@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+-------------------------------------------------------+---------------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+=======================================================+=================================+
+| `Prev &lt;textproc.html&gt;`_          | Chapter 16. External Filters, Programs and Commands   | `Next &lt;communications.html&gt;`_   |
++----------------------------------+-------------------------------------------------------+---------------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-and-archiving-commands">
+<h1>16.5. File and Archiving Commands</h1>
+<p><strong>Archiving</strong></p>
+<dl class="docutils">
+<dt><strong>tar</strong></dt>
+<dd><p class="first">The standard UNIX archiving utility.
+<a class="reference external" href="filearchiv.html#FTN.AEN11802">[1]</a> Originally a <em>Tape ARchiving</em>
+program, it has developed into a general purpose package that can
+handle all manner of archiving with all types of destination
+devices, ranging from tape drives to regular files to even
+<tt class="docutils literal">stdout</tt> (see <a class="reference external" href="special-chars.html#EX58">Example 3-4</a>). GNU <em>tar</em>
+has been patched to accept various compression filters, for example:
+<strong>tar czvf archive_name.tar.gz *</strong>, which recursively archives and
+<a class="reference external" href="filearchiv.html#GZIPREF">gzips</a> all files in a directory tree
+except <a class="reference external" href="basic.html#DOTFILESREF">dotfiles</a> in the current working
+directory (<a class="reference external" href="internalvariables.html#PWDREF">$PWD</a>).
+<a class="reference external" href="filearchiv.html#FTN.AEN11813">[2]</a></p>
+<p>Some useful <strong>tar</strong> options:</p>
+<ol class="arabic">
+<li><p class="first"><tt class="docutils literal"><span class="pre">-c</span></tt> create (a new archive)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-x</span></tt> extract (files from existing archive)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">--delete</span></tt> delete (files from existing archive)</p>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 41)</p>
+<p>Explicit markup ends without a blank line; unexpected unindent.</p>
+</div>
+<p>This option will not work on magnetic tape devices.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-r</span></tt> append (files to existing archive)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-A</span></tt> append (<em>tar</em> files to existing archive)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-t</span></tt> list (contents of existing archive)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-u</span></tt> update archive</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-d</span></tt> compare archive with specified filesystem</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">--after-date</span></tt> only process files with a date stamp <em>after</em>
+specified date</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-z</span></tt> <a class="reference external" href="filearchiv.html#GZIPREF">gzip</a> the archive</p>
+<p>(compress or uncompress, depending on whether combined with the
+<tt class="docutils literal"><span class="pre">-c</span></tt> or <tt class="docutils literal"><span class="pre">-x</span></tt>) option</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">-j</span></tt> <a class="reference external" href="filearchiv.html#BZIPREF">bzip2</a> the archive</p>
+</li>
+</ol>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 68)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">It may be difficult to recover data from a corrupted <em>gzipped</em> tar
+archive. When archiving important files, make multiple backups.</p>
+</dd>
+<dt><strong>shar</strong></dt>
+<dd><p class="first"><em>Shell archiving</em> utility. The text files in a shell archive are
+concatenated without compression, and the resultant archive is
+essentially a shell script, complete with #!/bin/sh header,
+containing all the necessary unarchiving commands, as well as the
+files themselves. <em>Shar archives</em> still show up in Usenet
+newsgroups, but otherwise <strong>shar</strong> has been replaced by
+<strong>tar</strong>/<strong>gzip</strong>. The <strong>unshar</strong> command unpacks <em>shar</em> archives.</p>
+<p class="last">The <strong>mailshar</strong> command is a Bash script that uses <strong>shar</strong> to
+concatenate multiple files into a single one for e-mailing. This
+script supports compression and
+<a class="reference external" href="filearchiv.html#UUENCODEREF">uuencoding</a>.</p>
+</dd>
+<dt><strong>ar</strong></dt>
+<dd>Creation and manipulation utility for archives, mainly used for
+binary object file libraries.</dd>
+<dt><strong>rpm</strong></dt>
+<dd><p class="first">The <em>Red Hat Package Manager</em>, or <strong>rpm</strong> utility provides a wrapper
+for source or binary archives. It includes commands for installing
+and checking the integrity of packages, among other things.</p>
+<p>A simple <strong>rpm -i package_name.rpm</strong> usually suffices to install a
+package, though there are many more options available.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 102)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p><tt class="docutils literal">rpm <span class="pre">-qf</span></tt> identifies which package a file originates from.</p>
+<pre class="literal-block">
+bash$ rpm -qf /bin/ls
+coreutils-5.2.1-31
+</pre>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 115)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p><tt class="docutils literal">rpm <span class="pre">-qa</span></tt> gives a complete list of all installed <em>rpm</em> packages on
+a given system. An <tt class="docutils literal">rpm <span class="pre">-qa</span> package_name</tt> lists only the
+package(s) corresponding to <tt class="docutils literal">package_name</tt>.</p>
+<pre class="last literal-block">
+bash$ rpm -qa
+redhat-logos-1.1.3-1
+ glibc-2.2.4-13
+ cracklib-2.7-12
+ dosfstools-2.7-1
+ gdbm-1.8.0-10
+ ksymoops-2.4.1-1
+ mktemp-1.5-11
+ perl-5.6.0-17
+ reiserfs-utils-3.x.0j-2
+ ...
+
+
+bash$ rpm -qa docbook-utils
+docbook-utils-0.6.9-2
+
+
+bash$ rpm -qa docbook | grep docbook
+docbook-dtd31-sgml-1.0-10
+ docbook-style-dsssl-1.64-3
+ docbook-dtd30-sgml-1.0-10
+ docbook-dtd40-sgml-1.0-11
+ docbook-utils-pdf-0.6.9-2
+ docbook-dtd41-sgml-1.0-10
+ docbook-utils-0.6.9-2
+</pre>
+</dd>
+<dt><strong>cpio</strong></dt>
+<dd><p class="first">This specialized archiving copy command (<strong>c**o**p**y **i**nput and
+**o**utput) is rarely seen any more, having been supplanted by
+**tar</strong>/<strong>gzip</strong>. It still has its uses, such as moving a directory
+tree. With an appropriate block size (for copying) specified, it can
+be appreciably faster than <strong>tar</strong>.</p>
+<p><strong>Example 16-30. Using *cpio* to move a directory tree</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+
+# Copying a directory tree using cpio.
+
+# Advantages of using 'cpio':
+#   Speed of copying. It's faster than 'tar' with pipes.
+#   Well suited for copying special files (named pipes, etc.)
+#+  that 'cp' may choke on.
+
+ARGS=2
+E_BADARGS=65
+
+if [ $# -ne &quot;$ARGS&quot; ]
+then
+  echo &quot;Usage: `basename $0` source destination&quot;
+  exit $E_BADARGS
+fi
+
+source=&quot;$1&quot;
+destination=&quot;$2&quot;
+
+###################################################################
+find &quot;$source&quot; -depth | cpio -admvp &quot;$destination&quot;
+#               ^^^^^         ^^^^^
+#  Read the 'find' and 'cpio' info pages to decipher these options.
+#  The above works only relative to $PWD (current directory) . . .
+#+ full pathnames are specified.
+###################################################################
+
+
+# Exercise:
+# --------
+
+#  Add code to check the exit status ($?) of the 'find | cpio' pipe
+#+ and output appropriate error messages if anything went wrong.
+
+exit $?
+</pre>
+</dd>
+<dt><strong>rpm2cpio</strong></dt>
+<dd><p class="first">This command extracts a <strong>cpio</strong> archive from an
+<a class="reference external" href="filearchiv.html#RPMREF">rpm</a> one.</p>
+<p><strong>Example 16-31. Unpacking an *rpm* archive</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# de-rpm.sh: Unpack an 'rpm' archive
+
+: ${1?&quot;Usage: `basename $0` target-file&quot;}
+# Must specify 'rpm' archive name as an argument.
+
+
+TEMPFILE=$$.cpio                         #  Tempfile with &quot;unique&quot; name.
+                                         #  $$ is process ID of script.
+
+rpm2cpio &lt; $1 &gt; $TEMPFILE                #  Converts rpm archive into
+                                         #+ cpio archive.
+cpio --make-directories -F $TEMPFILE -i  #  Unpacks cpio archive.
+rm -f $TEMPFILE                          #  Deletes cpio archive.
+
+exit 0
+
+#  Exercise:
+#  Add check for whether 1) &quot;target-file&quot; exists and
+#+                       2) it is an rpm archive.
+#  Hint:                    Parse output of 'file' command.
+</pre>
+</dd>
+<dt><strong>pax</strong></dt>
+<dd><p class="first">The <em>pax</em> <a href="#id3"><span class="problematic" id="id4">**</span></a>p**ortable <a href="#id5"><span class="problematic" id="id6">**</span></a>a**rchive e**x**change toolkit facilitates
+periodic file backups and is designed to be cross-compatible between
+various flavors of UNIX. It was designed to replace
+<a class="reference external" href="filearchiv.html#TARREF">tar</a> and
+<a class="reference external" href="filearchiv.html#CPIOREF">cpio</a>.</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 228); <em><a href="#id4">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 228); <em><a href="#id6">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<pre class="literal-block">
+pax -wf daily_backup.pax ~/linux-server/files
+#  Creates a tar archive of all files in the target directory.
+#  Note that the options to pax must be in the correct order --
+#+ pax -fw     has an entirely different effect.
+
+pax -f daily_backup.pax
+#  Lists the files in the archive.
+
+pax -rf daily_backup.pax ~/bsd-server/files
+#  Restores the backed-up files from the Linux machine
+#+ onto a BSD one.
+</pre>
+<p class="last">Note that <em>pax</em> handles many of the standard archiving and
+compression commands.</p>
+</dd>
+</dl>
+<p><strong>Compression</strong></p>
+<dl class="docutils">
+<dt><strong>gzip</strong></dt>
+<dd><p class="first">The standard GNU/UNIX compression utility, replacing the inferior
+and proprietary <strong>compress</strong>. The corresponding decompression
+command is <strong>gunzip</strong>, which is the equivalent of <strong>gzip -d</strong>.</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 263)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>The <tt class="docutils literal"><span class="pre">-c</span></tt> option sends the output of <strong>gzip</strong> to <tt class="docutils literal">stdout</tt>. This
+is useful when <a class="reference external" href="special-chars.html#PIPEREF">piping</a> to other
+commands.</p>
+<p>The <strong>zcat</strong> filter decompresses a <em>gzipped</em> file to <tt class="docutils literal">stdout</tt>, as
+possible input to a pipe or redirection. This is, in effect, a
+<strong>cat</strong> command that works on compressed files (including files
+processed with the older <a class="reference external" href="filearchiv.html#COMPRESSREF">compress</a>
+utility). The <strong>zcat</strong> command is equivalent to <strong>gzip -dc</strong>.</p>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 278)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>On some commercial UNIX systems, <strong>zcat</strong> is a synonym for
+<strong>uncompress -c</strong>, and will not work on <em>gzipped</em> files.</p>
+<p class="last">See also <a class="reference external" href="comparison-ops.html#EX14">Example 7-7</a>.</p>
+</dd>
+<dt><strong>bzip2</strong></dt>
+<dd><p class="first">An alternate compression utility, usually more efficient (but
+slower) than <strong>gzip</strong>, especially on large files. The corresponding
+decompression command is <strong>bunzip2</strong>.</p>
+<p>Similar to the <strong>zcat</strong> command, <strong>bzcat</strong> decompresses a
+<em>bzipped2-ed</em> file to <tt class="docutils literal">stdout</tt>.</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 296)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">Newer versions of <a class="reference external" href="filearchiv.html#TARREF">tar</a> have been patched
+with <strong>bzip2</strong> support.</p>
+</dd>
+<dt><strong>compress</strong>, <strong>uncompress</strong></dt>
+<dd><p class="first">This is an older, proprietary compression utility found in
+commercial UNIX distributions. The more efficient <strong>gzip</strong> has
+largely replaced it. Linux distributions generally include a
+<strong>compress</strong> workalike for compatibility, although <strong>gunzip</strong> can
+unarchive files treated with <strong>compress</strong>.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 311)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">The <strong>znew</strong> command transforms <em>compressed</em> files into <em>gzipped</em>
+ones.</p>
+</dd>
+<dt><strong>sq</strong></dt>
+<dd><p class="first">Yet another compression (<strong>sq**ueeze) utility, a filter that works
+only on sorted `ASCII &lt;special-chars.html#ASCIIDEF&gt;`_ word lists. It
+uses the standard invocation syntax for a filter, **sq &lt; input-file
+&gt; output-file</strong>. Fast, but not nearly as efficient as
+<a class="reference external" href="filearchiv.html#GZIPREF">gzip</a>. The corresponding uncompression
+filter is <strong>unsq</strong>, invoked like <strong>sq</strong>.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 327)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">The output of <strong>sq</strong> may be piped to <strong>gzip</strong> for further
+compression.</p>
+</dd>
+<dt><strong>zip</strong>, <strong>unzip</strong></dt>
+<dd>Cross-platform file archiving and compression utility compatible
+with DOS <em>pkzip.exe</em>. &quot;Zipped&quot; archives seem to be a more common
+medium of file exchange on the Internet than &quot;tarballs.&quot;</dd>
+<dt><strong>unarc</strong>, <strong>unarj</strong>, <strong>unrar</strong></dt>
+<dd>These Linux utilities permit unpacking archives compressed with the
+DOS <em>arc.exe</em>, <em>arj.exe</em>, and <em>rar.exe</em> programs.</dd>
+<dt><strong>lzma</strong>, <strong>unlzma</strong>, <strong>lzcat</strong></dt>
+<dd>Highly efficient Lempel-Ziv-Markov compression. The syntax of <em>lzma</em>
+is similar to that of <em>gzip</em>. The <a class="reference external" href="http://www.7-zip.org/sdk.html">7-zip
+Website</a> has more information.</dd>
+</dl>
+<p><strong>File Information</strong></p>
+<dl class="docutils">
+<dt><strong>file</strong></dt>
+<dd><p class="first">A utility for identifying file types. The command <tt class="docutils literal">file <span class="pre">file-name</span></tt>
+will return a file specification for <tt class="docutils literal"><span class="pre">file-name</span></tt>, such as
+<tt class="docutils literal">ascii text</tt> or <tt class="docutils literal">data</tt>. It references the <a class="reference external" href="sha-bang.html#MAGNUMREF">magic
+numbers</a> found in <tt class="docutils literal">/usr/share/magic</tt>,
+<tt class="docutils literal">/etc/magic</tt>, or <tt class="docutils literal">/usr/lib/magic</tt>, depending on the Linux/UNIX
+distribution.</p>
+<p>The <tt class="docutils literal"><span class="pre">-f</span></tt> option causes <strong>file</strong> to run in
+<a class="reference external" href="timedate.html#BATCHPROCREF">batch</a> mode, to read from a
+designated file a list of filenames to analyze. The <tt class="docutils literal"><span class="pre">-z</span></tt> option,
+when used on a compressed target file, forces an attempt to analyze
+the uncompressed file type.</p>
+<pre class="literal-block">
+bash$ file test.tar.gz
+test.tar.gz: gzip compressed data, deflated,
+ last modified: Sun Sep 16 13:34:51 2001, os: Unix
+
+bash file -z test.tar.gz
+test.tar.gz: GNU tar archive (gzip compressed data, deflated,
+ last modified: Sun Sep 16 13:34:51 2001, os: Unix)
+</pre>
+<pre class="literal-block">
+# Find sh and Bash scripts in a given directory:
+
+DIRECTORY=/usr/local/bin
+KEYWORD=Bourne
+# Bourne and Bourne-Again shell scripts
+
+file $DIRECTORY/* | fgrep $KEYWORD
+
+# Output:
+
+# /usr/local/bin/burn-cd:          Bourne-Again shell script text executable
+# /usr/local/bin/burnit:           Bourne-Again shell script text executable
+# /usr/local/bin/cassette.sh:      Bourne shell script text executable
+# /usr/local/bin/copy-cd:          Bourne-Again shell script text executable
+# . . .
+</pre>
+<p><strong>Example 16-32. Stripping comments from C program files</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# strip-comment.sh: Strips out the comments (/* COMMENT */) in a C program.
+
+E_NOARGS=0
+E_ARGERROR=66
+E_WRONG_FILE_TYPE=67
+
+if [ $# -eq &quot;$E_NOARGS&quot; ]
+then
+  echo &quot;Usage: `basename $0` C-program-file&quot; &gt;&amp;2 # Error message to stderr.
+  exit $E_ARGERROR
+fi
+
+# Test for correct file type.
+type=`file $1 | awk '{ print $2, $3, $4, $5 }'`
+# &quot;file $1&quot; echoes file type . . .
+# Then awk removes the first field, the filename . . .
+# Then the result is fed into the variable &quot;type.&quot;
+correct_type=&quot;ASCII C program text&quot;
+
+if [ &quot;$type&quot; != &quot;$correct_type&quot; ]
+then
+  echo
+  echo &quot;This script works on C program files only.&quot;
+  echo
+  exit $E_WRONG_FILE_TYPE
+fi
+
+
+# Rather cryptic sed script:
+#--------
+sed '
+/^\/\*/d
+/.*\*\//d
+' $1
+#--------
+# Easy to understand if you take several hours to learn sed fundamentals.
+
+
+#  Need to add one more line to the sed script to deal with
+#+ case where line of code has a comment following it on same line.
+#  This is left as a non-trivial exercise.
+
+#  Also, the above code deletes non-comment lines with a &quot;*/&quot; . . .
+#+ not a desirable result.
+
+exit 0
+
+
+# ----------------------------------------------------------------
+# Code below this line will not execute because of 'exit 0' above.
+
+# Stephane Chazelas suggests the following alternative:
+
+usage() {
+  echo &quot;Usage: `basename $0` C-program-file&quot; &gt;&amp;2
+  exit 1
+}
+
+WEIRD=`echo -n -e '\377'`   # or WEIRD=$'\377'
+[[ $# -eq 1 ]] || usage
+case `file &quot;$1&quot;` in
+  *&quot;C program text&quot;*) sed -e &quot;s%/\*%${WEIRD}%g;s%\*/%${WEIRD}%g&quot; &quot;$1&quot; \
+     | tr '\377\n' '\n\377' \
+     | sed -ne 'p;n' \
+     | tr -d '\n' | tr '\377' '\n';;
+  *) usage;;
+esac
+
+#  This is still fooled by things like:
+#  printf(&quot;/*&quot;);
+#  or
+#  /*  /* buggy embedded comment */
+#
+#  To handle all special cases (comments in strings, comments in string
+#+ where there is a \&quot;, \\&quot; ...),
+#+ the only way is to write a C parser (using lex or yacc perhaps?).
+
+exit 0
+</pre>
+</dd>
+<dt><strong>which</strong></dt>
+<dd><p class="first"><strong>which command</strong> gives the full path to &quot;command.&quot; This is useful
+for finding out whether a particular command or utility is installed
+on the system.</p>
+<p><tt class="docutils literal">$bash which rm</tt></p>
+<pre class="literal-block">
+/usr/bin/rm
+</pre>
+<p class="last">For an interesting use of this command, see <a class="reference external" href="colorizing.html#HORSERACE">Example
+36-14</a>.</p>
+</dd>
+<dt><strong>whereis</strong></dt>
+<dd><p class="first">Similar to <strong>which</strong>, above, <strong>whereis command</strong> gives the full path
+to &quot;command,&quot; but also to its <a class="reference external" href="basic.html#MANREF">manpage</a>.</p>
+<p><tt class="docutils literal">$bash whereis rm</tt></p>
+<pre class="last literal-block">
+rm: /bin/rm /usr/share/man/man1/rm.1.bz2
+</pre>
+</dd>
+<dt><strong>whatis</strong></dt>
+<dd><p class="first"><strong>whatis command</strong> looks up &quot;command&quot; in the <tt class="docutils literal">whatis</tt> database.
+This is useful for identifying system commands and important
+configuration files. Consider it a simplified <strong>man</strong> command.</p>
+<p><tt class="docutils literal">$bash whatis whatis</tt></p>
+<pre class="literal-block">
+whatis               (1)  - search the whatis database for complete words
+</pre>
+<p><strong>Example 16-33. Exploring ``/usr/X11R6/bin``</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+
+# What are all those mysterious binaries in /usr/X11R6/bin?
+
+DIRECTORY=&quot;/usr/X11R6/bin&quot;
+# Try also &quot;/bin&quot;, &quot;/usr/bin&quot;, &quot;/usr/local/bin&quot;, etc.
+
+for file in $DIRECTORY/*
+do
+  whatis `basename $file`   # Echoes info about the binary.
+done
+
+exit 0
+
+#  Note: For this to work, you must create a &quot;whatis&quot; database
+#+ with /usr/sbin/makewhatis.
+#  You may wish to redirect output of this script, like so:
+#    ./what.sh &gt;&gt;whatis.db
+#  or view it a page at a time on stdout,
+#    ./what.sh | less
+</pre>
+<p class="last">See also <a class="reference external" href="loops1.html#FILEINFO">Example 11-3</a>.</p>
+</dd>
+<dt><strong>vdir</strong></dt>
+<dd><p class="first">Show a detailed directory listing. The effect is similar to <a class="reference external" href="basic.html#LSREF">ls
+-lb</a>.</p>
+<p>This is one of the GNU <em>fileutils</em>.</p>
+<pre class="last literal-block">
+bash$ vdir
+total 10
+ -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.xrolo
+ -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
+ -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo
+
+bash ls -l
+total 10
+ -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.xrolo
+ -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
+ -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo
+</pre>
+</dd>
+<dt><strong>locate</strong>, <strong>slocate</strong></dt>
+<dd><p class="first">The <strong>locate</strong> command searches for files using a database stored
+for just that purpose. The <strong>slocate</strong> command is the secure version
+of <strong>locate</strong> (which may be aliased to <strong>slocate</strong>).</p>
+<p><tt class="docutils literal">$bash locate hickson</tt></p>
+<pre class="last literal-block">
+/usr/lib/xephem/catalogs/hickson.edb
+</pre>
+</dd>
+<dt><strong>getfacl</strong>, <strong>setfacl</strong></dt>
+<dd><p class="first">These commands <em>retrieve</em> or <em>set</em> the <a href="#id9"><span class="problematic" id="id10">**</span></a>f**ile <a href="#id11"><span class="problematic" id="id12">**</span></a>a**ccess
+<a href="#id13"><span class="problematic" id="id14">**</span></a>c**ontrol <a href="#id15"><span class="problematic" id="id16">**</span></a>l**ist -- the <em>owner</em>, <em>group</em>, and file permissions.</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 568); <em><a href="#id10">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 568); <em><a href="#id12">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 568); <em><a href="#id14">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 568); <em><a href="#id16">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<pre class="last literal-block">
+bash$ getfacl *
+# file: test1.txt
+ # owner: bozo
+ # group: bozgrp
+ user::rw-
+ group::rw-
+ other::r--
+
+ # file: test2.txt
+ # owner: bozo
+ # group: bozgrp
+ user::rw-
+ group::rw-
+ other::r--
+
+
+
+bash$ setfacl -m u:bozo:rw yearly_budget.csv
+bash$ getfacl yearly_budget.csv
+# file: yearly_budget.csv
+ # owner: accountant
+ # group: budgetgrp
+ user::rw-
+ user:bozo:rw-
+ user:accountant:rw-
+ group::rw-
+ mask::rw-
+ other::r--
+</pre>
+</dd>
+<dt><strong>readlink</strong></dt>
+<dd><p class="first">Disclose the file that a symbolic link points to.</p>
+<pre class="last literal-block">
+bash$ readlink /usr/bin/awk
+../../bin/gawk
+</pre>
+</dd>
+<dt><strong>strings</strong></dt>
+<dd><p class="first">Use the <strong>strings</strong> command to find printable strings in a binary or
+data file. It will list sequences of printable characters found in
+the target file. This might be handy for a quick 'n dirty
+examination of a core dump or for looking at an unknown graphic
+image file (<tt class="docutils literal">strings <span class="pre">image-file</span> | more</tt> might show something like
+<em>JFIF</em>, which would identify the file as a <em>jpeg</em> graphic). In a
+script, you would probably parse the output of <strong>strings</strong> with
+<a class="reference external" href="textproc.html#GREPREF">grep</a> or <a class="reference external" href="sedawk.html#SEDREF">sed</a>. See
+<a class="reference external" href="loops1.html#BINGREP">Example 11-7</a> and <a class="reference external" href="loops1.html#FINDSTRING">Example
+11-9</a>.</p>
+<p><strong>Example 16-34. An &quot;improved&quot; *strings* command</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# wstrings.sh: &quot;word-strings&quot; (enhanced &quot;strings&quot; command)
+#
+#  This script filters the output of &quot;strings&quot; by checking it
+#+ against a standard word list file.
+#  This effectively eliminates gibberish and noise,
+#+ and outputs only recognized words.
+
+# ===========================================================
+#                 Standard Check for Script Argument(s)
+ARGS=1
+E_BADARGS=85
+E_NOFILE=86
+
+if [ $# -ne $ARGS ]
+then
+  echo &quot;Usage: `basename $0` filename&quot;
+  exit $E_BADARGS
+fi
+
+if [ ! -f &quot;$1&quot; ]                      # Check if file exists.
+then
+    echo &quot;File \&quot;$1\&quot; does not exist.&quot;
+    exit $E_NOFILE
+fi
+# ===========================================================
+
+
+MINSTRLEN=3                           #  Minimum string length.
+WORDFILE=/usr/share/dict/linux.words  #  Dictionary file.
+#  May specify a different word list file
+#+ of one-word-per-line format.
+#  For example, the &quot;yawl&quot; word-list package,
+#  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+
+wlist=`strings &quot;$1&quot; | tr A-Z a-z | tr '[:space:]' Z | \
+tr -cs '[:alpha:]' Z | tr -s '\173-\377' Z | tr Z ' '`
+
+# Translate output of 'strings' command with multiple passes of 'tr'.
+#  &quot;tr A-Z a-z&quot;  converts to lowercase.
+#  &quot;tr '[:space:]'&quot;  converts whitespace characters to Z's.
+#  &quot;tr -cs '[:alpha:]' Z&quot;  converts non-alphabetic characters to Z's,
+#+ and squeezes multiple consecutive Z's.
+#  &quot;tr -s '\173-\377' Z&quot;  converts all characters past 'z' to Z's
+#+ and squeezes multiple consecutive Z's,
+#+ which gets rid of all the weird characters that the previous
+#+ translation failed to deal with.
+#  Finally, &quot;tr Z ' '&quot; converts all those Z's to whitespace,
+#+ which will be seen as word separators in the loop below.
+
+#  ********************************************************************
+#  Note the technique of feeding the output of 'tr' back to itself,
+#+ but with different arguments and/or options on each successive pass.
+#  ********************************************************************
+
+
+for word in $wlist                    # Important:
+                                      # $wlist must not be quoted here.
+                                      # &quot;$wlist&quot; does not work.
+                                      # Why not?
+do
+  strlen=${#word}                     # String length.
+  if [ &quot;$strlen&quot; -lt &quot;$MINSTRLEN&quot; ]   # Skip over short strings.
+  then
+    continue
+  fi
+
+  grep -Fw $word &quot;$WORDFILE&quot;          #  Match whole words only.
+#      ^^^                            #  &quot;Fixed strings&quot; and
+                                      #+ &quot;whole words&quot; options.
+done
+
+exit $?
+</pre>
+</dd>
+</dl>
+<p><strong>Comparison</strong></p>
+<dl class="docutils">
+<dt><strong>diff</strong>, <strong>patch</strong></dt>
+<dd><p class="first"><strong>diff</strong>: flexible file comparison utility. It compares the target
+files line-by-line sequentially. In some applications, such as
+comparing word dictionaries, it may be helpful to filter the files
+through <a class="reference external" href="textproc.html#SORTREF">sort</a> and <strong>uniq</strong> before piping
+them to <strong>diff</strong>. <tt class="docutils literal">diff <span class="pre">file-1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">file-2</span></tt> outputs the lines
+in the files that differ, with carets showing which file each
+particular line belongs to.</p>
+<p>The <tt class="docutils literal"><span class="pre">--side-by-side</span></tt> option to <strong>diff</strong> outputs each compared
+file, line by line, in separate columns, with non-matching lines
+marked. The <tt class="docutils literal"><span class="pre">-c</span></tt> and <tt class="docutils literal"><span class="pre">-u</span></tt> options likewise make the output of
+the command easier to interpret.</p>
+<p>There are available various fancy frontends for <strong>diff</strong>, such as
+<strong>sdiff</strong>, <strong>wdiff</strong>, <strong>xdiff</strong>, and <strong>mgdiff</strong>.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 727)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>The <strong>diff</strong> command returns an exit status of 0 if the compared
+files are identical, and 1 if they differ. This permits use of
+<strong>diff</strong> in a test construct within a shell script (see below).</p>
+<p>A common use for <strong>diff</strong> is generating difference files to be used
+with <strong>patch</strong> The <tt class="docutils literal"><span class="pre">-e</span></tt> option outputs files suitable for <strong>ed</strong>
+or <strong>ex</strong> scripts.</p>
+<p><strong>patch</strong>: flexible versioning utility. Given a difference file
+generated by <strong>diff</strong>, <strong>patch</strong> can upgrade a previous version of a
+package to a newer version. It is much more convenient to distribute
+a relatively small &quot;diff&quot; file than the entire body of a newly
+revised package. Kernel &quot;patches&quot; have become the preferred method
+of distributing the frequent releases of the Linux kernel.</p>
+<pre class="literal-block">
+patch -p1 &lt;patch-file
+# Takes all the changes listed in 'patch-file'
+# and applies them to the files referenced therein.
+# This upgrades to a newer version of the package.
+</pre>
+<p>Patching the kernel:</p>
+<pre class="literal-block">
+cd /usr/src
+gzip -cd patchXX.gz | patch -p0
+# Upgrading kernel source using 'patch'.
+# From the Linux kernel docs &quot;README&quot;,
+# by anonymous author (Alan Cox?).
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 764)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>The <strong>diff</strong> command can also recursively compare directories (for
+the filenames present).</p>
+<pre class="literal-block">
+bash$ diff -r ~/notes1 ~/notes2
+Only in /home/bozo/notes1: file02
+ Only in /home/bozo/notes1: file03
+ Only in /home/bozo/notes2: file04
+</pre>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<p>Use <strong>zdiff</strong> to compare <em>gzipped</em> files.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<p class="last">Use <strong>diffstat</strong> to create a histogram (point-distribution graph) of
+output from <strong>diff</strong>.</p>
+</dd>
+<dt><strong>diff3</strong>, <strong>merge</strong></dt>
+<dd><p class="first">An extended version of <strong>diff</strong> that compares three files at a time.
+This command returns an exit value of 0 upon successful execution,
+but unfortunately this gives no information about the results of the
+comparison.</p>
+<pre class="literal-block">
+bash$ diff3 file-1 file-2 file-3
+====
+ 1:1c
+   This is line 1 of &quot;file-1&quot;.
+ 2:1c
+   This is line 1 of &quot;file-2&quot;.
+ 3:1c
+   This is line 1 of &quot;file-3&quot;
+</pre>
+<p class="last">The <strong>merge</strong> (3-way file merge) command is an interesting adjunct
+to <em>diff3</em>. Its syntax is <tt class="docutils literal">merge Mergefile file1 file2</tt>. The
+result is to output to <tt class="docutils literal">Mergefile</tt> the changes that lead from
+<tt class="docutils literal">file1</tt> to <tt class="docutils literal">file2</tt>. Consider this command a stripped-down
+version of <em>patch</em>.</p>
+</dd>
+<dt><strong>sdiff</strong></dt>
+<dd>Compare and/or edit two files in order to merge them into an output
+file. Because of its interactive nature, this command would find
+little use in a script.</dd>
+<dt><strong>cmp</strong></dt>
+<dd><p class="first">The <strong>cmp</strong> command is a simpler version of <strong>diff</strong>, above. Whereas
+<strong>diff</strong> reports the differences between two files, <strong>cmp</strong> merely
+shows at what point they differ.</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 831)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Like <strong>diff</strong>, <strong>cmp</strong> returns an exit status of 0 if the compared
+files are identical, and 1 if they differ. This permits use in a
+test construct within a shell script.</p>
+<p><strong>Example 16-35. Using *cmp* to compare two files within a script.</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+
+ARGS=2  # Two args to script expected.
+E_BADARGS=65
+E_UNREADABLE=66
+
+if [ $# -ne &quot;$ARGS&quot; ]
+then
+  echo &quot;Usage: `basename $0` file1 file2&quot;
+  exit $E_BADARGS
+fi
+
+if [[ ! -r &quot;$1&quot; || ! -r &quot;$2&quot; ]]
+then
+  echo &quot;Both files to be compared must exist and be readable.&quot;
+  exit $E_UNREADABLE
+fi
+
+cmp $1 $2 &amp;&gt; /dev/null  # /dev/null buries the output of the &quot;cmp&quot; command.
+#   cmp -s $1 $2  has same result (&quot;-s&quot; silent flag to &quot;cmp&quot;)
+#   Thank you  Anders Gustavsson for pointing this out.
+#
+# Also works with 'diff', i.e.,   diff $1 $2 &amp;&gt; /dev/null
+
+if [ $? -eq 0 ]         # Test exit status of &quot;cmp&quot; command.
+then
+  echo &quot;File \&quot;$1\&quot; is identical to file \&quot;$2\&quot;.&quot;
+else
+  echo &quot;File \&quot;$1\&quot; differs from file \&quot;$2\&quot;.&quot;
+fi
+
+exit 0
+</pre>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 877)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">Use <strong>zcmp</strong> on <em>gzipped</em> files.</p>
+</dd>
+<dt><strong>comm</strong></dt>
+<dd><p class="first">Versatile file comparison utility. The files must be sorted for this
+to be useful.</p>
+<p><strong>comm ``-options`` ``first-file`` ``second-file``</strong></p>
+<p><tt class="docutils literal">comm <span class="pre">file-1</span> <span class="pre">file-2</span></tt> outputs three columns:</p>
+<ul class="simple">
+<li>column 1 = lines unique to <tt class="docutils literal"><span class="pre">file-1</span></tt></li>
+<li>column 2 = lines unique to <tt class="docutils literal"><span class="pre">file-2</span></tt></li>
+<li>column 3 = lines common to both.</li>
+</ul>
+<p>The options allow suppressing output of one or more columns.</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">-1</span></tt> suppresses column <tt class="docutils literal">1</tt></li>
+<li><tt class="docutils literal"><span class="pre">-2</span></tt> suppresses column <tt class="docutils literal">2</tt></li>
+<li><tt class="docutils literal"><span class="pre">-3</span></tt> suppresses column <tt class="docutils literal">3</tt></li>
+<li><tt class="docutils literal"><span class="pre">-12</span></tt> suppresses both columns <tt class="docutils literal">1</tt> and <tt class="docutils literal">2</tt>, etc.</li>
+</ul>
+<p class="last">This command is useful for comparing &quot;dictionaries&quot; or <em>word lists</em>
+-- sorted text files with one word per line.</p>
+</dd>
+</dl>
+<p><strong>Utilities</strong></p>
+<dl class="docutils">
+<dt><strong>basename</strong></dt>
+<dd><p class="first">Strips the path information from a file name, printing only the file
+name. The construction <tt class="docutils literal">basename&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $0</tt> lets the script know
+its name, that is, the name it was invoked by. This can be used for
+&quot;usage&quot; messages if, for example a script is called with missing
+arguments:</p>
+<pre class="last literal-block">
+echo &quot;Usage: `basename $0` arg1 arg2 ... argn&quot;
+</pre>
+</dd>
+<dt><strong>dirname</strong></dt>
+<dd><p class="first">Strips the <strong>basename</strong> from a filename, printing only the path
+information.</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 928)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p><strong>basename</strong> and <strong>dirname</strong> can operate on any arbitrary string.
+The argument does not need to refer to an existing file, or even be
+a filename for that matter (see <a class="reference external" href="contributed-scripts.html#DAYSBETWEEN">Example
+A-7</a>).</p>
+<p><strong>Example 16-36. *basename* and *dirname*</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+
+address=/home/bozo/daily-journal.txt
+
+echo &quot;Basename of /home/bozo/daily-journal.txt = `basename $address`&quot;
+echo &quot;Dirname of /home/bozo/daily-journal.txt = `dirname $address`&quot;
+echo
+echo &quot;My own home is `basename ~/`.&quot;         # `basename ~` also works.
+echo &quot;The home of my home is `dirname ~/`.&quot;  # `dirname ~`  also works.
+
+exit 0
+</pre>
+</dd>
+<dt><strong>split</strong>, <strong>csplit</strong></dt>
+<dd><p class="first">These are utilities for splitting a file into smaller chunks. Their
+usual use is for splitting up large files in order to back them up
+on floppies or preparatory to e-mailing or uploading them.</p>
+<p>The <strong>csplit</strong> command splits a file according to <em>context</em>, the
+split occuring where patterns are matched.</p>
+<p><strong>Example 16-37. A script that copies itself in sections</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# splitcopy.sh
+
+#  A script that splits itself into chunks,
+#+ then reassembles the chunks into an exact copy
+#+ of the original script.
+
+CHUNKSIZE=4    #  Size of first chunk of split files.
+OUTPREFIX=xx   #  csplit prefixes, by default,
+               #+ files with &quot;xx&quot; ...
+
+csplit &quot;$0&quot; &quot;$CHUNKSIZE&quot;
+
+# Some comment lines for padding . . .
+# Line 15
+# Line 16
+# Line 17
+# Line 18
+# Line 19
+# Line 20
+
+cat &quot;$OUTPREFIX&quot;* &gt; &quot;$0.copy&quot;  # Concatenate the chunks.
+rm &quot;$OUTPREFIX&quot;*               # Get rid of the chunks.
+
+exit $?
+</pre>
+</dd>
+</dl>
+<p><strong>Encoding and Encryption</strong></p>
+<dl class="docutils">
+<dt><strong>sum</strong>, <strong>cksum</strong>, <strong>md5sum</strong>, <strong>sha1sum</strong></dt>
+<dd><p class="first">These are utilities for generating <em>checksums</em>. A <em>checksum</em> is a
+number <a class="reference external" href="filearchiv.html#FTN.AEN12723">[3]</a> mathematically
+calculated from the contents of a file, for the purpose of checking
+its integrity. A script might refer to a list of checksums for
+security purposes, such as ensuring that the contents of key system
+files have not been altered or corrupted. For security applications,
+use the <strong>md5sum</strong> (<strong>m**essage **d**igest **5</strong> check**sum**)
+command, or better yet, the newer <strong>sha1sum</strong> (Secure Hash
+Algorithm). <a class="reference external" href="filearchiv.html#FTN.AEN12732">[4]</a></p>
+<pre class="literal-block">
+bash$ cksum /boot/vmlinuz
+1670054224 804083 /boot/vmlinuz
+
+bash$ echo -n &quot;Top Secret&quot; | cksum
+3391003827 10
+
+
+
+bash$ md5sum /boot/vmlinuz
+0f43eccea8f09e0a0b2b5cf1dcf333ba  /boot/vmlinuz
+
+bash$ echo -n &quot;Top Secret&quot; | md5sum
+8babc97a6f62a4649716f4df8d61728f  -
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 1022)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>The <strong>cksum</strong> command shows the size, in bytes, of its target,
+whether file or <tt class="docutils literal">stdout</tt>.</p>
+<p>The <strong>md5sum</strong> and <strong>sha1sum</strong> commands display a
+<a class="reference external" href="special-chars.html#DASHREF2">dash</a> when they receive their input
+from <tt class="docutils literal">stdout</tt>.</p>
+<p><strong>Example 16-38. Checking file integrity</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# file-integrity.sh: Checking whether files in a given directory
+#                    have been tampered with.
+
+E_DIR_NOMATCH=70
+E_BAD_DBFILE=71
+
+dbfile=File_record.md5
+# Filename for storing records (database file).
+
+
+set_up_database ()
+{
+  echo &quot;&quot;$directory&quot;&quot; &gt; &quot;$dbfile&quot;
+  # Write directory name to first line of file.
+  md5sum &quot;$directory&quot;/* &gt;&gt; &quot;$dbfile&quot;
+  # Append md5 checksums and filenames.
+}
+
+check_database ()
+{
+  local n=0
+  local filename
+  local checksum
+
+  # ------------------------------------------- #
+  #  This file check should be unnecessary,
+  #+ but better safe than sorry.
+
+  if [ ! -r &quot;$dbfile&quot; ]
+  then
+    echo &quot;Unable to read checksum database file!&quot;
+    exit $E_BAD_DBFILE
+  fi
+  # ------------------------------------------- #
+
+  while read record[n]
+  do
+
+    directory_checked=&quot;${record[0]}&quot;
+    if [ &quot;$directory_checked&quot; != &quot;$directory&quot; ]
+    then
+      echo &quot;Directories do not match up!&quot;
+      # Tried to use file for a different directory.
+      exit $E_DIR_NOMATCH
+    fi
+
+    if [ &quot;$n&quot; -gt 0 ]   # Not directory name.
+    then
+      filename[n]=$( echo ${record[$n]} | awk '{ print $2 }' )
+      #  md5sum writes records backwards,
+      #+ checksum first, then filename.
+      checksum[n]=$( md5sum &quot;${filename[n]}&quot; )
+
+
+      if [ &quot;${record[n]}&quot; = &quot;${checksum[n]}&quot; ]
+      then
+        echo &quot;${filename[n]} unchanged.&quot;
+
+      elif [ &quot;`basename ${filename[n]}`&quot; != &quot;$dbfile&quot; ]
+             #  Skip over checksum database file,
+             #+ as it will change with each invocation of script.
+         #  ---
+         #  This unfortunately means that when running
+         #+ this script on $PWD, tampering with the
+         #+ checksum database file will not be detected.
+         #  Exercise: Fix this.
+    then
+          echo &quot;${filename[n]} : CHECKSUM ERROR!&quot;
+        # File has been changed since last checked.
+      fi
+
+      fi
+
+
+
+    let &quot;n+=1&quot;
+  done &lt;&quot;$dbfile&quot;       # Read from checksum database file.
+
+}
+
+# =================================================== #
+# main ()
+
+if [ -z  &quot;$1&quot; ]
+then
+  directory=&quot;$PWD&quot;      #  If not specified,
+else                    #+ use current working directory.
+  directory=&quot;$1&quot;
+fi
+
+clear                   # Clear screen.
+echo &quot; Running file integrity check on $directory&quot;
+echo
+
+# ------------------------------------------------------------------ #
+  if [ ! -r &quot;$dbfile&quot; ] # Need to create database file?
+  then
+    echo &quot;Setting up database file, \&quot;&quot;$directory&quot;/&quot;$dbfile&quot;\&quot;.&quot;; echo
+    set_up_database
+  fi
+# ------------------------------------------------------------------ #
+
+check_database          # Do the actual work.
+
+echo
+
+#  You may wish to redirect the stdout of this script to a file,
+#+ especially if the directory checked has many files in it.
+
+exit 0
+
+#  For a much more thorough file integrity check,
+#+ consider the &quot;Tripwire&quot; package,
+#+ http://sourceforge.net/projects/tripwire/.
+</pre>
+<p>Also see <a class="reference external" href="contributed-scripts.html#DIRECTORYINFO">Example A-19</a>,
+<a class="reference external" href="colorizing.html#HORSERACE">Example 36-14</a>, and <a class="reference external" href="string-manipulation.html#RANDSTRING">Example
+10-2</a> for creative uses of
+the <strong>md5sum</strong> command.</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 1159)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>There have been reports that the 128-bit <strong>md5sum</strong> can be cracked,
+so the more secure 160-bit <strong>sha1sum</strong> is a welcome new addition to
+the checksum toolkit.</p>
+<pre class="literal-block">
+bash$ md5sum testfile
+e181e2c8720c60522c4c4c981108e367  testfile
+
+
+bash$ sha1sum testfile
+5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
+</pre>
+<p class="last">Security consultants have demonstrated that even <strong>sha1sum</strong> can be
+compromised. Fortunately, newer Linux distros include longer
+bit-length <strong>sha224sum</strong>, <strong>sha256sum</strong>, <strong>sha384sum</strong>, and
+<strong>sha512sum</strong> commands.</p>
+</dd>
+<dt><strong>uuencode</strong></dt>
+<dd>This utility encodes binary files (images, sound files, compressed
+files, etc.) into <a class="reference external" href="special-chars.html#ASCIIDEF">ASCII</a> characters,
+making them suitable for transmission in the body of an e-mail
+message or in a newsgroup posting. This is especially useful where
+MIME (multimedia) encoding is not available.</dd>
+<dt><strong>uudecode</strong></dt>
+<dd><p class="first">This reverses the encoding, decoding <em>uuencoded</em> files back into the
+original binaries.</p>
+<p><strong>Example 16-39. Uudecoding encoded files</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# Uudecodes all uuencoded files in current working directory.
+
+lines=35        # Allow 35 lines for the header (very generous).
+
+for File in *   # Test all the files in $PWD.
+do
+  search1=`head -n $lines $File | grep begin | wc -w`
+  search2=`tail -n $lines $File | grep end | wc -w`
+  #  Uuencoded files have a &quot;begin&quot; near the beginning,
+  #+ and an &quot;end&quot; near the end.
+  if [ &quot;$search1&quot; -gt 0 ]
+  then
+    if [ &quot;$search2&quot; -gt 0 ]
+    then
+      echo &quot;uudecoding - $File -&quot;
+      uudecode $File
+    fi
+  fi
+done
+
+#  Note that running this script upon itself fools it
+#+ into thinking it is a uuencoded file,
+#+ because it contains both &quot;begin&quot; and &quot;end&quot;.
+
+#  Exercise:
+#  --------
+#  Modify this script to check each file for a newsgroup header,
+#+ and skip to next if not found.
+
+exit 0
+</pre>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 1230)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">The <a class="reference external" href="textproc.html#FOLDREF">fold -s</a> command may be useful
+(possibly in a pipe) to process long uudecoded text messages
+downloaded from Usenet newsgroups.</p>
+</dd>
+<dt><strong>mimencode</strong>, <strong>mmencode</strong></dt>
+<dd>The <strong>mimencode</strong> and <strong>mmencode</strong> commands process
+multimedia-encoded e-mail attachments. Although <em>mail user agents</em>
+(such as <em>pine</em> or <em>kmail</em>) normally handle this automatically,
+these particular utilities permit manipulating such attachments
+manually from the command-line or in <a class="reference external" href="timedate.html#BATCHPROCREF">batch processing
+mode</a> by means of a shell script.</dd>
+<dt><strong>crypt</strong></dt>
+<dd>At one time, this was the standard UNIX file encryption utility.
+<a class="reference external" href="filearchiv.html#FTN.AEN12852">[5]</a> Politically-motivated
+government regulations prohibiting the export of encryption software
+resulted in the disappearance of <strong>crypt</strong> from much of the UNIX
+world, and it is still missing from most Linux distributions.
+Fortunately, programmers have come up with a number of decent
+alternatives to it, among them the author's very own
+<a class="reference external" href="ftp://metalab.unc.edu/pub/Linux/utils/file/cruft-0.2.tar.gz">cruft</a>
+(see <a class="reference external" href="contributed-scripts.html#ENCRYPTEDPW">Example A-4</a>).</dd>
+<dt><strong>openssl</strong></dt>
+<dd><p class="first">This is an Open Source implementation of <em>Secure Sockets Layer</em>
+encryption.</p>
+<pre class="literal-block">
+# To encrypt a file:
+openssl aes-128-ecb -salt -in file.txt -out file.encrypted \
+-pass pass:my_password
+#          ^^^^^^^^^^^   User-selected password.
+#       aes-128-ecb      is the encryption method chosen.
+
+# To decrypt an openssl-encrypted file:
+openssl aes-128-ecb -d -salt -in file.encrypted -out file.txt \
+-pass pass:my_password
+#          ^^^^^^^^^^^   User-selected password.
+</pre>
+<p><a class="reference external" href="special-chars.html#PIPEREF">Piping</a> <em>openssl</em> to/from
+<a class="reference external" href="filearchiv.html#TARREF">tar</a> makes it possible to encrypt an
+entire directory tree.</p>
+<pre class="literal-block">
+# To encrypt a directory:
+
+sourcedir=&quot;/home/bozo/testfiles&quot;
+encrfile=&quot;encr-dir.tar.gz&quot;
+password=my_secret_password
+
+tar czvf - &quot;$sourcedir&quot; |
+openssl des3 -salt -out &quot;$encrfile&quot; -pass pass:&quot;$password&quot;
+#       ^^^^   Uses des3 encryption.
+# Writes encrypted file &quot;encr-dir.tar.gz&quot; in current working directory.
+
+# To decrypt the resulting tarball:
+openssl des3 -d -salt -in &quot;$encrfile&quot; -pass pass:&quot;$password&quot; |
+tar -xzv
+# Decrypts and unpacks into current working directory.
+</pre>
+<p class="last">Of course, <em>openssl</em> has many other uses, such as obtaining signed
+<em>certificates</em> for Web sites. See the <a class="reference external" href="basic.html#INFOREF">info</a>
+page.</p>
+</dd>
+<dt><strong>shred</strong></dt>
+<dd><p class="first">Securely erase a file by overwriting it multiple times with random
+bit patterns before deleting it. This command has the same effect as
+<a class="reference external" href="extmisc.html#BLOTOUT">Example 16-60</a>, but does it in a more
+thorough and elegant manner.</p>
+<p>This is one of the GNU <em>fileutils</em>.</p>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 1309)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">Advanced forensic technology may still be able to recover the
+contents of a file, even after application of <strong>shred</strong>.</p>
+</dd>
+</dl>
+<p><strong>Miscellaneous</strong></p>
+<dl class="docutils">
+<dt><strong>mktemp</strong></dt>
+<dd><p class="first">Create a <em>temporary file</em> <a class="reference external" href="filearchiv.html#FTN.AEN12913">[6]</a> with
+a &quot;unique&quot; filename. When invoked from the command-line without
+additional arguments, it creates a zero-length file in the <tt class="docutils literal">/tmp</tt>
+directory.</p>
+<pre class="literal-block">
+bash$ mktemp
+/tmp/tmp.zzsvql3154
+</pre>
+<pre class="last literal-block">
+PREFIX=filename
+tempfile=`mktemp $PREFIX.XXXXXX`
+#                        ^^^^^^ Need at least 6 placeholders
+#+                              in the filename template.
+#   If no filename template supplied,
+#+ &quot;tmp.XXXXXXXXXX&quot; is the default.
+
+echo &quot;tempfile name = $tempfile&quot;
+# tempfile name = filename.QA2ZpY
+#                 or something similar...
+
+#  Creates a file of that name in the current working directory
+#+ with 600 file permissions.
+#  A &quot;umask 177&quot; is therefore unnecessary,
+#+ but it's good programming practice nevertheless.
+</pre>
+</dd>
+</dl>
+<p><strong>make</strong></p>
+<blockquote>
+<p>Utility for building and compiling binary packages. This can also be
+used for any set of operations triggered by incremental changes in
+source files.</p>
+<p>The <em>make</em> command checks a <tt class="docutils literal">Makefile</tt>, a list of file
+dependencies and operations to be carried out.</p>
+<p>The <em>make</em> utility is, in effect, a powerful scripting language
+similar in many ways to <em>Bash</em>, but with the capability of
+recognizing <em>dependencies</em>. For in-depth coverage of this useful
+tool set, see the <a class="reference external" href="http://www.gnu.org/manual/manual.html">GNU software documentation
+site</a>.</p>
+</blockquote>
+<dl class="docutils">
+<dt><strong>install</strong></dt>
+<dd>Special purpose file copying command, similar to
+<a class="reference external" href="basic.html#CPREF">cp</a>, but capable of setting permissions and
+attributes of the copied files. This command seems tailormade for
+installing software packages, and as such it shows up frequently in
+<tt class="docutils literal">Makefiles</tt> (in the <tt class="docutils literal">make&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; install :</tt> section). It
+could likewise prove useful in installation scripts.</dd>
+<dt><strong>dos2unix</strong></dt>
+<dd>This utility, written by Benjamin Lin and collaborators, converts
+DOS-formatted text files (lines terminated by CR-LF) to UNIX format
+(lines terminated by LF only), and
+<a class="reference external" href="gotchas.html#DOSNEWLINES">vice-versa</a>.</dd>
+<dt><strong>ptx</strong></dt>
+<dd>The <strong>ptx [targetfile]</strong> command outputs a permuted index
+(cross-reference list) of the targetfile. This may be further
+filtered and formatted in a pipe, if necessary.</dd>
+<dt><strong>more</strong>, <strong>less</strong></dt>
+<dd><p class="first">Pagers that display a text file or stream to <tt class="docutils literal">stdout</tt>, one
+screenful at a time. These may be used to filter the output of
+<tt class="docutils literal">stdout</tt> . . . or of a script.</p>
+<p>An interesting application of <em>more</em> is to &quot;test drive&quot; a command
+sequence, to forestall potentially unpleasant consequences.</p>
+<pre class="literal-block">
+ls /home/bozo | awk '{print &quot;rm -rf &quot; $1}' | more
+#                                            ^^^^
+
+# Testing the effect of the following (disastrous) command-line:
+#      ls /home/bozo | awk '{print &quot;rm -rf &quot; $1}' | sh
+#      Hand off to the shell to execute . . .       ^^
+</pre>
+<p class="last">The <em>less</em> pager has the interesting property of doing a formatted
+display of <em>man page</em> source. See <a class="reference external" href="contributed-scripts.html#MANED">Example
+A-39</a>.</p>
+</dd>
+</dl>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 10); <em><a href="#id24">backlink</a></em></p>
+Duplicate explicit target name: &quot;[1]&quot;.</div>
+<p><a class="reference external" href="filearchiv.html#AEN11802">[1]</a></p>
+<p>An <em>archive</em>, in the sense discussed here, is simply a set of related
+files stored in a single location.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 10); <em><a href="#id25">backlink</a></em></p>
+Duplicate explicit target name: &quot;[2]&quot;.</div>
+<p><a class="reference external" href="filearchiv.html#AEN11813">[2]</a></p>
+<p>A <tt class="docutils literal">tar czvf ArchiveName.tar.gz *</tt> <em>will</em> include dotfiles in
+subdirectories <em>below</em> the current working directory. This is an
+undocumented GNU <strong>tar</strong> &quot;feature.&quot;</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 10); <em><a href="#id26">backlink</a></em></p>
+Duplicate explicit target name: &quot;[3]&quot;.</div>
+<p><a class="reference external" href="filearchiv.html#AEN12723">[3]</a></p>
+<p>The checksum may be expressed as a <em>hexadecimal</em> number, or to some
+other base.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 10); <em><a href="#id27">backlink</a></em></p>
+Duplicate explicit target name: &quot;[4]&quot;.</div>
+<p><a class="reference external" href="filearchiv.html#AEN12732">[4]</a></p>
+<p>For even <em>better</em> security, use the <em>sha256sum</em>, <em>sha512</em>, and
+<em>sha1pass</em> commands.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 10); <em><a href="#id28">backlink</a></em></p>
+Duplicate explicit target name: &quot;[5]&quot;.</div>
+<p><a class="reference external" href="filearchiv.html#AEN12852">[5]</a></p>
+<p>This is a symmetric block cipher, used to encrypt files on a single
+system or local network, as opposed to the <em>public key</em> cipher class, of
+which <em>pgp</em> is a well-known example.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/filearchiv.ca.rst</tt>, line 10); <em><a href="#id29">backlink</a></em></p>
+Duplicate explicit target name: &quot;[6]&quot;.</div>
+<p><a class="reference external" href="filearchiv.html#AEN12913">[6]</a></p>
+<p>Creates a temporary <em>directory</em> when invoked with the <tt class="docutils literal"><span class="pre">-d</span></tt> option.</p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="29%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="textproc.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="communications.html">Next</a></td>
+</tr>
+<tr><td>Text Processing Commands</td>
+<td><a class="reference external" href="external.html">Up</a></td>
+<td>Communications Commands</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

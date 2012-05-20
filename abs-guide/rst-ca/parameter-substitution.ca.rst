@@ -1,95 +1,95 @@
-+--------------------------------------+--------------------------------------+------------------------+
-| Advanced Bash-Scripting Guide:       |
-+======================================+======================================+========================+
-| `Prev <string-manipulation.html>`_   | Chapter 10. Manipulating Variables   | `Next <loops.html>`_   |
-+--------------------------------------+--------------------------------------+------------------------+
+`Inici <index.ca.html>`_ :  Guia avançada de Bash-Scripting
+
+`Amunt <external.ca.html>`_ : Capítol 10. Manipulació de variables
+
+`Anterior <string-manipulation.html>`_ : Manipulació de strings
+
+`Següent <loops.ca.html>`_ : Bucles i branques
 
 --------------
 
-10.2. Parameter Substitution
-============================
+10.2. Substitució de paràmetres
+===============================
 
-**Manipulating and/or expanding variables**
+**Manipulació i/o expansió de variables**
 
-``${parameter}``
-    Same as ``$parameter``, i.e., value of the variable ``parameter``.
-    In certain contexts, only the less ambiguous ``${parameter}`` form
-    works.
+``${parametre}``
 
-    May be used for concatenating variables with strings.
+    El mateix que ``$parametre``, És a dir, el valor de la variable
+    ``parametre``. En certs contextos, només funciona la forma menys
+    ambigua de ``${parametre}``.
+
+    Es pot utilitzar per concatenar variables amb strings.
 
     ::
 
-        your_id=${USER}-on-${HOSTNAME}
-        echo "$your_id"
+        el_teu_id=${USER}-a-${HOSTNAME}
+        echo "$el_teu_id"
         #
-        echo "Old \$PATH = $PATH"
-        PATH=${PATH}:/opt/bin  # Add /opt/bin to $PATH for duration of script.
-        echo "New \$PATH = $PATH"
+        echo "Antic \$PATH = $PATH"
+        PATH=${PATH}:/opt/bin  # Afegeix /opt/bin a $PATH durant l'execució del script.
+        echo "Nou \$PATH = $PATH"
 
-``${parameter-default}``, ``${parameter:-default}``
-    If parameter not set, use default.
+``${parametre-perdefecte}``, ``${parametre:-perdefecte}``
+    En cas que el paràmetre no estigui assignat, es fa servir el valor
+    per defecte.
 
     ::
 
         var1=1
         var2=2
-        # var3 is unset.
+        # var3 no està assignada.
 
         echo ${var1-$var2}   # 1
         echo ${var3-$var2}   # 2
-        #           ^          Note the $ prefix.
+        #           ^          Atenció al prefix $.
 
 
 
         echo ${username-`whoami`}
-        # Echoes the result of `whoami`, if variable $username is still unset.
+        # Mostra el resultat de `whoami` si la variable $username no està assignada.
 
-    .. figure:: http://tldp.org/LDP/abs/images/note.gif
-       :align: center
-       :alt: Note
-
-       Note
-    ``${parameter-default}`` and ``${parameter:-default}`` are almost
-    equivalent. The extra : makes a difference only when ``parameter``
-    has been declared, but is null.
+    *Atenció*: ``${parametre-perdefecte}`` i
+    ``${parametre:-perdefecte}`` són pràcticament equivalents. Els :
+    extra només tenen sentit quan ``parametre`` està declarat però té
+    assignat nul.
 
     ::
 
         #!/bin/bash
         # param-sub.sh
 
-        #  Whether a variable has been declared
-        #+ affects triggering of the default option
-        #+ even if the variable is null.
+        #  El fet que una variable estigui o no declarada
+        #+ suposa l'activació de l'opció per defecte
+        #+ fins i tot quan el valor és nul.
 
         username0=
-        echo "username0 has been declared, but is set to null."
+        echo "username0 està declarat però té assignat el valor nul."
         echo "username0 = ${username0-`whoami`}"
-        # Will not echo.
+        # No mostrarà res.
 
         echo
 
-        echo username1 has not been declared.
+        echo username1 no està declarat.
         echo "username1 = ${username1-`whoami`}"
-        # Will echo.
+        # Mostra el valor per defecte (resultat de whoami).
 
         username2=
-        echo "username2 has been declared, but is set to null."
+        echo "username2 està declarat però té assignat nul."
         echo "username2 = ${username2:-`whoami`}"
         #                            ^
-        # Will echo because of :- rather than just - in condition test.
-        # Compare to first instance, above.
+        # Mostra el valor per defecte donat que hem posat a la condició :- en comptes de un simple - .
+        # Compara amb la primera instància, per sobre.
 
 
         #
 
-        # Once again:
+        # Un cop més:
 
         variable=
-        # variable has been declared, but is set to null.
+        # variable està declarada però assignada a nul.
 
-        echo "${variable-0}"    # (no output)
+        echo "${variable-0}"    # (sense sortida)
         echo "${variable:-1}"   # 1
         #               ^
 
@@ -100,58 +100,65 @@
 
         exit 0
 
-    The *default parameter* construct finds use in providing "missing"
-    command-line arguments in scripts.
+    Aquesta funcionalitat de *paràmetre per defecte* és útil quan cal
+    definir paràmetres "no indicats" a la línia de comandes de la crida
+    al script.
 
     ::
 
         DEFAULT_FILENAME=generic.data
         filename=${1:-$DEFAULT_FILENAME}
-        #  If not otherwise specified, the following command block operates
-        #+ on the file "generic.data".
-        #  Begin-Command-Block
+        #  En cas que no s'indiqui el contrari, les comandes al següent bloc actuen
+        #+ sobre el fitxer "generic.data".
+        #  Inici del bloc de comandes
         #  ...
         #  ...
         #  ...
-        #  End-Command-Block
+        #  Final del bloc de comandes
 
 
 
-        #  From "hanoi2.bash" example:
-        DISKS=${1:-E_NOPARAM}   # Must specify how many disks.
-        #  Set $DISKS to $1 command-line-parameter,
-        #+ or to $E_NOPARAM if that is unset.
+        #  De l'exemple "hanoi2.bash":
+        DISKS=${1:-E_NOPARAM}   # Cal especificar el nombre de discos.
+        #  Assigna $DISKS al paràmetre de línia de comanda $1,
+        #+ o bé a $E_NOPARAM en cas que $1 no estigui especificat.
 
-    See also `Example 3-4 <special-chars.html#EX58>`_, `Example
-    31-2 <zeros.html#EX73>`_, and `Example
-    A-6 <contributed-scripts.html#COLLATZ>`_.
+    Mira també `Exemple
+    3-4 <http://tldp.org/LDP/abs/html/special-chars.html#EX58>`_,
+    `Exemple 30-2 <http://tldp.org/LDP/abs/html/zeros.html#EX73>`_, i
+    `Exemple
+    A-6 <http://tldp.org/LDP/abs/html/contributed-scripts.html#COLLATZ>`_.
 
-    Compare this method with `using an *and list* to supply a default
-    command-line argument <list-cons.html#ANDDEFAULT>`_.
+    Compara aquest mètode amb l'`ús d'una*llista "and"* per a suplir un
+    argument de línia de comandes per
+    defecte <http://tldp.org/LDP/abs/html/list-cons.html#ANDDEFAULT>`_.
 
-``${parameter=default}``, ``${parameter:=default}``
+``${parametre=perdefecte}``, ``${parametre:=perdefecte}``
 
-    If parameter not set, set it to *default*.
+    En cas que el paràmetre no estigui assignat, assigna'l a
+    *perdefecte*.
 
-    Both forms nearly equivalent. The : makes a difference only when
-    ``$parameter`` has been declared and is null,
-    `[1] <parameter-substitution.html#FTN.AEN6273>`_ as above.
+    Les dues formes són pràcticament equivalents. El funcionament amb
+    els : només es diferencia quan ``$parametre`` està declarat i
+    assignat a nul [1]_ com passava més amunt.
 
     ::
 
         echo ${var=abc}   # abc
         echo ${var=xyz}   # abc
-        # $var had already been set to abc, so it did not change.
+        # $var ja se li a assignat abc i per tant no canvia.
 
-``${parameter+alt_value}``, ``${parameter:+alt_value}``
-    If parameter set, use ``alt_value``, else use null string.
+``${parametre+altre_valor}``, ``${parametre:+altre_valor}``
+    Si el paràmetre està assignat, canvia el valor a ``altre_valor``,
+    altrament fes servir el string nul.
 
-    Both forms nearly equivalent. The : makes a difference only when
-    ``parameter`` has been declared and is null, see below.
+    Les dues formes són pràcticament equivalents. El funcionament amb
+    els : només es diferencia quan ``parametre`` està declarat i
+    assignat a nul (mira més amunt).
 
     ::
 
-        echo "###### \${parameter+alt_value} ########"
+        echo "###### \${parametre+altre_valor} ########"
         echo
 
         a=${param1+xyz}
@@ -160,13 +167,17 @@
         param2=
         a=${param2+xyz}
         echo "a = $a"      # a = xyz
+        <t0><b1>${parameter=default}</b1></t0>, <t2><b3>${parameter:=default}</b3></t2>
+        <t0><b1>${parametre=perdefecte}</b1></t0>, <t2><b3>${parametre:=perdefecte}</b3></t2>
+        (50%, 50%, 82%)
+
 
         param3=123
         a=${param3+xyz}
         echo "a = $a"      # a = xyz
 
         echo
-        echo "###### \${parameter:+alt_value} ########"
+        echo "###### \${parametre:+altre_valor} ########"
         echo
 
         a=${param4:+xyz}
@@ -175,131 +186,130 @@
         param5=
         a=${param5:+xyz}
         echo "a = $a"      # a =
-        # Different result from   a=${param5+xyz}
+        # Resultat diferent de a=${param5+xyz}
 
         param6=123
         a=${param6:+xyz}
         echo "a = $a"      # a = xyz
 
-``${parameter?err_msg}``, ``${parameter:?err_msg}``
-    If parameter set, use it, else print *err\_msg* and *abort the
-    script* with an `exit status <exit-status.html#EXITSTATUSREF>`_ of
-    1.
+``${parametre?msg_err}``, ``${parametre:?msg_err}``
+    Si el paràmetre està assignat fes servir el seu valor, altrament
+    mostra el missatge msg_err i finalitza l'execució del script amb
+    `valor de sortida <exit-status.ca.html>`_ 1.
 
-    Both forms nearly equivalent. The : makes a difference only when
-    ``parameter`` has been declared and is null, as above.
+    Les dues formes són pràcticament equivalents. El funcionament amb
+    els : només es diferencia quan ``$parametre`` està declarat i
+    assignat a nul com passava més amunt.
 
-**Example 10-7. Using parameter substitution and error messages**
+**Exemple 10-7. Ús de la substitució de paràmetres i els missatges
+d'error**
 
 ::
 
     #!/bin/bash
 
-    #  Check some of the system's environmental variables.
-    #  This is good preventative maintenance.
-    #  If, for example, $USER, the name of the person at the console, is not set,
-    #+ the machine will not recognize you.
+    #  Comprovació d'algunes variables d'entorn del sistema.
+    #  És una bona pràctica de manteniment preventiu.
+    #  Si, per exemple, la variable d'entorn $USER (el nom de la persona logada a la consola), no està assignada,
+    #+ la màquina no et podrà reconèixer!.
 
     : ${HOSTNAME?} ${USER?} ${HOME?} ${MAIL?}
       echo
-      echo "Name of the machine is $HOSTNAME."
-      echo "You are $USER."
-      echo "Your home directory is $HOME."
-      echo "Your mail INBOX is located in $MAIL."
+      echo "El nom de la màquina és $HOSTNAME."
+      echo "Tu ets $USER."
+      echo "El teu directori d'inici és $HOME."
+      echo "La teva carpeta d'entrada de correu es troba a $MAIL."
       echo
-      echo "If you are reading this message,"
-      echo "critical environmental variables have been set."
+      echo "Si pots llegir aquest missatge, "
+      echo "vol dir que les variables d'entorn crítiques estan definides."
       echo
       echo
 
     # ------------------------------------------------------
 
-    #  The ${variablename?} construction can also check
-    #+ for variables set within the script.
+    #  L'expressió ${variablename?} també pot consultar
+    #+ si una variable està assignada dins el script.
 
-    ThisVariable=Value-of-ThisVariable
-    #  Note, by the way, that string variables may be set
-    #+ to characters disallowed in their names.
-    : ${ThisVariable?}
-    echo "Value of ThisVariable is $ThisVariable".
+    AquestaVar=Valor-daquesta-var
+    #  Fixat, per cert, que una variable pot ser assignada 
+    #+ a strings amb caràcters que no estan permesos en el seu nom.
+    : ${AquestaVar?}
+    echo "El valor de AquestaVar és $AquestaVar".
 
     echo; echo
 
 
-    : ${ZZXy23AB?"ZZXy23AB has not been set."}
-    #  Since ZZXy23AB has not been set,
-    #+ then the script terminates with an error message.
+    : ${ZZXy23AB?"ZZXy23AB no està assignada."}
+    #  Donat que ZZXy23AB no està assignada,
+    #+ el script finalitza amb un missatge d'error.
 
-    # You can specify the error message.
-    # : ${variablename?"ERROR MESSAGE"}
+    # Es pot especificar el missatge d'error.
+    # : ${nomvariable?"MISSATGE D'ERROR"}
 
 
-    # Same result with:   dummy_variable=${ZZXy23AB?}
-    #                     dummy_variable=${ZZXy23AB?"ZXy23AB has not been set."}
+    # El mateix resultat que amb:   altravariable=${ZZXy23AB?}
+    #                     altravariable=${ZZXy23AB?"ZXy23AB no està assignada."}
     #
     #                     echo ${ZZXy23AB?} >/dev/null
 
-    #  Compare these methods of checking whether a variable has been set
-    #+ with "set -u" . . .
+    #  Compara aquests mètodes de comprovar si una variable ha estat assignada
+    #+ amb "set -u" . . .
 
 
 
-    echo "You will not see this message, because script already terminated."
+    echo "Aquest missatge no es mostrarà perquè hores d'ara el script ja haurà terminat."
 
     HERE=0
-    exit $HERE   # Will NOT exit here.
+    exit $HERE   # NO finalitzarà aquí!.
 
-    # In fact, this script will return an exit status (echo $?) of 1.
+    # De fet, el script retornarà 1 com a resultat d'execució (echo $?).
 
-**Example 10-8. Parameter substitution and "usage" messages**
+**Exemple 10-8. Ús de la substitució de paràmetres i els missatges
+d'"informació"**
 
 ::
 
     #!/bin/bash
     # usage-message.sh
 
-    : ${1?"Usage: $0 ARGUMENT"}
-    #  Script exits here if command-line parameter absent,
-    #+ with following error message.
-    #    usage-message.sh: 1: Usage: usage-message.sh ARGUMENT
+    : ${1?"Ús: $0 ARGUMENT"}
+    #  El script finalitza aquí si falta el 1er paràmetre de línia de comandes.
+    #+ Mostrarà el següent missatge d'error:
+    #    usage-message.sh: 1: Ús: usage-message.sh ARGUMENT
 
-    echo "These two lines echo only if command-line parameter given."
-    echo "command-line parameter = \"$1\""
+    echo "Aquestes dues línies només s'executaran si s'ha especificat el paràmetre per línia de comandes."
+    echo "Paràmetre de línia de comanda = \"$1\""
 
-    exit 0  # Will exit here only if command-line parameter present.
+    exit 0  # Finalitzarà aquí només si s'ha especificar el primer paràmetre per línia de comandes.
 
-    # Check the exit status, both with and without command-line parameter.
-    # If command-line parameter present, then "$?" is 0.
-    # If not, then "$?" is 1.
+    # Pots comprovar el resultat de sortida tant passant-li el primer paràmetre per línia de comandes com no.
+    # Si li passes el paràmetre, "$?" serà 0.
+    # En cas contrari, "$?" serà 1.
 
-**Parameter substitution and/or expansion.**The following expressions
-are the complement to the **match** ``in`` **expr** string operations
-(see `Example 16-9 <moreadv.html#EX45>`_). These particular ones are
-used mostly in parsing file path names.
+**Ús de la substitució de paràmetres i/o l'expansió.**Les expressions
+següents complementen les operacions de strings que consideren la
+**coincidència** ``amb`` **expressió** (mira l'`Exemple
+16-9 <http://tldp.org/LDP/abs/html/moreadv.html#EX45>`_). Aquestes en
+concret es fan servir majoritàriament en l'anàlisi de camins (path)
+d'arxius.
 
-**Variable length / Substring removal**
+**Longitud de variables / Eliminació de substrings**
 
 ``${#var}``
-    ``String length`` (number of characters in ``$var``). For an
-    `array <arrays.html#ARRAYREF>`_, **${#array}** is the length of the
-    first element in the array.
+    ``Longitud del string`` (nombre de caràcters a ``$var``). Per a un
+    `array <http://tldp.org/LDP/abs/html/arrays.html#ARRAYREF>`_,
+    **${#array}** correspon a la longitud del primer element de l'array.
 
-    .. figure:: http://tldp.org/LDP/abs/images/note.gif
-       :align: center
-       :alt: Note
-
-       Note
-    Exceptions:
+    Excepcions:
 
     -  
 
-       **${#\*}** and **${#@}** give the *number of positional
-       parameters*.
+       **${#\*}** i **${#@}** retornen el *nombre de paràmetres*.
 
-    -  For an array, **${#array[\*]}** and **${#array[@]}** give the
-       number of elements in the array.
+    -  En cas d'array, **${#array[\*]}** i **${#array[@]}** retornen el
+       nombre d'elements que conté l'array.
 
-    **Example 10-9. Length of a variable**
+    **Exemple 10-9. Durada d'una variable**
 
     ::
 
@@ -308,215 +318,227 @@ used mostly in parsing file path names.
 
         E_NO_ARGS=65
 
-        if [ $# -eq 0 ]  # Must have command-line args to demo script.
+        if [ $# -eq 0 ]  # Per a aquesta demo cal que hi hagi arguments a la línia de comandes.
         then
-          echo "Please invoke this script with one or more command-line arguments."
+          echo "Crideu aquest script amb un o més arguments."
           exit $E_NO_ARGS
         fi  
 
         var01=abcdEFGH28ij
         echo "var01 = ${var01}"
-        echo "Length of var01 = ${#var01}"
-        # Now, let's try embedding a space.
+        echo "Longitud de var01 = ${#var01}"
+        # Intentem-ho ara amb un espai entre els caràcters.
         var02="abcd EFGH28ij"
         echo "var02 = ${var02}"
-        echo "Length of var02 = ${#var02}"
+        echo "Longitud de var02 = ${#var02}"
 
-        echo "Number of command-line arguments passed to script = ${#@}"
-        echo "Number of command-line arguments passed to script = ${#*}"
+        echo "Nombre d'arguments de línia de comandes passats al script = ${#@}"
+        echo "Nombre d'arguments de línia de comandes passats al script = ${#*}"
 
         exit 0
 
-``${var#Pattern}``, ``${var##Pattern}``
+``${var#Patró}``, ``${var##Patró}``
 
-    **${var#Pattern}** Remove from ``$var`` the *shortest* part of
-    ``$Pattern`` that matches the ``front end`` of ``$var``.
+    **${var#Patró}** Elimina de ``$var`` la part *més curta* del patró
+    que coincideixi ``des de l'inici`` amb el contingut de ``$var``.
+    NdT. No he pogut comprovar aquest funcionament. A les meves proves,
+    ${var#patró} elimina la cadena "Patró" de l'inici de $var en cas que
+    coincideixi perfectament.
 
-    **${var##Pattern}** Remove from ``$var`` the *longest* part of
-    ``$Pattern`` that matches the ``front end`` of ``$var``.
+    **${var##Patríó}** Elimina de ``$var`` la part *més llarga* de
+    ``$Patró`` que coincideixi ``des de l'inici`` amb el contingut de
+    ``$var``. NdT. No he pogut comprovar aquest funcionament. A les
+    meves proves, ${var##Patró} es comporta idènticament a ${var#Patró}
+    excepte en el cas que s'afegeixi el caràcter \*. Ex. ${var#\*Patró}
+    no sempre resulta igual a ${var##\*Patró}.
 
-    A usage illustration from `Example
-    A-7 <contributed-scripts.html#DAYSBETWEEN>`_:
-
-    ::
-
-        # Function from "days-between.sh" example.
-        # Strips leading zero(s) from argument passed.
-
-        strip_leading_zero () #  Strip possible leading zero(s)
-        {                     #+ from argument passed.
-          return=${1#0}       #  The "1" refers to "$1" -- passed arg.
-        }                     #  The "0" is what to remove from "$1" -- strips zeros.
-
-    Manfred Schwarb's more elaborate variation of the above:
+    Veiem un exemple d'ús a l'`Exemple
+    A-7 <http://tldp.org/LDP/abs/html/contributed-scripts.html#DAYSBETWEEN>`_:
 
     ::
 
-        strip_leading_zero2 () # Strip possible leading zero(s), since otherwise
-        {                      # Bash will interpret such numbers as octal values.
-          shopt -s extglob     # Turn on extended globbing.
-          local val=${1##+(0)} # Use local variable, longest matching series of 0's.
-          shopt -u extglob     # Turn off extended globbing.
+        # Una funció de l'exemple "days-between.sh".
+        # Elimina els zeros inicials de l'argument.
+
+        strip_leading_zero () #  Elimina un possible zero inicial
+        {                     #+ del paràmetre.
+          return=${1#0}       #  El "1" correspon al argument "$1".
+        }                     #  El "0" és el que volem eliminar de "$1".
+
+    Una versió de Manfred Schwarb amb una variació més elaborada de
+    l'anterior:
+
+    ::
+
+        strip_leading_zero2 () # Elimina els possibles zeros inicials de manera que
+        {                      # Bash no els interpreti com a valors en octal.
+          shopt -s extglob     # Activa l'expansió (globbing) estesa.
+          local val=${1##+(0)} # Guarda a la variable local val el resultat d'eliminar els 0's inicials.
+          shopt -u extglob     # Desactiva l'expansió estesa.
           _strip_leading_zero2=${val:-0}
-                               # If input was 0, return 0 instead of "".
+                               # En cas que l'entrada fos 0, retorna un 0 en comptes de "".
         }
 
-    Another usage illustration:
+    Un altre exemple d'ús:
 
     ::
 
-        echo `basename $PWD`        # Basename of current working directory.
-        echo "${PWD##*/}"           # Basename of current working directory.
+        echo `basename $PWD`        # Nom del directori de treball actual (incloent el camí absolut).
+        echo "${PWD##*/}"           # Nom del directori de treball actual (només el nom)
         echo
-        echo `basename $0`          # Name of script.
-        echo $0                     # Name of script.
-        echo "${0##*/}"             # Name of script.
+        echo `basename $0`          # Nom del script.
+        echo $0                     # Nom del script.
+        echo "${0##*/}"             # Nom del script.
         echo
-        filename=test.data
-        echo "${filename##*.}"      # data
-                                    # Extension of filename.
+        nomfitxer=test.data
+        echo "${nomfitxer##*.}"      # dades
+                                    # Extensió del fitxer nomfitxer.
 
 ``${var%Pattern}``, ``${var%%Pattern}``
 
-    **${var%Pattern}** Remove from ``$var`` the *shortest* part of
-    ``$Pattern`` that matches the ``back end`` of ``$var``.
+    **${var%Pattern}** elimina de ``$var`` la part *més curta* del patró
+    ``$Pattern`` que coincideixi amb la ``part final`` de ``$var``.
 
-    **${var%%Pattern}** Remove from ``$var`` the *longest* part of
-    ``$Pattern`` that matches the ``back end`` of ``$var``.
+    **${var%%Pattern}** elimina de ``$var`` la part *més llarga* de
+    ``$Pattern`` que coincideixi amb la ``part final`` de ``$var``.
 
-`Version 2 <bashver2.html#BASH2REF>`_ of Bash added additional options.
+La `versió 2 <http://tldp.org/LDP/abs/html/bashver2.html#BASH2REF>`_ de
+Bash va afegir noves opcions.
 
-**Example 10-10. Pattern matching in parameter substitution**
+**Exemple 10-10. Patrons a la substitució de paràmetres**
 
 ::
 
     #!/bin/bash
     # patt-matching.sh
 
-    # Pattern matching  using the # ## % %% parameter substitution operators.
+    # Patrons fent servir els operadors de substitució de paràmetres  # ## % %% .
 
     var1=abcd12345abc6789
-    pattern1=a*c  # * (wild card) matches everything between a - c.
+    pattern1=a*c  # * (comodí) coincideix amb qualsevol cosa entre a - c.
 
     echo
     echo "var1 = $var1"           # abcd12345abc6789
     echo "var1 = ${var1}"         # abcd12345abc6789
-                                  # (alternate form)
-    echo "Number of characters in ${var1} = ${#var1}"
+                                  # (forma alternativa)
+    echo "Nombre de caràcters en ${var1} = ${#var1}"
     echo
 
-    echo "pattern1 = $pattern1"   # a*c  (everything between 'a' and 'c')
+    echo "pattern1 = $pattern1"   # a*c  (qualsevol cosa entre 'a' i 'c')
     echo "--------------"
     echo '${var1#$pattern1}  =' "${var1#$pattern1}"    #         d12345abc6789
-    # Shortest possible match, strips out first 3 characters  abcd12345abc6789
+    # La coincidència més curta possible. Elimina els tres primers caràcters abcd12345abc6789 (NdT. No l'he pogut replicar)
     #                                     ^^^^^               |-|
     echo '${var1##$pattern1} =' "${var1##$pattern1}"   #                  6789      
-    # Longest possible match, strips out first 12 characters  abcd12345abc6789
+    # La coincidència més llarga possible. Elimina els primers 12 caràcters abcd12345abc6789 (NdT. No l'he pogut replicar)
     #                                    ^^^^^                |----------|
 
     echo; echo; echo
 
-    pattern2=b*9            # everything between 'b' and '9'
-    echo "var1 = $var1"     # Still  abcd12345abc6789
+    pattern2=b*9            # qualsevol cosa entre 'b' i '9'
+    echo "var1 = $var1"     # es manté abcd12345abc6789
     echo
     echo "pattern2 = $pattern2"
     echo "--------------"
     echo '${var1%pattern2}  =' "${var1%$pattern2}"     #     abcd12345a
-    # Shortest possible match, strips out last 6 characters  abcd12345abc6789
+    # La coincidència més curta possible. Elimina els darrers 6 caràcters  abcd12345abc6789
     #                                     ^^^^                         |----|
     echo '${var1%%pattern2} =' "${var1%%$pattern2}"    #     a
-    # Longest possible match, strips out last 12 characters  abcd12345abc6789
+    # La coincidència més llarga possible. Elimina els darrers 12 caràcters  abcd12345abc6789
     #                                    ^^^^                 |-------------|
 
-    # Remember, # and ## work from the left end (beginning) of string,
-    #           % and %% work from the right end.
+    # Recordem, # i ## actuen d'esquerra a dreta (des de l'inici) de la cadena,
+    #           % i %% actuen de dreta a esquerra (des del final) de la cadena.
 
     echo
 
     exit 0
 
-**Example 10-11. Renaming file extensions:**
+**Exemple 10-11. Canvi d'extensió d'un fitxer:**
 
 ::
 
     #!/bin/bash
-    # rfe.sh: Renaming file extensions.
+    # rfe.sh: Canvi d'extensió d'un fitxer
     #
-    #         rfe old_extension new_extension
+    #         rfe extensio_anterior extensio_nova
     #
-    # Example:
-    # To rename all *.gif files in working directory to *.jpg,
+    # Exemple:
+    # per canviar tots els *.gif del directori actual per *.jpg,
     #          rfe gif jpg
 
 
     E_BADARGS=65
 
     case $# in
-      0|1)             # The vertical bar means "or" in this context.
-      echo "Usage: `basename $0` old_file_suffix new_file_suffix"
-      exit $E_BADARGS  # If 0 or 1 arg, then bail out.
+      0|1)             # Aquí la barra vertical significa disjunció "o" ("or").
+      echo "Ús: `basename $0` sufix_antic sufix_nou"
+      exit $E_BADARGS  # En cas de 0 o 1 arguments.
       ;;
     esac
 
 
-    for filename in *.$1
-    # Traverse list of files ending with 1st argument.
+    for nomfitxer in *.$1
+    # Ordre invers de la llista de fitxers, tot començant amb el primer argument.
     do
-      mv $filename ${filename%$1}$2
-      #  Strip off part of filename matching 1st argument,
-      #+ then append 2nd argument.
+      mv $nomfitxer ${nomfitxer%$1}$2
+      #  Elimina la part del fitxer que coincideixi amb el primer argument, i
+      #+ a continuació afegeix el segon argument.
     done
 
     exit 0
 
-**Variable expansion / Substring replacement**
+**Expansió de variables / substitució de substrings**
 
-    These constructs have been adopted from *ksh*.
+    Les següents funcions van ser adoptades del *ksh*.
 
 ``${var:pos}``
-    Variable ``var`` expanded, starting from offset ``pos``.
+    Variable ``var`` expandida, començant des de la posició ``pos``.
 
 ``${var:pos:len}``
-    Expansion to a max of ``len`` characters of variable ``var``, from
-    offset ``pos``. See `Example A-13 <contributed-scripts.html#PW>`_
-    for an example of the creative use of this operator.
+    Expansió de ``len`` caràcters de la variable ``var`` començant des
+    de la posició ``pos``. A l'`Exemple
+    A-13 <http://tldp.org/LDP/abs/html/contributed-scripts.html#PW>`_ es
+    troba un exemple (creatiu) d'ús d'aquest operador.
 
-``${var/Pattern/Replacement}``
-    First match of ``Pattern``, within ``var`` replaced with
-    ``Replacement``.
+``${var/Patró/Substitució}``
+    Substitueix la primera aparició del ``Patró``, a la variable ``var``
+    per ``Substitució``.
 
-    If ``Replacement`` is omitted, then the first match of ``Pattern``
-    is replaced by *nothing*, that is, deleted.
+    En cas que no s'especifiqui ``Substitució``, la primera ocurrència
+    de ``Patró`` es substitueix per *no res*. És a dir, elimina aquesta
+    part de la variable.
 
-``${var//Pattern/Replacement}``
-    **Global replacement.** All matches of ``Pattern``, within ``var``
-    replaced with ``Replacement``.
+``${var//Patró/Substitució}``
+    **Substitució global.** Substitueix totes les aparicions de
+    ``Patró`` de la variable ``var`` per ``Substitució``.
 
-    As above, if ``Replacement`` is omitted, then all occurrences of
-    ``Pattern`` are replaced by *nothing*, that is, deleted.
+    Com abans, si no s'especifica ``Substitució`` es substitueixen totes
+    les ocurrències de ``Patró`` per *no res*. És a dir, són eliminades.
 
-    **Example 10-12. Using pattern matching to parse arbitrary strings**
+    **Exemple 10-12. Anàlisi de strings arbitraris**
 
     ::
 
+        empty string.
         #!/bin/bash
 
         var1=abcd-1234-defg
         echo "var1 = $var1"
 
         t=${var1#*-*}
-        echo "var1 (with everything, up to and including first - stripped out) = $t"
-        #  t=${var1#*-}  works just the same,
-        #+ since # matches the shortest string,
-        #+ and * matches everything preceding, including an empty string.
-        # (Thanks, Stephane Chazelas, for pointing this out.)
+        echo "var1 (un cop eliminat la part inicial fins al primer - ) = $t"
+        #  t=${var1#*-}  el string buit fa exactament el mateix,
+        #+ donat que # coincideix amb el string més curt,
+        #+ i * coincideix amb qualsevol cosa (incloent res) que precedeixi el string buit.
+        # (Agraïment per Stephane Chazelas)
 
         t=${var1##*-*}
-        echo "If var1 contains a \"-\", returns empty string...   var1 = $t"
+        echo "si var1 conté un  \"-\" retornarà la cadena buida...   var1 = $t"
 
 
         t=${var1%*-*}
-        echo "var1 (with everything from the last - on stripped out) = $t"
+        echo "var1 (un cop eliminat el contingut des del darrer - fins al final) = $t"
 
         echo
 
@@ -525,69 +547,70 @@ used mostly in parsing file path names.
         # -------------------------------------------
         echo "path_name = $path_name"
         t=${path_name##/*/}
-        echo "path_name, stripped of prefixes = $t"
-        # Same effect as   t=`basename $path_name` in this particular case.
-        #  t=${path_name%/}; t=${t##*/}   is a more general solution,
-        #+ but still fails sometimes.
-        #  If $path_name ends with a newline, then `basename $path_name` will not work,
-        #+ but the above expression will.
-        # (Thanks, S.C.)
+        echo "path_name un cop eliminat els prefixos = $t"
+        # En aquest cas, ofereix el mateix resultat que t=`basename $path_name`.
+        #  t=${path_name%/}; t=${t##*/}   és una solució més general,
+        #+ però encara falla de vegades.
+        #  En cas que $path_name acabi amb salt de línia, no funcionarà `basename $path_name`,
+        #+ mentre que l'expressió anterior continuarà funcionant.
+        # (Gràcies  S.C.)
 
         t=${path_name%/*.*}
-        # Same effect as   t=`dirname $path_name`
-        echo "path_name, stripped of suffixes = $t"
-        # These will fail in some cases, such as "../", "/foo////", # "foo/", "/".
-        #  Removing suffixes, especially when the basename has no suffix,
-        #+ but the dirname does, also complicates matters.
-        # (Thanks, S.C.)
+        # El mateix resultat que t=`dirname $path_name`
+        echo "path_name, sense l'extensió= $t"
+        # Fallarà en alguns casos, com ara amb "../", "/foo////", # "foo/", "/".
+        #  L'eliminació de sufixos es complica especialment quan el nom base no té extensió 
+        #+ però el directori que el conté sí que en té.
+        # (Agraïment per S.C.)
 
         echo
 
         t=${path_name:11}
-        echo "$path_name, with first 11 chars stripped off = $t"
+        echo "$path_name sense els primers 11 caràcters = $t"
         t=${path_name:11:5}
-        echo "$path_name, with first 11 chars stripped off, length 5 = $t"
+        echo "$path_name sense els primers 11 caràcters i amb 5 de longitud = $t"
 
         echo
 
         t=${path_name/bozo/clown}
-        echo "$path_name with \"bozo\" replaced  by \"clown\" = $t"
+        echo "$path_name on \"bozo\" ha estat substituït per \"clown\" = $t"
         t=${path_name/today/}
-        echo "$path_name with \"today\" deleted = $t"
+        echo "$path_name on \"today\" ha estat eliminat = $t"
         t=${path_name//o/O}
-        echo "$path_name with all o's capitalized = $t"
+        echo "$path_name on s'ha passat totes les "o" a majúscules = $t"
         t=${path_name//o/}
-        echo "$path_name with all o's deleted = $t"
+        echo "$path_name sense cap "o" = $t"
 
         exit 0
 
-``${var/#Pattern/Replacement}``
-    If *prefix* of ``var`` matches ``Pattern``, then substitute
-    ``Replacement`` for ``Pattern``.
+``${var/#Patró/Substitució}``
+    Quan l'*inici* de ``var`` coincideix amb ``Patró``, llavors
+    ``Substitució`` apareix en comptes de ``Patró``.
 
-``${var/%Pattern/Replacement}``
-    If *suffix* of ``var`` matches ``Pattern``, then substitute
-    ``Replacement`` for ``Pattern``.
+``${var/%Patró/Substitució}``
+    Quan el *final* de ``var`` coincideix amb ``Patró``, llavors
+    ``Substitució`` apareix en comptes de ``Patró``.
 
-    **Example 10-13. Matching patterns at prefix or suffix of string**
+    **Exemple 10-13. Coincidència de patrons a l'inici o al final d'un
+    string**
 
     ::
 
         #!/bin/bash
         # var-match.sh:
-        # Demo of pattern replacement at prefix / suffix of string.
+        # Demostració de la substitució del patró a l'inici/final d'un string.
 
-        v0=abc1234zip1234abc    # Original variable.
+        v0=abc1234zip1234abc    # Variable original.
         echo "v0 = $v0"         # abc1234zip1234abc
         echo
 
-        # Match at prefix (beginning) of string.
+        # Coincideix amb l'inici del string.
         v1=${v0/#abc/ABCDEF}    # abc1234zip1234abc
                                 # |-|
         echo "v1 = $v1"         # ABCDEF1234zip1234abc
                                 # |----|
 
-        # Match at suffix (end) of string.
+        # Coincideix amb el final del string.
         v2=${v0/%abc/ABCDEF}    # abc1234zip123abc
                                 #              |-|
         echo "v2 = $v2"         # abc1234zip1234ABCDEF
@@ -596,52 +619,50 @@ used mostly in parsing file path names.
         echo
 
         #  ----------------------------------------------------
-        #  Must match at beginning / end of string,
-        #+ otherwise no replacement results.
+        #  Cal que coincideixi extactament amb l'inici/final del string.
+        #+ Altrament no es realitza cap canvi.
         #  ----------------------------------------------------
-        v3=${v0/#123/000}       # Matches, but not at beginning.
+        v3=${v0/#123/000}       # Coincideix però no amb l'inici.
         echo "v3 = $v3"         # abc1234zip1234abc
-                                # NO REPLACEMENT.
-        v4=${v0/%123/000}       # Matches, but not at end.
+                                # CAP CANVI.
+        v4=${v0/%123/000}       # Coincideix però no amb el final.
         echo "v4 = $v4"         # abc1234zip1234abc
-                                # NO REPLACEMENT.
+                                # CAP CANVI.
 
         exit 0          
 
 ``${!varprefix*}``, ``${!varprefix@}``
-    Matches *names* of all previously declared variables beginning with
-    ``varprefix``.
+    Coincideix amb els *noms* de totes les variables declarades que
+    comencen per ``varprefix``.
 
     ::
 
-        # This is a variation on indirect reference, but with a * or @.
-        # Bash, version 2.04, adds this feature.
+        # Es tracta d'una variació d'una referència directa que fa servir  * o @.
+        # Aquesta funcionalitat està disponible en Bash des de la versió 2.04.
 
-        xyz23=whatever
+        xyz23=elquesigui
         xyz24=
 
-        a=${!xyz*}         #  Expands to *names* of declared variables
-        # ^ ^   ^           + beginning with "xyz".
+        a=${!xyz*}         #  Expandeix als *noms* de les variables declarades
+        # ^ ^   ^           + que comencen per "xyz".
         echo "a = $a"      #  a = xyz23 xyz24
-        a=${!xyz@}         #  Same as above.
+        a=${!xyz@}         #  Com abans.
         echo "a = $a"      #  a = xyz23 xyz24
 
         echo "---"
 
-        abc23=something_else
+        abc23=algunaaltracosa
         b=${!abc*}
         echo "b = $b"      #  b = abc23
-        c=${!b}            #  Now, the more familiar type of indirect reference.
-        echo $c            #  something_else
+        c=${!b}            #  Aquesta és la manera més habitual de fer una referència indirecta.
+        echo $c            #  una_altra_cosa
 
 Notes
 ~~~~~
 
-`[1] <parameter-substitution.html#AEN6273>`_
-
-If $parameter is null in a non-interactive script, it will terminate
-with a `127 exit status <exitcodes.html#EXITCODESREF>`_ (the Bash error
-code for "command not found").
+.. [1] Quan a un script no interactiu $parametre és null, l'execució
+    finalitza amb codi de sortida `127` (codi d'error de Bash que
+    indica *No es troba la comanda*).
 
 --------------
 

@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+--------------------------------------------+--------------------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+============================================+======================================+
+| `Prev &lt;operations.html&gt;`_        | Chapter 8. Operations and Related Topics   | `Next &lt;numerical-constants.html&gt;`_   |
++----------------------------------+--------------------------------------------+--------------------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="operators">
+<h1>8.1. Operators</h1>
+<p><strong>assignment</strong></p>
+<dl class="docutils">
+<dt><tt class="docutils literal">variable assignment</tt></dt>
+<dd>Initializing or changing the value of a variable</dd>
+</dl>
+<dl class="docutils">
+<dt>=</dt>
+<dd><p class="first">All-purpose assignment operator, which works for both arithmetic and
+string assignments.</p>
+<pre class="literal-block">
+var=27
+category=minerals  # No spaces allowed after the &quot;=&quot;.
+</pre>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 31)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Do not confuse the &quot;=&quot; assignment operator with the <a class="reference external" href="comparison-ops.html#EQUALSIGNREF">= test
+operator</a>.</p>
+<pre class="last literal-block">
+#   =  as a test operator
+
+if [ &quot;$string1&quot; = &quot;$string2&quot; ]
+then
+   command
+fi
+
+#  if [ &quot;X$string1&quot; = &quot;X$string2&quot; ] is safer,
+#+ to prevent an error message should one of the variables be empty.
+#  (The prepended &quot;X&quot; characters cancel out.)
+</pre>
+</dd>
+</dl>
+<p><strong>arithmetic operators</strong></p>
+<ul class="simple">
+<li>plus</li>
+</ul>
+<ul class="simple">
+<li>minus</li>
+</ul>
+<dl class="docutils">
+<dt>*</dt>
+<dd>multiplication</dd>
+</dl>
+<dl class="docutils">
+<dt>/</dt>
+<dd>division</dd>
+<dt>**</dt>
+<dd><p class="first">exponentiation</p>
+<pre class="last literal-block">
+# Bash, version 2.02, introduced the &quot;**&quot; exponentiation operator.
+
+let &quot;z=5**3&quot;    # 5 * 5 * 5
+echo &quot;z = $z&quot;   # z = 125
+</pre>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>%</dt>
+<dd><p class="first">modulo, or mod (returns the <em>remainder</em> of an integer division
+operation)</p>
+<pre class="literal-block">
+bash$ expr 5 % 3
+2
+</pre>
+<p><em>5/3 = 1, with remainder 2</em></p>
+<p>This operator finds use in, among other things, generating numbers
+within a specific range (see <a class="reference external" href="randomvar.html#EX21">Example 9-11</a>
+and <a class="reference external" href="randomvar.html#RANDOMTEST">Example 9-15</a>) and formatting
+program output (see <a class="reference external" href="arrays.html#QFUNCTION">Example 27-16</a> and
+<a class="reference external" href="contributed-scripts.html#COLLATZ">Example A-6</a>). It can even be
+used to generate prime numbers, (see <a class="reference external" href="contributed-scripts.html#PRIMES">Example
+A-15</a>). Modulo turns up
+surprisingly often in numerical recipes.</p>
+<p><strong>Example 8-1. Greatest common divisor</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# gcd.sh: greatest common divisor
+#         Uses Euclid's algorithm
+
+#  The &quot;greatest common divisor&quot; (gcd) of two integers
+#+ is the largest integer that will divide both, leaving no remainder.
+
+#  Euclid's algorithm uses successive division.
+#    In each pass,
+#+      dividend &lt;---  divisor
+#+      divisor  &lt;---  remainder
+#+   until remainder = 0.
+#    The gcd = dividend, on the final pass.
+#
+#  For an excellent discussion of Euclid's algorithm, see
+#+ Jim Loy's site, http://www.jimloy.com/number/euclids.htm.
+
+
+# ------------------------------------------------------
+# Argument check
+ARGS=2
+E_BADARGS=85
+
+if [ $# -ne &quot;$ARGS&quot; ]
+then
+  echo &quot;Usage: `basename $0` first-number second-number&quot;
+  exit $E_BADARGS
+fi
+# ------------------------------------------------------
+
+
+gcd ()
+{
+
+  dividend=$1             #  Arbitrary assignment.
+  divisor=$2              #! It doesn't matter which of the two is larger.
+                          #  Why not?
+
+  remainder=1             #  If an uninitialized variable is used inside
+                          #+ test brackets, an error message results.
+
+  until [ &quot;$remainder&quot; -eq 0 ]
+  do    #  ^^^^^^^^^^  Must be previously initialized!
+    let &quot;remainder = $dividend % $divisor&quot;
+    dividend=$divisor     # Now repeat with 2 smallest numbers.
+    divisor=$remainder
+  done                    # Euclid's algorithm
+
+}                         # Last $dividend is the gcd.
+
+
+gcd $1 $2
+
+echo; echo &quot;GCD of $1 and $2 = $dividend&quot;; echo
+
+
+# Exercises :
+# ---------
+# 1) Check command-line arguments to make sure they are integers,
+#+   and exit the script with an appropriate error message if not.
+# 2) Rewrite the gcd () function to use local variables.
+
+exit 0
+</pre>
+</dd>
+<dt>+=</dt>
+<dd><p class="first"><em>plus-equal</em> (increment variable by a constant)
+<a class="reference external" href="ops.html#FTN.AEN3879">[1]</a></p>
+<p class="last"><tt class="docutils literal">let &quot;var += 5&quot;</tt> results in <tt class="docutils literal">var</tt> being incremented by <tt class="docutils literal">5</tt>.</p>
+</dd>
+<dt>-=</dt>
+<dd><em>minus-equal</em> (decrement variable by a constant)</dd>
+<dt>*=</dt>
+<dd><p class="first"><em>times-equal</em> (multiply variable by a constant)</p>
+<p class="last"><tt class="docutils literal">let &quot;var *= 4&quot;</tt> results in <tt class="docutils literal">var</tt> being multiplied by <tt class="docutils literal">4</tt>.</p>
+</dd>
+<dt>/=</dt>
+<dd><em>slash-equal</em> (divide variable by a constant)</dd>
+<dt>%=</dt>
+<dd><p class="first"><em>mod-equal</em> (<em>remainder</em> of dividing variable by a constant)</p>
+<p><em>Arithmetic operators often occur in an
+`expr &lt;moreadv.html#EXPRREF&gt;`_ or `let &lt;internal.html#LETREF&gt;`_
+expression.</em></p>
+<p><strong>Example 8-2. Using Arithmetic Operations</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# Counting to 11 in 10 different ways.
+
+n=1; echo -n &quot;$n &quot;
+
+let &quot;n = $n + 1&quot;   # let &quot;n = n + 1&quot;  also works.
+echo -n &quot;$n &quot;
+
+
+: $((n = $n + 1))
+#  &quot;:&quot; necessary because otherwise Bash attempts
+#+ to interpret &quot;$((n = $n + 1))&quot; as a command.
+echo -n &quot;$n &quot;
+
+(( n = n + 1 ))
+#  A simpler alternative to the method above.
+#  Thanks, David Lombard, for pointing this out.
+echo -n &quot;$n &quot;
+
+n=$(($n + 1))
+echo -n &quot;$n &quot;
+
+: $[ n = $n + 1 ]
+#  &quot;:&quot; necessary because otherwise Bash attempts
+#+ to interpret &quot;$[ n = $n + 1 ]&quot; as a command.
+#  Works even if &quot;n&quot; was initialized as a string.
+echo -n &quot;$n &quot;
+
+n=$[ $n + 1 ]
+#  Works even if &quot;n&quot; was initialized as a string.
+#* Avoid this type of construct, since it is obsolete and nonportable.
+#  Thanks, Stephane Chazelas.
+echo -n &quot;$n &quot;
+
+# Now for C-style increment operators.
+# Thanks, Frank Wang, for pointing this out.
+
+let &quot;n++&quot;          # let &quot;++n&quot;  also works.
+echo -n &quot;$n &quot;
+
+(( n++ ))          # (( ++n ))  also works.
+echo -n &quot;$n &quot;
+
+: $(( n++ ))       # : $(( ++n )) also works.
+echo -n &quot;$n &quot;
+
+: $[ n++ ]         # : $[ ++n ] also works
+echo -n &quot;$n &quot;
+
+echo
+
+exit 0
+</pre>
+</dd>
+</dl>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 246)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Integer variables in older versions of Bash were signed <em>long</em> (32-bit)
+integers, in the range of -2147483648 to 2147483647. An operation that
+took a variable outside these limits gave an erroneous result.</p>
+<pre class="literal-block">
+echo $BASH_VERSION   # 1.14
+
+a=2147483646
+echo &quot;a = $a&quot;        # a = 2147483646
+let &quot;a+=1&quot;           # Increment &quot;a&quot;.
+echo &quot;a = $a&quot;        # a = 2147483647
+let &quot;a+=1&quot;           # increment &quot;a&quot; again, past the limit.
+echo &quot;a = $a&quot;        # a = -2147483648
+                     #      ERROR: out of range,
+                     # +    and the leftmost bit, the sign bit,
+                     # +    has been set, making the result negative.
+</pre>
+<p>As of version &gt;= 2.05b, Bash supports 64-bit integers.</p>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<p>Bash does not understand floating point arithmetic. It treats numbers
+containing a decimal point as strings.</p>
+<pre class="literal-block">
+a=1.5
+
+let &quot;b = $a + 1.3&quot;  # Error.
+# t2.sh: let: b = 1.5 + 1.3: syntax error in expression
+#                            (error token is &quot;.5 + 1.3&quot;)
+
+echo &quot;b = $b&quot;       # b=1
+</pre>
+<p>Use <a class="reference external" href="mathc.html#BCREF">bc</a> in scripts that that need floating point
+calculations or math library functions.</p>
+<p><a href="#id2"><span class="problematic" id="id3">**</span></a>bitwise operators.**The bitwise operators seldom make an appearance in
+shell scripts. Their chief use seems to be manipulating and testing
+values read from ports or <a class="reference external" href="devref1.html#SOCKETREF">sockets</a>. &quot;Bit
+flipping&quot; is more relevant to compiled languages, such as C and C++,
+which provide direct access to system hardware. However, see <em>vladz's</em>
+ingenious use of bitwise operators in his <em>base64.sh</em> (<a class="reference external" href="contributed-scripts.html#BASE64">Example
+A-54</a>) script.</p>
+<div class="system-message" id="id2">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 288); <em><a href="#id3">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p><strong>bitwise operators</strong></p>
+<dl class="docutils">
+<dt>&lt;&lt;</dt>
+<dd>bitwise left shift (multiplies by <tt class="docutils literal">2</tt> for each shift position)</dd>
+<dt>&lt;&lt;=</dt>
+<dd><p class="first"><em>left-shift-equal</em></p>
+<p class="last"><tt class="docutils literal">let &quot;var &lt;&lt;= 2&quot;</tt> results in <tt class="docutils literal">var</tt> left-shifted <tt class="docutils literal">2</tt> bits
+(multiplied by <tt class="docutils literal">4</tt>)</p>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>&gt;&gt;</dt>
+<dd>bitwise right shift (divides by <tt class="docutils literal">2</tt> for each shift position)</dd>
+<dt>&gt;&gt;=</dt>
+<dd><em>right-shift-equal</em> (inverse of &lt;&lt;=)</dd>
+</dl>
+<dl class="docutils">
+<dt>&amp;</dt>
+<dd>bitwise AND</dd>
+<dt>&amp;=</dt>
+<dd>bitwise <em>AND-equal</em></dd>
+<dt>|</dt>
+<dd>bitwise OR</dd>
+<dt>|=</dt>
+<dd>bitwise <em>OR-equal</em></dd>
+</dl>
+<dl class="docutils">
+<dt>~</dt>
+<dd>bitwise NOT</dd>
+</dl>
+<dl class="docutils">
+<dt>^</dt>
+<dd>bitwise XOR</dd>
+<dt>^=</dt>
+<dd>bitwise <em>XOR-equal</em></dd>
+</dl>
+<p><strong>logical (boolean) operators</strong></p>
+<dl class="docutils">
+<dt>!</dt>
+<dd><p class="first">NOT</p>
+<pre class="last literal-block">
+if [ ! -f $FILENAME ]
+then
+  ...
+</pre>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>&amp;&amp;</dt>
+<dd><p class="first">AND</p>
+<pre class="literal-block">
+if [ $condition1 ] &amp;&amp; [ $condition2 ]
+#  Same as:  if [ $condition1 -a $condition2 ]
+#  Returns true if both condition1 and condition2 hold true...
+
+if [[ $condition1 &amp;&amp; $condition2 ]]    # Also works.
+#  Note that &amp;&amp; operator not permitted inside brackets
+#+ of [ ... ] construct.
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 363)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">&amp;&amp; may also be used, depending on context, in an <a class="reference external" href="list-cons.html#LISTCONSREF">and
+list</a> to concatenate commands.</p>
+</dd>
+<dt>||</dt>
+<dd><p class="first">OR</p>
+<pre class="literal-block">
+if [ $condition1 ] || [ $condition2 ]
+# Same as:  if [ $condition1 -o $condition2 ]
+# Returns true if either condition1 or condition2 holds true...
+
+if [[ $condition1 || $condition2 ]]    # Also works.
+#  Note that || operator not permitted inside brackets
+#+ of a [ ... ] construct.
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 384)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Bash tests the <a class="reference external" href="exit-status.html#EXITSTATUSREF">exit status</a> of
+each statement linked with a logical operator.</p>
+<p><strong>Example 8-3. Compound Condition Tests Using &amp;&amp; and ||</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+
+a=24
+b=47
+
+if [ &quot;$a&quot; -eq 24 ] &amp;&amp; [ &quot;$b&quot; -eq 47 ]
+then
+  echo &quot;Test #1 succeeds.&quot;
+else
+  echo &quot;Test #1 fails.&quot;
+fi
+
+# ERROR:   if [ &quot;$a&quot; -eq 24 &amp;&amp; &quot;$b&quot; -eq 47 ]
+#+         attempts to execute  ' [ &quot;$a&quot; -eq 24 '
+#+         and fails to finding matching ']'.
+#
+#  Note:  if [[ $a -eq 24 &amp;&amp; $b -eq 24 ]]  works.
+#  The double-bracket if-test is more flexible
+#+ than the single-bracket version.
+#    (The &quot;&amp;&amp;&quot; has a different meaning in line 17 than in line 6.)
+#    Thanks, Stephane Chazelas, for pointing this out.
+
+
+if [ &quot;$a&quot; -eq 98 ] || [ &quot;$b&quot; -eq 47 ]
+then
+  echo &quot;Test #2 succeeds.&quot;
+else
+  echo &quot;Test #2 fails.&quot;
+fi
+
+
+#  The -a and -o options provide
+#+ an alternative compound condition test.
+#  Thanks to Patrick Callahan for pointing this out.
+
+
+if [ &quot;$a&quot; -eq 24 -a &quot;$b&quot; -eq 47 ]
+then
+  echo &quot;Test #3 succeeds.&quot;
+else
+  echo &quot;Test #3 fails.&quot;
+fi
+
+
+if [ &quot;$a&quot; -eq 98 -o &quot;$b&quot; -eq 47 ]
+then
+  echo &quot;Test #4 succeeds.&quot;
+else
+  echo &quot;Test #4 fails.&quot;
+fi
+
+
+a=rhino
+b=crocodile
+if [ &quot;$a&quot; = rhino ] &amp;&amp; [ &quot;$b&quot; = crocodile ]
+then
+  echo &quot;Test #5 succeeds.&quot;
+else
+  echo &quot;Test #5 fails.&quot;
+fi
+
+exit 0
+</pre>
+<p>The &amp;&amp; and || operators also find use in an arithmetic context.</p>
+<pre class="last literal-block">
+bash$ echo $(( 1 &amp;&amp; 2 )) $((3 &amp;&amp; 0)) $((4 || 0)) $((0 || 0))
+1 0 1 0
+</pre>
+</dd>
+</dl>
+<p><strong>miscellaneous operators</strong></p>
+<dl class="docutils">
+<dt>,</dt>
+<dd><p class="first">Comma operator</p>
+<p>The <strong>comma operator</strong> chains together two or more arithmetic
+operations. All the operations are evaluated (with possible <em>side
+effects</em>. <a class="reference external" href="ops.html#FTN.AEN4214">[2]</a></p>
+<pre class="literal-block">
+let &quot;t1 = ((5 + 3, 7 - 1, 15 - 4))&quot;
+echo &quot;t1 = $t1&quot;           ^^^^^^  # t1 = 11
+# Here t1 is set to the result of the last operation. Why?
+
+let &quot;t2 = ((a = 9, 15 / 3))&quot;      # Set &quot;a&quot; and calculate &quot;t2&quot;.
+echo &quot;t2 = $t2    a = $a&quot;         # t2 = 5    a = 9
+</pre>
+<p class="last">The comma operator finds use mainly in <a class="reference external" href="loops1.html#FORLOOPREF1">for
+loops</a>. See <a class="reference external" href="loops1.html#FORLOOPC">Example
+11-12</a>.</p>
+</dd>
+</dl>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 10); <em><a href="#id5">backlink</a></em></p>
+Duplicate explicit target name: &quot;[1]&quot;.</div>
+<p><a class="reference external" href="ops.html#AEN3879">[1]</a></p>
+<p>In a different context, <strong>+=</strong> can serve as a <em>string concatenation</em>
+operator. This can be useful for <a class="reference external" href="bashver3.html#PATHAPPEND">modifying *environmental
+variables*</a>.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/ops.ca.rst</tt>, line 10); <em><a href="#id6">backlink</a></em></p>
+Duplicate explicit target name: &quot;[2]&quot;.</div>
+<p><a class="reference external" href="ops.html#AEN4214">[2]</a></p>
+<p><em>Side effects</em> are, of course, unintended -- and usually undesirable --
+consequences.</p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="28%" />
+<col width="39%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="operations.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="numerical-constants.html">Next</a></td>
+</tr>
+<tr><td>Operations and Related Topics</td>
+<td><a class="reference external" href="operations.html">Up</a></td>
+<td>Numerical Constants</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

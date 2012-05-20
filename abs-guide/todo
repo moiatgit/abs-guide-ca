@@ -1,9 +1,8 @@
 Todo list
 
 1. check for already translated files at blamitec
-3. create a git project to protect translation efforts. You might want to pull it to github (see octopress)
-4. resolve inter-page links problem: it seems that #point info in link.html#point has been lost after rst convertion.
-5. think how is to be published. You might want to consider wp.
+2. resolve inter-page links problem: it seems that #point info in link.html#point has been lost after rst convertion.
+3. think how is to be published. You might want to consider wp.
  or maybe octopress.
 
 List of files
@@ -73,7 +72,7 @@ S  index.ca.rst
    mirrorsites.ca.rst
    miscellany.ca.rst
    moreadv.ca.rst
-   nestedifthen.ca.rst
+B  nestedifthen.ca.rst
    nestedloops.ca.rst
    networkprogramming.ca.rst
    numerical-constants.ca.rst
@@ -83,7 +82,7 @@ S  index.ca.rst
    optimizations.ca.rst
    options.ca.rst
    othertypesv.ca.rst
-   parameter-substitution.ca.rst
+S  parameter-substitution.ca.rst
    part1.ca.rst
    part2.ca.rst
    part3.ca.rst

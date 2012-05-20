@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+----+---------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+====+===========================+
+| `Prev &lt;part1.html&gt;`_             |    | `Next &lt;sha-bang.html&gt;`_   |
++----------------------------------+----+---------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="chapter-1-shell-programming">
+<h1>Chapter 1. Shell Programming!</h1>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a></p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 12); <em><a href="#id2">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p><em>No programming language is perfect. There is not even a single best
+language; there are only languages well suited or perhaps poorly suited
+for particular purposes.</em></p>
+<p><em>--Herbert Mayer</em></p>
+<p>A working knowledge of shell scripting is essential to anyone wishing to
+become reasonably proficient at system administration, even if they do
+not anticipate ever having to actually write a script. Consider that as
+a Linux machine boots up, it executes the shell scripts in <tt class="docutils literal">/etc/rc.d</tt>
+to restore the system configuration and set up services. A detailed
+understanding of these startup scripts is important for analyzing the
+behavior of a system, and possibly modifying it.</p>
+<p>The craft of scripting is not hard to master, since the scripts can be
+built in bite-sized sections and there is only a fairly small set of
+shell-specific operators and options <a class="reference external" href="why-shell.html#FTN.AEN60">[1]</a>
+to learn. The syntax is simple -- even austere -- similar to that of
+invoking and chaining together utilities at the command line, and there
+are only a few &quot;rules&quot; governing their use. Most short scripts work
+right the first time, and debugging even the longer ones is
+straightforward.</p>
+<blockquote>
+<dl class="docutils">
+<dt>In the 1970s, the BASIC language enabled anyone reasonably</dt>
+<dd>computer proficient to write programs on an early generation of
+microcomputers. Decades later, the Bash scripting language enables
+anyone with a rudimentary knowledge of Linux or UNIX to do the same
+on much more powerful machines.</dd>
+</dl>
+</blockquote>
+<p>A shell script is a quick-and-dirty method of prototyping a complex
+application. Getting even a limited subset of the functionality to work
+in a script is often a useful first stage in project development. In
+this way, the structure of the application can be tested and tinkered
+with, and the major pitfalls found before proceeding to the final coding
+in <em>C</em>, <em>C++</em>, <em>Java</em>, <a class="reference external" href="wrapper.html#PERLREF">Perl</a>, or <em>Python</em>.</p>
+<p>Shell scripting hearkens back to the classic UNIX philosophy of breaking
+complex projects into simpler subtasks, of chaining together components
+and utilities. Many consider this a better, or at least more
+esthetically pleasing approach to problem solving than using one of the
+new generation of high powered all-in-one languages, such as <em>Perl</em>,
+which attempt to be all things to all people, but at the cost of forcing
+you to alter your thinking processes to fit the tool.</p>
+<p>According to <a class="reference external" href="biblio.html#MAYERREF">Herbert Mayer</a>, &quot;a useful language
+needs arrays, pointers, and a generic mechanism for building data
+structures.&quot; By these criteria, shell scripting falls somewhat short of
+being &quot;useful.&quot; Or, perhaps not. . . .</p>
+<p>When not to use shell scripts</p>
+<ul class="simple">
+<li>Resource-intensive tasks, especially where speed is a factor
+(sorting, hashing, recursion <a class="reference external" href="why-shell.html#FTN.AEN84">[2]</a> ...)</li>
+<li>Procedures involving heavy-duty math operations, especially floating
+point arithmetic, arbitrary precision calculations, or complex
+numbers (use <em>C++</em> or <em>FORTRAN</em> instead)</li>
+<li>Cross-platform portability required (use <em>C</em> or <em>Java</em> instead)</li>
+<li>Complex applications, where structured programming is a necessity
+(type-checking of variables, function prototypes, etc.)</li>
+<li>Mission-critical applications upon which you are betting the future
+of the company</li>
+<li>Situations where <em>security</em> is important, where you need to guarantee
+the integrity of your system and protect against intrusion, cracking,
+and vandalism</li>
+<li>Project consists of subcomponents with interlocking dependencies</li>
+<li>Extensive file operations required (<em>Bash</em> is limited to serial file
+access, and that only in a particularly clumsy and inefficient
+line-by-line fashion.)</li>
+<li>Need native support for multi-dimensional arrays</li>
+<li>Need data structures, such as linked lists or trees</li>
+<li>Need to generate / manipulate graphics or GUIs</li>
+<li>Need direct access to system hardware or external peripherals</li>
+<li>Need port or <a class="reference external" href="devref1.html#SOCKETREF">socket</a> I/O</li>
+<li>Need to use libraries or interface with legacy code</li>
+<li>Proprietary, closed-source applications (Shell scripts put the source
+code right out in the open for all the world to see.)</li>
+</ul>
+<p>If any of the above applies, consider a more powerful scripting language
+-- perhaps <em>Perl</em>, <em>Tcl</em>, <em>Python</em>, <em>Ruby</em> -- or possibly a compiled
+language such as <em>C</em>, <em>C++</em>, or <em>Java</em>. Even then, prototyping the
+application as a shell script might still be a useful development step.</p>
+<p>We will be using Bash, an acronym <a class="reference external" href="why-shell.html#FTN.AEN136">[3]</a> for
+&quot;Bourne-Again shell&quot; and a pun on Stephen Bourne's now classic <em>Bourne</em>
+shell. Bash has become a <em>de facto</em> standard for shell scripting on most
+flavors of UNIX. Most of the principles this book covers apply equally
+well to scripting with other shells, such as the <em>Korn Shell</em>, from
+which Bash derives some of its features,
+<a class="reference external" href="why-shell.html#FTN.AEN143">[4]</a> and the <em>C Shell</em> and its variants.
+(Note that <em>C Shell</em> programming is not recommended due to certain
+inherent problems, as pointed out in an October, 1993 <a class="reference external" href="http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/">Usenet
+post</a> by Tom
+Christiansen.)</p>
+<p>What follows is a tutorial on shell scripting. It relies heavily on
+examples to illustrate various features of the shell. The example
+scripts work -- they've been tested, insofar as possible -- and some of
+them are even useful in real life. The reader can play with the actual
+working code of the examples in the source archive (<tt class="docutils literal">scriptname.sh</tt> or
+<tt class="docutils literal">scriptname.bash</tt>), <a class="reference external" href="why-shell.html#FTN.AEN153">[5]</a> give them
+<em>execute</em> permission (<tt class="docutils literal">chmod u+rx scriptname</tt>), then run them to see
+what happens. Should the <a class="reference external" href="http://bash.deta.in/abs-guide-latest.tar.bz2">source
+archive</a> not be
+available, then cut-and-paste from the
+<a class="reference external" href="http://www.tldp.org/LDP/abs/abs-guide.html.tar.gz">HTML</a> or
+<a class="reference external" href="http://bash.deta.in/abs-guide.pdf">pdf</a> rendered versions. Be aware
+that some of the scripts presented here introduce features before they
+are explained, and this may require the reader to temporarily skip ahead
+for enlightenment.</p>
+<p>Unless otherwise noted, <a class="reference external" href="mailto:thegrendel.abs&#64;gmail.com">the author</a>
+of this book wrote the example scripts that follow.</p>
+<p><a href="#id8"><span class="problematic" id="id9">**</span></a></p>
+<div class="system-message" id="id8">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 141); <em><a href="#id9">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p><em>His countenance was bold and bashed not.</em></p>
+<p><em>--Edmund Spenser</em></p>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 10); <em><a href="#id10">backlink</a></em></p>
+Duplicate explicit target name: &quot;[1]&quot;.</div>
+<p><a class="reference external" href="why-shell.html#AEN60">[1]</a></p>
+<p>These are referred to as <a class="reference external" href="internal.html#BUILTINREF">builtins</a>,
+features internal to the shell.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 10); <em><a href="#id11">backlink</a></em></p>
+Duplicate explicit target name: &quot;[2]&quot;.</div>
+<p><a class="reference external" href="why-shell.html#AEN84">[2]</a></p>
+<p>Although <a class="reference external" href="localvar.html#RECURSIONREF0">recursion *is* possible in a shell
+script</a>, it tends to be slow and its
+implementation is often an <a class="reference external" href="recurnolocvar.html#FIBOREF">ugly kludge</a>.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 10); <em><a href="#id12">backlink</a></em></p>
+Duplicate explicit target name: &quot;[3]&quot;.</div>
+<p><a class="reference external" href="why-shell.html#AEN136">[3]</a></p>
+<p>An <em>acronym</em> is a word formed by pasting together the initial letters of
+the words into a tongue-tripping phrase. This is a pernicious and
+subversive practice that surely deserves appropriately severe
+punishment.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 10); <em><a href="#id13">backlink</a></em></p>
+Duplicate explicit target name: &quot;[4]&quot;.</div>
+<p><a class="reference external" href="why-shell.html#AEN143">[4]</a></p>
+<p>Many of the features of <em>ksh88</em>, and even a few from the updated <em>ksh93</em>
+have been merged into Bash.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/why-shell.ca.rst</tt>, line 10); <em><a href="#id14">backlink</a></em></p>
+Duplicate explicit target name: &quot;[5]&quot;.</div>
+<p><a class="reference external" href="why-shell.html#AEN153">[5]</a></p>
+<p>By convention, user-written shell scripts that are Bourne shell
+compliant generally take a name with a <tt class="docutils literal">.sh</tt> extension. System
+scripts, such as those found in <tt class="docutils literal">/etc/rc.d</tt>, do not necessarily
+conform to this nomenclature.</p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="30%" />
+<col width="40%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="part1.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="sha-bang.html">Next</a></td>
+</tr>
+<tr><td>Introduction</td>
+<td><a class="reference external" href="part1.html">Up</a></td>
+<td>Starting Off With a Sha-Bang</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

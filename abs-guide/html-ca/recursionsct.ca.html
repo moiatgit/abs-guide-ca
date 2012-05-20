@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/recursionsct.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++--------------------------------------+--------------------------+-----------------------------+
+| Advanced Bash-Scripting Guide:       |
++======================================+==========================+=============================+
+| `Prev &lt;testsandcomparisons.html&gt;`_   | Chapter 36. Miscellany   | `Next &lt;colorizing.html&gt;`_   |
++--------------------------------------+--------------------------+-----------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="recursion-a-script-calling-itself">
+<h1>36.4. Recursion: a script calling itself</h1>
+<p>Can a script <a class="reference external" href="localvar.html#RECURSIONREF">recursively</a> call itself?
+Indeed.</p>
+<p><strong>Example 36-8. A (useless) script that recursively calls itself</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# recurse.sh
+
+#  Can a script recursively call itself?
+#  Yes, but is this of any practical use?
+#  (See the following.)
+
+RANGE=10
+MAXVAL=9
+
+i=$RANDOM
+let &quot;i %= $RANGE&quot;  # Generate a random number between 0 and $RANGE - 1.
+
+if [ &quot;$i&quot; -lt &quot;$MAXVAL&quot; ]
+then
+  echo &quot;i = $i&quot;
+  ./$0             #  Script recursively spawns a new instance of itself.
+fi                 #  Each child script does the same, until
+                   #+ a generated $i equals $MAXVAL.
+
+#  Using a &quot;while&quot; loop instead of an &quot;if/then&quot; test causes problems.
+#  Explain why.
+
+exit 0
+
+# Note:
+# ----
+# This script must have execute permission for it to work properly.
+# This is the case even if it is invoked by an &quot;sh&quot; command.
+# Explain why.
+</pre>
+<p><strong>Example 36-9. A (useful) script that recursively calls itself</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# pb.sh: phone book
+
+# Written by Rick Boivie, and used with permission.
+# Modifications by ABS Guide author.
+
+MINARGS=1     #  Script needs at least one argument.
+DATAFILE=./phonebook
+              #  A data file in current working directory
+              #+ named &quot;phonebook&quot; must exist.
+PROGNAME=$0
+E_NOARGS=70   #  No arguments error.
+
+if [ $# -lt $MINARGS ]; then
+      echo &quot;Usage: &quot;$PROGNAME&quot; data-to-look-up&quot;
+      exit $E_NOARGS
+fi
+
+
+if [ $# -eq $MINARGS ]; then
+      grep $1 &quot;$DATAFILE&quot;
+      # 'grep' prints an error message if $DATAFILE not present.
+else
+      ( shift; &quot;$PROGNAME&quot; $* ) | grep $1
+      # Script recursively calls itself.
+fi
+
+exit 0        #  Script exits here.
+              #  Therefore, it's o.k. to put
+              #+ non-hashmarked comments and data after this point.
+
+# ------------------------------------------------------------------------
+Sample &quot;phonebook&quot; datafile:
+
+John Doe        1555 Main St., Baltimore, MD 21228          (410) 222-3333
+Mary Moe        9899 Jones Blvd., Warren, NH 03787          (603) 898-3232
+Richard Roe     856 E. 7th St., New York, NY 10009          (212) 333-4567
+Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678
+Zoe Zenobia     4481 N. Baker St., San Francisco, SF 94338  (415) 501-1631
+# ------------------------------------------------------------------------
+
+$bash pb.sh Roe
+Richard Roe     856 E. 7th St., New York, NY 10009          (212) 333-4567
+Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678
+
+$bash pb.sh Roe Sam
+Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678
+
+#  When more than one argument is passed to this script,
+#+ it prints *only* the line(s) containing all the arguments.
+</pre>
+<p><strong>Example 36-10. Another (useful) script that recursively calls itself</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# usrmnt.sh, written by Anthony Richardson
+# Used with permission.
+
+# usage:       usrmnt.sh
+# description: mount device, invoking user must be listed in the
+#              MNTUSERS group in the /etc/sudoers file.
+
+# ----------------------------------------------------------
+#  This is a usermount script that reruns itself using sudo.
+#  A user with the proper permissions only has to type
+
+#   usermount /dev/fd0 /mnt/floppy
+
+# instead of
+
+#   sudo usermount /dev/fd0 /mnt/floppy
+
+#  I use this same technique for all of my
+#+ sudo scripts, because I find it convenient.
+# ----------------------------------------------------------
+
+#  If SUDO_COMMAND variable is not set we are not being run through
+#+ sudo, so rerun ourselves. Pass the user's real and group id . . .
+
+if [ -z &quot;$SUDO_COMMAND&quot; ]
+then
+   mntusr=$(id -u) grpusr=$(id -g) sudo $0 $*
+   exit 0
+fi
+
+# We will only get here if we are being run by sudo.
+/bin/mount $* -o uid=$mntusr,gid=$grpusr
+
+exit 0
+
+# Additional notes (from the author of this script):
+# -------------------------------------------------
+
+# 1) Linux allows the &quot;users&quot; option in the /etc/fstab
+#    file so that any user can mount removable media.
+#    But, on a server, I like to allow only a few
+#    individuals access to removable media.
+#    I find using sudo gives me more control.
+
+# 2) I also find sudo to be more convenient than
+#    accomplishing this task through groups.
+
+# 3) This method gives anyone with proper permissions
+#    root access to the mount command, so be careful
+#    about who you allow access.
+#    You can get finer control over which access can be mounted
+#    by using this same technique in separate mntfloppy, mntcdrom,
+#    and mntsamba scripts.
+</pre>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/recursionsct.ca.rst</tt>, line 169)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Too many levels of recursion can exhaust the script's stack space,
+causing a segfault.</p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="28%" />
+<col width="31%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="testsandcomparisons.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="colorizing.html">Next</a></td>
+</tr>
+<tr><td>Tests and Comparisons: Alternatives</td>
+<td><a class="reference external" href="miscellany.html">Up</a></td>
+<td>&quot;Colorizing&quot; Scripts</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1799 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+-------------------------------------------------------+-----------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+=======================================================+=============================+
+| `Prev &lt;timedate.html&gt;`_          | Chapter 16. External Filters, Programs and Commands   | `Next &lt;filearchiv.html&gt;`_   |
++----------------------------------+-------------------------------------------------------+-----------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="text-processing-commands">
+<h1>16.4. Text Processing Commands</h1>
+<p><strong>Commands affecting text and text files</strong></p>
+<dl class="docutils">
+<dt><strong>sort</strong></dt>
+<dd>File sort utility, often used as a filter in a pipe. This command
+sorts a <em>text stream</em> or file forwards or backwards, or according to
+various keys or character positions. Using the <tt class="docutils literal"><span class="pre">-m</span></tt> option, it
+merges presorted input files. The <em>info page</em> lists its many
+capabilities and options. See <a class="reference external" href="loops1.html#FINDSTRING">Example
+11-9</a>, <a class="reference external" href="loops1.html#SYMLINKS">Example
+11-10</a>, and <a class="reference external" href="contributed-scripts.html#MAKEDICT">Example
+A-8</a>.</dd>
+<dt><strong>tsort</strong></dt>
+<dd><p class="first"><em>Topological sort</em>, reading in pairs of whitespace-separated strings
+and sorting according to input patterns. The original purpose of
+<strong>tsort</strong> was to sort a list of dependencies for an obsolete version
+of the <em>ld</em> linker in an &quot;ancient&quot; version of UNIX.</p>
+<p class="last">The results of a <em>tsort</em> will usually differ markedly from those of
+the standard <strong>sort</strong> command, above.</p>
+</dd>
+<dt><strong>uniq</strong></dt>
+<dd><p class="first">This filter removes duplicate lines from a sorted file. It is often
+seen in a pipe coupled with <a class="reference external" href="textproc.html#SORTREF">sort</a>.</p>
+<pre class="literal-block">
+cat list-1 list-2 list-3 | sort | uniq &gt; final.list
+# Concatenates the list files,
+# sorts them,
+# removes duplicate lines,
+# and finally writes the result to an output file.
+</pre>
+<p>The useful <tt class="docutils literal"><span class="pre">-c</span></tt> option prefixes each line of the input file with
+its number of occurrences.</p>
+<pre class="literal-block">
+bash$ cat testfile
+This line occurs only once.
+ This line occurs twice.
+ This line occurs twice.
+ This line occurs three times.
+ This line occurs three times.
+ This line occurs three times.
+
+
+bash$ uniq -c testfile
+      1 This line occurs only once.
+       2 This line occurs twice.
+       3 This line occurs three times.
+
+
+bash$ sort testfile | uniq -c | sort -nr
+      3 This line occurs three times.
+       2 This line occurs twice.
+       1 This line occurs only once.
+</pre>
+<p>The <tt class="docutils literal">sort INPUTFILE | uniq <span class="pre">-c</span> | sort <span class="pre">-nr</span></tt> command string produces
+a <em>frequency of occurrence</em> listing on the <tt class="docutils literal">INPUTFILE</tt> file (the
+<tt class="docutils literal"><span class="pre">-nr</span></tt> options to <strong>sort</strong> cause a reverse numerical sort). This
+template finds use in analysis of log files and dictionary lists,
+and wherever the lexical structure of a document needs to be
+examined.</p>
+<p><strong>Example 16-12. Word Frequency Analysis</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# wf.sh: Crude word frequency analysis on a text file.
+# This is a more efficient version of the &quot;wf2.sh&quot; script.
+
+
+# Check for input file on command-line.
+ARGS=1
+E_BADARGS=85
+E_NOFILE=86
+
+if [ $# -ne &quot;$ARGS&quot; ]  # Correct number of arguments passed to script?
+then
+  echo &quot;Usage: `basename $0` filename&quot;
+  exit $E_BADARGS
+fi
+
+if [ ! -f &quot;$1&quot; ]       # Check if file exists.
+then
+  echo &quot;File \&quot;$1\&quot; does not exist.&quot;
+  exit $E_NOFILE
+fi
+
+
+
+########################################################
+# main ()
+sed -e 's/\.//g'  -e 's/\,//g' -e 's/ /\
+/g' &quot;$1&quot; | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr
+#                           =========================
+#                            Frequency of occurrence
+
+#  Filter out periods and commas, and
+#+ change space between words to linefeed,
+#+ then shift characters to lowercase, and
+#+ finally prefix occurrence count and sort numerically.
+
+#  Arun Giridhar suggests modifying the above to:
+#  . . . | sort | uniq -c | sort +1 [-f] | sort +0 -nr
+#  This adds a secondary sort key, so instances of
+#+ equal occurrence are sorted alphabetically.
+#  As he explains it:
+#  &quot;This is effectively a radix sort, first on the
+#+ least significant column
+#+ (word or string, optionally case-insensitive)
+#+ and last on the most significant column (frequency).&quot;
+#
+#  As Frank Wang explains, the above is equivalent to
+#+       . . . | sort | uniq -c | sort +0 -nr
+#+ and the following also works:
+#+       . . . | sort | uniq -c | sort -k1nr -k
+########################################################
+
+exit 0
+
+# Exercises:
+# ---------
+# 1) Add 'sed' commands to filter out other punctuation,
+#+   such as semicolons.
+# 2) Modify the script to also filter out multiple spaces and
+#+   other whitespace.
+</pre>
+<pre class="last literal-block">
+bash$ cat testfile
+This line occurs only once.
+ This line occurs twice.
+ This line occurs twice.
+ This line occurs three times.
+ This line occurs three times.
+ This line occurs three times.
+
+
+bash$ ./wf.sh testfile
+      6 this
+       6 occurs
+       6 line
+       3 times
+       3 three
+       2 twice
+       1 only
+       1 once
+</pre>
+</dd>
+<dt><strong>expand</strong>, <strong>unexpand</strong></dt>
+<dd><p class="first">The <strong>expand</strong> filter converts tabs to spaces. It is often used in a
+<a class="reference external" href="special-chars.html#PIPEREF">pipe</a>.</p>
+<p class="last">The <strong>unexpand</strong> filter converts spaces to tabs. This reverses the
+effect of <strong>expand</strong>.</p>
+</dd>
+<dt><strong>cut</strong></dt>
+<dd><p class="first">A tool for extracting <a class="reference external" href="special-chars.html#FIELDREF">fields</a> from
+files. It is similar to the <tt class="docutils literal">print $N</tt> command set in
+<a class="reference external" href="awk.html#AWKREF">awk</a>, but more limited. It may be simpler to use
+<em>cut</em> in a script than <em>awk</em>. Particularly important are the <tt class="docutils literal"><span class="pre">-d</span></tt>
+(delimiter) and <tt class="docutils literal"><span class="pre">-f</span></tt> (field specifier) options.</p>
+<p>Using <strong>cut</strong> to obtain a listing of the mounted filesystems:</p>
+<pre class="literal-block">
+cut -d ' ' -f1,2 /etc/mtab
+</pre>
+<p>Using <strong>cut</strong> to list the OS and kernel version:</p>
+<pre class="literal-block">
+uname -a | cut -d&quot; &quot; -f1,3,11,12
+</pre>
+<p>Using <strong>cut</strong> to extract message headers from an e-mail folder:</p>
+<pre class="literal-block">
+bash$ grep '^Subject:' read-messages | cut -c10-80
+Re: Linux suitable for mission-critical apps?
+ MAKE MILLIONS WORKING AT HOME!!!
+ Spam complaint
+ Re: Spam complaint
+</pre>
+<p>Using <strong>cut</strong> to parse a file:</p>
+<pre class="literal-block">
+# List all the users in /etc/passwd.
+
+FILENAME=/etc/passwd
+
+for user in $(cut -d: -f1 $FILENAME)
+do
+  echo $user
+done
+
+# Thanks, Oleg Philon for suggesting this.
+</pre>
+<p><tt class="docutils literal">cut <span class="pre">-d</span> ' ' <span class="pre">-f2,3</span> filename</tt> is equivalent to
+<tt class="docutils literal">awk <span class="pre">-F'[</span> ]' '{ print $2, $3 }' filename</tt></p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 224)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>It is even possible to specify a linefeed as a delimiter. The trick
+is to actually embed a linefeed (<strong>RETURN</strong>) in the command
+sequence.</p>
+<pre class="literal-block">
+bash$ cut -d'
+ ' -f3,7,19 testfile
+This is line 3 of testfile.
+ This is line 7 of testfile.
+ This is line 19 of testfile.
+</pre>
+<p>Thank you, Jaka Kranjc, for pointing this out.</p>
+<p class="last">See also <a class="reference external" href="mathc.html#BASE">Example 16-48</a>.</p>
+</dd>
+<dt><strong>paste</strong></dt>
+<dd>Tool for merging together different files into a single,
+multi-column file. In combination with
+<a class="reference external" href="textproc.html#CUTREF">cut</a>, useful for creating system log files.</dd>
+<dt><strong>join</strong></dt>
+<dd><p class="first">Consider this a special-purpose cousin of <strong>paste</strong>. This powerful
+utility allows merging two files in a meaningful fashion, which
+essentially creates a simple version of a relational database.</p>
+<p>The <strong>join</strong> command operates on exactly two files, but pastes
+together only those lines with a common tagged
+<a class="reference external" href="special-chars.html#FIELDREF">field</a> (usually a numerical label),
+and writes the result to <tt class="docutils literal">stdout</tt>. The files to be joined should
+be sorted according to the tagged field for the matchups to work
+properly.</p>
+<pre class="literal-block">
+File: 1.data
+
+100 Shoes
+200 Laces
+300 Socks
+</pre>
+<pre class="literal-block">
+File: 2.data
+
+100 $40.00
+200 $1.00
+300 $2.00
+</pre>
+<pre class="literal-block">
+bash$ join 1.data 2.data
+File: 1.data 2.data
+
+ 100 Shoes $40.00
+ 200 Laces $1.00
+ 300 Socks $2.00
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 289)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">The tagged field appears only once in the output.</p>
+</dd>
+<dt><strong>head</strong></dt>
+<dd><p class="first">lists the beginning of a file to <tt class="docutils literal">stdout</tt>. The default is <tt class="docutils literal">10</tt>
+lines, but a different number can be specified. The command has a
+number of interesting options.</p>
+<p><strong>Example 16-13. Which files are scripts?</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# script-detector.sh: Detects scripts within a directory.
+
+TESTCHARS=2    # Test first 2 characters.
+SHABANG='#!'   # Scripts begin with a &quot;sha-bang.&quot;
+
+for file in *  # Traverse all the files in current directory.
+do
+  if [[ `head -c$TESTCHARS &quot;$file&quot;` = &quot;$SHABANG&quot; ]]
+  #      head -c2                      #!
+  #  The '-c' option to &quot;head&quot; outputs a specified
+  #+ number of characters, rather than lines (the default).
+  then
+    echo &quot;File \&quot;$file\&quot; is a script.&quot;
+  else
+    echo &quot;File \&quot;$file\&quot; is *not* a script.&quot;
+  fi
+done
+
+exit 0
+
+#  Exercises:
+#  ---------
+#  1) Modify this script to take as an optional argument
+#+    the directory to scan for scripts
+#+    (rather than just the current working directory).
+#
+#  2) As it stands, this script gives &quot;false positives&quot; for
+#+    Perl, awk, and other scripting language scripts.
+#     Correct this.
+</pre>
+<p><strong>Example 16-14. Generating 10-digit random numbers</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# rnd.sh: Outputs a 10-digit random number
+
+# Script by Stephane Chazelas.
+
+head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
+
+
+# =================================================================== #
+
+# Analysis
+# --------
+
+# head:
+# -c4 option takes first 4 bytes.
+
+# od:
+# -N4 option limits output to 4 bytes.
+# -tu4 option selects unsigned decimal format for output.
+
+# sed:
+# -n option, in combination with &quot;p&quot; flag to the &quot;s&quot; command,
+# outputs only matched lines.
+
+
+
+# The author of this script explains the action of 'sed', as follows.
+
+# head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
+# ----------------------------------&gt; |
+
+# Assume output up to &quot;sed&quot; --------&gt; |
+# is 0000000 1198195154\n
+
+#  sed begins reading characters: 0000000 1198195154\n.
+#  Here it finds a newline character,
+#+ so it is ready to process the first line (0000000 1198195154).
+#  It looks at its &lt;range&gt;&lt;action&gt;s. The first and only one is
+
+#   range     action
+#   1         s/.* //p
+
+#  The line number is in the range, so it executes the action:
+#+ tries to substitute the longest string ending with a space in the line
+#  (&quot;0000000 &quot;) with nothing (//), and if it succeeds, prints the result
+#  (&quot;p&quot; is a flag to the &quot;s&quot; command here, this is different
+#+ from the &quot;p&quot; command).
+
+#  sed is now ready to continue reading its input. (Note that before
+#+ continuing, if -n option had not been passed, sed would have printed
+#+ the line once again).
+
+#  Now, sed reads the remainder of the characters, and finds the
+#+ end of the file.
+#  It is now ready to process its 2nd line (which is also numbered '$' as
+#+ it's the last one).
+#  It sees it is not matched by any &lt;range&gt;, so its job is done.
+
+#  In few word this sed commmand means:
+#  &quot;On the first line only, remove any character up to the right-most space,
+#+ then print it.&quot;
+
+# A better way to do this would have been:
+#           sed -e 's/.* //;q'
+
+# Here, two &lt;range&gt;&lt;action&gt;s (could have been written
+#           sed -e 's/.* //' -e q):
+
+#   range                    action
+#   nothing (matches line)   s/.* //
+#   nothing (matches line)   q (quit)
+
+#  Here, sed only reads its first line of input.
+#  It performs both actions, and prints the line (substituted) before
+#+ quitting (because of the &quot;q&quot; action) since the &quot;-n&quot; option is not passed.
+
+# =================================================================== #
+
+# An even simpler altenative to the above one-line script would be:
+#           head -c4 /dev/urandom| od -An -tu4
+
+exit
+</pre>
+<p class="last">See also <a class="reference external" href="filearchiv.html#EX52">Example 16-39</a>.</p>
+</dd>
+<dt><strong>tail</strong></dt>
+<dd><p class="first">lists the (tail) end of a file to <tt class="docutils literal">stdout</tt>. The default is <tt class="docutils literal">10</tt>
+lines, but this can be changed with the <tt class="docutils literal"><span class="pre">-n</span></tt> option. Commonly used
+to keep track of changes to a system logfile, using the <tt class="docutils literal"><span class="pre">-f</span></tt>
+option, which outputs lines appended to the file.</p>
+<p><strong>Example 16-15. Using *tail* to monitor the system log</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+
+filename=sys.log
+
+cat /dev/null &gt; $filename; echo &quot;Creating / cleaning out file.&quot;
+#  Creates the file if it does not already exist,
+#+ and truncates it to zero length if it does.
+#  : &gt; filename   and   &gt; filename also work.
+
+tail /var/log/messages &gt; $filename
+# /var/log/messages must have world read permission for this to work.
+
+echo &quot;$filename contains tail end of system log.&quot;
+
+exit 0
+</pre>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 451)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>To list a specific line of a text file,
+<a class="reference external" href="special-chars.html#PIPEREF">pipe</a> the output of <strong>head</strong> to
+<strong>tail -n 1</strong>. For example
+<tt class="docutils literal">head <span class="pre">-n</span> 8 database.txt | tail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">-n</span> 1</tt> lists the 8th line of
+the file <tt class="docutils literal">database.txt</tt>.</p>
+<p>To set a variable to a given block of a text file:</p>
+<pre class="literal-block">
+var=$(head -n $m $filename | tail -n $n)
+
+# filename = name of file
+# m = from beginning of file, number of lines to end of block
+# n = number of lines to set variable to (trim from end of block)
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 472)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Newer implementations of <strong>tail</strong> deprecate the older <strong>tail -$LINES
+filename</strong> usage. The standard <strong>tail -n $LINES filename</strong> is
+correct.</p>
+<p class="last">See also <a class="reference external" href="moreadv.html#EX41">Example 16-5</a>, <a class="reference external" href="filearchiv.html#EX52">Example
+16-39</a> and <a class="reference external" href="debugging.html#ONLINE">Example
+32-6</a>.</p>
+</dd>
+<dt><strong>grep</strong></dt>
+<dd><p class="first">A multi-purpose file search tool that uses <a class="reference external" href="regexp.html#REGEXREF">Regular
+Expressions</a>. It was originally a
+command/filter in the venerable <strong>ed</strong> line editor: <tt class="docutils literal">g/re/p</tt> --
+<em>global - regular expression - print</em>.</p>
+<p><strong>grep</strong> <tt class="docutils literal">pattern</tt> [<tt class="docutils literal">file</tt>...]</p>
+<p>Search the target file(s) for occurrences of <tt class="docutils literal">pattern</tt>, where
+<tt class="docutils literal">pattern</tt> may be literal text or a Regular Expression.</p>
+<pre class="literal-block">
+bash$ grep '[rst]ystem.$' osinfo.txt
+The GPL governs the distribution of the Linux operating system.
+</pre>
+<p>If no target file(s) specified, <strong>grep</strong> works as a filter on
+<tt class="docutils literal">stdout</tt>, as in a <a class="reference external" href="special-chars.html#PIPEREF">pipe</a>.</p>
+<pre class="literal-block">
+bash$ ps ax | grep clock
+765 tty1     S      0:00 xclock
+ 901 pts/1    S      0:00 grep clock
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">-i</span></tt> option causes a case-insensitive search.</p>
+<p>The <tt class="docutils literal"><span class="pre">-w</span></tt> option matches only whole words.</p>
+<p>The <tt class="docutils literal"><span class="pre">-l</span></tt> option lists only the files in which matches were found,
+but not the matching lines.</p>
+<p>The <tt class="docutils literal"><span class="pre">-r</span></tt> (recursive) option searches files in the current working
+directory and all subdirectories below it.</p>
+<p>The <tt class="docutils literal"><span class="pre">-n</span></tt> option lists the matching lines, together with line
+numbers.</p>
+<pre class="literal-block">
+bash$ grep -n Linux osinfo.txt
+2:This is a file containing information about Linux.
+ 6:The GPL governs the distribution of the Linux operating system.
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">-v</span></tt> (or <tt class="docutils literal"><span class="pre">--invert-match</span></tt>) option <em>filters out</em> matches.</p>
+<pre class="literal-block">
+grep pattern1 *.txt | grep -v pattern2
+
+# Matches all lines in &quot;*.txt&quot; files containing &quot;pattern1&quot;,
+# but ***not*** &quot;pattern2&quot;.
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">-c</span></tt> (<tt class="docutils literal"><span class="pre">--count</span></tt>) option gives a numerical count of matches,
+rather than actually listing the matches.</p>
+<pre class="literal-block">
+grep -c txt *.sgml   # (number of occurrences of &quot;txt&quot; in &quot;*.sgml&quot; files)
+
+
+#   grep -cz .
+#            ^ dot
+# means count (-c) zero-separated (-z) items matching &quot;.&quot;
+# that is, non-empty ones (containing at least 1 character).
+#
+printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz .     # 3
+printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz '$'   # 5
+printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz '^'   # 5
+#
+printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -c '$'    # 9
+# By default, newline chars (\n) separate items to match.
+
+# Note that the -z option is GNU &quot;grep&quot; specific.
+
+
+# Thanks, S.C.
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">--color</span></tt> (or <tt class="docutils literal"><span class="pre">--colour</span></tt>) option marks the matching string
+in color (on the console or in an <em>xterm</em> window). Since <em>grep</em>
+prints out each entire line containing the matching pattern, this
+lets you see exactly <em>what</em> is being matched. See also the <tt class="docutils literal"><span class="pre">-o</span></tt>
+option, which shows only the matching portion of the line(s).</p>
+<p><strong>Example 16-16. Printing out the *From* lines in stored e-mail
+messages</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# from.sh
+
+#  Emulates the useful 'from' utility in Solaris, BSD, etc.
+#  Echoes the &quot;From&quot; header line in all messages
+#+ in your e-mail directory.
+
+
+MAILDIR=~/mail/*               #  No quoting of variable. Why?
+# Maybe check if-exists $MAILDIR:   if [ -d $MAILDIR ] . . .
+GREP_OPTS=&quot;-H -A 5 --color&quot;    #  Show file, plus extra context lines
+                               #+ and display &quot;From&quot; in color.
+TARGETSTR=&quot;^From&quot;              # &quot;From&quot; at beginning of line.
+
+for file in $MAILDIR           #  No quoting of variable.
+do
+  grep $GREP_OPTS &quot;$TARGETSTR&quot; &quot;$file&quot;
+  #    ^^^^^^^^^^              #  Again, do not quote this variable.
+  echo
+done
+
+exit $?
+
+#  You might wish to pipe the output of this script to 'more'
+#+ or redirect it to a file . . .
+</pre>
+<p>When invoked with more than one target file given, <strong>grep</strong>
+specifies which file contains matches.</p>
+<pre class="literal-block">
+bash$ grep Linux osinfo.txt misc.txt
+osinfo.txt:This is a file containing information about Linux.
+ osinfo.txt:The GPL governs the distribution of the Linux operating system.
+ misc.txt:The Linux operating system is steadily gaining in popularity.
+</pre>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 614)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>To force <strong>grep</strong> to show the filename when searching only one
+target file, simply give <tt class="docutils literal">/dev/null</tt> as the second file.</p>
+<pre class="literal-block">
+bash$ grep Linux osinfo.txt /dev/null
+osinfo.txt:This is a file containing information about Linux.
+ osinfo.txt:The GPL governs the distribution of the Linux operating system.
+</pre>
+<p>If there is a successful match, <strong>grep</strong> returns an <a class="reference external" href="exit-status.html#EXITSTATUSREF">exit
+status</a> of 0, which makes it
+useful in a condition test in a script, especially in combination
+with the <tt class="docutils literal"><span class="pre">-q</span></tt> option to suppress output.</p>
+<pre class="literal-block">
+SUCCESS=0                      # if grep lookup succeeds
+word=Linux
+filename=data.file
+
+grep -q &quot;$word&quot; &quot;$filename&quot;    #  The &quot;-q&quot; option
+                               #+ causes nothing to echo to stdout.
+if [ $? -eq $SUCCESS ]
+# if grep -q &quot;$word&quot; &quot;$filename&quot;   can replace lines 5 - 7.
+then
+  echo &quot;$word found in $filename&quot;
+else
+  echo &quot;$word not found in $filename&quot;
+fi
+</pre>
+<p><a class="reference external" href="debugging.html#ONLINE">Example 32-6</a> demonstrates how to use
+<strong>grep</strong> to search for a word pattern in a system logfile.</p>
+<p><strong>Example 16-17. Emulating *grep* in a script</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# grp.sh: Rudimentary reimplementation of grep.
+
+E_BADARGS=85
+
+if [ -z &quot;$1&quot; ]    # Check for argument to script.
+then
+  echo &quot;Usage: `basename $0` pattern&quot;
+  exit $E_BADARGS
+fi
+
+echo
+
+for file in *     # Traverse all files in $PWD.
+do
+  output=$(sed -n /&quot;$1&quot;/p $file)  # Command substitution.
+
+  if [ ! -z &quot;$output&quot; ]           # What happens if &quot;$output&quot; is not quoted?
+  then
+    echo -n &quot;$file: &quot;
+    echo &quot;$output&quot;
+  fi              #  sed -ne &quot;/$1/s|^|${file}: |p&quot;  is equivalent to above.
+
+  echo
+done
+
+echo
+
+exit 0
+
+# Exercises:
+# ---------
+# 1) Add newlines to output, if more than one match in any given file.
+# 2) Add features.
+</pre>
+<p>How can <strong>grep</strong> search for two (or more) separate patterns? What if
+you want <strong>grep</strong> to display all lines in a file or files that
+contain both &quot;pattern1&quot; <em>and</em> &quot;pattern2&quot;?</p>
+<p>One method is to <a class="reference external" href="special-chars.html#PIPEREF">pipe</a> the result of
+<strong>grep pattern1</strong> to <strong>grep pattern2</strong>.</p>
+<p>For example, given the following file:</p>
+<pre class="literal-block">
+# Filename: tstfile
+
+This is a sample file.
+This is an ordinary text file.
+This file does not contain any unusual text.
+This file is not unusual.
+Here is some text.
+</pre>
+<p>Now, let's search this file for lines containing <em>both</em> &quot;file&quot; and
+&quot;text&quot; . . .</p>
+<pre class="literal-block">
+bash$ grep file tstfile
+# Filename: tstfile
+ This is a sample file.
+ This is an ordinary text file.
+ This file does not contain any unusual text.
+ This file is not unusual.
+
+bash$ grep file tstfile | grep text
+This is an ordinary text file.
+ This file does not contain any unusual text.
+</pre>
+<p>Now, for an interesting recreational use of <em>grep</em> . . .</p>
+<p><strong>Example 16-18. Crossword puzzle solver</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# cw-solver.sh
+# This is actually a wrapper around a one-liner (line 46).
+
+#  Crossword puzzle and anagramming word game solver.
+#  You know *some* of the letters in the word you're looking for,
+#+ so you need a list of all valid words
+#+ with the known letters in given positions.
+#  For example: w...i....n
+#               1???5????10
+# w in position 1, 3 unknowns, i in the 5th, 4 unknowns, n at the end.
+# (See comments at end of script.)
+
+
+E_NOPATT=71
+DICT=/usr/share/dict/word.lst
+#                    ^^^^^^^^   Looks for word list here.
+#  ASCII word list, one word per line.
+#  If you happen to need an appropriate list,
+#+ download the author's &quot;yawl&quot; word list package.
+#  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz
+#  or
+#  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+
+if [ -z &quot;$1&quot; ]   #  If no word pattern specified
+then             #+ as a command-line argument . . .
+  echo           #+ . . . then . . .
+  echo &quot;Usage:&quot;  #+ Usage message.
+  echo
+  echo &quot;&quot;$0&quot; \&quot;pattern,\&quot;&quot;
+  echo &quot;where \&quot;pattern\&quot; is in the form&quot;
+  echo &quot;xxx..x.x...&quot;
+  echo
+  echo &quot;The x's represent known letters,&quot;
+  echo &quot;and the periods are unknown letters (blanks).&quot;
+  echo &quot;Letters and periods can be in any position.&quot;
+  echo &quot;For example, try:   sh cw-solver.sh w...i....n&quot;
+  echo
+  exit $E_NOPATT
+fi
+
+echo
+# ===============================================
+# This is where all the work gets done.
+grep ^&quot;$1&quot;$ &quot;$DICT&quot;   # Yes, only one line!
+#    |    |
+# ^ is start-of-word regex anchor.
+# $ is end-of-word regex anchor.
+
+#  From _Stupid Grep Tricks_, vol. 1,
+#+ a book the ABS Guide author may yet get around
+#+ to writing . . . one of these days . . .
+# ===============================================
+echo
+
+
+exit $?  # Script terminates here.
+#  If there are too many words generated,
+#+ redirect the output to a file.
+
+$ sh cw-solver.sh w...i....n
+
+wellington
+workingman
+workingmen
+</pre>
+<p><strong>egrep</strong> -- <em>extended grep</em> -- is the same as <strong>grep -E</strong>. This
+uses a somewhat different, extended set of <a class="reference external" href="regexp.html#REGEXREF">Regular
+Expressions</a>, which can make the search a
+bit more flexible. It also allows the boolean | (<em>or</em>) operator.</p>
+<pre class="literal-block">
+bash $ egrep 'matches|Matches' file.txt
+Line 1 matches.
+ Line 3 Matches.
+ Line 4 contains matches, but also Matches
+</pre>
+<p><strong>fgrep</strong> -- <em>fast grep</em> -- is the same as <strong>grep -F</strong>. It does a
+literal string search (no <a class="reference external" href="regexp.html#REGEXREF">Regular
+Expressions</a>), which generally speeds things
+up a bit.</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 818)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>On some Linux distros, <strong>egrep</strong> and <strong>fgrep</strong> are symbolic links
+to, or aliases for <strong>grep</strong>, but invoked with the <tt class="docutils literal"><span class="pre">-E</span></tt> and <tt class="docutils literal"><span class="pre">-F</span></tt>
+options, respectively.</p>
+<p><strong>Example 16-19. Looking up definitions in *Webster's 1913
+Dictionary*</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# dict-lookup.sh
+
+#  This script looks up definitions in the 1913 Webster's Dictionary.
+#  This Public Domain dictionary is available for download
+#+ from various sites, including
+#+ Project Gutenberg (http://www.gutenberg.org/etext/247).
+#
+#  Convert it from DOS to UNIX format (with only LF at end of line)
+#+ before using it with this script.
+#  Store the file in plain, uncompressed ASCII text.
+#  Set DEFAULT_DICTFILE variable below to path/filename.
+
+
+E_BADARGS=85
+MAXCONTEXTLINES=50                        # Maximum number of lines to show.
+DEFAULT_DICTFILE=&quot;/usr/share/dict/webster1913-dict.txt&quot;
+                                          # Default dictionary file pathname.
+                                          # Change this as necessary.
+#  Note:
+#  ----
+#  This particular edition of the 1913 Webster's
+#+ begins each entry with an uppercase letter
+#+ (lowercase for the remaining characters).
+#  Only the *very first line* of an entry begins this way,
+#+ and that's why the search algorithm below works.
+
+
+
+if [[ -z $(echo &quot;$1&quot; | sed -n '/^[A-Z]/p') ]]
+#  Must at least specify word to look up, and
+#+ it must start with an uppercase letter.
+then
+  echo &quot;Usage: `basename $0` Word-to-define [dictionary-file]&quot;
+  echo
+  echo &quot;Note: Word to look up must start with capital letter,&quot;
+  echo &quot;with the rest of the word in lowercase.&quot;
+  echo &quot;--------------------------------------------&quot;
+  echo &quot;Examples: Abandon, Dictionary, Marking, etc.&quot;
+  exit $E_BADARGS
+fi
+
+
+if [ -z &quot;$2&quot; ]                            #  May specify different dictionary
+                                          #+ as an argument to this script.
+then
+  dictfile=$DEFAULT_DICTFILE
+else
+  dictfile=&quot;$2&quot;
+fi
+
+# ---------------------------------------------------------
+Definition=$(fgrep -A $MAXCONTEXTLINES &quot;$1 \\&quot; &quot;$dictfile&quot;)
+#                  Definitions in form &quot;Word \...&quot;
+#
+#  And, yes, &quot;fgrep&quot; is fast enough
+#+ to search even a very large text file.
+
+
+# Now, snip out just the definition block.
+
+echo &quot;$Definition&quot; |
+sed -n '1,/^[A-Z]/p' |
+#  Print from first line of output
+#+ to the first line of the next entry.
+sed '$d' | sed '$d'
+#  Delete last two lines of output
+#+ (blank line and first line of next entry).
+# ---------------------------------------------------------
+
+exit $?
+
+# Exercises:
+# ---------
+# 1)  Modify the script to accept any type of alphabetic input
+#   + (uppercase, lowercase, mixed case), and convert it
+#   + to an acceptable format for processing.
+#
+# 2)  Convert the script to a GUI application,
+#   + using something like 'gdialog' or 'zenity' . . .
+#     The script will then no longer take its argument(s)
+#   + from the command-line.
+#
+# 3)  Modify the script to parse one of the other available
+#   + Public Domain Dictionaries, such as the U.S. Census Bureau Gazetteer.
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 918)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>See also <a class="reference external" href="contributed-scripts.html#QKY">Example A-41</a> for an
+example of speedy <em>fgrep</em> lookup on a large text file.</p>
+<p><strong>agrep</strong> (<em>approximate grep</em>) extends the capabilities of <strong>grep</strong>
+to approximate matching. The search string may differ by a specified
+number of characters from the resulting matches. This utility is not
+part of the core Linux distribution.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 931)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>To search compressed files, use <strong>zgrep</strong>, <strong>zegrep</strong>, or
+<strong>zfgrep</strong>. These also work on non-compressed files, though slower
+than plain <strong>grep</strong>, <strong>egrep</strong>, <strong>fgrep</strong>. They are handy for
+searching through a mixed set of files, some compressed, some not.</p>
+<p class="last">To search <a class="reference external" href="filearchiv.html#BZIPREF">bzipped</a> files, use
+<strong>bzgrep</strong>.</p>
+</dd>
+<dt><strong>look</strong></dt>
+<dd><p class="first">The command <strong>look</strong> works like <strong>grep</strong>, but does a lookup on a
+&quot;dictionary,&quot; a sorted word list. By default, <strong>look</strong> searches for
+a match in <tt class="docutils literal">/usr/dict/words</tt>, but a different dictionary file may
+be specified.</p>
+<p><strong>Example 16-20. Checking words in a list for validity</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# lookup: Does a dictionary lookup on each word in a data file.
+
+file=words.data  # Data file from which to read words to test.
+
+echo
+echo &quot;Testing file $file&quot;
+echo
+
+while [ &quot;$word&quot; != end ]  # Last word in data file.
+do               # ^^^
+  read word      # From data file, because of redirection at end of loop.
+  look $word &gt; /dev/null  # Don't want to display lines in dictionary file.
+  #  Searches for words in the file /usr/share/dict/words
+  #+ (usually a link to linux.words).
+  lookup=$?      # Exit status of 'look' command.
+
+  if [ &quot;$lookup&quot; -eq 0 ]
+  then
+    echo &quot;\&quot;$word\&quot; is valid.&quot;
+  else
+    echo &quot;\&quot;$word\&quot; is invalid.&quot;
+  fi
+
+done &lt;&quot;$file&quot;    # Redirects stdin to $file, so &quot;reads&quot; come from there.
+
+echo
+
+exit 0
+
+# ----------------------------------------------------------------
+# Code below line will not execute because of &quot;exit&quot; command above.
+
+
+# Stephane Chazelas proposes the following, more concise alternative:
+
+while read word &amp;&amp; [[ $word != end ]]
+do if look &quot;$word&quot; &gt; /dev/null
+   then echo &quot;\&quot;$word\&quot; is valid.&quot;
+   else echo &quot;\&quot;$word\&quot; is invalid.&quot;
+   fi
+done &lt;&quot;$file&quot;
+
+exit 0
+</pre>
+</dd>
+<dt><strong>sed</strong>, <strong>awk</strong></dt>
+<dd>Scripting languages especially suited for parsing text files and
+command output. May be embedded singly or in combination in pipes
+and shell scripts.</dd>
+<dt><strong>`sed &lt;sedawk.html#SEDREF&gt;`_</strong></dt>
+<dd>Non-interactive &quot;stream editor&quot;, permits using many <strong>ex</strong> commands
+in <a class="reference external" href="timedate.html#BATCHPROCREF">batch</a> mode. It finds many uses in
+shell scripts.</dd>
+<dt><strong>`awk &lt;awk.html#AWKREF&gt;`_</strong></dt>
+<dd>Programmable file extractor and formatter, good for manipulating
+and/or extracting <a class="reference external" href="special-chars.html#FIELDREF">fields</a> (columns)
+in structured text files. Its syntax is similar to C.</dd>
+<dt><strong>wc</strong></dt>
+<dd><p class="first"><em>wc</em> gives a &quot;word count&quot; on a file or I/O stream:</p>
+<pre class="literal-block">
+bash $ wc /usr/share/doc/sed-4.1.2/README
+13  70  447 README
+[13 lines  70 words  447 characters]
+</pre>
+<p><tt class="docutils literal">wc <span class="pre">-w</span></tt> gives only the word count.</p>
+<p><tt class="docutils literal">wc <span class="pre">-l</span></tt> gives only the line count.</p>
+<p><tt class="docutils literal">wc <span class="pre">-c</span></tt> gives only the byte count.</p>
+<p><tt class="docutils literal">wc <span class="pre">-m</span></tt> gives only the character count.</p>
+<p><tt class="docutils literal">wc <span class="pre">-L</span></tt> gives only the length of the longest line.</p>
+<p>Using <strong>wc</strong> to count how many <tt class="docutils literal">.txt</tt> files are in current working
+directory:</p>
+<pre class="literal-block">
+$ ls *.txt | wc -l
+#  Will work as long as none of the &quot;*.txt&quot; files
+#+ have a linefeed embedded in their name.
+
+#  Alternative ways of doing this are:
+#      find . -maxdepth 1 -name \*.txt -print0 | grep -cz .
+#      (shopt -s nullglob; set -- *.txt; echo $#)
+
+#  Thanks, S.C.
+</pre>
+<p>Using <strong>wc</strong> to total up the size of all the files whose names begin
+with letters in the range d - h</p>
+<pre class="literal-block">
+bash$ wc [d-h]* | grep total | awk '{print $3}'
+71832
+</pre>
+<p>Using <strong>wc</strong> to count the instances of the word &quot;Linux&quot; in the main
+source file for this book.</p>
+<pre class="literal-block">
+bash$ grep Linux abs-book.sgml | wc -l
+50
+</pre>
+<p>See also <a class="reference external" href="filearchiv.html#EX52">Example 16-39</a> and <a class="reference external" href="redircb.html#REDIR4">Example
+20-8</a>.</p>
+<p>Certain commands include some of the functionality of <strong>wc</strong> as
+options.</p>
+<pre class="last literal-block">
+... | grep foo | wc -l
+# This frequently used construct can be more concisely rendered.
+
+... | grep -c foo
+# Just use the &quot;-c&quot; (or &quot;--count&quot;) option of grep.
+
+# Thanks, S.C.
+</pre>
+</dd>
+<dt><strong>tr</strong></dt>
+<dd><p class="first">character translation filter.</p>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 1085)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p><a class="reference external" href="special-chars.html#UCREF">Must use quoting and/or brackets</a>, as
+appropriate. Quotes prevent the shell from reinterpreting the
+special characters in <strong>tr</strong> command sequences. Brackets should be
+quoted to prevent expansion by the shell.</p>
+<p>Either <tt class="docutils literal">tr <span class="pre">&quot;A-Z&quot;</span> &quot;*&quot; &lt;filename</tt> or <tt class="docutils literal">tr <span class="pre">A-Z</span> \* &lt;filename</tt> changes
+all the uppercase letters in <tt class="docutils literal">filename</tt> to asterisks (writes to
+<tt class="docutils literal">stdout</tt>). On some systems this may not work, but
+<tt class="docutils literal">tr <span class="pre">A-Z</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">'[**]'</span></tt> will.</p>
+<p>The <tt class="docutils literal"><span class="pre">-d</span></tt> option deletes a range of characters.</p>
+<pre class="literal-block">
+echo &quot;abcdef&quot;                 # abcdef
+echo &quot;abcdef&quot; | tr -d b-d     # aef
+
+
+tr -d 0-9 &lt;filename
+# Deletes all digits from the file &quot;filename&quot;.
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">--squeeze-repeats</span></tt> (or <tt class="docutils literal"><span class="pre">-s</span></tt>) option deletes all but the
+first instance of a string of consecutive characters. This option is
+useful for removing excess
+<a class="reference external" href="special-chars.html#WHITESPACEREF">whitespace</a>.</p>
+<pre class="literal-block">
+bash$ echo &quot;XXXXX&quot; | tr --squeeze-repeats 'X'
+X
+</pre>
+<p>The <tt class="docutils literal"><span class="pre">-c</span></tt> &quot;complement&quot; option <em>inverts</em> the character set to match.
+With this option, <strong>tr</strong> acts only upon those characters <em>not</em>
+matching the specified set.</p>
+<pre class="literal-block">
+bash$ echo &quot;acfdeb123&quot; | tr -c b-d +
++c+d+b++++
+</pre>
+<p>Note that <strong>tr</strong> recognizes <a class="reference external" href="x17000.html#POSIXREF">POSIX character
+classes</a>.
+<a class="reference external" href="textproc.html#FTN.AEN11419">[1]</a></p>
+<pre class="literal-block">
+bash$ echo &quot;abcd2ef1&quot; | tr '[:alpha:]' -
+----2--1
+</pre>
+<p><strong>Example 16-21. *toupper*: Transforms a file to all uppercase.</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# Changes a file to all uppercase.
+
+E_BADARGS=85
+
+if [ -z &quot;$1&quot; ]  # Standard check for command-line arg.
+then
+  echo &quot;Usage: `basename $0` filename&quot;
+  exit $E_BADARGS
+fi
+
+tr a-z A-Z &lt;&quot;$1&quot;
+
+# Same effect as above, but using POSIX character set notation:
+#        tr '[:lower:]' '[:upper:]' &lt;&quot;$1&quot;
+# Thanks, S.C.
+
+#     Or even . . .
+#     cat &quot;$1&quot; | tr a-z A-Z
+#     Or dozens of other ways . . .
+
+exit 0
+
+#  Exercise:
+#  Rewrite this script to give the option of changing a file
+#+ to *either* upper or lowercase.
+#  Hint: Use either the &quot;case&quot; or &quot;select&quot; command.
+</pre>
+<p><strong>Example 16-22. *lowercase*: Changes all filenames in working
+directory to lowercase.</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+#
+#  Changes every filename in working directory to all lowercase.
+#
+#  Inspired by a script of John Dubois,
+#+ which was translated into Bash by Chet Ramey,
+#+ and considerably simplified by the author of the ABS Guide.
+
+
+for filename in *                # Traverse all files in directory.
+do
+   fname=`basename $filename`
+   n=`echo $fname | tr A-Z a-z`  # Change name to lowercase.
+   if [ &quot;$fname&quot; != &quot;$n&quot; ]       # Rename only files not already lowercase.
+   then
+     mv $fname $n
+   fi
+done
+
+exit $?
+
+
+# Code below this line will not execute because of &quot;exit&quot;.
+#--------------------------------------------------------#
+# To run it, delete script above line.
+
+# The above script will not work on filenames containing blanks or newlines.
+# Stephane Chazelas therefore suggests the following alternative:
+
+
+for filename in *    # Not necessary to use basename,
+                     # since &quot;*&quot; won't return any file containing &quot;/&quot;.
+do n=`echo &quot;$filename/&quot; | tr '[:upper:]' '[:lower:]'`
+#                             POSIX char set notation.
+#                    Slash added so that trailing newlines are not
+#                    removed by command substitution.
+   # Variable substitution:
+   n=${n%/}          # Removes trailing slash, added above, from filename.
+   [[ $filename == $n ]] || mv &quot;$filename&quot; &quot;$n&quot;
+                     # Checks if filename already lowercase.
+done
+
+exit $?
+</pre>
+<p><strong>Example 16-23. *du*: DOS to UNIX text file conversion.</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# Du.sh: DOS to UNIX text file converter.
+
+E_WRONGARGS=85
+
+if [ -z &quot;$1&quot; ]
+then
+  echo &quot;Usage: `basename $0` filename-to-convert&quot;
+  exit $E_WRONGARGS
+fi
+
+NEWFILENAME=$1.unx
+
+CR='\015'  # Carriage return.
+           # 015 is octal ASCII code for CR.
+           # Lines in a DOS text file end in CR-LF.
+           # Lines in a UNIX text file end in LF only.
+
+tr -d $CR &lt; $1 &gt; $NEWFILENAME
+# Delete CR's and write to new file.
+
+echo &quot;Original DOS text file is \&quot;$1\&quot;.&quot;
+echo &quot;Converted UNIX text file is \&quot;$NEWFILENAME\&quot;.&quot;
+
+exit 0
+
+# Exercise:
+# --------
+# Change the above script to convert from UNIX to DOS.
+</pre>
+<p><strong>Example 16-24. *rot13*: ultra-weak encryption.</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# rot13.sh: Classic rot13 algorithm,
+#           encryption that might fool a 3-year old
+#           for about 10 minutes.
+
+# Usage: ./rot13.sh filename
+# or     ./rot13.sh &lt;filename
+# or     ./rot13.sh and supply keyboard input (stdin)
+
+cat &quot;$&#64;&quot; | tr 'a-zA-Z' 'n-za-mN-ZA-M'   # &quot;a&quot; goes to &quot;n&quot;, &quot;b&quot; to &quot;o&quot; ...
+#  The   cat &quot;$&#64;&quot;   construct
+#+ permits input either from stdin or from files.
+
+exit 0
+</pre>
+<p><strong>Example 16-25. Generating &quot;Crypto-Quote&quot; Puzzles</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# crypto-quote.sh: Encrypt quotes
+
+#  Will encrypt famous quotes in a simple monoalphabetic substitution.
+#  The result is similar to the &quot;Crypto Quote&quot; puzzles
+#+ seen in the Op Ed pages of the Sunday paper.
+
+
+key=ETAOINSHRDLUBCFGJMQPVWZYXK
+# The &quot;key&quot; is nothing more than a scrambled alphabet.
+# Changing the &quot;key&quot; changes the encryption.
+
+# The 'cat &quot;$&#64;&quot;' construction gets input either from stdin or from files.
+# If using stdin, terminate input with a Control-D.
+# Otherwise, specify filename as command-line parameter.
+
+cat &quot;$&#64;&quot; | tr &quot;a-z&quot; &quot;A-Z&quot; | tr &quot;A-Z&quot; &quot;$key&quot;
+#        |  to uppercase  |     encrypt
+# Will work on lowercase, uppercase, or mixed-case quotes.
+# Passes non-alphabetic characters through unchanged.
+
+
+# Try this script with something like:
+# &quot;Nothing so needs reforming as other people's habits.&quot;
+# --Mark Twain
+#
+# Output is:
+# &quot;CFPHRCS QF CIIOQ MINFMBRCS EQ FPHIM GIFGUI'Q HETRPQ.&quot;
+# --BEML PZERC
+
+# To reverse the encryption:
+# cat &quot;$&#64;&quot; | tr &quot;$key&quot; &quot;A-Z&quot;
+
+
+#  This simple-minded cipher can be broken by an average 12-year old
+#+ using only pencil and paper.
+
+exit 0
+
+#  Exercise:
+#  --------
+#  Modify the script so that it will either encrypt or decrypt,
+#+ depending on command-line argument(s).
+</pre>
+<p>Of course, <em>tr</em> lends itself to <em>code obfuscation</em>.</p>
+<pre class="literal-block">
+#!/bin/bash
+# jabh.sh
+
+x=&quot;wftedskaebjgdBstbdbsmnjgz&quot;
+echo $x | tr &quot;a-z&quot; &quot;oh, turtleneck Phrase Jar!&quot;
+
+# Based on the Wikipedia &quot;Just another Perl hacker&quot; article.
+</pre>
+<p><strong>*tr* variants</strong></p>
+<p class="last">The <strong>tr</strong> utility has two historic variants. The BSD version does
+not use brackets (<tt class="docutils literal">tr <span class="pre">a-z</span> <span class="pre">A-Z</span></tt>), but the SysV one does
+(<tt class="docutils literal">tr <span class="pre">'[a-z]'</span> <span class="pre">'[A-Z]'</span></tt>). The GNU version of <strong>tr</strong> resembles the
+BSD one.</p>
+</dd>
+<dt><strong>fold</strong></dt>
+<dd>A filter that wraps lines of input to a specified width. This is
+especially useful with the <tt class="docutils literal"><span class="pre">-s</span></tt> option, which breaks lines at word
+spaces (see <a class="reference external" href="textproc.html#EX50">Example 16-26</a> and <a class="reference external" href="contributed-scripts.html#MAILFORMAT">Example
+A-1</a>).</dd>
+<dt><strong>fmt</strong></dt>
+<dd><p class="first">Simple-minded file formatter, used as a filter in a pipe to &quot;wrap&quot;
+long lines of text output.</p>
+<p><strong>Example 16-26. Formatted file listing.</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+
+WIDTH=40                    # 40 columns wide.
+
+b=`ls /usr/local/bin`       # Get a file listing...
+
+echo $b | fmt -w $WIDTH
+
+# Could also have been done by
+#    echo $b | fold - -s -w $WIDTH
+
+exit 0
+</pre>
+<p>See also <a class="reference external" href="moreadv.html#EX41">Example 16-5</a>.</p>
+<div class="figure align-center">
+<img alt="Tip" src="http://tldp.org/LDP/abs/images/tip.gif" />
+<p class="caption">Tip</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 1370)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">A powerful alternative to <strong>fmt</strong> is Kamil Toman's <strong>par</strong> utility,
+available from
+<a class="reference external" href="http://www.cs.berkeley.edu/~amc/Par/">http://www.cs.berkeley.edu/~amc/Par/</a>.</p>
+</dd>
+<dt><strong>col</strong></dt>
+<dd>This deceptively named filter removes reverse line feeds from an
+input stream. It also attempts to replace whitespace with equivalent
+tabs. The chief use of <strong>col</strong> is in filtering the output from
+certain text processing utilities, such as <strong>groff</strong> and <strong>tbl</strong>.</dd>
+<dt><strong>column</strong></dt>
+<dd><p class="first">Column formatter. This filter transforms list-type text output into
+a &quot;pretty-printed&quot; table by inserting tabs at appropriate places.</p>
+<p><strong>Example 16-27. Using *column* to format a directory listing</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# colms.sh
+# A minor modification of the example file in the &quot;column&quot; man page.
+
+
+(printf &quot;PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\n&quot; \
+; ls -l | sed 1d) | column -t
+#         ^^^^^^           ^^
+
+#  The &quot;sed 1d&quot; in the pipe deletes the first line of output,
+#+ which would be &quot;total        N&quot;,
+#+ where &quot;N&quot; is the total number of files found by &quot;ls -l&quot;.
+
+# The -t option to &quot;column&quot; pretty-prints a table.
+
+exit 0
+</pre>
+</dd>
+<dt><strong>colrm</strong></dt>
+<dd><p class="first">Column removal filter. This removes columns (characters) from a file
+and writes the file, lacking the range of specified columns, back to
+<tt class="docutils literal">stdout</tt>. <tt class="docutils literal">colrm 2 4 &lt;filename</tt> removes the second through
+fourth characters from each line of the text file <tt class="docutils literal">filename</tt>.</p>
+<div class="figure align-center">
+<img alt="Caution" src="http://tldp.org/LDP/abs/images/caution.gif" />
+<p class="caption">Caution</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 1416)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p class="last">If the file contains tabs or nonprintable characters, this may cause
+unpredictable behavior. In such cases, consider using
+<a class="reference external" href="textproc.html#EXPANDREF">expand</a> and <strong>unexpand</strong> in a pipe
+preceding <strong>colrm</strong>.</p>
+</dd>
+<dt><strong>nl</strong></dt>
+<dd><p class="first">Line numbering filter: <tt class="docutils literal">nl filename</tt> lists <tt class="docutils literal">filename</tt> to
+<tt class="docutils literal">stdout</tt>, but inserts consecutive numbers at the beginning of each
+non-blank line. If <tt class="docutils literal">filename</tt> omitted, operates on <tt class="docutils literal">stdin.</tt></p>
+<p>The output of <strong>nl</strong> is very similar to <tt class="docutils literal">cat <span class="pre">-b</span></tt>, since, by
+default <strong>nl</strong> does not list blank lines.</p>
+<p><strong>Example 16-28. *nl*: A self-numbering script.</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# line-number.sh
+
+# This script echoes itself twice to stdout with its lines numbered.
+
+# 'nl' sees this as line 4 since it does not number blank lines.
+# 'cat -n' sees the above line as number 6.
+
+nl `basename $0`
+
+echo; echo  # Now, let's try it with 'cat -n'
+
+cat -n `basename $0`
+# The difference is that 'cat -n' numbers the blank lines.
+# Note that 'nl -ba' will also do so.
+
+exit 0
+# -----------------------------------------------------------------
+</pre>
+</dd>
+<dt><strong>pr</strong></dt>
+<dd><p class="first">Print formatting filter. This will paginate files (or <tt class="docutils literal">stdout</tt>)
+into sections suitable for hard copy printing or viewing on screen.
+Various options permit row and column manipulation, joining lines,
+setting margins, numbering lines, adding page headers, and merging
+files, among other things. The <strong>pr</strong> command combines much of the
+functionality of <strong>nl</strong>, <strong>paste</strong>, <strong>fold</strong>, <strong>column</strong>, and
+<strong>expand</strong>.</p>
+<p><tt class="docutils literal">pr <span class="pre">-o</span> 5 <span class="pre">--width=65</span> fileZZZ | more</tt> gives a nice paginated listing
+to screen of <tt class="docutils literal">fileZZZ</tt> with margins set at 5 and 65.</p>
+<p class="last">A particularly useful option is <tt class="docutils literal"><span class="pre">-d</span></tt>, forcing double-spacing (same
+effect as <strong>sed -G</strong>).</p>
+</dd>
+<dt><strong>gettext</strong></dt>
+<dd><p class="first">The GNU <strong>gettext</strong> package is a set of utilities for
+<a class="reference external" href="localization.html">localizing</a> and translating the text output of
+programs into foreign languages. While originally intended for C
+programs, it now supports quite a number of programming and
+scripting languages.</p>
+<p class="last">The <strong>gettext</strong> <em>program</em> works on shell scripts. See the
+<tt class="docutils literal">info page</tt>.</p>
+</dd>
+<dt><strong>msgfmt</strong></dt>
+<dd>A program for generating binary message catalogs. It is used for
+<a class="reference external" href="localization.html">localization</a>.</dd>
+<dt><strong>iconv</strong></dt>
+<dd><p class="first">A utility for converting file(s) to a different encoding (character
+set). Its chief use is for <a class="reference external" href="localization.html">localization</a>.</p>
+<pre class="last literal-block">
+# Convert a string from UTF-8 to UTF-16 and print to the BookList
+function write_utf8_string {
+    STRING=$1
+    BOOKLIST=$2
+    echo -n &quot;$STRING&quot; | iconv -f UTF8 -t UTF16 | \
+    cut -b 3- | tr -d \\n &gt;&gt; &quot;$BOOKLIST&quot;
+}
+
+#  From Peter Knowles' &quot;booklistgen.sh&quot; script
+#+ for converting files to Sony Librie/PRS-50X format.
+#  (http://booklistgensh.peterknowles.com)
+</pre>
+</dd>
+<dt><strong>recode</strong></dt>
+<dd>Consider this a fancier version of <strong>iconv</strong>, above. This very
+versatile utility for converting a file to a different encoding
+scheme. Note that <em>recode</em> is not part of the standard Linux
+installation.</dd>
+<dt><strong>TeX</strong>, <strong>gs</strong></dt>
+<dd><p class="first"><strong>TeX</strong> and <strong>Postscript</strong> are text markup languages used for
+preparing copy for printing or formatted video display.</p>
+<p><strong>TeX</strong> is Donald Knuth's elaborate typsetting system. It is often
+convenient to write a shell script encapsulating all the options and
+arguments passed to one of these markup languages.</p>
+<p class="last"><em>Ghostscript</em> (<strong>gs</strong>) is a GPL-ed Postscript interpreter.</p>
+</dd>
+<dt><strong>texexec</strong></dt>
+<dd><p class="first">Utility for processing <em>TeX</em> and <em>pdf</em> files. Found in <tt class="docutils literal">/usr/bin</tt>
+on many Linux distros, it is actually a <a class="reference external" href="wrapper.html#SHWRAPPER">shell
+wrapper</a> that calls
+<a class="reference external" href="wrapper.html#PERLREF">Perl</a> to invoke <em>Tex</em>.</p>
+<pre class="last literal-block">
+texexec --pdfarrange --result=Concatenated.pdf *pdf
+
+#  Concatenates all the pdf files in the current working directory
+#+ into the merged file, Concatenated.pdf . . .
+#  (The --pdfarrange option repaginates a pdf file. See also --pdfcombine.)
+#  The above command-line could be parameterized and put into a shell script.
+</pre>
+</dd>
+<dt><strong>enscript</strong></dt>
+<dd><p class="first">Utility for converting plain text file to PostScript</p>
+<p class="last">For example, <strong>enscript filename.txt -p filename.ps</strong> produces the
+PostScript output file <tt class="docutils literal">filename.ps</tt>.</p>
+</dd>
+<dt><strong>groff</strong>, <strong>tbl</strong>, <strong>eqn</strong></dt>
+<dd><p class="first">Yet another text markup and display formatting language is
+<strong>groff</strong>. This is the enhanced GNU version of the venerable UNIX
+<strong>roff/troff</strong> display and typesetting package.
+<a class="reference external" href="basic.html#MANREF">Manpages</a> use <strong>groff</strong>.</p>
+<p>The <strong>tbl</strong> table processing utility is considered part of
+<strong>groff</strong>, as its function is to convert table markup into <strong>groff</strong>
+commands.</p>
+<p>The <strong>eqn</strong> equation processing utility is likewise part of
+<strong>groff</strong>, and its function is to convert equation markup into
+<strong>groff</strong> commands.</p>
+<p><strong>Example 16-29. *manview*: Viewing formatted manpages</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# manview.sh: Formats the source of a man page for viewing.
+
+#  This script is useful when writing man page source.
+#  It lets you look at the intermediate results on the fly
+#+ while working on it.
+
+E_WRONGARGS=85
+
+if [ -z &quot;$1&quot; ]
+then
+  echo &quot;Usage: `basename $0` filename&quot;
+  exit $E_WRONGARGS
+fi
+
+# ---------------------------
+groff -Tascii -man $1 | less
+# From the man page for groff.
+# ---------------------------
+
+#  If the man page includes tables and/or equations,
+#+ then the above code will barf.
+#  The following line can handle such cases.
+#
+#   gtbl &lt; &quot;$1&quot; | geqn -Tlatin1 | groff -Tlatin1 -mtty-char -man
+#
+#   Thanks, S.C.
+
+exit $?   # See also the &quot;maned.sh&quot; script.
+</pre>
+<p class="last">See also <a class="reference external" href="contributed-scripts.html#MANED">Example A-39</a>.</p>
+</dd>
+</dl>
+<p><strong>lex</strong>, <strong>yacc</strong></p>
+<blockquote>
+<p>The <strong>lex</strong> lexical analyzer produces programs for pattern matching.
+This has been replaced by the nonproprietary <strong>flex</strong> on Linux
+systems.</p>
+<p>The <strong>yacc</strong> utility creates a parser based on a set of
+specifications. This has been replaced by the nonproprietary
+<strong>bison</strong> on Linux systems.</p>
+</blockquote>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/textproc.ca.rst</tt>, line 10); <em><a href="#id13">backlink</a></em></p>
+Duplicate explicit target name: &quot;[1]&quot;.</div>
+<p><a class="reference external" href="textproc.html#AEN11419">[1]</a></p>
+<p>This is only true of the GNU version of <strong>tr</strong>, not the generic version
+often found on commercial UNIX systems.</p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="30%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="timedate.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="filearchiv.html">Next</a></td>
+</tr>
+<tr><td>Time / Date Commands</td>
+<td><a class="reference external" href="external.html">Up</a></td>
+<td>File and Archiving Commands</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

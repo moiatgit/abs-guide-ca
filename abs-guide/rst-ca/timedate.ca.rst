@@ -300,5 +300,3 @@ comandes
 
 `Següent <textproc.ca.html>`_ : Comandes de processament de text
 
-----------
-CA Rev. 201205201800
