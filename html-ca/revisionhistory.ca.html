@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/revisionhistory.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+----+------------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+====+==============================+
+| `Prev &lt;writingscripts.html&gt;`_    |    | `Next &lt;mirrorsites.html&gt;`_   |
++----------------------------------+----+------------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="appendix-o-revision-history">
+<h1>Appendix O. Revision History</h1>
+<pre class="literal-block">
+This document first appeared as a 60-page HOWTO in the late spring
+of 2000. Since then, it has gone through quite a number of updates
+and revisions. This book could not have been written without the
+assistance of the Linux community, and especially of the volunteers
+of the Linux Documentation Project.
+</pre>
+<p>Here is the e-mail to the LDP requesting permission to submit version
+0.1.</p>
+<pre class="literal-block">
+From thegrendel&#64;theriver.com Sat Jun 10 09:05:33 2000 -0700
+Date: Sat, 10 Jun 2000 09:05:28 -0700 (MST)
+From: &quot;M. Leo Cooper&quot; &lt;thegrendel&#64;theriver.com&gt;
+X-Sender: thegrendel&#64;localhost
+To: ldp-discuss&#64;lists.linuxdoc.org
+Subject: Permission to submit HOWTO
+
+Dear HOWTO Coordinator,
+
+I am working on and would like to submit to the LDP a HOWTO on the subject
+of &quot;Bash Scripting&quot; (shell scripting, using 'bash'). As it happens,
+I have been writing this document, off and on, for about the last eight
+months or so, and I could produce a first draft in ASCII text format in
+a matter of just a few more days.
+
+I began writing this out of frustration at being unable to find a
+decent book on shell scripting. I managed to locate some pretty good
+articles on various aspects of scripting, but nothing like a complete,
+beginning-to-end tutorial.  Well, in keeping with my philosophy, if all
+else fails, do it yourself.
+
+As it stands, this proposed &quot;Bash-Scripting HOWTO&quot; would serve as a
+combination tutorial and reference, with the heavier emphasis on the
+tutorial. It assumes Linux experience, but only a very basic level
+of programming skills. Interspersed with the text are 79 illustrative
+example scripts of varying complexity, all liberally commented. There
+are even exercises for the reader.
+
+At this stage, I'm up to 18,000+ words (124k), and that's over 50 pages of
+text (whew!).
+
+
+I haven't mentioned that I've previously authored an LDP HOWTO, the
+&quot;Software-Building HOWTO&quot;, which I wrote in Linuxdoc/SGML. I don't know
+if I could handle Docbook/SGML, and I'm glad you have volunteers to do
+the conversion. You people seem to have gotten on a more organized basis
+these last few months. Working with Greg Hankins and Tim Bynum was nice,
+but a professional team is even nicer.
+
+Anyhow, please advise.
+
+
+Mendel Cooper
+thegrendel&#64;theriver.com
+</pre>
+<p><strong>Table O-1. Revision History</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="15%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Release</th>
+<th class="head">Date</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0.1</td>
+<td>14 Jun 2000</td>
+<td>Initial release.</td>
+</tr>
+<tr><td><tt class="docutils literal">0.2</tt></td>
+<td>30 Oct 2000</td>
+<td>Bugs fixed, plus much additional material and more example scripts.</td>
+</tr>
+<tr><td><tt class="docutils literal">0.3</tt></td>
+<td>12 Feb 2001</td>
+<td>Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">0.4</tt></td>
+<td>08 Jul 2001</td>
+<td>Complete revision and expansion of the book.</td>
+</tr>
+<tr><td><tt class="docutils literal">0.5</tt></td>
+<td>03 Sep 2001</td>
+<td>Major update: Bugfixes, material added, sections reorganized.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.0</tt></td>
+<td>14 Oct 2001</td>
+<td>Stable release: Bugfixes, reorganization, material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.1</tt></td>
+<td>06 Jan 2002</td>
+<td>Bugfixes, material and scripts added.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.2</tt></td>
+<td>31 Mar 2002</td>
+<td>Bugfixes, material and scripts added.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.3</tt></td>
+<td>02 Jun 2002</td>
+<td>TANGERINE release: A few bugfixes, much more material and scripts added.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.4</tt></td>
+<td>16 Jun 2002</td>
+<td>MANGO release: A number of typos fixed, more material and scripts.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.5</tt></td>
+<td>13 Jul 2002</td>
+<td>PAPAYA release: A few bugfixes, much more material and scripts added.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.6</tt></td>
+<td>29 Sep 2002</td>
+<td>POMEGRANATE release: Bugfixes, more material, one more script.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.7</tt></td>
+<td>05 Jan 2003</td>
+<td>COCONUT release: A couple of bugfixes, more material, one more script.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.8</tt></td>
+<td>10 May 2003</td>
+<td>BREADFRUIT release: A number of bugfixes, more scripts and material.</td>
+</tr>
+<tr><td><tt class="docutils literal">1.9</tt></td>
+<td>21 Jun 2003</td>
+<td>PERSIMMON release: Bugfixes, and more material.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.0</tt></td>
+<td>24 Aug 2003</td>
+<td>GOOSEBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.1</tt></td>
+<td>14 Sep 2003</td>
+<td>HUCKLEBERRY release: Bugfixes, and more material.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.2</tt></td>
+<td>31 Oct 2003</td>
+<td>CRANBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.3</tt></td>
+<td>03 Jan 2004</td>
+<td>STRAWBERRY release: Bugfixes and more material.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.4</tt></td>
+<td>25 Jan 2004</td>
+<td>MUSKMELON release: Bugfixes.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.5</tt></td>
+<td>15 Feb 2004</td>
+<td>STARFRUIT release: Bugfixes and more material.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.6</tt></td>
+<td>15 Mar 2004</td>
+<td>SALAL release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.7</tt></td>
+<td>18 Apr 2004</td>
+<td>MULBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">2.8</tt></td>
+<td>11 Jul 2004</td>
+<td>ELDERBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.0</tt></td>
+<td>03 Oct 2004</td>
+<td>LOGANBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.1</tt></td>
+<td>14 Nov 2004</td>
+<td>BAYBERRY release: Bugfix update.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.2</tt></td>
+<td>06 Feb 2005</td>
+<td>BLUEBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.3</tt></td>
+<td>20 Mar 2005</td>
+<td>RASPBERRY release: Bugfixes, much material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.4</tt></td>
+<td>08 May 2005</td>
+<td>TEABERRY release: Bugfixes, stylistic revisions.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.5</tt></td>
+<td>05 Jun 2005</td>
+<td>BOXBERRY release: Bugfixes, some material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.6</tt></td>
+<td>28 Aug 2005</td>
+<td>POKEBERRY release: Bugfixes, some material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.7</tt></td>
+<td>23 Oct 2005</td>
+<td>WHORTLEBERRY release: Bugfixes, some material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.8</tt></td>
+<td>26 Feb 2006</td>
+<td>BLAEBERRY release: Bugfixes, some material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">3.9</tt></td>
+<td>15 May 2006</td>
+<td>SPICEBERRY release: Bugfixes, some material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">4.0</tt></td>
+<td>18 Jun 2006</td>
+<td>WINTERBERRY release: Major reorganization.</td>
+</tr>
+<tr><td><tt class="docutils literal">4.1</tt></td>
+<td>08 Oct 2006</td>
+<td>WAXBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">4.2</tt></td>
+<td>10 Dec 2006</td>
+<td>SPARKLEBERRY release: Important update.</td>
+</tr>
+<tr><td><tt class="docutils literal">4.3</tt></td>
+<td>29 Apr 2007</td>
+<td>INKBERRY release: Bugfixes, material added.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.0</tt></td>
+<td>24 Jun 2007</td>
+<td>SERVICEBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.1</tt></td>
+<td>10 Nov 2007</td>
+<td>LINGONBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.2</tt></td>
+<td>16 Mar 2008</td>
+<td>SILVERBERRY release: Important update.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.3</tt></td>
+<td>11 May 2008</td>
+<td>GOLDENBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.4</tt></td>
+<td>21 Jul 2008</td>
+<td>ANGLEBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.5</tt></td>
+<td>23 Nov 2008</td>
+<td>FARKLEBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">5.6</tt></td>
+<td>26 Jan 2009</td>
+<td>WORCESTERBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">6.0</tt></td>
+<td>23 Mar 2009</td>
+<td>THIMBLEBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">6.1</tt></td>
+<td>30 Sep 2009</td>
+<td>BUFFALOBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">6.2</tt></td>
+<td>17 Mar 2010</td>
+<td>ROWANBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">6.3</tt></td>
+<td>30 Apr 2011</td>
+<td>SWOZZLEBERRY release: Major update.</td>
+</tr>
+<tr><td><tt class="docutils literal">6.4</tt></td>
+<td>30 Aug 2011</td>
+<td>VORTEXBERRY release: Minor update.</td>
+</tr>
+<tr><td><tt class="docutils literal">6.5</tt></td>
+<td>05 Apr 2012</td>
+<td>TUNGSTENBERRY release: Minor update.</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="28%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="writingscripts.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="mirrorsites.html">Next</a></td>
+</tr>
+<tr><td>Writing Scripts</td>
+<td>&nbsp;</td>
+<td>Download and Mirror Sites</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

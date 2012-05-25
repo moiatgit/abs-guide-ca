@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/part4.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+----+---------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+====+===========================+
+| `Prev &lt;recess-time.html&gt;`_       |    | `Next &lt;internal.html&gt;`_   |
++----------------------------------+----+---------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="part-4-commands">
+<h1>Part 4. Commands</h1>
+<p>Mastering the commands on your Linux machine is an indispensable prelude
+to writing effective shell scripts.</p>
+<p>This section covers the following commands:</p>
+<ul class="simple">
+<li><a class="reference external" href="special-chars.html#DOTREF">.</a> (See also
+<a class="reference external" href="internal.html#SOURCEREF">source</a>)</li>
+<li><a class="reference external" href="system.html#ACREF">ac</a></li>
+<li><a class="reference external" href="system.html#USERADDREF">adduser</a></li>
+<li><a class="reference external" href="system.html#AGETTYREF">agetty</a></li>
+<li><a class="reference external" href="textproc.html#AGREPREF">agrep</a></li>
+<li><a class="reference external" href="filearchiv.html#ARREF">ar</a></li>
+<li><a class="reference external" href="system.html#ARCHREF">arch</a></li>
+<li><a class="reference external" href="timedate.html#ATREF">at</a></li>
+<li><a class="reference external" href="x9585.html#AUTOLOADREF">autoload</a></li>
+<li><a class="reference external" href="awk.html#AWKREF">awk</a> (See also <a class="reference external" href="mathc.html#AWKMATH">Using **awk** for math
+operations</a>)</li>
+<li><a class="reference external" href="system.html#BADBLOCKSREF">badblocks</a></li>
+<li><a class="reference external" href="extmisc.html#BANNERREF">banner</a></li>
+<li><a class="reference external" href="filearchiv.html#BASENAMEREF">basename</a></li>
+<li><a class="reference external" href="timedate.html#BATCHREF">batch</a></li>
+<li><a class="reference external" href="mathc.html#BCREF">bc</a></li>
+<li><a class="reference external" href="x9585.html#BGREF">bg</a></li>
+<li><a class="reference external" href="internal.html#BINDREF">bind</a></li>
+<li><a class="reference external" href="textproc.html#BISONREF">bison</a></li>
+<li><a class="reference external" href="x9585.html#BLTREF">builtin</a></li>
+<li><a class="reference external" href="textproc.html#BZGREPREF">bzgrep</a></li>
+<li><a class="reference external" href="filearchiv.html#BZIPREF">bzip2</a></li>
+<li><a class="reference external" href="timedate.html#CALREF">cal</a></li>
+<li><a class="reference external" href="internal.html#CALLERREF">caller</a></li>
+<li><a class="reference external" href="basic.html#CATREF">cat</a></li>
+<li><a class="reference external" href="internal.html#CDREF">cd</a></li>
+<li><a class="reference external" href="basic.html#CHATTRREF">chattr</a></li>
+<li><a class="reference external" href="communications.html#CHFNREF">chfn</a></li>
+<li><a class="reference external" href="system.html#CHGRPREF">chgrp</a></li>
+<li><a class="reference external" href="system.html#CHKCONFIGREF">chkconfig</a></li>
+<li><a class="reference external" href="basic.html#CHMODREF">chmod</a></li>
+<li><a class="reference external" href="system.html#CHOWNREF">chown</a></li>
+<li><a class="reference external" href="system.html#CHROOTREF">chroot</a></li>
+<li><a class="reference external" href="filearchiv.html#CKSUMREF">cksum</a></li>
+<li><a class="reference external" href="terminalccmds.html#CLEARREF">clear</a></li>
+<li><a class="reference external" href="timedate.html#CLOCKREF">clock</a></li>
+<li><a class="reference external" href="filearchiv.html#CMPREF">cmp</a></li>
+<li><a class="reference external" href="textproc.html#COLREF">col</a></li>
+<li><a class="reference external" href="textproc.html#COLRMREF">colrm</a></li>
+<li><a class="reference external" href="textproc.html#COLUMNREF">column</a></li>
+<li><a class="reference external" href="filearchiv.html#COMMREF">comm</a></li>
+<li><a class="reference external" href="x9585.html#COMMANDREF">command</a></li>
+<li><a class="reference external" href="tabexpansion.html#COMPGENREF">compgen</a></li>
+<li><a class="reference external" href="tabexpansion.html#COMPLETEREF">complete</a></li>
+<li><a class="reference external" href="filearchiv.html#COMPRESSREF">compress</a></li>
+<li><a class="reference external" href="bashver4.html#COPROCREF">coproc</a></li>
+<li><a class="reference external" href="basic.html#CPREF">cp</a></li>
+<li><a class="reference external" href="filearchiv.html#CPIOREF">cpio</a></li>
+<li><a class="reference external" href="system.html#CRONREF">cron</a></li>
+<li><a class="reference external" href="filearchiv.html#CRYPTREF">crypt</a></li>
+<li><a class="reference external" href="filearchiv.html#CSPLITREF">csplit</a></li>
+<li><a class="reference external" href="communications.html#CUREF">cu</a></li>
+<li><a class="reference external" href="textproc.html#CUTREF">cut</a></li>
+<li><a class="reference external" href="timedate.html#DATEREF">date</a></li>
+<li><a class="reference external" href="mathc.html#DCREF">dc</a></li>
+<li><a class="reference external" href="extmisc.html#DDREF">dd</a></li>
+<li><a class="reference external" href="system.html#DEBUGFSREF">debugfs</a></li>
+<li><a class="reference external" href="declareref.html">declare</a></li>
+<li><a class="reference external" href="system.html#DEPMODREF">depmod</a></li>
+<li><a class="reference external" href="system.html#DFREF">df</a></li>
+<li><a class="reference external" href="assortedtips.html#DIALOGREF">dialog</a></li>
+<li><a class="reference external" href="filearchiv.html#DIFFREF">diff</a></li>
+<li><a class="reference external" href="filearchiv.html#DIFF3REF">diff3</a></li>
+<li><a class="reference external" href="filearchiv.html#DIFFSTATREF">diffstat</a></li>
+<li><a class="reference external" href="communications.html#DIGREF">dig</a></li>
+<li><a class="reference external" href="filearchiv.html#DIRNAMEREF">dirname</a></li>
+<li><a class="reference external" href="internal.html#DIRSD">dirs</a></li>
+<li><a class="reference external" href="x9585.html#DISOWNREF">disown</a></li>
+<li><a class="reference external" href="system.html#DMESGREF">dmesg</a></li>
+<li><a class="reference external" href="extmisc.html#DOEXECREF">doexec</a></li>
+<li><a class="reference external" href="filearchiv.html#DOS2UNIXREF">dos2unix</a></li>
+<li><a class="reference external" href="system.html#DUREF">du</a></li>
+<li><a class="reference external" href="system.html#DUMPREF">dump</a></li>
+<li><a class="reference external" href="system.html#DUMPE2FSREF">dumpe2fs</a></li>
+<li><a class="reference external" href="system.html#E2FSCKREF">e2fsck</a></li>
+<li><a class="reference external" href="internal.html#ECHOREF">echo</a></li>
+<li><a class="reference external" href="textproc.html#EGREPREF">egrep</a></li>
+<li><a class="reference external" href="x9585.html#ENABLEREF">enable</a></li>
+<li><a class="reference external" href="textproc.html#ENSCRIPTREF">enscript</a></li>
+<li><a class="reference external" href="system.html#ENVVREF">env</a></li>
+<li><a class="reference external" href="textproc.html#EQNREF">eqn</a></li>
+<li><a class="reference external" href="internal.html#EVALREF">eval</a></li>
+<li><a class="reference external" href="internal.html#EXECREF">exec</a></li>
+<li><a class="reference external" href="internal.html#EXITREF">exit</a> (Related topic: <a class="reference external" href="exit-status.html#EXITSTATUSREF">exit
+status</a>)</li>
+<li><a class="reference external" href="textproc.html#EXPANDREF">expand</a></li>
+<li><a class="reference external" href="internal.html#EXPORTREF">export</a></li>
+<li><a class="reference external" href="moreadv.html#EXPRREF">expr</a></li>
+<li><a class="reference external" href="mathc.html#FACTORREF">factor</a></li>
+<li><a class="reference external" href="internal.html#FALSEREF">false</a></li>
+<li><a class="reference external" href="system.html#FDFORMATREF">fdformat</a></li>
+<li><a class="reference external" href="system.html#FDISKREF">fdisk</a></li>
+<li><a class="reference external" href="x9585.html#FGREF">fg</a></li>
+<li><a class="reference external" href="textproc.html#FGREPREF">fgrep</a></li>
+<li><a class="reference external" href="filearchiv.html#FILEREF">file</a></li>
+<li><a class="reference external" href="moreadv.html#FINDREF">find</a></li>
+<li><a class="reference external" href="communications.html#FINGERREF">finger</a></li>
+<li><a class="reference external" href="textproc.html#FLEXREF">flex</a></li>
+<li><a class="reference external" href="system.html#FLOCKREF">flock</a></li>
+<li><a class="reference external" href="textproc.html#FMTREF">fmt</a></li>
+<li><a class="reference external" href="textproc.html#FOLDREF">fold</a></li>
+<li><a class="reference external" href="system.html#FREEREF">free</a></li>
+<li><a class="reference external" href="system.html#FSCKREF">fsck</a></li>
+<li><a class="reference external" href="communications.html#FTPREF">ftp</a></li>
+<li><a class="reference external" href="system.html#FUSERREF">fuser</a></li>
+<li><a class="reference external" href="filearchiv.html#GETFACLREF">getfacl</a></li>
+<li><a class="reference external" href="extmisc.html#GETOPTY">getopt</a></li>
+<li><a class="reference external" href="internal.html#GETOPTSX">getopts</a></li>
+<li><a class="reference external" href="textproc.html#GETTEXTREF">gettext</a></li>
+<li><a class="reference external" href="system.html#GETTYREF">getty</a></li>
+<li><a class="reference external" href="system.html#GNOMEMOUNTREF">gnome-mount</a></li>
+<li><a class="reference external" href="textproc.html#GREPREF">grep</a></li>
+<li><a class="reference external" href="textproc.html#GROFFREF">groff</a></li>
+<li><a class="reference external" href="system.html#GROUPMODREF">groupmod</a></li>
+<li><a class="reference external" href="system.html#GROUPSCMDREF">groups</a> (Related topic: the
+<a class="reference external" href="internalvariables.html#GROUPSREF">$GROUPS</a> variable)</li>
+<li><a class="reference external" href="textproc.html#GSREF">gs</a></li>
+<li><a class="reference external" href="filearchiv.html#GZIPREF">gzip</a></li>
+<li><a class="reference external" href="system.html#HALTREF">halt</a></li>
+<li><a class="reference external" href="internal.html#HASHCMDREF">hash</a></li>
+<li><a class="reference external" href="system.html#HDPARMREF">hdparm</a></li>
+<li><a class="reference external" href="textproc.html#HEADREF">head</a></li>
+<li><a class="reference external" href="internal.html#HELPREF">help</a></li>
+<li><a class="reference external" href="extmisc.html#HEXDUMPREF">hexdump</a></li>
+<li><a class="reference external" href="communications.html#HOSTREF">host</a></li>
+<li><a class="reference external" href="system.html#HOSTIDREF">hostid</a></li>
+<li><a class="reference external" href="system.html#HNAMEREF">hostname</a> (Related topic: the
+<a class="reference external" href="internalvariables.html#HOSTNAMEREF">$HOSTNAME</a> variable)</li>
+<li><a class="reference external" href="timedate.html#HWCLOCKREF">hwclock</a></li>
+<li><a class="reference external" href="textproc.html#ICONVREF">iconv</a></li>
+<li><a class="reference external" href="system.html#IDREF">id</a> (Related topic: the
+<a class="reference external" href="internalvariables.html#UIDREF">$UID</a> variable)</li>
+<li><a class="reference external" href="system.html#IFCONFIGREF">ifconfig</a></li>
+<li><a class="reference external" href="basic.html#INFOREF">info</a></li>
+<li><a class="reference external" href="terminalccmds.html#INFOCMPREF">infocmp</a></li>
+<li><a class="reference external" href="system.html#INITREF">init</a></li>
+<li><a class="reference external" href="system.html#INSMODREF">insmod</a></li>
+<li><a class="reference external" href="filearchiv.html#INSTALLREF">install</a></li>
+<li><a class="reference external" href="system.html#IPREF">ip</a></li>
+<li><a class="reference external" href="communications.html#IPCALCREF">ipcalc</a></li>
+<li><a class="reference external" href="system.html#IPTABLESREF">iptables</a></li>
+<li><a class="reference external" href="system.html#IWCONFIGREF">iwconfig</a></li>
+<li><a class="reference external" href="x9585.html#JOBSREF">jobs</a></li>
+<li><a class="reference external" href="textproc.html#JOINREF">join</a></li>
+<li><a class="reference external" href="extmisc.html#JOTREF">jot</a></li>
+<li><a class="reference external" href="x9585.html#KILLREF">kill</a></li>
+<li><a class="reference external" href="x9585.html#KILLALLREF">killall</a></li>
+<li><a class="reference external" href="system.html#LASTREF">last</a></li>
+<li><a class="reference external" href="system.html#LASTCOMMREF">lastcomm</a></li>
+<li><a class="reference external" href="system.html#LASTLOGREF">lastlog</a></li>
+<li><a class="reference external" href="system.html#LDDREF">ldd</a></li>
+<li><a class="reference external" href="filearchiv.html#LESSREF">less</a></li>
+<li><a class="reference external" href="internal.html#LETREF">let</a></li>
+<li><a class="reference external" href="textproc.html#LEXREF">lex</a></li>
+<li><a class="reference external" href="system.html#LIDREF">lid</a></li>
+<li><a class="reference external" href="basic.html#LINKREF">ln</a></li>
+<li><a class="reference external" href="filearchiv.html#LOCATEREF">locate</a></li>
+<li><a class="reference external" href="system.html#LOCKFILEREF">lockfile</a></li>
+<li><a class="reference external" href="system.html#LOGGERREF">logger</a></li>
+<li><a class="reference external" href="system.html#LOGNAMEREF">logname</a></li>
+<li><a class="reference external" href="x9585.html#LOGOUTREF">logout</a></li>
+<li><a class="reference external" href="system.html#LOGROTATEREF">logrotate</a></li>
+<li><a class="reference external" href="textproc.html#LOOKREF">look</a></li>
+<li><a class="reference external" href="system.html#LOSETUPREF">losetup</a></li>
+<li><a class="reference external" href="extmisc.html#LPREF">lp</a></li>
+<li><a class="reference external" href="basic.html#LSREF">ls</a></li>
+<li><a class="reference external" href="system.html#LSDEVREF">lsdev</a></li>
+<li><a class="reference external" href="system.html#LSMODREF">lsmod</a></li>
+<li><a class="reference external" href="system.html#LSOFREF">lsof</a></li>
+<li><a class="reference external" href="system.html#LSPCIREF">lspci</a></li>
+<li><a class="reference external" href="system.html#LSUSBREF">lsusb</a></li>
+<li><a class="reference external" href="system.html#LTRACEREF">ltrace</a></li>
+<li><a class="reference external" href="communications.html#LYNXREF">lynx</a></li>
+<li><a class="reference external" href="filearchiv.html#LZMAREF">lzcat</a></li>
+<li><a class="reference external" href="filearchiv.html#LZMAREF">lzma</a></li>
+<li><a class="reference external" href="extmisc.html#M4REF">m4</a></li>
+<li><a class="reference external" href="communications.html#COMMMAIL1">mail</a></li>
+<li><a class="reference external" href="communications.html#MAILSTATSREF">mailstats</a></li>
+<li><a class="reference external" href="communications.html#MAILTOREF">mailto</a></li>
+<li><a class="reference external" href="filearchiv.html#MAKEREF">make</a></li>
+<li><a class="reference external" href="system.html#MAKEDEVREF">MAKEDEV</a></li>
+<li><a class="reference external" href="basic.html#MANREF">man</a></li>
+<li><a class="reference external" href="bashver4.html#MAPFILEREF">mapfile</a></li>
+<li><a class="reference external" href="extmisc.html#MCOOKIEREF">mcookie</a></li>
+<li><a class="reference external" href="filearchiv.html#MD5SUMREF">md5sum</a></li>
+<li><a class="reference external" href="filearchiv.html#MERGEREF">merge</a></li>
+<li><a class="reference external" href="system.html#MESGREF">mesg</a></li>
+<li><a class="reference external" href="filearchiv.html#MIMENCODEREF">mimencode</a></li>
+<li><a class="reference external" href="system.html#MKBOOTDISKREF">mkbootdisk</a></li>
+<li><a class="reference external" href="basic.html#MKDIRREF">mkdir</a></li>
+<li><a class="reference external" href="system.html#MKDOSFSREF">mkdosfs</a></li>
+<li><a class="reference external" href="system.html#MKE2FSREF">mke2fs</a></li>
+<li><a class="reference external" href="extmisc.html#MKFIFOREF">mkfifo</a></li>
+<li><a class="reference external" href="system.html#MKISOFSREF">mkisofs</a></li>
+<li><a class="reference external" href="system.html#MKNODREF">mknod</a></li>
+<li><a class="reference external" href="system.html#MKSWAPREF">mkswap</a></li>
+<li><a class="reference external" href="filearchiv.html#MKTEMPREF">mktemp</a></li>
+<li><a class="reference external" href="filearchiv.html#MMENCODEREF">mmencode</a></li>
+<li><a class="reference external" href="system.html#MODINFOREF">modinfo</a></li>
+<li><a class="reference external" href="system.html#MODPROBEREF">modprobe</a></li>
+<li><a class="reference external" href="filearchiv.html#MOREREF">more</a></li>
+<li><a class="reference external" href="system.html#MOUNTREF">mount</a></li>
+<li><a class="reference external" href="textproc.html#MSGFMTREF">msgfmt</a></li>
+<li><a class="reference external" href="basic.html#MVREF">mv</a></li>
+<li><a class="reference external" href="system.html#NCREF">nc</a></li>
+<li><a class="reference external" href="communications.html#NETCONFIGREF">netconfig</a></li>
+<li><a class="reference external" href="system.html#NETSTATREF">netstat</a></li>
+<li><a class="reference external" href="system.html#NEWGRPREF">newgrp</a></li>
+<li><a class="reference external" href="system.html#NICEREF">nice</a></li>
+<li><a class="reference external" href="textproc.html#NLREF">nl</a></li>
+<li><a class="reference external" href="system.html#NMREF">nm</a></li>
+<li><a class="reference external" href="system.html#NMAPREF">nmap</a></li>
+<li><a class="reference external" href="system.html#NOHUPREF">nohup</a></li>
+<li><a class="reference external" href="communications.html#NSLOOKUPREF">nslookup</a></li>
+<li><a class="reference external" href="extmisc.html#OBJDUMPREF">objdump</a></li>
+<li><a class="reference external" href="extmisc.html#ODREF">od</a></li>
+<li><a class="reference external" href="filearchiv.html#OPENSSLREF">openssl</a></li>
+<li><a class="reference external" href="system.html#PASSWDREF">passwd</a></li>
+<li><a class="reference external" href="textproc.html#PASTEREF">paste</a></li>
+<li><a class="reference external" href="filearchiv.html#PATCHREF">patch</a> (Related topic:
+<a class="reference external" href="filearchiv.html#DIFFREF">diff</a>)</li>
+<li><a class="reference external" href="extmisc.html#PATHCHKREF">pathchk</a></li>
+<li><a class="reference external" href="filearchiv.html#PAXREF">pax</a></li>
+<li><a class="reference external" href="system.html#PGREPREF">pgrep</a></li>
+<li><a class="reference external" href="system.html#PIDOFREF">pidof</a></li>
+<li><a class="reference external" href="communications.html#PINGREF">ping</a></li>
+<li><a class="reference external" href="system.html#PKILLREF">pkill</a></li>
+<li><a class="reference external" href="internal.html#DIRSD">popd</a></li>
+<li><a class="reference external" href="textproc.html#PRREF">pr</a></li>
+<li><a class="reference external" href="extmisc.html#PRINTENVREF">printenv</a></li>
+<li><a class="reference external" href="internal.html#PRINTFREF">printf</a></li>
+<li><a class="reference external" href="system.html#PROCINFOREF">procinfo</a></li>
+<li><a class="reference external" href="system.html#PPSSREF">ps</a></li>
+<li><a class="reference external" href="system.html#PSTREEREF">pstree</a></li>
+<li><a class="reference external" href="filearchiv.html#PTXREF">ptx</a></li>
+<li><a class="reference external" href="internal.html#DIRSD">pushd</a></li>
+<li><a class="reference external" href="internal.html#PWD2REF">pwd</a> (Related topic: the
+<a class="reference external" href="internalvariables.html#PWDREF">$PWD</a> variable)</li>
+<li><a class="reference external" href="system.html#QUOTAREF">quota</a></li>
+<li><a class="reference external" href="communications.html#RCPREF">rcp</a></li>
+<li><a class="reference external" href="system.html#RDEVREF">rdev</a></li>
+<li><a class="reference external" href="system.html#RDISTREF">rdist</a></li>
+<li><a class="reference external" href="internal.html#READREF">read</a></li>
+<li><a class="reference external" href="system.html#READELFREF">readelf</a></li>
+<li><a class="reference external" href="filearchiv.html#READLINKREF">readlink</a></li>
+<li><a class="reference external" href="internal.html#READONLYREF">readonly</a></li>
+<li><a class="reference external" href="system.html#REBOOTREF">reboot</a></li>
+<li><a class="reference external" href="textproc.html#RECODEREF">recode</a></li>
+<li><a class="reference external" href="system.html#NICE2REF">renice</a></li>
+<li><a class="reference external" href="terminalccmds.html#RESETREF">reset</a></li>
+<li><a class="reference external" href="terminalccmds.html#RESIZEREF">resize</a></li>
+<li><a class="reference external" href="system.html#RESTOREREF">restore</a></li>
+<li><a class="reference external" href="basic.html#REVREF">rev</a></li>
+<li><a class="reference external" href="communications.html#RLOGINREF">rlogin</a></li>
+<li><a class="reference external" href="basic.html#RMREF">rm</a></li>
+<li><a class="reference external" href="basic.html#RMDIRREF">rmdir</a></li>
+<li><a class="reference external" href="system.html#RMMODREF">rmmod</a></li>
+<li><a class="reference external" href="system.html#ROUTEREF">route</a></li>
+<li><a class="reference external" href="filearchiv.html#RPMREF">rpm</a></li>
+<li><a class="reference external" href="filearchiv.html#RPM2CPIOREF">rpm2cpio</a></li>
+<li><a class="reference external" href="communications.html#RSHREF">rsh</a></li>
+<li><a class="reference external" href="communications.html#RSYNCREF">rsync</a></li>
+<li><a class="reference external" href="system.html#RUNLEVELREF">runlevel</a></li>
+<li><a class="reference external" href="extmisc.html#RUNPARTSREF">run-parts</a></li>
+<li><a class="reference external" href="communications.html#RXREF">rx</a></li>
+<li><a class="reference external" href="communications.html#RZREF">rz</a></li>
+<li><a class="reference external" href="system.html#SARREF">sar</a></li>
+<li><a class="reference external" href="communications.html#SCPREF">scp</a></li>
+<li><a class="reference external" href="terminalccmds.html#SCRIPTREF">script</a></li>
+<li><a class="reference external" href="filearchiv.html#SDIFFREF">sdiff</a></li>
+<li><a class="reference external" href="sedawk.html#SEDREF">sed</a></li>
+<li><a class="reference external" href="extmisc.html#SEQREF">seq</a></li>
+<li><a class="reference external" href="system.html#SERVICEREF">service</a></li>
+<li><a class="reference external" href="internal.html#SETREF">set</a></li>
+<li><a class="reference external" href="filearchiv.html#SETFACLREF">setfacl</a></li>
+<li><a class="reference external" href="system.html#SETQUOTAREF">setquota</a></li>
+<li><a class="reference external" href="system.html#SETSERIALREF">setserial</a></li>
+<li><a class="reference external" href="system.html#SETTERMREF">setterm</a></li>
+<li><a class="reference external" href="filearchiv.html#SHA1SUMREF">sha1sum</a></li>
+<li><a class="reference external" href="filearchiv.html#SHARREF">shar</a></li>
+<li><a class="reference external" href="internal.html#SHOPTREF">shopt</a></li>
+<li><a class="reference external" href="filearchiv.html#SHREDREF">shred</a></li>
+<li><a class="reference external" href="system.html#SHUTDOWNREF">shutdown</a></li>
+<li><a class="reference external" href="system.html#SIZEREF">size</a></li>
+<li><a class="reference external" href="system.html#NICE2REF">skill</a></li>
+<li><a class="reference external" href="timedate.html#SLEEPREF">sleep</a></li>
+<li><a class="reference external" href="filearchiv.html#SLOCATEREF">slocate</a></li>
+<li><a class="reference external" href="system.html#NICE2REF">snice</a></li>
+<li><a class="reference external" href="textproc.html#SORTREF">sort</a></li>
+<li><a class="reference external" href="internal.html#SOURCEREF">source</a></li>
+<li><a class="reference external" href="extmisc.html#SOXREF">sox</a></li>
+<li><a class="reference external" href="filearchiv.html#SPLITREF">split</a></li>
+<li><a class="reference external" href="filearchiv.html#SQREF">sq</a></li>
+<li><a class="reference external" href="communications.html#SSHREF">ssh</a></li>
+<li><a class="reference external" href="system.html#STATREF">stat</a></li>
+<li><a class="reference external" href="system.html#STRACEREF">strace</a></li>
+<li><a class="reference external" href="filearchiv.html#STRINGSREF">strings</a></li>
+<li><a class="reference external" href="system.html#STRIPREF">strip</a></li>
+<li><a class="reference external" href="system.html#STTYREF">stty</a></li>
+<li><a class="reference external" href="system.html#SUREF">su</a></li>
+<li><a class="reference external" href="system.html#SUDOREF">sudo</a></li>
+<li><a class="reference external" href="filearchiv.html#SUMREF">sum</a></li>
+<li><a class="reference external" href="x9585.html#SUSPENDREF">suspend</a></li>
+<li><a class="reference external" href="system.html#SWAPONREF">swapoff</a></li>
+<li><a class="reference external" href="system.html#SWAPONREF">swapon</a></li>
+<li><a class="reference external" href="communications.html#RXREF">sx</a></li>
+<li><a class="reference external" href="system.html#SYNCREF">sync</a></li>
+<li><a class="reference external" href="communications.html#RZREF">sz</a></li>
+<li><a class="reference external" href="basic.html#CATREF">tac</a></li>
+<li><a class="reference external" href="textproc.html#TAILREF">tail</a></li>
+<li><a class="reference external" href="filearchiv.html#TARREF">tar</a></li>
+<li><a class="reference external" href="textproc.html#TBLREF">tbl</a></li>
+<li><a class="reference external" href="system.html#TCPDUMPREF">tcpdump</a></li>
+<li><a class="reference external" href="extmisc.html#TEEREF">tee</a></li>
+<li><a class="reference external" href="system.html#TELINITREF">telinit</a></li>
+<li><a class="reference external" href="communications.html#TELNETREF">telnet</a></li>
+<li><a class="reference external" href="textproc.html#TEXREF">Tex</a></li>
+<li><a class="reference external" href="textproc.html#TEXEXECREF">texexec</a></li>
+<li><a class="reference external" href="timedate.html#TIMREF">time</a></li>
+<li><a class="reference external" href="x9585.html#TIMESREF">times</a></li>
+<li><a class="reference external" href="system.html#TMPWATCHREF">tmpwatch</a></li>
+<li><a class="reference external" href="system.html#TOPREF">top</a></li>
+<li><a class="reference external" href="timedate.html#TOUCHREF">touch</a></li>
+<li><a class="reference external" href="terminalccmds.html#TPUTREF">tput</a></li>
+<li><a class="reference external" href="textproc.html#TRREF">tr</a></li>
+<li><a class="reference external" href="communications.html#TRACEROUTEREF">traceroute</a></li>
+<li><a class="reference external" href="internal.html#TRUEREF">true</a></li>
+<li><a class="reference external" href="system.html#TSETREF">tset</a></li>
+<li><a class="reference external" href="textproc.html#TSORTREF">tsort</a></li>
+<li><a class="reference external" href="system.html#TTYREF">tty</a></li>
+<li><a class="reference external" href="system.html#TUNE2FSREF">tune2fs</a></li>
+<li><a class="reference external" href="internal.html#TYPEREF">type</a></li>
+<li><a class="reference external" href="declareref.html">typeset</a></li>
+<li><a class="reference external" href="system.html#ULIMITREF">ulimit</a></li>
+<li><a class="reference external" href="system.html#UMASKREF">umask</a></li>
+<li><a class="reference external" href="system.html#UMOUNTREF">umount</a></li>
+<li><a class="reference external" href="system.html#UNAMEREF">uname</a></li>
+<li><a class="reference external" href="filearchiv.html#UNARCREF">unarc</a></li>
+<li><a class="reference external" href="filearchiv.html#UNARCREF">unarj</a></li>
+<li><a class="reference external" href="filearchiv.html#UNCOMPRESSREF">uncompress</a></li>
+<li><a class="reference external" href="textproc.html#EXPANDREF">unexpand</a></li>
+<li><a class="reference external" href="textproc.html#UNIQREF">uniq</a></li>
+<li><a class="reference external" href="extmisc.html#UNITSREF">units</a></li>
+<li><a class="reference external" href="filearchiv.html#LZMAREF">unlzma</a></li>
+<li><a class="reference external" href="filearchiv.html#UNARCREF">unrar</a></li>
+<li><a class="reference external" href="internal.html#UNSETREF">unset</a></li>
+<li><a class="reference external" href="filearchiv.html#SQREF">unsq</a></li>
+<li><a class="reference external" href="filearchiv.html#ZIPREF">unzip</a></li>
+<li><a class="reference external" href="system.html#UPTIMEREF">uptime</a></li>
+<li><a class="reference external" href="system.html#LSUSBREF">usbmodules</a></li>
+<li><a class="reference external" href="system.html#USERADDREF">useradd</a></li>
+<li><a class="reference external" href="system.html#USERADDREF">userdel</a></li>
+<li><a class="reference external" href="system.html#USERMODREF">usermod</a></li>
+<li><a class="reference external" href="system.html#USERSREF">users</a></li>
+<li><a class="reference external" href="timedate.html#USLEEPREF">usleep</a></li>
+<li><a class="reference external" href="communications.html#UUCPREF">uucp</a></li>
+<li><a class="reference external" href="filearchiv.html#UUDECODEREF">uudecode</a></li>
+<li><a class="reference external" href="filearchiv.html#UUENCODEREF">uuencode</a></li>
+<li><a class="reference external" href="communications.html#UUXREF">uux</a></li>
+<li><a class="reference external" href="communications.html#VACATIONREF">vacation</a></li>
+<li><a class="reference external" href="filearchiv.html#VDIRREF">vdir</a></li>
+<li><a class="reference external" href="system.html#VMSTATREF">vmstat</a></li>
+<li><a class="reference external" href="communications.html#VRFYREF">vrfy</a></li>
+<li><a class="reference external" href="system.html#WREF">w</a></li>
+<li><a class="reference external" href="x9585.html#WAITREF">wait</a></li>
+<li><a class="reference external" href="system.html#WALLREF">wall</a></li>
+<li><a class="reference external" href="system.html#WATCHREF">watch</a></li>
+<li><a class="reference external" href="textproc.html#WCREF">wc</a></li>
+<li><a class="reference external" href="communications.html#WGETREF">wget</a></li>
+<li><a class="reference external" href="filearchiv.html#WHATISREF">whatis</a></li>
+<li><a class="reference external" href="filearchiv.html#WHEREISREF">whereis</a></li>
+<li><a class="reference external" href="filearchiv.html#WHICHREF">which</a></li>
+<li><a class="reference external" href="system.html#WHOREF">who</a></li>
+<li><a class="reference external" href="system.html#WHOAMIREF">whoami</a></li>
+<li><a class="reference external" href="communications.html#WHOISREF">whois</a></li>
+<li><a class="reference external" href="communications.html#WRITEREF">write</a></li>
+<li><a class="reference external" href="moreadv.html#XARGSREF">xargs</a></li>
+<li><a class="reference external" href="system.html#XRANDRREF">xrandr</a></li>
+<li><a class="reference external" href="textproc.html#YACCREF">yacc</a></li>
+<li><a class="reference external" href="extmisc.html#YESREF">yes</a></li>
+<li><a class="reference external" href="filearchiv.html#ZCATREF">zcat</a></li>
+<li><a class="reference external" href="filearchiv.html#ZDIFFREF">zdiff</a></li>
+<li><a class="reference external" href="timedate.html#ZDUMPREF">zdump</a></li>
+<li><a class="reference external" href="textproc.html#ZEGREPREF">zegrep</a></li>
+<li><a class="reference external" href="textproc.html#ZEGREPREF">zfgrep</a></li>
+<li><a class="reference external" href="textproc.html#ZEGREPREF">zgrep</a></li>
+<li><a class="reference external" href="filearchiv.html#ZIPREF">zip</a></li>
+</ul>
+<p><strong>Table of Contents</strong></p>
+<ol class="arabic simple" start="15">
+<li><a class="reference external" href="internal.html">Internal Commands and Builtins</a></li>
+</ol>
+<p>15.1. <a class="reference external" href="x9585.html">Job Control Commands</a></p>
+<ol class="arabic simple" start="16">
+<li><a class="reference external" href="external.html">External Filters, Programs and Commands</a></li>
+</ol>
+<p>16.1. <a class="reference external" href="basic.html">Basic Commands</a></p>
+<p>16.2. <a class="reference external" href="moreadv.html">Complex Commands</a></p>
+<p>16.3. <a class="reference external" href="timedate.html">Time / Date Commands</a></p>
+<p>16.4. <a class="reference external" href="textproc.html">Text Processing Commands</a></p>
+<p>16.5. <a class="reference external" href="filearchiv.html">File and Archiving Commands</a></p>
+<p>16.6. <a class="reference external" href="communications.html">Communications Commands</a></p>
+<p>16.7. <a class="reference external" href="terminalccmds.html">Terminal Control Commands</a></p>
+<p>16.8. <a class="reference external" href="mathc.html">Math Commands</a></p>
+<p>16.9. <a class="reference external" href="extmisc.html">Miscellaneous Commands</a></p>
+<ol class="arabic simple" start="17">
+<li><a class="reference external" href="system.html">System and Administrative Commands</a></li>
+</ol>
+<p>17.1. <a class="reference external" href="sysscripts.html">Analyzing a System Script</a></p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="27%" />
+<col width="39%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="recess-time.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="internal.html">Next</a></td>
+</tr>
+<tr><td>Recess Time</td>
+<td>&nbsp;</td>
+<td>Internal Commands and Builtins</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

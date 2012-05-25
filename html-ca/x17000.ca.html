@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+-----------------------------------+------------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+===================================+==============================+
+| `Prev &lt;regexp.html&gt;`_            | Chapter 18. Regular Expressions   | `Next &lt;globbingref.html&gt;`_   |
++----------------------------------+-----------------------------------+------------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="a-brief-introduction-to-regular-expressions">
+<h1>18.1. A Brief Introduction to Regular Expressions</h1>
+<p>An expression is a string of characters. Those characters having an
+interpretation above and beyond their literal meaning are called
+<em>metacharacters</em>. A quote symbol, for example, may denote speech by a
+person, <em>ditto</em>, or a meta-meaning <a class="reference external" href="x17000.html#FTN.AEN17005">[1]</a> for
+the symbols that follow. Regular Expressions are sets of characters
+and/or metacharacters that match (or specify) patterns.</p>
+<p>A Regular Expression contains one or more of the following:</p>
+<ul class="simple">
+<li><em>A character set</em>. These are the characters retaining their literal
+meaning. The simplest type of Regular Expression consists <em>only</em> of a
+character set, with no metacharacters.</li>
+<li><em>An anchor</em>. These designate (<em>anchor</em>) the position in the line of
+text that the RE is to match. For example, ^, and $ are anchors.</li>
+<li><em>Modifiers</em>. These expand or narrow (<em>modify</em>) the range of text the
+RE is to match. Modifiers include the asterisk, brackets, and the
+backslash.</li>
+</ul>
+<p>The main uses for Regular Expressions (<em>RE*s) are text searches and
+string manipulation. An RE *matches</em> a single character or a set of
+characters -- a string or a part of a string.</p>
+<ul>
+<li><p class="first">The asterisk -- * -- matches any number of repeats of the character
+string or RE preceding it, including <em>zero</em> instances.</p>
+<p>&quot;1133*&quot; matches <tt class="docutils literal">11 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; one or more 3's</tt>: <tt class="docutils literal">113</tt>,
+<tt class="docutils literal">1133</tt>, <tt class="docutils literal">1133333</tt>, and so forth.</p>
+</li>
+<li><p class="first">The <em>dot</em> -- . -- matches any one character, except a newline.
+<a class="reference external" href="x17000.html#FTN.AEN17060">[2]</a></p>
+<p>&quot;13.&quot; matches
+<tt class="docutils literal">13 + at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; least one of any character (including a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; space)</tt>:
+<tt class="docutils literal">1133</tt>, <tt class="docutils literal">11333</tt>, but not <tt class="docutils literal">13</tt> (additional character missing).</p>
+<p>See <a class="reference external" href="textproc.html#CWSOLVER">Example 16-18</a> for a demonstration of
+<em>dot single-character</em> matching.</p>
+</li>
+<li><p class="first">The caret -- ^ -- matches the beginning of a line, but sometimes,
+depending on context, negates the meaning of a set of characters in
+an RE.</p>
+</li>
+<li><p class="first">The dollar sign -- $ -- at the end of an RE matches the end of a
+line.</p>
+<p>&quot;XXX$&quot; matches XXX at the end of a line.</p>
+<p>&quot;^$&quot; matches blank lines.</p>
+</li>
+<li><p class="first">Brackets -- [...] -- enclose a set of characters to match in a single
+RE.</p>
+<p>&quot;[xyz]&quot; matches any one of the characters <tt class="docutils literal">x</tt>, <tt class="docutils literal">y</tt>, or <tt class="docutils literal">z</tt>.</p>
+<p>&quot;[c-n]&quot; matches any one of the characters in the range <tt class="docutils literal">c</tt> to
+<tt class="docutils literal">n</tt>.</p>
+<p>&quot;[B-Pk-y]&quot; matches any one of the characters in the ranges <tt class="docutils literal">B</tt> to
+<tt class="docutils literal">P</tt> and <tt class="docutils literal">k</tt> to <tt class="docutils literal">y</tt>.</p>
+<p>&quot;[a-z0-9]&quot; matches any single lowercase letter or any digit.</p>
+<p>&quot;[^b-d]&quot; matches any character <em>except</em> those in the range <tt class="docutils literal">b</tt> to
+<tt class="docutils literal">d</tt>. This is an instance of ^ negating or inverting the meaning of
+the following RE (taking on a role similar to ! in a different
+context).</p>
+<p>Combined sequences of bracketed characters match common word
+patterns. &quot;[Yy][Ee][Ss]&quot; matches <tt class="docutils literal">yes</tt>, <tt class="docutils literal">Yes</tt>, <tt class="docutils literal">YES</tt>, <tt class="docutils literal">yEs</tt>,
+and so forth. &quot;[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]&quot;
+matches any Social Security number.</p>
+</li>
+<li><p class="first">The backslash -- \ -- <a class="reference external" href="escapingsection.html#ESCP">escapes</a> a
+special character, which means that character gets interpreted
+literally (and is therefore no longer <em>special</em>).</p>
+<p>A &quot;\$&quot; reverts back to its literal meaning of &quot;$&quot;, rather than its
+RE meaning of end-of-line. Likewise a &quot;\\&quot; has the literal meaning
+of &quot;\&quot;.</p>
+</li>
+<li><p class="first"><a class="reference external" href="escapingsection.html#ESCP">Escaped</a> &quot;angle brackets&quot; -- \&lt;...\&gt;
+-- mark word boundaries.</p>
+<p>The angle brackets must be escaped, since otherwise they have only
+their literal character meaning.</p>
+<p>&quot;\&lt;the\&gt;&quot; matches the word &quot;the,&quot; but not the words &quot;them,&quot;
+&quot;there,&quot; &quot;other,&quot; etc.</p>
+<pre class="literal-block">
+bash$ cat textfile
+This is line 1, of which there is only one instance.
+ This is the only instance of line 2.
+ This is line 3, another line.
+ This is line 4.
+
+
+bash$ grep 'the' textfile
+This is line 1, of which there is only one instance.
+ This is the only instance of line 2.
+ This is line 3, another line.
+
+
+bash$ grep '\&lt;the\&gt;' textfile
+This is the only instance of line 2.
+</pre>
+</li>
+</ul>
+<p>The only way to be certain that a particular RE works is to test it.</p>
+<pre class="literal-block">
+TEST FILE: tstfile                          # No match.
+                                            # No match.
+Run   grep &quot;1133*&quot;  on this file.           # Match.
+                                            # No match.
+                                            # No match.
+This line contains the number 113.          # Match.
+This line contains the number 13.           # No match.
+This line contains the number 133.          # No match.
+This line contains the number 1133.         # Match.
+This line contains the number 113312.       # Match.
+This line contains the number 1112.         # No match.
+This line contains the number 113312312.    # Match.
+This line contains no numbers at all.       # No match.
+</pre>
+<pre class="literal-block">
+bash$ grep &quot;1133*&quot; tstfile
+Run   grep &quot;1133*&quot;  on this file.           # Match.
+ This line contains the number 113.          # Match.
+ This line contains the number 1133.         # Match.
+ This line contains the number 113312.       # Match.
+ This line contains the number 113312312.    # Match.
+</pre>
+<ul>
+<li><p class="first"><a href="#id3"><span class="problematic" id="id4">**</span></a>Extended REs.**Additional metacharacters added to the basic set.
+Used in <a class="reference external" href="textproc.html#EGREPREF">egrep</a>, <a class="reference external" href="awk.html#AWKREF">awk</a>,
+and <a class="reference external" href="wrapper.html#PERLREF">Perl</a>.</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 160); <em><a href="#id4">backlink</a></em></p>
+<p>Inline strong start-string without end-string.</p>
+</div>
+</li>
+<li><p class="first">The question mark -- ? -- matches zero or one of the previous RE. It
+is generally used for matching single characters.</p>
+</li>
+<li><p class="first">The plus -- + -- matches one or more of the previous RE. It serves a
+role similar to the *, but does <em>not</em> match zero occurrences.</p>
+<pre class="literal-block">
+# GNU versions of sed and awk can use &quot;+&quot;,
+# but it needs to be escaped.
+
+echo a111b | sed -ne '/a1\+b/p'
+echo a111b | grep 'a1\+b'
+echo a111b | gawk '/a1+b/'
+# All of above are equivalent.
+
+# Thanks, S.C.
+</pre>
+</li>
+<li><p class="first"><a class="reference external" href="escapingsection.html#ESCP">Escaped</a> &quot;curly brackets&quot; -- \{ \} --
+indicate the number of occurrences of a preceding RE to match.</p>
+<p>It is necessary to escape the curly brackets since they have only
+their literal character meaning otherwise. This usage is technically
+not part of the basic RE set.</p>
+<p>&quot;[0-9]\{5\}&quot; matches exactly five digits (characters in the range
+of 0 to 9).</p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 201)</p>
+<p>Explicit markup ends without a blank line; unexpected unindent.</p>
+</div>
+<p>Curly brackets are not available as an RE in the &quot;classic&quot; (non-POSIX
+compliant) version of <a class="reference external" href="awk.html#AWKREF">awk</a>. However, the GNU
+extended version of <em>awk</em>, <strong>gawk</strong>, has the <tt class="docutils literal"><span class="pre">--re-interval</span></tt> option
+that permits them (without being escaped).</p>
+<pre class="literal-block">
+bash$ echo 2222 | gawk --re-interval '/2{3}/'
+2222
+</pre>
+<p><strong>Perl</strong> and some <strong>egrep</strong> versions do not require escaping the
+curly brackets.</p>
+</li>
+<li><p class="first">Parentheses -- <strong>( )</strong> -- enclose a group of REs. They are useful
+with the following &quot;|&quot; operator and in <a class="reference external" href="string-manipulation.html#EXPRPAREN">substring
+extraction</a> using
+<a class="reference external" href="moreadv.html#EXPRREF">expr</a>.</p>
+</li>
+<li><p class="first">The -- <strong>|</strong> -- &quot;or&quot; RE operator matches any of a set of alternate
+characters.</p>
+<pre class="literal-block">
+bash$ egrep 're(a|e)d' misc.txt
+People who read seem to be better informed than those who do not.
+ The clarinet produces sound by the vibration of its reed.
+</pre>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 237)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Some versions of <strong>sed</strong>, <strong>ed</strong>, and <strong>ex</strong> support escaped versions of
+the extended Regular Expressions described above, as do the GNU
+utilities.</p>
+<ul>
+<li><p class="first"><a href="#id7"><span class="problematic" id="id8">**</span></a>POSIX Character Classes.**``[:class:]``</p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 241); <em><a href="#id8">backlink</a></em></p>
+<p>Inline strong start-string without end-string.</p>
+</div>
+<p>This is an alternate method of specifying a range of characters to
+match.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:alnum:]</tt> matches alphabetic or numeric characters. This is
+equivalent to <tt class="docutils literal"><span class="pre">A-Za-z0-9</span></tt>.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:alpha:]</tt> matches alphabetic characters. This is equivalent to
+<tt class="docutils literal"><span class="pre">A-Za-z</span></tt>.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:blank:]</tt> matches a space or a tab.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:cntrl:]</tt> matches control characters.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:digit:]</tt> matches (decimal) digits. This is equivalent to
+<tt class="docutils literal"><span class="pre">0-9</span></tt>.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:graph:]</tt> (graphic printable characters). Matches characters in
+the range of <a class="reference external" href="special-chars.html#ASCIIDEF">ASCII</a> 33 - 126. This is
+the same as <tt class="docutils literal">[:print:]</tt>, below, but excluding the space character.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:lower:]</tt> matches lowercase alphabetic characters. This is
+equivalent to <tt class="docutils literal"><span class="pre">a-z</span></tt>.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:print:]</tt> (printable characters). Matches characters in the range
+of ASCII 32 - 126. This is the same as <tt class="docutils literal">[:graph:]</tt>, above, but
+adding the space character.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:space:]</tt> matches whitespace characters (space and horizontal
+tab).</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:upper:]</tt> matches uppercase alphabetic characters. This is
+equivalent to <tt class="docutils literal"><span class="pre">A-Z</span></tt>.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[:xdigit:]</tt> matches hexadecimal digits. This is equivalent to
+<tt class="docutils literal"><span class="pre">0-9A-Fa-f</span></tt>.</p>
+<div class="figure align-center">
+<img alt="Important" src="http://tldp.org/LDP/abs/images/important.gif" />
+<p class="caption">Important</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 284)</p>
+<p>Explicit markup ends without a blank line; unexpected unindent.</p>
+</div>
+<p>POSIX character classes generally require quoting or <a class="reference external" href="testconstructs.html#DBLBRACKETS">double
+brackets</a> ([[ ]]).</p>
+<pre class="literal-block">
+bash$ grep [[:digit:]] test.file
+abc=723
+</pre>
+<pre class="literal-block">
+# ...
+if [[ $arow =~ [[:digit:]] ]]   #  Numerical input?
+then       #  POSIX char class
+  if [[ $acol =~ [[:alpha:]] ]] # Number followed by a letter? Illegal!
+# ...
+# From ktour.sh example script.
+</pre>
+<p>These character classes may even be used with
+<a class="reference external" href="globbingref.html">globbing</a>, to a limited extent.</p>
+<pre class="literal-block">
+bash$ ls -l ?[[:digit:]][[:digit:]]?
+-rw-rw-r--    1 bozo  bozo         0 Aug 21 14:47 a33b
+</pre>
+<p>POSIX character classes are used in <a class="reference external" href="textproc.html#EX49">Example
+16-21</a> and <a class="reference external" href="textproc.html#LOWERCASE">Example
+16-22</a>.</p>
+</li>
+</ul>
+<p><a class="reference external" href="sedawk.html#SEDREF">Sed</a>, <a class="reference external" href="awk.html#AWKREF">awk</a>, and
+<a class="reference external" href="wrapper.html#PERLREF">Perl</a>, used as filters in scripts, take REs as
+arguments when &quot;sifting&quot; or transforming files or I/O streams. See
+<a class="reference external" href="contributed-scripts.html#BEHEAD">Example A-12</a> and <a class="reference external" href="contributed-scripts.html#TREE">Example
+A-16</a> for illustrations of this.</p>
+<p>The standard reference on this complex topic is Friedl's <em>Mastering
+Regular Expressions</em>. <em>Sed &amp; Awk</em>, by Dougherty and Robbins, also gives
+a very lucid treatment of REs. See the <a class="reference external" href="biblio.html">*Bibliography*</a>
+for more information on these books.</p>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 10); <em><a href="#id11">backlink</a></em></p>
+Duplicate explicit target name: &quot;[1]&quot;.</div>
+<p><a class="reference external" href="x17000.html#AEN17005">[1]</a></p>
+<p>A <em>meta-meaning</em> is the meaning of a term or expression on a higher
+level of abstraction. For example, the <em>literal</em> meaning of <em>regular
+expression</em> is an ordinary expression that conforms to accepted usage.
+The <em>meta-meaning</em> is drastically different, as discussed at length in
+this chapter.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/x17000.ca.rst</tt>, line 10); <em><a href="#id12">backlink</a></em></p>
+Duplicate explicit target name: &quot;[2]&quot;.</div>
+<p><a class="reference external" href="x17000.html#AEN17060">[2]</a></p>
+<p>Since <a class="reference external" href="sedawk.html#SEDREF">sed</a>, <a class="reference external" href="awk.html#AWKREF">awk</a>, and
+<a class="reference external" href="textproc.html#GREPREF">grep</a> process single lines, there will usually
+not be a newline to match. In those cases where there is a newline in a
+multiple line expression, the dot will match the newline.</p>
+<pre class="literal-block">
+#!/bin/bash
+
+sed -e 'N;s/.*/[&amp;]/' &lt;&lt; EOF   # Here Document
+line1
+line2
+EOF
+# OUTPUT:
+# [line1
+# line2]
+
+
+
+echo
+
+awk '{ $0=$1 &quot;\n&quot; $2; if (/line.1/) {print}}' &lt;&lt; EOF
+line 1
+line 2
+EOF
+# OUTPUT:
+# line
+# 1
+
+
+# Thanks, S.C.
+
+exit 0
+</pre>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="30%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="regexp.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="globbingref.html">Next</a></td>
+</tr>
+<tr><td>Regular Expressions</td>
+<td><a class="reference external" href="regexp.html">Up</a></td>
+<td>Globbing</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
