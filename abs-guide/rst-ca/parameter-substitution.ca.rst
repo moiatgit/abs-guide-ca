@@ -2,7 +2,7 @@
 
 `Amunt <external.ca.html>`_ : Capítol 10. Manipulació de variables
 
-`Anterior <string-manipulation.html>`_ : Manipulació de strings
+`Anterior <string-manipulation.ca.html>`_ : Manipulació de strings
 
 `Següent <loops.ca.html>`_ : Bucles i branques
 
@@ -666,9 +666,10 @@ Notes
 
 --------------
 
-+--------------------------------------+---------------------------------+------------------------+
-| `Prev <string-manipulation.html>`_   | `Home <index.html>`_            | `Next <loops.html>`_   |
-+--------------------------------------+---------------------------------+------------------------+
-| Manipulating Strings                 | `Up <manipulatingvars.html>`_   | Loops and Branches     |
-+--------------------------------------+---------------------------------+------------------------+
+`Inici <index.ca.html>`_ :  Guia avançada de Bash-Scripting
 
+`Amunt <external.ca.html>`_ : Capítol 10. Manipulació de variables
+
+`Anterior <string-manipulation.ca.html>`_ : Manipulació de strings
+
+`Següent <loops.ca.html>`_ : Bucles i branques
