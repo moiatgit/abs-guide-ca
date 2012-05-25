@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/string-manipulation.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++-----------------------------------+--------------------------------------+-----------------------------------------+
+| Advanced Bash-Scripting Guide:    |
++===================================+======================================+=========================================+
+| `Prev &lt;manipulatingvars.html&gt;`_   | Chapter 10. Manipulating Variables   | `Next &lt;parameter-substitution.html&gt;`_   |
++-----------------------------------+--------------------------------------+-----------------------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="manipulating-strings">
+<h1>10.1. Manipulating Strings</h1>
+<p>Bash supports a surprising number of string manipulation operations.
+Unfortunately, these tools lack a unified focus. Some are a subset of
+<a class="reference external" href="parameter-substitution.html#PARAMSUBREF">parameter substitution</a>, and
+others fall under the functionality of the UNIX
+<a class="reference external" href="moreadv.html#EXPRREF">expr</a> command. This results in inconsistent
+command syntax and overlap of functionality, not to mention confusion.</p>
+<p><strong>String Length</strong></p>
+<p>${#string}</p>
+<dl class="docutils">
+<dt>expr length $string</dt>
+<dd>These are the equivalent of <em>strlen()</em> in <em>C</em>.</dd>
+</dl>
+<p>expr &quot;$string&quot; : '.*'</p>
+<blockquote>
+<pre class="literal-block">
+stringZ=abcABC123ABCabc
+
+echo ${#stringZ}                 # 15
+echo `expr length $stringZ`      # 15
+echo `expr &quot;$stringZ&quot; : '.*'`    # 15
+</pre>
+</blockquote>
+<p><strong>Example 10-1. Inserting a blank line between paragraphs in a text
+file</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# paragraph-space.sh
+# Ver. 2.0, Reldate 05Aug08
+
+# Inserts a blank line between paragraphs of a single-spaced text file.
+# Usage: $0 &lt;FILENAME
+
+MINLEN=60        # May need to change this value.
+#  Assume lines shorter than $MINLEN characters ending in a period
+#+ terminate a paragraph. See exercises at end of script.
+
+while read line  # For as many lines as the input file has...
+do
+  echo &quot;$line&quot;   # Output the line itself.
+
+  len=${#line}
+  if [[ &quot;$len&quot; -lt &quot;$MINLEN&quot; &amp;&amp; &quot;$line&quot; =~ \[*\.\] ]]
+    then echo    #  Add a blank line immediately
+  fi             #+ after short line terminated by a period.
+done
+
+exit
+
+# Exercises:
+# ---------
+#  1) The script usually inserts a blank line at the end
+#+    of the target file. Fix this.
+#  2) Line 17 only considers periods as sentence terminators.
+#     Modify this to include other common end-of-sentence characters,
+#+    such as ?, !, and &quot;.
+</pre>
+<p><strong>Length of Matching Substring at Beginning of String</strong></p>
+<dl class="docutils">
+<dt>expr match &quot;$string&quot; '$substring'</dt>
+<dd><tt class="docutils literal">$substring</tt> is a <a class="reference external" href="regexp.html#REGEXREF">regular expression</a>.</dd>
+<dt>expr &quot;$string&quot; <span class="classifier-delimiter">:</span> <span class="classifier">'$substring'</span></dt>
+<dd><p class="first"><tt class="docutils literal">$substring</tt> is a regular expression.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+#       |------|
+#       12345678
+
+echo `expr match &quot;$stringZ&quot; 'abc[A-Z]*.2'`   # 8
+echo `expr &quot;$stringZ&quot; : 'abc[A-Z]*.2'`       # 8
+</pre>
+</dd>
+</dl>
+<p><strong>Index</strong></p>
+<dl class="docutils">
+<dt>expr index $string $substring</dt>
+<dd><p class="first">Numerical position in $string of first character in $substring that
+matches.</p>
+<pre class="literal-block">
+stringZ=abcABC123ABCabc
+#       123456 ...
+echo `expr index &quot;$stringZ&quot; C12`             # 6
+                                             # C position.
+
+echo `expr index &quot;$stringZ&quot; 1c`              # 3
+# 'c' (in #3 position) matches before '1'.
+</pre>
+<p class="last">This is the near equivalent of <em>strchr()</em> in <em>C</em>.</p>
+</dd>
+</dl>
+<p><strong>Substring Extraction</strong></p>
+<dl class="docutils">
+<dt>${string:position}</dt>
+<dd><p class="first">Extracts substring from <tt class="docutils literal">$string</tt> at <tt class="docutils literal">$position</tt>.</p>
+<p class="last">If the <tt class="docutils literal">$string</tt> parameter is &quot;*&quot; or &quot;&#64;&quot;, then this extracts the
+<a class="reference external" href="internalvariables.html#POSPARAMREF">positional parameters</a>,
+<a class="reference external" href="string-manipulation.html#FTN.AEN5950">[1]</a> starting at
+<tt class="docutils literal">$position</tt>.</p>
+</dd>
+<dt>${string:position:length}</dt>
+<dd><p class="first">Extracts <tt class="docutils literal">$length</tt> characters of substring from <tt class="docutils literal">$string</tt> at
+<tt class="docutils literal">$position</tt>.</p>
+<pre class="literal-block">
+stringZ=abcABC123ABCabc
+#       0123456789.....
+#       0-based indexing.
+
+echo ${stringZ:0}                            # abcABC123ABCabc
+echo ${stringZ:1}                            # bcABC123ABCabc
+echo ${stringZ:7}                            # 23ABCabc
+
+echo ${stringZ:7:3}                          # 23A
+                                             # Three characters of substring.
+
+
+
+# Is it possible to index from the right end of the string?
+
+echo ${stringZ:-4}                           # abcABC123ABCabc
+# Defaults to full string, as in ${parameter:-default}.
+# However . . .
+
+echo ${stringZ:(-4)}                         # Cabc
+echo ${stringZ: -4}                          # Cabc
+# Now, it works.
+# Parentheses or added space &quot;escape&quot; the position parameter.
+
+# Thank you, Dan Jacobson, for pointing this out.
+</pre>
+<p>The <em>position</em> and <em>length</em> arguments can be &quot;parameterized,&quot; that
+is, represented as a variable, rather than as a numerical constant.</p>
+<p><strong>Example 10-2. Generating an 8-character &quot;random&quot; string</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# rand-string.sh
+# Generating an 8-character &quot;random&quot; string.
+
+if [ -n &quot;$1&quot; ]  #  If command-line argument present,
+then            #+ then set start-string to it.
+  str0=&quot;$1&quot;
+else            #  Else use PID of script as start-string.
+  str0=&quot;$$&quot;
+fi
+
+POS=2  # Starting from position 2 in the string.
+LEN=8  # Extract eight characters.
+
+str1=$( echo &quot;$str0&quot; | md5sum | md5sum )
+#  Doubly scramble     ^^^^^^   ^^^^^^
+#+ by piping and repiping to md5sum.
+
+randstring=&quot;${str1:$POS:$LEN}&quot;
+# Can parameterize ^^^^ ^^^^
+
+echo &quot;$randstring&quot;
+
+exit $?
+
+# bozo$ ./rand-string.sh my-password
+# 1bdd88c4
+
+#  No, this is is not recommended
+#+ as a method of generating hack-proof passwords.
+</pre>
+<p>If the <tt class="docutils literal">$string</tt> parameter is &quot;*&quot; or &quot;&#64;&quot;, then this extracts a
+maximum of <tt class="docutils literal">$length</tt> positional parameters, starting at
+<tt class="docutils literal">$position</tt>.</p>
+<pre class="last literal-block">
+echo ${*:2}          # Echoes second and following positional parameters.
+echo ${&#64;:2}          # Same as above.
+
+echo ${*:2:3}        # Echoes three positional parameters, starting at second.
+</pre>
+</dd>
+<dt>expr substr $string $position $length</dt>
+<dd><p class="first">Extracts <tt class="docutils literal">$length</tt> characters from <tt class="docutils literal">$string</tt> starting at
+<tt class="docutils literal">$position</tt>.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+#       123456789......
+#       1-based indexing.
+
+echo `expr substr $stringZ 1 2`              # ab
+echo `expr substr $stringZ 4 3`              # ABC
+</pre>
+</dd>
+<dt>expr match &quot;$string&quot; '\($substring\)'</dt>
+<dd>Extracts <tt class="docutils literal">$substring</tt> at beginning of <tt class="docutils literal">$string</tt>, where
+<tt class="docutils literal">$substring</tt> is a <a class="reference external" href="regexp.html#REGEXREF">regular expression</a>.</dd>
+<dt>expr &quot;$string&quot; <span class="classifier-delimiter">:</span> <span class="classifier">'\\($substring\\)'</span></dt>
+<dd><p class="first">Extracts <tt class="docutils literal">$substring</tt> at beginning of <tt class="docutils literal">$string</tt>, where
+<tt class="docutils literal">$substring</tt> is a regular expression.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+#       =======
+
+echo `expr match &quot;$stringZ&quot; '\(.[b-c]*[A-Z]..[0-9]\)'`   # abcABC1
+echo `expr &quot;$stringZ&quot; : '\(.[b-c]*[A-Z]..[0-9]\)'`       # abcABC1
+echo `expr &quot;$stringZ&quot; : '\(.......\)'`                   # abcABC1
+# All of the above forms give an identical result.
+</pre>
+</dd>
+<dt>expr match &quot;$string&quot; '.*\($substring\)'</dt>
+<dd>Extracts <tt class="docutils literal">$substring</tt> at <em>end</em> of <tt class="docutils literal">$string</tt>, where
+<tt class="docutils literal">$substring</tt> is a regular expression.</dd>
+<dt>expr &quot;$string&quot; <span class="classifier-delimiter">:</span> <span class="classifier">'.\*\\($substring\\)'</span></dt>
+<dd><p class="first">Extracts <tt class="docutils literal">$substring</tt> at <em>end</em> of <tt class="docutils literal">$string</tt>, where
+<tt class="docutils literal">$substring</tt> is a regular expression.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+#                ======
+
+echo `expr match &quot;$stringZ&quot; '.*\([A-C][A-C][A-C][a-c]*\)'`    # ABCabc
+echo `expr &quot;$stringZ&quot; : '.*\(......\)'`                       # ABCabc
+</pre>
+</dd>
+</dl>
+<p><strong>Substring Removal</strong></p>
+<dl class="docutils">
+<dt>${string#substring}</dt>
+<dd>Deletes shortest match of <tt class="docutils literal">$substring</tt> from <em>front</em> of
+<tt class="docutils literal">$string</tt>.</dd>
+<dt>${string##substring}</dt>
+<dd><p class="first">Deletes longest match of <tt class="docutils literal">$substring</tt> from <em>front</em> of <tt class="docutils literal">$string</tt>.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+#       |----|          shortest
+#       |----------|    longest
+
+echo ${stringZ#a*C}      # 123ABCabc
+# Strip out shortest match between 'a' and 'C'.
+
+echo ${stringZ##a*C}     # abc
+# Strip out longest match between 'a' and 'C'.
+
+
+
+# You can parameterize the substrings.
+
+X='a*C'
+
+echo ${stringZ#$X}      # 123ABCabc
+echo ${stringZ##$X}     # abc
+                        # As above.
+</pre>
+</dd>
+<dt>${string%substring}</dt>
+<dd><p class="first">Deletes shortest match of <tt class="docutils literal">$substring</tt> from <em>back</em> of <tt class="docutils literal">$string</tt>.</p>
+<p>For example:</p>
+<pre class="last literal-block">
+# Rename all filenames in $PWD with &quot;TXT&quot; suffix to a &quot;txt&quot; suffix.
+# For example, &quot;file1.TXT&quot; becomes &quot;file1.txt&quot; . . .
+
+SUFF=TXT
+suff=txt
+
+for i in $(ls *.$SUFF)
+do
+  mv -f $i ${i%.$SUFF}.$suff
+  #  Leave unchanged everything *except* the shortest pattern match
+  #+ starting from the right-hand-side of the variable $i . . .
+done ### This could be condensed into a &quot;one-liner&quot; if desired.
+
+# Thank you, Rory Winston.
+</pre>
+</dd>
+<dt>${string%%substring}</dt>
+<dd><p class="first">Deletes longest match of <tt class="docutils literal">$substring</tt> from <em>back</em> of <tt class="docutils literal">$string</tt>.</p>
+<pre class="literal-block">
+stringZ=abcABC123ABCabc
+#                    ||     shortest
+#        |------------|     longest
+
+echo ${stringZ%b*c}      # abcABC123ABCa
+# Strip out shortest match between 'b' and 'c', from back of $stringZ.
+
+echo ${stringZ%%b*c}     # a
+# Strip out longest match between 'b' and 'c', from back of $stringZ.
+</pre>
+<p>This operator is useful for generating filenames.</p>
+<p><strong>Example 10-3. Converting graphic file formats, with filename
+change</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+#  cvt.sh:
+#  Converts all the MacPaint image files in a directory to &quot;pbm&quot; format.
+
+#  Uses the &quot;macptopbm&quot; binary from the &quot;netpbm&quot; package,
+#+ which is maintained by Brian Henderson (bryanh&#64;giraffe-data.com).
+#  Netpbm is a standard part of most Linux distros.
+
+OPERATION=macptopbm
+SUFFIX=pbm          # New filename suffix.
+
+if [ -n &quot;$1&quot; ]
+then
+  directory=$1      # If directory name given as a script argument...
+else
+  directory=$PWD    # Otherwise use current working directory.
+fi
+
+#  Assumes all files in the target directory are MacPaint image files,
+#+ with a &quot;.mac&quot; filename suffix.
+
+for file in $directory/*    # Filename globbing.
+do
+  filename=${file%.*c}      #  Strip &quot;.mac&quot; suffix off filename
+                            #+ ('.*c' matches everything
+                #+ between '.' and 'c', inclusive).
+  $OPERATION $file &gt; &quot;$filename.$SUFFIX&quot;
+                            # Redirect conversion to new filename.
+  rm -f $file               # Delete original files after converting.
+  echo &quot;$filename.$SUFFIX&quot;  # Log what is happening to stdout.
+done
+
+exit 0
+
+# Exercise:
+# --------
+#  As it stands, this script converts *all* the files in the current
+#+ working directory.
+#  Modify it to work *only* on files with a &quot;.mac&quot; suffix.
+</pre>
+<p><strong>Example 10-4. Converting streaming audio files to *ogg*</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# ra2ogg.sh: Convert streaming audio files (*.ra) to ogg.
+
+# Uses the &quot;mplayer&quot; media player program:
+#      http://www.mplayerhq.hu/homepage
+# Uses the &quot;ogg&quot; library and &quot;oggenc&quot;:
+#      http://www.xiph.org/
+#
+# This script may need appropriate codecs installed, such as sipr.so ...
+# Possibly also the compat-libstdc++ package.
+
+
+OFILEPREF=${1%%ra}      # Strip off the &quot;ra&quot; suffix.
+OFILESUFF=wav           # Suffix for wav file.
+OUTFILE=&quot;$OFILEPREF&quot;&quot;$OFILESUFF&quot;
+E_NOARGS=85
+
+if [ -z &quot;$1&quot; ]          # Must specify a filename to convert.
+then
+  echo &quot;Usage: `basename $0` [filename]&quot;
+  exit $E_NOARGS
+fi
+
+
+##########################################################################
+mplayer &quot;$1&quot; -ao pcm:file=$OUTFILE
+oggenc &quot;$OUTFILE&quot;  # Correct file extension automatically added by oggenc.
+##########################################################################
+
+rm &quot;$OUTFILE&quot;      # Delete intermediate *.wav file.
+                   # If you want to keep it, comment out above line.
+
+exit $?
+
+#  Note:
+#  ----
+#  On a Website, simply clicking on a *.ram streaming audio file
+#+ usually only downloads the URL of the actual *.ra audio file.
+#  You can then use &quot;wget&quot; or something similar
+#+ to download the *.ra file itself.
+
+
+#  Exercises:
+#  ---------
+#  As is, this script converts only *.ra filenames.
+#  Add flexibility by permitting use of *.ram and other filenames.
+#
+#  If you're really ambitious, expand the script
+#+ to do automatic downloads and conversions of streaming audio files.
+#  Given a URL, batch download streaming audio files (using &quot;wget&quot;)
+#+ and convert them on the fly.
+</pre>
+<p>A simple emulation of <a class="reference external" href="extmisc.html#GETOPTY">getopt</a> using
+substring-extraction constructs.</p>
+<p><strong>Example 10-5. Emulating *getopt*</strong></p>
+<pre class="last literal-block">
+#!/bin/bash
+# getopt-simple.sh
+# Author: Chris Morgan
+# Used in the ABS Guide with permission.
+
+
+getopt_simple()
+{
+    echo &quot;getopt_simple()&quot;
+    echo &quot;Parameters are '$*'&quot;
+    until [ -z &quot;$1&quot; ]
+    do
+      echo &quot;Processing parameter of: '$1'&quot;
+      if [ ${1:0:1} = '/' ]
+      then
+          tmp=${1:1}               # Strip off leading '/' . . .
+          parameter=${tmp%%=*}     # Extract name.
+          value=${tmp##*=}         # Extract value.
+          echo &quot;Parameter: '$parameter', value: '$value'&quot;
+          eval $parameter=$value
+      fi
+      shift
+    done
+}
+
+# Pass all options to getopt_simple().
+getopt_simple $*
+
+echo &quot;test is '$test'&quot;
+echo &quot;test2 is '$test2'&quot;
+
+exit 0  # See also, UseGetOpt.sh, a modified version of this script.
+
+---
+
+sh getopt_example.sh /test=value1 /test2=value2
+
+Parameters are '/test=value1 /test2=value2'
+Processing parameter of: '/test=value1'
+Parameter: 'test', value: 'value1'
+Processing parameter of: '/test2=value2'
+Parameter: 'test2', value: 'value2'
+test is 'value1'
+test2 is 'value2'
+</pre>
+</dd>
+</dl>
+<p><strong>Substring Replacement</strong></p>
+<dl class="docutils">
+<dt>${string/substring/replacement}</dt>
+<dd>Replace first <em>match</em> of <tt class="docutils literal">$substring</tt> with <tt class="docutils literal">$replacement</tt>.
+<a class="reference external" href="string-manipulation.html#FTN.AEN6127">[2]</a></dd>
+<dt>${string//substring/replacement}</dt>
+<dd><p class="first">Replace all matches of <tt class="docutils literal">$substring</tt> with <tt class="docutils literal">$replacement</tt>.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+
+echo ${stringZ/abc/xyz}       # xyzABC123ABCabc
+                              # Replaces first match of 'abc' with 'xyz'.
+
+echo ${stringZ//abc/xyz}      # xyzABC123ABCxyz
+                              # Replaces all matches of 'abc' with # 'xyz'.
+
+echo  ---------------
+echo &quot;$stringZ&quot;               # abcABC123ABCabc
+echo  ---------------
+                              # The string itself is not altered!
+
+# Can the match and replacement strings be parameterized?
+match=abc
+repl=000
+echo ${stringZ/$match/$repl}  # 000ABC123ABCabc
+#              ^      ^         ^^^
+echo ${stringZ//$match/$repl} # 000ABC123ABC000
+# Yes!          ^      ^        ^^^         ^^^
+
+echo
+
+# What happens if no $replacement string is supplied?
+echo ${stringZ/abc}           # ABC123ABCabc
+echo ${stringZ//abc}          # ABC123ABC
+# A simple deletion takes place.
+</pre>
+</dd>
+<dt>${string/#substring/replacement}</dt>
+<dd>If <tt class="docutils literal">$substring</tt> matches <em>front</em> end of <tt class="docutils literal">$string</tt>, substitute
+<tt class="docutils literal">$replacement</tt> for <tt class="docutils literal">$substring</tt>.</dd>
+<dt>${string/%substring/replacement}</dt>
+<dd><p class="first">If <tt class="docutils literal">$substring</tt> matches <em>back</em> end of <tt class="docutils literal">$string</tt>, substitute
+<tt class="docutils literal">$replacement</tt> for <tt class="docutils literal">$substring</tt>.</p>
+<pre class="last literal-block">
+stringZ=abcABC123ABCabc
+
+echo ${stringZ/#abc/XYZ}          # XYZABC123ABCabc
+                                  # Replaces front-end match of 'abc' with 'XYZ'.
+
+echo ${stringZ/%abc/XYZ}          # abcABC123ABCXYZ
+                                  # Replaces back-end match of 'abc' with 'XYZ'.
+</pre>
+</dd>
+</dl>
+<div class="section" id="manipulating-strings-using-awk">
+<h2>10.1.1. Manipulating strings using awk</h2>
+<p>A Bash script may invoke the string manipulation facilities of
+<a class="reference external" href="awk.html#AWKREF">awk</a> as an alternative to using its built-in
+operations.</p>
+<p><strong>Example 10-6. Alternate ways of extracting and locating substrings</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# substring-extraction.sh
+
+String=23skidoo1
+#      012345678    Bash
+#      123456789    awk
+# Note different string indexing system:
+# Bash numbers first character of string as 0.
+# Awk  numbers first character of string as 1.
+
+echo ${String:2:4} # position 3 (0-1-2), 4 characters long
+                                         # skid
+
+# The awk equivalent of ${string:pos:length} is substr(string,pos,length).
+echo | awk '
+{ print substr(&quot;'&quot;${String}&quot;'&quot;,3,4)      # skid
+}
+'
+#  Piping an empty &quot;echo&quot; to awk gives it dummy input,
+#+ and thus makes it unnecessary to supply a filename.
+
+echo &quot;----&quot;
+
+# And likewise:
+
+echo | awk '
+{ print index(&quot;'&quot;${String}&quot;'&quot;, &quot;skid&quot;)      # 3
+}                                           # (skid starts at position 3)
+'   # The awk equivalent of &quot;expr index&quot; ...
+
+exit 0
+</pre>
+</div>
+<div class="section" id="further-reference">
+<h2>10.1.2. Further Reference</h2>
+<p>For more on string manipulation in scripts, refer to <a class="reference external" href="parameter-substitution.html">Section
+10.2</a> and the <a class="reference external" href="moreadv.html#EXPEXTRSUB">relevant
+section</a> of the
+<a class="reference external" href="moreadv.html#EXPRREF">expr</a> command listing.</p>
+<p>Script examples:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="moreadv.html#EX45">Example 16-9</a></li>
+<li><a class="reference external" href="parameter-substitution.html#LENGTH">Example 10-9</a></li>
+<li><a class="reference external" href="parameter-substitution.html#PATTMATCHING">Example 10-10</a></li>
+<li><a class="reference external" href="parameter-substitution.html#RFE">Example 10-11</a></li>
+<li><a class="reference external" href="parameter-substitution.html#VARMATCH">Example 10-13</a></li>
+<li><a class="reference external" href="contributed-scripts.html#INSERTIONSORT">Example A-36</a></li>
+<li><a class="reference external" href="contributed-scripts.html#QKY">Example A-41</a></li>
+</ol>
+<div class="section" id="notes">
+<h3>Notes</h3>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/string-manipulation.ca.rst</tt>, line 10); <em><a href="#id5">backlink</a></em></p>
+Duplicate explicit target name: &quot;[1]&quot;.</div>
+<p><a class="reference external" href="string-manipulation.html#AEN5950">[1]</a></p>
+<p>This applies to either command-line arguments or parameters passed to a
+<a class="reference external" href="functions.html#FUNCTIONREF">function</a>.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/string-manipulation.ca.rst</tt>, line 10); <em><a href="#id6">backlink</a></em></p>
+Duplicate explicit target name: &quot;[2]&quot;.</div>
+<p><a class="reference external" href="string-manipulation.html#AEN6127">[2]</a></p>
+<p>Note that <tt class="docutils literal">$substring</tt> and <tt class="docutils literal">$replacement</tt> may refer to either
+<em>literal strings</em> or <em>variables</em>, depending on context. See the first
+usage example.</p>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="30%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="manipulatingvars.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="parameter-substitution.html">Next</a></td>
+</tr>
+<tr><td>Manipulating Variables</td>
+<td><a class="reference external" href="manipulatingvars.html">Up</a></td>
+<td>Parameter Substitution</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

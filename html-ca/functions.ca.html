@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/functions.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++----------------------------------+----+-------------------------------+
+| Advanced Bash-Scripting Guide:   |
++==================================+====+===============================+
+| `Prev &lt;process-sub.html&gt;`_       |    | `Next &lt;complexfunct.html&gt;`_   |
++----------------------------------+----+-------------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="chapter-24-functions">
+<h1>Chapter 24. Functions</h1>
+<p><strong>Table of Contents</strong></p>
+<p>24.1. <a class="reference external" href="complexfunct.html">Complex Functions and Function Complexities</a></p>
+<p>24.2. <a class="reference external" href="localvar.html">Local Variables</a></p>
+<p>24.3. <a class="reference external" href="recurnolocvar.html">Recursion Without Local Variables</a></p>
+<p>Like &quot;real&quot; programming languages, Bash has functions, though in a
+somewhat limited implementation. A function is a subroutine, a <a class="reference external" href="special-chars.html#CODEBLOCKREF">code
+block</a> that implements a set of
+operations, a &quot;black box&quot; that performs a specified task. Wherever there
+is repetitive code, when a task repeats with only slight variations in
+procedure, then consider using a function.</p>
+<dl class="docutils">
+<dt><strong>function</strong> <tt class="docutils literal">function_name</tt> {</dt>
+<dd><tt class="docutils literal">command</tt>...
+}</dd>
+</dl>
+<p>or</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">function_name</tt> () {</dt>
+<dd><tt class="docutils literal">command</tt>...
+}</dd>
+</dl>
+<p>This second form will cheer the hearts of C programmers (and is more
+<a class="reference external" href="portabilityissues.html">portable</a>).</p>
+<p>As in C, the function's opening bracket may optionally appear on the
+second line.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">function_name</tt> ()</dt>
+<dd>{
+<tt class="docutils literal">command</tt>...
+}</dd>
+</dl>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/functions.ca.rst</tt>, line 53)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>A function may be &quot;compacted&quot; into a single line.</p>
+<pre class="literal-block">
+fun () { echo &quot;This is a function&quot;; echo; }
+#                                 ^     ^
+</pre>
+<p>In this case, however, a <em>semicolon</em> must follow the final command in
+the function.</p>
+<pre class="literal-block">
+fun () { echo &quot;This is a function&quot;; echo } # Error!
+#                                       ^
+
+fun2 () { echo &quot;Even a single-command function? Yes!&quot;; }
+#                                                    ^
+</pre>
+<p>Functions are called, <em>triggered</em>, simply by invoking their names. <em>A
+function call is equivalent to a command.</em></p>
+<p><strong>Example 24-1. Simple functions</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+
+JUST_A_SECOND=1
+
+funky ()
+{ # This is about as simple as functions get.
+  echo &quot;This is a funky function.&quot;
+  echo &quot;Now exiting funky function.&quot;
+} # Function declaration must precede call.
+
+
+fun ()
+{ # A somewhat more complex function.
+  i=0
+  REPEATS=30
+
+  echo
+  echo &quot;And now the fun really begins.&quot;
+  echo
+
+  sleep $JUST_A_SECOND    # Hey, wait a second!
+  while [ $i -lt $REPEATS ]
+  do
+    echo &quot;----------FUNCTIONS----------&gt;&quot;
+    echo &quot;&lt;------------ARE-------------&quot;
+    echo &quot;&lt;------------FUN------------&gt;&quot;
+    echo
+    let &quot;i+=1&quot;
+  done
+}
+
+  # Now, call the functions.
+
+funky
+fun
+
+exit 0
+</pre>
+<p>The function definition must precede the first call to it. There is no
+method of &quot;declaring&quot; the function, as, for example, in C.</p>
+<pre class="literal-block">
+f1
+# Will give an error message, since function &quot;f1&quot; not yet defined.
+
+declare -f f1      # This doesn't help either.
+f1                 # Still an error message.
+
+# However...
+
+
+f1 ()
+{
+  echo &quot;Calling function \&quot;f2\&quot; from within function \&quot;f1\&quot;.&quot;
+  f2
+}
+
+f2 ()
+{
+  echo &quot;Function \&quot;f2\&quot;.&quot;
+}
+
+f1  #  Function &quot;f2&quot; is not actually called until this point,
+    #+ although it is referenced before its definition.
+    #  This is permissible.
+
+    # Thanks, S.C.
+</pre>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/functions.ca.rst</tt>, line 152)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Functions may not be empty!</p>
+<pre class="literal-block">
+#!/bin/bash
+# empty-function.sh
+
+empty ()
+{
+}
+
+exit 0  # Will not exit here!
+
+# $ sh empty-function.sh
+# empty-function.sh: line 6: syntax error near unexpected token `}'
+# empty-function.sh: line 6: `}'
+
+# $ echo $?
+# 2
+
+
+# Note that a function containing only comments is empty.
+
+func ()
+{
+  # Comment 1.
+  # Comment 2.
+  # This is still an empty function.
+  # Thank you, Mark Bova, for pointing this out.
+}
+# Results in same error message as above.
+
+
+# However ...
+
+not_quite_empty ()
+{
+  illegal_command
+} #  A script containing this function will *not* bomb
+  #+ as long as the function is not called.
+
+
+# Thank you, Thiemo Kellner, for pointing this out.
+</pre>
+<p>It is even possible to nest a function within another function, although
+this is not very useful.</p>
+<pre class="literal-block">
+f1 ()
+{
+
+  f2 () # nested
+  {
+    echo &quot;Function \&quot;f2\&quot;, inside \&quot;f1\&quot;.&quot;
+  }
+
+}
+
+f2  #  Gives an error message.
+    #  Even a preceding &quot;declare -f f2&quot; wouldn't help.
+
+echo
+
+f1  #  Does nothing, since calling &quot;f1&quot; does not automatically call &quot;f2&quot;.
+f2  #  Now, it's all right to call &quot;f2&quot;,
+    #+ since its definition has been made visible by calling &quot;f1&quot;.
+
+    # Thanks, S.C.
+</pre>
+<p>Function declarations can appear in unlikely places, even where a
+command would otherwise go.</p>
+<pre class="literal-block">
+ls -l | foo() { echo &quot;foo&quot;; }  # Permissible, but useless.
+
+
+
+if [ &quot;$USER&quot; = bozo ]
+then
+  bozo_greet ()   # Function definition embedded in an if/then construct.
+  {
+    echo &quot;Hello, Bozo.&quot;
+  }
+fi
+
+bozo_greet        # Works only for Bozo, and other users get an error.
+
+
+
+# Something like this might be useful in some contexts.
+NO_EXIT=1   # Will enable function definition below.
+
+[[ $NO_EXIT -eq 1 ]] &amp;&amp; exit() { true; }     # Function definition in an &quot;and-list&quot;.
+# If $NO_EXIT is 1, declares &quot;exit ()&quot;.
+# This disables the &quot;exit&quot; builtin by aliasing it to &quot;true&quot;.
+
+exit  # Invokes &quot;exit ()&quot; function, not &quot;exit&quot; builtin.
+
+
+
+# Or, similarly:
+filename=file1
+
+[ -f &quot;$filename&quot; ] &amp;&amp;
+foo () { rm -f &quot;$filename&quot;; echo &quot;File &quot;$filename&quot; deleted.&quot;; } ||
+foo () { echo &quot;File &quot;$filename&quot; not found.&quot;; touch bar; }
+
+foo
+
+# Thanks, S.C. and Christopher Head
+</pre>
+<p>Function names can take strange forms.</p>
+<pre class="literal-block">
+  _(){ for i in {1..10}; do echo -n &quot;$FUNCNAME&quot;; done; echo; }
+# ^^^         No space between function name and parentheses.
+#             This doesn't always work. Why not?
+
+# Now, let's invoke the function.
+  _         # __________
+#             ^^^^^^^^^^   10 underscores (10 x function name)!
+# A &quot;naked&quot; underscore is an acceptable function name.
+
+
+# In fact, a colon is likewise an acceptable function name.
+
+:(){ echo &quot;:&quot;; }; :
+
+# Of what use is this?
+# It's a devious way to obfuscate the code in a script.
+</pre>
+<p>See also <a class="reference external" href="contributed-scripts.html#GRONSFELD">Example A-55</a></p>
+<div class="figure align-center">
+<img alt="Note" src="http://tldp.org/LDP/abs/images/note.gif" />
+<p class="caption">Note</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/functions.ca.rst</tt>, line 293)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>What happens when different versions of the same function appear in a
+script?</p>
+<pre class="literal-block">
+#  As Yan Chen points out,
+#  when a function is defined multiple times,
+#  the final version is what is invoked.
+#  This is not, however, particularly useful.
+
+func ()
+{
+  echo &quot;First version of func ().&quot;
+}
+
+func ()
+{
+  echo &quot;Second version of func ().&quot;
+}
+
+func   # Second version of func ().
+
+exit $?
+
+#  It is even possible to use functions to override
+#+ or preempt system commands.
+#  Of course, this is *not* advisable.
+</pre>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="24%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="process-sub.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="complexfunct.html">Next</a></td>
+</tr>
+<tr><td>Process Substitution</td>
+<td><a class="reference external" href="part5.html">Up</a></td>
+<td>Complex Functions and Function Complexities</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

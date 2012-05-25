@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/zeros.ca.rst</tt>, line 1)</p>
+<p>Malformed table.</p>
+<pre class="literal-block">
++-------------------------------------+----+----------------------------+
+| Advanced Bash-Scripting Guide:      |
++=====================================+====+============================+
+| `Prev &lt;networkprogramming.html&gt;`_   |    | `Next &lt;debugging.html&gt;`_   |
++-------------------------------------+----+----------------------------+
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="chapter-31-of-zeros-and-nulls">
+<h1>Chapter 31. Of Zeros and Nulls</h1>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a></p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">rst-ca/zeros.ca.rst</tt>, line 12); <em><a href="#id2">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p><em>Faultily faultless, icily regular, splendidly null</em></p>
+<p><em>Dead perfection; no more.</em></p>
+<p><em>--Alfred Lord Tennyson</em></p>
+<p><strong>``/dev/zero`` ... ``/dev/null``</strong></p>
+<dl class="docutils">
+<dt>Uses of <tt class="docutils literal">/dev/null</tt></dt>
+<dd><p class="first">Think of <tt class="docutils literal">/dev/null</tt> as a <em>black hole</em>. It is essentially the
+equivalent of a write-only file. Everything written to it
+disappears. Attempts to read or output from it result in nothing.
+All the same, <tt class="docutils literal">/dev/null</tt> can be quite useful from both the
+command-line and in scripts.</p>
+<p>Suppressing <tt class="docutils literal">stdout</tt>.</p>
+<pre class="literal-block">
+cat $filename &gt;/dev/null
+# Contents of the file will not list to stdout.
+</pre>
+<p>Suppressing <tt class="docutils literal">stderr</tt> (from <a class="reference external" href="moreadv.html#EX57">Example 16-3</a>).</p>
+<pre class="literal-block">
+rm $badname 2&gt;/dev/null
+#           So error messages [stderr] deep-sixed.
+</pre>
+<p>Suppressing output from <em>both</em> <tt class="docutils literal">stdout</tt> and <tt class="docutils literal">stderr</tt>.</p>
+<pre class="literal-block">
+cat $filename 2&gt;/dev/null &gt;/dev/null
+# If &quot;$filename&quot; does not exist, there will be no error message output.
+# If &quot;$filename&quot; does exist, the contents of the file will not list to stdout.
+# Therefore, no output at all will result from the above line of code.
+#
+#  This can be useful in situations where the return code from a command
+#+ needs to be tested, but no output is desired.
+#
+# cat $filename &amp;&gt;/dev/null
+#     also works, as Baris Cicek points out.
+</pre>
+<p>Deleting contents of a file, but preserving the file itself, with
+all attendant permissions (from <a class="reference external" href="sha-bang.html#EX1">Example 2-1</a>
+and <a class="reference external" href="sha-bang.html#EX2">Example 2-3</a>):</p>
+<pre class="literal-block">
+cat /dev/null &gt; /var/log/messages
+#  : &gt; /var/log/messages   has same effect, but does not spawn a new process.
+
+cat /dev/null &gt; /var/log/wtmp
+</pre>
+<p>Automatically emptying the contents of a logfile (especially good
+for dealing with those nasty &quot;cookies&quot; sent by commercial Web
+sites):</p>
+<p><strong>Example 31-1. Hiding the cookie jar</strong></p>
+<pre class="last literal-block">
+# Obsolete Netscape browser.
+# Same principle applies to newer browsers.
+
+if [ -f ~/.netscape/cookies ]  # Remove, if exists.
+then
+  rm -f ~/.netscape/cookies
+fi
+
+ln -s /dev/null ~/.netscape/cookies
+# All cookies now get sent to a black hole, rather than saved to disk.
+</pre>
+</dd>
+<dt>Uses of <tt class="docutils literal">/dev/zero</tt></dt>
+<dd><p class="first">Like <tt class="docutils literal">/dev/null</tt>, <tt class="docutils literal">/dev/zero</tt> is a pseudo-device file, but it
+actually produces a stream of nulls (<em>binary</em> zeros, not the
+<a class="reference external" href="special-chars.html#ASCIIDEF">ASCII</a> kind). Output written to
+<tt class="docutils literal">/dev/zero</tt> disappears, and it is fairly difficult to actually
+read the nulls emitted there, though it can be done with
+<a class="reference external" href="extmisc.html#ODREF">od</a> or a hex editor. The chief use of
+<tt class="docutils literal">/dev/zero</tt> is creating an initialized dummy file of predetermined
+length intended as a temporary swap file.</p>
+<p><strong>Example 31-2. Setting up a swapfile using ``/dev/zero``</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# Creating a swap file.
+
+#  A swap file provides a temporary storage cache
+#+ which helps speed up certain filesystem operations.
+
+ROOT_UID=0         # Root has $UID 0.
+E_WRONG_USER=85    # Not root?
+
+FILE=/swap
+BLOCKSIZE=1024
+MINBLOCKS=40
+SUCCESS=0
+
+
+# This script must be run as root.
+if [ &quot;$UID&quot; -ne &quot;$ROOT_UID&quot; ]
+then
+  echo; echo &quot;You must be root to run this script.&quot;; echo
+  exit $E_WRONG_USER
+fi
+
+
+blocks=${1:-$MINBLOCKS}          #  Set to default of 40 blocks,
+                                 #+ if nothing specified on command-line.
+# This is the equivalent of the command block below.
+# --------------------------------------------------
+# if [ -n &quot;$1&quot; ]
+# then
+#   blocks=$1
+# else
+#   blocks=$MINBLOCKS
+# fi
+# --------------------------------------------------
+
+
+if [ &quot;$blocks&quot; -lt $MINBLOCKS ]
+then
+  blocks=$MINBLOCKS              # Must be at least 40 blocks long.
+fi
+
+
+######################################################################
+echo &quot;Creating swap file of size $blocks blocks (KB).&quot;
+dd if=/dev/zero of=$FILE bs=$BLOCKSIZE count=$blocks  # Zero out file.
+mkswap $FILE $blocks             # Designate it a swap file.
+swapon $FILE                     # Activate swap file.
+retcode=$?                       # Everything worked?
+#  Note that if one or more of these commands fails,
+#+ then it could cause nasty problems.
+######################################################################
+
+#  Exercise:
+#  Rewrite the above block of code so that if it does not execute
+#+ successfully, then:
+#    1) an error message is echoed to stderr,
+#    2) all temporary files are cleaned up, and
+#    3) the script exits in an orderly fashion with an
+#+      appropriate error code.
+
+echo &quot;Swap file created and activated.&quot;
+
+exit $retcode
+</pre>
+<p>Another application of <tt class="docutils literal">/dev/zero</tt> is to &quot;zero out&quot; a file of a
+designated size for a special purpose, such as mounting a filesystem
+on a <a class="reference external" href="devref1.html#LOOPBACKREF">loopback device</a> (see <a class="reference external" href="system.html#CREATEFS">Example
+17-8</a>) or &quot;securely&quot; deleting a file (see
+<a class="reference external" href="extmisc.html#BLOTOUT">Example 16-60</a>).</p>
+<p><strong>Example 31-3. Creating a ramdisk</strong></p>
+<pre class="literal-block">
+#!/bin/bash
+# ramdisk.sh
+
+#  A &quot;ramdisk&quot; is a segment of system RAM memory
+#+ which acts as if it were a filesystem.
+#  Its advantage is very fast access (read/write time).
+#  Disadvantages: volatility, loss of data on reboot or powerdown,
+#+                less RAM available to system.
+#
+#  Of what use is a ramdisk?
+#  Keeping a large dataset, such as a table or dictionary on ramdisk,
+#+ speeds up data lookup, since memory access is much faster than disk access.
+
+
+E_NON_ROOT_USER=70             # Must run as root.
+ROOTUSER_NAME=root
+
+MOUNTPT=/mnt/ramdisk           # Create with mkdir /mnt/ramdisk.
+SIZE=2000                      # 2K blocks (change as appropriate)
+BLOCKSIZE=1024                 # 1K (1024 byte) block size
+DEVICE=/dev/ram0               # First ram device
+
+username=`id -nu`
+if [ &quot;$username&quot; != &quot;$ROOTUSER_NAME&quot; ]
+then
+  echo &quot;Must be root to run \&quot;`basename $0`\&quot;.&quot;
+  exit $E_NON_ROOT_USER
+fi
+
+if [ ! -d &quot;$MOUNTPT&quot; ]         #  Test whether mount point already there,
+then                           #+ so no error if this script is run
+  mkdir $MOUNTPT               #+ multiple times.
+fi
+
+##############################################################################
+dd if=/dev/zero of=$DEVICE count=$SIZE bs=$BLOCKSIZE  # Zero out RAM device.
+                                                      # Why is this necessary?
+mke2fs $DEVICE                 # Create an ext2 filesystem on it.
+mount $DEVICE $MOUNTPT         # Mount it.
+chmod 777 $MOUNTPT             # Enables ordinary user to access ramdisk.
+                               # However, must be root to unmount it.
+##############################################################################
+# Need to test whether above commands succeed. Could cause problems otherwise.
+# Exercise: modify this script to make it safer.
+
+echo &quot;\&quot;$MOUNTPT\&quot; now available for use.&quot;
+# The ramdisk is now accessible for storing files, even by an ordinary user.
+
+#  Caution, the ramdisk is volatile, and its contents will disappear
+#+ on reboot or power loss.
+#  Copy anything you want saved to a regular directory.
+
+# After reboot, run this script to again set up ramdisk.
+# Remounting /mnt/ramdisk without the other steps will not work.
+
+#  Suitably modified, this script can by invoked in /etc/rc.d/rc.local,
+#+ to set up ramdisk automatically at bootup.
+#  That may be appropriate on, for example, a database server.
+
+exit 0
+</pre>
+<p class="last">In addition to all the above, <tt class="docutils literal">/dev/zero</tt> is needed by ELF
+(<em>Executable and Linking Format</em>) UNIX/Linux binaries.</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="27%" />
+<col width="31%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="networkprogramming.html">Prev</a></td>
+<td><a class="reference external" href="index.html">Home</a></td>
+<td><a class="reference external" href="debugging.html">Next</a></td>
+</tr>
+<tr><td>Network Programming</td>
+<td><a class="reference external" href="part5.html">Up</a></td>
+<td>Debugging</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
