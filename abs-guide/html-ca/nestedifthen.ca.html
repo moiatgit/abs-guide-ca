@@ -317,23 +317,15 @@ ul.auto-toc {
 <div class="document">
 
 
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">rst-ca/nestedifthen.ca.rst</tt>, line 1)</p>
-<p>Malformed table.</p>
-<pre class="literal-block">
-+----------------------------------+--------------------+---------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+====================+===========================+
-| `Prev &lt;comparison-ops.html&gt;`_    | Chapter 7. Tests   | `Next &lt;testtest.html&gt;`_   |
-+----------------------------------+--------------------+---------------------------+
-</pre>
-</div>
+<p><a class="reference external" href="index.ca.html">Inici</a> :  Guia avançada de Bash-Scripting</p>
+<p><a class="reference external" href="tests.ca.html">Amunt</a> : Capítol 7. Comprovacions</p>
+<p><a class="reference external" href="comparison-ops.ca.html">Anterior</a> : Altres operadors de comparació</p>
+<p><a class="reference external" href="testtest.ca.html">Següent</a> : Comprova el teu coneixement sobre comprovacions</p>
 <hr class="docutils" />
-<div class="section" id="nested-if-then-condition-tests">
-<h1>7.4. Nested <tt class="docutils literal">if/then</tt> Condition Tests</h1>
-<p>Condition tests using the <tt class="docutils literal">if/then</tt> construct may be nested. The net
-result is equivalent to using the <a class="reference external" href="ops.html#LOGOPS1">*&amp;&amp;*</a> compound
-comparison operator.</p>
+<div class="section" id="estructures-if-then-imbricades">
+<h1>7.4. Estructures if/then imbricades</h1>
+<p>L’estructura if/then pot ser imbricada. És a dir, pot aparèixer dins d’una altra estructura if/then. El resultat final equival a l’ús de l’operador
+<a class="reference external" href="ops.ca.html">*&amp;&amp;*</a> .</p>
 <pre class="literal-block">
 a=3
 
@@ -341,38 +333,23 @@ if [ &quot;$a&quot; -gt 0 ]
 then
   if [ &quot;$a&quot; -lt 5 ]
   then
-    echo &quot;The value of \&quot;a\&quot; lies somewhere between 0 and 5.&quot;
+    echo &quot;El valor de \&quot;a\&quot; es troba entre 0 i 5.&quot;
   fi
 fi
 
-# Same result as:
+# El resultat és equivalent al de:
 
 if [ &quot;$a&quot; -gt 0 ] &amp;&amp; [ &quot;$a&quot; -lt 5 ]
 then
-  echo &quot;The value of \&quot;a\&quot; lies somewhere between 0 and 5.&quot;
+  echo &quot;El valor de \&quot;a\&quot; es troba entre 0 i 5.&quot;
 fi
 </pre>
-<p><a class="reference external" href="bashver2.html#CARDS">Example 37-4</a> and <a class="reference external" href="system.html#BACKLIGHT">Example
-17-11</a> demonstrate nested <tt class="docutils literal">if/then</tt> condition
-tests.</p>
+<p><a class="reference external" href="bashver2.ca.html">Exemples 37-4</a> i  <a class="reference external" href="system.ca.html">17-11</a> que demostren l'ús imbricat de l'estructrura <tt class="docutils literal">if/then</tt>.</p>
 <hr class="docutils" />
-<table border="1" class="docutils">
-<colgroup>
-<col width="36%" />
-<col width="26%" />
-<col width="38%" />
-</colgroup>
-<tbody valign="top">
-<tr><td><a class="reference external" href="comparison-ops.html">Prev</a></td>
-<td><a class="reference external" href="index.html">Home</a></td>
-<td><a class="reference external" href="testtest.html">Next</a></td>
-</tr>
-<tr><td>Other Comparison Operators</td>
-<td><a class="reference external" href="tests.html">Up</a></td>
-<td>Testing Your Knowledge of Tests</td>
-</tr>
-</tbody>
-</table>
+<p><a class="reference external" href="index.ca.html">Inici</a> :  Guia avançada de Bash-Scripting</p>
+<p><a class="reference external" href="tests.ca.html">Amunt</a> : Capítol 7. Comprovacions</p>
+<p><a class="reference external" href="comparison-ops.ca.html">Anterior</a> : Altres operadors de comparació</p>
+<p><a class="reference external" href="testtest.ca.html">Següent</a> : Comprova el teu coneixement sobre comprovacions</p>
 </div>
 </div>
 </body>
