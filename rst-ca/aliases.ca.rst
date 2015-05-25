@@ -1,71 +1,80 @@
-+----------------------------------+----+----------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+====+============================+
-| `Prev <recurnolocvar.html>`_     |    | `Next <list-cons.html>`_   |
-+----------------------------------+----+----------------------------+
+`Inici <index.ca.html>`_ :  Guia avançada de Bash-Scripting
+
+`Anterior <recurnolocvar.html>`_ : Recursion Without Local Variables
+
+`Següent <list-cons.html>`_ : List Constructs
 
 --------------
 
-Chapter 25. Aliases
-===================
+Capítol 25. Àlies
+=================
 
-A Bash *alias* is essentially nothing more than a keyboard shortcut, an
-abbreviation, a means of avoiding typing a long command sequence. If,
-for example, we include **alias lm="ls -l \| more"** in the
-```~/.bashrc`` file <sample-bashrc.html>`_, then each ``lm``
-`[1] <aliases.html#FTN.AEN18532>`_ typed at the command-line will
-automatically be replaced by a **ls -l \| more**. This can save a great
-deal of typing at the command-line and avoid having to remember complex
-combinations of commands and options. Setting **alias rm="rm -i"**
-(interactive mode delete) may save a good deal of grief, since it can
-prevent inadvertently deleting important files.
+En Bash, un *àlies* no és més que una drecera de teclat, una
+abreviació, una manera d'evitar escriure una seqüència llarga de
+comandes. Si, per exemple, incloem **alias lm="ls -l \| more"** en el
+fitxer ` ~/.bashrc <sample-bashrc.html>`_, cada cop que escrivim
+``lm`` a la línia de comandes `[1] <aliases.html#FTN.AEN18532>`_,
+automàticament serà reemplaçat per la comanda **ls -l \| more**.
 
-In a script, aliases have very limited usefulness. It would be nice if
-aliases could assume some of the functionality of the **C**
-preprocessor, such as macro expansion, but unfortunately Bash does not
-expand arguments within the alias body.
-`[2] <aliases.html#FTN.AEN18539>`_ Moreover, a script fails to expand an
-alias itself within "compound constructs," such as
-`if/then <tests.html#IFTHEN>`_ statements, loops, and functions. An
-added limitation is that an alias will not expand recursively. Almost
-invariably, whatever we would like an alias to do could be accomplished
-much more effectively with a `function <functions.html#FUNCTIONREF>`_.
+Tot plegat, podem estalviar-nos escriure un munt a la línia de
+comandes i evitar-nos haver de recordar combinacions complexes de
+comandes i opcions.
 
-**Example 25-1. Aliases within a script**
+Un altre exemple, si definim l'àlies **alias rm="rm -i"**, podem
+evitar-nos molts problemes esborrant accidentalment fitxers
+importants, donat que sempre que fem servir **rm** (comanda per
+eliminar fitxers), ens demanarà confirmació en comptes d'eliminar els
+fitxers directament.
+
+Dins d'un guió, els àlies no tenen gaire utilitat. Fora bo que els
+àlies disposessin de part de la funcionalitat del preprocessador de C,
+com ara l'expansió de macros. Malauradament Bash no és capaç
+d'expandir arguments dins del cos d'un àlies.  `[2]
+<aliases.html#FTN.AEN18539>`_ És més, dins d'un guió no es pot ni
+expandir un àlies dins d'una "sentència composta" com ara les
+sentències `if/then <tests.html#IFTHEN>`_, els bucles, i les funcions.
+Una altra limitació és que els àlies no s'expandeixen recursivament.
+Quasi sempre, tot el que es pugui aconseguir amb un àlies, ho podrem
+realitzar molt més efectivament amb una `funció
+<functions.html#FUNCTIONREF>`_.
+
+**Exemple 25-1. Àlies dins d'un guió**
 
 ::
 
     #!/bin/bash
     # alias.sh
 
+    # Cal executar la següent opció per a poder expandir els àlies
     shopt -s expand_aliases
-    # Must set this option, else script will not expand aliases.
 
 
-    # First, some fun.
-    alias Jesse_James='echo "\"Alias Jesse James\" was a 1959 comedy starring Bob Hope."'
+    # Una mica d'humor per començar
+    alias Jesse_James='echo "\"Alias Jesse James\" va ser una comedia del 1959 protagonitzada per Bob Hope."'
     Jesse_James
 
     echo; echo; echo;
 
+    # Podem fer servir tant cometes dobles com simples a l'hora de definir un àlies
     alias ll="ls -l"
-    # May use either single (') or double (") quotes to define an alias.
 
-    echo "Trying aliased \"ll\":"
-    ll /usr/X11R6/bin/mk*   #* Alias works.
+    echo "Provant el nou àlies \"ll\":"
+    ll /etc/pa*   #* L'àlies funciona!
 
     echo
 
-    directory=/usr/X11R6/bin/
-    prefix=mk*  # See if wild card causes problems.
-    echo "Variables \"directory\" + \"prefix\" = $directory$prefix"
+    directori=/etc/
+    prefix=pa*  # Comprovem si el comodín causa problemes
+    echo "Variables \"directori\" + \"prefix\" = $directori$prefix"
     echo
 
-    alias lll="ls -l $directory$prefix"
+    alias lll="ls -l $directori$prefix"
 
-    echo "Trying aliased \"lll\":"
-    lll         # Long listing of all files in /usr/X11R6/bin stating with mk.
-    # An alias can handle concatenated variables -- including wild card -- o.k.
+    echo "Provant l'àlies \"lll\":"
+    lll         # Resultarà en la llista de fitxers a /etc/ que continguin
+                # pa* o bé que estiguin en un subdirectori que comenci amb pa*
+
+    # Comprovat: un àlies pot gestionar variables concatenades, incloent comodins.
 
 
 
@@ -76,60 +85,63 @@ much more effectively with a `function <functions.html#FUNCTIONREF>`_.
 
     if [ TRUE ]
     then
-      alias rr="ls -l"
-      echo "Trying aliased \"rr\" within if/then statement:"
-      rr /usr/X11R6/bin/mk*   #* Error message results!
-      # Aliases not expanded within compound statements.
-      echo "However, previously expanded alias still recognized:"
-      ll /usr/X11R6/bin/mk*
-    fi  
+        alias rr="ls -l"
+        echo "Provant l'àlies \"rr\" dins d'un bloc if/then:"
+        rr /etc/pa*   #* Apareix un missatge d'error de comanda no trobada!
+        # És a dir, els àlies no s'expandeixen dins de sentències compostes.
+        echo "En canvi, els àlies definits fora del bloc sí que són reconeguts:"
+        ll /etc/pa*
+    fi
 
     echo
 
-    count=0
-    while [ $count -lt 3 ]
+    comptador=0
+    while [ $comptador -lt 3 ]
     do
-      alias rrr="ls -l"
-      echo "Trying aliased \"rrr\" within \"while\" loop:"
-      rrr /usr/X11R6/bin/mk*   #* Alias will not expand here either.
-                               #  alias.sh: line 57: rrr: command not found
-      let count+=1
+        alias rrr="ls -l"
+        echo "Provant l'àlies \"rrr\" dins d'un bucle \"while\":"
+        rrr /etc/pa*    #* Aquí tampoc no s'expandirà l'àlies.
+                        # Es mostrarà l'error de comanda no trobada!
+        let comptador+=1
     done 
 
     echo; echo
 
-    alias xyz='cat $0'   # Script lists itself.
-                         # Note strong quotes.
+    alias xyz='cat $0'  # Mostra el codi d'aquest guió.
+                        # Atenció a les cometes simples.
     xyz
-    #  This seems to work,
-    #+ although the Bash documentation suggests that it shouldn't.
+    #  Sembla que funciona,
+    #+ malgrat la documentació de Bash suggereix que no hauria de fer-ho.
     #
-    #  However, as Steve Jacobson points out,
-    #+ the "$0" parameter expands immediately upon declaration of the alias.
+    #  Amb tot, tal i com Steve Jacobson indica,
+    #+ el paràmetre "$0" s'expandeix immediàtament en el moment de la declaració de l'àlies.
 
     exit 0
 
-The **unalias** command removes a previously set *alias*.
 
-**Example 25-2. *unalias*: Setting and unsetting an alias**
+La comanda **unalias** elimina els àlies prèviament definits amb
+**alias**.
+
+**Exemple 25-2. *unalias*: assignant i desassignant un àlies**
 
 ::
 
     #!/bin/bash
     # unalias.sh
 
-    shopt -s expand_aliases  # Enables alias expansion.
+    shopt -s expand_aliases  # Permet l'expansió d'àlies.
 
     alias llm='ls -al | more'
     llm
 
     echo
 
-    unalias llm              # Unset alias.
+    unalias llm              # desassigna l'àlies.
     llm
-    # Error message results, since 'llm' no longer recognized.
+    # Ara genera un error perquè 'llm' ja no està reconegut.
 
     exit 0
+
 
 ::
 
@@ -139,25 +151,26 @@ The **unalias** command removes a previously set *alias*.
     drwxr-xr-x   40 bozo     bozo         2048 Feb  6 14:04 ..
     -rwxr-xr-x    1 bozo     bozo          199 Feb  6 14:04 unalias.sh
 
-    ./unalias.sh: llm: command not found
+    ./unalias.sh: line 12: llm: no s'ha trobat l'ordre
 
-Notes
-~~~~~
+Anotacions
+----------
 
 `[1] <aliases.html#AEN18532>`_
 
-... as the first word of a command string. Obviously, an alias is only
-meaningful at the *beginning* of a command.
+... Com a primera paraula d'una comanda. Evidentment, un àlies només
+té sentit a l'inici d'una comanda.
 
 `[2] <aliases.html#AEN18539>`_
 
-However, aliases do seem to expand positional parameters.
+No obstant, els àlies semblen expandir paràmetres posicionals.
 
 --------------
 
-+-------------------------------------+------------------------+----------------------------+
-| `Prev <recurnolocvar.html>`_        | `Home <index.html>`_   | `Next <list-cons.html>`_   |
-+-------------------------------------+------------------------+----------------------------+
-| Recursion Without Local Variables   | `Up <part5.html>`_     | List Constructs            |
-+-------------------------------------+------------------------+----------------------------+
+`Inici <index.ca.html>`_ :  Guia avançada de Bash-Scripting
+
+`Anterior <recurnolocvar.html>`_ : Recursion Without Local Variables
+
+`Següent <list-cons.html>`_ : List Constructs
+
 

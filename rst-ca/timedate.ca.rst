@@ -57,7 +57,7 @@ comandes
 
         bash$ date -u
         Sat Mar 30 04:07:42 UTC 2002
-                  
+
 
     Aquesta opció facilita el càlcul del temps entre diferents dates.
 
@@ -85,7 +85,7 @@ comandes
 
         printf '\nEl %s de 2007 ' \
                "$(date -d"$CURRENT +
-                $(( $(diff) /$MPHR /$MPHR /$HPD / 2 )) days" '+%d %B')" 
+                $(( $(diff) /$MPHR /$MPHR /$HPD / 2 )) days" '+%d %B')"
         #       %B = nom del mes                ^ mig camí
         printf 'estava a mig camí entre  %s ' "$(date -d"$CURRENT" '+%d %B')"
         printf 'i %s\n' "$(date -d"$TARGET" '+%d %B')"
@@ -222,7 +222,7 @@ comandes
 
         bash$ at 2:30 am Friday < at-jobs.list
         job 2 at 2000-10-27 02:30
-                  
+
 
 **batch**
     La comanda de control de treballs **batch** és similar a **at**, Es
