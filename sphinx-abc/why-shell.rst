@@ -1,21 +1,14 @@
-+----------------------------------+----+---------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+====+===========================+
-| `Prev <part1.html>`_             |    | `Next <sha-bang.html>`_   |
-+----------------------------------+----+---------------------------+
+.. XXX TODO: translate me
 
---------------
+####################################
+Capítol 1. Perquè programar en Shell
+####################################
 
-Chapter 1. Shell Programming!
-=============================
+    *No programming language is perfect. There is not even a single best
+    language; there are only languages well suited or perhaps poorly suited
+    for particular purposes.*
 
-**
-
-*No programming language is perfect. There is not even a single best
-language; there are only languages well suited or perhaps poorly suited
-for particular purposes.*
-
-*--Herbert Mayer*
+    -- Herbert Mayer
 
 A working knowledge of shell scripting is essential to anyone wishing to
 become reasonably proficient at system administration, even if they do
@@ -27,7 +20,7 @@ behavior of a system, and possibly modifying it.
 
 The craft of scripting is not hard to master, since the scripts can be
 built in bite-sized sections and there is only a fairly small set of
-shell-specific operators and options `[1] <why-shell.html#FTN.AEN60>`_
+shell-specific operators and options [#why-shell]_ `[1] <why-shell.html#FTN.AEN60>`_
 to learn. The syntax is simple -- even austere -- similar to that of
 invoking and chaining together utilities at the command line, and there
 are only a few "rules" governing their use. Most short scripts work
@@ -138,19 +131,16 @@ for enlightenment.
 Unless otherwise noted, `the author <mailto:thegrendel.abs@gmail.com>`_
 of this book wrote the example scripts that follow.
 
-**
+    *His countenance was bold and bashed not.*
 
-*His countenance was bold and bashed not.*
-
-*--Edmund Spenser*
+    -- Edmund Spenser
 
 Notes
-~~~~~
+=====
 
-`[1] <why-shell.html#AEN60>`_
+.. [#why-shell] These are referred to as builtins features internal to
+   the shell.
 
-These are referred to as `builtins <internal.html#BUILTINREF>`_,
-features internal to the shell.
 
 `[2] <why-shell.html#AEN84>`_
 
@@ -176,12 +166,4 @@ By convention, user-written shell scripts that are Bourne shell
 compliant generally take a name with a ``.sh`` extension. System
 scripts, such as those found in ``/etc/rc.d``, do not necessarily
 conform to this nomenclature.
-
---------------
-
-+------------------------+------------------------+--------------------------------+
-| `Prev <part1.html>`_   | `Home <index.html>`_   | `Next <sha-bang.html>`_        |
-+------------------------+------------------------+--------------------------------+
-| Introduction           | `Up <part1.html>`_     | Starting Off With a Sha-Bang   |
-+------------------------+------------------------+--------------------------------+
 

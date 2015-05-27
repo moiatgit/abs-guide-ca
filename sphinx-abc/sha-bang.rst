@@ -1,25 +1,20 @@
-+----------------------------------+----+---------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+====+===========================+
-| `Prev <why-shell.html>`_         |    | `Next <invoking.html>`_   |
-+----------------------------------+----+---------------------------+
+.. XXX TODO: translate me
 
---------------
+###################################
+Capítol 2. Comencem amb el Sha-Bang
+###################################
 
-Chapter 2. Starting Off With a Sha-Bang
-=======================================
+    *Shell programming is a 1950s juke box . . .*
 
-**
+    -- Larry Wall
 
-*Shell programming is a 1950s juke box . . .*
+En aquest capítol veurem:
 
-*--Larry Wall*
+.. toctree::
+   :maxdepth: 1
 
-**Table of Contents**
-
-2.1. `Invoking the script <invoking.html>`_
-
-2.2. `Preliminary Exercises <prelimexer.html>`_
+   invoking
+   prelimexer
 
 In the simplest case, a script is nothing more than a list of system
 commands stored in a file. At the very least, this saves the effort of
@@ -27,15 +22,9 @@ retyping that particular sequence of commands each time it is invoked.
 
 **Example 2-1. *cleanup*: A script to clean up log files in /var/log**
 
-::
-
-    # Cleanup
-    # Run as root, of course.
-
-    cd /var/log
-    cat /dev/null > messages
-    cat /dev/null > wtmp
-    echo "Log files cleaned up."
+.. literalinclude:: _scripts/cleanup.sh
+   :language: sh
+   :linenos:
 
 There is nothing unusual here, only a set of commands that could just as
 easily have been invoked one by one from the command-line on the console
