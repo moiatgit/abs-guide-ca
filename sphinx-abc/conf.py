@@ -52,7 +52,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'ABS Guide ca'
 copyright = u'2015, Moisès Gómez'
-author = u'Moisès Gómez'
+author = u'Mendel Cooper'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

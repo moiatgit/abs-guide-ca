@@ -1,0 +1,43 @@
+Advanced Bash-Scripting Guide:
+
+`Prev <revisionhistory.html>`__
+
+`Next <todolist.html>`__
+
+--------------
+
+Appendix Q. Download and Mirror Sites
+=====================================
+
+The latest update of this document, as an archived,
+`bzip2-ed <filearchiv.html#BZIPREF>`__ "tarball" including both the SGML
+source and rendered HTML, may be downloaded from the `author's home
+site <http://bash.deta.in/abs-guide-latest.tar.bz2>`__). A `pdf
+version <http://bash.deta.in/abs-guide.pdf>`__ is also available
+(`mirror
+site <http://www.mediafire.com/file/xi34ape1bifcnlb/abs-guide.pdf>`__).
+There is likewise an `epub
+version <http://bash.deta.in/abs-guide.epub>`__, courtesy of Craig
+Barnes and Michael Satke. The `change
+log <http://bash.deta.in/Change.log>`__ gives a detailed revision
+history. The *ABS Guide* even has `its own ``freshmeat.net/freecode``
+page <http://freecode.com/projects/advancedbashscriptingguide/>`__ to
+keep track of major updates, user comments, and popularity ratings for
+the project.
+
+The legacy hosting site for this document is the `Linux Documentation
+Project <http://www.tldp.org/LDP/abs/>`__, which maintains many other
+Guides and HOWTOs as well.
+
+Many thanks to Ronny Bangsund for donating `server
+space <http://bash.deta.in/>`__ to host this project.
+
+--------------
+
++--------------------------+--------------------------+--------------------------+
+| `Prev <revisionhistory.h | Revision History         |
+| tml>`__                  |                          |
+| `Home <index.html>`__    | To Do List               |
+| `Next <todolist.html>`__ |                          |
++--------------------------+--------------------------+--------------------------+
+

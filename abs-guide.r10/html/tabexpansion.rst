@@ -1,0 +1,204 @@
+Advanced Bash-Scripting Guide:
+
+`Prev <systemdirs.html>`__
+
+`Next <localization.html>`__
+
+--------------
+
+Appendix J. An Introduction to Programmable Completion
+======================================================
+
+The *programmable completion* feature in Bash permits typing a partial
+command, then pressing the **[Tab]** key to auto-complete the command
+sequence. `[1] <tabexpansion.html#FTN.AEN24082>`__ If multiple
+completions are possible, then **[Tab]** lists them all. Let's see how
+it works.
+
++--------------------------------------------------------------------------+
+| .. code:: SCREEN                                                         |
+|                                                                          |
+|     bash$ xtra[Tab]                                                      |
+|     xtraceroute       xtrapin           xtrapproto                       |
+|      xtraceroute.real  xtrapinfo         xtrapreset                      |
+|      xtrapchar         xtrapout          xtrapstats                      |
+|                                                                          |
+|                                                                          |
+|     bash$ xtrac[Tab]                                                     |
+|     xtraceroute       xtraceroute.real                                   |
+|                                                                          |
+|                                                                          |
+|     bash$ xtraceroute.r[Tab]                                             |
+|     xtraceroute.real                                                     |
+|                                                                          |
+                                                                          
++--------------------------------------------------------------------------+
+
+Tab completion also works for variables and path names.
+
++--------------------------------------------------------------------------+
+| .. code:: SCREEN                                                         |
+|                                                                          |
+|     bash$ echo $BASH[Tab]                                                |
+|     $BASH                 $BASH_COMPLETION      $BASH_SUBSHELL           |
+|      $BASH_ARGC            $BASH_COMPLETION_DIR  $BASH_VERSINFO          |
+|      $BASH_ARGV            $BASH_LINENO          $BASH_VERSION           |
+|      $BASH_COMMAND         $BASH_SOURCE                                  |
+|                                                                          |
+|                                                                          |
+|     bash$ echo /usr/local/[Tab]                                          |
+|     bin/     etc/     include/ libexec/ sbin/    src/                    |
+|      doc/     games/   lib/     man/     share/                          |
+|                                                                          |
+                                                                          
++--------------------------------------------------------------------------+
+
+The Bash **complete** and **compgen**
+`builtins <internal.html#BUILTINREF>`__ make it possible for *tab
+completion* to recognize partial *parameters* and *options* to commands.
+In a very simple case, we can use **complete** from the command-line to
+specify a short list of acceptable parameters.
+
++--------------------------------------------------------------------------+
+| .. code:: SCREEN                                                         |
+|                                                                          |
+|     bash$ touch sample_command                                           |
+|     bash$ touch file1.txt file2.txt file2.doc file30.txt file4.zzz       |
+|     bash$ chmod +x sample_command                                        |
+|     bash$ complete -f -X '!*.txt' sample_command                         |
+|                                                                          |
+|                                                                          |
+|     bash$ ./sample[Tab][Tab]                                             |
+|     sample_command                                                       |
+|     file1.txt   file2.txt   file30.txt                                   |
+|                                                                          |
+                                                                          
++--------------------------------------------------------------------------+
+
+The ``-f`` option to *complete* specifies filenames, and ``-X`` the
+filter pattern.
+
+For anything more complex, we could write a script that specifies a list
+of acceptable command-line parameters. The **compgen** builtin expands a
+list of *arguments* to *generate* completion matches.
+
+Let us take a `modified version <contributed-scripts.html#USEGETOPT2>`__
+of the *UseGetOpt.sh* script as an example command. This script accepts
+a number of command-line parameters, preceded by either a single or
+double dash. And here is the corresponding *completion script*, by
+convention given a filename corresponding to its associated command.
+
+**Example J-1. Completion script for *UseGetOpt.sh***
+
++--------------------------------------------------------------------------+
+| .. code:: PROGRAMLISTING                                                 |
+|                                                                          |
+|     # file: UseGetOpt-2                                                  |
+|     # UseGetOpt-2.sh parameter-completion                                |
+|                                                                          |
+|     _UseGetOpt-2 ()   #  By convention, the function name                |
+|     {                 #+ starts with an underscore.                      |
+|       local cur                                                          |
+|       # Pointer to current completion word.                              |
+|       # By convention, it's named "cur" but this isn't strictly necessar |
+| y.                                                                       |
+|                                                                          |
+|       COMPREPLY=()   # Array variable storing the possible completions.  |
+|       cur=${COMP_WORDS[COMP_CWORD]}                                      |
+|                                                                          |
+|       case "$cur" in                                                     |
+|         -*)                                                              |
+|         COMPREPLY=( $( compgen -W '-a -d -f -l -t -h --aoption --debug \ |
+|                                    --file --log --test --help --' -- $cu |
+| r ) );;                                                                  |
+|     #   Generate the completion matches and load them into $COMPREPLY ar |
+| ray.                                                                     |
+|     #   xx) May add more cases here.                                     |
+|     #   yy)                                                              |
+|     #   zz)                                                              |
+|       esac                                                               |
+|                                                                          |
+|       return 0                                                           |
+|     }                                                                    |
+|                                                                          |
+|     complete -F _UseGetOpt-2 -o filenames ./UseGetOpt-2.sh               |
+|     #        ^^ ^^^^^^^^^^^^  Invokes the function _UseGetOpt-2.         |
+                                                                          
++--------------------------------------------------------------------------+
+
+Now, let's try it.
+
++--------------------------------------------------------------------------+
+| .. code:: SCREEN                                                         |
+|                                                                          |
+|     bash$ source UseGetOpt-2                                             |
+|                                                                          |
+|     bash$ ./UseGetOpt-2.sh -[Tab]                                        |
+|     --         --aoption  --debug    --file     --help     --log     --t |
+| est                                                                      |
+|      -a         -d         -f         -h         -l         -t           |
+|                                                                          |
+|                                                                          |
+|     bash$ ./UseGetOpt-2.sh --[Tab]                                       |
+|     --         --aoption  --debug    --file     --help     --log     --t |
+| est                                                                      |
+|                                                                          |
+                                                                          
++--------------------------------------------------------------------------+
+
+We begin by `sourcing <internal.html#SOURCEREF>`__ the "completion
+script." This sets the command-line parameters.
+`[2] <tabexpansion.html#FTN.AEN24160>`__
+
+In the first instance, hitting **[Tab]** after a single dash, the output
+is all the possible parameters preceded by *one or more* dashes. Hitting
+**[Tab]** after *two* dashes gives the possible parameters preceded by
+*two or more* dashes.
+
+Now, just what is the point of having to jump through flaming hoops to
+enable command-line tab completion? *It saves keystrokes.*
+`[3] <tabexpansion.html#FTN.AEN24173>`__
+
+--
+
+*Resources:*
+
+Bash `programmable
+completion <http://freshmeat.net/projects/bashcompletion>`__ project
+
+Mitch Frazier's `*Linux Journal* <http://www.linuxjournal.com>`__
+article, `*More on Using the Bash Complete
+Command* <http://www.linuxjournal.com/content/more-using-bash-complete-command>`__
+
+Steve's excellent two-part article, "An Introduction to Bash
+Completion": `Part
+1 <http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_1>`__
+and `Part
+2 <http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_2>`__
+
+Notes
+~~~~~
+
++--------------------------------------+--------------------------------------+
+| `[1] <tabexpansion.html#AEN24082>`__ | `[2] <tabexpansion.html#AEN24160>`__ |
+| This works only from the *command    | Normally the default parameter       |
+| line*, of course, and not within a   | completion files reside in either    |
+| script.                              | the ``/etc/profile.d`` directory or  |
+|                                      | in ``/etc/bash_completion``. These   |
+|                                      | autoload on system startup. So,      |
+|                                      | after writing a useful completion    |
+|                                      | script, you might wish to move it    |
+|                                      | (as *root*, of course) to one of     |
+|                                      | these directories.                   |
++--------------------------------------+--------------------------------------+
+
+--------------
+
++--------------------------+--------------------------+--------------------------+
+| `Prev <systemdirs.html>` | Important System         |
+| __                       | Directories              |
+| `Home <index.html>`__    |                          |
+| `Next <localization.html | Localization             |
+| >`__                     |                          |
++--------------------------+--------------------------+--------------------------+
+
