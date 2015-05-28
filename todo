@@ -3,7 +3,12 @@ Todo list
 
 * check for already translated files at blamitec
 
-* check for already 
+* check for already translated files at revision 6.5
+
+* check for problems with the translation to rst
+
+  There's a number of problems already detected as contents removed
+  (footnotes) and complete files missing (as aliases.rst!)
 
 Legend:
 

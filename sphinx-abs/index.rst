@@ -2,9 +2,9 @@
 Guia avançada de Bash-Scripting
 ###############################
 
-*********************************************************
-Una exploració en profunditat de l'art dels shell-scripts
-*********************************************************
+#############################################################
+Una exploració en profunditat de l'art de la programació Bash
+#############################################################
 
 Per *Mendel Cooper*: ``<thegrendel.abs (at) gmail (dot) com>``
 
@@ -15,23 +15,30 @@ Traduït per *Moisès Gómez*: ``<moiatgit (a) gmail (punt) com>``
 Introducció
 ===========
 
-Aquest tutorial no pressuposa cap coneixement previ de programació,
-però progressa ràpidament cap a un nivell intermedi/avançat, a l'hora
-que juga amb les petites meravelles de UNIX®.
+Tens al davant un llibre de programació de guions en *Bash*. Està
+escrit en forma de tutorial i no pressuposa cap coneixement previ de
+programació. Això sí, avança molt ràpidament a un nivell
+intermedi/avançat, tot jugant amb les petites meravelles del
+GNU/Linux.
 
-Ha estat ideat per poder ser usat tant com a llibre de text, com a
-manual d'autoaprenentatge, i com a referència i font de coneixement de
-les tècniques de *shell-script*.
+Ha estat ideat per poder ser usat de diferents maneres:
 
-Els exercicis, així com els exemples comentats amb profusió, conviden
-als lectors actius a participar, sota la premissa de que *l'única
-manera d'aprendre shell-script és escrivint shell-scripts*.
+* com a llibre de text
+
+* com a manual d'autoaprenentatge
+
+* com a referència i font de coneixement de les tècniques de
+  programació de guions.
+
+Hi trobaràs exercicis i exemples comentats amb profusió, que et
+convidaran a fer proves pel teu compte, sota la premissa de que
+*l'única manera d'aprendre a programar guions és escrivint guions*.
 
 Aquest llibre és apte per l'ús dins de l'aula i com a introducció
 general als conceptes de programació.
 
 Aquest document, a l'igual que l'original, està lliurat al *Domini
-Públic* i per tant, no hi ha cap copyright.
+Públic* i per tant, no hi ha cap *Copyright*.
 
 Dedicatòria
 ===========
