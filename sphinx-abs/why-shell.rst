@@ -9,28 +9,30 @@ XXX Perquè programar en Shell
     -- Herbert Mayer
 
 
-A qualsevol persona que vulgui administrar sistemes de manera
-raonablement eficient, li cal saber-se manegar amb la programació de
-guions.
-Fins i tot, per a aquells que encara no se'ls hagi passat pel cap que
-algun dia els podria ser necessari escriure un guió.
+Si tens intenció d'administrar sistemes informàtics de manera
+mínimament decent, tard o d'hora et caldrà disposar de coneixements de
+programació de guions. Fins i tot, si ara ni se t'acut per a què et
+pot servir.
 
-A working knowledge of shell scripting is essential to anyone wishing to
-become reasonably proficient at system administration, even if they do
-not anticipate ever having to actually write a script. Consider that as
-a Linux machine boots up, it executes the shell scripts in ``/etc/rc.d``
-to restore the system configuration and set up services. A detailed
-understanding of these startup scripts is important for analyzing the
-behavior of a system, and possibly modifying it.
+Per exemple, quan una màquina GNU/Linux arrenca, executa els guions
+que troba a la carpeta ``/etc/rc.d`` per recuperar la configuració del
+sistema i arrencar els serveis. És important comprendre el detall
+d'aquests guions per a poder analitzar el comportament del sistema i,
+ si es cau, modificar-lo.
 
-The craft of scripting is not hard to master, since scripts can be built
-in bite-sized sections and there is only a fairly small set of
-shell-specific operators and options `[1] <why-shell.html#FTN.AEN62>`__
-to learn. The syntax is simple -- even austere -- similar to that of
-invoking and chaining together utilities at the command line, and there
-are only a few "rules" governing their use. Most short scripts work
-right the first time, and debugging even the longer ones is
-straightforward.
+No és massa difícil dominar la programació de guions ja que poden ser
+escrits en seccions molt petites i només cal aprendre un conjunt força
+reduït d'opcions i operadors que siguin específics de la *shell*
+[#builtins]_.
+
+La sintaxi és força simple, hom diria austera, similar a la que fem
+servir quan encadenem utilitats en una mateixa línia de la línia de
+comandes. A més, hi ha poques "regles" que defineixen el seu ús.
+
+La majoria dels guions breus solen funcionar a la primera i, depurar
+guions, fins i tot els més llargs, és trivial.
+
+.. XXX TODO per aquí
 
     |     In the early days of personal computing, the BASIC language enabled
     | 
@@ -140,9 +142,9 @@ of this book wrote the example scripts that follow.
     -- Edmund Spenser
 
 
-.. rubric:: Footnotes
+.. rubric:: Notes
 
-.. [1] <why-shell.html#AEN62> These are referred to as `builtins <internal.html#BUILTINREF> `__, features internal to the shell.
+.. [#builtins] A aquests operadors i funcions que incorpora la *shell*, els coneixem com :doc:`builtins <internal>`.
 
 .. [2] <why-shell.html#AEN87> Although `recursion *is* possible in a shell script <localvar.html#RECURSIONREF0> `__, it tends to be slow and its implementation is often an `ugly kludge <recurnolocvar.html#FIBOREF>` __.
 
