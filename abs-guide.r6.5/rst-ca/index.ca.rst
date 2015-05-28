@@ -1,16 +1,16 @@
+###############################
 Guia avançada de Bash-Scripting
-===============================
+###############################
 
+*********************************************************
 Una exploració en profunditat de l'art dels shell-scripts
-=========================================================
+*********************************************************
 
-Per Mendel Cooper
------------------
+Per *Mendel Cooper*
 
 ``<thegrendel.abs@gmail.com>``
 
 Versió 6.5 del 05 d'abril de 2012
-
 
 ----------
 
@@ -37,7 +37,7 @@ A Anita, la font de tota la màgia.
 Taula de continguts
 -------------------
 
-Part 1. `Introducció <part1.ca.html>`_
+Part 1. `Introduction <part1.ca.html>`_
 
 1. `Shell Programming! <why-shell.ca.html>`_
 
@@ -53,7 +53,7 @@ Part 2. `Basics <part2.ca.html>`_
 
 6. `Exit and Exit Status <exit-status.ca.html>`_
 
-7. `Comprovacions <tests.ca.html>`_
+7. `Tests <tests.ca.html>`_
 
 8. `Operations and Related Topics <operations.ca.html>`_
 
@@ -61,9 +61,9 @@ Part 3. `Beyond the Basics <part3.ca.html>`_
 
 9. `Another Look at Variables <variables2.ca.html>`_
 
-10. `Manipulació de variables <manipulatingvars.ca.html>`_
+10. `Manipulating Variables <manipulatingvars.ca.html>`_
 
-11. `Bucles i branques <loops.ca.html>`_
+11. `Loops and Branches <loops.ca.html>`_
 
 12. `Command Substitution <commandsub.ca.html>`_
 
