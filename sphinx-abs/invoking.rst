@@ -1,7 +1,6 @@
-.. XXX TODO: translate me
-
-2.1. Invoking the script
-========================
+#######################
+XXX Invoking the script
+#######################
 
 Having written the script, you can invoke it by ``sh     scriptname``,
 `[1] <invoking.html#FTN.AEN296>`_ or alternatively ``bash scriptname``.

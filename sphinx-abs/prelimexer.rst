@@ -1,8 +1,6 @@
-.. XXX TODO: translate me
-
-##########################
-2.2. Uns primers exercicis
-##########################
+#########################
+XXX Uns primers exercicis
+#########################
 
 #. System administrators often write scripts to automate common tasks.
    Give several instances where such scripts would be useful.
