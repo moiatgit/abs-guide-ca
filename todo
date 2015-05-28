@@ -1,9 +1,9 @@
 Todo list
 
-1. check for already translated files at blamitec
-2. resolve inter-page links problem: it seems that #point info in link.html#point has been lost after rst convertion.
-3. think how is to be published. You might want to consider wp.
- or maybe octopress.
+
+* check for already translated files at blamitec
+
+* check for already 
 
 List of files
 =============
