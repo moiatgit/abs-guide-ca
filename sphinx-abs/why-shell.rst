@@ -34,21 +34,10 @@ guions, fins i tot els més llargs, és trivial.
 
 .. XXX TODO per aquí
 
-    |     In the early days of personal computing, the BASIC language enabled
-    | 
-        anyone reasonably computer proficient to write programs on an early
-    | 
-        generation of microcomputers. Decades later, the Bash scripting
-    | 
-        language enables anyone with a rudimentary knowledge of Linux or
-    |      UNIX to do the same on modern machines.
-    |      We now have miniaturized single-board computers with amazing
-    |      capabilities, such as the `Raspberry
-    Pi <http://www.raspberrypi.org/>`__.
-    | 
-        Bash scripting provides a way to explore the capabilities of these
-    |      fascinating devices.
-    |              
+.. note::
+
+    In the early days of personal computing, the BASIC language enabled anyone reasonably computer proficient to write programs on an early generation of microcomputers. Decades later, the Bash scripting language enables anyone with a rudimentary knowledge of Linux or    UNIX to do the same on modern machines.     We now have miniaturized single-board computers with amazing    capabilities, such as the `Raspberry Pi <http://www.raspberrypi.org/>`__.
+    Bash scripting provides a way to explore the capabilities of these     fascinating devices.              
 
 A shell script is a quick-and-dirty method of prototyping a complex
 application. Getting even a limited subset of the functionality to work
