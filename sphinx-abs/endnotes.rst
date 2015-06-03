@@ -13,5 +13,6 @@ Aquesta part inclou alguns continguts relatius al llibre.
    aboutauthor
    wherehelp
    toolsused
+   glossari
    credits
    disclaimer

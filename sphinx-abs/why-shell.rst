@@ -18,7 +18,7 @@ Per exemple, quan una màquina GNU/Linux arrenca, executa els guions
 que troba a la carpeta ``/etc/rc.d`` per recuperar la configuració del
 sistema i arrencar els serveis. És important comprendre el detall
 d'aquests guions per a poder analitzar el comportament del sistema i,
- si es cau, modificar-lo.
+si es cau, modificar-lo.
 
 No és massa difícil dominar la programació de guions ja que poden ser
 escrits en seccions molt petites i només cal aprendre un conjunt força
@@ -36,62 +36,99 @@ guions, fins i tot els més llargs, és trivial.
 
 .. note::
 
-    In the early days of personal computing, the BASIC language enabled anyone reasonably computer proficient to write programs on an early generation of microcomputers. Decades later, the Bash scripting language enables anyone with a rudimentary knowledge of Linux or    UNIX to do the same on modern machines.     We now have miniaturized single-board computers with amazing    capabilities, such as the `Raspberry Pi <http://www.raspberrypi.org/>`__.
-    Bash scripting provides a way to explore the capabilities of these     fascinating devices.              
+   Quan van aparèixer els primers ordinadors personals, el llenguatge
+   de programació BASIC permetia que qualsevol amb una mica
+   d'habilitat amb l'ordinador pogués escriure programes per aquells
+   microcomputadors.
 
-A shell script is a quick-and-dirty method of prototyping a complex
-application. Getting even a limited subset of the functionality to work
-in a script is often a useful first stage in project development. In
-this way, the structure of the application can be tested and tinkered
-with, and the major pitfalls found before proceeding to the final coding
-in *C*, *C++*, *Java*, `Perl <wrapper.html#PERLREF>`__, or *Python*.
+   Dècades més tard, el llenguatge de guions Bash permet que qualsevol
+   amb un coneixement rudimentari de GNU/Linux (o UNIX), pugui també
+   escriure programes en les màquines actuals.
 
-Shell scripting hearkens back to the classic UNIX philosophy of breaking
-complex projects into simpler subtasks, of chaining together components
-and utilities. Many consider this a better, or at least more
-esthetically pleasing approach to problem solving than using one of the
-new generation of high-powered all-in-one languages, such as *Perl*,
-which attempt to be all things to all people, but at the cost of forcing
-you to alter your thinking processes to fit the tool.
+   Ara disposem d'ordinadors miniatura amb capacitats increïbles, com
+   ara la `Raspberry Pi <http://www.raspberrypi.org/>`_, i Bash està
+   aquí per permetre explorar les possibilitats que ofereixen.
 
-According to `Herbert Mayer <biblio.html#MAYERREF>`__, "a useful
-language needs arrays, pointers, and a generic mechanism for building
-data structures." By these criteria, shell scripting falls somewhat
-short of being "useful." Or, perhaps not. . . .
+Un guió de shell (o *shell script*) permet realitzar àgilment
+prototipus d'aplicacions més complexes.  Sovint és útil disposar d'un
+subconjunt limitat de funcionalitats executant-se des d'un guió en les
+primeres fases de desenvolupament d'un projecte.  D'aquesta manera, és
+possible provar l'estructura de l'aplicació, i arreglar els errors que
+es trobin, abans de realitzar la codificació final en llenguatges com
+ara *C*, *C++*, *Java*, :doc:`Perl <wrapper>`, o *Python*.
 
+Els guions de shell s'inspiren que la clàssica filosofia UNIX de
+dividir tasques complexes en subtasques més simples, per després
+encadenar-les juntes de manera que resolguin la tasca complexa.
 
-When not to use shell scripts
+Hi ha qui considera aquesta manera de resoldre els problemes, millor o
+com a mínim més estètica, que la de fer servir llenguatges tot-inclòs
+com pot ser *Perl*, que intenten servir per a tot i per a tothom, amb
+el cost de forçar a tothom a canviar la manera de pensar per a
+adaptar-te a l'eina.
 
--  Resource-intensive tasks, especially where speed is a factor (sorting, hashing, recursion `[2] <why -shell.html# FTN.AEN87>`_ _ ...)
+Segons :ref:`Herbert Mayer <HERB89>`, *per què un llenguatge sigui
+útil, cal que disposi de cadenes (arrays), punters i algun mecanisme
+genèric per crear estructures de dades*. Amb aquests criteris, la
+programació en *shell* quedaria una mica per sota de ser "útil". O,
+potser no...
 
--  Procedures involving heavy-dut y math operation s, especiall y floating point arithmeti c, arbitrary precision calculati ons, or complex numbers (use *C* or *FORTRAN* instead)
+Hi ha algunes situacions en les que no voldrem fer servir guions
+de shell:
 
--  Cross-pla tform portabili ty required (use *C* or *Java* instead)
+- Amb tasques que requereixin un ús intensiu de recursos, especialment
+  quan la velocitat és important, com ara ordenació, càlcul de
+  funcions de *hash*, recursivitat [#recursio]_
 
--  Complex applicati ons, where structure d programmi ng is a necessity (type-che cking of variables , function prototype s, etc.)
+- Procediments que requereixen operacions matemàtiques molt pesants,
+  especialment amb aritmètica de punt flotant, càlculs de precisió
+  arbitrària, o nombres complexos. En aquest cas és millor que facis
+  servir *C* o *FORTRAN*.
 
--  Mission-c ritical applicati ons upon which you are betting the future of the company
+- Quan cal aconseguir portabilitat (és a dir, que el programa funcioni
+  en altres plataformes). En aquest cas, fes servir *C* o *Java*.
 
--  Situation s where *security * is important , where you need to guarantee the integrity of your system and protect against intrusion , cracking, and vandalism
+- Aplicacions complexes on cal una estructura de programa (comprovació
+  de tipus de variables, prototipus de funcions, etc.)
 
--  Project consists of subcompon ents with interlock ing dependenc ies
+- Aplicacions de missió crítica de les que dependrà el futur de la
+  teva empresa.
 
--  Extensive file operation s required (*Bash* is limited to serial file access, and that only in a particula rly clumsy and inefficie nt line-by-l ine fashion.)
+- Situacions en les que la *seguretat* sigui important, en les que
+  calgui garantir la integritat del teu sistema i protegir-lo contra
+  intrusos, *cracking* i vandalisme.
 
--  Need native support for multi-dim ensional arrays
+- Quan el projecte consisteix en subcomponents amb dependències
+  entrellaçades.
 
--  Need data structure s, such as linked lists or trees
+- Aplicacions que requereixin operacions extensives sobre fitxers.
+  *Bash* es limita a l'accés en sèrie d'una manera particularment
+  ineficient línia a línia.
 
--  Need to generate / manipulat e graphics or GUIs
+- Si es requereix un suport nadiu a matrius (*arrays*
+  multidimensionals)
 
--  Need direct access to system hardware or external periphera ls
+- Quan calen estructures de dades, com ara llistes enllaçades o
+  arbres.
 
--  Need port or `socket < devref1.html #SOCKETREF>` __ I/O -  Need to use libraries or interface with legacy code
+- Si cal generar o manipular gràfics o interfícies gràfiques d'usuari.
 
--  Proprieta ry, closed-so urce applicati ons (Shell scripts put the source code right out in the open for all the world to see.)
+- Si cal l'accés directe al maquinari del sistema o a perifèrics
+  externs.
 
-If any of the above applies, consider a more powerful scripting language -- perhaps *Perl*, *Tcl*, *Python*, *Ruby* -- or possibly a compiled language such as *C*, *C*, or *Java*. Even then, prototyping the application as a shell script might still be a useful development step.
+- Si cal entrada/sortida a través de :doc:`sockets <devref1>`.
 
+- Quan cal fer servir biblioteques o accedir a codi heretat.
+
+- Quan l'aplicació ha de ser de codi tancat, donat que els guions de
+  shell mostren el codi obertament llegible per tothom.
+
+Si el teu projecte presenta alguna de les necessitats anteriors,
+planteja't fer servir un llenguatge de programació de guions més potent (com ara *Perl*, *Tcl*, *Python*, *Ruby*) o fins i tot algun llenguatge compilat com *C*, *C*, o *Java*. 
+Fins i tot en aquests casos és probable que et continuï resultant útil
+començant construir prototips de la teva aplicació amb shell script.
+
+XXX PER AQUÍ
 
 We will be using Bash, an acronym `[3] <why-shell.html#FTN.AEN139>`__
 for "Bourne-Again shell" and a pun on Stephen Bourne's now classic
@@ -135,7 +172,14 @@ of this book wrote the example scripts that follow.
 
 .. [#builtins] A aquests operadors i funcions que incorpora la *shell*, els coneixem com :doc:`builtins <internal>`.
 
-.. [2] <why-shell.html#AEN87> Although `recursion *is* possible in a shell script <localvar.html#RECURSIONREF0> `__, it tends to be slow and its implementation is often an `ugly kludge <recurnolocvar.html#FIBOREF>` __.
+.. [#recursio] És possible realitzar recursivitat en Bash. Per
+   exemple, es factible definir una funció que es crida a si mateixa.
+   Sovint, però, el resultat sol executar-se molt lentament i la seva
+   implementació queda molt *lletja*.
+
+   Per a més detalls, consulta les seccions on es descriu recursivitat
+   :doc:`amb <localvar>` i :doc:`sense <recurnolocvar>` variables
+   locals.
 
 .. [3]	An acronym is an ersatz word formed by pasting together the initial letters of the words into a tongue-tripping phrase. This morally corrupt and pernicious practice deserves appropriately severe punishment. Public flogging suggests itself.
 
