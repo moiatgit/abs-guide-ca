@@ -1,7 +1,7 @@
 # Cleanup
-# Run as root, of course.
+# A executar com a root, és clar
 
 cd /var/log
 cat /dev/null > messages
 cat /dev/null > wtmp
-echo "Log files cleaned up."
+echo "Fitxers de Log netejats."
