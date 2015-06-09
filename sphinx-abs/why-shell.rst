@@ -1,6 +1,6 @@
-#############################
-XXX Perquè programar en Shell
-#############################
+#########################
+Perquè programar en Shell
+#########################
 
     *No programming language is perfect. There is not even a single best
     language; there are only languages well suited or perhaps poorly suited
@@ -31,8 +31,6 @@ comandes. A més, hi ha poques "regles" que defineixen el seu ús.
 
 La majoria dels guions breus solen funcionar a la primera i, depurar
 guions, fins i tot els més llargs, és trivial.
-
-.. XXX TODO per aquí
 
 .. note::
 
@@ -128,39 +126,32 @@ planteja't fer servir un llenguatge de programació de guions més potent (com a
 Fins i tot en aquests casos és probable que et continuï resultant útil
 començant construir prototips de la teva aplicació amb shell script.
 
-XXX PER AQUÍ
+En aquest llibre farem servir *Bash*, acrònim [#acronim]_ de "Bourne-Again shell" i un joc de paraules sobre el ja clàssic "Bourne Shell" de Stephen Bourne.
+Bash s'ha convertit en l'estàndard *de facto* de la programació de
+guions a la majoria de les distribucions i varietats UNIX/Linux.
+Molts dels elements que cobreix aquest llibre també funcionen amb
+altres shells, com ara *Korn Shell*, de la que Bash hereta part de les
+seves característiques [#kornshell]_, de la mateixa manera que *C
+Shell* i les seves variants.
+Cal tenir present que la programació en *C Shell* no està recomanada
+per problemes inherents, tal i com va ser indicat a una `entrada a
+Usenet <http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/>`_ del Tom
+Christiansen d'octubre de 1993 
 
-We will be using Bash, an acronym `[3] <why-shell.html#FTN.AEN139>`__
-for "Bourne-Again shell" and a pun on Stephen Bourne's now classic
-*Bourne* shell. Bash has become a *de facto* standard for shell
-scripting on most flavors of UNIX. Most of the principles this book
-covers apply equally well to scripting with other shells, such as the
-*Korn Shell*, from which Bash derives some of its features,
-`[4] <why-shell.html#FTN.AEN147>`__ and the *C Shell* and its variants.
-(Note that *C Shell* programming is not recommended due to certain
-inherent problems, as pointed out in an October, 1993 `Usenet
-post <http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/>`__ by Tom
-Christiansen.)
+A continuació trobareu un tutorial de programació de guions (o shell
+scripting). Es recolça fortament en exemples a l'hora d'il·lustrar les
+diferents propietats de la shell. Els guions d'exemple funcionen (han
+estat provats en la messura del possible) i alguns d'ells poden
+resultar fins i tot útils per resoldre problemes reals.
+Pots jugar amb el codi dels exemples que apareixen en fitxers amb
+extensió .sh o .bash [#extensio]_. Simplement, descarrega el
+fitxer de `arxiu <http://bash.deta.in/abs-guide-latest.tar.bz2>`_, o si no està disponible, copia el codi directament d'aquest llibre i enganxa'l a un fitxer, dóna-li permissos d'execució (``chmod u+rx scriptname``) i
+executa'l per veure que passa.
+Tingués en comptes que alguns guions inclouen característiques abans
+que siguin explicades al llibre, cosa que pot suposar-te una il·luminació
+momentània del que trobaràs més endavant.
 
-What follows is a tutorial on shell scripting. It relies heavily on
-examples to illustrate various features of the shell. The example
-scripts work -- they've been tested, insofar as possible -- and some of
-them are even useful in real life. The reader can play with the actual
-working code of the examples in the source archive (``scriptname.sh`` or
-``scriptname.bash``), `[5] <why-shell.html#FTN.AEN157>`__ give them
-*execute* permission (``chmod u+rx scriptname``), then run them to see
-what happens. Should the `source
-archive <http://bash.deta.in/abs-guide-latest.tar.bz2>`__ not be
-available, then cut-and-paste from the
-`HTML <http://www.tldp.org/LDP/abs/abs-guide.html.tar.gz>`__ or
-`pdf <http://bash.deta.in/abs-guide.pdf>`__ rendered versions. Be aware
-that some of the scripts presented here introduce features before they
-are explained, and this may require the reader to temporarily skip ahead
-for enlightenment.
-
-Unless otherwise noted, `the author <mailto:thegrendel.abs@gmail.com>`__
-of this book wrote the example scripts that follow.
-
+A menys que s'indiqui el contrari, `l'autor <mailto:thegrendel.abs@gmail.com>`_ d'aquest llibre va escriure cada guió que hi apareix.
 
  
     *His countenance was bold and bashed not.* 
@@ -181,8 +172,18 @@ of this book wrote the example scripts that follow.
    :doc:`amb <localvar>` i :doc:`sense <recurnolocvar>` variables
    locals.
 
-.. [3]	An acronym is an ersatz word formed by pasting together the initial letters of the words into a tongue-tripping phrase. This morally corrupt and pernicious practice deserves appropriately severe punishment. Public flogging suggests itself.
+.. [#acronim] Un acrònim és una paraulota composada per les inicials
+   de vàries paraules, enganxades de manera que resultin en un
+   travallengua. Es tracta d'una pràctica moralment corrupta i
+   perniciosa que mereix ser castigada amb la severitat apropiada, com
+   ara flagel·lació pública.
 
-.. [4]	Many of the features of ksh88, and even a few from the updated ksh93 have been merged into Bash.
+.. [#kornshell] Moltes de les característiques de *ksh88* i fins i tot
+   algunes de la versió actualitzada *ksh93* han estat incloses en
+   Bash.
 
-.. [5]	By convention, user-written shell scripts that are Bourne shell compliant generally take a name with a .sh extension. System scripts, such as those found in /etc/rc.d, do not necessarily conform to this nomenclature.
+.. [#extensio] Per convenció, els guions d'usuari compatibles amb
+   Bourne Shell, generalment es guarden en fitxers amb extensió .sh.
+   En canvi, els guions de sistema (com ara els que trobaràs a
+   /etc/rc?.d) no necessàriament segueixen aquesta nomenclatura.
+
