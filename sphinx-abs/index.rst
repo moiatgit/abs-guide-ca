@@ -2,9 +2,9 @@
 Guia avançada de Bash-Scripting
 ###############################
 
-#############################################################
+*************************************************************
 Una exploració en profunditat de l'art de la programació Bash
-#############################################################
+*************************************************************
 
 Per *Mendel Cooper*: ``<thegrendel.abs (at) gmail (dot) com>``
 
@@ -49,7 +49,7 @@ Taula de continguts
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :titlesonly:
 
    part1
    part2

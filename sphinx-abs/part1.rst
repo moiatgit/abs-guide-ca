@@ -27,7 +27,7 @@ programació tipus C.
 En aquesta part veurem:
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    why-shell
    sha-bang

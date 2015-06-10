@@ -9,7 +9,7 @@ XXX Comencem amb el Sha-Bang
 En aquest capítol veurem:
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    invoking
    prelimexer

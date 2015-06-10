@@ -6,7 +6,7 @@ Aquesta part inclou alguns continguts relatius al llibre.
 
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    authorsnote
    traductorcat
