@@ -60,18 +60,21 @@ millorar l'efectivitat.
 
 -----
 
-The *sha-bang* ( #!) `[1] <sha-bang.html#FTN.AEN205>`__ at the head of a
-script tells your system that this file is a set of commands to be fed
-to the command interpreter indicated. The #! is actually a two-byte
-`[2] <sha-bang.html#FTN.AEN214>`__ *magic number*, a special marker that
-designates a file type, or in this case an executable shell script (type
-``man magic`` for more details on this fascinating topic). Immediately
-following the *sha-bang* is a *path name*. This is the path to the
-program that interprets the commands in the script, whether it be a
-shell, a programming language, or a utility. This command interpreter
-then executes the commands in the script, starting at the top (the line
-following the *sha-bang* line), and ignoring comments.
-`[3] <sha-bang.html#FTN.AEN226>`__
+El *shabang* ( #!) [#shabang]_ 
+a l'inici d'un fitxer permet al sistema saber que el contingut d'aquest fitxer ha de ser processat per un determinat intèrpret.
+De fet, #! és un *número màgic* de dos bytes [#omesdedos]_, una marca especial que
+designa el tipus de fitxer. En aquest cas indica que és un executable.
+Trobaràs més informació sobre aquest fascinant tema escrivint ``man magic``
+a la teva consola.
+Tot just després del *shabang* apareix el programa que
+interpreta el contingut del fitxer, ja sigui comandes de la shell,
+d'un altre llenguatge de programació (ex. Python) o qualsevol altra
+utilitat.
+El que apareix a continuació del *shabang* és interpretat per a aquest
+programa. [#elprimer]_
+
+
+XXX TODO Per aquíii
 
 +--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
@@ -263,23 +266,26 @@ Linux machine.
 | .              |
 +----------------+----------------+----------------+----------------+----------------+
 
-Notes
-~~~~~
+.. rubric:: Footnotes
 
-`[1] <sha-bang.html#AEN205>`__
+.. [#shabang] En la literatura es sol trobar com *she-bang* o
+   *sh-bang*.  El nom està format per les inicials dels mots amb els
+   que sovint s'anomenen els símbols que el composen: *sharp* (#) i
+   *bang* (!).
 
-More commonly seen in the literature as *she-bang* or *sh-bang*. This
-derives from the concatenation of the tokens *sharp* (#) and *bang* (!).
+.. [#omesdedos] Algunes versions de UNIX (aquelles basades en 4.2 BSD)
+   suposadament prenen un nombre màgic de quatre bytes, en requerir un
+   espai en blanc després de l'exclamació (*bang*). Per exemple ``#!
+   /bin/sh``. Probablement no sigui més que un mite segons `Sven
+   Mascheck
+   <http://www.in-ulm.de/~mascheck/various/shebang/#details>`_.
 
-`[2] <sha-bang.html#AEN214>`__
+.. [#elprimer] El *shabang* en un guió de shell serà la primera
+línia que veurà l'intèrpret de comandes (*sh* o *bash* per exemple).
+Donat que la línia comença amb  #, serà interpretat correctament com
+un comentari. La línia ja haurà fet la seva feina, permetent escollir
+l'intèrpret.
 
-Some flavors of UNIX (those based on 4.2 BSD) allegedly take a four-byte
-magic number, requiring a blank after the ! -- ``#! /bin/sh``.
-`According to Sven
-Mascheck <http://www.in-ulm.de/~mascheck/various/shebang/#details>`__
-this is probably a myth.
-
-`[3] <sha-bang.html#AEN226>`__
 
 The #! line in a shell script will be the first thing the command
 interpreter (**sh** or **bash**) sees. Since this line begins with a #,
