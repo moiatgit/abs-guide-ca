@@ -15,22 +15,24 @@ disponible en aquest tema (gràcies `termcat.cat <termcat.cat>`_).
 A continuació es llisten els termes principals que apareixen en el
 llibre, amb la versió en anglès entre parèntesis.
 
-Cadena (*array*)
-    Seqüència de valors, sovint del mateix tipus, accessibles a partir
-    d'un nom i un índex.
+.. glossary::
 
-Guió (*script*)
-    Programa (conjunt de línies de codi) en un llenguatge de guions.
+   Cadena (*array*)
+       Seqüència de valors, sovint del mateix tipus, accessibles a partir
+       d'un nom i un índex.
 
-Shell
-    Aquest terme no l'he traduït. Fa referència al programa del
-    sistema operatiu que recull l'entrada de la línia de comandes, la
-    interpreta i, mostra errors si no la considera correcta o la prova
-    d'executar si la troba correcta.
+   Guió (*script*)
+       Programa (conjunt de línies de codi) en un llenguatge de guions.
 
-    Entre d'altres programes *shell* en tenim, sh, bash (el que ens
-    n'ocupem en aquest llibre), ksh, tcsh i zsh.
+   Shell
+       Aquest terme no l'he traduït. Fa referència al programa del
+       sistema operatiu que recull l'entrada de la línia de comandes, la
+       interpreta i, mostra errors si no la considera correcta o la prova
+       d'executar si la troba correcta.
 
-Shell script
-    És refereix al llenguatge de programació de guions que ofereix la
-    shell.
+       Entre d'altres programes *shell* en tenim, sh, bash (el que ens
+       n'ocupem en aquest llibre), ksh, tcsh i zsh.
+
+   Shell script
+       És refereix al llenguatge de programació de guions que ofereix la
+       shell.

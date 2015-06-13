@@ -1,5 +1,5 @@
 ###############################
-Guia avançada de Bash-Scripting
+Guia Avançada de Bash-Scripting
 ###############################
 
 *************************************************************
@@ -17,7 +17,7 @@ Introducció
 
 Tens al davant un llibre de programació de guions en *Bash*. Està
 escrit en forma de tutorial i no pressuposa cap coneixement previ de
-programació. Això sí, avança molt ràpidament a un nivell
+programació. Això sí, avança molt ràpidament cap a un nivell
 intermedi/avançat, tot jugant amb les petites meravelles del
 GNU/Linux.
 

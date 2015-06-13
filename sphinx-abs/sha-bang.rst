@@ -21,7 +21,9 @@ no per evitar-nos teclejar una i altra vegada la mateixa seqüència de
 comandes. 
 
 
-**Exemple 2-1. *cleanup*: Un script per netejar els fitxers de log de /var/log**
+**Exemple 1. *cleanup*: Un script per netejar els fitxers de log de
+
+/var/log**
 
 .. literalinclude:: _scripts/cleanup.sh
    :language: bash
@@ -35,7 +37,7 @@ de simplement no haver de tornar a reescriure-les. El guió es
 converteix en un *programa*, una *eina*, i com a tal, pot ser
 fàcilment modificada o adaptada a requeriments particulars.
 
-**Exemple 2-2. *cleanup*: versió millorada del guió de neteja.**
+**Exemple 2. *cleanup*: versió millorada del guió de neteja.**
 
 .. literalinclude:: _scripts/cleanup2.sh
    :language: bash
@@ -44,7 +46,8 @@ fàcilment modificada o adaptada a requeriments particulars.
 Ara si que comença a semblar un guió real! Però encara podem anar-hi
 més lluny...
 
-**Exemple 2-3. *cleanup*: Una versió ampliada i generalitzada dels
+**Exemple 3. *cleanup*: Una versió ampliada i generalitzada dels
+
 guions anteriors.**
 
 .. literalinclude:: _scripts/cleanup3.sh
@@ -52,7 +55,7 @@ guions anteriors.**
    :linenos:
 
 
-Donat que podria ser que no ens interessi eliminar el log de sistema
+Donat que podria ser que no ens interessés eliminar el log de sistema
 completament, aquesta versió del guió conserva la darrera secció dels
 missatges de log.
 Constantment descobrirem maneres d'ajustar els nostres guions per
