@@ -1,20 +1,17 @@
-+----------------------------------+----+-------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+====+=========================+
-| `Prev <sysscripts.html>`_        |    | `Next <regexp.html>`_   |
-+----------------------------------+----+-------------------------+
-
---------------
-
-Part 5. Advanced Topics
-=======================
+###########################
+XXX Part 5. Advanced Topics
+###########################
 
 At this point, we are ready to delve into certain of the difficult and
 unusual aspects of scripting. Along the way, we will attempt to "push
 the envelope" in various ways and examine *boundary conditions* (what
 happens when we move into uncharted territory?).
 
-**Table of Contents**
+.. toctree::
+   :titlesonly:
+
+   gotchas
+   portabilityissues
 
 18. `Regular Expressions <regexp.html>`_
 
@@ -106,12 +103,4 @@ scripts <intandnonint.html>`_
 37.2. `Bash, version 3 <bashver3.html>`_
 
 37.3. `Bash, version 4 <bashver4.html>`_
-
---------------
-
-+-----------------------------+------------------------+-------------------------+
-| `Prev <sysscripts.html>`_   | `Home <index.html>`_   | `Next <regexp.html>`_   |
-+-----------------------------+------------------------+-------------------------+
-| Analyzing a System Script   |                        | Regular Expressions     |
-+-----------------------------+------------------------+-------------------------+
 

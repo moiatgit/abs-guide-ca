@@ -1,13 +1,6 @@
-+----------------------------------+----+---------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+====+===========================+
-| `Prev <recess-time.html>`_       |    | `Next <internal.html>`_   |
-+----------------------------------+----+---------------------------+
-
---------------
-
-Part 4. Commands
-================
+####################
+XXX Part 4. Commands
+####################
 
 Mastering the commands on your Linux machine is an indispensable prelude
 to writing effective shell scripts.
@@ -811,12 +804,3 @@ This section covers the following commands:
 17. `System and Administrative Commands <system.html>`_
 
 17.1. `Analyzing a System Script <sysscripts.html>`_
-
---------------
-
-+------------------------------+------------------------+----------------------------------+
-| `Prev <recess-time.html>`_   | `Home <index.html>`_   | `Next <internal.html>`_          |
-+------------------------------+------------------------+----------------------------------+
-| Recess Time                  |                        | Internal Commands and Builtins   |
-+------------------------------+------------------------+----------------------------------+
-
