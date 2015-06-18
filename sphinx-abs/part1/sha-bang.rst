@@ -93,15 +93,12 @@ Fixat que el camí que s'indica al shabang ha de ser correcte,
 altrament generarà un missatge d'error (normalment *No es troba
 la comanda*) com a única resposta d'executar el guió [#envline].
 
-XXX TODO Per aquíii
-
 Si el nostre guió consisteix únicament en una llista de comandes i no
 inclou cap directiva interna de la shell (com ara una assignació a una
 variable de l'estil ``linies=50``), podem ometre #!. 
 De fet, si Bash és la teva shell per defecte, #! no és en realitat
 necessària a l'inici del guió. Amb tot, la necessitaràs si finalment
 et cal executar el guió des d'alguna altra shell com ara *tcsh*.
-
 
 .. note::
 
