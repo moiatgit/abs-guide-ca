@@ -22,7 +22,6 @@ comandes.
 
 
 **Exemple 1. *cleanup*: Un script per netejar els fitxers de log de
-
 /var/log**
 
 .. literalinclude:: _scripts/cleanup.sh
