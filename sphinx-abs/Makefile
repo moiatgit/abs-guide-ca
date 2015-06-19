@@ -50,6 +50,7 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/*
+	find . -name '*~' -delete
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

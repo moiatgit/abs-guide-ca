@@ -1,21 +1,22 @@
 #!/bin/bash
-# XXX Proper header for a Bash script.
+# Una capçalera adequada per un guió Bash
 
-# Cleanup, version 2
+# Cleanup, versió 2
 
-# Run as root, of course.
-# Insert code here to print error message and exit if not root.
+# A executar com a root, per suposat
+
+# Mostra un missatge d'error i sorti si no s'executa com a root.
 
 LOG_DIR=/var/log
-# Variables are better than hard-coded values.
+# És millor fer servir variables que els valors directament.
 cd $LOG_DIR
 
 cat /dev/null > messages
 cat /dev/null > wtmp
 
 
-echo "Logs cleaned up."
+echo "Fitxers de Log netejats."
 
-exit #  The right and proper method of "exiting" from a script.
-     #  A bare "exit" (no parameter) returns the exit status
-     #+ of the preceding command. 
+exit #  La manera adequada de sortir d'un guió.
+     #  Un "exit" sense paràmetres retorna el resultat de sortida de
+     #  la comanda anterior.

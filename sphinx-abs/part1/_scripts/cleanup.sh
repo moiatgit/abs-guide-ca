@@ -1,5 +1,5 @@
 # Cleanup
-# A executar com a root, és clar
+# A executar com a root, per suposat
 
 cd /var/log
 cat /dev/null > messages
