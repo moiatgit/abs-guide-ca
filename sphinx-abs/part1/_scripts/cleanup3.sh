@@ -1,85 +1,84 @@
 #!/bin/bash
-# XXX Cleanup, version 3
+# Cleanup, versió 3
 
-#  Warning:
+#  Atenció:
 #  -------
-#  This script uses quite a number of features that will be explained
-#+ later on.
-#  By the time you've finished the first half of the book,
-#+ there should be nothing mysterious about it.
-
-
+#  Aquest guió fa servir força característiques que seran explicades
+#  més endavant.
+#  Quan ja entenguis la primera meitat d'aquest llibre, no hauries de
+#  trobar res misterios aquí.
 
 LOG_DIR=/var/log
-ROOT_UID=0     # Only users with $UID 0 have root privileges.
-LINES=50       # Default number of lines saved.
-E_XCD=86       # Can't change directory?
-E_NOTROOT=87   # Non-root exit error.
+ROOT_UID=0     # Només l'usuari amb $UID 0 té privilegis de root
+LINIES=50      # El nombre de línies guardades per defecte
+E_XCD=86       # Error: no es pot canviar de directori
+E_NOTROOT=87   # Error: No és root
 
-
-# Run as root, of course.
+# A executar com a root, per suposat
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-  echo "Must be root to run this script."
+  echo "Cal ser executat per root"
   exit $E_NOTROOT
-fi  
+fi
 
 if [ -n "$1" ]
-# Test whether command-line argument is present (non-empty).
+# Comprova si se li ha passat al menys un argument per línia de comandes
 then
-  lines=$1
-else  
-  lines=$LINES # Default, if not specified on command-line.
-fi  
+  linies=$1
+else
+  linies=$LINIES # Si no ha estat especificat el nombre de línies, es
+                # considera el valor per defecte
+fi
 
 
-#  Stephane Chazelas suggests the following,
-#+ as a better way of checking command-line arguments,
-#+ but this is still a bit advanced for this stage of the tutorial.
+#  Stephane Chazelas suggereix la següent manera de comprovar els
+#  arguments de línia de comandes, encara que és una mica avançat pel
+#  nivell actual d'aquest llibre.
 #
-#    E_WRONGARGS=85  # Non-numerical argument (bad argument format).
+#    E_WRONGARGS=85  # Error: argument no numèric (format d'argument
+#    incorrecte)
 #
 #    case "$1" in
-#    ""      ) lines=50;;
-#    *[!0-9]*) echo "Usage: `basename $0` lines-to-cleanup";
+#    ""      ) linies=50;;
+#    *[!0-9]*) echo "Ús: `basename $0` linies-a-netejar";
 #     exit $E_WRONGARGS;;
-#    *       ) lines=$1;;
+#    *       ) linies=$1;;
 #    esac
 #
-#* Skip ahead to "Loops" chapter to decipher all this.
-
+#  Salta a la secció sobre bucles per desxifrar-ho.
 
 cd $LOG_DIR
 
-if [ `pwd` != "$LOG_DIR" ]  # or   if [ "$PWD" != "$LOG_DIR" ]
-                            # Not in /var/log?
+if [ `pwd` != "$LOG_DIR" ]  # o bé   if [ "$PWD" != "$LOG_DIR" ]
+                            # que vol dir si no es troba a /var/log?
 then
-  echo "Can't change to $LOG_DIR."
+  echo "No es pot canviar al directori $LOG_DIR."
   exit $E_XCD
-fi  # Doublecheck if in right directory before messing with log file.
+fi  # Torna a comprovar si es troba en el directori adequat abans de
+    # començar a trastejar amb el fitxer de log.
 
-# Far more efficient is:
+# Seria molt més eficient de la següent manera:
 #
 # cd /var/log || {
-#   echo "Cannot change to necessary directory." >&2
+#   echo "No es pot canviar al directori corresponent." >&2
 #   exit $E_XCD;
 # }
 
-
-
-
-tail -n $lines messages > mesg.temp # Save last section of message log file.
-mv mesg.temp messages               # Rename it as system log file.
+tail -n $linies messages > mesg.temp # Guarda la darrera secció del
+                                     # fitxer de missatges de log.
+mv mesg.temp messages                # Reanomena el fitxer com a log
+                                     # del sistema.
 
 
 #  cat /dev/null > messages
-#* No longer needed, as the above method is safer.
+#  Ja no cal, doncs el mètode anterior és més segur.
 
-cat /dev/null > wtmp  #  ': > wtmp' and '> wtmp'  have the same effect.
-echo "Log files cleaned up."
-#  Note that there are other log files in /var/log not affected
-#+ by this script.
+cat /dev/null > wtmp  #  ': > wtmp' i '> wtmp'  produeixen el mateix efecte.
+
+echo "Fitxers de Log netejats."
+#  Fixat que la resta de fitxers de log que es trobin a /var/log no
+#  es toquen.
 
 exit 0
-#  A zero return value from the script upon exit indicates success
-#+ to the shell.
+#  El valor zero de retorn, indica a la shell que el guió ha
+#  finalitzat sense errors.

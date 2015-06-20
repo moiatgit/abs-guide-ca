@@ -16,12 +16,11 @@ He dedicat, però, molt d'esforç de manera que el resultat pugui
 arribar a ser d'utilitat a altres persones. Espero que sigui el teu
 cas.
 
+El llibre original, en la seva darrera versió/revisió, el podeu trobar
+a la `pàgina de l'autor <http://www.tldp.org/LDP/abs/html/>`.
+
 Voldria indicar algunes decisions que he pres respecte a aquesta
 traducció:
-
-#. El llibre original, en la seva darrera versió/revisió, el podeu
-   trobar a la `pàgina de l'autor
-   <http://www.tldp.org/LDP/abs/html/>`.
 
 #. Elaborant la traducció, he realitzat proves de tot el codi que hi
    apareix. A menys que s'indiqui el contrari, el codi ha funcionat
