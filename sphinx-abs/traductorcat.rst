@@ -24,11 +24,17 @@ traducció:
 
 #. Elaborant la traducció, he realitzat proves de tot el codi que hi
    apareix. A menys que s'indiqui el contrari, el codi ha funcionat
-   fent servir *GNU bash, version 4.3.30(1)-release (x86_64-pc-linux-gnu)*.
+   fent servir *GNU bash, version 4.3.30(1)-release
+   (x86_64-pc-linux-gnu)*.
 
-#. He deixat sense traduir, o fins i tot eliminat, algunes de les
-   nombroses i generalment interessants cites amb que l'autor ha
-   enriquit el seu text original.
+#. Allà on ho he considerat oportú, he afegit algun exemple o
+   aclariment que no apareix en el llibre original. Donat que es
+   tracta d'afegits petits, he preferit no signar aquestes aportacions
+   per evitar fer la lectura més pesada.
+
+#. He deixat sense traduir algunes de les nombroses i generalment
+   interessants cites amb que l'autor ha enriquit el seu text
+   original.
 
 #. El format del llibre resultant és diferent. He optat per fer servir
    *ReStructuredText* i amb aquest, *Sphinx*. Tot plegat fa que el
@@ -40,7 +46,6 @@ traducció:
 
 #. He incorporat alguns canvis en la jerarquia de parts del llibre
    original, de manera que alguns continguts quedessin més visibles
-   amb el format generat per *Sphinx*. El canvi més significatiu és
-   precisament la part de *notes finals* on apareix aquest text.
+   amb el format generat per *Sphinx*.
 
 
