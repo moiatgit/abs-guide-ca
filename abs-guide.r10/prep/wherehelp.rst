@@ -1,9 +1,6 @@
-.. raw:: html
-
-   <div class="SECT1">
-
-  38.3. Where to Go For Help
-===========================
+###############################
+XXX  38.3. Where to Go For Help
+###############################
 
 `The author <mailto:thegrendel.abs@gmail.com>`__ is no longer supporting
 or updating this document. He will not answer questions about this book
