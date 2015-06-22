@@ -1,21 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-+----------------------------------+
-| Advanced Bash-Scripting Guide:   |
-+==================================+
-| `Prev <asciitable.html>`__       |
-+----------------------------------+
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="INDEX">
 
   Index
@@ -554,14 +538,22 @@ download <mirrorsites.html#WHERE_TARBALL>`__
 
       <div class="NOTE">
 
-   +--------------------------------------+--------------------------------------+
-   | |Note|                               |
-   | `In certain                          |
-   | contexts <bashver3.html#PLUSEQSTR>`_ |
-   | _                                    |
-   | , **+=** can also function as a      |
-   | *string concatenation* operator.     |
-   +--------------------------------------+--------------------------------------+
+   .. raw:: html
+
+      <div>
+
+   |Note|
+
+   `In certain contexts <bashver3.html#PLUSEQSTR>`__ , **+=** can also
+   function as a *string concatenation* operator.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -2886,94 +2878,6 @@ Word splitting
 `*Zombie* <x9644.html#ZOMBIEREF>`__ , a process that has terminated, but
 not yet been `killed <x9644.html#KILLREF>`__ by its
 `parent <internal.html#PARENTREF>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-`Prev <asciitable.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-ASCII Table
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
 
 .. raw:: html
 

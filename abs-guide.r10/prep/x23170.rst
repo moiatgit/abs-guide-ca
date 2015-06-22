@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <sedawk.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Appendix C. A Sed and Awk Micro-Primer
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <awk.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   C.1. Sed
@@ -104,18 +30,66 @@ the three most commonly used ones. These are **p** rinting (to
 
 **Table C-1. Basic sed operators**
 
-+--------------------------+--------------------------+--------------------------+
-| Operator                 |
-| Name                     |
-| Effect                   |
-+==========================+==========================+==========================+
-| ``          [address-ran | ``          [address-ran | ``          s/pattern1/p |
-| ge]/p         ``         | ge]/d         ``         | attern2/         ``      |
-| print                    | delete                   | substitute               |
-| Print [specified address | Delete [specified        | Substitute pattern2 for  |
-| range]                   | address range]           | first instance of        |
-|                          |                          | pattern1 in a line       |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+Operator
+
+Name
+
+Effect
+
+``        [address-range]/p       ``
+
+print
+
+Print [specified address range]
+
+``        [address-range]/d       ``
+
+delete
+
+Delete [specified address range]
+
+``        s/pattern1/pattern2/       ``
+
+substitute
+
+Substitute pattern2 for first instance of pattern1 in a line
+
+``        [address-range]/s/pattern1/pattern2/       ``
+
+substitute
+
+Substitute pattern2 for first instance of pattern1 in a line, over
+``                 address-range               ``
+
+``        [address-range]/y/pattern1/pattern2/       ``
+
+transform
+
+replace any character in pattern1 with the corresponding character in
+pattern2, over ``                 address-range               ``
+(equivalent of **tr** )
+
+``        [address] i pattern Filename       ``
+
+insert
+
+Insert pattern at address indicated in file Filename. Usually used with
+``        -i       `` ``                 in-place               ``
+option.
+
+``        g       ``
+
+global
+
+Operate on *every* pattern match within each matched line of input
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -125,15 +99,23 @@ the three most commonly used ones. These are **p** rinting (to
 
    <div class="NOTE">
 
-+--------------------------------------+--------------------------------------+
-| |Note|                               |
-| Unless the ``          g         ``  |
-| ( *global* ) operator is appended to |
-| a *substitute* command, the          |
-| substitution operates only on the    |
-| *first* instance of a pattern match  |
-| within each line.                    |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+Unless the ``         g        `` ( *global* ) operator is appended to a
+*substitute* command, the substitution operates only on the *first*
+instance of a pattern match within each line.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -142,97 +124,99 @@ the three most commonly used ones. These are **p** rinting (to
 From the command-line and in a shell script, a sed operation may require
 quoting and certain options.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     sed -e '/^$/d' $file |
-| name                     |
-|     # The -e option caus |
-| es the next string to be |
-|  interpreted as an editi |
-| ng instruction.          |
-|     #  (If passing only  |
-| a single instruction to  |
-| sed, the "-e" is optiona |
-| l.)                      |
-|     #  The "strong" quot |
-| es ('') protect the RE c |
-| haracters in the instruc |
-| tion                     |
-|     #+ from reinterpreta |
-| tion as special characte |
-| rs by the body of the sc |
-| ript.                    |
-|     # (This reserves RE  |
-| expansion of the instruc |
-| tion for sed.)           |
-|     #                    |
-|     # Operates on the te |
-| xt contained in file $fi |
-| lename.                  |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
 
-In certain cases, a *sed* editing command will not work with single
-quotes.
+   <div>
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     filename=file1.txt   |
-|     pattern=BEGIN        |
-|                          |
-|       sed "/^$pattern/d" |
-|  "$filename"  # Works as |
-|  specified.              |
-|     # sed '/^$pattern/d' |
-|  "$filename"    has unex |
-| pected results.          |
-|     #        In this ins |
-| tance, with strong quoti |
-| ng (' ... '),            |
-|     #+      "$pattern" w |
-| ill not expand to "BEGIN |
-| ".                       |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. code:: PROGRAMLISTING
+
+    sed -e '/^$/d' $filename
+    # The -e option causes the next string to be interpreted as an editing instruction.
+    #  (If passing only a single instruction to sed, the "-e" is optional.)
+    #  The "strong" quotes ('') protect the RE characters in the instruction
+    #+ from reinterpretation as special characters by the body of the script.
+    # (This reserves RE expansion of the instruction for sed.)
+    #
+    # Operates on the text contained in file $filename.
 
 .. raw:: html
 
-   <div class="NOTE">
-
-+--------------------------------------+--------------------------------------+
-| |Note|                               |
-| *Sed* uses the                       |
-| ``          -e         `` option to  |
-| specify that the following string is |
-| an instruction or set of             |
-| instructions. If there is only a     |
-| single instruction contained in the  |
-| string, then this may be omitted.    |
-+--------------------------------------+--------------------------------------+
+   </p>
 
 .. raw:: html
 
    </div>
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     sed -n '/xzy/p' $fil |
-| ename                    |
-|     # The -n option tell |
-| s sed to print only thos |
-| e lines matching the pat |
-| tern.                    |
-|     # Otherwise all inpu |
-| t lines would print.     |
-|     # The -e option not  |
-| necessary here since the |
-| re is only a single edit |
-| ing instruction.         |
-                          
-+--------------------------+--------------------------+--------------------------+
+In certain cases, a *sed* editing command will not work with single
+quotes.
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    filename=file1.txt
+    pattern=BEGIN
+
+      sed "/^$pattern/d" "$filename"  # Works as specified.
+    # sed '/^$pattern/d' "$filename"    has unexpected results.
+    #        In this instance, with strong quoting (' ... '),
+    #+      "$pattern" will not expand to "BEGIN".
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NOTE">
+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+*Sed* uses the ``         -e        `` option to specify that the
+following string is an instruction or set of instructions. If there is
+only a single instruction contained in the string, then this may be
+omitted.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    sed -n '/xzy/p' $filename
+    # The -n option tells sed to print only those lines matching the pattern.
+    # Otherwise all input lines would print.
+    # The -e option not necessary here since there is only a single editing instruction.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -240,13 +224,69 @@ quotes.
 
 **Table C-2. Examples of sed operators**
 
-+--------------------------------------+--------------------------------------+
-| Notation                             |
-| Effect                               |
-+======================================+======================================+
-| ``          8d         ``            | ``          /^$/d         ``         |
-| Delete 8th line of input.            | Delete all blank lines.              |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+Notation
+
+Effect
+
+``        8d       ``
+
+Delete 8th line of input.
+
+``        /^$/d       ``
+
+Delete all blank lines.
+
+``        1,/^$/d       ``
+
+Delete from beginning of input up to, and including first blank line.
+
+``        /Jones/p       ``
+
+Print only lines containing "Jones" (with -n option).
+
+``        s/Windows/Linux/       ``
+
+Substitute "Linux" for first instance of "Windows" found in each input
+line.
+
+``        s/BSOD/stability/g       ``
+
+Substitute "stability" for every instance of "BSOD" found in each input
+line.
+
+``        s/ *$//       ``
+
+Delete all spaces at the end of every line.
+
+``        s/00*/0/g       ``
+
+Compress all consecutive sequences of zeroes into a single zero.
+
+``        echo "Working on it." | sed -e '1i How far are you along?'       ``
+
+Prints "How far are you along?" as first line, "Working on it" as
+second.
+
+``        5i 'Linux is great.' file.txt       ``
+
+Inserts 'Linux is great.' at line 5 of the file file.txt.
+
+``        /GUI/d       ``
+
+Delete all lines containing "GUI" .
+
+``        s/GUI//g       ``
+
+Delete all instances of "GUI" , leaving the remainder of each line
+intact.
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -256,38 +296,60 @@ Substituting a zero-length string for another is equivalent to deleting
 that string within a line of input. This leaves the remainder of the
 line intact. Applying ``             s/GUI//           `` to the line
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
-|                          |
-|     The most important p |
-| arts of any application  |
-| are its GUI and sound ef |
-| fects                    |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    The most important parts of any application are its GUI and sound effects
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 results in
-+--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
-|                          |
-|     The most important p |
-| arts of any application  |
-| are its  and sound effec |
-| ts                       |
-                          
-+--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    The most important parts of any application are its  and sound effects
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 A backslash forces the **sed** replacement command to continue on to the
 next line. This has the effect of using the *newline* at the end of the
 first line as the *replacement string* .
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     s/^  */\             |
-|     /g                   |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    s/^  */\
+    /g
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 This substitution replaces line-beginning spaces with a newline. The net
 result is to replace paragraph indents with a blank line between
@@ -295,14 +357,23 @@ paragraphs.
 An address range followed by one or more operations may require open and
 closed curly brackets, with appropriate newlines.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     /[0-9A-Za-z]/,/^$/{  |
-|     /^$/d                |
-|     }                    |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    /[0-9A-Za-z]/,/^$/{
+    /^$/d
+    }
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 This deletes only the first of each set of consecutive blank lines. That
 might be useful for single-spacing a text file, but retaining the blank
@@ -312,18 +383,25 @@ line(s) between paragraphs.
 
    <div class="NOTE">
 
-+--------------------------------------+--------------------------------------+
-| |Note|                               |
-| The usual delimiter that *sed* uses  |
-| is / . However, *sed* allows other   |
-| delimiters, such as % . This is      |
-| useful when / is part of a           |
-| replacement string, as in a file     |
-| pathname. See `Example               |
-| 11-10 <loops1.html#FINDSTRING>`__    |
-| and `Example                         |
-| 16-32 <filearchiv.html#STRIPC>`__ .  |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+The usual delimiter that *sed* uses is / . However, *sed* allows other
+delimiters, such as % . This is useful when / is part of a replacement
+string, as in a file pathname. See `Example
+11-10 <loops1.html#FINDSTRING>`__ and `Example
+16-32 <filearchiv.html#STRIPC>`__ .
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -333,14 +411,22 @@ line(s) between paragraphs.
 
    <div class="TIP">
 
-+--------------------------------------+--------------------------------------+
-| |Tip|                                |
-| A quick way to double-space a text   |
-| file is                              |
-| ``                     sed G         |
-| filename                   ``        |
-| .                                    |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Tip|
+
+A quick way to double-space a text file is
+``                   sed G        filename                 `` .
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -405,24 +491,25 @@ references <biblio.html#DGSEDREF>`__ in the
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <x23170.html#AEN23174>`__     | ` [2]  <x23170.html#AEN23185>`__     |
-| *Sed* executes without user          | If no address range is specified,    |
-| intervention.                        | the default is *all* lines.          |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <x23170.html#AEN23174>`__
+
+*Sed* executes without user intervention.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <x23170.html#AEN23185>`__
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <sedawk.html>`__   | A Sed and Awk            |
-| `Home <index.html>`__    | Micro-Primer             |
-| `Next <awk.html>`__      | `Up <sedawk.html>`__     |
-|                          | Awk                      |
-+--------------------------+--------------------------+--------------------------+
+If no address range is specified, the default is *all* lines.
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 

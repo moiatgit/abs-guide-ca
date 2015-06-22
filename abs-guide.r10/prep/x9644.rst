@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <internal.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 15. Internal Commands and Builtins
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <external.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   15.1. Job Control Commands
@@ -95,115 +21,69 @@ chapter.
 
        <div class="NOTE">
 
-    +--------------+--------------+--------------+--------------+--------------+--------------+
-    | |Note|       |
-    | It is all    |
-    | too easy to  |
-    | confuse      |
-    | *jobs* and   |
-    | *processes*  |
-    | . Certain    |
-    | `builtins <i |
-    | nternal.html |
-    | #BUILTINREF> |
-    | `__          |
-    | , such as    |
-    | **kill** ,   |
-    | **disown** , |
-    | and **wait** |
-    | accept       |
-    | either a job |
-    | number or a  |
-    | process      |
-    | number as an |
-    | argument.    |
-    | The          |
-    | `fg <x9644.h |
-    | tml#FGREF>`_ |
-    | _            |
-    | ,            |
-    | `bg <x9644.h |
-    | tml#BGREF>`_ |
-    | _            |
-    | and **jobs** |
-    | commands     |
-    | accept only  |
-    | a job        |
-    | number.      |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ---+-------- |
-    | ------------ |
-    | ------+----- |
-    | ------------ |
-    | ---------+   |
-    | | .. code::  |
-    | SCREEN       |
-    |    |         |
-    | |            |
-    |              |
-    |    |         |
-    | |     bash$  |
-    | sleep 100 &  |
-    |    |         |
-    | |     [1] 13 |
-    | 84           |
-    |    |         |
-    | |            |
-    |              |
-    |    |         |
-    | |     bash $ |
-    |  jobs        |
-    |    |         |
-    | |     [1]+   |
-    | Running      |
-    |    |         |
-    | |            |
-    | sleep 100 &  |
-    |    |         |
-    |              |
-    |              |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ---+-------- |
-    | ------------ |
-    | ------+----- |
-    | ------------ |
-    | ---------+   |
-    |              |
-    |  "1" is the  |
-    | job number   |
-    | (jobs are    |
-    | maintained   |
-    | by the       |
-    | current      |
-    | shell).      |
-    | "1384" is    |
-    | the          |
-    | `PID <intern |
-    | alvariables. |
-    | html#PPIDREF |
-    | >`__         |
-    | or *process  |
-    | ID number*   |
-    | (processes   |
-    | are          |
-    | maintained   |
-    | by the       |
-    | system). To  |
-    | kill this    |
-    | job/process, |
-    | either a     |
-    | **kill %1**  |
-    | or a **kill  |
-    | 1384**       |
-    | works.       |
-    |              |
-    | *Thanks,     |
-    | S.C.*        |
-    +--------------+--------------+--------------+--------------+--------------+--------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    It is all too easy to confuse *jobs* and *processes* . Certain
+    `builtins <internal.html#BUILTINREF>`__ , such as **kill** ,
+    **disown** , and **wait** accept either a job number or a process
+    number as an argument. The `fg <x9644.html#FGREF>`__ ,
+    `bg <x9644.html#BGREF>`__ and **jobs** commands accept only a job
+    number.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ sleep 100 &    |
+    |     [1] 1384             |
+    |                          |
+    |     bash $ jobs          |
+    |     [1]+  Running        |
+    |           sleep 100 &    |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+     "1" is the job number (jobs are maintained by the current shell).
+    "1384" is the `PID <internalvariables.html#PPIDREF>`__ or *process
+    ID number* (processes are maintained by the system). To kill this
+    job/process, either a **kill %1** or a **kill 1384** works.
+
+    *Thanks, S.C.*
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ sleep 100 &
+        [1] 1384
+
+        bash $ jobs
+        [1]+  Running                 sleep 100 &
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ sleep 100 &
+        [1] 1384
+
+        bash $ jobs
+        [1]+  Running                 sleep 100 &
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -234,64 +114,55 @@ chapter.
 
     **Example 15-26. Waiting for a process to finish before proceeding**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     ROOT_UID=0   # Only  |
-    | users with $UID 0 have r |
-    | oot privileges.          |
-    |     E_NOTROOT=65         |
-    |     E_NOPARAMS=66        |
-    |                          |
-    |     if [ "$UID" -ne "$RO |
-    | OT_UID" ]                |
-    |     then                 |
-    |       echo "Must be root |
-    |  to run this script."    |
-    |       # "Run along kid,  |
-    | it's past your bedtime." |
-    |       exit $E_NOTROOT    |
-    |     fi                   |
-    |                          |
-    |     if [ -z "$1" ]       |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` find-string"    |
-    |       exit $E_NOPARAMS   |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     echo "Updating 'loca |
-    | te' database..."         |
-    |     echo "This may take  |
-    | a while."                |
-    |     updatedb /usr &      |
-    | # Must be run as root.   |
-    |                          |
-    |     wait                 |
-    |     # Don't run the rest |
-    |  of the script until 'up |
-    | datedb' finished.        |
-    |     # You want the the d |
-    | atabase updated before l |
-    | ooking up the file name. |
-    |                          |
-    |     locate $1            |
-    |                          |
-    |     #  Without the 'wait |
-    | ' command, in the worse  |
-    | case scenario,           |
-    |     #+ the script would  |
-    | exit while 'updatedb' wa |
-    | s still running,         |
-    |     #+ leaving it as an  |
-    | orphan process.          |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        ROOT_UID=0   # Only users with $UID 0 have root privileges.
+        E_NOTROOT=65
+        E_NOPARAMS=66
+
+        if [ "$UID" -ne "$ROOT_UID" ]
+        then
+          echo "Must be root to run this script."
+          # "Run along kid, it's past your bedtime."
+          exit $E_NOTROOT
+        fi  
+
+        if [ -z "$1" ]
+        then
+          echo "Usage: `basename $0` find-string"
+          exit $E_NOPARAMS
+        fi
+
+
+        echo "Updating 'locate' database..."
+        echo "This may take a while."
+        updatedb /usr &     # Must be run as root.
+
+        wait
+        # Don't run the rest of the script until 'updatedb' finished.
+        # You want the the database updated before looking up the file name.
+
+        locate $1
+
+        #  Without the 'wait' command, in the worse case scenario,
+        #+ the script would exit while 'updatedb' was still running,
+        #+ leaving it as an orphan process.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -307,455 +178,203 @@ chapter.
 
        <div class="TIP">
 
-    +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
-    | |Tip|   |
-    | Within  |
-    | a       |
-    | script, |
-    | running |
-    | a       |
-    | command |
-    | in the  |
-    | backgro |
-    | und     |
-    | with an |
-    | ampersa |
-    | nd      |
-    | (&) may |
-    | cause   |
-    | the     |
-    | script  |
-    | to hang |
-    | until   |
-    | **ENTER |
-    | **      |
-    | is hit. |
-    | This    |
-    | seems   |
-    | to      |
-    | occur   |
-    | with    |
-    | command |
-    | s       |
-    | that    |
-    | write   |
-    | to      |
-    | ``      |
-    |         |
-    |  stdout |
-    |         |
-    |      `` |
-    | . It    |
-    | can be  |
-    | a major |
-    | annoyan |
-    | ce.     |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    | | .. co |
-    | de:: PR |
-    | OGRAMLI |
-    | STING | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    | |     # |
-    | !/bin/b |
-    | ash     |
-    |       | |
-    | |     # |
-    |  test.s |
-    | h       |
-    |       | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    | |     l |
-    | s -l &  |
-    |         |
-    |       | |
-    | |     e |
-    | cho "Do |
-    | ne."    |
-    |       | |
-    |         |
-    |         |
-    |         |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    | | .. co |
-    | de:: SC |
-    | REEN    |
-    |       | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    | |     b |
-    | ash$ ./ |
-    | test.sh |
-    |       | |
-    | |     D |
-    | one.    |
-    |         |
-    |       | |
-    | |       |
-    | [bozo@l |
-    | ocalhos |
-    | t tes | |
-    | | t-scr |
-    | ipts]$  |
-    | total 1 |
-    |       | |
-    | |       |
-    | -rwxr-x |
-    | r-x     |
-    | 1 boz | |
-    | | o     |
-    |  bozo   |
-    |         |
-    |   34  | |
-    | | Oct 1 |
-    | 1 15:09 |
-    |  test.s |
-    | h     | |
-    | |       |
-    | _       |
-    |         |
-    |       | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    |         |
-    |         |
-    |         |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    |         |
-    |     | A |
-    | s Walte |
-    | r Brame |
-    | ld IV e |
-    | xplains |
-    |  it:    |
-    |     |   |
-    |     As  |
-    | far as  |
-    | I can t |
-    | ell, su |
-    | ch scri |
-    | pts don |
-    | 't actu |
-    | ally ha |
-    | ng. It  |
-    | just    |
-    |     |   |
-    |     see |
-    | ms that |
-    |  they d |
-    | o becau |
-    | se the  |
-    | backgro |
-    | und com |
-    | mand wr |
-    | ites te |
-    | xt to   |
-    |     |   |
-    |     the |
-    |  consol |
-    | e after |
-    |  the pr |
-    | ompt. T |
-    | he user |
-    |  gets t |
-    | he impr |
-    | ession  |
-    | that    |
-    |     |   |
-    |     the |
-    |  prompt |
-    |  was ne |
-    | ver dis |
-    | played. |
-    |  Here's |
-    |  the se |
-    | quence  |
-    | of even |
-    | ts:     |
-    |     |   |
-    |     1.  |
-    | Script  |
-    | launche |
-    | s backg |
-    | round c |
-    | ommand. |
-    |     |   |
-    |     2.  |
-    | Script  |
-    | exits.  |
-    |     |   |
-    |     3.  |
-    | Shell d |
-    | isplays |
-    |  the pr |
-    | ompt.   |
-    |     |   |
-    |     4.  |
-    | Backgro |
-    | und com |
-    | mand co |
-    | ntinues |
-    |  runnin |
-    | g and w |
-    | riting  |
-    | text to |
-    |  the    |
-    |     |   |
-    |     con |
-    | sole.   |
-    |     |   |
-    |     5.  |
-    | Backgro |
-    | und com |
-    | mand fi |
-    | nishes. |
-    |     |   |
-    |     6.  |
-    | User do |
-    | esn't s |
-    | ee a pr |
-    | ompt at |
-    |  the bo |
-    | ttom of |
-    |  the ou |
-    | tput, t |
-    | hinks s |
-    | cript   |
-    |     |   |
-    |     is  |
-    | hanging |
-    | .       |
-    |         |
-    | Placing |
-    | a       |
-    | **wait* |
-    | *       |
-    | after   |
-    | the     |
-    | backgro |
-    | und     |
-    | command |
-    | seems   |
-    | to      |
-    | remedy  |
-    | this.   |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    | | .. co |
-    | de:: PR |
-    | OGRAMLI |
-    | STING | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    | |     # |
-    | !/bin/b |
-    | ash     |
-    |       | |
-    | |     # |
-    |  test.s |
-    | h       |
-    |       | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    | |     l |
-    | s -l &  |
-    |         |
-    |       | |
-    | |     e |
-    | cho "Do |
-    | ne."    |
-    |       | |
-    | |     w |
-    | ait     |
-    |         |
-    |       | |
-    |         |
-    |         |
-    |         |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    | | .. co |
-    | de:: SC |
-    | REEN    |
-    |       | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    | |     b |
-    | ash$ ./ |
-    | test.sh |
-    |       | |
-    | |     D |
-    | one.    |
-    |         |
-    |       | |
-    | |       |
-    | [bozo@l |
-    | ocalhos |
-    | t tes | |
-    | | t-scr |
-    | ipts]$  |
-    | total 1 |
-    |       | |
-    | |       |
-    | -rwxr-x |
-    | r-x     |
-    | 1 boz | |
-    | | o     |
-    |  bozo   |
-    |         |
-    |   34  | |
-    | | Oct 1 |
-    | 1 15:09 |
-    |  test.s |
-    | h     | |
-    | |       |
-    |         |
-    |         |
-    |       | |
-    |         |
-    |         |
-    |         |
-    |         |
-    | +------ |
-    | ------- |
-    | ------- |
-    | ------+ |
-    | ------- |
-    | ------- |
-    | ------- |
-    | -----+- |
-    | ------- |
-    | ------- |
-    | ------- |
-    | ----+   |
-    |         |
-    | `Redire |
-    | cting < |
-    | io-redi |
-    | rection |
-    | .html#I |
-    | OREDIRR |
-    | EF>`__  |
-    | the     |
-    | output  |
-    | of the  |
-    | command |
-    | to a    |
-    | file or |
-    | even to |
-    | ``      |
-    |         |
-    | /dev/nu |
-    | ll      |
-    |       ` |
-    | `       |
-    | also    |
-    | takes   |
-    | care of |
-    | this    |
-    | problem |
-    | .       |
-    +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    Within a script, running a command in the background with an
+    ampersand (&) may cause the script to hang until **ENTER** is hit.
+    This seems to occur with commands that write to
+    ``            stdout           `` . It can be a major annoyance.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # test.sh            |
+    |                          |
+    |     ls -l &              |
+    |     echo "Done."         |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ ./test.sh      |
+    |     Done.                |
+    |      [bozo@localhost tes |
+    | t-scripts]$ total 1      |
+    |      -rwxr-xr-x    1 boz |
+    | o     bozo           34  |
+    | Oct 11 15:09 test.sh     |
+    |      _                   |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+        | As Walter Brameld IV explains it:
+        | 
+        As far as I can tell, such scripts don't actually hang. It just
+        | 
+        seems that they do because the background command writes text to
+        | 
+        the console after the prompt. The user gets the impression that
+        | 
+        the prompt was never displayed. Here's the sequence of events:
+        |  1. Script launches background command.
+        |  2. Script exits.
+        |  3. Shell displays the prompt.
+        | 
+        4. Background command continues running and writing text to the
+        |  console.
+        |  5. Background command finishes.
+        | 
+        6. User doesn't see a prompt at the bottom of the output, thinks script
+        |  is hanging.
+
+    Placing a **wait** after the background command seems to remedy
+    this.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # test.sh            |
+    |                          |
+    |     ls -l &              |
+    |     echo "Done."         |
+    |     wait                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ ./test.sh      |
+    |     Done.                |
+    |      [bozo@localhost tes |
+    | t-scripts]$ total 1      |
+    |      -rwxr-xr-x    1 boz |
+    | o     bozo           34  |
+    | Oct 11 15:09 test.sh     |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    `Redirecting <io-redirection.html#IOREDIRREF>`__ the output of the
+    command to a file or even to ``           /dev/null          `` also
+    takes care of this problem.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # test.sh         
+
+        ls -l &
+        echo "Done."
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ ./test.sh
+        Done.
+         [bozo@localhost test-scripts]$ total 1
+         -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
+         _
+                       
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # test.sh         
+
+        ls -l &
+        echo "Done."
+        wait
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ ./test.sh
+        Done.
+         [bozo@localhost test-scripts]$ total 1
+         -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
+                       
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # test.sh         
+
+        ls -l &
+        echo "Done."
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ ./test.sh
+        Done.
+         [bozo@localhost test-scripts]$ total 1
+         -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
+         _
+                       
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # test.sh         
+
+        ls -l &
+        echo "Done."
+        wait
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ ./test.sh
+        Done.
+         [bozo@localhost test-scripts]$ total 1
+         -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
+                       
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -774,12 +393,21 @@ chapter.
     Gives statistics on the system time elapsed when executing commands,
     in the following form:
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     0m0.020s 0m0.020s    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        0m0.020s 0m0.020s
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     This capability is of relatively limited value, since it is not
     common to profile and benchmark shell scripts.
@@ -795,43 +423,40 @@ chapter.
 
     **Example 15-27. A script that kills itself**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # self-destruct.sh   |
-    |                          |
-    |     kill $$  # Script ki |
-    | lls its own process here |
-    | .                        |
-    |              # Recall th |
-    | at "$$" is the script's  |
-    | PID.                     |
-    |                          |
-    |     echo "This line will |
-    |  not echo."              |
-    |     # Instead, the shell |
-    |  sends a "Terminated" me |
-    | ssage to stdout.         |
-    |                          |
-    |     exit 0   # Normal ex |
-    | it? No!                  |
-    |                          |
-    |     #  After this script |
-    |  terminates prematurely, |
-    |     #+ what exit status  |
-    | does it return?          |
-    |     #                    |
-    |     # sh self-destruct.s |
-    | h                        |
-    |     # echo $?            |
-    |     # 143                |
-    |     #                    |
-    |     # 143 = 128 + 15     |
-    |     #             TERM s |
-    | ignal                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # self-destruct.sh
+
+        kill $$  # Script kills its own process here.
+                 # Recall that "$$" is the script's PID.
+
+        echo "This line will not echo."
+        # Instead, the shell sends a "Terminated" message to stdout.
+
+        exit 0   # Normal exit? No!
+
+        #  After this script terminates prematurely,
+        #+ what exit status does it return?
+        #
+        # sh self-destruct.sh
+        # echo $?
+        # 143
+        #
+        # 143 = 128 + 15
+        #             TERM signal
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -841,34 +466,32 @@ chapter.
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | ``                           kill -l |
-    |                          ``          |
-    | lists all the                        |
-    | `signals <debugging.html#SIGNALD>`__ |
-    | (as does the file                    |
-    | ``             /usr/include/asm/sign |
-    | al.h            ``                   |
-    | ). A                                 |
-    | ``                           kill -9 |
-    |                          ``          |
-    | is a *sure kill* , which will        |
-    | usually terminate a process that     |
-    | stubbornly refuses to die with a     |
-    | plain **kill** . Sometimes, a        |
-    | ``                           kill    |
-    |       -15                         `` |
-    | works. A *zombie* process, that is,  |
-    | a child process that has terminated, |
-    | but that the `parent                 |
-    | process <internal.html#FORKREF>`__   |
-    | has not (yet) killed, cannot be      |
-    | killed by a logged-on user -- you    |
-    | can't kill something that is already |
-    | dead -- but **init** will generally  |
-    | clean it up sooner or later.         |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    ``                         kill -l                       `` lists
+    all the `signals <debugging.html#SIGNALD>`__ (as does the file
+    ``            /usr/include/asm/signal.h           `` ). A
+    ``                         kill -9                       `` is a
+    *sure kill* , which will usually terminate a process that stubbornly
+    refuses to die with a plain **kill** . Sometimes, a
+    ``                         kill         -15                       ``
+    works. A *zombie* process, that is, a child process that has
+    terminated, but that the `parent process <internal.html#FORKREF>`__
+    has not (yet) killed, cannot be killed by a logged-on user -- you
+    can't kill something that is already dead -- but **init** will
+    generally clean it up sooner or later.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -884,20 +507,24 @@ chapter.
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | This refers to the **killall**       |
-    | command in                           |
-    | ``             /usr/bin            ` |
-    | `                                    |
-    | , *not* the `killall                 |
-    | script <sysscripts.html#KILLALL2REF> |
-    | `__                                  |
-    | in                                   |
-    | ``             /etc/rc.d/init.d      |
-    |        ``                            |
-    | .                                    |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    This refers to the **killall** command in
+    ``            /usr/bin           `` , *not* the `killall
+    script <sysscripts.html#KILLALL2REF>`__ in
+    ``            /etc/rc.d/init.d           `` .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -907,26 +534,44 @@ chapter.
     The **command** directive disables aliases and functions for the
     command immediately following it.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ command ls     |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ command ls
+                      
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | This is one of three shell           |
-    | directives that effect script        |
-    | command processing. The others are   |
-    | `builtin <x9644.html#BLTREF>`__ and  |
-    | `enable <x9644.html#ENABLEREF>`__ .  |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    This is one of three shell directives that effect script command
+    processing. The others are `builtin <x9644.html#BLTREF>`__ and
+    `enable <x9644.html#ENABLEREF>`__ .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -973,14 +618,45 @@ chapter.
 
 **Table 15-1. Job identifiers**
 
-+--------------------------------------+--------------------------------------+
-| Notation                             |
-| Meaning                              |
-+======================================+======================================+
-| ``          %N         ``            | ``          %S         ``            |
-| Job number [N]                       | Invocation (command-line) of job     |
-|                                      | begins with string *S*               |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+Notation
+
+Meaning
+
+``        %N       ``
+
+Job number [N]
+
+``        %S       ``
+
+Invocation (command-line) of job begins with string *S*
+
+``        %?S       ``
+
+Invocation (command-line) of job contains within it string *S*
+
+``        %%       ``
+
+ "current" job (last job stopped in foreground or started in background)
+
+``        %+       ``
+
+ "current" job (last job stopped in foreground or started in background)
+
+``        %-       ``
+
+Last job
+
+``        $!       ``
+
+Last background process
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -995,114 +671,36 @@ Notes
 
 .. raw:: html
 
-   <table border="0" class="FOOTNOTES" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   <div>
 
 ` [1]  <x9644.html#AEN9753>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 This only applies to *child processes* , of course.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [2]  <x9644.html#AEN9928>`__
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
-
 The C source for a number of loadable builtins is typically found in the
-``        /usr/share/doc/bash-?.??/functions       `` directory.
+``       /usr/share/doc/bash-?.??/functions      `` directory.
 
-Note that the ``        -f       `` option to **enable** is not
+Note that the ``       -f      `` option to **enable** is not
 `portable <portabilityissues.html>`__ to all systems.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [3]  <x9644.html#AEN9949>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 The same effect as **autoload** can be achieved with `typeset
 -fu <declareref.html>`__ .
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <internal.html>`__ | Internal Commands and    |
-| `Home <index.html>`__    | Builtins                 |
-| `Next <external.html>`__ | `Up <internal.html>`__   |
-|                          | External Filters,        |
-|                          | Programs and Commands    |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

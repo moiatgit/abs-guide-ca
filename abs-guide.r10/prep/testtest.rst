@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <nestedifthen.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 7. Tests
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <operations.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   7.5. Testing Your Knowledge of Tests
@@ -84,39 +10,33 @@ server. This file contains quite a number of *if/then* tests. The
 following is excerpted from an "ancient" version of
 ``      xinitrc     `` ( *Red Hat 7.1* , or thereabouts).
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     if [ -f $HOME/.Xclie |
-| nts ]; then              |
-|       exec $HOME/.Xclien |
-| ts                       |
-|     elif [ -f /etc/X11/x |
-| init/Xclients ]; then    |
-|       exec /etc/X11/xini |
-| t/Xclients               |
-|     else                 |
-|          # failsafe sett |
-| ings.  Although we shoul |
-| d never get here         |
-|          # (we provide f |
-| allbacks in Xclients as  |
-| well) it can't hurt.     |
-|          xclock -geometr |
-| y 100x100-5+5 &          |
-|          xterm -geometry |
-|  80x50-50+150 &          |
-|          if [ -f /usr/bi |
-| n/netscape -a -f /usr/sh |
-| are/doc/HTML/index.html  |
-| ]; then                  |
-|                  netscap |
-| e /usr/share/doc/HTML/in |
-| dex.html &               |
-|          fi              |
-|     fi                   |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    if [ -f $HOME/.Xclients ]; then
+      exec $HOME/.Xclients
+    elif [ -f /etc/X11/xinit/Xclients ]; then
+      exec /etc/X11/xinit/Xclients
+    else
+         # failsafe settings.  Although we should never get here
+         # (we provide fallbacks in Xclients as well) it can't hurt.
+         xclock -geometry 100x100-5+5 &
+         xterm -geometry 80x50-50+150 &
+         if [ -f /usr/bin/netscape -a -f /usr/share/doc/HTML/index.html ]; then
+                 netscape /usr/share/doc/HTML/index.html &
+         fi
+    fi
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 Explain the *test* constructs in the above snippet, then examine an
 updated version of the file, ``      /etc/X11/xinit/xinitrc     `` , and
@@ -124,26 +44,6 @@ analyze the *if/then* test constructs there. You may need to refer ahead
 to the discussions of `grep <textproc.html#GREPREF>`__ ,
 `sed <sedawk.html#SEDREF>`__ , and `regular
 expressions <regexp.html#REGEXREF>`__ .
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <nestedifthen.html | Nested                   |
-| >`__                     | ``                 if/th |
-| `Home <index.html>`__    | en               ``      |
-| `Next <operations.html>` | Condition Tests          |
-| __                       | `Up <tests.html>`__      |
-|                          | Operations and Related   |
-|                          | Topics                   |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

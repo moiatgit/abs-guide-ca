@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <sample-bashrc.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <exercises.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="APPENDIX">
 
   Appendix N. Converting DOS Batch Files to Shell Scripts
@@ -92,16 +20,235 @@ equivalent shell scripting ones.
 **Table N-1. Batch file keywords / variables / operators, and their
 shell equivalents**
 
-+--------------------------+--------------------------+--------------------------+
-| Batch File Operator      |
-| Shell Script Equivalent  |
-| Meaning                  |
-+==========================+==========================+==========================+
-| ``          %         `` | ``          /         `` | ``          \         `` |
-| $                        | -                        | /                        |
-| command-line parameter   | command option flag      | directory path separator |
-| prefix                   |                          |                          |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+Batch File Operator
+
+Shell Script Equivalent
+
+Meaning
+
+``        %       ``
+
+$
+
+command-line parameter prefix
+
+``        /       ``
+
+-
+
+command option flag
+
+``        \       ``
+
+/
+
+directory path separator
+
+``        ==       ``
+
+=
+
+(equal-to) string comparison test
+
+``        !==!       ``
+
+!=
+
+(not equal-to) string comparison test
+
+``        |       ``
+
+\|
+
+pipe
+
+``        @       ``
+
+set ``        +v       ``
+
+do not echo current command
+
+``        *       ``
+
+\*
+
+filename "wild card"
+
+``        >       ``
+
+>
+
+file redirection (overwrite)
+
+``        >>       ``
+
+>>
+
+file redirection (append)
+
+``        <       ``
+
+<
+
+redirect ``        stdin       ``
+
+``        %VAR%       ``
+
+$VAR
+
+environmental variable
+
+``        REM       ``
+
+#
+
+comment
+
+``        NOT       ``
+
+!
+
+negate following test
+
+``        NUL       ``
+
+``        /dev/null       ``
+
+ "black hole" for burying command output
+
+``        ECHO       ``
+
+echo
+
+echo (many more option in Bash)
+
+``        ECHO.       ``
+
+echo
+
+echo blank line
+
+``        ECHO OFF       ``
+
+set ``        +v       ``
+
+do not echo command(s) following
+
+``        FOR %%VAR IN (LIST) DO       ``
+
+for var in [list]; do
+
+ "for" loop
+
+``        :LABEL       ``
+
+none (unnecessary)
+
+label
+
+``        GOTO       ``
+
+none (use a function)
+
+jump to another location in the script
+
+``        PAUSE       ``
+
+sleep
+
+pause or wait an interval
+
+``        CHOICE       ``
+
+case or select
+
+menu choice
+
+``        IF       ``
+
+if
+
+if-test
+
+``        IF EXIST                           FILENAME                 ``
+
+if [ -e filename ]
+
+test if file exists
+
+``        IF !%N==!       ``
+
+if [ -z "$N" ]
+
+if replaceable parameter "N" not present
+
+``        CALL       ``
+
+source or . (dot operator)
+
+ "include" another script
+
+``        COMMAND /C       ``
+
+source or . (dot operator)
+
+ "include" another script (same as CALL)
+
+``        SET       ``
+
+export
+
+set an environmental variable
+
+``        SHIFT       ``
+
+shift
+
+left shift command-line argument list
+
+``        SGN       ``
+
+-lt or -gt
+
+sign (of integer)
+
+``        ERRORLEVEL       ``
+
+$?
+
+exit status
+
+``        CON       ``
+
+``        stdin       ``
+
+ "console" ( ``        stdin       `` )
+
+``        PRN       ``
+
+``        /dev/lp0       ``
+
+(generic) printer device
+
+``        LPT1       ``
+
+``        /dev/lp0       ``
+
+first printer device
+
+``        COM1       ``
+
+``        /dev/ttyS0       ``
+
+first serial port
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -117,16 +264,193 @@ script.
 
 **Table N-2. DOS commands and their UNIX equivalents**
 
-+--------------------------+--------------------------+--------------------------+
-| DOS Command              |
-| UNIX Equivalent          |
-| Effect                   |
-+==========================+==========================+==========================+
-| ``          ASSIGN       | ``          ATTRIB       | ``          CD         ` |
-|    ``                    |    ``                    | `                        |
-| ln                       | chmod                    | cd                       |
-| link file or directory   | change file permissions  | change directory         |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+DOS Command
+
+UNIX Equivalent
+
+Effect
+
+``        ASSIGN       ``
+
+ln
+
+link file or directory
+
+``        ATTRIB       ``
+
+chmod
+
+change file permissions
+
+``        CD       ``
+
+cd
+
+change directory
+
+``        CHDIR       ``
+
+cd
+
+change directory
+
+``        CLS       ``
+
+clear
+
+clear screen
+
+``        COMP       ``
+
+diff, comm, cmp
+
+file compare
+
+``        COPY       ``
+
+cp
+
+file copy
+
+``        Ctl-C       ``
+
+Ctl-C
+
+break (signal)
+
+``        Ctl-Z       ``
+
+Ctl-D
+
+EOF (end-of-file)
+
+``        DEL       ``
+
+rm
+
+delete file(s)
+
+``        DELTREE       ``
+
+rm -rf
+
+delete directory recursively
+
+``        DIR       ``
+
+ls -l
+
+directory listing
+
+``        ERASE       ``
+
+rm
+
+delete file(s)
+
+``        EXIT       ``
+
+exit
+
+exit current process
+
+``        FC       ``
+
+comm, cmp
+
+file compare
+
+``        FIND       ``
+
+grep
+
+find strings in files
+
+``        MD       ``
+
+mkdir
+
+make directory
+
+``        MKDIR       ``
+
+mkdir
+
+make directory
+
+``        MORE       ``
+
+more
+
+text file paging filter
+
+``        MOVE       ``
+
+mv
+
+move
+
+``        PATH       ``
+
+$PATH
+
+path to executables
+
+``        REN       ``
+
+mv
+
+rename (move)
+
+``        RENAME       ``
+
+mv
+
+rename (move)
+
+``        RD       ``
+
+rmdir
+
+remove directory
+
+``        RMDIR       ``
+
+rmdir
+
+remove directory
+
+``        SORT       ``
+
+sort
+
+sort file
+
+``        TIME       ``
+
+date
+
+display system time
+
+``        TYPE       ``
+
+cat
+
+output file to ``        stdout       ``
+
+``        XCOPY       ``
+
+cp
+
+(extended) file copy
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -136,31 +460,28 @@ script.
 
    <div class="NOTE">
 
-+--------------------------+--------------------------+--------------------------+
-| |Note|                   |
-| Virtually all UNIX and   |
-| shell operators and      |
-| commands have many more  |
-| options and enhancements |
-| than their DOS and batch |
-| file counterparts. Many  |
-| DOS batch files rely on  |
-| auxiliary utilities,     |
-| such as **ask.com** , a  |
-| crippled counterpart to  |
-| `read <internal.html#REA |
-| DREF>`__                 |
-| .                        |
-|                          |
-| DOS supports only a very |
-| limited and incompatible |
-| subset of filename       |
-| `wild-card               |
-| expansion <globbingref.h |
-| tml>`__                  |
-| , recognizing just the   |
-| \* and ? characters.     |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+Virtually all UNIX and shell operators and commands have many more
+options and enhancements than their DOS and batch file counterparts.
+Many DOS batch files rely on auxiliary utilities, such as **ask.com** ,
+a crippled counterpart to `read <internal.html#READREF>`__ .
+
+DOS supports only a very limited and incompatible subset of filename
+`wild-card expansion <globbingref.html>`__ , recognizing just the \* and
+? characters.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -175,41 +496,39 @@ straightforward, and the result ofttimes reads better than the original.
 
 **Example N-1. VIEWDATA.BAT: DOS Batch File**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     REM VIEWDATA         |
-|                          |
-|     REM INSPIRED BY AN E |
-| XAMPLE IN "DOS POWERTOOL |
-| S"                       |
-|     REM                  |
-|           BY PAUL SOMERS |
-| ON                       |
-|                          |
-|                          |
-|     @ECHO OFF            |
-|                          |
-|     IF !%1==! GOTO VIEWD |
-| ATA                      |
-|     REM  IF NO COMMAND-L |
-| INE ARG...               |
-|     FIND "%1" C:\BOZO\BO |
-| OKLIST.TXT               |
-|     GOTO EXIT0           |
-|     REM  PRINT LINE WITH |
-|  STRING MATCH, THEN EXIT |
-| .                        |
-|                          |
-|     :VIEWDATA            |
-|     TYPE C:\BOZO\BOOKLIS |
-| T.TXT | MORE             |
-|     REM  SHOW ENTIRE FIL |
-| E, 1 PAGE AT A TIME.     |
-|                          |
-|     :EXIT0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    REM VIEWDATA
+
+    REM INSPIRED BY AN EXAMPLE IN "DOS POWERTOOLS"
+    REM                           BY PAUL SOMERSON
+
+
+    @ECHO OFF
+
+    IF !%1==! GOTO VIEWDATA
+    REM  IF NO COMMAND-LINE ARG...
+    FIND "%1" C:\BOZO\BOOKLIST.TXT
+    GOTO EXIT0
+    REM  PRINT LINE WITH STRING MATCH, THEN EXIT.
+
+    :VIEWDATA
+    TYPE C:\BOZO\BOOKLIST.TXT | MORE
+    REM  SHOW ENTIRE FILE, 1 PAGE AT A TIME.
+
+    :EXIT0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -224,51 +543,41 @@ The script conversion is somewhat of an improvement. ` [1]
 
 **Example N-2. *viewdata.sh* : Shell Script Conversion of VIEWDATA.BAT**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # viewdata.sh        |
-|     # Conversion of VIEW |
-| DATA.BAT to shell script |
-| .                        |
-|                          |
-|     DATAFILE=/home/bozo/ |
-| datafiles/book-collectio |
-| n.data                   |
-|     ARGNO=1              |
-|                          |
-|     # @ECHO OFF          |
-|         Command unnecess |
-| ary here.                |
-|                          |
-|     if [ $# -lt "$ARGNO" |
-|  ]    # IF !%1==! GOTO V |
-| IEWDATA                  |
-|     then                 |
-|       less $DATAFILE     |
-|       # TYPE C:\MYDIR\BO |
-| OKLIST.TXT | MORE        |
-|     else                 |
-|       grep "$1" $DATAFIL |
-| E     # FIND "%1" C:\MYD |
-| IR\BOOKLIST.TXT          |
-|     fi                   |
-|                          |
-|     exit 0               |
-|       # :EXIT0           |
-|                          |
-|     #  GOTOs, labels, sm |
-| oke-and-mirrors, and fli |
-| mflam unnecessary.       |
-|     #  The converted scr |
-| ipt is short, sweet, and |
-|  clean,                  |
-|     #+ which is more tha |
-| n can be said for the or |
-| iginal.                  |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # viewdata.sh
+    # Conversion of VIEWDATA.BAT to shell script.
+
+    DATAFILE=/home/bozo/datafiles/book-collection.data
+    ARGNO=1
+
+    # @ECHO OFF                 Command unnecessary here.
+
+    if [ $# -lt "$ARGNO" ]    # IF !%1==! GOTO VIEWDATA
+    then
+      less $DATAFILE          # TYPE C:\MYDIR\BOOKLIST.TXT | MORE
+    else
+      grep "$1" $DATAFILE     # FIND "%1" C:\MYDIR\BOOKLIST.TXT
+    fi  
+
+    exit 0                    # :EXIT0
+
+    #  GOTOs, labels, smoke-and-mirrors, and flimflam unnecessary.
+    #  The converted script is short, sweet, and clean,
+    #+ which is more than can be said for the original.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -286,109 +595,22 @@ trace.
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <dosbatch.html#AEN24713>`__   |
-| Various readers have suggested       |
-| modifications of the above batch     |
-| file to prettify it and make it more |
-| compact and efficient. In the        |
-| opinion of the *ABS Guide* author,   |
-| this is wasted effort. A Bash script |
-| can access a DOS filesystem, or even |
-| an NTFS partition (with the help of  |
-| `ntfs-3g <http://www.ntfs-3g.org>`__ |
-| ) to do batch or scripted            |
-| operations.                          |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <dosbatch.html#AEN24713>`__
+
+Various readers have suggested modifications of the above batch file to
+prettify it and make it more compact and efficient. In the opinion of
+the *ABS Guide* author, this is wasted effort. A Bash script can access
+a DOS filesystem, or even an NTFS partition (with the help of
+`ntfs-3g <http://www.ntfs-3g.org>`__ ) to do batch or scripted
+operations.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-`Prev <sample-bashrc.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-`Next <exercises.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-Sample ``        .bashrc       `` and ``        .bash_profile       ``
-Files
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-Exercises
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
+   </p>
 
 .. raw:: html
 

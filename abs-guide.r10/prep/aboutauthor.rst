@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <authorsnote.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 38. Endnotes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <wherehelp.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   38.2. About the Author
@@ -117,7 +43,7 @@ one-time pad encryption utility, the
 `mcalc <http://ibiblio.org/pub/Linux/apps/financial/mcalc-1.6.tar.gz>`__
 mortgage calculator, the
 `judge <http://ibiblio.org/pub/Linux/games/amusements/judge-1.0.tar.gz>`__
-Scrabbleé€Ÿ adjudicator, the
+ScrabbleÂ® adjudicator, the
 `yawl <http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz>`__ word
 gaming list package, and the
 `Quacky <http://bash.deta.in/qky.README.html>`__ anagramming gaming
@@ -137,34 +63,39 @@ cherishes human frailty, especially his own. ` [3]
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]                                | ` [2]                                |
-|  <aboutauthor.html#AEN21292>`__      |  <aboutauthor.html#AEN21295>`__      |
-| In fact, he has no credentials or    | Those who can, do. Those who can't . |
-| special qualifications. He's a       | . . get an MCSE.                     |
-| school dropout with no formal        |                                      |
-| credentials or professional          |                                      |
-| experience whatsoever. None. Zero.   |                                      |
-| Nada. Aside from the *ABS Guide* ,   |                                      |
-| his major claim to fame is a First   |                                      |
-| Place in the sack race at the Colfax |                                      |
-| Elementary School Field Day in June, |                                      |
-| 1958.                                |                                      |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <aboutauthor.html#AEN21292>`__
+
+In fact, he has no credentials or special qualifications. He's a school
+dropout with no formal credentials or professional experience
+whatsoever. None. Zero. Nada. Aside from the *ABS Guide* , his major
+claim to fame is a First Place in the sack race at the Colfax Elementary
+School Field Day in June, 1958.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <aboutauthor.html#AEN21295>`__
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <authorsnote.html> | Author's Note            |
-| `__                      | `Up <endnotes.html>`__   |
-| `Home <index.html>`__    | Where to Go For Help     |
-| `Next <wherehelp.html>`_ |                          |
-| _                        |                          |
-+--------------------------+--------------------------+--------------------------+
+Those who can, do. Those who can't . . . get an MCSE.
+
+.. raw:: html
+
+   </p>
+
+` [3]  <aboutauthor.html#AEN21318>`__
+
+Sometimes it seems as if he has spent his entire life flouting
+conventional wisdom and defying the sonorous Voice of Authority: " *Hey,
+you can't do that!* "
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 

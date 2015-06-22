@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <manipulatingvars.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 10. Manipulating Variables
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <parameter-substitution.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   10.1. Manipulating Strings
@@ -97,20 +23,26 @@ command syntax and overlap of functionality, not to mention confusion.
      These are the equivalent of *strlen()* in *C* .
 
  expr "$string" : '.\*'
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |                          |
-    |     echo ${#stringZ}     |
-    |              # 15        |
-    |     echo `expr length $s |
-    | tringZ`      # 15        |
-    |     echo `expr "$stringZ |
-    | " : '.*'`    # 15        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+
+        echo ${#stringZ}                 # 15
+        echo `expr length $stringZ`      # 15
+        echo `expr "$stringZ" : '.*'`    # 15
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
 .. raw:: html
 
@@ -123,80 +55,53 @@ command syntax and overlap of functionality, not to mention confusion.
 **Example 10-1. Inserting a blank line between paragraphs in a text
 file**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # paragraph-space.sh |
-|     # Ver. 2.1, Reldate  |
-| 29Jul12 [fixup]          |
-|                          |
-|     # Inserts a blank li |
-| ne between paragraphs of |
-|  a single-spaced text fi |
-| le.                      |
-|     # Usage: $0 <FILENAM |
-| E                        |
-|                          |
-|     MINLEN=60        # C |
-| hange this value? It's a |
-|  judgment call.          |
-|     #  Assume lines shor |
-| ter than $MINLEN charact |
-| ers ending in a period   |
-|     #+ terminate a parag |
-| raph. See exercises belo |
-| w.                       |
-|                          |
-|     while read line  # F |
-| or as many lines as the  |
-| input file has ...       |
-|     do                   |
-|       echo "$line"   # O |
-| utput the line itself.   |
-|                          |
-|       len=${#line}       |
-|       if [[ "$len" -lt " |
-| $MINLEN" && "$line" =~ [ |
-| *{\.}]$ ]]               |
-|     # if [[ "$len" -lt " |
-| $MINLEN" && "$line" =~ \ |
-| [*\.\] ]]                |
-|     # An update to Bash  |
-| broke the previous versi |
-| on of this script. Ouch! |
-|     # Thank you, Halim S |
-| rama, for pointing this  |
-| out and suggesting a fix |
-| .                        |
-|         then echo    #   |
-| Add a blank line immedia |
-| tely                     |
-|       fi             #+  |
-| after a short line termi |
-| nated by a period.       |
-|     done                 |
-|                          |
-|     exit                 |
-|                          |
-|     # Exercises:         |
-|     # ---------          |
-|     #  1) The script usu |
-| ally inserts a blank lin |
-| e at the end             |
-|     #+    of the target  |
-| file. Fix this.          |
-|     #  2) Line 17 only c |
-| onsiders periods as sent |
-| ence terminators.        |
-|     #     Modify this to |
-|  include other common en |
-| d-of-sentence characters |
-| ,                        |
-|     #+    such as ?, !,  |
-| and ".                   |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # paragraph-space.sh
+    # Ver. 2.1, Reldate 29Jul12 [fixup]
+
+    # Inserts a blank line between paragraphs of a single-spaced text file.
+    # Usage: $0 <FILENAME
+
+    MINLEN=60        # Change this value? It's a judgment call.
+    #  Assume lines shorter than $MINLEN characters ending in a period
+    #+ terminate a paragraph. See exercises below.
+
+    while read line  # For as many lines as the input file has ...
+    do
+      echo "$line"   # Output the line itself.
+
+      len=${#line}
+      if [[ "$len" -lt "$MINLEN" && "$line" =~ [*{\.}]$ ]]
+    # if [[ "$len" -lt "$MINLEN" && "$line" =~ \[*\.\] ]]
+    # An update to Bash broke the previous version of this script. Ouch!
+    # Thank you, Halim Srama, for pointing this out and suggesting a fix.
+        then echo    #  Add a blank line immediately
+      fi             #+ after a short line terminated by a period.
+    done
+
+    exit
+
+    # Exercises:
+    # ---------
+    #  1) The script usually inserts a blank line at the end
+    #+    of the target file. Fix this.
+    #  2) Line 17 only considers periods as sentence terminators.
+    #     Modify this to include other common end-of-sentence characters,
+    #+    such as ?, !, and ".
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -216,22 +121,26 @@ file**
     ``                   $substring                 `` is a regular
     expression.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #       |------|     |
-    |     #       12345678     |
-    |                          |
-    |     echo `expr match "$s |
-    | tringZ" 'abc[A-Z]*.2'`   |
-    |  # 8                     |
-    |     echo `expr "$stringZ |
-    | " : 'abc[A-Z]*.2'`       |
-    |  # 8                     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #       |------|
+        #       12345678
+
+        echo `expr match "$stringZ" 'abc[A-Z]*.2'`   # 8
+        echo `expr "$stringZ" : 'abc[A-Z]*.2'`       # 8
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
 .. raw:: html
 
@@ -247,26 +156,27 @@ file**
     Numerical position in $string of first character in $substring that
     matches.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #       123456 ...   |
-    |     echo `expr index "$s |
-    | tringZ" C12`             |
-    |  # 6                     |
-    |                          |
-    |                          |
-    |  # C position.           |
-    |                          |
-    |     echo `expr index "$s |
-    | tringZ" 1c`              |
-    |  # 3                     |
-    |     # 'c' (in #3 positio |
-    | n) matches before '1'.   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #       123456 ...
+        echo `expr index "$stringZ" C12`             # 6
+                                                     # C position.
+
+        echo `expr index "$stringZ" 1c`              # 3
+        # 'c' (in #3 position) matches before '1'.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     This is the near equivalent of *strchr()* in *C* .
 
@@ -296,64 +206,45 @@ file**
     of substring from ``                   $string                 `` at
     ``                   $position                 `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #       0123456789.. |
-    | ...                      |
-    |     #       0-based inde |
-    | xing.                    |
-    |                          |
-    |     echo ${stringZ:0}    |
-    |                          |
-    |  # abcABC123ABCabc       |
-    |     echo ${stringZ:1}    |
-    |                          |
-    |  # bcABC123ABCabc        |
-    |     echo ${stringZ:7}    |
-    |                          |
-    |  # 23ABCabc              |
-    |                          |
-    |     echo ${stringZ:7:3}  |
-    |                          |
-    |  # 23A                   |
-    |                          |
-    |                          |
-    |  # Three characters of s |
-    | ubstring.                |
-    |                          |
-    |                          |
-    |                          |
-    |     # Is it possible to  |
-    | index from the right end |
-    |  of the string?          |
-    |                          |
-    |     echo ${stringZ:-4}   |
-    |                          |
-    |  # abcABC123ABCabc       |
-    |     # Defaults to full s |
-    | tring, as in ${parameter |
-    | :-default}.              |
-    |     # However . . .      |
-    |                          |
-    |     echo ${stringZ:(-4)} |
-    |                          |
-    |  # Cabc                  |
-    |     echo ${stringZ: -4}  |
-    |                          |
-    |  # Cabc                  |
-    |     # Now, it works.     |
-    |     # Parentheses or add |
-    | ed space "escape" the po |
-    | sition parameter.        |
-    |                          |
-    |     # Thank you, Dan Jac |
-    | obson, for pointing this |
-    |  out.                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #       0123456789.....
+        #       0-based indexing.
+
+        echo ${stringZ:0}                            # abcABC123ABCabc
+        echo ${stringZ:1}                            # bcABC123ABCabc
+        echo ${stringZ:7}                            # 23ABCabc
+
+        echo ${stringZ:7:3}                          # 23A
+                                                     # Three characters of substring.
+
+
+
+        # Is it possible to index from the right end of the string?
+            
+        echo ${stringZ:-4}                           # abcABC123ABCabc
+        # Defaults to full string, as in ${parameter:-default}.
+        # However . . .
+
+        echo ${stringZ:(-4)}                         # Cabc 
+        echo ${stringZ: -4}                          # Cabc
+        # Now, it works.
+        # Parentheses or added space "escape" the position parameter.
+
+        # Thank you, Dan Jacobson, for pointing this out.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The *position* and *length* arguments can be "parameterized," that
     is, represented as a variable, rather than as a numerical constant.
@@ -364,60 +255,50 @@ file**
 
     **Example 10-2. Generating an 8-character "random" string**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # rand-string.sh     |
-    |     # Generating an 8-ch |
-    | aracter "random" string. |
-    |                          |
-    |     if [ -n "$1" ]  #  I |
-    | f command-line argument  |
-    | present,                 |
-    |     then            #+ t |
-    | hen set start-string to  |
-    | it.                      |
-    |       str0="$1"          |
-    |     else            #  E |
-    | lse use PID of script as |
-    |  start-string.           |
-    |       str0="$$"          |
-    |     fi                   |
-    |                          |
-    |     POS=2  # Starting fr |
-    | om position 2 in the str |
-    | ing.                     |
-    |     LEN=8  # Extract eig |
-    | ht characters.           |
-    |                          |
-    |     str1=$( echo "$str0" |
-    |  | md5sum | md5sum )     |
-    |     #  Doubly scramble   |
-    |    ^^^^^^   ^^^^^^       |
-    |     #+ by piping and rep |
-    | iping to md5sum.         |
-    |                          |
-    |     randstring="${str1:$ |
-    | POS:$LEN}"               |
-    |     # Can parameterize ^ |
-    | ^^^ ^^^^                 |
-    |                          |
-    |     echo "$randstring"   |
-    |                          |
-    |     exit $?              |
-    |                          |
-    |     # bozo$ ./rand-strin |
-    | g.sh my-password         |
-    |     # 1bdd88c4           |
-    |                          |
-    |     #  No, this is is no |
-    | t recommended            |
-    |     #+ as a method of ge |
-    | nerating hack-proof pass |
-    | words.                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # rand-string.sh
+        # Generating an 8-character "random" string.
+
+        if [ -n "$1" ]  #  If command-line argument present,
+        then            #+ then set start-string to it.
+          str0="$1"
+        else            #  Else use PID of script as start-string.
+          str0="$$"
+        fi
+
+        POS=2  # Starting from position 2 in the string.
+        LEN=8  # Extract eight characters.
+
+        str1=$( echo "$str0" | md5sum | md5sum )
+        #  Doubly scramble     ^^^^^^   ^^^^^^
+        #+ by piping and repiping to md5sum.
+
+        randstring="${str1:$POS:$LEN}"
+        # Can parameterize ^^^^ ^^^^
+
+        echo "$randstring"
+
+        exit $?
+
+        # bozo$ ./rand-string.sh my-password
+        # 1bdd88c4
+
+        #  No, this is is not recommended
+        #+ as a method of generating hack-proof passwords.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -427,46 +308,50 @@ file**
     then this extracts a maximum of ``         $length        ``
     positional parameters, starting at ``         $position        `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo ${*:2}          |
-    |  # Echoes second and fol |
-    | lowing positional parame |
-    | ters.                    |
-    |     echo ${@:2}          |
-    |  # Same as above.        |
-    |                          |
-    |     echo ${*:2:3}        |
-    |  # Echoes three position |
-    | al parameters, starting  |
-    | at second.               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo ${*:2}          # Echoes second and following positional parameters.
+        echo ${@:2}          # Same as above.
+
+        echo ${*:2:3}        # Echoes three positional parameters, starting at second.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  expr substr $string $position $length
     Extracts ``                   $length                 `` characters
     from ``                   $string                 `` starting at
     ``                   $position                 `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #       123456789... |
-    | ...                      |
-    |     #       1-based inde |
-    | xing.                    |
-    |                          |
-    |     echo `expr substr $s |
-    | tringZ 1 2`              |
-    |  # ab                    |
-    |     echo `expr substr $s |
-    | tringZ 4 3`              |
-    |  # ABC                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #       123456789......
+        #       1-based indexing.
+
+        echo `expr substr $stringZ 1 2`              # ab
+        echo `expr substr $stringZ 4 3`              # ABC
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  expr match "$string" '\\($substring\\)'
     Extracts ``                   $substring                 `` at
@@ -480,27 +365,27 @@ file**
     ``                   $substring                 `` is a regular
     expression.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #       =======      |
-    |                          |
-    |     echo `expr match "$s |
-    | tringZ" '\(.[b-c]*[A-Z]. |
-    | .[0-9]\)'`   # abcABC1   |
-    |     echo `expr "$stringZ |
-    | " : '\(.[b-c]*[A-Z]..[0- |
-    | 9]\)'`       # abcABC1   |
-    |     echo `expr "$stringZ |
-    | " : '\(.......\)'`       |
-    |              # abcABC1   |
-    |     # All of the above f |
-    | orms give an identical r |
-    | esult.                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #       =======     
+
+        echo `expr match "$stringZ" '\(.[b-c]*[A-Z]..[0-9]\)'`   # abcABC1
+        echo `expr "$stringZ" : '\(.[b-c]*[A-Z]..[0-9]\)'`       # abcABC1
+        echo `expr "$stringZ" : '\(.......\)'`                   # abcABC1
+        # All of the above forms give an identical result.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  expr match "$string" '.\*\\($substring\\)'
     Extracts ``                   $substring                 `` at *end*
@@ -514,24 +399,25 @@ file**
     ``                   $substring                 `` is a regular
     expression.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #                === |
-    | ===                      |
-    |                          |
-    |     echo `expr match "$s |
-    | tringZ" '.*\([A-C][A-C][ |
-    | A-C][a-c]*\)'`    # ABCa |
-    | bc                       |
-    |     echo `expr "$stringZ |
-    | " : '.*\(......\)'`      |
-    |                   # ABCa |
-    | bc                       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #                ======
+
+        echo `expr match "$stringZ" '.*\([A-C][A-C][A-C][a-c]*\)'`    # ABCabc
+        echo `expr "$stringZ" : '.*\(......\)'`                       # ABCabc
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
 .. raw:: html
 
@@ -553,43 +439,39 @@ file**
     ``                   $substring                 `` from *front* of
     ``                   $string                 `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #       |----|       |
-    |     shortest             |
-    |     #       |----------| |
-    |     longest              |
-    |                          |
-    |     echo ${stringZ#a*C}  |
-    |      # 123ABCabc         |
-    |     # Strip out shortest |
-    |  match between 'a' and ' |
-    | C'.                      |
-    |                          |
-    |     echo ${stringZ##a*C} |
-    |      # abc               |
-    |     # Strip out longest  |
-    | match between 'a' and 'C |
-    | '.                       |
-    |                          |
-    |                          |
-    |                          |
-    |     # You can parameteri |
-    | ze the substrings.       |
-    |                          |
-    |     X='a*C'              |
-    |                          |
-    |     echo ${stringZ#$X}   |
-    |     # 123ABCabc          |
-    |     echo ${stringZ##$X}  |
-    |     # abc                |
-    |                          |
-    |     # As above.          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #       |----|          shortest
+        #       |----------|    longest
+
+        echo ${stringZ#a*C}      # 123ABCabc
+        # Strip out shortest match between 'a' and 'C'.
+
+        echo ${stringZ##a*C}     # abc
+        # Strip out longest match between 'a' and 'C'.
+
+
+
+        # You can parameterize the substrings.
+
+        X='a*C'
+
+        echo ${stringZ#$X}      # 123ABCabc
+        echo ${stringZ##$X}     # abc
+                                # As above.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  ${string%substring}
     Deletes shortest match of
@@ -598,69 +480,63 @@ file**
 
     For example:
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     # Rename all filenam |
-    | es in $PWD with "TXT" su |
-    | ffix to a "txt" suffix.  |
-    |     # For example, "file |
-    | 1.TXT" becomes "file1.tx |
-    | t" . . .                 |
-    |                          |
-    |     SUFF=TXT             |
-    |     suff=txt             |
-    |                          |
-    |     for i in $(ls *.$SUF |
-    | F)                       |
-    |     do                   |
-    |       mv -f $i ${i%.$SUF |
-    | F}.$suff                 |
-    |       #  Leave unchanged |
-    |  everything *except* the |
-    |  shortest pattern match  |
-    |       #+ starting from t |
-    | he right-hand-side of th |
-    | e variable $i . . .      |
-    |     done ### This could  |
-    | be condensed into a "one |
-    | -liner" if desired.      |
-    |                          |
-    |     # Thank you, Rory Wi |
-    | nston.                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        # Rename all filenames in $PWD with "TXT" suffix to a "txt" suffix.
+        # For example, "file1.TXT" becomes "file1.txt" . . .
+
+        SUFF=TXT
+        suff=txt
+
+        for i in $(ls *.$SUFF)
+        do
+          mv -f $i ${i%.$SUFF}.$suff
+          #  Leave unchanged everything *except* the shortest pattern match
+          #+ starting from the right-hand-side of the variable $i . . .
+        done ### This could be condensed into a "one-liner" if desired.
+
+        # Thank you, Rory Winston.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  ${string%%substring}
     Deletes longest match of
     ``                   $substring                 `` from *back* of
     ``                   $string                 `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |     #                    |
-    |  ||     shortest         |
-    |     #        |---------- |
-    | --|     longest          |
-    |                          |
-    |     echo ${stringZ%b*c}  |
-    |      # abcABC123ABCa     |
-    |     # Strip out shortest |
-    |  match between 'b' and ' |
-    | c', from back of $string |
-    | Z.                       |
-    |                          |
-    |     echo ${stringZ%%b*c} |
-    |      # a                 |
-    |     # Strip out longest  |
-    | match between 'b' and 'c |
-    | ', from back of $stringZ |
-    | .                        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+        #                    ||     shortest
+        #        |------------|     longest
+
+        echo ${stringZ%b*c}      # abcABC123ABCa
+        # Strip out shortest match between 'b' and 'c', from back of $stringZ.
+
+        echo ${stringZ%%b*c}     # a
+        # Strip out longest match between 'b' and 'c', from back of $stringZ.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     This operator is useful for generating filenames.
 
@@ -671,120 +547,79 @@ file**
     **Example 10-3. Converting graphic file formats, with filename
     change**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     #  cvt.sh:           |
-    |     #  Converts all the  |
-    | MacPaint image files in  |
-    | a directory to "pbm" for |
-    | mat.                     |
-    |                          |
-    |     #  Uses the "macptop |
-    | bm" binary from the "net |
-    | pbm" package,            |
-    |     #+ which is maintain |
-    | ed by Brian Henderson (b |
-    | ryanh@giraffe-data.com). |
-    |     #  Netpbm is a stand |
-    | ard part of most Linux d |
-    | istros.                  |
-    |                          |
-    |     OPERATION=macptopbm  |
-    |     SUFFIX=pbm           |
-    | # New filename suffix.   |
-    |                          |
-    |     if [ -n "$1" ]       |
-    |     then                 |
-    |       directory=$1       |
-    | # If directory name give |
-    | n as a script argument.. |
-    | .                        |
-    |     else                 |
-    |       directory=$PWD     |
-    | # Otherwise use current  |
-    | working directory.       |
-    |     fi                   |
-    |                          |
-    |     #  Assumes all files |
-    |  in the target directory |
-    |  are MacPaint image file |
-    | s,                       |
-    |     #+ with a ".mac" fil |
-    | ename suffix.            |
-    |                          |
-    |     for file in $directo |
-    | ry/*    # Filename globb |
-    | ing.                     |
-    |     do                   |
-    |       filename=${file%.* |
-    | c}      #  Strip ".mac"  |
-    | suffix off filename      |
-    |                          |
-    |         #+ ('.*c' matche |
-    | s everything             |
-    |                     #+ b |
-    | etween '.' and 'c', incl |
-    | usive).                  |
-    |       $OPERATION $file > |
-    |  "$filename.$SUFFIX"     |
-    |                          |
-    |         # Redirect conve |
-    | rsion to new filename.   |
-    |       rm -f $file        |
-    |         # Delete origina |
-    | l files after converting |
-    | .                        |
-    |       echo "$filename.$S |
-    | UFFIX"  # Log what is ha |
-    | ppening to stdout.       |
-    |     done                 |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     # Exercise:          |
-    |     # --------           |
-    |     #  As it stands, thi |
-    | s script converts *all*  |
-    | the files in the current |
-    |     #+ working directory |
-    | .                        |
-    |     #  Modify it to work |
-    |  *only* on files with a  |
-    | ".mac" suffix.           |
-    |                          |
-    |                          |
-    |                          |
-    |     # *** And here's ano |
-    | ther way to do it. *** # |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Batch convert into |
-    |  different graphic forma |
-    | ts.                      |
-    |     # Assumes imagemagic |
-    | k installed (standard in |
-    |  most Linux distros).    |
-    |                          |
-    |     INFMT=png   # Can be |
-    |  tif, jpg, gif, etc.     |
-    |     OUTFMT=pdf  # Can be |
-    |  tif, jpg, gif, pdf, etc |
-    | .                        |
-    |                          |
-    |     for pic in *"$INFMT" |
-    |     do                   |
-    |       p2=$(ls "$pic" | s |
-    | ed -e s/\.$INFMT//)      |
-    |       # echo $p2         |
-    |         convert "$pic" $ |
-    | p2.$OUTFMT               |
-    |         done             |
-    |                          |
-    |     exit $?              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        #  cvt.sh:
+        #  Converts all the MacPaint image files in a directory to "pbm" format.
+
+        #  Uses the "macptopbm" binary from the "netpbm" package,
+        #+ which is maintained by Brian Henderson (bryanh@giraffe-data.com).
+        #  Netpbm is a standard part of most Linux distros.
+
+        OPERATION=macptopbm
+        SUFFIX=pbm          # New filename suffix. 
+
+        if [ -n "$1" ]
+        then
+          directory=$1      # If directory name given as a script argument...
+        else
+          directory=$PWD    # Otherwise use current working directory.
+        fi  
+          
+        #  Assumes all files in the target directory are MacPaint image files,
+        #+ with a ".mac" filename suffix.
+
+        for file in $directory/*    # Filename globbing.
+        do
+          filename=${file%.*c}      #  Strip ".mac" suffix off filename
+                                    #+ ('.*c' matches everything
+                        #+ between '.' and 'c', inclusive).
+          $OPERATION $file > "$filename.$SUFFIX"
+                                    # Redirect conversion to new filename.
+          rm -f $file               # Delete original files after converting.   
+          echo "$filename.$SUFFIX"  # Log what is happening to stdout.
+        done
+
+        exit 0
+
+        # Exercise:
+        # --------
+        #  As it stands, this script converts *all* the files in the current
+        #+ working directory.
+        #  Modify it to work *only* on files with a ".mac" suffix.
+
+
+
+        # *** And here's another way to do it. *** #
+
+        #!/bin/bash
+        # Batch convert into different graphic formats.
+        # Assumes imagemagick installed (standard in most Linux distros).
+
+        INFMT=png   # Can be tif, jpg, gif, etc.
+        OUTFMT=pdf  # Can be tif, jpg, gif, pdf, etc.
+
+        for pic in *"$INFMT"
+        do
+          p2=$(ls "$pic" | sed -e s/\.$INFMT//)
+          # echo $p2
+            convert "$pic" $p2.$OUTFMT
+            done
+
+        exit $?
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -796,114 +631,71 @@ file**
 
     **Example 10-4. Converting streaming audio files to *ogg***
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # ra2ogg.sh: Convert |
-    |  streaming audio files ( |
-    | *.ra) to ogg.            |
-    |                          |
-    |     # Uses the "mplayer" |
-    |  media player program:   |
-    |     #      http://www.mp |
-    | layerhq.hu/homepage      |
-    |     # Uses the "ogg" lib |
-    | rary and "oggenc":       |
-    |     #      http://www.xi |
-    | ph.org/                  |
-    |     #                    |
-    |     # This script may ne |
-    | ed appropriate codecs in |
-    | stalled, such as sipr.so |
-    |  ...                     |
-    |     # Possibly also the  |
-    | compat-libstdc++ package |
-    | .                        |
-    |                          |
-    |                          |
-    |     OFILEPREF=${1%%ra}   |
-    |     # Strip off the "ra" |
-    |  suffix.                 |
-    |     OFILESUFF=wav        |
-    |     # Suffix for wav fil |
-    | e.                       |
-    |     OUTFILE="$OFILEPREF" |
-    | "$OFILESUFF"             |
-    |     E_NOARGS=85          |
-    |                          |
-    |     if [ -z "$1" ]       |
-    |     # Must specify a fil |
-    | ename to convert.        |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` [filename]"     |
-    |       exit $E_NOARGS     |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     #################### |
-    | ######################## |
-    | ######################## |
-    | ######                   |
-    |     mplayer "$1" -ao pcm |
-    | :file=$OUTFILE           |
-    |     oggenc "$OUTFILE"  # |
-    |  Correct file extension  |
-    | automatically added by o |
-    | ggenc.                   |
-    |     #################### |
-    | ######################## |
-    | ######################## |
-    | ######                   |
-    |                          |
-    |     rm "$OUTFILE"      # |
-    |  Delete intermediate *.w |
-    | av file.                 |
-    |                        # |
-    |  If you want to keep it, |
-    |  comment out above line. |
-    |                          |
-    |     exit $?              |
-    |                          |
-    |     #  Note:             |
-    |     #  ----              |
-    |     #  On a Website, sim |
-    | ply clicking on a *.ram  |
-    | streaming audio file     |
-    |     #+ usually only down |
-    | loads the URL of the act |
-    | ual *.ra audio file.     |
-    |     #  You can then use  |
-    | "wget" or something simi |
-    | lar                      |
-    |     #+ to download the * |
-    | .ra file itself.         |
-    |                          |
-    |                          |
-    |     #  Exercises:        |
-    |     #  ---------         |
-    |     #  As is, this scrip |
-    | t converts only *.ra fil |
-    | enames.                  |
-    |     #  Add flexibility b |
-    | y permitting use of *.ra |
-    | m and other filenames.   |
-    |     #                    |
-    |     #  If you're really  |
-    | ambitious, expand the sc |
-    | ript                     |
-    |     #+ to do automatic d |
-    | ownloads and conversions |
-    |  of streaming audio file |
-    | s.                       |
-    |     #  Given a URL, batc |
-    | h download streaming aud |
-    | io files (using "wget")  |
-    |     #+ and convert them  |
-    | on the fly.              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # ra2ogg.sh: Convert streaming audio files (*.ra) to ogg.
+
+        # Uses the "mplayer" media player program:
+        #      http://www.mplayerhq.hu/homepage
+        # Uses the "ogg" library and "oggenc":
+        #      http://www.xiph.org/
+        #
+        # This script may need appropriate codecs installed, such as sipr.so ...
+        # Possibly also the compat-libstdc++ package.
+
+
+        OFILEPREF=${1%%ra}      # Strip off the "ra" suffix.
+        OFILESUFF=wav           # Suffix for wav file.
+        OUTFILE="$OFILEPREF""$OFILESUFF"
+        E_NOARGS=85
+
+        if [ -z "$1" ]          # Must specify a filename to convert.
+        then
+          echo "Usage: `basename $0` [filename]"
+          exit $E_NOARGS
+        fi
+
+
+        ##########################################################################
+        mplayer "$1" -ao pcm:file=$OUTFILE
+        oggenc "$OUTFILE"  # Correct file extension automatically added by oggenc.
+        ##########################################################################
+
+        rm "$OUTFILE"      # Delete intermediate *.wav file.
+                           # If you want to keep it, comment out above line.
+
+        exit $?
+
+        #  Note:
+        #  ----
+        #  On a Website, simply clicking on a *.ram streaming audio file
+        #+ usually only downloads the URL of the actual *.ra audio file.
+        #  You can then use "wget" or something similar
+        #+ to download the *.ra file itself.
+
+
+        #  Exercises:
+        #  ---------
+        #  As is, this script converts only *.ra filenames.
+        #  Add flexibility by permitting use of *.ram and other filenames.
+        #
+        #  If you're really ambitious, expand the script
+        #+ to do automatic downloads and conversions of streaming audio files.
+        #  Given a URL, batch download streaming audio files (using "wget")
+        #+ and convert them on the fly.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -918,83 +710,64 @@ file**
 
     **Example 10-5. Emulating *getopt***
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # getopt-simple.sh   |
-    |     # Author: Chris Morg |
-    | an                       |
-    |     # Used in the ABS Gu |
-    | ide with permission.     |
-    |                          |
-    |                          |
-    |     getopt_simple()      |
-    |     {                    |
-    |         echo "getopt_sim |
-    | ple()"                   |
-    |         echo "Parameters |
-    |  are '$*'"               |
-    |         until [ -z "$1"  |
-    | ]                        |
-    |         do               |
-    |           echo "Processi |
-    | ng parameter of: '$1'"   |
-    |           if [ ${1:0:1}  |
-    | = '/' ]                  |
-    |           then           |
-    |               tmp=${1:1} |
-    |                # Strip o |
-    | ff leading '/' . . .     |
-    |               parameter= |
-    | ${tmp%%=*}     # Extract |
-    |  name.                   |
-    |               value=${tm |
-    | p##*=}         # Extract |
-    |  value.                  |
-    |               echo "Para |
-    | meter: '$parameter', val |
-    | ue: '$value'"            |
-    |               eval $para |
-    | meter=$value             |
-    |           fi             |
-    |           shift          |
-    |         done             |
-    |     }                    |
-    |                          |
-    |     # Pass all options t |
-    | o getopt_simple().       |
-    |     getopt_simple $*     |
-    |                          |
-    |     echo "test is '$test |
-    | '"                       |
-    |     echo "test2 is '$tes |
-    | t2'"                     |
-    |                          |
-    |     exit 0  # See also,  |
-    | UseGetOpt.sh, a modified |
-    |  version of this script. |
-    |                          |
-    |     ---                  |
-    |                          |
-    |     sh getopt_example.sh |
-    |  /test=value1 /test2=val |
-    | ue2                      |
-    |                          |
-    |     Parameters are '/tes |
-    | t=value1 /test2=value2'  |
-    |     Processing parameter |
-    |  of: '/test=value1'      |
-    |     Parameter: 'test', v |
-    | alue: 'value1'           |
-    |     Processing parameter |
-    |  of: '/test2=value2'     |
-    |     Parameter: 'test2',  |
-    | value: 'value2'          |
-    |     test is 'value1'     |
-    |     test2 is 'value2'    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # getopt-simple.sh
+        # Author: Chris Morgan
+        # Used in the ABS Guide with permission.
+
+
+        getopt_simple()
+        {
+            echo "getopt_simple()"
+            echo "Parameters are '$*'"
+            until [ -z "$1" ]
+            do
+              echo "Processing parameter of: '$1'"
+              if [ ${1:0:1} = '/' ]
+              then
+                  tmp=${1:1}               # Strip off leading '/' . . .
+                  parameter=${tmp%%=*}     # Extract name.
+                  value=${tmp##*=}         # Extract value.
+                  echo "Parameter: '$parameter', value: '$value'"
+                  eval $parameter=$value
+              fi
+              shift
+            done
+        }
+
+        # Pass all options to getopt_simple().
+        getopt_simple $*
+
+        echo "test is '$test'"
+        echo "test2 is '$test2'"
+
+        exit 0  # See also, UseGetOpt.sh, a modified version of this script.
+
+        ---
+
+        sh getopt_example.sh /test=value1 /test2=value2
+
+        Parameters are '/test=value1 /test2=value2'
+        Processing parameter of: '/test=value1'
+        Parameter: 'test', value: 'value1'
+        Processing parameter of: '/test2=value2'
+        Parameter: 'test2', value: 'value2'
+        test is 'value1'
+        test2 is 'value2'
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1021,69 +794,47 @@ file**
     ``                   $substring                 `` with
     ``                   $replacement                 `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |                          |
-    |     echo ${stringZ/abc/x |
-    | yz}       # xyzABC123ABC |
-    | abc                      |
-    |                          |
-    |           # Replaces fir |
-    | st match of 'abc' with ' |
-    | xyz'.                    |
-    |                          |
-    |     echo ${stringZ//abc/ |
-    | xyz}      # xyzABC123ABC |
-    | xyz                      |
-    |                          |
-    |           # Replaces all |
-    |  matches of 'abc' with # |
-    |  'xyz'.                  |
-    |                          |
-    |     echo  -------------- |
-    | -                        |
-    |     echo "$stringZ"      |
-    |           # abcABC123ABC |
-    | abc                      |
-    |     echo  -------------- |
-    | -                        |
-    |                          |
-    |           # The string i |
-    | tself is not altered!    |
-    |                          |
-    |     # Can the match and  |
-    | replacement strings be p |
-    | arameterized?            |
-    |     match=abc            |
-    |     repl=000             |
-    |     echo ${stringZ/$matc |
-    | h/$repl}  # 000ABC123ABC |
-    | abc                      |
-    |     #              ^     |
-    |   ^         ^^^          |
-    |     echo ${stringZ//$mat |
-    | ch/$repl} # 000ABC123ABC |
-    | 000                      |
-    |     # Yes!          ^    |
-    |    ^        ^^^          |
-    | ^^^                      |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     # What happens if no |
-    |  $replacement string is  |
-    | supplied?                |
-    |     echo ${stringZ/abc}  |
-    |           # ABC123ABCabc |
-    |     echo ${stringZ//abc} |
-    |           # ABC123ABC    |
-    |     # A simple deletion  |
-    | takes place.             |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+
+        echo ${stringZ/abc/xyz}       # xyzABC123ABCabc
+                                      # Replaces first match of 'abc' with 'xyz'.
+
+        echo ${stringZ//abc/xyz}      # xyzABC123ABCxyz
+                                      # Replaces all matches of 'abc' with # 'xyz'.
+
+        echo  ---------------
+        echo "$stringZ"               # abcABC123ABCabc
+        echo  ---------------
+                                      # The string itself is not altered!
+
+        # Can the match and replacement strings be parameterized?
+        match=abc
+        repl=000
+        echo ${stringZ/$match/$repl}  # 000ABC123ABCabc
+        #              ^      ^         ^^^
+        echo ${stringZ//$match/$repl} # 000ABC123ABC000
+        # Yes!          ^      ^        ^^^         ^^^
+
+        echo
+
+        # What happens if no $replacement string is supplied?
+        echo ${stringZ/abc}           # ABC123ABCabc
+        echo ${stringZ//abc}          # ABC123ABC
+        # A simple deletion takes place.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  ${string/#substring/replacement}
     If ``                   $substring                 `` matches
@@ -1097,29 +848,27 @@ file**
     ``                   $replacement                 `` for
     ``                   $substring                 `` .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     stringZ=abcABC123ABC |
-    | abc                      |
-    |                          |
-    |     echo ${stringZ/#abc/ |
-    | XYZ}          # XYZABC12 |
-    | 3ABCabc                  |
-    |                          |
-    |               # Replaces |
-    |  front-end match of 'abc |
-    | ' with 'XYZ'.            |
-    |                          |
-    |     echo ${stringZ/%abc/ |
-    | XYZ}          # abcABC12 |
-    | 3ABCXYZ                  |
-    |                          |
-    |               # Replaces |
-    |  back-end match of 'abc' |
-    |  with 'XYZ'.             |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        stringZ=abcABC123ABCabc
+
+        echo ${stringZ/#abc/XYZ}          # XYZABC123ABCabc
+                                          # Replaces front-end match of 'abc' with 'XYZ'.
+
+        echo ${stringZ/%abc/XYZ}          # abcABC123ABCXYZ
+                                          # Replaces back-end match of 'abc' with 'XYZ'.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
 .. raw:: html
 
@@ -1142,69 +891,51 @@ operations.
 
 **Example 10-6. Alternate ways of extracting and locating substrings**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # substring-extracti |
-| on.sh                    |
-|                          |
-|     String=23skidoo1     |
-|     #      012345678     |
-| Bash                     |
-|     #      123456789     |
-| awk                      |
-|     # Note different str |
-| ing indexing system:     |
-|     # Bash numbers first |
-|  character of string as  |
-| 0.                       |
-|     # Awk  numbers first |
-|  character of string as  |
-| 1.                       |
-|                          |
-|     echo ${String:2:4} # |
-|  position 3 (0-1-2), 4 c |
-| haracters long           |
-|                          |
-|                      # s |
-| kid                      |
-|                          |
-|     # The awk equivalent |
-|  of ${string:pos:length} |
-|  is substr(string,pos,le |
-| ngth).                   |
-|     echo | awk '         |
-|     { print substr("'"${ |
-| String}"'",3,4)      # s |
-| kid                      |
-|     }                    |
-|     '                    |
-|     #  Piping an empty " |
-| echo" to awk gives it du |
-| mmy input,               |
-|     #+ and thus makes it |
-|  unnecessary to supply a |
-|  filename.               |
-|                          |
-|     echo "----"          |
-|                          |
-|     # And likewise:      |
-|                          |
-|     echo | awk '         |
-|     { print index("'"${S |
-| tring}"'", "skid")       |
-| # 3                      |
-|     }                    |
-|                          |
-| # (skid starts at positi |
-| on 3)                    |
-|     '   # The awk equiva |
-| lent of "expr index" ... |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # substring-extraction.sh
+
+    String=23skidoo1
+    #      012345678    Bash
+    #      123456789    awk
+    # Note different string indexing system:
+    # Bash numbers first character of string as 0.
+    # Awk  numbers first character of string as 1.
+
+    echo ${String:2:4} # position 3 (0-1-2), 4 characters long
+                                             # skid
+
+    # The awk equivalent of ${string:pos:length} is substr(string,pos,length).
+    echo | awk '
+    { print substr("'"${String}"'",3,4)      # skid
+    }
+    '
+    #  Piping an empty "echo" to awk gives it dummy input,
+    #+ and thus makes it unnecessary to supply a filename.
+
+    echo "----"
+
+    # And likewise:
+
+    echo | awk '
+    { print index("'"${String}"'", "skid")      # 3
+    }                                           # (skid starts at position 3)
+    '   # The awk equivalent of "expr index" ...
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -1253,35 +984,29 @@ Script examples:
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]                                | ` [2]                                |
-|  <string-manipulation.html#AEN5987>` |  <string-manipulation.html#AEN6164>` |
-| __                                   | __                                   |
-| This applies to either command-line  | Note that                            |
-| arguments or parameters passed to a  | ``                 $substring        |
-| `function <functions.html#FUNCTIONRE |         ``                           |
-| F>`__                                | and                                  |
-| .                                    | ``                 $replacement      |
-|                                      |           ``                         |
-|                                      | may refer to either *literal         |
-|                                      | strings* or *variables* , depending  |
-|                                      | on context. See the first usage      |
-|                                      | example.                             |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <string-manipulation.html#AEN5987>`__
+
+This applies to either command-line arguments or parameters passed to a
+`function <functions.html#FUNCTIONREF>`__ .
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <string-manipulation.html#AEN6164>`__
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <manipulatingvars. | Manipulating Variables   |
-| html>`__                 | `Up <manipulatingvars.ht |
-| `Home <index.html>`__    | ml>`__                   |
-| `Next <parameter-substit | Parameter Substitution   |
-| ution.html>`__           |                          |
-+--------------------------+--------------------------+--------------------------+
+Note that ``               $substring             `` and
+``               $replacement             `` may refer to either
+*literal strings* or *variables* , depending on context. See the first
+usage example.
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 

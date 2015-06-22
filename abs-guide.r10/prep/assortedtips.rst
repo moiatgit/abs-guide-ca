@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <optimizations.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 36. Miscellany
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <securityissues.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   36.7. Assorted Tips
@@ -93,53 +19,48 @@ Chapter 36. Miscellany
    plunge right in and code those parts of the script that come easily,
    and write the hard parts as *pseudo-code* .
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |                          |
-   |     ARGCOUNT=1           |
-   |            # Need name a |
-   | s argument.              |
-   |     E_WRONGARGS=65       |
-   |                          |
-   |     if [ number-of-argum |
-   | ents is-not-equal-to "$A |
-   | RGCOUNT" ]               |
-   |     #    ^^^^^^^^^^^^^^^ |
-   | ^^^^ ^^^^^^^^^^^^^^^     |
-   |     #  Can't figure out  |
-   | how to code this . . .   |
-   |     #+ . . . so write it |
-   |  in pseudo-code.         |
-   |                          |
-   |     then                 |
-   |       echo "Usage: name- |
-   | of-script name"          |
-   |       #            ^^^^^ |
-   | ^^^^^^^^^     More pseud |
-   | o-code.                  |
-   |       exit $E_WRONGARGS  |
-   |     fi                   |
-   |                          |
-   |     . . .                |
-   |                          |
-   |     exit 0               |
-   |                          |
-   |                          |
-   |     # Later on, substitu |
-   | te working code for the  |
-   | pseudo-code.             |
-   |                          |
-   |     # Line 6 becomes:    |
-   |     if [ $# -ne "$ARGCOU |
-   | NT" ]                    |
-   |                          |
-   |     # Line 12 becomes:   |
-   |       echo "Usage: `base |
-   | name $0` name"           |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+
+       ARGCOUNT=1                     # Need name as argument.
+       E_WRONGARGS=65
+
+       if [ number-of-arguments is-not-equal-to "$ARGCOUNT" ]
+       #    ^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^
+       #  Can't figure out how to code this . . .
+       #+ . . . so write it in pseudo-code.
+
+       then
+         echo "Usage: name-of-script name"
+         #            ^^^^^^^^^^^^^^     More pseudo-code.
+         exit $E_WRONGARGS
+       fi 
+
+       . . .
+
+       exit 0
+
+
+       # Later on, substitute working code for the pseudo-code.
+
+       # Line 6 becomes:
+       if [ $# -ne "$ARGCOUNT" ]
+
+       # Line 12 becomes:
+         echo "Usage: `basename $0` name"
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    For an example of using pseudo-code, see the `Square
    Root <writingscripts.html#NEWTONSQRT>`__ exercise.
@@ -151,32 +72,29 @@ Chapter 36. Miscellany
    script you want to keep track of. This will keep a continuing file
    record of the script names and invocation times.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     # Append (>>) follow |
-   | ing to end of each scrip |
-   | t tracked.               |
-   |                          |
-   |     whoami>> $SAVE_FILE  |
-   |    # User invoking the s |
-   | cript.                   |
-   |     echo $0>> $SAVE_FILE |
-   |    # Script name.        |
-   |     date>> $SAVE_FILE    |
-   |    # Date and time.      |
-   |     echo>> $SAVE_FILE    |
-   |    # Blank line as separ |
-   | ator.                    |
-   |                          |
-   |     #  Of course, SAVE_F |
-   | ILE defined and exported |
-   |  as environmental variab |
-   | le in ~/.bashrc          |
-   |     #+ (something like ~ |
-   | /.scripts-run)           |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       # Append (>>) following to end of each script tracked.
+
+       whoami>> $SAVE_FILE    # User invoking the script.
+       echo $0>> $SAVE_FILE   # Script name.
+       date>> $SAVE_FILE      # Date and time.
+       echo>> $SAVE_FILE      # Blank line as separator.
+
+       #  Of course, SAVE_FILE defined and exported as environmental variable in ~/.bashrc
+       #+ (something like ~/.scripts-run)
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  
 
@@ -184,24 +102,27 @@ Chapter 36. Miscellany
    *prepend* a line to an existing file, that is, to paste it in at the
    beginning?
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     file=data.txt        |
-   |     title="***This is th |
-   | e title line of data tex |
-   | t file***"               |
-   |                          |
-   |     echo $title | cat -  |
-   | $file >$file.new         |
-   |     # "cat -" concatenat |
-   | es stdout to $file.      |
-   |     #  End result is     |
-   |     #+ to write a new fi |
-   | le with $title appended  |
-   | at *beginning*.          |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       file=data.txt
+       title="***This is the title line of data text file***"
+
+       echo $title | cat - $file >$file.new
+       # "cat -" concatenates stdout to $file.
+       #  End result is
+       #+ to write a new file with $title appended at *beginning*.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    This is a simplified variant of the `Example
    19-13 <x17837.html#PREPENDEX>`__ script given earlier. And, of
@@ -232,224 +153,160 @@ Chapter 36. Miscellany
    `dot <special-chars.html#DOTREF>`__ ( **.** ) or
    `source <internal.html#SOURCEREF>`__ command.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     # SCRIPT LIBRARY     |
-   |     # ------ -------     |
-   |                          |
-   |     # Note:              |
-   |     # No "#!" here.      |
-   |     # No "live code" eit |
-   | her.                     |
-   |                          |
-   |                          |
-   |     # Useful variable de |
-   | finitions                |
-   |                          |
-   |     ROOT_UID=0           |
-   |    # Root has $UID 0.    |
-   |     E_NOTROOT=101        |
-   |    # Not root user error |
-   | .                        |
-   |     MAXRETVAL=255        |
-   |    # Maximum (positive)  |
-   | return value of a functi |
-   | on.                      |
-   |     SUCCESS=0            |
-   |     FAILURE=-1           |
-   |                          |
-   |                          |
-   |                          |
-   |     # Functions          |
-   |                          |
-   |     Usage ()             |
-   |    # "Usage:" message.   |
-   |     {                    |
-   |       if [ -z "$1" ]     |
-   |    # No arg passed.      |
-   |       then               |
-   |         msg=filename     |
-   |       else               |
-   |         msg=$@           |
-   |       fi                 |
-   |                          |
-   |       echo "Usage: `base |
-   | name $0` "$msg""         |
-   |     }                    |
-   |                          |
-   |                          |
-   |     Check_if_root ()     |
-   |    # Check if root runni |
-   | ng script.               |
-   |     {                    |
-   |    # From "ex39.sh" exam |
-   | ple.                     |
-   |       if [ "$UID" -ne "$ |
-   | ROOT_UID" ]              |
-   |       then               |
-   |         echo "Must be ro |
-   | ot to run this script."  |
-   |         exit $E_NOTROOT  |
-   |       fi                 |
-   |     }                    |
-   |                          |
-   |                          |
-   |     CreateTempfileName ( |
-   | )  # Creates a "unique"  |
-   | temp filename.           |
-   |     {                    |
-   |    # From "ex51.sh" exam |
-   | ple.                     |
-   |       prefix=temp        |
-   |       suffix=`eval date  |
-   | +%s`                     |
-   |       Tempfilename=$pref |
-   | ix.$suffix               |
-   |     }                    |
-   |                          |
-   |                          |
-   |     isalpha2 ()          |
-   |    # Tests whether *enti |
-   | re string* is alphabetic |
-   | .                        |
-   |     {                    |
-   |    # From "isalpha.sh" e |
-   | xample.                  |
-   |       [ $# -eq 1 ] || re |
-   | turn $FAILURE            |
-   |                          |
-   |       case $1 in         |
-   |       *[!a-zA-Z]*|"") re |
-   | turn $FAILURE;;          |
-   |       *) return $SUCCESS |
-   | ;;                       |
-   |       esac               |
-   |    # Thanks, S.C.        |
-   |     }                    |
-   |                          |
-   |                          |
-   |     abs ()               |
-   |              # Absolute  |
-   | value.                   |
-   |     {                    |
-   |              # Caution:  |
-   | Max return value = 255.  |
-   |       E_ARGERR=-999999   |
-   |                          |
-   |       if [ -z "$1" ]     |
-   |              # Need arg  |
-   | passed.                  |
-   |       then               |
-   |         return $E_ARGERR |
-   |              # Obvious e |
-   | rror value returned.     |
-   |       fi                 |
-   |                          |
-   |       if [ "$1" -ge 0 ]  |
-   |              # If non-ne |
-   | gative,                  |
-   |       then               |
-   |              #           |
-   |         absval=$1        |
-   |              # stays as- |
-   | is.                      |
-   |       else               |
-   |              # Otherwise |
-   | ,                        |
-   |         let "absval = (( |
-   |  0 - $1 ))"  # change si |
-   | gn.                      |
-   |       fi                 |
-   |                          |
-   |       return $absval     |
-   |     }                    |
-   |                          |
-   |                          |
-   |     tolower ()           |
-   |    #  Converts string(s) |
-   |  passed as argument(s)   |
-   |     {                    |
-   |    #+ to lowercase.      |
-   |                          |
-   |       if [ -z "$1" ]     |
-   |    #  If no argument(s)  |
-   | passed,                  |
-   |       then               |
-   |    #+ send error message |
-   |         echo "(null)"    |
-   |    #+ (C-style void-poin |
-   | ter error message)       |
-   |         return           |
-   |    #+ and return from fu |
-   | nction.                  |
-   |       fi                 |
-   |                          |
-   |       echo "$@" | tr A-Z |
-   |  a-z                     |
-   |       # Translate all pa |
-   | ssed arguments ($@).     |
-   |                          |
-   |       return             |
-   |                          |
-   |     # Use command substi |
-   | tution to set a variable |
-   |  to function output.     |
-   |     # For example:       |
-   |     #    oldvar="A seT o |
-   | f miXed-caSe LEtTerS"    |
-   |     #    newvar=`tolower |
-   |  "$oldvar"`              |
-   |     #    echo "$newvar"  |
-   |    # a set of mixed-case |
-   |  letters                 |
-   |     #                    |
-   |     # Exercise: Rewrite  |
-   | this function to change  |
-   | lowercase passed argumen |
-   | t(s)                     |
-   |     #           to upper |
-   | case ... toupper()  [eas |
-   | y].                      |
-   |     }                    |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       # SCRIPT LIBRARY
+       # ------ -------
+
+       # Note:
+       # No "#!" here.
+       # No "live code" either.
+
+
+       # Useful variable definitions
+
+       ROOT_UID=0             # Root has $UID 0.
+       E_NOTROOT=101          # Not root user error. 
+       MAXRETVAL=255          # Maximum (positive) return value of a function.
+       SUCCESS=0
+       FAILURE=-1
+
+
+
+       # Functions
+
+       Usage ()               # "Usage:" message.
+       {
+         if [ -z "$1" ]       # No arg passed.
+         then
+           msg=filename
+         else
+           msg=$@
+         fi
+
+         echo "Usage: `basename $0` "$msg""
+       }  
+
+
+       Check_if_root ()       # Check if root running script.
+       {                      # From "ex39.sh" example.
+         if [ "$UID" -ne "$ROOT_UID" ]
+         then
+           echo "Must be root to run this script."
+           exit $E_NOTROOT
+         fi
+       }  
+
+
+       CreateTempfileName ()  # Creates a "unique" temp filename.
+       {                      # From "ex51.sh" example.
+         prefix=temp
+         suffix=`eval date +%s`
+         Tempfilename=$prefix.$suffix
+       }
+
+
+       isalpha2 ()            # Tests whether *entire string* is alphabetic.
+       {                      # From "isalpha.sh" example.
+         [ $# -eq 1 ] || return $FAILURE
+
+         case $1 in
+         *[!a-zA-Z]*|"") return $FAILURE;;
+         *) return $SUCCESS;;
+         esac                 # Thanks, S.C.
+       }
+
+
+       abs ()                           # Absolute value.
+       {                                # Caution: Max return value = 255.
+         E_ARGERR=-999999
+
+         if [ -z "$1" ]                 # Need arg passed.
+         then
+           return $E_ARGERR             # Obvious error value returned.
+         fi
+
+         if [ "$1" -ge 0 ]              # If non-negative,
+         then                           #
+           absval=$1                    # stays as-is.
+         else                           # Otherwise,
+           let "absval = (( 0 - $1 ))"  # change sign.
+         fi  
+
+         return $absval
+       }
+
+
+       tolower ()             #  Converts string(s) passed as argument(s)
+       {                      #+ to lowercase.
+
+         if [ -z "$1" ]       #  If no argument(s) passed,
+         then                 #+ send error message
+           echo "(null)"      #+ (C-style void-pointer error message)
+           return             #+ and return from function.
+         fi  
+
+         echo "$@" | tr A-Z a-z
+         # Translate all passed arguments ($@).
+
+         return
+
+       # Use command substitution to set a variable to function output.
+       # For example:
+       #    oldvar="A seT of miXed-caSe LEtTerS"
+       #    newvar=`tolower "$oldvar"`
+       #    echo "$newvar"    # a set of mixed-case letters
+       #
+       # Exercise: Rewrite this function to change lowercase passed argument(s)
+       #           to uppercase ... toupper()  [easy].
+       }
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  
 
    Use special-purpose comment headers to increase clarity and
    legibility in scripts.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     ## Caution.          |
-   |     rm -rf *.zzy   ##  T |
-   | he "-rf" options to "rm" |
-   |  are very dangerous,     |
-   |                    ##+ e |
-   | specially with wild card |
-   | s.                       |
-   |                          |
-   |     #+ Line continuation |
-   | .                        |
-   |     #  This is line 1    |
-   |     #+ of a multi-line c |
-   | omment,                  |
-   |     #+ and this is the f |
-   | inal line.               |
-   |                          |
-   |     #* Note.             |
-   |                          |
-   |     #o List item.        |
-   |                          |
-   |     #> Another point of  |
-   | view.                    |
-   |     while [ "$var1" != " |
-   | end" ]    #> while test  |
-   | "$var1" != "end"         |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       ## Caution.
+       rm -rf *.zzy   ##  The "-rf" options to "rm" are very dangerous,
+                      ##+ especially with wild cards.
+
+       #+ Line continuation.
+       #  This is line 1
+       #+ of a multi-line comment,
+       #+ and this is the final line.
+
+       #* Note.
+
+       #o List item.
+
+       #> Another point of view.
+       while [ "$var1" != "end" ]    #> while test "$var1" != "end"
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  
 
@@ -462,91 +319,72 @@ Chapter 36. Miscellany
 
    **Example 36-17. A Progress Bar**
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |     # progress-bar.sh    |
-   |                          |
-   |     # Author: Dotan Bara |
-   | k (very minor revisions  |
-   | by ABS Guide author).    |
-   |     # Used in ABS Guide  |
-   | with permission (thanks! |
-   | ).                       |
-   |                          |
-   |                          |
-   |     BAR_WIDTH=50         |
-   |     BAR_CHAR_START="["   |
-   |     BAR_CHAR_END="]"     |
-   |     BAR_CHAR_EMPTY="."   |
-   |     BAR_CHAR_FULL="="    |
-   |     BRACKET_CHARS=2      |
-   |     LIMIT=100            |
-   |                          |
-   |     print_progress_bar() |
-   |     {                    |
-   |             # Calculate  |
-   | how many characters will |
-   |  be full.                |
-   |             let "full_li |
-   | mit = ((($1 - $BRACKET_C |
-   | HARS) * $2) / $LIMIT)"   |
-   |                          |
-   |             # Calculate  |
-   | how many characters will |
-   |  be empty.               |
-   |             let "empty_l |
-   | imit = ($1 - $BRACKET_CH |
-   | ARS) - ${full_limit}"    |
-   |                          |
-   |             # Prepare th |
-   | e bar.                   |
-   |             bar_line="${ |
-   | BAR_CHAR_START}"         |
-   |             for ((j=0; j |
-   | <full_limit; j++)); do   |
-   |                     bar_ |
-   | line="${bar_line}${BAR_C |
-   | HAR_FULL}"               |
-   |             done         |
-   |                          |
-   |             for ((j=0; j |
-   | <empty_limit; j++)); do  |
-   |                     bar_ |
-   | line="${bar_line}${BAR_C |
-   | HAR_EMPTY}"              |
-   |             done         |
-   |                          |
-   |             bar_line="${ |
-   | bar_line}${BAR_CHAR_END} |
-   | "                        |
-   |                          |
-   |             printf "%3d% |
-   | % %s" $2 ${bar_line}     |
-   |     }                    |
-   |                          |
-   |     # Here is a sample o |
-   | f code that uses it.     |
-   |     MAX_PERCENT=100      |
-   |     for ((i=0; i<=MAX_PE |
-   | RCENT; i++)); do         |
-   |             #            |
-   |             usleep 10000 |
-   |             # ... Or run |
-   |  some other commands ... |
-   |             #            |
-   |             print_progre |
-   | ss_bar ${BAR_WIDTH} ${i} |
-   |             echo -en "\r |
-   | "                        |
-   |     done                 |
-   |                          |
-   |     echo ""              |
-   |                          |
-   |     exit                 |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+       # progress-bar.sh
+
+       # Author: Dotan Barak (very minor revisions by ABS Guide author).
+       # Used in ABS Guide with permission (thanks!).
+
+
+       BAR_WIDTH=50
+       BAR_CHAR_START="["
+       BAR_CHAR_END="]"
+       BAR_CHAR_EMPTY="."
+       BAR_CHAR_FULL="="
+       BRACKET_CHARS=2
+       LIMIT=100
+
+       print_progress_bar()
+       {
+               # Calculate how many characters will be full.
+               let "full_limit = ((($1 - $BRACKET_CHARS) * $2) / $LIMIT)"
+
+               # Calculate how many characters will be empty.
+               let "empty_limit = ($1 - $BRACKET_CHARS) - ${full_limit}"
+
+               # Prepare the bar.
+               bar_line="${BAR_CHAR_START}"
+               for ((j=0; j<full_limit; j++)); do
+                       bar_line="${bar_line}${BAR_CHAR_FULL}"
+               done
+
+               for ((j=0; j<empty_limit; j++)); do
+                       bar_line="${bar_line}${BAR_CHAR_EMPTY}"
+               done
+
+               bar_line="${bar_line}${BAR_CHAR_END}"
+
+               printf "%3d%% %s" $2 ${bar_line}
+       }
+
+       # Here is a sample of code that uses it.
+       MAX_PERCENT=100
+       for ((i=0; i<=MAX_PERCENT; i++)); do
+               #
+               usleep 10000
+               # ... Or run some other commands ...
+               #
+               print_progress_bar ${BAR_WIDTH} ${i}
+               echo -en "\r"
+       done
+
+       echo ""
+
+       exit
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -558,47 +396,44 @@ Chapter 36. Miscellany
    `if-test <testconstructs.html#TESTCONSTRUCTS1>`__ constructs is for
    comment blocks.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |                          |
-   |     COMMENT_BLOCK=       |
-   |     #  Try setting the a |
-   | bove variable to some va |
-   | lue                      |
-   |     #+ for an unpleasant |
-   |  surprise.               |
-   |                          |
-   |     if [ $COMMENT_BLOCK  |
-   | ]; then                  |
-   |                          |
-   |     Comment block --     |
-   |     ==================== |
-   | =============            |
-   |     This is a comment li |
-   | ne.                      |
-   |     This is another comm |
-   | ent line.                |
-   |     This is yet another  |
-   | comment line.            |
-   |     ==================== |
-   | =============            |
-   |                          |
-   |     echo "This will not  |
-   | echo."                   |
-   |                          |
-   |     Comment blocks are e |
-   | rror-free! Whee!         |
-   |                          |
-   |     fi                   |
-   |                          |
-   |     echo "No more commen |
-   | ts, please."             |
-   |                          |
-   |     exit 0               |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+
+       COMMENT_BLOCK=
+       #  Try setting the above variable to some value
+       #+ for an unpleasant surprise.
+
+       if [ $COMMENT_BLOCK ]; then
+
+       Comment block --
+       =================================
+       This is a comment line.
+       This is another comment line.
+       This is yet another comment line.
+       =================================
+
+       echo "This will not echo."
+
+       Comment blocks are error-free! Whee!
+
+       fi
+
+       echo "No more comments, please."
+
+       exit 0
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    Compare this with `using here documents to comment out code
    blocks <here-docs.html#CBLOCK1>`__ .
@@ -610,44 +445,41 @@ Chapter 36. Miscellany
    if a parameter contains only digits, so it can be treated as an
    integer.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |                          |
-   |     SUCCESS=0            |
-   |     E_BADINPUT=85        |
-   |                          |
-   |     test "$1" -ne 0 -o " |
-   | $1" -eq 0 2>/dev/null    |
-   |     # An integer is eith |
-   | er equal to 0 or not equ |
-   | al to 0.                 |
-   |     # 2>/dev/null suppre |
-   | sses error message.      |
-   |                          |
-   |     if [ $? -ne "$SUCCES |
-   | S" ]                     |
-   |     then                 |
-   |       echo "Usage: `base |
-   | name $0` integer-input"  |
-   |       exit $E_BADINPUT   |
-   |     fi                   |
-   |                          |
-   |     let "sum = $1 + 25"  |
-   |             # Would give |
-   |  error if $1 not integer |
-   | .                        |
-   |     echo "Sum = $sum"    |
-   |                          |
-   |     # Any variable, not  |
-   | just a command-line para |
-   | meter, can be tested thi |
-   | s way.                   |
-   |                          |
-   |     exit 0               |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+
+       SUCCESS=0
+       E_BADINPUT=85
+
+       test "$1" -ne 0 -o "$1" -eq 0 2>/dev/null
+       # An integer is either equal to 0 or not equal to 0.
+       # 2>/dev/null suppresses error message.
+
+       if [ $? -ne "$SUCCESS" ]
+       then
+         echo "Usage: `basename $0` integer-input"
+         exit $E_BADINPUT
+       fi
+
+       let "sum = $1 + 25"             # Would give error if $1 not integer.
+       echo "Sum = $sum"
+
+       # Any variable, not just a command-line parameter, can be tested this way.
+
+       exit 0
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -   The 0 - 255 range for function return values is a severe limitation.
    Global variables and other workarounds are often problematic. An
@@ -664,69 +496,51 @@ Chapter 36. Miscellany
 
    **Example 36-18. Return value trickery**
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |     # multiplication.sh  |
-   |                          |
-   |     multiply ()          |
-   |             # Multiplies |
-   |  params passed.          |
-   |     {                    |
-   |             # Will accep |
-   | t a variable number of a |
-   | rgs.                     |
-   |                          |
-   |       local product=1    |
-   |                          |
-   |       until [ -z "$1" ]  |
-   |             # Until uses |
-   |  up arguments passed...  |
-   |       do                 |
-   |         let "product *=  |
-   | $1"                      |
-   |         shift            |
-   |       done               |
-   |                          |
-   |       echo $product      |
-   |             #  Will not  |
-   | echo to stdout,          |
-   |     }                    |
-   |             #+ since thi |
-   | s will be assigned to a  |
-   | variable.                |
-   |                          |
-   |     mult1=15383; mult2=2 |
-   | 5211                     |
-   |     val1=`multiply $mult |
-   | 1 $mult2`                |
-   |     # Assigns stdout (ec |
-   | ho) of function to the v |
-   | ariable val1.            |
-   |     echo "$mult1 X $mult |
-   | 2 = $val1"               |
-   |      # 387820813         |
-   |                          |
-   |     mult1=25; mult2=5; m |
-   | ult3=20                  |
-   |     val2=`multiply $mult |
-   | 1 $mult2 $mult3`         |
-   |     echo "$mult1 X $mult |
-   | 2 X $mult3 = $val2"      |
-   |      # 2500              |
-   |                          |
-   |     mult1=188; mult2=37; |
-   |  mult3=25; mult4=47      |
-   |     val3=`multiply $mult |
-   | 1 $mult2 $mult3 $mult4`  |
-   |     echo "$mult1 X $mult |
-   | 2 X $mult3 X $mult4 = $v |
-   | al3" # 8173300           |
-   |                          |
-   |     exit 0               |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+       # multiplication.sh
+
+       multiply ()                     # Multiplies params passed.
+       {                               # Will accept a variable number of args.
+
+         local product=1
+
+         until [ -z "$1" ]             # Until uses up arguments passed...
+         do
+           let "product *= $1"
+           shift
+         done
+
+         echo $product                 #  Will not echo to stdout,
+       }                               #+ since this will be assigned to a variable.
+
+       mult1=15383; mult2=25211
+       val1=`multiply $mult1 $mult2`
+       # Assigns stdout (echo) of function to the variable val1.
+       echo "$mult1 X $mult2 = $val1"                   # 387820813
+
+       mult1=25; mult2=5; mult3=20
+       val2=`multiply $mult1 $mult2 $mult3`
+       echo "$mult1 X $mult2 X $mult3 = $val2"          # 2500
+
+       mult1=188; mult2=37; mult3=25; mult4=47
+       val3=`multiply $mult1 $mult2 $mult3 $mult4`
+       echo "$mult1 X $mult2 X $mult3 X $mult4 = $val3" # 8173300
+
+       exit 0
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -735,49 +549,37 @@ Chapter 36. Miscellany
    The same technique also works for alphanumeric strings. This means
    that a function can "return" a non-numeric value.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     capitalize_ichar ()  |
-   |          #  Capitalizes  |
-   | initial character        |
-   |     {                    |
-   |          #+ of argument  |
-   | string(s) passed.        |
-   |                          |
-   |       string0="$@"       |
-   |          # Accepts multi |
-   | ple arguments.           |
-   |                          |
-   |       firstchar=${string |
-   | 0:0:1}   # First charact |
-   | er.                      |
-   |       string1=${string0: |
-   | 1}       # Rest of strin |
-   | g(s).                    |
-   |                          |
-   |       FirstChar=`echo "$ |
-   | firstchar" | tr a-z A-Z` |
-   |                          |
-   |          # Capitalize fi |
-   | rst character.           |
-   |                          |
-   |       echo "$FirstChar$s |
-   | tring1"  # Output to std |
-   | out.                     |
-   |                          |
-   |     }                    |
-   |                          |
-   |     newstring=`capitaliz |
-   | e_ichar "every sentence  |
-   | should start with a capi |
-   | tal letter."`            |
-   |     echo "$newstring"    |
-   |        # Every sentence  |
-   | should start with a capi |
-   | tal letter.              |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       capitalize_ichar ()          #  Capitalizes initial character
+       {                            #+ of argument string(s) passed.
+
+         string0="$@"               # Accepts multiple arguments.
+
+         firstchar=${string0:0:1}   # First character.
+         string1=${string0:1}       # Rest of string(s).
+
+         FirstChar=`echo "$firstchar" | tr a-z A-Z`
+                                    # Capitalize first character.
+
+         echo "$FirstChar$string1"  # Output to stdout.
+
+       }  
+
+       newstring=`capitalize_ichar "every sentence should start with a capital letter."`
+       echo "$newstring"          # Every sentence should start with a capital letter.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    It is even possible for a function to "return" multiple values with
    this method.
@@ -788,58 +590,48 @@ Chapter 36. Miscellany
 
    **Example 36-19. Even more return value trickery**
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |     # sum-product.sh     |
-   |     # A function may "re |
-   | turn" more than one valu |
-   | e.                       |
-   |                          |
-   |     sum_and_product ()   |
-   |  # Calculates both sum a |
-   | nd product of passed arg |
-   | s.                       |
-   |     {                    |
-   |       echo $(( $1 + $2 ) |
-   | ) $(( $1 * $2 ))         |
-   |     # Echoes to stdout e |
-   | ach calculated value, se |
-   | parated by space.        |
-   |     }                    |
-   |                          |
-   |     echo                 |
-   |     echo "Enter first nu |
-   | mber "                   |
-   |     read first           |
-   |                          |
-   |     echo                 |
-   |     echo "Enter second n |
-   | umber "                  |
-   |     read second          |
-   |     echo                 |
-   |                          |
-   |     retval=`sum_and_prod |
-   | uct $first $second`      |
-   |  # Assigns output of fun |
-   | ction.                   |
-   |     sum=`echo "$retval"  |
-   | | awk '{print $1}'`      |
-   |  # Assigns first field.  |
-   |     product=`echo "$retv |
-   | al" | awk '{print $2}'`  |
-   |  # Assigns second field. |
-   |                          |
-   |     echo "$first + $seco |
-   | nd = $sum"               |
-   |     echo "$first * $seco |
-   | nd = $product"           |
-   |     echo                 |
-   |                          |
-   |     exit 0               |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+       # sum-product.sh
+       # A function may "return" more than one value.
+
+       sum_and_product ()   # Calculates both sum and product of passed args.
+       {
+         echo $(( $1 + $2 )) $(( $1 * $2 ))
+       # Echoes to stdout each calculated value, separated by space.
+       }
+
+       echo
+       echo "Enter first number "
+       read first
+
+       echo
+       echo "Enter second number "
+       read second
+       echo
+
+       retval=`sum_and_product $first $second`      # Assigns output of function.
+       sum=`echo "$retval" | awk '{print $1}'`      # Assigns first field.
+       product=`echo "$retval" | awk '{print $2}'`  # Assigns second field.
+
+       echo "$first + $second = $sum"
+       echo "$first * $second = $product"
+       echo
+
+       exit 0
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -849,66 +641,74 @@ Chapter 36. Miscellany
 
       <div class="CAUTION">
 
-   +--------------------+--------------------+--------------------+--------------------+
-   | |Caution|          |
-   |  There can be only |
-   | **one** *echo*     |
-   | statement in the   |
-   | function for this  |
-   | to work. If you    |
-   | alter the previous |
-   | example:           |
-   |                    |
-   | +----------------- |
-   | ---------+-------- |
-   | ------------------ |
-   | +----------------- |
-   | ---------+         |
-   | | .. code:: PROGRA |
-   | MLISTING |         |
-   | |                  |
-   |          |         |
-   | |     sum_and_prod |
-   | uct ()   |         |
-   | |     {            |
-   |          |         |
-   | |       echo "This |
-   |  is the  |         |
-   | | sum_and_product  |
-   | function |         |
-   | | ." # This messes |
-   |  things  |         |
-   | | up!              |
-   |          |         |
-   | |       echo $(( $ |
-   | 1 + $2 ) |         |
-   | | ) $(( $1 * $2 )) |
-   |          |         |
-   | |     }            |
-   |          |         |
-   | |     ...          |
-   |          |         |
-   | |     retval=`sum_ |
-   | and_prod |         |
-   | | uct $first $seco |
-   | nd`      |         |
-   | |  # Assigns outpu |
-   | t of fun |         |
-   | | ction.           |
-   |          |         |
-   | |     # Now, this  |
-   | will not |         |
-   | |  work correctly. |
-   |          |         |
-   |                    |
-   |                    |
-   | +----------------- |
-   | ---------+-------- |
-   | ------------------ |
-   | +----------------- |
-   | ---------+         |
-                       
-   +--------------------+--------------------+--------------------+--------------------+
+   .. raw:: html
+
+      <div>
+
+   |Caution|
+
+    There can be only **one** *echo* statement in the function for this
+   to work. If you alter the previous example:
+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     sum_and_product ()   |
+   |     {                    |
+   |       echo "This is the  |
+   | sum_and_product function |
+   | ." # This messes things  |
+   | up!                      |
+   |       echo $(( $1 + $2 ) |
+   | ) $(( $1 * $2 ))         |
+   |     }                    |
+   |     ...                  |
+   |     retval=`sum_and_prod |
+   | uct $first $second`      |
+   |  # Assigns output of fun |
+   | ction.                   |
+   |     # Now, this will not |
+   |  work correctly.         |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   .. raw:: html
+
+      </p>
+
+   .. code:: PROGRAMLISTING
+
+       sum_and_product ()
+       {
+         echo "This is the sum_and_product function." # This messes things up!
+         echo $(( $1 + $2 )) $(( $1 * $2 ))
+       }
+       ...
+       retval=`sum_and_product $first $second`      # Assigns output of function.
+       # Now, this will not work correctly.
+
+   .. raw:: html
+
+      </p>
+
+   .. code:: PROGRAMLISTING
+
+       sum_and_product ()
+       {
+         echo "This is the sum_and_product function." # This messes things up!
+         echo $(( $1 + $2 )) $(( $1 * $2 ))
+       }
+       ...
+       retval=`sum_and_product $first $second`      # Assigns output of function.
+       # Now, this will not work correctly.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -935,156 +735,98 @@ Chapter 36. Miscellany
 
    **Example 36-20. Passing and returning arrays**
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |     # array-function.sh: |
-   |  Passing an array to a f |
-   | unction and ...          |
-   |     #                    |
-   | "returning" an array fro |
-   | m a function             |
-   |                          |
-   |                          |
-   |     Pass_Array ()        |
-   |     {                    |
-   |       local passed_array |
-   |    # Local variable!     |
-   |       passed_array=( `ec |
-   | ho "$1"` )               |
-   |       echo "${passed_arr |
-   | ay[@]}"                  |
-   |       #  List all the el |
-   | ements of the new array  |
-   |       #+ declared and se |
-   | t within the function.   |
-   |     }                    |
-   |                          |
-   |                          |
-   |     original_array=( ele |
-   | ment1 element2 element3  |
-   | element4 element5 )      |
-   |                          |
-   |     echo                 |
-   |     echo "original_array |
-   |  = ${original_array[@]}" |
-   |     #                    |
-   |    List all elements of  |
-   | original array.          |
-   |                          |
-   |                          |
-   |     # This is the trick  |
-   | that permits passing an  |
-   | array to a function.     |
-   |     # ****************** |
-   | ****************         |
-   |     argument=`echo ${ori |
-   | ginal_array[@]}`         |
-   |     # ****************** |
-   | ****************         |
-   |     #  Pack a variable   |
-   |     #+ with all the spac |
-   | e-separated elements of  |
-   | the original array.      |
-   |     #                    |
-   |     # Attempting to just |
-   |  pass the array itself w |
-   | ill not work.            |
-   |                          |
-   |                          |
-   |     # This is the trick  |
-   | that allows grabbing an  |
-   | array as a "return value |
-   | ".                       |
-   |     # ****************** |
-   | ***********************  |
-   |     returned_array=( `Pa |
-   | ss_Array "$argument"` )  |
-   |     # ****************** |
-   | ***********************  |
-   |     # Assign 'echoed' ou |
-   | tput of function to arra |
-   | y variable.              |
-   |                          |
-   |     echo "returned_array |
-   |  = ${returned_array[@]}" |
-   |                          |
-   |     echo "============== |
-   | ======================== |
-   | =======================" |
-   |                          |
-   |     #  Now, try it again |
-   | ,                        |
-   |     #+ attempting to acc |
-   | ess (list) the array fro |
-   | m outside the function.  |
-   |     Pass_Array "$argumen |
-   | t"                       |
-   |                          |
-   |     # The function itsel |
-   | f lists the array, but . |
-   | ..                       |
-   |     #+ accessing the arr |
-   | ay from outside the func |
-   | tion is forbidden.       |
-   |     echo "Passed array ( |
-   | within function) = ${pas |
-   | sed_array[@]}"           |
-   |     # NULL VALUE since t |
-   | he array is a variable l |
-   | ocal to the function.    |
-   |                          |
-   |     echo                 |
-   |                          |
-   |     #################### |
-   | ######################## |
-   |                          |
-   |     # And here is an eve |
-   | n more explicit example: |
-   |                          |
-   |     ret_array ()         |
-   |     {                    |
-   |       for element in {11 |
-   | ..20}                    |
-   |       do                 |
-   |         echo "$element " |
-   |    #  Echo individual el |
-   | ements                   |
-   |       done               |
-   |    #+ of what will be as |
-   | sembled into an array.   |
-   |     }                    |
-   |                          |
-   |     arr=( $(ret_array) ) |
-   |    #  Assemble into arra |
-   | y.                       |
-   |                          |
-   |     echo "Capturing arra |
-   | y \"arr\" from function  |
-   | ret_array () ..."        |
-   |     echo "Third element  |
-   | of array \"arr\" is ${ar |
-   | r[2]}."   # 13  (zero-in |
-   | dexed)                   |
-   |     echo -n "Entire arra |
-   | y is: "                  |
-   |     echo ${arr[@]}       |
-   |           # 11 12 13 14  |
-   | 15 16 17 18 19 20        |
-   |                          |
-   |     echo                 |
-   |                          |
-   |     exit 0               |
-   |                          |
-   |     #  Nathan Coulter po |
-   | ints out that passing ar |
-   | rays with elements conta |
-   | ining                    |
-   |     #+ whitespace breaks |
-   |  this example.           |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+       # array-function.sh: Passing an array to a function and ...
+       #                   "returning" an array from a function
+
+
+       Pass_Array ()
+       {
+         local passed_array   # Local variable!
+         passed_array=( `echo "$1"` )
+         echo "${passed_array[@]}"
+         #  List all the elements of the new array
+         #+ declared and set within the function.
+       }
+
+
+       original_array=( element1 element2 element3 element4 element5 )
+
+       echo
+       echo "original_array = ${original_array[@]}"
+       #                      List all elements of original array.
+
+
+       # This is the trick that permits passing an array to a function.
+       # **********************************
+       argument=`echo ${original_array[@]}`
+       # **********************************
+       #  Pack a variable
+       #+ with all the space-separated elements of the original array.
+       #
+       # Attempting to just pass the array itself will not work.
+
+
+       # This is the trick that allows grabbing an array as a "return value".
+       # *****************************************
+       returned_array=( `Pass_Array "$argument"` )
+       # *****************************************
+       # Assign 'echoed' output of function to array variable.
+
+       echo "returned_array = ${returned_array[@]}"
+
+       echo "============================================================="
+
+       #  Now, try it again,
+       #+ attempting to access (list) the array from outside the function.
+       Pass_Array "$argument"
+
+       # The function itself lists the array, but ...
+       #+ accessing the array from outside the function is forbidden.
+       echo "Passed array (within function) = ${passed_array[@]}"
+       # NULL VALUE since the array is a variable local to the function.
+
+       echo
+
+       ############################################
+
+       # And here is an even more explicit example:
+
+       ret_array ()
+       {
+         for element in {11..20}
+         do
+           echo "$element "   #  Echo individual elements
+         done                 #+ of what will be assembled into an array.
+       }
+
+       arr=( $(ret_array) )   #  Assemble into array.
+
+       echo "Capturing array \"arr\" from function ret_array () ..."
+       echo "Third element of array \"arr\" is ${arr[2]}."   # 13  (zero-indexed)
+       echo -n "Entire array is: "
+       echo ${arr[@]}                # 11 12 13 14 15 16 17 18 19 20
+
+       echo
+
+       exit 0
+
+       #  Nathan Coulter points out that passing arrays with elements containing
+       #+ whitespace breaks this example.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -1111,22 +853,25 @@ Chapter 36. Miscellany
    on a "foreign" machine whose user may have bollixed up the
    ``         $PATH        `` and **umask** .
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |     PATH=/bin:/usr/bin:/ |
-   | usr/local/bin ; export P |
-   | ATH                      |
-   |     umask 022   # Files  |
-   | that the script creates  |
-   | will have 755 permission |
-   | .                        |
-   |                          |
-   |     # Thanks to Ian D. A |
-   | llen, for this tip.      |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+       PATH=/bin:/usr/bin:/usr/local/bin ; export PATH
+       umask 022   # Files that the script creates will have 755 permission.
+
+       # Thanks to Ian D. Allen, for this tip.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  
 
@@ -1135,20 +880,24 @@ Chapter 36. Miscellany
    set of arguments and/or options. Especially suitable for this are
    `tr <textproc.html#TRREF>`__ and `grep <textproc.html#GREPREF>`__ .
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     # From "wstrings.sh" |
-   |  example.                |
-   |                          |
-   |     wlist=`strings "$1"  |
-   | | tr A-Z a-z | tr '[:spa |
-   | ce:]' Z | \              |
-   |     tr -cs '[:alpha:]' Z |
-   |  | tr -s '\173-\377' Z | |
-   |  tr Z ' '`               |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       # From "wstrings.sh" example.
+
+       wlist=`strings "$1" | tr A-Z a-z | tr '[:space:]' Z | \
+       tr -cs '[:alpha:]' Z | tr -s '\173-\377' Z | tr Z ' '`
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -1156,81 +905,59 @@ Chapter 36. Miscellany
 
    **Example 36-21. Fun with anagrams**
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     #!/bin/bash          |
-   |     # agram.sh: Playing  |
-   | games with anagrams.     |
-   |                          |
-   |     # Find anagrams of.. |
-   | .                        |
-   |     LETTERSET=etaoinshrd |
-   | lu                       |
-   |     FILTER='.......'     |
-   |    # How many letters mi |
-   | nimum?                   |
-   |     #       1234567      |
-   |                          |
-   |     anagram "$LETTERSET" |
-   |  | # Find all anagrams o |
-   | f the letterset...       |
-   |     grep "$FILTER" |     |
-   |    # With at least 7 let |
-   | ters,                    |
-   |     grep '^is' |         |
-   |    # starting with 'is'  |
-   |     grep -v 's$' |       |
-   |    # no plurals          |
-   |     grep -v 'ed$'        |
-   |    # no past tense verbs |
-   |     # Possible to add ma |
-   | ny combinations of condi |
-   | tions and filters.       |
-   |                          |
-   |     #  Uses "anagram" ut |
-   | ility                    |
-   |     #+ that is part of t |
-   | he author's "yawl" word  |
-   | list package.            |
-   |     #  http://ibiblio.or |
-   | g/pub/Linux/libs/yawl-0. |
-   | 3.2.tar.gz               |
-   |     #  http://bash.deta. |
-   | in/yawl-0.3.2.tar.gz     |
-   |                          |
-   |     exit 0               |
-   |    # End of code.        |
-   |                          |
-   |                          |
-   |     bash$ sh agram.sh    |
-   |     islander             |
-   |     isolate              |
-   |     isolead              |
-   |     isotheral            |
-   |                          |
-   |                          |
-   |                          |
-   |     #  Exercises:        |
-   |     #  ---------         |
-   |     #  Modify this scrip |
-   | t to take the LETTERSET  |
-   | as a command-line parame |
-   | ter.                     |
-   |     #  Parameterize the  |
-   | filters in lines 11 - 13 |
-   |  (as with $FILTER),      |
-   |     #+ so that they can  |
-   | be specified by passing  |
-   | arguments to a function. |
-   |                          |
-   |     #  For a slightly di |
-   | fferent approach to anag |
-   | ramming,                 |
-   |     #+ see the agram2.sh |
-   |  script.                 |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       #!/bin/bash
+       # agram.sh: Playing games with anagrams.
+
+       # Find anagrams of...
+       LETTERSET=etaoinshrdlu
+       FILTER='.......'       # How many letters minimum?
+       #       1234567
+
+       anagram "$LETTERSET" | # Find all anagrams of the letterset...
+       grep "$FILTER" |       # With at least 7 letters,
+       grep '^is' |           # starting with 'is'
+       grep -v 's$' |         # no plurals
+       grep -v 'ed$'          # no past tense verbs
+       # Possible to add many combinations of conditions and filters.
+
+       #  Uses "anagram" utility
+       #+ that is part of the author's "yawl" word list package.
+       #  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz
+       #  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+       exit 0                 # End of code.
+
+
+       bash$ sh agram.sh
+       islander
+       isolate
+       isolead
+       isotheral
+
+
+
+       #  Exercises:
+       #  ---------
+       #  Modify this script to take the LETTERSET as a command-line parameter.
+       #  Parameterize the filters in lines 11 - 13 (as with $FILTER),
+       #+ so that they can be specified by passing arguments to a function.
+
+       #  For a slightly different approach to anagramming,
+       #+ see the agram2.sh script.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -1253,57 +980,41 @@ Chapter 36. Miscellany
    be installed is dangerous. Use `whatis <filearchiv.html#WHATISREF>`__
    to avoid potential problems with this.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     CMD=command1         |
-   |          # First choice. |
-   |     PlanB=command2       |
-   |          # Fallback opti |
-   | on.                      |
-   |                          |
-   |     command_test=$(whati |
-   | s "$CMD" | grep 'nothing |
-   |  appropriate')           |
-   |     #  If 'command1' not |
-   |  found on system , 'what |
-   | is' will return          |
-   |     #+ "command1: nothin |
-   | g appropriate."          |
-   |     #                    |
-   |     #  A safer alternati |
-   | ve is:                   |
-   |     #     command_test=$ |
-   | (whereis "$CMD" | grep \ |
-   | /)                       |
-   |     #  But then the sens |
-   | e of the following test  |
-   | would have to be reverse |
-   | d,                       |
-   |     #+ since the $comman |
-   | d_test variable holds co |
-   | ntent only if            |
-   |     #+ the $CMD exists o |
-   | n the system.            |
-   |     #     (Thanks, bojst |
-   | er.)                     |
-   |                          |
-   |                          |
-   |     if [[ -z "$command_t |
-   | est" ]]  # Check whether |
-   |  command present.        |
-   |     then                 |
-   |       $CMD option1 optio |
-   | n2       #  Run command1 |
-   |  with options.           |
-   |     else                 |
-   |          #  Otherwise,   |
-   |       $PlanB             |
-   |          #+ run command2 |
-   | .                        |
-   |     fi                   |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       CMD=command1                 # First choice.
+       PlanB=command2               # Fallback option.
+
+       command_test=$(whatis "$CMD" | grep 'nothing appropriate')
+       #  If 'command1' not found on system , 'whatis' will return
+       #+ "command1: nothing appropriate."
+       #
+       #  A safer alternative is:
+       #     command_test=$(whereis "$CMD" | grep \/)
+       #  But then the sense of the following test would have to be reversed,
+       #+ since the $command_test variable holds content only if
+       #+ the $CMD exists on the system.
+       #     (Thanks, bojster.)
+
+
+       if [[ -z "$command_test" ]]  # Check whether command present.
+       then
+         $CMD option1 option2       #  Run command1 with options.
+       else                         #  Otherwise,
+         $PlanB                     #+ run command2. 
+       fi
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  
 
@@ -1312,86 +1023,84 @@ Chapter 36. Miscellany
    ``         stderr        `` , rather that ``         stdout        ``
    .
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     if ls -l nonexistent |
-   | _filename | grep -q 'No  |
-   | such file or directory'  |
-   |       then echo "File \" |
-   | nonexistent_filename\" d |
-   | oes not exist."          |
-   |     fi                   |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       if ls -l nonexistent_filename | grep -q 'No such file or directory'
+         then echo "File \"nonexistent_filename\" does not exist."
+       fi
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    `Redirecting <io-redirection.html#IOREDIRREF>`__
    ``         stderr        `` to ``         stdout        `` fixes
    this.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     if ls -l nonexistent |
-   | _filename 2>&1 | grep -q |
-   |  'No such file or direct |
-   | ory'                     |
-   |     #                    |
-   |           ^^^^           |
-   |       then echo "File \" |
-   | nonexistent_filename\" d |
-   | oes not exist."          |
-   |     fi                   |
-   |                          |
-   |     # Thanks, Chris Mart |
-   | in, for pointing this ou |
-   | t.                       |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       if ls -l nonexistent_filename 2>&1 | grep -q 'No such file or directory'
+       #                             ^^^^
+         then echo "File \"nonexistent_filename\" does not exist."
+       fi
+
+       # Thanks, Chris Martin, for pointing this out.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -   If you absolutely must access a subshell variable outside the
    subshell, here's a way to do it.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     TMPFILE=tmpfile      |
-   |              # Create a  |
-   | temp file to store the v |
-   | ariable.                 |
-   |                          |
-   |     (   # Inside the sub |
-   | shell ...                |
-   |     inner_variable=Inner |
-   |     echo $inner_variable |
-   |     echo $inner_variable |
-   |  >>$TMPFILE  # Append to |
-   |  temp file.              |
-   |     )                    |
-   |                          |
-   |         # Outside the su |
-   | bshell ...               |
-   |                          |
-   |     echo; echo "-----";  |
-   | echo                     |
-   |     echo $inner_variable |
-   |              # Null, as  |
-   | expected.                |
-   |     echo "-----"; echo   |
-   |                          |
-   |     # Now ...            |
-   |     read inner_variable  |
-   | <$TMPFILE    # Read back |
-   |  shell variable.         |
-   |     rm -f "$TMPFILE"     |
-   |              # Get rid o |
-   | f temp file.             |
-   |     echo "$inner_variabl |
-   | e"           # It's an u |
-   | gly kludge, but it works |
-   | .                        |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       TMPFILE=tmpfile                  # Create a temp file to store the variable.
+
+       (   # Inside the subshell ...
+       inner_variable=Inner
+       echo $inner_variable
+       echo $inner_variable >>$TMPFILE  # Append to temp file.
+       )
+
+           # Outside the subshell ...
+
+       echo; echo "-----"; echo
+       echo $inner_variable             # Null, as expected.
+       echo "-----"; echo
+
+       # Now ...
+       read inner_variable <$TMPFILE    # Read back shell variable.
+       rm -f "$TMPFILE"                 # Get rid of temp file.
+       echo "$inner_variable"           # It's an ugly kludge, but it works.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  
 
@@ -1411,14 +1120,21 @@ Chapter 36. Miscellany
    ``                   # $Id$                 `` in a script with
    something like:
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     # $Id: hello-world.s |
-   | h,v 1.1 2004/10/16 02:43 |
-   | :05 bozo Exp $           |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       # $Id: hello-world.sh,v 1.1 2004/10/16 02:43:05 bozo Exp $
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 .. raw:: html
 
@@ -1443,20 +1159,25 @@ obtain *widtools*
 
    <div class="CAUTION">
 
-+--------------------------------------+--------------------------------------+
-| |Caution|                            |
-| The *widtools* (widget tools)        |
-| package requires the *XForms*        |
-| library to be installed.             |
-| Additionally, the                    |
-| `Makefile <filearchiv.html#MAKEFILER |
-| EF>`__                               |
-| needs some judicious editing before  |
-| the package will build on a typical  |
-| Linux system. Finally, three of the  |
-| six widgets offered do not work      |
-| (and, in fact, segfault).            |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Caution|
+
+The *widtools* (widget tools) package requires the *XForms* library to
+be installed. Additionally, the
+`Makefile <filearchiv.html#MAKEFILEREF>`__ needs some judicious editing
+before the package will build on a typical Linux system. Finally, three
+of the six widgets offered do not work (and, in fact, segfault).
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -1473,112 +1194,77 @@ X-Windows-based widget sets.
 
 **Example 36-22. Widgets invoked from a shell script**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # dialog.sh: Using ' |
-| gdialog' widgets.        |
-|                          |
-|     # Must have 'gdialog |
-| ' installed on your syst |
-| em to run this script.   |
-|     # Or, you can replac |
-| e all instance of 'gdial |
-| og' below with 'kdialog' |
-|  ...                     |
-|     # Version 1.1 (corre |
-| cted 04/05/05)           |
-|                          |
-|     # This script was in |
-| spired by the following  |
-| article.                 |
-|     #     "Scripting for |
-|  X Productivity," by Mar |
-| co Fioretti,             |
-|     #      LINUX JOURNAL |
-| , Issue 113, September 2 |
-| 003, pp. 86-9.           |
-|     # Thank you, all you |
-|  good people at LJ.      |
-|                          |
-|                          |
-|     # Input error in dia |
-| log box.                 |
-|     E_INPUT=85           |
-|     # Dimensions of disp |
-| lay, input widgets.      |
-|     HEIGHT=50            |
-|     WIDTH=60             |
-|                          |
-|     # Output file name ( |
-| constructed out of scrip |
-| t name).                 |
-|     OUTFILE=$0.output    |
-|                          |
-|     # Display this scrip |
-| t in a text widget.      |
-|     gdialog --title "Dis |
-| playing: $0" --textbox $ |
-| 0 $HEIGHT $WIDTH         |
-|                          |
-|                          |
-|                          |
-|     # Now, we'll try sav |
-| ing input in a file.     |
-|     echo -n "VARIABLE="  |
-| > $OUTFILE               |
-|     gdialog --title "Use |
-| r Input" --inputbox "Ent |
-| er variable, please:" \  |
-|     $HEIGHT $WIDTH 2>> $ |
-| OUTFILE                  |
-|                          |
-|                          |
-|     if [ "$?" -eq 0 ]    |
-|     # It's good practice |
-|  to check exit status.   |
-|     then                 |
-|       echo "Executed \"d |
-| ialog box\" without erro |
-| rs."                     |
-|     else                 |
-|       echo "Error(s) in  |
-| \"dialog box\" execution |
-| ."                       |
-|             # Or, clicke |
-| d on "Cancel", instead o |
-| f "OK" button.           |
-|       rm $OUTFILE        |
-|       exit $E_INPUT      |
-|     fi                   |
-|                          |
-|                          |
-|                          |
-|     # Now, we'll retriev |
-| e and display the saved  |
-| variable.                |
-|     . $OUTFILE   # 'Sour |
-| ce' the saved file.      |
-|     echo "The variable i |
-| nput in the \"input box\ |
-| " was: "$VARIABLE""      |
-|                          |
-|                          |
-|     rm $OUTFILE  # Clean |
-|  up by removing the temp |
-|  file.                   |
-|                  # Some  |
-| applications may need to |
-|  retain this file.       |
-|                          |
-|     exit $?              |
-|                          |
-|     # Exercise: Rewrite  |
-| this script using the 'z |
-| enity' widget set.       |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # dialog.sh: Using 'gdialog' widgets.
+
+    # Must have 'gdialog' installed on your system to run this script.
+    # Or, you can replace all instance of 'gdialog' below with 'kdialog' ...
+    # Version 1.1 (corrected 04/05/05)
+
+    # This script was inspired by the following article.
+    #     "Scripting for X Productivity," by Marco Fioretti,
+    #      LINUX JOURNAL, Issue 113, September 2003, pp. 86-9.
+    # Thank you, all you good people at LJ.
+
+
+    # Input error in dialog box.
+    E_INPUT=85
+    # Dimensions of display, input widgets.
+    HEIGHT=50
+    WIDTH=60
+
+    # Output file name (constructed out of script name).
+    OUTFILE=$0.output
+
+    # Display this script in a text widget.
+    gdialog --title "Displaying: $0" --textbox $0 $HEIGHT $WIDTH
+
+
+
+    # Now, we'll try saving input in a file.
+    echo -n "VARIABLE=" > $OUTFILE
+    gdialog --title "User Input" --inputbox "Enter variable, please:" \
+    $HEIGHT $WIDTH 2>> $OUTFILE
+
+
+    if [ "$?" -eq 0 ]
+    # It's good practice to check exit status.
+    then
+      echo "Executed \"dialog box\" without errors."
+    else
+      echo "Error(s) in \"dialog box\" execution."
+            # Or, clicked on "Cancel", instead of "OK" button.
+      rm $OUTFILE
+      exit $E_INPUT
+    fi
+
+
+
+    # Now, we'll retrieve and display the saved variable.
+    . $OUTFILE   # 'Source' the saved file.
+    echo "The variable input in the \"input box\" was: "$VARIABLE""
+
+
+    rm $OUTFILE  # Clean up by removing the temp file.
+                 # Some applications may need to retain this file.
+
+    exit $?
+
+    # Exercise: Rewrite this script using the 'zenity' widget set.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -1587,44 +1273,51 @@ X-Windows-based widget sets.
  The `xmessage <extmisc.html#XMESSAGEREF>`__ command is a simple method
 of popping up a message/query window. For example:
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     xmessage Fatal error |
-|  in script! -button exit |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    xmessage Fatal error in script! -button exit
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
  The latest entry in the widget sweepstakes is
 `zenity <extmisc.html#ZENITYREF>`__ . This utility pops up *GTK+* dialog
 widgets-and-windows, and it works very nicely within a script.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     get_info ()          |
-|     {                    |
-|       zenity --entry     |
-|    #  Pops up query wind |
-| ow . . .                 |
-|                          |
-|    #+ and prints user en |
-| try to stdout.           |
-|                          |
-|                          |
-|    #  Also try the --cal |
-| endar and --scale option |
-| s.                       |
-|     }                    |
-|                          |
-|     answer=$( get_info ) |
-|    #  Capture stdout in  |
-| $answer variable.        |
-|                          |
-|     echo "User entered:  |
-| "$answer""               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    get_info ()
+    {
+      zenity --entry       #  Pops up query window . . .
+                           #+ and prints user entry to stdout.
+
+                           #  Also try the --calendar and --scale options.
+    }
+
+    answer=$( get_info )   #  Capture stdout in $answer variable.
+
+    echo "User entered: "$answer""
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 For other methods of scripting with widgets, try *Tk* or *wish* ( *Tcl*
 derivatives), *PerlTk* ( *Perl* with *Tk* extensions), *tksh* ( *ksh*
@@ -1635,24 +1328,6 @@ with *Tk* extensions), *XForms4Perl* ( *Perl* with *XForms* extensions),
 .. raw:: html
 
    </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <optimizations.htm | Optimizations            |
-| l>`__                    | `Up <miscellany.html>`__ |
-| `Home <index.html>`__    | Security Issues          |
-| `Next <securityissues.ht |                          |
-| ml>`__                   |                          |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

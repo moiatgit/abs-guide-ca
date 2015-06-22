@@ -11,30 +11,6 @@
   <link href="variables.html" rel="NEXT" title="Introduction to Variables and Parameters"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="part2.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="variables.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="SPECIAL-CHARS">
@@ -116,30 +92,26 @@
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># This line is a comment.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># This line is a comment.</pre>
+        </font>
+       </p>
+      </div>
       <p>
        Comments may also occur following the end of a command.
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo "A comment will follow." # Comment here.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo "A comment will follow." # Comment here.
 #                            ^ Note whitespace before #</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="WSBCOMM">
        </a>
@@ -152,15 +124,13 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">     # A tab precedes this comment.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">     # A tab precedes this comment.</pre>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="COMMINPIPE">
        </a>
@@ -173,90 +143,85 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
 # Delete lines containing '#' comment character.
            sed -e 's/\./\. /g' -e 's/_/_ /g'` )
 # Excerpted from life.sh script</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           A command may not follow a comment on the
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          A command may not follow a comment on the
 	      same line. There is no method of terminating the comment,
 	      in order for
-           <span class="QUOTE">
-            "live code"
-           </span>
-           to begin on the same
+          <span class="QUOTE">
+           "live code"
+          </span>
+          to begin on the same
 	      line. Use a new line for the next command.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Of course, a
-           <a href="quoting.html#QUOTINGREF">
-            quoted
-           </a>
-           or an
-           <a href="escapingsection.html#ESCP">
-            escaped
-           </a>
-           <span class="TOKEN">
-            #
-           </span>
-           in an
-           <a href="internal.html#ECHOREF">
-            echo
-           </a>
-           statement does
-           <em>
-            not
-           </em>
-           begin a comment. Likewise, a
-           <span class="TOKEN">
-            #
-           </span>
-           appears in
-           <a href="parameter-substitution.html#PSUB2">
-            certain
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Of course, a
+          <a href="quoting.html#QUOTINGREF">
+           quoted
+          </a>
+          or an
+          <a href="escapingsection.html#ESCP">
+           escaped
+          </a>
+          <span class="TOKEN">
+           #
+          </span>
+          in an
+          <a href="internal.html#ECHOREF">
+           echo
+          </a>
+          statement does
+          <em>
+           not
+          </em>
+          begin a comment. Likewise, a
+          <span class="TOKEN">
+           #
+          </span>
+          appears in
+          <a href="parameter-substitution.html#PSUB2">
+           certain
 	    parameter-substitution constructs
-           </a>
-           and in
-           <a href="numerical-constants.html#NUMCONSTANTS">
-            numerical constant expressions
-           </a>
-           .
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">echo "The # here does not begin a comment."
+          </a>
+          and in
+          <a href="numerical-constants.html#NUMCONSTANTS">
+           numerical constant expressions
+          </a>
+          .
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">echo "The # here does not begin a comment."
 echo 'The # here does not begin a comment.'
 echo The \# here does not begin a comment.
 echo The # here begins a comment.
@@ -265,19 +230,43 @@ echo ${PATH#*:}       # Parameter substitution, not a comment.
 echo $(( 2#101011 ))  # Base conversion, not a comment.
 
 # Thanks, S.C.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          The standard
-          <a href="quoting.html#QUOTINGREF">
-           quoting and
+            </font>
+           </td>
+          </tr>
+         </table>         The standard
+         <a href="quoting.html#QUOTINGREF">
+          quoting and
 	  escape
-          </a>
-          characters (" ' \) escape the #.
-         </td>
-        </tr>
-       </table>
+         </a>
+         characters (" ' \) escape the #.
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">echo "The # here does not begin a comment."
+echo 'The # here does not begin a comment.'
+echo The \# here does not begin a comment.
+echo The # here begins a comment.
+
+echo ${PATH#*:}       # Parameter substitution, not a comment.
+echo $(( 2#101011 ))  # Base conversion, not a comment.
+
+# Thanks, S.C.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">echo "The # here does not begin a comment."
+echo 'The # here does not begin a comment.'
+echo The \# here does not begin a comment.
+echo The # here begins a comment.
+
+echo ${PATH#*:}       # Parameter substitution, not a comment.
+echo $(( 2#101011 ))  # Base conversion, not a comment.
+
+# Thanks, S.C.</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Certain
@@ -311,11 +300,10 @@ echo $(( 2#101011 ))  # Base conversion, not a comment.
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo hello; echo there
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo hello; echo there
 
 
 if [ -x "$filename" ]; then    #  Note the space after the semicolon.
@@ -324,10 +312,9 @@ if [ -x "$filename" ]; then    #  Note the space after the semicolon.
 else   #                       ^^
   echo "File $filename not found."; touch $filename
 fi; echo "File test complete."</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Note that the
        <span class="QUOTE">
@@ -367,18 +354,16 @@ fi; echo "File test complete."</pre>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">case "$variable" in
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">case "$variable" in
   abc)  echo "\$variable = abc" ;;
   xyz)  echo "\$variable = xyz" ;;
 esac</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <span class="TOKEN">
@@ -468,11 +453,10 @@ esac</pre>
         </a>
         will not normally show.
        </p>
-       <table bgcolor="#E0E0E0" border="1" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>touch .hidden-file</b></tt>
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>touch .hidden-file</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>	      
 <tt class="COMPUTEROUTPUT">total 10
  -rw-r--r--    1 bozo      4034 Jul 18 22:04 data1.addressbook
@@ -489,10 +473,9 @@ esac</pre>
  -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.addressbook
  -rw-rw-r--    1 bozo  bozo         0 Aug 29 20:54 .hidden-file</tt>
 	        </pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="DOTDIRECTORY">
@@ -514,11 +497,10 @@ esac</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pwd</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pwd</b></tt>
 <tt class="COMPUTEROUTPUT">/home/bozo/projects</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cd .</b></tt>
@@ -529,10 +511,9 @@ esac</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pwd</b></tt>
 <tt class="COMPUTEROUTPUT">/home/bozo/</tt>
 	        </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <i class="FIRSTTERM">
@@ -549,16 +530,14 @@ esac</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cp /home/bozo/current_work/junk/* .</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cp /home/bozo/current_work/junk/* .</b></tt>
 	        </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       Copy all the
       <span class="QUOTE">
        "junk"
@@ -700,16 +679,14 @@ esac</pre>
 		series of arithmetic operations. All are evaluated,
 		but only the last one is returned.
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">let "t2 = ((a = 9, 15 / 3))"
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">let "t2 = ((a = 9, 15 / 3))"
 # Set "a = 9" and "t2 = 15 / 3"</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="COMMAOP2">
@@ -720,11 +697,10 @@ esac</pre>
        </i>
        operator can also concatenate strings.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">for file in /{,usr/}bin/*calc
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">for file in /{,usr/}bin/*calc
 #             ^    Find all executable files ending in "calc"
 #+                 in /bin and /usr/bin directories.
 do
@@ -741,10 +717,9 @@ done
 
 
 # Thank you, Rory Winston, for pointing this out.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <span class="TOKEN">
@@ -968,26 +943,23 @@ done
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">:
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">:
 echo $?   # 0</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Endless loop:
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">while :
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">while :
 do
    operation-1
    operation-2
@@ -1000,28 +972,25 @@ done
 #    do
 #      ...
 #    done</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Placeholder in if/then test:
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">if condition
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">if condition
 then :   # Do nothing and branch ahead
 else     # Or else ...
    take-some-action
 fi</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Provide a placeholder where a binary operation is
 	      expected, see
@@ -1036,19 +1005,17 @@ fi</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">: ${username=`whoami`}
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">: ${username=`whoami`}
 # ${username=`whoami`}   Gives an error without the leading :
 #                        unless "username" is a command or builtin...
 
 : ${1?"Usage: $0 ARGUMENT"}     # From "usage-message.sh example script.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Provide a placeholder where a command is expected in a
        <a href="here-docs.html#HEREDOCREF">
@@ -1071,17 +1038,15 @@ fi</pre>
        </a>
        ).
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">: ${HOSTNAME?} ${USER?} ${MAIL?}
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">: ${HOSTNAME?} ${USER?} ${MAIL?}
 #  Prints error message
 #+ if one or more of essential environmental variables not set.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <b class="COMMAND">
         <a href="parameter-substitution.html#EXPREPL1">
@@ -1104,18 +1069,16 @@ fi</pre>
 	      permissions. If the file did not previously exist,
 	      creates it.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">: &gt; data.xxx   # File "data.xxx" now empty.	      
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">: &gt; data.xxx   # File "data.xxx" now empty.	      
 
 # Same effect as   cat /dev/null &gt;data.xxx
 # However, this does not fork a new process, since ":" is a builtin.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       See also
       <a href="textproc.html#EX12">
        Example 16-15
@@ -1139,21 +1102,19 @@ fi</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="REGFILEREF">
-           </a>
-           This applies to regular files,
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="REGFILEREF">
+          </a>
+          This applies to regular files,
         not pipes, symlinks, and certain special files.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        May be used to begin a comment line, although this is not
@@ -1170,15 +1131,13 @@ fi</pre>
        </span>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">: This is a comment that generates an error, ( if [ $x -eq 3] ).</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">: This is a comment that generates an error, ( if [ $x -eq 3] ).</pre>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <span class="QUOTE">
@@ -1205,16 +1164,14 @@ fi</pre>
        </a>
        variable.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $PATH</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $PATH</b></tt>
 <tt class="COMPUTEROUTPUT">/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="COLONFNAME">
        </a>
@@ -1230,11 +1187,10 @@ fi</pre>
        </a>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">:()
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">:()
 {
   echo "The name of this function is "$FUNCNAME" "
   # Why use a colon as a function name?
@@ -1244,10 +1200,9 @@ fi</pre>
 :
 
 # The name of this function is :</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       This is not
       <a href="portabilityissues.html">
        portable
@@ -1275,18 +1230,16 @@ fi</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">not_empty ()
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">not_empty ()
 {
   :
 } # Contains a : (null command), and so is not empty.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="NOTREF">
@@ -1406,17 +1359,15 @@ fi</pre>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo *</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo *</b></tt>
 <tt class="COMPUTEROUTPUT">abs-book.sgml add-drive.sh agram.sh alias.sh</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="ASTERISKREF2">
        </a>
@@ -1541,11 +1492,10 @@ fi</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">(( var0 = var1&lt;98?9:21 ))
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">(( var0 = var1&lt;98?9:21 ))
 #                ^ ^
 
 # if [ "$var1" -lt 98 ]
@@ -1554,10 +1504,9 @@ fi</pre>
 # else
 #   var0=21
 # fi</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        In a
        <a href="parameter-substitution.html#PARAMSUBREF">
@@ -1632,19 +1581,17 @@ fi</pre>
          (contents of a variable).
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">var1=5
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">var1=5
 var2=23skidoo
 
 echo $var1     # 5
 echo $var2     # 23skidoo</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="VARPREFIXREF">
@@ -1834,64 +1781,78 @@ echo $var2     # 23skidoo</pre>
          command group.
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">(a=hello; echo $a)</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">(a=hello; echo $a)</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="IMPORTANT">
        <p>
        </p>
-       <table border="0" class="IMPORTANT" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Important" hspace="5" src="../images/important.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           A listing of commands within
-           <tt class="REPLACEABLE">
-            <i>
-             parentheses
-            </i>
-           </tt>
-           starts a
-           <a href="subshells.html#SUBSHELLSREF">
-            subshell
-           </a>
-           .
-          </p>
-          <p>
-           Variables inside parentheses, within the subshell, are not
+       <div>
+        <p>
+         <img alt="Important" hspace="5" src="../images/important.gif"/>
+        </p>
+        <p>
+         <p>
+          A listing of commands within
+          <tt class="REPLACEABLE">
+           <i>
+            parentheses
+           </i>
+          </tt>
+          starts a
+          <a href="subshells.html#SUBSHELLSREF">
+           subshell
+          </a>
+          .
+         </p>
+         <p>
+          Variables inside parentheses, within the subshell, are not
 	      visible to the rest of the script. The parent process,
 	      the script,
-           <a href="subshells.html#PARVIS">
-            cannot read variables
+          <a href="subshells.html#PARVIS">
+           cannot read variables
 	      created in the child process
-           </a>
-           , the subshell.
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">a=123
+          </a>
+          , the subshell.
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">a=123
 ( a=321; )	      
 
 echo "a = $a"   # a = 123
 # "a" within parentheses acts like a local variable.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">a=123
+( a=321; )	      
+
+echo "a = $a"   # a = 123
+# "a" within parentheses acts like a local variable.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">a=123
+( a=321; )	      
+
+echo "a = $a"   # a = 123
+# "a" within parentheses acts like a local variable.</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="FORMALPARA">
        <p>
@@ -1901,15 +1862,13 @@ echo "a = $a"   # a = 123
         <a name="ARRAYINIT1">
         </a>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">Array=(element1 element2 element3)</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">Array=(element1 element2 element3)</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1926,11 +1885,10 @@ echo "a = $a"   # a = 123
         <a name="BRACEEXPREF">
         </a>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">echo \"{These,words,are,quoted}\"   # " prefix and suffix
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">echo \"{These,words,are,quoted}\"   # " prefix and suffix
 # "These" "words" "are" "quoted"
 
 
@@ -1939,10 +1897,9 @@ cat {file1,file2,file3} &gt; combined_file
 
 cp file22.{txt,backup}
 # Copies "file22.txt" to "file22.backup"</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        A command may act upon a comma-separated list of file specs within
@@ -1967,34 +1924,32 @@ cp file22.{txt,backup}
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           No spaces allowed within the braces
-           <em>
-            unless
-           </em>
-           the spaces are quoted or escaped.
-          </p>
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             echo {file1,file2}\ :{\ A," B",' C'}
-            </b>
-           </tt>
-          </p>
-          <p>
-           <tt class="COMPUTEROUTPUT">
-            file1 : A file1 : B file1 : C file2 : A file2 : B file2 : C
-           </tt>
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          No spaces allowed within the braces
+          <em>
+           unless
+          </em>
+          the spaces are quoted or escaped.
+         </p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            echo {file1,file2}\ :{\ A," B",' C'}
+           </b>
+          </tt>
+         </p>
+         <p>
+          <tt class="COMPUTEROUTPUT">
+           file1 : A file1 : B file1 : C file2 : A file2 : B file2 : C
+          </tt>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2011,11 +1966,10 @@ cp file22.{txt,backup}
          Extended Brace expansion.
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
 # Echoes characters between a and z.
 
 echo {0..3} # 0 1 2 3
@@ -2025,10 +1979,9 @@ echo {0..3} # 0 1 2 3
 base64_charset=( {A..Z} {a..z} {0..9} + / = )
 # Initializing an array, using extended brace expansion.
 # From vladz's "base64.sh" example script.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        The
@@ -2089,34 +2042,30 @@ base64_charset=( {A..Z} {a..z} {0..9} + / = )
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>{ local a;
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>{ local a;
 	      a=123; }</b></tt>
 <tt class="COMPUTEROUTPUT">bash: local: can only be used in a
 function</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">a=123
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">a=123
 { a=321; }
 echo "a = $a"   # a = 321   (value inside code block)
 
 # Thanks, S.C.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="BLOCKIO">
        </a>
@@ -2137,11 +2086,10 @@ echo "a = $a"   # a = 321   (value inside code block)
          Example 3-1. Code blocks and I/O redirection
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Reading lines in /etc/fstab.
 
 File=/etc/fstab
@@ -2162,10 +2110,9 @@ exit 0
 # Now, how do you parse the separate fields of each line?
 # Hint: use awk, or . . .
 # . . . Hans-Joerg Diers suggests using the "set" Bash builtin.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="BLOCKIO2">
@@ -2179,11 +2126,10 @@ exit 0
          Example 3-2. Saving the output of a code block to a file
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # rpm-check.sh
 
 #  Queries an rpm file for description, listing,
@@ -2224,55 +2170,52 @@ echo "Results of rpm test in file $1.test"
 # See rpm man page for explanation of options.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Unlike a command group within (parentheses),
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Unlike a command group within (parentheses),
 	      as above, a code block enclosed by {braces} will
-           <em>
-            not
-           </em>
-           normally launch a
-           <a href="subshells.html#SUBSHELLSREF">
-            subshell
-           </a>
-           .
-           <a href="special-chars.html#FTN.AEN1199" name="AEN1199">
-            <span class="footnote">
-             [6]
-            </span>
-           </a>
-          </p>
-          <p>
-           It is possible to
-           <a href="loops1.html#ITERATIONREF">
-            iterate
-           </a>
-           a code block
+          <em>
+           not
+          </em>
+          normally launch a
+          <a href="subshells.html#SUBSHELLSREF">
+           subshell
+          </a>
+          .
+          <a href="special-chars.html#FTN.AEN1199" name="AEN1199">
+           <span class="footnote">
+            [6]
+           </span>
+          </a>
+         </p>
+         <p>
+          It is possible to
+          <a href="loops1.html#ITERATIONREF">
+           iterate
+          </a>
+          a code block
                 using a
-           <a href="loops1.html#NODODONE">
-            non-standard
-            <i class="FIRSTTERM">
-             for-loop
-            </i>
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="loops1.html#NODODONE">
+           non-standard
+           <i class="FIRSTTERM">
+            for-loop
+           </i>
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2308,18 +2251,16 @@ exit 0</pre>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">ls . | xargs -i -t cp ./{} $1
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">ls . | xargs -i -t cp ./{} $1
 #            ^^         ^^
 
 # From "ex42.sh" (copydir.sh) example.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="SEMICOLONESC">
        </a>
@@ -2351,84 +2292,80 @@ exit 0</pre>
         .
        </p>
       </div>
-      <table border="1" cellpadding="5" class="SIDEBAR">
-       <tr>
-        <td>
-         <div class="SIDEBAR">
-          <a name="AEN1234">
+      <div>
+       <p>
+        <div class="SIDEBAR">
+         <a name="AEN1234">
+         </a>
+         <p>
+         </p>
+         <p>
+          <a name="PATHNAMEREF">
           </a>
-          <p>
-          </p>
-          <p>
-           <a name="PATHNAMEREF">
-           </a>
-          </p>
-          <p>
-           Definition: A
-           <i class="FIRSTTERM">
-            pathname
-           </i>
-           is a
-           <i class="FIRSTTERM">
-            filename
-           </i>
-           that includes the
+         </p>
+         <p>
+          Definition: A
+          <i class="FIRSTTERM">
+           pathname
+          </i>
+          is a
+          <i class="FIRSTTERM">
+           filename
+          </i>
+          that includes the
               complete
-           <a href="internalvariables.html#PATHREF">
-            path
-           </a>
-           .  As an example,
-           <tt class="FILENAME">
-            /home/bozo/Notes/Thursday/schedule.txt
-           </tt>
-           .
+          <a href="internalvariables.html#PATHREF">
+           path
+          </a>
+          .  As an example,
+          <tt class="FILENAME">
+           /home/bozo/Notes/Thursday/schedule.txt
+          </tt>
+          .
               This is sometimes referred to as the
-           <i class="FIRSTTERM">
-            absolute
+          <i class="FIRSTTERM">
+           absolute
               path
-           </i>
-           .
-          </p>
-          <p>
-          </p>
-         </div>
-        </td>
-       </tr>
-      </table>
+          </i>
+          .
+         </p>
+         <p>
+         </p>
+        </div>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <span class="QUOTE">
-            "
-            <span class="TOKEN">
-             ;
-            </span>
-            "
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <span class="QUOTE">
+           "
+           <span class="TOKEN">
+            ;
            </span>
-           ends
+           "
+          </span>
+          ends
 		the
-           <tt class="OPTION">
-            -exec
-           </tt>
-           option of a
-           <b class="COMMAND">
-            find
-           </b>
-           command sequence.  It needs
+          <tt class="OPTION">
+           -exec
+          </tt>
+          option of a
+          <b class="COMMAND">
+           find
+          </b>
+          command sequence.  It needs
 		to be escaped to protect it from interpretation by the
 		shell.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2539,16 +2476,14 @@ exit 0</pre>
        ,
 	       brackets set off the numbering of each element of that array.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">Array[1]=slot_1
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">Array[1]=slot_1
 echo ${Array[1]}</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <span class="TOKEN">
@@ -2599,19 +2534,17 @@ echo ${Array[1]}</pre>
        </span>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">a=3
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">a=3
 b=7
 
 echo $[$a+$b]   # 10
 echo $[$a*$b]   # 21</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Note that this usage is
        <em>
@@ -2738,46 +2671,44 @@ echo $[$a*$b]   # 21</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="DEVNULLREDIRECT">
-           </a>
-           This is useful for suppressing output when
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="DEVNULLREDIRECT">
+          </a>
+          This is useful for suppressing output when
                 testing for a condition. For example, let us
                 test whether a certain command exists.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type bogus_command &amp;&gt;/dev/null</b></tt>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type bogus_command &amp;&gt;/dev/null</b></tt>
 <tt class="COMPUTEROUTPUT"></tt>
 
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $?</b></tt>
 <tt class="COMPUTEROUTPUT">1</tt>
                     </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           Or in a script:
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">command_test () { type "$1" &amp;&gt;/dev/null; }
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          Or in a script:
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">command_test () { type "$1" &amp;&gt;/dev/null; }
 #                                      ^
 
 cmd=rmdir            # Legitimate command.
@@ -2786,13 +2717,60 @@ command_test $cmd; echo $?   # 0
 
 cmd=bogus_command    # Illegitimate command
 command_test $cmd; echo $?   # 1</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type bogus_command &amp;&gt;/dev/null</b></tt>
+<tt class="COMPUTEROUTPUT"></tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $?</b></tt>
+<tt class="COMPUTEROUTPUT">1</tt>
+                    </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">command_test () { type "$1" &amp;&gt;/dev/null; }
+#                                      ^
+
+cmd=rmdir            # Legitimate command.
+command_test $cmd; echo $?   # 0
+
+
+cmd=bogus_command    # Illegitimate command
+command_test $cmd; echo $?   # 1</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type bogus_command &amp;&gt;/dev/null</b></tt>
+<tt class="COMPUTEROUTPUT"></tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $?</b></tt>
+<tt class="COMPUTEROUTPUT">1</tt>
+                    </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">command_test () { type "$1" &amp;&gt;/dev/null; }
+#                                      ^
+
+cmd=rmdir            # Legitimate command.
+command_test $cmd; echo $?   # 0
+
+
+cmd=bogus_command    # Illegitimate command
+command_test $cmd; echo $?   # 1</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="REDIROUTERROR2">
@@ -3017,11 +2995,10 @@ command_test $cmd; echo $?   # 1</pre>
          .
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">veg1=carrots
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">veg1=carrots
 veg2=tomatoes
 
 if [[ "$veg1" &lt; "$veg2" ]]
@@ -3032,10 +3009,9 @@ then
 else
   echo "What kind of dictionary are you using, anyhow?"
 fi</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3107,100 +3083,95 @@ fi</pre>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo ls -l | sh
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo ls -l | sh
 #  Passes the output of "echo ls -l" to the shell,
 #+ with the same result as a simple "ls -l".
 
 
 cat *.lst | sort | uniq
 # Merges and sorts all ".lst" files, then deletes duplicate lines.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
-      <table border="1" cellpadding="5" class="SIDEBAR">
-       <tr>
-        <td>
-         <div class="SIDEBAR">
-          <a name="AEN1555">
-          </a>
-          <p>
-          </p>
-          <p>
-           A pipe, as a classic method of interprocess
+        </font>
+       </p>
+      </div>
+      <div>
+       <p>
+        <div class="SIDEBAR">
+         <a name="AEN1555">
+         </a>
+         <p>
+         </p>
+         <p>
+          A pipe, as a classic method of interprocess
 	      communication, sends the
-           <tt class="FILENAME">
-            stdout
-           </tt>
-           of one
-           <a href="special-chars.html#PROCESSREF">
-            process
-           </a>
-           to the
-           <tt class="FILENAME">
-            stdin
-           </tt>
-           of another. In a typical case,
+          <tt class="FILENAME">
+           stdout
+          </tt>
+          of one
+          <a href="special-chars.html#PROCESSREF">
+           process
+          </a>
+          to the
+          <tt class="FILENAME">
+           stdin
+          </tt>
+          of another. In a typical case,
 	      a command, such as
-           <a href="basic.html#CATREF">
-            cat
-           </a>
-           or
-           <a href="internal.html#ECHOREF">
-            echo
-           </a>
-           , pipes a stream of
+          <a href="basic.html#CATREF">
+           cat
+          </a>
+          or
+          <a href="internal.html#ECHOREF">
+           echo
+          </a>
+          , pipes a stream of
 	      data to a
-           <a name="FILTERDEF">
-           </a>
-           <i class="FIRSTTERM">
-            filter
-           </i>
-           , a command that
+          <a name="FILTERDEF">
+          </a>
+          <i class="FIRSTTERM">
+           filter
+          </i>
+          , a command that
 	      transforms its input for processing.
-           <a href="special-chars.html#FTN.AEN1564" name="AEN1564">
-            <span class="footnote">
-             [7]
-            </span>
-           </a>
-          </p>
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             cat $filename1 $filename2 | grep $search_word
-            </b>
-           </tt>
-          </p>
-          <p>
-           For an interesting note on the complexity of using UNIX
+          <a href="special-chars.html#FTN.AEN1564" name="AEN1564">
+           <span class="footnote">
+            [7]
+           </span>
+          </a>
+         </p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            cat $filename1 $filename2 | grep $search_word
+           </b>
+          </tt>
+         </p>
+         <p>
+          For an interesting note on the complexity of using UNIX
 	      pipes, see
-           <a href="http://www.faqs.org/faqs/unix-faq/faq/part3/" target="_top">
-            the UNIX FAQ,
+          <a href="http://www.faqs.org/faqs/unix-faq/faq/part3/" target="_top">
+           the UNIX FAQ,
 	      Part 3
-           </a>
-           .
-          </p>
-          <p>
-          </p>
-         </div>
-        </td>
-       </tr>
-      </table>
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </div>
+       </p>
+      </div>
       <p>
        <a name="UCREF">
        </a>
        The output of a command or commands
 	      may be piped to a script.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 # uppercase.sh : Changes input to uppercase.
 
 tr 'a-z' 'A-Z'
@@ -3208,108 +3179,127 @@ tr 'a-z' 'A-Z'
 #+ to prevent filename generation from single-letter filenames.
 
 exit 0</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       Now, let us pipe the output of
       <b class="COMMAND">
        ls -l
       </b>
       to this
 	      script.
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l | ./uppercase.sh</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l | ./uppercase.sh</b></tt>
 <tt class="COMPUTEROUTPUT">-RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
  -RW-RW-R--    1 BOZO  BOZO       109 APR 14 16:48 2.TXT
  -RW-R--R--    1 BOZO  BOZO       725 APR 20 20:56 DATA-FILE</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <tt class="FILENAME">
-            stdout
-           </tt>
-           of each process in
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <tt class="FILENAME">
+           stdout
+          </tt>
+          of each process in
 	       a pipe must be read as the
-           <tt class="FILENAME">
-            stdin
-           </tt>
-           of the next. If this is not the case, the data stream
+          <tt class="FILENAME">
+           stdin
+          </tt>
+          of the next. If this is not the case, the data stream
 	       will
-           <i class="FIRSTTERM">
-            block
-           </i>
-           , and the pipe will not
+          <i class="FIRSTTERM">
+           block
+          </i>
+          , and the pipe will not
 	       behave as expected.
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">cat file1 file2 | ls -l | sort
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">cat file1 file2 | ls -l | sort
 # The output from "cat file1 file2" disappears.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           A pipe runs as a
-           <a href="othertypesv.html#CHILDREF">
-            child
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          A pipe runs as a
+          <a href="othertypesv.html#CHILDREF">
+           child
 	       process
-           </a>
-           , and therefore cannot alter script
+          </a>
+          , and therefore cannot alter script
 	       variables.
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">variable="initial_value"
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">variable="initial_value"
 echo "new_value" | read variable
 echo "variable = $variable"     # variable = initial_value</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           If one of the commands in the pipe
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          If one of the commands in the pipe
 	       aborts, this prematurely terminates execution of the
 	       pipe. Called a
-           <i class="FIRSTTERM">
-            broken pipe
-           </i>
-           , this
+          <i class="FIRSTTERM">
+           broken pipe
+          </i>
+          , this
 	       condition sends a
-           <tt class="REPLACEABLE">
-            <i>
-             SIGPIPE
-            </i>
-           </tt>
-           <a href="debugging.html#SIGNALD">
-            signal
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <tt class="REPLACEABLE">
+           <i>
+            SIGPIPE
+           </i>
+          </tt>
+          <a href="debugging.html#SIGNALD">
+           signal
+          </a>
+          .
+         </p>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">cat file1 file2 | ls -l | sort
+# The output from "cat file1 file2" disappears.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">variable="initial_value"
+echo "new_value" | read variable
+echo "variable = $variable"     # variable = initial_value</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">cat file1 file2 | ls -l | sort
+# The output from "cat file1 file2" disappears.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">variable="initial_value"
+echo "new_value" | read variable
+echo "variable = $variable"     # variable = initial_value</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3391,18 +3381,16 @@ echo "variable = $variable"     # variable = initial_value</pre>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sleep 10 &amp;</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sleep 10 &amp;</b></tt>
 <tt class="COMPUTEROUTPUT">[1] 850</tt>
 <tt class="COMPUTEROUTPUT">[1]+  Done                    sleep 10</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Within a script, commands and even
        <a href="loops1.html#FORLOOPREF1">
@@ -3423,11 +3411,10 @@ echo "variable = $variable"     # variable = initial_value</pre>
          Example 3-3. Running a loop in the background
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # background-loop.sh
 
 for i in 1 2 3 4 5 6 7 8 9 10            # First loop.
@@ -3469,32 +3456,29 @@ exit 0
 #  Nasimuddin Ansari suggests adding    sleep 1
 #+ after the   echo -n "$i"   in lines 6 and 14,
 #+ for some real fun.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           A command run in the background within a
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          A command run in the background within a
 	      script may cause the script to hang, waiting
 	      for a keystroke. Fortunately, there is a
-           <a href="x9644.html#WAITHANG">
-            remedy
-           </a>
-           for this.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="x9644.html#WAITHANG">
+           remedy
+          </a>
+          for this.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3586,11 +3570,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">if [ $file1 -ot $file2 ]
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">if [ $file1 -ot $file2 ]
 then #      ^
   echo "File $file1 is older than $file2."
 fi
@@ -3608,10 +3591,9 @@ fi
 
 param2=${param1:-$DEFAULTVAL}
 #               ^</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="DOUBLEDASHREF">
        </a>
@@ -3658,25 +3640,24 @@ param2=${param1:-$DEFAULTVAL}
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This provides a handy means of removing
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          This provides a handy means of removing
 		  files whose
-           <em>
-            names begin with a dash
-           </em>
-           .
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
+          <em>
+           names begin with a dash
+          </em>
+          .
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
 <tt class="COMPUTEROUTPUT">-rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname</tt>
 
 
@@ -3684,13 +3665,36 @@ param2=${param1:-$DEFAULTVAL}
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
 <tt class="COMPUTEROUTPUT">total 0</tt></pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
+<tt class="COMPUTEROUTPUT">-rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rm -- -badname</b></tt>
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
+<tt class="COMPUTEROUTPUT">total 0</tt></pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
+<tt class="COMPUTEROUTPUT">-rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rm -- -badname</b></tt>
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
+<tt class="COMPUTEROUTPUT">total 0</tt></pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        The
@@ -3744,21 +3748,19 @@ param2=${param1:-$DEFAULTVAL}
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat -</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat -</b></tt>
 <tt class="USERINPUT"><b>abc</b></tt>
 <tt class="COMPUTEROUTPUT">abc</tt>
 
 <tt class="COMPUTEROUTPUT">...</tt>
 
 <tt class="USERINPUT"><b>Ctl-D</b></tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        As expected,
        <tt class="USERINPUT">
@@ -3783,11 +3785,10 @@ param2=${param1:-$DEFAULTVAL}
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)
 # Move entire file tree from one directory to another
 # [courtesy Alan Cox &lt;a.cox@swansea.ac.uk&gt;, with a minor change]
 
@@ -3828,25 +3829,22 @@ param2=${param1:-$DEFAULTVAL}
 #     Or:
 # cp -a /source/directory/* /source/directory/.[^.]* /dest/directory
 #     If there are hidden files in /source/directory.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
 #  --uncompress tar file--      | --then pass it to "tar"--
 #  If "tar" has not been patched to handle "bunzip2",
 #+ this needs to be done in two discrete steps, using a pipe.
 #  The purpose of the exercise is to unarchive "bzipped" kernel source.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Note that in this context the
        <span class="QUOTE">
@@ -3870,16 +3868,14 @@ param2=${param1:-$DEFAULTVAL}
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo "whatever" | cat -</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo "whatever" | cat -</b></tt>
 <tt class="COMPUTEROUTPUT">whatever</tt> </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Where a filename is expected,
        <tt class="REPLACEABLE">
@@ -3909,17 +3905,15 @@ param2=${param1:-$DEFAULTVAL}
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>file</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>file</b></tt>
 <tt class="COMPUTEROUTPUT">Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       By itself on the command-line,
       <a href="filearchiv.html#FILEREF">
        file
@@ -3933,11 +3927,10 @@ param2=${param1:-$DEFAULTVAL}
        for a more useful result. This causes the
 	      shell to await user input.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>file -</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>file -</b></tt>
 <tt class="USERINPUT"><b>abc</b></tt>
 <tt class="COMPUTEROUTPUT">standard input:              ASCII text</tt>
 
@@ -3947,10 +3940,9 @@ param2=${param1:-$DEFAULTVAL}
 <tt class="USERINPUT"><b>#!/bin/bash</b></tt>
 <tt class="COMPUTEROUTPUT">standard input:              Bourne-Again shell script text executable</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       Now the command accepts input from
       <tt class="FILENAME">
        stdin
@@ -4013,11 +4005,10 @@ param2=${param1:-$DEFAULTVAL}
          Example 3-4. Backup of all files changed in last day
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 #  Backs up all files in current directory modified within last 24 hours
 #+ in a "tarball" (tarred and gzipped file).
@@ -4050,69 +4041,80 @@ echo "Directory $PWD backed up in archive file \"$archive.tar.gz\"."
 
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Filenames beginning with
-           <span class="QUOTE">
-            "-"
-           </span>
-           may cause problems when coupled with the
-           <span class="QUOTE">
-            "-"
-           </span>
-           redirection operator. A script should
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          Filenames beginning with
+          <span class="QUOTE">
+           "-"
+          </span>
+          may cause problems when coupled with the
+          <span class="QUOTE">
+           "-"
+          </span>
+          redirection operator. A script should
 	      check for this and add an appropriate prefix to such
 	      filenames, for example
-           <tt class="FILENAME">
-            ./-FILENAME
-           </tt>
-           ,
-           <tt class="FILENAME">
-            $PWD/-FILENAME
-           </tt>
-           , or
-           <tt class="FILENAME">
-            $PATHNAME/-FILENAME
-           </tt>
-           .
-          </p>
-          <p>
-           If the value of a variable begins with a
-           <tt class="REPLACEABLE">
-            <i>
-             -
-            </i>
-           </tt>
-           , this may likewise create
+          <tt class="FILENAME">
+           ./-FILENAME
+          </tt>
+          ,
+          <tt class="FILENAME">
+           $PWD/-FILENAME
+          </tt>
+          , or
+          <tt class="FILENAME">
+           $PATHNAME/-FILENAME
+          </tt>
+          .
+         </p>
+         <p>
+          If the value of a variable begins with a
+          <tt class="REPLACEABLE">
+           <i>
+            -
+           </i>
+          </tt>
+          , this may likewise create
 		problems.
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">var="-n"
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">var="-n"
 echo $var		
 # Has the effect of "echo -n", and outputs nothing.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">var="-n"
+echo $var		
+# Has the effect of "echo -n", and outputs nothing.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">var="-n"
+echo $var		
+# Has the effect of "echo -n", and outputs nothing.</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4144,33 +4146,31 @@ echo $var
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Do not confuse the
-           <span class="QUOTE">
-            "-"
-           </span>
-           used in this
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          Do not confuse the
+          <span class="QUOTE">
+           "-"
+          </span>
+          used in this
 		sense with the
-           <span class="QUOTE">
-            "-"
-           </span>
-           redirection
+          <span class="QUOTE">
+           "-"
+          </span>
+          redirection
 		operator just discussed. The interpretation of the
-           <span class="QUOTE">
-            "-"
-           </span>
-           depends on the context in which it
+          <span class="QUOTE">
+           "-"
+          </span>
+          depends on the context in which it
 		appears.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4208,16 +4208,14 @@ echo $var
          Assignment operator
         </a>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">a=28
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">a=28
 echo $a   # 28</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        In a
@@ -4346,16 +4344,14 @@ echo $a   # 28</pre>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">let "z = 5 % 3"
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">let "z = 5 % 3"
 echo $z  # 2</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        In a
        <a href="parameter-substitution.html#PCTPATREF">
@@ -4411,11 +4407,10 @@ echo $z  # 2</pre>
         </b>
         lists the contents of it.
        </p>
-       <table bgcolor="#E0E0E0" border="1" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo ~bozo</b></tt>
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo ~bozo</b></tt>
 <tt class="COMPUTEROUTPUT">/home/bozo</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo ~</b></tt>
@@ -4430,10 +4425,9 @@ echo $z  # 2</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo ~nonexistent-user</b></tt>
 <tt class="COMPUTEROUTPUT">~nonexistent-user</tt>
 	      </pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4799,11 +4793,10 @@ echo $z  # 2</pre>
         </p>
         <p>
         </p>
-        <table bgcolor="#E0E0E0" border="0" width="90%">
-         <tr>
-          <td>
-           <font color="#000000">
-            <pre class="PROGRAMLISTING">#!/bin/bash
+        <div>
+         <p>
+          <font color="#000000">
+           <pre class="PROGRAMLISTING">#!/bin/bash
 # Embedding Ctl-H in a string.
 
 a="^H^H"                  # Two Ctl-H's -- backspaces
@@ -4834,10 +4827,9 @@ echo -n "12345678"
 sleep 2
 echo -n "$rubout"
 sleep 2</pre>
-           </font>
-          </td>
-         </tr>
-        </table>
+          </font>
+         </p>
+        </div>
        </li>
        <li>
         <p>
@@ -4969,11 +4961,10 @@ sleep 2</pre>
         </p>
         <p>
         </p>
-        <table bgcolor="#E0E0E0" border="0" width="90%">
-         <tr>
-          <td>
-           <font color="#000000">
-            <pre class="PROGRAMLISTING">#!/bin/bash
+        <div>
+         <p>
+          <font color="#000000">
+           <pre class="PROGRAMLISTING">#!/bin/bash
 # Thank you, Lee Maschmeyer, for this example.
 
 read -n 1 -s -p \
@@ -5012,10 +5003,9 @@ echo "$var" | col
 #  The col utility can be used to emulate the proper behavior of VT.
 
 exit 0</pre>
-           </font>
-          </td>
-         </tr>
-        </table>
+          </font>
+         </p>
+        </div>
        </li>
        <li>
         <p>
@@ -5197,16 +5187,14 @@ exit 0</pre>
          permits inserting control characters. For example, the
 		  following two are equivalent:
         </p>
-        <table bgcolor="#E0E0E0" border="0" width="90%">
-         <tr>
-          <td>
-           <font color="#000000">
-            <pre class="PROGRAMLISTING">echo -e '\x0a'
+        <div>
+         <p>
+          <font color="#000000">
+           <pre class="PROGRAMLISTING">echo -e '\x0a'
 echo &lt;Ctl-V&gt;&lt;Ctl-J&gt;</pre>
-           </font>
-          </td>
-         </tr>
-        </table>
+          </font>
+         </p>
+        </div>
         <p>
          <tt class="USERINPUT">
           <b>
@@ -5387,50 +5375,48 @@ echo &lt;Ctl-V&gt;&lt;Ctl-J&gt;</pre>
        of input to certain
 	    commands. It defaults to whitespace.
       </p>
-      <table border="1" cellpadding="5" class="SIDEBAR">
-       <tr>
-        <td>
-         <div class="SIDEBAR">
-          <a name="AEN2207">
+      <div>
+       <p>
+        <div class="SIDEBAR">
+         <a name="AEN2207">
+         </a>
+         <p>
+         </p>
+         <p>
+          <a name="FIELDREF">
           </a>
-          <p>
-          </p>
-          <p>
-           <a name="FIELDREF">
-           </a>
-           <tt class="USERINPUT">
-            <b>
-             Definition:
-            </b>
-           </tt>
-           A
-           <i class="FIRSTTERM">
-            field
-           </i>
-           is a discrete chunk of data
+          <tt class="USERINPUT">
+           <b>
+            Definition:
+           </b>
+          </tt>
+          A
+          <i class="FIRSTTERM">
+           field
+          </i>
+          is a discrete chunk of data
 	      expressed as a string of consecutive characters.
 	      Separating each field from adjacent fields is either
-           <i class="FIRSTTERM">
-            whitespace
-           </i>
-           or some other designated
+          <i class="FIRSTTERM">
+           whitespace
+          </i>
+          or some other designated
 	      character (often determined by the
-           <span class="TOKEN">
-            $IFS
-           </span>
-           ).
+          <span class="TOKEN">
+           $IFS
+          </span>
+          ).
 	      In some contexts, a field may be called a
-           <i class="FIRSTTERM">
-            record
-           </i>
-           .
-          </p>
-          <p>
-          </p>
-         </div>
-        </td>
-       </tr>
-      </table>
+          <i class="FIRSTTERM">
+           record
+          </i>
+          .
+         </p>
+         <p>
+         </p>
+        </div>
+       </p>
+      </div>
       <p>
        <a name="QUOTINGWS">
        </a>
@@ -5472,363 +5458,330 @@ echo &lt;Ctl-V&gt;&lt;Ctl-J&gt;</pre>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN612" name="FTN.AEN612">
-      <span class="footnote">
-       [1]
-      </span>
+  <div>
+   <p>
+    <a href="special-chars.html#AEN612" name="FTN.AEN612">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="OPERATORDEF">
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="OPERATORDEF">
-      </a>
-      An
-      <i class="FIRSTTERM">
-       operator
-      </i>
-      is an agent that carries
+     An
+     <i class="FIRSTTERM">
+      operator
+     </i>
+     is an agent that carries
 		  out an
-      <i class="FIRSTTERM">
-       operation
-      </i>
-      . Some examples
+     <i class="FIRSTTERM">
+      operation
+     </i>
+     . Some examples
 		  are the common
-      <a href="ops.html#AROPS1">
-       arithmetic
+     <a href="ops.html#AROPS1">
+      arithmetic
 		  operators
-      </a>
-      ,
-      <b class="COMMAND">
-       + - * /
-      </b>
-      . In
+     </a>
+     ,
+     <b class="COMMAND">
+      + - * /
+     </b>
+     . In
 		  Bash, there is some overlap between the concepts
 		  of
-      <i class="FIRSTTERM">
-       operator
-      </i>
-      and
-      <a href="internal.html#KEYWORDREF">
-       keyword
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN888" name="FTN.AEN888">
-      <span class="footnote">
-       [2]
-      </span>
+     <i class="FIRSTTERM">
+      operator
+     </i>
+     and
+     <a href="internal.html#KEYWORDREF">
+      keyword
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      This is more commonly known
+     .
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN888" name="FTN.AEN888">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     This is more commonly known
                    as the
-      <i class="FIRSTTERM">
-       ternary
-      </i>
-      operator. Unfortunately,
-      <i class="FIRSTTERM">
-       ternary
-      </i>
-      is an ugly word. It doesn't roll off
+     <i class="FIRSTTERM">
+      ternary
+     </i>
+     operator. Unfortunately,
+     <i class="FIRSTTERM">
+      ternary
+     </i>
+     is an ugly word. It doesn't roll off
                    the tongue, and it doesn't elucidate. It
                    obfuscates.
-      <i class="FIRSTTERM">
-       Trinary
-      </i>
-      is by far
+     <i class="FIRSTTERM">
+      Trinary
+     </i>
+     is by far
                    the more elegant usage.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN1001" name="FTN.AEN1001">
-      <span class="footnote">
-       [3]
-      </span>
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN1001" name="FTN.AEN1001">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="ASCIIDEF">
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="ASCIIDEF">
-      </a>
-     </p>
-     <p>
-      <b class="COMMAND">
-       A
-      </b>
-      merican
-      <b class="COMMAND">
-       S
-      </b>
-      tandard
-      <b class="COMMAND">
-       C
-      </b>
-      ode
+    </p>
+    <p>
+     <b class="COMMAND">
+      A
+     </b>
+     merican
+     <b class="COMMAND">
+      S
+     </b>
+     tandard
+     <b class="COMMAND">
+      C
+     </b>
+     ode
 			for
-      <b class="COMMAND">
-       I
-      </b>
-      nformation
-      <b class="COMMAND">
-       I
-      </b>
-      nterchange.
+     <b class="COMMAND">
+      I
+     </b>
+     nformation
+     <b class="COMMAND">
+      I
+     </b>
+     nterchange.
 			This is a system for encoding text characters
 			(alphabetic, numeric, and a limited set of symbols)
 			as 7-bit numbers that can be stored and manipulated by
 			computers. Many of the ASCII characters are
 			represented on a standard keyboard.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN1071" name="FTN.AEN1071">
-      <span class="footnote">
-       [4]
-      </span>
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN1071" name="FTN.AEN1071">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="PROCESSIDDEF">
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="PROCESSIDDEF">
-      </a>
-     </p>
-     <p>
-      A
-      <i class="FIRSTTERM">
-       PID
-      </i>
-      , or
-      <i class="FIRSTTERM">
-       process ID
-      </i>
-      , is a number assigned
+    </p>
+    <p>
+     A
+     <i class="FIRSTTERM">
+      PID
+     </i>
+     , or
+     <i class="FIRSTTERM">
+      process ID
+     </i>
+     , is a number assigned
 		      to a running process. The
-      <i class="FIRSTTERM">
-       PID
-      </i>
-      s
+     <i class="FIRSTTERM">
+      PID
+     </i>
+     s
 		      of running processes may be viewed with a
-      <a href="system.html#PPSSREF">
-       ps
-      </a>
-      command.
-     </p>
-     <p>
-      <a name="PROCESSREF">
-      </a>
-     </p>
-     <p>
-      <tt class="USERINPUT">
-       <b>
-        Definition:
-       </b>
-      </tt>
-      A
-      <i class="FIRSTTERM">
-       process
-      </i>
-      is a currently
+     <a href="system.html#PPSSREF">
+      ps
+     </a>
+     command.
+    </p>
+    <p>
+     <a name="PROCESSREF">
+     </a>
+    </p>
+    <p>
+     <tt class="USERINPUT">
+      <b>
+       Definition:
+      </b>
+     </tt>
+     A
+     <i class="FIRSTTERM">
+      process
+     </i>
+     is a currently
 		      executing command (or program), sometimes referred
 		      to as a
-      <i class="FIRSTTERM">
-       job
-      </i>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN1124" name="FTN.AEN1124">
-      <span class="footnote">
-       [5]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The shell does the
-      <i class="FIRSTTERM">
-       brace
+     <i class="FIRSTTERM">
+      job
+     </i>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN1124" name="FTN.AEN1124">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The shell does the
+     <i class="FIRSTTERM">
+      brace
 	       expansion
-      </i>
-      . The command itself acts upon the
-      <em>
-       result
-      </em>
-      of the expansion.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN1199" name="FTN.AEN1199">
-      <span class="footnote">
-       [6]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Exception: a code block in braces as
+     </i>
+     . The command itself acts upon the
+     <em>
+      result
+     </em>
+     of the expansion.
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN1199" name="FTN.AEN1199">
+     <span class="footnote">
+      [6]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Exception: a code block in braces as
 		  part of a pipe
-      <em>
-       may
-      </em>
-      run as a
-      <a href="subshells.html#SUBSHELLSREF">
-       subshell
-      </a>
-      .
-     </p>
-     <p>
-     </p>
-     <table bgcolor="#E0E0E0" border="0" width="90%">
-      <tr>
-       <td>
-        <font color="#000000">
-         <pre class="PROGRAMLISTING">ls | { read firstline; read secondline; }
+     <em>
+      may
+     </em>
+     run as a
+     <a href="subshells.html#SUBSHELLSREF">
+      subshell
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <table bgcolor="#E0E0E0" border="0" width="90%">
+     <tr>
+      <td>
+       <font color="#000000">
+        <pre class="PROGRAMLISTING">ls | { read firstline; read secondline; }
 #  Error. The code block in braces runs as a subshell,
 #+ so the output of "ls" cannot be passed to variables within the block.
 echo "First line is $firstline; second line is $secondline"  # Won't work.
 
 # Thanks, S.C.</pre>
-        </font>
-       </td>
-      </tr>
-     </table>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN1564" name="FTN.AEN1564">
-      <span class="footnote">
-       [7]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Even as in olden times a
-      <i class="FIRSTTERM">
-       philtre
-      </i>
-      denoted a potion alleged
+       </font>
+      </td>
+     </tr>
+    </table>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">ls | { read firstline; read secondline; }
+#  Error. The code block in braces runs as a subshell,
+#+ so the output of "ls" cannot be passed to variables within the block.
+echo "First line is $firstline; second line is $secondline"  # Won't work.
+
+# Thanks, S.C.</pre>
+    </font>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">ls | { read firstline; read secondline; }
+#  Error. The code block in braces runs as a subshell,
+#+ so the output of "ls" cannot be passed to variables within the block.
+echo "First line is $firstline; second line is $secondline"  # Won't work.
+
+# Thanks, S.C.</pre>
+    </font>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN1564" name="FTN.AEN1564">
+     <span class="footnote">
+      [7]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Even as in olden times a
+     <i class="FIRSTTERM">
+      philtre
+     </i>
+     denoted a potion alleged
 		to have magical transformative powers, so does a UNIX
-      <i class="FIRSTTERM">
-       filter
-      </i>
-      transform its target in
+     <i class="FIRSTTERM">
+      filter
+     </i>
+     transform its target in
 		(roughly) analogous fashion. (The coder who comes up with a
-      <span class="QUOTE">
-       "love philtre"
-      </span>
-      that runs on a Linux machine
+     <span class="QUOTE">
+      "love philtre"
+     </span>
+     that runs on a Linux machine
 		will likely win accolades and honors.)
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN2107" name="FTN.AEN2107">
-      <span class="footnote">
-       [8]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Bash stores a list of commands
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN2107" name="FTN.AEN2107">
+     <span class="footnote">
+      [8]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Bash stores a list of commands
 		    previously issued from the command-line
 		    in a
-      <i class="FIRSTTERM">
-       buffer
-      </i>
-      , or
+     <i class="FIRSTTERM">
+      buffer
+     </i>
+     , or
 		    memory space, for recall with the
-      <a href="internal.html#BUILTINREF">
-       builtin
-      </a>
-      <i class="FIRSTTERM">
-       history
-      </i>
-      commands.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="special-chars.html#AEN2198" name="FTN.AEN2198">
-      <span class="footnote">
-       [9]
-      </span>
+     <a href="internal.html#BUILTINREF">
+      builtin
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      A linefeed (
-      <i class="FIRSTTERM">
-       newline
-      </i>
-      )
+     <i class="FIRSTTERM">
+      history
+     </i>
+     commands.
+    </p>
+   </p>
+   <p>
+    <a href="special-chars.html#AEN2198" name="FTN.AEN2198">
+     <span class="footnote">
+      [9]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     A linefeed (
+     <i class="FIRSTTERM">
+      newline
+     </i>
+     )
 		    is also a whitespace character. This explains
 		    why a
-      <i class="FIRSTTERM">
-       blank line
-      </i>
-      ,
+     <i class="FIRSTTERM">
+      blank line
+     </i>
+     ,
 		    consisting only of a linefeed, is considered
 		    whitespace.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="part2.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="variables.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Basics
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part2.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Introduction to Variables and Parameters
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
   </div>
  </body>
 </html>

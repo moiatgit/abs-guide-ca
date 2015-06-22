@@ -1,93 +1,28 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <unofficialst.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <intandnonint.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 36. Miscellany
 =======================
 
-+--------------------------+--------------------------+--------------------------+
-| **                       |
-| *Nobody really knows     |
-| what the Bourne shell's  |
-| grammar is. Even         |
-| examination of the       |
-| source code is little    |
-| help.*                   |
-|                          |
-| *--Tom Duff*             |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+**
+
+*Nobody really knows what the Bourne shell's grammar is. Even
+examination of the source code is little help.*
+
+*--Tom Duff*
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -299,25 +234,6 @@ Scripts <securityissues.html#SECURITYTIPS>`__
 .. raw:: html
 
    </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <unofficialst.html | Unofficial Shell         |
-| >`__                     | Scripting Stylesheet     |
-| `Home <index.html>`__    | `Up <part5.html>`__      |
-| `Next <intandnonint.html | Interactive and          |
-| >`__                     | non-interactive shells   |
-|                          | and scripts              |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

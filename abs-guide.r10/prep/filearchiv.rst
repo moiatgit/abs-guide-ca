@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <textproc.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 16. External Filters, Programs and Commands
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <communications.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   16.5. File and Archiving Commands
@@ -113,11 +39,21 @@ Chapter 16. External Filters, Programs and Commands
 
           <div class="CAUTION">
 
-       +--------------------------------------+--------------------------------------+
-       | |Caution|                            |
-       | This option will not work on         |
-       | magnetic tape devices.               |
-       +--------------------------------------+--------------------------------------+
+       .. raw:: html
+
+          <div>
+
+       |Caution|
+
+       This option will not work on magnetic tape devices.
+
+       .. raw:: html
+
+          </p>
+
+       .. raw:: html
+
+          </div>
 
        .. raw:: html
 
@@ -152,13 +88,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="CAUTION">
 
-    +--------------------------------------+--------------------------------------+
-    | |Caution|                            |
-    | It may be difficult to recover data  |
-    | from a corrupted *gzipped* tar       |
-    | archive. When archiving important    |
-    | files, make multiple backups.        |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    It may be difficult to recover data from a corrupted *gzipped* tar
+    archive. When archiving important files, make multiple backups.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -197,42 +142,52 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Tip|              |
-    | ``                 |
-    |            rpm -qf |
-    |                    |
-    |        ``          |
-    | identifies which   |
-    | package a file     |
-    | originates from.   |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    | | .. code:: SCREEN |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     bash$ rpm -q |
-    | f /bin/l |         |
-    | | s                |
-    |          |         |
-    | |     coreutils-5. |
-    | 2.1-31   |         |
-    | |                  |
-    |          |         |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    ``                         rpm -qf                       ``
+    identifies which package a file originates from.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ rpm -qf /bin/l |
+    | s                        |
+    |     coreutils-5.2.1-31   |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ rpm -qf /bin/ls
+        coreutils-5.2.1-31
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ rpm -qf /bin/ls
+        coreutils-5.2.1-31
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -242,122 +197,134 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Tip|              |
-    | ``                 |
-    |            rpm -qa |
-    |                    |
-    |        ``          |
-    | gives a complete   |
-    | list of all        |
-    | installed *rpm*    |
-    | packages on a      |
-    | given system. An   |
-    | ``                 |
-    |            rpm -qa |
-    |  package_name      |
-    |                    |
-    |   ``               |
-    | lists only the     |
-    | package(s)         |
-    | corresponding to   |
-    | ``             pac |
-    | kage_name          |
-    |    ``              |
-    | .                  |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    | | .. code:: SCREEN |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     bash$ rpm -q |
-    | a        |         |
-    | |     redhat-logos |
-    | -1.1.3-1 |         |
-    | |      glibc-2.2.4 |
-    | -13      |         |
-    | |      cracklib-2. |
-    | 7-12     |         |
-    | |      dosfstools- |
-    | 2.7-1    |         |
-    | |      gdbm-1.8.0- |
-    | 10       |         |
-    | |      ksymoops-2. |
-    | 4.1-1    |         |
-    | |      mktemp-1.5- |
-    | 11       |         |
-    | |      perl-5.6.0- |
-    | 17       |         |
-    | |      reiserfs-ut |
-    | ils-3.x. |         |
-    | | 0j-2             |
-    |          |         |
-    | |      ...         |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     bash$ rpm -q |
-    | a docboo |         |
-    | | k-utils          |
-    |          |         |
-    | |     docbook-util |
-    | s-0.6.9- |         |
-    | | 2                |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     bash$ rpm -q |
-    | a docboo |         |
-    | | k | grep docbook |
-    |          |         |
-    | |     docbook-dtd3 |
-    | 1-sgml-1 |         |
-    | | .0-10            |
-    |          |         |
-    | |      docbook-sty |
-    | le-dsssl |         |
-    | | -1.64-3          |
-    |          |         |
-    | |      docbook-dtd |
-    | 30-sgml- |         |
-    | | 1.0-10           |
-    |          |         |
-    | |      docbook-dtd |
-    | 40-sgml- |         |
-    | | 1.0-11           |
-    |          |         |
-    | |      docbook-uti |
-    | ls-pdf-0 |         |
-    | | .6.9-2           |
-    |          |         |
-    | |      docbook-dtd |
-    | 41-sgml- |         |
-    | | 1.0-10           |
-    |          |         |
-    | |      docbook-uti |
-    | ls-0.6.9 |         |
-    | | -2               |
-    |          |         |
-    | |                  |
-    |          |         |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    ``                         rpm -qa                       `` gives a
+    complete list of all installed *rpm* packages on a given system. An
+    ``                         rpm -qa package_name                       ``
+    lists only the package(s) corresponding to
+    ``            package_name           `` .
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ rpm -qa        |
+    |     redhat-logos-1.1.3-1 |
+    |      glibc-2.2.4-13      |
+    |      cracklib-2.7-12     |
+    |      dosfstools-2.7-1    |
+    |      gdbm-1.8.0-10       |
+    |      ksymoops-2.4.1-1    |
+    |      mktemp-1.5-11       |
+    |      perl-5.6.0-17       |
+    |      reiserfs-utils-3.x. |
+    | 0j-2                     |
+    |      ...                 |
+    |                          |
+    |                          |
+    |     bash$ rpm -qa docboo |
+    | k-utils                  |
+    |     docbook-utils-0.6.9- |
+    | 2                        |
+    |                          |
+    |                          |
+    |     bash$ rpm -qa docboo |
+    | k | grep docbook         |
+    |     docbook-dtd31-sgml-1 |
+    | .0-10                    |
+    |      docbook-style-dsssl |
+    | -1.64-3                  |
+    |      docbook-dtd30-sgml- |
+    | 1.0-10                   |
+    |      docbook-dtd40-sgml- |
+    | 1.0-11                   |
+    |      docbook-utils-pdf-0 |
+    | .6.9-2                   |
+    |      docbook-dtd41-sgml- |
+    | 1.0-10                   |
+    |      docbook-utils-0.6.9 |
+    | -2                       |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ rpm -qa
+        redhat-logos-1.1.3-1
+         glibc-2.2.4-13
+         cracklib-2.7-12
+         dosfstools-2.7-1
+         gdbm-1.8.0-10
+         ksymoops-2.4.1-1
+         mktemp-1.5-11
+         perl-5.6.0-17
+         reiserfs-utils-3.x.0j-2
+         ...
+
+
+        bash$ rpm -qa docbook-utils
+        docbook-utils-0.6.9-2
+
+
+        bash$ rpm -qa docbook | grep docbook
+        docbook-dtd31-sgml-1.0-10
+         docbook-style-dsssl-1.64-3
+         docbook-dtd30-sgml-1.0-10
+         docbook-dtd40-sgml-1.0-11
+         docbook-utils-pdf-0.6.9-2
+         docbook-dtd41-sgml-1.0-10
+         docbook-utils-0.6.9-2
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ rpm -qa
+        redhat-logos-1.1.3-1
+         glibc-2.2.4-13
+         cracklib-2.7-12
+         dosfstools-2.7-1
+         gdbm-1.8.0-10
+         ksymoops-2.4.1-1
+         mktemp-1.5-11
+         perl-5.6.0-17
+         reiserfs-utils-3.x.0j-2
+         ...
+
+
+        bash$ rpm -qa docbook-utils
+        docbook-utils-0.6.9-2
+
+
+        bash$ rpm -qa docbook | grep docbook
+        docbook-dtd31-sgml-1.0-10
+         docbook-style-dsssl-1.64-3
+         docbook-dtd30-sgml-1.0-10
+         docbook-dtd40-sgml-1.0-11
+         docbook-utils-pdf-0.6.9-2
+         docbook-dtd41-sgml-1.0-10
+         docbook-utils-0.6.9-2
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -376,74 +343,57 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-30. Using *cpio* to move a directory tree**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     # Copying a director |
-    | y tree using cpio.       |
-    |                          |
-    |     # Advantages of usin |
-    | g 'cpio':                |
-    |     #   Speed of copying |
-    | . It's faster than 'tar' |
-    |  with pipes.             |
-    |     #   Well suited for  |
-    | copying special files (n |
-    | amed pipes, etc.)        |
-    |     #+  that 'cp' may ch |
-    | oke on.                  |
-    |                          |
-    |     ARGS=2               |
-    |     E_BADARGS=65         |
-    |                          |
-    |     if [ $# -ne "$ARGS"  |
-    | ]                        |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` source destinat |
-    | ion"                     |
-    |       exit $E_BADARGS    |
-    |     fi                   |
-    |                          |
-    |     source="$1"          |
-    |     destination="$2"     |
-    |                          |
-    |     #################### |
-    | ######################## |
-    | #######################  |
-    |     find "$source" -dept |
-    | h | cpio -admvp "$destin |
-    | ation"                   |
-    |     #               ^^^^ |
-    | ^         ^^^^^          |
-    |     #  Read the 'find' a |
-    | nd 'cpio' info pages to  |
-    | decipher these options.  |
-    |     #  The above works o |
-    | nly relative to $PWD (cu |
-    | rrent directory) . . .   |
-    |     #+ full pathnames ar |
-    | e specified.             |
-    |     #################### |
-    | ######################## |
-    | #######################  |
-    |                          |
-    |                          |
-    |     # Exercise:          |
-    |     # --------           |
-    |                          |
-    |     #  Add code to check |
-    |  the exit status ($?) of |
-    |  the 'find | cpio' pipe  |
-    |     #+ and output approp |
-    | riate error messages if  |
-    | anything went wrong.     |
-    |                          |
-    |     exit $?              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        # Copying a directory tree using cpio.
+
+        # Advantages of using 'cpio':
+        #   Speed of copying. It's faster than 'tar' with pipes.
+        #   Well suited for copying special files (named pipes, etc.)
+        #+  that 'cp' may choke on.
+
+        ARGS=2
+        E_BADARGS=65
+
+        if [ $# -ne "$ARGS" ]
+        then
+          echo "Usage: `basename $0` source destination"
+          exit $E_BADARGS
+        fi  
+
+        source="$1"
+        destination="$2"
+
+        ###################################################################
+        find "$source" -depth | cpio -admvp "$destination"
+        #               ^^^^^         ^^^^^
+        #  Read the 'find' and 'cpio' info pages to decipher these options.
+        #  The above works only relative to $PWD (current directory) . . .
+        #+ full pathnames are specified.
+        ###################################################################
+
+
+        # Exercise:
+        # --------
+
+        #  Add code to check the exit status ($?) of the 'find | cpio' pipe
+        #+ and output appropriate error messages if anything went wrong.
+
+        exit $?
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -459,57 +409,41 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-31. Unpacking an *rpm* archive**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # de-rpm.sh: Unpack  |
-    | an 'rpm' archive         |
-    |                          |
-    |     : ${1?"Usage: `basen |
-    | ame $0` target-file"}    |
-    |     # Must specify 'rpm' |
-    |  archive name as an argu |
-    | ment.                    |
-    |                          |
-    |                          |
-    |     TEMPFILE=$$.cpio     |
-    |                      #   |
-    | Tempfile with "unique" n |
-    | ame.                     |
-    |                          |
-    |                      #   |
-    | $$ is process ID of scri |
-    | pt.                      |
-    |                          |
-    |     rpm2cpio < $1 > $TEM |
-    | PFILE                #   |
-    | Converts rpm archive int |
-    | o                        |
-    |                          |
-    |                      #+  |
-    | cpio archive.            |
-    |     cpio --make-director |
-    | ies -F $TEMPFILE -i  #   |
-    | Unpacks cpio archive.    |
-    |     rm -f $TEMPFILE      |
-    |                      #   |
-    | Deletes cpio archive.    |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     #  Exercise:         |
-    |     #  Add check for whe |
-    | ther 1) "target-file" ex |
-    | ists and                 |
-    |     #+                   |
-    |      2) it is an rpm arc |
-    | hive.                    |
-    |     #  Hint:             |
-    |         Parse output of  |
-    | 'file' command.          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # de-rpm.sh: Unpack an 'rpm' archive
+
+        : ${1?"Usage: `basename $0` target-file"}
+        # Must specify 'rpm' archive name as an argument.
+
+
+        TEMPFILE=$$.cpio                         #  Tempfile with "unique" name.
+                                                 #  $$ is process ID of script.
+
+        rpm2cpio < $1 > $TEMPFILE                #  Converts rpm archive into
+                                                 #+ cpio archive.
+        cpio --make-directories -F $TEMPFILE -i  #  Unpacks cpio archive.
+        rm -f $TEMPFILE                          #  Deletes cpio archive.
+
+        exit 0
+
+        #  Exercise:
+        #  Add check for whether 1) "target-file" exists and
+        #+                       2) it is an rpm archive.
+        #  Hint:                    Parse output of 'file' command.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -522,35 +456,31 @@ Chapter 16. External Filters, Programs and Commands
     replace `tar <filearchiv.html#TARREF>`__ and
     `cpio <filearchiv.html#CPIOREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     pax -wf daily_backup |
-    | .pax ~/linux-server/file |
-    | s                        |
-    |     #  Creates a tar arc |
-    | hive of all files in the |
-    |  target directory.       |
-    |     #  Note that the opt |
-    | ions to pax must be in t |
-    | he correct order --      |
-    |     #+ pax -fw     has a |
-    | n entirely different eff |
-    | ect.                     |
-    |                          |
-    |     pax -f daily_backup. |
-    | pax                      |
-    |     #  Lists the files i |
-    | n the archive.           |
-    |                          |
-    |     pax -rf daily_backup |
-    | .pax ~/bsd-server/files  |
-    |     #  Restores the back |
-    | ed-up files from the Lin |
-    | ux machine               |
-    |     #+ onto a BSD one.   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        pax -wf daily_backup.pax ~/linux-server/files 
+        #  Creates a tar archive of all files in the target directory.
+        #  Note that the options to pax must be in the correct order --
+        #+ pax -fw     has an entirely different effect.
+
+        pax -f daily_backup.pax
+        #  Lists the files in the archive.
+
+        pax -rf daily_backup.pax ~/bsd-server/files
+        #  Restores the backed-up files from the Linux machine
+        #+ onto a BSD one.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Note that *pax* handles many of the standard archiving and
     compression commands.
@@ -574,17 +504,23 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | The ``             -c            ``  |
-    | option sends the output of **gzip**  |
-    | to                                   |
-    | ``             stdout            ``  |
-    | . This is useful when                |
-    | `piping <special-chars.html#PIPEREF> |
-    | `__                                  |
-    | to other commands.                   |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    The ``            -c           `` option sends the output of
+    **gzip** to ``            stdout           `` . This is useful when
+    `piping <special-chars.html#PIPEREF>`__ to other commands.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -601,13 +537,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="CAUTION">
 
-    +--------------------------------------+--------------------------------------+
-    | |Caution|                            |
-    | On some commercial UNIX systems,     |
-    | **zcat** is a synonym for            |
-    | **uncompress -c** , and will not     |
-    | work on *gzipped* files.             |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    On some commercial UNIX systems, **zcat** is a synonym for
+    **uncompress -c** , and will not work on *gzipped* files.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -627,13 +572,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | Newer versions of                    |
-    | `tar <filearchiv.html#TARREF>`__     |
-    | have been patched with **bzip2**     |
-    | support.                             |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    Newer versions of `tar <filearchiv.html#TARREF>`__ have been patched
+    with **bzip2** support.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -650,12 +604,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------------------+--------------------------------------+
-    | |Tip|                                |
-    | The **znew** command transforms      |
-    | *compressed* files into *gzipped*    |
-    | ones.                                |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    The **znew** command transforms *compressed* files into *gzipped*
+    ones.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -673,11 +637,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------------------+--------------------------------------+
-    | |Tip|                                |
-    | The output of **sq** may be piped to |
-    | **gzip** for further compression.    |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    The output of **sq** may be piped to **gzip** for further
+    compression.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -730,66 +705,58 @@ Chapter 16. External Filters, Programs and Commands
     ``         -z        `` option, when used on a compressed target
     file, forces an attempt to analyze the uncompressed file type.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ file test.tar. |
-    | gz                       |
-    |     test.tar.gz: gzip co |
-    | mpressed data, deflated, |
-    |      last modified: Sun  |
-    | Sep 16 13:34:51 2001, os |
-    | : Unix                   |
-    |                          |
-    |     bash file -z test.ta |
-    | r.gz                     |
-    |     test.tar.gz: GNU tar |
-    |  archive (gzip compresse |
-    | d data, deflated,        |
-    |      last modified: Sun  |
-    | Sep 16 13:34:51 2001, os |
-    | : Unix)                  |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     # Find sh and Bash s |
-    | cripts in a given direct |
-    | ory:                     |
-    |                          |
-    |     DIRECTORY=/usr/local |
-    | /bin                     |
-    |     KEYWORD=Bourne       |
-    |     # Bourne and Bourne- |
-    | Again shell scripts      |
-    |                          |
-    |     file $DIRECTORY/* |  |
-    | fgrep $KEYWORD           |
-    |                          |
-    |     # Output:            |
-    |                          |
-    |     # /usr/local/bin/bur |
-    | n-cd:          Bourne-Ag |
-    | ain shell script text ex |
-    | ecutable                 |
-    |     # /usr/local/bin/bur |
-    | nit:           Bourne-Ag |
-    | ain shell script text ex |
-    | ecutable                 |
-    |     # /usr/local/bin/cas |
-    | sette.sh:      Bourne sh |
-    | ell script text executab |
-    | le                       |
-    |     # /usr/local/bin/cop |
-    | y-cd:          Bourne-Ag |
-    | ain shell script text ex |
-    | ecutable                 |
-    |     # . . .              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ file test.tar.gz
+        test.tar.gz: gzip compressed data, deflated,
+         last modified: Sun Sep 16 13:34:51 2001, os: Unix
+
+        bash file -z test.tar.gz
+        test.tar.gz: GNU tar archive (gzip compressed data, deflated,
+         last modified: Sun Sep 16 13:34:51 2001, os: Unix)
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        # Find sh and Bash scripts in a given directory:
+
+        DIRECTORY=/usr/local/bin
+        KEYWORD=Bourne
+        # Bourne and Bourne-Again shell scripts
+
+        file $DIRECTORY/* | fgrep $KEYWORD
+
+        # Output:
+
+        # /usr/local/bin/burn-cd:          Bourne-Again shell script text executable
+        # /usr/local/bin/burnit:           Bourne-Again shell script text executable
+        # /usr/local/bin/cassette.sh:      Bourne shell script text executable
+        # /usr/local/bin/copy-cd:          Bourne-Again shell script text executable
+        # . . .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -797,147 +764,99 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-32. Stripping comments from C program files**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # strip-comment.sh:  |
-    | Strips out the comments  |
-    | (/* COMMENT */) in a C p |
-    | rogram.                  |
-    |                          |
-    |     E_NOARGS=0           |
-    |     E_ARGERROR=66        |
-    |     E_WRONG_FILE_TYPE=67 |
-    |                          |
-    |     if [ $# -eq "$E_NOAR |
-    | GS" ]                    |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` C-program-file" |
-    |  >&2 # Error message to  |
-    | stderr.                  |
-    |       exit $E_ARGERROR   |
-    |     fi                   |
-    |                          |
-    |     # Test for correct f |
-    | ile type.                |
-    |     type=`file $1 | awk  |
-    | '{ print $2, $3, $4, $5  |
-    | }'`                      |
-    |     # "file $1" echoes f |
-    | ile type . . .           |
-    |     # Then awk removes t |
-    | he first field, the file |
-    | name . . .               |
-    |     # Then the result is |
-    |  fed into the variable " |
-    | type."                   |
-    |     correct_type="ASCII  |
-    | C program text"          |
-    |                          |
-    |     if [ "$type" != "$co |
-    | rrect_type" ]            |
-    |     then                 |
-    |       echo               |
-    |       echo "This script  |
-    | works on C program files |
-    |  only."                  |
-    |       echo               |
-    |       exit $E_WRONG_FILE |
-    | _TYPE                    |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     # Rather cryptic sed |
-    |  script:                 |
-    |     #--------            |
-    |     sed '                |
-    |     /^\/\*/d             |
-    |     /.*\*\//d            |
-    |     ' $1                 |
-    |     #--------            |
-    |     # Easy to understand |
-    |  if you take several hou |
-    | rs to learn sed fundamen |
-    | tals.                    |
-    |                          |
-    |                          |
-    |     #  Need to add one m |
-    | ore line to the sed scri |
-    | pt to deal with          |
-    |     #+ case where line o |
-    | f code has a comment fol |
-    | lowing it on same line.  |
-    |     #  This is left as a |
-    |  non-trivial exercise.   |
-    |                          |
-    |     #  Also, the above c |
-    | ode deletes non-comment  |
-    | lines with a "*/" . . .  |
-    |     #+ not a desirable r |
-    | esult.                   |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |                          |
-    |     # ------------------ |
-    | ------------------------ |
-    | ----------------------   |
-    |     # Code below this li |
-    | ne will not execute beca |
-    | use of 'exit 0' above.   |
-    |                          |
-    |     # Stephane Chazelas  |
-    | suggests the following a |
-    | lternative:              |
-    |                          |
-    |     usage() {            |
-    |       echo "Usage: `base |
-    | name $0` C-program-file" |
-    |  >&2                     |
-    |       exit 1             |
-    |     }                    |
-    |                          |
-    |     WEIRD=`echo -n -e '\ |
-    | 377'`   # or WEIRD=$'\37 |
-    | 7'                       |
-    |     [[ $# -eq 1 ]] || us |
-    | age                      |
-    |     case `file "$1"` in  |
-    |       *"C program text"* |
-    | ) sed -e "s%/\*%${WEIRD} |
-    | %g;s%\*/%${WEIRD}%g" "$1 |
-    | " \                      |
-    |          | tr '\377\n' ' |
-    | \n\377' \                |
-    |          | sed -ne 'p;n' |
-    |  \                       |
-    |          | tr -d '\n' |  |
-    | tr '\377' '\n';;         |
-    |       *) usage;;         |
-    |     esac                 |
-    |                          |
-    |     #  This is still foo |
-    | led by things like:      |
-    |     #  printf("/*");     |
-    |     #  or                |
-    |     #  /*  /* buggy embe |
-    | dded comment */          |
-    |     #                    |
-    |     #  To handle all spe |
-    | cial cases (comments in  |
-    | strings, comments in str |
-    | ing                      |
-    |     #+ where there is a  |
-    | \", \\" ...),            |
-    |     #+ the only way is t |
-    | o write a C parser (usin |
-    | g lex or yacc perhaps?). |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # strip-comment.sh: Strips out the comments (/* COMMENT */) in a C program.
+
+        E_NOARGS=0
+        E_ARGERROR=66
+        E_WRONG_FILE_TYPE=67
+
+        if [ $# -eq "$E_NOARGS" ]
+        then
+          echo "Usage: `basename $0` C-program-file" >&2 # Error message to stderr.
+          exit $E_ARGERROR
+        fi  
+
+        # Test for correct file type.
+        type=`file $1 | awk '{ print $2, $3, $4, $5 }'`
+        # "file $1" echoes file type . . .
+        # Then awk removes the first field, the filename . . .
+        # Then the result is fed into the variable "type."
+        correct_type="ASCII C program text"
+
+        if [ "$type" != "$correct_type" ]
+        then
+          echo
+          echo "This script works on C program files only."
+          echo
+          exit $E_WRONG_FILE_TYPE
+        fi  
+
+
+        # Rather cryptic sed script:
+        #--------
+        sed '
+        /^\/\*/d
+        /.*\*\//d
+        ' $1
+        #--------
+        # Easy to understand if you take several hours to learn sed fundamentals.
+
+
+        #  Need to add one more line to the sed script to deal with
+        #+ case where line of code has a comment following it on same line.
+        #  This is left as a non-trivial exercise.
+
+        #  Also, the above code deletes non-comment lines with a "*/" . . .
+        #+ not a desirable result.
+
+        exit 0
+
+
+        # ----------------------------------------------------------------
+        # Code below this line will not execute because of 'exit 0' above.
+
+        # Stephane Chazelas suggests the following alternative:
+
+        usage() {
+          echo "Usage: `basename $0` C-program-file" >&2
+          exit 1
+        }
+
+        WEIRD=`echo -n -e '\377'`   # or WEIRD=$'\377'
+        [[ $# -eq 1 ]] || usage
+        case `file "$1"` in
+          *"C program text"*) sed -e "s%/\*%${WEIRD}%g;s%\*/%${WEIRD}%g" "$1" \
+             | tr '\377\n' '\n\377' \
+             | sed -ne 'p;n' \
+             | tr -d '\n' | tr '\377' '\n';;
+          *) usage;;
+        esac
+
+        #  This is still fooled by things like:
+        #  printf("/*");
+        #  or
+        #  /*  /* buggy embedded comment */
+        #
+        #  To handle all special cases (comments in strings, comments in string
+        #+ where there is a \", \\" ...),
+        #+ the only way is to write a C parser (using lex or yacc perhaps?).
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -950,12 +869,21 @@ Chapter 16. External Filters, Programs and Commands
 
     ``                   $bash which rm                 ``
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     /usr/bin/rm          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        /usr/bin/rm
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     For an interesting use of this command, see `Example
     36-16 <colorizing.html#HORSERACE>`__ .
@@ -966,13 +894,21 @@ Chapter 16. External Filters, Programs and Commands
 
     ``                   $bash whereis rm                 ``
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     rm: /bin/rm /usr/sha |
-    | re/man/man1/rm.1.bz2     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        rm: /bin/rm /usr/share/man/man1/rm.1.bz2
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **whatis**
     **whatis command** looks up "command" in the
@@ -982,15 +918,21 @@ Chapter 16. External Filters, Programs and Commands
 
     ``                   $bash whatis whatis                 ``
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     whatis               |
-    |  (1)  - search the whati |
-    | s database for complete  |
-    | words                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        whatis               (1)  - search the whatis database for complete words
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -998,47 +940,40 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-33. Exploring ``           /usr/X11R6/bin          ``**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     # What are all those |
-    |  mysterious binaries in  |
-    | /usr/X11R6/bin?          |
-    |                          |
-    |     DIRECTORY="/usr/X11R |
-    | 6/bin"                   |
-    |     # Try also "/bin", " |
-    | /usr/bin", "/usr/local/b |
-    | in", etc.                |
-    |                          |
-    |     for file in $DIRECTO |
-    | RY/*                     |
-    |     do                   |
-    |       whatis `basename $ |
-    | file`   # Echoes info ab |
-    | out the binary.          |
-    |     done                 |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     #  Note: For this to |
-    |  work, you must create a |
-    |  "whatis" database       |
-    |     #+ with /usr/sbin/ma |
-    | kewhatis.                |
-    |     #  You may wish to r |
-    | edirect output of this s |
-    | cript, like so:          |
-    |     #    ./what.sh >>wha |
-    | tis.db                   |
-    |     #  or view it a page |
-    |  at a time on stdout,    |
-    |     #    ./what.sh | les |
-    | s                        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        # What are all those mysterious binaries in /usr/X11R6/bin?
+
+        DIRECTORY="/usr/X11R6/bin"
+        # Try also "/bin", "/usr/bin", "/usr/local/bin", etc.
+
+        for file in $DIRECTORY/*
+        do
+          whatis `basename $file`   # Echoes info about the binary.
+        done
+
+        exit 0
+
+        #  Note: For this to work, you must create a "whatis" database
+        #+ with /usr/sbin/makewhatis.
+        #  You may wish to redirect output of this script, like so:
+        #    ./what.sh >>whatis.db
+        #  or view it a page at a time on stdout,
+        #    ./what.sh | less
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1052,35 +987,32 @@ Chapter 16. External Filters, Programs and Commands
 
     This is one of the GNU *fileutils* .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ vdir           |
-    |     total 10             |
-    |      -rw-r--r--    1 boz |
-    | o  bozo      4034 Jul 18 |
-    |  22:04 data1.xrolo       |
-    |      -rw-r--r--    1 boz |
-    | o  bozo      4602 May 25 |
-    |  13:58 data1.xrolo.bak   |
-    |      -rw-r--r--    1 boz |
-    | o  bozo       877 Dec 17 |
-    |   2000 employment.xrolo  |
-    |                          |
-    |     bash ls -l           |
-    |     total 10             |
-    |      -rw-r--r--    1 boz |
-    | o  bozo      4034 Jul 18 |
-    |  22:04 data1.xrolo       |
-    |      -rw-r--r--    1 boz |
-    | o  bozo      4602 May 25 |
-    |  13:58 data1.xrolo.bak   |
-    |      -rw-r--r--    1 boz |
-    | o  bozo       877 Dec 17 |
-    |   2000 employment.xrolo  |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ vdir
+        total 10
+         -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.xrolo
+         -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
+         -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo
+
+        bash ls -l
+        total 10
+         -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.xrolo
+         -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
+         -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **locate** , **slocate**
     The **locate** command searches for files using a database stored
@@ -1089,68 +1021,90 @@ Chapter 16. External Filters, Programs and Commands
 
     ``                   $bash locate hickson                 ``
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     /usr/lib/xephem/cata |
-    | logs/hickson.edb         |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        /usr/lib/xephem/catalogs/hickson.edb
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **getfacl** , **setfacl**
     These commands *retrieve* or *set* the **f** ile **a** ccess **c**
     ontrol **l** ist -- the *owner* , *group* , and file permissions.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ getfacl *      |
-    |     # file: test1.txt    |
-    |      # owner: bozo       |
-    |      # group: bozgrp     |
-    |      user::rw-           |
-    |      group::rw-          |
-    |      other::r--          |
-    |                          |
-    |      # file: test2.txt   |
-    |      # owner: bozo       |
-    |      # group: bozgrp     |
-    |      user::rw-           |
-    |      group::rw-          |
-    |      other::r--          |
-    |                          |
-    |                          |
-    |                          |
-    |     bash$ setfacl -m u:b |
-    | ozo:rw yearly_budget.csv |
-    |     bash$ getfacl yearly |
-    | _budget.csv              |
-    |     # file: yearly_budge |
-    | t.csv                    |
-    |      # owner: accountant |
-    |      # group: budgetgrp  |
-    |      user::rw-           |
-    |      user:bozo:rw-       |
-    |      user:accountant:rw- |
-    |      group::rw-          |
-    |      mask::rw-           |
-    |      other::r--          |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ getfacl *
+        # file: test1.txt
+         # owner: bozo
+         # group: bozgrp
+         user::rw-
+         group::rw-
+         other::r--
+
+         # file: test2.txt
+         # owner: bozo
+         # group: bozgrp
+         user::rw-
+         group::rw-
+         other::r--
+         
+
+         
+        bash$ setfacl -m u:bozo:rw yearly_budget.csv
+        bash$ getfacl yearly_budget.csv
+        # file: yearly_budget.csv
+         # owner: accountant
+         # group: budgetgrp
+         user::rw-
+         user:bozo:rw-
+         user:accountant:rw-
+         group::rw-
+         mask::rw-
+         other::r--
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **readlink**
     Disclose the file that a symbolic link points to.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ readlink /usr/ |
-    | bin/awk                  |
-    |     ../../bin/gawk       |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ readlink /usr/bin/awk
+        ../../bin/gawk
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **strings**
     Use the **strings** command to find printable strings in a binary or
@@ -1172,167 +1126,94 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-34. An "improved" *strings* command**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # wstrings.sh: "word |
-    | -strings" (enhanced "str |
-    | ings" command)           |
-    |     #                    |
-    |     #  This script filte |
-    | rs the output of "string |
-    | s" by checking it        |
-    |     #+ against a standar |
-    | d word list file.        |
-    |     #  This effectively  |
-    | eliminates gibberish and |
-    |  noise,                  |
-    |     #+ and outputs only  |
-    | recognized words.        |
-    |                          |
-    |     # ================== |
-    | ======================== |
-    | =================        |
-    |     #                 St |
-    | andard Check for Script  |
-    | Argument(s)              |
-    |     ARGS=1               |
-    |     E_BADARGS=85         |
-    |     E_NOFILE=86          |
-    |                          |
-    |     if [ $# -ne $ARGS ]  |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` filename"       |
-    |       exit $E_BADARGS    |
-    |     fi                   |
-    |                          |
-    |     if [ ! -f "$1" ]     |
-    |                   # Chec |
-    | k if file exists.        |
-    |     then                 |
-    |         echo "File \"$1\ |
-    | " does not exist."       |
-    |         exit $E_NOFILE   |
-    |     fi                   |
-    |     # ================== |
-    | ======================== |
-    | =================        |
-    |                          |
-    |                          |
-    |     MINSTRLEN=3          |
-    |                   #  Min |
-    | imum string length.      |
-    |     WORDFILE=/usr/share/ |
-    | dict/linux.words  #  Dic |
-    | tionary file.            |
-    |     #  May specify a dif |
-    | ferent word list file    |
-    |     #+ of one-word-per-l |
-    | ine format.              |
-    |     #  For example, the  |
-    | "yawl" word-list package |
-    | ,                        |
-    |     #  http://bash.deta. |
-    | in/yawl-0.3.2.tar.gz     |
-    |                          |
-    |                          |
-    |     wlist=`strings "$1"  |
-    | | tr A-Z a-z | tr '[:spa |
-    | ce:]' Z | \              |
-    |            tr -cs '[:alp |
-    | ha:]' Z | tr -s '\173-\3 |
-    | 77' Z | tr Z ' '`        |
-    |                          |
-    |     # Translate output o |
-    | f 'strings' command with |
-    |  multiple passes of 'tr' |
-    | .                        |
-    |     #  "tr A-Z a-z"  con |
-    | verts to lowercase.      |
-    |     #  "tr '[:space:]'"  |
-    |  converts whitespace cha |
-    | racters to Z's.          |
-    |     #  "tr -cs '[:alpha: |
-    | ]' Z"  converts non-alph |
-    | abetic characters to Z's |
-    | ,                        |
-    |     #+ and squeezes mult |
-    | iple consecutive Z's.    |
-    |     #  "tr -s '\173-\377 |
-    | ' Z"  converts all chara |
-    | cters past 'z' to Z's    |
-    |     #+ and squeezes mult |
-    | iple consecutive Z's,    |
-    |     #+ which gets rid of |
-    |  all the weird character |
-    | s that the previous      |
-    |     #+ translation faile |
-    | d to deal with.          |
-    |     #  Finally, "tr Z '  |
-    | '" converts all those Z' |
-    | s to whitespace,         |
-    |     #+ which will be see |
-    | n as word separators in  |
-    | the loop below.          |
-    |                          |
-    |     #  ***************** |
-    | ************************ |
-    | ************************ |
-    | ******                   |
-    |     #  Note the techniqu |
-    | e of feeding/piping the  |
-    | output of 'tr' back to i |
-    | tself,                   |
-    |     #+ but with differen |
-    | t arguments and/or optio |
-    | ns on each successive pa |
-    | ss.                      |
-    |     #  ***************** |
-    | ************************ |
-    | ************************ |
-    | ******                   |
-    |                          |
-    |                          |
-    |     for word in $wlist   |
-    |                   #  Imp |
-    | ortant:                  |
-    |                          |
-    |                   #  $wl |
-    | ist must not be quoted h |
-    | ere.                     |
-    |                          |
-    |                   # "$wl |
-    | ist" does not work.      |
-    |                          |
-    |                   #  Why |
-    |  not?                    |
-    |     do                   |
-    |       strlen=${#word}    |
-    |                   #  Str |
-    | ing length.              |
-    |       if [ "$strlen" -lt |
-    |  "$MINSTRLEN" ]   #  Ski |
-    | p over short strings.    |
-    |       then               |
-    |         continue         |
-    |       fi                 |
-    |                          |
-    |       grep -Fw $word "$W |
-    | ORDFILE"          #   Ma |
-    | tch whole words only.    |
-    |     #      ^^^           |
-    |                   #  "Fi |
-    | xed strings" and         |
-    |                          |
-    |                   #+ "wh |
-    | ole words" options.      |
-    |     done                 |
-    |                          |
-    |     exit $?              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # wstrings.sh: "word-strings" (enhanced "strings" command)
+        #
+        #  This script filters the output of "strings" by checking it
+        #+ against a standard word list file.
+        #  This effectively eliminates gibberish and noise,
+        #+ and outputs only recognized words.
+
+        # ===========================================================
+        #                 Standard Check for Script Argument(s)
+        ARGS=1
+        E_BADARGS=85
+        E_NOFILE=86
+
+        if [ $# -ne $ARGS ]
+        then
+          echo "Usage: `basename $0` filename"
+          exit $E_BADARGS
+        fi
+
+        if [ ! -f "$1" ]                      # Check if file exists.
+        then
+            echo "File \"$1\" does not exist."
+            exit $E_NOFILE
+        fi
+        # ===========================================================
+
+
+        MINSTRLEN=3                           #  Minimum string length.
+        WORDFILE=/usr/share/dict/linux.words  #  Dictionary file.
+        #  May specify a different word list file
+        #+ of one-word-per-line format.
+        #  For example, the "yawl" word-list package,
+        #  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+
+        wlist=`strings "$1" | tr A-Z a-z | tr '[:space:]' Z | \
+               tr -cs '[:alpha:]' Z | tr -s '\173-\377' Z | tr Z ' '`
+
+        # Translate output of 'strings' command with multiple passes of 'tr'.
+        #  "tr A-Z a-z"  converts to lowercase.
+        #  "tr '[:space:]'"  converts whitespace characters to Z's.
+        #  "tr -cs '[:alpha:]' Z"  converts non-alphabetic characters to Z's,
+        #+ and squeezes multiple consecutive Z's.
+        #  "tr -s '\173-\377' Z"  converts all characters past 'z' to Z's
+        #+ and squeezes multiple consecutive Z's,
+        #+ which gets rid of all the weird characters that the previous
+        #+ translation failed to deal with.
+        #  Finally, "tr Z ' '" converts all those Z's to whitespace,
+        #+ which will be seen as word separators in the loop below.
+
+        #  ***********************************************************************
+        #  Note the technique of feeding/piping the output of 'tr' back to itself,
+        #+ but with different arguments and/or options on each successive pass.
+        #  ***********************************************************************
+
+
+        for word in $wlist                    #  Important:
+                                              #  $wlist must not be quoted here.
+                                              # "$wlist" does not work.
+                                              #  Why not?
+        do
+          strlen=${#word}                     #  String length.
+          if [ "$strlen" -lt "$MINSTRLEN" ]   #  Skip over short strings.
+          then
+            continue
+          fi
+
+          grep -Fw $word "$WORDFILE"          #   Match whole words only.
+        #      ^^^                            #  "Fixed strings" and
+                                              #+ "whole words" options. 
+        done  
+
+        exit $?
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1371,16 +1252,24 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------------------+--------------------------------------+
-    | |Tip|                                |
-    |  The **diff** command returns an     |
-    | exit status of 0 if the compared     |
-    | files are identical, and 1 if they   |
-    | differ (or 2 when *binary* files are |
-    | being compared). This permits use of |
-    | **diff** in a test construct within  |
-    | a shell script (see below).          |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+     The **diff** command returns an exit status of 0 if the compared
+    files are identical, and 1 if they differ (or 2 when *binary* files
+    are being compared). This permits use of **diff** in a test
+    construct within a shell script (see below).
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1397,90 +1286,106 @@ Chapter 16. External Filters, Programs and Commands
     newly revised package. Kernel "patches" have become the preferred
     method of distributing the frequent releases of the Linux kernel.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     patch -p1 <patch-fil |
-    | e                        |
-    |     # Takes all the chan |
-    | ges listed in 'patch-fil |
-    | e'                       |
-    |     # and applies them t |
-    | o the files referenced t |
-    | herein.                  |
-    |     # This upgrades to a |
-    |  newer version of the pa |
-    | ckage.                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        patch -p1 <patch-file
+        # Takes all the changes listed in 'patch-file'
+        # and applies them to the files referenced therein.
+        # This upgrades to a newer version of the package.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Patching the kernel:
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     cd /usr/src          |
-    |     gzip -cd patchXX.gz  |
-    | | patch -p0              |
-    |     # Upgrading kernel s |
-    | ource using 'patch'.     |
-    |     # From the Linux ker |
-    | nel docs "README",       |
-    |     # by anonymous autho |
-    | r (Alan Cox?).           |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        cd /usr/src
+        gzip -cd patchXX.gz | patch -p0
+        # Upgrading kernel source using 'patch'.
+        # From the Linux kernel docs "README",
+        # by anonymous author (Alan Cox?).
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Note|             |
-    | The **diff**       |
-    | command can also   |
-    | recursively        |
-    | compare            |
-    | directories (for   |
-    | the filenames      |
-    | present).          |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    | | .. code:: SCREEN |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     bash$ diff - |
-    | r ~/note |         |
-    | | s1 ~/notes2      |
-    |          |         |
-    | |     Only in /hom |
-    | e/bozo/n |         |
-    | | otes1: file02    |
-    |          |         |
-    | |      Only in /ho |
-    | me/bozo/ |         |
-    | | notes1: file03   |
-    |          |         |
-    | |      Only in /ho |
-    | me/bozo/ |         |
-    | | notes2: file04   |
-    |          |         |
-    | |                  |
-    |          |         |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    The **diff** command can also recursively compare directories (for
+    the filenames present).
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ diff -r ~/note |
+    | s1 ~/notes2              |
+    |     Only in /home/bozo/n |
+    | otes1: file02            |
+    |      Only in /home/bozo/ |
+    | notes1: file03           |
+    |      Only in /home/bozo/ |
+    | notes2: file04           |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ diff -r ~/notes1 ~/notes2
+        Only in /home/bozo/notes1: file02
+         Only in /home/bozo/notes1: file03
+         Only in /home/bozo/notes2: file04
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ diff -r ~/notes1 ~/notes2
+        Only in /home/bozo/notes1: file02
+         Only in /home/bozo/notes1: file03
+         Only in /home/bozo/notes2: file04
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1490,12 +1395,21 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------+--------------------------+--------------------------+
-    | |Tip|                    |
-    |                          |
-    | Use **zdiff** to compare |
-    | *gzipped* files.         |
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    Use **zdiff** to compare *gzipped* files.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1505,15 +1419,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------+--------------------------+--------------------------+
-    | |Tip|                    |
-    |                          |
-    | Use **diffstat** to      |
-    | create a histogram       |
-    | (point-distribution      |
-    | graph) of output from    |
-    | **diff** .               |
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    Use **diffstat** to create a histogram (point-distribution graph) of
+    output from **diff** .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1525,24 +1446,29 @@ Chapter 16. External Filters, Programs and Commands
     but unfortunately this gives no information about the results of the
     comparison.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ diff3 file-1 f |
-    | ile-2 file-3             |
-    |     ====                 |
-    |      1:1c                |
-    |        This is line 1 of |
-    |  "file-1".               |
-    |      2:1c                |
-    |        This is line 1 of |
-    |  "file-2".               |
-    |      3:1c                |
-    |        This is line 1 of |
-    |  "file-3"                |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ diff3 file-1 file-2 file-3
+        ====
+         1:1c
+           This is line 1 of "file-1".
+         2:1c
+           This is line 1 of "file-2".
+         3:1c
+           This is line 1 of "file-3"
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
      The **merge** (3-way file merge) command is an interesting adjunct
     to *diff3* . Its syntax is
@@ -1566,14 +1492,23 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | Like **diff** , **cmp** returns an   |
-    | exit status of 0 if the compared     |
-    | files are identical, and 1 if they   |
-    | differ. This permits use in a test   |
-    | construct within a shell script.     |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    Like **diff** , **cmp** returns an exit status of 0 if the compared
+    files are identical, and 1 if they differ. This permits use in a
+    test construct within a shell script.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1585,67 +1520,55 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-35. Using *cmp* to compare two files within a script.**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # file-comparison.sh |
-    |                          |
-    |     ARGS=2  # Two args t |
-    | o script expected.       |
-    |     E_BADARGS=85         |
-    |     E_UNREADABLE=86      |
-    |                          |
-    |     if [ $# -ne "$ARGS"  |
-    | ]                        |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` file1 file2"    |
-    |       exit $E_BADARGS    |
-    |     fi                   |
-    |                          |
-    |     if [[ ! -r "$1" || ! |
-    |  -r "$2" ]]              |
-    |     then                 |
-    |       echo "Both files t |
-    | o be compared must exist |
-    |  and be readable."       |
-    |       exit $E_UNREADABLE |
-    |     fi                   |
-    |                          |
-    |     cmp $1 $2 &> /dev/nu |
-    | ll                       |
-    |     #   Redirection to / |
-    | dev/null buries the outp |
-    | ut of the "cmp" command. |
-    |     #   cmp -s $1 $2  ha |
-    | s same result ("-s" sile |
-    | nt flag to "cmp")        |
-    |     #   Thank you  Ander |
-    | s Gustavsson for pointin |
-    | g this out.              |
-    |     #                    |
-    |     #  Also works with ' |
-    | diff', i.e.,             |
-    |     #+ diff $1 $2 &> /de |
-    | v/null                   |
-    |                          |
-    |     if [ $? -eq 0 ]      |
-    |     # Test exit status o |
-    | f "cmp" command.         |
-    |     then                 |
-    |       echo "File \"$1\"  |
-    | is identical to file \"$ |
-    | 2\"."                    |
-    |     else                 |
-    |       echo "File \"$1\"  |
-    | differs from file \"$2\" |
-    | ."                       |
-    |     fi                   |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # file-comparison.sh
+
+        ARGS=2  # Two args to script expected.
+        E_BADARGS=85
+        E_UNREADABLE=86
+
+        if [ $# -ne "$ARGS" ]
+        then
+          echo "Usage: `basename $0` file1 file2"
+          exit $E_BADARGS
+        fi
+
+        if [[ ! -r "$1" || ! -r "$2" ]]
+        then
+          echo "Both files to be compared must exist and be readable."
+          exit $E_UNREADABLE
+        fi
+
+        cmp $1 $2 &> /dev/null
+        #   Redirection to /dev/null buries the output of the "cmp" command.
+        #   cmp -s $1 $2  has same result ("-s" silent flag to "cmp")
+        #   Thank you  Anders Gustavsson for pointing this out.
+        #
+        #  Also works with 'diff', i.e.,
+        #+ diff $1 $2 &> /dev/null
+
+        if [ $? -eq 0 ]         # Test exit status of "cmp" command.
+        then
+          echo "File \"$1\" is identical to file \"$2\"."
+        else  
+          echo "File \"$1\" differs from file \"$2\"."
+        fi
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1655,10 +1578,21 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------------------+--------------------------------------+
-    | |Tip|                                |
-    | Use **zcmp** on *gzipped* files.     |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    Use **zcmp** on *gzipped* files.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1716,14 +1650,21 @@ Chapter 16. External Filters, Programs and Commands
     be used for "usage" messages if, for example a script is called with
     missing arguments:
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo "Usage: `basena |
-    | me $0` arg1 arg2 ... arg |
-    | n"                       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo "Usage: `basename $0` arg1 arg2 ... argn"
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **dirname**
     Strips the **basename** from a filename, printing only the path
@@ -1733,18 +1674,24 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | **basename** and **dirname** can     |
-    | operate on any arbitrary string. The |
-    | argument does not need to refer to   |
-    | an existing file, or even be a       |
-    | filename for that matter (see        |
-    | `Example                             |
-    | A-7 <contributed-scripts.html#DAYSBE |
-    | TWEEN>`__                            |
-    | ).                                   |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    **basename** and **dirname** can operate on any arbitrary string.
+    The argument does not need to refer to an existing file, or even be
+    a filename for that matter (see `Example
+    A-7 <contributed-scripts.html#DAYSBETWEEN>`__ ).
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1756,34 +1703,31 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-36. *basename* and *dirname***
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     address=/home/bozo/d |
-    | aily-journal.txt         |
-    |                          |
-    |     echo "Basename of /h |
-    | ome/bozo/daily-journal.t |
-    | xt = `basename $address` |
-    | "                        |
-    |     echo "Dirname of /ho |
-    | me/bozo/daily-journal.tx |
-    | t = `dirname $address`"  |
-    |     echo                 |
-    |     echo "My own home is |
-    |  `basename ~/`."         |
-    |  # `basename ~` also wor |
-    | ks.                      |
-    |     echo "The home of my |
-    |  home is `dirname ~/`."  |
-    |  # `dirname ~`  also wor |
-    | ks.                      |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        address=/home/bozo/daily-journal.txt
+
+        echo "Basename of /home/bozo/daily-journal.txt = `basename $address`"
+        echo "Dirname of /home/bozo/daily-journal.txt = `dirname $address`"
+        echo
+        echo "My own home is `basename ~/`."         # `basename ~` also works.
+        echo "The home of my home is `dirname ~/`."  # `dirname ~`  also works.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1803,51 +1747,45 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-37. A script that copies itself in sections**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # splitcopy.sh       |
-    |                          |
-    |     #  A script that spl |
-    | its itself into chunks,  |
-    |     #+ then reassembles  |
-    | the chunks into an exact |
-    |  copy                    |
-    |     #+ of the original s |
-    | cript.                   |
-    |                          |
-    |     CHUNKSIZE=4    #  Si |
-    | ze of first chunk of spl |
-    | it files.                |
-    |     OUTPREFIX=xx   #  cs |
-    | plit prefixes, by defaul |
-    | t,                       |
-    |                    #+ fi |
-    | les with "xx" ...        |
-    |                          |
-    |     csplit "$0" "$CHUNKS |
-    | IZE"                     |
-    |                          |
-    |     # Some comment lines |
-    |  for padding . . .       |
-    |     # Line 15            |
-    |     # Line 16            |
-    |     # Line 17            |
-    |     # Line 18            |
-    |     # Line 19            |
-    |     # Line 20            |
-    |                          |
-    |     cat "$OUTPREFIX"* >  |
-    | "$0.copy"  # Concatenate |
-    |  the chunks.             |
-    |     rm "$OUTPREFIX"*     |
-    |            # Get rid of  |
-    | the chunks.              |
-    |                          |
-    |     exit $?              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # splitcopy.sh
+
+        #  A script that splits itself into chunks,
+        #+ then reassembles the chunks into an exact copy
+        #+ of the original script.
+
+        CHUNKSIZE=4    #  Size of first chunk of split files.
+        OUTPREFIX=xx   #  csplit prefixes, by default,
+                       #+ files with "xx" ...
+
+        csplit "$0" "$CHUNKSIZE"
+
+        # Some comment lines for padding . . .
+        # Line 15
+        # Line 16
+        # Line 17
+        # Line 18
+        # Line 19
+        # Line 20
+
+        cat "$OUTPREFIX"* > "$0.copy"  # Concatenate the chunks.
+        rm "$OUTPREFIX"*               # Get rid of the chunks.
+
+        exit $?
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1874,59 +1812,59 @@ Chapter 16. External Filters, Programs and Commands
     command, or better yet, the newer **sha1sum** (Secure Hash
     Algorithm). ` [4]  <filearchiv.html#FTN.AEN12849>`__
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ cksum /boot/vm |
-    | linuz                    |
-    |     1670054224 804083 /b |
-    | oot/vmlinuz              |
-    |                          |
-    |     bash$ echo -n "Top S |
-    | ecret" | cksum           |
-    |     3391003827 10        |
-    |                          |
-    |                          |
-    |                          |
-    |     bash$ md5sum /boot/v |
-    | mlinuz                   |
-    |     0f43eccea8f09e0a0b2b |
-    | 5cf1dcf333ba  /boot/vmli |
-    | nuz                      |
-    |                          |
-    |     bash$ echo -n "Top S |
-    | ecret" | md5sum          |
-    |     8babc97a6f62a4649716 |
-    | f4df8d61728f  -          |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ cksum /boot/vmlinuz
+        1670054224 804083 /boot/vmlinuz
+
+        bash$ echo -n "Top Secret" | cksum
+        3391003827 10
+
+
+
+        bash$ md5sum /boot/vmlinuz
+        0f43eccea8f09e0a0b2b5cf1dcf333ba  /boot/vmlinuz
+
+        bash$ echo -n "Top Secret" | md5sum
+        8babc97a6f62a4649716f4df8d61728f  -
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------------+--------------------------+--------------------------+
-    | |Note|                   |
-    | The **cksum** command    |
-    | shows the size, in       |
-    | bytes, of its target,    |
-    | whether file or          |
-    | ``             stdout    |
-    |          ``              |
-    | .                        |
-    |                          |
-    | The **md5sum** and       |
-    | **sha1sum** commands     |
-    | display a                |
-    | `dash <special-chars.htm |
-    | l#DASHREF2>`__           |
-    | when they receive their  |
-    | input from               |
-    | ``             stdout    |
-    |          ``              |
-    | .                        |
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    The **cksum** command shows the size, in bytes, of its target,
+    whether file or ``            stdout           `` .
+
+    The **md5sum** and **sha1sum** commands display a
+    `dash <special-chars.html#DASHREF2>`__ when they receive their input
+    from ``            stdout           `` .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1938,217 +1876,135 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-38. Checking file integrity**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # file-integrity.sh: |
-    |  Checking whether files  |
-    | in a given directory     |
-    |     #                    |
-    |  have been tampered with |
-    | .                        |
-    |                          |
-    |     E_DIR_NOMATCH=80     |
-    |     E_BAD_DBFILE=81      |
-    |                          |
-    |     dbfile=File_record.m |
-    | d5                       |
-    |     # Filename for stori |
-    | ng records (database fil |
-    | e).                      |
-    |                          |
-    |                          |
-    |     set_up_database ()   |
-    |     {                    |
-    |       echo ""$directory" |
-    | " > "$dbfile"            |
-    |       # Write directory  |
-    | name to first line of fi |
-    | le.                      |
-    |       md5sum "$directory |
-    | "/* >> "$dbfile"         |
-    |       # Append md5 check |
-    | sums and filenames.      |
-    |     }                    |
-    |                          |
-    |     check_database ()    |
-    |     {                    |
-    |       local n=0          |
-    |       local filename     |
-    |       local checksum     |
-    |                          |
-    |       # ---------------- |
-    | ------------------------ |
-    | --- #                    |
-    |       #  This file check |
-    |  should be unnecessary,  |
-    |       #+ but better safe |
-    |  than sorry.             |
-    |                          |
-    |       if [ ! -r "$dbfile |
-    | " ]                      |
-    |       then               |
-    |         echo "Unable to  |
-    | read checksum database f |
-    | ile!"                    |
-    |         exit $E_BAD_DBFI |
-    | LE                       |
-    |       fi                 |
-    |       # ---------------- |
-    | ------------------------ |
-    | --- #                    |
-    |                          |
-    |       while read record[ |
-    | n]                       |
-    |       do                 |
-    |                          |
-    |         directory_checke |
-    | d="${record[0]}"         |
-    |         if [ "$directory |
-    | _checked" != "$directory |
-    | " ]                      |
-    |         then             |
-    |           echo "Director |
-    | ies do not match up!"    |
-    |           # Tried to use |
-    |  file for a different di |
-    | rectory.                 |
-    |           exit $E_DIR_NO |
-    | MATCH                    |
-    |         fi               |
-    |                          |
-    |         if [ "$n" -gt 0  |
-    | ]   # Not directory name |
-    | .                        |
-    |         then             |
-    |           filename[n]=$( |
-    |  echo ${record[$n]} | aw |
-    | k '{ print $2 }' )       |
-    |           #  md5sum writ |
-    | es records backwards,    |
-    |           #+ checksum fi |
-    | rst, then filename.      |
-    |           checksum[n]=$( |
-    |  md5sum "${filename[n]}" |
-    |  )                       |
-    |                          |
-    |                          |
-    |           if [ "${record |
-    | [n]}" = "${checksum[n]}" |
-    |  ]                       |
-    |           then           |
-    |             echo "${file |
-    | name[n]} unchanged."     |
-    |                          |
-    |             elif [ "`bas |
-    | ename ${filename[n]}`" ! |
-    | = "$dbfile" ]            |
-    |                    #  Sk |
-    | ip over checksum databas |
-    | e file,                  |
-    |                    #+ as |
-    |  it will change with eac |
-    | h invocation of script.  |
-    |                    #  -- |
-    | -                        |
-    |                    #  Th |
-    | is unfortunately means t |
-    | hat when running         |
-    |                    #+ th |
-    | is script on $PWD, tampe |
-    | ring with the            |
-    |                    #+ ch |
-    | ecksum database file wil |
-    | l not be detected.       |
-    |                    #  Ex |
-    | ercise: Fix this.        |
-    |             then         |
-    |               echo "${fi |
-    | lename[n]} : CHECKSUM ER |
-    | ROR!"                    |
-    |             # File has b |
-    | een changed since last c |
-    | hecked.                  |
-    |             fi           |
-    |                          |
-    |           fi             |
-    |                          |
-    |                          |
-    |                          |
-    |         let "n+=1"       |
-    |       done <"$dbfile"    |
-    |     # Read from checksum |
-    |  database file.          |
-    |                          |
-    |     }                    |
-    |                          |
-    |     # ================== |
-    | ======================== |
-    | ========= #              |
-    |     # main ()            |
-    |                          |
-    |     if [ -z  "$1" ]      |
-    |     then                 |
-    |       directory="$PWD"   |
-    |     #  If not specified, |
-    |     else                 |
-    |     #+ use current worki |
-    | ng directory.            |
-    |       directory="$1"     |
-    |     fi                   |
-    |                          |
-    |     clear                |
-    |     # Clear screen.      |
-    |     echo " Running file  |
-    | integrity check on $dire |
-    | ctory"                   |
-    |     echo                 |
-    |                          |
-    |     # ------------------ |
-    | ------------------------ |
-    | ------------------------ |
-    |  #                       |
-    |       if [ ! -r "$dbfile |
-    | " ] # Need to create dat |
-    | abase file?              |
-    |       then               |
-    |         echo "Setting up |
-    |  database file, \""$dire |
-    | ctory"/"$dbfile"\"."; ec |
-    | ho                       |
-    |         set_up_database  |
-    |       fi                 |
-    |     # ------------------ |
-    | ------------------------ |
-    | ------------------------ |
-    |  #                       |
-    |                          |
-    |     check_database       |
-    |     # Do the actual work |
-    | .                        |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     #  You may wish to r |
-    | edirect the stdout of th |
-    | is script to a file,     |
-    |     #+ especially if the |
-    |  directory checked has m |
-    | any files in it.         |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     #  For a much more t |
-    | horough file integrity c |
-    | heck,                    |
-    |     #+ consider the "Tri |
-    | pwire" package,          |
-    |     #+ http://sourceforg |
-    | e.net/projects/tripwire/ |
-    | .                        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # file-integrity.sh: Checking whether files in a given directory
+        #                    have been tampered with.
+
+        E_DIR_NOMATCH=80
+        E_BAD_DBFILE=81
+
+        dbfile=File_record.md5
+        # Filename for storing records (database file).
+
+
+        set_up_database ()
+        {
+          echo ""$directory"" > "$dbfile"
+          # Write directory name to first line of file.
+          md5sum "$directory"/* >> "$dbfile"
+          # Append md5 checksums and filenames.
+        }
+
+        check_database ()
+        {
+          local n=0
+          local filename
+          local checksum
+
+          # ------------------------------------------- #
+          #  This file check should be unnecessary,
+          #+ but better safe than sorry.
+
+          if [ ! -r "$dbfile" ]
+          then
+            echo "Unable to read checksum database file!"
+            exit $E_BAD_DBFILE
+          fi
+          # ------------------------------------------- #
+
+          while read record[n]
+          do
+
+            directory_checked="${record[0]}"
+            if [ "$directory_checked" != "$directory" ]
+            then
+              echo "Directories do not match up!"
+              # Tried to use file for a different directory.
+              exit $E_DIR_NOMATCH
+            fi
+
+            if [ "$n" -gt 0 ]   # Not directory name.
+            then
+              filename[n]=$( echo ${record[$n]} | awk '{ print $2 }' )
+              #  md5sum writes records backwards,
+              #+ checksum first, then filename.
+              checksum[n]=$( md5sum "${filename[n]}" )
+
+
+              if [ "${record[n]}" = "${checksum[n]}" ]
+              then
+                echo "${filename[n]} unchanged."
+
+                elif [ "`basename ${filename[n]}`" != "$dbfile" ]
+                       #  Skip over checksum database file,
+                       #+ as it will change with each invocation of script.
+                       #  ---
+                       #  This unfortunately means that when running
+                       #+ this script on $PWD, tampering with the
+                       #+ checksum database file will not be detected.
+                       #  Exercise: Fix this.
+                then
+                  echo "${filename[n]} : CHECKSUM ERROR!"
+                # File has been changed since last checked.
+                fi
+
+              fi
+
+
+
+            let "n+=1"
+          done <"$dbfile"       # Read from checksum database file. 
+
+        }  
+
+        # =================================================== #
+        # main ()
+
+        if [ -z  "$1" ]
+        then
+          directory="$PWD"      #  If not specified,
+        else                    #+ use current working directory.
+          directory="$1"
+        fi  
+
+        clear                   # Clear screen.
+        echo " Running file integrity check on $directory"
+        echo
+
+        # ------------------------------------------------------------------ #
+          if [ ! -r "$dbfile" ] # Need to create database file?
+          then
+            echo "Setting up database file, \""$directory"/"$dbfile"\"."; echo
+            set_up_database
+          fi  
+        # ------------------------------------------------------------------ #
+
+        check_database          # Do the actual work.
+
+        echo 
+
+        #  You may wish to redirect the stdout of this script to a file,
+        #+ especially if the directory checked has many files in it.
+
+        exit 0
+
+        #  For a much more thorough file integrity check,
+        #+ consider the "Tripwire" package,
+        #+ http://sourceforge.net/projects/tripwire/.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2163,57 +2019,69 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="NOTE">
 
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    There have been reports that the 128-bit **md5sum** can be cracked,
+    so the more secure 160-bit **sha1sum** is a welcome new addition to
+    the checksum toolkit.
+
     +--------------------------+--------------------------+--------------------------+
-    | |Note|                   |
-    | There have been reports  |
-    | that the 128-bit         |
-    | **md5sum** can be        |
-    | cracked, so the more     |
-    | secure 160-bit           |
-    | **sha1sum** is a welcome |
-    | new addition to the      |
-    | checksum toolkit.        |
+    | .. code:: SCREEN         |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
-    | | .. code:: SCREEN       |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     bash$ md5sum testf |
-    | il |                     |
-    | | e                      |
-    |    |                     |
-    | |     e181e2c8720c60522c |
-    | 4c |                     |
-    | | 4c981108e367  testfile |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     bash$ sha1sum test |
-    | fi |                     |
-    | | le                     |
-    |    |                     |
-    | |     5d7425a9c08a66c317 |
-    | 7f |                     |
-    | | 1e31286fa40986ffc996   |
-    | te |                     |
-    | | stfile                 |
-    |    |                     |
-    | |                        |
-    |    |                     |
+    |     bash$ md5sum testfil |
+    | e                        |
+    |     e181e2c8720c60522c4c |
+    | 4c981108e367  testfile   |
     |                          |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
+    |     bash$ sha1sum testfi |
+    | le                       |
+    |     5d7425a9c08a66c3177f |
+    | 1e31286fa40986ffc996  te |
+    | stfile                   |
+    |                          |
                               
     +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ md5sum testfile
+        e181e2c8720c60522c4c4c981108e367  testfile
+
+
+        bash$ sha1sum testfile
+        5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ md5sum testfile
+        e181e2c8720c60522c4c4c981108e367  testfile
+
+
+        bash$ sha1sum testfile
+        5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2241,66 +2109,51 @@ Chapter 16. External Filters, Programs and Commands
 
     **Example 16-39. Uudecoding encoded files**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Uudecodes all uuen |
-    | coded files in current w |
-    | orking directory.        |
-    |                          |
-    |     lines=35        # Al |
-    | low 35 lines for the hea |
-    | der (very generous).     |
-    |                          |
-    |     for File in *   # Te |
-    | st all the files in $PWD |
-    | .                        |
-    |     do                   |
-    |       search1=`head -n $ |
-    | lines $File | grep begin |
-    |  | wc -w`                |
-    |       search2=`tail -n $ |
-    | lines $File | grep end | |
-    |  wc -w`                  |
-    |       #  Uuencoded files |
-    |  have a "begin" near the |
-    |  beginning,              |
-    |       #+ and an "end" ne |
-    | ar the end.              |
-    |       if [ "$search1" -g |
-    | t 0 ]                    |
-    |       then               |
-    |         if [ "$search2"  |
-    | -gt 0 ]                  |
-    |         then             |
-    |           echo "uudecodi |
-    | ng - $File -"            |
-    |           uudecode $File |
-    |         fi               |
-    |       fi                 |
-    |     done                 |
-    |                          |
-    |     #  Note that running |
-    |  this script upon itself |
-    |  fools it                |
-    |     #+ into thinking it  |
-    | is a uuencoded file,     |
-    |     #+ because it contai |
-    | ns both "begin" and "end |
-    | ".                       |
-    |                          |
-    |     #  Exercise:         |
-    |     #  --------          |
-    |     #  Modify this scrip |
-    | t to check each file for |
-    |  a newsgroup header,     |
-    |     #+ and skip to next  |
-    | if not found.            |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # Uudecodes all uuencoded files in current working directory.
+
+        lines=35        # Allow 35 lines for the header (very generous).
+
+        for File in *   # Test all the files in $PWD.
+        do
+          search1=`head -n $lines $File | grep begin | wc -w`
+          search2=`tail -n $lines $File | grep end | wc -w`
+          #  Uuencoded files have a "begin" near the beginning,
+          #+ and an "end" near the end.
+          if [ "$search1" -gt 0 ]
+          then
+            if [ "$search2" -gt 0 ]
+            then
+              echo "uudecoding - $File -"
+              uudecode $File
+            fi  
+          fi
+        done  
+
+        #  Note that running this script upon itself fools it
+        #+ into thinking it is a uuencoded file,
+        #+ because it contains both "begin" and "end".
+
+        #  Exercise:
+        #  --------
+        #  Modify this script to check each file for a newsgroup header,
+        #+ and skip to next if not found.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2310,15 +2163,23 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="TIP">
 
-    +--------------------------------------+--------------------------------------+
-    | |Tip|                                |
-    | The `fold                            |
-    | -s <textproc.html#FOLDREF>`__        |
-    | command may be useful (possibly in a |
-    | pipe) to process long uudecoded text |
-    | messages downloaded from Usenet      |
-    | newsgroups.                          |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    The `fold -s <textproc.html#FOLDREF>`__ command may be useful
+    (possibly in a pipe) to process long uudecoded text messages
+    downloaded from Usenet newsgroups.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2347,75 +2208,64 @@ Chapter 16. External Filters, Programs and Commands
     This is an Open Source implementation of *Secure Sockets Layer*
     encryption.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     # To encrypt a file: |
-    |     openssl aes-128-ecb  |
-    | -salt -in file.txt -out  |
-    | file.encrypted \         |
-    |     -pass pass:my_passwo |
-    | rd                       |
-    |     #          ^^^^^^^^^ |
-    | ^^   User-selected passw |
-    | ord.                     |
-    |     #       aes-128-ecb  |
-    |      is the encryption m |
-    | ethod chosen.            |
-    |                          |
-    |     # To decrypt an open |
-    | ssl-encrypted file:      |
-    |     openssl aes-128-ecb  |
-    | -d -salt -in file.encryp |
-    | ted -out file.txt \      |
-    |     -pass pass:my_passwo |
-    | rd                       |
-    |     #          ^^^^^^^^^ |
-    | ^^   User-selected passw |
-    | ord.                     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        # To encrypt a file:
+        openssl aes-128-ecb -salt -in file.txt -out file.encrypted \
+        -pass pass:my_password
+        #          ^^^^^^^^^^^   User-selected password.
+        #       aes-128-ecb      is the encryption method chosen.
+
+        # To decrypt an openssl-encrypted file:
+        openssl aes-128-ecb -d -salt -in file.encrypted -out file.txt \
+        -pass pass:my_password
+        #          ^^^^^^^^^^^   User-selected password.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     `Piping <special-chars.html#PIPEREF>`__ *openssl* to/from
     `tar <filearchiv.html#TARREF>`__ makes it possible to encrypt an
     entire directory tree.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     # To encrypt a direc |
-    | tory:                    |
-    |                          |
-    |     sourcedir="/home/boz |
-    | o/testfiles"             |
-    |     encrfile="encr-dir.t |
-    | ar.gz"                   |
-    |     password=my_secret_p |
-    | assword                  |
-    |                          |
-    |     tar czvf - "$sourced |
-    | ir" |                    |
-    |     openssl des3 -salt - |
-    | out "$encrfile" -pass pa |
-    | ss:"$password"           |
-    |     #       ^^^^   Uses  |
-    | des3 encryption.         |
-    |     # Writes encrypted f |
-    | ile "encr-dir.tar.gz" in |
-    |  current working directo |
-    | ry.                      |
-    |                          |
-    |     # To decrypt the res |
-    | ulting tarball:          |
-    |     openssl des3 -d -sal |
-    | t -in "$encrfile" -pass  |
-    | pass:"$password" |       |
-    |     tar -xzv             |
-    |     # Decrypts and unpac |
-    | ks into current working  |
-    | directory.               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        # To encrypt a directory:
+
+        sourcedir="/home/bozo/testfiles"
+        encrfile="encr-dir.tar.gz"
+        password=my_secret_password
+
+        tar czvf - "$sourcedir" |
+        openssl des3 -salt -out "$encrfile" -pass pass:"$password"
+        #       ^^^^   Uses des3 encryption.
+        # Writes encrypted file "encr-dir.tar.gz" in current working directory.
+
+        # To decrypt the resulting tarball:
+        openssl des3 -d -salt -in "$encrfile" -pass pass:"$password" |
+        tar -xzv
+        # Decrypts and unpacks into current working directory.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Of course, *openssl* has many other uses, such as obtaining signed
     *certificates* for Web sites. See the `info <basic.html#INFOREF>`__
@@ -2433,13 +2283,22 @@ Chapter 16. External Filters, Programs and Commands
 
        <div class="CAUTION">
 
-    +--------------------------------------+--------------------------------------+
-    | |Caution|                            |
-    | Advanced forensic technology may     |
-    | still be able to recover the         |
-    | contents of a file, even after       |
-    | application of **shred** .           |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    Advanced forensic technology may still be able to recover the
+    contents of a file, even after application of **shred** .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2461,51 +2320,53 @@ Chapter 16. External Filters, Programs and Commands
     additional arguments, it creates a zero-length file in the
     ``         /tmp        `` directory.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ mktemp         |
-    |     /tmp/tmp.zzsvql3154  |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     PREFIX=filename      |
-    |     tempfile=`mktemp $PR |
-    | EFIX.XXXXXX`             |
-    |     #                    |
-    |      ^^^^^^ Need at leas |
-    | t 6 placeholders         |
-    |     #+                   |
-    |             in the filen |
-    | ame template.            |
-    |     #   If no filename t |
-    | emplate supplied,        |
-    |     #+ "tmp.XXXXXXXXXX"  |
-    | is the default.          |
-    |                          |
-    |     echo "tempfile name  |
-    | = $tempfile"             |
-    |     # tempfile name = fi |
-    | lename.QA2ZpY            |
-    |     #                 or |
-    |  something similar...    |
-    |                          |
-    |     #  Creates a file of |
-    |  that name in the curren |
-    | t working directory      |
-    |     #+ with 600 file per |
-    | missions.                |
-    |     #  A "umask 177" is  |
-    | therefore unnecessary,   |
-    |     #+ but it's good pro |
-    | gramming practice nevert |
-    | heless.                  |
-                              
-    +--------------------------+--------------------------+--------------------------+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ mktemp
+        /tmp/tmp.zzsvql3154
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        PREFIX=filename
+        tempfile=`mktemp $PREFIX.XXXXXX`
+        #                        ^^^^^^ Need at least 6 placeholders
+        #+                              in the filename template.
+        #   If no filename template supplied,
+        #+ "tmp.XXXXXXXXXX" is the default.
+
+        echo "tempfile name = $tempfile"
+        # tempfile name = filename.QA2ZpY
+        #                 or something similar...
+
+        #  Creates a file of that name in the current working directory
+        #+ with 600 file permissions.
+        #  A "umask 177" is therefore unnecessary,
+        #+ but it's good programming practice nevertheless.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **make**
 
@@ -2551,27 +2412,26 @@ Chapter 16. External Filters, Programs and Commands
     An interesting application of *more* is to "test drive" a command
     sequence, to forestall potentially unpleasant consequences.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     ls /home/bozo | awk  |
-    | '{print "rm -rf " $1}' | |
-    |  more                    |
-    |     #                    |
-    |                          |
-    |  ^^^^                    |
-    |                          |
-    |     # Testing the effect |
-    |  of the following (disas |
-    | trous) command-line:     |
-    |     #      ls /home/bozo |
-    |  | awk '{print "rm -rf " |
-    |  $1}' | sh               |
-    |     #      Hand off to t |
-    | he shell to execute . .  |
-    | .       ^^               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        ls /home/bozo | awk '{print "rm -rf " $1}' | more
+        #                                            ^^^^
+                 
+        # Testing the effect of the following (disastrous) command-line:
+        #      ls /home/bozo | awk '{print "rm -rf " $1}' | sh
+        #      Hand off to the shell to execute . . .       ^^
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The *less* pager has the interesting property of doing a formatted
     display of *man page* source. See `Example
@@ -2588,29 +2448,65 @@ Chapter 16. External Filters, Programs and Commands
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <filearchiv.html#AEN11885>`__ | ` [2]  <filearchiv.html#AEN11896>`__ |
-| An *archive* , in the sense          | A                                    |
-| discussed here, is simply a set of   | ``                 tar czvf ArchiveN |
-| related files stored in a single     | ame.tar.gz *               ``        |
-| location.                            | *will* include dotfiles in           |
-|                                      | subdirectories *below* the current   |
-|                                      | working directory. This is an        |
-|                                      | undocumented GNU **tar** "feature."  |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <filearchiv.html#AEN11885>`__
+
+An *archive* , in the sense discussed here, is simply a set of related
+files stored in a single location.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <filearchiv.html#AEN11896>`__
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <textproc.html>`__ | Text Processing Commands |
-| `Home <index.html>`__    | `Up <external.html>`__   |
-| `Next <communications.ht | Communications Commands  |
-| ml>`__                   |                          |
-+--------------------------+--------------------------+--------------------------+
+A ``               tar czvf ArchiveName.tar.gz *             `` *will*
+include dotfiles in subdirectories *below* the current working
+directory. This is an undocumented GNU **tar** "feature."
+
+.. raw:: html
+
+   </p>
+
+` [3]  <filearchiv.html#AEN12840>`__
+
+The checksum may be expressed as a *hexadecimal* number, or to some
+other base.
+
+.. raw:: html
+
+   </p>
+
+` [4]  <filearchiv.html#AEN12849>`__
+
+For even *better* security, use the *sha256sum* , *sha512* , and
+*sha1pass* commands.
+
+.. raw:: html
+
+   </p>
+
+` [5]  <filearchiv.html#AEN12969>`__
+
+This is a symmetric block cipher, used to encrypt files on a single
+system or local network, as opposed to the *public key* cipher class, of
+which *pgp* is a well-known example.
+
+.. raw:: html
+
+   </p>
+
+` [6]  <filearchiv.html#AEN13030>`__
+
+Creates a temporary *directory* when invoked with the
+``       -d      `` option.
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 

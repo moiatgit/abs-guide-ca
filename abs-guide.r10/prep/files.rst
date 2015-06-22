@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <bash-options.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <systemdirs.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="APPENDIX">
 
   Appendix H. Important Files
@@ -154,35 +82,49 @@ Advanced Bash-Scripting Guide:
     Listing and description of attached hardware devices. This
     information is in text form and can be extracted and parsed.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ grep -A 5 AUDI |
-    | O /etc/sysconfig/hwconf  |
-    |                          |
-    |     class: AUDIO         |
-    |      bus: PCI            |
-    |      detached: 0         |
-    |      driver: snd-intel8x |
-    | 0                        |
-    |      desc: "Intel Corpor |
-    | ation 82801CA/CAM AC'97  |
-    | Audio Controller"        |
-    |      vendorId: 8086      |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ grep -A 5 AUDIO /etc/sysconfig/hwconf        
+        class: AUDIO
+         bus: PCI
+         detached: 0
+         driver: snd-intel8x0
+         desc: "Intel Corporation 82801CA/CAM AC'97 Audio Controller"
+         vendorId: 8086
+         
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | This file is present on Red Hat and  |
-    | Fedora Core installations, but may   |
-    | be missing from other distros.       |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    This file is present on Red Hat and Fedora Core installations, but
+    may be missing from other distros.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -199,101 +141,27 @@ Advanced Bash-Scripting Guide:
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <files.html#AEN23892>`__      | ` [2]  <files.html#AEN23937>`__      |
-| This does not apply to **csh** ,     | In older versions of UNIX, passwords |
-| **tcsh** , and other shells not      | *were* stored in                     |
-| related to or descended from the     | ``        /etc/passwd       `` , and |
-| classic Bourne shell ( **sh** ).     | that explains the name of the file.  |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <files.html#AEN23892>`__
+
+This does not apply to **csh** , **tcsh** , and other shells not related
+to or descended from the classic Bourne shell ( **sh** ).
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <files.html#AEN23937>`__
 
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
+In older versions of UNIX, passwords *were* stored in
+``       /etc/passwd      `` , and that explains the name of the file.
 
 .. raw:: html
 
-   <td align="left" valign="top" width="33%">
-
-`Prev <bash-options.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-`Next <systemdirs.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-Bash Command-Line Options
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-Important System Directories
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
+   </p>
 
 .. raw:: html
 

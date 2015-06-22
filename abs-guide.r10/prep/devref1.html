@@ -11,38 +11,6 @@
   <link href="procref1.html" rel="NEXT" title="/proc"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="devproc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 29.
-      <tt class="FILENAME">
-       /dev
-      </tt>
-      and
-      <tt class="FILENAME">
-       /proc
-      </tt>
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="procref1.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="DEVREF1">
@@ -90,11 +58,10 @@
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="1" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>df</b></tt>
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>df</b></tt>
 <tt class="COMPUTEROUTPUT">Filesystem           1k-blocks      Used Available Use%
  Mounted on
  /dev/hda6               495876    222748    247527  48% /
@@ -102,10 +69,9 @@
  /dev/hda8               367013     13262    334803   4% /home
  /dev/hda5              1714416   1123624    503704  70% /usr</tt>
 	      </pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="LOOPBACKREF">
     </a>
@@ -206,15 +172,13 @@
      </span>
     </a>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">/dev/sda1    /mnt/flashdrive    auto    noauto,user,noatime    0 0</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">/dev/sda1    /mnt/flashdrive    auto    noauto,user,noatime    0 0</pre>
+     </font>
+    </p>
+   </div>
    (See also
    <a href="contributed-scripts.html#USBINST">
     Example A-23
@@ -228,11 +192,10 @@
     </tt>
     ):
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">head -1 /dev/hdc
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">head -1 /dev/hdc
 
 
 #  head: cannot open '/dev/hdc' for reading: No medium found
@@ -251,10 +214,9 @@
 
 #  Now, it's just a matter of checking/parsing the output and taking
 #+ appropriate action.</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="SOCKETREF">
     </a>
@@ -271,43 +233,41 @@
     </i>
     .
    </p>
-   <table border="1" cellpadding="5" class="SIDEBAR">
-    <tr>
-     <td>
-      <div class="SIDEBAR">
-       <a name="AEN19112">
-       </a>
-       <p>
-       </p>
-       <p>
-        A
-        <i class="FIRSTTERM">
-         socket
-        </i>
-        is a
+   <div>
+    <p>
+     <div class="SIDEBAR">
+      <a name="AEN19112">
+      </a>
+      <p>
+      </p>
+      <p>
+       A
+       <i class="FIRSTTERM">
+        socket
+       </i>
+       is a
 	      communications node associated with a specific I/O
 	      port. (This is analogous to a
-        <i class="FIRSTTERM">
-         hardware
+       <i class="FIRSTTERM">
+        hardware
 	      socket
-        </i>
-        , or
-        <i class="FIRSTTERM">
-         receptacle
-        </i>
-        ,
+       </i>
+       , or
+       <i class="FIRSTTERM">
+        receptacle
+       </i>
+       ,
 	      for a connecting cable.) It permits data transfer between
 	      hardware devices on the same machine, between machines
 	      on the same network, between machines across different
 	      networks, and, of course, between machines at different
 	      locations on the Internet.
-       </p>
-       <p>
-       </p>
-      </div>
-     </td>
-    </tr>
-   </table>
+      </p>
+      <p>
+      </p>
+     </div>
+    </p>
+   </div>
    <p>
     <a name="NPREF">
     </a>
@@ -321,17 +281,15 @@
     </tt>
     :
    </p>
-   <table bgcolor="#E0E0E0" border="1" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &lt;/dev/tcp/time.nist.gov/13</b></tt>
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &lt;/dev/tcp/time.nist.gov/13</b></tt>
 <tt class="COMPUTEROUTPUT">53082 04-03-18 04:26:54 68 0 0 502.3 UTC(NIST) *</tt>
 	      </pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     [Mark contributed this example.]
    </p>
@@ -340,11 +298,10 @@
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">#!/bin/bash
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">#!/bin/bash
 # This script must run with root permissions.
 
 URL="time.nist.gov/13"
@@ -354,27 +311,24 @@ UTC=$(echo "$Time" | awk '{print$3}')   # Third field is UTC (GMT) time.
 # Exercise: modify this for different time zones.
 
 echo "UTC Time = "$UTC""</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="NW001">
     </a>
     Downloading a URL:
    </p>
-   <table bgcolor="#E0E0E0" border="1" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>exec 5&lt;&gt;/dev/tcp/www.net.cn/80</b></tt>
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>exec 5&lt;&gt;/dev/tcp/www.net.cn/80</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo -e "GET / HTTP/1.0\n" &gt;&amp;5</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &lt;&amp;5</b></tt>
 	      </pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     [Thanks, Mark and Mihai Maties.]
    </p>
@@ -391,11 +345,10 @@ echo "UTC Time = "$UTC""</pre>
 	      troubleshooting
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # dev-tcp.sh: /dev/tcp redirection to check Internet connection.
 
 # Script by Troy Engel.
@@ -431,10 +384,9 @@ else
 fi
 
 exit $MYEXIT</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="MUSICSCR">
@@ -444,11 +396,10 @@ exit $MYEXIT</pre>
       Example 29-2. Playing music
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # music.sh
 
 # Music without external files
@@ -488,176 +439,126 @@ $n$g$e2$d$c$d$c$a$g$n$g$e$n$g$a$d$c$b$a$b$c" &gt; /dev/dsp
 # dsp = Digital Signal Processor
 
 exit      # A "bonny" example of an elegant shell script!</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
   </div>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="devref1.html#AEN19045" name="FTN.AEN19045">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The entries in
-      <tt class="FILENAME">
-       /dev
-      </tt>
-      provide mount points for physical and virtual devices. These
+  <div>
+   <p>
+    <a href="devref1.html#AEN19045" name="FTN.AEN19045">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The entries in
+     <tt class="FILENAME">
+      /dev
+     </tt>
+     provide mount points for physical and virtual devices. These
 	     entries use very little drive space.
-     </p>
-     <p>
-      Some devices, such as
-      <tt class="FILENAME">
-       /dev/null
-      </tt>
-      ,
-      <tt class="FILENAME">
-       /dev/zero
-      </tt>
-      ,
+    </p>
+    <p>
+     Some devices, such as
+     <tt class="FILENAME">
+      /dev/null
+     </tt>
+     ,
+     <tt class="FILENAME">
+      /dev/zero
+     </tt>
+     ,
 	   and
-      <tt class="FILENAME">
-       /dev/urandom
-      </tt>
-      are virtual. They
+     <tt class="FILENAME">
+      /dev/urandom
+     </tt>
+     are virtual. They
 	   are not actual physical devices and exist only in
 	   software.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="devref1.html#AEN19065" name="FTN.AEN19065">
-      <span class="footnote">
-       [2]
-      </span>
+    </p>
+   </p>
+   <p>
+    <a href="devref1.html#AEN19065" name="FTN.AEN19065">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="BLOCKDEVREF">
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="BLOCKDEVREF">
-      </a>
-      A
-      <i class="FIRSTTERM">
-       block
+     A
+     <i class="FIRSTTERM">
+      block
 	    device
-      </i>
-      reads and/or writes data in chunks,
+     </i>
+     reads and/or writes data in chunks,
 	    or
-      <i class="FIRSTTERM">
-       blocks
-      </i>
-      , in contrast to a
-      <a name="CHARDEVREF">
-      </a>
-      <i class="FIRSTTERM">
-       character device
-      </i>
-      ,
+     <i class="FIRSTTERM">
+      blocks
+     </i>
+     , in contrast to a
+     <a name="CHARDEVREF">
+     </a>
+     <i class="FIRSTTERM">
+      character device
+     </i>
+     ,
 	    which acesses data in
-      <i class="FIRSTTERM">
-       character
-      </i>
-      units. Examples of block devices are hard drives, CDROM
+     <i class="FIRSTTERM">
+      character
+     </i>
+     units. Examples of block devices are hard drives, CDROM
 	    drives, and flash drives. Examples of character devices are
 	    keyboards, modems, sound cards.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="devref1.html#AEN19093" name="FTN.AEN19093">
-      <span class="footnote">
-       [3]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Of course, the mount point
-      <tt class="FILENAME">
-       /mnt/flashdrive
-      </tt>
-      must exist. If not,
+    </p>
+   </p>
+   <p>
+    <a href="devref1.html#AEN19093" name="FTN.AEN19093">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Of course, the mount point
+     <tt class="FILENAME">
+      /mnt/flashdrive
+     </tt>
+     must exist. If not,
 		then, as
-      <i class="FIRSTTERM">
-       root
-      </i>
-      ,
-      <b class="COMMAND">
-       mkdir
+     <i class="FIRSTTERM">
+      root
+     </i>
+     ,
+     <b class="COMMAND">
+      mkdir
 		/mnt/flashdrive
-      </b>
-      .
-     </p>
-     <p>
-      To actually mount the drive, use the following command:
-      <b class="COMMAND">
-       mount /mnt/flashdrive
-      </b>
-     </p>
-     <p>
-      Newer Linux distros automount flash drives in the
-      <tt class="FILENAME">
-       /media
-      </tt>
-      directory without user intervention.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="devproc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="procref1.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <tt class="FILENAME">
-       /dev
-      </tt>
-      and
-      <tt class="FILENAME">
-       /proc
-      </tt>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="devproc.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <tt class="FILENAME">
-       /proc
-      </tt>
-     </td>
-    </tr>
-   </table>
+     </b>
+     .
+    </p>
+    <p>
+     To actually mount the drive, use the following command:
+     <b class="COMMAND">
+      mount /mnt/flashdrive
+     </b>
+    </p>
+    <p>
+     Newer Linux distros automount flash drives in the
+     <tt class="FILENAME">
+      /media
+     </tt>
+     directory without user intervention.
+    </p>
+   </p>
   </div>
  </body>
 </html>

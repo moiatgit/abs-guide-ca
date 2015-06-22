@@ -11,31 +11,6 @@
   <link href="system.html" rel="NEXT" title="System and Administrative Commands"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="mathc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 16. External Filters, Programs and Commands
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="system.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="EXTMISC">
@@ -82,11 +57,10 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>seq 5</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>seq 5</b></tt>
 <tt class="COMPUTEROUTPUT">1
  2
  3
@@ -98,10 +72,9 @@
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>seq -s : 5</b></tt>
 <tt class="COMPUTEROUTPUT">1:2:3:4:5</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Both
        <b class="COMMAND">
@@ -131,11 +104,10 @@
 	      arguments
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Using "seq"
 
 echo
@@ -188,21 +160,19 @@ done      # 45 50 55 60 65 70 75 80
 echo; echo
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        A simpler example:
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#  Create a set of 10 files,
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#  Create a set of 10 files,
 #+ named file.1, file.2 . . . file.10.
 COUNT=10
 PREFIX=file
@@ -213,10 +183,9 @@ do
   #  Or, can do other operations,
   #+ such as rm, grep, etc.
 done</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="LETTERCOUNT">
        </a>
@@ -225,11 +194,10 @@ done</pre>
          Example 16-55. Letter Count"
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # letter-count.sh: Counting letter occurrences in a text file.
 # Written by Stefano Palmeri.
 # Used in ABS Guide with permission.
@@ -284,78 +252,91 @@ exit $?
 #  This script has exactly the same functionality as letter-count2.sh,
 #+ but executes faster.
 #  Why?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Somewhat more capable than
-           <i class="FIRSTTERM">
-            seq
-           </i>
-           ,
-           <b class="COMMAND">
-            jot
-           </b>
-           is a classic UNIX
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Somewhat more capable than
+          <i class="FIRSTTERM">
+           seq
+          </i>
+          ,
+          <b class="COMMAND">
+           jot
+          </b>
+          is a classic UNIX
 	utility that is not normally included in a standard Linux
 	distro. However, the source
-           <i class="FIRSTTERM">
-            rpm
-           </i>
-           is available for download from the
-           <a href="http://www.mit.edu/afs/athena/system/rhlinux/athena-9.0/free/SRPMS/athena-jot-9.0-3.src.rpm" target="_top">
-            MIT repository
-           </a>
-           .
-          </p>
-          <p>
-           <a name="JOTRANDOM">
-           </a>
-          </p>
-          <p>
-           Unlike
-           <i class="FIRSTTERM">
-            seq
-           </i>
-           ,
-           <b class="COMMAND">
-            jot
-           </b>
-           can
+          <i class="FIRSTTERM">
+           rpm
+          </i>
+          is available for download from the
+          <a href="http://www.mit.edu/afs/athena/system/rhlinux/athena-9.0/free/SRPMS/athena-jot-9.0-3.src.rpm" target="_top">
+           MIT repository
+          </a>
+          .
+         </p>
+         <p>
+          <a name="JOTRANDOM">
+          </a>
+         </p>
+         <p>
+          Unlike
+          <i class="FIRSTTERM">
+           seq
+          </i>
+          ,
+          <b class="COMMAND">
+           jot
+          </b>
+          can
         generate a sequence of random numbers, using the
-           <tt class="OPTION">
-            -r
-           </tt>
-           option.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>jot -r 3 999</b></tt>
+          <tt class="OPTION">
+           -r
+          </tt>
+          option.
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>jot -r 3 999</b></tt>
 <tt class="COMPUTEROUTPUT">1069
  1272
  1428</tt></pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>jot -r 3 999</b></tt>
+<tt class="COMPUTEROUTPUT">1069
+ 1272
+ 1428</tt></pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>jot -r 3 999</b></tt>
+<tt class="COMPUTEROUTPUT">1069
+ 1272
+ 1428</tt></pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -405,11 +386,10 @@ exit $?
 	        options
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Using getopt
 
 # Try the following when invoking this script:
@@ -454,55 +434,64 @@ done
 #  See "ex33.sh."
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           As
-           <em>
-            Peggy Russell
-           </em>
-           points out:
-          </p>
-          <p>
-           It is often necessary to include an
-           <a href="internal.html#EVALREF">
-            eval
-           </a>
-           to correctly process
-           <a href="special-chars.html#WHITESPACEREF">
-            whitespace
-           </a>
-           and
-           <i class="FIRSTTERM">
-            quotes
-           </i>
-           .
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">args=$(getopt -o a:bc:d -- "$@")
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          As
+          <em>
+           Peggy Russell
+          </em>
+          points out:
+         </p>
+         <p>
+          It is often necessary to include an
+          <a href="internal.html#EVALREF">
+           eval
+          </a>
+          to correctly process
+          <a href="special-chars.html#WHITESPACEREF">
+           whitespace
+          </a>
+          and
+          <i class="FIRSTTERM">
+           quotes
+          </i>
+          .
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">args=$(getopt -o a:bc:d -- "$@")
 eval set -- "$args"</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">args=$(getopt -o a:bc:d -- "$@")
+eval set -- "$args"</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">args=$(getopt -o a:bc:d -- "$@")
+eval set -- "$args"</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See
@@ -651,58 +640,55 @@ eval set -- "$args"</pre>
       <div class="WARNING">
        <p>
        </p>
-       <table border="0" class="WARNING" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Warning" hspace="5" src="../images/warning.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Caution advised when piping
-           <i class="FIRSTTERM">
-            yes
-           </i>
-           to a potentially dangerous
+       <div>
+        <p>
+         <img alt="Warning" hspace="5" src="../images/warning.gif"/>
+        </p>
+        <p>
+         <p>
+          Caution advised when piping
+          <i class="FIRSTTERM">
+           yes
+          </i>
+          to a potentially dangerous
 	     system command, such as
-           <a href="system.html#FSCKREF">
-            fsck
-           </a>
-           or
-           <a href="system.html#FDISKREF">
-            fdisk
-           </a>
-           . It might have
+          <a href="system.html#FSCKREF">
+           fsck
+          </a>
+          or
+          <a href="system.html#FDISKREF">
+           fdisk
+          </a>
+          . It might have
 	     unintended consequences.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <i class="FIRSTTERM">
-            yes
-           </i>
-           command parses variables,
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <i class="FIRSTTERM">
+           yes
+          </i>
+          command parses variables,
 	       or more accurately, it echoes parsed variables.
 	       For example:
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $BASH_VERSION</b></tt>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $BASH_VERSION</b></tt>
 <tt class="COMPUTEROUTPUT">3.1.17(1)-release
  3.1.17(1)-release
  3.1.17(1)-release
@@ -710,48 +696,83 @@ eval set -- "$args"</pre>
  3.1.17(1)-release
  . . .</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           This particular
-           <span class="QUOTE">
-            "feature"
-           </span>
-           may be used
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          This particular
+          <span class="QUOTE">
+           "feature"
+          </span>
+          may be used
 	       to create a
-           <em>
-            very large
-           </em>
-           ASCII file on the fly:
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $PATH &gt; huge_file.txt</b></tt>
+          <em>
+           very large
+          </em>
+          ASCII file on the fly:
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $PATH &gt; huge_file.txt</b></tt>
 <tt class="USERINPUT"><b>Ctl-C</b></tt>	      
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          Hit
-          <tt class="USERINPUT">
-           <b>
-            Ctl-C
-           </b>
-          </tt>
-          <em>
-           very
+            </font>
+           </td>
+          </tr>
+         </table>         Hit
+         <tt class="USERINPUT">
+          <b>
+           Ctl-C
+          </b>
+         </tt>
+         <em>
+          very
 	      quickly
-          </em>
-          , or you just might get more than you
+         </em>
+         , or you just might get more than you
 	      bargained for. . . .
-         </td>
-        </tr>
-       </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $BASH_VERSION</b></tt>
+<tt class="COMPUTEROUTPUT">3.1.17(1)-release
+ 3.1.17(1)-release
+ 3.1.17(1)-release
+ 3.1.17(1)-release
+ 3.1.17(1)-release
+ . . .</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $PATH &gt; huge_file.txt</b></tt>
+<tt class="USERINPUT"><b>Ctl-C</b></tt>	      
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $BASH_VERSION</b></tt>
+<tt class="COMPUTEROUTPUT">3.1.17(1)-release
+ 3.1.17(1)-release
+ 3.1.17(1)-release
+ 3.1.17(1)-release
+ 3.1.17(1)-release
+ . . .</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>yes $PATH &gt; huge_file.txt</b></tt>
+<tt class="USERINPUT"><b>Ctl-C</b></tt>	      
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="YESEMU">
@@ -768,11 +789,10 @@ eval set -- "$args"</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">yes ()
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">yes ()
 { # Trivial emulation of "yes" ...
   local DEFAULT_TEXT="y"
   while [ true ]   # Endless loop.
@@ -785,10 +805,9 @@ eval set -- "$args"</pre>
     fi
   done             #  The only things missing are the
 }                  #+ --help and --version options.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="BANNERREF">
@@ -839,17 +858,15 @@ eval set -- "$args"</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>printenv | grep HOME</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>printenv | grep HOME</b></tt>
 <tt class="COMPUTEROUTPUT">HOME=/home/bozo</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LPREF">
@@ -1004,36 +1021,32 @@ eval set -- "$args"</pre>
 	      useful for printing an ongoing process to a file or paper, perhaps to
 	      keep track of it for debugging purposes.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN">                             (redirection)
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN">                             (redirection)
                             |----&gt; to file
                             |
   ==========================|====================
   command ---&gt; command ---&gt; |tee ---&gt; command ---&gt; ---&gt; output of pipe
   ===============================================
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">cat listfile* | sort | tee check.file | uniq &gt; result.file
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">cat listfile* | sort | tee check.file | uniq &gt; result.file
 #                      ^^^^^^^^^^^^^^   ^^^^    
 
 #  The file "check.file" contains the concatenated sorted "listfiles,"
 #+ before the duplicate lines are removed by 'uniq.'</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="MKFIFOREF">
@@ -1071,11 +1084,10 @@ eval set -- "$args"</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 # This short script by Omair Eshkenazi.
 # Used in ABS Guide with permission (thanks!).
 
@@ -1101,10 +1113,9 @@ pipe1   BOZO
 pipe2   BOZO
 mkfifo-example.sh    BOZO
 Mixed.msg BOZO</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="PATHCHKREF">
@@ -1182,18 +1193,16 @@ Mixed.msg BOZO</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Converting a file to all uppercase:
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Converting a file to all uppercase:
 
 dd if=$filename conv=ucase &gt; $filename.uppercase
 #                    lcase   # For lower case conversion</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="DDOPTIONS">
        </a>
@@ -1303,11 +1312,10 @@ dd if=$filename conv=ucase &gt; $filename.uppercase
          Example 16-57. A script that copies itself
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # self-copy.sh
 
 # This script copies itself.
@@ -1322,10 +1330,9 @@ exit $?
 #  A program whose only output is its own source code
 #+ is called a "quine" per Willard Quine.
 #  Does this script qualify as a quine?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EXERCISINGDD">
@@ -1338,11 +1345,10 @@ exit $?
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # exercising-dd.sh
 
 # Script by Stephane Chazelas.
@@ -1363,10 +1369,9 @@ echo -n "hello vertical world" | dd cbs=1 conv=unblock 2&gt; /dev/null
 # Why? A newline follows each character dd emits.
 
 exit $?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="DDKEYSTROKES">
@@ -1388,11 +1393,10 @@ exit $?</pre>
          Example 16-59. Capturing Keystrokes
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # dd-keypress.sh: Capture keystrokes without needing to press ENTER.
 
 
@@ -1413,10 +1417,9 @@ echo "You pressed the \"$keys\" keys."
 
 # Thanks, Stephane Chazelas, for showing the way.
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="DDRANDOM">
@@ -1430,19 +1433,17 @@ exit 0</pre>
        command can do random access on a
 	      data stream.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo -n . | dd bs=1 seek=4 of=file conv=notrunc
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo -n . | dd bs=1 seek=4 of=file conv=notrunc
 #  The "conv=notrunc" option means that the output file
 #+ will not be truncated.
 
 # Thanks, S.C.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="DDCOPY">
        </a>
@@ -1519,11 +1520,10 @@ exit 0</pre>
          </em>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # rp.sdcard.sh
 # Preparing an SD card with a bootable image for the Raspberry Pi.
 
@@ -1579,10 +1579,9 @@ exit $?
 # 1) Provide additional error checking.
 # 2) Have script autodetect device file for SD card (difficult!).
 # 3) Have script sutodetect image file (*img) in $PWD.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="DDSWAP">
@@ -1628,11 +1627,10 @@ exit $?
          Example 16-61. Securely deleting a file
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # blot-out.sh: Erase "all" traces of a file.
 
 #  This script overwrites a target file alternately
@@ -1726,10 +1724,9 @@ exit 0
 #+ see Peter Gutmann's paper,
 #+     "Secure Deletion of Data From Magnetic and Solid-State Memory".
 #       http://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also the
@@ -1777,18 +1774,16 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
 # Sample output: 1324725719, 3918166450, 2989231420, etc.
 
-# From rnd.sh example script, by StĂŠphane Chazelas</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+# From rnd.sh example script, by StÃ©phane Chazelas</pre>
+        </font>
+       </p>
+      </div>
       <p>
        See also
        <a href="randomvar.html#SEEDINGRANDOM">
@@ -1830,16 +1825,14 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">dd if=/bin/ls | hexdump -C | less
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">dd if=/bin/ls | hexdump -C | less
 # The -C option nicely formats the output in tabular form.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="OBJDUMPREF">
@@ -1860,11 +1853,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>objdump -d /bin/ls</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>objdump -d /bin/ls</b></tt>
 <tt class="COMPUTEROUTPUT">/bin/ls:     file format elf32-i386
 
  Disassembly of section .init:
@@ -1874,10 +1866,9 @@ exit 0
   80490bd:       89 e5                   mov    %esp,%ebp
   . . .</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="MCOOKIEREF">
@@ -1907,15 +1898,13 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">random000=$(mcookie)</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">random000=$(mcookie)</pre>
+        </font>
+       </p>
+      </div>
       <p>
        Of course, a script could use
        <a href="filearchiv.html#MD5SUMREF">
@@ -1925,17 +1914,15 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Generate md5 checksum on the script itself.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Generate md5 checksum on the script itself.
 random001=`md5sum $0 | awk '{print $1}'`
 # Uses 'awk' to strip off the filename.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -1956,11 +1943,10 @@ random001=`md5sum $0 | awk '{print $1}'`
          Example 16-62. Filename generator
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # tempfile-name.sh:  temp filename generator
 
 BASE_STR=`mcookie`   # 32-character magic cookie.
@@ -1988,10 +1974,9 @@ echo "Temp filename = "$temp_filename""
 #+ with the 'date' method in ex51.sh.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2024,11 +2009,10 @@ exit 0</pre>
          Example 16-63. Converting meters to miles
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # unit-conversion.sh
 # Must have 'units' utility installed.
 
@@ -2056,10 +2040,9 @@ exit 0
 
 # Exercise: Edit this script to accept command-line parameters,
 #           with appropriate error checking, of course.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2138,11 +2121,10 @@ exit 0
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # m4.sh: Using the m4 macro processor
 
 # Strings
@@ -2157,10 +2139,9 @@ echo "incr($var)" | m4                              #  100
 echo "eval($var / 3)" | m4                          #   33
 
 exit</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2181,15 +2162,13 @@ exit</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">xmessage Left click to continue -button okay</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">xmessage Left click to continue -button okay</pre>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="ZENITYREF">
@@ -2292,34 +2271,52 @@ exit</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The various behaviors of the executable
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The various behaviors of the executable
               must be defined within the code of the executable itself,
               analogous to something like the following in a shell script:
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">case `basename $0` in
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">case `basename $0` in
 "name1" ) do_something;;
 "name2" ) do_something_else;;
 "name3" ) do_yet_another_thing;;
 *       ) bail_out;;
 esac</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">case `basename $0` in
+"name1" ) do_something;;
+"name2" ) do_something_else;;
+"name3" ) do_yet_another_thing;;
+*       ) bail_out;;
+esac</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">case `basename $0` in
+"name1" ) do_something;;
+"name2" ) do_something_else;;
+"name3" ) do_yet_another_thing;;
+*       ) bail_out;;
+esac</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2436,211 +2433,184 @@ esac</pre>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="extmisc.html#AEN14105" name="FTN.AEN14105">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      This is actually a script adapted from
+  <div>
+   <p>
+    <a href="extmisc.html#AEN14105" name="FTN.AEN14105">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     This is actually a script adapted from
 		the Debian Linux distribution.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="extmisc.html#AEN14214" name="FTN.AEN14214">
-      <span class="footnote">
-       [2]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The
-      <i class="FIRSTTERM">
-       print queue
-      </i>
-      is
+    </p>
+   </p>
+   <p>
+    <a href="extmisc.html#AEN14214" name="FTN.AEN14214">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The
+     <i class="FIRSTTERM">
+      print queue
+     </i>
+     is
 	      the group of jobs
-      <span class="QUOTE">
-       "waiting in line"
-      </span>
-      to be
+     <span class="QUOTE">
+      "waiting in line"
+     </span>
+     to be
 	      printed.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="extmisc.html#AEN14218" name="FTN.AEN14218">
-      <span class="footnote">
-       [3]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Large mechanical
-      <i class="FIRSTTERM">
-       line
+    </p>
+   </p>
+   <p>
+    <a href="extmisc.html#AEN14218" name="FTN.AEN14218">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Large mechanical
+     <i class="FIRSTTERM">
+      line
 		printers
-      </i>
-      printed a single
+     </i>
+     printed a single
 		line of type at a time onto joined
 		sheets of
-      <i class="FIRSTTERM">
-       greenbar
-      </i>
-      paper, to the accompaniment of
-      <a href="http://www.columbia.edu/cu/computinghistory/1403.html" target="_top">
-       a
+     <i class="FIRSTTERM">
+      greenbar
+     </i>
+     paper, to the accompaniment of
+     <a href="http://www.columbia.edu/cu/computinghistory/1403.html" target="_top">
+      a
 		great deal of noise
-      </a>
-      . The hardcopy
+     </a>
+     . The hardcopy
 		thusly printed was referred to as a
-      <i class="FIRSTTERM">
-       printout
-      </i>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="extmisc.html#AEN14280" name="FTN.AEN14280">
-      <span class="footnote">
-       [4]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      For an excellent overview of this
+     <i class="FIRSTTERM">
+      printout
+     </i>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="extmisc.html#AEN14280" name="FTN.AEN14280">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     For an excellent overview of this
 		  topic, see Andy Vaught's article,
-      <a href="http://www2.linuxjournal.com/lj-issues/issue41/2156.html" target="_top">
-       Introduction
+     <a href="http://www2.linuxjournal.com/lj-issues/issue41/2156.html" target="_top">
+      Introduction
 		  to Named Pipes
-      </a>
-      , in the September, 1997 issue of
-      <a href="http://www.linuxjournal.com" target="_top">
-       <i class="CITETITLE">
-        Linux
-		  Journal
-       </i>
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="extmisc.html#AEN14318" name="FTN.AEN14318">
-      <span class="footnote">
-       [5]
-      </span>
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <span class="ACRONYM">
-       EBCDIC
-      </span>
-      (pronounced
-      <span class="QUOTE">
-       "ebb-sid-ick"
-      </span>
-      ) is an acronym for Extended
+     , in the September, 1997 issue of
+     <a href="http://www.linuxjournal.com" target="_top">
+      <i class="CITETITLE">
+       Linux
+		  Journal
+      </i>
+     </a>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="extmisc.html#AEN14318" name="FTN.AEN14318">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <span class="ACRONYM">
+      EBCDIC
+     </span>
+     (pronounced
+     <span class="QUOTE">
+      "ebb-sid-ick"
+     </span>
+     ) is an acronym for Extended
 		  Binary Coded Decimal Interchange Code, an obsolete
                   IBM data format. A bizarre application of
                   the
-      <tt class="OPTION">
-       conv=ebcdic
-      </tt>
-      option of
-      <b class="COMMAND">
-       dd
-      </b>
-      is as a quick 'n easy, but not
+     <tt class="OPTION">
+      conv=ebcdic
+     </tt>
+     option of
+     <b class="COMMAND">
+      dd
+     </b>
+     is as a quick 'n easy, but not
                   very secure text file encoder.
-     </p>
-     <table bgcolor="#E0E0E0" border="0" width="90%">
-      <tr>
-       <td>
-        <font color="#000000">
-         <pre class="PROGRAMLISTING">cat $file | dd conv=swab,ebcdic &gt; $file_encrypted
+    </p>
+    <table bgcolor="#E0E0E0" border="0" width="90%">
+     <tr>
+      <td>
+       <font color="#000000">
+        <pre class="PROGRAMLISTING">cat $file | dd conv=swab,ebcdic &gt; $file_encrypted
 # Encode (looks like gibberish).		    
 # Might as well switch bytes (swab), too, for a little extra obscurity.
 
 cat $file_encrypted | dd conv=swab,ascii &gt; $file_plaintext
 # Decode.</pre>
-        </font>
-       </td>
-      </tr>
-     </table>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="extmisc.html#AEN14523" name="FTN.AEN14523">
-      <span class="footnote">
-       [6]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      A
-      <i class="FIRSTTERM">
-       macro
-      </i>
-      is a
+       </font>
+      </td>
+     </tr>
+    </table>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">cat $file | dd conv=swab,ebcdic &gt; $file_encrypted
+# Encode (looks like gibberish).		    
+# Might as well switch bytes (swab), too, for a little extra obscurity.
+
+cat $file_encrypted | dd conv=swab,ascii &gt; $file_plaintext
+# Decode.</pre>
+    </font>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">cat $file | dd conv=swab,ebcdic &gt; $file_encrypted
+# Encode (looks like gibberish).		    
+# Might as well switch bytes (swab), too, for a little extra obscurity.
+
+cat $file_encrypted | dd conv=swab,ascii &gt; $file_plaintext
+# Decode.</pre>
+    </font>
+   </p>
+   <p>
+    <a href="extmisc.html#AEN14523" name="FTN.AEN14523">
+     <span class="footnote">
+      [6]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     A
+     <i class="FIRSTTERM">
+      macro
+     </i>
+     is a
 		 symbolic constant that expands into a command string
 		 or a set of operations on parameters. Simply put,
 		 it's a shortcut or abbreviation.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="mathc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="system.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Math Commands
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="external.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      System and Administrative Commands
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
   </div>
  </body>
 </html>

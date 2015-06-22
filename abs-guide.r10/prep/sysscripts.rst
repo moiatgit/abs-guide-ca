@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <system.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 17. System and Administrative Commands
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <part5.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   17.1. Analyzing a System Script
@@ -90,103 +16,62 @@ running processes at system shutdown.
 
 **Example 17-12. *killall* , from ``        /etc/rc.d/init.d       ``**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/sh            |
-|                          |
-|     # --> Comments added |
-|  by the author of this d |
-| ocument marked by "# --> |
-| ".                       |
-|                          |
-|     # --> This is part o |
-| f the 'rc' script packag |
-| e                        |
-|     # --> by Miquel van  |
-| Smoorenburg, <miquels@dr |
-| inkel.nl.mugnet.org>.    |
-|                          |
-|     # --> This particula |
-| r script seems to be Red |
-|  Hat / FC specific       |
-|     # --> (may not be pr |
-| esent in other distribut |
-| ions).                   |
-|                          |
-|     #  Bring down all un |
-| needed services that are |
-|  still running           |
-|     #+ (there shouldn't  |
-| be any, so this is just  |
-| a sanity check)          |
-|                          |
-|     for i in /var/lock/s |
-| ubsys/*; do              |
-|             # --> Standa |
-| rd for/in loop, but sinc |
-| e "do" is on same line,  |
-|             # --> it is  |
-| necessary to add ";".    |
-|             # Check if t |
-| he script is there.      |
-|             [ ! -f $i ]  |
-| && continue              |
-|             # --> This i |
-| s a clever use of an "an |
-| d list", equivalent to:  |
-|             # --> if [ ! |
-|  -f "$i" ]; then continu |
-| e                        |
-|                          |
-|             # Get the su |
-| bsystem name.            |
-|             subsys=${i#/ |
-| var/lock/subsys/}        |
-|             # --> Match  |
-| variable name, which, in |
-|  this case, is the file  |
-| name.                    |
-|             # --> This i |
-| s the exact equivalent o |
-| f subsys=`basename $i`.  |
-|                          |
-|             # -->  It ge |
-| ts it from the lock file |
-|  name                    |
-|             # -->+ (if t |
-| here is a lock file,     |
-|             # -->+ that' |
-| s proof the process has  |
-| been running).           |
-|             # -->  See t |
-| he "lockfile" entry, abo |
-| ve.                      |
-|                          |
-|                          |
-|             # Bring the  |
-| subsystem down.          |
-|             if [ -f /etc |
-| /rc.d/init.d/$subsys.ini |
-| t ]; then                |
-|                /etc/rc.d |
-| /init.d/$subsys.init sto |
-| p                        |
-|             else         |
-|                /etc/rc.d |
-| /init.d/$subsys stop     |
-|             # -->  Suspe |
-| nd running jobs and daem |
-| ons.                     |
-|             # -->  Note  |
-| that "stop" is a positio |
-| nal parameter,           |
-|             # -->+ not a |
-|  shell builtin.          |
-|             fi           |
-|     done                 |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/sh
+
+    # --> Comments added by the author of this document marked by "# -->".
+
+    # --> This is part of the 'rc' script package
+    # --> by Miquel van Smoorenburg, <miquels@drinkel.nl.mugnet.org>.
+
+    # --> This particular script seems to be Red Hat / FC specific
+    # --> (may not be present in other distributions).
+
+    #  Bring down all unneeded services that are still running
+    #+ (there shouldn't be any, so this is just a sanity check)
+
+    for i in /var/lock/subsys/*; do
+            # --> Standard for/in loop, but since "do" is on same line,
+            # --> it is necessary to add ";".
+            # Check if the script is there.
+            [ ! -f $i ] && continue
+            # --> This is a clever use of an "and list", equivalent to:
+            # --> if [ ! -f "$i" ]; then continue
+
+            # Get the subsystem name.
+            subsys=${i#/var/lock/subsys/}
+            # --> Match variable name, which, in this case, is the file name.
+            # --> This is the exact equivalent of subsys=`basename $i`.
+        
+            # -->  It gets it from the lock file name
+            # -->+ (if there is a lock file,
+            # -->+ that's proof the process has been running).
+            # -->  See the "lockfile" entry, above.
+
+
+            # Bring the subsystem down.
+            if [ -f /etc/rc.d/init.d/$subsys.init ]; then
+               /etc/rc.d/init.d/$subsys.init stop
+            else
+               /etc/rc.d/init.d/$subsys stop
+            # -->  Suspend running jobs and daemons.
+            # -->  Note that "stop" is a positional parameter,
+            # -->+ not a shell builtin.
+            fi
+    done
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -233,27 +118,19 @@ the "initscripts" documentation.
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <sysscripts.html#AEN17079>`__ |
-| The *killall* system script should   |
-| not be confused with the             |
-| `killall <x9644.html#KILLALLREF>`__  |
-| command in                           |
-| ``        /usr/bin       `` .        |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <sysscripts.html#AEN17079>`__
+
+The *killall* system script should not be confused with the
+`killall <x9644.html#KILLALLREF>`__ command in ``       /usr/bin      ``
+.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <system.html>`__   | System and               |
-| `Home <index.html>`__    | Administrative Commands  |
-| `Next <part5.html>`__    | `Up <system.html>`__     |
-|                          | Advanced Topics          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

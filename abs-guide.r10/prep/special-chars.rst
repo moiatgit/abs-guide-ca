@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <part2.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <variables.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 3. Special Characters
@@ -102,73 +30,104 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     # This line is a com |
-    | ment.                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        # This line is a comment.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Comments may also occur following the end of a command.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo "A comment will |
-    |  follow." # Comment here |
-    | .                        |
-    |     #                    |
-    |          ^ Note whitespa |
-    | ce before #              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo "A comment will follow." # Comment here.
+        #                            ^ Note whitespace before #
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
      Comments may also follow
     `whitespace <special-chars.html#WHITESPACEREF>`__ at the beginning
     of a line.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |          # A tab precede |
-    | s this comment.          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+             # A tab precedes this comment.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
      Comments may even be embedded within a
     `pipe <special-chars.html#PIPEREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     initial=( `cat "$sta |
-    | rtfile" | sed -e '/#/d'  |
-    | | tr -d '\n' |\          |
-    |     # Delete lines conta |
-    | ining '#' comment charac |
-    | ter.                     |
-    |                sed -e 's |
-    | /\./\. /g' -e 's/_/_ /g' |
-    | ` )                      |
-    |     # Excerpted from lif |
-    | e.sh script              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
+        # Delete lines containing '#' comment character.
+                   sed -e 's/\./\. /g' -e 's/_/_ /g'` )
+        # Excerpted from life.sh script
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="CAUTION">
 
-    +--------------------------------------+--------------------------------------+
-    | |Caution|                            |
-    | A command may not follow a comment   |
-    | on the same line. There is no method |
-    | of terminating the comment, in order |
-    | for "live code" to begin on the same |
-    | line. Use a new line for the next    |
-    | command.                             |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    A command may not follow a comment on the same line. There is no
+    method of terminating the comment, in order for "live code" to begin
+    on the same line. Use a new line for the next command.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -178,93 +137,84 @@ building blocks of Bash scripts.
 
        <div class="NOTE">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Note|             |
-    | Of course, a       |
-    | `quoted <quoting.h |
-    | tml#QUOTINGREF>`__ |
-    | or an              |
-    | `escaped <escaping |
-    | section.html#ESCP> |
-    | `__                |
-    | # in an            |
-    | `echo <internal.ht |
-    | ml#ECHOREF>`__     |
-    | statement does     |
-    | *not* begin a      |
-    | comment. Likewise, |
-    | a # appears in     |
-    | `certain           |
-    | parameter-substitu |
-    | tion               |
-    | constructs <parame |
-    | ter-substitution.h |
-    | tml#PSUB2>`__      |
-    | and in `numerical  |
-    | constant           |
-    | expressions <numer |
-    | ical-constants.htm |
-    | l#NUMCONSTANTS>`__ |
-    | .                  |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    | | .. code:: PROGRA |
-    | MLISTING |         |
-    | |                  |
-    |          |         |
-    | |     echo "The #  |
-    | here doe |         |
-    | | s not begin a co |
-    | mment."  |         |
-    | |     echo 'The #  |
-    | here doe |         |
-    | | s not begin a co |
-    | mment.'  |         |
-    | |     echo The \#  |
-    | here doe |         |
-    | | s not begin a co |
-    | mment.   |         |
-    | |     echo The # h |
-    | ere begi |         |
-    | | ns a comment.    |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     echo ${PATH# |
-    | *:}      |         |
-    | |   # Parameter su |
-    | bstituti |         |
-    | | on, not a commen |
-    | t.       |         |
-    | |     echo $(( 2#1 |
-    | 01011 )) |         |
-    | |   # Base convers |
-    | ion, not |         |
-    | |  a comment.      |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     # Thanks, S. |
-    | C.       |         |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    |                    |
-    | The standard       |
-    | `quoting and       |
-    | escape <quoting.ht |
-    | ml#QUOTINGREF>`__  |
-    | characters (" '    |
-    | \\) escape the #.  |
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    Of course, a `quoted <quoting.html#QUOTINGREF>`__ or an
+    `escaped <escapingsection.html#ESCP>`__ # in an
+    `echo <internal.html#ECHOREF>`__ statement does *not* begin a
+    comment. Likewise, a # appears in `certain parameter-substitution
+    constructs <parameter-substitution.html#PSUB2>`__ and in `numerical
+    constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     echo "The # here doe |
+    | s not begin a comment."  |
+    |     echo 'The # here doe |
+    | s not begin a comment.'  |
+    |     echo The \# here doe |
+    | s not begin a comment.   |
+    |     echo The # here begi |
+    | ns a comment.            |
+    |                          |
+    |     echo ${PATH#*:}      |
+    |   # Parameter substituti |
+    | on, not a comment.       |
+    |     echo $(( 2#101011 )) |
+    |   # Base conversion, not |
+    |  a comment.              |
+    |                          |
+    |     # Thanks, S.C.       |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    The standard `quoting and escape <quoting.html#QUOTINGREF>`__
+    characters (" ' \\) escape the #.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        echo "The # here does not begin a comment."
+        echo 'The # here does not begin a comment.'
+        echo The \# here does not begin a comment.
+        echo The # here begins a comment.
+
+        echo ${PATH#*:}       # Parameter substitution, not a comment.
+        echo $(( 2#101011 ))  # Base conversion, not a comment.
+
+        # Thanks, S.C.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        echo "The # here does not begin a comment."
+        echo 'The # here does not begin a comment.'
+        echo The \# here does not begin a comment.
+        echo The # here begins a comment.
+
+        echo ${PATH#*:}       # Parameter substitution, not a comment.
+        echo $(( 2#101011 ))  # Base conversion, not a comment.
+
+        # Thanks, S.C.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -285,31 +235,29 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo hello; echo the |
-    | re                       |
-    |                          |
-    |                          |
-    |     if [ -x "$filename"  |
-    | ]; then    #  Note the s |
-    | pace after the semicolon |
-    | .                        |
-    |     #+                   |
-    |  ^^                      |
-    |       echo "File $filena |
-    | me exists."; cp $filenam |
-    | e $filename.bak          |
-    |     else   #             |
-    |            ^^            |
-    |       echo "File $filena |
-    | me not found."; touch $f |
-    | ilename                  |
-    |     fi; echo "File test  |
-    | complete."               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo hello; echo there
+
+
+        if [ -x "$filename" ]; then    #  Note the space after the semicolon.
+        #+                   ^^
+          echo "File $filename exists."; cp $filename $filename.bak
+        else   #                       ^^
+          echo "File $filename not found."; touch $filename
+        fi; echo "File test complete."
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Note that the " ; " `sometimes needs to be
     *escaped* <moreadv.html#FINDREF0>`__ .
@@ -326,17 +274,24 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     case "$variable" in  |
-    |       abc)  echo "\$vari |
-    | able = abc" ;;           |
-    |       xyz)  echo "\$vari |
-    | able = xyz" ;;           |
-    |     esac                 |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        case "$variable" in
+          abc)  echo "\$variable = abc" ;;
+          xyz)  echo "\$variable = xyz" ;;
+        esac
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  ;;& , ;&
     .. raw:: html
@@ -374,49 +329,37 @@ building blocks of Bash scripts.
     filenames, a leading dot is the prefix of a "hidden" file, a file
     that an `ls <basic.html#LSREF>`__ will not normally show.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ touch .hidden- |
-    | file                     |
-    |     bash$ ls -l          |
-    |     total 10             |
-    |      -rw-r--r--    1 boz |
-    | o      4034 Jul 18 22:04 |
-    |  data1.addressbook       |
-    |      -rw-r--r--    1 boz |
-    | o      4602 May 25 13:58 |
-    |  data1.addressbook.bak   |
-    |      -rw-r--r--    1 boz |
-    | o       877 Dec 17  2000 |
-    |  employment.addressbook  |
-    |                          |
-    |                          |
-    |     bash$ ls -al         |
-    |     total 14             |
-    |      drwxrwxr-x    2 boz |
-    | o  bozo      1024 Aug 29 |
-    |  20:54 ./                |
-    |      drwx------   52 boz |
-    | o  bozo      3072 Aug 29 |
-    |  20:51 ../               |
-    |      -rw-r--r--    1 boz |
-    | o  bozo      4034 Jul 18 |
-    |  22:04 data1.addressbook |
-    |      -rw-r--r--    1 boz |
-    | o  bozo      4602 May 25 |
-    |  13:58 data1.addressbook |
-    | .bak                     |
-    |      -rw-r--r--    1 boz |
-    | o  bozo       877 Dec 17 |
-    |   2000 employment.addres |
-    | sbook                    |
-    |      -rw-rw-r--    1 boz |
-    | o  bozo         0 Aug 29 |
-    |  20:54 .hidden-file      |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ touch .hidden-file
+        bash$ ls -l         
+        total 10
+         -rw-r--r--    1 bozo      4034 Jul 18 22:04 data1.addressbook
+         -rw-r--r--    1 bozo      4602 May 25 13:58 data1.addressbook.bak
+         -rw-r--r--    1 bozo       877 Dec 17  2000 employment.addressbook
+
+
+        bash$ ls -al        
+        total 14
+         drwxrwxr-x    2 bozo  bozo      1024 Aug 29 20:54 ./
+         drwx------   52 bozo  bozo      3072 Aug 29 20:51 ../
+         -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.addressbook
+         -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.addressbook.bak
+         -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.addressbook
+         -rw-rw-r--    1 bozo  bozo         0 Aug 29 20:54 .hidden-file
+                    
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -426,34 +369,51 @@ building blocks of Bash scripts.
     current working directory, and *two dots* denote the parent
     directory.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ pwd            |
-    |     /home/bozo/projects  |
-    |                          |
-    |     bash$ cd .           |
-    |     bash$ pwd            |
-    |     /home/bozo/projects  |
-    |                          |
-    |     bash$ cd ..          |
-    |     bash$ pwd            |
-    |     /home/bozo/          |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ pwd
+        /home/bozo/projects
+
+        bash$ cd .
+        bash$ pwd
+        /home/bozo/projects
+
+        bash$ cd ..
+        bash$ pwd
+        /home/bozo/
+                    
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The *dot* often appears as the destination (directory) of a file
     movement command, in this context meaning *current directory* .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ cp /home/bozo/ |
-    | current_work/junk/* .    |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ cp /home/bozo/current_work/junk/* .
+                    
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Copy all the "junk" files to
     `$PWD <internalvariables.html#PWDREF>`__ .
@@ -509,15 +469,22 @@ building blocks of Bash scripts.
     arithmetic operations. All are evaluated, but only the last one is
     returned.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     let "t2 = ((a = 9, 1 |
-    | 5 / 3))"                 |
-    |     # Set "a = 9" and "t |
-    | 2 = 15 / 3"              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        let "t2 = ((a = 9, 15 / 3))"
+        # Set "a = 9" and "t2 = 15 / 3"
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -525,36 +492,37 @@ building blocks of Bash scripts.
 
      The *comma* operator can also concatenate strings.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     for file in /{,usr/} |
-    | bin/*calc                |
-    |     #             ^    F |
-    | ind all executable files |
-    |  ending in "calc"        |
-    |     #+                 i |
-    | n /bin and /usr/bin dire |
-    | ctories.                 |
-    |     do                   |
-    |             if [ -x "$fi |
-    | le" ]                    |
-    |             then         |
-    |               echo $file |
-    |             fi           |
-    |     done                 |
-    |                          |
-    |     # /bin/ipcalc        |
-    |     # /usr/bin/kcalc     |
-    |     # /usr/bin/oidcalc   |
-    |     # /usr/bin/oocalc    |
-    |                          |
-    |                          |
-    |     # Thank you, Rory Wi |
-    | nston, for pointing this |
-    |  out.                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        for file in /{,usr/}bin/*calc
+        #             ^    Find all executable files ending in "calc"
+        #+                 in /bin and /usr/bin directories.
+        do
+                if [ -x "$file" ]
+                then
+                  echo $file
+                fi
+        done
+
+        # /bin/ipcalc
+        # /usr/bin/kcalc
+        # /usr/bin/oidcalc
+        # /usr/bin/oocalc
+
+
+        # Thank you, Rory Winston, for pointing this out.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  , , ,
     .. raw:: html
@@ -636,73 +604,98 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     :                    |
-    |     echo $?   # 0        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        :
+        echo $?   # 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Endless loop:
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     while :              |
-    |     do                   |
-    |        operation-1       |
-    |        operation-2       |
-    |        ...               |
-    |        operation-n       |
-    |     done                 |
-    |                          |
-    |     # Same as:           |
-    |     #    while true      |
-    |     #    do              |
-    |     #      ...           |
-    |     #    done            |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        while :
+        do
+           operation-1
+           operation-2
+           ...
+           operation-n
+        done
+
+        # Same as:
+        #    while true
+        #    do
+        #      ...
+        #    done
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Placeholder in if/then test:
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     if condition         |
-    |     then :   # Do nothin |
-    | g and branch ahead       |
-    |     else     # Or else . |
-    | ..                       |
-    |        take-some-action  |
-    |     fi                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        if condition
+        then :   # Do nothing and branch ahead
+        else     # Or else ...
+           take-some-action
+        fi
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Provide a placeholder where a binary operation is expected, see
     `Example 8-2 <ops.html#ARITHOPS>`__ and `default
     parameters <parameter-substitution.html#DEFPARAM>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     : ${username=`whoami |
-    | `}                       |
-    |     # ${username=`whoami |
-    | `}   Gives an error with |
-    | out the leading :        |
-    |     #                    |
-    |      unless "username" i |
-    | s a command or builtin.. |
-    | .                        |
-    |                          |
-    |     : ${1?"Usage: $0 ARG |
-    | UMENT"}     # From "usag |
-    | e-message.sh example scr |
-    | ipt.                     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        : ${username=`whoami`}
+        # ${username=`whoami`}   Gives an error without the leading :
+        #                        unless "username" is a command or builtin...
+
+        : ${1?"Usage: $0 ARGUMENT"}     # From "usage-message.sh example script.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Provide a placeholder where a command is expected in a `here
     document <here-docs.html#HEREDOCREF>`__ . See `Example
@@ -712,18 +705,23 @@ building blocks of Bash scripts.
     substitution <parameter-substitution.html#PARAMSUBREF>`__ (as in
     `Example 10-7 <parameter-substitution.html#EX6>`__ ).
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     : ${HOSTNAME?} ${USE |
-    | R?} ${MAIL?}             |
-    |     #  Prints error mess |
-    | age                      |
-    |     #+ if one or more of |
-    |  essential environmental |
-    |  variables not set.      |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        : ${HOSTNAME?} ${USER?} ${MAIL?}
+        #  Prints error message
+        #+ if one or more of essential environmental variables not set.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     **`Variable expansion / substring
     replacement <parameter-substitution.html#EXPREPL1>`__** .
@@ -733,20 +731,24 @@ building blocks of Bash scripts.
     zero length, without changing its permissions. If the file did not
     previously exist, creates it.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     : > data.xxx   # Fil |
-    | e "data.xxx" now empty.  |
-    |                          |
-    |                          |
-    |     # Same effect as   c |
-    | at /dev/null >data.xxx   |
-    |     # However, this does |
-    |  not fork a new process, |
-    |  since ":" is a builtin. |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        : > data.xxx   # File "data.xxx" now empty.       
+
+        # Same effect as   cat /dev/null >data.xxx
+        # However, this does not fork a new process, since ":" is a builtin.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     See also `Example 16-15 <textproc.html#EX12>`__ .
 
@@ -759,12 +761,22 @@ building blocks of Bash scripts.
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    |  This applies to regular files, not  |
-    | pipes, symlinks, and certain special |
-    | files.                               |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+     This applies to regular files, not pipes, symlinks, and certain
+    special files.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -775,54 +787,71 @@ building blocks of Bash scripts.
     remainder of that line, so almost anything may appear in a comment.
     However, this is not the case with : .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     : This is a comment  |
-    | that generates an error, |
-    |  ( if [ $x -eq 3] ).     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        : This is a comment that generates an error, ( if [ $x -eq 3] ).
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The " : " serves as a `field <special-chars.html#FIELDREF>`__
     separator, in
     ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
     and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ echo $PATH     |
-    |     /usr/local/bin:/bin: |
-    | /usr/bin:/usr/X11R6/bin: |
-    | /sbin:/usr/sbin:/usr/gam |
-    | es                       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ echo $PATH
+        /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     A *colon* is `acceptable as a function
     name <functions.html#FSTRANGEREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     :()                  |
-    |     {                    |
-    |       echo "The name of  |
-    | this function is "$FUNCN |
-    | AME" "                   |
-    |       # Why use a colon  |
-    | as a function name?      |
-    |       # It's a way of ob |
-    | fuscating your code.     |
-    |     }                    |
-    |                          |
-    |     :                    |
-    |                          |
-    |     # The name of this f |
-    | unction is :             |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        :()
+        {
+          echo "The name of this function is "$FUNCNAME" "
+          # Why use a colon as a function name?
+          # It's a way of obfuscating your code.
+        }
+
+        :
+
+        # The name of this function is :
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     This is not `portable <portabilityissues.html>`__ behavior, and
     therefore not a recommended practice. In fact, more recent releases
@@ -831,17 +860,24 @@ building blocks of Bash scripts.
 
     A *colon* can serve as a placeholder in an otherwise empty function.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     not_empty ()         |
-    |     {                    |
-    |       :                  |
-    |     } # Contains a : (nu |
-    | ll command), and so is n |
-    | ot empty.                |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        not_empty ()
+        {
+          :
+        } # Contains a : (null command), and so is not empty.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  !
     .. raw:: html
@@ -881,15 +917,23 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ echo *         |
-    |     abs-book.sgml add-dr |
-    | ive.sh agram.sh alias.sh |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ echo *
+        abs-book.sgml add-drive.sh agram.sh alias.sh
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The \* also represents `any number (or zero)
     characters <x17129.html#ASTERISKREG>`__ in a `regular
@@ -931,22 +975,29 @@ building blocks of Bash scripts.
     ``         result-if-true        `` **:**
     ``         result-if-false        ``
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     (( var0 = var1<98?9: |
-    | 21 ))                    |
-    |     #                ^ ^ |
-    |                          |
-    |     # if [ "$var1" -lt 9 |
-    | 8 ]                      |
-    |     # then               |
-    |     #   var0=9           |
-    |     # else               |
-    |     #   var0=21          |
-    |     # fi                 |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        (( var0 = var1<98?9:21 ))
+        #                ^ ^
+
+        # if [ "$var1" -lt 98 ]
+        # then
+        #   var0=9
+        # else
+        #   var0=21
+        # fi
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     In a `parameter
     substitution <parameter-substitution.html#PARAMSUBREF>`__
@@ -975,17 +1026,25 @@ building blocks of Bash scripts.
     **`Variable substitution <varsubn.html>`__ (contents of a
     variable).**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     var1=5               |
-    |     var2=23skidoo        |
-    |                          |
-    |     echo $var1     # 5   |
-    |     echo $var2     # 23s |
-    | kidoo                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        var1=5
+        var2=23skidoo
+
+        echo $var1     # 5
+        echo $var2     # 23skidoo
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1079,12 +1138,21 @@ building blocks of Bash scripts.
 
     **command group.**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     (a=hello; echo $a)   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        (a=hello; echo $a)
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1094,70 +1162,66 @@ building blocks of Bash scripts.
 
        <div class="IMPORTANT">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Important|        |
-    | A listing of       |
-    | commands within    |
-    | ``                 |
-    |            parenth |
-    | eses               |
-    |            ``      |
-    | starts a           |
-    | `subshell <subshel |
-    | ls.html#SUBSHELLSR |
-    | EF>`__             |
-    | .                  |
-    |                    |
-    | Variables inside   |
-    | parentheses,       |
-    | within the         |
-    | subshell, are not  |
-    | visible to the     |
-    | rest of the        |
-    | script. The parent |
-    | process, the       |
-    | script, `cannot    |
-    | read variables     |
-    | created in the     |
-    | child              |
-    | process <subshells |
-    | .html#PARVIS>`__   |
-    | , the subshell.    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    | | .. code:: PROGRA |
-    | MLISTING |         |
-    | |                  |
-    |          |         |
-    | |     a=123        |
-    |          |         |
-    | |     ( a=321; )   |
-    |          |         |
-    | |                  |
-    |          |         |
-    | |     echo "a = $a |
-    | "   # a  |         |
-    | | = 123            |
-    |          |         |
-    | |     # "a" within |
-    |  parenth |         |
-    | | eses acts like a |
-    |  local v |         |
-    | | ariable.         |
-    |          |         |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Important|
+
+    A listing of commands within
+    ``                         parentheses                       ``
+    starts a `subshell <subshells.html#SUBSHELLSREF>`__ .
+
+    Variables inside parentheses, within the subshell, are not visible
+    to the rest of the script. The parent process, the script, `cannot
+    read variables created in the child
+    process <subshells.html#PARVIS>`__ , the subshell.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     a=123                |
+    |     ( a=321; )           |
+    |                          |
+    |     echo "a = $a"   # a  |
+    | = 123                    |
+    |     # "a" within parenth |
+    | eses acts like a local v |
+    | ariable.                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        a=123
+        ( a=321; )        
+
+        echo "a = $a"   # a = 123
+        # "a" within parentheses acts like a local variable.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        a=123
+        ( a=321; )        
+
+        echo "a = $a"   # a = 123
+        # "a" within parentheses acts like a local variable.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1169,13 +1233,21 @@ building blocks of Bash scripts.
 
     **array initialization.**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     Array=(element1 elem |
-    | ent2 element3)           |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        Array=(element1 element2 element3)
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1188,28 +1260,29 @@ building blocks of Bash scripts.
 
     **Brace expansion.**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo \"{These,words, |
-    | are,quoted}\"   # " pref |
-    | ix and suffix            |
-    |     # "These" "words" "a |
-    | re" "quoted"             |
-    |                          |
-    |                          |
-    |     cat {file1,file2,fil |
-    | e3} > combined_file      |
-    |     # Concatenates the f |
-    | iles file1, file2, and f |
-    | ile3 into combined_file. |
-    |                          |
-    |     cp file22.{txt,backu |
-    | p}                       |
-    |     # Copies "file22.txt |
-    | " to "file22.backup"     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo \"{These,words,are,quoted}\"   # " prefix and suffix
+        # "These" "words" "are" "quoted"
+
+
+        cat {file1,file2,file3} > combined_file
+        # Concatenates the files file1, file2, and file3 into combined_file.
+
+        cp file22.{txt,backup}
+        # Copies "file22.txt" to "file22.backup"
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1225,27 +1298,26 @@ building blocks of Bash scripts.
 
        <div class="CAUTION">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Caution|          |
-    | No spaces allowed  |
-    | within the braces  |
-    | *unless* the       |
-    | spaces are quoted  |
-    | or escaped.        |
-    |                    |
-    | ``                 |
-    |            echo {f |
-    | ile1,file2}\ :{\ A |
-    | ," B",' C'}        |
-    |                    |
-    | ``                 |
-    |                    |
-    | ``             fil |
-    | e1 : A file1 : B f |
-    | ile1 : C file2 : A |
-    |  file2 : B file2 : |
-    |  C            ``   |
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    No spaces allowed within the braces *unless* the spaces are quoted
+    or escaped.
+
+    ``                         echo {file1,file2}\ :{\ A," B",' C'}                       ``
+
+    ``            file1 : A file1 : B file1 : C file2 : A file2 : B file2 : C           ``
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1258,31 +1330,30 @@ building blocks of Bash scripts.
 
     **Extended Brace expansion.**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo {a..z} # a b c  |
-    | d e f g h i j k l m n o  |
-    | p q r s t u v w x y z    |
-    |     # Echoes characters  |
-    | between a and z.         |
-    |                          |
-    |     echo {0..3} # 0 1 2  |
-    | 3                        |
-    |     # Echoes characters  |
-    | between 0 and 3.         |
-    |                          |
-    |                          |
-    |     base64_charset=( {A. |
-    | .Z} {a..z} {0..9} + / =  |
-    | )                        |
-    |     # Initializing an ar |
-    | ray, using extended brac |
-    | e expansion.             |
-    |     # From vladz's "base |
-    | 64.sh" example script.   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
+        # Echoes characters between a and z.
+
+        echo {0..3} # 0 1 2 3
+        # Echoes characters between 0 and 3.
+
+
+        base64_charset=( {A..Z} {a..z} {0..9} + / = )
+        # Initializing an array, using extended brace expansion.
+        # From vladz's "base64.sh" example script.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1307,30 +1378,45 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ { local a;     |
-    |               a=123; }   |
-    |     bash: local: can onl |
-    | y be used in a           |
-    |     function             |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     a=123                |
-    |     { a=321; }           |
-    |     echo "a = $a"   # a  |
-    | = 321   (value inside co |
-    | de block)                |
-    |                          |
-    |     # Thanks, S.C.       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ { local a;
+                  a=123; }
+        bash: local: can only be used in a
+        function
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        a=123
+        { a=321; }
+        echo "a = $a"   # a = 321   (value inside code block)
+
+        # Thanks, S.C.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The code block enclosed in braces may have `I/O
     redirected <io-redirection.html#IOREDIRREF>`__ to and from it.
@@ -1341,40 +1427,41 @@ building blocks of Bash scripts.
 
     **Example 3-1. Code blocks and I/O redirection**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Reading lines in / |
-    | etc/fstab.               |
-    |                          |
-    |     File=/etc/fstab      |
-    |                          |
-    |     {                    |
-    |     read line1           |
-    |     read line2           |
-    |     } < $File            |
-    |                          |
-    |     echo "First line in  |
-    | $File is:"               |
-    |     echo "$line1"        |
-    |     echo                 |
-    |     echo "Second line in |
-    |  $File is:"              |
-    |     echo "$line2"        |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     # Now, how do you pa |
-    | rse the separate fields  |
-    | of each line?            |
-    |     # Hint: use awk, or  |
-    | . . .                    |
-    |     # . . . Hans-Joerg D |
-    | iers suggests using the  |
-    | "set" Bash builtin.      |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # Reading lines in /etc/fstab.
+
+        File=/etc/fstab
+
+        {
+        read line1
+        read line2
+        } < $File
+
+        echo "First line in $File is:"
+        echo "$line1"
+        echo
+        echo "Second line in $File is:"
+        echo "$line2"
+
+        exit 0
+
+        # Now, how do you parse the separate fields of each line?
+        # Hint: use awk, or . . .
+        # . . . Hans-Joerg Diers suggests using the "set" Bash builtin.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1386,76 +1473,61 @@ building blocks of Bash scripts.
 
     **Example 3-2. Saving the output of a code block to a file**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # rpm-check.sh       |
-    |                          |
-    |     #  Queries an rpm fi |
-    | le for description, list |
-    | ing,                     |
-    |     #+ and whether it ca |
-    | n be installed.          |
-    |     #  Saves output to a |
-    |  file.                   |
-    |     #                    |
-    |     #  This script illus |
-    | trates using a code bloc |
-    | k.                       |
-    |                          |
-    |     SUCCESS=0            |
-    |     E_NOARGS=65          |
-    |                          |
-    |     if [ -z "$1" ]       |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` rpm-file"       |
-    |       exit $E_NOARGS     |
-    |     fi                   |
-    |                          |
-    |     { # Begin code block |
-    | .                        |
-    |       echo               |
-    |       echo "Archive Desc |
-    | ription:"                |
-    |       rpm -qpi $1        |
-    | # Query description.     |
-    |       echo               |
-    |       echo "Archive List |
-    | ing:"                    |
-    |       rpm -qpl $1        |
-    | # Query listing.         |
-    |       echo               |
-    |       rpm -i --test $1   |
-    | # Query whether rpm file |
-    |  can be installed.       |
-    |       if [ "$?" -eq $SUC |
-    | CESS ]                   |
-    |       then               |
-    |         echo "$1 can be  |
-    | installed."              |
-    |       else               |
-    |         echo "$1 cannot  |
-    | be installed."           |
-    |       fi                 |
-    |       echo               |
-    | # End code block.        |
-    |     } > "$1.test"        |
-    | # Redirects output of ev |
-    | erything in block to fil |
-    | e.                       |
-    |                          |
-    |     echo "Results of rpm |
-    |  test in file $1.test"   |
-    |                          |
-    |     # See rpm man page f |
-    | or explanation of option |
-    | s.                       |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # rpm-check.sh
+
+        #  Queries an rpm file for description, listing,
+        #+ and whether it can be installed.
+        #  Saves output to a file.
+        # 
+        #  This script illustrates using a code block.
+
+        SUCCESS=0
+        E_NOARGS=65
+
+        if [ -z "$1" ]
+        then
+          echo "Usage: `basename $0` rpm-file"
+          exit $E_NOARGS
+        fi  
+
+        { # Begin code block.
+          echo
+          echo "Archive Description:"
+          rpm -qpi $1       # Query description.
+          echo
+          echo "Archive Listing:"
+          rpm -qpl $1       # Query listing.
+          echo
+          rpm -i --test $1  # Query whether rpm file can be installed.
+          if [ "$?" -eq $SUCCESS ]
+          then
+            echo "$1 can be installed."
+          else
+            echo "$1 cannot be installed."
+          fi  
+          echo              # End code block.
+        } > "$1.test"       # Redirects output of everything in block to file.
+
+        echo "Results of rpm test in file $1.test"
+
+        # See rpm man page for explanation of options.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1465,29 +1537,27 @@ building blocks of Bash scripts.
 
        <div class="NOTE">
 
-    +--------------------------+--------------------------+--------------------------+
-    | |Note|                   |
-    | Unlike a command group   |
-    | within (parentheses), as |
-    | above, a code block      |
-    | enclosed by {braces}     |
-    | will *not* normally      |
-    | launch a                 |
-    | `subshell <subshells.htm |
-    | l#SUBSHELLSREF>`__       |
-    | . ` [6]                  |
-    |  <special-chars.html#FTN |
-    | .AEN1199>`__             |
-    |                          |
-    | It is possible to        |
-    | `iterate <loops1.html#IT |
-    | ERATIONREF>`__           |
-    | a code block using a     |
-    | `non-standard            |
-    | *for-loop* <loops1.html# |
-    | NODODONE>`__             |
-    | .                        |
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    Unlike a command group within (parentheses), as above, a code block
+    enclosed by {braces} will *not* normally launch a
+    `subshell <subshells.html#SUBSHELLSREF>`__ . ` [6]
+     <special-chars.html#FTN.AEN1199>`__
+
+    It is possible to `iterate <loops1.html#ITERATIONREF>`__ a code
+    block using a `non-standard *for-loop* <loops1.html#NODODONE>`__ .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1507,18 +1577,24 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     ls . | xargs -i -t c |
-    | p ./{} $1                |
-    |     #            ^^      |
-    |     ^^                   |
-    |                          |
-    |     # From "ex42.sh" (co |
-    | pydir.sh) example.       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        ls . | xargs -i -t cp ./{} $1
+        #            ^^         ^^
+
+        # From "ex42.sh" (copydir.sh) example.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  {} \\;
     .. raw:: html
@@ -1533,35 +1609,52 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------------------------------------------------------+
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    <div class="SIDEBAR">                                                 |
-    |                                                                          |
-    | Definition: A *pathname* is a *filename* that includes the complete      |
-    | `path <internalvariables.html#PATHREF>`__ . As an example,               |
-    | ``             /home/bozo/Notes/Thursday/schedule.txt            `` .    |
-    | This is sometimes referred to as the *absolute path* .                   |
-    |                                                                          |
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    </div>                                                                |
-                                                                              
-    +--------------------------------------------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. raw:: html
+
+       <div class="SIDEBAR">
+
+    Definition: A *pathname* is a *filename* that includes the complete
+    `path <internalvariables.html#PATHREF>`__ . As an example,
+    ``            /home/bozo/Notes/Thursday/schedule.txt           `` .
+    This is sometimes referred to as the *absolute path* .
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | The " ; " ends the                   |
-    | ``             -exec            ``   |
-    | option of a **find** command         |
-    | sequence. It needs to be escaped to  |
-    | protect it from interpretation by    |
-    | the shell.                           |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    The " ; " ends the ``            -exec           `` option of a
+    **find** command sequence. It needs to be escaped to protect it from
+    interpretation by the shell.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1616,13 +1709,22 @@ building blocks of Bash scripts.
     In the context of an `array <arrays.html#ARRAYREF>`__ , brackets set
     off the numbering of each element of that array.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     Array[1]=slot_1      |
-    |     echo ${Array[1]}     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        Array[1]=slot_1
+        echo ${Array[1]}
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  [ ]
     .. raw:: html
@@ -1652,16 +1754,25 @@ building blocks of Bash scripts.
 
     Evaluate integer expression between $[ ] .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     a=3                  |
-    |     b=7                  |
-    |                          |
-    |     echo $[$a+$b]   # 10 |
-    |     echo $[$a*$b]   # 21 |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        a=3
+        b=7
+
+        echo $[$a+$b]   # 10
+        echo $[$a*$b]   # 21
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Note that this usage is *deprecated* , and has been replaced by the
     `(( ... )) <dblparens.html>`__ construct.
@@ -1707,155 +1818,119 @@ building blocks of Bash scripts.
 
        <div class="NOTE">
 
-    +------------+------------+------------+------------+------------+------------+------------+
-    | |Note|     |
-    |  This is   |
-    | useful for |
-    | suppressin |
-    | g          |
-    | output     |
-    | when       |
-    | testing    |
-    | for a      |
-    | condition. |
-    | For        |
-    | example,   |
-    | let us     |
-    | test       |
-    | whether a  |
-    | certain    |
-    | command    |
-    | exists.    |
-    |            |
-    | +--------- |
-    | ---------- |
-    | -------+-- |
-    | ---------- |
-    | ---------- |
-    | ----+----- |
-    | ---------- |
-    | ---------- |
-    | -+         |
-    | | .. code: |
-    | : SCREEN   |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    | |     bash |
-    | $ type bog |
-    | us_com |   |
-    | | mand &>/ |
-    | dev/null   |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    | |     bash |
-    | $ echo $?  |
-    |        |   |
-    | |     1    |
-    |            |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    |            |
-    |            |
-    |            |
-    | +--------- |
-    | ---------- |
-    | -------+-- |
-    | ---------- |
-    | ---------- |
-    | ----+----- |
-    | ---------- |
-    | ---------- |
-    | -+         |
-    |            |
-    | Or in a    |
-    | script:    |
-    |            |
-    | +--------- |
-    | ---------- |
-    | -------+-- |
-    | ---------- |
-    | ---------- |
-    | ----+----- |
-    | ---------- |
-    | ---------- |
-    | -+         |
-    | | .. code: |
-    | : PROGRAML |
-    | ISTING |   |
-    | |          |
-    |            |
-    |        |   |
-    | |     comm |
-    | and_test ( |
-    | ) { ty |   |
-    | | pe "$1"  |
-    | &>/dev/nul |
-    | l; }   |   |
-    | |     #    |
-    |            |
-    |        |   |
-    | |          |
-    |            |
-    |  ^     |   |
-    | |          |
-    |            |
-    |        |   |
-    | |     cmd= |
-    | rmdir      |
-    |        |   |
-    | |  # Legit |
-    | imate comm |
-    | and.   |   |
-    | |     comm |
-    | and_test $ |
-    | cmd; e |   |
-    | | cho $?   |
-    |  # 0       |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    | |          |
-    |            |
-    |        |   |
-    | |     cmd= |
-    | bogus_comm |
-    | and    |   |
-    | |  # Illeg |
-    | itimate co |
-    | mmand  |   |
-    | |     comm |
-    | and_test $ |
-    | cmd; e |   |
-    | | cho $?   |
-    |  # 1       |
-    |        |   |
-    |            |
-    |            |
-    |            |
-    | +--------- |
-    | ---------- |
-    | -------+-- |
-    | ---------- |
-    | ---------- |
-    | ----+----- |
-    | ---------- |
-    | ---------- |
-    | -+         |
-                
-    +------------+------------+------------+------------+------------+------------+------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+     This is useful for suppressing output when testing for a condition.
+    For example, let us test whether a certain command exists.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ type bogus_com |
+    | mand &>/dev/null         |
+    |                          |
+    |                          |
+    |                          |
+    |     bash$ echo $?        |
+    |     1                    |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    Or in a script:
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     command_test () { ty |
+    | pe "$1" &>/dev/null; }   |
+    |     #                    |
+    |                    ^     |
+    |                          |
+    |     cmd=rmdir            |
+    |  # Legitimate command.   |
+    |     command_test $cmd; e |
+    | cho $?   # 0             |
+    |                          |
+    |                          |
+    |     cmd=bogus_command    |
+    |  # Illegitimate command  |
+    |     command_test $cmd; e |
+    | cho $?   # 1             |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ type bogus_command &>/dev/null
+
+
+
+        bash$ echo $?
+        1
+                            
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        command_test () { type "$1" &>/dev/null; }
+        #                                      ^
+
+        cmd=rmdir            # Legitimate command.
+        command_test $cmd; echo $?   # 0
+
+
+        cmd=bogus_command    # Illegitimate command
+        command_test $cmd; echo $?   # 1
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ type bogus_command &>/dev/null
+
+
+
+        bash$ echo $?
+        1
+                            
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        command_test () { type "$1" &>/dev/null; }
+        #                                      ^
+
+        cmd=rmdir            # Legitimate command.
+        command_test $cmd; echo $?   # 0
+
+
+        cmd=bogus_command    # Illegitimate command
+        command_test $cmd; echo $?   # 1
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1929,30 +2004,31 @@ building blocks of Bash scripts.
 
     **`ASCII comparison <comparison-ops.html#LTREF>`__ .**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     veg1=carrots         |
-    |     veg2=tomatoes        |
-    |                          |
-    |     if [[ "$veg1" < "$ve |
-    | g2" ]]                   |
-    |     then                 |
-    |       echo "Although $ve |
-    | g1 precede $veg2 in the  |
-    | dictionary,"             |
-    |       echo -n "this does |
-    |  not necessarily imply a |
-    | nything "                |
-    |       echo "about my cul |
-    | inary preferences."      |
-    |     else                 |
-    |       echo "What kind of |
-    |  dictionary are you usin |
-    | g, anyhow?"              |
-    |     fi                   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        veg1=carrots
+        veg2=tomatoes
+
+        if [[ "$veg1" < "$veg2" ]]
+        then
+          echo "Although $veg1 precede $veg2 in the dictionary,"
+          echo -n "this does not necessarily imply anything "
+          echo "about my culinary preferences."
+        else
+          echo "What kind of dictionary are you using, anyhow?"
+        fi
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1988,239 +2064,203 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     echo ls -l | sh      |
-    |     #  Passes the output |
-    |  of "echo ls -l" to the  |
-    | shell,                   |
-    |     #+ with the same res |
-    | ult as a simple "ls -l". |
-    |                          |
-    |                          |
-    |     cat *.lst | sort | u |
-    | niq                      |
-    |     # Merges and sorts a |
-    | ll ".lst" files, then de |
-    | letes duplicate lines.   |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
 
-    +--------------------------------------------------------------------------+
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    <div class="SIDEBAR">                                                 |
-    |                                                                          |
-    | A pipe, as a classic method of interprocess communication, sends the     |
-    | ``             stdout            `` of one                               |
-    | `process <special-chars.html#PROCESSREF>`__ to the                       |
-    | ``             stdin            `` of another. In a typical case, a      |
-    | command, such as `cat <basic.html#CATREF>`__ or                          |
-    | `echo <internal.html#ECHOREF>`__ , pipes a stream of data to a *filter*  |
-    | , a command that transforms its input for processing. ` [7]              |
-    |  <special-chars.html#FTN.AEN1564>`__                                     |
-    |                                                                          |
-    | ``                           cat $filename1 $filename2 | grep $search_wo |
-    | rd                         ``                                            |
-    |                                                                          |
-    | For an interesting note on the complexity of using UNIX pipes, see `the  |
-    | UNIX FAQ, Part 3 <http://www.faqs.org/faqs/unix-faq/faq/part3/>`__ .     |
-    |                                                                          |
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    </div>                                                                |
-                                                                              
-    +--------------------------------------------------------------------------+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        echo ls -l | sh
+        #  Passes the output of "echo ls -l" to the shell,
+        #+ with the same result as a simple "ls -l".
+
+
+        cat *.lst | sort | uniq
+        # Merges and sorts all ".lst" files, then deletes duplicate lines.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. raw:: html
+
+       <div class="SIDEBAR">
+
+    A pipe, as a classic method of interprocess communication, sends the
+    ``            stdout           `` of one
+    `process <special-chars.html#PROCESSREF>`__ to the
+    ``            stdin           `` of another. In a typical case, a
+    command, such as `cat <basic.html#CATREF>`__ or
+    `echo <internal.html#ECHOREF>`__ , pipes a stream of data to a
+    *filter* , a command that transforms its input for processing. ` [7]
+     <special-chars.html#FTN.AEN1564>`__
+
+    ``                         cat $filename1 $filename2 | grep $search_word                       ``
+
+    For an interesting note on the complexity of using UNIX pipes, see
+    `the UNIX FAQ, Part
+    3 <http://www.faqs.org/faqs/unix-faq/faq/part3/>`__ .
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
      The output of a command or commands may be piped to a script.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # uppercase.sh : Cha |
-    | nges input to uppercase. |
-    |                          |
-    |     tr 'a-z' 'A-Z'       |
-    |     #  Letter ranges mus |
-    | t be quoted              |
-    |     #+ to prevent filena |
-    | me generation from singl |
-    | e-letter filenames.      |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # uppercase.sh : Changes input to uppercase.
+
+        tr 'a-z' 'A-Z'
+        #  Letter ranges must be quoted
+        #+ to prevent filename generation from single-letter filenames.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Now, let us pipe the output of **ls -l** to this script.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ ls -l | ./uppe |
-    | rcase.sh                 |
-    |     -RW-RW-R--    1 BOZO |
-    |   BOZO       109 APR  7  |
-    | 19:49 1.TXT              |
-    |      -RW-RW-R--    1 BOZ |
-    | O  BOZO       109 APR 14 |
-    |  16:48 2.TXT             |
-    |      -RW-R--R--    1 BOZ |
-    | O  BOZO       725 APR 20 |
-    |  20:56 DATA-FILE         |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ ls -l | ./uppercase.sh
+        -RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
+         -RW-RW-R--    1 BOZO  BOZO       109 APR 14 16:48 2.TXT
+         -RW-R--R--    1 BOZO  BOZO       725 APR 20 20:56 DATA-FILE
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------+--------------+--------------+--------------+--------------+--------------+
-    | |Note|       |
-    | The          |
-    | ``           |
-    |    stdout    |
-    |          ``  |
-    | of each      |
-    | process in a |
-    | pipe must be |
-    | read as the  |
-    | ``           |
-    |    stdin     |
-    |         ``   |
-    | of the next. |
-    | If this is   |
-    | not the      |
-    | case, the    |
-    | data stream  |
-    | will *block* |
-    | , and the    |
-    | pipe will    |
-    | not behave   |
-    | as expected. |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ---+-------- |
-    | ------------ |
-    | ------+----- |
-    | ------------ |
-    | ---------+   |
-    | | .. code::  |
-    | PROGRAMLISTI |
-    | NG |         |
-    | |            |
-    |              |
-    |    |         |
-    | |     cat fi |
-    | le1 file2 |  |
-    | ls |         |
-    | |  -l | sort |
-    |              |
-    |    |         |
-    | |     # The  |
-    | output from  |
-    | "c |         |
-    | | at file1 f |
-    | ile2" disapp |
-    | ea |         |
-    | | rs.        |
-    |              |
-    |    |         |
-    |              |
-    |              |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ---+-------- |
-    | ------------ |
-    | ------+----- |
-    | ------------ |
-    | ---------+   |
-    |              |
-    | A pipe runs  |
-    | as a `child  |
-    | process <oth |
-    | ertypesv.htm |
-    | l#CHILDREF>` |
-    | __           |
-    | , and        |
-    | therefore    |
-    | cannot alter |
-    | script       |
-    | variables.   |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ---+-------- |
-    | ------------ |
-    | ------+----- |
-    | ------------ |
-    | ---------+   |
-    | | .. code::  |
-    | PROGRAMLISTI |
-    | NG |         |
-    | |            |
-    |              |
-    |    |         |
-    | |     variab |
-    | le="initial_ |
-    | va |         |
-    | | lue"       |
-    |              |
-    |    |         |
-    | |     echo " |
-    | new_value" | |
-    |  r |         |
-    | | ead variab |
-    | le           |
-    |    |         |
-    | |     echo " |
-    | variable = $ |
-    | va |         |
-    | | riable"    |
-    |   # variable |
-    |  = |         |
-    | |  initial_v |
-    | alue         |
-    |    |         |
-    |              |
-    |              |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ---+-------- |
-    | ------------ |
-    | ------+----- |
-    | ------------ |
-    | ---------+   |
-    |              |
-    | If one of    |
-    | the commands |
-    | in the pipe  |
-    | aborts, this |
-    | prematurely  |
-    | terminates   |
-    | execution of |
-    | the pipe.    |
-    | Called a     |
-    | *broken      |
-    | pipe* , this |
-    | condition    |
-    | sends a      |
-    | ``           |
-    |              |
-    |      SIGPIPE |
-    |              |
-    |              |
-    |  ``          |
-    | `signal <deb |
-    | ugging.html# |
-    | SIGNALD>`__  |
-    | .            |
-    +--------------+--------------+--------------+--------------+--------------+--------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    The ``            stdout           `` of each process in a pipe must
+    be read as the ``            stdin           `` of the next. If this
+    is not the case, the data stream will *block* , and the pipe will
+    not behave as expected.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     cat file1 file2 | ls |
+    |  -l | sort               |
+    |     # The output from "c |
+    | at file1 file2" disappea |
+    | rs.                      |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    A pipe runs as a `child process <othertypesv.html#CHILDREF>`__ , and
+    therefore cannot alter script variables.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     variable="initial_va |
+    | lue"                     |
+    |     echo "new_value" | r |
+    | ead variable             |
+    |     echo "variable = $va |
+    | riable"     # variable = |
+    |  initial_value           |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    If one of the commands in the pipe aborts, this prematurely
+    terminates execution of the pipe. Called a *broken pipe* , this
+    condition sends a
+    ``                         SIGPIPE                       ``
+    `signal <debugging.html#SIGNALD>`__ .
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        cat file1 file2 | ls -l | sort
+        # The output from "cat file1 file2" disappears.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        variable="initial_value"
+        echo "new_value" | read variable
+        echo "variable = $variable"     # variable = initial_value
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        cat file1 file2 | ls -l | sort
+        # The output from "cat file1 file2" disappears.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        variable="initial_value"
+        echo "new_value" | read variable
+        echo "variable = $variable"     # variable = initial_value
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2265,16 +2305,24 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ sleep 10 &     |
-    |     [1] 850              |
-    |     [1]+  Done           |
-    |           sleep 10       |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ sleep 10 &
+        [1] 850
+        [1]+  Done                    sleep 10
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Within a script, commands and even
     `loops <loops1.html#FORLOOPREF1>`__ may run in the background.
@@ -2285,86 +2333,62 @@ building blocks of Bash scripts.
 
     **Example 3-3. Running a loop in the background**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # background-loop.sh |
-    |                          |
-    |     for i in 1 2 3 4 5 6 |
-    |  7 8 9 10            # F |
-    | irst loop.               |
-    |     do                   |
-    |       echo -n "$i "      |
-    |     done & # Run this lo |
-    | op in background.        |
-    |            # Will someti |
-    | mes execute after second |
-    |  loop.                   |
-    |                          |
-    |     echo   # This 'echo' |
-    |  sometimes will not disp |
-    | lay.                     |
-    |                          |
-    |     for i in 11 12 13 14 |
-    |  15 16 17 18 19 20   # S |
-    | econd loop.              |
-    |     do                   |
-    |       echo -n "$i "      |
-    |     done                 |
-    |                          |
-    |     echo   # This 'echo' |
-    |  sometimes will not disp |
-    | lay.                     |
-    |                          |
-    |     # ================== |
-    | ======================== |
-    | ============             |
-    |                          |
-    |     # The expected outpu |
-    | t from the script:       |
-    |     # 1 2 3 4 5 6 7 8 9  |
-    | 10                       |
-    |     # 11 12 13 14 15 16  |
-    | 17 18 19 20              |
-    |                          |
-    |     # Sometimes, though, |
-    |  you get:                |
-    |     # 11 12 13 14 15 16  |
-    | 17 18 19 20              |
-    |     # 1 2 3 4 5 6 7 8 9  |
-    | 10 bozo $                |
-    |     # (The second 'echo' |
-    |  doesn't execute. Why?)  |
-    |                          |
-    |     # Occasionally also: |
-    |     # 1 2 3 4 5 6 7 8 9  |
-    | 10 11 12 13 14 15 16 17  |
-    | 18 19 20                 |
-    |     # (The first 'echo'  |
-    | doesn't execute. Why?)   |
-    |                          |
-    |     # Very rarely someth |
-    | ing like:                |
-    |     # 11 12 13 1 2 3 4 5 |
-    |  6 7 8 9 10 14 15 16 17  |
-    | 18 19 20                 |
-    |     # The foreground loo |
-    | p preempts the backgroun |
-    | d one.                   |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     #  Nasimuddin Ansari |
-    |  suggests adding    slee |
-    | p 1                      |
-    |     #+ after the   echo  |
-    | -n "$i"   in lines 6 and |
-    |  14,                     |
-    |     #+ for some real fun |
-    | .                        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # background-loop.sh
+
+        for i in 1 2 3 4 5 6 7 8 9 10            # First loop.
+        do
+          echo -n "$i "
+        done & # Run this loop in background.
+               # Will sometimes execute after second loop.
+
+        echo   # This 'echo' sometimes will not display.
+
+        for i in 11 12 13 14 15 16 17 18 19 20   # Second loop.
+        do
+          echo -n "$i "
+        done  
+
+        echo   # This 'echo' sometimes will not display.
+
+        # ======================================================
+
+        # The expected output from the script:
+        # 1 2 3 4 5 6 7 8 9 10 
+        # 11 12 13 14 15 16 17 18 19 20 
+
+        # Sometimes, though, you get:
+        # 11 12 13 14 15 16 17 18 19 20 
+        # 1 2 3 4 5 6 7 8 9 10 bozo $
+        # (The second 'echo' doesn't execute. Why?)
+
+        # Occasionally also:
+        # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+        # (The first 'echo' doesn't execute. Why?)
+
+        # Very rarely something like:
+        # 11 12 13 1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 
+        # The foreground loop preempts the background one.
+
+        exit 0
+
+        #  Nasimuddin Ansari suggests adding    sleep 1
+        #+ after the   echo -n "$i"   in lines 6 and 14,
+        #+ for some real fun.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2374,15 +2398,23 @@ building blocks of Bash scripts.
 
        <div class="CAUTION">
 
-    +--------------------------------------+--------------------------------------+
-    | |Caution|                            |
-    | A command run in the background      |
-    | within a script may cause the script |
-    | to hang, waiting for a keystroke.    |
-    | Fortunately, there is a              |
-    | `remedy <x9644.html#WAITHANG>`__ for |
-    | this.                                |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    A command run in the background within a script may cause the script
+    to hang, waiting for a keystroke. Fortunately, there is a
+    `remedy <x9644.html#WAITHANG>`__ for this.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2422,36 +2454,38 @@ building blocks of Bash scripts.
 
     ``                   sort -dfu $filename                 ``
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     if [ $file1 -ot $fil |
-    | e2 ]                     |
-    |     then #      ^        |
-    |       echo "File $file1  |
-    | is older than $file2."   |
-    |     fi                   |
-    |                          |
-    |     if [ "$a" -eq "$b" ] |
-    |     then #    ^          |
-    |       echo "$a is equal  |
-    | to $b."                  |
-    |     fi                   |
-    |                          |
-    |     if [ "$c" -eq 24 -a  |
-    | "$d" -eq 47 ]            |
-    |     then #    ^          |
-    |      ^                   |
-    |       echo "$c equals 24 |
-    |  and $d equals 47."      |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     param2=${param1:-$DE |
-    | FAULTVAL}                |
-    |     #               ^    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        if [ $file1 -ot $file2 ]
+        then #      ^
+          echo "File $file1 is older than $file2."
+        fi
+
+        if [ "$a" -eq "$b" ]
+        then #    ^
+          echo "$a is equal to $b."
+        fi
+
+        if [ "$c" -eq 24 -a "$d" -eq 47 ]
+        then #    ^              ^
+          echo "$c equals 24 and $d equals 47."
+        fi
+
+
+        param2=${param1:-$DEFAULTVAL}
+        #               ^
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     **--**
 
@@ -2467,49 +2501,68 @@ building blocks of Bash scripts.
 
        <div class="TIP">
 
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    This provides a handy means of removing files whose *names begin
+    with a dash* .
+
     +--------------------------+--------------------------+--------------------------+
-    | |Tip|                    |
-    | This provides a handy    |
-    | means of removing files  |
-    | whose *names begin with  |
-    | a dash* .                |
+    | .. code:: SCREEN         |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
-    | | .. code:: SCREEN       |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     bash$ ls -l        |
-    |    |                     |
-    | |     -rw-r--r-- 1 bozo  |
-    | bo |                     |
-    | | zo 0 Nov 25 12:29 -bad |
-    | na |                     |
-    | | me                     |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     bash$ rm -- -badna |
-    | me |                     |
-    | |                        |
-    |    |                     |
-    | |     bash$ ls -l        |
-    |    |                     |
-    | |     total 0            |
-    |    |                     |
+    |     bash$ ls -l          |
+    |     -rw-r--r-- 1 bozo bo |
+    | zo 0 Nov 25 12:29 -badna |
+    | me                       |
     |                          |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
+    |     bash$ rm -- -badname |
+    |                          |
+    |     bash$ ls -l          |
+    |     total 0              |
                               
     +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ ls -l
+        -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
+
+
+        bash$ rm -- -badname
+
+        bash$ ls -l
+        total 0
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ ls -l
+        -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
+
+
+        bash$ rm -- -badname
+
+        bash$ ls -l
+        total 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2533,145 +2586,129 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ cat -          |
-    |     abc                  |
-    |     abc                  |
-    |                          |
-    |     ...                  |
-    |                          |
-    |     Ctl-D                |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ cat -
+        abc
+        abc
+
+        ...
+
+        Ctl-D
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     As expected, ``                   cat -                 `` echoes
     ``         stdin        `` , in this case keyboarded user input, to
     ``         stdout        `` . But, does I/O redirection using **-**
     have real-world applications?
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     (cd /source/director |
-    | y && tar cf - . ) | (cd  |
-    | /dest/directory && tar x |
-    | pvf -)                   |
-    |     # Move entire file t |
-    | ree from one directory t |
-    | o another                |
-    |     # [courtesy Alan Cox |
-    |  <a.cox@swansea.ac.uk>,  |
-    | with a minor change]     |
-    |                          |
-    |     # 1) cd /source/dire |
-    | ctory                    |
-    |     #    Source director |
-    | y, where the files to be |
-    |  moved are.              |
-    |     # 2) &&              |
-    |     #   "And-list": if t |
-    | he 'cd' operation succes |
-    | sful,                    |
-    |     #    then execute th |
-    | e next command.          |
-    |     # 3) tar cf - .      |
-    |     #    The 'c' option  |
-    | 'tar' archiving command  |
-    | creates a new archive,   |
-    |     #    the 'f' (file)  |
-    | option, followed by '-'  |
-    | designates the target fi |
-    | le                       |
-    |     #    as stdout, and  |
-    | do it in current directo |
-    | ry tree ('.').           |
-    |     # 4) |               |
-    |     #    Piped to ...    |
-    |     # 5) ( ... )         |
-    |     #    a subshell      |
-    |     # 6) cd /dest/direct |
-    | ory                      |
-    |     #    Change to the d |
-    | estination directory.    |
-    |     # 7) &&              |
-    |     #   "And-list", as a |
-    | bove                     |
-    |     # 8) tar xpvf -      |
-    |     #    Unarchive ('x') |
-    | , preserve ownership and |
-    |  file permissions ('p'), |
-    |     #    and send verbos |
-    | e messages to stdout ('v |
-    | '),                      |
-    |     #    reading data fr |
-    | om stdin ('f' followed b |
-    | y '-').                  |
-    |     #                    |
-    |     #    Note that 'x' i |
-    | s a command, and 'p', 'v |
-    | ', 'f' are options.      |
-    |     #                    |
-    |     # Whew!              |
-    |                          |
-    |                          |
-    |                          |
-    |     # More elegant than, |
-    |  but equivalent to:      |
-    |     #   cd source/direct |
-    | ory                      |
-    |     #   tar cf - . | (cd |
-    |  ../dest/directory; tar  |
-    | xpvf -)                  |
-    |     #                    |
-    |     #     Also having sa |
-    | me effect:               |
-    |     # cp -a /source/dire |
-    | ctory/* /dest/directory  |
-    |     #     Or:            |
-    |     # cp -a /source/dire |
-    | ctory/* /source/director |
-    | y/.[^.]* /dest/directory |
-    |     #     If there are h |
-    | idden files in /source/d |
-    | irectory.                |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     bunzip2 -c linux-2.6 |
-    | .16.tar.bz2 | tar xvf -  |
-    |     #  --uncompress tar  |
-    | file--      | --then pas |
-    | s it to "tar"--          |
-    |     #  If "tar" has not  |
-    | been patched to handle " |
-    | bunzip2",                |
-    |     #+ this needs to be  |
-    | done in two discrete ste |
-    | ps, using a pipe.        |
-    |     #  The purpose of th |
-    | e exercise is to unarchi |
-    | ve "bzipped" kernel sour |
-    | ce.                      |
-                              
-    +--------------------------+--------------------------+--------------------------+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
+        # Move entire file tree from one directory to another
+        # [courtesy Alan Cox <a.cox@swansea.ac.uk>, with a minor change]
+
+        # 1) cd /source/directory
+        #    Source directory, where the files to be moved are.
+        # 2) &&
+        #   "And-list": if the 'cd' operation successful,
+        #    then execute the next command.
+        # 3) tar cf - .
+        #    The 'c' option 'tar' archiving command creates a new archive,
+        #    the 'f' (file) option, followed by '-' designates the target file
+        #    as stdout, and do it in current directory tree ('.').
+        # 4) |
+        #    Piped to ...
+        # 5) ( ... )
+        #    a subshell
+        # 6) cd /dest/directory
+        #    Change to the destination directory.
+        # 7) &&
+        #   "And-list", as above
+        # 8) tar xpvf -
+        #    Unarchive ('x'), preserve ownership and file permissions ('p'),
+        #    and send verbose messages to stdout ('v'),
+        #    reading data from stdin ('f' followed by '-').
+        #
+        #    Note that 'x' is a command, and 'p', 'v', 'f' are options.
+        #
+        # Whew!
+
+
+
+        # More elegant than, but equivalent to:
+        #   cd source/directory
+        #   tar cf - . | (cd ../dest/directory; tar xpvf -)
+        #
+        #     Also having same effect:
+        # cp -a /source/directory/* /dest/directory
+        #     Or:
+        # cp -a /source/directory/* /source/directory/.[^.]* /dest/directory
+        #     If there are hidden files in /source/directory.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
+        #  --uncompress tar file--      | --then pass it to "tar"--
+        #  If "tar" has not been patched to handle "bunzip2",
+        #+ this needs to be done in two discrete steps, using a pipe.
+        #  The purpose of the exercise is to unarchive "bzipped" kernel source.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Note that in this context the "-" is not itself a Bash operator, but
     rather an option recognized by certain UNIX utilities that write to
     ``         stdout        `` , such as **tar** , **cat** , etc.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ echo "whatever |
-    | " | cat -                |
-    |     whatever             |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ echo "whatever" | cat -
+        whatever 
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Where a filename is expected,
     ``                   -                 `` redirects output to
@@ -2680,16 +2717,23 @@ building blocks of Bash scripts.
     from ``         stdin        `` , rather than from a file. This is a
     method of using a file-oriented utility as a filter in a pipe.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ file           |
-    |     Usage: file [-bciknv |
-    | zL] [-f namefile] [-m ma |
-    | gicfiles] file...        |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ file
+        Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     By itself on the command-line, `file <filearchiv.html#FILEREF>`__
     fails with an error message.
@@ -2697,25 +2741,30 @@ building blocks of Bash scripts.
     Add a "-" for a more useful result. This causes the shell to await
     user input.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ file -         |
-    |     abc                  |
-    |     standard input:      |
-    |          ASCII text      |
-    |                          |
-    |                          |
-    |                          |
-    |     bash$ file -         |
-    |     #!/bin/bash          |
-    |     standard input:      |
-    |          Bourne-Again sh |
-    | ell script text executab |
-    | le                       |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ file -
+        abc
+        standard input:              ASCII text
+
+
+
+        bash$ file -
+        #!/bin/bash
+        standard input:              Bourne-Again shell script text executable
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Now the command accepts input from ``        stdin       `` and
     analyzes it.
@@ -2739,82 +2788,53 @@ building blocks of Bash scripts.
 
     **Example 3-4. Backup of all files changed in last day**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     #  Backs up all file |
-    | s in current directory m |
-    | odified within last 24 h |
-    | ours                     |
-    |     #+ in a "tarball" (t |
-    | arred and gzipped file). |
-    |                          |
-    |     BACKUPFILE=backup-$( |
-    | date +%m-%d-%Y)          |
-    |     #                 Em |
-    | beds date in backup file |
-    | name.                    |
-    |     #                 Th |
-    | anks, Joshua Tschida, fo |
-    | r the idea.              |
-    |     archive=${1:-$BACKUP |
-    | FILE}                    |
-    |     #  If no backup-arch |
-    | ive filename specified o |
-    | n command-line,          |
-    |     #+ it will default t |
-    | o "backup-MM-DD-YYYY.tar |
-    | .gz."                    |
-    |                          |
-    |     tar cvf - `find . -m |
-    | time -1 -type f -print`  |
-    | > $archive.tar           |
-    |     gzip $archive.tar    |
-    |     echo "Directory $PWD |
-    |  backed up in archive fi |
-    | le \"$archive.tar.gz\"." |
-    |                          |
-    |                          |
-    |     #  Stephane Chazelas |
-    |  points out that the abo |
-    | ve code will fail        |
-    |     #+ if there are too  |
-    | many files found         |
-    |     #+ or if any filenam |
-    | es contain blank charact |
-    | ers.                     |
-    |                          |
-    |     # He suggests the fo |
-    | llowing alternatives:    |
-    |     # ------------------ |
-    | ------------------------ |
-    | ------------------------ |
-    | -                        |
-    |     #   find . -mtime -1 |
-    |  -type f -print0 | xargs |
-    |  -0 tar rvf "$archive.ta |
-    | r"                       |
-    |     #      using the GNU |
-    |  version of "find".      |
-    |                          |
-    |                          |
-    |     #   find . -mtime -1 |
-    |  -type f -exec tar rvf " |
-    | $archive.tar" '{}' \;    |
-    |     #         portable t |
-    | o other UNIX flavors, bu |
-    | t much slower.           |
-    |     # ------------------ |
-    | ------------------------ |
-    | ------------------------ |
-    | -                        |
-    |                          |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        #  Backs up all files in current directory modified within last 24 hours
+        #+ in a "tarball" (tarred and gzipped file).
+
+        BACKUPFILE=backup-$(date +%m-%d-%Y)
+        #                 Embeds date in backup filename.
+        #                 Thanks, Joshua Tschida, for the idea.
+        archive=${1:-$BACKUPFILE}
+        #  If no backup-archive filename specified on command-line,
+        #+ it will default to "backup-MM-DD-YYYY.tar.gz."
+
+        tar cvf - `find . -mtime -1 -type f -print` > $archive.tar
+        gzip $archive.tar
+        echo "Directory $PWD backed up in archive file \"$archive.tar.gz\"."
+
+
+        #  Stephane Chazelas points out that the above code will fail
+        #+ if there are too many files found
+        #+ or if any filenames contain blank characters.
+
+        # He suggests the following alternatives:
+        # -------------------------------------------------------------------
+        #   find . -mtime -1 -type f -print0 | xargs -0 tar rvf "$archive.tar"
+        #      using the GNU version of "find".
+
+
+        #   find . -mtime -1 -type f -exec tar rvf "$archive.tar" '{}' \;
+        #         portable to other UNIX flavors, but much slower.
+        # -------------------------------------------------------------------
+
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2824,72 +2844,61 @@ building blocks of Bash scripts.
 
        <div class="CAUTION">
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Caution|          |
-    | Filenames          |
-    | beginning with "-" |
-    | may cause problems |
-    | when coupled with  |
-    | the "-"            |
-    | redirection        |
-    | operator. A script |
-    | should check for   |
-    | this and add an    |
-    | appropriate prefix |
-    | to such filenames, |
-    | for example        |
-    | ``             ./- |
-    | FILENAME           |
-    |   ``               |
-    | ,                  |
-    | ``             $PW |
-    | D/-FILENAME        |
-    |      ``            |
-    | , or               |
-    | ``             $PA |
-    | THNAME/-FILENAME   |
-    |           ``       |
-    | .                  |
-    |                    |
-    | If the value of a  |
-    | variable begins    |
-    | with a             |
-    | ``                 |
-    |            -       |
-    |                    |
-    |  ``                |
-    | , this may         |
-    | likewise create    |
-    | problems.          |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-    | | .. code:: PROGRA |
-    | MLISTING |         |
-    | |                  |
-    |          |         |
-    | |     var="-n"     |
-    |          |         |
-    | |     echo $var    |
-    |          |         |
-    | |     # Has the ef |
-    | fect of  |         |
-    | | "echo -n", and o |
-    | utputs n |         |
-    | | othing.          |
-    |          |         |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ---------+-------- |
-    | ------------------ |
-    | +----------------- |
-    | ---------+         |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    Filenames beginning with "-" may cause problems when coupled with
+    the "-" redirection operator. A script should check for this and add
+    an appropriate prefix to such filenames, for example
+    ``            ./-FILENAME           `` ,
+    ``            $PWD/-FILENAME           `` , or
+    ``            $PATHNAME/-FILENAME           `` .
+
+    If the value of a variable begins with a
+    ``                         -                       `` , this may
+    likewise create problems.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     var="-n"             |
+    |     echo $var            |
+    |     # Has the effect of  |
+    | "echo -n", and outputs n |
+    | othing.                  |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        var="-n"
+        echo $var       
+        # Has the effect of "echo -n", and outputs nothing.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        var="-n"
+        echo $var       
+        # Has the effect of "echo -n", and outputs nothing.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2913,14 +2922,23 @@ building blocks of Bash scripts.
 
        <div class="CAUTION">
 
-    +--------------------------------------+--------------------------------------+
-    | |Caution|                            |
-    | Do not confuse the "-" used in this  |
-    | sense with the "-" redirection       |
-    | operator just discussed. The         |
-    | interpretation of the "-" depends on |
-    | the context in which it appears.     |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Caution|
+
+    Do not confuse the "-" used in this sense with the "-" redirection
+    operator just discussed. The interpretation of the "-" depends on
+    the context in which it appears.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2945,13 +2963,22 @@ building blocks of Bash scripts.
 
     **Equals.** `Assignment operator <varassignment.html#EQREF>`__
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     a=28                 |
-    |     echo $a   # 28       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        a=28
+        echo $a   # 28
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -3006,13 +3033,22 @@ building blocks of Bash scripts.
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     let "z = 5 % 3"      |
-    |     echo $z  # 2         |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        let "z = 5 % 3"
+        echo $z  # 2
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     In a `different context <parameter-substitution.html#PCTPATREF>`__ ,
     the % is a `pattern matching <parameter-substitution.html#PSUB2>`__
@@ -3029,27 +3065,35 @@ building blocks of Bash scripts.
     ~bozo** lists the contents of it. ~/ is the current user's home
     directory, and **ls ~/** lists the contents of it.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ echo ~bozo     |
-    |     /home/bozo           |
-    |                          |
-    |     bash$ echo ~         |
-    |     /home/bozo           |
-    |                          |
-    |     bash$ echo ~/        |
-    |     /home/bozo/          |
-    |                          |
-    |     bash$ echo ~:        |
-    |     /home/bozo:          |
-    |                          |
-    |     bash$ echo ~nonexist |
-    | ent-user                 |
-    |     ~nonexistent-user    |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ echo ~bozo
+        /home/bozo
+
+        bash$ echo ~
+        /home/bozo
+
+        bash$ echo ~/
+        /home/bozo/
+
+        bash$ echo ~:
+        /home/bozo:
+
+        bash$ echo ~nonexistent-user
+        ~nonexistent-user
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -3193,60 +3237,51 @@ building blocks of Bash scripts.
        (destructive backspace). Erases characters the cursor backs over
        while backspacing.
 
-       +--------------------------+--------------------------+--------------------------+
-       | .. code:: PROGRAMLISTING |
-       |                          |
-       |     #!/bin/bash          |
-       |     # Embedding Ctl-H in |
-       |  a string.               |
-       |                          |
-       |     a="^H^H"             |
-       |       # Two Ctl-H's -- b |
-       | ackspaces                |
-       |                          |
-       |       # ctl-V ctl-H, usi |
-       | ng vi/vim                |
-       |     echo "abcdef"        |
-       |       # abcdef           |
-       |     echo                 |
-       |     echo -n "abcdef$a "  |
-       |       # abcd f           |
-       |     #  Space at end  ^   |
-       |             ^  Backspace |
-       | s twice.                 |
-       |     echo                 |
-       |     echo -n "abcdef$a"   |
-       |       # abcdef           |
-       |     #  No space at end   |
-       |              ^ Doesn't b |
-       | ackspace (why?).         |
-       |                          |
-       |       # Results may not  |
-       | be quite as expected.    |
-       |     echo; echo           |
-       |                          |
-       |     # Constantin Hagemei |
-       | er suggests trying:      |
-       |     # a=$'\010\010'      |
-       |     # a=$'\b\b'          |
-       |     # a=$'\x08\x08'      |
-       |     # But, this does not |
-       |  change the results.     |
-       |                          |
-       |     #################### |
-       | ####################     |
-       |                          |
-       |     # Now, try this.     |
-       |                          |
-       |     rubout="^H^H^H^H^H"  |
-       |       # 5 x Ctl-H.       |
-       |                          |
-       |     echo -n "12345678"   |
-       |     sleep 2              |
-       |     echo -n "$rubout"    |
-       |     sleep 2              |
-                                 
-       +--------------------------+--------------------------+--------------------------+
+       .. raw:: html
+
+          <div>
+
+       .. code:: PROGRAMLISTING
+
+           #!/bin/bash
+           # Embedding Ctl-H in a string.
+
+           a="^H^H"                  # Two Ctl-H's -- backspaces
+                                     # ctl-V ctl-H, using vi/vim
+           echo "abcdef"             # abcdef
+           echo
+           echo -n "abcdef$a "       # abcd f
+           #  Space at end  ^              ^  Backspaces twice.
+           echo
+           echo -n "abcdef$a"        # abcdef
+           #  No space at end               ^ Doesn't backspace (why?).
+                                     # Results may not be quite as expected.
+           echo; echo
+
+           # Constantin Hagemeier suggests trying:
+           # a=$'\010\010'
+           # a=$'\b\b'
+           # a=$'\x08\x08'
+           # But, this does not change the results.
+
+           ########################################
+
+           # Now, try this.
+
+           rubout="^H^H^H^H^H"       # 5 x Ctl-H.
+
+           echo -n "12345678"
+           sleep 2
+           echo -n "$rubout"
+           sleep 2
+
+       .. raw:: html
+
+          </p>
+
+       .. raw:: html
+
+          </div>
 
     -  ``                       Ctl-I                     ``
 
@@ -3285,95 +3320,59 @@ building blocks of Bash scripts.
 
        ``                       Carriage return                     `` .
 
-       +--------------------------+--------------------------+--------------------------+
-       | .. code:: PROGRAMLISTING |
-       |                          |
-       |     #!/bin/bash          |
-       |     # Thank you, Lee Mas |
-       | chmeyer, for this exampl |
-       | e.                       |
-       |                          |
-       |     read -n 1 -s -p \    |
-       |     $'Control-M leaves c |
-       | ursor at beginning of th |
-       | is line. Press Enter. \x |
-       | 0d'                      |
-       |                # Of cour |
-       | se, '0d' is the hex equi |
-       | valent of Control-M.     |
-       |     echo >&2   #  The '- |
-       | s' makes anything typed  |
-       | silent,                  |
-       |                #+ so it  |
-       | is necessary to go to ne |
-       | w line explicitly.       |
-       |                          |
-       |     read -n 1 -s -p $'Co |
-       | ntrol-J leaves cursor on |
-       |  next line. \x0a'        |
-       |                #  '0a' i |
-       | s the hex equivalent of  |
-       | Control-J, linefeed.     |
-       |     echo >&2             |
-       |                          |
-       |     ###                  |
-       |                          |
-       |     read -n 1 -s -p $'An |
-       | d Control-K\x0bgoes stra |
-       | ight down.'              |
-       |     echo >&2   #  Contro |
-       | l-K is vertical tab.     |
-       |                          |
-       |     # A better example o |
-       | f the effect of a vertic |
-       | al tab is:               |
-       |                          |
-       |     var=$'\x0aThis is th |
-       | e bottom line\x0bThis is |
-       |  the top line\x0a'       |
-       |     echo "$var"          |
-       |     #  This works the sa |
-       | me way as the above exam |
-       | ple. However:            |
-       |     echo "$var" | col    |
-       |     #  This causes the r |
-       | ight end of the line to  |
-       | be higher than the left  |
-       | end.                     |
-       |     #  It also explains  |
-       | why we started and ended |
-       |  with a line feed --     |
-       |     #+ to avoid a garble |
-       | d screen.                |
-       |                          |
-       |     # As Lee Maschmeyer  |
-       | explains:                |
-       |     # ------------------ |
-       | --------                 |
-       |     #  In the [first ver |
-       | tical tab example] . . . |
-       |  the vertical tab        |
-       |     #+ makes the printin |
-       | g go straight down witho |
-       | ut a carriage return.    |
-       |     #  This is true only |
-       |  on devices, such as the |
-       |  Linux console,          |
-       |     #+ that can't go "ba |
-       | ckward."                 |
-       |     #  The real purpose  |
-       | of VT is to go straight  |
-       | UP, not down.            |
-       |     #  It can be used to |
-       |  print superscripts on a |
-       |  printer.                |
-       |     #  The col utility c |
-       | an be used to emulate th |
-       | e proper behavior of VT. |
-       |                          |
-       |     exit 0               |
-                                 
-       +--------------------------+--------------------------+--------------------------+
+       .. raw:: html
+
+          <div>
+
+       .. code:: PROGRAMLISTING
+
+           #!/bin/bash
+           # Thank you, Lee Maschmeyer, for this example.
+
+           read -n 1 -s -p \
+           $'Control-M leaves cursor at beginning of this line. Press Enter. \x0d'
+                      # Of course, '0d' is the hex equivalent of Control-M.
+           echo >&2   #  The '-s' makes anything typed silent,
+                      #+ so it is necessary to go to new line explicitly.
+
+           read -n 1 -s -p $'Control-J leaves cursor on next line. \x0a'
+                      #  '0a' is the hex equivalent of Control-J, linefeed.
+           echo >&2
+
+           ###
+
+           read -n 1 -s -p $'And Control-K\x0bgoes straight down.'
+           echo >&2   #  Control-K is vertical tab.
+
+           # A better example of the effect of a vertical tab is:
+
+           var=$'\x0aThis is the bottom line\x0bThis is the top line\x0a'
+           echo "$var"
+           #  This works the same way as the above example. However:
+           echo "$var" | col
+           #  This causes the right end of the line to be higher than the left end.
+           #  It also explains why we started and ended with a line feed --
+           #+ to avoid a garbled screen.
+
+           # As Lee Maschmeyer explains:
+           # --------------------------
+           #  In the [first vertical tab example] . . . the vertical tab
+           #+ makes the printing go straight down without a carriage return.
+           #  This is true only on devices, such as the Linux console,
+           #+ that can't go "backward."
+           #  The real purpose of VT is to go straight UP, not down.
+           #  It can be used to print superscripts on a printer.
+           #  The col utility can be used to emulate the proper behavior of VT.
+
+           exit 0
+
+       .. raw:: html
+
+          </p>
+
+       .. raw:: html
+
+          </div>
 
     -  ``                       Ctl-N                     ``
 
@@ -3425,13 +3424,22 @@ building blocks of Bash scripts.
        inserting control characters. For example, the following two are
        equivalent:
 
-       +--------------------------+--------------------------+--------------------------+
-       | .. code:: PROGRAMLISTING |
-       |                          |
-       |     echo -e '\x0a'       |
-       |     echo <Ctl-V><Ctl-J>  |
-                                 
-       +--------------------------+--------------------------+--------------------------+
+       .. raw:: html
+
+          <div>
+
+       .. code:: PROGRAMLISTING
+
+           echo -e '\x0a'
+           echo <Ctl-V><Ctl-J>
+
+       .. raw:: html
+
+          </p>
+
+       .. raw:: html
+
+          </div>
 
        ``                       Ctl-V                     `` is
        primarily useful from within a text editor.
@@ -3488,22 +3496,32 @@ building blocks of Bash scripts.
     separating *fields* of input to certain commands. It defaults to
     whitespace.
 
-    +--------------------------------------------------------------------------+
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    <div class="SIDEBAR">                                                 |
-    |                                                                          |
-    |  ``                           Definition:                         `` A   |
-    | *field* is a discrete chunk of data expressed as a string of consecutive |
-    | characters. Separating each field from adjacent fields is either         |
-    | *whitespace* or some other designated character (often determined by the |
-    | $IFS ). In some contexts, a field may be called a *record* .             |
-    |                                                                          |
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    </div>                                                                |
-                                                                              
-    +--------------------------------------------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. raw:: html
+
+       <div class="SIDEBAR">
+
+     ``                         Definition:                       `` A
+    *field* is a discrete chunk of data expressed as a string of
+    consecutive characters. Separating each field from adjacent fields
+    is either *whitespace* or some other designated character (often
+    determined by the $IFS ). In some contexts, a field may be called a
+    *record* .
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     To preserve *whitespace* within a string or in a variable, use
     `quoting <quoting.html#QUOTINGREF>`__ .
@@ -3525,25 +3543,9 @@ Notes
 
 .. raw:: html
 
-   <table border="0" class="FOOTNOTES" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   <div>
 
 ` [1]  <special-chars.html#AEN612>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
  An *operator* is an agent that carries out an *operation* . Some
 examples are the common `arithmetic operators <ops.html#AROPS1>`__ , **+
@@ -3552,29 +3554,9 @@ examples are the common `arithmetic operators <ops.html#AROPS1>`__ , **+
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [2]  <special-chars.html#AEN888>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 This is more commonly known as the *ternary* operator. Unfortunately,
 *ternary* is an ugly word. It doesn't roll off the tongue, and it
@@ -3583,29 +3565,9 @@ usage.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [3]  <special-chars.html#AEN1001>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 **A** merican **S** tandard **C** ode for **I** nformation **I**
 nterchange. This is a system for encoding text characters (alphabetic,
@@ -3615,92 +3577,31 @@ represented on a standard keyboard.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [4]  <special-chars.html#AEN1071>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 A *PID* , or *process ID* , is a number assigned to a running process.
 The *PID* s of running processes may be viewed with a
 `ps <system.html#PPSSREF>`__ command.
 
-``                 Definition:               `` A *process* is a
-currently executing command (or program), sometimes referred to as a
-*job* .
+``               Definition:             `` A *process* is a currently
+executing command (or program), sometimes referred to as a *job* .
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [5]  <special-chars.html#AEN1124>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 The shell does the *brace expansion* . The command itself acts upon the
 *result* of the expansion.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [6]  <special-chars.html#AEN1199>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 Exception: a code block in braces as part of a pipe *may* run as a
 `subshell <subshells.html#SUBSHELLSREF>`__ .
@@ -3728,29 +3629,35 @@ Exception: a code block in braces as part of a pipe *may* run as a
 
 .. raw:: html
 
-   </td>
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    ls | { read firstline; read secondline; }
+    #  Error. The code block in braces runs as a subshell,
+    #+ so the output of "ls" cannot be passed to variables within the block.
+    echo "First line is $firstline; second line is $secondline"  # Won't work.
+
+    # Thanks, S.C.
 
 .. raw:: html
 
-   </tr>
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    ls | { read firstline; read secondline; }
+    #  Error. The code block in braces runs as a subshell,
+    #+ so the output of "ls" cannot be passed to variables within the block.
+    echo "First line is $firstline; second line is $secondline"  # Won't work.
+
+    # Thanks, S.C.
 
 .. raw:: html
 
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [7]  <special-chars.html#AEN1564>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 Even as in olden times a *philtre* denoted a potion alleged to have
 magical transformative powers, so does a UNIX *filter* transform its
@@ -3760,29 +3667,9 @@ and honors.)
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [8]  <special-chars.html#AEN2107>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 Bash stores a list of commands previously issued from the command-line
 in a *buffer* , or memory space, for recall with the
@@ -3790,29 +3677,9 @@ in a *buffer* , or memory space, for recall with the
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [9]  <special-chars.html#AEN2198>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 A linefeed ( *newline* ) is also a whitespace character. This explains
 why a *blank line* , consisting only of a linefeed, is considered
@@ -3820,28 +3687,7 @@ whitespace.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <part2.html>`__    | Basics                   |
-| `Home <index.html>`__    | `Up <part2.html>`__      |
-| `Next <variables.html>`_ | Introduction to          |
-| _                        | Variables and Parameters |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

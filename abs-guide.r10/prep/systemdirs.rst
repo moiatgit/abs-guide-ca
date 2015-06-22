@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <files.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <tabexpansion.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="APPENDIX">
 
   Appendix I. Important System Directories
@@ -186,11 +114,21 @@ intimately familiar with the following system directories.
 
       <div class="WARNING">
 
-   +--------------------------------------+--------------------------------------+
-   | |Warning|                            |
-   | Altering files in this directory may |
-   | result in an unbootable system.      |
-   +--------------------------------------+--------------------------------------+
+   .. raw:: html
+
+      <div>
+
+   |Warning|
+
+   Altering files in this directory may result in an unbootable system.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -203,133 +141,26 @@ intimately familiar with the following system directories.
 Notes
 ~~~~~
 
-+--------------------------+--------------------------+--------------------------+
-| ` [1]                    |
-|  <systemdirs.html#AEN239 |
-| 69>`__                   |
-| Some early UNIX systems  |
-| had a fast,              |
-| small-capacity fixed     |
-| disk (containing         |
-| ``        /       `` ,   |
-| the root partition), and |
-| a second drive which was |
-| larger, but slower       |
-| (containing              |
-| ``        /usr       ``  |
-| and other partitions).   |
-| The most frequently used |
-| programs and utilities   |
-| therefore resided on the |
-| small-but-fast drive, in |
-| ``        /bin       ``  |
-| , and the others on the  |
-| slower drive, in         |
-| ``        /usr/bin       |
-|  ``                      |
-| .                        |
-|                          |
-| This likewise accounts   |
-| for the split between    |
-| ``        /sbin       `` |
-| and                      |
-| ``        /usr/sbin      |
-|   ``                     |
-| ,                        |
-| ``        /lib       ``  |
-| and                      |
-| ``        /usr/lib       |
-|  ``                      |
-| , etc.                   |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <systemdirs.html#AEN23969>`__
+
+Some early UNIX systems had a fast, small-capacity fixed disk
+(containing ``       /      `` , the root partition), and a second drive
+which was larger, but slower (containing ``       /usr      `` and other
+partitions). The most frequently used programs and utilities therefore
+resided on the small-but-fast drive, in ``       /bin      `` , and the
+others on the slower drive, in ``       /usr/bin      `` .
+
+This likewise accounts for the split between ``       /sbin      `` and
+``       /usr/sbin      `` , ``       /lib      `` and
+``       /usr/lib      `` , etc.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-`Prev <files.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-`Next <tabexpansion.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-Important Files
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-An Introduction to Programmable Completion
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
+   </p>
 
 .. raw:: html
 

@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <x23170.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Appendix C. A Sed and Awk Micro-Primer
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <pathmanagement.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   C.2. Awk
@@ -97,72 +23,84 @@ and columns.
 brackets <special-chars.html#CODEBLOCKREF>`__ enclose blocks of awk code
 within a shell script.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     # $1 is field #1, $2 |
-|  is field #2, etc.       |
-|                          |
-|     echo one two | awk ' |
-| {print $1}'              |
-|     # one                |
-|                          |
-|     echo one two | awk ' |
-| {print $2}'              |
-|     # two                |
-|                          |
-|     # But what is field  |
-| #0 ($0)?                 |
-|     echo one two | awk ' |
-| {print $0}'              |
-|     # one two            |
-|     # All the fields!    |
-|                          |
-|                          |
-|     awk '{print $3}' $fi |
-| lename                   |
-|     # Prints field #3 of |
-|  file $filename to stdou |
-| t.                       |
-|                          |
-|     awk '{print $1 $5 $6 |
-| }' $filename             |
-|     # Prints fields #1,  |
-| #5, and #6 of file $file |
-| name.                    |
-|                          |
-|     awk '{print $0}' $fi |
-| lename                   |
-|     # Prints the entire  |
-| file!                    |
-|     # Same effect as:    |
-| cat $filename . . . or . |
-|  . . sed '' $filename    |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    # $1 is field #1, $2 is field #2, etc.
+
+    echo one two | awk '{print $1}'
+    # one
+
+    echo one two | awk '{print $2}'
+    # two
+
+    # But what is field #0 ($0)?
+    echo one two | awk '{print $0}'
+    # one two
+    # All the fields!
+
+
+    awk '{print $3}' $filename
+    # Prints field #3 of file $filename to stdout.
+
+    awk '{print $1 $5 $6}' $filename
+    # Prints fields #1, #5, and #6 of file $filename.
+
+    awk '{print $0}' $filename
+    # Prints the entire file!
+    # Same effect as:   cat $filename . . . or . . . sed '' $filename
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 We have just seen the awk *print* command in action. The only other
 feature of awk we need to deal with here is variables. Awk handles
 variables similarly to shell scripts, though a bit more flexibly.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     { total += ${column_ |
-| number} }                |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    { total += ${column_number} }
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 This adds the value of ``           column_number         `` to the
 running total of ``           total         `` >. Finally, to print
 "total" , there is an **END** command block, executed after the script
 has processed all its input.
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     END { print total }  |
-                          
-+--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    END { print total }
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 Corresponding to the **END** , there is a **BEGIN** , for a code block
 to be performed before awk starts processing its input.
@@ -176,139 +114,89 @@ to a shell script.
 
 **Example C-1. Counting Letter Occurrences**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #! /bin/sh           |
-|     # letter-count2.sh:  |
-| Counting letter occurren |
-| ces in a text file.      |
-|     #                    |
-|     # Script by nyal [ny |
-| al@voila.fr].            |
-|     # Used in ABS Guide  |
-| with permission.         |
-|     # Recommented and re |
-| formatted by ABS Guide a |
-| uthor.                   |
-|     # Version 1.1: Modif |
-| ied to work with gawk 3. |
-| 1.3.                     |
-|     #              (Will |
-|  still work with earlier |
-|  versions.)              |
-|                          |
-|                          |
-|     INIT_TAB_AWK=""      |
-|     # Parameter to initi |
-| alize awk script.        |
-|     count_case=0         |
-|     FILE_PARSE=$1        |
-|                          |
-|     E_PARAMERR=85        |
-|                          |
-|     usage()              |
-|     {                    |
-|         echo "Usage: let |
-| ter-count.sh file letter |
-| s" 2>&1                  |
-|         # For example:   |
-|  ./letter-count2.sh file |
-| name.txt a b c           |
-|         exit $E_PARAMERR |
-|   # Too few arguments pa |
-| ssed to script.          |
-|     }                    |
-|                          |
-|     if [ ! -f "$1" ] ; t |
-| hen                      |
-|         echo "$1: No suc |
-| h file." 2>&1            |
-|         usage            |
-|       # Print usage mess |
-| age and exit.            |
-|     fi                   |
-|                          |
-|     if [ -z "$2" ] ; the |
-| n                        |
-|         echo "$2: No let |
-| ters specified." 2>&1    |
-|         usage            |
-|     fi                   |
-|                          |
-|     shift                |
-|        # Letters specifi |
-| ed.                      |
-|     for letter in `echo  |
-| $@`    # For each one .  |
-| . .                      |
-|       do                 |
-|       INIT_TAB_AWK="$INI |
-| T_TAB_AWK tab_search[${c |
-| ount_case}] = \          |
-|       \"$letter\"; final |
-| _tab[${count_case}] = 0; |
-|  "                       |
-|       # Pass as paramete |
-| r to awk script below.   |
-|       count_case=`expr $ |
-| count_case + 1`          |
-|     done                 |
-|                          |
-|     # DEBUG:             |
-|     # echo $INIT_TAB_AWK |
-| ;                        |
-|                          |
-|     cat $FILE_PARSE |    |
-|     # Pipe the target fi |
-| le to the following awk  |
-| script.                  |
-|                          |
-|     # ------------------ |
-| ------------------------ |
-| ------------------------ |
-| ---                      |
-|     # Earlier version of |
-|  script:                 |
-|     # awk -v tab_search= |
-| 0 -v final_tab=0 -v tab= |
-| 0 -v \                   |
-|     # nb_letter=0 -v cha |
-| ra=0 -v chara2=0 \       |
-|                          |
-|     awk \                |
-|     "BEGIN { $INIT_TAB_A |
-| WK } \                   |
-|     { split(\$0, tab, \" |
-| \"); \                   |
-|     for (chara in tab) \ |
-|     { for (chara2 in tab |
-| _search) \               |
-|     { if (tab_search[cha |
-| ra2] == tab[chara]) { fi |
-| nal_tab[chara2]++ } } }  |
-| } \                      |
-|     END { for (chara in  |
-| final_tab) \             |
-|     { print tab_search[c |
-| hara] \" => \" final_tab |
-| [chara] } }"             |
-|     # ------------------ |
-| ------------------------ |
-| ------------------------ |
-| ---                      |
-|     #  Nothing all that  |
-| complicated, just . . .  |
-|     #+ for-loops, if-tes |
-| ts, and a couple of spec |
-| ialized functions.       |
-|                          |
-|     exit $?              |
-|                          |
-|     # Compare this scrip |
-| t to letter-count.sh.    |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #! /bin/sh
+    # letter-count2.sh: Counting letter occurrences in a text file.
+    #
+    # Script by nyal [nyal@voila.fr].
+    # Used in ABS Guide with permission.
+    # Recommented and reformatted by ABS Guide author.
+    # Version 1.1: Modified to work with gawk 3.1.3.
+    #              (Will still work with earlier versions.)
+
+
+    INIT_TAB_AWK=""
+    # Parameter to initialize awk script.
+    count_case=0
+    FILE_PARSE=$1
+
+    E_PARAMERR=85
+
+    usage()
+    {
+        echo "Usage: letter-count.sh file letters" 2>&1
+        # For example:   ./letter-count2.sh filename.txt a b c
+        exit $E_PARAMERR  # Too few arguments passed to script.
+    }
+
+    if [ ! -f "$1" ] ; then
+        echo "$1: No such file." 2>&1
+        usage                 # Print usage message and exit.
+    fi 
+
+    if [ -z "$2" ] ; then
+        echo "$2: No letters specified." 2>&1
+        usage
+    fi 
+
+    shift                      # Letters specified.
+    for letter in `echo $@`    # For each one . . .
+      do
+      INIT_TAB_AWK="$INIT_TAB_AWK tab_search[${count_case}] = \
+      \"$letter\"; final_tab[${count_case}] = 0; " 
+      # Pass as parameter to awk script below.
+      count_case=`expr $count_case + 1`
+    done
+
+    # DEBUG:
+    # echo $INIT_TAB_AWK;
+
+    cat $FILE_PARSE |
+    # Pipe the target file to the following awk script.
+
+    # ---------------------------------------------------------------------
+    # Earlier version of script:
+    # awk -v tab_search=0 -v final_tab=0 -v tab=0 -v \
+    # nb_letter=0 -v chara=0 -v chara2=0 \
+
+    awk \
+    "BEGIN { $INIT_TAB_AWK } \
+    { split(\$0, tab, \"\"); \
+    for (chara in tab) \
+    { for (chara2 in tab_search) \
+    { if (tab_search[chara2] == tab[chara]) { final_tab[chara2]++ } } } } \
+    END { for (chara in final_tab) \
+    { print tab_search[chara] \" => \" final_tab[chara] } }"
+    # ---------------------------------------------------------------------
+    #  Nothing all that complicated, just . . .
+    #+ for-loops, if-tests, and a couple of specialized functions.
+
+    exit $?
+
+    # Compare this script to letter-count.sh.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -363,25 +251,18 @@ learn. See the appropriate references in the
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <awk.html#AEN23443>`__        |
-| Its name derives from the initials   |
-| of its authors, **A** ho, **W**      |
-| einberg, and **K** ernighan.         |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <awk.html#AEN23443>`__
+
+Its name derives from the initials of its authors, **A** ho, **W**
+einberg, and **K** ernighan.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <x23170.html>`__   | Sed                      |
-| `Home <index.html>`__    | `Up <sedawk.html>`__     |
-| `Next <pathmanagement.ht | Parsing and Managing     |
-| ml>`__                   | Pathnames                |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

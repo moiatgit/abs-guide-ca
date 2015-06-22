@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <varassignment.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 4. Introduction to Variables and Parameters
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <othertypesv.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   4.3. Bash Variables Are Untyped
@@ -91,132 +17,83 @@ a variable contains only digits.
 
 **Example 4-4. Integer or string?**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # int-or-string.sh   |
-|                          |
-|     a=2334               |
-|      # Integer.          |
-|     let "a += 1"         |
-|     echo "a = $a "       |
-|      # a = 2335          |
-|     echo                 |
-|      # Integer, still.   |
-|                          |
-|                          |
-|     b=${a/23/BB}         |
-|      # Substitute "BB" f |
-| or "23".                 |
-|                          |
-|      # This transforms $ |
-| b into a string.         |
-|     echo "b = $b"        |
-|      # b = BB35          |
-|     declare -i b         |
-|      # Declaring it an i |
-| nteger doesn't help.     |
-|     echo "b = $b"        |
-|      # b = BB35          |
-|                          |
-|     let "b += 1"         |
-|      # BB35 + 1          |
-|     echo "b = $b"        |
-|      # b = 1             |
-|     echo                 |
-|      # Bash sets the "in |
-| teger value" of a string |
-|  to 0.                   |
-|                          |
-|     c=BB34               |
-|     echo "c = $c"        |
-|      # c = BB34          |
-|     d=${c/BB/23}         |
-|      # Substitute "23" f |
-| or "BB".                 |
-|                          |
-|      # This makes $d an  |
-| integer.                 |
-|     echo "d = $d"        |
-|      # d = 2334          |
-|     let "d += 1"         |
-|      # 2334 + 1          |
-|     echo "d = $d"        |
-|      # d = 2335          |
-|     echo                 |
-|                          |
-|                          |
-|     # What about null va |
-| riables?                 |
-|     e=''                 |
-|      # ... Or e="" ... O |
-| r e=                     |
-|     echo "e = $e"        |
-|      # e =               |
-|     let "e += 1"         |
-|      # Arithmetic operat |
-| ions allowed on a null v |
-| ariable?                 |
-|     echo "e = $e"        |
-|      # e = 1             |
-|     echo                 |
-|      # Null variable tra |
-| nsformed into an integer |
-| .                        |
-|                          |
-|     # What about undecla |
-| red variables?           |
-|     echo "f = $f"        |
-|      # f =               |
-|     let "f += 1"         |
-|      # Arithmetic operat |
-| ions allowed?            |
-|     echo "f = $f"        |
-|      # f = 1             |
-|     echo                 |
-|      # Undeclared variab |
-| le transformed into an i |
-| nteger.                  |
-|     #                    |
-|     # However ...        |
-|     let "f /= $undecl_va |
-| r"   # Divide by zero?   |
-|     #   let: f /= : synt |
-| ax error: operand expect |
-| ed (error token is " ")  |
-|     # Syntax error! Vari |
-| able $undecl_var is not  |
-| set to zero here!        |
-|     #                    |
-|     # But still ...      |
-|     let "f /= 0"         |
-|     #   let: f /= 0: div |
-| ision by 0 (error token  |
-| is "0")                  |
-|     # Expected behavior. |
-|                          |
-|                          |
-|     #  Bash (usually) se |
-| ts the "integer value" o |
-| f null to zero           |
-|     #+ when performing a |
-| n arithmetic operation.  |
-|     #  But, don't try th |
-| is at home, folks!       |
-|     #  It's undocumented |
-|  and probably non-portab |
-| le behavior.             |
-|                          |
-|                          |
-|     # Conclusion: Variab |
-| les in Bash are untyped, |
-|     #+ with all attendan |
-| t consequences.          |
-|                          |
-|     exit $?              |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # int-or-string.sh
+
+    a=2334                   # Integer.
+    let "a += 1"
+    echo "a = $a "           # a = 2335
+    echo                     # Integer, still.
+
+
+    b=${a/23/BB}             # Substitute "BB" for "23".
+                             # This transforms $b into a string.
+    echo "b = $b"            # b = BB35
+    declare -i b             # Declaring it an integer doesn't help.
+    echo "b = $b"            # b = BB35
+
+    let "b += 1"             # BB35 + 1
+    echo "b = $b"            # b = 1
+    echo                     # Bash sets the "integer value" of a string to 0.
+
+    c=BB34
+    echo "c = $c"            # c = BB34
+    d=${c/BB/23}             # Substitute "23" for "BB".
+                             # This makes $d an integer.
+    echo "d = $d"            # d = 2334
+    let "d += 1"             # 2334 + 1
+    echo "d = $d"            # d = 2335
+    echo
+
+
+    # What about null variables?
+    e=''                     # ... Or e="" ... Or e=
+    echo "e = $e"            # e =
+    let "e += 1"             # Arithmetic operations allowed on a null variable?
+    echo "e = $e"            # e = 1
+    echo                     # Null variable transformed into an integer.
+
+    # What about undeclared variables?
+    echo "f = $f"            # f =
+    let "f += 1"             # Arithmetic operations allowed?
+    echo "f = $f"            # f = 1
+    echo                     # Undeclared variable transformed into an integer.
+    #
+    # However ...
+    let "f /= $undecl_var"   # Divide by zero?
+    #   let: f /= : syntax error: operand expected (error token is " ")
+    # Syntax error! Variable $undecl_var is not set to zero here!
+    #
+    # But still ...
+    let "f /= 0"
+    #   let: f /= 0: division by 0 (error token is "0")
+    # Expected behavior.
+
+
+    #  Bash (usually) sets the "integer value" of null to zero
+    #+ when performing an arithmetic operation.
+    #  But, don't try this at home, folks!
+    #  It's undocumented and probably non-portable behavior.
+
+
+    # Conclusion: Variables in Bash are untyped,
+    #+ with all attendant consequences.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -230,24 +107,6 @@ habits.
 
 To lighten the burden of keeping track of variable types in a script,
 Bash *does* permit `declaring <declareref.html>`__ variables.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <varassignment.htm | Variable Assignment      |
-| l>`__                    | `Up <variables.html>`__  |
-| `Home <index.html>`__    | Special Variable Types   |
-| `Next <othertypesv.html> |                          |
-| `__                      |                          |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

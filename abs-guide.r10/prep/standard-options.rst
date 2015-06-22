@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <command-line-options.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Appendix G. Command-Line Options
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <bash-options.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   G.1. Standard Command-Line Options
@@ -169,16 +95,23 @@ However:
 
    <div class="CAUTION">
 
-+--------------------------------------+--------------------------------------+
-| |Caution|                            |
-| Many UNIX and Linux utilities        |
-| deviate from this "standard," so it  |
-| is dangerous to *assume* that a      |
-| given option will behave in a        |
-| standard way. Always check the man   |
-| page for the command in question     |
-| when in doubt.                       |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Caution|
+
+Many UNIX and Linux utilities deviate from this "standard," so it is
+dangerous to *assume* that a given option will behave in a standard way.
+Always check the man page for the command in question when in doubt.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -187,24 +120,6 @@ However:
 A complete table of recommended options for the GNU utilities is
 available at `the GNU standards
 page <http://www.gnu.org/prep/standards/>`__ .
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <command-line-opti | Command-Line Options     |
-| ons.html>`__             | `Up <command-line-option |
-| `Home <index.html>`__    | s.html>`__               |
-| `Next <bash-options.html | Bash Command-Line        |
-| >`__                     | Options                  |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

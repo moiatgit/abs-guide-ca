@@ -11,31 +11,6 @@
   <link href="timedate.html" rel="NEXT" title="Time / Date Commands"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="basic.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 16. External Filters, Programs and Commands
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="timedate.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="MOREADV">
@@ -108,19 +83,17 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>find ~/ -name '*.txt'</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>find ~/ -name '*.txt'</b></tt>
 <tt class="COMPUTEROUTPUT">/home/bozo/.kde/share/apps/karm/karmdata.txt
  /home/bozo/misc/irmeyc.txt
  /home/bozo/test-scripts/1.txt</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="CURLYBRACKETSREF">
        </a>
@@ -148,23 +121,20 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">find ~/ -name 'core*' -exec rm {} \;
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">find ~/ -name 'core*' -exec rm {} \;
 # Removes all core dump files from user's home directory.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">find /home/bozo/projects -mtime -1
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">find /home/bozo/projects -mtime -1
 #                               ^   Note minus sign!
 #  Lists all files in /home/bozo/projects directory tree
 #+ that were modified within the last day (current_day - 1).
@@ -190,17 +160,15 @@ find "$DIR" -type f -atime +5 -exec rm {} \;
 #  l = symbolic link, etc.
 #
 #  (The 'find' manpage and info page have complete option listings.)</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">find /etc -exec grep '[0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*' {} \;
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">find /etc -exec grep '[0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*' {} \;
 
 # Finds all IP addresses (xxx.xxx.xxx.xxx) in /etc directory files.
 # There a few extraneous hits. Can they be filtered out?
@@ -213,38 +181,35 @@ find /etc -type f -exec cat '{}' \; | tr -c '.[:digit:]' '\n' \
 #  [:digit:] is one of the character classes
 #+ introduced with the POSIX 1003.2 standard. 
 
-# Thanks, StĂŠphane Chazelas. </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+# Thanks, StÃ©phane Chazelas. </pre>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <tt class="OPTION">
-            -exec
-           </tt>
-           option to
-           <b class="COMMAND">
-            find
-           </b>
-           should not be confused with the
-           <a href="internal.html#EXECREF">
-            exec
-           </a>
-           shell builtin.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <tt class="OPTION">
+           -exec
+          </tt>
+          option to
+          <b class="COMMAND">
+           find
+          </b>
+          should not be confused with the
+          <a href="internal.html#EXECREF">
+           exec
+          </a>
+          shell builtin.
+         </p>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX57">
@@ -263,11 +228,10 @@ find /etc -type f -exec cat '{}' \; | tr -c '.[:digit:]' '\n' \
          .
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # badname.sh
 # Delete filenames in current directory containing bad characters.
 
@@ -298,10 +262,9 @@ find . -name '*[+{;"\\=?~()&lt;&gt;&amp;*|$ ]*' -maxdepth 0 \
 #+ subdirectories below $PWD.
 
 # (Thanks, S.C.)</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="IDELETE">
@@ -315,11 +278,10 @@ find . -name '*[+{;"\\=?~()&lt;&gt;&amp;*|$ ]*' -maxdepth 0 \
          number
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # idelete.sh: Deleting a file by its inode number.
 
 #  This is useful when a filename starts with an illegal character,
@@ -365,10 +327,9 @@ find . -inum $inum -exec rm {} \;
 echo "File "\"$1"\" deleted!"
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        The
@@ -384,11 +345,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 #  Find suid root files.
 #  A strange suid file might indicate a security hole,
 #+ or even a system intrusion.
@@ -402,10 +362,9 @@ for file in $( find "$directory" -perm "$permissions" )
 do
   ls -ltF --author "$file"
 done</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        See
        <a href="filearchiv.html#EX48">
@@ -502,11 +461,10 @@ done</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l</b></tt>
 <tt class="COMPUTEROUTPUT">total 0
  -rw-rw-r--    1 bozo  bozo         0 Jan 29 23:58 file1
  -rw-rw-r--    1 bozo  bozo         0 Jan 29 23:58 file2</tt>
@@ -526,10 +484,9 @@ done</pre>
  ./sent-mail-jul-2005: while mentioning that the Linux ext2/ext3 filesystem
  . . .</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <tt class="USERINPUT">
         <b>
@@ -550,43 +507,59 @@ done</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Note that
-           <i class="FIRSTTERM">
-            xargs
-           </i>
-           processes the
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Note that
+          <i class="FIRSTTERM">
+           xargs
+          </i>
+          processes the
 	      arguments passed to it sequentially,
-           <em>
-            one at
+          <em>
+           one at
 	      a time
-           </em>
-           .
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>find /usr/bin | xargs file</b></tt>
+          </em>
+          .
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>find /usr/bin | xargs file</b></tt>
 <tt class="COMPUTEROUTPUT">/usr/bin:          directory
  /usr/bin/foomatic-ppd-options:          perl script text executable
  . . .</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>find /usr/bin | xargs file</b></tt>
+<tt class="COMPUTEROUTPUT">/usr/bin:          directory
+ /usr/bin/foomatic-ppd-options:          perl script text executable
+ . . .</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>find /usr/bin | xargs file</b></tt>
+<tt class="COMPUTEROUTPUT">/usr/bin:          directory
+ /usr/bin/foomatic-ppd-options:          perl script text executable
+ . . .</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="XARGSLIMARGS">
@@ -595,52 +568,50 @@ done</pre>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           An interesting
-           <i class="FIRSTTERM">
-            xargs
-           </i>
-           option is
-           <tt class="OPTION">
-            -n
-            <tt class="REPLACEABLE">
-             <i>
-              NN
-             </i>
-            </tt>
-           </tt>
-           ,
-	      which limits to
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          An interesting
+          <i class="FIRSTTERM">
+           xargs
+          </i>
+          option is
+          <tt class="OPTION">
+           -n
            <tt class="REPLACEABLE">
             <i>
              NN
             </i>
            </tt>
-           the number
+          </tt>
+          ,
+	      which limits to
+          <tt class="REPLACEABLE">
+           <i>
+            NN
+           </i>
+          </tt>
+          the number
 	      of arguments passed.
-          </p>
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             ls | xargs -n 8 echo
-            </b>
-           </tt>
-           lists the files in the
+         </p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            ls | xargs -n 8 echo
+           </b>
+          </tt>
+          lists the files in the
 	      current directory in
-           <tt class="LITERAL">
-            8
-           </tt>
-           columns.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <tt class="LITERAL">
+           8
+          </tt>
+          columns.
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        <a name="XARGSWS">
@@ -649,110 +620,123 @@ done</pre>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Another useful option is
-           <tt class="OPTION">
-            -0
-           </tt>
-           , in combination with
-           <tt class="USERINPUT">
-            <b>
-             find
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          Another useful option is
+          <tt class="OPTION">
+           -0
+          </tt>
+          , in combination with
+          <tt class="USERINPUT">
+           <b>
+            find
 	      -print0
-            </b>
-           </tt>
-           or
-           <tt class="USERINPUT">
-            <b>
-             grep -lZ
-            </b>
-           </tt>
-           . This
+           </b>
+          </tt>
+          or
+          <tt class="USERINPUT">
+           <b>
+            grep -lZ
+           </b>
+          </tt>
+          . This
 	      allows handling arguments containing whitespace or
 	      quotes.
-          </p>
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             find / -type f -print0 | xargs -0 grep -liwZ GUI | xargs -0 rm -f
-            </b>
-           </tt>
-          </p>
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             grep -rliwZ GUI / | xargs -0 rm -f
-            </b>
-           </tt>
-          </p>
-          <p>
-           Either of the above will remove any file containing
-           <span class="QUOTE">
-            "GUI"
-           </span>
-           .
-           <em>
-            (Thanks, S.C.)
-           </em>
-          </p>
-          <p>
-           Or:
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">cat /proc/"$pid"/"$OPTION" | xargs -0 echo
+         </p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            find / -type f -print0 | xargs -0 grep -liwZ GUI | xargs -0 rm -f
+           </b>
+          </tt>
+         </p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            grep -rliwZ GUI / | xargs -0 rm -f
+           </b>
+          </tt>
+         </p>
+         <p>
+          Either of the above will remove any file containing
+          <span class="QUOTE">
+           "GUI"
+          </span>
+          .
+          <em>
+           (Thanks, S.C.)
+          </em>
+         </p>
+         <p>
+          Or:
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">cat /proc/"$pid"/"$OPTION" | xargs -0 echo
 #  Formats output:         ^^^^^^^^^^^^^^^
 #  From Han Holl's fixup of "get-commandline.sh"
 #+ script in "/dev and /proc" chapter.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">cat /proc/"$pid"/"$OPTION" | xargs -0 echo
+#  Formats output:         ^^^^^^^^^^^^^^^
+#  From Han Holl's fixup of "get-commandline.sh"
+#+ script in "/dev and /proc" chapter.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">cat /proc/"$pid"/"$OPTION" | xargs -0 echo
+#  Formats output:         ^^^^^^^^^^^^^^^
+#  From Han Holl's fixup of "get-commandline.sh"
+#+ script in "/dev and /proc" chapter.</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="XARGSMULTIPROCESS">
-           </a>
-          </p>
-          <p>
-           The
-           <tt class="OPTION">
-            -P
-           </tt>
-           option to
-           <i class="FIRSTTERM">
-            xargs
-           </i>
-           permits running
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="XARGSMULTIPROCESS">
+          </a>
+         </p>
+         <p>
+          The
+          <tt class="OPTION">
+           -P
+          </tt>
+          option to
+          <i class="FIRSTTERM">
+           xargs
+          </i>
+          permits running
 		      processes in parallel. This speeds up execution
 		      in a machine with a multicore CPU.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#!/bin/bash
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/bash
 
 ls *gif | xargs -t -n1 -P2 gif2png
 # Converts all the gif images in current directory to png.
@@ -764,13 +748,44 @@ ls *gif | xargs -t -n1 -P2 gif2png
 # -P2   Run up to 2 processes simultaneously.
 
 # Thank you, Roberto Polli, for the inspiration.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+
+ls *gif | xargs -t -n1 -P2 gif2png
+# Converts all the gif images in current directory to png.
+
+# Options:
+# =======
+# -t    Print command to stderr.
+# -n1   At most 1 argument per command line.
+# -P2   Run up to 2 processes simultaneously.
+
+# Thank you, Roberto Polli, for the inspiration.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+
+ls *gif | xargs -t -n1 -P2 gif2png
+# Converts all the gif images in current directory to png.
+
+# Options:
+# =======
+# -t    Print command to stderr.
+# -n1   At most 1 argument per command line.
+# -P2   Run up to 2 processes simultaneously.
+
+# Thank you, Roberto Polli, for the inspiration.</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX41">
@@ -784,11 +799,10 @@ ls *gif | xargs -t -n1 -P2 gif2png
          to monitor system log
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Generates a log file in current directory
 # from the tail end of /var/log/messages.
@@ -824,10 +838,9 @@ exit 0
 #  Modify this script to track changes in /var/log/messages at intervals
 #+ of 20 minutes.
 #  Hint: Use the "watch" command. </pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="XARGSCURLYREF">
@@ -851,11 +864,10 @@ exit 0
          Example 16-6. Copying files in current directory to another
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # copydir.sh
 
 #  Copy (verbose) all files in current directory ($PWD)
@@ -885,10 +897,9 @@ ls . | xargs -i -t cp ./{} $1
 #+ unless any of the filenames has embedded "whitespace" characters.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="KILLBYNAME">
@@ -898,11 +909,10 @@ exit 0</pre>
          Example 16-7. Killing processes by name
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # kill-byname.sh: Killing processes by name.
 # Compare this script with kill-process.sh.
 
@@ -942,10 +952,9 @@ exit $?
 
 #  The "killall" command has the same effect as this script,
 #+ but using it is not quite as educational.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="WF2">
@@ -958,11 +967,10 @@ exit $?
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # wf2.sh: Crude word frequency analysis on a text file.
 
 # Uses 'xargs' to decompose lines of text into single words.
@@ -1007,10 +1015,9 @@ sort | uniq -c | sort -nr
 #+ but a bit more ponderously, and it runs more slowly (why?).
 
 exit $?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1161,11 +1168,10 @@ exit $?</pre>
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Demonstrating some of the uses of 'expr'
 # =======================================
@@ -1269,58 +1275,56 @@ echo "The digits at the beginning of \"$a\" are \"$b\"."
 echo
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="IMPORTANT">
        <p>
        </p>
-       <table border="0" class="IMPORTANT" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Important" hspace="5" src="../images/important.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <a href="special-chars.html#NULLREF">
-            :
+       <div>
+        <p>
+         <img alt="Important" hspace="5" src="../images/important.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <a href="special-chars.html#NULLREF">
+           :
 	      (
-            <i class="FIRSTTERM">
-             null
-            </i>
-            )
-           </a>
-           operator
+           <i class="FIRSTTERM">
+            null
+           </i>
+           )
+          </a>
+          operator
 	      can substitute for
-           <b class="COMMAND">
-            match
+          <b class="COMMAND">
+           match
+          </b>
+          . For example,
+          <tt class="USERINPUT">
+           <b>
+            b=`expr $a : [0-9]*`
            </b>
-           . For example,
-           <tt class="USERINPUT">
-            <b>
-             b=`expr $a : [0-9]*`
-            </b>
-           </tt>
-           is the
+          </tt>
+          is the
 	      exact equivalent of
-           <tt class="USERINPUT">
-            <b>
-             b=`expr match $a
+          <tt class="USERINPUT">
+           <b>
+            b=`expr match $a
 	      [0-9]*`
-            </b>
-           </tt>
-           in the above listing.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#!/bin/bash
+           </b>
+          </tt>
+          in the above listing.
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/bash
 
 echo
 echo "String operations using \"expr \$string : \" construct"
@@ -1363,13 +1367,106 @@ echo "The last 7 characters of \"$a\" are `expr "$a" : '.*\(.......\)'`."
 echo
 
 exit 0</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+
+echo
+echo "String operations using \"expr \$string : \" construct"
+echo "==================================================="
+echo
+
+a=1234zipper5FLIPPER43231
+
+echo "The string being operated upon is \"`expr "$a" : '\(.*\)'`\"."
+#     Escaped parentheses grouping operator.            ==  ==
+
+#       ***************************
+#+          Escaped parentheses
+#+           match a substring
+#       ***************************
+
+
+#  If no escaped parentheses ...
+#+ then 'expr' converts the string operand to an integer.
+
+echo "Length of \"$a\" is `expr "$a" : '.*'`."   # Length of string
+
+echo "Number of digits at the beginning of \"$a\" is `expr "$a" : '[0-9]*'`."
+
+# ------------------------------------------------------------------------- #
+
+echo
+
+echo "The digits at the beginning of \"$a\" are `expr "$a" : '\([0-9]*\)'`."
+#                                                             ==      ==
+echo "The first 7 characters of \"$a\" are `expr "$a" : '\(.......\)'`."
+#         =====                                          ==       ==
+# Again, escaped parentheses force a substring match.
+#
+echo "The last 7 characters of \"$a\" are `expr "$a" : '.*\(.......\)'`."
+#         ====                  end of string operator  ^^
+#  (In fact, means skip over one or more of any characters until specified
+#+  substring found.)
+
+echo
+
+exit 0</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+
+echo
+echo "String operations using \"expr \$string : \" construct"
+echo "==================================================="
+echo
+
+a=1234zipper5FLIPPER43231
+
+echo "The string being operated upon is \"`expr "$a" : '\(.*\)'`\"."
+#     Escaped parentheses grouping operator.            ==  ==
+
+#       ***************************
+#+          Escaped parentheses
+#+           match a substring
+#       ***************************
+
+
+#  If no escaped parentheses ...
+#+ then 'expr' converts the string operand to an integer.
+
+echo "Length of \"$a\" is `expr "$a" : '.*'`."   # Length of string
+
+echo "Number of digits at the beginning of \"$a\" is `expr "$a" : '[0-9]*'`."
+
+# ------------------------------------------------------------------------- #
+
+echo
+
+echo "The digits at the beginning of \"$a\" are `expr "$a" : '\([0-9]*\)'`."
+#                                                             ==      ==
+echo "The first 7 characters of \"$a\" are `expr "$a" : '\(.......\)'`."
+#         =====                                          ==       ==
+# Again, escaped parentheses force a substring match.
+#
+echo "The last 7 characters of \"$a\" are `expr "$a" : '.*\(.......\)'`."
+#         ====                  end of string operator  ^^
+#  (In fact, means skip over one or more of any characters until specified
+#+  substring found.)
+
+echo
+
+exit 0</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -1397,20 +1494,18 @@ exit 0</pre>
 	      life."
     </span>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING"># Strip the whitespace from the beginning and end.
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING"># Strip the whitespace from the beginning and end.
 LRFDATE=`expr "$LRFDATE" : '[[:space:]]*\(.*\)[[:space:]]*$'`
 
 #  From Peter Knowles' "booklistgen.sh" script
 #+ for converting files to Sony Librie/PRS-50X format.
 #  (http://booklistgensh.peterknowles.com)</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a href="wrapper.html#PERLREF">
      Perl
@@ -1463,67 +1558,30 @@ LRFDATE=`expr "$LRFDATE" : '[[:space:]]*\(.*\)[[:space:]]*$'`
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="moreadv.html#AEN10465" name="FTN.AEN10465">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      And even when
-      <i class="FIRSTTERM">
-       xargs
-      </i>
-      is
+  <div>
+   <p>
+    <a href="moreadv.html#AEN10465" name="FTN.AEN10465">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     And even when
+     <i class="FIRSTTERM">
+      xargs
+     </i>
+     is
 		not strictly necessary, it can speed up execution of a command
 		involving
-      <a href="timedate.html#BATCHPROCREF">
-       batch-processing
-      </a>
-      of multiple
+     <a href="timedate.html#BATCHPROCREF">
+      batch-processing
+     </a>
+     of multiple
 		files.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="basic.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="timedate.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Basic Commands
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="external.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Time / Date Commands
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
   </div>
  </body>
 </html>

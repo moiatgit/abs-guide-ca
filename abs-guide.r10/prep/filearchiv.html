@@ -11,31 +11,6 @@
   <link href="communications.html" rel="NEXT" title="Communications Commands"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="textproc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 16. External Filters, Programs and Commands
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="communications.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="FILEARCHIV">
@@ -153,19 +128,17 @@
         <div class="CAUTION">
          <p>
          </p>
-         <table border="0" class="CAUTION" width="90%">
-          <tr>
-           <td align="CENTER" valign="TOP" width="25">
-            <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-           </td>
-           <td align="LEFT" valign="TOP">
-            <p>
-             This option will not work on magnetic tape
+         <div>
+          <p>
+           <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+          </p>
+          <p>
+           <p>
+            This option will not work on magnetic tape
 		  devices.
-            </p>
-           </td>
-          </tr>
-         </table>
+           </p>
+          </p>
+         </div>
         </div>
        </li>
        <li>
@@ -269,25 +242,23 @@
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           It may be difficult to recover data from a
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          It may be difficult to recover data from a
 	      corrupted
-           <i class="FIRSTTERM">
-            gzipped
-           </i>
-           tar
+          <i class="FIRSTTERM">
+           gzipped
+          </i>
+          tar
 	      archive. When archiving important files, make multiple
 	      backups.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -412,78 +383,89 @@
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             rpm -qf
-            </b>
-           </tt>
-           identifies which package a
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            rpm -qf
+           </b>
+          </tt>
+          identifies which package a
 	      file originates from.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qf /bin/ls</b></tt>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qf /bin/ls</b></tt>
 <tt class="COMPUTEROUTPUT">coreutils-5.2.1-31</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qf /bin/ls</b></tt>
+<tt class="COMPUTEROUTPUT">coreutils-5.2.1-31</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qf /bin/ls</b></tt>
+<tt class="COMPUTEROUTPUT">coreutils-5.2.1-31</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             rpm -qa
-            </b>
-           </tt>
-           gives a
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            rpm -qa
+           </b>
+          </tt>
+          gives a
 	      complete list of all installed
-           <i class="FIRSTTERM">
-            rpm
-           </i>
-           packages
+          <i class="FIRSTTERM">
+           rpm
+          </i>
+          packages
 	      on a given system. An
-           <tt class="USERINPUT">
-            <b>
-             rpm -qa package_name
-            </b>
-           </tt>
-           lists only the package(s) corresponding to
-           <tt class="FILENAME">
-            package_name
-           </tt>
-           .
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa</b></tt>
+          <tt class="USERINPUT">
+           <b>
+            rpm -qa package_name
+           </b>
+          </tt>
+          lists only the package(s) corresponding to
+          <tt class="FILENAME">
+           package_name
+          </tt>
+          .
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa</b></tt>
 <tt class="COMPUTEROUTPUT">redhat-logos-1.1.3-1
  glibc-2.2.4-13
  cracklib-2.7-12
@@ -509,13 +491,72 @@
  docbook-dtd41-sgml-1.0-10
  docbook-utils-0.6.9-2</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa</b></tt>
+<tt class="COMPUTEROUTPUT">redhat-logos-1.1.3-1
+ glibc-2.2.4-13
+ cracklib-2.7-12
+ dosfstools-2.7-1
+ gdbm-1.8.0-10
+ ksymoops-2.4.1-1
+ mktemp-1.5-11
+ perl-5.6.0-17
+ reiserfs-utils-3.x.0j-2
+ ...</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa docbook-utils</b></tt>
+<tt class="COMPUTEROUTPUT">docbook-utils-0.6.9-2</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa docbook | grep docbook</b></tt>
+<tt class="COMPUTEROUTPUT">docbook-dtd31-sgml-1.0-10
+ docbook-style-dsssl-1.64-3
+ docbook-dtd30-sgml-1.0-10
+ docbook-dtd40-sgml-1.0-11
+ docbook-utils-pdf-0.6.9-2
+ docbook-dtd41-sgml-1.0-10
+ docbook-utils-0.6.9-2</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa</b></tt>
+<tt class="COMPUTEROUTPUT">redhat-logos-1.1.3-1
+ glibc-2.2.4-13
+ cracklib-2.7-12
+ dosfstools-2.7-1
+ gdbm-1.8.0-10
+ ksymoops-2.4.1-1
+ mktemp-1.5-11
+ perl-5.6.0-17
+ reiserfs-utils-3.x.0j-2
+ ...</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa docbook-utils</b></tt>
+<tt class="COMPUTEROUTPUT">docbook-utils-0.6.9-2</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rpm -qa docbook | grep docbook</b></tt>
+<tt class="COMPUTEROUTPUT">docbook-dtd31-sgml-1.0-10
+ docbook-style-dsssl-1.64-3
+ docbook-dtd30-sgml-1.0-10
+ docbook-dtd40-sgml-1.0-11
+ docbook-utils-pdf-0.6.9-2
+ docbook-dtd41-sgml-1.0-10
+ docbook-utils-0.6.9-2</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -574,11 +615,10 @@
          to move a directory tree
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Copying a directory tree using cpio.
 
@@ -615,10 +655,9 @@ find "$source" -depth | cpio -admvp "$destination"
 #+ and output appropriate error messages if anything went wrong.
 
 exit $?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -652,11 +691,10 @@ exit $?</pre>
          archive
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # de-rpm.sh: Unpack an 'rpm' archive
 
 : ${1?"Usage: `basename $0` target-file"}
@@ -677,10 +715,9 @@ exit 0
 #  Add check for whether 1) "target-file" exists and
 #+                       2) it is an rpm archive.
 #  Hint:                    Parse output of 'file' command.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -723,11 +760,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">pax -wf daily_backup.pax ~/linux-server/files 
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">pax -wf daily_backup.pax ~/linux-server/files 
 #  Creates a tar archive of all files in the target directory.
 #  Note that the options to pax must be in the correct order --
 #+ pax -fw     has an entirely different effect.
@@ -738,10 +774,9 @@ pax -f daily_backup.pax
 pax -rf daily_backup.pax ~/bsd-server/files
 #  Restores the backed-up files from the Linux machine
 #+ onto a BSD one.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Note that
        <i class="FIRSTTERM">
@@ -792,36 +827,34 @@ pax -rf daily_backup.pax ~/bsd-server/files
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <tt class="OPTION">
-            -c
-           </tt>
-           option sends the output of
-           <b class="COMMAND">
-            gzip
-           </b>
-           to
-           <tt class="FILENAME">
-            stdout
-           </tt>
-           . This
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <tt class="OPTION">
+           -c
+          </tt>
+          option sends the output of
+          <b class="COMMAND">
+           gzip
+          </b>
+          to
+          <tt class="FILENAME">
+           stdout
+          </tt>
+          . This
 	      is useful when
-           <a href="special-chars.html#PIPEREF">
-            piping
-           </a>
-           to other
+          <a href="special-chars.html#PIPEREF">
+           piping
+          </a>
+          to other
 	      commands.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        <a name="ZCATREF">
@@ -863,31 +896,29 @@ pax -rf daily_backup.pax ~/bsd-server/files
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           On some commercial UNIX systems,
-           <b class="COMMAND">
-            zcat
-           </b>
-           is a synonym for
-           <b class="COMMAND">
-            uncompress -c
-           </b>
-           ,
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          On some commercial UNIX systems,
+          <b class="COMMAND">
+           zcat
+          </b>
+          is a synonym for
+          <b class="COMMAND">
+           uncompress -c
+          </b>
+          ,
 	      and will not work on
-           <i class="FIRSTTERM">
-            gzipped
-           </i>
-           files.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <i class="FIRSTTERM">
+           gzipped
+          </i>
+          files.
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -940,26 +971,24 @@ pax -rf daily_backup.pax ~/bsd-server/files
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Newer versions of
-           <a href="filearchiv.html#TARREF">
-            tar
-           </a>
-           have been patched with
-           <b class="COMMAND">
-            bzip2
-           </b>
-           support.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Newer versions of
+          <a href="filearchiv.html#TARREF">
+           tar
+          </a>
+          have been patched with
+          <b class="COMMAND">
+           bzip2
+          </b>
+          support.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1003,30 +1032,28 @@ pax -rf daily_backup.pax ~/bsd-server/files
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            znew
-           </b>
-           command transforms
-           <i class="FIRSTTERM">
-            compressed
-           </i>
-           files into
-           <i class="FIRSTTERM">
-            gzipped
-           </i>
-           ones.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           znew
+          </b>
+          command transforms
+          <i class="FIRSTTERM">
+           compressed
+          </i>
+          files into
+          <i class="FIRSTTERM">
+           gzipped
+          </i>
+          ones.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1072,28 +1099,26 @@ pax -rf daily_backup.pax ~/bsd-server/files
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The output of
-           <b class="COMMAND">
-            sq
-           </b>
-           may be
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          The output of
+          <b class="COMMAND">
+           sq
+          </b>
+          may be
 	        piped to
-           <b class="COMMAND">
-            gzip
-           </b>
-           for further
+          <b class="COMMAND">
+           gzip
+          </b>
+          for further
 		compression.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1314,11 +1339,10 @@ pax -rf daily_backup.pax ~/bsd-server/files
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>file test.tar.gz</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>file test.tar.gz</b></tt>
 <tt class="COMPUTEROUTPUT">test.tar.gz: gzip compressed data, deflated,
  last modified: Sun Sep 16 13:34:51 2001, os: Unix</tt>
 
@@ -1326,17 +1350,15 @@ pax -rf daily_backup.pax ~/bsd-server/files
 <tt class="COMPUTEROUTPUT">test.tar.gz: GNU tar archive (gzip compressed data, deflated,
  last modified: Sun Sep 16 13:34:51 2001, os: Unix)</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Find sh and Bash scripts in a given directory:
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Find sh and Bash scripts in a given directory:
 
 DIRECTORY=/usr/local/bin
 KEYWORD=Bourne
@@ -1351,10 +1373,9 @@ file $DIRECTORY/* | fgrep $KEYWORD
 # /usr/local/bin/cassette.sh:      Bourne shell script text executable
 # /usr/local/bin/copy-cd:          Bourne-Again shell script text executable
 # . . .</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="STRIPC">
        </a>
@@ -1363,11 +1384,10 @@ file $DIRECTORY/* | fgrep $KEYWORD
          Example 16-32. Stripping comments from C program files
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # strip-comment.sh: Strips out the comments (/* COMMENT */) in a C program.
 
 E_NOARGS=0
@@ -1446,10 +1466,9 @@ esac
 #+ the only way is to write a C parser (using lex or yacc perhaps?).
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1480,15 +1499,13 @@ exit 0</pre>
         </b>
        </tt>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="COMPUTEROUTPUT">/usr/bin/rm</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="COMPUTEROUTPUT">/usr/bin/rm</tt></pre>
+        </font>
+       </p>
+      </div>
       <p>
        For an interesting use of this command, see
        <a href="colorizing.html#HORSERACE">
@@ -1532,15 +1549,13 @@ exit 0</pre>
         </b>
        </tt>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="COMPUTEROUTPUT">rm: /bin/rm /usr/share/man/man1/rm.1.bz2</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="COMPUTEROUTPUT">rm: /bin/rm /usr/share/man/man1/rm.1.bz2</tt></pre>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="WHATISREF">
@@ -1579,15 +1594,13 @@ exit 0</pre>
         </b>
        </tt>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="COMPUTEROUTPUT">whatis               (1)  - search the whatis database for complete words</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="COMPUTEROUTPUT">whatis               (1)  - search the whatis database for complete words</tt></pre>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="WHAT">
        </a>
@@ -1599,11 +1612,10 @@ exit 0</pre>
          </tt>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 # What are all those mysterious binaries in /usr/X11R6/bin?
 
@@ -1623,10 +1635,9 @@ exit 0
 #    ./what.sh &gt;&gt;whatis.db
 #  or view it a page at a time on stdout,
 #    ./what.sh | less</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -1660,11 +1671,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>vdir</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>vdir</b></tt>
 <tt class="COMPUTEROUTPUT">total 10
  -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.xrolo
  -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
@@ -1676,10 +1686,9 @@ exit 0
  -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
  -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LOCATEREF">
@@ -1722,15 +1731,13 @@ exit 0
         </b>
        </tt>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="COMPUTEROUTPUT">/usr/lib/xephem/catalogs/hickson.edb</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="COMPUTEROUTPUT">/usr/lib/xephem/catalogs/hickson.edb</tt></pre>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="GETFACLREF">
@@ -1783,11 +1790,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>getfacl *</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>getfacl *</b></tt>
 <tt class="COMPUTEROUTPUT"># file: test1.txt
  # owner: bozo
  # group: bozgrp
@@ -1816,10 +1822,9 @@ exit 0
  mask::rw-
  other::r--</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="READLINKREF">
@@ -1834,17 +1839,15 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>readlink /usr/bin/awk</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>readlink /usr/bin/awk</b></tt>
 <tt class="COMPUTEROUTPUT">../../bin/gawk</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="STRINGSREF">
@@ -1918,11 +1921,10 @@ exit 0
          command
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # wstrings.sh: "word-strings" (enhanced "strings" command)
 #
 #  This script filters the output of "strings" by checking it
@@ -1996,10 +1998,9 @@ do
 done  
 
 exit $?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -2106,45 +2107,43 @@ exit $?</pre>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="DIFFERR2">
-           </a>
-           The
-           <b class="COMMAND">
-            diff
-           </b>
-           command returns an exit status of
-           <span class="ERRORCODE">
-            0
-           </span>
-           if the compared files are identical, and
-           <span class="ERRORCODE">
-            1
-           </span>
-           if they differ (or
-           <span class="ERRORCODE">
-            2
-           </span>
-           when
-           <i class="FIRSTTERM">
-            binary
-           </i>
-           files are being compared).  This permits use of
-           <b class="COMMAND">
-            diff
-           </b>
-           in a test construct within a shell
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="DIFFERR2">
+          </a>
+          The
+          <b class="COMMAND">
+           diff
+          </b>
+          command returns an exit status of
+          <span class="ERRORCODE">
+           0
+          </span>
+          if the compared files are identical, and
+          <span class="ERRORCODE">
+           1
+          </span>
+          if they differ (or
+          <span class="ERRORCODE">
+           2
+          </span>
+          when
+          <i class="FIRSTTERM">
+           binary
+          </i>
+          files are being compared).  This permits use of
+          <b class="COMMAND">
+           diff
+          </b>
+          in a test construct within a shell
               script (see below).
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        A common use for
@@ -2206,129 +2205,137 @@ exit $?</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">patch -p1 &lt;patch-file
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">patch -p1 &lt;patch-file
 # Takes all the changes listed in 'patch-file'
 # and applies them to the files referenced therein.
 # This upgrades to a newer version of the package.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Patching the kernel:
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">cd /usr/src
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">cd /usr/src
 gzip -cd patchXX.gz | patch -p0
 # Upgrading kernel source using 'patch'.
 # From the Linux kernel docs "README",
 # by anonymous author (Alan Cox?).</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            diff
-           </b>
-           command can also
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           diff
+          </b>
+          command can also
 	      recursively compare directories (for the filenames
 	      present).
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>diff -r ~/notes1 ~/notes2</b></tt>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>diff -r ~/notes1 ~/notes2</b></tt>
 <tt class="COMPUTEROUTPUT">Only in /home/bozo/notes1: file02
  Only in /home/bozo/notes1: file03
  Only in /home/bozo/notes2: file04</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>diff -r ~/notes1 ~/notes2</b></tt>
+<tt class="COMPUTEROUTPUT">Only in /home/bozo/notes1: file02
+ Only in /home/bozo/notes1: file03
+ Only in /home/bozo/notes2: file04</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>diff -r ~/notes1 ~/notes2</b></tt>
+<tt class="COMPUTEROUTPUT">Only in /home/bozo/notes1: file02
+ Only in /home/bozo/notes1: file03
+ Only in /home/bozo/notes2: file04</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="ZDIFFREF">
-           </a>
-          </p>
-          <p>
-           Use
-           <b class="COMMAND">
-            zdiff
-           </b>
-           to compare
-           <i class="FIRSTTERM">
-            gzipped
-           </i>
-           files.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="ZDIFFREF">
+          </a>
+         </p>
+         <p>
+          Use
+          <b class="COMMAND">
+           zdiff
+          </b>
+          to compare
+          <i class="FIRSTTERM">
+           gzipped
+          </i>
+          files.
+         </p>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="DIFFSTATREF">
-           </a>
-          </p>
-          <p>
-           Use
-           <b class="COMMAND">
-            diffstat
-           </b>
-           to create
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="DIFFSTATREF">
+          </a>
+         </p>
+         <p>
+          Use
+          <b class="COMMAND">
+           diffstat
+          </b>
+          to create
 	       a histogram (point-distribution graph) of output from
-           <b class="COMMAND">
-            diff
-           </b>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <b class="COMMAND">
+           diff
+          </b>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2355,11 +2362,10 @@ gzip -cd patchXX.gz | patch -p0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>diff3 file-1 file-2 file-3</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>diff3 file-1 file-2 file-3</b></tt>
 <tt class="COMPUTEROUTPUT">====
  1:1c
    This is line 1 of "file-1".
@@ -2368,10 +2374,9 @@ gzip -cd patchXX.gz | patch -p0
  3:1c
    This is line 1 of "file-3"</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="MERGEREF">
        </a>
@@ -2455,28 +2460,26 @@ gzip -cd patchXX.gz | patch -p0
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Like
-           <b class="COMMAND">
-            diff
-           </b>
-           ,
-           <b class="COMMAND">
-            cmp
-           </b>
-           returns an exit status of 0 if the compared files are
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Like
+          <b class="COMMAND">
+           diff
+          </b>
+          ,
+          <b class="COMMAND">
+           cmp
+          </b>
+          returns an exit status of 0 if the compared files are
 	    identical, and 1 if they differ. This permits use in a test
 	    construct within a shell script.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="FILECOMP">
@@ -2491,11 +2494,10 @@ gzip -cd patchXX.gz | patch -p0
 	        within a script.
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # file-comparison.sh
 
 ARGS=2  # Two args to script expected.
@@ -2530,34 +2532,31 @@ else
 fi
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Use
-           <b class="COMMAND">
-            zcmp
-           </b>
-           on
-           <i class="FIRSTTERM">
-            gzipped
-           </i>
-           files.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          Use
+          <b class="COMMAND">
+           zcmp
+          </b>
+          on
+          <i class="FIRSTTERM">
+           gzipped
+          </i>
+          files.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2733,15 +2732,13 @@ exit 0</pre>
        messages if, 
 	      for example a script is called with missing arguments:
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo "Usage: `basename $0` arg1 arg2 ... argn"</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo "Usage: `basename $0` arg1 arg2 ... argn"</pre>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="DIRNAMEREF">
@@ -2762,31 +2759,29 @@ exit 0</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <b class="COMMAND">
-            basename
-           </b>
-           and
-           <b class="COMMAND">
-            dirname
-           </b>
-           can operate on any arbitrary string. The argument
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <b class="COMMAND">
+           basename
+          </b>
+          and
+          <b class="COMMAND">
+           dirname
+          </b>
+          can operate on any arbitrary string. The argument
 		does not need to refer to an existing file, or
 		even be a filename for that matter (see
-           <a href="contributed-scripts.html#DAYSBETWEEN">
-            Example A-7
-           </a>
-           ).
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="contributed-scripts.html#DAYSBETWEEN">
+           Example A-7
+          </a>
+          ).
+         </p>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX35">
@@ -2803,11 +2798,10 @@ exit 0</pre>
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 address=/home/bozo/daily-journal.txt
 
@@ -2818,10 +2812,9 @@ echo "My own home is `basename ~/`."         # `basename ~` also works.
 echo "The home of my home is `dirname ~/`."  # `dirname ~`  also works.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2865,11 +2858,10 @@ exit 0</pre>
          Example 16-37. A script that copies itself in sections
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # splitcopy.sh
 
 #  A script that splits itself into chunks,
@@ -2894,10 +2886,9 @@ cat "$OUTPREFIX"* &gt; "$0.copy"  # Concatenate the chunks.
 rm "$OUTPREFIX"*               # Get rid of the chunks.
 
 exit $?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -2996,11 +2987,10 @@ exit $?</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cksum /boot/vmlinuz</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cksum /boot/vmlinuz</b></tt>
 <tt class="COMPUTEROUTPUT">1670054224 804083 /boot/vmlinuz</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo -n "Top Secret" | cksum</b></tt>
@@ -3014,53 +3004,50 @@ exit $?</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo -n "Top Secret" | md5sum</b></tt>
 <tt class="COMPUTEROUTPUT">8babc97a6f62a4649716f4df8d61728f  -</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            cksum
-           </b>
-           command shows the size,
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           cksum
+          </b>
+          command shows the size,
 	    in bytes, of its target, whether file or
-           <tt class="FILENAME">
-            stdout
-           </tt>
-           .
-          </p>
-          <p>
-           The
-           <b class="COMMAND">
-            md5sum
-           </b>
-           and
-           <b class="COMMAND">
-            sha1sum
-           </b>
-           commands display a
-           <a href="special-chars.html#DASHREF2">
-            dash
-           </a>
-           when they receive their input from
-           <tt class="FILENAME">
-            stdout
-           </tt>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <tt class="FILENAME">
+           stdout
+          </tt>
+          .
+         </p>
+         <p>
+          The
+          <b class="COMMAND">
+           md5sum
+          </b>
+          and
+          <b class="COMMAND">
+           sha1sum
+          </b>
+          commands display a
+          <a href="special-chars.html#DASHREF2">
+           dash
+          </a>
+          when they receive their input from
+          <tt class="FILENAME">
+           stdout
+          </tt>
+          .
+         </p>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="FILEINTEGRITY">
@@ -3070,11 +3057,10 @@ exit $?</pre>
          Example 16-38. Checking file integrity
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # file-integrity.sh: Checking whether files in a given directory
 #                    have been tampered with.
 
@@ -3189,10 +3175,9 @@ exit 0
 #  For a much more thorough file integrity check,
 #+ consider the "Tripwire" package,
 #+ http://sourceforge.net/projects/tripwire/.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Also see
@@ -3217,43 +3202,63 @@ exit 0
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           There have been reports that the 128-bit
-           <b class="COMMAND">
-            md5sum
-           </b>
-           can be cracked, so the more secure
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          There have been reports that the 128-bit
+          <b class="COMMAND">
+           md5sum
+          </b>
+          can be cracked, so the more secure
 	    160-bit
-           <b class="COMMAND">
-            sha1sum
-           </b>
-           is a welcome new addition
+          <b class="COMMAND">
+           sha1sum
+          </b>
+          is a welcome new addition
 	    to the checksum toolkit.
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>md5sum testfile</b></tt>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>md5sum testfile</b></tt>
 <tt class="COMPUTEROUTPUT">e181e2c8720c60522c4c4c981108e367  testfile</tt>
 
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sha1sum testfile</b></tt>
 <tt class="COMPUTEROUTPUT">5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>md5sum testfile</b></tt>
+<tt class="COMPUTEROUTPUT">e181e2c8720c60522c4c4c981108e367  testfile</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sha1sum testfile</b></tt>
+<tt class="COMPUTEROUTPUT">5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>md5sum testfile</b></tt>
+<tt class="COMPUTEROUTPUT">e181e2c8720c60522c4c4c981108e367  testfile</tt>
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sha1sum testfile</b></tt>
+<tt class="COMPUTEROUTPUT">5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Security consultants have demonstrated that even
@@ -3325,11 +3330,10 @@ exit 0
          Example 16-39. Uudecoding encoded files
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Uudecodes all uuencoded files in current working directory.
 
 lines=35        # Allow 35 lines for the header (very generous).
@@ -3360,32 +3364,29 @@ done
 #+ and skip to next if not found.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <a href="textproc.html#FOLDREF">
-            fold -s
-           </a>
-           command
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <a href="textproc.html#FOLDREF">
+           fold -s
+          </a>
+          command
 	    may be useful (possibly in a pipe) to process long uudecoded
 	    text messages downloaded from Usenet newsgroups.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3486,11 +3487,10 @@ exit 0</pre>
        </i>
        encryption.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># To encrypt a file:
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># To encrypt a file:
 openssl aes-128-ecb -salt -in file.txt -out file.encrypted \
 -pass pass:my_password
 #          ^^^^^^^^^^^   User-selected password.
@@ -3500,10 +3500,9 @@ openssl aes-128-ecb -salt -in file.txt -out file.encrypted \
 openssl aes-128-ecb -d -salt -in file.encrypted -out file.txt \
 -pass pass:my_password
 #          ^^^^^^^^^^^   User-selected password.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a href="special-chars.html#PIPEREF">
         Piping
@@ -3518,11 +3517,10 @@ openssl aes-128-ecb -d -salt -in file.encrypted -out file.txt \
        makes it possible to encrypt
              an entire directory tree.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># To encrypt a directory:
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># To encrypt a directory:
 
 sourcedir="/home/bozo/testfiles"
 encrfile="encr-dir.tar.gz"
@@ -3537,10 +3535,9 @@ openssl des3 -salt -out "$encrfile" -pass pass:"$password"
 openssl des3 -d -salt -in "$encrfile" -pass pass:"$password" |
 tar -xzv
 # Decrypts and unpacks into current working directory.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Of course,
        <i class="FIRSTTERM">
@@ -3586,23 +3583,21 @@ tar -xzv
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Advanced forensic technology may still be able to
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          Advanced forensic technology may still be able to
 	      recover the contents of a file, even after application of
-           <b class="COMMAND">
-            shred
-           </b>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <b class="COMMAND">
+           shred
+          </b>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -3650,24 +3645,21 @@ tar -xzv
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>mktemp</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>mktemp</b></tt>
 <tt class="COMPUTEROUTPUT">/tmp/tmp.zzsvql3154</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">PREFIX=filename
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">PREFIX=filename
 tempfile=`mktemp $PREFIX.XXXXXX`
 #                        ^^^^^^ Need at least 6 placeholders
 #+                              in the filename template.
@@ -3682,10 +3674,9 @@ echo "tempfile name = $tempfile"
 #+ with 600 file permissions.
 #  A "umask 177" is therefore unnecessary,
 #+ but it's good programming practice nevertheless.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="MAKEREF">
@@ -3847,20 +3838,18 @@ echo "tempfile name = $tempfile"
        a command sequence,
 	       to forestall potentially unpleasant consequences.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">ls /home/bozo | awk '{print "rm -rf " $1}' | more
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">ls /home/bozo | awk '{print "rm -rf " $1}' | more
 #                                            ^^^^
 		 
 # Testing the effect of the following (disastrous) command-line:
 #      ls /home/bozo | awk '{print "rm -rf " $1}' | sh
 #      Hand off to the shell to execute . . .       ^^</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <i class="FIRSTTERM">
@@ -3884,193 +3873,146 @@ echo "tempfile name = $tempfile"
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="filearchiv.html#AEN11885" name="FTN.AEN11885">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      An
-      <i class="FIRSTTERM">
-       archive
-      </i>
-      ,
+  <div>
+   <p>
+    <a href="filearchiv.html#AEN11885" name="FTN.AEN11885">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     An
+     <i class="FIRSTTERM">
+      archive
+     </i>
+     ,
 	        in the sense discussed here, is simply a set of related
 	        files stored in a single location.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="filearchiv.html#AEN11896" name="FTN.AEN11896">
-      <span class="footnote">
-       [2]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      A
-      <tt class="REPLACEABLE">
-       <i>
-        tar czvf ArchiveName.tar.gz *
-       </i>
-      </tt>
-      <em>
-       will
-      </em>
-      include dotfiles in
+    </p>
+   </p>
+   <p>
+    <a href="filearchiv.html#AEN11896" name="FTN.AEN11896">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     A
+     <tt class="REPLACEABLE">
+      <i>
+       tar czvf ArchiveName.tar.gz *
+      </i>
+     </tt>
+     <em>
+      will
+     </em>
+     include dotfiles in
 		    subdirectories
-      <em>
-       below
-      </em>
-      the current
+     <em>
+      below
+     </em>
+     the current
 		    working directory. This is an undocumented GNU
-      <b class="COMMAND">
-       tar
-      </b>
-      <span class="QUOTE">
-       "feature."
-      </span>
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="filearchiv.html#AEN12840" name="FTN.AEN12840">
-      <span class="footnote">
-       [3]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The checksum may be expressed as a
-      <i class="FIRSTTERM">
-       hexadecimal
-      </i>
-      number, or to some
+     <b class="COMMAND">
+      tar
+     </b>
+     <span class="QUOTE">
+      "feature."
+     </span>
+    </p>
+   </p>
+   <p>
+    <a href="filearchiv.html#AEN12840" name="FTN.AEN12840">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The checksum may be expressed as a
+     <i class="FIRSTTERM">
+      hexadecimal
+     </i>
+     number, or to some
 		other base.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="filearchiv.html#AEN12849" name="FTN.AEN12849">
-      <span class="footnote">
-       [4]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      For even
-      <em>
-       better
-      </em>
-      security, use the
-      <i class="FIRSTTERM">
-       sha256sum
-      </i>
-      ,
-      <i class="FIRSTTERM">
-       sha512
-      </i>
-      , and
-      <i class="FIRSTTERM">
-       sha1pass
-      </i>
-      commands.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="filearchiv.html#AEN12969" name="FTN.AEN12969">
-      <span class="footnote">
-       [5]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      This is a symmetric block cipher, used to
+    </p>
+   </p>
+   <p>
+    <a href="filearchiv.html#AEN12849" name="FTN.AEN12849">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     For even
+     <em>
+      better
+     </em>
+     security, use the
+     <i class="FIRSTTERM">
+      sha256sum
+     </i>
+     ,
+     <i class="FIRSTTERM">
+      sha512
+     </i>
+     , and
+     <i class="FIRSTTERM">
+      sha1pass
+     </i>
+     commands.
+    </p>
+   </p>
+   <p>
+    <a href="filearchiv.html#AEN12969" name="FTN.AEN12969">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     This is a symmetric block cipher, used to
 		encrypt files on a single system or local network,
 		as opposed to the
-      <i class="FIRSTTERM">
-       public key
-      </i>
-      cipher class, of which
-      <i class="FIRSTTERM">
-       pgp
-      </i>
-      is a
+     <i class="FIRSTTERM">
+      public key
+     </i>
+     cipher class, of which
+     <i class="FIRSTTERM">
+      pgp
+     </i>
+     is a
 		well-known example.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="filearchiv.html#AEN13030" name="FTN.AEN13030">
-      <span class="footnote">
-       [6]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Creates a temporary
-      <i class="FIRSTTERM">
-       directory
-      </i>
-      when invoked with the
-      <tt class="OPTION">
-       -d
-      </tt>
-      option.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="textproc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="communications.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Text Processing Commands
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="external.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Communications Commands
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
+   <p>
+    <a href="filearchiv.html#AEN13030" name="FTN.AEN13030">
+     <span class="footnote">
+      [6]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Creates a temporary
+     <i class="FIRSTTERM">
+      directory
+     </i>
+     when invoked with the
+     <tt class="OPTION">
+      -d
+     </tt>
+     option.
+    </p>
+   </p>
   </div>
  </body>
 </html>

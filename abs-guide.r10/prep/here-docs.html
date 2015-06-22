@@ -11,59 +11,33 @@
   <link href="x17837.html" rel="NEXT" title="Here Strings"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="globbingref.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="x17837.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="HERE-DOCS">
     </a>
     Chapter 19. Here Documents
    </h1>
-   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
-    <tr>
-     <td width="45%">
-     </td>
-     <td align="LEFT" valign="TOP" width="45%">
+   <div>
+    <p>
+    </p>
+    <p>
+     <i>
+     </i>
+     <p>
       <i>
+       Here and now, boys.
       </i>
-      <p>
-       <i>
-        Here and now, boys.
+     </p>
+     <p>
+      <i>
+       --Aldous Huxley,
+       <i class="FIRSTTERM">
+        Island
        </i>
-      </p>
-      <p>
-       <i>
-        --Aldous Huxley,
-        <i class="FIRSTTERM">
-         Island
-        </i>
-       </i>
-      </p>
-     </td>
-    </tr>
-   </table>
+      </i>
+     </p>
+    </p>
+   </div>
    <p>
     <a name="HEREDOCREF">
     </a>
@@ -97,19 +71,17 @@
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">COMMAND &lt;&lt;InputComesFromHERE
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">COMMAND &lt;&lt;InputComesFromHERE
 ...
 ...
 ...
 InputComesFromHERE</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="LIMITSTRINGREF">
     </a>
@@ -144,17 +116,15 @@ InputComesFromHERE</pre>
     </tt>
     contains
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">command #1
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">command #1
 command #2
 ...</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     The
     <i class="FIRSTTERM">
@@ -163,19 +133,17 @@ command #2
     equivalent looks
         like this:
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">interactive-program &lt;&lt;LimitString
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">interactive-program &lt;&lt;LimitString
 command #1
 command #2
 ...
 LimitString</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     Choose a
     <i class="FIRSTTERM">
@@ -211,11 +179,10 @@ LimitString</pre>
 	logged in
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 wall &lt;&lt;zzz23EndOfMessagezzz23
 E-mail your noontime orders for pizza to the system administrator.
@@ -230,10 +197,9 @@ zzz23EndOfMessagezzz23
 #+ is a quick-and-dirty one-off solution.
 
 exit</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="VIHERE">
@@ -264,11 +230,10 @@ exit</pre>
 	file
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Noninteractive use of 'vi' to edit a file.
 # Emulates 'sed'.
@@ -301,10 +266,9 @@ x23LimitStringx23
 #+ because of possible problems with terminal interaction.
 
 exit</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     The above script could just as effectively have been implemented with
@@ -332,11 +296,10 @@ exit</pre>
     </i>
     .
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">#!/bin/bash
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">#!/bin/bash
 #  Replace all instances of "Smith" with "Jones"
 #+ in files with a ".txt" filename suffix. 
 
@@ -354,10 +317,9 @@ EOF
   # :wq is write-and-quit.
   # -------------------------------------
 done</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="CATSCRIPTREF">
     </a>
@@ -385,11 +347,10 @@ done</pre>
       </i>
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 #  'echo' is fine for printing single line messages,
 #+  but somewhat problematic for for message blocks.
@@ -425,10 +386,9 @@ This is line 4 of the message.
 This is the last line of the message.
 -------------------------------------"
 # However, text may not include double quotes unless they are escaped.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="LIMITSTRDASH">
@@ -458,11 +418,10 @@ This is the last line of the message.
       Example 19-4. Multi-line message, with tabs suppressed
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # Same as previous example, but...
 
 #  The - option to a here document &lt;&lt;-
@@ -485,10 +444,9 @@ ENDOFMESSAGE
 # Note that this option has no effect on *embedded* tabs.
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="HEREPASSP">
@@ -512,11 +470,10 @@ exit 0</pre>
       Example 19-5. Here document with replaceable parameters
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # Another 'cat' here document, using parameter substitution.
 
 # Try it with no command-line parameters,   ./scriptname
@@ -550,10 +507,9 @@ Endofmessage
 # So does the comment.
 
 exit</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="HEREPARAMSUB">
@@ -580,11 +536,10 @@ exit</pre>
 	  directory
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # upload.sh
 
 #  Upload file pair (Filename.lsm, Filename.tar.gz)
@@ -626,10 +581,9 @@ bye
 End-Of-Session
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="HEREESC">
@@ -678,11 +632,10 @@ exit 0</pre>
       Example 19-7. Parameter substitution turned off
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 #  A 'cat' here-document, but with parameter substitution disabled.
 
 NAME="John Doe"
@@ -723,10 +676,9 @@ SpecialCharTest
 
 
 exit</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="HERELIT">
@@ -744,11 +696,10 @@ exit</pre>
       Example 19-8. A script that generates another script
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # generate-script.sh
 # Based on an idea by Albert Reiner.
 
@@ -798,10 +749,9 @@ fi
 #+ and the like.
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="HERECS">
@@ -815,21 +765,19 @@ exit 0</pre>
     </a>
     .
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">variable=$(cat &lt;&lt;SETVAR
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">variable=$(cat &lt;&lt;SETVAR
 This variable
 runs over multiple lines.
 SETVAR
 )
 
 echo "$variable"</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="HEREFUNC">
     </a>
@@ -846,11 +794,10 @@ echo "$variable"</pre>
       Example 19-9. Here documents and functions
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # here-function.sh
 
 GetPersonalData ()
@@ -882,10 +829,9 @@ echo "$city, $state $zipcode"
 echo
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="ANONHEREDOC0">
@@ -915,21 +861,19 @@ exit 0</pre>
       Here Document
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 : &lt;&lt;TESTVARIABLES
 ${HOSTNAME?}${USER?}${MAIL?}  # Print error message if one of the variables not set.
 TESTVARIABLES
 
 exit $?</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="CBLOCK1">
@@ -938,23 +882,21 @@ exit $?</pre>
    <div class="TIP">
     <p>
     </p>
-    <table border="0" class="TIP" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        A variation of the above technique permits
-        <span class="QUOTE">
-         "commenting
+    <div>
+     <p>
+      <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+     </p>
+     <p>
+      <p>
+       A variation of the above technique permits
+       <span class="QUOTE">
+        "commenting
         out"
-        </span>
-        blocks of code.
-       </p>
-      </td>
-     </tr>
-    </table>
+       </span>
+       blocks of code.
+      </p>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="COMMENTBLOCK">
@@ -964,11 +906,10 @@ exit $?</pre>
       Example 19-11. Commenting out a block of code
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # commentblock.sh
 
 : &lt;&lt;COMMENTBLOCK
@@ -1034,10 +975,9 @@ commented-bad.sh: line 3: foo_bar_bazz: parameter null or not set
   : &lt;&lt;'COMMENTBLOCK'
 
 # Thank you, Kurt Pfeifle, for pointing this out.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="HSELFDOC">
@@ -1046,22 +986,20 @@ commented-bad.sh: line 3: foo_bar_bazz: parameter null or not set
    <div class="TIP">
     <p>
     </p>
-    <table border="0" class="TIP" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        Yet another twist of this nifty trick makes
-        <span class="QUOTE">
-         "self-documenting"
-        </span>
-        scripts possible.
-       </p>
-      </td>
-     </tr>
-    </table>
+    <div>
+     <p>
+      <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+     </p>
+     <p>
+      <p>
+       Yet another twist of this nifty trick makes
+       <span class="QUOTE">
+        "self-documenting"
+       </span>
+       scripts possible.
+      </p>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="SELFDOCUMENT">
@@ -1071,11 +1009,10 @@ commented-bad.sh: line 3: foo_bar_bazz: parameter null or not set
       Example 19-12. A self-documenting script
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # self-document.sh: self-documenting script
 # Modification of "colm.sh".
 
@@ -1109,10 +1046,9 @@ echo "Listing of "$directory":"; echo
 ; ls -l "$directory" | sed 1d) | column -t
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Using a
@@ -1124,11 +1060,10 @@ exit 0</pre>
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">DOC_REQUEST=70
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">DOC_REQUEST=70
 
 if [ "$1" = "-h"  -o "$1" = "--help" ]     # Request help.
 then                                       # Use a "cat script" . . .
@@ -1142,10 +1077,9 @@ then list the current working directory.
 DOCUMENTATIONXX
 exit $DOC_REQUEST
 fi</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     See also
     <a href="contributed-scripts.html#ISSPAMMER2">
@@ -1173,54 +1107,66 @@ fi</pre>
    <div class="NOTE">
     <p>
     </p>
-    <table border="0" class="NOTE" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Note" hspace="5" src="../images/note.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        Here documents create temporary files, but these
+    <div>
+     <p>
+      <img alt="Note" hspace="5" src="../images/note.gif"/>
+     </p>
+     <p>
+      <p>
+       Here documents create temporary files, but these
 	    files are deleted after opening and are not accessible to
 	    any other process.
-       </p>
-       <p>
-       </p>
-       <table bgcolor="#E0E0E0" border="1" width="100%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>bash -c 'lsof -a -p $$ -d0' &lt;&lt; EOF</b></tt>
+      </p>
+      <p>
+      </p>
+      <table bgcolor="#E0E0E0" border="1" width="100%">
+       <tr>
+        <td>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>bash -c 'lsof -a -p $$ -d0' &lt;&lt; EOF</b></tt>
 <tt class="PROMPT">&gt; </tt><tt class="USERINPUT"><b>EOF</b></tt>
 <tt class="COMPUTEROUTPUT">lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)</tt>
 	      </pre>
-          </font>
-         </td>
-        </tr>
-       </table>
-      </td>
-     </tr>
-    </table>
+         </font>
+        </td>
+       </tr>
+      </table>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>bash -c 'lsof -a -p $$ -d0' &lt;&lt; EOF</b></tt>
+<tt class="PROMPT">&gt; </tt><tt class="USERINPUT"><b>EOF</b></tt>
+<tt class="COMPUTEROUTPUT">lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)</tt>
+	      </pre>
+      </font>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>bash -c 'lsof -a -p $$ -d0' &lt;&lt; EOF</b></tt>
+<tt class="PROMPT">&gt; </tt><tt class="USERINPUT"><b>EOF</b></tt>
+<tt class="COMPUTEROUTPUT">lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)</tt>
+	      </pre>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="CAUTION">
     <p>
     </p>
-    <table border="0" class="CAUTION" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        Some utilities will not work inside a
-        <i class="FIRSTTERM">
-         here document
-        </i>
-        .
-       </p>
-      </td>
-     </tr>
-    </table>
+    <div>
+     <p>
+      <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+     </p>
+     <p>
+      <p>
+       Some utilities will not work inside a
+       <i class="FIRSTTERM">
+        here document
+       </i>
+       .
+      </p>
+     </p>
+    </div>
    </div>
    <p>
     <a name="INDENTEDLS">
@@ -1229,44 +1175,43 @@ fi</pre>
    <div class="WARNING">
     <p>
     </p>
-    <table border="0" class="WARNING" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Warning" hspace="5" src="../images/warning.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        The closing
-        <i class="FIRSTTERM">
-         limit string
-        </i>
-        ,
+    <div>
+     <p>
+      <img alt="Warning" hspace="5" src="../images/warning.gif"/>
+     </p>
+     <p>
+      <p>
+       The closing
+       <i class="FIRSTTERM">
+        limit string
+       </i>
+       ,
 	  on the final line of a here document, must start in the
-        <em>
-         first
-        </em>
-        character position. There can
+       <em>
+        first
+       </em>
+       character position. There can
 	  be
-        <em>
-         no leading whitespace
-        </em>
-        . Trailing
+       <em>
+        no leading whitespace
+       </em>
+       . Trailing
 	  whitespace after the limit string likewise causes unexpected
 	  behavior. The whitespace prevents the limit string from being
 	  recognized.
-        <a href="here-docs.html#FTN.AEN17822" name="AEN17822">
-         <span class="footnote">
-          [1]
-         </span>
-        </a>
-       </p>
-       <p>
-       </p>
-       <table bgcolor="#E0E0E0" border="0" width="100%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <a href="here-docs.html#FTN.AEN17822" name="AEN17822">
+        <span class="footnote">
+         [1]
+        </span>
+       </a>
+      </p>
+      <p>
+      </p>
+      <table bgcolor="#E0E0E0" border="0" width="100%">
+       <tr>
+        <td>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 echo "----------------------------------------------------------------------"
 
@@ -1287,41 +1232,89 @@ echo "Outside the here document."
 exit 0
 
 echo "This line had better not echo."  # Follows an 'exit' command.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
-      </td>
-     </tr>
-    </table>
+         </font>
+        </td>
+       </tr>
+      </table>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
+
+echo "----------------------------------------------------------------------"
+
+cat &lt;&lt;LimitString
+echo "This is line 1 of the message inside the here document."
+echo "This is line 2 of the message inside the here document."
+echo "This is the final line of the message inside the here document."
+     LimitString
+#^^^^Indented limit string. Error! This script will not behave as expected.
+
+echo "----------------------------------------------------------------------"
+
+#  These comments are outside the 'here document',
+#+ and should not echo.
+
+echo "Outside the here document."
+
+exit 0
+
+echo "This line had better not echo."  # Follows an 'exit' command.</pre>
+      </font>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
+
+echo "----------------------------------------------------------------------"
+
+cat &lt;&lt;LimitString
+echo "This is line 1 of the message inside the here document."
+echo "This is line 2 of the message inside the here document."
+echo "This is the final line of the message inside the here document."
+     LimitString
+#^^^^Indented limit string. Error! This script will not behave as expected.
+
+echo "----------------------------------------------------------------------"
+
+#  These comments are outside the 'here document',
+#+ and should not echo.
+
+echo "Outside the here document."
+
+exit 0
+
+echo "This line had better not echo."  # Follows an 'exit' command.</pre>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="CAUTION">
     <p>
     </p>
-    <table border="0" class="CAUTION" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        <a name="EXCLLS">
-        </a>
-        Some people very cleverly use a
+    <div>
+     <p>
+      <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+     </p>
+     <p>
+      <p>
+       <a name="EXCLLS">
+       </a>
+       Some people very cleverly use a
           single
-        <span class="TOKEN">
-         !
-        </span>
-        as a limit string. But, that's not
+       <span class="TOKEN">
+        !
+       </span>
+       as a limit string. But, that's not
           necessarily a good idea.
-       </p>
-       <p>
-       </p>
-       <table bgcolor="#E0E0E0" border="0" width="100%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING"># This works.
+      </p>
+      <p>
+      </p>
+      <table bgcolor="#E0E0E0" border="0" width="100%">
+       <tr>
+        <td>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING"># This works.
 cat &lt;&lt;!
 Hello!
 ! Three more exclamations !!!
@@ -1344,13 +1337,66 @@ Single exclamation point follows!
 !
 EOF
 # It's safer to use a multi-character limit string.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
-      </td>
-     </tr>
-    </table>
+         </font>
+        </td>
+       </tr>
+      </table>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING"># This works.
+cat &lt;&lt;!
+Hello!
+! Three more exclamations !!!
+!
+
+
+# But . . .
+cat &lt;&lt;!
+Hello!
+Single exclamation point follows!
+!
+!
+# Crashes with an error message.
+
+
+# However, the following will work.
+cat &lt;&lt;EOF
+Hello!
+Single exclamation point follows!
+!
+EOF
+# It's safer to use a multi-character limit string.</pre>
+      </font>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING"># This works.
+cat &lt;&lt;!
+Hello!
+! Three more exclamations !!!
+!
+
+
+# But . . .
+cat &lt;&lt;!
+Hello!
+Single exclamation point follows!
+!
+!
+# Crashes with an error message.
+
+
+# However, the following will work.
+cat &lt;&lt;EOF
+Hello!
+Single exclamation point follows!
+!
+EOF
+# It's safer to use a multi-character limit string.</pre>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     For those tasks too complex for a
@@ -1372,66 +1418,29 @@ EOF
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="here-docs.html#AEN17822" name="FTN.AEN17822">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Except, as Dennis Benzinger points out,
+  <div>
+   <p>
+    <a href="here-docs.html#AEN17822" name="FTN.AEN17822">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Except, as Dennis Benzinger points out,
           if
-      <a href="here-docs.html#LIMITSTRDASH">
-       using
-       <b class="COMMAND">
-        &lt;&lt;-
-       </b>
-       to suppress
+     <a href="here-docs.html#LIMITSTRDASH">
+      using
+      <b class="COMMAND">
+       &lt;&lt;-
+      </b>
+      to suppress
           tabs
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="globbingref.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="x17837.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Globbing
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part5.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Here Strings
-     </td>
-    </tr>
-   </table>
+     </a>
+     .
+    </p>
+   </p>
   </div>
  </body>
 </html>

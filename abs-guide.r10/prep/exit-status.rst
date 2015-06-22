@@ -1,91 +1,28 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <escapingsection.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <tests.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 6. Exit and Exit Status
 ================================
 
-+--------------------------+--------------------------+--------------------------+
-| **                       |
-| *... there are dark      |
-| corners in the Bourne    |
-| shell, and people use    |
-| all of them.*            |
-|                          |
-| *--Chet Ramey*           |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+**
+
+*... there are dark corners in the Bourne shell, and people use all of
+them.*
+
+*--Chet Ramey*
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
  The **exit** command terminates a script, just as in a **C** program.
 It can also return a value, which is available to the script's parent
@@ -110,294 +47,182 @@ integer in the 0 - 255 range).
 
    <div class="NOTE">
 
-+----------+----------+----------+----------+----------+----------+----------+----------+----------+
-| |Note|   |
-| When a   |
-| script   |
-| ends     |
-| with an  |
-| **exit** |
-| that has |
-| no       |
-| paramete |
-| r,       |
-| the exit |
-| status   |
-| of the   |
-| script   |
-| is the   |
-| exit     |
-| status   |
-| of the   |
-| last     |
-| command  |
-| executed |
-| in the   |
-| script   |
-| (previou |
-| s        |
-| to the   |
-| **exit** |
-| ).       |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| ---+---- |
-| -------- |
-| -------- |
-| ------+- |
-| -------- |
-| -------- |
-| -------- |
-| -+       |
-| | .. cod |
-| e:: PROG |
-| RAMLISTI |
-| NG |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     #! |
-| /bin/bas |
-| h        |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     CO |
-| MMAND_1  |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     .  |
-| . .      |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     CO |
-| MMAND_LA |
-| ST       |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     #  |
-| Will exi |
-| t with s |
-| ta |     |
-| | tus of |
-|  last co |
-| mmand.   |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     ex |
-| it       |
-|          |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| ---+---- |
-| -------- |
-| -------- |
-| ------+- |
-| -------- |
-| -------- |
-| -------- |
-| -+       |
-|          |
-| The      |
-| equivale |
-| nt       |
-| of a     |
-| bare     |
-| **exit** |
-| is       |
-| **exit   |
-| $?** or  |
-| even     |
-| just     |
-| omitting |
-| the      |
-| **exit** |
-| .        |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| ---+---- |
-| -------- |
-| -------- |
-| ------+- |
-| -------- |
-| -------- |
-| -------- |
-| -+       |
-| | .. cod |
-| e:: PROG |
-| RAMLISTI |
-| NG |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     #! |
-| /bin/bas |
-| h        |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     CO |
-| MMAND_1  |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     .  |
-| . .      |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     CO |
-| MMAND_LA |
-| ST       |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     #  |
-| Will exi |
-| t with s |
-| ta |     |
-| | tus of |
-|  last co |
-| mmand.   |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     ex |
-| it $?    |
-|          |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| ---+---- |
-| -------- |
-| -------- |
-| ------+- |
-| -------- |
-| -------- |
-| -------- |
-| -+       |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| ---+---- |
-| -------- |
-| -------- |
-| ------+- |
-| -------- |
-| -------- |
-| -------- |
-| -+       |
-| | .. cod |
-| e:: PROG |
-| RAMLISTI |
-| NG |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     #! |
-| /bin/bas |
-| h        |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     CO |
-| MMAND1   |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     .  |
-| . .      |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     CO |
-| MMAND_LA |
-| ST       |
-|    |     |
-| |        |
-|          |
-|          |
-|    |     |
-| |     #  |
-| Will exi |
-| t with s |
-| ta |     |
-| | tus of |
-|  last co |
-| mmand.   |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| ---+---- |
-| -------- |
-| -------- |
-| ------+- |
-| -------- |
-| -------- |
-| -------- |
-| -+       |
-          
-+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+When a script ends with an **exit** that has no parameter, the exit
+status of the script is the exit status of the last command executed in
+the script (previous to the **exit** ).
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     COMMAND_1            |
+|                          |
+|     . . .                |
+|                          |
+|     COMMAND_LAST         |
+|                          |
+|     # Will exit with sta |
+| tus of last command.     |
+|                          |
+|     exit                 |
+                          
++--------------------------+--------------------------+--------------------------+
+
+The equivalent of a bare **exit** is **exit $?** or even just omitting
+the **exit** .
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     COMMAND_1            |
+|                          |
+|     . . .                |
+|                          |
+|     COMMAND_LAST         |
+|                          |
+|     # Will exit with sta |
+| tus of last command.     |
+|                          |
+|     exit $?              |
+                          
++--------------------------+--------------------------+--------------------------+
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     COMMAND1             |
+|                          |
+|     . . .                |
+|                          |
+|     COMMAND_LAST         |
+|                          |
+|     # Will exit with sta |
+| tus of last command.     |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    COMMAND_1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with status of last command.
+
+    exit
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    COMMAND_1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with status of last command.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    COMMAND1
+
+    . . . 
+
+    COMMAND_LAST
+
+    # Will exit with status of last command.
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    COMMAND_1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with status of last command.
+
+    exit
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    COMMAND_1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with status of last command.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    COMMAND1
+
+    . . . 
+
+    COMMAND_LAST
+
+    # Will exit with status of last command.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -422,44 +247,36 @@ success or an integer in the range 1 - 255 on error.
 
 **Example 6-1. exit / exit status**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     echo hello           |
-|     echo $?    # Exit st |
-| atus 0 returned because  |
-| command executed success |
-| fully.                   |
-|                          |
-|     lskdf      # Unrecog |
-| nized command.           |
-|     echo $?    # Non-zer |
-| o exit status returned - |
-| - command failed to exec |
-| ute.                     |
-|                          |
-|     echo                 |
-|                          |
-|     exit 113   # Will re |
-| turn 113 to shell.       |
-|                # To veri |
-| fy this, type "echo $?"  |
-| after script terminates. |
-|                          |
-|     #  By convention, an |
-|  'exit 0' indicates succ |
-| ess,                     |
-|     #+ while a non-zero  |
-| exit value means an erro |
-| r or anomalous condition |
-| .                        |
-|     #  See the "Exit Cod |
-| es With Special Meanings |
-| " appendix.              |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    echo hello
+    echo $?    # Exit status 0 returned because command executed successfully.
+
+    lskdf      # Unrecognized command.
+    echo $?    # Non-zero exit status returned -- command failed to execute.
+
+    echo
+
+    exit 113   # Will return 113 to shell.
+               # To verify this, type "echo $?" after script terminates.
+
+    #  By convention, an 'exit 0' indicates success,
+    #+ while a non-zero exit value means an error or anomalous condition.
+    #  See the "Exit Codes With Special Meanings" appendix.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -474,165 +291,146 @@ testing the result of a command in a script (see `Example
 
    <div class="NOTE">
 
-+--------------------------+--------------------------+--------------------------+
-| |Note|                   |
-| The                      |
-| `! <special-chars.html#N |
-| OTREF>`__                |
-| , the *logical not*      |
-| qualifier, reverses the  |
-| outcome of a test or     |
-| command, and this        |
-| affects its `exit        |
-| status <exit-status.html |
-| #EXITSTATUSREF>`__       |
-| .                        |
-|                          |
-| .. raw:: html            |
-|                          |
-|    <div class="EXAMPLE"> |
-|                          |
-| **Example 6-2. Negating  |
-| a condition using ! **   |
-|                          |
-| +----------------------- |
-| ---+-------------------- |
-| ------+----------------- |
-| ---------+               |
-| | .. code:: PROGRAMLISTI |
-| NG |                     |
-| |                        |
-|    |                     |
-| |     true    # The "tru |
-| e" |                     |
-| |  builtin.              |
-|    |                     |
-| |     echo "exit status  |
-| of |                     |
-| |  \"true\" = $?"     #  |
-| 0  |                     |
-| |                        |
-|    |                     |
-| |     ! true             |
-|    |                     |
-| |     echo "exit status  |
-| of |                     |
-| |  \"! true\" = $?"   #  |
-| 1  |                     |
-| |     # Note that the "! |
-| "  |                     |
-| | needs a space between  |
-| it |                     |
-| |  and the command.      |
-|    |                     |
-| |     #    !true   leads |
-|  t |                     |
-| | o a "command not found |
-| "  |                     |
-| | error                  |
-|    |                     |
-| |     #                  |
-|    |                     |
-| |     # The '!' operator |
-|  p |                     |
-| | refixing a command inv |
-| ok |                     |
-| | es the Bash history me |
-| ch |                     |
-| | anism.                 |
-|    |                     |
-| |                        |
-|    |                     |
-| |     true               |
-|    |                     |
-| |     !true              |
-|    |                     |
-| |     # No error this ti |
-| me |                     |
-| | , but no negation eith |
-| er |                     |
-| | .                      |
-|    |                     |
-| |     # It just repeats  |
-| th |                     |
-| | e previous command (tr |
-| ue |                     |
-| | ).                     |
-|    |                     |
-| |                        |
-|    |                     |
-| |                        |
-|    |                     |
-| |     # ================ |
-| == |                     |
-| | ====================== |
-| == |                     |
-| | ================= #    |
-|    |                     |
-| |     # Preceding a _pip |
-| e_ |                     |
-| |  with ! inverts the ex |
-| it |                     |
-| |  status returned.      |
-|    |                     |
-| |     ls | bogus_command |
-|    |                     |
-| |    # bash: bogus_comma |
-| nd |                     |
-| | : command not found    |
-|    |                     |
-| |     echo $?            |
-|    |                     |
-| |    # 127               |
-|    |                     |
-| |                        |
-|    |                     |
-| |     ! ls | bogus_comma |
-| nd |                     |
-| |    # bash: bogus_comma |
-| nd |                     |
-| | : command not found    |
-|    |                     |
-| |     echo $?            |
-|    |                     |
-| |    # 0                 |
-|    |                     |
-| |     # Note that the !  |
-| do |                     |
-| | es not change the exec |
-| ut |                     |
-| | ion of the pipe.       |
-|    |                     |
-| |     # Only the exit st |
-| at |                     |
-| | us changes.            |
-|    |                     |
-| |     # ================ |
-| == |                     |
-| | ====================== |
-| == |                     |
-| | ================= #    |
-|    |                     |
-| |                        |
-|    |                     |
-| |     # Thanks, Stéphane |
-|  C |                     |
-| | hazelas and Kristopher |
-|  N |                     |
-| | ewsome.                |
-|    |                     |
-|                          |
-|                          |
-| +----------------------- |
-| ---+-------------------- |
-| ------+----------------- |
-| ---------+               |
-|                          |
-| .. raw:: html            |
-|                          |
-|    </div>                |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+The `! <special-chars.html#NOTREF>`__ , the *logical not* qualifier,
+reverses the outcome of a test or command, and this affects its `exit
+status <exit-status.html#EXITSTATUSREF>`__ .
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
+**Example 6-2. Negating a condition using ! **
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    true    # The "true" builtin.
+    echo "exit status of \"true\" = $?"     # 0
+
+    ! true
+    echo "exit status of \"! true\" = $?"   # 1
+    # Note that the "!" needs a space between it and the command.
+    #    !true   leads to a "command not found" error
+    #
+    # The '!' operator prefixing a command invokes the Bash history mechanism.
+
+    true
+    !true
+    # No error this time, but no negation either.
+    # It just repeats the previous command (true).
+
+
+    # =========================================================== #
+    # Preceding a _pipe_ with ! inverts the exit status returned.
+    ls | bogus_command     # bash: bogus_command: command not found
+    echo $?                # 127
+
+    ! ls | bogus_command   # bash: bogus_command: command not found
+    echo $?                # 0
+    # Note that the ! does not change the execution of the pipe.
+    # Only the exit status changes.
+    # =========================================================== #
+
+    # Thanks, StÃ©phane Chazelas and Kristopher Newsome.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    true    # The "true" builtin.
+    echo "exit status of \"true\" = $?"     # 0
+
+    ! true
+    echo "exit status of \"! true\" = $?"   # 1
+    # Note that the "!" needs a space between it and the command.
+    #    !true   leads to a "command not found" error
+    #
+    # The '!' operator prefixing a command invokes the Bash history mechanism.
+
+    true
+    !true
+    # No error this time, but no negation either.
+    # It just repeats the previous command (true).
+
+
+    # =========================================================== #
+    # Preceding a _pipe_ with ! inverts the exit status returned.
+    ls | bogus_command     # bash: bogus_command: command not found
+    echo $?                # 127
+
+    ! ls | bogus_command   # bash: bogus_command: command not found
+    echo $?                # 0
+    # Note that the ! does not change the execution of the pipe.
+    # Only the exit status changes.
+    # =========================================================== #
+
+    # Thanks, StÃ©phane Chazelas and Kristopher Newsome.
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    true    # The "true" builtin.
+    echo "exit status of \"true\" = $?"     # 0
+
+    ! true
+    echo "exit status of \"! true\" = $?"   # 1
+    # Note that the "!" needs a space between it and the command.
+    #    !true   leads to a "command not found" error
+    #
+    # The '!' operator prefixing a command invokes the Bash history mechanism.
+
+    true
+    !true
+    # No error this time, but no negation either.
+    # It just repeats the previous command (true).
+
+
+    # =========================================================== #
+    # Preceding a _pipe_ with ! inverts the exit status returned.
+    ls | bogus_command     # bash: bogus_command: command not found
+    echo $?                # 127
+
+    ! ls | bogus_command   # bash: bogus_command: command not found
+    echo $?                # 0
+    # Note that the ! does not change the execution of the pipe.
+    # Only the exit status changes.
+    # =========================================================== #
+
+    # Thanks, StÃ©phane Chazelas and Kristopher Newsome.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -642,15 +440,23 @@ testing the result of a command in a script (see `Example
 
    <div class="CAUTION">
 
-+--------------------------------------+--------------------------------------+
-| |Caution|                            |
-| Certain exit status codes have       |
-| `reserved                            |
-| meanings <exitcodes.html#EXITCODESRE |
-| F>`__                                |
-| and should not be user-specified in  |
-| a script.                            |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Caution|
+
+Certain exit status codes have `reserved
+meanings <exitcodes.html#EXITCODESREF>`__ and should not be
+user-specified in a script.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -663,26 +469,18 @@ testing the result of a command in a script (see `Example
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <exit-status.html#AEN2981>`__ |
-| In those instances when there is no  |
-| `return <complexfunct.html#RETURNREF |
-| >`__                                 |
-| terminating the function.            |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <exit-status.html#AEN2981>`__
+
+In those instances when there is no
+`return <complexfunct.html#RETURNREF>`__ terminating the function.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <escapingsection.h | Escaping                 |
-| tml>`__                  | `Up <part2.html>`__      |
-| `Home <index.html>`__    | Tests                    |
-| `Next <tests.html>`__    |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

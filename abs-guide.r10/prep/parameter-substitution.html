@@ -11,31 +11,6 @@
   <link href="loops.html" rel="NEXT" title="Loops and Branches"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="string-manipulation.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 10. Manipulating Variables
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="loops.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="PARAMETER-SUBSTITUTION">
@@ -94,20 +69,18 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">your_id=${USER}-on-${HOSTNAME}
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">your_id=${USER}-on-${HOSTNAME}
 echo "$your_id"
 #
 echo "Old \$PATH = $PATH"
 PATH=${PATH}:/opt/bin  # Add /opt/bin to $PATH for duration of script.
 echo "New \$PATH = $PATH"</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="DEFPARAM1">
@@ -130,11 +103,10 @@ echo "New \$PATH = $PATH"</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">var1=1
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">var1=1
 var2=2
 # var3 is unset.
 
@@ -146,57 +118,53 @@ echo ${var3-$var2}   # 2
 
 echo ${username-`whoami`}
 # Echoes the result of `whoami`, if variable $username is still unset.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="UNDDR">
-           </a>
-           <tt class="REPLACEABLE">
-            <i>
-             ${parameter-default}
-            </i>
-           </tt>
-           and
-           <tt class="REPLACEABLE">
-            <i>
-             ${parameter:-default}
-            </i>
-           </tt>
-           are almost equivalent. The extra
-           <span class="TOKEN">
-            :
-           </span>
-           makes
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="UNDDR">
+          </a>
+          <tt class="REPLACEABLE">
+           <i>
+            ${parameter-default}
+           </i>
+          </tt>
+          and
+          <tt class="REPLACEABLE">
+           <i>
+            ${parameter:-default}
+           </i>
+          </tt>
+          are almost equivalent. The extra
+          <span class="TOKEN">
+           :
+          </span>
+          makes
 		  a difference only when
-           <tt class="PARAMETER">
-            <i>
-             parameter
-            </i>
-           </tt>
-           has been declared, but is null.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <tt class="PARAMETER">
+           <i>
+            parameter
+           </i>
+          </tt>
+          has been declared, but is null.
+         </p>
+        </p>
+       </div>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 # param-sub.sh
 
 #  Whether a variable has been declared
@@ -239,10 +207,9 @@ echo "${variable-2}"    # 2
 echo "${variable:-3}"   # 3
 
 exit 0</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <i class="FIRSTTERM">
@@ -258,11 +225,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">DEFAULT_FILENAME=generic.data
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">DEFAULT_FILENAME=generic.data
 filename=${1:-$DEFAULT_FILENAME}
 #  If not otherwise specified, the following command block operates
 #+ on the file "generic.data".
@@ -278,10 +244,9 @@ filename=${1:-$DEFAULT_FILENAME}
 DISKS=${1:-E_NOPARAM}   # Must specify how many disks.
 #  Set $DISKS to $1 command-line-parameter,
 #+ or to $E_NOPARAM if that is unset.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        See also
        <a href="special-chars.html#EX58">
@@ -355,17 +320,15 @@ DISKS=${1:-E_NOPARAM}   # Must specify how many disks.
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo ${var=abc}   # abc
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo ${var=abc}   # abc
 echo ${var=xyz}   # abc
 # $var had already been set to abc, so it did not change.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="PARAMALTV">
@@ -408,11 +371,10 @@ echo ${var=xyz}   # abc
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo "###### \${parameter+alt_value} ########"
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo "###### \${parameter+alt_value} ########"
 echo
 
 a=${param1+xyz}
@@ -441,10 +403,9 @@ echo "a = $a"      # a =
 param6=123
 a=${param6:+xyz}
 echo "a = $a"      # a = xyz</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="QERRMSG">
@@ -506,11 +467,10 @@ echo "a = $a"      # a = xyz</pre>
       Example 10-7. Using parameter substitution and error messages
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 #  Check some of the system's environmental variables.
 #  This is good preventative maintenance.
@@ -567,10 +527,9 @@ HERE=0
 exit $HERE   # Will NOT exit here.
 
 # In fact, this script will return an exit status (echo $?) of 1.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="USAGEMESSAGE">
@@ -584,11 +543,10 @@ exit $HERE   # Will NOT exit here.
       messages
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # usage-message.sh
 
 : ${1?"Usage: $0 ARGUMENT"}
@@ -604,10 +562,9 @@ exit 0  # Will exit here only if command-line parameter present.
 # Check the exit status, both with and without command-line parameter.
 # If command-line parameter present, then "$?" is 0.
 # If not, then "$?" is 1.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="FORMALPARA">
     <p>
@@ -683,57 +640,55 @@ exit 0  # Will exit here only if command-line parameter present.
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Exceptions:
-          </p>
-          <p>
-          </p>
-          <ul>
-           <li>
-            <p>
-             <a name="NUMPOSPARAM">
-             </a>
-            </p>
-            <p>
-             <b class="COMMAND">
-              ${#*}
-             </b>
-             and
-             <b class="COMMAND">
-              ${#@}
-             </b>
-             give the
-             <em>
-              number
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Exceptions:
+         </p>
+         <p>
+         </p>
+         <ul>
+          <li>
+           <p>
+            <a name="NUMPOSPARAM">
+            </a>
+           </p>
+           <p>
+            <b class="COMMAND">
+             ${#*}
+            </b>
+            and
+            <b class="COMMAND">
+             ${#@}
+            </b>
+            give the
+            <em>
+             number
 		      of positional parameters
-             </em>
-             .
-            </p>
-           </li>
-           <li>
-            <p>
-             For an array,
-             <b class="COMMAND">
-              ${#array[*]}
-             </b>
-             and
-             <b class="COMMAND">
-              ${#array[@]}
-             </b>
-             give the number
+            </em>
+            .
+           </p>
+          </li>
+          <li>
+           <p>
+            For an array,
+            <b class="COMMAND">
+             ${#array[*]}
+            </b>
+            and
+            <b class="COMMAND">
+             ${#array[@]}
+            </b>
+            give the number
 		      of elements in the array.
-            </p>
-           </li>
-          </ul>
-         </td>
-        </tr>
-       </table>
+           </p>
+          </li>
+         </ul>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="LENGTH">
@@ -743,11 +698,10 @@ exit 0  # Will exit here only if command-line parameter present.
          Example 10-9. Length of a variable
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # length.sh
 
 E_NO_ARGS=65
@@ -770,10 +724,9 @@ echo "Number of command-line arguments passed to script = ${#@}"
 echo "Number of command-line arguments passed to script = ${#*}"
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -865,32 +818,29 @@ exit 0</pre>
        </a>
        :
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Function from "days-between.sh" example.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Function from "days-between.sh" example.
 # Strips leading zero(s) from argument passed.
 
 strip_leading_zero () #  Strip possible leading zero(s)
 {                     #+ from argument passed.
   return=${1#0}       #  The "1" refers to "$1" -- passed arg.
 }                     #  The "0" is what to remove from "$1" -- strips zeros.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Manfred Schwarb's more elaborate variation of the
 			above:
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">strip_leading_zero2 () # Strip possible leading zero(s), since otherwise
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">strip_leading_zero2 () # Strip possible leading zero(s), since otherwise
 {                      # Bash will interpret such numbers as octal values.
   shopt -s extglob     # Turn on extended globbing.
   local val=${1##+(0)} # Use local variable, longest matching series of 0's.
@@ -898,20 +848,18 @@ strip_leading_zero () #  Strip possible leading zero(s)
   _strip_leading_zero2=${val:-0}
                        # If input was 0, return 0 instead of "".
 }</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Another usage illustration:
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo `basename $PWD`        # Basename of current working directory.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo `basename $PWD`        # Basename of current working directory.
 echo "${PWD##*/}"           # Basename of current working directory.
 echo
 echo `basename $0`          # Name of script.
@@ -921,10 +869,9 @@ echo
 filename=test.data
 echo "${filename##*.}"      # data
                             # Extension of filename.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="PCTPATREF">
@@ -1026,11 +973,10 @@ echo "${filename##*.}"      # data
       Example 10-10. Pattern matching in parameter substitution
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # patt-matching.sh
 
 # Pattern matching  using the # ## % %% parameter substitution operators.
@@ -1074,10 +1020,9 @@ echo '${var1%%pattern2} =' "${var1%%$pattern2}"    #     a
 echo
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="RFE">
@@ -1090,11 +1035,10 @@ exit 0</pre>
       </span>
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # rfe.sh: Renaming file extensions.
 #
 #         rfe old_extension new_extension
@@ -1123,10 +1067,9 @@ do
 done
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
    </p>
@@ -1325,11 +1268,10 @@ exit 0</pre>
          Example 10-12. Using pattern matching to parse arbitrary strings
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 var1=abcd-1234-defg
 echo "var1 = $var1"
@@ -1390,10 +1332,9 @@ t=${path_name//o/}
 echo "$path_name with all o's deleted = $t"
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1483,11 +1424,10 @@ exit 0</pre>
          Example 10-13. Matching patterns at prefix or suffix of string
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # var-match.sh:
 # Demo of pattern replacement at prefix / suffix of string.
 
@@ -1521,10 +1461,9 @@ echo "v4 = $v4"         # abc1234zip1234abc
                         # NO REPLACEMENT.
 
 exit 0			</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1558,11 +1497,10 @@ exit 0			</pre>
        </tt>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># This is a variation on indirect reference, but with a * or @.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># This is a variation on indirect reference, but with a * or @.
 # Bash, version 2.04, adds this feature.
 
 xyz23=whatever
@@ -1581,10 +1519,9 @@ b=${!abc*}
 echo "b = $b"      #  b = abc23
 c=${!b}            #  Now, the more familiar type of indirect reference.
 echo $c            #  something_else</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
     </dl>
    </div>
@@ -1592,68 +1529,31 @@ echo $c            #  something_else</pre>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="parameter-substitution.html#AEN6310" name="FTN.AEN6310">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      If $parameter is null in a
+  <div>
+   <p>
+    <a href="parameter-substitution.html#AEN6310" name="FTN.AEN6310">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     If $parameter is null in a
 		      non-interactive script, it will terminate with a
-      <a href="exitcodes.html#EXITCODESREF">
-       <span class="RETURNVALUE">
-        127
-       </span>
-       exit status
-      </a>
-      (the Bash error code for
-      <span class="QUOTE">
-       "command not found"
+     <a href="exitcodes.html#EXITCODESREF">
+      <span class="RETURNVALUE">
+       127
       </span>
-      ).
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="string-manipulation.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="loops.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Manipulating Strings
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="manipulatingvars.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Loops and Branches
-     </td>
-    </tr>
-   </table>
+      exit status
+     </a>
+     (the Bash error code for
+     <span class="QUOTE">
+      "command not found"
+     </span>
+     ).
+    </p>
+   </p>
   </div>
  </body>
 </html>

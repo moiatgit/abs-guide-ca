@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <assortedtips.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 36. Miscellany
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <portabilityissues.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   36.8. Security Issues
@@ -167,33 +93,20 @@ hackers.
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]                                |
-|  <securityissues.html#AEN20748>`__   |
-| See Marius van Oers' article, `Unix  |
-| Shell Scripting                      |
-| Malware <http://www.virusbtn.com/mag |
-| azine/archives/200204/malshell.xml>` |
-| __                                   |
-| , and also the `*Denning*            |
-| reference <biblio.html#DENNINGREF>`_ |
-| _                                    |
-| in the *bibliography* .              |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <securityissues.html#AEN20748>`__
+
+See Marius van Oers' article, `Unix Shell Scripting
+Malware <http://www.virusbtn.com/magazine/archives/200204/malshell.xml>`__
+, and also the `*Denning* reference <biblio.html#DENNINGREF>`__ in the
+*bibliography* .
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <assortedtips.html | Assorted Tips            |
-| >`__                     | `Up <miscellany.html>`__ |
-| `Home <index.html>`__    | Portability Issues       |
-| `Next <portabilityissues |                          |
-| .html>`__                |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

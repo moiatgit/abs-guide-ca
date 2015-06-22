@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <communications.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 16. External Filters, Programs and Commands
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <mathc.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   16.7. Terminal Control Commands
@@ -92,15 +18,23 @@ Chapter 16. External Filters, Programs and Commands
     ; **tput reset** is the equivalent of
     `reset <terminalccmds.html#RESETREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ tput longname  |
-    |     xterm terminal emula |
-    | tor (X Window System)    |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ tput longname
+        xterm terminal emulator (X Window System)
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     Issuing a **tput cup X Y** moves the cursor to the (X,Y) coordinates
     in the current terminal. A **clear** to erase the terminal screen
@@ -136,37 +70,32 @@ Chapter 16. External Filters, Programs and Commands
     This command prints out extensive information about the current
     terminal. It references the *terminfo* database.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ infocmp        |
-    |     #       Reconstructe |
-    | d via infocmp from file: |
-    |      /usr/share/terminfo |
-    | /r/rxvt                  |
-    |      rxvt|rxvt terminal  |
-    | emulator (X Window Syste |
-    | m),                      |
-    |              am, bce, eo |
-    | , km, mir, msgr, xenl, x |
-    | on,                      |
-    |              colors#8, c |
-    | ols#80, it#8, lines#24,  |
-    | pairs#64,                |
-    |              acsc=``aaff |
-    | ggjjkkllmmnnooppqqrrsstt |
-    | uuvvwwxxyyzz{{||}}~~,    |
-    |              bel=^G, bli |
-    | nk=\E[5m, bold=\E[1m,    |
-    |              civis=\E[?2 |
-    | 5l,                      |
-    |              clear=\E[H\ |
-    | E[2J, cnorm=\E[?25h, cr= |
-    | ^M,                      |
-    |              ...         |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ infocmp
+        #       Reconstructed via infocmp from file:
+         /usr/share/terminfo/r/rxvt
+         rxvt|rxvt terminal emulator (X Window System), 
+                 am, bce, eo, km, mir, msgr, xenl, xon, 
+                 colors#8, cols#80, it#8, lines#24, pairs#64, 
+                 acsc=``aaffggjjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~, 
+                 bel=^G, blink=\E[5m, bold=\E[1m,
+                 civis=\E[?25l, 
+                 clear=\E[H\E[2J, cnorm=\E[?25h, cr=^M, 
+                 ...
+                  
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **reset**
     Reset terminal parameters and clear text screen. As with **clear** ,
@@ -185,18 +114,26 @@ Chapter 16. External Filters, Programs and Commands
     ``         $TERMCAP        `` to duplicate the *size* (dimensions)
     of the current terminal.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
-    |                          |
-    |     bash$ resize         |
-    |     set noglob;          |
-    |      setenv COLUMNS '80' |
-    | ;                        |
-    |      setenv LINES '24';  |
-    |      unset noglob;       |
-    |                          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: SCREEN
+
+        bash$ resize
+        set noglob;
+         setenv COLUMNS '80';
+         setenv LINES '24';
+         unset noglob;
+                    
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
  **script**
     This utility records (saves to a file) all the user keystrokes at
@@ -206,23 +143,6 @@ Chapter 16. External Filters, Programs and Commands
 .. raw:: html
 
    </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <communications.ht | Communications Commands  |
-| ml>`__                   | `Up <external.html>`__   |
-| `Home <index.html>`__    | Math Commands            |
-| `Next <mathc.html>`__    |                          |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

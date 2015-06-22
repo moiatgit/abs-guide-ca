@@ -11,58 +11,32 @@
   <link href="options.html" rel="NEXT" title="Options"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="zeros.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="options.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="DEBUGGING">
     </a>
     Chapter 32. Debugging
    </h1>
-   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
-    <tr>
-     <td width="45%">
-     </td>
-     <td align="LEFT" valign="TOP" width="45%">
+   <div>
+    <p>
+    </p>
+    <p>
+     <i>
+     </i>
+     <p>
       <i>
-      </i>
-      <p>
-       <i>
-        Debugging is twice as hard as writing the code in the first
+       Debugging is twice as hard as writing the code in the first
         place. Therefore, if you write the code as cleverly as possible,
         you are, by definition, not smart enough to debug it.
-       </i>
-      </p>
-      <p>
-       <i>
-        --Brian Kernighan
-       </i>
-      </p>
-     </td>
-    </tr>
-   </table>
+      </i>
+     </p>
+     <p>
+      <i>
+       --Brian Kernighan
+      </i>
+     </p>
+    </p>
+   </div>
    <p>
     The Bash shell contains no built-in debugger, and only bare-bones
 	debugging-specific commands and constructs. Syntax errors or
@@ -77,11 +51,10 @@
       Example 32-1. A buggy script
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # ex74.sh
 
 # This is a buggy script.
@@ -95,23 +68,20 @@ then
 fi  
 
 exit $?   # 0! Why?</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Output from script:
    </p>
-   <table bgcolor="#E0E0E0" border="1" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="SCREEN"><tt class="COMPUTEROUTPUT">./ex74.sh: [37: command not found</tt></pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="SCREEN"><tt class="COMPUTEROUTPUT">./ex74.sh: [37: command not found</tt></pre>
+     </font>
+    </p>
+   </div>
    What's wrong with the above script? Hint: after the
    <i class="FIRSTTERM">
     if
@@ -128,11 +98,10 @@ exit $?   # 0! Why?</pre>
       </a>
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # missing-keyword.sh
 # What error message will this script generate? And why?
 
@@ -147,24 +116,21 @@ exit 0     # Will not exit here!
 
 # From command line, after script terminates:
   echo $?    # 2</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Output from script:
    </p>
-   <table bgcolor="#E0E0E0" border="1" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="SCREEN"><tt class="COMPUTEROUTPUT">missing-keyword.sh: line 10: syntax error: unexpected end of file</tt>
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="SCREEN"><tt class="COMPUTEROUTPUT">missing-keyword.sh: line 10: syntax error: unexpected end of file</tt>
 	</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    Note that the error message does
    <em>
     not
@@ -192,11 +158,10 @@ exit 0     # Will not exit here!
       : another buggy script
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 #  This script is supposed to delete all filenames in current directory
 #+ containing embedded spaces.
@@ -212,10 +177,9 @@ badname=`ls | grep ' '`
 rm "$badname"
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Try to find out what's wrong with
@@ -268,19 +232,17 @@ exit 0</pre>
     . However, there are simpler
 	ways of going about it.
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING"># Correct methods of deleting filenames containing spaces.
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING"># Correct methods of deleting filenames containing spaces.
 rm *\ *
 rm *" "*
 rm *' '*
 # Thank you. S.C.</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     Summarizing the symptoms of a buggy script,
    </p>
@@ -344,31 +306,30 @@ rm *' '*
      <div class="TIP">
       <p>
       </p>
-      <table border="0" class="TIP" width="90%">
-       <tr>
-        <td align="CENTER" valign="TOP" width="25">
-         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-        </td>
-        <td align="LEFT" valign="TOP">
-         <p>
-          Even better is an
-          <b class="COMMAND">
-           echo
-          </b>
-          that echoes
+      <div>
+       <p>
+        <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+       </p>
+       <p>
+        <p>
+         Even better is an
+         <b class="COMMAND">
+          echo
+         </b>
+         that echoes
 	      only when
-          <i class="FIRSTTERM">
-           debug
-          </i>
-          is on.
-         </p>
-         <p>
-         </p>
-         <table bgcolor="#E0E0E0" border="0" width="90%">
-          <tr>
-           <td>
-            <font color="#000000">
-             <pre class="PROGRAMLISTING">### debecho (debug-echo), by Stefano Falsetto ###
+         <i class="FIRSTTERM">
+          debug
+         </i>
+         is on.
+        </p>
+        <p>
+        </p>
+        <table bgcolor="#E0E0E0" border="0" width="90%">
+         <tr>
+          <td>
+           <font color="#000000">
+            <pre class="PROGRAMLISTING">### debecho (debug-echo), by Stefano Falsetto ###
 ### Will echo passed parameters only if DEBUG is set to a value. ###
 debecho () {
   if [ ! -z "$DEBUG" ]; then
@@ -384,13 +345,52 @@ debecho $Whatever   # whatnot
 DEBUG=
 Whatever=notwhat
 debecho $Whatever   # (Will not echo.)</pre>
-            </font>
-           </td>
-          </tr>
-         </table>
-        </td>
-       </tr>
-      </table>
+           </font>
+          </td>
+         </tr>
+        </table>
+       </p>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">### debecho (debug-echo), by Stefano Falsetto ###
+### Will echo passed parameters only if DEBUG is set to a value. ###
+debecho () {
+  if [ ! -z "$DEBUG" ]; then
+     echo "$1" &gt;&amp;2
+     #         ^^^ to stderr
+  fi
+}
+
+DEBUG=on
+Whatever=whatnot
+debecho $Whatever   # whatnot
+
+DEBUG=
+Whatever=notwhat
+debecho $Whatever   # (Will not echo.)</pre>
+        </font>
+       </p>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">### debecho (debug-echo), by Stefano Falsetto ###
+### Will echo passed parameters only if DEBUG is set to a value. ###
+debecho () {
+  if [ ! -z "$DEBUG" ]; then
+     echo "$1" &gt;&amp;2
+     #         ^^^ to stderr
+  fi
+}
+
+DEBUG=on
+Whatever=whatnot
+debecho $Whatever   # whatnot
+
+DEBUG=
+Whatever=notwhat
+debecho $Whatever   # (Will not echo.)</pre>
+        </font>
+       </p>
+      </div>
      </div>
     </li>
     <li>
@@ -522,11 +522,10 @@ debecho $Whatever   # (Will not echo.)</pre>
       error message
 		and aborts the script.
      </p>
-     <table bgcolor="#E0E0E0" border="0" width="90%">
-      <tr>
-       <td>
-        <font color="#000000">
-         <pre class="PROGRAMLISTING">set -u   # Or   set -o nounset
+     <div>
+      <p>
+       <font color="#000000">
+        <pre class="PROGRAMLISTING">set -u   # Or   set -o nounset
 
 # Setting a variable to null will not trigger the error/abort.
 # unset_var=
@@ -537,10 +536,9 @@ echo "Should not echo!"
 
 # sh t2.sh
 # t2.sh: line 6: unset_var: unbound variable</pre>
-        </font>
-       </td>
-      </tr>
-     </table>
+       </font>
+      </p>
+     </div>
     </li>
     <li>
      <p>
@@ -563,11 +561,10 @@ echo "Should not echo!"
         </i>
        </b>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 # assert.sh
 
 #######################################################################
@@ -615,10 +612,9 @@ echo "This statement echoes only if the \"assert\" does not fail."
 # More commands . . .
 
 exit $?</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </div>
     </li>
     <li>
@@ -698,53 +694,49 @@ exit $?</pre>
        <a name="SIGNALD">
        </a>
       </p>
-      <table border="1" cellpadding="5" class="SIDEBAR">
-       <tr>
-        <td>
-         <div class="SIDEBAR">
-          <a name="AEN19477">
-          </a>
-          <p>
-          </p>
-          <p>
-           A
-           <i class="FIRSTTERM">
-            signal
-           </i>
-           is a message
+      <div>
+       <p>
+        <div class="SIDEBAR">
+         <a name="AEN19477">
+         </a>
+         <p>
+         </p>
+         <p>
+          A
+          <i class="FIRSTTERM">
+           signal
+          </i>
+          is a message
 		sent to a process, either by the kernel or another
 		process, telling it to take some specified action
 		(usually to terminate).  For example, hitting a
-           <a href="special-chars.html#CTLCREF">
-            Control-C
-           </a>
-           sends a user interrupt, an INT signal, to a running
+          <a href="special-chars.html#CTLCREF">
+           Control-C
+          </a>
+          sends a user interrupt, an INT signal, to a running
 		program.
-          </p>
-          <p>
-          </p>
-         </div>
-        </td>
-       </tr>
-      </table>
+         </p>
+         <p>
+         </p>
+        </div>
+       </p>
+      </div>
       <p>
        <em>
         A simple instance:
        </em>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">trap '' 2
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">trap '' 2
 # Ignore interrupt 2 (Control-C), with no action specified. 
 
 trap 'echo "Control-C disabled."' 2
 # Message when Control-C pressed.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
     </dl>
    </div>
@@ -756,11 +748,10 @@ trap 'echo "Control-C disabled."' 2
       Example 32-5. Trapping at exit
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # Hunting variables with a trap.
 
 trap 'echo Variable Listing --- a = $a  b = $b' EXIT
@@ -780,10 +771,9 @@ b=36
 exit 0
 #  Note that commenting out the 'exit' command makes no difference,
 #+ since the script exits in any case after running out of commands.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="ONLINE">
@@ -796,11 +786,10 @@ exit 0
       </b>
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # logon.sh: A quick 'n dirty script to check whether you are on-line yet.
 
 umask 177  # Make sure temp files are not world readable.
@@ -887,10 +876,9 @@ echo "On-line"
 
 # Exercise: Discuss the relative strengths and weaknesses
 #           of each of these various approaches.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="PROGRESSBAR2">
@@ -900,11 +888,10 @@ echo "On-line"
       Example 32-7. A Simple Implementation of a Progress Bar
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#! /bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#! /bin/bash
 # progress-bar2.sh
 # Author: Graham Ewart (with reformatting by ABS Guide author).
 # Used in ABS Guide with permission (thanks!).
@@ -935,46 +922,43 @@ wait $pid              # Stop the progress bar.
 trap EXIT
 
 exit $?</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="NOTE">
     <p>
     </p>
-    <table border="0" class="NOTE" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Note" hspace="5" src="../images/note.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        The
-        <tt class="OPTION">
-         DEBUG
-        </tt>
-        argument to
-        <b class="COMMAND">
-         trap
-        </b>
-        causes a specified action to execute
+    <div>
+     <p>
+      <img alt="Note" hspace="5" src="../images/note.gif"/>
+     </p>
+     <p>
+      <p>
+       The
+       <tt class="OPTION">
+        DEBUG
+       </tt>
+       argument to
+       <b class="COMMAND">
+        trap
+       </b>
+       causes a specified action to execute
 	after every command in a script. This permits tracing variables,
 	for example.
+      </p>
+      <div class="EXAMPLE">
+       <a name="VARTRACE">
+       </a>
+       <p>
+        <b>
+         Example 32-8. Tracing a variable
+        </b>
        </p>
-       <div class="EXAMPLE">
-        <a name="VARTRACE">
-        </a>
+       <div>
         <p>
-         <b>
-          Example 32-8. Tracing a variable
-         </b>
-        </p>
-        <table bgcolor="#E0E0E0" border="0" width="100%">
-         <tr>
-          <td>
-           <font color="#000000">
-            <pre class="PROGRAMLISTING">#!/bin/bash
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 trap 'echo "VARIABLE-TRACE&gt; \$variable = \"$variable\""' DEBUG
 # Echoes the value of $variable after every command.
@@ -1005,14 +989,82 @@ VARIABLE-TRACE&gt; $variable = "29"
 VARIABLE-TRACE&gt; $variable = "87"
   Just multiplied $variable by 3.
 VARIABLE-TRACE&gt; $variable = "87"</pre>
-           </font>
-          </td>
-         </tr>
-        </table>
+         </font>
+        </p>
        </div>
-      </td>
-     </tr>
-    </table>
+      </div>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
+
+trap 'echo "VARIABLE-TRACE&gt; \$variable = \"$variable\""' DEBUG
+# Echoes the value of $variable after every command.
+
+variable=29; line=$LINENO
+
+echo "  Just initialized \$variable to $variable in line number $line."
+
+let "variable *= 3"; line=$LINENO
+echo "  Just multiplied \$variable by 3 in line number $line."
+
+exit 0
+
+#  The "trap 'command1 . . . command2 . . .' DEBUG" construct is
+#+ more appropriate in the context of a complex script,
+#+ where inserting multiple "echo $variable" statements might be
+#+ awkward and time-consuming.
+
+# Thanks, Stephane Chazelas for the pointer.
+
+
+Output of script:
+
+VARIABLE-TRACE&gt; $variable = ""
+VARIABLE-TRACE&gt; $variable = "29"
+  Just initialized $variable to 29.
+VARIABLE-TRACE&gt; $variable = "29"
+VARIABLE-TRACE&gt; $variable = "87"
+  Just multiplied $variable by 3.
+VARIABLE-TRACE&gt; $variable = "87"</pre>
+      </font>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
+
+trap 'echo "VARIABLE-TRACE&gt; \$variable = \"$variable\""' DEBUG
+# Echoes the value of $variable after every command.
+
+variable=29; line=$LINENO
+
+echo "  Just initialized \$variable to $variable in line number $line."
+
+let "variable *= 3"; line=$LINENO
+echo "  Just multiplied \$variable by 3 in line number $line."
+
+exit 0
+
+#  The "trap 'command1 . . . command2 . . .' DEBUG" construct is
+#+ more appropriate in the context of a complex script,
+#+ where inserting multiple "echo $variable" statements might be
+#+ awkward and time-consuming.
+
+# Thanks, Stephane Chazelas for the pointer.
+
+
+Output of script:
+
+VARIABLE-TRACE&gt; $variable = ""
+VARIABLE-TRACE&gt; $variable = "29"
+  Just initialized $variable to 29.
+VARIABLE-TRACE&gt; $variable = "29"
+VARIABLE-TRACE&gt; $variable = "87"
+  Just multiplied $variable by 3.
+VARIABLE-TRACE&gt; $variable = "87"</pre>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Of course, the
@@ -1035,11 +1087,10 @@ VARIABLE-TRACE&gt; $variable = "87"</pre>
       Example 32-9. Running multiple processes (on an SMP box)
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # parent.sh
 # Running multiple processes on an SMP box.
 # Author: Tedman Eng
@@ -1199,278 +1250,234 @@ or *all* process started in background. So I wrote [this] bash script
 that can do the job, using the "trap" instruction.
   --Vernia Damiano
 SCRIPT_AUTHOR_COMMENTS</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="NOTE">
     <p>
     </p>
-    <table border="0" class="NOTE" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Note" hspace="5" src="../images/note.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        <tt class="USERINPUT">
-         <b>
-          trap '' SIGNAL
-         </b>
-        </tt>
-        (two adjacent
+    <div>
+     <p>
+      <img alt="Note" hspace="5" src="../images/note.gif"/>
+     </p>
+     <p>
+      <p>
+       <tt class="USERINPUT">
+        <b>
+         trap '' SIGNAL
+        </b>
+       </tt>
+       (two adjacent
 	apostrophes) disables SIGNAL for the remainder of the
 	script.
-        <tt class="USERINPUT">
-         <b>
-          trap SIGNAL
-         </b>
-        </tt>
-        restores
+       <tt class="USERINPUT">
+        <b>
+         trap SIGNAL
+        </b>
+       </tt>
+       restores
 	the functioning of SIGNAL once more. This is useful to
 	protect a critical portion of a script from an undesirable
 	interrupt.
-       </p>
-      </td>
-     </tr>
-    </table>
+      </p>
+     </p>
+    </div>
    </div>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">	trap '' 2  # Signal 2 is Control-C, now disabled.
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">	trap '' 2  # Signal 2 is Control-C, now disabled.
 	command
 	command
 	command
 	trap 2     # Reenables Control-C
 	</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
-   <table border="1" cellpadding="5" class="SIDEBAR">
-    <tr>
-     <td>
-      <div class="SIDEBAR">
-       <a name="AEN19513">
+     </font>
+    </p>
+   </div>
+   <div>
+    <p>
+     <div class="SIDEBAR">
+      <a name="AEN19513">
+      </a>
+      <p>
+      </p>
+      <p>
+       <a href="bashver3.html#BASH3REF">
+        Version 3
        </a>
-       <p>
-       </p>
-       <p>
-        <a href="bashver3.html#BASH3REF">
-         Version 3
-        </a>
-        of Bash adds the
+       of Bash adds the
 	  following
-        <a href="internalvariables.html#INTERNALVARIABLES1">
-         internal
+       <a href="internalvariables.html#INTERNALVARIABLES1">
+        internal
 	  variables
-        </a>
-        for use by the debugger.
-       </p>
-       <p>
-       </p>
-       <ol type="1">
-        <li>
-         <p>
-          <tt class="VARNAME">
-           $BASH_ARGC
-          </tt>
-         </p>
-         <p>
-          Number of command-line arguments passed to script,
+       </a>
+       for use by the debugger.
+      </p>
+      <p>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         <tt class="VARNAME">
+          $BASH_ARGC
+         </tt>
+        </p>
+        <p>
+         Number of command-line arguments passed to script,
 	     similar to
-          <a href="internalvariables.html#CLACOUNTREF">
-           <tt class="VARNAME">
-            $#
-           </tt>
-          </a>
-          .
-         </p>
-        </li>
-        <li>
-         <p>
+         <a href="internalvariables.html#CLACOUNTREF">
           <tt class="VARNAME">
-           $BASH_ARGV
+           $#
           </tt>
-         </p>
-         <p>
-          Final command-line parameter passed to script, equivalent
-          <a href="othertypesv.html#LASTARGREF">
-           <tt class="VARNAME">
-            ${!#}
-           </tt>
-          </a>
-          .
-         </p>
-        </li>
-        <li>
-         <p>
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         <tt class="VARNAME">
+          $BASH_ARGV
+         </tt>
+        </p>
+        <p>
+         Final command-line parameter passed to script, equivalent
+         <a href="othertypesv.html#LASTARGREF">
           <tt class="VARNAME">
-           $BASH_COMMAND
+           ${!#}
           </tt>
-         </p>
-         <p>
-          Command currently executing.
-         </p>
-        </li>
-        <li>
-         <p>
-          <tt class="VARNAME">
-           $BASH_EXECUTION_STRING
-          </tt>
-         </p>
-         <p>
-          The
-          <i class="FIRSTTERM">
-           option string
-          </i>
-          following the
-          <tt class="OPTION">
-           -c
-          </tt>
-          <a href="bash-options.html#CLOPTS">
-           option
-          </a>
-          to Bash.
-         </p>
-        </li>
-        <li>
-         <p>
-          <tt class="VARNAME">
-           $BASH_LINENO
-          </tt>
-         </p>
-         <p>
-          In a
-          <a href="functions.html#FUNCTIONREF">
-           function
-          </a>
-          ,
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         <tt class="VARNAME">
+          $BASH_COMMAND
+         </tt>
+        </p>
+        <p>
+         Command currently executing.
+        </p>
+       </li>
+       <li>
+        <p>
+         <tt class="VARNAME">
+          $BASH_EXECUTION_STRING
+         </tt>
+        </p>
+        <p>
+         The
+         <i class="FIRSTTERM">
+          option string
+         </i>
+         following the
+         <tt class="OPTION">
+          -c
+         </tt>
+         <a href="bash-options.html#CLOPTS">
+          option
+         </a>
+         to Bash.
+        </p>
+       </li>
+       <li>
+        <p>
+         <tt class="VARNAME">
+          $BASH_LINENO
+         </tt>
+        </p>
+        <p>
+         In a
+         <a href="functions.html#FUNCTIONREF">
+          function
+         </a>
+         ,
 	     indicates the line number of the function call.
-         </p>
-        </li>
-        <li>
-         <p>
-          <tt class="VARNAME">
-           $BASH_REMATCH
-          </tt>
-         </p>
-         <p>
-          Array variable associated with
-          <b class="COMMAND">
-           =~
-          </b>
-          <a href="bashver3.html#REGEXMATCHREF">
-           conditional regex
+        </p>
+       </li>
+       <li>
+        <p>
+         <tt class="VARNAME">
+          $BASH_REMATCH
+         </tt>
+        </p>
+        <p>
+         Array variable associated with
+         <b class="COMMAND">
+          =~
+         </b>
+         <a href="bashver3.html#REGEXMATCHREF">
+          conditional regex
 	   matching
-          </a>
-          .
-         </p>
-        </li>
-        <li>
-         <p>
-          <a name="BASHSOURCEREF">
-          </a>
-         </p>
-         <p>
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         <a name="BASHSOURCEREF">
+         </a>
+        </p>
+        <p>
+         <tt class="VARNAME">
+          $BASH_SOURCE
+         </tt>
+        </p>
+        <p>
+         This is the name of the script, usually the same as
+         <a href="othertypesv.html#ARG0">
+          $0
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="internalvariables.html#BASHSUBSHELLREF">
           <tt class="VARNAME">
-           $BASH_SOURCE
+           $BASH_SUBSHELL
           </tt>
-         </p>
-         <p>
-          This is the name of the script, usually the same as
-          <a href="othertypesv.html#ARG0">
-           $0
-          </a>
-          .
-         </p>
-        </li>
-        <li>
-         <p>
-          <a href="internalvariables.html#BASHSUBSHELLREF">
-           <tt class="VARNAME">
-            $BASH_SUBSHELL
-           </tt>
-          </a>
-         </p>
-        </li>
-       </ol>
-       <p>
-       </p>
-      </div>
-     </td>
-    </tr>
-   </table>
+         </a>
+        </p>
+       </li>
+      </ol>
+      <p>
+      </p>
+     </div>
+    </p>
+   </div>
   </div>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="debugging.html#AEN19460" name="FTN.AEN19460">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      By convention,
-      <tt class="REPLACEABLE">
-       <i>
-        signal
+  <div>
+   <p>
+    <a href="debugging.html#AEN19460" name="FTN.AEN19460">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     By convention,
+     <tt class="REPLACEABLE">
+      <i>
+       signal
 		0
-       </i>
-      </tt>
-      is assigned to
-      <a href="exit-status.html#EXITCOMMANDREF">
-       exit
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="zeros.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="options.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Of Zeros and Nulls
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part5.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Options
-     </td>
-    </tr>
-   </table>
+      </i>
+     </tt>
+     is assigned to
+     <a href="exit-status.html#EXITCOMMANDREF">
+      exit
+     </a>
+     .
+    </p>
+   </p>
   </div>
  </body>
 </html>

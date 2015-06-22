@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <regexp.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 18. Regular Expressions
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <globbingref.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   18.1. A Brief Introduction to Regular Expressions
@@ -198,124 +124,176 @@ characters -- a string or a part of a string.
     "\\<the\\>" matches the word "the," but not the words "them,"
    "there," "other," etc.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: SCREEN         |
-   |                          |
-   |     bash$ cat textfile   |
-   |     This is line 1, of w |
-   | hich there is only one i |
-   | nstance.                 |
-   |      This is the only in |
-   | stance of line 2.        |
-   |      This is line 3, ano |
-   | ther line.               |
-   |      This is line 4.     |
-   |                          |
-   |                          |
-   |     bash$ grep 'the' tex |
-   | tfile                    |
-   |     This is line 1, of w |
-   | hich there is only one i |
-   | nstance.                 |
-   |      This is the only in |
-   | stance of line 2.        |
-   |      This is line 3, ano |
-   | ther line.               |
-   |                          |
-   |                          |
-   |     bash$ grep '\<the\>' |
-   |  textfile                |
-   |     This is the only ins |
-   | tance of line 2.         |
-   |                          |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
 
-+--------------------------------------------------------------------------+
-| .. raw:: html                                                            |
-|                                                                          |
-|    <div class="SIDEBAR">                                                 |
-|                                                                          |
-| The only way to be certain that a particular RE works is to test it.     |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-| | .. code:: PROGRAMLISTING |                                             |
-| |                          |                                             |
-| |     TEST FILE: tstfile   |                                             |
-| |                          |                                             |
-| | # No match.              |                                             |
-| |                          |                                             |
-| |                          |                                             |
-| | # No match.              |                                             |
-| |     Run   grep "1133*"   |                                             |
-| | on this file.            |                                             |
-| | # Match.                 |                                             |
-| |                          |                                             |
-| |                          |                                             |
-| | # No match.              |                                             |
-| |                          |                                             |
-| |                          |                                             |
-| | # No match.              |                                             |
-| |     This line contains t |                                             |
-| | he number 113.           |                                             |
-| | # Match.                 |                                             |
-| |     This line contains t |                                             |
-| | he number 13.            |                                             |
-| | # No match.              |                                             |
-| |     This line contains t |                                             |
-| | he number 133.           |                                             |
-| | # No match.              |                                             |
-| |     This line contains t |                                             |
-| | he number 1133.          |                                             |
-| | # Match.                 |                                             |
-| |     This line contains t |                                             |
-| | he number 113312.        |                                             |
-| | # Match.                 |                                             |
-| |     This line contains t |                                             |
-| | he number 1112.          |                                             |
-| | # No match.              |                                             |
-| |     This line contains t |                                             |
-| | he number 113312312.     |                                             |
-| | # Match.                 |                                             |
-| |     This line contains n |                                             |
-| | o numbers at all.        |                                             |
-| | # No match.              |                                             |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-| | .. code:: SCREEN         |                                             |
-| |                          |                                             |
-| |     bash$ grep "1133*" t |                                             |
-| | stfile                   |                                             |
-| |     Run   grep "1133*"   |                                             |
-| | on this file.            |                                             |
-| | # Match.                 |                                             |
-| |      This line contains  |                                             |
-| | the number 113.          |                                             |
-| |  # Match.                |                                             |
-| |      This line contains  |                                             |
-| | the number 1133.         |                                             |
-| |  # Match.                |                                             |
-| |      This line contains  |                                             |
-| | the number 113312.       |                                             |
-| |  # Match.                |                                             |
-| |      This line contains  |                                             |
-| | the number 113312312.    |                                             |
-| |  # Match.                |                                             |
-| |                          |                                             |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-|                                                                          |
-| .. raw:: html                                                            |
-|                                                                          |
-|    </div>                                                                |
-                                                                          
-+--------------------------------------------------------------------------+
+      <div>
+
+   .. code:: SCREEN
+
+       bash$ cat textfile
+       This is line 1, of which there is only one instance.
+        This is the only instance of line 2.
+        This is line 3, another line.
+        This is line 4.
+
+
+       bash$ grep 'the' textfile
+       This is line 1, of which there is only one instance.
+        This is the only instance of line 2.
+        This is line 3, another line.
+
+
+       bash$ grep '\<the\>' textfile
+       This is the only instance of line 2.
+                 
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div class="SIDEBAR">
+
+The only way to be certain that a particular RE works is to test it.
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    TEST FILE: tstfile                          # No match.
+                                                # No match.
+    Run   grep "1133*"  on this file.           # Match.
+                                                # No match.
+                                                # No match.
+    This line contains the number 113.          # Match.
+    This line contains the number 13.           # No match.
+    This line contains the number 133.          # No match.
+    This line contains the number 1133.         # Match.
+    This line contains the number 113312.       # Match.
+    This line contains the number 1112.         # No match.
+    This line contains the number 113312312.    # Match.
+    This line contains no numbers at all.       # No match.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ grep "1133*" tstfile
+    Run   grep "1133*"  on this file.           # Match.
+     This line contains the number 113.          # Match.
+     This line contains the number 1133.         # Match.
+     This line contains the number 113312.       # Match.
+     This line contains the number 113312312.    # Match.
+              
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    TEST FILE: tstfile                          # No match.
+                                                # No match.
+    Run   grep "1133*"  on this file.           # Match.
+                                                # No match.
+                                                # No match.
+    This line contains the number 113.          # Match.
+    This line contains the number 13.           # No match.
+    This line contains the number 133.          # No match.
+    This line contains the number 1133.         # Match.
+    This line contains the number 113312.       # Match.
+    This line contains the number 1112.         # No match.
+    This line contains the number 113312312.    # Match.
+    This line contains no numbers at all.       # No match.
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ grep "1133*" tstfile
+    Run   grep "1133*"  on this file.           # Match.
+     This line contains the number 113.          # Match.
+     This line contains the number 1133.         # Match.
+     This line contains the number 113312.       # Match.
+     This line contains the number 113312312.    # Match.
+              
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    TEST FILE: tstfile                          # No match.
+                                                # No match.
+    Run   grep "1133*"  on this file.           # Match.
+                                                # No match.
+                                                # No match.
+    This line contains the number 113.          # Match.
+    This line contains the number 13.           # No match.
+    This line contains the number 133.          # No match.
+    This line contains the number 1133.         # Match.
+    This line contains the number 113312.       # Match.
+    This line contains the number 1112.         # No match.
+    This line contains the number 113312312.    # Match.
+    This line contains no numbers at all.       # No match.
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ grep "1133*" tstfile
+    Run   grep "1133*"  on this file.           # Match.
+     This line contains the number 113.          # Match.
+     This line contains the number 1133.         # Match.
+     This line contains the number 113312.       # Match.
+     This line contains the number 113312312.    # Match.
+              
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 -  
 
@@ -341,26 +319,29 @@ characters -- a string or a part of a string.
    The plus -- + -- matches one or more of the previous RE. It serves a
    role similar to the \* , but does *not* match zero occurrences.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     # GNU versions of se |
-   | d and awk can use "+",   |
-   |     # but it needs to be |
-   |  escaped.                |
-   |                          |
-   |     echo a111b | sed -ne |
-   |  '/a1\+b/p'              |
-   |     echo a111b | grep 'a |
-   | 1\+b'                    |
-   |     echo a111b | gawk '/ |
-   | a1+b/'                   |
-   |     # All of above are e |
-   | quivalent.               |
-   |                          |
-   |     # Thanks, S.C.       |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       # GNU versions of sed and awk can use "+",
+       # but it needs to be escaped.
+
+       echo a111b | sed -ne '/a1\+b/p'
+       echo a111b | grep 'a1\+b'
+       echo a111b | gawk '/a1+b/'
+       # All of above are equivalent.
+
+       # Thanks, S.C.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 -  `Escaped <escapingsection.html#ESCP>`__ "curly brackets" -- \\{ \\}
    -- indicate the number of occurrences of a preceding RE to match.
@@ -376,69 +357,59 @@ characters -- a string or a part of a string.
 
       <div class="NOTE">
 
-   +----------------+----------------+----------------+----------------+----------------+
-   | |Note|         |
-   | Curly brackets |
-   | are not        |
-   | available as   |
-   | an RE in the   |
-   | "classic"      |
-   | (non-POSIX     |
-   | compliant)     |
-   | version of     |
-   | `awk <awk.html |
-   | #AWKREF>`__    |
-   | . However, the |
-   | GNU extended   |
-   | version of     |
-   | *awk* ,        |
-   | **gawk** , has |
-   | the            |
-   | ``             |
-   | --re-interval  |
-   |           ``   |
-   | option that    |
-   | permits them   |
-   | (without being |
-   | escaped).      |
-   |                |
-   | +------------- |
-   | -------------+ |
-   | -------------- |
-   | ------------+- |
-   | -------------- |
-   | -----------+   |
-   | | .. code:: SC |
-   | REEN         | |
-   | |              |
-   |              | |
-   | |     bash$ ec |
-   | ho 2222 | ga | |
-   | | wk --re-inte |
-   | rval '/2{3}/ | |
-   | | '            |
-   |              | |
-   | |     2222     |
-   |              | |
-   | |              |
-   |              | |
-   |                |
-   |                |
-   | +------------- |
-   | -------------+ |
-   | -------------- |
-   | ------------+- |
-   | -------------- |
-   | -----------+   |
-   |                |
-   | **Perl** and   |
-   | some **egrep** |
-   | versions do    |
-   | not require    |
-   | escaping the   |
-   | curly          |
-   | brackets.      |
-   +----------------+----------------+----------------+----------------+----------------+
+   .. raw:: html
+
+      <div>
+
+   |Note|
+
+   Curly brackets are not available as an RE in the "classic" (non-POSIX
+   compliant) version of `awk <awk.html#AWKREF>`__ . However, the GNU
+   extended version of *awk* , **gawk** , has the
+   ``           --re-interval          `` option that permits them
+   (without being escaped).
+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: SCREEN         |
+   |                          |
+   |     bash$ echo 2222 | ga |
+   | wk --re-interval '/2{3}/ |
+   | '                        |
+   |     2222                 |
+   |                          |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   **Perl** and some **egrep** versions do not require escaping the
+   curly brackets.
+
+   .. raw:: html
+
+      </p>
+
+   .. code:: SCREEN
+
+       bash$ echo 2222 | gawk --re-interval '/2{3}/'
+       2222
+                 
+
+   .. raw:: html
+
+      </p>
+
+   .. code:: SCREEN
+
+       bash$ echo 2222 | gawk --re-interval '/2{3}/'
+       2222
+                 
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    .. raw:: html
 
@@ -454,33 +425,46 @@ characters -- a string or a part of a string.
 -  The -- **\|** -- "or" RE operator matches any of a set of alternate
    characters.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: SCREEN         |
-   |                          |
-   |     bash$ egrep 're(a|e) |
-   | d' misc.txt              |
-   |     People who read seem |
-   |  to be better informed t |
-   | han those who do not.    |
-   |      The clarinet produc |
-   | es sound by the vibratio |
-   | n of its reed.           |
-   |                          |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: SCREEN
+
+       bash$ egrep 're(a|e)d' misc.txt
+       People who read seem to be better informed than those who do not.
+        The clarinet produces sound by the vibration of its reed.
+                 
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
 .. raw:: html
 
    <div class="NOTE">
 
-+--------------------------------------+--------------------------------------+
-| |Note|                               |
-| Some versions of **sed** , **ed** ,  |
-| and **ex** support escaped versions  |
-| of the extended Regular Expressions  |
-| described above, as do the GNU       |
-| utilities.                           |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+Some versions of **sed** , **ed** , and **ex** support escaped versions
+of the extended Regular Expressions described above, as do the GNU
+utilities.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -550,62 +534,86 @@ characters -- a string or a part of a string.
 
       <div class="IMPORTANT">
 
-   +--------------------------------------+--------------------------------------+
-   | |Important|                          |
-   | POSIX character classes generally    |
-   | require quoting or `double           |
-   | brackets <testconstructs.html#DBLBRA |
-   | CKETS>`__                            |
-   | ([[ ]]).                             |
-   +--------------------------------------+--------------------------------------+
+   .. raw:: html
+
+      <div>
+
+   |Important|
+
+   POSIX character classes generally require quoting or `double
+   brackets <testconstructs.html#DBLBRACKETS>`__ ([[ ]]).
+
+   .. raw:: html
+
+      </p>
 
    .. raw:: html
 
       </div>
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: SCREEN         |
-   |                          |
-   |     bash$ grep [[:digit: |
-   | ]] test.file             |
-   |     abc=723              |
-   |                          |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
-   |                          |
-   |     # ...                |
-   |     if [[ $arow =~ [[:di |
-   | git:]] ]]   #  Numerical |
-   |  input?                  |
-   |     then       #  POSIX  |
-   | char class               |
-   |       if [[ $acol =~ [[: |
-   | alpha:]] ]] # Number fol |
-   | lowed by a letter? Illeg |
-   | al!                      |
-   |     # ...                |
-   |     # From ktour.sh exam |
-   | ple script.              |
-                             
-   +--------------------------+--------------------------+--------------------------+
+      </div>
+
+   .. raw:: html
+
+      <div>
+
+   .. code:: SCREEN
+
+       bash$ grep [[:digit:]] test.file
+       abc=723
+                 
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
+
+   .. raw:: html
+
+      <div>
+
+   .. code:: PROGRAMLISTING
+
+       # ...
+       if [[ $arow =~ [[:digit:]] ]]   #  Numerical input?
+       then       #  POSIX char class
+         if [[ $acol =~ [[:alpha:]] ]] # Number followed by a letter? Illegal!
+       # ...
+       # From ktour.sh example script.
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    These character classes may even be used with
    `globbing <globbingref.html>`__ , to a limited extent.
 
-   +--------------------------+--------------------------+--------------------------+
-   | .. code:: SCREEN         |
-   |                          |
-   |     bash$ ls -l ?[[:digi |
-   | t:]][[:digit:]]?         |
-   |     -rw-rw-r--    1 bozo |
-   |   bozo         0 Aug 21  |
-   | 14:47 a33b               |
-   |                          |
-                             
-   +--------------------------+--------------------------+--------------------------+
+   .. raw:: html
+
+      <div>
+
+   .. code:: SCREEN
+
+       bash$ ls -l ?[[:digit:]][[:digit:]]?
+       -rw-rw-r--    1 bozo  bozo         0 Aug 21 14:47 a33b
+                 
+
+   .. raw:: html
+
+      </p>
+
+   .. raw:: html
+
+      </div>
 
    POSIX character classes are used in `Example
    16-21 <textproc.html#EX49>`__ and `Example
@@ -631,25 +639,9 @@ Notes
 
 .. raw:: html
 
-   <table border="0" class="FOOTNOTES" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   <div>
 
 ` [1]  <x17129.html#AEN17134>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
  A *meta-meaning* is the meaning of a term or expression on a higher
 level of abstraction. For example, the *literal* meaning of *regular
@@ -659,29 +651,9 @@ this chapter.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [2]  <x17129.html#AEN17189>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 Since `sed <sedawk.html#SEDREF>`__ , `awk <awk.html#AWKREF>`__ , and
 `grep <textproc.html#GREPREF>`__ process single lines, there will
@@ -726,28 +698,73 @@ newline in a multiple line expression, the dot will match the newline.
 
 .. raw:: html
 
-   </td>
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    sed -e 'N;s/.*/[&]/' << EOF   # Here Document
+    line1
+    line2
+    EOF
+    # OUTPUT:
+    # [line1
+    # line2]
+
+
+
+    echo
+
+    awk '{ $0=$1 "\n" $2; if (/line.1/) {print}}' << EOF
+    line 1
+    line 2
+    EOF
+    # OUTPUT:
+    # line
+    # 1
+
+
+    # Thanks, S.C.
+
+    exit 0
 
 .. raw:: html
 
-   </tr>
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    sed -e 'N;s/.*/[&]/' << EOF   # Here Document
+    line1
+    line2
+    EOF
+    # OUTPUT:
+    # [line1
+    # line2]
+
+
+
+    echo
+
+    awk '{ $0=$1 "\n" $2; if (/line.1/) {print}}' << EOF
+    line 1
+    line 2
+    EOF
+    # OUTPUT:
+    # line
+    # 1
+
+
+    # Thanks, S.C.
+
+    exit 0
 
 .. raw:: html
 
-   </table>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <regexp.html>`__   | Regular Expressions      |
-| `Home <index.html>`__    | `Up <regexp.html>`__     |
-| `Next <globbingref.html> | Globbing                 |
-| `__                      |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

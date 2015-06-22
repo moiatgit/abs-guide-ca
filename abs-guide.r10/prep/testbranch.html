@@ -11,31 +11,6 @@
   <link href="commandsub.html" rel="NEXT" title="Command Substitution"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="loopcontrol.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 11. Loops and Branches
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="commandsub.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="TESTBRANCH">
@@ -159,89 +134,87 @@
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-          </p>
-          <p>
-          </p>
-          <ul>
-           <li>
-            <p>
-             Quoting the variables is not mandatory,
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+         </p>
+         <p>
+         </p>
+         <ul>
+          <li>
+           <p>
+            Quoting the variables is not mandatory,
 		since word splitting does not take place.
-            </p>
-           </li>
-           <li>
-            <p>
-             <a name="CASEPAREN">
-             </a>
-             Each test line
+           </p>
+          </li>
+          <li>
+           <p>
+            <a name="CASEPAREN">
+            </a>
+            Each test line
                     ends with a right paren
-             <b class="COMMAND">
-              )
-             </b>
-             .
-             <a href="testbranch.html#FTN.AEN7087" name="AEN7087">
-              <span class="footnote">
-               [1]
-              </span>
-             </a>
-            </p>
-           </li>
-           <li>
-            <p>
-             Each condition block ends
-		with a
-             <em>
-              double
-             </em>
-             semicolon
-             <span class="TOKEN">
-              ;;
+            <b class="COMMAND">
+             )
+            </b>
+            .
+            <a href="testbranch.html#FTN.AEN7087" name="AEN7087">
+             <span class="footnote">
+              [1]
              </span>
-             .
-            </p>
-           </li>
-           <li>
-            <p>
-             If a condition tests
-             <i class="FIRSTTERM">
-              true
-             </i>
-             , then the associated
+            </a>
+           </p>
+          </li>
+          <li>
+           <p>
+            Each condition block ends
+		with a
+            <em>
+             double
+            </em>
+            semicolon
+            <span class="TOKEN">
+             ;;
+            </span>
+            .
+           </p>
+          </li>
+          <li>
+           <p>
+            If a condition tests
+            <i class="FIRSTTERM">
+             true
+            </i>
+            , then the associated
 		commands execute and the
-             <b class="COMMAND">
-              case
-             </b>
-             block terminates.
-            </p>
-           </li>
-           <li>
-            <p>
-             The entire
-             <b class="COMMAND">
-              case
-             </b>
-             block ends with an
-             <b class="COMMAND">
-              esac
-             </b>
-             (
-             <i class="WORDASWORD">
-              case
-             </i>
-             spelled backwards).
-            </p>
-           </li>
-          </ul>
-         </td>
-        </tr>
-       </table>
+            <b class="COMMAND">
+             case
+            </b>
+            block terminates.
+           </p>
+          </li>
+          <li>
+           <p>
+            The entire
+            <b class="COMMAND">
+             case
+            </b>
+            block ends with an
+            <b class="COMMAND">
+             esac
+            </b>
+            (
+            <i class="WORDASWORD">
+             case
+            </i>
+            spelled backwards).
+           </p>
+          </li>
+         </ul>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX29">
@@ -254,11 +227,10 @@
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Testing ranges of characters.
 
 echo; echo "Hit a key, then hit return."
@@ -287,10 +259,9 @@ esac      #  Allows ranges of characters in [square brackets],
 #  Hint: enclose everything in a "while" loop.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX30">
@@ -303,11 +274,10 @@ exit 0</pre>
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Crude address database
 
@@ -372,10 +342,9 @@ echo
 #+ instead of terminating after displaying just one address.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="CASECL">
@@ -388,11 +357,10 @@ exit 0</pre>
        </b>
        involves testing for command-line parameters.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#! /bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#! /bin/bash
 
 case "$1" in
   "") echo "Usage: ${0##*/} &lt;filename&gt;"; exit $E_PARAM;;
@@ -409,19 +377,17 @@ case "$1" in
 
   * ) FILENAME=$1;;     # Otherwise, $1.
 esac</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Here is a more straightforward example of
 	      command-line parameter handling:
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#! /bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#! /bin/bash
 
 
 while [ $# -gt 0 ]; do    # Until you run out of parameters . . .
@@ -445,10 +411,9 @@ done
 #  From Stefano Falsetto's "Log2Rot" script,
 #+ part of his "rottlog" package.
 #  Used with permission.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="CASECMD">
        </a>
@@ -465,11 +430,10 @@ done
          variable
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # case-cmd.sh: Using command substitution to generate a "case" variable.
 
 case $( arch ) in   # $( arch ) returns machine architecture.
@@ -482,10 +446,9 @@ case $( arch ) in   # $( arch ) returns machine architecture.
 esac
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="CSGLOB">
@@ -510,11 +473,10 @@ exit 0</pre>
          Example 11-28. Simple string matching
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # match-string.sh: Simple string matching
 #                  using a 'case' construct.
 
@@ -552,10 +514,9 @@ echo $?             # 0
 
 
 exit 0		    </pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="ISALPHA">
@@ -565,11 +526,10 @@ exit 0		    </pre>
          Example 11-29. Checking for alphabetic input
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # isalpha.sh: Using a "case" structure to filter a string.
 
 SUCCESS=0
@@ -675,10 +635,9 @@ exit 0        # Script improved by S.C.
 #  Write an 'isfloat ()' function that tests for floating point numbers.
 #  Hint: The function duplicates 'isdigit ()',
 #+ but adds a test for a mandatory decimal point.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -757,11 +716,10 @@ exit 0        # Script improved by S.C.
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 PS3='Choose your favorite vegetable: ' # Sets the prompt string.
                                        # Otherwise it defaults to #? .
@@ -785,10 +743,9 @@ exit
 #+ the "select" statement.
 #  For example, if the user inputs "peas,"
 #+ the script would respond "Sorry. That is not on the menu."</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="INLISTOMIT">
@@ -867,11 +824,10 @@ exit
          in a function
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 PS3='Choose your favorite vegetable: '
 
@@ -895,10 +851,9 @@ choice_of beans rice carrots radishes rutabaga spinach
 #         passed to choice_of() function
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -914,35 +869,34 @@ exit 0</pre>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="testbranch.html#AEN7087" name="FTN.AEN7087">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Pattern-match lines may also
-      <em>
-       start
-      </em>
-      with a
-      <b class="COMMAND">
-       (
-      </b>
-      left paren to give the layout
+  <div>
+   <p>
+    <a href="testbranch.html#AEN7087" name="FTN.AEN7087">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Pattern-match lines may also
+     <em>
+      start
+     </em>
+     with a
+     <b class="COMMAND">
+      (
+     </b>
+     left paren to give the layout
     a more structured appearance.
-     </p>
-     <p>
-     </p>
-     <table bgcolor="#E0E0E0" border="0" width="90%">
-      <tr>
-       <td>
-        <font color="#000000">
-         <pre class="PROGRAMLISTING">case $( arch ) in   # $( arch ) returns machine architecture.
+    </p>
+    <p>
+    </p>
+    <table bgcolor="#E0E0E0" border="0" width="90%">
+     <tr>
+      <td>
+       <font color="#000000">
+        <pre class="PROGRAMLISTING">case $( arch ) in   # $( arch ) returns machine architecture.
   ( i386 ) echo "80386-based machine";;
 # ^      ^
   ( i486 ) echo "80486-based machine";;
@@ -950,47 +904,35 @@ exit 0</pre>
   ( i686 ) echo "Pentium2+-based machine";;
   (    * ) echo "Other type of machine";;
 esac</pre>
-        </font>
-       </td>
-      </tr>
-     </table>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="loopcontrol.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="commandsub.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Loop Control
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="loops.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Command Substitution
-     </td>
-    </tr>
-   </table>
+       </font>
+      </td>
+     </tr>
+    </table>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">case $( arch ) in   # $( arch ) returns machine architecture.
+  ( i386 ) echo "80386-based machine";;
+# ^      ^
+  ( i486 ) echo "80486-based machine";;
+  ( i586 ) echo "Pentium-based machine";;
+  ( i686 ) echo "Pentium2+-based machine";;
+  (    * ) echo "Other type of machine";;
+esac</pre>
+    </font>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">case $( arch ) in   # $( arch ) returns machine architecture.
+  ( i386 ) echo "80386-based machine";;
+# ^      ^
+  ( i486 ) echo "80486-based machine";;
+  ( i586 ) echo "Pentium-based machine";;
+  ( i686 ) echo "Pentium2+-based machine";;
+  (    * ) echo "Other type of machine";;
+esac</pre>
+    </font>
+   </p>
   </div>
  </body>
 </html>

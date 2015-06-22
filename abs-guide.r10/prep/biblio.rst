@@ -1,90 +1,25 @@
-.. raw:: html
-
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
+  Bibliography
+=============
 
 .. raw:: html
 
-   <tr>
+   <div>
+
+**
+
+*Those who do not understand UNIX are condemned to reinvent it, poorly.*
+
+*--Henry Spencer*
+
+* *
 
 .. raw:: html
 
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <disclaimer.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <contributed-scripts.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
+   </p>
 
 .. raw:: html
 
    </div>
-
-  Bibliography
-=============
-
-+--------------------+--------------------+--------------------+--------------------+
-| **                 |
-| *Those who do not  |
-| understand UNIX    |
-| are condemned to   |
-| reinvent it,       |
-| poorly.*           |
-|                    |
-| *--Henry Spencer*  |
-|                    |
-| * *                |
-+--------------------+--------------------+--------------------+--------------------+
 
 .. raw:: html
 
@@ -1680,7 +1615,7 @@ site <http://sunsite.ualberta.ca/Documentation>`__ .
    <div class="ABSTRACT">
 
 *dgatwood* has a very nice `shell script
-games <http://www.shellscriptgames.com/>`__ site, featuring a Tetris速
+games <http://www.shellscriptgames.com/>`__ site, featuring a TetrisÂ®
 clone and solitaire.
 
 .. raw:: html
@@ -2216,102 +2151,19 @@ The `manpages <basic.html#MANREF>`__ for **bash** and **bash2** ,
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <biblio.html#AEN21579>`__     |
-| It was hard to resist the obvious    |
-| pun. No slight intended, since the   |
-| book is a pretty decent introduction |
-| to the basic concepts of shell       |
-| scripting.                           |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <biblio.html#AEN21579>`__
+
+It was hard to resist the obvious pun. No slight intended, since the
+book is a pretty decent introduction to the basic concepts of shell
+scripting.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-`Prev <disclaimer.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-`Next <contributed-scripts.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-Disclaimer
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-Contributed Scripts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
+   </p>
 
 .. raw:: html
 

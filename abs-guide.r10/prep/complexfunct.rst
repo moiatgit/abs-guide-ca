@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <functions.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 24. Functions
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <localvar.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   24.1. Complex Functions and Function Complexities
@@ -83,13 +9,21 @@ Functions may process arguments passed to them and return an `exit
 status <exit-status.html#EXITSTATUSREF>`__ to the script for further
 processing.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     function_name $arg1  |
-| $arg2                    |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    function_name $arg1 $arg2
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 The function refers to the passed arguments by position (as if they were
 `positional parameters <internalvariables.html#POSPARAMREF>`__ ), that
@@ -101,111 +35,75 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
 
 **Example 24-2. Function Taking Parameters**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # Functions and para |
-| meters                   |
-|                          |
-|     DEFAULT=default      |
-|                          |
-| # Default param value.   |
-|                          |
-|     func2 () {           |
-|        if [ -z "$1" ]    |
-|                          |
-| # Is parameter #1 zero l |
-| ength?                   |
-|        then              |
-|          echo "-Paramete |
-| r #1 is zero length.-"   |
-| # Or no parameter passed |
-| .                        |
-|        else              |
-|          echo "-Paramete |
-| r #1 is \"$1\".-"        |
-|        fi                |
-|                          |
-|        variable=${1-$DEF |
-| AULT}                    |
-| #  What does             |
-|        echo "variable =  |
-| $variable"               |
-| #+ parameter substitutio |
-| n show?                  |
-|                          |
-|                          |
-| #  --------------------- |
-| ------                   |
-|                          |
-|                          |
-| #  It distinguishes betw |
-| een                      |
-|                          |
-|                          |
-| #+ no param and a null p |
-| aram.                    |
-|                          |
-|        if [ "$2" ]       |
-|        then              |
-|          echo "-Paramete |
-| r #2 is \"$2\".-"        |
-|        fi                |
-|                          |
-|        return 0          |
-|     }                    |
-|                          |
-|     echo                 |
-|                          |
-|     echo "Nothing passed |
-| ."                       |
-|     func2                |
-|            # Called with |
-|  no params               |
-|     echo                 |
-|                          |
-|                          |
-|     echo "Zero-length pa |
-| rameter passed."         |
-|     func2 ""             |
-|            # Called with |
-|  zero-length param       |
-|     echo                 |
-|                          |
-|     echo "Null parameter |
-|  passed."                |
-|     func2 "$uninitialize |
-| d_param"   # Called with |
-|  uninitialized param     |
-|     echo                 |
-|                          |
-|     echo "One parameter  |
-| passed."                 |
-|     func2 first          |
-|   # Called with one para |
-| m                        |
-|     echo                 |
-|                          |
-|     echo "Two parameters |
-|  passed."                |
-|     func2 first second   |
-|   # Called with two para |
-| ms                       |
-|     echo                 |
-|                          |
-|     echo "\"\" \"second\ |
-| " passed."               |
-|     func2 "" second      |
-|   # Called with zero-len |
-| gth first parameter      |
-|     echo                 |
-|   # and ASCII string as  |
-| a second one.            |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # Functions and parameters
+
+    DEFAULT=default                             # Default param value.
+
+    func2 () {
+       if [ -z "$1" ]                           # Is parameter #1 zero length?
+       then
+         echo "-Parameter #1 is zero length.-"  # Or no parameter passed.
+       else
+         echo "-Parameter #1 is \"$1\".-"
+       fi
+
+       variable=${1-$DEFAULT}                   #  What does
+       echo "variable = $variable"              #+ parameter substitution show?
+                                                #  ---------------------------
+                                                #  It distinguishes between
+                                                #+ no param and a null param.
+
+       if [ "$2" ]
+       then
+         echo "-Parameter #2 is \"$2\".-"
+       fi
+
+       return 0
+    }
+
+    echo
+       
+    echo "Nothing passed."   
+    func2                          # Called with no params
+    echo
+
+
+    echo "Zero-length parameter passed."
+    func2 ""                       # Called with zero-length param
+    echo
+
+    echo "Null parameter passed."
+    func2 "$uninitialized_param"   # Called with uninitialized param
+    echo
+
+    echo "One parameter passed."   
+    func2 first           # Called with one param
+    echo
+
+    echo "Two parameters passed."   
+    func2 first second    # Called with two params
+    echo
+
+    echo "\"\" \"second\" passed."
+    func2 "" second       # Called with zero-length first parameter
+    echo                  # and ASCII string as a second one.
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -215,17 +113,23 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
 
    <div class="IMPORTANT">
 
-+--------------------------------------+--------------------------------------+
-| |Important|                          |
-| The                                  |
-| `shift <othertypesv.html#SHIFTREF>`_ |
-| _                                    |
-| command works on arguments passed to |
-| functions (see `Example              |
-| 36-18 <assortedtips.html#MULTIPLICAT |
-| ION>`__                              |
-| ).                                   |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Important|
+
+The `shift <othertypesv.html#SHIFTREF>`__ command works on arguments
+passed to functions (see `Example
+36-18 <assortedtips.html#MULTIPLICATION>`__ ).
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -240,50 +144,44 @@ function see them? Well, let's clear up the confusion.
 
 **Example 24-3. Functions and command-line args passed to the script**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # func-cmdlinearg.sh |
-|     #  Call this script  |
-| with a command-line argu |
-| ment,                    |
-|     #+ something like $0 |
-|  arg1.                   |
-|                          |
-|                          |
-|     func ()              |
-|                          |
-|     {                    |
-|     echo "$1"   # Echoes |
-|  first arg passed to the |
-|  function.               |
-|     }           # Does a |
-|  command-line arg qualif |
-| y?                       |
-|                          |
-|     echo "First call to  |
-| function: no arg passed. |
-| "                        |
-|     echo "See if command |
-| -line arg is seen."      |
-|     func                 |
-|     # No! Command-line a |
-| rg not seen.             |
-|                          |
-|     echo "============== |
-| ======================== |
-| ======================"  |
-|     echo                 |
-|     echo "Second call to |
-|  function: command-line  |
-| arg passed explicitly."  |
-|     func $1              |
-|     # Now it's seen!     |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # func-cmdlinearg.sh
+    #  Call this script with a command-line argument,
+    #+ something like $0 arg1.
+
+
+    func ()
+
+    {
+    echo "$1"   # Echoes first arg passed to the function.
+    }           # Does a command-line arg qualify?
+
+    echo "First call to function: no arg passed."
+    echo "See if command-line arg is seen."
+    func
+    # No! Command-line arg not seen.
+
+    echo "============================================================"
+    echo
+    echo "Second call to function: command-line arg passed explicitly."
+    func $1
+    # Now it's seen!
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -305,45 +203,43 @@ passing variable pointers to functions.
 
 **Example 24-4. Passing an indirect reference to a function**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # ind-func.sh: Passi |
-| ng an indirect reference |
-|  to a function.          |
-|                          |
-|     echo_var ()          |
-|     {                    |
-|     echo "$1"            |
-|     }                    |
-|                          |
-|     message=Hello        |
-|     Hello=Goodbye        |
-|                          |
-|     echo_var "$message"  |
-|        # Hello           |
-|     # Now, let's pass an |
-|  indirect reference to t |
-| he function.             |
-|     echo_var "${!message |
-| }"     # Goodbye         |
-|                          |
-|     echo "-------------" |
-|                          |
-|     # What happens if we |
-|  change the contents of  |
-| "hello" variable?        |
-|     Hello="Hello, again! |
-| "                        |
-|     echo_var "$message"  |
-|        # Hello           |
-|     echo_var "${!message |
-| }"     # Hello, again!   |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # ind-func.sh: Passing an indirect reference to a function.
+
+    echo_var ()
+    {
+    echo "$1"
+    }
+
+    message=Hello
+    Hello=Goodbye
+
+    echo_var "$message"        # Hello
+    # Now, let's pass an indirect reference to the function.
+    echo_var "${!message}"     # Goodbye
+
+    echo "-------------"
+
+    # What happens if we change the contents of "hello" variable?
+    Hello="Hello, again!"
+    echo_var "$message"        # Hello
+    echo_var "${!message}"     # Hello, again!
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -358,45 +254,42 @@ The next logical question is whether parameters can be dereferenced
 
 **Example 24-5. Dereferencing a parameter passed to a function**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # dereference.sh     |
-|     # Dereferencing para |
-| meter passed to a functi |
-| on.                      |
-|     # Script by Bruce W. |
-|  Clare.                  |
-|                          |
-|     dereference ()       |
-|     {                    |
-|          y=\$"$1"   # Na |
-| me of variable (not valu |
-| e!).                     |
-|          echo $y    # $J |
-| unk                      |
-|                          |
-|          x=`eval "expr \ |
-| "$y\" "`                 |
-|          echo $1=$x      |
-|          eval "$1=\"Some |
-|  Different Text \""  # A |
-| ssign new value.         |
-|     }                    |
-|                          |
-|     Junk="Some Text"     |
-|     echo $Junk "before"  |
-|    # Some Text before    |
-|                          |
-|     dereference Junk     |
-|     echo $Junk "after"   |
-|    # Some Different Text |
-|  after                   |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # dereference.sh
+    # Dereferencing parameter passed to a function.
+    # Script by Bruce W. Clare.
+
+    dereference ()
+    {
+         y=\$"$1"   # Name of variable (not value!).
+         echo $y    # $Junk
+
+         x=`eval "expr \"$y\" "`
+         echo $1=$x
+         eval "$1=\"Some Different Text \""  # Assign new value.
+    }
+
+    Junk="Some Text"
+    echo $Junk "before"    # Some Text before
+
+    dereference Junk
+    echo $Junk "after"     # Some Different Text after
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -408,74 +301,58 @@ The next logical question is whether parameters can be dereferenced
 
 **Example 24-6. Again, dereferencing a parameter passed to a function**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # ref-params.sh: Der |
-| eferencing a parameter p |
-| assed to a function.     |
-|     #                (Co |
-| mplex Example)           |
-|                          |
-|     ITERATIONS=3  # How  |
-| many times to get input. |
-|     icount=1             |
-|                          |
-|     my_read () {         |
-|       #  Called with my_ |
-| read varname,            |
-|       #+ outputs the pre |
-| vious value between brac |
-| kets as the default valu |
-| e,                       |
-|       #+ then asks for a |
-|  new value.              |
-|                          |
-|       local local_var    |
-|                          |
-|       echo -n "Enter a v |
-| alue "                   |
-|       eval 'echo -n "[$' |
-| $1'] "'  #  Previous val |
-| ue.                      |
-|     # eval echo -n "[\$$ |
-| 1] "     #  Easier to un |
-| derstand,                |
-|                          |
-|          #+ but loses tr |
-| ailing space in user pro |
-| mpt.                     |
-|       read local_var     |
-|       [ -n "$local_var"  |
-| ] && eval $1=\$local_var |
-|                          |
-|       # "And-list": if " |
-| local_var" then set "$1" |
-|  to its value.           |
-|     }                    |
-|                          |
-|     echo                 |
-|                          |
-|     while [ "$icount" -l |
-| e "$ITERATIONS" ]        |
-|     do                   |
-|       my_read var        |
-|       echo "Entry #$icou |
-| nt = $var"               |
-|       let "icount += 1"  |
-|       echo               |
-|     done                 |
-|                          |
-|                          |
-|     # Thanks to Stephane |
-|  Chazelas for providing  |
-| this instructive example |
-| .                        |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # ref-params.sh: Dereferencing a parameter passed to a function.
+    #                (Complex Example)
+
+    ITERATIONS=3  # How many times to get input.
+    icount=1
+
+    my_read () {
+      #  Called with my_read varname,
+      #+ outputs the previous value between brackets as the default value,
+      #+ then asks for a new value.
+
+      local local_var
+
+      echo -n "Enter a value "
+      eval 'echo -n "[$'$1'] "'  #  Previous value.
+    # eval echo -n "[\$$1] "     #  Easier to understand,
+                                 #+ but loses trailing space in user prompt.
+      read local_var
+      [ -n "$local_var" ] && eval $1=\$local_var
+
+      # "And-list": if "local_var" then set "$1" to its value.
+    }
+
+    echo
+
+    while [ "$icount" -le "$ITERATIONS" ]
+    do
+      my_read var
+      echo "Entry #$icount = $var"
+      let "icount += 1"
+      echo
+    done  
+
+
+    # Thanks to Stephane Chazelas for providing this instructive example.
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -513,82 +390,68 @@ The next logical question is whether parameters can be dereferenced
 
     **Example 24-7. Maximum of two numbers**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # max.sh: Maximum of |
-    |  two integers.           |
-    |                          |
-    |     E_PARAM_ERR=250    # |
-    |  If less than 2 params p |
-    | assed to function.       |
-    |     EQUAL=251          # |
-    |  Return value if both pa |
-    | rams equal.              |
-    |     #  Error values out  |
-    | of range of any          |
-    |     #+ params that might |
-    |  be fed to the function. |
-    |                          |
-    |     max2 ()              |
-    | # Returns larger of two  |
-    | numbers.                 |
-    |     {                    |
-    | # Note: numbers compared |
-    |  must be less than 250.  |
-    |     if [ -z "$2" ]       |
-    |     then                 |
-    |       return $E_PARAM_ER |
-    | R                        |
-    |     fi                   |
-    |                          |
-    |     if [ "$1" -eq "$2" ] |
-    |     then                 |
-    |       return $EQUAL      |
-    |     else                 |
-    |       if [ "$1" -gt "$2" |
-    |  ]                       |
-    |       then               |
-    |         return $1        |
-    |       else               |
-    |         return $2        |
-    |       fi                 |
-    |     fi                   |
-    |     }                    |
-    |                          |
-    |     max2 33 34           |
-    |     return_val=$?        |
-    |                          |
-    |     if [ "$return_val" - |
-    | eq $E_PARAM_ERR ]        |
-    |     then                 |
-    |       echo "Need to pass |
-    |  two parameters to the f |
-    | unction."                |
-    |     elif [ "$return_val" |
-    |  -eq $EQUAL ]            |
-    |       then               |
-    |         echo "The two nu |
-    | mbers are equal."        |
-    |     else                 |
-    |         echo "The larger |
-    |  of the two numbers is $ |
-    | return_val."             |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |     #  Exercise (easy):  |
-    |     #  ---------------   |
-    |     #  Convert this to a |
-    | n interactive script,    |
-    |     #+ that is, have the |
-    |  script ask for input (t |
-    | wo numbers).             |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # max.sh: Maximum of two integers.
+
+        E_PARAM_ERR=250    # If less than 2 params passed to function.
+        EQUAL=251          # Return value if both params equal.
+        #  Error values out of range of any
+        #+ params that might be fed to the function.
+
+        max2 ()             # Returns larger of two numbers.
+        {                   # Note: numbers compared must be less than 250.
+        if [ -z "$2" ]
+        then
+          return $E_PARAM_ERR
+        fi
+
+        if [ "$1" -eq "$2" ]
+        then
+          return $EQUAL
+        else
+          if [ "$1" -gt "$2" ]
+          then
+            return $1
+          else
+            return $2
+          fi
+        fi
+        }
+
+        max2 33 34
+        return_val=$?
+
+        if [ "$return_val" -eq $E_PARAM_ERR ]
+        then
+          echo "Need to pass two parameters to the function."
+        elif [ "$return_val" -eq $EQUAL ]
+          then
+            echo "The two numbers are equal."
+        else
+            echo "The larger of the two numbers is $return_val."
+        fi  
+
+          
+        exit 0
+
+        #  Exercise (easy):
+        #  ---------------
+        #  Convert this to an interactive script,
+        #+ that is, have the script ask for input (two numbers).
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -598,90 +461,107 @@ The next logical question is whether parameters can be dereferenced
 
        <div class="TIP">
 
+    .. raw:: html
+
+       <div>
+
+    |Tip|
+
+    For a function to return a string or array, use a dedicated
+    variable.
+
     +--------------------------+--------------------------+--------------------------+
-    | |Tip|                    |
-    | For a function to return |
-    | a string or array, use a |
-    | dedicated variable.      |
+    | .. code:: PROGRAMLISTING |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
-    | | .. code:: PROGRAMLISTI |
-    | NG |                     |
-    | |                        |
-    |    |                     |
-    | |     count_lines_in_etc |
-    | _p |                     |
-    | | asswd()                |
-    |    |                     |
-    | |     {                  |
-    |    |                     |
-    | |       [[ -r /etc/passw |
-    | d  |                     |
-    | | ]] && REPLY=$(echo $(w |
-    | c  |                     |
-    | | -l < /etc/passwd))     |
-    |    |                     |
-    | |       #  If /etc/passw |
-    | d  |                     |
-    | | is readable, set REPLY |
-    |  t |                     |
-    | | o line count.          |
-    |    |                     |
-    | |       #  Returns both  |
-    | a  |                     |
-    | | parameter value and st |
-    | at |                     |
-    | | us information.        |
-    |    |                     |
-    | |       #  The 'echo' se |
-    | em |                     |
-    | | s unnecessary, but . . |
-    |  . |                     |
-    | |       #+ it removes ex |
-    | ce |                     |
-    | | ss whitespace from the |
-    |  o |                     |
-    | | utput.                 |
-    |    |                     |
-    | |     }                  |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     if count_lines_in_ |
-    | et |                     |
-    | | c_passwd               |
-    |    |                     |
-    | |     then               |
-    |    |                     |
-    | |       echo "There are  |
-    | $R |                     |
-    | | EPLY lines in /etc/pas |
-    | sw |                     |
-    | | d."                    |
-    |    |                     |
-    | |     else               |
-    |    |                     |
-    | |       echo "Cannot cou |
-    | nt |                     |
-    | |  lines in /etc/passwd. |
-    | "  |                     |
-    | |     fi                 |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     # Thanks, S.C.     |
-    |    |                     |
+    |     count_lines_in_etc_p |
+    | asswd()                  |
+    |     {                    |
+    |       [[ -r /etc/passwd  |
+    | ]] && REPLY=$(echo $(wc  |
+    | -l < /etc/passwd))       |
+    |       #  If /etc/passwd  |
+    | is readable, set REPLY t |
+    | o line count.            |
+    |       #  Returns both a  |
+    | parameter value and stat |
+    | us information.          |
+    |       #  The 'echo' seem |
+    | s unnecessary, but . . . |
+    |       #+ it removes exce |
+    | ss whitespace from the o |
+    | utput.                   |
+    |     }                    |
     |                          |
+    |     if count_lines_in_et |
+    | c_passwd                 |
+    |     then                 |
+    |       echo "There are $R |
+    | EPLY lines in /etc/passw |
+    | d."                      |
+    |     else                 |
+    |       echo "Cannot count |
+    |  lines in /etc/passwd."  |
+    |     fi                   |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
+    |     # Thanks, S.C.       |
                               
     +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        count_lines_in_etc_passwd()
+        {
+          [[ -r /etc/passwd ]] && REPLY=$(echo $(wc -l < /etc/passwd))
+          #  If /etc/passwd is readable, set REPLY to line count.
+          #  Returns both a parameter value and status information.
+          #  The 'echo' seems unnecessary, but . . .
+          #+ it removes excess whitespace from the output.
+        }
+
+        if count_lines_in_etc_passwd
+        then
+          echo "There are $REPLY lines in /etc/passwd."
+        else
+          echo "Cannot count lines in /etc/passwd."
+        fi  
+
+        # Thanks, S.C.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        count_lines_in_etc_passwd()
+        {
+          [[ -r /etc/passwd ]] && REPLY=$(echo $(wc -l < /etc/passwd))
+          #  If /etc/passwd is readable, set REPLY to line count.
+          #  Returns both a parameter value and status information.
+          #  The 'echo' seems unnecessary, but . . .
+          #+ it removes excess whitespace from the output.
+        }
+
+        if count_lines_in_etc_passwd
+        then
+          echo "There are $REPLY lines in /etc/passwd."
+        else
+          echo "Cannot count lines in /etc/passwd."
+        fi  
+
+        # Thanks, S.C.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -693,111 +573,93 @@ The next logical question is whether parameters can be dereferenced
 
     **Example 24-8. Converting numbers to Roman numerals**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     # Arabic number to R |
-    | oman numeral conversion  |
-    |     # Range: 0 - 200     |
-    |     # It's crude, but it |
-    |  works.                  |
-    |                          |
-    |     # Extending the rang |
-    | e and otherwise improvin |
-    | g the script is left as  |
-    | an exercise.             |
-    |                          |
-    |     # Usage: roman numbe |
-    | r-to-convert             |
-    |                          |
-    |     LIMIT=200            |
-    |     E_ARG_ERR=65         |
-    |     E_OUT_OF_RANGE=66    |
-    |                          |
-    |     if [ -z "$1" ]       |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` number-to-conve |
-    | rt"                      |
-    |       exit $E_ARG_ERR    |
-    |     fi                   |
-    |                          |
-    |     num=$1               |
-    |     if [ "$num" -gt $LIM |
-    | IT ]                     |
-    |     then                 |
-    |       echo "Out of range |
-    | !"                       |
-    |       exit $E_OUT_OF_RAN |
-    | GE                       |
-    |     fi                   |
-    |                          |
-    |     to_roman ()   # Must |
-    |  declare function before |
-    |  first call to it.       |
-    |     {                    |
-    |     number=$1            |
-    |     factor=$2            |
-    |     rchar=$3             |
-    |     let "remainder = num |
-    | ber - factor"            |
-    |     while [ "$remainder" |
-    |  -ge 0 ]                 |
-    |     do                   |
-    |       echo -n $rchar     |
-    |       let "number -= fac |
-    | tor"                     |
-    |       let "remainder = n |
-    | umber - factor"          |
-    |     done                 |
-    |                          |
-    |     return $number       |
-    |            # Exercises:  |
-    |            # ---------   |
-    |            # 1) Explain  |
-    | how this function works. |
-    |            #    Hint: di |
-    | vision by successive sub |
-    | traction.                |
-    |            # 2) Extend t |
-    | o range of the function. |
-    |            #    Hint: us |
-    | e "echo" and command-sub |
-    | stitution capture.       |
-    |     }                    |
-    |                          |
-    |                          |
-    |     to_roman $num 100 C  |
-    |     num=$?               |
-    |     to_roman $num 90 LXX |
-    | XX                       |
-    |     num=$?               |
-    |     to_roman $num 50 L   |
-    |     num=$?               |
-    |     to_roman $num 40 XL  |
-    |     num=$?               |
-    |     to_roman $num 10 X   |
-    |     num=$?               |
-    |     to_roman $num 9 IX   |
-    |     num=$?               |
-    |     to_roman $num 5 V    |
-    |     num=$?               |
-    |     to_roman $num 4 IV   |
-    |     num=$?               |
-    |     to_roman $num 1 I    |
-    |     # Successive calls t |
-    | o conversion function!   |
-    |     # Is this really nec |
-    | essary??? Can it be simp |
-    | lified?                  |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     exit                 |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        # Arabic number to Roman numeral conversion
+        # Range: 0 - 200
+        # It's crude, but it works.
+
+        # Extending the range and otherwise improving the script is left as an exercise.
+
+        # Usage: roman number-to-convert
+
+        LIMIT=200
+        E_ARG_ERR=65
+        E_OUT_OF_RANGE=66
+
+        if [ -z "$1" ]
+        then
+          echo "Usage: `basename $0` number-to-convert"
+          exit $E_ARG_ERR
+        fi  
+
+        num=$1
+        if [ "$num" -gt $LIMIT ]
+        then
+          echo "Out of range!"
+          exit $E_OUT_OF_RANGE
+        fi  
+
+        to_roman ()   # Must declare function before first call to it.
+        {
+        number=$1
+        factor=$2
+        rchar=$3
+        let "remainder = number - factor"
+        while [ "$remainder" -ge 0 ]
+        do
+          echo -n $rchar
+          let "number -= factor"
+          let "remainder = number - factor"
+        done  
+
+        return $number
+               # Exercises:
+               # ---------
+               # 1) Explain how this function works.
+               #    Hint: division by successive subtraction.
+               # 2) Extend to range of the function.
+               #    Hint: use "echo" and command-substitution capture.
+        }
+           
+
+        to_roman $num 100 C
+        num=$?
+        to_roman $num 90 LXXXX
+        num=$?
+        to_roman $num 50 L
+        num=$?
+        to_roman $num 40 XL
+        num=$?
+        to_roman $num 10 X
+        num=$?
+        to_roman $num 9 IX
+        num=$?
+        to_roman $num 5 V
+        num=$?
+        to_roman $num 4 IV
+        num=$?
+        to_roman $num 1 I
+        # Successive calls to conversion function!
+        # Is this really necessary??? Can it be simplified?
+
+        echo
+
+        exit
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -809,1806 +671,641 @@ The next logical question is whether parameters can be dereferenced
 
        <div class="IMPORTANT">
 
-    +--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+
-    | |Impor |
-    | tant|  |
-    | The    |
-    | larges |
-    | t      |
-    | positi |
-    | ve     |
-    | intege |
-    | r      |
-    | a      |
-    | functi |
-    | on     |
-    | can    |
-    | return |
-    | is     |
-    | 255.   |
-    | The    |
-    | **retu |
-    | rn**   |
-    | comman |
-    | d      |
-    | is     |
-    | closel |
-    | y      |
-    | tied   |
-    | to the |
-    | concep |
-    | t      |
-    | of     |
-    | `exit  |
-    | status |
-    |  <exit |
-    | -statu |
-    | s.html |
-    | #EXITS |
-    | TATUSR |
-    | EF>`__ |
-    | ,      |
-    | which  |
-    | accoun |
-    | ts     |
-    | for    |
-    | this   |
-    | partic |
-    | ular   |
-    | limita |
-    | tion.  |
-    | Fortun |
-    | ately, |
-    | there  |
-    | are    |
-    | variou |
-    | s      |
-    | `worka |
-    | rounds |
-    |  <asso |
-    | rtedti |
-    | ps.htm |
-    | l#RVT> |
-    | `__    |
-    | for    |
-    | those  |
-    | situat |
-    | ions   |
-    | requir |
-    | ing    |
-    | a      |
-    | large  |
-    | intege |
-    | r      |
-    | return |
-    | value  |
-    | from a |
-    | functi |
-    | on.    |
-    |        |
-    | .. raw |
-    | :: htm |
-    | l      |
-    |        |
-    |    <di |
-    | v      |
-    |    cla |
-    | ss="EX |
-    | AMPLE" |
-    | >      |
-    |        |
-    | **Exam |
-    | ple    |
-    | 24-9.  |
-    | Testin |
-    | g      |
-    | large  |
-    | return |
-    | values |
-    | in a   |
-    | functi |
-    | on**   |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    | | .. c |
-    | ode::  |
-    | PROGRA |
-    | MLISTI |
-    | NG |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #!/bin |
-    | /bash  |
-    |        |
-    |    |   |
-    | |      |
-    | # retu |
-    | rn-tes |
-    | t.sh   |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # The  |
-    | larges |
-    | t posi |
-    | ti |   |
-    | | ve v |
-    | alue a |
-    |  funct |
-    | ion ca |
-    | n  |   |
-    | | retu |
-    | rn is  |
-    | 255.   |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | return |
-    | _test  |
-    | ()     |
-    |    |   |
-    | |    # |
-    |  Retur |
-    | ns wha |
-    | tever  |
-    | pa |   |
-    | | ssed |
-    |  to it |
-    | .      |
-    |        |
-    |    |   |
-    | |      |
-    | {      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   retu |
-    | rn $1  |
-    |        |
-    |    |   |
-    | |      |
-    | }      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | return |
-    | _test  |
-    | 27     |
-    |    |   |
-    | |    # |
-    |  o.k.  |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | echo $ |
-    | ?      |
-    |        |
-    |    |   |
-    | |    # |
-    |  Retur |
-    | ns 27. |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | return |
-    | _test  |
-    | 255    |
-    |    |   |
-    | |    # |
-    |  Still |
-    |  o.k.  |
-    |        |
-    |    |   |
-    | |      |
-    | echo $ |
-    | ?      |
-    |        |
-    |    |   |
-    | |    # |
-    |  Retur |
-    | ns 255 |
-    | .      |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | return |
-    | _test  |
-    | 257    |
-    |    |   |
-    | |    # |
-    |  Error |
-    | !      |
-    |        |
-    |    |   |
-    | |      |
-    | echo $ |
-    | ?      |
-    |        |
-    |    |   |
-    | |    # |
-    |  Retur |
-    | ns 1 ( |
-    | return |
-    |  c |   |
-    | | ode  |
-    | for mi |
-    | scella |
-    | neous  |
-    | er |   |
-    | | ror) |
-    | .      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # ==== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | =====  |
-    |        |
-    |    |   |
-    | |      |
-    | return |
-    | _test  |
-    | -15189 |
-    | 6  |   |
-    | |    # |
-    |  Do la |
-    | rge ne |
-    | gative |
-    |  n |   |
-    | | umbe |
-    | rs wor |
-    | k?     |
-    |        |
-    |    |   |
-    | |      |
-    | echo $ |
-    | ?      |
-    |        |
-    |    |   |
-    | |    # |
-    |  Will  |
-    | this r |
-    | eturn  |
-    | -1 |   |
-    | | 5189 |
-    | 6?     |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |    # |
-    |  No! I |
-    | t retu |
-    | rns 16 |
-    | 8. |   |
-    | |      |
-    | #  Ver |
-    | sion o |
-    | f Bash |
-    |  b |   |
-    | | efor |
-    | e 2.05 |
-    | b perm |
-    | itted  |
-    |    |   |
-    | |      |
-    | #+ lar |
-    | ge neg |
-    | ative  |
-    | in |   |
-    | | tege |
-    | r retu |
-    | rn val |
-    | ues.   |
-    |    |   |
-    | |      |
-    | #  It  |
-    | happen |
-    | ed to  |
-    | be |   |
-    | |  a u |
-    | seful  |
-    | featur |
-    | e.     |
-    |    |   |
-    | |      |
-    | #  New |
-    | er ver |
-    | sions  |
-    | of |   |
-    | |  Bas |
-    | h unfo |
-    | rtunat |
-    | ely pl |
-    | ug |   |
-    | |  thi |
-    | s loop |
-    | hole.  |
-    |        |
-    |    |   |
-    | |      |
-    | #  Thi |
-    | s may  |
-    | break  |
-    | ol |   |
-    | | der  |
-    | script |
-    | s.     |
-    |        |
-    |    |   |
-    | |      |
-    | #  Cau |
-    | tion!  |
-    |        |
-    |    |   |
-    | |      |
-    | # ==== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | =====  |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | exit 0 |
-    |        |
-    |        |
-    |    |   |
-    |        |
-    |        |
-    |        |
-    |        |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    |        |
-    | .. raw |
-    | :: htm |
-    | l      |
-    |        |
-    |    </d |
-    | iv>    |
-    |        |
-    | A      |
-    | workar |
-    | ound   |
-    | for    |
-    | obtain |
-    | ing    |
-    | large  |
-    | intege |
-    | r      |
-    | "retur |
-    | n      |
-    | values |
-    | "      |
-    | is to  |
-    | simply |
-    | assign |
-    | the    |
-    | "retur |
-    | n      |
-    | value" |
-    | to a   |
-    | global |
-    | variab |
-    | le.    |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    | | .. c |
-    | ode::  |
-    | PROGRA |
-    | MLISTI |
-    | NG |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | Return |
-    | _Val=  |
-    |   # Gl |
-    | ob |   |
-    | | al v |
-    | ariabl |
-    | e to h |
-    | old ov |
-    | er |   |
-    | | size |
-    |  retur |
-    | n valu |
-    | e of f |
-    | un |   |
-    | | ctio |
-    | n.     |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | alt_re |
-    | turn_t |
-    | est () |
-    |    |   |
-    | |      |
-    | {      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   fvar |
-    | =$1    |
-    |        |
-    |    |   |
-    | |      |
-    |   Retu |
-    | rn_Val |
-    | =$fvar |
-    |    |   |
-    | |      |
-    |   retu |
-    | rn   # |
-    |  Retur |
-    | ns |   |
-    | |  0 ( |
-    | succes |
-    | s).    |
-    |        |
-    |    |   |
-    | |      |
-    | }      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | alt_re |
-    | turn_t |
-    | est 1  |
-    |    |   |
-    | |      |
-    | echo $ |
-    | ?      |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |  # 0   |
-    |    |   |
-    | |      |
-    | echo " |
-    | return |
-    |  value |
-    |  = |   |
-    | |  $Re |
-    | turn_V |
-    | al"    |
-    |  # 1   |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | alt_re |
-    | turn_t |
-    | est 25 |
-    | 6  |   |
-    | |      |
-    | echo " |
-    | return |
-    |  value |
-    |  = |   |
-    | |  $Re |
-    | turn_V |
-    | al"    |
-    |  # 256 |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | alt_re |
-    | turn_t |
-    | est 25 |
-    | 7  |   |
-    | |      |
-    | echo " |
-    | return |
-    |  value |
-    |  = |   |
-    | |  $Re |
-    | turn_V |
-    | al"    |
-    |  # 257 |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | alt_re |
-    | turn_t |
-    | est 25 |
-    | 70 |   |
-    | | 1    |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | echo " |
-    | return |
-    |  value |
-    |  = |   |
-    | |  $Re |
-    | turn_V |
-    | al"    |
-    |  #2570 |
-    | 1  |   |
-    |        |
-    |        |
-    |        |
-    |        |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    |        |
-    | A more |
-    | elegan |
-    | t      |
-    | method |
-    | is to  |
-    | have   |
-    | the    |
-    | functi |
-    | on     |
-    | **echo |
-    | **     |
-    | its    |
-    | "retur |
-    | n      |
-    | value  |
-    | to     |
-    | ``     |
-    |        |
-    |     st |
-    | dout   |
-    |        |
-    |      ` |
-    | `      |
-    | ," and |
-    | then   |
-    | captur |
-    | e      |
-    | it by  |
-    | `comma |
-    | nd     |
-    | substi |
-    | tution |
-    |  <comm |
-    | andsub |
-    | .html# |
-    | COMMAN |
-    | DSUBRE |
-    | F>`__  |
-    | . See  |
-    | the    |
-    | `discu |
-    | ssion  |
-    | of     |
-    | this < |
-    | assort |
-    | edtips |
-    | .html# |
-    | RVT>`_ |
-    | _      |
-    | in     |
-    | `Secti |
-    | on     |
-    | 36.7 < |
-    | assort |
-    | edtips |
-    | .html> |
-    | `__    |
-    | .      |
-    |        |
-    | .. raw |
-    | :: htm |
-    | l      |
-    |        |
-    |    <di |
-    | v      |
-    |    cla |
-    | ss="EX |
-    | AMPLE" |
-    | >      |
-    |        |
-    | **Exam |
-    | ple    |
-    | 24-10. |
-    | Compar |
-    | ing    |
-    | two    |
-    | large  |
-    | intege |
-    | rs**   |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    | | .. c |
-    | ode::  |
-    | PROGRA |
-    | MLISTI |
-    | NG |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #!/bin |
-    | /bash  |
-    |        |
-    |    |   |
-    | |      |
-    | # max2 |
-    | .sh: M |
-    | aximum |
-    |  o |   |
-    | | f tw |
-    | o LARG |
-    | E inte |
-    | gers.  |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #  Thi |
-    | s is t |
-    | he pre |
-    | vi |   |
-    | | ous  |
-    | "max.s |
-    | h" exa |
-    | mple,  |
-    |    |   |
-    | |      |
-    | #+ mod |
-    | ified  |
-    | to per |
-    | mi |   |
-    | | t co |
-    | mparin |
-    | g larg |
-    | e inte |
-    | ge |   |
-    | | rs.  |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | EQUAL= |
-    | 0      |
-    |        |
-    |    |   |
-    | | # Re |
-    | turn v |
-    | alue i |
-    | f both |
-    |  p |   |
-    | | aram |
-    | s equa |
-    | l.     |
-    |        |
-    |    |   |
-    | |      |
-    | E_PARA |
-    | M_ERR= |
-    | -99999 |
-    |    |   |
-    | | # No |
-    | t enou |
-    | gh par |
-    | ams pa |
-    | ss |   |
-    | | ed t |
-    | o func |
-    | tion.  |
-    |        |
-    |    |   |
-    | |      |
-    | #      |
-    |        |
-    | ^^^^^^ |
-    |    |   |
-    | |   Ou |
-    | t of r |
-    | ange o |
-    | f any  |
-    | pa |   |
-    | | rams |
-    |  that  |
-    | might  |
-    | be pas |
-    | se |   |
-    | | d.   |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | max2 ( |
-    | )      |
-    |        |
-    |    |   |
-    | | # "R |
-    | eturns |
-    | " larg |
-    | er of  |
-    | tw |   |
-    | | o nu |
-    | mbers. |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | {      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | if [ - |
-    | z "$2" |
-    |  ]     |
-    |    |   |
-    | |      |
-    | then   |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   echo |
-    |  $E_PA |
-    | RAM_ER |
-    | R  |   |
-    | |      |
-    |   retu |
-    | rn     |
-    |        |
-    |    |   |
-    | |      |
-    | fi     |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | if [ " |
-    | $1" -e |
-    | q "$2" |
-    |  ] |   |
-    | |      |
-    | then   |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   echo |
-    |  $EQUA |
-    | L      |
-    |    |   |
-    | |      |
-    |   retu |
-    | rn     |
-    |        |
-    |    |   |
-    | |      |
-    | else   |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   if [ |
-    |  "$1"  |
-    | -gt "$ |
-    | 2" |   |
-    | |  ]   |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   then |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |     re |
-    | tval=$ |
-    | 1      |
-    |    |   |
-    | |      |
-    |   else |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |     re |
-    | tval=$ |
-    | 2      |
-    |    |   |
-    | |      |
-    |   fi   |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | fi     |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | echo $ |
-    | retval |
-    |        |
-    |    |   |
-    | | # Ec |
-    | hoes ( |
-    | to std |
-    | out),  |
-    | ra |   |
-    | | ther |
-    |  than  |
-    | return |
-    | ing va |
-    | lu |   |
-    | | e.   |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | | # Wh |
-    | y?     |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | }      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | return |
-    | _val=$ |
-    | (max2  |
-    | 33 |   |
-    | | 001  |
-    | 33997) |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #      |
-    |        |
-    |  ^^^^  |
-    |    |   |
-    | |      |
-    |        |
-    | Functi |
-    | on nam |
-    | e  |   |
-    | |      |
-    | #      |
-    |        |
-    |        |
-    | ^^ |   |
-    | | ^^^  |
-    | ^^^^^  |
-    | Params |
-    |  passe |
-    | d  |   |
-    | |      |
-    | #  Thi |
-    | s is a |
-    | ctuall |
-    | y  |   |
-    | | a fo |
-    | rm of  |
-    | comman |
-    | d subs |
-    | ti |   |
-    | | tuti |
-    | on:    |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #+ tre |
-    | ating  |
-    | a func |
-    | ti |   |
-    | | on a |
-    | s if i |
-    | t were |
-    |  a com |
-    | ma |   |
-    | | nd,  |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #+ and |
-    |  assig |
-    | ning t |
-    | he |   |
-    | |  std |
-    | out of |
-    |  the f |
-    | unctio |
-    | n  |   |
-    | | to t |
-    | he var |
-    | iable  |
-    | "retur |
-    | n_ |   |
-    | | val. |
-    | "      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # ==== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | === OU |
-    | TPUT = |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | =====  |
-    |        |
-    |    |   |
-    | |      |
-    | if [ " |
-    | $retur |
-    | n_val" |
-    |  - |   |
-    | | eq " |
-    | $E_PAR |
-    | AM_ERR |
-    | " ]    |
-    |    |   |
-    | |      |
-    |   then |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |   echo |
-    |  "Erro |
-    | r in p |
-    | ar |   |
-    | | amet |
-    | ers pa |
-    | ssed t |
-    | o comp |
-    | ar |   |
-    | | ison |
-    |  funct |
-    | ion!"  |
-    |        |
-    |    |   |
-    | |      |
-    | elif [ |
-    |  "$ret |
-    | urn_va |
-    | l" |   |
-    | |  -eq |
-    |  "$EQU |
-    | AL" ]  |
-    |        |
-    |    |   |
-    | |      |
-    |   then |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |     ec |
-    | ho "Th |
-    | e two  |
-    | nu |   |
-    | | mber |
-    | s are  |
-    | equal. |
-    | "      |
-    |    |   |
-    | |      |
-    | else   |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |     ec |
-    | ho "Th |
-    | e larg |
-    | er |   |
-    | |  of  |
-    | the tw |
-    | o numb |
-    | ers is |
-    |  $ |   |
-    | | retu |
-    | rn_val |
-    | ."     |
-    |        |
-    |    |   |
-    | |      |
-    | fi     |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # ==== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | ====== |
-    | ====== |
-    | == |   |
-    | | ==== |
-    | ====== |
-    | =====  |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | exit 0 |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #  Exe |
-    | rcises |
-    | :      |
-    |    |   |
-    | |      |
-    | #  --- |
-    | ------ |
-    |        |
-    |    |   |
-    | |      |
-    | #  1)  |
-    | Find a |
-    |  more  |
-    | el |   |
-    | | egan |
-    | t way  |
-    | of tes |
-    | ting   |
-    |    |   |
-    | |      |
-    | #+     |
-    | the pa |
-    | ramete |
-    | rs |   |
-    | |  pas |
-    | sed to |
-    |  the f |
-    | unctio |
-    | n. |   |
-    | |      |
-    | #  2)  |
-    | Simpli |
-    | fy the |
-    |  i |   |
-    | | f/th |
-    | en str |
-    | ucture |
-    |  at "O |
-    | UT |   |
-    | | PUT. |
-    | "      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #  3)  |
-    | Rewrit |
-    | e the  |
-    | sc |   |
-    | | ript |
-    |  to ta |
-    | ke inp |
-    | ut fro |
-    | m  |   |
-    | | comm |
-    | and-li |
-    | ne par |
-    | ameter |
-    | s. |   |
-    |        |
-    |        |
-    |        |
-    |        |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    |        |
-    | .. raw |
-    | :: htm |
-    | l      |
-    |        |
-    |    </d |
-    | iv>    |
-    |        |
-    | Here   |
-    | is     |
-    | anothe |
-    | r      |
-    | exampl |
-    | e      |
-    | of     |
-    | captur |
-    | ing    |
-    | a      |
-    | functi |
-    | on     |
-    | "retur |
-    | n      |
-    | value. |
-    | "      |
-    | Unders |
-    | tandin |
-    | g      |
-    | it     |
-    | requir |
-    | es     |
-    | some   |
-    | knowle |
-    | dge    |
-    | of     |
-    | `awk < |
-    | awk.ht |
-    | ml#AWK |
-    | REF>`_ |
-    | _      |
-    | .      |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    | | .. c |
-    | ode::  |
-    | PROGRA |
-    | MLISTI |
-    | NG |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | month_ |
-    | length |
-    |  ()  # |
-    |  T |   |
-    | | akes |
-    |  month |
-    |  numbe |
-    | r as a |
-    | n  |   |
-    | | argu |
-    | ment.  |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | {      |
-    |        |
-    |      # |
-    |  R |   |
-    | | etur |
-    | ns num |
-    | ber of |
-    |  days  |
-    | in |   |
-    | |  mon |
-    | th.    |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | monthD |
-    | ="31 2 |
-    | 8 31 3 |
-    | 0  |   |
-    | | 31 3 |
-    | 0 31 3 |
-    | 1 30 3 |
-    | 1 30 3 |
-    | 1" |   |
-    | |   #  |
-    | Declar |
-    | e as l |
-    | ocal?  |
-    |    |   |
-    | |      |
-    | echo " |
-    | $month |
-    | D" | a |
-    | wk |   |
-    | |  '{  |
-    | print  |
-    | $'"${1 |
-    | }"' }' |
-    |    |   |
-    | |   #  |
-    | Tricky |
-    | .      |
-    |        |
-    |    |   |
-    | |      |
-    | #      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    | ^^^^^^ |
-    | ^^^    |
-    |    |   |
-    | |      |
-    | # Para |
-    | meter  |
-    | passed |
-    |  t |   |
-    | | o fu |
-    | nction |
-    |   ($1  |
-    | -- mon |
-    | th |   |
-    | |  num |
-    | ber),  |
-    | then t |
-    | o awk. |
-    |    |   |
-    | |      |
-    | # Awk  |
-    | sees t |
-    | his as |
-    |  " |   |
-    | | prin |
-    | t $1 . |
-    |  . . p |
-    | rint $ |
-    | 12 |   |
-    | | " (d |
-    | ependi |
-    | ng on  |
-    | month  |
-    | nu |   |
-    | | mber |
-    | )      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # Temp |
-    | late f |
-    | or pas |
-    | si |   |
-    | | ng a |
-    |  param |
-    | eter t |
-    | o embe |
-    | dd |   |
-    | | ed a |
-    | wk scr |
-    | ipt:   |
-    |        |
-    |    |   |
-    | |      |
-    | #      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |     $' |
-    | "${scr |
-    | ip |   |
-    | | t_pa |
-    | ramete |
-    | r}"'   |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #    H |
-    | ere's  |
-    | a slig |
-    | ht |   |
-    | | ly s |
-    | impler |
-    |  awk c |
-    | onstru |
-    | ct |   |
-    | | :    |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #    e |
-    | cho $m |
-    | onthD  |
-    | |  |   |
-    | | awk  |
-    | -v mon |
-    | th=$1  |
-    | '{prin |
-    | t  |   |
-    | | $(mo |
-    | nth)}' |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #    U |
-    | ses th |
-    | e -v a |
-    | wk |   |
-    | |  opt |
-    | ion, w |
-    | hich a |
-    | ssigns |
-    |  a |   |
-    | |  var |
-    | iable  |
-    | value  |
-    |        |
-    |    |   |
-    | |      |
-    | #+   p |
-    | rior t |
-    | o exec |
-    | ut |   |
-    | | ion  |
-    | of the |
-    |  awk p |
-    | rogram |
-    |  b |   |
-    | | lock |
-    | .      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #    T |
-    | hank y |
-    | ou, Ri |
-    | ch |   |
-    | | .    |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | #  Nee |
-    | ds err |
-    | or che |
-    | ck |   |
-    | | ing  |
-    | for co |
-    | rrect  |
-    | parame |
-    | te |   |
-    | | r ra |
-    | nge (1 |
-    | -12)   |
-    |        |
-    |    |   |
-    | |      |
-    | #+ and |
-    |  for F |
-    | ebruar |
-    | y  |   |
-    | | in l |
-    | eap ye |
-    | ar.    |
-    |        |
-    |    |   |
-    | |      |
-    | }      |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # ---- |
-    | ------ |
-    | ------ |
-    | -- |   |
-    | | ---- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | -- |   |
-    | | ---- |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | # Usag |
-    | e exam |
-    | ple:   |
-    |    |   |
-    | |      |
-    | month= |
-    | 4      |
-    |    # A |
-    | pr |   |
-    | | il,  |
-    | for ex |
-    | ample  |
-    | (4th m |
-    | on |   |
-    | | th). |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | days_i |
-    | n=$(mo |
-    | nth_le |
-    | ng |   |
-    | | th $ |
-    | month) |
-    |        |
-    |        |
-    |    |   |
-    | |      |
-    | echo $ |
-    | days_i |
-    | n  # 3 |
-    | 0  |   |
-    | |      |
-    | # ---- |
-    | ------ |
-    | ------ |
-    | -- |   |
-    | | ---- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | -- |   |
-    | | ---- |
-    |        |
-    |        |
-    |        |
-    |    |   |
-    |        |
-    |        |
-    |        |
-    |        |
-    |        |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+-- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ------ |
-    | +----- |
-    | ------ |
-    | ------ |
-    | ------ |
-    | ---+   |
-    |        |
-    | See    |
-    | also   |
-    | `Examp |
-    | le     |
-    | A-7 <c |
-    | ontrib |
-    | uted-s |
-    | cripts |
-    | .html# |
-    | DAYSBE |
-    | TWEEN> |
-    | `__    |
-    | and    |
-    | `Examp |
-    | le     |
-    | A-37 < |
-    | contri |
-    | buted- |
-    | script |
-    | s.html |
-    | #STDDE |
-    | V>`__  |
-    | .      |
-    |        |
-    | ``     |
-    |        |
-    |        |
-    |        |
-    |      E |
-    | xercis |
-    | e:     |
-    |        |
-    |        |
-    |        |
-    |    ``  |
-    | Using  |
-    | what   |
-    | we     |
-    | have   |
-    | just   |
-    | learne |
-    | d,     |
-    | extend |
-    | the    |
-    | previo |
-    | us     |
-    | `Roman |
-    | numera |
-    | ls     |
-    | exampl |
-    | e <com |
-    | plexfu |
-    | nct.ht |
-    | ml#EX6 |
-    | 1>`__  |
-    | to     |
-    | accept |
-    | arbitr |
-    | arily  |
-    | large  |
-    | input. |
-    +--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+
+    .. raw:: html
+
+       <div>
+
+    |Important|
+
+    The largest positive integer a function can return is 255. The
+    **return** command is closely tied to the concept of `exit
+    status <exit-status.html#EXITSTATUSREF>`__ , which accounts for this
+    particular limitation. Fortunately, there are various
+    `workarounds <assortedtips.html#RVT>`__ for those situations
+    requiring a large integer return value from a function.
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
+    **Example 24-9. Testing large return values in a function**
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # return-test.sh
+
+        # The largest positive value a function can return is 255.
+
+        return_test ()         # Returns whatever passed to it.
+        {
+          return $1
+        }
+
+        return_test 27         # o.k.
+        echo $?                # Returns 27.
+          
+        return_test 255        # Still o.k.
+        echo $?                # Returns 255.
+
+        return_test 257        # Error!
+        echo $?                # Returns 1 (return code for miscellaneous error).
+
+        # =========================================================
+        return_test -151896    # Do large negative numbers work?
+        echo $?                # Will this return -151896?
+                               # No! It returns 168.
+        #  Version of Bash before 2.05b permitted
+        #+ large negative integer return values.
+        #  It happened to be a useful feature.
+        #  Newer versions of Bash unfortunately plug this loophole.
+        #  This may break older scripts.
+        #  Caution!
+        # =========================================================
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </div>
+
+    A workaround for obtaining large integer "return values" is to
+    simply assign the "return value" to a global variable.
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     Return_Val=   # Glob |
+    | al variable to hold over |
+    | size return value of fun |
+    | ction.                   |
+    |                          |
+    |     alt_return_test ()   |
+    |     {                    |
+    |       fvar=$1            |
+    |       Return_Val=$fvar   |
+    |       return   # Returns |
+    |  0 (success).            |
+    |     }                    |
+    |                          |
+    |     alt_return_test 1    |
+    |     echo $?              |
+    |                  # 0     |
+    |     echo "return value = |
+    |  $Return_Val"    # 1     |
+    |                          |
+    |     alt_return_test 256  |
+    |     echo "return value = |
+    |  $Return_Val"    # 256   |
+    |                          |
+    |     alt_return_test 257  |
+    |     echo "return value = |
+    |  $Return_Val"    # 257   |
+    |                          |
+    |     alt_return_test 2570 |
+    | 1                        |
+    |     echo "return value = |
+    |  $Return_Val"    #25701  |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    A more elegant method is to have the function **echo** its "return
+    value to ``             stdout            `` ," and then capture it
+    by `command substitution <commandsub.html#COMMANDSUBREF>`__ . See
+    the `discussion of this <assortedtips.html#RVT>`__ in `Section
+    36.7 <assortedtips.html>`__ .
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
+    **Example 24-10. Comparing two large integers**
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # max2.sh: Maximum of two LARGE integers.
+
+        #  This is the previous "max.sh" example,
+        #+ modified to permit comparing large integers.
+
+        EQUAL=0             # Return value if both params equal.
+        E_PARAM_ERR=-99999  # Not enough params passed to function.
+        #           ^^^^^^    Out of range of any params that might be passed.
+
+        max2 ()             # "Returns" larger of two numbers.
+        {
+        if [ -z "$2" ]
+        then
+          echo $E_PARAM_ERR
+          return
+        fi
+
+        if [ "$1" -eq "$2" ]
+        then
+          echo $EQUAL
+          return
+        else
+          if [ "$1" -gt "$2" ]
+          then
+            retval=$1
+          else
+            retval=$2
+          fi
+        fi
+
+        echo $retval        # Echoes (to stdout), rather than returning value.
+                            # Why?
+        }
+
+
+        return_val=$(max2 33001 33997)
+        #            ^^^^             Function name
+        #                 ^^^^^ ^^^^^ Params passed
+        #  This is actually a form of command substitution:
+        #+ treating a function as if it were a command,
+        #+ and assigning the stdout of the function to the variable "return_val."
+
+
+        # ========================= OUTPUT ========================
+        if [ "$return_val" -eq "$E_PARAM_ERR" ]
+          then
+          echo "Error in parameters passed to comparison function!"
+        elif [ "$return_val" -eq "$EQUAL" ]
+          then
+            echo "The two numbers are equal."
+        else
+            echo "The larger of the two numbers is $return_val."
+        fi
+        # =========================================================
+          
+        exit 0
+
+        #  Exercises:
+        #  ---------
+        #  1) Find a more elegant way of testing
+        #+    the parameters passed to the function.
+        #  2) Simplify the if/then structure at "OUTPUT."
+        #  3) Rewrite the script to take input from command-line parameters.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </div>
+
+    Here is another example of capturing a function "return value."
+    Understanding it requires some knowledge of
+    `awk <awk.html#AWKREF>`__ .
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     month_length ()  # T |
+    | akes month number as an  |
+    | argument.                |
+    |     {                # R |
+    | eturns number of days in |
+    |  month.                  |
+    |     monthD="31 28 31 30  |
+    | 31 30 31 31 30 31 30 31" |
+    |   # Declare as local?    |
+    |     echo "$monthD" | awk |
+    |  '{ print $'"${1}"' }'   |
+    |   # Tricky.              |
+    |     #                    |
+    |           ^^^^^^^^^      |
+    |     # Parameter passed t |
+    | o function  ($1 -- month |
+    |  number), then to awk.   |
+    |     # Awk sees this as " |
+    | print $1 . . . print $12 |
+    | " (depending on month nu |
+    | mber)                    |
+    |     # Template for passi |
+    | ng a parameter to embedd |
+    | ed awk script:           |
+    |     #                    |
+    |               $'"${scrip |
+    | t_parameter}"'           |
+    |                          |
+    |     #    Here's a slight |
+    | ly simpler awk construct |
+    | :                        |
+    |     #    echo $monthD |  |
+    | awk -v month=$1 '{print  |
+    | $(month)}'               |
+    |     #    Uses the -v awk |
+    |  option, which assigns a |
+    |  variable value          |
+    |     #+   prior to execut |
+    | ion of the awk program b |
+    | lock.                    |
+    |     #    Thank you, Rich |
+    | .                        |
+    |                          |
+    |     #  Needs error check |
+    | ing for correct paramete |
+    | r range (1-12)           |
+    |     #+ and for February  |
+    | in leap year.            |
+    |     }                    |
+    |                          |
+    |     # ------------------ |
+    | ------------------------ |
+    | ----                     |
+    |     # Usage example:     |
+    |     month=4        # Apr |
+    | il, for example (4th mon |
+    | th).                     |
+    |     days_in=$(month_leng |
+    | th $month)               |
+    |     echo $days_in  # 30  |
+    |     # ------------------ |
+    | ------------------------ |
+    | ----                     |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    See also `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and
+    `Example A-37 <contributed-scripts.html#STDDEV>`__ .
+
+    ``                         Exercise:                       `` Using
+    what we have just learned, extend the previous `Roman numerals
+    example <complexfunct.html#EX61>`__ to accept arbitrarily large
+    input.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # return-test.sh
+
+        # The largest positive value a function can return is 255.
+
+        return_test ()         # Returns whatever passed to it.
+        {
+          return $1
+        }
+
+        return_test 27         # o.k.
+        echo $?                # Returns 27.
+          
+        return_test 255        # Still o.k.
+        echo $?                # Returns 255.
+
+        return_test 257        # Error!
+        echo $?                # Returns 1 (return code for miscellaneous error).
+
+        # =========================================================
+        return_test -151896    # Do large negative numbers work?
+        echo $?                # Will this return -151896?
+                               # No! It returns 168.
+        #  Version of Bash before 2.05b permitted
+        #+ large negative integer return values.
+        #  It happened to be a useful feature.
+        #  Newer versions of Bash unfortunately plug this loophole.
+        #  This may break older scripts.
+        #  Caution!
+        # =========================================================
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        Return_Val=   # Global variable to hold oversize return value of function.
+
+        alt_return_test ()
+        {
+          fvar=$1
+          Return_Val=$fvar
+          return   # Returns 0 (success).
+        }
+
+        alt_return_test 1
+        echo $?                              # 0
+        echo "return value = $Return_Val"    # 1
+
+        alt_return_test 256
+        echo "return value = $Return_Val"    # 256
+
+        alt_return_test 257
+        echo "return value = $Return_Val"    # 257
+
+        alt_return_test 25701
+        echo "return value = $Return_Val"    #25701
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # max2.sh: Maximum of two LARGE integers.
+
+        #  This is the previous "max.sh" example,
+        #+ modified to permit comparing large integers.
+
+        EQUAL=0             # Return value if both params equal.
+        E_PARAM_ERR=-99999  # Not enough params passed to function.
+        #           ^^^^^^    Out of range of any params that might be passed.
+
+        max2 ()             # "Returns" larger of two numbers.
+        {
+        if [ -z "$2" ]
+        then
+          echo $E_PARAM_ERR
+          return
+        fi
+
+        if [ "$1" -eq "$2" ]
+        then
+          echo $EQUAL
+          return
+        else
+          if [ "$1" -gt "$2" ]
+          then
+            retval=$1
+          else
+            retval=$2
+          fi
+        fi
+
+        echo $retval        # Echoes (to stdout), rather than returning value.
+                            # Why?
+        }
+
+
+        return_val=$(max2 33001 33997)
+        #            ^^^^             Function name
+        #                 ^^^^^ ^^^^^ Params passed
+        #  This is actually a form of command substitution:
+        #+ treating a function as if it were a command,
+        #+ and assigning the stdout of the function to the variable "return_val."
+
+
+        # ========================= OUTPUT ========================
+        if [ "$return_val" -eq "$E_PARAM_ERR" ]
+          then
+          echo "Error in parameters passed to comparison function!"
+        elif [ "$return_val" -eq "$EQUAL" ]
+          then
+            echo "The two numbers are equal."
+        else
+            echo "The larger of the two numbers is $return_val."
+        fi
+        # =========================================================
+          
+        exit 0
+
+        #  Exercises:
+        #  ---------
+        #  1) Find a more elegant way of testing
+        #+    the parameters passed to the function.
+        #  2) Simplify the if/then structure at "OUTPUT."
+        #  3) Rewrite the script to take input from command-line parameters.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        month_length ()  # Takes month number as an argument.
+        {                # Returns number of days in month.
+        monthD="31 28 31 30 31 30 31 31 30 31 30 31"  # Declare as local?
+        echo "$monthD" | awk '{ print $'"${1}"' }'    # Tricky.
+        #                             ^^^^^^^^^
+        # Parameter passed to function  ($1 -- month number), then to awk.
+        # Awk sees this as "print $1 . . . print $12" (depending on month number)
+        # Template for passing a parameter to embedded awk script:
+        #                                 $'"${script_parameter}"'
+
+        #    Here's a slightly simpler awk construct:
+        #    echo $monthD | awk -v month=$1 '{print $(month)}'
+        #    Uses the -v awk option, which assigns a variable value
+        #+   prior to execution of the awk program block.
+        #    Thank you, Rich.
+
+        #  Needs error checking for correct parameter range (1-12)
+        #+ and for February in leap year.
+        }
+
+        # ----------------------------------------------
+        # Usage example:
+        month=4        # April, for example (4th month).
+        days_in=$(month_length $month)
+        echo $days_in  # 30
+        # ----------------------------------------------
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # return-test.sh
+
+        # The largest positive value a function can return is 255.
+
+        return_test ()         # Returns whatever passed to it.
+        {
+          return $1
+        }
+
+        return_test 27         # o.k.
+        echo $?                # Returns 27.
+          
+        return_test 255        # Still o.k.
+        echo $?                # Returns 255.
+
+        return_test 257        # Error!
+        echo $?                # Returns 1 (return code for miscellaneous error).
+
+        # =========================================================
+        return_test -151896    # Do large negative numbers work?
+        echo $?                # Will this return -151896?
+                               # No! It returns 168.
+        #  Version of Bash before 2.05b permitted
+        #+ large negative integer return values.
+        #  It happened to be a useful feature.
+        #  Newer versions of Bash unfortunately plug this loophole.
+        #  This may break older scripts.
+        #  Caution!
+        # =========================================================
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        Return_Val=   # Global variable to hold oversize return value of function.
+
+        alt_return_test ()
+        {
+          fvar=$1
+          Return_Val=$fvar
+          return   # Returns 0 (success).
+        }
+
+        alt_return_test 1
+        echo $?                              # 0
+        echo "return value = $Return_Val"    # 1
+
+        alt_return_test 256
+        echo "return value = $Return_Val"    # 256
+
+        alt_return_test 257
+        echo "return value = $Return_Val"    # 257
+
+        alt_return_test 25701
+        echo "return value = $Return_Val"    #25701
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # max2.sh: Maximum of two LARGE integers.
+
+        #  This is the previous "max.sh" example,
+        #+ modified to permit comparing large integers.
+
+        EQUAL=0             # Return value if both params equal.
+        E_PARAM_ERR=-99999  # Not enough params passed to function.
+        #           ^^^^^^    Out of range of any params that might be passed.
+
+        max2 ()             # "Returns" larger of two numbers.
+        {
+        if [ -z "$2" ]
+        then
+          echo $E_PARAM_ERR
+          return
+        fi
+
+        if [ "$1" -eq "$2" ]
+        then
+          echo $EQUAL
+          return
+        else
+          if [ "$1" -gt "$2" ]
+          then
+            retval=$1
+          else
+            retval=$2
+          fi
+        fi
+
+        echo $retval        # Echoes (to stdout), rather than returning value.
+                            # Why?
+        }
+
+
+        return_val=$(max2 33001 33997)
+        #            ^^^^             Function name
+        #                 ^^^^^ ^^^^^ Params passed
+        #  This is actually a form of command substitution:
+        #+ treating a function as if it were a command,
+        #+ and assigning the stdout of the function to the variable "return_val."
+
+
+        # ========================= OUTPUT ========================
+        if [ "$return_val" -eq "$E_PARAM_ERR" ]
+          then
+          echo "Error in parameters passed to comparison function!"
+        elif [ "$return_val" -eq "$EQUAL" ]
+          then
+            echo "The two numbers are equal."
+        else
+            echo "The larger of the two numbers is $return_val."
+        fi
+        # =========================================================
+          
+        exit 0
+
+        #  Exercises:
+        #  ---------
+        #  1) Find a more elegant way of testing
+        #+    the parameters passed to the function.
+        #  2) Simplify the if/then structure at "OUTPUT."
+        #  3) Rewrite the script to take input from command-line parameters.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        month_length ()  # Takes month number as an argument.
+        {                # Returns number of days in month.
+        monthD="31 28 31 30 31 30 31 31 30 31 30 31"  # Declare as local?
+        echo "$monthD" | awk '{ print $'"${1}"' }'    # Tricky.
+        #                             ^^^^^^^^^
+        # Parameter passed to function  ($1 -- month number), then to awk.
+        # Awk sees this as "print $1 . . . print $12" (depending on month number)
+        # Template for passing a parameter to embedded awk script:
+        #                                 $'"${script_parameter}"'
+
+        #    Here's a slightly simpler awk construct:
+        #    echo $monthD | awk -v month=$1 '{print $(month)}'
+        #    Uses the -v awk option, which assigns a variable value
+        #+   prior to execution of the awk program block.
+        #    Thank you, Rich.
+
+        #  Needs error checking for correct parameter range (1-12)
+        #+ and for February in leap year.
+        }
+
+        # ----------------------------------------------
+        # Usage example:
+        month=4        # April, for example (4th month).
+        days_in=$(month_length $month)
+        echo $days_in  # 30
+        # ----------------------------------------------
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2637,73 +1334,58 @@ The next logical question is whether parameters can be dereferenced
 
     **Example 24-11. Real name from username**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # realname.sh        |
-    |     #                    |
-    |     # From username, get |
-    | s "real name" from /etc/ |
-    | passwd.                  |
-    |                          |
-    |                          |
-    |     ARGCOUNT=1       # E |
-    | xpect one arg.           |
-    |     E_WRONGARGS=85       |
-    |                          |
-    |     file=/etc/passwd     |
-    |     pattern=$1           |
-    |                          |
-    |     if [ $# -ne "$ARGCOU |
-    | NT" ]                    |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` USERNAME"       |
-    |       exit $E_WRONGARGS  |
-    |     fi                   |
-    |                          |
-    |     file_excerpt ()    # |
-    |   Scan file for pattern, |
-    |     {                  # |
-    | + then print relevant po |
-    | rtion of line.           |
-    |       while read line  # |
-    |  "while" does not necess |
-    | arily need [ condition ] |
-    |       do                 |
-    |         echo "$line" | g |
-    | rep $1 | awk -F":" '{ pr |
-    | int $5 }'                |
-    |         # Have awk use " |
-    | :" delimiter.            |
-    |       done               |
-    |     } <$file  # Redirect |
-    |  into function's stdin.  |
-    |                          |
-    |     file_excerpt $patter |
-    | n                        |
-    |                          |
-    |     # Yes, this entire s |
-    | cript could be reduced t |
-    | o                        |
-    |     #       grep PATTERN |
-    |  /etc/passwd | awk -F":" |
-    |  '{ print $5 }'          |
-    |     # or                 |
-    |     #       awk -F: '/PA |
-    | TTERN/ {print $5}'       |
-    |     # or                 |
-    |     #       awk -F: '($1 |
-    |  == "username") { print  |
-    | $5 }' # real name from u |
-    | sername                  |
-    |     # However, it might  |
-    | not be as instructive.   |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # realname.sh
+        #
+        # From username, gets "real name" from /etc/passwd.
+
+
+        ARGCOUNT=1       # Expect one arg.
+        E_WRONGARGS=85
+
+        file=/etc/passwd
+        pattern=$1
+
+        if [ $# -ne "$ARGCOUNT" ]
+        then
+          echo "Usage: `basename $0` USERNAME"
+          exit $E_WRONGARGS
+        fi  
+
+        file_excerpt ()    #  Scan file for pattern,
+        {                  #+ then print relevant portion of line.
+          while read line  # "while" does not necessarily need [ condition ]
+          do
+            echo "$line" | grep $1 | awk -F":" '{ print $5 }'
+            # Have awk use ":" delimiter.
+          done
+        } <$file  # Redirect into function's stdin.
+
+        file_excerpt $pattern
+
+        # Yes, this entire script could be reduced to
+        #       grep PATTERN /etc/passwd | awk -F":" '{ print $5 }'
+        # or
+        #       awk -F: '/PATTERN/ {print $5}'
+        # or
+        #       awk -F: '($1 == "username") { print $5 }' # real name from username
+        # However, it might not be as instructive.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2714,59 +1396,72 @@ The next logical question is whether parameters can be dereferenced
     redirecting the ``         stdin        `` to an embedded bracketed
     code block within the function.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     # Instead of:        |
-    |     Function ()          |
-    |     {                    |
-    |      ...                 |
-    |      } < file            |
-    |                          |
-    |     # Try this:          |
-    |     Function ()          |
-    |     {                    |
-    |       {                  |
-    |         ...              |
-    |        } < file          |
-    |     }                    |
-    |                          |
-    |     # Similarly,         |
-    |                          |
-    |     Function ()  # This  |
-    | works.                   |
-    |     {                    |
-    |       {                  |
-    |        echo $*           |
-    |       } | tr a b         |
-    |     }                    |
-    |                          |
-    |     Function ()  # This  |
-    | doesn't work.            |
-    |     {                    |
-    |       echo $*            |
-    |     } | tr a b   # A nes |
-    | ted code block is mandat |
-    | ory here.                |
-    |                          |
-    |                          |
-    |     # Thanks, S.C.       |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        # Instead of:
+        Function ()
+        {
+         ...
+         } < file
+
+        # Try this:
+        Function ()
+        {
+          {
+            ...
+           } < file
+        }
+
+        # Similarly,
+
+        Function ()  # This works.
+        {
+          {
+           echo $*
+          } | tr a b
+        }
+
+        Function ()  # This doesn't work.
+        {
+          echo $*
+        } | tr a b   # A nested code block is mandatory here.
+
+
+        # Thanks, S.C.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | Emmanuel Rouat's `sample             |
-    | ``              bashrc             ` |
-    | `                                    |
-    | file <sample-bashrc.html>`__         |
-    | contains some instructive examples   |
-    | of functions.                        |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    Emmanuel Rouat's `sample ``             bashrc            ``
+    file <sample-bashrc.html>`__ contains some instructive examples of
+    functions.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -2783,27 +1478,18 @@ The next logical question is whether parameters can be dereferenced
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]                                |
-|  <complexfunct.html#AEN18474>`__     |
-| The **return** command is a Bash     |
-| `builtin <internal.html#BUILTINREF>` |
-| __                                   |
-| .                                    |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <complexfunct.html#AEN18474>`__
+
+The **return** command is a Bash `builtin <internal.html#BUILTINREF>`__
+.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <functions.html>`_ | Functions                |
-| _                        | `Up <functions.html>`__  |
-| `Home <index.html>`__    | Local Variables          |
-| `Next <localvar.html>`__ |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

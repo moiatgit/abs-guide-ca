@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <numerical-constants.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 8. Operations and Related Topics
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <opprecedence.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   8.3. The Double-Parentheses Construct
@@ -93,117 +19,80 @@ variables in Bash, for example, ``      (( var++ ))     `` .
 
 **Example 8-5. C-style manipulation of variables**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # c-vars.sh          |
-|     # Manipulating a var |
-| iable, C-style, using th |
-| e (( ... )) construct.   |
-|                          |
-|                          |
-|     echo                 |
-|                          |
-|     (( a = 23 ))  #  Set |
-| ting a value, C-style,   |
-|                   #+ wit |
-| h spaces on both sides o |
-| f the "=".               |
-|     echo "a (initial val |
-| ue) = $a"   # 23         |
-|                          |
-|     (( a++ ))     #  Pos |
-| t-increment 'a', C-style |
-| .                        |
-|     echo "a (after a++)  |
-| = $a"       # 24         |
-|                          |
-|     (( a-- ))     #  Pos |
-| t-decrement 'a', C-style |
-| .                        |
-|     echo "a (after a--)  |
-| = $a"       # 23         |
-|                          |
-|                          |
-|     (( ++a ))     #  Pre |
-| -increment 'a', C-style. |
-|     echo "a (after ++a)  |
-| = $a"       # 24         |
-|                          |
-|     (( --a ))     #  Pre |
-| -decrement 'a', C-style. |
-|     echo "a (after --a)  |
-| = $a"       # 23         |
-|                          |
-|     echo                 |
-|                          |
-|     #################### |
-| ######################## |
-| ############             |
-|     #  Note that, as in  |
-| C, pre- and post-decreme |
-| nt operators             |
-|     #+ have different si |
-| de-effects.              |
-|                          |
-|     n=1; let --n && echo |
-|  "True" || echo "False"  |
-|  # False                 |
-|     n=1; let n-- && echo |
-|  "True" || echo "False"  |
-|  # True                  |
-|                          |
-|     #  Thanks, Jeroen Do |
-| mburg.                   |
-|     #################### |
-| ######################## |
-| ############             |
-|                          |
-|     echo                 |
-|                          |
-|     (( t = a<45?7:11 ))  |
-|   # C-style trinary oper |
-| ator.                    |
-|     #       ^  ^ ^       |
-|     echo "If a < 45, the |
-| n t = 7, else t = 11."   |
-| # a = 23                 |
-|     echo "t = $t "       |
-|                          |
-| # t = 7                  |
-|                          |
-|     echo                 |
-|                          |
-|                          |
-|     # -----------------  |
-|     # Easter Egg alert!  |
-|     # -----------------  |
-|     #  Chet Ramey seems  |
-| to have snuck a bunch of |
-|  undocumented C-style    |
-|     #+ constructs into B |
-| ash (actually adapted fr |
-| om ksh, pretty much).    |
-|     #  In the Bash docs, |
-|  Ramey calls (( ... )) s |
-| hell arithmetic,         |
-|     #+ but it goes far b |
-| eyond that.              |
-|     #  Sorry, Chet, the  |
-| secret is out.           |
-|                          |
-|     # See also "for" and |
-|  "while" loops using the |
-|  (( ... )) construct.    |
-|                          |
-|     # These work only wi |
-| th version 2.04 or later |
-|  of Bash.                |
-|                          |
-|     exit                 |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # c-vars.sh
+    # Manipulating a variable, C-style, using the (( ... )) construct.
+
+
+    echo
+
+    (( a = 23 ))  #  Setting a value, C-style,
+                  #+ with spaces on both sides of the "=".
+    echo "a (initial value) = $a"   # 23
+
+    (( a++ ))     #  Post-increment 'a', C-style.
+    echo "a (after a++) = $a"       # 24
+
+    (( a-- ))     #  Post-decrement 'a', C-style.
+    echo "a (after a--) = $a"       # 23
+
+
+    (( ++a ))     #  Pre-increment 'a', C-style.
+    echo "a (after ++a) = $a"       # 24
+
+    (( --a ))     #  Pre-decrement 'a', C-style.
+    echo "a (after --a) = $a"       # 23
+
+    echo
+
+    ########################################################
+    #  Note that, as in C, pre- and post-decrement operators
+    #+ have different side-effects.
+
+    n=1; let --n && echo "True" || echo "False"  # False
+    n=1; let n-- && echo "True" || echo "False"  # True
+
+    #  Thanks, Jeroen Domburg.
+    ########################################################
+
+    echo
+
+    (( t = a<45?7:11 ))   # C-style trinary operator.
+    #       ^  ^ ^
+    echo "If a < 45, then t = 7, else t = 11."  # a = 23
+    echo "t = $t "                              # t = 7
+
+    echo
+
+
+    # -----------------
+    # Easter Egg alert!
+    # -----------------
+    #  Chet Ramey seems to have snuck a bunch of undocumented C-style
+    #+ constructs into Bash (actually adapted from ksh, pretty much).
+    #  In the Bash docs, Ramey calls (( ... )) shell arithmetic,
+    #+ but it goes far beyond that.
+    #  Sorry, Chet, the secret is out.
+
+    # See also "for" and "while" loops using the (( ... )) construct.
+
+    # These work only with version 2.04 or later of Bash.
+
+    exit
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -211,24 +100,6 @@ variables in Bash, for example, ``      (( var++ ))     `` .
 
 See also `Example 11-13 <loops1.html#FORLOOPC>`__ and `Example
 8-4 <numerical-constants.html#NUMBERS>`__ .
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <numerical-constan | Numerical Constants      |
-| ts.html>`__              | `Up <operations.html>`__ |
-| `Home <index.html>`__    | Operator Precedence      |
-| `Next <opprecedence.html |                          |
-| >`__                     |                          |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

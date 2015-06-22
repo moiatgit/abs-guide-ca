@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <loops.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 11. Loops and Branches
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <nestedloops.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   11.1. Loops
@@ -104,43 +30,51 @@ control condition* is true.
 
        <div class="NOTE">
 
-    +--------------------------------------+--------------------------------------+
-    | |Note|                               |
-    | During each pass through the loop,   |
-    | ``                           arg     |
-    |                      ``              |
-    | takes on the value of each           |
-    | successive variable in the           |
-    | ``                           list    |
-    |                       ``             |
-    | .                                    |
-    +--------------------------------------+--------------------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    During each pass through the loop,
+    ``                         arg                       `` takes on the
+    value of each successive variable in the
+    ``                         list                       `` .
+
+    .. raw:: html
+
+       </p>
 
     .. raw:: html
 
        </div>
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     for arg in "$var1" " |
-    | $var2" "$var3" ... "$var |
-    | N"                       |
-    |     # In pass 1 of the l |
-    | oop, arg = $var1         |
-    |     # In pass 2 of the l |
-    | oop, arg = $var2         |
-    |     # In pass 3 of the l |
-    | oop, arg = $var3         |
-    |     # ...                |
-    |     # In pass N of the l |
-    | oop, arg = $varN         |
-    |                          |
-    |     # Arguments in [list |
-    | ] quoted to prevent poss |
-    | ible word splitting.     |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        for arg in "$var1" "$var2" "$var3" ... "$varN"  
+        # In pass 1 of the loop, arg = $var1        
+        # In pass 2 of the loop, arg = $var2        
+        # In pass 3 of the loop, arg = $var3        
+        # ...
+        # In pass N of the loop, arg = $varN
+
+        # Arguments in [list] quoted to prevent possible word splitting.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The argument ``                   list                 `` may
     contain `wild cards <special-chars.html#ASTERISKREF>`__ .
@@ -157,48 +91,41 @@ control condition* is true.
 
     **Example 11-1. Simple *for* loops**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Listing the planet |
-    | s.                       |
-    |                          |
-    |     for planet in Mercur |
-    | y Venus Earth Mars Jupit |
-    | er Saturn Uranus Neptune |
-    |  Pluto                   |
-    |     do                   |
-    |       echo $planet  # Ea |
-    | ch planet on a separate  |
-    | line.                    |
-    |     done                 |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     for planet in "Mercu |
-    | ry Venus Earth Mars Jupi |
-    | ter Saturn Uranus Neptun |
-    | e Pluto"                 |
-    |         # All planets on |
-    |  same line.              |
-    |         # Entire 'list'  |
-    | enclosed in quotes creat |
-    | es a single variable.    |
-    |         # Why? Whitespac |
-    | e incorporated into the  |
-    | variable.                |
-    |     do                   |
-    |       echo $planet       |
-    |     done                 |
-    |                          |
-    |     echo; echo "Whoops!  |
-    | Pluto is no longer a pla |
-    | net!"                    |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # Listing the planets.
+
+        for planet in Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto
+        do
+          echo $planet  # Each planet on a separate line.
+        done
+
+        echo; echo
+
+        for planet in "Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto"
+            # All planets on same line.
+            # Entire 'list' enclosed in quotes creates a single variable.
+            # Why? Whitespace incorporated into the variable.
+        do
+          echo $planet
+        done
+
+        echo; echo "Whoops! Pluto is no longer a planet!"
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -219,59 +146,44 @@ control condition* is true.
     **Example 11-2. *for* loop with two parameters in each [list]
     element**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Planets revisited. |
-    |                          |
-    |     # Associate the name |
-    |  of each planet with its |
-    |  distance from the sun.  |
-    |                          |
-    |     for planet in "Mercu |
-    | ry 36" "Venus 67" "Earth |
-    |  93"  "Mars 142" "Jupite |
-    | r 483"                   |
-    |     do                   |
-    |       set -- $planet  #  |
-    |  Parses variable "planet |
-    | "                        |
-    |                       #+ |
-    |  and sets positional par |
-    | ameters.                 |
-    |       #  The "--" preven |
-    | ts nasty surprises if $p |
-    | lanet is null or         |
-    |       #+ begins with a d |
-    | ash.                     |
-    |                          |
-    |       #  May need to sav |
-    | e original positional pa |
-    | rameters,                |
-    |       #+ since they get  |
-    | overwritten.             |
-    |       #  One way of doin |
-    | g this is to use an arra |
-    | y,                       |
-    |       #         original |
-    | _params=("$@")           |
-    |                          |
-    |       echo "$1      $2,0 |
-    | 00,000 miles from the su |
-    | n"                       |
-    |       #-------two  tabs- |
-    | --concatenate zeroes ont |
-    | o parameter $2           |
-    |     done                 |
-    |                          |
-    |     # (Thanks, S.C., for |
-    |  additional clarificatio |
-    | n.)                      |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # Planets revisited.
+
+        # Associate the name of each planet with its distance from the sun.
+
+        for planet in "Mercury 36" "Venus 67" "Earth 93"  "Mars 142" "Jupiter 483"
+        do
+          set -- $planet  #  Parses variable "planet"
+                          #+ and sets positional parameters.
+          #  The "--" prevents nasty surprises if $planet is null or
+          #+ begins with a dash.
+
+          #  May need to save original positional parameters,
+          #+ since they get overwritten.
+          #  One way of doing this is to use an array,
+          #         original_params=("$@")
+
+          echo "$1      $2,000,000 miles from the sun"
+          #-------two  tabs---concatenate zeroes onto parameter $2
+        done
+
+        # (Thanks, S.C., for additional clarification.)
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -287,59 +199,50 @@ control condition* is true.
     **Example 11-3. *Fileinfo:* operating on a file list contained in a
     variable**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # fileinfo.sh        |
-    |                          |
-    |     FILES="/usr/sbin/acc |
-    | ept                      |
-    |     /usr/sbin/pwck       |
-    |     /usr/sbin/chroot     |
-    |     /usr/bin/fakefile    |
-    |     /sbin/badblocks      |
-    |     /sbin/ypbind"     #  |
-    | List of files you are cu |
-    | rious about.             |
-    |                       #  |
-    | Threw in a dummy file, / |
-    | usr/bin/fakefile.        |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     for file in $FILES   |
-    |     do                   |
-    |                          |
-    |       if [ ! -e "$file"  |
-    | ]       # Check if file  |
-    | exists.                  |
-    |       then               |
-    |         echo "$file does |
-    |  not exist."; echo       |
-    |         continue         |
-    |         # On to next.    |
-    |        fi                |
-    |                          |
-    |       ls -l $file | awk  |
-    | '{ print $8 "         fi |
-    | le size: " $5 }'  # Prin |
-    | t 2 fields.              |
-    |       whatis `basename $ |
-    | file`   # File info.     |
-    |       # Note that the wh |
-    | atis database needs to h |
-    | ave been set up for this |
-    |  to work.                |
-    |       # To do this, as r |
-    | oot run /usr/bin/makewha |
-    | tis.                     |
-    |       echo               |
-    |     done                 |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # fileinfo.sh
+
+        FILES="/usr/sbin/accept
+        /usr/sbin/pwck
+        /usr/sbin/chroot
+        /usr/bin/fakefile
+        /sbin/badblocks
+        /sbin/ypbind"     # List of files you are curious about.
+                          # Threw in a dummy file, /usr/bin/fakefile.
+
+        echo
+
+        for file in $FILES
+        do
+
+          if [ ! -e "$file" ]       # Check if file exists.
+          then
+            echo "$file does not exist."; echo
+            continue                # On to next.
+           fi
+
+          ls -l $file | awk '{ print $8 "         file size: " $5 }'  # Print 2 fields.
+          whatis `basename $file`   # File info.
+          # Note that the whatis database needs to have been set up for this to work.
+          # To do this, as root run /usr/bin/makewhatis.
+          echo
+        done  
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -354,24 +257,31 @@ control condition* is true.
 
     **Example 11-4. Operating on a parameterized file list**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     filename="*txt"      |
-    |                          |
-    |     for file in $filenam |
-    | e                        |
-    |     do                   |
-    |      echo "Contents of $ |
-    | file"                    |
-    |      echo "---"          |
-    |      cat "$file"         |
-    |      echo                |
-    |     done                 |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        filename="*txt"
+
+        for file in $filename
+        do
+         echo "Contents of $file"
+         echo "---"
+         cat "$file"
+         echo
+        done
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -387,65 +297,51 @@ control condition* is true.
 
     **Example 11-5. Operating on files with a *for* loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # list-glob.sh: Gene |
-    | rating [list] in a for-l |
-    | oop, using "globbing" .. |
-    | .                        |
-    |     # Globbing = filenam |
-    | e expansion.             |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     for file in *        |
-    |     #           ^  Bash  |
-    | performs filename expans |
-    | ion                      |
-    |     #+             on ex |
-    | pressions that globbing  |
-    | recognizes.              |
-    |     do                   |
-    |       ls -l "$file"  # L |
-    | ists all files in $PWD ( |
-    | current directory).      |
-    |       #  Recall that the |
-    |  wild card character "*" |
-    |  matches every filename, |
-    |       #+ however, in "gl |
-    | obbing," it doesn't matc |
-    | h dot-files.             |
-    |                          |
-    |       #  If the pattern  |
-    | matches no file, it is e |
-    | xpanded to itself.       |
-    |       #  To prevent this |
-    | , set the nullglob optio |
-    | n                        |
-    |       #+   (shopt -s nul |
-    | lglob).                  |
-    |       #  Thanks, S.C.    |
-    |     done                 |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     for file in [jx]*    |
-    |     do                   |
-    |       rm -f $file    # R |
-    | emoves only files beginn |
-    | ing with "j" or "x" in $ |
-    | PWD.                     |
-    |       echo "Removed file |
-    |  \"$file\"".             |
-    |     done                 |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # list-glob.sh: Generating [list] in a for-loop, using "globbing" ...
+        # Globbing = filename expansion.
+
+        echo
+
+        for file in *
+        #           ^  Bash performs filename expansion
+        #+             on expressions that globbing recognizes.
+        do
+          ls -l "$file"  # Lists all files in $PWD (current directory).
+          #  Recall that the wild card character "*" matches every filename,
+          #+ however, in "globbing," it doesn't match dot-files.
+
+          #  If the pattern matches no file, it is expanded to itself.
+          #  To prevent this, set the nullglob option
+          #+   (shopt -s nullglob).
+          #  Thanks, S.C.
+        done
+
+        echo; echo
+
+        for file in [jx]*
+        do
+          rm -f $file    # Removes only files beginning with "j" or "x" in $PWD.
+          echo "Removed file \"$file\"".
+        done
+
+        echo
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -466,34 +362,36 @@ control condition* is true.
     ``                       in [list]                     `` in a *for*
     loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     #  Invoke this scrip |
-    | t both with and without  |
-    | arguments,               |
-    |     #+ and see what happ |
-    | ens.                     |
-    |                          |
-    |     for a                |
-    |     do                   |
-    |      echo -n "$a "       |
-    |     done                 |
-    |                          |
-    |     #  The 'in list' mis |
-    | sing, therefore the loop |
-    |  operates on '$@'        |
-    |     #+ (command-line arg |
-    | ument list, including wh |
-    | itespace).               |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        #  Invoke this script both with and without arguments,
+        #+ and see what happens.
+
+        for a
+        do
+         echo -n "$a "
+        done
+
+        #  The 'in list' missing, therefore the loop operates on '$@'
+        #+ (command-line argument list, including whitespace).
+
+        echo
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -514,29 +412,33 @@ control condition* is true.
     ``                       [list]                     `` in a *for*
     loop with command substitution**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     #  for-loopcmd.sh: f |
-    | or-loop with [list]      |
-    |     #+ generated by comm |
-    | and substitution.        |
-    |                          |
-    |     NUMBERS="9 7 3 8 37. |
-    | 53"                      |
-    |                          |
-    |     for number in `echo  |
-    | $NUMBERS`  # for number  |
-    | in 9 7 3 8 37.53         |
-    |     do                   |
-    |       echo -n "$number " |
-    |     done                 |
-    |                          |
-    |     echo                 |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        #  for-loopcmd.sh: for-loop with [list]
+        #+ generated by command substitution.
+
+        NUMBERS="9 7 3 8 37.53"
+
+        for number in `echo $NUMBERS`  # for number in 9 7 3 8 37.53
+        do
+          echo -n "$number "
+        done
+
+        echo 
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -552,73 +454,59 @@ control condition* is true.
 
     **Example 11-8. A *grep* replacement for binary files**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # bin-grep.sh: Locat |
-    | es matching strings in a |
-    |  binary file.            |
-    |                          |
-    |     # A "grep" replaceme |
-    | nt for binary files.     |
-    |     # Similar effect to  |
-    | "grep -a"                |
-    |                          |
-    |     E_BADARGS=65         |
-    |     E_NOFILE=66          |
-    |                          |
-    |     if [ $# -ne 2 ]      |
-    |     then                 |
-    |       echo "Usage: `base |
-    | name $0` search_string f |
-    | ilename"                 |
-    |       exit $E_BADARGS    |
-    |     fi                   |
-    |                          |
-    |     if [ ! -f "$2" ]     |
-    |     then                 |
-    |       echo "File \"$2\"  |
-    | does not exist."         |
-    |       exit $E_NOFILE     |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     IFS=$'\012'       #  |
-    | Per suggestion of Anton  |
-    | Filippov.                |
-    |                       #  |
-    | was:  IFS="\n"           |
-    |     for word in $( strin |
-    | gs "$2" | grep "$1" )    |
-    |     # The "strings" comm |
-    | and lists strings in bin |
-    | ary files.               |
-    |     # Output then piped  |
-    | to "grep", which tests f |
-    | or desired string.       |
-    |     do                   |
-    |       echo $word         |
-    |     done                 |
-    |                          |
-    |     # As S.C. points out |
-    | , lines 23 - 30 could be |
-    |  replaced with the simpl |
-    | er                       |
-    |     #    strings "$2" |  |
-    | grep "$1" | tr -s "$IFS" |
-    |  '[\n*]'                 |
-    |                          |
-    |                          |
-    |     #  Try something lik |
-    | e  "./bin-grep.sh mem /b |
-    | in/ls"                   |
-    |     #+ to exercise this  |
-    | script.                  |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # bin-grep.sh: Locates matching strings in a binary file.
+
+        # A "grep" replacement for binary files.
+        # Similar effect to "grep -a"
+
+        E_BADARGS=65
+        E_NOFILE=66
+
+        if [ $# -ne 2 ]
+        then
+          echo "Usage: `basename $0` search_string filename"
+          exit $E_BADARGS
+        fi
+
+        if [ ! -f "$2" ]
+        then
+          echo "File \"$2\" does not exist."
+          exit $E_NOFILE
+        fi  
+
+
+        IFS=$'\012'       # Per suggestion of Anton Filippov.
+                          # was:  IFS="\n"
+        for word in $( strings "$2" | grep "$1" )
+        # The "strings" command lists strings in binary files.
+        # Output then piped to "grep", which tests for desired string.
+        do
+          echo $word
+        done
+
+        # As S.C. points out, lines 23 - 30 could be replaced with the simpler
+        #    strings "$2" | grep "$1" | tr -s "$IFS" '[\n*]'
+
+
+        #  Try something like  "./bin-grep.sh mem /bin/ls"
+        #+ to exercise this script.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -632,55 +520,49 @@ control condition* is true.
 
     **Example 11-9. Listing all users on the system**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # userlist.sh        |
-    |                          |
-    |     PASSWORD_FILE=/etc/p |
-    | asswd                    |
-    |     n=1           # User |
-    |  number                  |
-    |                          |
-    |     for name in $(awk 'B |
-    | EGIN{FS=":"}{print $1}'  |
-    | < "$PASSWORD_FILE" )     |
-    |     # Field separator =  |
-    | :    ^^^^^^              |
-    |     # Print first field  |
-    |              ^^^^^^^^    |
-    |     # Get input from pas |
-    | sword file  /etc/passwd  |
-    |  ^^^^^^^^^^^^^^^^^       |
-    |     do                   |
-    |       echo "USER #$n = $ |
-    | name"                    |
-    |       let "n += 1"       |
-    |     done                 |
-    |                          |
-    |                          |
-    |     # USER #1 = root     |
-    |     # USER #2 = bin      |
-    |     # USER #3 = daemon   |
-    |     # ...                |
-    |     # USER #33 = bozo    |
-    |                          |
-    |     exit $?              |
-    |                          |
-    |     #  Discussion:       |
-    |     #  ----------        |
-    |     #  How is it that an |
-    |  ordinary user, or a scr |
-    | ipt run by same,         |
-    |     #+ can read /etc/pas |
-    | swd? (Hint: Check the /e |
-    | tc/passwd file permissio |
-    | ns.)                     |
-    |     #  Is this a securit |
-    | y hole? Why or why not?  |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # userlist.sh
+
+        PASSWORD_FILE=/etc/passwd
+        n=1           # User number
+
+        for name in $(awk 'BEGIN{FS=":"}{print $1}' < "$PASSWORD_FILE" )
+        # Field separator = :    ^^^^^^
+        # Print first field              ^^^^^^^^
+        # Get input from password file  /etc/passwd  ^^^^^^^^^^^^^^^^^
+        do
+          echo "USER #$n = $name"
+          let "n += 1"
+        done  
+
+
+        # USER #1 = root
+        # USER #2 = bin
+        # USER #3 = daemon
+        # ...
+        # USER #33 = bozo
+
+        exit $?
+
+        #  Discussion:
+        #  ----------
+        #  How is it that an ordinary user, or a script run by same,
+        #+ can read /etc/passwd? (Hint: Check the /etc/passwd file permissions.)
+        #  Is this a security hole? Why or why not?
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -697,52 +579,42 @@ control condition* is true.
     **Example 11-10. Checking all the binaries in a directory for
     authorship**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # findstring.sh:     |
-    |     # Find a particular  |
-    | string in the binaries i |
-    | n a specified directory. |
-    |                          |
-    |     directory=/usr/bin/  |
-    |     fstring="Free Softwa |
-    | re Foundation"  # See wh |
-    | ich files come from the  |
-    | FSF.                     |
-    |                          |
-    |     for file in $( find  |
-    | $directory -type f -name |
-    |  '*' | sort )            |
-    |     do                   |
-    |       strings -f $file | |
-    |  grep "$fstring" | sed - |
-    | e "s%$directory%%"       |
-    |       #  In the "sed" ex |
-    | pression,                |
-    |       #+ it is necessary |
-    |  to substitute for the n |
-    | ormal "/" delimiter      |
-    |       #+ because "/" hap |
-    | pens to be one of the ch |
-    | aracters filtered out.   |
-    |       #  Failure to do s |
-    | o gives an error message |
-    | . (Try it.)              |
-    |     done                 |
-    |                          |
-    |     exit $?              |
-    |                          |
-    |     #  Exercise (easy):  |
-    |     #  ---------------   |
-    |     #  Convert this scri |
-    | pt to take command-line  |
-    | parameters               |
-    |     #+ for $directory an |
-    | d $fstring.              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # findstring.sh:
+        # Find a particular string in the binaries in a specified directory.
+
+        directory=/usr/bin/
+        fstring="Free Software Foundation"  # See which files come from the FSF.
+
+        for file in $( find $directory -type f -name '*' | sort )
+        do
+          strings -f $file | grep "$fstring" | sed -e "s%$directory%%"
+          #  In the "sed" expression,
+          #+ it is necessary to substitute for the normal "/" delimiter
+          #+ because "/" happens to be one of the characters filtered out.
+          #  Failure to do so gives an error message. (Try it.)
+        done  
+
+        exit $?
+
+        #  Exercise (easy):
+        #  ---------------
+        #  Convert this script to take command-line parameters
+        #+ for $directory and $fstring.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -752,27 +624,33 @@ control condition* is true.
     command substitution, but this time the "command" is a
     `function <functions.html#FUNCTIONREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     generate_list ()     |
-    |     {                    |
-    |       echo "one two thre |
-    | e"                       |
-    |     }                    |
-    |                          |
-    |     for word in $(genera |
-    | te_list)  # Let "word" g |
-    | rab output of function.  |
-    |     do                   |
-    |       echo "$word"       |
-    |     done                 |
-    |                          |
-    |     # one                |
-    |     # two                |
-    |     # three              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        generate_list ()
+        {
+          echo "one two three"
+        }
+
+        for word in $(generate_list)  # Let "word" grab output of function.
+        do
+          echo "$word"
+        done
+
+        # one
+        # two
+        # three
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     The output of a *for loop* may be piped to a command or commands.
 
@@ -782,133 +660,83 @@ control condition* is true.
 
     **Example 11-11. Listing the *symbolic links* in a directory**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # symlinks.sh: Lists |
-    |  symbolic links in a dir |
-    | ectory.                  |
-    |                          |
-    |                          |
-    |     directory=${1-`pwd`} |
-    |     #  Defaults to curre |
-    | nt working directory,    |
-    |     #+ if not otherwise  |
-    | specified.               |
-    |     #  Equivalent to cod |
-    | e block below.           |
-    |     # ------------------ |
-    | ------------------------ |
-    | ----------------         |
-    |     # ARGS=1             |
-    |      # Expect one comman |
-    | d-line argument.         |
-    |     #                    |
-    |     # if [ $# -ne "$ARGS |
-    | " ]  # If not 1 arg...   |
-    |     # then               |
-    |     #   directory=`pwd`  |
-    |      # current working d |
-    | irectory                 |
-    |     # else               |
-    |     #   directory=$1     |
-    |     # fi                 |
-    |     # ------------------ |
-    | ------------------------ |
-    | ----------------         |
-    |                          |
-    |     echo "symbolic links |
-    |  in directory \"$directo |
-    | ry\""                    |
-    |                          |
-    |     for file in "$( find |
-    |  $directory -type l )"   |
-    |  # -type l = symbolic li |
-    | nks                      |
-    |     do                   |
-    |       echo "$file"       |
-    |     done | sort          |
-    |                          |
-    |  # Otherwise file list i |
-    | s unsorted.              |
-    |     #  Strictly speaking |
-    | , a loop isn't really ne |
-    | cessary here,            |
-    |     #+ since the output  |
-    | of the "find" command is |
-    |  expanded into a single  |
-    | word.                    |
-    |     #  However, it's eas |
-    | y to understand and illu |
-    | strative this way.       |
-    |                          |
-    |     #  As Dominik 'Aenea |
-    | s' Schnitzer points out, |
-    |     #+ failing to quote  |
-    |  $( find $directory -typ |
-    | e l )                    |
-    |     #+ will choke on fil |
-    | enames with embedded whi |
-    | tespace.                 |
-    |     #  containing whites |
-    | pace.                    |
-    |                          |
-    |     exit 0               |
-    |                          |
-    |                          |
-    |     # ------------------ |
-    | ------------------------ |
-    | --------------           |
-    |     # Jean Helou propose |
-    | s the following alternat |
-    | ive:                     |
-    |                          |
-    |     echo "symbolic links |
-    |  in directory \"$directo |
-    | ry\""                    |
-    |     # Backup of the curr |
-    | ent IFS. One can never b |
-    | e too cautious.          |
-    |     OLDIFS=$IFS          |
-    |     IFS=:                |
-    |                          |
-    |     for file in $(find $ |
-    | directory -type l -print |
-    | f "%p$IFS")              |
-    |     do     #             |
-    |                   ^^^^^^ |
-    | ^^^^^^^^^^               |
-    |            echo "$file"  |
-    |            done|sort     |
-    |                          |
-    |     # And, James "Mike"  |
-    | Conley suggests modifyin |
-    | g Helou's code thusly:   |
-    |                          |
-    |     OLDIFS=$IFS          |
-    |     IFS='' # Null IFS me |
-    | ans no word breaks       |
-    |     for file in $( find  |
-    | $directory -type l )     |
-    |     do                   |
-    |       echo $file         |
-    |       done | sort        |
-    |                          |
-    |     #  This works in the |
-    |  "pathological" case of  |
-    | a directory name having  |
-    |     #+ an embedded colon |
-    | .                        |
-    |     #  "This also fixes  |
-    | the pathological case of |
-    |  the directory name havi |
-    | ng                       |
-    |     #+  a colon (or spac |
-    | e in earlier example) as |
-    |  well."                  |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # symlinks.sh: Lists symbolic links in a directory.
+
+
+        directory=${1-`pwd`}
+        #  Defaults to current working directory,
+        #+ if not otherwise specified.
+        #  Equivalent to code block below.
+        # ----------------------------------------------------------
+        # ARGS=1                 # Expect one command-line argument.
+        #
+        # if [ $# -ne "$ARGS" ]  # If not 1 arg...
+        # then
+        #   directory=`pwd`      # current working directory
+        # else
+        #   directory=$1
+        # fi
+        # ----------------------------------------------------------
+
+        echo "symbolic links in directory \"$directory\""
+
+        for file in "$( find $directory -type l )"   # -type l = symbolic links
+        do
+          echo "$file"
+        done | sort                                  # Otherwise file list is unsorted.
+        #  Strictly speaking, a loop isn't really necessary here,
+        #+ since the output of the "find" command is expanded into a single word.
+        #  However, it's easy to understand and illustrative this way.
+
+        #  As Dominik 'Aeneas' Schnitzer points out,
+        #+ failing to quote  $( find $directory -type l )
+        #+ will choke on filenames with embedded whitespace.
+        #  containing whitespace. 
+
+        exit 0
+
+
+        # --------------------------------------------------------
+        # Jean Helou proposes the following alternative:
+
+        echo "symbolic links in directory \"$directory\""
+        # Backup of the current IFS. One can never be too cautious.
+        OLDIFS=$IFS
+        IFS=:
+
+        for file in $(find $directory -type l -printf "%p$IFS")
+        do     #                              ^^^^^^^^^^^^^^^^
+               echo "$file"
+               done|sort
+
+        # And, James "Mike" Conley suggests modifying Helou's code thusly:
+
+        OLDIFS=$IFS
+        IFS='' # Null IFS means no word breaks
+        for file in $( find $directory -type l )
+        do
+          echo $file
+          done | sort
+
+        #  This works in the "pathological" case of a directory name having
+        #+ an embedded colon.
+        #  "This also fixes the pathological case of the directory name having
+        #+  a colon (or space in earlier example) as well."
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -924,52 +752,42 @@ control condition* is true.
 
     **Example 11-12. Symbolic links in a directory, saved to a file**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # symlinks.sh: Lists |
-    |  symbolic links in a dir |
-    | ectory.                  |
-    |                          |
-    |     OUTFILE=symlinks.lis |
-    | t                        |
-    |   # save-file            |
-    |                          |
-    |     directory=${1-`pwd`} |
-    |     #  Defaults to curre |
-    | nt working directory,    |
-    |     #+ if not otherwise  |
-    | specified.               |
-    |                          |
-    |                          |
-    |     echo "symbolic links |
-    |  in directory \"$directo |
-    | ry\"" > "$OUTFILE"       |
-    |     echo "-------------- |
-    | -------------" >> "$OUTF |
-    | ILE"                     |
-    |                          |
-    |     for file in "$( find |
-    |  $directory -type l )"   |
-    |   # -type l = symbolic l |
-    | inks                     |
-    |     do                   |
-    |       echo "$file"       |
-    |     done | sort >> "$OUT |
-    | FILE"                    |
-    |   # stdout of loop       |
-    |     #           ^^^^^^^^ |
-    | ^^^^^                    |
-    |     redirected to save f |
-    | ile.                     |
-    |                          |
-    |     # echo "Output file  |
-    | = $OUTFILE"              |
-    |                          |
-    |     exit $?              |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # symlinks.sh: Lists symbolic links in a directory.
+
+        OUTFILE=symlinks.list                         # save-file
+
+        directory=${1-`pwd`}
+        #  Defaults to current working directory,
+        #+ if not otherwise specified.
+
+
+        echo "symbolic links in directory \"$directory\"" > "$OUTFILE"
+        echo "---------------------------" >> "$OUTFILE"
+
+        for file in "$( find $directory -type l )"    # -type l = symbolic links
+        do
+          echo "$file"
+        done | sort >> "$OUTFILE"                     # stdout of loop
+        #           ^^^^^^^^^^^^^                       redirected to save file.
+
+        # echo "Output file = $OUTFILE"
+
+        exit $?
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -985,94 +803,79 @@ control condition* is true.
 
     **Example 11-13. A C-style *for* loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Multiple ways to c |
-    | ount up to 10.           |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     # Standard syntax.   |
-    |     for a in 1 2 3 4 5 6 |
-    |  7 8 9 10                |
-    |     do                   |
-    |       echo -n "$a "      |
-    |     done                 |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     # +================= |
-    | ======================== |
-    | =+                       |
-    |                          |
-    |     # Using "seq" ...    |
-    |     for a in `seq 10`    |
-    |     do                   |
-    |       echo -n "$a "      |
-    |     done                 |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     # +================= |
-    | ======================== |
-    | =+                       |
-    |                          |
-    |     # Using brace expans |
-    | ion ...                  |
-    |     # Bash, version 3+.  |
-    |     for a in {1..10}     |
-    |     do                   |
-    |       echo -n "$a "      |
-    |     done                 |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     # +================= |
-    | ======================== |
-    | =+                       |
-    |                          |
-    |     # Now, let's do the  |
-    | same, using C-like synta |
-    | x.                       |
-    |                          |
-    |     LIMIT=10             |
-    |                          |
-    |     for ((a=1; a <= LIMI |
-    | T ; a++))  # Double pare |
-    | ntheses, and naked "LIMI |
-    | T"                       |
-    |     do                   |
-    |       echo -n "$a "      |
-    |     done                 |
-    |            # A construct |
-    |  borrowed from ksh93.    |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     # +================= |
-    | ======================== |
-    | ======================== |
-    | ========+                |
-    |                          |
-    |     # Let's use the C "c |
-    | omma operator" to increm |
-    | ent two variables simult |
-    | aneously.                |
-    |                          |
-    |     for ((a=1, b=1; a <= |
-    |  LIMIT ; a++, b++))      |
-    |     do  # The comma conc |
-    | atenates operations.     |
-    |       echo -n "$a-$b "   |
-    |     done                 |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # Multiple ways to count up to 10.
+
+        echo
+
+        # Standard syntax.
+        for a in 1 2 3 4 5 6 7 8 9 10
+        do
+          echo -n "$a "
+        done  
+
+        echo; echo
+
+        # +==========================================+
+
+        # Using "seq" ...
+        for a in `seq 10`
+        do
+          echo -n "$a "
+        done  
+
+        echo; echo
+
+        # +==========================================+
+
+        # Using brace expansion ...
+        # Bash, version 3+.
+        for a in {1..10}
+        do
+          echo -n "$a "
+        done  
+
+        echo; echo
+
+        # +==========================================+
+
+        # Now, let's do the same, using C-like syntax.
+
+        LIMIT=10
+
+        for ((a=1; a <= LIMIT ; a++))  # Double parentheses, and naked "LIMIT"
+        do
+          echo -n "$a "
+        done                           # A construct borrowed from ksh93.
+
+        echo; echo
+
+        # +=========================================================================+
+
+        # Let's use the C "comma operator" to increment two variables simultaneously.
+
+        for ((a=1, b=1; a <= LIMIT ; a++, b++))
+        do  # The comma concatenates operations.
+          echo -n "$a-$b "
+        done
+
+        echo; echo
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1092,84 +895,62 @@ control condition* is true.
 
     **Example 11-14. Using *efax* in batch mode**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # Faxing (must have  |
-    | 'efax' package installed |
-    | ).                       |
-    |                          |
-    |     EXPECTED_ARGS=2      |
-    |     E_BADARGS=85         |
-    |     MODEM_PORT="/dev/tty |
-    | S2"   # May be different |
-    |  on your machine.        |
-    |     #                ^^^ |
-    | ^^      PCMCIA modem car |
-    | d default port.          |
-    |                          |
-    |     if [ $# -ne $EXPECTE |
-    | D_ARGS ]                 |
-    |     # Check for proper n |
-    | umber of command-line ar |
-    | gs.                      |
-    |     then                 |
-    |        echo "Usage: `bas |
-    | ename $0` phone# text-fi |
-    | le"                      |
-    |        exit $E_BADARGS   |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     if [ ! -f "$2" ]     |
-    |     then                 |
-    |       echo "File $2 is n |
-    | ot a text file."         |
-    |       #     File is not  |
-    | a regular file, or does  |
-    | not exist.               |
-    |       exit $E_BADARGS    |
-    |     fi                   |
-    |                          |
-    |                          |
-    |     fax make $2          |
-    |      #  Create fax-forma |
-    | tted files from text fil |
-    | es.                      |
-    |                          |
-    |     for file in $(ls $2. |
-    | 0*)  #  Concatenate the  |
-    | converted files.         |
-    |                          |
-    |      #  Uses wild card ( |
-    | filename "globbing")     |
-    |                  #+ in v |
-    | ariable list.            |
-    |     do                   |
-    |       fil="$fil $file"   |
-    |     done                 |
-    |                          |
-    |     efax -d "$MODEM_PORT |
-    | "  -t "T$1" $fil   # Fin |
-    | ally, do the work.       |
-    |     # Trying adding  -o1 |
-    |   if above line fails.   |
-    |                          |
-    |                          |
-    |     #  As S.C. points ou |
-    | t, the for-loop can be e |
-    | liminated with           |
-    |     #     efax -d /dev/t |
-    | tyS2 -o1 -t "T$1" $2.0*  |
-    |     #+ but it's not quit |
-    | e as instructive [grin]. |
-    |                          |
-    |     exit $?   # Also, ef |
-    | ax sends diagnostic mess |
-    | ages to stdout.          |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # Faxing (must have 'efax' package installed).
+
+        EXPECTED_ARGS=2
+        E_BADARGS=85
+        MODEM_PORT="/dev/ttyS2"   # May be different on your machine.
+        #                ^^^^^      PCMCIA modem card default port.
+
+        if [ $# -ne $EXPECTED_ARGS ]
+        # Check for proper number of command-line args.
+        then
+           echo "Usage: `basename $0` phone# text-file"
+           exit $E_BADARGS
+        fi
+
+
+        if [ ! -f "$2" ]
+        then
+          echo "File $2 is not a text file."
+          #     File is not a regular file, or does not exist.
+          exit $E_BADARGS
+        fi
+          
+
+        fax make $2              #  Create fax-formatted files from text files.
+
+        for file in $(ls $2.0*)  #  Concatenate the converted files.
+                                 #  Uses wild card (filename "globbing")
+                     #+ in variable list.
+        do
+          fil="$fil $file"
+        done  
+
+        efax -d "$MODEM_PORT"  -t "T$1" $fil   # Finally, do the work.
+        # Trying adding  -o1  if above line fails.
+
+
+        #  As S.C. points out, the for-loop can be eliminated with
+        #     efax -d /dev/ttyS2 -o1 -t "T$1" $2.0*
+        #+ but it's not quite as instructive [grin].
+
+        exit $?   # Also, efax sends diagnostic messages to stdout.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1179,105 +960,128 @@ control condition* is true.
 
        <div class="NOTE">
 
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+     The `keywords <internal.html#KEYWORDREF>`__ **do** and **done**
+    delineate the *for-loop* command block. However, these may, in
+    certain contexts, be omitted by framing the command block within
+    `curly brackets <special-chars.html#CODEBLOCKREF>`__
+
     +--------------------------+--------------------------+--------------------------+
-    | |Note|                   |
-    |  The                     |
-    | `keywords <internal.html |
-    | #KEYWORDREF>`__          |
-    | **do** and **done**      |
-    | delineate the *for-loop* |
-    | command block. However,  |
-    | these may, in certain    |
-    | contexts, be omitted by  |
-    | framing the command      |
-    | block within `curly      |
-    | brackets <special-chars. |
-    | html#CODEBLOCKREF>`__    |
+    | .. code:: PROGRAMLISTING |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
-    | | .. code:: PROGRAMLISTI |
-    | NG |                     |
-    | |                        |
-    |    |                     |
-    | |     for((n=1; n<=10; n |
-    | ++ |                     |
-    | | ))                     |
-    |    |                     |
-    | |     # No do!           |
-    |    |                     |
-    | |     {                  |
-    |    |                     |
-    | |       echo -n "* $n *" |
-    |    |                     |
-    | |     }                  |
-    |    |                     |
-    | |     # No done!         |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     # Outputs:         |
-    |    |                     |
-    | |     # * 1 ** 2 ** 3 ** |
-    |  4 |                     |
-    | |  ** 5 ** 6 ** 7 ** 8 * |
-    | *  |                     |
-    | | 9 ** 10 *              |
-    |    |                     |
-    | |     # And, echo $? ret |
-    | ur |                     |
-    | | ns 0, so Bash does not |
-    |  r |                     |
-    | | egister an error.      |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     echo               |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     #  But, note that  |
-    | in |                     |
-    | |  a classic for-loop:   |
-    |    |                     |
-    | | for n in [list] ...    |
-    |    |                     |
-    | |     #+ a terminal semi |
-    | co |                     |
-    | | lon is required.       |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     for n in 1 2 3     |
-    |    |                     |
-    | |     {  echo -n "$n ";  |
-    | }  |                     |
-    | |     #               ^  |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |                        |
-    |    |                     |
-    | |     # Thank you, YongY |
-    | e, |                     |
-    | |  for pointing this out |
-    | .  |                     |
+    |     for((n=1; n<=10; n++ |
+    | ))                       |
+    |     # No do!             |
+    |     {                    |
+    |       echo -n "* $n *"   |
+    |     }                    |
+    |     # No done!           |
     |                          |
     |                          |
-    | +----------------------- |
-    | ---+-------------------- |
-    | ------+----------------- |
-    | ---------+               |
+    |     # Outputs:           |
+    |     # * 1 ** 2 ** 3 ** 4 |
+    |  ** 5 ** 6 ** 7 ** 8 **  |
+    | 9 ** 10 *                |
+    |     # And, echo $? retur |
+    | ns 0, so Bash does not r |
+    | egister an error.        |
+    |                          |
+    |                          |
+    |     echo                 |
+    |                          |
+    |                          |
+    |     #  But, note that in |
+    |  a classic for-loop:     |
+    | for n in [list] ...      |
+    |     #+ a terminal semico |
+    | lon is required.         |
+    |                          |
+    |     for n in 1 2 3       |
+    |     {  echo -n "$n "; }  |
+    |     #               ^    |
+    |                          |
+    |                          |
+    |     # Thank you, YongYe, |
+    |  for pointing this out.  |
                               
     +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        for((n=1; n<=10; n++)) 
+        # No do!
+        {
+          echo -n "* $n *"
+        }
+        # No done!
+
+
+        # Outputs:
+        # * 1 ** 2 ** 3 ** 4 ** 5 ** 6 ** 7 ** 8 ** 9 ** 10 *
+        # And, echo $? returns 0, so Bash does not register an error.
+
+
+        echo
+
+
+        #  But, note that in a classic for-loop:    for n in [list] ...
+        #+ a terminal semicolon is required.
+
+        for n in 1 2 3
+        {  echo -n "$n "; }
+        #               ^
+
+
+        # Thank you, YongYe, for pointing this out.
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        for((n=1; n<=10; n++)) 
+        # No do!
+        {
+          echo -n "* $n *"
+        }
+        # No done!
+
+
+        # Outputs:
+        # * 1 ** 2 ** 3 ** 4 ** 5 ** 6 ** 7 ** 8 ** 9 ** 10 *
+        # And, echo $? returns 0, so Bash does not register an error.
+
+
+        echo
+
+
+        #  But, note that in a classic for-loop:    for n in [list] ...
+        #+ a terminal semicolon is required.
+
+        for n in 1 2 3
+        {  echo -n "$n "; }
+        #               ^
+
+
+        # Thank you, YongYe, for pointing this out.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1319,47 +1123,40 @@ control condition* is true.
 
     **Example 11-15. Simple *while* loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     var0=0               |
-    |     LIMIT=10             |
-    |                          |
-    |     while [ "$var0" -lt  |
-    | "$LIMIT" ]               |
-    |     #      ^             |
-    |         ^                |
-    |     # Spaces, because th |
-    | ese are "test-brackets"  |
-    | . . .                    |
-    |     do                   |
-    |       echo -n "$var0 "   |
-    |       # -n suppresses ne |
-    | wline.                   |
-    |       #             ^    |
-    |         Space, to separa |
-    | te printed out numbers.  |
-    |                          |
-    |       var0=`expr $var0 + |
-    |  1`   # var0=$(($var0+1) |
-    | )  also works.           |
-    |                          |
-    |       # var0=$((var0 + 1 |
-    | )) also works.           |
-    |                          |
-    |       # let "var0 += 1"  |
-    |    also works.           |
-    |     done                 |
-    |       # Various other me |
-    | thods also work.         |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        var0=0
+        LIMIT=10
+
+        while [ "$var0" -lt "$LIMIT" ]
+        #      ^                    ^
+        # Spaces, because these are "test-brackets" . . .
+        do
+          echo -n "$var0 "        # -n suppresses newline.
+          #             ^           Space, to separate printed out numbers.
+
+          var0=`expr $var0 + 1`   # var0=$(($var0+1))  also works.
+                                  # var0=$((var0 + 1)) also works.
+                                  # let "var0 += 1"    also works.
+        done                      # Various other methods also work.
+
+        echo
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1371,38 +1168,35 @@ control condition* is true.
 
     **Example 11-16. Another *while* loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     echo                 |
-    |                          |
-    |            # Equivalent  |
-    | to:                      |
-    |     while [ "$var1" != " |
-    | end" ]     # while test  |
-    | "$var1" != "end"         |
-    |     do                   |
-    |       echo "Input variab |
-    | le #1 (end to exit) "    |
-    |       read var1          |
-    |            # Not 'read $ |
-    | var1' (why?).            |
-    |       echo "variable #1  |
-    | = $var1"   # Need quotes |
-    |  because of "#" . . .    |
-    |       # If input is 'end |
-    | ', echoes it here.       |
-    |       # Does not test fo |
-    | r termination condition  |
-    | until top of loop.       |
-    |       echo               |
-    |     done                 |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        echo
+                                       # Equivalent to:
+        while [ "$var1" != "end" ]     # while test "$var1" != "end"
+        do
+          echo "Input variable #1 (end to exit) "
+          read var1                    # Not 'read $var1' (why?).
+          echo "variable #1 = $var1"   # Need quotes because of "#" . . .
+          # If input is 'end', echoes it here.
+          # Does not test for termination condition until top of loop.
+          echo
+        done  
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1418,44 +1212,41 @@ control condition* is true.
 
     **Example 11-17. *while* loop with multiple conditions**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     var1=unset           |
-    |     previous=$var1       |
-    |                          |
-    |     while echo "previous |
-    | -variable = $previous"   |
-    |           echo           |
-    |           previous=$var1 |
-    |           [ "$var1" != e |
-    | nd ] # Keeps track of wh |
-    | at $var1 was previously. |
-    |           # Four conditi |
-    | ons on *while*, but only |
-    |  the final one controls  |
-    | loop.                    |
-    |           # The *last* e |
-    | xit status is the one th |
-    | at counts.               |
-    |     do                   |
-    |     echo "Input variable |
-    |  #1 (end to exit) "      |
-    |       read var1          |
-    |       echo "variable #1  |
-    | = $var1"                 |
-    |     done                 |
-    |                          |
-    |     # Try to figure out  |
-    | how this all works.      |
-    |     # It's a wee bit tri |
-    | cky.                     |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        var1=unset
+        previous=$var1
+
+        while echo "previous-variable = $previous"
+              echo
+              previous=$var1
+              [ "$var1" != end ] # Keeps track of what $var1 was previously.
+              # Four conditions on *while*, but only the final one controls loop.
+              # The *last* exit status is the one that counts.
+        do
+        echo "Input variable #1 (end to exit) "
+          read var1
+          echo "variable #1 = $var1"
+        done  
+
+        # Try to figure out how this all works.
+        # It's a wee bit tricky.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1471,67 +1262,54 @@ control condition* is true.
 
     **Example 11-18. C-style syntax in a *while* loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |     # wh-loopc.sh: Count |
-    |  to 10 in a "while" loop |
-    | .                        |
-    |                          |
-    |     LIMIT=10             |
-    |      # 10 iterations.    |
-    |     a=1                  |
-    |                          |
-    |     while [ "$a" -le $LI |
-    | MIT ]                    |
-    |     do                   |
-    |       echo -n "$a "      |
-    |       let "a+=1"         |
-    |     done                 |
-    |      # No surprises, so  |
-    | far.                     |
-    |                          |
-    |     echo; echo           |
-    |                          |
-    |     # +================= |
-    | ======================== |
-    | ======================== |
-    | +                        |
-    |                          |
-    |     # Now, we'll repeat  |
-    | with C-like syntax.      |
-    |                          |
-    |     ((a = 1))      # a=1 |
-    |     # Double parentheses |
-    |  permit space when setti |
-    | ng a variable, as in C.  |
-    |                          |
-    |     while (( a <= LIMIT  |
-    | ))   #  Double parenthes |
-    | es,                      |
-    |     do                   |
-    |      #+ and no "$" prece |
-    | ding variables.          |
-    |       echo -n "$a "      |
-    |       ((a += 1))         |
-    |      # let "a+=1"        |
-    |       # Yes, indeed.     |
-    |       # Double parenthes |
-    | es permit incrementing a |
-    |  variable with C-like sy |
-    | ntax.                    |
-    |     done                 |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     # C and Java program |
-    | mers can feel right at h |
-    | ome in Bash.             |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+        # wh-loopc.sh: Count to 10 in a "while" loop.
+
+        LIMIT=10                 # 10 iterations.
+        a=1
+
+        while [ "$a" -le $LIMIT ]
+        do
+          echo -n "$a "
+          let "a+=1"
+        done                     # No surprises, so far.
+
+        echo; echo
+
+        # +=================================================================+
+
+        # Now, we'll repeat with C-like syntax.
+
+        ((a = 1))      # a=1
+        # Double parentheses permit space when setting a variable, as in C.
+
+        while (( a <= LIMIT ))   #  Double parentheses,
+        do                       #+ and no "$" preceding variables.
+          echo -n "$a "
+          ((a += 1))             # let "a+=1"
+          # Yes, indeed.
+          # Double parentheses permit incrementing a variable with C-like syntax.
+        done
+
+        echo
+
+        # C and Java programmers can feel right at home in Bash.
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1540,142 +1318,174 @@ control condition* is true.
     Inside its test brackets, a *while loop* can call a
     `function <functions.html#FUNCTIONREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     t=0                  |
-    |                          |
-    |     condition ()         |
-    |     {                    |
-    |       ((t++))            |
-    |                          |
-    |       if [ $t -lt 5 ]    |
-    |       then               |
-    |         return 0  # true |
-    |       else               |
-    |         return 1  # fals |
-    | e                        |
-    |       fi                 |
-    |     }                    |
-    |                          |
-    |     while condition      |
-    |     #     ^^^^^^^^^      |
-    |     #     Function call  |
-    | -- four loop iterations. |
-    |     do                   |
-    |       echo "Still going: |
-    |  t = $t"                 |
-    |     done                 |
-    |                          |
-    |     # Still going: t = 1 |
-    |     # Still going: t = 2 |
-    |     # Still going: t = 3 |
-    |     # Still going: t = 4 |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
 
-    +--------------------------------------------------------------------------+
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    <div class="SIDEBAR">                                                 |
-    |                                                                          |
-    | Similar to the `if-test <testconstructs.html#IFGREPREF>`__ construct, a  |
-    | *while* loop can omit the test brackets.                                 |
-    |                                                                          |
-    | +--------------------------+--------------------------+----------------- |
-    | ---------+                                                               |
-    | | .. code:: PROGRAMLISTING |                                             |
-    | |                          |                                             |
-    | |     while condition      |                                             |
-    | |     do                   |                                             |
-    | |        command(s) ...    |                                             |
-    | |     done                 |                                             |
-    |                                                                          |
-    | +--------------------------+--------------------------+----------------- |
-    | ---------+                                                               |
-    |                                                                          |
-    | .. raw:: html                                                            |
-    |                                                                          |
-    |    </div>                                                                |
-                                                                              
-    +--------------------------------------------------------------------------+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        t=0
+
+        condition ()
+        {
+          ((t++))
+
+          if [ $t -lt 5 ]
+          then
+            return 0  # true
+          else
+            return 1  # false
+          fi
+        }
+
+        while condition
+        #     ^^^^^^^^^
+        #     Function call -- four loop iterations.
+        do
+          echo "Still going: t = $t"
+        done
+
+        # Still going: t = 1
+        # Still going: t = 2
+        # Still going: t = 3
+        # Still going: t = 4
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div>
+
+    .. raw:: html
+
+       <div class="SIDEBAR">
+
+    Similar to the `if-test <testconstructs.html#IFGREPREF>`__
+    construct, a *while* loop can omit the test brackets.
+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        while condition
+        do
+           command(s) ...
+        done
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        while condition
+        do
+           command(s) ...
+        done
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: PROGRAMLISTING
+
+        while condition
+        do
+           command(s) ...
+        done
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     By coupling the power of the `read <internal.html#READREF>`__
     command with a *while loop* , we get the handy `while
     read <internal.html#WHILEREADREF>`__ construct, useful for reading
     and parsing files.
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     cat $filename |   #  |
-    | Supply input from a file |
-    | .                        |
-    |     while read line   #  |
-    | As long as there is anot |
-    | her line to read ...     |
-    |     do                   |
-    |       ...                |
-    |     done                 |
-    |                          |
-    |     # =========== Snippe |
-    | t from "sd.sh" example s |
-    | cript ========== #       |
-    |                          |
-    |       while read value   |
-    |  # Read one data point a |
-    | t a time.                |
-    |       do                 |
-    |         rt=$(echo "scale |
-    | =$SC; $rt + $value" | bc |
-    | )                        |
-    |         (( ct++ ))       |
-    |       done               |
-    |                          |
-    |       am=$(echo "scale=$ |
-    | SC; $rt / $ct" | bc)     |
-    |                          |
-    |       echo $am; return $ |
-    | ct   # This function "re |
-    | turns" TWO values!       |
-    |       #  Caution: This l |
-    | ittle trick will not wor |
-    | k if $ct > 255!          |
-    |       #  To handle a lar |
-    | ger number of data point |
-    | s,                       |
-    |       #+ simply comment  |
-    | out the "return $ct" abo |
-    | ve.                      |
-    |     } <"$datafile"   # F |
-    | eed in data file.        |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        cat $filename |   # Supply input from a file.
+        while read line   # As long as there is another line to read ...
+        do
+          ...
+        done
+
+        # =========== Snippet from "sd.sh" example script ========== #
+
+          while read value   # Read one data point at a time.
+          do
+            rt=$(echo "scale=$SC; $rt + $value" | bc)
+            (( ct++ ))
+          done
+
+          am=$(echo "scale=$SC; $rt / $ct" | bc)
+
+          echo $am; return $ct   # This function "returns" TWO values!
+          #  Caution: This little trick will not work if $ct > 255!
+          #  To handle a larger number of data points,
+          #+ simply comment out the "return $ct" above.
+        } <"$datafile"   # Feed in data file.
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
        <div class="NOTE">
 
-    +--------------------------+--------------------------+--------------------------+
-    | |Note|                   |
-    | A *while loop* may have  |
-    | its                      |
-    | ``             stdin     |
-    |         ``               |
-    | `redirected to a         |
-    | file <redircb.html#REDIR |
-    | REF>`__                  |
-    | by a < at its end.       |
-    |                          |
-    | A *while loop* may have  |
-    | its                      |
-    | ``             stdin     |
-    |         ``               |
-    | `supplied by a           |
-    | pipe <internal.html#READ |
-    | PIPEREF>`__              |
-    | .                        |
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    |Note|
+
+    A *while loop* may have its ``            stdin           ``
+    `redirected to a file <redircb.html#REDIRREF>`__ by a < at its end.
+
+    A *while loop* may have its ``            stdin           ``
+    `supplied by a pipe <internal.html#READPIPEREF>`__ .
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1708,55 +1518,50 @@ control condition* is true.
 
     **Example 11-19. *until* loop**
 
-    +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     END_CONDITION=end    |
-    |                          |
-    |     until [ "$var1" = "$ |
-    | END_CONDITION" ]         |
-    |     # Tests condition he |
-    | re, at top of loop.      |
-    |     do                   |
-    |       echo "Input variab |
-    | le #1 "                  |
-    |       echo "($END_CONDIT |
-    | ION to exit)"            |
-    |       read var1          |
-    |       echo "variable #1  |
-    | = $var1"                 |
-    |       echo               |
-    |     done                 |
-    |                          |
-    |     #                    |
-    |   ---                    |
-    |      #                   |
-    |                          |
-    |     #  As with "for" and |
-    |  "while" loops,          |
-    |     #+ an "until" loop p |
-    | ermits C-like test const |
-    | ructs.                   |
-    |                          |
-    |     LIMIT=10             |
-    |     var=0                |
-    |                          |
-    |     until (( var > LIMIT |
-    |  ))                      |
-    |     do  # ^^ ^     ^     |
-    |  ^^   No brackets, no $  |
-    | prefixing variables.     |
-    |       echo -n "$var "    |
-    |       (( var++ ))        |
-    |     done    # 0 1 2 3 4  |
-    | 5 6 7 8 9 10             |
-    |                          |
-    |                          |
-    |     exit 0               |
-                              
-    +--------------------------+--------------------------+--------------------------+
+    .. raw:: html
+
+       <div>
+
+    .. code:: PROGRAMLISTING
+
+        #!/bin/bash
+
+        END_CONDITION=end
+
+        until [ "$var1" = "$END_CONDITION" ]
+        # Tests condition here, at top of loop.
+        do
+          echo "Input variable #1 "
+          echo "($END_CONDITION to exit)"
+          read var1
+          echo "variable #1 = $var1"
+          echo
+        done  
+
+        #                     ---                        #
+
+        #  As with "for" and "while" loops,
+        #+ an "until" loop permits C-like test constructs.
+
+        LIMIT=10
+        var=0
+
+        until (( var > LIMIT ))
+        do  # ^^ ^     ^     ^^   No brackets, no $ prefixing variables.
+          echo -n "$var "
+          (( var++ ))
+        done    # 0 1 2 3 4 5 6 7 8 9 10 
+
+
+        exit 0
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       </div>
 
     .. raw:: html
 
@@ -1780,27 +1585,19 @@ use whatever type of loop gets the job done in the simplest way.
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <loops1.html#AEN6560>`__      |
-|  *Iteration* : Repeated execution of |
-| a command or group of commands,      |
-| usually -- but not always, *while* a |
-| given condition holds, or *until* a  |
-| given condition is met.              |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <loops1.html#AEN6560>`__
+
+ *Iteration* : Repeated execution of a command or group of commands,
+usually -- but not always, *while* a given condition holds, or *until* a
+given condition is met.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <loops.html>`__    | Loops and Branches       |
-| `Home <index.html>`__    | `Up <loops.html>`__      |
-| `Next <nestedloops.html> | Nested Loops             |
-| `__                      |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <exit-status.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <testconstructs.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 7. Tests
@@ -160,24 +88,6 @@ then act according to the result of the test. Bash has the
 `bracket <testconstructs.html#DBLBRACKETS>`__ and
 `parenthesis <testconstructs.html#DBLPARENSTST>`__ operators, and the
 **if/then** construct.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <exit-status.html> | Exit and Exit Status     |
-| `__                      | `Up <part2.html>`__      |
-| `Home <index.html>`__    | Test Constructs          |
-| `Next <testconstructs.ht |                          |
-| ml>`__                   |                          |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

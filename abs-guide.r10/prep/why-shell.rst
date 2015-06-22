@@ -1,95 +1,29 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <part1.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <sha-bang.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 1. Shell Programming!
 ==============================
 
-+--------------------------+--------------------------+--------------------------+
-| **                       |
-| *No programming language |
-| is perfect. There is not |
-| even a single best       |
-| language; there are only |
-| languages well suited or |
-| perhaps poorly suited    |
-| for particular           |
-| purposes.*               |
-|                          |
-| *--Herbert Mayer*        |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+**
+
+*No programming language is perfect. There is not even a single best
+language; there are only languages well suited or perhaps poorly suited
+for particular purposes.*
+
+*--Herbert Mayer*
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 A working knowledge of shell scripting is essential to anyone wishing to
 become reasonably proficient at system administration, even if they do
@@ -142,64 +76,73 @@ language needs arrays, pointers, and a generic mechanism for building
 data structures." By these criteria, shell scripting falls somewhat
 short of being "useful." Or, perhaps not. . . .
 
-+--------------------------------------------------------------------------+
-| .. raw:: html                                                            |
-|                                                                          |
-|    <div class="SIDEBAR">                                                 |
-|                                                                          |
-| When not to use shell scripts                                            |
-|                                                                          |
-| -  Resource-intensive tasks, especially where speed is a factor          |
-|    (sorting, hashing, recursion ` [2]  <why-shell.html#FTN.AEN87>`__     |
-|    ...)                                                                  |
-|                                                                          |
-| -  Procedures involving heavy-duty math operations, especially floating  |
-|    point arithmetic, arbitrary precision calculations, or complex        |
-|    numbers (use *C++* or *FORTRAN* instead)                              |
-|                                                                          |
-| -  Cross-platform portability required (use *C* or *Java* instead)       |
-|                                                                          |
-| -  Complex applications, where structured programming is a necessity     |
-|    (type-checking of variables, function prototypes, etc.)               |
-|                                                                          |
-| -  Mission-critical applications upon which you are betting the future   |
-|    of the company                                                        |
-|                                                                          |
-| -  Situations where *security* is important, where you need to guarantee |
-|    the integrity of your system and protect against intrusion, cracking, |
-|    and vandalism                                                         |
-|                                                                          |
-| -  Project consists of subcomponents with interlocking dependencies      |
-|                                                                          |
-| -  Extensive file operations required ( *Bash* is limited to serial file |
-|    access, and that only in a particularly clumsy and inefficient        |
-|    line-by-line fashion.)                                                |
-|                                                                          |
-| -  Need native support for multi-dimensional arrays                      |
-|                                                                          |
-| -  Need data structures, such as linked lists or trees                   |
-|                                                                          |
-| -  Need to generate / manipulate graphics or GUIs                        |
-|                                                                          |
-| -  Need direct access to system hardware or external peripherals         |
-|                                                                          |
-| -  Need port or `socket <devref1.html#SOCKETREF>`__ I/O                  |
-|                                                                          |
-| -  Need to use libraries or interface with legacy code                   |
-|                                                                          |
-| -  Proprietary, closed-source applications (Shell scripts put the source |
-|    code right out in the open for all the world to see.)                 |
-|                                                                          |
-| If any of the above applies, consider a more powerful scripting language |
-| -- perhaps *Perl* , *Tcl* , *Python* , *Ruby* -- or possibly a compiled  |
-| language such as *C* , *C++* , or *Java* . Even then, prototyping the    |
-| application as a shell script might still be a useful development step.  |
-|                                                                          |
-| .. raw:: html                                                            |
-|                                                                          |
-|    </div>                                                                |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div class="SIDEBAR">
+
+When not to use shell scripts
+
+-  Resource-intensive tasks, especially where speed is a factor
+   (sorting, hashing, recursion ` [2]  <why-shell.html#FTN.AEN87>`__
+   ...)
+
+-  Procedures involving heavy-duty math operations, especially floating
+   point arithmetic, arbitrary precision calculations, or complex
+   numbers (use *C++* or *FORTRAN* instead)
+
+-  Cross-platform portability required (use *C* or *Java* instead)
+
+-  Complex applications, where structured programming is a necessity
+   (type-checking of variables, function prototypes, etc.)
+
+-  Mission-critical applications upon which you are betting the future
+   of the company
+
+-  Situations where *security* is important, where you need to guarantee
+   the integrity of your system and protect against intrusion, cracking,
+   and vandalism
+
+-  Project consists of subcomponents with interlocking dependencies
+
+-  Extensive file operations required ( *Bash* is limited to serial file
+   access, and that only in a particularly clumsy and inefficient
+   line-by-line fashion.)
+
+-  Need native support for multi-dimensional arrays
+
+-  Need data structures, such as linked lists or trees
+
+-  Need to generate / manipulate graphics or GUIs
+
+-  Need direct access to system hardware or external peripherals
+
+-  Need port or `socket <devref1.html#SOCKETREF>`__ I/O
+
+-  Need to use libraries or interface with legacy code
+
+-  Proprietary, closed-source applications (Shell scripts put the source
+   code right out in the open for all the world to see.)
+
+If any of the above applies, consider a more powerful scripting language
+-- perhaps *Perl* , *Tcl* , *Python* , *Ruby* -- or possibly a compiled
+language such as *C* , *C++* , or *Java* . Even then, prototyping the
+application as a shell script might still be a useful development step.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 We will be using Bash , an acronym ` [3]  <why-shell.html#FTN.AEN139>`__
 for "Bourne-Again shell" and a pun on Stephen Bourne's now classic
@@ -233,13 +176,23 @@ for enlightenment.
 Unless otherwise noted, `the author <mailto:thegrendel.abs@gmail.com>`__
 of this book wrote the example scripts that follow.
 
-+--------------------------+--------------------------+--------------------------+
-| **                       |
-| *His countenance was     |
-| bold and bashed not.*    |
-|                          |
-| *--Edmund Spenser*       |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+**
+
+*His countenance was bold and bashed not.*
+
+*--Edmund Spenser*
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -248,31 +201,60 @@ of this book wrote the example scripts that follow.
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <why-shell.html#AEN62>`__     | ` [2]  <why-shell.html#AEN87>`__     |
-| These are referred to as             | Although `recursion *is* possible in |
-| `builtins <internal.html#BUILTINREF> | a shell                              |
-| `__                                  | script <localvar.html#RECURSIONREF0> |
-| , features internal to the shell.    | `__                                  |
-|                                      | , it tends to be slow and its        |
-|                                      | implementation is often an `ugly     |
-|                                      | kludge <recurnolocvar.html#FIBOREF>` |
-|                                      | __                                   |
-|                                      | .                                    |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <why-shell.html#AEN62>`__
+
+These are referred to as `builtins <internal.html#BUILTINREF>`__ ,
+features internal to the shell.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <why-shell.html#AEN87>`__
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <part1.html>`__    | Introduction             |
-| `Home <index.html>`__    | `Up <part1.html>`__      |
-| `Next <sha-bang.html>`__ | Starting Off With a      |
-|                          | Sha-Bang                 |
-+--------------------------+--------------------------+--------------------------+
+Although `recursion *is* possible in a shell
+script <localvar.html#RECURSIONREF0>`__ , it tends to be slow and its
+implementation is often an `ugly kludge <recurnolocvar.html#FIBOREF>`__
+.
+
+.. raw:: html
+
+   </p>
+
+` [3]  <why-shell.html#AEN139>`__
+
+An *acronym* is an *ersatz* word formed by pasting together the initial
+letters of the words into a tongue-tripping phrase. This morally corrupt
+and pernicious practice deserves appropriately severe punishment. Public
+flogging suggests itself.
+
+.. raw:: html
+
+   </p>
+
+` [4]  <why-shell.html#AEN147>`__
+
+Many of the features of *ksh88* , and even a few from the updated
+*ksh93* have been merged into Bash.
+
+.. raw:: html
+
+   </p>
+
+` [5]  <why-shell.html#AEN157>`__
+
+By convention, user-written shell scripts that are Bourne shell
+compliant generally take a name with a ``       .sh      `` extension.
+System scripts, such as those found in ``       /etc/rc.d      `` , do
+not necessarily conform to this nomenclature.
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 

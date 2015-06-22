@@ -11,30 +11,6 @@
   <link href="sysscripts.html" rel="NEXT" title="Analyzing a System Script"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="extmisc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="sysscripts.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="SYSTEM">
@@ -101,19 +77,17 @@
        internal variable,
 	       but gives the group names, rather than the numbers.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>groups</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>groups</b></tt>
 <tt class="COMPUTEROUTPUT">bozita cdrom cdwriter audio xgrp</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $GROUPS</b></tt>
 <tt class="COMPUTEROUTPUT">501</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="CHOWNREF">
@@ -152,17 +126,15 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>chown bozo *.txt</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>chown bozo *.txt</b></tt>
 <tt class="COMPUTEROUTPUT"></tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -183,17 +155,15 @@
        )
 	      to use this operation.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">chgrp --recursive dunderheads *.data
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">chgrp --recursive dunderheads *.data
 #  The "dunderheads" group will now own all the "*.data" files
 #+ all the way down the $PWD directory tree (that's what "recursive" means).</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="USERADDREF">
@@ -231,28 +201,26 @@
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            adduser
-           </b>
-           command is a synonym
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           adduser
+          </b>
+          command is a synonym
 	      for
-           <b class="COMMAND">
-            useradd
-           </b>
-           and is usually a symbolic link to
+          <b class="COMMAND">
+           useradd
+          </b>
+          and is usually a symbolic link to
 	      it.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -315,47 +283,43 @@
        internal Bash
 	      variables.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>id</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>id</b></tt>
 <tt class="COMPUTEROUTPUT">uid=501(bozo) gid=501(bozo) groups=501(bozo),22(cdrom),80(cdwriter),81(audio)</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $UID</b></tt>
 <tt class="COMPUTEROUTPUT">501</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            id
-           </b>
-           command shows the
-           <em>
-            effective
-           </em>
-           IDs only when they differ
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           id
+          </b>
+          command shows the
+          <em>
+           effective
+          </em>
+          IDs only when they differ
 	      from the
-           <em>
-            real
-           </em>
-           ones.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <em>
+           real
+          </em>
+          ones.
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        Also see
@@ -385,11 +349,10 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>lid bozo</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>lid bozo</b></tt>
 <tt class="COMPUTEROUTPUT"> bozo(gid=500)</tt>
 
 
@@ -399,10 +362,9 @@
   adm(gid=4)
   lp(gid=7)</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="WHOREF">
@@ -417,20 +379,18 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>who</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>who</b></tt>
 <tt class="COMPUTEROUTPUT">bozo  tty1     Apr 27 17:45
  bozo  pts/0    Apr 27 17:46
  bozo  pts/1    Apr 27 17:47
  bozo  pts/2    Apr 27 17:49</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <tt class="OPTION">
@@ -459,17 +419,15 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>who -m</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>who -m</b></tt>
 <tt class="COMPUTEROUTPUT">localhost.localdomain!bozo  pts/2    Apr 27 17:49</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="WHOAMIREF">
        </a>
@@ -485,17 +443,15 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>whoami</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>whoami</b></tt>
 <tt class="COMPUTEROUTPUT">bozo</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="WREF">
@@ -522,16 +478,14 @@
        to find
 	      a specific user and/or process.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>w | grep startx</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>w | grep startx</b></tt>
 <tt class="COMPUTEROUTPUT">bozo  tty1     -                 4:22pm  6:41   4.47s  0.45s  startx</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LOGNAMEREF">
@@ -554,65 +508,59 @@
        ,
 	      above.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>logname</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>logname</b></tt>
 <tt class="COMPUTEROUTPUT">bozo</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>whoami</b></tt>
 <tt class="COMPUTEROUTPUT">bozo</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        However . . .
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>su</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>su</b></tt>
 <tt class="COMPUTEROUTPUT">Password: ......</tt>
 
 <tt class="PROMPT">bash# </tt><tt class="USERINPUT"><b>whoami</b></tt>
 <tt class="COMPUTEROUTPUT">root</tt>
 <tt class="PROMPT">bash# </tt><tt class="USERINPUT"><b>logname</b></tt>
 <tt class="COMPUTEROUTPUT">bozo</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           While
-           <b class="COMMAND">
-            logname
-           </b>
-           prints the name
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          While
+          <b class="COMMAND">
+           logname
+          </b>
+          prints the name
 	      of the logged in user,
-           <b class="COMMAND">
-            whoami
-           </b>
-           gives the
+          <b class="COMMAND">
+           whoami
+          </b>
+          gives the
 	      name of the user attached to the current process. As we have
 	      just seen, sometimes these are not the same.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -678,19 +626,17 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Some commands.
 sudo cp /root/secretfile /home/bozo/secret
 # Some more commands.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The file
        <tt class="FILENAME">
@@ -735,11 +681,10 @@ sudo cp /root/secretfile /home/bozo/secret
          Example 17-1. Setting a new password
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 #  setnew-password.sh: For demonstration purposes only.
 #                      Not a good idea to actually run this script.
 #  This script must be run as root.
@@ -784,10 +729,9 @@ echo; echo "User $username's password changed!"
 # Using the 'passwd' command in a script is dangerous.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        The
@@ -830,16 +774,14 @@ exit 0</pre>
        . This is one of the GNU
 	      accounting utilities.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ac</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ac</b></tt>
 <tt class="COMPUTEROUTPUT">        total       68.08</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LASTREF">
@@ -865,11 +807,10 @@ exit 0</pre>
        For example, to show the last few times the system
 	      rebooted:
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>last reboot</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>last reboot</b></tt>
 <tt class="COMPUTEROUTPUT">reboot   system boot  2.6.9-1.667      Fri Feb  4 18:18          (00:02)    
  reboot   system boot  2.6.9-1.667      Fri Feb  4 15:20          (01:27)    
  reboot   system boot  2.6.9-1.667      Fri Feb  4 12:56          (00:49)    
@@ -877,10 +818,9 @@ exit 0</pre>
  . . .
 
  wtmp begins Tue Feb  1 12:50:09 2005</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="NEWGRPREF">
@@ -903,28 +843,26 @@ exit 0</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Kurt Glaesemann points out that the
-           <i class="FIRSTTERM">
-            newgrp
-           </i>
-           command could prove helpful
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Kurt Glaesemann points out that the
+          <i class="FIRSTTERM">
+           newgrp
+          </i>
+          command could prove helpful
 	      in setting the default group permissions for files a user
 	      writes. However, the
-           <a href="system.html#CHGRPREF">
-            chgrp
-           </a>
-           command might be more convenient for this purpose.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="system.html#CHGRPREF">
+           chgrp
+          </a>
+          command might be more convenient for this purpose.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -956,16 +894,14 @@ exit 0</pre>
        </i>
        window counts as a different terminal.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>tty</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>tty</b></tt>
 <tt class="COMPUTEROUTPUT">/dev/pts/1</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="STTYREF">
@@ -993,11 +929,10 @@ exit 0</pre>
          character
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # erase.sh: Using "stty" to set an erase character when reading input.
 
 echo -n "What is your name? "
@@ -1015,10 +950,9 @@ exit 0
 
 # Even after the script exits, the new key value remains set.
 # Exercise: How would you reset the erase character to the default value?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="SECRETPW">
@@ -1033,11 +967,10 @@ exit 0
 	      Turning off terminal echoing
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # secret-pw.sh: secret password
 
 echo
@@ -1066,10 +999,9 @@ stty echo     # Restores screen echo.
 exit 0
 
 # Do an 'info stty' for more on this useful-but-tricky command.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        A creative use of
@@ -1091,11 +1023,10 @@ exit 0
          Example 17-4. Keypress detection
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # keypress.sh: Detect a user keypress ("hot keys").
 
 echo
@@ -1114,10 +1045,9 @@ stty "$old_tty_settings"      # Restore old settings.
 # Thanks, Stephane Chazelas.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Also see
@@ -1134,60 +1064,56 @@ exit 0</pre>
        <a name="TERMINALSREF">
        </a>
       </p>
-      <table border="1" cellpadding="5" class="SIDEBAR">
-       <tr>
-        <td>
-         <div class="SIDEBAR">
-          <a name="AEN15053">
-          </a>
-          <p>
-           <b>
-            terminals and modes
-           </b>
-          </p>
-          <p>
-           Normally, a terminal works in the
-           <i class="FIRSTTERM">
-            canonical
-           </i>
-           mode.  When a user hits a
+      <div>
+       <p>
+        <div class="SIDEBAR">
+         <a name="AEN15053">
+         </a>
+         <p>
+          <b>
+           terminals and modes
+          </b>
+         </p>
+         <p>
+          Normally, a terminal works in the
+          <i class="FIRSTTERM">
+           canonical
+          </i>
+          mode.  When a user hits a
 	      key, the resulting character does not immediately go to
 	      the program actually running in this terminal.  A buffer
 	      local to the terminal stores keystrokes. When the user
 	      hits the
-           <b class="KEYCAP">
-            ENTER
-           </b>
-           key, this sends all the
+          <b class="KEYCAP">
+           ENTER
+          </b>
+          key, this sends all the
 	      stored keystrokes to the program running.  There is even
 	      a basic line editor inside the terminal.
-          </p>
+         </p>
+         <p>
+         </p>
+         <div>
           <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stty -a</b></tt>
+           <font color="#000000">
+            <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stty -a</b></tt>
 <tt class="COMPUTEROUTPUT">speed 9600 baud; rows 36; columns 96; line = 0;
  intr = ^C; quit = ^\; erase = ^H; kill = ^U; eof = ^D; eol = &lt;undef&gt;; eol2 = &lt;undef&gt;;
  start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; flush = ^O;
  ...
  isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt</tt>
                 </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           Using canonical mode, it is possible to redefine the
-              special keys for the local terminal line editor.
+           </font>
           </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &gt; filexxx</b></tt>
+         </div>
+         <p>
+          Using canonical mode, it is possible to redefine the
+              special keys for the local terminal line editor.
+         </p>
+         <div>
+          <p>
+           <font color="#000000">
+            <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &gt; filexxx</b></tt>
 <tt class="USERINPUT"><b>wha&lt;ctl-W&gt;I&lt;ctl-H&gt;foo bar&lt;ctl-U&gt;hello world&lt;ENTER&gt;</b></tt>
 <tt class="USERINPUT"><b>&lt;ctl-D&gt;</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat filexxx</b></tt>
@@ -1195,64 +1121,108 @@ exit 0</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>wc -c &lt; filexxx</b></tt>
 <tt class="COMPUTEROUTPUT">12</tt>		
                 </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          The process controlling the terminal receives only 12
-              characters (11 alphabetic ones, plus a newline), although
-              the user hit 26 keys.
-          <p>
-           In non-canonical (
-           <span class="QUOTE">
-            "raw"
-           </span>
-           ) mode, every
-              key hit (including special editing keys such as
-           <b class="KEYCAP">
-            ctl-H
-           </b>
-           ) sends a character immediately to
-              the controlling process.
-          </p>
-          <p>
-           The Bash prompt disables both
-           <tt class="OPTION">
-            icanon
-           </tt>
-           and
-           <tt class="OPTION">
-            echo
-           </tt>
-           , since it replaces the basic
-              terminal line editor with its own more elaborate one. For
-              example, when you hit
-           <b class="KEYCAP">
-            ctl-A
-           </b>
-           at the Bash
-              prompt, there's no
-           <b class="KEYCAP">
-            ^A
-           </b>
-           echoed by the
-              terminal, but Bash gets a
-           <b class="KEYCAP">
-            \1
-           </b>
-           character,
-              interprets it, and moves the cursor to the begining of
-              the line.
-          </p>
-          <p>
-           <em>
-            Stéphane Chazelas
-           </em>
+           </font>
           </p>
          </div>
-        </td>
-       </tr>
-      </table>
+         The process controlling the terminal receives only 12
+              characters (11 alphabetic ones, plus a newline), although
+              the user hit 26 keys.
+         <p>
+          In non-canonical (
+          <span class="QUOTE">
+           "raw"
+          </span>
+          ) mode, every
+              key hit (including special editing keys such as
+          <b class="KEYCAP">
+           ctl-H
+          </b>
+          ) sends a character immediately to
+              the controlling process.
+         </p>
+         <p>
+          The Bash prompt disables both
+          <tt class="OPTION">
+           icanon
+          </tt>
+          and
+          <tt class="OPTION">
+           echo
+          </tt>
+          , since it replaces the basic
+              terminal line editor with its own more elaborate one. For
+              example, when you hit
+          <b class="KEYCAP">
+           ctl-A
+          </b>
+          at the Bash
+              prompt, there's no
+          <b class="KEYCAP">
+           ^A
+          </b>
+          echoed by the
+              terminal, but Bash gets a
+          <b class="KEYCAP">
+           \1
+          </b>
+          character,
+              interprets it, and moves the cursor to the begining of
+              the line.
+         </p>
+         <p>
+          <em>
+           Stéphane Chazelas
+          </em>
+         </p>
+        </div>
+       </p>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stty -a</b></tt>
+<tt class="COMPUTEROUTPUT">speed 9600 baud; rows 36; columns 96; line = 0;
+ intr = ^C; quit = ^\; erase = ^H; kill = ^U; eof = ^D; eol = &lt;undef&gt;; eol2 = &lt;undef&gt;;
+ start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; flush = ^O;
+ ...
+ isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt</tt>
+                </pre>
+        </font>
+       </p>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &gt; filexxx</b></tt>
+<tt class="USERINPUT"><b>wha&lt;ctl-W&gt;I&lt;ctl-H&gt;foo bar&lt;ctl-U&gt;hello world&lt;ENTER&gt;</b></tt>
+<tt class="USERINPUT"><b>&lt;ctl-D&gt;</b></tt>
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat filexxx</b></tt>
+<tt class="COMPUTEROUTPUT">hello world</tt>		
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>wc -c &lt; filexxx</b></tt>
+<tt class="COMPUTEROUTPUT">12</tt>		
+                </pre>
+        </font>
+       </p>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stty -a</b></tt>
+<tt class="COMPUTEROUTPUT">speed 9600 baud; rows 36; columns 96; line = 0;
+ intr = ^C; quit = ^\; erase = ^H; kill = ^U; eof = ^D; eol = &lt;undef&gt;; eol2 = &lt;undef&gt;;
+ start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; flush = ^O;
+ ...
+ isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt</tt>
+                </pre>
+        </font>
+       </p>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat &gt; filexxx</b></tt>
+<tt class="USERINPUT"><b>wha&lt;ctl-W&gt;I&lt;ctl-H&gt;foo bar&lt;ctl-U&gt;hello world&lt;ENTER&gt;</b></tt>
+<tt class="USERINPUT"><b>&lt;ctl-D&gt;</b></tt>
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat filexxx</b></tt>
+<tt class="COMPUTEROUTPUT">hello world</tt>		
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>wc -c &lt; filexxx</b></tt>
+<tt class="COMPUTEROUTPUT">12</tt>		
+                </pre>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="SETTERMREF">
@@ -1273,17 +1243,15 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>setterm -cursor off</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>setterm -cursor off</b></tt>
 <tt class="COMPUTEROUTPUT">bash$</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -1303,19 +1271,17 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">setterm -bold on
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">setterm -bold on
 echo bold hello
 
 setterm -bold off
 echo normal hello</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="TSETREF">
@@ -1335,19 +1301,17 @@ echo normal hello</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>tset -r</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>tset -r</b></tt>
 <tt class="COMPUTEROUTPUT">Terminal type is xterm-xfree86.
  Kill is control-U (^U).
  Interrupt is control-C (^C).</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="SETSERIALREF">
@@ -1368,18 +1332,16 @@ echo normal hello</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># From /etc/pcmcia/serial script:
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># From /etc/pcmcia/serial script:
 
 IRQ=`setserial /dev/$DEVICE | sed -e 's/.*IRQ: //'`
 setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="GETTYREF">
@@ -1433,22 +1395,20 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           It can be quite annoying to have a message
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          It can be quite annoying to have a message
 	      about ordering pizza suddenly appear in the middle of
 	      the text file you are editing. On a multi-user network,
 	      you might therefore wish to disable write access to your
 	      terminal when you need to avoid interruptions.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1480,44 +1440,40 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>wall System going down for maintenance in 5 minutes!</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>wall System going down for maintenance in 5 minutes!</b></tt>
 <tt class="COMPUTEROUTPUT">Broadcast message from bozo (pts/1) Sun Jul  8 13:53:27 2001...
 
  System going down for maintenance in 5 minutes!</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           If write access to a particular terminal has been
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          If write access to a particular terminal has been
 	      disabled with
-           <b class="COMMAND">
-            mesg
-           </b>
-           , then
-           <b class="COMMAND">
-            wall
-           </b>
-           cannot send a message to
+          <b class="COMMAND">
+           mesg
+          </b>
+          , then
+          <b class="COMMAND">
+           wall
+          </b>
+          cannot send a message to
 	      that terminal.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -1562,11 +1518,10 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
        </tt>
        option shows only the OS type.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uname</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uname</b></tt>
 <tt class="COMPUTEROUTPUT">Linux</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uname -s</b></tt>
@@ -1576,10 +1531,9 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uname -a</b></tt>
 <tt class="COMPUTEROUTPUT">Linux iron.bozo 2.6.15-1.2054_FC5 #1 Tue Mar 14 15:48:33 EST 2006
  i686 i686 i386 GNU/Linux</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="ARCHREF">
@@ -1601,19 +1555,17 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
        </a>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>arch</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>arch</b></tt>
 <tt class="COMPUTEROUTPUT">i686</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uname -m</b></tt>
 <tt class="COMPUTEROUTPUT">i686</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LASTCOMMREF">
@@ -1652,11 +1604,10 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lastlog</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lastlog</b></tt>
 <tt class="COMPUTEROUTPUT">root          tty1                      Fri Dec  7 18:43:21 -0700 2001
  bin                                     **Never logged in**
  daemon                                  **Never logged in**
@@ -1668,30 +1619,27 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lastlog | grep root</b></tt>
 <tt class="COMPUTEROUTPUT">root          tty1                      Fri Dec  7 18:43:21 -0700 2001</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This command will fail if the user invoking
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          This command will fail if the user invoking
 		it does not have read permission for the
-           <tt class="FILENAME">
-            /var/log/lastlog
-           </tt>
-           file.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <tt class="FILENAME">
+           /var/log/lastlog
+          </tt>
+          file.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1724,11 +1672,10 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsof</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsof</b></tt>
 <tt class="COMPUTEROUTPUT">COMMAND    PID    USER   FD   TYPE     DEVICE    SIZE     NODE NAME
  init         1    root  mem    REG        3,5   30748    30303 /sbin/init
  init         1    root  mem    REG        3,5   73120     8069 /lib/ld-2.1.3.so
@@ -1736,10 +1683,9 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
  cardmgr    213    root  mem    REG        3,5   36956    30357 /sbin/cardmgr
  ...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -1762,19 +1708,17 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsof -an -i tcp</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsof -an -i tcp</b></tt>
 <tt class="COMPUTEROUTPUT">COMMAND  PID USER  FD  TYPE DEVICE SIZE NODE NAME
  firefox 2330 bozo  32u IPv4   9956       TCP 66.0.118.137:57596-&gt;67.112.7.104:http ...
  firefox 2330 bozo  38u IPv4  10535       TCP 66.0.118.137:57708-&gt;216.79.48.24:http ...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        See
        <a href="networkprogramming.html#IPADDRESSES">
@@ -1821,21 +1765,19 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>strace df</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>strace df</b></tt>
 <tt class="COMPUTEROUTPUT">execve("/bin/df", ["df"], [/* 45 vars */]) = 0
  uname({sys="Linux", node="bozo.localdomain", ...}) = 0
  brk(0)                                  = 0x804f5e4
 
  ...</tt>
 	    </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        This is the Linux equivalent of
 	      the Solaris
@@ -1870,11 +1812,10 @@ setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ltrace df</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ltrace df</b></tt>
 <tt class="COMPUTEROUTPUT">__libc_start_main(0x804a910, 1, 0xbfb589a4, 0x804fb70, 0x804fb68 &lt;unfinished ...&gt;:
  setlocale(6, "")                                 = "en_US.UTF-8"
 bindtextdomain("coreutils", "/usr/share/locale") = "/usr/share/locale"
@@ -1884,10 +1825,9 @@ getenv("DF_BLOCK_SIZE")                          = NULL
 
  ...</tt>
 	    </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="NCREF">
@@ -1914,17 +1854,15 @@ getenv("DF_BLOCK_SIZE")                          = NULL
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>nc localhost.localdomain 25</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>nc localhost.localdomain 25</b></tt>
 <tt class="COMPUTEROUTPUT">220 localhost.localdomain ESMTP Sendmail 8.13.1/8.13.1;
  Thu, 31 Mar 2005 15:41:35 -0700</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        A real-life
        <a href="process-sub.html#NETCATEXAMPLE">
@@ -1944,11 +1882,10 @@ getenv("DF_BLOCK_SIZE")                          = NULL
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#! /bin/sh
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#! /bin/sh
 ## Duplicate DaveG's ident-scan thingie using netcat. Oooh, he'll be p*ssed.
 ## Args: target port [port port port ...]
 ## Hose stdout _and_ stderr together.
@@ -2015,24 +1952,21 @@ exit $?
 #  For more of Hobbit's 'nc' example scripts,
 #+ look in the documentation:
 #+ the /usr/share/doc/nc-X.XX/scripts directory.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        And, of course, there's Dr. Andrew Tridgell's notorious
 	      one-line script in the BitKeeper Affair:
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo clone | nc thunk.org 5000 &gt; e2fsprogs.dat</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo clone | nc thunk.org 5000 &gt; e2fsprogs.dat</pre>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="FREEREF">
@@ -2068,32 +2002,28 @@ exit $?
        does, and much
 	      more.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">free</b>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">free</b>
 <tt class="COMPUTEROUTPUT">                total       used       free     shared    buffers     cached
    Mem:         30504      28624       1880      15820       1608       16376
    -/+ buffers/cache:      10640      19864
    Swap:        68540       3128      65412</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        To show unused RAM memory:
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">free | grep Mem | awk '{ print $4 }'</b>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">free | grep Mem | awk '{ print $4 }'</b>
 <tt class="COMPUTEROUTPUT">1880</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="PROCINFOREF">
@@ -2114,16 +2044,14 @@ exit $?
        . This gives a very extensive and
 	      detailed listing.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>procinfo | grep Bootup</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>procinfo | grep Bootup</b></tt>
 <tt class="COMPUTEROUTPUT">Bootup: Wed Mar 21 15:15:50 2001    Load average: 0.04 0.21 0.34 3/47 6829</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LSDEVREF">
@@ -2138,11 +2066,10 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsdev</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsdev</b></tt>
 <tt class="COMPUTEROUTPUT">Device            DMA   IRQ  I/O Ports
  ------------------------------------------------
  cascade             4     2 
@@ -2153,10 +2080,9 @@ exit $?
  ide0                     14  01f0-01f7 03f6-03f6
  ...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="DUREF">
@@ -2170,20 +2096,18 @@ exit $?
        Show (disk) file usage, recursively. Defaults to current
 	      working directory, unless otherwise specified.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">du -ach</b>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">du -ach</b>
 <tt class="COMPUTEROUTPUT">1.0k    ./wi.sh
  1.0k    ./tst.sh
  1.0k    ./random.file
  6.0k    .
  6.0k    total</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="DFREF">
@@ -2196,19 +2120,17 @@ exit $?
       <p>
        Shows filesystem usage in tabular form.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">df</b>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><b class="COMMAND">df</b>
 <tt class="COMPUTEROUTPUT">Filesystem           1k-blocks      Used Available Use% Mounted on
  /dev/hda5               273262     92607    166547  36% /
  /dev/hda8               222525    123951     87085  59% /home
  /dev/hda7              1408796   1075744    261488  80% /usr</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="DMESGREF">
@@ -2247,20 +2169,18 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>dmesg | grep hda</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>dmesg | grep hda</b></tt>
 <tt class="COMPUTEROUTPUT">Kernel command line: ro root=/dev/hda2
  hda: IBM-DLGA-23080, ATA DISK drive
  hda: 6015744 sectors (3080 MB) w/96KiB Cache, CHS=746/128/63
  hda: hda1 hda2 hda3 &lt; hda5 hda6 hda7 &gt; hda4</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="STATREF">
@@ -2281,11 +2201,10 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stat test.cru</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stat test.cru</b></tt>
 <tt class="COMPUTEROUTPUT">  File: "test.cru"
    Size: 49970        Allocated Blocks: 100          Filetype: Regular File
    Mode: (0664/-rw-rw-r--)         Uid: (  501/ bozo)  Gid: (  501/ bozo)
@@ -2294,10 +2213,9 @@ exit $?
  Modify: Sat Jun  2 16:40:24 2001
  Change: Sat Jun  2 16:40:24 2001</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        If the target file does not exist,
        <b class="COMMAND">
@@ -2307,17 +2225,15 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stat nonexistent-file</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>stat nonexistent-file</b></tt>
 <tt class="COMPUTEROUTPUT">nonexistent-file: No such file or directory</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        In a script, you can use
        <b class="COMMAND">
@@ -2329,11 +2245,10 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 # fileinfo2.sh
 
 # Per suggestion of Joël Bourquard and . . .
@@ -2367,10 +2282,9 @@ File size:          418
 File inode:         1730378
 File type:          regular file
 File access rights: -rw-rw-r--</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="VMSTATREF">
@@ -2385,19 +2299,17 @@ File access rights: -rw-rw-r--</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>vmstat</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>vmstat</b></tt>
 <tt class="COMPUTEROUTPUT">   procs                      memory    swap          io system         cpu
  r  b  w   swpd   free   buff  cache  si  so    bi    bo   in    cs  us  sy id
  0  0  0      0  11040   2636  38952   0   0    33     7  271    88   8   3 89</tt>
 	    </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="UPTIMEREF">
@@ -2413,39 +2325,35 @@ File access rights: -rw-rw-r--</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uptime</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>uptime</b></tt>
 <tt class="COMPUTEROUTPUT">10:28pm  up  1:57,  3 users,  load average: 0.17, 0.34, 0.27</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           A
-           <i class="FIRSTTERM">
-            load average
-           </i>
-           of 1 or less
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          A
+          <i class="FIRSTTERM">
+           load average
+          </i>
+          of 1 or less
 	      indicates that the system handles processes immediately. A load
 	      average greater than 1 means that processes are being queued. When
 	      the load average gets above 3 (on a single-core processor),
 	      then system performance is significantly degraded.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2478,19 +2386,17 @@ File access rights: -rw-rw-r--</pre>
        internal
 	      variable.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>hostname</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>hostname</b></tt>
 <tt class="COMPUTEROUTPUT">localhost.localdomain</tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $HOSTNAME</b></tt>
 <tt class="COMPUTEROUTPUT">localhost.localdomain</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Similar to the
        <b class="COMMAND">
@@ -2536,96 +2442,103 @@ File access rights: -rw-rw-r--</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>hostid</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>hostid</b></tt>
 <tt class="COMPUTEROUTPUT">7f0100</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This command allegedly fetches a
-           <span class="QUOTE">
-            "unique"
-           </span>
-           serial number for a particular system. Certain
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          This command allegedly fetches a
+          <span class="QUOTE">
+           "unique"
+          </span>
+          serial number for a particular system. Certain
 	      product registration procedures use this number
 	      to brand a particular user license. Unfortunately,
-           <b class="COMMAND">
-            hostid
-           </b>
-           only returns the machine
+          <b class="COMMAND">
+           hostid
+          </b>
+          only returns the machine
 	      network address in hexadecimal, with pairs of bytes
 	      transposed.
-          </p>
-          <p>
-           The network address of a typical non-networked Linux
+         </p>
+         <p>
+          The network address of a typical non-networked Linux
 	      machine, is found in
-           <tt class="FILENAME">
-            /etc/hosts
-           </tt>
-           .
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat /etc/hosts</b></tt>
+          <tt class="FILENAME">
+           /etc/hosts
+          </tt>
+          .
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat /etc/hosts</b></tt>
 <tt class="COMPUTEROUTPUT">127.0.0.1               localhost.localdomain localhost</tt></pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           As it happens, transposing the bytes of
-           <tt class="USERINPUT">
-            <b>
-             127.0.0.1
-            </b>
-           </tt>
-           , we get
-           <tt class="USERINPUT">
-            <b>
-             0.127.1.0
-            </b>
-           </tt>
-           , which translates in
-	      hex to
-           <tt class="USERINPUT">
-            <b>
-             007f0100
-            </b>
-           </tt>
-           , the exact equivalent
-	      of what
-           <b class="COMMAND">
-            hostid
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          As it happens, transposing the bytes of
+          <tt class="USERINPUT">
+           <b>
+            127.0.0.1
            </b>
-           returns, above. There
+          </tt>
+          , we get
+          <tt class="USERINPUT">
+           <b>
+            0.127.1.0
+           </b>
+          </tt>
+          , which translates in
+	      hex to
+          <tt class="USERINPUT">
+           <b>
+            007f0100
+           </b>
+          </tt>
+          , the exact equivalent
+	      of what
+          <b class="COMMAND">
+           hostid
+          </b>
+          returns, above. There
 	      exist only a few million other Linux machines with this
 	      identical
-           <i class="FIRSTTERM">
-            hostid
-           </i>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <i class="FIRSTTERM">
+           hostid
+          </i>
+          .
+         </p>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat /etc/hosts</b></tt>
+<tt class="COMPUTEROUTPUT">127.0.0.1               localhost.localdomain localhost</tt></pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cat /etc/hosts</b></tt>
+<tt class="COMPUTEROUTPUT">127.0.0.1               localhost.localdomain localhost</tt></pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2666,11 +2579,10 @@ File access rights: -rw-rw-r--</pre>
        </a>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sar</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sar</b></tt>
 <tt class="COMPUTEROUTPUT">Linux 2.4.9 (brooks.seringas.fr) 	09/26/03
 
 10:30:00          CPU     %user     %nice   %system   %iowait     %idle
@@ -2687,10 +2599,9 @@ Average:          all      2.23      3.63     72.87      0.00     21.27
 15:30:00          all      0.79      2.94      7.56      0.00     88.71
 Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
            </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="READELFREF">
@@ -2711,11 +2622,10 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
        </i>
        package.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>readelf -h /bin/bash</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>readelf -h /bin/bash</b></tt>
 <tt class="COMPUTEROUTPUT">ELF Header:
    Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
    Class:                             ELF32
@@ -2725,10 +2635,9 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
    ABI Version:                       0
    Type:                              EXEC (Executable file)
    . . .</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="SIZEREF">
@@ -2749,18 +2658,16 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>size /bin/bash</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>size /bin/bash</b></tt>
 <tt class="COMPUTEROUTPUT">   text    data     bss     dec     hex filename
   495971   22496   17392  535859   82d33 /bin/bash</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
     </dl>
    </div>
@@ -2802,16 +2709,14 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">logger Experiencing instability in network connection at 23:10, 05/21.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">logger Experiencing instability in network connection at 23:10, 05/21.
 # Now, do a 'tail /var/log/messages'.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        By embedding a
        <b class="COMMAND">
@@ -2826,21 +2731,19 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">logger -t $0 -i Logging at line "$LINENO".
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">logger -t $0 -i Logging at line "$LINENO".
 # The "-t" option specifies the tag for the logger entry.
 # The "-i" option records the process ID.
 
 # tail /var/log/message
 # ...
 # Jul  7 20:48:58 localhost ./test.sh[1712]: Logging at line 3.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LOGROTATEREF">
@@ -2880,27 +2783,25 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Stefano Falsetto has created
-           <a href="http://www.gnu.org/software/rottlog/" target="_top">
-            rottlog
-           </a>
-           ,
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Stefano Falsetto has created
+          <a href="http://www.gnu.org/software/rottlog/" target="_top">
+           rottlog
+          </a>
+          ,
 	     which he considers to be an improved version of
-           <b class="COMMAND">
-            logrotate
-           </b>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <b class="COMMAND">
+           logrotate
+          </b>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -2966,16 +2867,14 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
        </a>
        ).
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b> ps ax | grep sendmail</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b> ps ax | grep sendmail</b></tt>
 <tt class="COMPUTEROUTPUT">295 ?	   S	  0:00 sendmail: accepting connections on port 25</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        To display system processes in graphical
        <span class="QUOTE">
@@ -3024,11 +2923,10 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ps a | grep mingetty</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ps a | grep mingetty</b></tt>
 <tt class="COMPUTEROUTPUT">2212 tty2     Ss+    0:00 /sbin/mingetty tty2
  2213 tty3     Ss+    0:00 /sbin/mingetty tty3
  2214 tty4     Ss+    0:00 /sbin/mingetty tty4
@@ -3044,10 +2942,9 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
  2215 mingetty
  2216 mingetty</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Compare the action of
        <b class="COMMAND">
@@ -3101,11 +2998,10 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>top -b</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>top -b</b></tt>
 <tt class="COMPUTEROUTPUT">  8:30pm  up 3 min,  3 users,  load average: 0.49, 0.32, 0.13
  45 processes: 44 sleeping, 1 running, 0 zombie, 0 stopped
  CPU states: 13.6% user,  7.3% system,  0.0% nice, 78.9% idle
@@ -3118,10 +3014,9 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
      2 root       9   0     0    0     0 SW    0.0  0.0   0:00 keventd
    ...</tt>  
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="NICEREF">
@@ -3242,17 +3137,15 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pidof xclock</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pidof xclock</b></tt>
 <tt class="COMPUTEROUTPUT">880</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="KILLPROCESS">
        </a>
@@ -3265,11 +3158,10 @@ Average:          all      6.33      1.70     14.71      0.00     77.26</tt>
          helps kill a process
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # kill-process.sh
 
 NOPROCESS=2
@@ -3304,10 +3196,9 @@ kill $t                  # May need 'kill -9' for stubborn process.
 # but it would not be as instructive.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3332,11 +3223,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>fuser -u /usr/bin/vim</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>fuser -u /usr/bin/vim</b></tt>
 <tt class="COMPUTEROUTPUT">/usr/bin/vim:         3207e(bozo)</tt>
 
 
@@ -3344,10 +3234,9 @@ exit 0</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>fuser -u /dev/null</b></tt>
 <tt class="COMPUTEROUTPUT">/dev/null:            3009(bozo)  3010(bozo)  3197(bozo)  3199(bozo)</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        One important application for
        <b class="COMMAND">
@@ -3375,11 +3264,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>umount /mnt/usbdrive</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>umount /mnt/usbdrive</b></tt>
 <tt class="COMPUTEROUTPUT">umount: /mnt/usbdrive: device is busy</tt>
 
 
@@ -3390,10 +3278,9 @@ exit 0</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>kill -9 1772</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>umount /mnt/usbdrive</b></tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -3417,11 +3304,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>nmap localhost.localdomain</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>nmap localhost.localdomain</b></tt>
 <tt class="COMPUTEROUTPUT">PORT     STATE SERVICE
  25/tcp   open  smtp</tt>
 
@@ -3433,10 +3319,9 @@ exit 0</pre>
 <tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>ps ax | grep 2095 | grep -v grep</b></tt>
 <tt class="COMPUTEROUTPUT">2095 ?        Ss     0:00 sendmail: accepting connections</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="CRONREF">
@@ -3486,26 +3371,24 @@ exit 0</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Some flavors of Linux run
-           <b class="COMMAND">
-            crond
-           </b>
-           , Matthew Dillon's version of
-           <b class="COMMAND">
-            cron
-           </b>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Some flavors of Linux run
+          <b class="COMMAND">
+           crond
+          </b>
+          , Matthew Dillon's version of
+          <b class="COMMAND">
+           cron
+          </b>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -3655,29 +3538,27 @@ exit 0</pre>
       <div class="WARNING">
        <p>
        </p>
-       <table border="0" class="WARNING" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Warning" hspace="5" src="../images/warning.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           On some Linux distros, the
-           <b class="COMMAND">
-            halt
-           </b>
-           command
+       <div>
+        <p>
+         <img alt="Warning" hspace="5" src="../images/warning.gif"/>
+        </p>
+        <p>
+         <p>
+          On some Linux distros, the
+          <b class="COMMAND">
+           halt
+          </b>
+          command
 	      has 755 permissions, so it can be invoked by a non-root user.
 	      A careless
-           <i class="FIRSTTERM">
-            halt
-           </i>
-           in a terminal or a script
+          <i class="FIRSTTERM">
+           halt
+          </i>
+          in a terminal or a script
 	      may shut down the system!
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3711,19 +3592,17 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>/sbin/service iptables stop</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>/sbin/service iptables stop</b></tt>
 <tt class="COMPUTEROUTPUT">Flushing firewall rules:                                   [  OK  ]
  Setting chains to policy ACCEPT: filter                    [  OK  ]
  Unloading iptables modules:                                [  OK  ]</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
     </dl>
    </div>
@@ -3763,11 +3642,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 
 SERVER=$HOST                           # localhost.localdomain (127.0.0.1).
 PORT_NUMBER=25                         # SMTP port.
@@ -3779,10 +3657,9 @@ nmap $SERVER | grep -w "$PORT_NUMBER"  # Is that particular port open?
 exit 0
 
 # 25/tcp     open        smtp</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="IFCONFIGREF">
@@ -3799,11 +3676,10 @@ exit 0
        </i>
        and tuning utility.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ifconfig -a</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ifconfig -a</b></tt>
 <tt class="COMPUTEROUTPUT">lo        Link encap:Local Loopback
            inet addr:127.0.0.1  Mask:255.0.0.0
            UP LOOPBACK RUNNING  MTU:16436  Metric:1
@@ -3811,10 +3687,9 @@ exit 0
            TX packets:10 errors:0 dropped:0 overruns:0 carrier:0
            collisions:0 txqueuelen:0 
            RX bytes:700 (700.0 b)  TX bytes:700 (700.0 b)</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -3826,11 +3701,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Code snippets from /etc/rc.d/init.d/network
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Code snippets from /etc/rc.d/init.d/network
 
 # ...
 
@@ -3858,10 +3732,9 @@ echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
 #    echo $(/sbin/ifconfig | awk '/^[a-z]/ { print $1 })'
 #    echo $(/sbin/ifconfig | sed -e 's/ .*//')
 #  Thanks, S.C., for additional comments.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        See also
        <a href="debugging.html#ONLINE">
@@ -3905,11 +3778,10 @@ echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
        </a>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>netstat</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>netstat</b></tt>
 <tt class="COMPUTEROUTPUT">Active Internet connections (w/o servers)
  Proto Recv-Q Send-Q Local Address           Foreign Address         State      
  Active UNIX domain sockets (w/o servers)
@@ -3918,36 +3790,33 @@ echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
  unix  3      [ ]         STREAM     CONNECTED     4514   /tmp/.X11-unix/X0
  unix  3      [ ]         STREAM     CONNECTED     4513
  . . .</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           A
-           <b class="COMMAND">
-            netstat -lptu
-           </b>
-           shows
-           <a href="devref1.html#SOCKETREF">
-            sockets
-           </a>
-           that are listening
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          A
+          <b class="COMMAND">
+           netstat -lptu
+          </b>
+          shows
+          <a href="devref1.html#SOCKETREF">
+           sockets
+          </a>
+          that are listening
 	    to ports, and the associated processes. This can be useful
 	    for determining whether a computer has been hacked or
 	    compromised.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3992,11 +3861,10 @@ echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ip link show</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ip link show</b></tt>
 <tt class="COMPUTEROUTPUT">1: lo: &lt;LOOPBACK,UP&gt; mtu 16436 qdisc noqueue 
      link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
  2: eth0: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc pfifo_fast qlen 1000
@@ -4008,10 +3876,9 @@ echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ip route list</b></tt>
 <tt class="COMPUTEROUTPUT">169.254.0.0/16 dev lo  scope link</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Or, in a script:
       </p>
@@ -4019,11 +3886,10 @@ echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
        <a name="IPSCRIPT0">
        </a>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 # Script by Juan Nicolas Ruiz
 # Used with his kind permission.
 
@@ -4054,10 +3920,9 @@ REMOTE_NET="192.168.3.0/24"
 /sbin/ip tunnel del netb
 
 exit 0</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="ROUTEREF">
@@ -4072,20 +3937,18 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>route</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>route</b></tt>
 <tt class="COMPUTEROUTPUT">Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
  pm3-67.bozosisp *               255.255.255.255 UH       40 0          0 ppp0
  127.0.0.0       *               255.0.0.0       U        40 0          0 lo
  default         pm3-67.bozosisp 0.0.0.0         UG       40 0          0 ppp0</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="IPTABLESREF">
@@ -4155,19 +4018,17 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>chkconfig --list</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>chkconfig --list</b></tt>
 <tt class="COMPUTEROUTPUT">atd             0:off   1:off   2:off   3:on    4:on    5:on    6:off
  rwhod           0:off   1:off   2:off   3:off   4:off   5:off   6:off
  ...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="TCPDUMPREF">
@@ -4199,16 +4060,14 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>tcpdump ip host bozoville and caduceus</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>tcpdump ip host bozoville and caduceus</b></tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Of course, the output of
        <b class="COMMAND">
@@ -4295,18 +4154,16 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">mount -t iso9660 /dev/cdrom /mnt/cdrom
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">mount -t iso9660 /dev/cdrom /mnt/cdrom
 # Mounts CD ROM. ISO 9660 is a standard CD ROM filesystem.
 mount /mnt/cdrom
 # Shortcut, if /mnt/cdrom listed in /etc/fstab</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="ISOMOUNTREF0">
        </a>
@@ -4343,11 +4200,10 @@ mount /mnt/cdrom
          Example 17-7. Checking a CD image
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING"># As root...
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING"># As root...
 
 mkdir /mnt/cdtest  # Prepare a mount point, if not already there.
 
@@ -4356,10 +4212,9 @@ mount -r -t iso9660 -o loop cd-image.iso /mnt/cdtest   # Mount the image.
 cd /mnt/cdtest     # Now, check the image.
 ls -alR            # List the files in the directory tree there.
                    # And so forth.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4378,43 +4233,39 @@ ls -alR            # List the files in the directory tree there.
        </b>
        ed, else filesystem corruption may result.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">umount /mnt/cdrom
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">umount /mnt/cdrom
 # You may now press the eject button and safely remove the disk.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            automount
-           </b>
-           utility, if
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           automount
+          </b>
+          utility, if
 		properly installed, can mount and unmount floppies or
 		CDROM disks as they are accessed or removed. On
-           <span class="QUOTE">
-            "multispindle"
-           </span>
-           laptops with swappable
+          <span class="QUOTE">
+           "multispindle"
+          </span>
+          laptops with swappable
 		floppy and optical drives, this can cause problems,
 		however.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4459,11 +4310,10 @@ ls -alR            # List the files in the directory tree there.
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>gnome-mount -d /dev/sda1</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>gnome-mount -d /dev/sda1</b></tt>
 <tt class="COMPUTEROUTPUT">gnome-mount 0.4</tt>
 
 
@@ -4471,10 +4321,9 @@ ls -alR            # List the files in the directory tree there.
 <tt class="COMPUTEROUTPUT">. . .
  /dev/sda1                63584     12034     51550  19% /media/disk</tt>
  </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="SYNCREF">
@@ -4536,11 +4385,10 @@ ls -alR            # List the files in the directory tree there.
          Example 17-8. Creating a filesystem in a file
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">SIZE=1000000  # 1 meg
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">SIZE=1000000  # 1 meg
 
 head -c $SIZE &lt; /dev/zero &gt; file  # Set up file of designated size.
 losetup /dev/loop0 file           # Set it up as loopback device.
@@ -4548,10 +4396,9 @@ mke2fs /dev/loop0                 # Create filesystem.
 mount -o loop /dev/loop0 /mnt     # Mount it.
 
 # Thanks, S.C.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4618,11 +4465,10 @@ mount -o loop /dev/loop0 /mnt     # Mount it.
          Example 17-9. Adding a new hard drive
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Adding a second hard drive to system.
 # Software configuration. Assumes hardware already mounted.
@@ -4663,10 +4509,9 @@ chmod 777 $MOUNTPOINT  # Makes new drive accessible to all users.
 # /dev/hdb1  /mnt/newdisk  ext2  defaults  1 1
 
 exit</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -4720,19 +4565,17 @@ exit</pre>
       <div class="WARNING">
        <p>
        </p>
-       <table border="0" class="WARNING" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Warning" hspace="5" src="../images/warning.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This is an extremely dangerous command. Use it at
+       <div>
+        <p>
+         <img alt="Warning" hspace="5" src="../images/warning.gif"/>
+        </p>
+        <p>
+         <p>
+          This is an extremely dangerous command. Use it at
 	      your own risk, as you may inadvertently destroy your filesystem.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4755,18 +4598,16 @@ exit</pre>
        </i>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">root# </tt><b class="COMMAND">dumpe2fs /dev/hda7 | grep 'ount count'</b>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">root# </tt><b class="COMMAND">dumpe2fs /dev/hda7 | grep 'ount count'</b>
 <tt class="COMPUTEROUTPUT">dumpe2fs 1.19, 13-Jul-2000 for EXT2 FS 0.5b, 95/08/09
  Mount count:              6
  Maximum mount count:      20</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="HDPARMREF">
@@ -4805,20 +4646,18 @@ exit</pre>
       <div class="WARNING">
        <p>
        </p>
-       <table border="0" class="WARNING" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Warning" hspace="5" src="../images/warning.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Use this command with extreme caution. If something
+       <div>
+        <p>
+         <img alt="Warning" hspace="5" src="../images/warning.gif"/>
+        </p>
+        <p>
+         <p>
+          Use this command with extreme caution. If something
 	      goes wrong, you may destroy an existing
 	      filesystem.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4874,23 +4713,21 @@ exit</pre>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           All of these should be invoked as
-           <i class="FIRSTTERM">
-            root
-           </i>
-           , and they can damage or destroy
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          All of these should be invoked as
+          <i class="FIRSTTERM">
+           root
+          </i>
+          , and they can damage or destroy
 	      a filesystem if misused.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4969,11 +4806,10 @@ exit</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsusb</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsusb</b></tt>
 <tt class="COMPUTEROUTPUT">Bus 001 Device 001: ID 0000:0000  
  Device Descriptor:
    bLength                18
@@ -4988,10 +4824,9 @@ exit</pre>
 
    . . .</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="LSPCIREF">
@@ -5010,11 +4845,10 @@ exit</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lspci</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lspci</b></tt>
 <tt class="COMPUTEROUTPUT">00:00.0 Host bridge: Intel Corporation 82845 845
  (Brookdale) Chipset Host Bridge (rev 04)
  00:01.0 PCI bridge: Intel Corporation 82845 845
@@ -5026,10 +4860,9 @@ exit</pre>
 
    . . .</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="MKBOOTDISKREF">
@@ -5230,29 +5063,27 @@ exit</pre>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           It might be necessary to copy certain system
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          It might be necessary to copy certain system
 	      files to a
-           <i class="FIRSTTERM">
-            chrooted
-           </i>
-           directory,
+          <i class="FIRSTTERM">
+           chrooted
+          </i>
+          directory,
 	      since the normal
-           <tt class="VARNAME">
-            $PATH
-           </tt>
-           can no longer
+          <tt class="VARNAME">
+           $PATH
+          </tt>
+          can no longer
 	      be relied upon.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -5284,44 +5115,42 @@ exit</pre>
        that controls access to
 	      a file, device, or resource.
       </p>
-      <table border="1" cellpadding="5" class="SIDEBAR">
-       <tr>
-        <td>
-         <div class="SIDEBAR">
-          <a name="AEN16645">
+      <div>
+       <p>
+        <div class="SIDEBAR">
+         <a name="AEN16645">
+         </a>
+         <p>
+         </p>
+         <p>
+          <a name="SEMAPHOREREF">
           </a>
-          <p>
-          </p>
-          <p>
-           <a name="SEMAPHOREREF">
-           </a>
-           <tt class="USERINPUT">
-            <b>
-             Definition:
-            </b>
-           </tt>
-           A
-           <i class="FIRSTTERM">
-            semaphore
-           </i>
-           is a flag or
+          <tt class="USERINPUT">
+           <b>
+            Definition:
+           </b>
+          </tt>
+          A
+          <i class="FIRSTTERM">
+           semaphore
+          </i>
+          is a flag or
 		  signal. (The usage originated in railroading, where a
 		  colored flag, lantern, or striped movable arm
-           <i class="FIRSTTERM">
-            semaphore
-           </i>
-           indicated whether a
+          <i class="FIRSTTERM">
+           semaphore
+          </i>
+          indicated whether a
 		  particular track was in use and therefore unavailable
 		  for another train.) A UNIX process can check the
 		  appropriate semaphore to determine whether a particular
 		  resource is available/accessible.
-          </p>
-          <p>
-          </p>
-         </div>
-        </td>
-       </tr>
-      </table>
+         </p>
+         <p>
+         </p>
+        </div>
+       </p>
+      </div>
       <p>
        The lock file serves as a flag that this particular
 	      file, device, or resource is in use by a process (and
@@ -5335,19 +5164,17 @@ exit</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">lockfile /home/bozo/lockfiles/$0.lock
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">lockfile /home/bozo/lockfiles/$0.lock
 # Creates a write-protected lockfile prefixed with the name of the script.
 
 lockfile /home/bozo/lockfiles/${0##*/}.lock
 # A safer version of the above, as pointed out by E. Choroba.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Lock files are used in such applications as protecting 
 	      system mail folders from simultaneously being changed
@@ -5377,21 +5204,19 @@ lockfile /home/bozo/lockfiles/${0##*/}.lock
        A script can test for the presence of a lock file by
 	      something like the following.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">appname=xyzip
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">appname=xyzip
 # Application "xyzip" created lock file "/var/lock/xyzip.lock".
 
 if [ -e "/var/lock/$appname.lock" ]
 then   #+ Prevent other programs &amp; scripts
        #  from accessing files/resources used by xyzip.
   ...</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="FLOCKREF">
@@ -5421,44 +5246,40 @@ then   #+ Prevent other programs &amp; scripts
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">flock $0 cat $0 &gt; lockfile__$0
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">flock $0 cat $0 &gt; lockfile__$0
 #  Set a lock on the script the above line appears in,
 #+ while listing the script to stdout.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Unlike
-           <b class="COMMAND">
-            lockfile
-           </b>
-           ,
-           <b class="COMMAND">
-            flock
-           </b>
-           does
-           <em>
-            not
-           </em>
-           automatically create a lock file.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Unlike
+          <b class="COMMAND">
+           lockfile
+          </b>
+          ,
+          <b class="COMMAND">
+           flock
+          </b>
+          does
+          <em>
+           not
+          </em>
+          automatically create a lock file.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -5677,32 +5498,31 @@ then   #+ Prevent other programs &amp; scripts
       <div class="IMPORTANT">
        <p>
        </p>
-       <table border="0" class="IMPORTANT" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Important" hspace="5" src="../images/important.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Judicious use of
-           <b class="COMMAND">
-            ulimit
-           </b>
-           can
+       <div>
+        <p>
+         <img alt="Important" hspace="5" src="../images/important.gif"/>
+        </p>
+        <p>
+         <p>
+          Judicious use of
+          <b class="COMMAND">
+           ulimit
+          </b>
+          can
 	      protect a system against the dreaded
-           <i class="FIRSTTERM">
-            fork
+          <i class="FIRSTTERM">
+           fork
 	      bomb
-           </i>
-           .
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#!/bin/bash
+          </i>
+          .
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/bash
 # This script is for illustrative purposes only.
 # Run it at your own peril -- it WILL freeze your system.
 
@@ -5714,29 +5534,59 @@ do
 done        #  This is the notorious <span class="QUOTE">"sorcerer's appentice"</span> scenario.
 
 exit 0      #  Will not exit here, because this script will never terminate.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           A
-           <b class="COMMAND">
-            ulimit -Hu XX
-           </b>
-           (where
-           <em>
-            XX
-           </em>
-           is the user process limit) in
-           <tt class="FILENAME">
-            /etc/profile
-           </tt>
-           would abort
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          A
+          <b class="COMMAND">
+           ulimit -Hu XX
+          </b>
+          (where
+          <em>
+           XX
+          </em>
+          is the user process limit) in
+          <tt class="FILENAME">
+           /etc/profile
+          </tt>
+          would abort
 	      this script when it exceeded the preset limit.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+# This script is for illustrative purposes only.
+# Run it at your own peril -- it WILL freeze your system.
+
+while true  #  Endless loop.
+do
+  $0 &amp;      #  This script invokes itself . . .
+            #+ forks an infinite number of times . . .
+            #+ until the system freezes up because all resources exhausted.
+done        #  This is the notorious <span class="QUOTE">"sorcerer's appentice"</span> scenario.
+
+exit 0      #  Will not exit here, because this script will never terminate.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+# This script is for illustrative purposes only.
+# Run it at your own peril -- it WILL freeze your system.
+
+while true  #  Endless loop.
+do
+  $0 &amp;      #  This script invokes itself . . .
+            #+ forks an infinite number of times . . .
+            #+ until the system freezes up because all resources exhausted.
+done        #  This is the notorious <span class="QUOTE">"sorcerer's appentice"</span> scenario.
+
+exit 0      #  Will not exit here, because this script will never terminate.</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -5839,11 +5689,10 @@ exit 0      #  Will not exit here, because this script will never terminate.</pr
 	        from prying eyes
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # rot13a.sh: Same as "rot13.sh" script, but writes output to "secure" file.
 
 # Usage: ./rot13a.sh filename
@@ -5862,10 +5711,9 @@ cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M' &gt; $OUTFILE
 #    ^^ Input from stdin or a file.   ^^^^^^^^^^ Output redirected to file. 
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -5920,11 +5768,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsmod</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>lsmod</b></tt>
 <tt class="COMPUTEROUTPUT">Module                  Size  Used by
  autofs                  9456   2 (autoclean)
  opl3                   11376   0
@@ -5938,30 +5785,27 @@ exit 0</pre>
  i82365                 22928   2
  pcmcia_core            45984   0 [serial_cs ds i82365]</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Doing a
-           <b class="COMMAND">
-            cat /proc/modules
-           </b>
-           gives the
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Doing a
+          <b class="COMMAND">
+           cat /proc/modules
+          </b>
+          gives the
 	      same information.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -6043,20 +5887,18 @@ exit 0</pre>
       <p>
        Output information about a loadable module.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>modinfo hid</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>modinfo hid</b></tt>
 <tt class="COMPUTEROUTPUT">filename:    /lib/modules/2.4.20-6/kernel/drivers/usb/hid.o
  description: "USB HID support drivers"
  author:      "Andreas Gal, Vojtech Pavlik &lt;vojtech@suse.cz&gt;"
  license:     "GPL"</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
     </dl>
    </div>
@@ -6105,32 +5947,31 @@ exit 0</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="ENVV2REF">
-           </a>
-           The first line of a script (the
-           <span class="QUOTE">
-            "sha-bang"
-           </span>
-           line) may use
-           <b class="COMMAND">
-            env
-           </b>
-           when the path to the shell or interpreter is unknown.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#! /usr/bin/env perl
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="ENVV2REF">
+          </a>
+          The first line of a script (the
+          <span class="QUOTE">
+           "sha-bang"
+          </span>
+          line) may use
+          <b class="COMMAND">
+           env
+          </b>
+          when the path to the shell or interpreter is unknown.
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#! /usr/bin/env perl
 
 print "This Perl script will run,\n";
 print "even when I don't know where to find Perl.\n";
@@ -6138,31 +5979,71 @@ print "even when I don't know where to find Perl.\n";
 # Good for portable cross-platform scripts,
 # where the Perl binaries may not be in the expected place.
 # Thanks, S.C.</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           Or even ...
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#!/bin/env bash
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          Or even ...
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/env bash
 # Queries the $PATH enviromental variable for the location of bash.
 # Therefore ...
 # This script will run where Bash is not in its usual place, in /bin.
 ...</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#! /usr/bin/env perl
+
+print "This Perl script will run,\n";
+print "even when I don't know where to find Perl.\n";
+
+# Good for portable cross-platform scripts,
+# where the Perl binaries may not be in the expected place.
+# Thanks, S.C.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/env bash
+# Queries the $PATH enviromental variable for the location of bash.
+# Therefore ...
+# This script will run where Bash is not in its usual place, in /bin.
+...</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#! /usr/bin/env perl
+
+print "This Perl script will run,\n";
+print "even when I don't know where to find Perl.\n";
+
+# Good for portable cross-platform scripts,
+# where the Perl binaries may not be in the expected place.
+# Thanks, S.C.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/env bash
+# Queries the $PATH enviromental variable for the location of bash.
+# Therefore ...
+# This script will run where Bash is not in its usual place, in /bin.
+...</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -6176,17 +6057,15 @@ print "even when I don't know where to find Perl.\n";
       <p>
        Show shared lib dependencies for an executable file.
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ldd /bin/ls</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ldd /bin/ls</b></tt>
 <tt class="COMPUTEROUTPUT">libc.so.6 =&gt; /lib/libc.so.6 (0x4000c000)
 /lib/ld-linux.so.2 =&gt; /lib/ld-linux.so.2 (0x80000000)</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="WATCHREF">
@@ -6209,43 +6088,39 @@ print "even when I don't know where to find Perl.\n";
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">watch -n 5 tail /var/log/messages
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">watch -n 5 tail /var/log/messages
 # Shows tail end of system log, /var/log/messages, every five seconds.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Unfortunately,
-           <a href="special-chars.html#PIPEREF">
-            piping
-           </a>
-           the output of
-           <b class="COMMAND">
-            watch command
-           </b>
-           to
-           <a href="textproc.html#GREPREF">
-            grep
-           </a>
-           does not work.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Unfortunately,
+          <a href="special-chars.html#PIPEREF">
+           piping
+          </a>
+          the output of
+          <b class="COMMAND">
+           watch command
+          </b>
+          to
+          <a href="textproc.html#GREPREF">
+           grep
+          </a>
+          does not work.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -6307,11 +6182,10 @@ print "even when I don't know where to find Perl.\n";
 	        the brightness of the (laptop) screen backlight
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # backlight.sh
 # reldate 02dec2011
 
@@ -6440,10 +6314,9 @@ pct=$(echo "scale=$scale0; $act_brightness / $max_brightness * $sf" | bc)
 echo "Percentage brightness = $pct%"
 
 exit $E_CHANGE1</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -6465,262 +6338,221 @@ exit $E_CHANGE1</pre>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN14695" name="FTN.AEN14695">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      This is the case on a Linux machine or a UNIX
+  <div>
+   <p>
+    <a href="system.html#AEN14695" name="FTN.AEN14695">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     This is the case on a Linux machine or a UNIX
 		   system with disk quotas.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN14727" name="FTN.AEN14727">
-      <span class="footnote">
-       [2]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The
-      <b class="COMMAND">
-       userdel
-      </b>
-      command
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN14727" name="FTN.AEN14727">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The
+     <b class="COMMAND">
+      userdel
+     </b>
+     command
 		   will fail if the particular user being deleted is
 		   still logged on.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16255" name="FTN.AEN16255">
-      <span class="footnote">
-       [3]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      For more detail on burning CDRs, see Alex
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16255" name="FTN.AEN16255">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     For more detail on burning CDRs, see Alex
 	    Withers' article,
-      <a href="http://www2.linuxjournal.com/lj-issues/issue66/3335.html" target="_top">
-       Creating
+     <a href="http://www2.linuxjournal.com/lj-issues/issue66/3335.html" target="_top">
+      Creating
 	    CDs
-      </a>
-      , in the October, 1999 issue of
-      <a href="http://www.linuxjournal.com" target="_top">
-       <i class="CITETITLE">
-        Linux
+     </a>
+     , in the October, 1999 issue of
+     <a href="http://www.linuxjournal.com" target="_top">
+      <i class="CITETITLE">
+       Linux
 	     Journal
-       </i>
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16504" name="FTN.AEN16504">
-      <span class="footnote">
-       [4]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The
-      <tt class="OPTION">
-       -c
-      </tt>
-      option to
-      <a href="system.html#MKE2FSREF">
-       mke2fs
-      </a>
-      also invokes a check for bad
-		blocks.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16659" name="FTN.AEN16659">
-      <span class="footnote">
-       [5]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Since only
-      <i class="FIRSTTERM">
-       root
       </i>
-      has write permission in the
-      <tt class="FILENAME">
-       /var/lock
-      </tt>
-      directory,
-		 a user script cannot set a lock file there.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16748" name="FTN.AEN16748">
-      <span class="footnote">
-       [6]
-      </span>
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Operators of single-user Linux systems
+     .
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16504" name="FTN.AEN16504">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The
+     <tt class="OPTION">
+      -c
+     </tt>
+     option to
+     <a href="system.html#MKE2FSREF">
+      mke2fs
+     </a>
+     also invokes a check for bad
+		blocks.
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16659" name="FTN.AEN16659">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Since only
+     <i class="FIRSTTERM">
+      root
+     </i>
+     has write permission in the
+     <tt class="FILENAME">
+      /var/lock
+     </tt>
+     directory,
+		 a user script cannot set a lock file there.
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16748" name="FTN.AEN16748">
+     <span class="footnote">
+      [6]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Operators of single-user Linux systems
 		  generally prefer something simpler for backups, such
 		  as
-      <b class="COMMAND">
-       tar
-      </b>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16782" name="FTN.AEN16782">
-      <span class="footnote">
-       [7]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      As of the
-      <a href="bashver4.html#BASH4REF">
-       version
+     <b class="COMMAND">
+      tar
+     </b>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16782" name="FTN.AEN16782">
+     <span class="footnote">
+      [7]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     As of the
+     <a href="bashver4.html#BASH4REF">
+      version
                 4 update
-      </a>
-      of Bash, the
-      <tt class="OPTION">
-       -f
-      </tt>
-      and
-      <tt class="OPTION">
-       -c
-      </tt>
-      options take a block size
+     </a>
+     of Bash, the
+     <tt class="OPTION">
+      -f
+     </tt>
+     and
+     <tt class="OPTION">
+      -c
+     </tt>
+     options take a block size
                 of 512 when in
-      <a href="sha-bang.html#POSIX2REF">
-       POSIX
-      </a>
-      mode. Additionally, there are two new options:
-      <tt class="OPTION">
-       -b
-      </tt>
-      for
-      <a href="devref1.html#SOCKETREF">
-       socket
-      </a>
-      buffer size, and
-      <tt class="OPTION">
-       -T
-      </tt>
-      for the limit on the number of
-      <i class="FIRSTTERM">
-       threads
-      </i>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16847" name="FTN.AEN16847">
-      <span class="footnote">
-       [8]
-      </span>
+     <a href="sha-bang.html#POSIX2REF">
+      POSIX
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      NAND is the logical
-      <i class="FIRSTTERM">
-       not-and
-      </i>
-      operator. Its effect
+     mode. Additionally, there are two new options:
+     <tt class="OPTION">
+      -b
+     </tt>
+     for
+     <a href="devref1.html#SOCKETREF">
+      socket
+     </a>
+     buffer size, and
+     <tt class="OPTION">
+      -T
+     </tt>
+     for the limit on the number of
+     <i class="FIRSTTERM">
+      threads
+     </i>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16847" name="FTN.AEN16847">
+     <span class="footnote">
+      [8]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     NAND is the logical
+     <i class="FIRSTTERM">
+      not-and
+     </i>
+     operator. Its effect
 		  is somewhat similar to subtraction.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="system.html#AEN16975" name="FTN.AEN16975">
-      <span class="footnote">
-       [9]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      In Bash and other Bourne shell derivatives, it is
+    </p>
+   </p>
+   <p>
+    <a href="system.html#AEN16975" name="FTN.AEN16975">
+     <span class="footnote">
+      [9]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     In Bash and other Bourne shell derivatives, it is
 	      possible to set variables in a single command's environment.
-     </p>
-     <table bgcolor="#E0E0E0" border="0" width="90%">
-      <tr>
-       <td>
-        <font color="#000000">
-         <pre class="PROGRAMLISTING">var1=value1 var2=value2 commandXXX
+    </p>
+    <table bgcolor="#E0E0E0" border="0" width="90%">
+     <tr>
+      <td>
+       <font color="#000000">
+        <pre class="PROGRAMLISTING">var1=value1 var2=value2 commandXXX
 # $var1 and $var2 set in the environment of 'commandXXX' only.</pre>
-        </font>
-       </td>
-      </tr>
-     </table>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="extmisc.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="sysscripts.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Miscellaneous Commands
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part4.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Analyzing a System Script
-     </td>
-    </tr>
-   </table>
+       </font>
+      </td>
+     </tr>
+    </table>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">var1=value1 var2=value2 commandXXX
+# $var1 and $var2 set in the environment of 'commandXXX' only.</pre>
+    </font>
+   </p>
+   <p>
+    <font color="#000000">
+     <pre class="PROGRAMLISTING">var1=value1 var2=value2 commandXXX
+# $var1 and $var2 set in the environment of 'commandXXX' only.</pre>
+    </font>
+   </p>
   </div>
  </body>
 </html>

@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <subshells.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <process-sub.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 22. Restricted Shells
@@ -133,78 +61,63 @@ The following commands and actions are disabled:
 
 **Example 22-1. Running a script in restricted mode**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     #  Starting the scri |
-| pt with "#!/bin/bash -r" |
-|     #+ runs entire scrip |
-| t in restricted mode.    |
-|                          |
-|     echo                 |
-|                          |
-|     echo "Changing direc |
-| tory."                   |
-|     cd /usr/local        |
-|     echo "Now in `pwd`"  |
-|     echo "Coming back ho |
-| me."                     |
-|     cd                   |
-|     echo "Now in `pwd`"  |
-|     echo                 |
-|                          |
-|     # Everything up to h |
-| ere in normal, unrestric |
-| ted mode.                |
-|                          |
-|     set -r               |
-|     # set --restricted   |
-|   has same effect.       |
-|     echo "==> Now in res |
-| tricted mode. <=="       |
-|                          |
-|     echo                 |
-|     echo                 |
-|                          |
-|     echo "Attempting dir |
-| ectory change in restric |
-| ted mode."               |
-|     cd ..                |
-|     echo "Still in `pwd` |
-| "                        |
-|                          |
-|     echo                 |
-|     echo                 |
-|                          |
-|     echo "\$SHELL = $SHE |
-| LL"                      |
-|     echo "Attempting to  |
-| change shell in restrict |
-| ed mode."                |
-|     SHELL="/bin/ash"     |
-|     echo                 |
-|     echo "\$SHELL= $SHEL |
-| L"                       |
-|                          |
-|     echo                 |
-|     echo                 |
-|                          |
-|     echo "Attempting to  |
-| redirect output in restr |
-| icted mode."             |
-|     ls -l /usr/bin > bin |
-| .files                   |
-|     ls -l bin.files    # |
-|  Try to list attempted f |
-| ile creation effort.     |
-|                          |
-|     echo                 |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+
+    #  Starting the script with "#!/bin/bash -r"
+    #+ runs entire script in restricted mode.
+
+    echo
+
+    echo "Changing directory."
+    cd /usr/local
+    echo "Now in `pwd`"
+    echo "Coming back home."
+    cd
+    echo "Now in `pwd`"
+    echo
+
+    # Everything up to here in normal, unrestricted mode.
+
+    set -r
+    # set --restricted    has same effect.
+    echo "==> Now in restricted mode. <=="
+
+    echo
+    echo
+
+    echo "Attempting directory change in restricted mode."
+    cd ..
+    echo "Still in `pwd`"
+
+    echo
+    echo
+
+    echo "\$SHELL = $SHELL"
+    echo "Attempting to change shell in restricted mode."
+    SHELL="/bin/ash"
+    echo
+    echo "\$SHELL= $SHELL"
+
+    echo
+    echo
+
+    echo "Attempting to redirect output in restricted mode."
+    ls -l /usr/bin > bin.files
+    ls -l bin.files    # Try to list attempted file creation effort.
+
+    echo
+
+    exit 0
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 
@@ -213,20 +126,6 @@ The following commands and actions are disabled:
 .. raw:: html
 
    </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <subshells.html>`_ | Subshells                |
-| _                        | `Up <part5.html>`__      |
-| `Home <index.html>`__    | Process Substitution     |
-| `Next <process-sub.html> |                          |
-| `__                      |                          |
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

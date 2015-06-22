@@ -1,92 +1,27 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <securityissues.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 36. Miscellany
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <winscript.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   36.9. Portability Issues
 =========================
 
-+--------------------------+--------------------------+--------------------------+
-| **                       |
-| *It is easier to port a  |
-| shell than a shell       |
-| script.*                 |
-|                          |
-| *--Larry Wall*           |
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+**
+
+*It is easier to port a shell than a shell script.*
+
+*--Larry Wall*
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 This book deals specifically with Bash scripting on a GNU/Linux system.
 All the same, users of **sh** and **ksh** will find much of value here.
@@ -168,99 +103,80 @@ script, first using Bash, then the classic *sh* .
 
 **Example 36-23. Test Suite**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # test-suite.sh      |
-|     # A partial Bash com |
-| patibility test suite.   |
-|     # Run this on your v |
-| ersion of Bash, or some  |
-| other shell.             |
-|                          |
-|     default_option=FAIL  |
-|         # Tests below wi |
-| ll fail unless . . .     |
-|                          |
-|     echo                 |
-|     echo -n "Testing "   |
-|     sleep 1; echo -n ".  |
-| "                        |
-|     sleep 1; echo -n ".  |
-| "                        |
-|     sleep 1; echo ". "   |
-|     echo                 |
-|                          |
-|     # Double brackets    |
-|     String="Double brack |
-| ets supported?"          |
-|     echo -n "Double brac |
-| kets test: "             |
-|     if [[ "$String" = "D |
-| ouble brackets supported |
-| ?" ]]                    |
-|     then                 |
-|       echo "PASS"        |
-|     else                 |
-|       echo "FAIL"        |
-|     fi                   |
-|                          |
-|                          |
-|     # Double brackets an |
-| d regex matching         |
-|     String="Regex matchi |
-| ng supported?"           |
-|     echo -n "Regex match |
-| ing: "                   |
-|     if [[ "$String" =~ R |
-| .....matching* ]]        |
-|     then                 |
-|       echo "PASS"        |
-|     else                 |
-|       echo "FAIL"        |
-|     fi                   |
-|                          |
-|                          |
-|     # Arrays             |
-|     test_arr=$default_op |
-| tion     # FAIL          |
-|     Array=( If supports  |
-| arrays will print PASS ) |
-|     test_arr=${Array[5]} |
-|     echo "Array test: $t |
-| est_arr"                 |
-|                          |
-|                          |
-|     # Command Substituti |
-| on                       |
-|     csub_test ()         |
-|     {                    |
-|       echo "PASS"        |
-|     }                    |
-|                          |
-|     test_csub=$default_o |
-| ption    # FAIL          |
-|     test_csub=$(csub_tes |
-| t)                       |
-|     echo "Command substi |
-| tution test: $test_csub" |
-|                          |
-|     echo                 |
-|                          |
-|     #  Completing this s |
-| cript is an exercise for |
-|  the reader.             |
-|     #  Add to the above  |
-| similar tests for double |
-|  parentheses,            |
-|     #+ brace expansion,  |
-| process substitution, et |
-| c.                       |
-|                          |
-|     exit $?              |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # test-suite.sh
+    # A partial Bash compatibility test suite.
+    # Run this on your version of Bash, or some other shell.
+
+    default_option=FAIL         # Tests below will fail unless . . .
+
+    echo
+    echo -n "Testing "
+    sleep 1; echo -n ". "
+    sleep 1; echo -n ". "
+    sleep 1; echo ". "
+    echo
+
+    # Double brackets
+    String="Double brackets supported?"
+    echo -n "Double brackets test: "
+    if [[ "$String" = "Double brackets supported?" ]]
+    then
+      echo "PASS"
+    else
+      echo "FAIL"
+    fi
+
+
+    # Double brackets and regex matching
+    String="Regex matching supported?"
+    echo -n "Regex matching: "
+    if [[ "$String" =~ R.....matching* ]]
+    then
+      echo "PASS"
+    else
+      echo "FAIL"
+    fi
+
+
+    # Arrays
+    test_arr=$default_option     # FAIL
+    Array=( If supports arrays will print PASS )
+    test_arr=${Array[5]}
+    echo "Array test: $test_arr"
+
+
+    # Command Substitution
+    csub_test ()
+    {
+      echo "PASS"
+    }
+
+    test_csub=$default_option    # FAIL
+    test_csub=$(csub_test)
+    echo "Command substitution test: $test_csub"
+
+    echo
+
+    #  Completing this script is an exercise for the reader.
+    #  Add to the above similar tests for double parentheses,
+    #+ brace expansion, process substitution, etc.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -277,27 +193,17 @@ script, first using Bash, then the classic *sh* .
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]                                |
-|  <portabilityissues.html#AEN20799>`_ |
-| _                                    |
-| Or, better yet, `#!/bin/env          |
-| sh <system.html#ENVV2REF>`__ .       |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <portabilityissues.html#AEN20799>`__
+
+Or, better yet, `#!/bin/env sh <system.html#ENVV2REF>`__ .
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <securityissues.ht | Security Issues          |
-| ml>`__                   | `Up <miscellany.html>`__ |
-| `Home <index.html>`__    | Shell Scripting Under    |
-| `Next <winscript.html>`_ | Windows                  |
-| _                        |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

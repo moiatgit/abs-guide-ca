@@ -11,31 +11,6 @@
   <link href="terminalccmds.html" rel="NEXT" title="Terminal Control Commands"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="filearchiv.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 16. External Filters, Programs and Commands
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="terminalccmds.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="COMMUNICATIONS">
@@ -75,17 +50,15 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>host surfacemail.com</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>host surfacemail.com</b></tt>
 <tt class="COMPUTEROUTPUT">surfacemail.com. has address 202.92.42.236</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="IPCALCREF">
@@ -110,17 +83,15 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ipcalc -h 202.92.42.236</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ipcalc -h 202.92.42.236</b></tt>
 <tt class="COMPUTEROUTPUT">HOSTNAME=surfacemail.com</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="NSLOOKUPREF">
@@ -161,11 +132,10 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>nslookup -sil 66.97.104.180</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>nslookup -sil 66.97.104.180</b></tt>
 <tt class="COMPUTEROUTPUT">nslookup kuhleersparnis.ch
  Server:         135.116.137.2
  Address:        135.116.137.2#53
@@ -173,10 +143,9 @@
  Non-authoritative answer:
  Name:   kuhleersparnis.ch</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="DIGREF">
@@ -257,11 +226,10 @@
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>dig -x 81.9.6.2</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>dig -x 81.9.6.2</b></tt>
 <tt class="COMPUTEROUTPUT">;; Got answer:
  ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NXDOMAIN, id: 11649
  ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
@@ -278,10 +246,9 @@
  ;; WHEN: Wed Jun 26 08:35:24 2002
  ;; MSG SIZE  rcvd: 91</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="SPAMLOOKUP_0">
        </a>
@@ -294,11 +261,10 @@
          Example 16-40. Finding out where to report a spammer
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # spam-lookup.sh: Look up abuse contact to report a spammer.
 # Thanks, Michael Zick.
 
@@ -343,10 +309,9 @@ exit $?
 
 #  For a more elaborate version of this script,
 #+ see the SpamViz home page, http://www.spamviz.net/index.html.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="ISSPAMMER_0">
@@ -360,11 +325,10 @@ exit $?
          Example 16-41. Analyzing a spam domain
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#! /bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#! /bin/bash
 # is-spammer.sh: Identifying spam domains
 
 # $Id: is-spammer, v 1.4 2004/09/01 19:37:52 mszick Exp $
@@ -510,10 +474,9 @@ exit 0
 
 # 4) Set a time-out for the script using the "+time=" option
      to the 'dig' command.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        For a much more elaborate version of the above script, see
@@ -548,21 +511,19 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>traceroute 81.9.6.2</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>traceroute 81.9.6.2</b></tt>
 <tt class="COMPUTEROUTPUT">traceroute to 81.9.6.2 (81.9.6.2), 30 hops max, 38 byte packets
  1  tc43.xjbnnbrb.com (136.30.178.8)  191.303 ms  179.400 ms  179.767 ms
  2  or0.xjbnnbrb.com (136.30.178.1)  179.536 ms  179.534 ms  169.685 ms
  3  192.168.11.101 (192.168.11.101)  189.471 ms  189.556 ms *
  ...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="PINGREF">
@@ -587,11 +548,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ping localhost</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ping localhost</b></tt>
 <tt class="COMPUTEROUTPUT">PING localhost.localdomain (127.0.0.1) from 127.0.0.1 : 56(84) bytes of data.
  64 bytes from localhost.localdomain (127.0.0.1): icmp_seq=0 ttl=255 time=709 usec
  64 bytes from localhost.localdomain (127.0.0.1): icmp_seq=1 ttl=255 time=286 usec
@@ -600,10 +560,9 @@ exit 0
  2 packets transmitted, 2 packets received, 0% packet loss
  round-trip min/avg/max/mdev = 0.286/0.497/0.709/0.212 ms</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        A successful
        <i class="FIRSTTERM">
@@ -627,11 +586,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">  HNAME=news-15.net  # Notorious spammer.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">  HNAME=news-15.net  # Notorious spammer.
 # HNAME=$HOST     # Debug: test for localhost.
   count=2  # Send only two pings.
 
@@ -641,10 +599,9 @@ then
 else
   echo ""$HNAME" seems to be down. Pity."
 fi</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="WHOISREF">
@@ -703,11 +660,10 @@ fi</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>finger</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>finger</b></tt>
 <tt class="COMPUTEROUTPUT">Login  Name           Tty      Idle  Login Time   Office     Office Phone
  bozo   Bozo Bozeman   tty1        8  Jun 25 16:59                (:0)
  bozo   Bozo Bozeman   ttyp0          Jun 25 16:59                (:0.0)
@@ -726,10 +682,9 @@ fi</pre>
  Mail last read Tue Jul  3 10:08 2007 (MST) 
  No Plan.</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Out of security considerations, many networks disable
        <b class="COMMAND">
@@ -1006,28 +961,26 @@ fi</pre>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <i class="FIRSTTERM">
-            telnet
-           </i>
-           protocol
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <i class="FIRSTTERM">
+           telnet
+          </i>
+          protocol
 	    contains security holes and should therefore probably be
 	    avoided. Its use within a shell script is
-           <em>
-            not
-           </em>
-           recommended.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <em>
+           not
+          </em>
+          recommended.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1053,11 +1006,10 @@ fi</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">wget -p http://www.xyz23.com/file01.html
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">wget -p http://www.xyz23.com/file01.html
 #  The -p or --page-requisite option causes wget to fetch all files
 #+ required to display the specified page.
 
@@ -1068,10 +1020,9 @@ wget -r ftp://ftp.xyz24.net/~bozo/project_files/ -O $SAVEFILE
 wget -c ftp://ftp.xyz25.net/bozofiles/filename.tar.bz2
 #  The -c option lets wget resume an interrupted download.
 #  This works with ftp servers and many HTTP sites.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="QUOTEFETCH">
        </a>
@@ -1080,11 +1031,10 @@ wget -c ftp://ftp.xyz25.net/bozofiles/filename.tar.bz2
          Example 16-42. Getting a stock quote
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # quote-fetch.sh: Download a stock quote.
 
 
@@ -1124,10 +1074,9 @@ exit $?
 #
 # 2) Modify this script to fetch the local weather report,
 #+   taking the user's zip code as an argument.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -1164,15 +1113,13 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">lynx -dump http://www.xyz23.com/file01.html &gt;$SAVEFILE</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">lynx -dump http://www.xyz23.com/file01.html &gt;$SAVEFILE</pre>
+        </font>
+       </p>
+      </div>
       <p>
        With the
        <tt class="OPTION">
@@ -1281,16 +1228,14 @@ exit $?
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rsync -a ~/sourcedir/*txt /node1/subdirectory/</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>rsync -a ~/sourcedir/*txt /node1/subdirectory/</b></tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="FC4UPD">
        </a>
@@ -1299,11 +1244,10 @@ exit $?
          Example 16-43. Updating FC4
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # fc4upd.sh
 
 # Script author: Frank Wang.
@@ -1520,10 +1464,9 @@ else
 fi
 
 exit $RET</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -1535,41 +1478,39 @@ exit $RET</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Using
-           <a href="communications.html#RCPREF">
-            rcp
-           </a>
-           ,
-           <a href="communications.html#RSYNCREF">
-            rsync
-           </a>
-           , and similar
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          Using
+          <a href="communications.html#RCPREF">
+           rcp
+          </a>
+          ,
+          <a href="communications.html#RSYNCREF">
+           rsync
+          </a>
+          , and similar
 	      utilities with security implications in a shell
 	      script may not be advisable. Consider, instead, using
-           <b class="COMMAND">
-            ssh
-           </b>
-           ,
-           <a href="communications.html#SCPREF">
-            scp
-           </a>
-           ,
+          <b class="COMMAND">
+           ssh
+          </b>
+          ,
+          <a href="communications.html#SCPREF">
+           scp
+          </a>
+          ,
 	      or an
-           <b class="COMMAND">
-            expect
-           </b>
-           script.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <b class="COMMAND">
+           expect
+          </b>
+          script.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1622,11 +1563,10 @@ exit $RET</pre>
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # remote.bash: Using ssh.
 
 # This example by Michael Zick.
@@ -1695,58 +1635,55 @@ ssh -l ${USER} ${HOST} " ls -l "
 #+    man sshd_config.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Within a loop,
-           <b class="COMMAND">
-            ssh
-           </b>
-           may cause
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          Within a loop,
+          <b class="COMMAND">
+           ssh
+          </b>
+          may cause
 		unexpected behavior. According to a
-           <a href="http://groups-beta.google.com/group/comp.unix.shell/msg/dcb446b5fff7d230" target="_top">
-            Usenet post
-           </a>
-           in the comp.unix shell archives,
-           <b class="COMMAND">
-            ssh
-           </b>
-           inherits the loop's
-           <tt class="FILENAME">
-            stdin
-           </tt>
-           . To remedy this, pass
-           <b class="COMMAND">
-            ssh
-           </b>
-           either the
-           <tt class="OPTION">
-            -n
-           </tt>
-           or
-           <tt class="OPTION">
-            -f
-           </tt>
-           option.
-          </p>
-          <p>
-           Thanks, Jason Bechtel, for pointing this out.
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="http://groups-beta.google.com/group/comp.unix.shell/msg/dcb446b5fff7d230" target="_top">
+           Usenet post
+          </a>
+          in the comp.unix shell archives,
+          <b class="COMMAND">
+           ssh
+          </b>
+          inherits the loop's
+          <tt class="FILENAME">
+           stdin
+          </tt>
+          . To remedy this, pass
+          <b class="COMMAND">
+           ssh
+          </b>
+          either the
+          <tt class="OPTION">
+           -n
+          </tt>
+          or
+          <tt class="OPTION">
+           -f
+          </tt>
+          option.
+         </p>
+         <p>
+          Thanks, Jason Bechtel, for pointing this out.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1872,11 +1809,10 @@ exit 0</pre>
          Example 16-45. A script that mails itself
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/sh
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/sh
 # self-mailer.sh: Self-mailing script
 
 adr=${1:-`whoami`}     # Default to current user, if not specified.
@@ -1907,10 +1843,9 @@ exit 0
 
 #  Note that the "mailx" command (in "send" mode) may be substituted
 #+ for "mail" ... but with somewhat different options.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1961,11 +1896,10 @@ exit 0
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>mailstats</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">root# </tt><tt class="USERINPUT"><b>mailstats</b></tt>
 <tt class="COMPUTEROUTPUT">Statistics from Tue Jan  1 20:32:08 2008
   M   msgsfr  bytes_from   msgsto    bytes_to  msgsrej msgsdis msgsqur  Mailer
   4     1682      24118K        0          0K        0       0       0  esmtp
@@ -1974,10 +1908,9 @@ exit 0
   T     1894      24758K     1894      25131K        0       0       0
   C      414                    0</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="VACATIONREF">
@@ -2004,78 +1937,41 @@ exit 0
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="communications.html#AEN13320" name="FTN.AEN13320">
-      <span class="footnote">
-       [1]
-      </span>
+  <div>
+   <p>
+    <a href="communications.html#AEN13320" name="FTN.AEN13320">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="DAEMONREF">
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="DAEMONREF">
-      </a>
-     </p>
-     <p>
-      A
-      <i class="FIRSTTERM">
-       daemon
-      </i>
-      is a background
+    </p>
+    <p>
+     A
+     <i class="FIRSTTERM">
+      daemon
+     </i>
+     is a background
 		    process not attached to a terminal session. Daemons
 		    perform designated services either at specified times
 		    or explicitly triggered by certain events.
-     </p>
-     <p>
-      The word
-      <span class="QUOTE">
-       "daemon"
-      </span>
-      means ghost in
+    </p>
+    <p>
+     The word
+     <span class="QUOTE">
+      "daemon"
+     </span>
+     means ghost in
 		    Greek, and there is certainly something mysterious,
 		    almost supernatural, about the way UNIX daemons
 		    wander about behind the scenes, silently carrying
 		    out their appointed tasks.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="filearchiv.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="terminalccmds.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      File and Archiving Commands
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="external.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Terminal Control Commands
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
   </div>
  </body>
 </html>

@@ -1,79 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <sha-bang.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-Chapter 2. Starting Off With a Sha-Bang
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <prelimexer.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="SECT1">
 
   2.1. Invoking the script
@@ -127,28 +53,44 @@ systemwide executable. The script could then be invoked by simply typing
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]  <invoking.html#AEN300>`__     | ` [2]  <invoking.html#AEN315>`__     |
-| Caution: invoking a *Bash* script by | A script needs *read* , as well as   |
-| ``                 sh scriptname     | execute permission for it to run,    |
-|            ``                        | since the shell needs to be able to  |
-| turns off Bash-specific extensions,  | read it.                             |
-| and the script may therefore fail to |                                      |
-| execute.                             |                                      |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <invoking.html#AEN300>`__
+
+Caution: invoking a *Bash* script by
+``               sh scriptname             `` turns off Bash-specific
+extensions, and the script may therefore fail to execute.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <invoking.html#AEN315>`__
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <sha-bang.html>`__ | Starting Off With a      |
-| `Home <index.html>`__    | Sha-Bang                 |
-| `Next <prelimexer.html>` | `Up <sha-bang.html>`__   |
-| __                       | Preliminary Exercises    |
-+--------------------------+--------------------------+--------------------------+
+A script needs *read* , as well as execute permission for it to run,
+since the shell needs to be able to read it.
+
+.. raw:: html
+
+   </p>
+
+` [3]  <invoking.html#AEN327>`__
+
+Why not simply invoke the script with
+``               scriptname             `` ? If the directory you are in
+( `$PWD <internalvariables.html#PWDREF>`__ ) is where
+``       scriptname      `` is located, why doesn't this work? This
+fails because, for security reasons, the current directory (
+``       ./      `` ) is not by default included in a user's
+`$PATH <internalvariables.html#PATHREF>`__ . It is therefore necessary
+to explicitly invoke the script in the current directory with a
+``               ./scriptname             `` .
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 

@@ -11,58 +11,32 @@
   <link href="sha-bang.html" rel="NEXT" title="Starting Off With a Sha-Bang"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="part1.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="sha-bang.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="WHY-SHELL">
     </a>
     Chapter 1. Shell Programming!
    </h1>
-   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
-    <tr>
-     <td width="45%">
-     </td>
-     <td align="LEFT" valign="TOP" width="45%">
+   <div>
+    <p>
+    </p>
+    <p>
+     <i>
+     </i>
+     <p>
       <i>
-      </i>
-      <p>
-       <i>
-        No programming language is perfect. There is not even a single
+       No programming language is perfect. There is not even a single
         best language; there are only languages well suited or perhaps
         poorly suited for particular purposes.
-       </i>
-      </p>
-      <p>
-       <i>
-        --Herbert Mayer
-       </i>
-      </p>
-     </td>
-    </tr>
-   </table>
+      </i>
+     </p>
+     <p>
+      <i>
+       --Herbert Mayer
+      </i>
+     </p>
+    </p>
+   </div>
    <p>
     A working knowledge of shell scripting is essential to anyone
       wishing to become reasonably proficient at system administration,
@@ -186,187 +160,185 @@
     </span>
     Or, perhaps not. . . .
    </p>
-   <table border="1" cellpadding="5" class="SIDEBAR">
-    <tr>
-     <td>
-      <div class="SIDEBAR">
-       <a name="AEN82">
-       </a>
-       <p>
-       </p>
-       <p>
-        When not to use shell scripts
-       </p>
-       <p>
-       </p>
-       <ul>
-        <li>
-         <p>
-          Resource-intensive tasks, especially where speed is
+   <div>
+    <p>
+     <div class="SIDEBAR">
+      <a name="AEN82">
+      </a>
+      <p>
+      </p>
+      <p>
+       When not to use shell scripts
+      </p>
+      <p>
+      </p>
+      <ul>
+       <li>
+        <p>
+         Resource-intensive tasks, especially where speed is
 	    a factor (sorting, hashing, recursion
-          <a href="why-shell.html#FTN.AEN87" name="AEN87">
-           <span class="footnote">
-            [2]
-           </span>
-          </a>
-          ...)
-         </p>
-        </li>
-        <li>
-         <p>
-          Procedures involving heavy-duty math operations,
+         <a href="why-shell.html#FTN.AEN87" name="AEN87">
+          <span class="footnote">
+           [2]
+          </span>
+         </a>
+         ...)
+        </p>
+       </li>
+       <li>
+        <p>
+         Procedures involving heavy-duty math operations,
 	    especially floating point arithmetic, arbitrary
 	    precision calculations, or complex numbers (use
-          <i class="FIRSTTERM">
-           C++
-          </i>
-          or
-          <i class="FIRSTTERM">
-           FORTRAN
-          </i>
-          instead)
-         </p>
-        </li>
-        <li>
-         <p>
-          Cross-platform portability required (use
-          <i class="FIRSTTERM">
-           C
-          </i>
-          or
-          <i class="FIRSTTERM">
-           Java
-          </i>
-          instead)
-         </p>
-        </li>
-        <li>
-         <p>
-          Complex applications, where structured programming is
+         <i class="FIRSTTERM">
+          C++
+         </i>
+         or
+         <i class="FIRSTTERM">
+          FORTRAN
+         </i>
+         instead)
+        </p>
+       </li>
+       <li>
+        <p>
+         Cross-platform portability required (use
+         <i class="FIRSTTERM">
+          C
+         </i>
+         or
+         <i class="FIRSTTERM">
+          Java
+         </i>
+         instead)
+        </p>
+       </li>
+       <li>
+        <p>
+         Complex applications, where structured programming is
 	    a necessity (type-checking of variables, function
 	    prototypes, etc.)
-         </p>
-        </li>
-        <li>
-         <p>
-          Mission-critical applications upon which you are betting the
+        </p>
+       </li>
+       <li>
+        <p>
+         Mission-critical applications upon which you are betting the
 	     future of the company
-         </p>
-        </li>
-        <li>
-         <p>
-          Situations where
-          <em>
-           security
-          </em>
-          is
+        </p>
+       </li>
+       <li>
+        <p>
+         Situations where
+         <em>
+          security
+         </em>
+         is
 	    important, where you need to guarantee the integrity of
 	    your system and protect against intrusion, cracking, and
 	    vandalism
-         </p>
-        </li>
-        <li>
-         <p>
-          Project consists of subcomponents with interlocking
+        </p>
+       </li>
+       <li>
+        <p>
+         Project consists of subcomponents with interlocking
 	    dependencies
-         </p>
-        </li>
-        <li>
-         <p>
-          Extensive file operations required
+        </p>
+       </li>
+       <li>
+        <p>
+         Extensive file operations required
 	    (
-          <i class="FIRSTTERM">
-           Bash
-          </i>
-          is limited to serial file access,
+         <i class="FIRSTTERM">
+          Bash
+         </i>
+         is limited to serial file access,
 	    and that only in a particularly clumsy and inefficient
 	    line-by-line fashion.)
-         </p>
-        </li>
-        <li>
-         <p>
-          Need native support for multi-dimensional arrays
-         </p>
-        </li>
-        <li>
-         <p>
-          Need data structures, such as linked lists or trees
-         </p>
-        </li>
-        <li>
-         <p>
-          Need to generate / manipulate graphics or GUIs
-         </p>
-        </li>
-        <li>
-         <p>
-          Need direct access to system hardware or
+        </p>
+       </li>
+       <li>
+        <p>
+         Need native support for multi-dimensional arrays
+        </p>
+       </li>
+       <li>
+        <p>
+         Need data structures, such as linked lists or trees
+        </p>
+       </li>
+       <li>
+        <p>
+         Need to generate / manipulate graphics or GUIs
+        </p>
+       </li>
+       <li>
+        <p>
+         Need direct access to system hardware or
 	    external peripherals
-         </p>
-        </li>
-        <li>
-         <p>
-          Need port or
-          <a href="devref1.html#SOCKETREF">
-           socket
-          </a>
-          I/O
-         </p>
-        </li>
-        <li>
-         <p>
-          Need to use libraries or interface with legacy code
-         </p>
-        </li>
-        <li>
-         <p>
-          Proprietary, closed-source applications (Shell scripts
+        </p>
+       </li>
+       <li>
+        <p>
+         Need port or
+         <a href="devref1.html#SOCKETREF">
+          socket
+         </a>
+         I/O
+        </p>
+       </li>
+       <li>
+        <p>
+         Need to use libraries or interface with legacy code
+        </p>
+       </li>
+       <li>
+        <p>
+         Proprietary, closed-source applications (Shell scripts
 	    put the source code right out in the open for all the world
 	    to see.)
-         </p>
-        </li>
-       </ul>
-       <p>
-        If any of the above applies, consider a more powerful scripting
+        </p>
+       </li>
+      </ul>
+      <p>
+       If any of the above applies, consider a more powerful scripting
       language -- perhaps
-        <i class="FIRSTTERM">
-         Perl
-        </i>
-        ,
-        <i class="FIRSTTERM">
-         Tcl
-        </i>
-        ,
-        <i class="FIRSTTERM">
-         Python
-        </i>
-        ,
-        <i class="FIRSTTERM">
-         Ruby
-        </i>
-        -- or possibly a
+       <i class="FIRSTTERM">
+        Perl
+       </i>
+       ,
+       <i class="FIRSTTERM">
+        Tcl
+       </i>
+       ,
+       <i class="FIRSTTERM">
+        Python
+       </i>
+       ,
+       <i class="FIRSTTERM">
+        Ruby
+       </i>
+       -- or possibly a
       compiled language such as
-        <i class="FIRSTTERM">
-         C
-        </i>
-        ,
-        <i class="FIRSTTERM">
-         C++
-        </i>
-        , or
-        <i class="FIRSTTERM">
-         Java
-        </i>
-        . Even
+       <i class="FIRSTTERM">
+        C
+       </i>
+       ,
+       <i class="FIRSTTERM">
+        C++
+       </i>
+       , or
+       <i class="FIRSTTERM">
+        Java
+       </i>
+       . Even
       then, prototyping the application as a shell script might still
       be a useful development step.
-       </p>
-       <p>
-       </p>
-      </div>
-     </td>
-    </tr>
-   </table>
+      </p>
+      <p>
+      </p>
+     </div>
+    </p>
+   </div>
    <p>
     <a name="BASHDEF">
     </a>
@@ -483,187 +455,140 @@
     of this
        book wrote the example scripts that follow.
    </p>
-   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
-    <tr>
-     <td width="45%">
-     </td>
-     <td align="LEFT" valign="TOP" width="45%">
+   <div>
+    <p>
+    </p>
+    <p>
+     <i>
+     </i>
+     <p>
       <i>
+       His countenance was bold and bashed not.
       </i>
-      <p>
-       <i>
-        His countenance was bold and bashed not.
-       </i>
-      </p>
-      <p>
-       <i>
-        --Edmund Spenser
-       </i>
-      </p>
-     </td>
-    </tr>
-   </table>
+     </p>
+     <p>
+      <i>
+       --Edmund Spenser
+      </i>
+     </p>
+    </p>
+   </div>
   </div>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="why-shell.html#AEN62" name="FTN.AEN62">
-      <span class="footnote">
-       [1]
-      </span>
+  <div>
+   <p>
+    <a href="why-shell.html#AEN62" name="FTN.AEN62">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     These are referred to as
+     <a href="internal.html#BUILTINREF">
+      builtins
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      These are referred to as
-      <a href="internal.html#BUILTINREF">
-       builtins
-      </a>
-      , features internal to the
+     , features internal to the
         shell.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="why-shell.html#AEN87" name="FTN.AEN87">
-      <span class="footnote">
-       [2]
-      </span>
+    </p>
+   </p>
+   <p>
+    <a href="why-shell.html#AEN87" name="FTN.AEN87">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Although
+     <a href="localvar.html#RECURSIONREF0">
+      recursion
+      <em>
+       is
+      </em>
+      possible in a shell script
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Although
-      <a href="localvar.html#RECURSIONREF0">
-       recursion
-       <em>
-        is
-       </em>
-       possible in a shell script
-      </a>
-      ,
+     ,
 	      it tends to be slow and its implementation is often
 	      an
-      <a href="recurnolocvar.html#FIBOREF">
-       ugly kludge
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="why-shell.html#AEN139" name="FTN.AEN139">
-      <span class="footnote">
-       [3]
-      </span>
+     <a href="recurnolocvar.html#FIBOREF">
+      ugly kludge
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      An
-      <i class="FIRSTTERM">
-       acronym
-      </i>
-      is an
-      <em>
-       ersatz
-      </em>
-      word formed by pasting
+     .
+    </p>
+   </p>
+   <p>
+    <a href="why-shell.html#AEN139" name="FTN.AEN139">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     An
+     <i class="FIRSTTERM">
+      acronym
+     </i>
+     is an
+     <em>
+      ersatz
+     </em>
+     word formed by pasting
         together the initial letters of the words into a tongue-tripping
 	phrase. This morally corrupt and pernicious practice
 	deserves appropriately severe punishment. Public
 	flogging suggests itself.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="why-shell.html#AEN147" name="FTN.AEN147">
-      <span class="footnote">
-       [4]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Many of the features of
-      <i class="FIRSTTERM">
-       ksh88
-      </i>
-      ,
+    </p>
+   </p>
+   <p>
+    <a href="why-shell.html#AEN147" name="FTN.AEN147">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Many of the features of
+     <i class="FIRSTTERM">
+      ksh88
+     </i>
+     ,
 	 and even a few from the updated
-      <i class="FIRSTTERM">
-       ksh93
-      </i>
-      have been merged into Bash.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="why-shell.html#AEN157" name="FTN.AEN157">
-      <span class="footnote">
-       [5]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      By convention, user-written shell scripts
+     <i class="FIRSTTERM">
+      ksh93
+     </i>
+     have been merged into Bash.
+    </p>
+   </p>
+   <p>
+    <a href="why-shell.html#AEN157" name="FTN.AEN157">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     By convention, user-written shell scripts
          that are Bourne shell compliant generally take a name with a
-      <tt class="FILENAME">
-       .sh
-      </tt>
-      extension.  System scripts, such as
+     <tt class="FILENAME">
+      .sh
+     </tt>
+     extension.  System scripts, such as
          those found in
-      <tt class="FILENAME">
-       /etc/rc.d
-      </tt>
-      ,
+     <tt class="FILENAME">
+      /etc/rc.d
+     </tt>
+     ,
          do not necessarily conform to this nomenclature.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="part1.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="sha-bang.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Introduction
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part1.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Starting Off With a Sha-Bang
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
   </div>
  </body>
 </html>

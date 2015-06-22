@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <systemdirs.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <localization.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="APPENDIX">
 
   Appendix J. An Introduction to Programmable Completion
@@ -83,63 +11,61 @@ sequence. ` [1]  <tabexpansion.html#FTN.AEN24082>`__ If multiple
 completions are possible, then **[Tab]** lists them all. Let's see how
 it works.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
-|                          |
-|     bash$ xtra[Tab]      |
-|     xtraceroute       xt |
-| rapin           xtrappro |
-| to                       |
-|      xtraceroute.real  x |
-| trapinfo         xtrapre |
-| set                      |
-|      xtrapchar         x |
-| trapout          xtrapst |
-| ats                      |
-|                          |
-|                          |
-|     bash$ xtrac[Tab]     |
-|     xtraceroute       xt |
-| raceroute.real           |
-|                          |
-|                          |
-|     bash$ xtraceroute.r[ |
-| Tab]                     |
-|     xtraceroute.real     |
-|                          |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ xtra[Tab]
+    xtraceroute       xtrapin           xtrapproto
+     xtraceroute.real  xtrapinfo         xtrapreset
+     xtrapchar         xtrapout          xtrapstats
+
+
+    bash$ xtrac[Tab]
+    xtraceroute       xtraceroute.real
+
+
+    bash$ xtraceroute.r[Tab]
+    xtraceroute.real
+          
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 Tab completion also works for variables and path names.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
-|                          |
-|     bash$ echo $BASH[Tab |
-| ]                        |
-|     $BASH                |
-|   $BASH_COMPLETION       |
-| $BASH_SUBSHELL           |
-|      $BASH_ARGC          |
-|    $BASH_COMPLETION_DIR  |
-|  $BASH_VERSINFO          |
-|      $BASH_ARGV          |
-|    $BASH_LINENO          |
-|  $BASH_VERSION           |
-|      $BASH_COMMAND       |
-|    $BASH_SOURCE          |
-|                          |
-|                          |
-|     bash$ echo /usr/loca |
-| l/[Tab]                  |
-|     bin/     etc/     in |
-| clude/ libexec/ sbin/    |
-|  src/                    |
-|      doc/     games/   l |
-| ib/     man/     share/  |
-|                          |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ echo $BASH[Tab]
+    $BASH                 $BASH_COMPLETION      $BASH_SUBSHELL
+     $BASH_ARGC            $BASH_COMPLETION_DIR  $BASH_VERSINFO
+     $BASH_ARGV            $BASH_LINENO          $BASH_VERSION
+     $BASH_COMMAND         $BASH_SOURCE
+
+
+    bash$ echo /usr/local/[Tab]
+    bin/     etc/     include/ libexec/ sbin/    src/     
+     doc/     games/   lib/     man/     share/
+          
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 The Bash **complete** and **compgen**
 `builtins <internal.html#BUILTINREF>`__ make it possible for *tab
@@ -147,28 +73,30 @@ completion* to recognize partial *parameters* and *options* to commands.
 In a very simple case, we can use **complete** from the command-line to
 specify a short list of acceptable parameters.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
-|                          |
-|     bash$ touch sample_c |
-| ommand                   |
-|     bash$ touch file1.tx |
-| t file2.txt file2.doc fi |
-| le30.txt file4.zzz       |
-|     bash$ chmod +x sampl |
-| e_command                |
-|     bash$ complete -f -X |
-|  '!*.txt' sample_command |
-|                          |
-|                          |
-|     bash$ ./sample[Tab][ |
-| Tab]                     |
-|     sample_command       |
-|     file1.txt   file2.tx |
-| t   file30.txt           |
-|                          |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ touch sample_command
+    bash$ touch file1.txt file2.txt file2.doc file30.txt file4.zzz
+    bash$ chmod +x sample_command
+    bash$ complete -f -X '!*.txt' sample_command
+
+
+    bash$ ./sample[Tab][Tab]
+    sample_command
+    file1.txt   file2.txt   file30.txt
+      
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 The ``      -f     `` option to *complete* specifies filenames, and
 ``      -X     `` the filter pattern.
@@ -189,63 +117,47 @@ convention given a filename corresponding to its associated command.
 
 **Example J-1. Completion script for *UseGetOpt.sh***
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     # file: UseGetOpt-2  |
-|     # UseGetOpt-2.sh par |
-| ameter-completion        |
-|                          |
-|     _UseGetOpt-2 ()   #  |
-|  By convention, the func |
-| tion name                |
-|     {                 #+ |
-|  starts with an undersco |
-| re.                      |
-|       local cur          |
-|       # Pointer to curre |
-| nt completion word.      |
-|       # By convention, i |
-| t's named "cur" but this |
-|  isn't strictly necessar |
-| y.                       |
-|                          |
-|       COMPREPLY=()   # A |
-| rray variable storing th |
-| e possible completions.  |
-|       cur=${COMP_WORDS[C |
-| OMP_CWORD]}              |
-|                          |
-|       case "$cur" in     |
-|         -*)              |
-|         COMPREPLY=( $( c |
-| ompgen -W '-a -d -f -l - |
-| t -h --aoption --debug \ |
-|                          |
-|            --file --log  |
-| --test --help --' -- $cu |
-| r ) );;                  |
-|     #   Generate the com |
-| pletion matches and load |
-|  them into $COMPREPLY ar |
-| ray.                     |
-|     #   xx) May add more |
-|  cases here.             |
-|     #   yy)              |
-|     #   zz)              |
-|       esac               |
-|                          |
-|       return 0           |
-|     }                    |
-|                          |
-|     complete -F _UseGetO |
-| pt-2 -o filenames ./UseG |
-| etOpt-2.sh               |
-|     #        ^^ ^^^^^^^^ |
-| ^^^^  Invokes the functi |
-| on _UseGetOpt-2.         |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    # file: UseGetOpt-2
+    # UseGetOpt-2.sh parameter-completion
+
+    _UseGetOpt-2 ()   #  By convention, the function name
+    {                 #+ starts with an underscore.
+      local cur
+      # Pointer to current completion word.
+      # By convention, it's named "cur" but this isn't strictly necessary.
+
+      COMPREPLY=()   # Array variable storing the possible completions.
+      cur=${COMP_WORDS[COMP_CWORD]}
+
+      case "$cur" in
+        -*)
+        COMPREPLY=( $( compgen -W '-a -d -f -l -t -h --aoption --debug \
+                                   --file --log --test --help --' -- $cur ) );;
+    #   Generate the completion matches and load them into $COMPREPLY array.
+    #   xx) May add more cases here.
+    #   yy)
+    #   zz)
+      esac
+
+      return 0
+    }
+
+    complete -F _UseGetOpt-2 -o filenames ./UseGetOpt-2.sh
+    #        ^^ ^^^^^^^^^^^^  Invokes the function _UseGetOpt-2.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -253,32 +165,30 @@ convention given a filename corresponding to its associated command.
 
 Now, let's try it.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
-|                          |
-|     bash$ source UseGetO |
-| pt-2                     |
-|                          |
-|     bash$ ./UseGetOpt-2. |
-| sh -[Tab]                |
-|     --         --aoption |
-|   --debug    --file      |
-| --help     --log     --t |
-| est                      |
-|      -a         -d       |
-|    -f         -h         |
-|  -l         -t           |
-|                          |
-|                          |
-|     bash$ ./UseGetOpt-2. |
-| sh --[Tab]               |
-|     --         --aoption |
-|   --debug    --file      |
-| --help     --log     --t |
-| est                      |
-|                          |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ source UseGetOpt-2
+
+    bash$ ./UseGetOpt-2.sh -[Tab]
+    --         --aoption  --debug    --file     --help     --log     --test
+     -a         -d         -f         -h         -l         -t
+
+
+    bash$ ./UseGetOpt-2.sh --[Tab]
+    --         --aoption  --debug    --file     --help     --log     --test
+      
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 We begin by `sourcing <internal.html#SOURCEREF>`__ the "completion
 script." This sets the command-line parameters. ` [2]
@@ -317,110 +227,40 @@ and `Part
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
-| ` [1]                                | ` [2]                                |
-|  <tabexpansion.html#AEN24082>`__     |  <tabexpansion.html#AEN24160>`__     |
-| This works only from the *command    | Normally the default parameter       |
-| line* , of course, and not within a  | completion files reside in either    |
-| script.                              | the                                  |
-|                                      | ``        /etc/profile.d       ``    |
-|                                      | directory or in                      |
-|                                      | ``        /etc/bash_completion       |
-|                                      |  ``                                  |
-|                                      | . These autoload on system startup.  |
-|                                      | So, after writing a useful           |
-|                                      | completion script, you might wish to |
-|                                      | move it (as *root* , of course) to   |
-|                                      | one of these directories.            |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+` [1]  <tabexpansion.html#AEN24082>`__
+
+This works only from the *command line* , of course, and not within a
+script.
 
 .. raw:: html
 
-   <div class="NAVFOOTER">
+   </p>
 
---------------
+` [2]  <tabexpansion.html#AEN24160>`__
 
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
+Normally the default parameter completion files reside in either the
+``       /etc/profile.d      `` directory or in
+``       /etc/bash_completion      `` . These autoload on system
+startup. So, after writing a useful completion script, you might wish to
+move it (as *root* , of course) to one of these directories.
 
 .. raw:: html
 
-   <td align="left" valign="top" width="33%">
+   </p>
 
-`Prev <systemdirs.html>`__
+` [3]  <tabexpansion.html#AEN24173>`__
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
+It has been extensively documented that programmers are willing to put
+in long hours of effort in order to save ten minutes of "unnecessary"
+labor. This is known as *optimization* .
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-`Next <localization.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-Important System Directories
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-Localization
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
+   </p>
 
 .. raw:: html
 

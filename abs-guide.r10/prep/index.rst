@@ -42,197 +42,37 @@ An in-depth exploration of the art of shell scripting
 
 .. raw:: html
 
-   <table border="0" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="LEFT" colspan="3" valign="TOP">
+   <div>
 
 **Revision History**
 
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT">
-
 Revision 6.5
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT">
 
 05 Apr 2012
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT">
-
 Revised by: mc
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" colspan="3">
 
 'TUNGSTENBERRY' release
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT">
-
 Revision 6.6
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT">
 
 27 Nov 2012
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT">
-
 Revised by: mc
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" colspan="3">
 
 'YTTERBIUMBERRY' release
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT">
-
 Revision 10
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT">
 
 10 Mar 2014
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT">
-
 Revised by: mc
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" colspan="3">
 
 'PUBLICDOMAIN' release
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
+   </div>
 
 .. raw:: html
 
@@ -5555,20 +5395,6 @@ T-3. `A third ASCII table script, using
 .. raw:: html
 
    </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+-------------------------+----------------+
-| `Next <part1.html>`__   | Introduction   |
-+-------------------------+----------------+
 
 .. raw:: html
 

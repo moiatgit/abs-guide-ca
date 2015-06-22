@@ -15,8 +15,9 @@ def makeitpretty(fname):
     f.close()
     print("Done on %s"%fname)
 
-for f in os.listdir("."):
-    n,e=os.path.splitext(f)
-    if e == ".html":
-        makeitpretty(f)
+# for f in os.listdir("."):
+#     n,e=os.path.splitext(f)
+#     if e == ".html":
+#         makeitpretty(f)
 
+makeitpretty("aliases.original.html")

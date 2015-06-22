@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <refcards.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <x23170.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="APPENDIX">
 
   Appendix C. A Sed and Awk Micro-Primer
@@ -145,17 +73,20 @@ combined capabilities give shell scripts some of the power of
 
    <div class="NOTE">
 
-+--------------------------------------+--------------------------------------+
-| |Note|                               |
-| One important difference between the |
-| utilities is that while shell        |
-| scripts can easily pass arguments to |
-| sed, it is more cumbersome for awk   |
-| (see `Example                        |
-| 36-5 <wrapper.html#COLTOTALER>`__    |
-| and `Example                         |
-| 28-2 <ivr.html#COLTOTALER2>`__ ).    |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+One important difference between the utilities is that while shell
+scripts can easily pass arguments to sed, it is more cumbersome for awk
+(see `Example 36-5 <wrapper.html#COLTOTALER>`__ and `Example
+28-2 <ivr.html#COLTOTALER2>`__ ).
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 
@@ -164,94 +95,6 @@ combined capabilities give shell scripts some of the power of
 .. raw:: html
 
    </div>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-`Prev <refcards.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-`Home <index.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-`Next <x23170.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="top" width="33%">
-
-Reference Cards
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="top" width="34%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="top" width="33%">
-
-Sed
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
 
 .. raw:: html
 

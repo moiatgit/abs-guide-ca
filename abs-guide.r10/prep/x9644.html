@@ -11,31 +11,6 @@
   <link href="external.html" rel="NEXT" title="External Filters, Programs and Commands"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="SECT1" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="internal.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-      Chapter 15. Internal Commands and Builtins
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="external.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="SECT1">
    <h1 class="SECT1">
     <a name="AEN9644">
@@ -83,104 +58,119 @@
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           It is all too easy to confuse
-           <i class="FIRSTTERM">
-            jobs
-           </i>
-           and
-           <i class="FIRSTTERM">
-            processes
-           </i>
-           .  Certain
-           <a href="internal.html#BUILTINREF">
-            builtins
-           </a>
-           , such as
-           <b class="COMMAND">
-            kill
-           </b>
-           ,
-           <b class="COMMAND">
-            disown
-           </b>
-           , and
-           <b class="COMMAND">
-            wait
-           </b>
-           accept either a job number or a
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          It is all too easy to confuse
+          <i class="FIRSTTERM">
+           jobs
+          </i>
+          and
+          <i class="FIRSTTERM">
+           processes
+          </i>
+          .  Certain
+          <a href="internal.html#BUILTINREF">
+           builtins
+          </a>
+          , such as
+          <b class="COMMAND">
+           kill
+          </b>
+          ,
+          <b class="COMMAND">
+           disown
+          </b>
+          , and
+          <b class="COMMAND">
+           wait
+          </b>
+          accept either a job number or a
 		process number as an argument. The
-           <a href="x9644.html#FGREF">
-            fg
-           </a>
-           ,
-           <a href="x9644.html#BGREF">
-            bg
-           </a>
-           and
-           <b class="COMMAND">
-            jobs
-           </b>
-           commands accept only a job number.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sleep 100 &amp;</b></tt>
+          <a href="x9644.html#FGREF">
+           fg
+          </a>
+          ,
+          <a href="x9644.html#BGREF">
+           bg
+          </a>
+          and
+          <b class="COMMAND">
+           jobs
+          </b>
+          commands accept only a job number.
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sleep 100 &amp;</b></tt>
 <tt class="COMPUTEROUTPUT">[1] 1384</tt>
 
 <tt class="PROMPT">bash $ </tt><tt class="USERINPUT"><b>jobs</b></tt>
 <tt class="COMPUTEROUTPUT">[1]+  Running                 sleep 100 &amp;</tt></pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <p>
-           <span class="QUOTE">
-            "1"
-           </span>
-           is the job number (jobs are
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          <span class="QUOTE">
+           "1"
+          </span>
+          is the job number (jobs are
 		maintained by the current shell).
-           <span class="QUOTE">
-            "1384"
-           </span>
-           is the
-           <a href="internalvariables.html#PPIDREF">
-            PID
-           </a>
-           or
-           <i class="FIRSTTERM">
-            process ID
+          <span class="QUOTE">
+           "1384"
+          </span>
+          is the
+          <a href="internalvariables.html#PPIDREF">
+           PID
+          </a>
+          or
+          <i class="FIRSTTERM">
+           process ID
 		number
-           </i>
-           (processes are maintained by the system). To kill
+          </i>
+          (processes are maintained by the system). To kill
 		this job/process, either a
-           <b class="COMMAND">
-            kill %1
-           </b>
-           or a
-           <b class="COMMAND">
-            kill 1384
-           </b>
-           works.
-          </p>
-          <p>
-           <em>
-            Thanks, S.C.
-           </em>
-          </p>
-         </td>
-        </tr>
-       </table>
+          <b class="COMMAND">
+           kill %1
+          </b>
+          or a
+          <b class="COMMAND">
+           kill 1384
+          </b>
+          works.
+         </p>
+         <p>
+          <em>
+           Thanks, S.C.
+          </em>
+         </p>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sleep 100 &amp;</b></tt>
+<tt class="COMPUTEROUTPUT">[1] 1384</tt>
+
+<tt class="PROMPT">bash $ </tt><tt class="USERINPUT"><b>jobs</b></tt>
+<tt class="COMPUTEROUTPUT">[1]+  Running                 sleep 100 &amp;</tt></pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>sleep 100 &amp;</b></tt>
+<tt class="COMPUTEROUTPUT">[1] 1384</tt>
+
+<tt class="PROMPT">bash $ </tt><tt class="USERINPUT"><b>jobs</b></tt>
+<tt class="COMPUTEROUTPUT">[1]+  Running                 sleep 100 &amp;</tt></pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -271,11 +261,10 @@
          Example 15-26. Waiting for a process to finish before proceeding
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 ROOT_UID=0   # Only users with $UID 0 have root privileges.
 E_NOTROOT=65
@@ -310,10 +299,9 @@ locate $1
 #+ leaving it as an orphan process.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Optionally,
@@ -357,135 +345,205 @@ exit 0</pre>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Within a script, running a command in the background
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          Within a script, running a command in the background
 		with an ampersand (&amp;) may cause the script
 		to hang until
-           <b class="KEYCAP">
-            ENTER
-           </b>
-           is hit. This
+          <b class="KEYCAP">
+           ENTER
+          </b>
+          is hit. This
 		seems to occur with commands that write to
-           <tt class="FILENAME">
-            stdout
-           </tt>
-           . It can be a major annoyance.
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#!/bin/bash
+          <tt class="FILENAME">
+           stdout
+          </tt>
+          . It can be a major annoyance.
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/bash
 # test.sh		  
 
 ls -l &amp;
 echo "Done."</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
+            </font>
+           </td>
+          </tr>
+         </table>         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
 <tt class="COMPUTEROUTPUT">Done.
  [bozo@localhost test-scripts]$ total 1
  -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
  _</tt>
                </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <a name="AEN9768">
-          </a>
-          <blockquote class="BLOCKQUOTE">
-           <p class="LITERALLAYOUT">
-            As Walter Brameld IV explains it:
-            <br/>
-            <br/>
-            As far as I can tell, such scripts don't actually hang. It just
-            <br/>
-            seems that they do because the background command writes text to
-            <br/>
-            the console after the prompt. The user gets the impression that
-            <br/>
-            the prompt was never displayed. Here's the sequence of events:
-            <br/>
-            <br/>
-            1. Script launches background command.
-            <br/>
-            2. Script exits.
-            <br/>
-            3. Shell displays the prompt.
-            <br/>
-            4. Background command continues running and writing text to the
-            <br/>
-            console.
-            <br/>
-            5. Background command finishes.
-            <br/>
-            6. User doesn't see a prompt at the bottom of the output, thinks script
-            <br/>
-            is hanging.
-            <br/>
-           </p>
-          </blockquote>
-          <p>
-           Placing a
-           <b class="COMMAND">
-            wait
-           </b>
-           after the background
-                command seems to remedy this.
+            </font>
+           </td>
+          </tr>
+         </table>         <a name="AEN9768">
+         </a>
+         <blockquote class="BLOCKQUOTE">
+          <p class="LITERALLAYOUT">
+           As Walter Brameld IV explains it:
+           <br/>
+           <br/>
+           As far as I can tell, such scripts don't actually hang. It just
+           <br/>
+           seems that they do because the background command writes text to
+           <br/>
+           the console after the prompt. The user gets the impression that
+           <br/>
+           the prompt was never displayed. Here's the sequence of events:
+           <br/>
+           <br/>
+           1. Script launches background command.
+           <br/>
+           2. Script exits.
+           <br/>
+           3. Shell displays the prompt.
+           <br/>
+           4. Background command continues running and writing text to the
+           <br/>
+           console.
+           <br/>
+           5. Background command finishes.
+           <br/>
+           6. User doesn't see a prompt at the bottom of the output, thinks script
+           <br/>
+           is hanging.
+           <br/>
           </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">#!/bin/bash
+         </blockquote>
+         <p>
+          Placing a
+          <b class="COMMAND">
+           wait
+          </b>
+          after the background
+                command seems to remedy this.
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/bash
 # test.sh		  
 
 ls -l &amp;
 echo "Done."
 wait</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
+            </font>
+           </td>
+          </tr>
+         </table>         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
 <tt class="COMPUTEROUTPUT">Done.
  [bozo@localhost test-scripts]$ total 1
  -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh</tt>
                </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          <a href="io-redirection.html#IOREDIRREF">
-           Redirecting
-          </a>
-          the
+            </font>
+           </td>
+          </tr>
+         </table>         <a href="io-redirection.html#IOREDIRREF">
+          Redirecting
+         </a>
+         the
                 output of the command to a file or even to
-          <tt class="FILENAME">
-           /dev/null
-          </tt>
-          also takes care of this
+         <tt class="FILENAME">
+          /dev/null
+         </tt>
+         also takes care of this
 		problem.
-         </td>
-        </tr>
-       </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+# test.sh		  
+
+ls -l &amp;
+echo "Done."</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
+<tt class="COMPUTEROUTPUT">Done.
+ [bozo@localhost test-scripts]$ total 1
+ -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
+ _</tt>
+               </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+# test.sh		  
+
+ls -l &amp;
+echo "Done."
+wait</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
+<tt class="COMPUTEROUTPUT">Done.
+ [bozo@localhost test-scripts]$ total 1
+ -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh</tt>
+               </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+# test.sh		  
+
+ls -l &amp;
+echo "Done."</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
+<tt class="COMPUTEROUTPUT">Done.
+ [bozo@localhost test-scripts]$ total 1
+ -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
+ _</tt>
+               </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
+# test.sh		  
+
+ls -l &amp;
+echo "Done."
+wait</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>./test.sh</b></tt>
+<tt class="COMPUTEROUTPUT">Done.
+ [bozo@localhost test-scripts]$ total 1
+ -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh</tt>
+               </pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -538,15 +596,13 @@ wait</pre>
        Gives statistics on the system time elapsed when
 	        executing commands, in the following form:
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="COMPUTEROUTPUT">0m0.020s 0m0.020s</tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="COMPUTEROUTPUT">0m0.020s 0m0.020s</tt></pre>
+        </font>
+       </p>
+      </div>
       <p>
        This capability is of relatively limited value, since it is not common to
 		profile and benchmark shell scripts.
@@ -581,11 +637,10 @@ wait</pre>
          Example 15-27. A script that kills itself
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # self-destruct.sh
 
 kill $$  # Script kills its own process here.
@@ -605,10 +660,9 @@ exit 0   # Normal exit? No!
 #
 # 143 = 128 + 15
 #             TERM signal</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="ZOMBIEREF">
@@ -617,73 +671,71 @@ exit 0   # Normal exit? No!
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             kill -l
-            </b>
-           </tt>
-           lists all the
-           <a href="debugging.html#SIGNALD">
-            signals
-           </a>
-           (as does the
-		file
-           <tt class="FILENAME">
-            /usr/include/asm/signal.h
-           </tt>
-           ).
-		A
-           <tt class="USERINPUT">
-            <b>
-             kill -9
-            </b>
-           </tt>
-           is a
-           <i class="FIRSTTERM">
-            sure
-		kill
-           </i>
-           , which will usually terminate a
-		process that stubbornly refuses to die with a plain
-           <b class="COMMAND">
-            kill
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            kill -l
            </b>
-           . Sometimes, a
-           <tt class="USERINPUT">
-            <b>
-             kill
+          </tt>
+          lists all the
+          <a href="debugging.html#SIGNALD">
+           signals
+          </a>
+          (as does the
+		file
+          <tt class="FILENAME">
+           /usr/include/asm/signal.h
+          </tt>
+          ).
+		A
+          <tt class="USERINPUT">
+           <b>
+            kill -9
+           </b>
+          </tt>
+          is a
+          <i class="FIRSTTERM">
+           sure
+		kill
+          </i>
+          , which will usually terminate a
+		process that stubbornly refuses to die with a plain
+          <b class="COMMAND">
+           kill
+          </b>
+          . Sometimes, a
+          <tt class="USERINPUT">
+           <b>
+            kill
 		-15
-            </b>
-           </tt>
-           works. A
-           <i class="FIRSTTERM">
-            zombie
-           </i>
-           process,
+           </b>
+          </tt>
+          works. A
+          <i class="FIRSTTERM">
+           zombie
+          </i>
+          process,
 		that is, a child process that has terminated, but that
 		the
-           <a href="internal.html#FORKREF">
-            parent process
-           </a>
-           has not (yet) killed, cannot be killed by a logged-on
+          <a href="internal.html#FORKREF">
+           parent process
+          </a>
+          has not (yet) killed, cannot be killed by a logged-on
 		user -- you can't kill something that is already dead --
 		but
-           <b class="COMMAND">
-            init
-           </b>
-           will generally clean it up
+          <b class="COMMAND">
+           init
+          </b>
+          will generally clean it up
 		sooner or later.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -725,38 +777,36 @@ exit 0   # Normal exit? No!
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This refers to the
-           <b class="COMMAND">
-            killall
-           </b>
-           command in
-           <tt class="FILENAME">
-            /usr/bin
-           </tt>
-           ,
-           <em>
-            not
-           </em>
-           the
-           <a href="sysscripts.html#KILLALL2REF">
-            killall script
-           </a>
-           in
-           <tt class="FILENAME">
-            /etc/rc.d/init.d
-           </tt>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          This refers to the
+          <b class="COMMAND">
+           killall
+          </b>
+          command in
+          <tt class="FILENAME">
+           /usr/bin
+          </tt>
+          ,
+          <em>
+           not
+          </em>
+          the
+          <a href="sysscripts.html#KILLALL2REF">
+           killall script
+          </a>
+          in
+          <tt class="FILENAME">
+           /etc/rc.d/init.d
+          </tt>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -778,40 +828,36 @@ exit 0   # Normal exit? No!
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>command ls</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>command ls</b></tt>
               </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This is one of three shell directives that
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          This is one of three shell directives that
 	      effect script command processing. The others are
-           <a href="x9644.html#BLTREF">
-            builtin
-           </a>
-           and
-           <a href="x9644.html#ENABLEREF">
-            enable
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="x9644.html#BLTREF">
+           builtin
+          </a>
+          and
+          <a href="x9644.html#ENABLEREF">
+           enable
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -971,221 +1017,160 @@ exit 0   # Normal exit? No!
       Table 15-1. Job identifiers
      </b>
     </p>
-    <table border="1" class="CALSTABLE">
-     <thead>
-      <tr>
-       <th align="LEFT" valign="TOP">
-        Notation
-       </th>
-       <th align="LEFT" valign="TOP">
-        Meaning
-       </th>
-      </tr>
-     </thead>
-     <tbody>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         %N
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        Job number [N]
-       </td>
-      </tr>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         %S
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        Invocation (command-line) of job begins with string
-        <em>
-         S
-        </em>
-       </td>
-      </tr>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         %?S
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        Invocation (command-line) of job contains within it string
-        <em>
-         S
-        </em>
-       </td>
-      </tr>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         %%
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        <span class="QUOTE">
-         "current"
-        </span>
-        job (last job stopped in
+    <div>
+     <p>
+      Notation
+     </p>
+     <p>
+      Meaning
+     </p>
+     <p>
+      <tt class="OPTION">
+       %N
+      </tt>
+     </p>
+     <p>
+      Job number [N]
+     </p>
+     <p>
+      <tt class="OPTION">
+       %S
+      </tt>
+     </p>
+     <p>
+      Invocation (command-line) of job begins with string
+      <em>
+       S
+      </em>
+     </p>
+     <p>
+      <tt class="OPTION">
+       %?S
+      </tt>
+     </p>
+     <p>
+      Invocation (command-line) of job contains within it string
+      <em>
+       S
+      </em>
+     </p>
+     <p>
+      <tt class="OPTION">
+       %%
+      </tt>
+     </p>
+     <p>
+      <span class="QUOTE">
+       "current"
+      </span>
+      job (last job stopped in
 	      foreground or started in background)
-       </td>
-      </tr>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         %+
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        <span class="QUOTE">
-         "current"
-        </span>
-        job (last job stopped in
+     </p>
+     <p>
+      <tt class="OPTION">
+       %+
+      </tt>
+     </p>
+     <p>
+      <span class="QUOTE">
+       "current"
+      </span>
+      job (last job stopped in
 	      foreground or started in background)
-       </td>
-      </tr>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         %-
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        Last job
-       </td>
-      </tr>
-      <tr>
-       <td align="LEFT" valign="TOP">
-        <tt class="OPTION">
-         $!
-        </tt>
-       </td>
-       <td align="LEFT" valign="TOP">
-        Last background process
-       </td>
-      </tr>
-     </tbody>
-    </table>
+     </p>
+     <p>
+      <tt class="OPTION">
+       %-
+      </tt>
+     </p>
+     <p>
+      Last job
+     </p>
+     <p>
+      <tt class="OPTION">
+       $!
+      </tt>
+     </p>
+     <p>
+      Last background process
+     </p>
+    </div>
    </div>
   </div>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="x9644.html#AEN9753" name="FTN.AEN9753">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      This only applies to
-      <i class="FIRSTTERM">
-       child
+  <div>
+   <p>
+    <a href="x9644.html#AEN9753" name="FTN.AEN9753">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     This only applies to
+     <i class="FIRSTTERM">
+      child
          processes
-      </i>
-      , of course.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="x9644.html#AEN9928" name="FTN.AEN9928">
-      <span class="footnote">
-       [2]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The C source for a number of loadable builtins is
+     </i>
+     , of course.
+    </p>
+   </p>
+   <p>
+    <a href="x9644.html#AEN9928" name="FTN.AEN9928">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The C source for a number of loadable builtins is
 		    typically found in the
-      <tt class="FILENAME">
-       /usr/share/doc/bash-?.??/functions
-      </tt>
-      directory.
-     </p>
-     <p>
-      Note that the
-      <tt class="OPTION">
-       -f
-      </tt>
-      option to
-      <b class="COMMAND">
-       enable
-      </b>
-      is not
-      <a href="portabilityissues.html">
-       portable
-      </a>
-      to all
-                    systems.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="x9644.html#AEN9949" name="FTN.AEN9949">
-      <span class="footnote">
-       [3]
-      </span>
+     <tt class="FILENAME">
+      /usr/share/doc/bash-?.??/functions
+     </tt>
+     directory.
+    </p>
+    <p>
+     Note that the
+     <tt class="OPTION">
+      -f
+     </tt>
+     option to
+     <b class="COMMAND">
+      enable
+     </b>
+     is not
+     <a href="portabilityissues.html">
+      portable
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      The same effect as
-      <b class="COMMAND">
-       autoload
-      </b>
-      can be achieved with
-      <a href="declareref.html">
-       typeset -fu
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="internal.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="external.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Internal Commands and Builtins
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="internal.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      External Filters, Programs and Commands
-     </td>
-    </tr>
-   </table>
+     to all
+                    systems.
+    </p>
+   </p>
+   <p>
+    <a href="x9644.html#AEN9949" name="FTN.AEN9949">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     The same effect as
+     <b class="COMMAND">
+      autoload
+     </b>
+     can be achieved with
+     <a href="declareref.html">
+      typeset -fu
+     </a>
+     .
+    </p>
+   </p>
   </div>
  </body>
 </html>

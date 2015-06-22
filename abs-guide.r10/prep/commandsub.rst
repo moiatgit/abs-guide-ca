@@ -1,77 +1,5 @@
 .. raw:: html
 
-   <div class="NAVHEADER">
-
-.. raw:: html
-
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <th align="center" colspan="3">
-
-Advanced Bash-Scripting Guide:
-
-.. raw:: html
-
-   </th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="left" valign="bottom" width="10%">
-
-`Prev <testbranch.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center" valign="bottom" width="80%">
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="right" valign="bottom" width="10%">
-
-`Next <arithexp.html>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
---------------
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
    <div class="CHAPTER">
 
   Chapter 12. Command Substitution
@@ -85,16 +13,22 @@ literally plugs the command output into another context. ` [2]
  The classic form of command substitution uses *backquotes* (\`...\`).
 Commands within backquotes (backticks) generate command-line text.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     script_name=`basenam |
-| e $0`                    |
-|     echo "The name of th |
-| is script is $script_nam |
-| e."                      |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    script_name=`basename $0`
+    echo "The name of this script is $script_name."
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -108,73 +42,63 @@ set a variable, and even for generating the argument list in a
 
    </div>
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     rm `cat filename`    |
-| # "filename" contains a  |
-| list of files to delete. |
-|     #                    |
-|     # S. C. points out t |
-| hat "arg list too long"  |
-| error might result.      |
-|     # Better is          |
-|      xargs rm -- < filen |
-| ame                      |
-|     # ( -- covers those  |
-| cases where "filename" b |
-| egins with a "-" )       |
-|                          |
-|     textfile_listing=`ls |
-|  *.txt`                  |
-|     # Variable contains  |
-| names of all *.txt files |
-|  in current working dire |
-| ctory.                   |
-|     echo $textfile_listi |
-| ng                       |
-|                          |
-|     textfile_listing2=$( |
-| ls *.txt)   # The altern |
-| ative form of command su |
-| bstitution.              |
-|     echo $textfile_listi |
-| ng2                      |
-|     # Same result.       |
-|                          |
-|     # A possible problem |
-|  with putting a list of  |
-| files into a single stri |
-| ng                       |
-|     # is that a newline  |
-| may creep in.            |
-|     #                    |
-|     # A safer way to ass |
-| ign a list of files to a |
-|  parameter is with an ar |
-| ray.                     |
-|     #      shopt -s null |
-| glob    # If no match, f |
-| ilename expands to nothi |
-| ng.                      |
-|     #      textfile_list |
-| ing=( *.txt )            |
-|     #                    |
-|     # Thanks, S.C.       |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    rm `cat filename`   # "filename" contains a list of files to delete.
+    #
+    # S. C. points out that "arg list too long" error might result.
+    # Better is              xargs rm -- < filename 
+    # ( -- covers those cases where "filename" begins with a "-" )
+
+    textfile_listing=`ls *.txt`
+    # Variable contains names of all *.txt files in current working directory.
+    echo $textfile_listing
+
+    textfile_listing2=$(ls *.txt)   # The alternative form of command substitution.
+    echo $textfile_listing2
+    # Same result.
+
+    # A possible problem with putting a list of files into a single string
+    # is that a newline may creep in.
+    #
+    # A safer way to assign a list of files to a parameter is with an array.
+    #      shopt -s nullglob    # If no match, filename expands to nothing.
+    #      textfile_listing=( *.txt )
+    #
+    # Thanks, S.C.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
    <div class="NOTE">
 
-+--------------------------------------+--------------------------------------+
-| |Note|                               |
-|  Command substitution invokes a      |
-| `subshell <subshells.html#SUBSHELLSR |
-| EF>`__                               |
-| .                                    |
-+--------------------------------------+--------------------------------------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+ Command substitution invokes a
+`subshell <subshells.html#SUBSHELLSREF>`__ .
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -184,405 +108,333 @@ set a variable, and even for generating the argument list in a
 
    <div class="CAUTION">
 
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| |Caution|    |
-|  Command     |
-| substitution |
-| may result   |
-| in `word     |
-| splitting <q |
-| uotingvar.ht |
-| ml#WSPLITREF |
-| >`__         |
-| .            |
-|              |
-| +----------- |
-| ------------ |
-| ---+-------- |
-| ------------ |
-| ------+----- |
-| ------------ |
-| ---------+   |
-| | .. code::  |
-| PROGRAMLISTI |
-| NG |         |
-| |            |
-|              |
-|    |         |
-| |     COMMAN |
-| D `echo a b` |
-|    |         |
-| |    # 2 arg |
-| s: a and b   |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     COMMAN |
-| D "`echo a b |
-| `" |         |
-| |    # 1 arg |
-| : "a b"      |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     COMMAN |
-| D `echo`     |
-|    |         |
-| |    # no ar |
-| g            |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     COMMAN |
-| D "`echo`"   |
-|    |         |
-| |    # one e |
-| mpty arg     |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     # Than |
-| ks, S.C.     |
-|    |         |
-|              |
-|              |
-|              |
-| +----------- |
-| ------------ |
-| ---+-------- |
-| ------------ |
-| ------+----- |
-| ------------ |
-| ---------+   |
-|              |
-| Even when    |
-| there is no  |
-| word         |
-| splitting,   |
-| command      |
-| substitution |
-| can remove   |
-| trailing     |
-| newlines.    |
-|              |
-| +----------- |
-| ------------ |
-| ---+-------- |
-| ------------ |
-| ------+----- |
-| ------------ |
-| ---------+   |
-| | .. code::  |
-| PROGRAMLISTI |
-| NG |         |
-| |            |
-|              |
-|    |         |
-| |     # cd " |
-| `pwd`"  # Th |
-| is |         |
-| |  should al |
-| ways work.   |
-|    |         |
-| |     # Howe |
-| ver...       |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     mkdir  |
-| 'dir with tr |
-| ai |         |
-| | ling newli |
-| ne           |
-|    |         |
-| |     '      |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     cd 'di |
-| r with trail |
-| in |         |
-| | g newline  |
-|              |
-|    |         |
-| |     '      |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     cd "`p |
-| wd`"  # Erro |
-| r  |         |
-| | message:   |
-|              |
-|    |         |
-| |     # bash |
-| : cd: /tmp/f |
-| il |         |
-| | e with tra |
-| iling newlin |
-| e: |         |
-| |  No such f |
-| ile or direc |
-| to |         |
-| | ry         |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     cd "$P |
-| WD"   # Work |
-| s  |         |
-| | fine.      |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     old_tt |
-| y_setting=$( |
-| st |         |
-| | ty -g)   # |
-|  Save old te |
-| rm |         |
-| | inal setti |
-| ng.          |
-|    |         |
-| |     echo " |
-| Hit a key "  |
-|    |         |
-| |     stty - |
-| icanon -echo |
-|    |         |
-| |          # |
-|  Disable "ca |
-| no |         |
-| | nical" mod |
-| e for termin |
-| al |         |
-| | .          |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |          # |
-|  Also, disab |
-| le |         |
-| |  *local* e |
-| cho.         |
-|    |         |
-| |     key=$( |
-| dd bs=1 coun |
-| t= |         |
-| | 1 2> /dev/ |
-| null)   # Us |
-| in |         |
-| | g 'dd' to  |
-| get a keypre |
-| ss |         |
-| | .          |
-|              |
-|    |         |
-| |     stty " |
-| $old_tty_set |
-| ti |         |
-| | ng"      # |
-|  Restore old |
-|  s |         |
-| | etting.    |
-|              |
-|    |         |
-| |     echo " |
-| You hit ${#k |
-| ey |         |
-| | } key."  # |
-|  ${#variable |
-| }  |         |
-| | = number o |
-| f characters |
-|  i |         |
-| | n $variabl |
-| e            |
-|    |         |
-| |     #      |
-|              |
-|    |         |
-| |     # Hit  |
-| any key exce |
-| pt |         |
-| |  RETURN, a |
-| nd the outpu |
-| t  |         |
-| | is "You hi |
-| t 1 key."    |
-|    |         |
-| |     # Hit  |
-| RETURN, and  |
-| it |         |
-| | 's "You hi |
-| t 0 key."    |
-|    |         |
-| |     # The  |
-| newline gets |
-|  e |         |
-| | aten in th |
-| e command su |
-| bs |         |
-| | titution.  |
-|              |
-|    |         |
-| |            |
-|              |
-|    |         |
-| |     #Code  |
-| snippet by S |
-| tĂ |         |
-| | Šphane Cha |
-| zelas.       |
-|    |         |
-|              |
-|              |
-|              |
-| +----------- |
-| ------------ |
-| ---+-------- |
-| ------------ |
-| ------+----- |
-| ------------ |
-| ---------+   |
-              
-+--------------+--------------+--------------+--------------+--------------+--------------+
-
 .. raw:: html
 
-   </div>
+   <div>
 
-.. raw:: html
+|Caution|
 
-   <div class="CAUTION">
+ Command substitution may result in `word
+splitting <quotingvar.html#WSPLITREF>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| |Caution|                |
-| Using **echo** to output |
-| an *unquoted* variable   |
-| set with command         |
-| substitution removes     |
-| trailing newlines        |
-| characters from the      |
-| output of the reassigned |
-| command(s). This can     |
-| cause unpleasant         |
-| surprises.               |
+| .. code:: PROGRAMLISTING |
 |                          |
-| +----------------------- |
-| ---+-------------------- |
-| ------+----------------- |
-| ---------+               |
-| | .. code:: PROGRAMLISTI |
-| NG |                     |
-| |                        |
-|    |                     |
-| |     dir_listing=`ls -l |
-| `  |                     |
-| |     echo $dir_listing  |
-|    |                     |
-| |   # unquoted           |
-|    |                     |
-| |                        |
-|    |                     |
-| |     # Expecting a nice |
-| ly |                     |
-| |  ordered directory lis |
-| ti |                     |
-| | ng.                    |
-|    |                     |
-| |                        |
-|    |                     |
-| |     # However, what yo |
-| u  |                     |
-| | get is:                |
-|    |                     |
-| |     # total 3 -rw-rw-r |
-| -- |                     |
-| |  1 bozo bozo 30 May 13 |
-|  1 |                     |
-| | 7:15 1.txt -rw-rw-r--  |
-| 1  |                     |
-| | bozo                   |
-|    |                     |
-| |     # bozo 51 May 15 2 |
-| 0: |                     |
-| | 57 t2.sh -rwxr-xr-x 1  |
-| bo |                     |
-| | zo bozo 217 Mar 5 21:1 |
-| 3  |                     |
-| | wi.sh                  |
-|    |                     |
-| |                        |
-|    |                     |
-| |     # The newlines dis |
-| ap |                     |
-| | peared.                |
-|    |                     |
-| |                        |
-|    |                     |
-| |                        |
-|    |                     |
-| |     echo "$dir_listing |
-| "  |                     |
-| |   # quoted             |
-|    |                     |
-| |     # -rw-rw-r--    1  |
-| bo |                     |
-| | zo       30 May 13 17: |
-| 15 |                     |
-| |  1.txt                 |
-|    |                     |
-| |     # -rw-rw-r--    1  |
-| bo |                     |
-| | zo       51 May 15 20: |
-| 57 |                     |
-| |  t2.sh                 |
-|    |                     |
-| |     # -rwxr-xr-x    1  |
-| bo |                     |
-| | zo      217 Mar  5 21: |
-| 13 |                     |
-| |  wi.sh                 |
-|    |                     |
+|     COMMAND `echo a b`   |
+|    # 2 args: a and b     |
+|                          |
+|     COMMAND "`echo a b`" |
+|    # 1 arg: "a b"        |
+|                          |
+|     COMMAND `echo`       |
+|    # no arg              |
+|                          |
+|     COMMAND "`echo`"     |
+|    # one empty arg       |
 |                          |
 |                          |
-| +----------------------- |
-| ---+-------------------- |
-| ------+----------------- |
-| ---------+               |
+|     # Thanks, S.C.       |
                           
 +--------------------------+--------------------------+--------------------------+
+
+Even when there is no word splitting, command substitution can remove
+trailing newlines.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     # cd "`pwd`"  # This |
+|  should always work.     |
+|     # However...         |
+|                          |
+|     mkdir 'dir with trai |
+| ling newline             |
+|     '                    |
+|                          |
+|     cd 'dir with trailin |
+| g newline                |
+|     '                    |
+|                          |
+|     cd "`pwd`"  # Error  |
+| message:                 |
+|     # bash: cd: /tmp/fil |
+| e with trailing newline: |
+|  No such file or directo |
+| ry                       |
+|                          |
+|     cd "$PWD"   # Works  |
+| fine.                    |
+|                          |
+|                          |
+|                          |
+|                          |
+|                          |
+|     old_tty_setting=$(st |
+| ty -g)   # Save old term |
+| inal setting.            |
+|     echo "Hit a key "    |
+|     stty -icanon -echo   |
+|          # Disable "cano |
+| nical" mode for terminal |
+| .                        |
+|                          |
+|          # Also, disable |
+|  *local* echo.           |
+|     key=$(dd bs=1 count= |
+| 1 2> /dev/null)   # Usin |
+| g 'dd' to get a keypress |
+| .                        |
+|     stty "$old_tty_setti |
+| ng"      # Restore old s |
+| etting.                  |
+|     echo "You hit ${#key |
+| } key."  # ${#variable}  |
+| = number of characters i |
+| n $variable              |
+|     #                    |
+|     # Hit any key except |
+|  RETURN, and the output  |
+| is "You hit 1 key."      |
+|     # Hit RETURN, and it |
+| 's "You hit 0 key."      |
+|     # The newline gets e |
+| aten in the command subs |
+| titution.                |
+|                          |
+|     #Code snippet by StÃ |
+| ©phane Chazelas.         |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    COMMAND `echo a b`     # 2 args: a and b
+
+    COMMAND "`echo a b`"   # 1 arg: "a b"
+
+    COMMAND `echo`         # no arg
+
+    COMMAND "`echo`"       # one empty arg
+
+
+    # Thanks, S.C.
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    # cd "`pwd`"  # This should always work.
+    # However...
+
+    mkdir 'dir with trailing newline
+    '
+
+    cd 'dir with trailing newline
+    '
+
+    cd "`pwd`"  # Error message:
+    # bash: cd: /tmp/file with trailing newline: No such file or directory
+
+    cd "$PWD"   # Works fine.
+
+
+
+
+
+    old_tty_setting=$(stty -g)   # Save old terminal setting.
+    echo "Hit a key "
+    stty -icanon -echo           # Disable "canonical" mode for terminal.
+                                 # Also, disable *local* echo.
+    key=$(dd bs=1 count=1 2> /dev/null)   # Using 'dd' to get a keypress.
+    stty "$old_tty_setting"      # Restore old setting. 
+    echo "You hit ${#key} key."  # ${#variable} = number of characters in $variable
+    #
+    # Hit any key except RETURN, and the output is "You hit 1 key."
+    # Hit RETURN, and it's "You hit 0 key."
+    # The newline gets eaten in the command substitution.
+
+    #Code snippet by StÃ©phane Chazelas.
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    COMMAND `echo a b`     # 2 args: a and b
+
+    COMMAND "`echo a b`"   # 1 arg: "a b"
+
+    COMMAND `echo`         # no arg
+
+    COMMAND "`echo`"       # one empty arg
+
+
+    # Thanks, S.C.
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    # cd "`pwd`"  # This should always work.
+    # However...
+
+    mkdir 'dir with trailing newline
+    '
+
+    cd 'dir with trailing newline
+    '
+
+    cd "`pwd`"  # Error message:
+    # bash: cd: /tmp/file with trailing newline: No such file or directory
+
+    cd "$PWD"   # Works fine.
+
+
+
+
+
+    old_tty_setting=$(stty -g)   # Save old terminal setting.
+    echo "Hit a key "
+    stty -icanon -echo           # Disable "canonical" mode for terminal.
+                                 # Also, disable *local* echo.
+    key=$(dd bs=1 count=1 2> /dev/null)   # Using 'dd' to get a keypress.
+    stty "$old_tty_setting"      # Restore old setting. 
+    echo "You hit ${#key} key."  # ${#variable} = number of characters in $variable
+    #
+    # Hit any key except RETURN, and the output is "You hit 1 key."
+    # Hit RETURN, and it's "You hit 0 key."
+    # The newline gets eaten in the command substitution.
+
+    #Code snippet by StÃ©phane Chazelas.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="CAUTION">
+
+.. raw:: html
+
+   <div>
+
+|Caution|
+
+Using **echo** to output an *unquoted* variable set with command
+substitution removes trailing newlines characters from the output of the
+reassigned command(s). This can cause unpleasant surprises.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     dir_listing=`ls -l`  |
+|     echo $dir_listing    |
+|   # unquoted             |
+|                          |
+|     # Expecting a nicely |
+|  ordered directory listi |
+| ng.                      |
+|                          |
+|     # However, what you  |
+| get is:                  |
+|     # total 3 -rw-rw-r-- |
+|  1 bozo bozo 30 May 13 1 |
+| 7:15 1.txt -rw-rw-r-- 1  |
+| bozo                     |
+|     # bozo 51 May 15 20: |
+| 57 t2.sh -rwxr-xr-x 1 bo |
+| zo bozo 217 Mar 5 21:13  |
+| wi.sh                    |
+|                          |
+|     # The newlines disap |
+| peared.                  |
+|                          |
+|                          |
+|     echo "$dir_listing"  |
+|   # quoted               |
+|     # -rw-rw-r--    1 bo |
+| zo       30 May 13 17:15 |
+|  1.txt                   |
+|     # -rw-rw-r--    1 bo |
+| zo       51 May 15 20:57 |
+|  t2.sh                   |
+|     # -rwxr-xr-x    1 bo |
+| zo      217 Mar  5 21:13 |
+|  wi.sh                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    dir_listing=`ls -l`
+    echo $dir_listing     # unquoted
+
+    # Expecting a nicely ordered directory listing.
+
+    # However, what you get is:
+    # total 3 -rw-rw-r-- 1 bozo bozo 30 May 13 17:15 1.txt -rw-rw-r-- 1 bozo
+    # bozo 51 May 15 20:57 t2.sh -rwxr-xr-x 1 bozo bozo 217 Mar 5 21:13 wi.sh
+
+    # The newlines disappeared.
+
+
+    echo "$dir_listing"   # quoted
+    # -rw-rw-r--    1 bozo       30 May 13 17:15 1.txt
+    # -rw-rw-r--    1 bozo       51 May 15 20:57 t2.sh
+    # -rwxr-xr-x    1 bozo      217 Mar  5 21:13 wi.sh
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    dir_listing=`ls -l`
+    echo $dir_listing     # unquoted
+
+    # Expecting a nicely ordered directory listing.
+
+    # However, what you get is:
+    # total 3 -rw-rw-r-- 1 bozo bozo 30 May 13 17:15 1.txt -rw-rw-r-- 1 bozo
+    # bozo 51 May 15 20:57 t2.sh -rwxr-xr-x 1 bozo bozo 217 Mar 5 21:13 wi.sh
+
+    # The newlines disappeared.
+
+
+    echo "$dir_listing"   # quoted
+    # -rw-rw-r--    1 bozo       30 May 13 17:15 1.txt
+    # -rw-rw-r--    1 bozo       51 May 15 20:57 t2.sh
+    # -rwxr-xr-x    1 bozo      217 Mar  5 21:13 wi.sh
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -592,238 +444,201 @@ Command substitution even permits setting a variable to the contents of
 a file, using either `redirection <io-redirection.html#IOREDIRREF>`__ or
 the `cat <basic.html#CATREF>`__ command.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     variable1=`<file1`   |
-|     #  Set "variable1" t |
-| o contents of "file1".   |
-|     variable2=`cat file2 |
-| `   #  Set "variable2" t |
-| o contents of "file2".   |
-|                          |
-|     #  This, however, fo |
-| rks a new process,       |
-|                          |
-|     #+ so the line of co |
-| de executes slower than  |
-| the above version.       |
-|                          |
-|     #  Note that the var |
-| iables may contain embed |
-| ded whitespace,          |
-|     #+ or even (horrors) |
-| , control characters.    |
-|                          |
-|     #  It is not necessa |
-| ry to explicitly assign  |
-| a variable.              |
-|     echo "` <$0`"        |
-|     # Echoes the script  |
-| itself to stdout.        |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #  Excerpts from sys |
-| tem file, /etc/rc.d/rc.s |
-| ysinit                   |
-|     #+ (on a Red Hat Lin |
-| ux installation)         |
-|                          |
-|                          |
-|     if [ -f /fsckoptions |
-|  ]; then                 |
-|             fsckoptions= |
-| `cat /fsckoptions`       |
-|     ...                  |
-|     fi                   |
-|     #                    |
-|     #                    |
-|     if [ -e "/proc/ide/$ |
-| {disk[$device]}/media" ] |
-|  ; then                  |
-|                  hdmedia |
-| =`cat /proc/ide/${disk[$ |
-| device]}/media`          |
-|     ...                  |
-|     fi                   |
-|     #                    |
-|     #                    |
-|     if [ ! -n "`uname -r |
-|  | grep -- "-"`" ]; then |
-|            ktag="`cat /p |
-| roc/version`"            |
-|     ...                  |
-|     fi                   |
-|     #                    |
-|     #                    |
-|     if [ $usb = "1" ]; t |
-| hen                      |
-|         sleep 5          |
-|         mouseoutput=`cat |
-|  /proc/bus/usb/devices 2 |
-| >/dev/null|grep -E "^I.* |
-| Cls=03.*Prot=02"`        |
-|         kbdoutput=`cat / |
-| proc/bus/usb/devices 2>/ |
-| dev/null|grep -E "^I.*Cl |
-| s=03.*Prot=01"`          |
-|     ...                  |
-|     fi                   |
-                          
-+--------------------------+--------------------------+--------------------------+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    variable1=`<file1`      #  Set "variable1" to contents of "file1".
+    variable2=`cat file2`   #  Set "variable2" to contents of "file2".
+                            #  This, however, forks a new process,
+                            #+ so the line of code executes slower than the above version.
+
+    #  Note that the variables may contain embedded whitespace,
+    #+ or even (horrors), control characters.
+
+    #  It is not necessary to explicitly assign a variable.
+    echo "` <$0`"           # Echoes the script itself to stdout.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #  Excerpts from system file, /etc/rc.d/rc.sysinit
+    #+ (on a Red Hat Linux installation)
+
+
+    if [ -f /fsckoptions ]; then
+            fsckoptions=`cat /fsckoptions`
+    ...
+    fi
+    #
+    #
+    if [ -e "/proc/ide/${disk[$device]}/media" ] ; then
+                 hdmedia=`cat /proc/ide/${disk[$device]}/media`
+    ...
+    fi
+    #
+    #
+    if [ ! -n "`uname -r | grep -- "-"`" ]; then
+           ktag="`cat /proc/version`"
+    ...
+    fi
+    #
+    #
+    if [ $usb = "1" ]; then
+        sleep 5
+        mouseoutput=`cat /proc/bus/usb/devices 2>/dev/null|grep -E "^I.*Cls=03.*Prot=02"`
+        kbdoutput=`cat /proc/bus/usb/devices 2>/dev/null|grep -E "^I.*Cls=03.*Prot=01"`
+    ...
+    fi
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
    <div class="CAUTION">
 
-+--------------------+--------------------+--------------------+--------------------+
-| |Caution|          |
-| Do not set a       |
-| variable to the    |
-| contents of a      |
-| *long* text file   |
-| unless you have a  |
-| very good reason   |
-| for doing so. Do   |
-| not set a variable |
-| to the contents of |
-| a *binary* file,   |
-| even as a joke.    |
-|                    |
-| .. raw:: html      |
-|                    |
-|    <div            |
-|    class="EXAMPLE" |
-| >                  |
-|                    |
-| **Example 12-1.    |
-| Stupid script      |
-| tricks**           |
-|                    |
-| +----------------- |
-| ---------+-------- |
-| ------------------ |
-| +----------------- |
-| ---------+         |
-| | .. code:: PROGRA |
-| MLISTING |         |
-| |                  |
-|          |         |
-| |     #!/bin/bash  |
-|          |         |
-| |     # stupid-scr |
-| ipt-tric |         |
-| | ks.sh: Don't try |
-|  this at |         |
-| |  home, folks.    |
-|          |         |
-| |     # From "Stup |
-| id Scrip |         |
-| | t Tricks," Volum |
-| e I.     |         |
-| |                  |
-|          |         |
-| |     exit 99  ### |
-|  Comment |         |
-| |  out this line i |
-| f you da |         |
-| | re.              |
-|          |         |
-| |                  |
-|          |         |
-| |     dangerous_va |
-| riable=` |         |
-| | cat /boot/vmlinu |
-| z`   # T |         |
-| | he compressed Li |
-| nux kern |         |
-| | el itself.       |
-|          |         |
-| |                  |
-|          |         |
-| |     echo "string |
-| -length  |         |
-| | of \$dangerous_v |
-| ariable  |         |
-| | = ${#dangerous_v |
-| ariable} |         |
-| | "                |
-|          |         |
-| |     # string-len |
-| gth of $ |         |
-| | dangerous_variab |
-| le = 794 |         |
-| | 151              |
-|          |         |
-| |     # (Newer ker |
-| nels are |         |
-| |  bigger.)        |
-|          |         |
-| |     # Does not g |
-| ive same |         |
-| |  count as 'wc -c |
-|  /boot/v |         |
-| | mlinuz'.         |
-|          |         |
-| |                  |
-|          |         |
-| |     # echo "$dan |
-| gerous_v |         |
-| | ariable"         |
-|          |         |
-| |     # Don't try  |
-| this! It |         |
-| |  would hang the  |
-| script.  |         |
-| |                  |
-|          |         |
-| |                  |
-|          |         |
-| |     #  The docum |
-| ent auth |         |
-| | or is aware of n |
-| o useful |         |
-| |  applications fo |
-| r        |         |
-| |     #+ setting a |
-|  variabl |         |
-| | e to the content |
-| s of a b |         |
-| | inary file.      |
-|          |         |
-| |                  |
-|          |         |
-| |     exit 0       |
-|          |         |
-|                    |
-|                    |
-| +----------------- |
-| ---------+-------- |
-| ------------------ |
-| +----------------- |
-| ---------+         |
-|                    |
-| .. raw:: html      |
-|                    |
-|    </div>          |
-|                    |
-| Notice that a      |
-| *buffer overrun*   |
-| does not occur.    |
-| This is one        |
-| instance where an  |
-| interpreted        |
-| language, such as  |
-| Bash, provides     |
-| more protection    |
-| from programmer    |
-| mistakes than a    |
-| compiled language. |
-+--------------------+--------------------+--------------------+--------------------+
+.. raw:: html
+
+   <div>
+
+|Caution|
+
+Do not set a variable to the contents of a *long* text file unless you
+have a very good reason for doing so. Do not set a variable to the
+contents of a *binary* file, even as a joke.
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
+**Example 12-1. Stupid script tricks**
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # stupid-script-tricks.sh: Don't try this at home, folks.
+    # From "Stupid Script Tricks," Volume I.
+
+    exit 99  ### Comment out this line if you dare.
+
+    dangerous_variable=`cat /boot/vmlinuz`   # The compressed Linux kernel itself.
+
+    echo "string-length of \$dangerous_variable = ${#dangerous_variable}"
+    # string-length of $dangerous_variable = 794151
+    # (Newer kernels are bigger.)
+    # Does not give same count as 'wc -c /boot/vmlinuz'.
+
+    # echo "$dangerous_variable"
+    # Don't try this! It would hang the script.
+
+
+    #  The document author is aware of no useful applications for
+    #+ setting a variable to the contents of a binary file.
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+Notice that a *buffer overrun* does not occur. This is one instance
+where an interpreted language, such as Bash, provides more protection
+from programmer mistakes than a compiled language.
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # stupid-script-tricks.sh: Don't try this at home, folks.
+    # From "Stupid Script Tricks," Volume I.
+
+    exit 99  ### Comment out this line if you dare.
+
+    dangerous_variable=`cat /boot/vmlinuz`   # The compressed Linux kernel itself.
+
+    echo "string-length of \$dangerous_variable = ${#dangerous_variable}"
+    # string-length of $dangerous_variable = 794151
+    # (Newer kernels are bigger.)
+    # Does not give same count as 'wc -c /boot/vmlinuz'.
+
+    # echo "$dangerous_variable"
+    # Don't try this! It would hang the script.
+
+
+    #  The document author is aware of no useful applications for
+    #+ setting a variable to the contents of a binary file.
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # stupid-script-tricks.sh: Don't try this at home, folks.
+    # From "Stupid Script Tricks," Volume I.
+
+    exit 99  ### Comment out this line if you dare.
+
+    dangerous_variable=`cat /boot/vmlinuz`   # The compressed Linux kernel itself.
+
+    echo "string-length of \$dangerous_variable = ${#dangerous_variable}"
+    # string-length of $dangerous_variable = 794151
+    # (Newer kernels are bigger.)
+    # Does not give same count as 'wc -c /boot/vmlinuz'.
+
+    # echo "$dangerous_variable"
+    # Don't try this! It would hang the script.
+
+
+    #  The document author is aware of no useful applications for
+    #+ setting a variable to the contents of a binary file.
+
+    exit 0
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -839,1062 +654,557 @@ output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 
 **Example 12-2. Generating a variable from a loop**
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     #!/bin/bash          |
-|     # csubloop.sh: Setti |
-| ng a variable to the out |
-| put of a loop.           |
-|                          |
-|     variable1=`for i in  |
-| 1 2 3 4 5                |
-|     do                   |
-|       echo -n "$i"       |
-|            #  The 'echo' |
-|  command is critical     |
-|     done`                |
-|            #+ to command |
-|  substitution here.      |
-|                          |
-|     echo "variable1 = $v |
-| ariable1"  # variable1 = |
-|  12345                   |
-|                          |
-|                          |
-|     i=0                  |
-|     variable2=`while [ " |
-| $i" -lt 10 ]             |
-|     do                   |
-|       echo -n "$i"       |
-|            # Again, the  |
-| necessary 'echo'.        |
-|       let "i += 1"       |
-|            # Increment.  |
-|     done`                |
-|                          |
-|     echo "variable2 = $v |
-| ariable2"  # variable2 = |
-|  0123456789              |
-|                          |
-|     #  Demonstrates that |
-|  it's possible to embed  |
-| a loop                   |
-|     #+ inside a variable |
-|  declaration.            |
-|                          |
-|     exit 0               |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # csubloop.sh: Setting a variable to the output of a loop.
+
+    variable1=`for i in 1 2 3 4 5
+    do
+      echo -n "$i"                 #  The 'echo' command is critical
+    done`                          #+ to command substitution here.
+
+    echo "variable1 = $variable1"  # variable1 = 12345
+
+
+    i=0
+    variable2=`while [ "$i" -lt 10 ]
+    do
+      echo -n "$i"                 # Again, the necessary 'echo'.
+      let "i += 1"                 # Increment.
+    done`
+
+    echo "variable2 = $variable2"  # variable2 = 0123456789
+
+    #  Demonstrates that it's possible to embed a loop
+    #+ inside a variable declaration.
+
+    exit 0
+
+.. raw:: html
+
+   </p>
 
 .. raw:: html
 
    </div>
 
-+--------------------------------------------------------------------------+
-| .. raw:: html                                                            |
-|                                                                          |
-|    <div class="SIDEBAR">                                                 |
-|                                                                          |
-| Command substitution makes it possible to extend the toolset available   |
-| to Bash. It is simply a matter of writing a program or script that       |
-| outputs to ``          stdout         `` (like a well-behaved UNIX tool  |
-| should) and assigning that output to a variable.                         |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-| | .. code:: PROGRAMLISTING |                                             |
-| |                          |                                             |
-| |     #include <stdio.h>   |                                             |
-| |                          |                                             |
-| |     /*  "Hello, world."  |                                             |
-| | C program  */            |                                             |
-| |                          |                                             |
-| |     int main()           |                                             |
-| |     {                    |                                             |
-| |       printf( "Hello, wo |                                             |
-| | rld.\n" );               |                                             |
-| |       return (0);        |                                             |
-| |     }                    |                                             |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-| | .. code:: SCREEN         |                                             |
-| |                          |                                             |
-| |     bash$ gcc -o hello h |                                             |
-| | ello.c                   |                                             |
-| |                          |                                             |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-| | .. code:: PROGRAMLISTING |                                             |
-| |                          |                                             |
-| |     #!/bin/bash          |                                             |
-| |     # hello.sh           |                                             |
-| |                          |                                             |
-| |     greeting=`./hello`   |                                             |
-| |     echo $greeting       |                                             |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-| | .. code:: SCREEN         |                                             |
-| |                          |                                             |
-| |     bash$ sh hello.sh    |                                             |
-| |     Hello, world.        |                                             |
-| |                          |                                             |
-|                                                                          |
-| +--------------------------+--------------------------+----------------- |
-| ---------+                                                               |
-|                                                                          |
-| .. raw:: html                                                            |
-|                                                                          |
-|    </div>                                                                |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. raw:: html
+
+   <div class="SIDEBAR">
+
+Command substitution makes it possible to extend the toolset available
+to Bash. It is simply a matter of writing a program or script that
+outputs to ``         stdout        `` (like a well-behaved UNIX tool
+should) and assigning that output to a variable.
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #include <stdio.h>
+
+    /*  "Hello, world." C program  */       
+
+    int main()
+    {
+      printf( "Hello, world.\n" );
+      return (0);
+    }
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ gcc -o hello hello.c
+              
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # hello.sh      
+
+    greeting=`./hello`
+    echo $greeting
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div>
+
+.. code:: SCREEN
+
+    bash$ sh hello.sh
+    Hello, world.
+                
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #include <stdio.h>
+
+    /*  "Hello, world." C program  */       
+
+    int main()
+    {
+      printf( "Hello, world.\n" );
+      return (0);
+    }
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ gcc -o hello hello.c
+              
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # hello.sh      
+
+    greeting=`./hello`
+    echo $greeting
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ sh hello.sh
+    Hello, world.
+                
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #include <stdio.h>
+
+    /*  "Hello, world." C program  */       
+
+    int main()
+    {
+      printf( "Hello, world.\n" );
+      return (0);
+    }
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ gcc -o hello hello.c
+              
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # hello.sh      
+
+    greeting=`./hello`
+    echo $greeting
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ sh hello.sh
+    Hello, world.
+                
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
    <div class="NOTE">
 
-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| |Note |
-| |     |
-|  The  |
-| **$(. |
-| ..)** |
-| form  |
-| has   |
-| super |
-| seded |
-| backt |
-| icks  |
-| for   |
-| comma |
-| nd    |
-| subst |
-| ituti |
-| on.   |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-| | ..  |
-| code: |
-| : PRO |
-| GRAML |
-| ISTIN |
-| G |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  outp |
-| ut=$( |
-| sed - |
-| n /"$ |
-| 1 |   |
-| | "/p |
-|  $fil |
-| e)    |
-| # Fro |
-| m "gr |
-| p |   |
-| | .sh |
-| " exa |
-| mple. |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  # Se |
-| tting |
-|  a va |
-| riabl |
-| e |   |
-| |  to |
-|  the  |
-| conte |
-| nts o |
-| f a t |
-| e |   |
-| | xt  |
-| file. |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  File |
-| _cont |
-| ents1 |
-| =$(ca |
-| t |   |
-| |  $f |
-| ile1) |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  File |
-| _cont |
-| ents2 |
-| =$(<$ |
-| f |   |
-| | ile |
-| 2)    |
-|       |
-| # Bas |
-| h per |
-| m |   |
-| | its |
-|  this |
-|  also |
-| .     |
-|       |
-|   |   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-|       |
-| The   |
-| **$(. |
-| ..)** |
-| form  |
-| of    |
-| comma |
-| nd    |
-| subst |
-| ituti |
-| on    |
-| treat |
-| s     |
-| a     |
-| doubl |
-| e     |
-| backs |
-| lash  |
-| in a  |
-| diffe |
-| rent  |
-| way   |
-| than  |
-| **\`. |
-| ..\`* |
-| *     |
-| .     |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-| | ..  |
-| code: |
-| : SCR |
-| EEN   |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  bash |
-| $ ech |
-| o `ec |
-| ho \\ |
-| ` |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  bash |
-| $ ech |
-| o $(e |
-| cho \ |
-| \ |   |
-| | )   |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  \    |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-|       |
-| The   |
-| **$(. |
-| ..)** |
-| form  |
-| of    |
-| comma |
-| nd    |
-| subst |
-| ituti |
-| on    |
-| permi |
-| ts    |
-| nesti |
-| ng.   |
-| ` [3] |
-|  <com |
-| mands |
-| ub.ht |
-| ml#FT |
-| N.AEN |
-| 7308> |
-| `__   |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-| | ..  |
-| code: |
-| : PRO |
-| GRAML |
-| ISTIN |
-| G |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  word |
-| _coun |
-| t=$(  |
-| wc -w |
-|   |   |
-| | $(e |
-| cho * |
-|  | aw |
-| k '{p |
-| rint  |
-| $ |   |
-| | 8}' |
-| ) )   |
-|       |
-|       |
-|       |
-|   |   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-|       |
-| Or,   |
-| for   |
-| somet |
-| hing  |
-| a bit |
-| more  |
-| elabo |
-| rate  |
-| . . . |
-|       |
-| .. ra |
-| w:: h |
-| tml   |
-|       |
-|    <d |
-| iv    |
-|    cl |
-| ass=" |
-| EXAMP |
-| LE">  |
-|       |
-| **Exa |
-| mple  |
-| 12-3. |
-| Findi |
-| ng    |
-| anagr |
-| ams** |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-| | ..  |
-| code: |
-| : PRO |
-| GRAML |
-| ISTIN |
-| G |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  #!/b |
-| in/ba |
-| sh    |
-|       |
-|   |   |
-| |     |
-|  # ag |
-| ram2. |
-| sh    |
-|       |
-|   |   |
-| |     |
-|  # Ex |
-| ample |
-|  of n |
-| ested |
-|   |   |
-| | com |
-| mand  |
-| subst |
-| ituti |
-| on.   |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  #  U |
-| ses " |
-| anagr |
-| am" u |
-| t |   |
-| | ili |
-| ty    |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  #+ t |
-| hat i |
-| s par |
-| t of  |
-| t |   |
-| | he  |
-| autho |
-| r's " |
-| yawl" |
-|  word |
-|   |   |
-| | lis |
-| t pac |
-| kage. |
-|       |
-|       |
-|   |   |
-| |     |
-|  #  h |
-| ttp:/ |
-| /ibib |
-| lio.o |
-| r |   |
-| | g/p |
-| ub/Li |
-| nux/l |
-| ibs/y |
-| awl-0 |
-| . |   |
-| | 3.2 |
-| .tar. |
-| gz    |
-|       |
-|       |
-|   |   |
-| |     |
-|  #  h |
-| ttp:/ |
-| /bash |
-| .deta |
-| . |   |
-| | in/ |
-| yawl- |
-| 0.3.2 |
-| .tar. |
-| gz    |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  E_NO |
-| ARGS= |
-| 86    |
-|       |
-|   |   |
-| |     |
-|  E_BA |
-| DARG= |
-| 87    |
-|       |
-|   |   |
-| |     |
-|  MINL |
-| EN=7  |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  if [ |
-|  -z " |
-| $1" ] |
-|       |
-|   |   |
-| |     |
-|  then |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|    ec |
-| ho "U |
-| sage  |
-| $0 LE |
-| T |   |
-| | TER |
-| SET"  |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|    ex |
-| it $E |
-| _NOAR |
-| GS    |
-|   |   |
-| |     |
-|   # S |
-| cript |
-|  need |
-| s a c |
-| o |   |
-| | mma |
-| nd-li |
-| ne ar |
-| gumen |
-| t.    |
-|   |   |
-| |     |
-|  elif |
-|  [ ${ |
-| #1} - |
-| lt $M |
-| I |   |
-| | NLE |
-| N ]   |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  then |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|    ec |
-| ho "A |
-| rgume |
-| nt mu |
-| s |   |
-| | t h |
-| ave a |
-| t lea |
-| st $M |
-| INLEN |
-|   |   |
-| | let |
-| ters. |
-| "     |
-|       |
-|       |
-|   |   |
-| |     |
-|    ex |
-| it $E |
-| _BADA |
-| RG    |
-|   |   |
-| |     |
-|  fi   |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  FILT |
-| ER='. |
-| ..... |
-| .'    |
-|   |   |
-| |     |
-|   # M |
-| ust h |
-| ave a |
-| t lea |
-| s |   |
-| | t 7 |
-|  lett |
-| ers.  |
-|       |
-|       |
-|   |   |
-| |     |
-|  #    |
-|     1 |
-| 23456 |
-| 7     |
-|   |   |
-| |     |
-|  Anag |
-| rams= |
-| ( $(e |
-| cho $ |
-| ( |   |
-| | ana |
-| gram  |
-| $1 |  |
-| grep  |
-| $FILT |
-| E |   |
-| | R)  |
-| ) )   |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  #    |
-|       |
-|   $(  |
-|     $ |
-| ( |   |
-| |   n |
-| ested |
-|  comm |
-| and s |
-| ub.   |
-|   |   |
-| |  )  |
-| )     |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  #    |
-|       |
-| (     |
-|       |
-|   |   |
-| |     |
-|  arra |
-| y ass |
-| ignme |
-| nt    |
-|   |   |
-| |     |
-|   )   |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  echo |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  echo |
-|  "${# |
-| Anagr |
-| ams[* |
-| ] |   |
-| | }   |
-| 7+ le |
-| tter  |
-| anagr |
-| ams f |
-| o |   |
-| | und |
-| "     |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  echo |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  echo |
-|  ${An |
-| agram |
-| s[0]} |
-|   |   |
-| |     |
-|   # F |
-| irst  |
-| anagr |
-| am.   |
-|   |   |
-| |     |
-|  echo |
-|  ${An |
-| agram |
-| s[1]} |
-|   |   |
-| |     |
-|   # S |
-| econd |
-|  anag |
-| ram.  |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|   # E |
-| tc.   |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  # ec |
-| ho "$ |
-| {Anag |
-| rams[ |
-| * |   |
-| | ]}" |
-|   # T |
-| o lis |
-| t all |
-|  the  |
-| a |   |
-| | nag |
-| rams  |
-| in a  |
-| singl |
-| e lin |
-| e |   |
-| |  .  |
-| . .   |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  #  L |
-| ook a |
-| head  |
-| to th |
-| e |   |
-| |  Ar |
-| rays  |
-| chapt |
-| er fo |
-| r enl |
-| i |   |
-| | ght |
-| enmen |
-| t on  |
-|       |
-|       |
-|   |   |
-| |     |
-|  #+ w |
-| hat's |
-|  goin |
-| g on  |
-| h |   |
-| | ere |
-| .     |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  # Se |
-| e als |
-| o the |
-|  agra |
-| m |   |
-| | .sh |
-|  scri |
-| pt fo |
-| r an  |
-| exerc |
-| i |   |
-| | se  |
-| in an |
-| agram |
-|  find |
-| ing.  |
-|   |   |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|   |   |
-| |     |
-|  exit |
-|  $?   |
-|       |
-|       |
-|   |   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| --+-- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----+ |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| -+    |
-|       |
-| .. ra |
-| w:: h |
-| tml   |
-|       |
-|    </ |
-| div>  |
-       
-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+.. raw:: html
+
+   <div>
+
+|Note|
+
+ The **$(...)** form has superseded backticks for command substitution.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     output=$(sed -n /"$1 |
+| "/p $file)   # From "grp |
+| .sh"  example.           |
+|                          |
+|     # Setting a variable |
+|  to the contents of a te |
+| xt file.                 |
+|     File_contents1=$(cat |
+|  $file1)                 |
+|     File_contents2=$(<$f |
+| ile2)        # Bash perm |
+| its this also.           |
+                          
++--------------------------+--------------------------+--------------------------+
+
+The **$(...)** form of command substitution treats a double backslash in
+a different way than **\`...\`** .
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ echo `echo \\` |
+|                          |
+|                          |
+|     bash$ echo $(echo \\ |
+| )                        |
+|     \                    |
+|                          |
+                          
++--------------------------+--------------------------+--------------------------+
+
+The **$(...)** form of command substitution permits nesting. ` [3]
+ <commandsub.html#FTN.AEN7308>`__
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     word_count=$( wc -w  |
+| $(echo * | awk '{print $ |
+| 8}') )                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+Or, for something a bit more elaborate . . .
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
+**Example 12-3. Finding anagrams**
+
+.. raw:: html
+
+   <div>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # agram2.sh
+    # Example of nested command substitution.
+
+    #  Uses "anagram" utility
+    #+ that is part of the author's "yawl" word list package.
+    #  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz
+    #  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+    E_NOARGS=86
+    E_BADARG=87
+    MINLEN=7
+
+    if [ -z "$1" ]
+    then
+      echo "Usage $0 LETTERSET"
+      exit $E_NOARGS         # Script needs a command-line argument.
+    elif [ ${#1} -lt $MINLEN ]
+    then
+      echo "Argument must have at least $MINLEN letters."
+      exit $E_BADARG
+    fi
+
+
+
+    FILTER='.......'         # Must have at least 7 letters.
+    #       1234567
+    Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
+    #          $(     $(  nested command sub.    ) )
+    #        (              array assignment         )
+
+    echo
+    echo "${#Anagrams[*]}  7+ letter anagrams found"
+    echo
+    echo ${Anagrams[0]}      # First anagram.
+    echo ${Anagrams[1]}      # Second anagram.
+                             # Etc.
+
+    # echo "${Anagrams[*]}"  # To list all the anagrams in a single line . . .
+
+    #  Look ahead to the Arrays chapter for enlightenment on
+    #+ what's going on here.
+
+    # See also the agram.sh script for an exercise in anagram finding.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    output=$(sed -n /"$1"/p $file)   # From "grp.sh" example.
+              
+    # Setting a variable to the contents of a text file.
+    File_contents1=$(cat $file1)      
+    File_contents2=$(<$file2)        # Bash permits this also.
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ echo `echo \\`
+
+
+    bash$ echo $(echo \\)
+    \
+              
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    word_count=$( wc -w $(echo * | awk '{print $8}') )
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # agram2.sh
+    # Example of nested command substitution.
+
+    #  Uses "anagram" utility
+    #+ that is part of the author's "yawl" word list package.
+    #  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz
+    #  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+    E_NOARGS=86
+    E_BADARG=87
+    MINLEN=7
+
+    if [ -z "$1" ]
+    then
+      echo "Usage $0 LETTERSET"
+      exit $E_NOARGS         # Script needs a command-line argument.
+    elif [ ${#1} -lt $MINLEN ]
+    then
+      echo "Argument must have at least $MINLEN letters."
+      exit $E_BADARG
+    fi
+
+
+
+    FILTER='.......'         # Must have at least 7 letters.
+    #       1234567
+    Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
+    #          $(     $(  nested command sub.    ) )
+    #        (              array assignment         )
+
+    echo
+    echo "${#Anagrams[*]}  7+ letter anagrams found"
+    echo
+    echo ${Anagrams[0]}      # First anagram.
+    echo ${Anagrams[1]}      # Second anagram.
+                             # Etc.
+
+    # echo "${Anagrams[*]}"  # To list all the anagrams in a single line . . .
+
+    #  Look ahead to the Arrays chapter for enlightenment on
+    #+ what's going on here.
+
+    # See also the agram.sh script for an exercise in anagram finding.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    output=$(sed -n /"$1"/p $file)   # From "grp.sh" example.
+              
+    # Setting a variable to the contents of a text file.
+    File_contents1=$(cat $file1)      
+    File_contents2=$(<$file2)        # Bash permits this also.
+
+.. raw:: html
+
+   </p>
+
+.. code:: SCREEN
+
+    bash$ echo `echo \\`
+
+
+    bash$ echo $(echo \\)
+    \
+              
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    word_count=$( wc -w $(echo * | awk '{print $8}') )
+
+.. raw:: html
+
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    #!/bin/bash
+    # agram2.sh
+    # Example of nested command substitution.
+
+    #  Uses "anagram" utility
+    #+ that is part of the author's "yawl" word list package.
+    #  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz
+    #  http://bash.deta.in/yawl-0.3.2.tar.gz
+
+    E_NOARGS=86
+    E_BADARG=87
+    MINLEN=7
+
+    if [ -z "$1" ]
+    then
+      echo "Usage $0 LETTERSET"
+      exit $E_NOARGS         # Script needs a command-line argument.
+    elif [ ${#1} -lt $MINLEN ]
+    then
+      echo "Argument must have at least $MINLEN letters."
+      exit $E_BADARG
+    fi
+
+
+
+    FILTER='.......'         # Must have at least 7 letters.
+    #       1234567
+    Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
+    #          $(     $(  nested command sub.    ) )
+    #        (              array assignment         )
+
+    echo
+    echo "${#Anagrams[*]}  7+ letter anagrams found"
+    echo
+    echo ${Anagrams[0]}      # First anagram.
+    echo ${Anagrams[1]}      # Second anagram.
+                             # Etc.
+
+    # echo "${Anagrams[*]}"  # To list all the anagrams in a single line . . .
+
+    #  Look ahead to the Arrays chapter for enlightenment on
+    #+ what's going on here.
+
+    # See also the agram.sh script for an exercise in anagram finding.
+
+    exit $?
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
 
 .. raw:: html
 
@@ -1943,25 +1253,9 @@ Notes
 
 .. raw:: html
 
-   <table border="0" class="FOOTNOTES" width="100%">
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   <div>
 
 ` [1]  <commandsub.html#AEN7205>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 For purposes of *command substitution* , a **command** may be an
 external system command, an internal scripting
@@ -1970,59 +1264,19 @@ function <assortedtips.html#RVT>`__ .
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [2]  <commandsub.html#AEN7211>`__
 
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
-
 In a more technically correct sense, *command substitution* extracts the
-``        stdout       `` of a command, then assigns it to a variable
+``       stdout      `` of a command, then assigns it to a variable
 using the = operator.
 
 .. raw:: html
 
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="5%">
+   </p>
 
 ` [3]  <commandsub.html#AEN7308>`__
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="LEFT" valign="TOP" width="95%">
 
 In fact, nesting with backticks is also possible, but only by escaping
 the inner backticks, as John Default points out.
@@ -2038,28 +1292,23 @@ the inner backticks, as John Default points out.
 
 .. raw:: html
 
-   </td>
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    word_count=` wc -w \`echo * | awk '{print $8}'\` `
 
 .. raw:: html
 
-   </tr>
+   </p>
+
+.. code:: PROGRAMLISTING
+
+    word_count=` wc -w \`echo * | awk '{print $8}'\` `
 
 .. raw:: html
 
-   </table>
-
-.. raw:: html
-
-   <div class="NAVFOOTER">
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <testbranch.html>` | Testing and Branching    |
-| __                       | `Up <part3.html>`__      |
-| `Home <index.html>`__    | Arithmetic Expansion     |
-| `Next <arithexp.html>`__ |                          |
-+--------------------------+--------------------------+--------------------------+
+   </p>
 
 .. raw:: html
 

@@ -11,30 +11,6 @@
   <link href="x9644.html" rel="NEXT" title="Job Control Commands"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="part4.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="x9644.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="INTERNAL">
@@ -75,92 +51,90 @@
     <a name="FORKREF">
     </a>
    </p>
-   <table border="1" cellpadding="5" class="SIDEBAR">
-    <tr>
-     <td>
-      <div class="SIDEBAR">
-       <a name="AEN8611">
+   <div>
+    <p>
+     <div class="SIDEBAR">
+      <a name="AEN8611">
+      </a>
+      <p>
+      </p>
+      <p>
+       <a name="PARENTREF">
+       </a>
+       When a command or
+		   the shell itself initiates (or
+       <i class="FIRSTTERM">
+        spawns
+       </i>
+       ) a new
+		   subprocess to carry out a task, this is called
+       <i class="FIRSTTERM">
+        forking
+       </i>
+       . This new process
+		   is the
+       <i class="FIRSTTERM">
+        child
+       </i>
+       , and the process
+		   that
+       <i class="FIRSTTERM">
+        forked
+       </i>
+       it off is the
+       <i class="FIRSTTERM">
+        parent
+       </i>
+       . While the
+       <i class="FIRSTTERM">
+        child
+		   process
+       </i>
+       is doing its work, the
+       <i class="FIRSTTERM">
+        parent process
+       </i>
+       is still
+		   executing.
+      </p>
+      <p>
+       Note that while a
+       <i class="FIRSTTERM">
+        parent
+		   process
+       </i>
+       gets the
+       <i class="FIRSTTERM">
+        process
+		   ID
+       </i>
+       of the
+       <i class="FIRSTTERM">
+        child
+		   process
+       </i>
+       , and can thus pass arguments to it,
+       <em>
+        the reverse is not true
+       </em>
+       .
+       <a href="gotchas.html#PARCHILDPROBREF">
+        This can create problems
+		   that are subtle and hard to track down.
+       </a>
+      </p>
+      <div class="EXAMPLE">
+       <a name="SPAWNSCR">
        </a>
        <p>
+        <b>
+         Example 15-1. A script that spawns multiple instances of itself
+        </b>
        </p>
-       <p>
-        <a name="PARENTREF">
-        </a>
-        When a command or
-		   the shell itself initiates (or
-        <i class="FIRSTTERM">
-         spawns
-        </i>
-        ) a new
-		   subprocess to carry out a task, this is called
-        <i class="FIRSTTERM">
-         forking
-        </i>
-        . This new process
-		   is the
-        <i class="FIRSTTERM">
-         child
-        </i>
-        , and the process
-		   that
-        <i class="FIRSTTERM">
-         forked
-        </i>
-        it off is the
-        <i class="FIRSTTERM">
-         parent
-        </i>
-        . While the
-        <i class="FIRSTTERM">
-         child
-		   process
-        </i>
-        is doing its work, the
-        <i class="FIRSTTERM">
-         parent process
-        </i>
-        is still
-		   executing.
-       </p>
-       <p>
-        Note that while a
-        <i class="FIRSTTERM">
-         parent
-		   process
-        </i>
-        gets the
-        <i class="FIRSTTERM">
-         process
-		   ID
-        </i>
-        of the
-        <i class="FIRSTTERM">
-         child
-		   process
-        </i>
-        , and can thus pass arguments to it,
-        <em>
-         the reverse is not true
-        </em>
-        .
-        <a href="gotchas.html#PARCHILDPROBREF">
-         This can create problems
-		   that are subtle and hard to track down.
-        </a>
-       </p>
-       <div class="EXAMPLE">
-        <a name="SPAWNSCR">
-        </a>
+       <div>
         <p>
-         <b>
-          Example 15-1. A script that spawns multiple instances of itself
-         </b>
-        </p>
-        <table bgcolor="#E0E0E0" border="0" width="100%">
-         <tr>
-          <td>
-           <font color="#000000">
-            <pre class="PROGRAMLISTING">#!/bin/bash
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # spawn.sh
 
 
@@ -191,35 +165,103 @@ exit 0               # Not necessary; script will never get to here.
 #  Is having a script spawn multiple instances of itself
 #+ an advisable scripting technique.
 #  Why or why not?</pre>
-           </font>
-          </td>
-         </tr>
-        </table>
+         </font>
+        </p>
        </div>
-       <p>
-        <a name="BLTINFRK">
-        </a>
-       </p>
-       <p>
-        Generally, a Bash
-        <i class="FIRSTTERM">
-         builtin
-        </i>
-        does not fork a subprocess when it executes within
+      </div>
+      <p>
+       <a name="BLTINFRK">
+       </a>
+      </p>
+      <p>
+       Generally, a Bash
+       <i class="FIRSTTERM">
+        builtin
+       </i>
+       does not fork a subprocess when it executes within
 		   a script. An external system command or filter in
 		   a script usually
-        <em>
-         will
-        </em>
-        fork a
+       <em>
+        will
+       </em>
+       fork a
 		   subprocess.
-       </p>
-       <p>
-       </p>
-      </div>
-     </td>
-    </tr>
-   </table>
+      </p>
+      <p>
+      </p>
+     </div>
+    </p>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">#!/bin/bash
+# spawn.sh
+
+
+PIDS=$(pidof sh $0)  # Process IDs of the various instances of this script.
+P_array=( $PIDS )    # Put them in an array (why?).
+echo $PIDS           # Show process IDs of parent and child processes.
+let "instances = ${#P_array[*]} - 1"  # Count elements, less 1.
+                                      # Why subtract 1?
+echo "$instances instance(s) of this script running."
+echo "[Hit Ctl-C to exit.]"; echo
+
+
+sleep 1              # Wait.
+sh $0                # Play it again, Sam.
+
+exit 0               # Not necessary; script will never get to here.
+                     # Why not?
+
+#  After exiting with a Ctl-C,
+#+ do all the spawned instances of the script die?
+#  If so, why?
+
+# Note:
+# ----
+# Be careful not to run this script too long.
+# It will eventually eat up too many system resources.
+
+#  Is having a script spawn multiple instances of itself
+#+ an advisable scripting technique.
+#  Why or why not?</pre>
+     </font>
+    </p>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">#!/bin/bash
+# spawn.sh
+
+
+PIDS=$(pidof sh $0)  # Process IDs of the various instances of this script.
+P_array=( $PIDS )    # Put them in an array (why?).
+echo $PIDS           # Show process IDs of parent and child processes.
+let "instances = ${#P_array[*]} - 1"  # Count elements, less 1.
+                                      # Why subtract 1?
+echo "$instances instance(s) of this script running."
+echo "[Hit Ctl-C to exit.]"; echo
+
+
+sleep 1              # Wait.
+sh $0                # Play it again, Sam.
+
+exit 0               # Not necessary; script will never get to here.
+                     # Why not?
+
+#  After exiting with a Ctl-C,
+#+ do all the spawned instances of the script die?
+#  If so, why?
+
+# Note:
+# ----
+# Be careful not to run this script too long.
+# It will eventually eat up too many system resources.
+
+#  Is having a script spawn multiple instances of itself
+#+ an advisable scripting technique.
+#  Why or why not?</pre>
+     </font>
+    </p>
+   </div>
    <p>
     A builtin may be a synonym to a system command of the same
 	name, but Bash reimplements it internally.  For example,
@@ -234,18 +276,16 @@ exit 0               # Not necessary; script will never get to here.
     , although their behavior is
 	almost identical.
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">#!/bin/bash
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">#!/bin/bash
 
 echo "This line uses the \"echo\" builtin."
 /bin/echo "This line uses the /bin/echo system command."</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="KEYWORDREF">
     </a>
@@ -330,16 +370,14 @@ echo "This line uses the \"echo\" builtin."
        </a>
        ).
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">echo Hello
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">echo Hello
 echo $a</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        An
        <b class="COMMAND">
@@ -375,37 +413,51 @@ echo $a</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           An
-           <b class="COMMAND">
-            echo
-           </b>
-           can be used to feed a
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          An
+          <b class="COMMAND">
+           echo
+          </b>
+          can be used to feed a
 	      sequence of commands down a pipe.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
 then
   echo "$VAR contains the substring sequence \"txt\""
 fi</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
+then
+  echo "$VAR contains the substring sequence \"txt\""
+fi</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
+then
+  echo "$VAR contains the substring sequence \"txt\""
+fi</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="ECHOCS">
@@ -414,53 +466,51 @@ fi</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           An
-           <b class="COMMAND">
-            echo
-           </b>
-           , in combination with
-           <a href="commandsub.html#COMMANDSUBREF">
-            command substitution
-           </a>
-           can set a variable.
-          </p>
-          <p>
-           <tt class="USERINPUT">
-            <b>
-             a=`echo
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          An
+          <b class="COMMAND">
+           echo
+          </b>
+          , in combination with
+          <a href="commandsub.html#COMMANDSUBREF">
+           command substitution
+          </a>
+          can set a variable.
+         </p>
+         <p>
+          <tt class="USERINPUT">
+           <b>
+            a=`echo
 	      "HELLO" | tr A-Z a-z`
-            </b>
-           </tt>
-          </p>
-          <p>
-           See also
-           <a href="textproc.html#LOWERCASE">
-            Example 16-22
-           </a>
-           ,
-           <a href="moreadv.html#EX57">
-            Example 16-3
-           </a>
-           ,
-           <a href="mathc.html#MONTHLYPMT">
-            Example 16-47
-           </a>
-           , and
-           <a href="mathc.html#BASE">
-            Example 16-48
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+           </b>
+          </tt>
+         </p>
+         <p>
+          See also
+          <a href="textproc.html#LOWERCASE">
+           Example 16-22
+          </a>
+          ,
+          <a href="moreadv.html#EX57">
+           Example 16-3
+          </a>
+          ,
+          <a href="mathc.html#MONTHLYPMT">
+           Example 16-47
+          </a>
+          , and
+          <a href="mathc.html#BASE">
+           Example 16-48
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        Be aware that
@@ -510,11 +560,10 @@ fi</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l /usr/share/apps/kjezz/sounds</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>ls -l /usr/share/apps/kjezz/sounds</b></tt>
 <tt class="COMPUTEROUTPUT">-rw-r--r--    1 root     root         1407 Nov  7  2000 reflect.au
  -rw-r--r--    1 root     root          362 Nov  7  2000 seconds.au</tt>
 
@@ -524,10 +573,9 @@ fi</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo `ls -l /usr/share/apps/kjezz/sounds`</b></tt>
 <tt class="COMPUTEROUTPUT">total 40 -rw-r--r-- 1 root root 716 Nov 7 2000 reflect.au -rw-r--r-- 1 root root ...</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        So, how can we embed a linefeed within an
        <a href="internal.html#ECHOREF">
@@ -535,11 +583,10 @@ fi</pre>
        </a>
        character string?
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Embedding a linefeed?
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Embedding a linefeed?
 echo "Why doesn't this string \n split on two lines?"
 # Doesn't split.
 
@@ -584,10 +631,9 @@ echo $string1
 # Linefeed becomes a space.
 
 # Thanks, Steve Parker, for pointing this out.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="BINECHO">
        </a>
@@ -595,37 +641,51 @@ echo $string1
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           This command is a shell builtin, and not the same as
-           <tt class="FILENAME">
-            /bin/echo
-           </tt>
-           , although its behavior is
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          This command is a shell builtin, and not the same as
+          <tt class="FILENAME">
+           /bin/echo
+          </tt>
+          , although its behavior is
 	      similar.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type -a echo</b></tt>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type -a echo</b></tt>
 <tt class="COMPUTEROUTPUT">echo is a shell builtin
  echo is /bin/echo</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type -a echo</b></tt>
+<tt class="COMPUTEROUTPUT">echo is a shell builtin
+ echo is /bin/echo</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type -a echo</b></tt>
+<tt class="COMPUTEROUTPUT">echo is a shell builtin
+ echo is /bin/echo</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -702,22 +762,20 @@ echo $string1
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Older versions of Bash may not support
-           <b class="COMMAND">
-            printf
-           </b>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          Older versions of Bash may not support
+          <b class="COMMAND">
+           printf
+          </b>
+          .
+         </p>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX47">
@@ -731,11 +789,10 @@ echo $string1
          in action
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # printf demo
 
 declare -r PI=3.14159265358979     # Read-only variable, i.e., a constant.
@@ -776,10 +833,9 @@ echo $Msg; echo $Msg
 #+ but this is not portable.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Formatting error messages is a useful application of
@@ -789,11 +845,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">E_BADDIR=85
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">E_BADDIR=85
 
 var=nonexistent_directory
 
@@ -808,10 +863,9 @@ error()
 cd $var || error $"Can't cd to %s." "$var"
 
 # Thanks, S.C.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        See also
        <a href="assortedtips.html#PROGRESSBAR">
@@ -863,11 +917,10 @@ cd $var || error $"Can't cd to %s." "$var"
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # "Reading" variables.
 
 echo -n "Enter the value of variable 'var1': "
@@ -890,10 +943,9 @@ echo "var2 = $var2      var3 = $var3"
 #+ the other variable(s) will remain unset (null).
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        A
@@ -920,11 +972,10 @@ exit 0</pre>
 	        variable
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # read-novar.sh
 
 echo
@@ -973,10 +1024,9 @@ echo            #   #!/bin/bash  line discarded.
 # See also the soundcard-on.sh script.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Normally, inputting a
@@ -1014,11 +1064,10 @@ exit 0</pre>
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 echo
 
@@ -1049,10 +1098,9 @@ echo "var2 = $var2"
 echo 
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="READOPTIONS">
@@ -1073,11 +1121,10 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Read a keypress without hitting ENTER.
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Read a keypress without hitting ENTER.
 
 read -s -n1 -p "Hit a key " keypress
 echo; echo "Keypress was "\"$keypress\""."
@@ -1087,10 +1134,9 @@ echo; echo "Keypress was "\"$keypress\""."
 # -p option means echo the following prompt before reading input.
 
 # Using these options is tricky, since they need to be in the correct order.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="READARROW">
        </a>
@@ -1118,11 +1164,10 @@ echo; echo "Keypress was "\"$keypress\""."
          Example 15-6. Detecting the arrow keys
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # arrow-detect.sh: Detects the arrow keys, and a few more.
 # Thank you, Sandro Magi, for showing me how.
 
@@ -1248,39 +1293,36 @@ done
 #  Exercise:
 #  --------
 #  1) Add detection of the "Home," "End," "PgUp," and "PgDn" keys.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <tt class="OPTION">
-            -n
-           </tt>
-           option to
-           <b class="COMMAND">
-            read
-           </b>
-           will not detect the
-           <b class="KEYCAP">
-            ENTER
-           </b>
-           (newline)
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <tt class="OPTION">
+           -n
+          </tt>
+          option to
+          <b class="COMMAND">
+           read
+          </b>
+          will not detect the
+          <b class="KEYCAP">
+           ENTER
+          </b>
+          (newline)
 	      key.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        <a name="READTIMED">
@@ -1368,11 +1410,10 @@ done
          </a>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 read var1 &lt;data-file
 echo "var1 = $var1"
@@ -1429,91 +1470,87 @@ echo
 echo "\$IFS still $IFS"
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           <a name="PIPEREADREF0">
-           </a>
-          </p>
-          <p>
-           <a href="special-chars.html#PIPEREF">
-            Piping
-           </a>
-           output
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          <a name="PIPEREADREF0">
+          </a>
+         </p>
+         <p>
+          <a href="special-chars.html#PIPEREF">
+           Piping
+          </a>
+          output
 	      to a
-           <i class="FIRSTTERM">
-            read
-           </i>
-           , using
-           <a href="internal.html#ECHOREF">
-            echo
-           </a>
-           to set variables
-           <a href="gotchas.html#BADREAD0">
-            will fail
-           </a>
-           .
-          </p>
-          <p>
-           <a name="READPIPEREF">
-           </a>
-           Yet, piping the output of
-           <a href="basic.html#CATREF">
-            cat
-           </a>
-           <em>
-            seems
-           </em>
-           to
+          <i class="FIRSTTERM">
+           read
+          </i>
+          , using
+          <a href="internal.html#ECHOREF">
+           echo
+          </a>
+          to set variables
+          <a href="gotchas.html#BADREAD0">
+           will fail
+          </a>
+          .
+         </p>
+         <p>
+          <a name="READPIPEREF">
+          </a>
+          Yet, piping the output of
+          <a href="basic.html#CATREF">
+           cat
+          </a>
+          <em>
+           seems
+          </em>
+          to
 	      work.
-          </p>
-          <p>
-           <a name="WHILEREADREF">
-           </a>
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">cat file1 file2 |
+         </p>
+         <p>
+          <a name="WHILEREADREF">
+          </a>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">cat file1 file2 |
 while read line
 do
 echo $line
 done</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
+            </font>
+           </td>
+          </tr>
+         </table>         <p>
+          However, as Bjรถn Eriksson shows:
+         </p>
+         <div class="EXAMPLE">
+          <a name="READPIPE">
+          </a>
           <p>
-           However, as Bjรถn Eriksson shows:
+           <b>
+            Example 15-8. Problems reading from a pipe
+           </b>
           </p>
-          <div class="EXAMPLE">
-           <a name="READPIPE">
-           </a>
+          <div>
            <p>
-            <b>
-             Example 15-8. Problems reading from a pipe
-            </b>
-           </p>
-           <table bgcolor="#E0E0E0" border="0" width="90%">
-            <tr>
-             <td>
-              <font color="#000000">
-               <pre class="PROGRAMLISTING">#!/bin/sh
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">#!/bin/sh
 # readpipe.sh
 # This example contributed by Bjon Eriksson.
 
@@ -1556,80 +1593,202 @@ All done, last: (null)
 
 The variable (last) is set within the loop/subshell
 but its value does not persist outside the loop.</pre>
-              </font>
-             </td>
-            </tr>
-           </table>
+            </font>
+           </p>
           </div>
-          <p>
-           The
-           <i class="FIRSTTERM">
-            gendiff
-           </i>
-           script, usually
+         </div>
+         <p>
+          The
+          <i class="FIRSTTERM">
+           gendiff
+          </i>
+          script, usually
               found in
-           <tt class="FILENAME">
-            /usr/bin
-           </tt>
-           on
+          <tt class="FILENAME">
+           /usr/bin
+          </tt>
+          on
               many Linux distros, pipes the output of
-           <a href="moreadv.html#FINDREF">
-            find
-           </a>
-           to a
-           <i class="FIRSTTERM">
-            while
+          <a href="moreadv.html#FINDREF">
+           find
+          </a>
+          to a
+          <i class="FIRSTTERM">
+           while
               read
-           </i>
-           construct.
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING">find $1 \( -name "*$2" -o -name ".*$2" \) -print |
+          </i>
+          construct.
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING">find $1 \( -name "*$2" -o -name ".*$2" \) -print |
 while read f; do
 . . .</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">cat file1 file2 |
+while read line
+do
+echo $line
+done</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/sh
+# readpipe.sh
+# This example contributed by Bjon Eriksson.
+
+### shopt -s lastpipe
+
+last="(null)"
+cat $0 |
+while read line
+do
+    echo "{$line}"
+    last=$line
+done
+
+echo
+echo "++++++++++++++++++++++"
+printf "\nAll done, last: $last\n" #  The output of this line
+                                   #+ changes if you uncomment line 5.
+                                   #  (Bash, version -ge 4.2 required.)
+
+exit 0  # End of code.
+        # (Partial) output of script follows.
+        # The 'echo' supplies extra brackets.
+
+#############################################
+
+./readpipe.sh 
+
+{#!/bin/sh}
+{last="(null)"}
+{cat $0 |}
+{while read line}
+{do}
+{echo "{$line}"}
+{last=$line}
+{done}
+{printf "nAll done, last: $lastn"}
+
+
+All done, last: (null)
+
+The variable (last) is set within the loop/subshell
+but its value does not persist outside the loop.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">find $1 \( -name "*$2" -o -name ".*$2" \) -print |
+while read f; do
+. . .</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">cat file1 file2 |
+while read line
+do
+echo $line
+done</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/sh
+# readpipe.sh
+# This example contributed by Bjon Eriksson.
+
+### shopt -s lastpipe
+
+last="(null)"
+cat $0 |
+while read line
+do
+    echo "{$line}"
+    last=$line
+done
+
+echo
+echo "++++++++++++++++++++++"
+printf "\nAll done, last: $last\n" #  The output of this line
+                                   #+ changes if you uncomment line 5.
+                                   #  (Bash, version -ge 4.2 required.)
+
+exit 0  # End of code.
+        # (Partial) output of script follows.
+        # The 'echo' supplies extra brackets.
+
+#############################################
+
+./readpipe.sh 
+
+{#!/bin/sh}
+{last="(null)"}
+{cat $0 |}
+{while read line}
+{do}
+{echo "{$line}"}
+{last=$line}
+{done}
+{printf "nAll done, last: $lastn"}
+
+
+All done, last: (null)
+
+The variable (last) is set within the loop/subshell
+but its value does not persist outside the loop.</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">find $1 \( -name "*$2" -o -name ".*$2" \) -print |
+while read f; do
+. . .</pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           It is possible to
-           <i class="FIRSTTERM">
-            paste
-           </i>
-           text into
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          It is possible to
+          <i class="FIRSTTERM">
+           paste
+          </i>
+          text into
 	        the input field of a
-           <i class="FIRSTTERM">
-            read
-           </i>
-           (but
-           <em>
-            not
-           </em>
-           multiple lines!). See
-           <a href="contributed-scripts.html#PADSW">
-            Example A-38
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <i class="FIRSTTERM">
+           read
+          </i>
+          (but
+          <em>
+           not
+          </em>
+          multiple lines!). See
+          <a href="contributed-scripts.html#PADSW">
+           Example A-38
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -1664,15 +1823,13 @@ while read f; do
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)</pre>
+        </font>
+       </p>
+      </div>
       [from the
       <a href="special-chars.html#COXEX">
        previously cited
@@ -1708,41 +1865,54 @@ while read f; do
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            cd
-           </b>
-           command does not function
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           cd
+          </b>
+          command does not function
 	      as expected when presented with two forward slashes.
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cd //</b></tt>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cd //</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pwd</b></tt>
 <tt class="COMPUTEROUTPUT">//</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-          The output should, of course, be
-          <tt class="COMPUTEROUTPUT">
-           /
-          </tt>
-          .
+            </font>
+           </td>
+          </tr>
+         </table>         The output should, of course, be
+         <tt class="COMPUTEROUTPUT">
+          /
+         </tt>
+         .
 	      This is a problem both from the command-line and in a script.
-         </td>
-        </tr>
-       </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cd //</b></tt>
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pwd</b></tt>
+<tt class="COMPUTEROUTPUT">//</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>cd //</b></tt>
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>pwd</b></tt>
+<tt class="COMPUTEROUTPUT">//</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -1885,11 +2055,10 @@ while read f; do
          Example 15-9. Changing the current working directory
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 dir1=/usr/local
 dir2=/var/spool
@@ -1915,10 +2084,9 @@ exit 0
 
 # What happens if you don't 'popd' -- then exit the script?
 # Which directory do you end up in? Why?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -1976,11 +2144,10 @@ exit 0
          do arithmetic.
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 echo
 
@@ -2029,10 +2196,9 @@ let "t = a&lt;7?7:11"   # False
 echo $t  #     11
 
 exit</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="EXITVALANOMALY02">
@@ -2041,31 +2207,30 @@ exit</pre>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <i class="FIRSTTERM">
-            let
-           </i>
-           command can,
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <i class="FIRSTTERM">
+           let
+          </i>
+          command can,
                       in certain contexts, return a surprising
-           <a href="exit-status.html#EXITSTATUSREF">
-            exit status
-           </a>
-           .
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="0" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="PROGRAMLISTING"># Evgeniy Ivanov points out:
+          <a href="exit-status.html#EXITSTATUSREF">
+           exit status
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="0" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="PROGRAMLISTING"># Evgeniy Ivanov points out:
 
 var=0
 echo $?     # 0
@@ -2091,13 +2256,72 @@ echo $?     # 1
 #+ this is part of the design spec for 'let' . . .
 # "If the last ARG evaluates to 0, let returns 1;
 #  let returns 0 otherwise." ['help let']</pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING"># Evgeniy Ivanov points out:
+
+var=0
+echo $?     # 0
+            # As expected.
+
+let var++
+echo $?     # 1
+            # The command was successful, so why isn't $?=0 ???
+            # Anomaly!
+
+let var++
+echo $?     # 0
+            # As expected.
+
+
+# Likewise . . .
+
+let var=0
+echo $?     # 1
+            # The command was successful, so why isn't $?=0 ???
+
+#  However, as Jeff Gorak points out,
+#+ this is part of the design spec for 'let' . . .
+# "If the last ARG evaluates to 0, let returns 1;
+#  let returns 0 otherwise." ['help let']</pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING"># Evgeniy Ivanov points out:
+
+var=0
+echo $?     # 0
+            # As expected.
+
+let var++
+echo $?     # 1
+            # The command was successful, so why isn't $?=0 ???
+            # Anomaly!
+
+let var++
+echo $?     # 0
+            # As expected.
+
+
+# Likewise . . .
+
+let var=0
+echo $?     # 1
+            # The command was successful, so why isn't $?=0 ???
+
+#  However, as Jeff Gorak points out,
+#+ this is part of the design spec for 'let' . . .
+# "If the last ARG evaluates to 0, let returns 1;
+#  let returns 0 otherwise." ['help let']</pre>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2135,40 +2359,36 @@ echo $?     # 1
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            eval
-           </b>
-           command can be used for
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           eval
+          </b>
+          command can be used for
 	      code generation from the command-line or within a script.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>command_string="ps ax"</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>command_string="ps ax"</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>process="ps ax"</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>eval "$command_string" | grep "$process"</b></tt>
 <tt class="COMPUTEROUTPUT">26973 pts/3    R+     0:00 grep --color ps ax
  26974 pts/3    R+     0:00 ps ax</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="EVALFORCED">
        </a>
@@ -2185,11 +2405,10 @@ echo $?     # 1
        </em>
        of its arguments.
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">a='$b'
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">a='$b'
 b='$c'
 c=d
 
@@ -2201,10 +2420,9 @@ eval eval echo $a   # d
                     # Third level.
 
 # Thank you, E. Choroba.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        <a name="EVALEFF">
        </a>
@@ -2220,11 +2438,10 @@ eval eval echo $a   # d
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Exercising "eval" ...
 
 y=`eval ls -l`  #  Similar to y=`ls -l`
@@ -2264,10 +2481,9 @@ eval major=${version/./;minor=}     #  Replaces '.' in version by ';minor='
                                     #  The substitution yields '3; minor=4'
                                     #+ so eval does minor=4, major=3
 echo Major: $major, minor: $minor   #  Major: 3, minor: 4</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        <a name="ARRCHOICE0">
@@ -2286,11 +2502,10 @@ echo Major: $major, minor: $minor   #  Major: 3, minor: 4</pre>
                       among variables
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # arr-choice.sh
 
 #  Passing arguments to a function to select
@@ -2325,10 +2540,9 @@ element_number=4
 choose_array      # (null)
 
 # Thank you, Antonio Macchi, for pointing this out.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="ECHOPARAMS">
@@ -2345,11 +2559,10 @@ choose_array      # (null)
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # echo-params.sh
 
 # Call this script with a few command-line parameters.
@@ -2388,10 +2601,9 @@ Command-line parameter $2 = second
 Command-line parameter $3 = third
 Command-line parameter $4 = fourth
 Command-line parameter $5 = fifth</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="EX44">
@@ -2401,11 +2613,10 @@ Command-line parameter $5 = fifth</pre>
          Example 15-14. Forcing a log-off
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Killing ppp to force a log-off.
 # For dialup connection, of course.
 
@@ -2440,10 +2651,9 @@ exit $?
 #+   is actually running before attempting to kill it.   
 # 3) Write an alternate version of this script based on 'fuser':
 #+      if [ fuser -s /dev/modem ]; then . . .</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="ROT14">
@@ -2456,11 +2666,10 @@ exit $?
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # A version of "rot13" using 'eval'.
 # Compare to "rot13.sh" example.
 
@@ -2482,10 +2691,9 @@ echo $var                    # foobar
 # Modified by document author.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Here is another example of using
@@ -2506,15 +2714,13 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">eval ${1}+=\"${x} ${y} \"</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">eval ${1}+=\"${x} ${y} \"</pre>
+        </font>
+       </p>
+      </div>
       <p>
        <a href="contributed-scripts.html#SAMORSE">
         Example A-53
@@ -2543,42 +2749,38 @@ exit 0</pre>
        </a>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">eval var=\$$var</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">eval var=\$$var</pre>
+        </font>
+       </p>
+      </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <i class="FIRSTTERM">
-            eval
-           </i>
-           command can
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <i class="FIRSTTERM">
+           eval
+          </i>
+          command can
                 be used to
-           <a href="bashver3.html#BRACEEXPREF3">
-            parameterize
-            <i class="FIRSTTERM">
-             brace expansion
-            </i>
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="bashver3.html#BRACEEXPREF3">
+           parameterize
+           <i class="FIRSTTERM">
+            brace expansion
+           </i>
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        <a name="EVALRISK">
@@ -2587,49 +2789,47 @@ exit 0</pre>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <b class="COMMAND">
-            eval
-           </b>
-           command can be
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <b class="COMMAND">
+           eval
+          </b>
+          command can be
 	      risky, and normally should be avoided when there
 	      exists a reasonable alternative. An
-           <tt class="USERINPUT">
-            <b>
-             eval
-	      $COMMANDS
-            </b>
-           </tt>
-           executes the contents of
-           <tt class="REPLACEABLE">
-            <i>
-             COMMANDS
-            </i>
-           </tt>
-           , which may
-	      contain such unpleasant surprises as
-           <b class="COMMAND">
-            rm -rf
-	      *
-           </b>
-           . Running an
-           <b class="COMMAND">
+          <tt class="USERINPUT">
+           <b>
             eval
+	      $COMMANDS
            </b>
-           on
+          </tt>
+          executes the contents of
+          <tt class="REPLACEABLE">
+           <i>
+            COMMANDS
+           </i>
+          </tt>
+          , which may
+	      contain such unpleasant surprises as
+          <b class="COMMAND">
+           rm -rf
+	      *
+          </b>
+          . Running an
+          <b class="COMMAND">
+           eval
+          </b>
+          on
 	      unfamiliar code written by persons unknown is living
 	      dangerously.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -2685,11 +2885,10 @@ exit 0</pre>
 	        parameters
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # ex34.sh
 # Script "set-test"
 
@@ -2724,10 +2923,9 @@ echo $_        # ###
 echo
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        More fun with positional parameters.
@@ -2740,11 +2938,10 @@ exit 0</pre>
          Example 15-17. Reversing the positional parameters
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # revposparams.sh: Reverse positional parameters.
 # Script by Dan Jacobson, with stylistic revisions by document author.
 
@@ -2809,10 +3006,9 @@ $ ./revposparams.sh
 d e
 c
 a b</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Invoking
@@ -2829,11 +3025,10 @@ a b</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>set</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>set</b></tt>
 <tt class="COMPUTEROUTPUT">AUTHORCOPY=/home/bozo/posts
  BASH=/bin/bash
  BASH_VERSION=$'2.05.8(1)-release'
@@ -2843,10 +3038,9 @@ a b</pre>
  variable22=abc
  variable23=xzy</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Using
        <b class="COMMAND">
@@ -2875,11 +3069,10 @@ a b</pre>
          Example 15-18. Reassigning the positional parameters
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 variable="one two three four five"
 
@@ -2917,10 +3110,9 @@ echo "first parameter = $first_param"             # (null value)
 echo "second parameter = $second_param"           # (null value)
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        See also
@@ -2957,19 +3149,17 @@ exit 0</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>unset PATH</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>unset PATH</b></tt>
 
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $PATH</b></tt>
 <tt class="COMPUTEROUTPUT"></tt>
 <tt class="PROMPT">bash$ </tt></pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="UNS">
        </a>
@@ -2982,11 +3172,10 @@ exit 0</pre>
          a variable
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # unset.sh: Unsetting a variable.
 
 variable=hello                       #  Initialized.
@@ -3003,39 +3192,36 @@ then
 fi
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           In most contexts, an
-           <i class="FIRSTTERM">
-            undeclared
-           </i>
-           variable and one that has been
-           <i class="FIRSTTERM">
-            unset
-           </i>
-           are equivalent. However, the
-           <a href="parameter-substitution.html#UNDDR">
-            ${parameter:-default}
-           </a>
-           parameter substitution
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          In most contexts, an
+          <i class="FIRSTTERM">
+           undeclared
+          </i>
+          variable and one that has been
+          <i class="FIRSTTERM">
+           unset
+          </i>
+          are equivalent. However, the
+          <a href="parameter-substitution.html#UNDDR">
+           ${parameter:-default}
+          </a>
+          parameter substitution
               construct can distinguish between the two.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3081,24 +3267,22 @@ exit 0</pre>
       <div class="CAUTION">
        <p>
        </p>
-       <table border="0" class="CAUTION" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Caution" hspace="5" src="../images/caution.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           Unfortunately,
-           <a href="gotchas.html#PARCHILDPROBREF">
-            there is no way to export variables back to the parent
+       <div>
+        <p>
+         <img alt="Caution" hspace="5" src="../images/caution.gif"/>
+        </p>
+        <p>
+         <p>
+          Unfortunately,
+          <a href="gotchas.html#PARCHILDPROBREF">
+           there is no way to export variables back to the parent
 	     process
-           </a>
-           , to the process that called or invoked the
+          </a>
+          , to the process that called or invoked the
 	     script or shell.
-          </p>
-         </td>
-        </tr>
-       </table>
+         </p>
+        </p>
+       </div>
       </div>
       <p>
        <a name="EXPORTAWK">
@@ -3121,11 +3305,10 @@ exit 0</pre>
          script
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 #  Yet another version of the "column totaler" script (col-totaler.sh)
 #+ that adds up a specified column (of numbers) in the target file.
@@ -3163,41 +3346,39 @@ awk "$awkscript" "$filename"
 # Thanks, Stephane Chazelas.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="TIP">
        <p>
        </p>
-       <table border="0" class="TIP" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           It is possible to initialize and export
+       <div>
+        <p>
+         <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+        </p>
+        <p>
+         <p>
+          It is possible to initialize and export
 		  variables in the same operation, as in
-           <b class="COMMAND">
-            export
+          <b class="COMMAND">
+           export
 		  var1=xxx
-           </b>
-           .
-          </p>
-          <p>
-           However, as Greg Keraunen points out, in certain
+          </b>
+          .
+         </p>
+         <p>
+          However, as Greg Keraunen points out, in certain
 		  situations this may have a different effect than
 		  setting a variable, then exporting it.
-          </p>
-          <p>
-          </p>
-          <table bgcolor="#E0E0E0" border="1" width="90%">
-           <tr>
-            <td>
-             <font color="#000000">
-              <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>export var=(a b); echo ${var[0]}</b></tt>
+         </p>
+         <p>
+         </p>
+         <table bgcolor="#E0E0E0" border="1" width="90%">
+          <tr>
+           <td>
+            <font color="#000000">
+             <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>export var=(a b); echo ${var[0]}</b></tt>
 <tt class="COMPUTEROUTPUT">(a b)</tt>
 
 
@@ -3205,34 +3386,55 @@ exit 0</pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>var=(a b); export var; echo ${var[0]}</b></tt>
 <tt class="COMPUTEROUTPUT">a</tt>
 	      </pre>
-             </font>
-            </td>
-           </tr>
-          </table>
-         </td>
-        </tr>
-       </table>
+            </font>
+           </td>
+          </tr>
+         </table>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>export var=(a b); echo ${var[0]}</b></tt>
+<tt class="COMPUTEROUTPUT">(a b)</tt>
+
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>var=(a b); export var; echo ${var[0]}</b></tt>
+<tt class="COMPUTEROUTPUT">a</tt>
+	      </pre>
+         </font>
+        </p>
+        <p>
+         <font color="#000000">
+          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>export var=(a b); echo ${var[0]}</b></tt>
+<tt class="COMPUTEROUTPUT">(a b)</tt>
+
+
+
+<tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>var=(a b); export var; echo ${var[0]}</b></tt>
+<tt class="COMPUTEROUTPUT">a</tt>
+	      </pre>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           A variable to be exported may require special
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          A variable to be exported may require special
                 treatment.  See
-           <a href="sample-bashrc.html#BASHPROF">
-            Example M-2
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="sample-bashrc.html#BASHPROF">
+           Example M-2
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3382,96 +3584,93 @@ exit 0</pre>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-          </p>
-          <p>
-          </p>
-          <ol type="1">
-           <li>
-            <p>
-             The arguments passed from the command-line to
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+         </p>
+         <p>
+         </p>
+         <ol type="1">
+          <li>
+           <p>
+            The arguments passed from the command-line to
 		      the script must be preceded by a
 		      dash (
-             <tt class="OPTION">
-              -
-             </tt>
-             ). It is the
+            <tt class="OPTION">
+             -
+            </tt>
+            ). It is the
 		      prefixed
-             <tt class="OPTION">
-              -
-             </tt>
-             that lets
-             <b class="COMMAND">
-              getopts
-             </b>
-             recognize command-line
+            <tt class="OPTION">
+             -
+            </tt>
+            that lets
+            <b class="COMMAND">
+             getopts
+            </b>
+            recognize command-line
 		      arguments as
-             <i class="FIRSTTERM">
-              options
-             </i>
-             .
+            <i class="FIRSTTERM">
+             options
+            </i>
+            .
 		      In fact,
-             <b class="COMMAND">
-              getopts
-             </b>
-             will not process
+            <b class="COMMAND">
+             getopts
+            </b>
+            will not process
 		      arguments without the prefixed
-             <tt class="OPTION">
-              -
-             </tt>
-             ,
+            <tt class="OPTION">
+             -
+            </tt>
+            ,
 		      and will terminate option processing at the first
 		      argument encountered lacking them.
-            </p>
-           </li>
-           <li>
-            <p>
-             The
-             <b class="COMMAND">
-              getopts
-             </b>
-             template
+           </p>
+          </li>
+          <li>
+           <p>
+            The
+            <b class="COMMAND">
+             getopts
+            </b>
+            template
 		      differs slightly from the standard
-             <a href="loops1.html#WHILELOOPREF">
-              while loop
-             </a>
-             , in that
+            <a href="loops1.html#WHILELOOPREF">
+             while loop
+            </a>
+            , in that
 		      it lacks condition brackets.
-            </p>
-           </li>
-           <li>
-            <p>
-             The
-             <b class="COMMAND">
-              getopts
-             </b>
-             construct is a highly
+           </p>
+          </li>
+          <li>
+           <p>
+            The
+            <b class="COMMAND">
+             getopts
+            </b>
+            construct is a highly
 		     functional replacement for the traditional
-             <a href="extmisc.html#GETOPTY">
-              getopt
-             </a>
-             external
+            <a href="extmisc.html#GETOPTY">
+             getopt
+            </a>
+            external
 		     command.
-            </p>
-           </li>
-          </ol>
-         </td>
-        </tr>
-       </table>
+           </p>
+          </li>
+         </ol>
+        </p>
+       </div>
       </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">while getopts ":abcde:fg" Option
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">while getopts ":abcde:fg" Option
 # Initial declaration.
 # a, b, c, d, e, f, and g are the options (flags) expected.
 # The : after option 'e' shows it will have an argument passed with it.
@@ -3490,10 +3689,9 @@ shift $(($OPTIND - 1))
 # Move argument pointer to next.
 
 # All this is not nearly as complicated as it looks &lt;grin&gt;.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <div class="EXAMPLE">
        <a name="EX33">
        </a>
@@ -3507,11 +3705,10 @@ shift $(($OPTIND - 1))
 	        options/arguments passed to a script
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # ex33.sh: Exercising getopts and OPTIND
 #          Script modified 10/09/03 at the suggestion of Bill Gradwohl.
 
@@ -3573,10 +3770,9 @@ exit $?
 #+  but there is no reliable way to differentiate what came
 #+ from where by using OPTIND."
 #  There are, however, workarounds.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
     </dl>
@@ -3662,11 +3858,10 @@ exit $?
          a data file
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 #  Note that this example must be invoked with bash, i.e., bash ex38.sh
 #+ not  sh ex38.sh !
 
@@ -3691,10 +3886,9 @@ print_message This is the message-print function in the data-file.
 
 
 exit $?</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
        <p>
         File
         <tt class="FILENAME">
@@ -3707,11 +3901,10 @@ exit $?</pre>
         , above.  Must be present in same
 		directory.
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING"># This is a data file loaded by a script.
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING"># This is a data file loaded by a script.
 # Files of this type may contain variables, functions, etc.
 # It loads with a 'source' or '.' command from a shell script.
 
@@ -3746,10 +3939,9 @@ print_message ()
 
   return 0
 }</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        If the
@@ -3784,15 +3976,13 @@ print_message ()
        </a>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">source $filename $arg1 arg2</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">source $filename $arg1 arg2</pre>
+        </font>
+       </p>
+      </div>
       <p>
        It is even possible for a script to
        <i class="FIRSTTERM">
@@ -3809,11 +3999,10 @@ print_message ()
          Example 15-23. A (useless) script that sources itself
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # self-source.sh: a script sourcing itself "recursively."
 # From "Stupid Script Tricks," Volume II.
 
@@ -3853,10 +4042,9 @@ exit 0   # The net effect is counting from 1 to 100.
 # Exercise:
 # --------
 # Write a script that uses this trick to actually do something useful.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -3897,57 +4085,53 @@ exit 0   # The net effect is counting from 1 to 100.
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           If a script terminates with an
-           <b class="COMMAND">
-            exit
-           </b>
-           lacking an argument, the exit status of the script is the exit
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          If a script terminates with an
+          <b class="COMMAND">
+           exit
+          </b>
+          lacking an argument, the exit status of the script is the exit
 	      status of the last command executed in the script, not counting
 	      the
-           <b class="COMMAND">
-            exit
-           </b>
-           . This is equivalent to an
-           <b class="COMMAND">
-            exit $?
-           </b>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <b class="COMMAND">
+           exit
+          </b>
+          . This is equivalent to an
+          <b class="COMMAND">
+           exit $?
+          </b>
+          .
+         </p>
+        </p>
+       </div>
       </div>
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           An
-           <b class="COMMAND">
-            exit
-           </b>
-           command may also be used to
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          An
+          <b class="COMMAND">
+           exit
+          </b>
+          command may also be used to
 	      terminate a
-           <a href="subshells.html#SUBSHELLSREF">
-            subshell
-           </a>
-           .
-          </p>
-         </td>
-        </tr>
-       </table>
+          <a href="subshells.html#SUBSHELLSREF">
+           subshell
+          </a>
+          .
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4000,11 +4184,10 @@ exit 0   # The net effect is counting from 1 to 100.
          </i>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 exec echo "Exiting \"$0\" at line $LINENO."   # Exit from script here.
 # $LINENO is an internal Bash variable set to the line number it's on.
@@ -4018,10 +4201,9 @@ exit 99                       #  This script will not exit here.
                               #  Check exit value after script terminates
                               #+ with an 'echo $?'.
                               #  It will *not* be 99.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <div class="EXAMPLE">
        <a name="SELFEXEC">
@@ -4035,11 +4217,10 @@ exit 99                       #  This script will not exit here.
          itself
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # self-exec.sh
 
 # Note: Set permissions on this script to 555 or 755,
@@ -4062,10 +4243,9 @@ echo "This line will never echo!"  # Why not?
 
 exit 99                            # Will not exit here!
                                    # Exit code will not be 99!</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        An
@@ -4097,36 +4277,34 @@ exit 99                            # Will not exit here!
       <div class="NOTE">
        <p>
        </p>
-       <table border="0" class="NOTE" width="90%">
-        <tr>
-         <td align="CENTER" valign="TOP" width="25">
-          <img alt="Note" hspace="5" src="../images/note.gif"/>
-         </td>
-         <td align="LEFT" valign="TOP">
-          <p>
-           The
-           <tt class="OPTION">
-            -exec
-           </tt>
-           option to
-           <a href="moreadv.html#FINDREF">
-            find
-           </a>
-           is
-           <tt class="REPLACEABLE">
-            <i>
-             not
-            </i>
-           </tt>
-           the same as the
-           <b class="COMMAND">
-            exec
-           </b>
-           shell builtin.
-          </p>
-         </td>
-        </tr>
-       </table>
+       <div>
+        <p>
+         <img alt="Note" hspace="5" src="../images/note.gif"/>
+        </p>
+        <p>
+         <p>
+          The
+          <tt class="OPTION">
+           -exec
+          </tt>
+          option to
+          <a href="moreadv.html#FINDREF">
+           find
+          </a>
+          is
+          <tt class="REPLACEABLE">
+           <i>
+            not
+           </i>
+          </tt>
+          the same as the
+          <b class="COMMAND">
+           exec
+          </b>
+          shell builtin.
+         </p>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -4165,21 +4343,19 @@ exit 99                            # Will not exit here!
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">shopt -s cdspell
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">shopt -s cdspell
 # Allows minor misspelling of directory names with 'cd'
 # Option -s sets, -u unsets.
 
 cd /hpme  # Oops! Mistyped '/home'.
 pwd       # /home
           # The shell corrected the misspelling.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <b class="COMMAND">
@@ -4212,11 +4388,10 @@ pwd       # /home
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">#!/bin/bash
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">#!/bin/bash
 
 function1 ()
 {
@@ -4232,10 +4407,9 @@ function1    # Line 9 of script.
 #        ^^^^^^^    Name of calling script.
 
 caller 0     # Has no effect because it's not inside a function.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        A
        <b class="COMMAND">
@@ -4296,25 +4470,22 @@ caller 0     # Has no effect because it's not inside a function.</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>true</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>true</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $?</b></tt>
 <tt class="COMPUTEROUTPUT">0</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Endless loop
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Endless loop
 while true   # alias for ":"
 do
    operation-1
@@ -4323,10 +4494,9 @@ do
    operation-n
    # Need a way to break out of loop or script will hang.
 done</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="FALSEREF">
@@ -4346,25 +4516,22 @@ done</pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>false</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>false</b></tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>echo $?</b></tt>
 <tt class="COMPUTEROUTPUT">1</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING"># Testing "false" 
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING"># Testing "false" 
 if false
 then
   echo "false evaluates \"true\""
@@ -4384,10 +4551,9 @@ do
    operation-n
    # Nothing happens!
 done   </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
      <dt>
       <a name="TYPEREF">
@@ -4443,11 +4609,10 @@ done   </pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type '['</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type '['</b></tt>
 <tt class="COMPUTEROUTPUT">[ is a shell builtin</tt>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type -a '['</b></tt>
 <tt class="COMPUTEROUTPUT">[ is a shell builtin
@@ -4457,10 +4622,9 @@ done   </pre>
 <tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>type type</b></tt>
 <tt class="COMPUTEROUTPUT">type is a shell builtin</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        The
        <b class="COMMAND">
@@ -4568,19 +4732,17 @@ done   </pre>
       </p>
       <p>
       </p>
-      <table bgcolor="#E0E0E0" border="1" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>help exit</b></tt>
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="SCREEN"><tt class="PROMPT">bash$ </tt><tt class="USERINPUT"><b>help exit</b></tt>
 <tt class="COMPUTEROUTPUT">exit: exit [n]
     Exit the shell with a status of N.  If N is omitted, the exit status
     is that of the last command executed.</tt>
 	      </pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
      </dd>
     </dl>
    </div>
@@ -4588,287 +4750,234 @@ done   </pre>
   <h3 class="FOOTNOTES">
    Notes
   </h3>
-  <table border="0" class="FOOTNOTES" width="100%">
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN8607" name="FTN.AEN8607">
-      <span class="footnote">
-       [1]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      As Nathan Coulter points out, "while forking a
+  <div>
+   <p>
+    <a href="internal.html#AEN8607" name="FTN.AEN8607">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     As Nathan Coulter points out, "while forking a
 	  process is a low-cost operation, executing a new program in
 	  the newly-forked child process adds more
 	  overhead."
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN8650" name="FTN.AEN8650">
-      <span class="footnote">
-       [2]
-      </span>
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN8650" name="FTN.AEN8650">
+     <span class="footnote">
+      [2]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     An exception to this is the
+     <a href="timedate.html#TIMREF">
+      time
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      An exception to this is the
-      <a href="timedate.html#TIMREF">
-       time
-      </a>
-      command, listed in the
+     command, listed in the
 	     official Bash documentation as a keyword (
-      <span class="QUOTE">
-       "reserved
+     <span class="QUOTE">
+      "reserved
 	     word"
-      </span>
-      ).
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9009" name="FTN.AEN9009">
-      <span class="footnote">
-       [3]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Note that
-      <i class="FIRSTTERM">
-       let
-      </i>
-      <a href="gotchas.html#LETBAD">
-       cannot be used
+     </span>
+     ).
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9009" name="FTN.AEN9009">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Note that
+     <i class="FIRSTTERM">
+      let
+     </i>
+     <a href="gotchas.html#LETBAD">
+      cannot be used
           for setting
-       <i class="FIRSTTERM">
-        string
-       </i>
-       variables.
-      </a>
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9199" name="FTN.AEN9199">
-      <span class="footnote">
-       [4]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      To
       <i class="FIRSTTERM">
-       Export
+       string
       </i>
-      information is to make it available in a more general context.
+      variables.
+     </a>
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9199" name="FTN.AEN9199">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     To
+     <i class="FIRSTTERM">
+      Export
+     </i>
+     information is to make it available in a more general context.
 	      See also
-      <a href="subshells.html#SCOPEREF">
-       scope
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9289" name="FTN.AEN9289">
-      <span class="footnote">
-       [5]
-      </span>
+     <a href="subshells.html#SCOPEREF">
+      scope
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      An
-      <i class="FIRSTTERM">
-       option
-      </i>
-      is an
+     .
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9289" name="FTN.AEN9289">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     An
+     <i class="FIRSTTERM">
+      option
+     </i>
+     is an
 		argument that acts as a flag, switching script behaviors
 		on or off. The argument associated with a particular
 		option indicates the behavior that the option (flag)
 		switches on or off.
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9393" name="FTN.AEN9393">
-      <span class="footnote">
-       [6]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Technically, an
-      <b class="COMMAND">
-       exit
-      </b>
-      only terminates the
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9393" name="FTN.AEN9393">
+     <span class="footnote">
+      [6]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Technically, an
+     <b class="COMMAND">
+      exit
+     </b>
+     only terminates the
 		    process (or shell) in which it is running,
-      <em>
-       not
-      </em>
-      the
-      <i class="FIRSTTERM">
-       parent
+     <em>
+      not
+     </em>
+     the
+     <i class="FIRSTTERM">
+      parent
 		    process
-      </i>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9425" name="FTN.AEN9425">
-      <span class="footnote">
-       [7]
-      </span>
-     </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      Unless the
-      <b class="COMMAND">
-       exec
-      </b>
-      is used
+     </i>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9425" name="FTN.AEN9425">
+     <span class="footnote">
+      [7]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     Unless the
+     <b class="COMMAND">
+      exec
+     </b>
+     is used
 		   to
-      <a href="x17974.html#USINGEXECREF">
-       reassign file
+     <a href="x17974.html#USINGEXECREF">
+      reassign file
 		   descriptors
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9591" name="FTN.AEN9591">
-      <span class="footnote">
-       [8]
-      </span>
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="HASHREF">
-      </a>
-     </p>
-     <p>
-      <i class="FIRSTTERM">
-       Hashing
-      </i>
-      is a method of
+     .
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9591" name="FTN.AEN9591">
+     <span class="footnote">
+      [8]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="HASHREF">
+     </a>
+    </p>
+    <p>
+     <i class="FIRSTTERM">
+      Hashing
+     </i>
+     is a method of
 		creating lookup keys for data stored in a table. The
-      <em>
-       data items themselves
-      </em>
-      are
-      <span class="QUOTE">
-       "scrambled"
-      </span>
-      to create keys, using one of
+     <em>
+      data items themselves
+     </em>
+     are
+     <span class="QUOTE">
+      "scrambled"
+     </span>
+     to create keys, using one of
 		a number of simple mathematical
-      <i class="FIRSTTERM">
-       algorithms
-      </i>
-      (methods, or
+     <i class="FIRSTTERM">
+      algorithms
+     </i>
+     (methods, or
 		recipes).
-     </p>
-     <p>
-      An advantage of
-      <i class="FIRSTTERM">
-       hashing
-      </i>
-      is that
+    </p>
+    <p>
+     An advantage of
+     <i class="FIRSTTERM">
+      hashing
+     </i>
+     is that
 		it is fast. A disadvantage is that
-      <i class="FIRSTTERM">
-       collisions
-      </i>
-      -- where a single key
+     <i class="FIRSTTERM">
+      collisions
+     </i>
+     -- where a single key
 		maps to more than one data item -- are possible.
-     </p>
-     <p>
-      For examples of hashing see
-      <a href="contributed-scripts.html#HASHLIB">
-       Example A-20
-      </a>
-      and
-      <a href="contributed-scripts.html#HASHEXAMPLE">
-       Example A-21
-      </a>
-      .
-     </p>
-    </td>
-   </tr>
-   <tr>
-    <td align="LEFT" valign="TOP" width="5%">
-     <a href="internal.html#AEN9621" name="FTN.AEN9621">
-      <span class="footnote">
-       [9]
-      </span>
+    </p>
+    <p>
+     For examples of hashing see
+     <a href="contributed-scripts.html#HASHLIB">
+      Example A-20
      </a>
-    </td>
-    <td align="LEFT" valign="TOP" width="95%">
-     <p>
-      <a name="READLINEREF">
-      </a>
-      The
-      <i class="FIRSTTERM">
-       readline
-      </i>
-      library is what
+     and
+     <a href="contributed-scripts.html#HASHEXAMPLE">
+      Example A-21
+     </a>
+     .
+    </p>
+   </p>
+   <p>
+    <a href="internal.html#AEN9621" name="FTN.AEN9621">
+     <span class="footnote">
+      [9]
+     </span>
+    </a>
+   </p>
+   <p>
+    <p>
+     <a name="READLINEREF">
+     </a>
+     The
+     <i class="FIRSTTERM">
+      readline
+     </i>
+     library is what
             Bash uses for reading input in an
             interactive shell.
-     </p>
-    </td>
-   </tr>
-  </table>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="part4.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="x9644.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Commands
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part4.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Job Control Commands
-     </td>
-    </tr>
-   </table>
+    </p>
+   </p>
   </div>
  </body>
 </html>

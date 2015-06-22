@@ -11,30 +11,6 @@
   <link href="ivr.html" rel="NEXT" title="Indirect References"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="list-cons.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="ivr.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="ARRAYS">
@@ -87,11 +63,10 @@
       Example 27-1. Simple array usage
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 
 area[11]=23
@@ -167,10 +142,9 @@ echo ${area3[24]}
 # -----------------------------------------------
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="ARRAYINIT0">
@@ -186,42 +160,38 @@ exit 0</pre>
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">base64_charset=( {A..Z} {a..z} {0..9} + / = )
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">base64_charset=( {A..Z} {a..z} {0..9} + / = )
                #  Using extended brace expansion
                #+ to initialize the elements of the array.                
                #  Excerpted from vladz's "base64.sh" script
                #+ in the "Contributed Scripts" appendix.</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="ARRAYOPSVARS">
     </a>
    </p>
-   <table border="1" cellpadding="5" class="SIDEBAR">
-    <tr>
-     <td>
-      <div class="SIDEBAR">
-       <a name="AEN18812">
-       </a>
-       <p>
-       </p>
-       <p>
-        Bash permits array operations on variables, even if
+   <div>
+    <p>
+     <div class="SIDEBAR">
+      <a name="AEN18812">
+      </a>
+      <p>
+      </p>
+      <p>
+       Bash permits array operations on variables, even if
         the variables are not explicitly declared as arrays.
-       </p>
+      </p>
+      <p>
+      </p>
+      <div>
        <p>
-       </p>
-       <table bgcolor="#E0E0E0" border="0" width="100%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">string=abcABC123ABCabc
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">string=abcABC123ABCabc
 echo ${string[@]}               # abcABC123ABCabc
 echo ${string[*]}               # abcABC123ABCabc 
 echo ${string[0]}               # abcABC123ABCabc
@@ -232,22 +202,50 @@ echo ${#string[@]}              # 1
                                 # The string itself.
 
 # Thank you, Michael Zick, for pointing this out.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
-       Once again this demonstrates that
-       <a href="untyped.html#BVUNTYPED">
-        Bash
-      variables are untyped
-       </a>
-       .
-       <p>
+        </font>
        </p>
       </div>
-     </td>
-    </tr>
-   </table>
+      Once again this demonstrates that
+      <a href="untyped.html#BVUNTYPED">
+       Bash
+      variables are untyped
+      </a>
+      .
+      <p>
+      </p>
+     </div>
+    </p>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">string=abcABC123ABCabc
+echo ${string[@]}               # abcABC123ABCabc
+echo ${string[*]}               # abcABC123ABCabc 
+echo ${string[0]}               # abcABC123ABCabc
+echo ${string[1]}               # No output!
+                                # Why?
+echo ${#string[@]}              # 1
+                                # One element in the array.
+                                # The string itself.
+
+# Thank you, Michael Zick, for pointing this out.</pre>
+     </font>
+    </p>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">string=abcABC123ABCabc
+echo ${string[@]}               # abcABC123ABCabc
+echo ${string[*]}               # abcABC123ABCabc 
+echo ${string[0]}               # abcABC123ABCabc
+echo ${string[1]}               # No output!
+                                # Why?
+echo ${#string[@]}              # 1
+                                # One element in the array.
+                                # The string itself.
+
+# Thank you, Michael Zick, for pointing this out.</pre>
+     </font>
+    </p>
+   </div>
    <div class="EXAMPLE">
     <a name="POEM">
     </a>
@@ -256,11 +254,10 @@ echo ${#string[@]}              # 1
       Example 27-2. Formatting a poem
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # poem.sh: Pretty-prints one of the ABS Guide author's favorite poems.
 
 # Lines of the poem (single stanza).
@@ -300,10 +297,9 @@ exit 0
 # Exercise:
 # --------
 # Modify this script to pretty-print a poem from a text data file.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="ARRAYSYNTAX">
@@ -322,11 +318,10 @@ exit 0
       Example 27-3. Various array operations
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # array-ops.sh: More fun with arrays.
 
 
@@ -373,10 +368,9 @@ echo ${#array2[0]}     # 13    (length of first element)
 echo ${#array2[*]}     # 3     (number of elements in array)
 
 exit</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="ARRAYSTRINGOPS">
@@ -398,11 +392,10 @@ exit</pre>
       Example 27-4. String operations on arrays
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # array-strops.sh: String operations on arrays.
 
 # Script by Michael Zick.
@@ -520,10 +513,9 @@ exit 0
 #    The name[@] notation specifies (the equivalent of) a "for-each"
 #+   operation.
 #  Bash is more powerful than you think!</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a href="commandsub.html#COMMANDSUBREF">
@@ -540,11 +532,10 @@ exit 0
       Example 27-5. Loading the contents of a script into an array
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # script-array.sh: Loads this script into an array.
 # Inspired by an e-mail from Chris Martin (thanks!).
 
@@ -573,10 +564,9 @@ exit 0
 #  Modify this script so it lists itself
 #+ in its original format,
 #+ complete with whitespace, line breaks, etc.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     In an array context, some Bash
@@ -606,11 +596,10 @@ exit 0
       Example 27-6. Some special properties of arrays
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 declare -a colors
 #  All subsequent commands in this script will treat
@@ -673,10 +662,9 @@ echo; echo -n "Colors gone."
 echo ${colors[@]}            # List array again, now empty.
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     <a name="ARRAYNUMELEMENTS">
@@ -729,11 +717,10 @@ exit 0</pre>
       Example 27-7. Of empty arrays and empty elements
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # empty-array.sh
 
 #  Thanks to Stephane Chazelas for the original example,
@@ -890,10 +877,9 @@ echo "Elements in array10:  ${array10[@]}"
 #  In the normal case, pattern matching is done *after* quote removal.
  
 exit</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     The relationship of
@@ -918,11 +904,10 @@ exit</pre>
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING"># Copying an array.
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING"># Copying an array.
 array2=( "${array1[@]}" )
 # or
 array2="${array1[@]}"
@@ -948,10 +933,9 @@ array=( "${array[@]}" "new element" )
 array[${#array[*]}]="new element"
 
 # Thanks, S.C.</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     <a name="ARRAYINITCS">
     </a>
@@ -959,31 +943,30 @@ array[${#array[*]}]="new element"
    <div class="TIP">
     <p>
     </p>
-    <table border="0" class="TIP" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Tip" hspace="5" src="../images/tip.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        The
-        <b class="COMMAND">
-         array=( element1 element2 ... elementN )
-        </b>
-        initialization operation, with the help of
-        <a href="commandsub.html#COMMANDSUBREF">
-         command substitution
-        </a>
-        , makes it
+    <div>
+     <p>
+      <img alt="Tip" hspace="5" src="../images/tip.gif"/>
+     </p>
+     <p>
+      <p>
+       The
+       <b class="COMMAND">
+        array=( element1 element2 ... elementN )
+       </b>
+       initialization operation, with the help of
+       <a href="commandsub.html#COMMANDSUBREF">
+        command substitution
+       </a>
+       , makes it
 	possible to load the contents of a text file into an array.
-       </p>
-       <p>
-       </p>
-       <table bgcolor="#E0E0E0" border="0" width="100%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+      </p>
+      <p>
+      </p>
+      <table bgcolor="#E0E0E0" border="0" width="100%">
+       <tr>
+        <td>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 
 filename=sample_file
 
@@ -1011,13 +994,76 @@ echo ${array1[@]}            # List the array.
 
 element_count=${#array1[*]}
 echo $element_count          # 8</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
-      </td>
-     </tr>
-    </table>
+         </font>
+        </td>
+       </tr>
+      </table>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
+
+filename=sample_file
+
+#            cat sample_file
+#
+#            1 a b c
+#            2 d e fg
+
+
+declare -a array1
+
+array1=( `cat "$filename"`)                #  Loads contents
+#         List file to stdout              #+ of $filename into array1.
+#
+#  array1=( `cat "$filename" | tr '\n' ' '`)
+#                            change linefeeds in file to spaces. 
+#  Not necessary because Bash does word splitting,
+#+ changing linefeeds to spaces.
+
+echo ${array1[@]}            # List the array.
+#                              1 a b c 2 d e fg
+#
+#  Each whitespace-separated "word" in the file
+#+ has been assigned to an element of the array.
+
+element_count=${#array1[*]}
+echo $element_count          # 8</pre>
+      </font>
+     </p>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
+
+filename=sample_file
+
+#            cat sample_file
+#
+#            1 a b c
+#            2 d e fg
+
+
+declare -a array1
+
+array1=( `cat "$filename"`)                #  Loads contents
+#         List file to stdout              #+ of $filename into array1.
+#
+#  array1=( `cat "$filename" | tr '\n' ' '`)
+#                            change linefeeds in file to spaces. 
+#  Not necessary because Bash does word splitting,
+#+ changing linefeeds to spaces.
+
+echo ${array1[@]}            # List the array.
+#                              1 a b c 2 d e fg
+#
+#  Each whitespace-separated "word" in the file
+#+ has been assigned to an element of the array.
+
+element_count=${#array1[*]}
+echo $element_count          # 8</pre>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Clever scripting makes it possible to add array operations.
@@ -1034,11 +1080,10 @@ echo $element_count          # 8</pre>
       Example 27-8. Initializing arrays
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#! /bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#! /bin/bash
 # array-assign.bash
 
 #  Array operations are Bash-specific,
@@ -1126,31 +1171,28 @@ times
 #  Try it, and see.
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="NOTE">
     <p>
     </p>
-    <table border="0" class="NOTE" width="100%">
-     <tr>
-      <td align="CENTER" valign="TOP" width="25">
-       <img alt="Note" hspace="5" src="../images/note.gif"/>
-      </td>
-      <td align="LEFT" valign="TOP">
-       <p>
-        Adding a superfluous
-        <b class="COMMAND">
-         declare -a
-        </b>
-        statement to an array declaration may speed up execution of
+    <div>
+     <p>
+      <img alt="Note" hspace="5" src="../images/note.gif"/>
+     </p>
+     <p>
+      <p>
+       Adding a superfluous
+       <b class="COMMAND">
+        declare -a
+       </b>
+       statement to an array declaration may speed up execution of
 	subsequent operations on the array.
-       </p>
-      </td>
-     </tr>
-    </table>
+      </p>
+     </p>
+    </div>
    </div>
    <p>
     <a name="ARRAYAPPEND0">
@@ -1164,11 +1206,10 @@ exit 0</pre>
       Example 27-9. Copying and concatenating arrays
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#! /bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#! /bin/bash
 # CopyArray.sh
 #
 # This script written by Michael Zick.
@@ -1233,10 +1274,9 @@ echo "Array Modest = ${modest[@]}"
 echo "Array Before = ${before[@]}"
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="ARRAYAPPEND">
@@ -1246,11 +1286,10 @@ exit 0</pre>
       Example 27-10. More on concatenating arrays
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#! /bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#! /bin/bash
 # array-append.bash
 
 # Copyright (c) Michael S. Zick, 2003, All rights reserved.
@@ -1362,10 +1401,9 @@ echo '- - in versions of Bash newer than version 2.05b - -'
 # MSZ: Sorry about any earlier confusion folks.
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     --
@@ -1387,11 +1425,10 @@ exit 0</pre>
       Example 27-11. The Bubble Sort
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # bubble.sh: Bubble sort, of sorts.
 
 # Recall the algorithm for a bubble sort. In this particular version...
@@ -1488,10 +1525,9 @@ done                            # End of outer loop
                                 # All done.
 
 exit 0</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     --
@@ -1505,11 +1541,10 @@ exit 0</pre>
    </p>
    <p>
    </p>
-   <table bgcolor="#E0E0E0" border="0" width="100%">
-    <tr>
-     <td>
-      <font color="#000000">
-       <pre class="PROGRAMLISTING">#!/bin/bash
+   <div>
+    <p>
+     <font color="#000000">
+      <pre class="PROGRAMLISTING">#!/bin/bash
 # "Nested" array.
 
 #  Michael Zick provided this example,
@@ -1535,10 +1570,9 @@ echo "Current directory and date of last status change:"
 echo "${SubArray[@]}"
 
 exit 0</pre>
-      </font>
-     </td>
-    </tr>
-   </table>
+     </font>
+    </p>
+   </div>
    <p>
     --
    </p>
@@ -1562,11 +1596,10 @@ exit 0</pre>
       Example 27-12. Embedded arrays and indirect references
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # embedded-arrays.sh
 # Embedded arrays and indirect references.
 
@@ -1633,10 +1666,9 @@ exit 0
 #   As the author of the script notes,
 #+ "you can easily expand it to create named-hashes in bash."
 #   (Difficult) exercise for the reader: implement this.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     --
@@ -1663,11 +1695,10 @@ exit 0
       Example 27-13. The Sieve of Eratosthenes
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # sieve.sh (ex68.sh)
 
 # Sieve of Eratosthenes
@@ -1801,10 +1832,9 @@ done
 echo ${Primes[*]}
 
 exit $?</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <div class="EXAMPLE">
     <a name="EX68A">
@@ -1814,11 +1844,10 @@ exit $?</pre>
       Example 27-14. The Sieve of Eratosthenes, Optimized
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # Optimized Sieve of Eratosthenes
 # Script by Jared Martin, with very minor changes by ABS Guide author.
 # Used in ABS Guide with permission (thanks!).
@@ -1854,10 +1883,9 @@ printf "%8d" ${Primes[*]}
 echo; echo
 
 exit $?</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     Compare these array-based prime number generators with
@@ -1891,11 +1919,10 @@ exit $?</pre>
       Example 27-15. Emulating a push-down stack
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # stack.sh: push-down stack simulation
 
 #  Similar to the CPU stack, a push-down stack stores data items
@@ -2014,10 +2041,9 @@ exit 0
 
 # 4)  Using this script as a starting point,
 #   + write a stack-based 4-function calculator.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     --
@@ -2042,11 +2068,10 @@ exit 0
       </em>
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 
 # Douglas Hofstadter's notorious "Q-series":
 
@@ -2105,10 +2130,9 @@ exit 0
 #  The more intuitive recursive implementation is left as an exercise.
 #  Warning: calculating this series recursively takes a VERY long time
 #+ via a script. C/C++ would be orders of magnitude faster.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     --
@@ -2129,11 +2153,10 @@ exit 0
       Example 27-17. Simulating a two-dimensional array, then tilting it
      </b>
     </p>
-    <table bgcolor="#E0E0E0" border="0" width="100%">
-     <tr>
-      <td>
-       <font color="#000000">
-        <pre class="PROGRAMLISTING">#!/bin/bash
+    <div>
+     <p>
+      <font color="#000000">
+       <pre class="PROGRAMLISTING">#!/bin/bash
 # twodim.sh: Simulating a two-dimensional array.
 
 # A one-dimensional array consists of a single row.
@@ -2275,10 +2298,9 @@ exit 0
 # 3)  Rewrite this script to handle a non-square array,
 #     such as a 6 X 4 one.
 #     Try to minimize "distortion" when the array is rotated.</pre>
-       </font>
-      </td>
-     </tr>
-    </table>
+      </font>
+     </p>
+    </div>
    </div>
    <p>
     A two-dimensional array is essentially equivalent to a
@@ -2353,41 +2375,6 @@ exit 0
      </p>
     </li>
    </ul>
-  </div>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="list-cons.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="ivr.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      List Constructs
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part5.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Indirect References
-     </td>
-    </tr>
-   </table>
   </div>
  </body>
 </html>

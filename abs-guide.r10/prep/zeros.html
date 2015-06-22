@@ -11,61 +11,35 @@
   <link href="debugging.html" rel="NEXT" title="Debugging"/>
  </head>
  <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
-  <div class="NAVHEADER">
-   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
-    <tr>
-     <th align="center" colspan="3">
-      Advanced Bash-Scripting Guide:
-     </th>
-    </tr>
-    <tr>
-     <td align="left" valign="bottom" width="10%">
-      <a accesskey="P" href="networkprogramming.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="bottom" width="80%">
-     </td>
-     <td align="right" valign="bottom" width="10%">
-      <a accesskey="N" href="debugging.html">
-       Next
-      </a>
-     </td>
-    </tr>
-   </table>
-   <hr align="LEFT" width="100%"/>
-  </div>
   <div class="CHAPTER">
    <h1>
     <a name="ZEROS">
     </a>
     Chapter 31. Of Zeros and Nulls
    </h1>
-   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
-    <tr>
-     <td width="45%">
-     </td>
-     <td align="LEFT" valign="TOP" width="45%">
+   <div>
+    <p>
+    </p>
+    <p>
+     <i>
+     </i>
+     <p>
       <i>
+       Faultily faultless, icily regular, splendidly null
       </i>
-      <p>
-       <i>
-        Faultily faultless, icily regular, splendidly null
-       </i>
-      </p>
-      <p>
-       <i>
-        Dead perfection; no more.
-       </i>
-      </p>
-      <p>
-       <i>
-        --Alfred Lord Tennyson
-       </i>
-      </p>
-     </td>
-    </tr>
-   </table>
+     </p>
+     <p>
+      <i>
+       Dead perfection; no more.
+      </i>
+     </p>
+     <p>
+      <i>
+       --Alfred Lord Tennyson
+      </i>
+     </p>
+    </p>
+   </div>
    <p>
     <a name="ZEROSREF">
     </a>
@@ -123,16 +97,14 @@
        </tt>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">cat $filename &gt;/dev/null
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">cat $filename &gt;/dev/null
 # Contents of the file will not list to stdout.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Suppressing
        <tt class="FILENAME">
@@ -144,16 +116,14 @@
        </a>
        ).
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">rm $badname 2&gt;/dev/null
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">rm $badname 2&gt;/dev/null
 #           So error messages [stderr] deep-sixed.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Suppressing output from
        <em>
@@ -168,11 +138,10 @@
        </tt>
        .
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">cat $filename 2&gt;/dev/null &gt;/dev/null
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">cat $filename 2&gt;/dev/null &gt;/dev/null
 # If "$filename" does not exist, there will be no error message output.
 # If "$filename" does exist, the contents of the file will not list to stdout.
 # Therefore, no output at all will result from the above line of code.
@@ -182,10 +151,9 @@
 #
 # cat $filename &amp;&gt;/dev/null
 #     also works, as Baris Cicek points out.</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Deleting contents of a file, but preserving the file itself, with
 	      all attendant permissions (from
@@ -198,18 +166,16 @@
        </a>
        ):
       </p>
-      <table bgcolor="#E0E0E0" border="0" width="90%">
-       <tr>
-        <td>
-         <font color="#000000">
-          <pre class="PROGRAMLISTING">cat /dev/null &gt; /var/log/messages
+      <div>
+       <p>
+        <font color="#000000">
+         <pre class="PROGRAMLISTING">cat /dev/null &gt; /var/log/messages
 #  : &gt; /var/log/messages   has same effect, but does not spawn a new process.
 
 cat /dev/null &gt; /var/log/wtmp</pre>
-         </font>
-        </td>
-       </tr>
-      </table>
+        </font>
+       </p>
+      </div>
       <p>
        Automatically emptying the contents of a logfile
 	      (especially good for dealing with those nasty
@@ -226,11 +192,10 @@ cat /dev/null &gt; /var/log/wtmp</pre>
          Example 31-1. Hiding the cookie jar
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING"># Obsolete Netscape browser.
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING"># Obsolete Netscape browser.
 # Same principle applies to newer browsers.
 
 if [ -f ~/.netscape/cookies ]  # Remove, if exists.
@@ -240,10 +205,9 @@ fi
 
 ln -s /dev/null ~/.netscape/cookies
 # All cookies now get sent to a black hole, rather than saved to disk.</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
      </dd>
      <dt>
@@ -307,11 +271,10 @@ ln -s /dev/null ~/.netscape/cookies
          </tt>
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # Creating a swap file.
 
 #  A swap file provides a temporary storage cache
@@ -374,10 +337,9 @@ retcode=$?                       # Everything worked?
 echo "Swap file created and activated."
 
 exit $retcode</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        Another application of
@@ -416,11 +378,10 @@ exit $retcode</pre>
          Example 31-3. Creating a ramdisk
         </b>
        </p>
-       <table bgcolor="#E0E0E0" border="0" width="90%">
-        <tr>
-         <td>
-          <font color="#000000">
-           <pre class="PROGRAMLISTING">#!/bin/bash
+       <div>
+        <p>
+         <font color="#000000">
+          <pre class="PROGRAMLISTING">#!/bin/bash
 # ramdisk.sh
 
 #  A "ramdisk" is a segment of system RAM memory
@@ -480,10 +441,9 @@ echo "\"$MOUNTPT\" now available for use."
 #  That may be appropriate on, for example, a database server.
 
 exit 0</pre>
-          </font>
-         </td>
-        </tr>
-       </table>
+         </font>
+        </p>
+       </div>
       </div>
       <p>
        In addition to all the above,
@@ -501,41 +461,6 @@ exit 0</pre>
      </dd>
     </dl>
    </div>
-  </div>
-  <div class="NAVFOOTER">
-   <hr align="LEFT" width="100%"/>
-   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
-    <tr>
-     <td align="left" valign="top" width="33%">
-      <a accesskey="P" href="networkprogramming.html">
-       Prev
-      </a>
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="H" href="index.html">
-       Home
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      <a accesskey="N" href="debugging.html">
-       Next
-      </a>
-     </td>
-    </tr>
-    <tr>
-     <td align="left" valign="top" width="33%">
-      Network Programming
-     </td>
-     <td align="center" valign="top" width="34%">
-      <a accesskey="U" href="part5.html">
-       Up
-      </a>
-     </td>
-     <td align="right" valign="top" width="33%">
-      Debugging
-     </td>
-    </tr>
-   </table>
   </div>
  </body>
 </html>
