@@ -1,0 +1,432 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th align="center" colspan="3">
+
+Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="left" valign="bottom" width="10%">
+
+`Prev <sedawk.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center" valign="bottom" width="80%">
+
+Appendix C. A Sed and Awk Micro-Primer
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="right" valign="bottom" width="10%">
+
+`Next <awk.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
+
+  C.1. Sed
+=========
+
+*Sed* is a non-interactive ` [1]  <x23170.html#FTN.AEN23174>`__ **s**
+tream **ed** itor. It receives text input, whether from
+``      stdin     `` or from a file, performs certain operations on
+specified lines of the input, one line at a time, then outputs the
+result to ``      stdout     `` or to a file. Within a shell script,
+*sed* is usually one of several tool components in a pipe.
+
+*Sed* determines which lines of its input that it will operate on from
+the *address range* passed to it. ` [2]  <x23170.html#FTN.AEN23185>`__
+Specify this address range either by line number or by a pattern to
+match. For example, ``             3d           `` signals *sed* to
+delete line 3 of the input, and ``             /Windows/d           ``
+tells sed that you want every line of the input containing a match to
+"Windows" deleted.
+
+Of all the operations in the *sed* toolkit, we will focus primarily on
+the three most commonly used ones. These are **p** rinting (to
+``      stdout     `` ), **d** eletion, and **s** ubstitution.
+
+.. raw:: html
+
+   <div class="TABLE">
+
+**Table C-1. Basic sed operators**
+
++--------------------------+--------------------------+--------------------------+
+| Operator                 |
+| Name                     |
+| Effect                   |
++==========================+==========================+==========================+
+| ``          [address-ran | ``          [address-ran | ``          s/pattern1/p |
+| ge]/p         ``         | ge]/d         ``         | attern2/         ``      |
+| print                    | delete                   | substitute               |
+| Print [specified address | Delete [specified        | Substitute pattern2 for  |
+| range]                   | address range]           | first instance of        |
+|                          |                          | pattern1 in a line       |
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NOTE">
+
++--------------------------------------+--------------------------------------+
+| |Note|                               |
+| Unless the ``          g         ``  |
+| ( *global* ) operator is appended to |
+| a *substitute* command, the          |
+| substitution operates only on the    |
+| *first* instance of a pattern match  |
+| within each line.                    |
++--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   </div>
+
+From the command-line and in a shell script, a sed operation may require
+quoting and certain options.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     sed -e '/^$/d' $file |
+| name                     |
+|     # The -e option caus |
+| es the next string to be |
+|  interpreted as an editi |
+| ng instruction.          |
+|     #  (If passing only  |
+| a single instruction to  |
+| sed, the "-e" is optiona |
+| l.)                      |
+|     #  The "strong" quot |
+| es ('') protect the RE c |
+| haracters in the instruc |
+| tion                     |
+|     #+ from reinterpreta |
+| tion as special characte |
+| rs by the body of the sc |
+| ript.                    |
+|     # (This reserves RE  |
+| expansion of the instruc |
+| tion for sed.)           |
+|     #                    |
+|     # Operates on the te |
+| xt contained in file $fi |
+| lename.                  |
+                          
++--------------------------+--------------------------+--------------------------+
+
+In certain cases, a *sed* editing command will not work with single
+quotes.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     filename=file1.txt   |
+|     pattern=BEGIN        |
+|                          |
+|       sed "/^$pattern/d" |
+|  "$filename"  # Works as |
+|  specified.              |
+|     # sed '/^$pattern/d' |
+|  "$filename"    has unex |
+| pected results.          |
+|     #        In this ins |
+| tance, with strong quoti |
+| ng (' ... '),            |
+|     #+      "$pattern" w |
+| ill not expand to "BEGIN |
+| ".                       |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   <div class="NOTE">
+
++--------------------------------------+--------------------------------------+
+| |Note|                               |
+| *Sed* uses the                       |
+| ``          -e         `` option to  |
+| specify that the following string is |
+| an instruction or set of             |
+| instructions. If there is only a     |
+| single instruction contained in the  |
+| string, then this may be omitted.    |
++--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   </div>
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     sed -n '/xzy/p' $fil |
+| ename                    |
+|     # The -n option tell |
+| s sed to print only thos |
+| e lines matching the pat |
+| tern.                    |
+|     # Otherwise all inpu |
+| t lines would print.     |
+|     # The -e option not  |
+| necessary here since the |
+| re is only a single edit |
+| ing instruction.         |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   <div class="TABLE">
+
+**Table C-2. Examples of sed operators**
+
++--------------------------------------+--------------------------------------+
+| Notation                             |
+| Effect                               |
++======================================+======================================+
+| ``          8d         ``            | ``          /^$/d         ``         |
+| Delete 8th line of input.            | Delete all blank lines.              |
++--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   </div>
+
+Substituting a zero-length string for another is equivalent to deleting
+that string within a line of input. This leaves the remainder of the
+line intact. Applying ``             s/GUI//           `` to the line
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     The most important p |
+| arts of any application  |
+| are its GUI and sound ef |
+| fects                    |
+                          
++--------------------------+--------------------------+--------------------------+
+
+results in
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     The most important p |
+| arts of any application  |
+| are its  and sound effec |
+| ts                       |
+                          
++--------------------------+--------------------------+--------------------------+
+
+A backslash forces the **sed** replacement command to continue on to the
+next line. This has the effect of using the *newline* at the end of the
+first line as the *replacement string* .
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     s/^  */\             |
+|     /g                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+This substitution replaces line-beginning spaces with a newline. The net
+result is to replace paragraph indents with a blank line between
+paragraphs.
+An address range followed by one or more operations may require open and
+closed curly brackets, with appropriate newlines.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     /[0-9A-Za-z]/,/^$/{  |
+|     /^$/d                |
+|     }                    |
+                          
++--------------------------+--------------------------+--------------------------+
+
+This deletes only the first of each set of consecutive blank lines. That
+might be useful for single-spacing a text file, but retaining the blank
+line(s) between paragraphs.
+
+.. raw:: html
+
+   <div class="NOTE">
+
++--------------------------------------+--------------------------------------+
+| |Note|                               |
+| The usual delimiter that *sed* uses  |
+| is / . However, *sed* allows other   |
+| delimiters, such as % . This is      |
+| useful when / is part of a           |
+| replacement string, as in a file     |
+| pathname. See `Example               |
+| 11-10 <loops1.html#FINDSTRING>`__    |
+| and `Example                         |
+| 16-32 <filearchiv.html#STRIPC>`__ .  |
++--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="TIP">
+
++--------------------------------------+--------------------------------------+
+| |Tip|                                |
+| A quick way to double-space a text   |
+| file is                              |
+| ``                     sed G         |
+| filename                   ``        |
+| .                                    |
++--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   </div>
+
+For illustrative examples of sed within shell scripts, see:
+
+#. `Example 36-1 <wrapper.html#EX3>`__
+
+#. `Example 36-2 <wrapper.html#EX4>`__
+
+#. `Example 16-3 <moreadv.html#EX57>`__
+
+#. `Example A-2 <contributed-scripts.html#RN>`__
+
+#. `Example 16-17 <textproc.html#GRP>`__
+
+#. `Example 16-27 <textproc.html#COL>`__
+
+#. `Example A-12 <contributed-scripts.html#BEHEAD>`__
+
+#. `Example A-16 <contributed-scripts.html#TREE>`__
+
+#. `Example A-17 <contributed-scripts.html#TREE2>`__
+
+#. `Example 16-32 <filearchiv.html#STRIPC>`__
+
+#. `Example 11-10 <loops1.html#FINDSTRING>`__
+
+#. `Example 16-48 <mathc.html#BASE>`__
+
+#. `Example A-1 <contributed-scripts.html#MAILFORMAT>`__
+
+#. `Example 16-14 <textproc.html#RND>`__
+
+#. `Example 16-12 <textproc.html#WF>`__
+
+#. `Example A-10 <contributed-scripts.html#LIFESLOW>`__
+
+#. `Example 19-12 <here-docs.html#SELFDOCUMENT>`__
+
+#. `Example 16-19 <textproc.html#DICTLOOKUP>`__
+
+#. `Example A-29 <contributed-scripts.html#WHX>`__
+
+#. `Example A-31 <contributed-scripts.html#BASHPODDER>`__
+
+#. `Example A-24 <contributed-scripts.html#TOHTML>`__
+
+#. `Example A-43 <contributed-scripts.html#STOPWATCH>`__
+
+#. `Example A-55 <contributed-scripts.html#SEDAPPEND>`__
+
+For a more extensive treatment of *sed* , refer to the `pertinent
+references <biblio.html#DGSEDREF>`__ in the
+`*Bibliography* <biblio.html>`__ .
+
+.. raw:: html
+
+   </div>
+
+Notes
+~~~~~
+
++--------------------------------------+--------------------------------------+
+| ` [1]  <x23170.html#AEN23174>`__     | ` [2]  <x23170.html#AEN23185>`__     |
+| *Sed* executes without user          | If no address range is specified,    |
+| intervention.                        | the default is *all* lines.          |
++--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
+--------------
+
++--------------------------+--------------------------+--------------------------+
+| `Prev <sedawk.html>`__   | A Sed and Awk            |
+| `Home <index.html>`__    | Micro-Primer             |
+| `Next <awk.html>`__      | `Up <sedawk.html>`__     |
+|                          | Awk                      |
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. |Note| image:: ../images/note.gif
+.. |Tip| image:: ../images/tip.gif

@@ -1,0 +1,450 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th align="center" colspan="3">
+
+Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="left" valign="bottom" width="10%">
+
+`Prev <here-docs.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center" valign="bottom" width="80%">
+
+Chapter 19. Here Documents
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="right" valign="bottom" width="10%">
+
+`Next <io-redirection.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
+
+  19.1. Here Strings
+===================
+
+    | A *here string* can be considered as a stripped-down form of a
+    *here document* .
+    |  It consists of nothing more than **COMMAND <<< $WORD** ,
+    |  where ``       $WORD      `` is expanded and fed to the
+    ``       stdin      `` of **COMMAND** .
+
+As a simple example, consider this alternative to the
+`echo-grep <internal.html#ECHOGREPREF>`__ construction.
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     # Instead of:        |
+|     if echo "$VAR" | gre |
+| p -q txt   # if [[ $VAR  |
+| = *txt* ]]               |
+|     # etc.               |
+|                          |
+|     # Try:               |
+|     if grep -q "txt" <<< |
+|  "$VAR"                  |
+|     then   #         ^^^ |
+|        echo "$VAR contai |
+| ns the substring sequenc |
+| e \"txt\""               |
+|     fi                   |
+|     # Thank you, Sebasti |
+| an Kaminski, for the sug |
+| gestion.                 |
+                          
++--------------------------+--------------------------+--------------------------+
+
+Or, in combination with `read <internal.html#READREF>`__ :
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     String="This is a st |
+| ring of words."          |
+|                          |
+|     read -r -a Words <<< |
+|  "$String"               |
+|     #  The -a option to  |
+| "read"                   |
+|     #+ assigns the resul |
+| ting values to successiv |
+| e members of an array.   |
+|                          |
+|     echo "First word in  |
+| String is:    ${Words[0] |
+| }"   # This              |
+|     echo "Second word in |
+|  String is:   ${Words[1] |
+| }"   # is                |
+|     echo "Third word in  |
+| String is:    ${Words[2] |
+| }"   # a                 |
+|     echo "Fourth word in |
+|  String is:   ${Words[3] |
+| }"   # string            |
+|     echo "Fifth word in  |
+| String is:    ${Words[4] |
+| }"   # of                |
+|     echo "Sixth word in  |
+| String is:    ${Words[5] |
+| }"   # words.            |
+|     echo "Seventh word i |
+| n String is:  ${Words[6] |
+| }"   # (null)            |
+|                          |
+|                          |
+|      # Past end of $Stri |
+| ng.                      |
+|                          |
+|     # Thank you, Francis |
+| co Lobo, for the suggest |
+| ion.                     |
+                          
++--------------------------+--------------------------+--------------------------+
+
+ It is, of course, possible to feed the output of a *here string* into
+the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     # As Seamus points o |
+| ut . . .                 |
+|                          |
+|     ArrayVar=( element0  |
+| element1 element2 {A..D} |
+|  )                       |
+|                          |
+|     while read element ; |
+|  do                      |
+|       echo "$element" 1> |
+| &2                       |
+|     done <<< $(echo ${Ar |
+| rayVar[*]})              |
+|                          |
+|     # element0 element1  |
+| element2 A B C D         |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
+**Example 19-13. Prepending a line to a file**
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # prepend.sh: Add te |
+| xt at beginning of file. |
+|     #                    |
+|     #  Example contribut |
+| ed by Kenny Stauffer,    |
+|     #+ and slightly modi |
+| fied by document author. |
+|                          |
+|                          |
+|     E_NOSUCHFILE=85      |
+|                          |
+|     read -p "File: " fil |
+| e   # -p arg to 'read' d |
+| isplays prompt.          |
+|     if [ ! -e "$file" ]  |
+|     then   # Bail out if |
+|  no such file.           |
+|       echo "File $file n |
+| ot found."               |
+|       exit $E_NOSUCHFILE |
+|     fi                   |
+|                          |
+|     read -p "Title: " ti |
+| tle                      |
+|     cat - $file <<<$titl |
+| e > $file.new            |
+|                          |
+|     echo "Modified file  |
+| is $file.new"            |
+|                          |
+|     exit  # Ends script  |
+| execution.               |
+|                          |
+|       from 'man bash':   |
+|       Here Strings       |
+|         A variant of her |
+| e documents, the format  |
+| is:                      |
+|                          |
+|             <<<word      |
+|                          |
+|         The word is expa |
+| nded and supplied to the |
+|  command on its standard |
+|  input.                  |
+|                          |
+|                          |
+|       Of course, the fol |
+| lowing also works:       |
+|        sed -e '1i\       |
+|        Title: ' $file    |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
+**Example 19-14. Parsing a mailbox**
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     #  Script by Francis |
+| co Lobo,                 |
+|     #+ and slightly modi |
+| fied and commented by AB |
+| S Guide author.          |
+|     #  Used in ABS Guide |
+|  with permission. (Thank |
+|  you!)                   |
+|                          |
+|     # This script will n |
+| ot run under Bash versio |
+| ns -lt 3.0.              |
+|                          |
+|                          |
+|     E_MISSING_ARG=87     |
+|     if [ -z "$1" ]       |
+|     then                 |
+|       echo "Usage: $0 ma |
+| ilbox-file"              |
+|       exit $E_MISSING_AR |
+| G                        |
+|     fi                   |
+|                          |
+|     mbox_grep()  # Parse |
+|  mailbox file.           |
+|     {                    |
+|         declare -i body= |
+| 0 match=0                |
+|         declare -a date  |
+| sender                   |
+|         declare mail hea |
+| der value                |
+|                          |
+|                          |
+|         while IFS= read  |
+| -r mail                  |
+|     #         ^^^^       |
+|            Reset $IFS.   |
+|     #  Otherwise "read"  |
+| will strip leading & tra |
+| iling space from its inp |
+| ut.                      |
+|                          |
+|        do                |
+|            if [[ $mail = |
+| ~ ^From  ]]   # Match "F |
+| rom" field in message.   |
+|            then          |
+|               (( body  = |
+|  0 ))           # "Zero  |
+| out" variables.          |
+|               (( match = |
+|  0 ))                    |
+|               unset date |
+|                          |
+|            elif (( body  |
+| ))                       |
+|            then          |
+|                 (( match |
+|  ))                      |
+|                 #  echo  |
+| "$mail"                  |
+|                 #  Uncom |
+| ment above line if you w |
+| ant entire body          |
+|                 #+ of me |
+| ssage to display.        |
+|                          |
+|        elif [[ $mail ]]; |
+|  then                    |
+|           IFS=: read -r  |
+| header value <<< "$mail" |
+|           #              |
+|              ^^^  "here  |
+| string"                  |
+|                          |
+|           case "$header" |
+|  in                      |
+|           [Ff][Rr][Oo][M |
+| m] ) [[ $value =~ "$2" ] |
+| ] && (( match++ )) ;;    |
+|           # Match "From" |
+|  line.                   |
+|           [Dd][Aa][Tt][E |
+| e] ) read -r -a date <<< |
+|  "$value" ;;             |
+|           #              |
+|                      ^^^ |
+|           # Match "Date" |
+|  line.                   |
+|           [Rr][Ee][Cc][E |
+| e][Ii][Vv][Ee][Dd] ) rea |
+| d -r -a sender <<< "$val |
+| ue" ;;                   |
+|           #              |
+|                          |
+|                ^^^       |
+|           # Match IP Add |
+| ress (may be spoofed).   |
+|           esac           |
+|                          |
+|            else          |
+|               (( body++  |
+| ))                       |
+|               (( match   |
+| )) &&                    |
+|               echo "MESS |
+| AGE ${date:+of: ${date[* |
+| ]} }"                    |
+|            #    Entire $ |
+| date array             ^ |
+|               echo "IP a |
+| ddress of sender: ${send |
+| er[1]}"                  |
+|            #    Second f |
+| ield of "Received" line  |
+|    ^                     |
+|                          |
+|            fi            |
+|                          |
+|                          |
+|         done < "$1" # Re |
+| direct stdout of file in |
+| to loop.                 |
+|     }                    |
+|                          |
+|                          |
+|     mbox_grep "$1"  # Se |
+| nd mailbox file to funct |
+| ion.                     |
+|                          |
+|     exit $?              |
+|                          |
+|     # Exercises:         |
+|     # ---------          |
+|     # 1) Break the singl |
+| e function, above, into  |
+| multiple functions,      |
+|     #+   for the sake of |
+|  readability.            |
+|     # 2) Add additional  |
+| parsing to the script, c |
+| hecking for various keyw |
+| ords.                    |
+|                          |
+|                          |
+|                          |
+|     $ mailbox_grep.sh sc |
+| am_mail                  |
+|       MESSAGE of Thu, 5  |
+| Jan 2006 08:00:56 -0500  |
+| (EST)                    |
+|       IP address of send |
+| er: 196.3.62.4           |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+Exercise: Find other uses for *here strings* , such as, for example,
+`feeding input to *dc* <mathc.html#GOLDENRATIO>`__ .
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
+--------------
+
++--------------------------+--------------------------+--------------------------+
+| `Prev <here-docs.html>`_ | Here Documents           |
+| _                        | `Up <here-docs.html>`__  |
+| `Home <index.html>`__    | I/O Redirection          |
+| `Next <io-redirection.ht |                          |
+| ml>`__                   |                          |
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+

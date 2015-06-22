@@ -1,0 +1,242 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th align="center" colspan="3">
+
+Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="left" valign="bottom" width="10%">
+
+`Prev <toolsused.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center" valign="bottom" width="80%">
+
+Chapter 38. Endnotes
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="right" valign="bottom" width="10%">
+
+`Next <disclaimer.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+--------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
+
+  38.5. Credits
+==============
+
+*Community participation made this project possible.* The author
+gratefully acknowledges that writing this book would have been
+unthinkable without help and feedback from all you people out there.
+
+`Philippe Martin <mailto:feloy@free.fr>`__ translated the first version
+(0.1) of this document into DocBook/SGML. While not on the job at a
+small French company as a software developer, he enjoys working on
+GNU/Linux documentation and software, reading literature, playing music,
+and, for his peace of mind, making merry with friends. You may run
+across him somewhere in France or in the Basque Country, or you can
+email him at feloy@free.fr .
+
+Philippe Martin also pointed out that positional parameters past $9 are
+possible using {bracket} notation. (See `Example
+4-5 <othertypesv.html#EX17>`__ ).
+
+`Stéphane Chazelas <mailto:stephane_chazelas@yahoo.fr>`__ sent a long
+list of corrections, additions, and example scripts. More than a
+contributor, he had, in effect, for a while taken on the role of
+*co-editor* for this document. *Merci beaucoup!*
+
+Paulo Marcel Coelho Aragao offered many corrections, both major and
+minor, and contributed quite a number of helpful suggestions.
+
+I would like to especially thank *Patrick Callahan* , *Mike Novak* , and
+*Pal Domokos* for catching bugs, pointing out ambiguities, and for
+suggesting clarifications and changes in the preliminary version (0.1)
+of this document. Their lively discussion of shell scripting and general
+documentation issues inspired me to try to make this document more
+readable.
+
+I'm grateful to Jim Van Zandt for pointing out errors and omissions in
+version 0.2 of this document. He also contributed an instructive
+`example script <contributed-scripts.html#ZFIFO>`__ .
+
+Many thanks to `Jordi Sanfeliu <mailto:mikaku@fiwix.org>`__ for giving
+permission to use his fine tree script ( `Example
+A-16 <contributed-scripts.html#TREE>`__ ), and to Rick Boivie for
+revising it.
+
+Likewise, thanks to `Michel Charpentier <mailto:charpov@cs.unh.edu>`__
+for permission to use his `dc <mathc.html#DCREF>`__ factoring script (
+`Example 16-52 <mathc.html#FACTR>`__ ).
+
+Kudos to `Noah Friedman <mailto:friedman@prep.ai.mit.edu>`__ for
+permission to use his string function script ( `Example
+A-18 <contributed-scripts.html#STRING>`__ ).
+
+`Emmanuel Rouat <mailto:emmanuel.rouat@wanadoo.fr>`__ suggested
+corrections and additions on `command
+substitution <commandsub.html#COMMANDSUBREF>`__ ,
+`aliases <aliases.html#ALIASREF>`__ , and `path
+management <pathmanagement.html>`__ . He also contributed a very nice
+sample ``      .bashrc     `` file ( `Appendix M <sample-bashrc.html>`__
+).
+
+`Heiner Steven <mailto:heiner.steven@odn.de>`__ kindly gave permission
+to use his base conversion script, `Example 16-48 <mathc.html#BASE>`__ .
+He also made a number of corrections and many helpful suggestions.
+Special thanks.
+
+Rick Boivie contributed the delightfully recursive *pb.sh* script (
+`Example 36-11 <recursionsct.html#PBOOK>`__ ), revised the *tree.sh*
+script ( `Example A-16 <contributed-scripts.html#TREE>`__ ), and
+suggested performance improvements for the *monthlypmt.sh* script (
+`Example 16-47 <mathc.html#MONTHLYPMT>`__ ).
+
+Florian Wisser enlightened me on some of the fine points of testing
+strings (see `Example 7-6 <comparison-ops.html#STRTEST>`__ ), and on
+other matters.
+
+Oleg Philon sent suggestions concerning `cut <textproc.html#CUTREF>`__
+and `pidof <system.html#PIDOFREF>`__ .
+
+Michael Zick extended the `empty array <arrays.html#EMPTYARRAY>`__
+example to demonstrate some surprising array properties. He also
+contributed the *isspammer* scripts ( `Example
+16-41 <communications.html#ISSPAMMER>`__ and `Example
+A-28 <contributed-scripts.html#ISSPAMMER2>`__ ).
+
+Marc-Jano Knopp sent corrections and clarifications on DOS batch files.
+
+Hyun Jin Cha found several typos in the document in the process of doing
+a Korean translation. Thanks for pointing these out.
+
+Andreas Abraham sent in a long list of typographical errors and other
+corrections. Special thanks!
+
+Others contributing scripts, making helpful suggestions, and pointing
+out errors were Gabor Kiss, Leopold Toetsch, Peter Tillier, Marcus
+Berglof, Tony Richardson, Nick Drage (script ideas!), Rich Bartell, Jess
+Thrysoee, Adam Lazur, Bram Moolenaar, Baris Cicek, Greg Keraunen, Keith
+Matthews, Sandro Magi, Albert Reiner, Dim Segebart, Rory Winston, Lee
+Bigelow, Wayne Pollock, "jipe," "bojster," "nyal," "Hobbit," "Ender,"
+"Little Monster" (Alexis), "Mark," "Patsie," "vladz," Peggy Russell,
+Emilio Conti, Ian. D. Allen, Hans-Joerg Diers, Arun Giridhar, Dennis
+Leeuw, Dan Jacobson, Aurelio Marinho Jargas, Edward Scholtz, Jean Helou,
+Chris Martin, Lee Maschmeyer, Bruno Haible, Wilbert Berendsen, Sebastien
+Godard, Bjön Eriksson, John MacDonald, John Lange, Joshua Tschida, Troy
+Engel, Manfred Schwarb, Amit Singh, Bill Gradwohl, E. Choroba, David
+Lombard, Jason Parker, Steve Parker, Bruce W. Clare, William Park,
+Vernia Damiano, Mihai Maties, Mark Alexander, Jeremy Impson, Ken Fuchs,
+Jared Martin, Frank Wang, Sylvain Fourmanoit, Matthew Sage, Matthew
+Walker, Kenny Stauffer, Filip Moritz, Andrzej Stefanski, Daniel Albers,
+Jeffrey Haemer, Stefano Palmeri, Nils Radtke, Sigurd Solaas, Serghey
+Rodin, Jeroen Domburg, Alfredo Pironti, Phil Braham, Bruno de Oliveira
+Schneider, Stefano Falsetto, Chris Morgan, Walter Dnes, Linc Fessenden,
+Michael Iatrou, Pharis Monalo, Jesse Gough, Fabian Kreutz, Mark Norman,
+Harald Koenig, Dan Stromberg, Peter Knowles, Francisco Lobo, Mariusz
+Gniazdowski, Sebastian Arming, Chetankumar Phulpagare, Benno
+Schulenberg, Tedman Eng, Jochen DeSmet, Juan Nicolas Ruiz, Oliver
+Beckstein, Achmed Darwish, Dotan Barak, Richard Neill, Albert Siersema,
+Omair Eshkenazi, Geoff Lee, Graham Ewart, JuanJo Ciarlante, Cliff
+Bamford, Nathan Coulter, Ramses Rodriguez Martinez, Evgeniy Ivanov,
+Craig Barnes, George Dimitriu, Kevin LeBlanc, Antonio Macchi, Tomas
+Pospisek, David Wheeler, Erik Brandsberg, YongYe, Andreas Kühne, Pádraig
+Brady, Joseph Steinhauser, and David Lawyer (himself an author of four
+HOWTOs).
+
+My gratitude to `Chet Ramey <mailto:chet@po.cwru.edu>`__ and Brian Fox
+for writing *Bash* , and building into it elegant and powerful scripting
+capabilities rivaling those of *ksh* .
+
+Very special thanks to the hard-working volunteers at the `Linux
+Documentation Project <http://www.tldp.org>`__ . The LDP hosts a
+repository of Linux knowledge and lore, and has, to a great extent,
+enabled the publication of this book.
+
+Thanks and appreciation to IBM, Red Hat, Google, the `Free Software
+Foundation <http://www.fsf.org>`__ , and all the good people fighting
+the good fight to keep Open Source software free and open.
+
+Belated thanks to my fourth grade teacher, Miss Spencer, for emotional
+support and for convincing me that maybe, just maybe I wasn't a total
+loss.
+
+Thanks most of all to my wife, Anita, for her encouragement,
+inspiration, and emotional support.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
+--------------
+
++--------------------------+--------------------------+--------------------------+
+| `Prev <toolsused.html>`_ | Tools Used to Produce    |
+| _                        | This Book                |
+| `Home <index.html>`__    | `Up <endnotes.html>`__   |
+| `Next <disclaimer.html>` | Disclaimer               |
+| __                       |                          |
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
