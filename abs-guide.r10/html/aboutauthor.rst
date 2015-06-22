@@ -1,18 +1,85 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <authorsnote.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 38. Endnotes
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <wherehelp.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 38.2. About the Author
 ======================
 
 Who is this guy anyhow?
-
 The author claims no credentials or special qualifications,
 `[1] <aboutauthor.html#FTN.AEN21292>`__ other than a compulsion to
 write. `[2] <aboutauthor.html#FTN.AEN21295>`__
@@ -60,6 +127,10 @@ Living in an out-of-the-way community with wife and orange tabby, he
 cherishes human frailty, especially his own.
 `[3] <aboutauthor.html#FTN.AEN21318>`__
 
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
@@ -77,6 +148,10 @@ Notes
 | 1958.                                |                                      |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -86,4 +161,8 @@ Notes
 | `Next <wherehelp.html>`_ |                          |
 | _                        |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

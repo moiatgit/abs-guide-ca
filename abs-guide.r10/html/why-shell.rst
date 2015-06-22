@@ -1,31 +1,103 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <part1.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
+
 `Next <sha-bang.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="CHAPTER">
 
 Chapter 1. Shell Programming!
 =============================
 
-+--------------------+--------------------+--------------------+--------------------+
-|                    |
-| **                 |
-| *No programming    |
-| language is        |
-| perfect. There is  |
-| not even a single  |
-| best language;     |
-| there are only     |
-| languages well     |
-| suited or perhaps  |
-| poorly suited for  |
-| particular         |
-| purposes.*         |
-|                    |
-| *--Herbert Mayer*  |
-+--------------------+--------------------+--------------------+--------------------+
++----------------+----------------+----------------+----------------+----------------+
+|                |
+| **             |
+| *No            |
+| programming    |
+| language is    |
+| perfect. There |
+| is not even a  |
+| single best    |
+| language;      |
+| there are only |
+| languages well |
+| suited or      |
+| perhaps poorly |
+| suited for     |
+| particular     |
+| purposes.*     |
+|                |
+| *--Herbert     |
+| Mayer*         |
++----------------+----------------+----------------+----------------+----------------+
 
 A working knowledge of shell scripting is essential to anyone wishing to
 become reasonably proficient at system administration, even if they do
@@ -60,6 +132,10 @@ straightforward.
     |      fascinating devices.
     |              
 
+.. raw:: html
+
+   </p>
+
 A shell script is a quick-and-dirty method of prototyping a complex
 application. Getting even a limited subset of the functionality to work
 in a script is often a useful first stage in project development. In
@@ -80,255 +156,67 @@ language needs arrays, pointers, and a generic mechanism for building
 data structures." By these criteria, shell scripting falls somewhat
 short of being "useful." Or, perhaps not. . . .
 
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| When not to  |
-| use shell    |
-| scripts      |
-|              |
-| -  Resource- |
-| intensive    |
-|    tasks,    |
-|    especiall |
-| y            |
-|    where     |
-|    speed is  |
-|    a factor  |
-|    (sorting, |
-|    hashing,  |
-|    recursion |
-|    `[2] <why |
-| -shell.html# |
-| FTN.AEN87>`_ |
-| _            |
-|    ...)      |
-|              |
-| -  Procedure |
-| s            |
-|    involving |
-|    heavy-dut |
-| y            |
-|    math      |
-|    operation |
-| s,           |
-|    especiall |
-| y            |
-|    floating  |
-|    point     |
-|    arithmeti |
-| c,           |
-|    arbitrary |
-|    precision |
-|    calculati |
-| ons,         |
-|    or        |
-|    complex   |
-|    numbers   |
-|    (use      |
-|    *C++* or  |
-|    *FORTRAN* |
-|    instead)  |
-|              |
-| -  Cross-pla |
-| tform        |
-|    portabili |
-| ty           |
-|    required  |
-|    (use *C*  |
-|    or *Java* |
-|    instead)  |
-|              |
-| -  Complex   |
-|    applicati |
-| ons,         |
-|    where     |
-|    structure |
-| d            |
-|    programmi |
-| ng           |
-|    is a      |
-|    necessity |
-|    (type-che |
-| cking        |
-|    of        |
-|    variables |
-| ,            |
-|    function  |
-|    prototype |
-| s,           |
-|    etc.)     |
-|              |
-| -  Mission-c |
-| ritical      |
-|    applicati |
-| ons          |
-|    upon      |
-|    which you |
-|    are       |
-|    betting   |
-|    the       |
-|    future of |
-|    the       |
-|    company   |
-|              |
-| -  Situation |
-| s            |
-|    where     |
-|    *security |
-| *            |
-|    is        |
-|    important |
-| ,            |
-|    where you |
-|    need to   |
-|    guarantee |
-|    the       |
-|    integrity |
-|    of your   |
-|    system    |
-|    and       |
-|    protect   |
-|    against   |
-|    intrusion |
-| ,            |
-|    cracking, |
-|    and       |
-|    vandalism |
-|              |
-| -  Project   |
-|    consists  |
-|    of        |
-|    subcompon |
-| ents         |
-|    with      |
-|    interlock |
-| ing          |
-|    dependenc |
-| ies          |
-|              |
-| -  Extensive |
-|    file      |
-|    operation |
-| s            |
-|    required  |
-|    (*Bash*   |
-|    is        |
-|    limited   |
-|    to serial |
-|    file      |
-|    access,   |
-|    and that  |
-|    only in a |
-|    particula |
-| rly          |
-|    clumsy    |
-|    and       |
-|    inefficie |
-| nt           |
-|    line-by-l |
-| ine          |
-|    fashion.) |
-|              |
-| -  Need      |
-|    native    |
-|    support   |
-|    for       |
-|    multi-dim |
-| ensional     |
-|    arrays    |
-|              |
-| -  Need data |
-|    structure |
-| s,           |
-|    such as   |
-|    linked    |
-|    lists or  |
-|    trees     |
-|              |
-| -  Need to   |
-|    generate  |
-|    /         |
-|    manipulat |
-| e            |
-|    graphics  |
-|    or GUIs   |
-|              |
-| -  Need      |
-|    direct    |
-|    access to |
-|    system    |
-|    hardware  |
-|    or        |
-|    external  |
-|    periphera |
-| ls           |
-|              |
-| -  Need port |
-|    or        |
-|    `socket < |
-| devref1.html |
-| #SOCKETREF>` |
-| __           |
-|    I/O       |
-|              |
-| -  Need to   |
-|    use       |
-|    libraries |
-|    or        |
-|    interface |
-|    with      |
-|    legacy    |
-|    code      |
-|              |
-| -  Proprieta |
-| ry,          |
-|    closed-so |
-| urce         |
-|    applicati |
-| ons          |
-|    (Shell    |
-|    scripts   |
-|    put the   |
-|    source    |
-|    code      |
-|    right out |
-|    in the    |
-|    open for  |
-|    all the   |
-|    world to  |
-|    see.)     |
-|              |
-| If any of    |
-| the above    |
-| applies,     |
-| consider a   |
-| more         |
-| powerful     |
-| scripting    |
-| language --  |
-| perhaps      |
-| *Perl*,      |
-| *Tcl*,       |
-| *Python*,    |
-| *Ruby* -- or |
-| possibly a   |
-| compiled     |
-| language     |
-| such as *C*, |
-| *C++*, or    |
-| *Java*. Even |
-| then,        |
-| prototyping  |
-| the          |
-| application  |
-| as a shell   |
-| script might |
-| still be a   |
-| useful       |
-| development  |
-| step.        |
-|              |
-              
-+--------------+--------------+--------------+--------------+--------------+--------------+
++--------------------------------------------------------------------------+
+| .. raw:: html                                                            |
+|                                                                          |
+|    <div class="SIDEBAR">                                                 |
+|                                                                          |
+| When not to use shell scripts                                            |
+|                                                                          |
+| -  Resource-intensive tasks, especially where speed is a factor          |
+|    (sorting, hashing, recursion `[2] <why-shell.html#FTN.AEN87>`__ ...)  |
+|                                                                          |
+| -  Procedures involving heavy-duty math operations, especially floating  |
+|    point arithmetic, arbitrary precision calculations, or complex        |
+|    numbers (use *C++* or *FORTRAN* instead)                              |
+|                                                                          |
+| -  Cross-platform portability required (use *C* or *Java* instead)       |
+|                                                                          |
+| -  Complex applications, where structured programming is a necessity     |
+|    (type-checking of variables, function prototypes, etc.)               |
+|                                                                          |
+| -  Mission-critical applications upon which you are betting the future   |
+|    of the company                                                        |
+|                                                                          |
+| -  Situations where *security* is important, where you need to guarantee |
+|    the integrity of your system and protect against intrusion, cracking, |
+|    and vandalism                                                         |
+|                                                                          |
+| -  Project consists of subcomponents with interlocking dependencies      |
+|                                                                          |
+| -  Extensive file operations required (*Bash* is limited to serial file  |
+|    access, and that only in a particularly clumsy and inefficient        |
+|    line-by-line fashion.)                                                |
+|                                                                          |
+| -  Need native support for multi-dimensional arrays                      |
+|                                                                          |
+| -  Need data structures, such as linked lists or trees                   |
+|                                                                          |
+| -  Need to generate / manipulate graphics or GUIs                        |
+|                                                                          |
+| -  Need direct access to system hardware or external peripherals         |
+|                                                                          |
+| -  Need port or `socket <devref1.html#SOCKETREF>`__ I/O                  |
+|                                                                          |
+| -  Need to use libraries or interface with legacy code                   |
+|                                                                          |
+| -  Proprietary, closed-source applications (Shell scripts put the source |
+|    code right out in the open for all the world to see.)                 |
+|                                                                          |
+| .. raw:: html                                                            |
+|                                                                          |
+|    </p>                                                                  |
+|                                                                          |
+| If any of the above applies, consider a more powerful scripting language |
+| -- perhaps *Perl*, *Tcl*, *Python*, *Ruby* -- or possibly a compiled     |
+| language such as *C*, *C++*, or *Java*. Even then, prototyping the       |
+| application as a shell script might still be a useful development step.  |
+|                                                                          |
+| .. raw:: html                                                            |
+|                                                                          |
+|    </div>                                                                |
+                                                                          
++--------------------------------------------------------------------------+
 
 We will be using Bash, an acronym `[3] <why-shell.html#FTN.AEN139>`__
 for "Bourne-Again shell" and a pun on Stephen Bourne's now classic
@@ -361,15 +249,21 @@ for enlightenment.
 Unless otherwise noted, `the author <mailto:thegrendel.abs@gmail.com>`__
 of this book wrote the example scripts that follow.
 
-+--------------------+--------------------+--------------------+--------------------+
-|                    |
-| **                 |
-| *His countenance   |
-| was bold and       |
-| bashed not.*       |
-|                    |
-| *--Edmund Spenser* |
-+--------------------+--------------------+--------------------+--------------------+
++----------------+----------------+----------------+----------------+----------------+
+|                |
+| **             |
+| *His           |
+| countenance    |
+| was bold and   |
+| bashed not.*   |
+|                |
+| *--Edmund      |
+| Spenser*       |
++----------------+----------------+----------------+----------------+----------------+
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -386,6 +280,10 @@ Notes
 |                                      | __.                                  |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -394,4 +292,8 @@ Notes
 | `Next <sha-bang.html>`__ | Starting Off With a      |
 |                          | Sha-Bang                 |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

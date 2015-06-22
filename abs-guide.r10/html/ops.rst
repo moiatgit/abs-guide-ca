@@ -1,15 +1,87 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <operations.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 8. Operations and Related Topics
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <numerical-constants.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 8.1. Operators
 ==============
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **assignment**
 
@@ -20,101 +92,108 @@ Chapter 8. Operations and Related Topics
     All-purpose assignment operator, which works for both arithmetic and
     string assignments.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     var=27                                                               |
-    |     category=minerals  # No spaces allowed after the "=".                |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     var=27               |
+    |     category=minerals  # |
+    |  No spaces allowed after |
+    |  the "=".                |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Caution|          |
-    | Do not confuse the |
-    | "=" assignment     |
-    | operator with the  |
-    | `= test            |
-    | operator <comparis |
-    | on-ops.html#EQUALS |
-    | IGNREF>`__.        |
-    |                    |
-    | +----------------- |
-    | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
-    | | .. code:: PROGRA |
-    | MLISTING           |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     #   =  as a  |
-    | test operator      |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     if [ "$strin |
-    | g1" = "$string2" ] |
-    |                    |
-    |                    |
-    |    |               |
-    | |     then         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |        command   |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     fi           |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     #  if [ "X$s |
-    | tring1" = "X$strin |
-    | g2" ] is safer,    |
-    |                    |
-    |    |               |
-    | |     #+ to preven |
-    | t an error message |
-    |  should one of the |
-    |  variables be empt |
-    | y. |               |
-    | |     #  (The prep |
-    | ended "X" characte |
-    | rs cancel out.)    |
-    |                    |
-    |    |               |
-    |                    |
-    |                    |
-    |                    |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="CAUTION">
+
+    +----------------+----------------+----------------+----------------+----------------+
+    | |Caution|      |
+    | Do not confuse |
+    | the "="        |
+    | assignment     |
+    | operator with  |
+    | the `= test    |
+    | operator <comp |
+    | arison-ops.htm |
+    | l#EQUALSIGNREF |
+    | >`__.          |
+    |                |
+    | +------------- |
+    | -------------+ |
+    | -------------- |
+    | ------------+- |
+    | -------------- |
+    | -----------+   |
+    | | .. code:: PR |
+    | OGRAMLISTING | |
+    | |              |
+    |              | |
+    | |     #   =  a |
+    | s a test ope | |
+    | | rator        |
+    |              | |
+    | |              |
+    |              | |
+    | |     if [ "$s |
+    | tring1" = "$ | |
+    | | string2" ]   |
+    |              | |
+    | |     then     |
+    |              | |
+    | |        comma |
+    | nd           | |
+    | |     fi       |
+    |              | |
+    | |              |
+    |              | |
+    | |     #  if [  |
+    | "X$string1"  | |
+    | | = "X$string2 |
+    | " ] is safer | |
+    | | ,            |
+    |              | |
+    | |     #+ to pr |
+    | event an err | |
+    | | or message s |
+    | hould one of | |
+    | |  the variabl |
+    | es be empty. | |
+    | |     #  (The  |
+    | prepended "X | |
+    | | " characters |
+    |  cancel out. | |
+    | | )            |
+    |              | |
+    |                |
+    |                |
+    | +------------- |
+    | -------------+ |
+    | -------------- |
+    | ------------+- |
+    | -------------- |
+    | -----------+   |
+    |                |
+    | .. raw:: html  |
+    |                |
+    |    </p>        |
+                    
+    +----------------+----------------+----------------+----------------+----------------+
+
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **arithmetic operators**
 
@@ -133,30 +212,42 @@ Chapter 8. Operations and Related Topics
 \*\*
     exponentiation
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     # Bash, version 2.02, introduced the "**" exponentiation operator.   |
-    |                                                                          |
-    |     let "z=5**3"    # 5 * 5 * 5                                          |
-    |     echo "z = $z"   # z = 125                                            |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     # Bash, version 2.02 |
+    | , introduced the "**" ex |
+    | ponentiation operator.   |
+    |                          |
+    |     let "z=5**3"    # 5  |
+    | * 5 * 5                  |
+    |     echo "z = $z"   # z  |
+    | = 125                    |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 %
     modulo, or mod (returns the *remainder* of an integer division
     operation)
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ expr 5 % 3                                                     |
-    |     2                                                                    |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ expr 5 % 3     |
+    |     2                    |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
     *5/3 = 1, with remainder 2*
+
+    .. raw:: html
+
+       </p>
 
     This operator finds use in, among other things, generating numbers
     within a specific range (see `Example 9-11 <randomvar.html#EX21>`__
@@ -167,80 +258,139 @@ Chapter 8. Operations and Related Topics
     A-15 <contributed-scripts.html#PRIMES>`__). Modulo turns up
     surprisingly often in numerical recipes.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 8-1. Greatest common divisor**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # gcd.sh: greatest common divisor                                    |
-    |     #         Uses Euclid's algorithm                                    |
-    |                                                                          |
-    |     #  The "greatest common divisor" (gcd) of two integers               |
-    |     #+ is the largest integer that will divide both, leaving no remainde |
-    | r.                                                                       |
-    |                                                                          |
-    |     #  Euclid's algorithm uses successive division.                      |
-    |     #    In each pass,                                                   |
-    |     #+      dividend <---  divisor                                       |
-    |     #+      divisor  <---  remainder                                     |
-    |     #+   until remainder = 0.                                            |
-    |     #    The gcd = dividend, on the final pass.                          |
-    |     #                                                                    |
-    |     #  For an excellent discussion of Euclid's algorithm, see            |
-    |     #+ Jim Loy's site, http://www.jimloy.com/number/euclids.htm.         |
-    |                                                                          |
-    |                                                                          |
-    |     # ------------------------------------------------------             |
-    |     # Argument check                                                     |
-    |     ARGS=2                                                               |
-    |     E_BADARGS=85                                                         |
-    |                                                                          |
-    |     if [ $# -ne "$ARGS" ]                                                |
-    |     then                                                                 |
-    |       echo "Usage: `basename $0` first-number second-number"             |
-    |       exit $E_BADARGS                                                    |
-    |     fi                                                                   |
-    |     # ------------------------------------------------------             |
-    |                                                                          |
-    |                                                                          |
-    |     gcd ()                                                               |
-    |     {                                                                    |
-    |                                                                          |
-    |       dividend=$1             #  Arbitrary assignment.                   |
-    |       divisor=$2              #! It doesn't matter which of the two is l |
-    | arger.                                                                   |
-    |                               #  Why not?                                |
-    |                                                                          |
-    |       remainder=1             #  If an uninitialized variable is used in |
-    | side                                                                     |
-    |                               #+ test brackets, an error message results |
-    | .                                                                        |
-    |                                                                          |
-    |       until [ "$remainder" -eq 0 ]                                       |
-    |       do    #  ^^^^^^^^^^  Must be previously initialized!               |
-    |         let "remainder = $dividend % $divisor"                           |
-    |         dividend=$divisor     # Now repeat with 2 smallest numbers.      |
-    |         divisor=$remainder                                               |
-    |       done                    # Euclid's algorithm                       |
-    |                                                                          |
-    |     }                         # Last $dividend is the gcd.               |
-    |                                                                          |
-    |                                                                          |
-    |     gcd $1 $2                                                            |
-    |                                                                          |
-    |     echo; echo "GCD of $1 and $2 = $dividend"; echo                      |
-    |                                                                          |
-    |                                                                          |
-    |     # Exercises :                                                        |
-    |     # ---------                                                          |
-    |     # 1) Check command-line arguments to make sure they are integers,    |
-    |     #+   and exit the script with an appropriate error message if not.   |
-    |     # 2) Rewrite the gcd () function to use local variables.             |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # gcd.sh: greatest c |
+    | ommon divisor            |
+    |     #         Uses Eucli |
+    | d's algorithm            |
+    |                          |
+    |     #  The "greatest com |
+    | mon divisor" (gcd) of tw |
+    | o integers               |
+    |     #+ is the largest in |
+    | teger that will divide b |
+    | oth, leaving no remainde |
+    | r.                       |
+    |                          |
+    |     #  Euclid's algorith |
+    | m uses successive divisi |
+    | on.                      |
+    |     #    In each pass,   |
+    |     #+      dividend <-- |
+    | -  divisor               |
+    |     #+      divisor  <-- |
+    | -  remainder             |
+    |     #+   until remainder |
+    |  = 0.                    |
+    |     #    The gcd = divid |
+    | end, on the final pass.  |
+    |     #                    |
+    |     #  For an excellent  |
+    | discussion of Euclid's a |
+    | lgorithm, see            |
+    |     #+ Jim Loy's site, h |
+    | ttp://www.jimloy.com/num |
+    | ber/euclids.htm.         |
+    |                          |
+    |                          |
+    |     # ------------------ |
+    | ------------------------ |
+    | ------------             |
+    |     # Argument check     |
+    |     ARGS=2               |
+    |     E_BADARGS=85         |
+    |                          |
+    |     if [ $# -ne "$ARGS"  |
+    | ]                        |
+    |     then                 |
+    |       echo "Usage: `base |
+    | name $0` first-number se |
+    | cond-number"             |
+    |       exit $E_BADARGS    |
+    |     fi                   |
+    |     # ------------------ |
+    | ------------------------ |
+    | ------------             |
+    |                          |
+    |                          |
+    |     gcd ()               |
+    |     {                    |
+    |                          |
+    |       dividend=$1        |
+    |       #  Arbitrary assig |
+    | nment.                   |
+    |       divisor=$2         |
+    |       #! It doesn't matt |
+    | er which of the two is l |
+    | arger.                   |
+    |                          |
+    |       #  Why not?        |
+    |                          |
+    |       remainder=1        |
+    |       #  If an uninitial |
+    | ized variable is used in |
+    | side                     |
+    |                          |
+    |       #+ test brackets,  |
+    | an error message results |
+    | .                        |
+    |                          |
+    |       until [ "$remainde |
+    | r" -eq 0 ]               |
+    |       do    #  ^^^^^^^^^ |
+    | ^  Must be previously in |
+    | itialized!               |
+    |         let "remainder = |
+    |  $dividend % $divisor"   |
+    |         dividend=$diviso |
+    | r     # Now repeat with  |
+    | 2 smallest numbers.      |
+    |         divisor=$remaind |
+    | er                       |
+    |       done               |
+    |       # Euclid's algorit |
+    | hm                       |
+    |                          |
+    |     }                    |
+    |       # Last $dividend i |
+    | s the gcd.               |
+    |                          |
+    |                          |
+    |     gcd $1 $2            |
+    |                          |
+    |     echo; echo "GCD of $ |
+    | 1 and $2 = $dividend"; e |
+    | cho                      |
+    |                          |
+    |                          |
+    |     # Exercises :        |
+    |     # ---------          |
+    |     # 1) Check command-l |
+    | ine arguments to make su |
+    | re they are integers,    |
+    |     #+   and exit the sc |
+    | ript with an appropriate |
+    |  error message if not.   |
+    |     # 2) Rewrite the gcd |
+    |  () function to use loca |
+    | l variables.             |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
 +=
     *plus-equal* (increment variable by a constant)
@@ -266,312 +416,368 @@ Chapter 8. Operations and Related Topics
     `expr <moreadv.html#EXPRREF>`__ or `let <internal.html#LETREF>`__
     expression.*
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 8-2. Using Arithmetic Operations**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # Counting to 11 in 10 different ways.                               |
-    |                                                                          |
-    |     n=1; echo -n "$n "                                                   |
-    |                                                                          |
-    |     let "n = $n + 1"   # let "n = n + 1"  also works.                    |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |                                                                          |
-    |     : $((n = $n + 1))                                                    |
-    |     #  ":" necessary because otherwise Bash attempts                     |
-    |     #+ to interpret "$((n = $n + 1))" as a command.                      |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     (( n = n + 1 ))                                                      |
-    |     #  A simpler alternative to the method above.                        |
-    |     #  Thanks, David Lombard, for pointing this out.                     |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     n=$(($n + 1))                                                        |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     : $[ n = $n + 1 ]                                                    |
-    |     #  ":" necessary because otherwise Bash attempts                     |
-    |     #+ to interpret "$[ n = $n + 1 ]" as a command.                      |
-    |     #  Works even if "n" was initialized as a string.                    |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     n=$[ $n + 1 ]                                                        |
-    |     #  Works even if "n" was initialized as a string.                    |
-    |     #* Avoid this type of construct, since it is obsolete and nonportabl |
-    | e.                                                                       |
-    |     #  Thanks, Stephane Chazelas.                                        |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     # Now for C-style increment operators.                               |
-    |     # Thanks, Frank Wang, for pointing this out.                         |
-    |                                                                          |
-    |     let "n++"          # let "++n"  also works.                          |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     (( n++ ))          # (( ++n ))  also works.                          |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     : $(( n++ ))       # : $(( ++n )) also works.                        |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     : $[ n++ ]         # : $[ ++n ] also works                           |
-    |     echo -n "$n "                                                        |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # Counting to 11 in  |
+    | 10 different ways.       |
+    |                          |
+    |     n=1; echo -n "$n "   |
+    |                          |
+    |     let "n = $n + 1"   # |
+    |  let "n = n + 1"  also w |
+    | orks.                    |
+    |     echo -n "$n "        |
+    |                          |
+    |                          |
+    |     : $((n = $n + 1))    |
+    |     #  ":" necessary bec |
+    | ause otherwise Bash atte |
+    | mpts                     |
+    |     #+ to interpret "$(( |
+    | n = $n + 1))" as a comma |
+    | nd.                      |
+    |     echo -n "$n "        |
+    |                          |
+    |     (( n = n + 1 ))      |
+    |     #  A simpler alterna |
+    | tive to the method above |
+    | .                        |
+    |     #  Thanks, David Lom |
+    | bard, for pointing this  |
+    | out.                     |
+    |     echo -n "$n "        |
+    |                          |
+    |     n=$(($n + 1))        |
+    |     echo -n "$n "        |
+    |                          |
+    |     : $[ n = $n + 1 ]    |
+    |     #  ":" necessary bec |
+    | ause otherwise Bash atte |
+    | mpts                     |
+    |     #+ to interpret "$[  |
+    | n = $n + 1 ]" as a comma |
+    | nd.                      |
+    |     #  Works even if "n" |
+    |  was initialized as a st |
+    | ring.                    |
+    |     echo -n "$n "        |
+    |                          |
+    |     n=$[ $n + 1 ]        |
+    |     #  Works even if "n" |
+    |  was initialized as a st |
+    | ring.                    |
+    |     #* Avoid this type o |
+    | f construct, since it is |
+    |  obsolete and nonportabl |
+    | e.                       |
+    |     #  Thanks, Stephane  |
+    | Chazelas.                |
+    |     echo -n "$n "        |
+    |                          |
+    |     # Now for C-style in |
+    | crement operators.       |
+    |     # Thanks, Frank Wang |
+    | , for pointing this out. |
+    |                          |
+    |     let "n++"          # |
+    |  let "++n"  also works.  |
+    |     echo -n "$n "        |
+    |                          |
+    |     (( n++ ))          # |
+    |  (( ++n ))  also works.  |
+    |     echo -n "$n "        |
+    |                          |
+    |     : $(( n++ ))       # |
+    |  : $(( ++n )) also works |
+    | .                        |
+    |     echo -n "$n "        |
+    |                          |
+    |     : $[ n++ ]         # |
+    |  : $[ ++n ] also works   |
+    |     echo -n "$n "        |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-+----------------+----------------+----------------+----------------+----------------+
-| |Note|         |
-| Integer        |
-| variables in   |
-| older versions |
-| of Bash were   |
-| signed *long*  |
-| (32-bit)       |
-| integers, in   |
-| the range of   |
-| -2147483648 to |
-| 2147483647. An |
-| operation that |
-| took a         |
-| variable       |
-| outside these  |
-| limits gave an |
-| erroneous      |
-| result.        |
-|                |
-| +------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -----+         |
-| | .. code:: PR |
-| OGRAMLISTING   |
-|                |
-|                |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     echo $BA |
-| SH_VERSION   # |
-|  1.14          |
-|                |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     a=214748 |
-| 3646           |
-|                |
-|                |
-|                |
-|      |         |
-| |     echo "a  |
-| = $a"        # |
-|  a = 214748364 |
-| 6              |
-|                |
-|      |         |
-| |     let "a+= |
-| 1"           # |
-|  Increment "a" |
-| .              |
-|                |
-|      |         |
-| |     echo "a  |
-| = $a"        # |
-|  a = 214748364 |
-| 7              |
-|                |
-|      |         |
-| |     let "a+= |
-| 1"           # |
-|  increment "a" |
-|  again, past t |
-| he limit.      |
-|      |         |
-| |     echo "a  |
-| = $a"        # |
-|  a = -21474836 |
-| 48             |
-|                |
-|      |         |
-| |              |
-|              # |
-|       ERROR: o |
-| ut of range,   |
-|                |
-|      |         |
-| |              |
-|              # |
-|  +    and the  |
-| leftmost bit,  |
-| the sign bit,  |
-|      |         |
-| |              |
-|              # |
-|  +    has been |
-|  set, making t |
-| he result nega |
-| tive |         |
-| | .            |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-|                |
-|                |
-|                |
-|                |
-|                |
-|                |
-| +------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -----+         |
-|                |
-| As of version  |
-| >= 2.05b, Bash |
-| supports       |
-| 64-bit         |
-| integers.      |
-+----------------+----------------+----------------+----------------+----------------+
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NOTE">
 
 +--------------+--------------+--------------+--------------+--------------+--------------+
-| |Caution|    |
-|              |
-| Bash does    |
-| not          |
-| understand   |
-| floating     |
-| point        |
-| arithmetic.  |
-| It treats    |
-| numbers      |
-| containing a |
-| decimal      |
-| point as     |
-| strings.     |
+| |Note|       |
+| Integer      |
+| variables in |
+| older        |
+| versions of  |
+| Bash were    |
+| signed       |
+| *long*       |
+| (32-bit)     |
+| integers, in |
+| the range of |
+| -2147483648  |
+| to           |
+| 2147483647.  |
+| An operation |
+| that took a  |
+| variable     |
+| outside      |
+| these limits |
+| gave an      |
+| erroneous    |
+| result.      |
 |              |
 | +----------- |
 | ------------ |
+| ---+-------- |
 | ------------ |
+| ------+----- |
 | ------------ |
-| ------------ |
-| ------------ |
-| ---+         |
+| ---------+   |
 | | .. code::  |
 | PROGRAMLISTI |
-| NG           |
+| NG |         |
+| |            |
 |              |
-|              |
+|    |         |
+| |     echo $ |
+| BASH_VERSION |
+|    |         |
+| |  # 1.14    |
 |              |
 |    |         |
 | |            |
 |              |
-|              |
-|              |
-|              |
-|              |
 |    |         |
-| |     a=1.5  |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     let "b |
-|  = $a + 1.3" |
-|   # Error.   |
-|              |
-|              |
-|              |
-|    |         |
-| |     # t2.s |
-| h: let: b =  |
-| 1.5 + 1.3: s |
-| yntax error  |
-| in expressio |
-| n            |
-|    |         |
-| |     #      |
-|              |
-|            ( |
-| error token  |
-| is ".5 + 1.3 |
-| ")           |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
+| |     a=2147 |
+| 483646       |
 |    |         |
 | |     echo " |
-| b = $b"      |
-|   # b=1      |
-|              |
-|              |
+| a = $a"      |
+|    |         |
+| |  # a = 214 |
+| 7483646      |
+|    |         |
+| |     let "a |
+| +=1"         |
+|    |         |
+| |  # Increme |
+| nt "a".      |
+|    |         |
+| |     echo " |
+| a = $a"      |
+|    |         |
+| |  # a = 214 |
+| 7483647      |
+|    |         |
+| |     let "a |
+| +=1"         |
+|    |         |
+| |  # increme |
+| nt "a" again |
+| ,  |         |
+| | past the l |
+| imit.        |
+|    |         |
+| |     echo " |
+| a = $a"      |
+|    |         |
+| |  # a = -21 |
+| 47483648     |
+|    |         |
+| |            |
 |              |
 |    |         |
+| |  #      ER |
+| ROR: out of  |
+| ra |         |
+| | nge,       |
 |              |
+|    |         |
+| |            |
 |              |
+|    |         |
+| |  # +    an |
+| d the leftmo |
+| st |         |
+| |  bit, the  |
+| sign bit,    |
+|    |         |
+| |            |
 |              |
+|    |         |
+| |  # +    ha |
+| s been set,  |
+| ma |         |
+| | king the r |
+| esult negati |
+| ve |         |
+| | .          |
 |              |
+|    |         |
 |              |
 |              |
 |              |
 | +----------- |
 | ------------ |
+| ---+-------- |
 | ------------ |
+| ------+----- |
 | ------------ |
-| ------------ |
-| ------------ |
-| ---+         |
+| ---------+   |
 |              |
-| Use          |
-| `bc <mathc.h |
-| tml#BCREF>`_ |
-| _            |
-| in scripts   |
-| that that    |
-| need         |
-| floating     |
-| point        |
-| calculations |
-| or math      |
-| library      |
-| functions.   |
+| .. raw:: htm |
+| l            |
+|              |
+|    </p>      |
+|              |
+| As of        |
+| version >=   |
+| 2.05b, Bash  |
+| supports     |
+| 64-bit       |
+| integers.    |
 +--------------+--------------+--------------+--------------+--------------+--------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="CAUTION">
+
++------------+------------+------------+------------+------------+------------+------------+
+| |Caution|  |
+|            |
+| Bash does  |
+| not        |
+| understand |
+| floating   |
+| point      |
+| arithmetic |
+| .          |
+| It treats  |
+| numbers    |
+| containing |
+| a decimal  |
+| point as   |
+| strings.   |
+|            |
+| +--------- |
+| ---------- |
+| -------+-- |
+| ---------- |
+| ---------- |
+| ----+----- |
+| ---------- |
+| ---------- |
+| -+         |
+| | .. code: |
+| : PROGRAML |
+| ISTING |   |
+| |          |
+|            |
+|        |   |
+| |     a=1. |
+| 5          |
+|        |   |
+| |          |
+|            |
+|        |   |
+| |     let  |
+| "b = $a +  |
+| 1.3"   |   |
+| | # Error. |
+|            |
+|        |   |
+| |     # t2 |
+| .sh: let:  |
+| b = 1. |   |
+| | 5 + 1.3: |
+|  syntax er |
+| ror in |   |
+| |  express |
+| ion        |
+|        |   |
+| |     #    |
+|            |
+|        |   |
+| |          |
+|  (error to |
+| ken is |   |
+| |  ".5 + 1 |
+| .3")       |
+|        |   |
+| |          |
+|            |
+|        |   |
+| |     echo |
+|  "b = $b"  |
+|        |   |
+| | # b=1    |
+|            |
+|        |   |
+|            |
+|            |
+|            |
+| +--------- |
+| ---------- |
+| -------+-- |
+| ---------- |
+| ---------- |
+| ----+----- |
+| ---------- |
+| ---------- |
+| -+         |
+|            |
+| .. raw:: h |
+| tml        |
+|            |
+|    </p>    |
+|            |
+| Use        |
+| `bc <mathc |
+| .html#BCRE |
+| F>`__      |
+| in scripts |
+| that that  |
+| need       |
+| floating   |
+| point      |
+| calculatio |
+| ns         |
+| or math    |
+| library    |
+| functions. |
++------------+------------+------------+------------+------------+------------+------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="FORMALPARA">
 
 **bitwise operators.** The bitwise operators seldom make an appearance
 in shell scripts. Their chief use seems to be manipulating and testing
@@ -580,6 +786,14 @@ flipping" is more relevant to compiled languages, such as C and C++,
 which provide direct access to system hardware. However, see *vladz's*
 ingenious use of bitwise operators in his *base64.sh* (`Example
 A-54 <contributed-scripts.html#BASE64>`__) script.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **bitwise operators**
 
@@ -619,35 +833,66 @@ A-54 <contributed-scripts.html#BASE64>`__) script.
 ^=
     bitwise *XOR-equal*
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 **logical (boolean) operators**
 
 !
     NOT
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     if [ ! -f $FILENAME ]                                                |
-    |     then                                                                 |
-    |       ...                                                                |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     if [ ! -f $FILENAME  |
+    | ]                        |
+    |     then                 |
+    |       ...                |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 &&
     AND
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     if [ $condition1 ] && [ $condition2 ]                                |
-    |     #  Same as:  if [ $condition1 -a $condition2 ]                       |
-    |     #  Returns true if both condition1 and condition2 hold true...       |
-    |                                                                          |
-    |     if [[ $condition1 && $condition2 ]]    # Also works.                 |
-    |     #  Note that && operator not permitted inside brackets               |
-    |     #+ of [ ... ] construct.                                             |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     if [ $condition1 ] & |
+    | & [ $condition2 ]        |
+    |     #  Same as:  if [ $c |
+    | ondition1 -a $condition2 |
+    |  ]                       |
+    |     #  Returns true if b |
+    | oth condition1 and condi |
+    | tion2 hold true...       |
+    |                          |
+    |     if [[ $condition1 && |
+    |  $condition2 ]]    # Als |
+    | o works.                 |
+    |     #  Note that && oper |
+    | ator not permitted insid |
+    | e brackets               |
+    |     #+ of [ ... ] constr |
+    | uct.                     |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -657,21 +902,43 @@ A-54 <contributed-scripts.html#BASE64>`__) script.
     | to concatenate commands.             |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
 \|\|
     OR
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     if [ $condition1 ] || [ $condition2 ]                                |
-    |     # Same as:  if [ $condition1 -o $condition2 ]                        |
-    |     # Returns true if either condition1 or condition2 holds true...      |
-    |                                                                          |
-    |     if [[ $condition1 || $condition2 ]]    # Also works.                 |
-    |     #  Note that || operator not permitted inside brackets               |
-    |     #+ of a [ ... ] construct.                                           |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     if [ $condition1 ] | |
+    | | [ $condition2 ]        |
+    |     # Same as:  if [ $co |
+    | ndition1 -o $condition2  |
+    | ]                        |
+    |     # Returns true if ei |
+    | ther condition1 or condi |
+    | tion2 holds true...      |
+    |                          |
+    |     if [[ $condition1 || |
+    |  $condition2 ]]    # Als |
+    | o works.                 |
+    |     #  Note that || oper |
+    | ator not permitted insid |
+    | e brackets               |
+    |     #+ of a [ ... ] cons |
+    | truct.                   |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -682,86 +949,145 @@ A-54 <contributed-scripts.html#BASE64>`__) script.
     | logical operator.                    |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 8-3. Compound Condition Tests Using && and \|\|**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     a=24                                                                 |
-    |     b=47                                                                 |
-    |                                                                          |
-    |     if [ "$a" -eq 24 ] && [ "$b" -eq 47 ]                                |
-    |     then                                                                 |
-    |       echo "Test #1 succeeds."                                           |
-    |     else                                                                 |
-    |       echo "Test #1 fails."                                              |
-    |     fi                                                                   |
-    |                                                                          |
-    |     # ERROR:   if [ "$a" -eq 24 && "$b" -eq 47 ]                         |
-    |     #+         attempts to execute  ' [ "$a" -eq 24 '                    |
-    |     #+         and fails to finding matching ']'.                        |
-    |     #                                                                    |
-    |     #  Note:  if [[ $a -eq 24 && $b -eq 24 ]]  works.                    |
-    |     #  The double-bracket if-test is more flexible                       |
-    |     #+ than the single-bracket version.                                  |
-    |     #    (The "&&" has a different meaning in line 17 than in line 6.)   |
-    |     #    Thanks, Stephane Chazelas, for pointing this out.               |
-    |                                                                          |
-    |                                                                          |
-    |     if [ "$a" -eq 98 ] || [ "$b" -eq 47 ]                                |
-    |     then                                                                 |
-    |       echo "Test #2 succeeds."                                           |
-    |     else                                                                 |
-    |       echo "Test #2 fails."                                              |
-    |     fi                                                                   |
-    |                                                                          |
-    |                                                                          |
-    |     #  The -a and -o options provide                                     |
-    |     #+ an alternative compound condition test.                           |
-    |     #  Thanks to Patrick Callahan for pointing this out.                 |
-    |                                                                          |
-    |                                                                          |
-    |     if [ "$a" -eq 24 -a "$b" -eq 47 ]                                    |
-    |     then                                                                 |
-    |       echo "Test #3 succeeds."                                           |
-    |     else                                                                 |
-    |       echo "Test #3 fails."                                              |
-    |     fi                                                                   |
-    |                                                                          |
-    |                                                                          |
-    |     if [ "$a" -eq 98 -o "$b" -eq 47 ]                                    |
-    |     then                                                                 |
-    |       echo "Test #4 succeeds."                                           |
-    |     else                                                                 |
-    |       echo "Test #4 fails."                                              |
-    |     fi                                                                   |
-    |                                                                          |
-    |                                                                          |
-    |     a=rhino                                                              |
-    |     b=crocodile                                                          |
-    |     if [ "$a" = rhino ] && [ "$b" = crocodile ]                          |
-    |     then                                                                 |
-    |       echo "Test #5 succeeds."                                           |
-    |     else                                                                 |
-    |       echo "Test #5 fails."                                              |
-    |     fi                                                                   |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     a=24                 |
+    |     b=47                 |
+    |                          |
+    |     if [ "$a" -eq 24 ] & |
+    | & [ "$b" -eq 47 ]        |
+    |     then                 |
+    |       echo "Test #1 succ |
+    | eeds."                   |
+    |     else                 |
+    |       echo "Test #1 fail |
+    | s."                      |
+    |     fi                   |
+    |                          |
+    |     # ERROR:   if [ "$a" |
+    |  -eq 24 && "$b" -eq 47 ] |
+    |     #+         attempts  |
+    | to execute  ' [ "$a" -eq |
+    |  24 '                    |
+    |     #+         and fails |
+    |  to finding matching ']' |
+    | .                        |
+    |     #                    |
+    |     #  Note:  if [[ $a - |
+    | eq 24 && $b -eq 24 ]]  w |
+    | orks.                    |
+    |     #  The double-bracke |
+    | t if-test is more flexib |
+    | le                       |
+    |     #+ than the single-b |
+    | racket version.          |
+    |     #    (The "&&" has a |
+    |  different meaning in li |
+    | ne 17 than in line 6.)   |
+    |     #    Thanks, Stephan |
+    | e Chazelas, for pointing |
+    |  this out.               |
+    |                          |
+    |                          |
+    |     if [ "$a" -eq 98 ] | |
+    | | [ "$b" -eq 47 ]        |
+    |     then                 |
+    |       echo "Test #2 succ |
+    | eeds."                   |
+    |     else                 |
+    |       echo "Test #2 fail |
+    | s."                      |
+    |     fi                   |
+    |                          |
+    |                          |
+    |     #  The -a and -o opt |
+    | ions provide             |
+    |     #+ an alternative co |
+    | mpound condition test.   |
+    |     #  Thanks to Patrick |
+    |  Callahan for pointing t |
+    | his out.                 |
+    |                          |
+    |                          |
+    |     if [ "$a" -eq 24 -a  |
+    | "$b" -eq 47 ]            |
+    |     then                 |
+    |       echo "Test #3 succ |
+    | eeds."                   |
+    |     else                 |
+    |       echo "Test #3 fail |
+    | s."                      |
+    |     fi                   |
+    |                          |
+    |                          |
+    |     if [ "$a" -eq 98 -o  |
+    | "$b" -eq 47 ]            |
+    |     then                 |
+    |       echo "Test #4 succ |
+    | eeds."                   |
+    |     else                 |
+    |       echo "Test #4 fail |
+    | s."                      |
+    |     fi                   |
+    |                          |
+    |                          |
+    |     a=rhino              |
+    |     b=crocodile          |
+    |     if [ "$a" = rhino ]  |
+    | && [ "$b" = crocodile ]  |
+    |     then                 |
+    |       echo "Test #5 succ |
+    | eeds."                   |
+    |     else                 |
+    |       echo "Test #5 fail |
+    | s."                      |
+    |     fi                   |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     The && and \|\| operators also find use in an arithmetic context.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $(( 1 && 2 )) $((3 && 0)) $((4 || 0)) $((0 || 0))         |
-    |     1 0 1 0                                                              |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $(( 1 &&  |
+    | 2 )) $((3 && 0)) $((4 || |
+    |  0)) $((0 || 0))         |
+    |     1 0 1 0              |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **miscellaneous operators**
 
@@ -772,21 +1098,41 @@ A-54 <contributed-scripts.html#BASE64>`__) script.
     operations. All the operations are evaluated (with possible *side
     effects*. `[2] <ops.html#FTN.AEN4242>`__
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     let "t1 = ((5 + 3, 7 - 1, 15 - 4))"                                  |
-    |     echo "t1 = $t1"           ^^^^^^  # t1 = 11                          |
-    |     # Here t1 is set to the result of the last operation. Why?           |
-    |                                                                          |
-    |     let "t2 = ((a = 9, 15 / 3))"      # Set "a" and calculate "t2".      |
-    |     echo "t2 = $t2    a = $a"         # t2 = 5    a = 9                  |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     let "t1 = ((5 + 3, 7 |
+    |  - 1, 15 - 4))"          |
+    |     echo "t1 = $t1"      |
+    |       ^^^^^^  # t1 = 11  |
+    |     # Here t1 is set to  |
+    | the result of the last o |
+    | peration. Why?           |
+    |                          |
+    |     let "t2 = ((a = 9, 1 |
+    | 5 / 3))"      # Set "a"  |
+    | and calculate "t2".      |
+    |     echo "t2 = $t2    a  |
+    | = $a"         # t2 = 5   |
+    |   a = 9                  |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     The comma operator finds use mainly in `for
     loops <loops1.html#FORLOOPREF1>`__. See `Example
     11-13 <loops1.html#FORLOOPC>`__.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -801,6 +1147,10 @@ Notes
 | >`__.                                |                                      |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -810,6 +1160,10 @@ Notes
 | `Next <numerical-constan | Numerical Constants      |
 | ts.html>`__              |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

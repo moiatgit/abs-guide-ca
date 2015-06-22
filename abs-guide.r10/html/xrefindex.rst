@@ -1,10 +1,78 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <asciitable.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
+
  
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="INDEX">
 
 Index
 =====
@@ -29,6 +97,10 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__.
    `Uppercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in
    *parameter substitution*
 
+.. raw:: html
+
+   </p>
+
 **~** *Tilde*
 
 -  **~** `home directory <special-chars.html#TILDEREF>`__, corresponds
@@ -42,6 +114,10 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__.
 
 -  **~-** `*Previous* working
    directory <special-chars.html#PREVWORKINGDIR>`__
+
+.. raw:: html
+
+   </p>
 
 **=** *Equals* sign
 
@@ -57,6 +133,10 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__.
    operator
 
    `*Example script* <contributed-scripts.html#FINDSPLIT0>`__
+
+.. raw:: html
+
+   </p>
 
 **<** Left angle bracket
 
@@ -77,6 +157,10 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__.
 
    **<>** `Opening a file <special-chars.html#REDIRRW>`__ for *both*
    reading and writing
+
+.. raw:: html
+
+   </p>
 
 **>** Right angle bracket
 
@@ -116,6 +200,10 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__.
    **:> ``file``** `Truncate
    file <io-redirection.html#IOREDIRECTIONREF>`__ to zero length
 
+.. raw:: html
+
+   </p>
+
 **\|** `Pipe <special-chars.html#PIPEREF>`__, a device for passing the
 output of a command to another command or to the shell
 
@@ -140,6 +228,10 @@ output of a command to another command or to the shell
    `*C-style* variable decrement <dblparens.html#PLUSPLUSREF>`__ within
    `double parentheses <dblparens.html#DBLPARENSREF>`__
 
+.. raw:: html
+
+   </p>
+
 **;** (semicolon)
 
 -  `As command separator <special-chars.html#SEMICOLONREF>`__
@@ -161,6 +253,10 @@ output of a command to another command or to the shell
 -  **;;&** **;&** `Terminators <bashver4.html#NCTERM>`__ in a *case*
    option (`version 4+ <bashver4.html#BASH4REF>`__ of Bash).
 
+.. raw:: html
+
+   </p>
+
 **:** Colon
 
 -  **:> ``filename``** `Truncate
@@ -176,11 +272,19 @@ output of a command to another command or to the shell
 
 -  Used as a `function name <functions.html#FSTRANGEREF>`__
 
+.. raw:: html
+
+   </p>
+
 **!** `Negation operator <special-chars.html#NOTREF>`__, inverts `exit
 status <exit-status.html#NEGCOND>`__ of a test or command
 
 -  **!=** `not-equal-to <comparison-ops.html#NOTEQUAL>`__ String
    comparison operator
+
+.. raw:: html
+
+   </p>
 
 **?** (question mark)
 
@@ -191,6 +295,10 @@ status <exit-status.html#NEGCOND>`__ of a test or command
    `globbing <globbingref.html>`__
 
 -  In a `*C*-style Trinary operator <special-chars.html#CSTRINARY>`__
+
+.. raw:: html
+
+   </p>
 
 **//** `Double forward slash <internal.html#DOUBLESLASHREF>`__, behavior
 of `cd <internal.html#CDREF>`__ command toward
@@ -210,12 +318,20 @@ of `cd <internal.html#CDREF>`__ command toward
 
 -  **..** `*Parent* directory <special-chars.html#DOTDIRECTORY>`__
 
+.. raw:: html
+
+   </p>
+
 **' ... '** (single quotes) `*strong* quoting <varsubn.html#SNGLQUO>`__
 
 **" ... "** (double quotes) `*weak* quoting <varsubn.html#DBLQUO>`__
 
 -  `*Double-quoting* the *backslash* (**\\**)
    character <quotingvar.html#QUOTINGBSL>`__
+
+.. raw:: html
+
+   </p>
 
 **,**
 
@@ -227,6 +343,10 @@ of `cd <internal.html#CDREF>`__ command toward
 
    `Lowercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in
    *parameter substitution*
+
+.. raw:: html
+
+   </p>
 
 **()** Parentheses
 
@@ -247,6 +367,10 @@ of `cd <internal.html#CDREF>`__ command toward
 -  **(( ... ))** `Double parentheses <dblparens.html#DBLPARENSREF>`__,
    in arithmetic expansion
 
+.. raw:: html
+
+   </p>
+
 **[** `Left bracket <special-chars.html#LEFTBRACKET>`__, *test*
 construct
 
@@ -258,6 +382,10 @@ construct
    *Regular Expression*
 
 -  `*Test* construct <special-chars.html#BRACKTEST>`__
+
+.. raw:: html
+
+   </p>
 
 **[[ ... ]]** `Double brackets <testconstructs.html#DBLBRACKETS>`__,
 extended *test* construct
@@ -350,6 +478,10 @@ using `backquotes <special-chars.html#BACKTICKSREF>`__ notation
    **${string/%substring/replacement}** `Substring
    replacement <string-manipulation.html#SUBSTRREPL00>`__
 
+.. raw:: html
+
+   </p>
+
 **$' ... '** `String expansion <escapingsection.html#STRQ>`__, using
 *escaped* characters.
 
@@ -371,6 +503,10 @@ using `backquotes <special-chars.html#BACKTICKSREF>`__ notation
 
 -  `Escaping a *newline* <escapingsection.html#ESCNEWLINE>`__, to write
    a multi-line command
+
+.. raw:: html
+
+   </p>
 
 **&**
 
@@ -406,6 +542,10 @@ using `backquotes <special-chars.html#BACKTICKSREF>`__ notation
 
 -  **Command &** `Run job in *background* <special-chars.html#BGJOB>`__
 
+.. raw:: html
+
+   </p>
+
 **#** `Hashmark <special-chars.html#HASHMARKREF>`__, special symbol
 beginning a script *comment*
 
@@ -426,6 +566,10 @@ a `shell script <part1.html#WHATSASCRIPT>`__
 -  **\*\*** Extended *globbing* `file-match
    operator <bashver4.html#GLOBSTARREF>`__
 
+.. raw:: html
+
+   </p>
+
 **%** Percent sign
 
 -  `Modulo <ops.html#MODULOREF>`__, division-remainder arithmetic
@@ -433,6 +577,10 @@ a `shell script <part1.html#WHATSASCRIPT>`__
 
 -  `Substring removal <parameter-substitution.html#PCTPATREF>`__
    (pattern matching) operator
+
+.. raw:: html
+
+   </p>
 
 **+** Plus sign
 
@@ -445,6 +593,10 @@ a `shell script <part1.html#WHATSASCRIPT>`__
 
 -  **++** `*C-style* variable increment <dblparens.html#PLUSPLUSREF>`__,
    within `double parentheses <dblparens.html#DBLPARENSREF>`__
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -497,12 +649,20 @@ download <mirrorsites.html#WHERE_TARBALL>`__
 
 -  `Removing an *alias* <aliases.html#UNALIASREF>`__, using *unalias*
 
+.. raw:: html
+
+   </p>
+
 `Anagramming <commandsub.html#AGRAM2>`__
 
 `*And* list <list-cons.html#LCONS1>`__
 
 -  `To supply default command-line
    argument <list-cons.html#ANDDEFAULT>`__
+
+.. raw:: html
+
+   </p>
 
 `*And* logical operator <ops.html#LOGOPS1>`__ **&&**
 
@@ -517,17 +677,29 @@ word boundary in a `Regular Expression <regexp.html#REGEXREF>`__
 
 -  `tar <filearchiv.html#TARREF>`__
 
+.. raw:: html
+
+   </p>
+
 `Arithmetic expansion <arithexp.html#ARITHEXPREF>`__
 
 -  `*exit status* of <testconstructs.html#ARXS>`__
 
 -  `variations of <arithexp.html#ARITHEXPVAR1>`__
 
+.. raw:: html
+
+   </p>
+
 `Arithmetic operators <ops.html#AROPS1>`__
 
 -  `combination operators <ops.html#ARITHOPSCOMB>`__, *C*-style
 
    **+=** **-=** **\*=** **/=** **%=**
+
+   .. raw:: html
+
+      <div class="NOTE">
 
    +--------------------------------------+--------------------------------------+
    | |Note|                               |
@@ -537,6 +709,14 @@ word boundary in a `Regular Expression <regexp.html#REGEXREF>`__
    | **+=** can also function as a        |
    | *string concatenation* operator.     |
    +--------------------------------------+--------------------------------------+
+
+   .. raw:: html
+
+      </div>
+
+.. raw:: html
+
+   </p>
 
 `Arrays <arrays.html#ARRAYREF>`__
 
@@ -605,6 +785,10 @@ ASCII
 
 -  `Scripts for generating ASCII table <asciitable.html>`__
 
+.. raw:: html
+
+   </p>
+
 `awk <awk.html>`__ field-oriented text processing language
 
 -  ```rand()`` <randomvar.html#AWKRANDOMREF>`__, random function
@@ -613,6 +797,10 @@ ASCII
 
 -  `Using *export* <internal.html#EXPORTAWK>`__ to pass a variable to an
    embedded *awk* script
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -649,6 +837,10 @@ substitution <commandsub.html#BACKQUOTESREF>`__
 
    `Version 4.2 <bashver4.html#BASH42>`__
 
+.. raw:: html
+
+   </p>
+
 `.bashrc <sample-bashrc.html>`__
 
 ```$BASH_SUBSHELL`` <internalvariables.html#BASHSUBSHELLREF>`__
@@ -666,6 +858,10 @@ substitution <commandsub.html#BACKQUOTESREF>`__
 -  `Template <mathc.html#BCTEMPLATE>`__ for calculating a script
    variable
 
+.. raw:: html
+
+   </p>
+
 `Bibliography <biblio.html>`__
 
 `Bison <textproc.html#BISONREF>`__ utility
@@ -674,9 +870,17 @@ substitution <commandsub.html#BACKQUOTESREF>`__
 
 -  `Example script <contributed-scripts.html#BASE64>`__
 
+.. raw:: html
+
+   </p>
+
 `Block devices <devref1.html#BLOCKDEVREF>`__
 
 -  `testing for <fto.html#BLOCKDEVTEST>`__
+
+.. raw:: html
+
+   </p>
 
 `Blocks of code <special-chars.html#CODEBLOCKREF>`__
 
@@ -686,6 +890,10 @@ substitution <commandsub.html#BACKQUOTESREF>`__
 
    *Script example*: `Redirecting output of a a code
    block <special-chars.html#BLOCKIO2>`__
+
+.. raw:: html
+
+   </p>
 
 `Bootable flash drives <extmisc.html#BFS>`__, creating
 
@@ -698,6 +906,10 @@ substitution <commandsub.html#BACKQUOTESREF>`__
 -  With `increment and zero-padding <bashver4.html#BRACEEXPREF4>`__ (new
    feature in Bash, `version 4 <bashver4.html#BASH4REF>`__)
 
+.. raw:: html
+
+   </p>
+
 Brackets, **[ ]**
 
 -  `*Array* element <arrays.html#BRACKARRAY>`__
@@ -706,6 +918,10 @@ Brackets, **[ ]**
    *Regular Expression*
 
 -  `*Test* construct <special-chars.html#BRACKTEST>`__
+
+.. raw:: html
+
+   </p>
 
 Brackets, *curly*, **{}**, used in
 
@@ -723,9 +939,17 @@ Brackets, *curly*, **{}**, used in
 
 -  `Parameter <loopcontrol.html#BREAKPARAM>`__ (optional)
 
+.. raw:: html
+
+   </p>
+
 `Builtins <internal.html#BUILTINREF>`__ in *Bash*
 
 -  `Do not fork a subprocess <internal.html#BLTINFRK>`__
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -734,6 +958,10 @@ Brackets, *curly*, **{}**, used in
 -  `Command-line parameters <testbranch.html#CASECL>`__, handling
 
 -  `Globbing <testbranch.html#CSGLOB>`__, filtering strings with
+
+.. raw:: html
+
+   </p>
 
 `cat <basic.html#CATREF>`__, con\ *cat*\ entate file(s)
 
@@ -748,9 +976,17 @@ Brackets, *curly*, **{}**, used in
 
 -  `Uses of <basic.html#CATUSES>`__
 
+.. raw:: html
+
+   </p>
+
 `Character devices <devref1.html#CHARDEVREF>`__
 
 -  `testing for <fto.html#CHARDEVTEST>`__
+
+.. raw:: html
+
+   </p>
 
 `Checksum <filearchiv.html#CHECKSUMREF>`__
 
@@ -769,6 +1005,10 @@ Brackets, *curly*, **{}**, used in
 
 -  `Template <colorizing.html#COLORIZTEMPL>`__, colored text on colored
    background
+
+.. raw:: html
+
+   </p>
 
 `Comma operator <ops.html#COMMAOP>`__, linking commands or operations
 
@@ -796,6 +1036,10 @@ Bash)
 
 -  `Word splitting <commandsub.html#CSWS>`__
 
+.. raw:: html
+
+   </p>
+
 `Comment headers <assortedtips.html#COMMENTH>`__, special purpose
 
 Commenting out blocks of code
@@ -803,6 +1047,10 @@ Commenting out blocks of code
 -  Using an `*anonymous* here document <here-docs.html#CBLOCK1>`__
 
 -  Using an `*if-then* construct <assortedtips.html#COMOUTBL>`__
+
+.. raw:: html
+
+   </p>
 
 `Communications and hosts <communications.html>`__
 
@@ -817,6 +1065,10 @@ Commenting out blocks of code
 -  `gzip <filearchiv.html#GZIPREF>`__
 
 -  `zip <filearchiv.html#ZIPREF>`__
+
+.. raw:: html
+
+   </p>
 
 `continue <loopcontrol.html#BRKCONT1>`__ loop control command
 
@@ -835,6 +1087,10 @@ Commenting out blocks of code
 
 -  `Control-M <special-chars.html#CTLMREF>`__, carriage return
 
+.. raw:: html
+
+   </p>
+
 `Coprocesses <bashver4.html#COPROCREF>`__
 
 `cron <system.html#CRONREF>`__, scheduling *daemon*
@@ -852,6 +1108,10 @@ Curly brackets {}
 -  `in an *Extended Regular Expression* <x17129.html#ESCPCB>`__
 
 -  `in *xargs* <moreadv.html#XARGSCURLYREF>`__
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -882,6 +1142,10 @@ Curly brackets {}
 
 -  `Thread on *www.linuxquestions.org* <biblio.html#DDLINK>`__
 
+.. raw:: html
+
+   </p>
+
 `Debugging scripts <debugging.html>`__
 
 -  `Tools <debugging.html#DEBUGTOOLS>`__
@@ -889,6 +1153,10 @@ Curly brackets {}
 -  `*Trapping* at exit <debugging.html#DEBUGTRAP>`__
 
 -  `*Trapping* signals <debugging.html#TRAPREF1>`__
+
+.. raw:: html
+
+   </p>
 
 `Decimal number <numerical-constants.html#NUMCONSTANTS>`__, Bash
 interprets numbers as
@@ -910,6 +1178,10 @@ interprets numbers as
    generating pseudorandom numbers with
 
 -  ```/dev/zero`` <zeros.html#ZEROSREF1>`__, pseudo-device file
+
+.. raw:: html
+
+   </p>
 
 `Device file <devref1.html#DEVFILEREF>`__
 
@@ -949,6 +1221,10 @@ arithmetic expansion/evaluation construct
 -  `*Double-quoting* the *backslash* (**\\**)
    character <quotingvar.html#QUOTINGBSL>`__
 
+.. raw:: html
+
+   </p>
+
 `Double-spacing a text file <x23170.html#DOUBLESPACE>`__, using
 `sed <sedawk.html#SEDREF>`__
 
@@ -964,6 +1240,10 @@ arithmetic expansion/evaluation construct
    substitution <commandsub.html#COMMANDSUBREF>`__
 
 -  ```/bin/echo`` <internal.html#BINECHO>`__, external *echo* command
+
+.. raw:: html
+
+   </p>
 
 `elif <testconstructs.html#ELIFREF1>`__, Contraction of *else* and
 `if <tests.html#IFTHEN>`__
@@ -989,6 +1269,10 @@ generating prime numbers
 
 -  `Used with *Unicode* characters <bashver4.html#UNICODEREF2>`__
 
+.. raw:: html
+
+   </p>
+
 ```/etc/fstab`` <system.html#FSTABREF>`__ (filesystem mount) file
 
 ```/etc/passwd`` <files.html#DATAFILESREF1>`__ (user account) file
@@ -1010,6 +1294,10 @@ with variable expansion
    list <contributed-scripts.html#SAMORSE>`__
 
 -  `Using *eval* to select among variables <internal.html#ARRCHOICE0>`__
+
+.. raw:: html
+
+   </p>
 
 `Evaluation of *octal/hex* constants within [[ ...
 ]] <testconstructs.html#DBLBRAEV>`__
@@ -1042,11 +1330,19 @@ Exit and Exit status
    ```/usr/include/sysexits.h`` <exitcodes.html#SYSEXITSREF>`__, system
    file listing C/C++ standard exit codes
 
+.. raw:: html
+
+   </p>
+
 `Export <internal.html#EXPORTREF2>`__, to make available variables to
 `child processes <othertypesv.html#CHILDREF>`__
 
 -  `Passing a variable to an embedded *awk*
    script <internal.html#EXPORTAWK>`__
+
+.. raw:: html
+
+   </p>
 
 `expr <moreadv.html#EXPRREF>`__, *Expression* evaluator
 
@@ -1056,6 +1352,10 @@ Exit and Exit status
    string) <string-manipulation.html#SUBSTRINGINDEX2>`__
 
 -  `Substring matching <string-manipulation.html#EXPRMATCH>`__
+
+.. raw:: html
+
+   </p>
 
 `Extended *Regular Expressions* <x17129.html#EXTREGEX>`__
 
@@ -1069,12 +1369,20 @@ Exit and Exit status
 
 -  **+** `*Character match* <x17129.html#PLUSREF>`__
 
+.. raw:: html
+
+   </p>
+
 \* \* \*
 
 `factor <mathc.html#FACTORREF>`__, decomposes an integer into its prime
 factors
 
 -  Application: `Generating prime numbers <mathc.html#PRIMES2>`__
+
+.. raw:: html
+
+   </p>
 
 `false <internal.html#FALSEREF>`__, returns *unsuccessful* (1) `exit
 status <exit-status.html#EXITSTATUSREF>`__
@@ -1106,6 +1414,10 @@ comprises an item of data
 
 -  **\\;** `*Escaped* semicolon <moreadv.html#FINDREF0>`__
 
+.. raw:: html
+
+   </p>
+
 `Filter <special-chars.html#FILTERDEF>`__
 
 -  `Using - with file-processing utility as a
@@ -1113,6 +1425,10 @@ comprises an item of data
 
 -  `Feeding output of a filter back to *same*
    filter <assortedtips.html#FILTEROUTP>`__
+
+.. raw:: html
+
+   </p>
 
 `Floating point numbers <ops.html#NOFLOATINGPOINT>`__, Bash does not
 recognize
@@ -1215,15 +1531,27 @@ Games and amusements
 
    `Alternate graphic version <contributed-scripts.html#HANOI2A>`__
 
+.. raw:: html
+
+   </p>
+
 `getopt <extmisc.html#GETOPTY>`__, *external* command for parsing script
 *command-line* arguments
 
 -  `Emulated in a script <string-manipulation.html#GETOPTSIMPLE1>`__
 
+.. raw:: html
+
+   </p>
+
 `getopts <internal.html#GETOPTSX>`__, Bash *builtin* for parsing script
 *command-line* arguments
 
 -  ```$OPTIND`` / ``$OPTARG`` <internal.html#GETOPTSOPT>`__
+
+.. raw:: html
+
+   </p>
 
 `Global <subshells.html#SCOPEREF>`__ variable
 
@@ -1234,6 +1562,10 @@ Games and amusements
 -  `*Wild cards* <special-chars.html#ASTERISKREF>`__
 
 -  `Will not match ``dot files`` <globbingref.html#WDOTFILEWC>`__
+
+.. raw:: html
+
+   </p>
 
 `Golden Ratio <mathc.html#GOLDENRATIO>`__ (*Phi*)
 
@@ -1258,6 +1590,10 @@ belongs to
 `Hashing <internal.html#HASHREF>`__, creating lookup keys in a table
 
 -  `*Example script* <contributed-scripts.html#HASHEX2_0>`__
+
+.. raw:: html
+
+   </p>
 
 `head <textproc.html#HEADREF>`__, *echo* to ``stdout`` lines at the
 beginning of a text file
@@ -1317,6 +1653,10 @@ beginning of a text file
 
 -  `Using *vi* non-interactively <here-docs.html#VIHERE>`__
 
+.. raw:: html
+
+   </p>
+
 `History commands <histcommands.html>`__
 
 ```$HOME`` <internalvariables.html#HOMEDIRREF>`__, *user's home
@@ -1339,10 +1679,18 @@ Control System)
 
    `Fixup <assortedtips.html#IFGREPFIX>`__ for *if-grep* test
 
+.. raw:: html
+
+   </p>
+
 ```$IFS`` <internalvariables.html#IFSREF>`__, *Internal field separator*
 variable
 
 -  `Defaults to *whitespace* <internalvariables.html#IFSWS>`__
+
+.. raw:: html
+
+   </p>
 
 `Integer comparison operators <comparison-ops.html#ICOMPARISON1>`__
 
@@ -1363,12 +1711,20 @@ loop
    2 <bashver2.html#BASH2REF>`__ of Bash (`example
    script <bashver2.html#VARREFNEW>`__)
 
+.. raw:: html
+
+   </p>
+
 `iptables <system.html#IPTABLESREF>`__, packet filtering and firewall
 utility
 
 -  `Usage example <system.html#IPTABLES01>`__
 
 -  `Example script <networkprogramming.html#IPTABLES02>`__
+
+.. raw:: html
+
+   </p>
 
 `Iteration <loops1.html#ITERATIONREF>`__
 
@@ -1381,6 +1737,10 @@ to `seq <extmisc.html#SEQREF>`__.
 
 -  `Random sequence generation <extmisc.html#JOTRANDOM>`__
 
+.. raw:: html
+
+   </p>
+
 `Just another Bash hacker! <textproc.html#JABH>`__
 
 \* \* \*
@@ -1389,10 +1749,18 @@ to `seq <extmisc.html#SEQREF>`__.
 
 -  `error <debugging.html#MISSINGKEYWORD>`__, if missing
 
+.. raw:: html
+
+   </p>
+
 `kill <x9644.html#KILLREF>`__, terminate a process by `process
 ID <special-chars.html#PROCESSIDDEF>`__
 
 -  `Options <x9644.html#ZOMBIEREF>`__ (``-l``, ``-9``)
+
+.. raw:: html
+
+   </p>
 
 `killall <x9644.html#KILLALLREF>`__, terminate a process *by name*
 
@@ -1411,6 +1779,10 @@ operations on variables
 
 -  *C-style* `increment and decrement operators <internal.html#EX46>`__
 
+.. raw:: html
+
+   </p>
+
 `Limit string <here-docs.html#LIMITSTRINGREF>`__, in a `here
 document <here-docs.html#HEREDOCREF>`__
 
@@ -1424,15 +1796,27 @@ the *line number* where it appears in a script
 
 -  `*symbolic* links <basic.html#SYMLINKREF>`__, *ln -s*
 
+.. raw:: html
+
+   </p>
+
 `List constructs <list-cons.html#LISTCONSREF>`__
 
 -  `*And* list <list-cons.html#LCONS1>`__
 
 -  `*Or* list <list-cons.html#ORLISTREF>`__
 
+.. raw:: html
+
+   </p>
+
 `Local variables <localvar.html#LOCALREF1>`__
 
 -  and `recursion <localvar.html#LOCVARRECUR>`__
+
+.. raw:: html
+
+   </p>
 
 `Localization <localization.html>`__
 
@@ -1514,11 +1898,19 @@ the *line number* where it appears in a script
 
 -  `Which type of loop to use <loops1.html#CHOOSELOOP>`__
 
+.. raw:: html
+
+   </p>
+
 Loopback devices
 
 -  `In ``/dev`` directory <devref1.html#LOOPBACKREF>`__
 
 -  `Mounting an ISO image <system.html#ISOMOUNTREF0>`__
+
+.. raw:: html
+
+   </p>
 
 `-lt <comparison-ops.html#LT0REF>`__, *less-than* `integer
 comparison <comparison-ops.html#ICOMPARISON1>`__ test
@@ -1539,6 +1931,10 @@ of dependencies used by `make <filearchiv.html#MAKEREF>`__ command
 
 -  `*Man page* editor <contributed-scripts.html#MANED>`__ (script)
 
+.. raw:: html
+
+   </p>
+
 `mapfile <bashver4.html#MAPFILEREF>`__ builtin, loads an array with a
 text file
 
@@ -1553,6 +1949,10 @@ text file
 -  Application: `Generating prime
    numbers <contributed-scripts.html#PRIMES1>`__
 
+.. raw:: html
+
+   </p>
+
 `Mortgage calculations <mathc.html#MONTHLYPMT0>`__, *example script*
 
 \* \* \*
@@ -1562,6 +1962,10 @@ text file
 `Named pipe <extmisc.html#NAMEDPIPEREF>`__, a temporary FIFO buffer
 
 -  `*Example script* <contributed-scripts.html#ZFIFO>`__
+
+.. raw:: html
+
+   </p>
 
 `nc <system.html#NCREF>`__, *netcat*, a network toolkit for TCP and UDP
 ports
@@ -1598,6 +2002,10 @@ Obfuscation
 
 -  `Just another Bash hacker! <textproc.html#JABH>`__
 
+.. raw:: html
+
+   </p>
+
 `octal <escapingsection.html#OCTALREF>`__, base-8 numbers
 
 `od <extmisc.html#ODREF>`__, *octal dump*
@@ -1612,6 +2020,10 @@ Operator
 -  `Definition of <special-chars.html#OPERATORDEF>`__
 
 -  `Precedence <opprecedence.html#OPPRECEDENCE1>`__
+
+.. raw:: html
+
+   </p>
 
 `Options <options.html#OPTIONSREF>`__, passed to shell or script on
 command line or by `set <internal.html#SETREF>`__ command
@@ -1662,6 +2074,10 @@ command line or by `set <internal.html#SETREF>`__ command
 
 -  `**Table** <refcards.html#PARSUBTAB>`__ of *parameter substitution*
 
+.. raw:: html
+
+   </p>
+
 `Parent / child process problem <gotchas.html#PARCHILDPROBREF>`__, a
 *child* process cannot `export <internal.html#EXPORTREF>`__ variables to
 a `parent process <internal.html#FORKREF>`__
@@ -1676,16 +2092,28 @@ Parentheses
 -  `Double parentheses <dblparens.html#DBLPARENSREF>`__, in arithmetic
    expansion
 
+.. raw:: html
+
+   </p>
+
 ```$PATH`` <internalvariables.html#PATHREF>`__, the *path* (location of
 system binaries)
 
 -  Appending directories to ``$PATH`` `using the ``+=``
    operator <bashver3.html#PATHAPPEND>`__.
 
+.. raw:: html
+
+   </p>
+
 `Pathname <special-chars.html#PATHNAMEREF>`__, a ``filename`` that
 incorporates the complete *path* of a given file.
 
 -  `Parsing *pathnames* <pathmanagement.html>`__
+
+.. raw:: html
+
+   </p>
 
 `Perl <wrapper.html#PERLREF>`__, programming language
 
@@ -1693,6 +2121,10 @@ incorporates the complete *path* of a given file.
    *Bash* script
 
 -  `Embedded <wrapper.html#PERLEMB>`__ in a *Bash* script
+
+.. raw:: html
+
+   </p>
 
 `*Perquackey*-type anagramming game <contributed-scripts.html#QKY>`__
 (*Quackey* script)
@@ -1723,6 +2155,10 @@ output of a command to another command or to the shell
 
 -  `Redirecting ``stdin`` <basic.html#CATLESSEFF>`__, rather than using
    `cat <basic.html#CATREF>`__ in a *pipe*
+
+.. raw:: html
+
+   </p>
 
 `Pitfalls <gotchas.html>`__
 
@@ -1815,6 +2251,10 @@ output of a command to another command or to the shell
 
 -  `Whitespace <gotchas.html#WSBAD>`__, misuse of
 
+.. raw:: html
+
+   </p>
+
 Pointers
 
 -  `and file descriptors <io-redirection.html#FDREF1>`__
@@ -1834,6 +2274,10 @@ Pointers
 
 -  `Using *whatis* <assortedtips.html#WHATISREF3>`__
 
+.. raw:: html
+
+   </p>
+
 `Positional parameters <othertypesv.html#POSPARAMREF1>`__
 
 -  ```$@`` <internalvariables.html#APPREF2>`__, as *separate* words
@@ -1841,6 +2285,10 @@ Pointers
 -  ```$*`` <internalvariables.html#APPREF>`__, as a *single* word
 
 -  `in functions <complexfunct.html#PASSEDARGS>`__
+
+.. raw:: html
+
+   </p>
 
 `POSIX <sha-bang.html#POSIX2REF>`__, *Portable Operating System
 Interface / UNIX*
@@ -1850,6 +2298,10 @@ Interface / UNIX*
 -  `1003.2 standard <portabilityissues.html#POSIX3REF>`__
 
 -  `Character classes <x17129.html#POSIXREF>`__
+
+.. raw:: html
+
+   </p>
 
 ```$PPID`` <internalvariables.html#PPIDREF>`__, *process ID* of parent
 process
@@ -1868,6 +2320,10 @@ Prime numbers
 
 -  Sieve of Eratosthenes, `example script <arrays.html#PRIMES0>`__
 
+.. raw:: html
+
+   </p>
+
 `printf <internal.html#PRINTFREF>`__, *formatted print* command
 
 ```/proc`` <procref1.html#PROCREF2>`__ directory
@@ -1877,6 +2333,10 @@ Prime numbers
 -  `Writing to files in ``/proc`` <procref1.html#PROCWARNING>`__,
    *warning*
 
+.. raw:: html
+
+   </p>
+
 `Process <special-chars.html#PROCESSREF>`__
 
 -  `Child process <othertypesv.html#CHILDREF2>`__
@@ -1884,6 +2344,10 @@ Prime numbers
 -  `Parent process <internal.html#PARENTREF>`__
 
 -  `Process ID <special-chars.html#PROCESSIDDEF>`__ (PID)
+
+.. raw:: html
+
+   </p>
 
 `Process substitution <process-sub.html#PROCESSSUBREF>`__
 
@@ -1896,6 +2360,10 @@ Prime numbers
 -  `*while-read* loop without a
    *subshell* <process-sub.html#GOODREAD0>`__
 
+.. raw:: html
+
+   </p>
+
 `Programmable completion <tabexpansion.html>`__ (tab expansion)
 
 Prompt
@@ -1904,6 +2372,10 @@ Prompt
    command line
 
 -  ```$PS2`` <internalvariables.html#SECPROMPTREF>`__, Secondary prompt
+
+.. raw:: html
+
+   </p>
 
 `Pseudo-code <assortedtips.html#PSEUDOCODEREF>`__, as problem-solving
 method
@@ -1926,6 +2398,10 @@ Question mark, **?**
 -  In a `*C*-style Trinary (ternary)
    operator <special-chars.html#CSTRINARY>`__
 
+.. raw:: html
+
+   </p>
+
 `Quoting <quoting.html#QUOTINGDEF>`__
 
 -  `Character string <quoting.html#QUOTINGREF>`__
@@ -1935,6 +2411,10 @@ Question mark, **?**
    `within *test* brackets <gotchas.html#FAILQUOTE>`__
 
 -  `*Whitespace* <quotingvar.html#WSQUO>`__, using *quoting* to preserve
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -1956,9 +2436,17 @@ Random numbers
 
 -  `Random string <string-manipulation.html#RANDSTRING0>`__, generating
 
+.. raw:: html
+
+   </p>
+
 Raspberry Pi (single-board computer)
 
 -  `Script for preparing a bootable SD card <extmisc.html#RPSDCARD01>`__
+
+.. raw:: html
+
+   </p>
 
 `rcs <assortedtips.html#RCSREF>`__
 
@@ -1984,6 +2472,10 @@ Raspberry Pi (single-board computer)
 
 -  `*while read* <loops1.html#WHILEREADREF2>`__ construct
 
+.. raw:: html
+
+   </p>
+
 `readline <internal.html#READLINEREF>`__ library
 
 `Recursion <localvar.html#RECURSIONREF>`__
@@ -2000,6 +2492,10 @@ Raspberry Pi (single-board computer)
    recursively <recursionsct.html#SCRIPTRECURSION>`__
 
 -  `Towers of Hanoi <recurnolocvar.html#HANOIREF>`__
+
+.. raw:: html
+
+   </p>
 
 Redirection
 
@@ -2054,6 +2550,10 @@ Redirection
 -  `tee <extmisc.html#TEEREF>`__, redirect to a file output of
    command(s) partway through a `pipe <special-chars.html#PIPEREF>`__
 
+.. raw:: html
+
+   </p>
+
 `Reference Cards <refcards.html>`__
 
 -  `Miscellaneous constructs <refcards.html#MISCTAB>`__
@@ -2069,6 +2569,10 @@ Redirection
    `Binary comparison <refcards.html#BINCOMPTAB>`__
 
    `Files <refcards.html#FILESTAB>`__
+
+.. raw:: html
+
+   </p>
 
 `*Regular Expressions* <regexp.html#REGEXREF>`__
 
@@ -2098,6 +2602,10 @@ Redirection
 
    **[: :]** `POSIX character classes <x17129.html#POSIXREF>`__
 
+.. raw:: html
+
+   </p>
+
 ```$REPLY`` <internalvariables.html#REPLYREF>`__, Default value
 associated with `read <internal.html#READREF>`__ command
 
@@ -2111,6 +2619,10 @@ script) with certain commands disabled
 
 -  `Running scripts in sequence <assortedtips.html#RUNPARTSREF2>`__,
    without user intervention
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -2137,15 +2649,27 @@ useful definitions and `functions <functions.html#FUNCTIONREF>`__
 
 -  `Writing secure scripts <securityissues.html#SECURITYTIPS1>`__
 
+.. raw:: html
+
+   </p>
+
 `sed <sedawk.html#SEDREF>`__, pattern-based programming language
 
 -  `**Table** <x23170.html#SEDBASICTABLE>`__, basic operators
 
 -  `**Table** <x23170.html#SEDOPTABLE>`__, examples of operators
 
+.. raw:: html
+
+   </p>
+
 `select <testbranch.html#SELECTREF>`__, construct for menu building
 
--  ```in          list`` omitted <testbranch.html#INLISTOMIT>`__
+-  ```in          list``\  omitted <testbranch.html#INLISTOMIT>`__
+
+.. raw:: html
+
+   </p>
 
 `Semaphore <system.html#SEMAPHOREREF>`__
 
@@ -2156,6 +2680,10 @@ useful definitions and `functions <functions.html#FUNCTIONREF>`__
 -  `When terminating *curly-bracketed* code
    block <gotchas.html#OMITSEMICOLON>`__
 
+.. raw:: html
+
+   </p>
+
 `seq <extmisc.html#SEQREF>`__, Emit a sequence of integers. Equivalent
 to `jot <extmisc.html#JOTREF>`__.
 
@@ -2164,6 +2692,10 @@ variables
 
 -  `set -u <debugging.html#UNDVARERR>`__, Abort script with error
    message if attempting to use an *undeclared* variable.
+
+.. raw:: html
+
+   </p>
 
 `Shell script <part1.html#WHATSASCRIPT>`__, definition of
 
@@ -2194,6 +2726,10 @@ Simulations
 
 -  `Pushdown *stack* <arrays.html#STACKEX0>`__
 
+.. raw:: html
+
+   </p>
+
 `Single quotes <varsubn.html#SNGLQUO>`__ (**' ... '**) *strong*
 `quoting <quoting.html#QUOTINGREF>`__
 
@@ -2206,10 +2742,18 @@ Sorting
 
 -  `Insertion sort <contributed-scripts.html#INSERTIONSORT0>`__
 
+.. raw:: html
+
+   </p>
+
 `source <internal.html#SOURCEREF>`__, execute a script or, within a
 script, import a file
 
 -  `Passing positional parameters <internal.html#SOURCEPARAMS>`__
+
+.. raw:: html
+
+   </p>
 
 *Spam*, dealing with
 
@@ -2221,6 +2765,10 @@ script, import a file
 
 -  `*Example script* <contributed-scripts.html#WHX0>`__
 
+.. raw:: html
+
+   </p>
+
 `Special characters <special-chars.html#SCHARLIST1>`__
 
 Stack
@@ -2229,6 +2777,10 @@ Stack
 
 -  Emulating a *push-down stack*, `example
    script <arrays.html#STACKEX0>`__
+
+.. raw:: html
+
+   </p>
 
 Standard Deviation, `example script <contributed-scripts.html#STDDEV>`__
 
@@ -2309,6 +2861,10 @@ Strings
 -  `**Table** <refcards.html#STRINGOPSTAB>`__ of *string/substring*
    manipulation and extraction operators
 
+.. raw:: html
+
+   </p>
+
 `*Strong* quoting <varsubn.html#SNGLQUO>`__ **' ... '**
 
 `Stylesheet <scrstyle.html>`__ for writing scripts
@@ -2327,6 +2883,10 @@ Strings
    ... `can be accessed outside the
    subshell? <assortedtips.html#SUBSHTMP>`__
 
+.. raw:: html
+
+   </p>
+
 `su <system.html#SUREF>`__ *Substitute user*, log on as a different user
 or as *root*
 
@@ -2334,6 +2894,10 @@ or as *root*
 
 -  `*suid* commands inside a script <gotchas.html#SUIDSCR>`__, not
    advisable
+
+.. raw:: html
+
+   </p>
 
 `Symbolic links <basic.html#SYMLINKREF>`__
 
@@ -2365,12 +2929,20 @@ partway through a `pipe <special-chars.html#PIPEREF>`__
 
 -  `wall <system.html#WALLREF>`__
 
+.. raw:: html
+
+   </p>
+
 *test* command
 
 -  `Bash *builtin* <testconstructs.html#TTESTREF>`__
 
 -  `external command <testconstructs.html#USRBINTEST>`__,
    ``/usr/bin/test`` (equivalent to ``/usr/bin/[``)
+
+.. raw:: html
+
+   </p>
 
 `Test constructs <testconstructs.html#TESTCONSTRUCTS1>`__
 
@@ -2451,6 +3023,10 @@ Test operators
 
    `File <refcards.html#FILESTAB>`__
 
+.. raw:: html
+
+   </p>
+
 `Text and text file processing <textproc.html>`__
 
 `Time / Date <timedate.html>`__
@@ -2464,6 +3040,10 @@ Timed input
 -  `Using timing loop <internalvariables.html#TIMINGLOOP>`__
 
 -  `Using ``$TMOUT`` <internalvariables.html#TMOUTREF>`__
+
+.. raw:: html
+
+   </p>
 
 `Tips and hints <assortedtips.html>`__ for Bash scripts
 
@@ -2560,6 +3140,10 @@ Timed input
 
 -  `Widgets <assortedtips.html#WIDGETREF>`__, invoking from a script
 
+.. raw:: html
+
+   </p>
+
 ```$TMOUT`` <internalvariables.html#TMOUTREF>`__, Timeout interval
 
 `Token <testconstructs.html#TOKENREF>`__, a symbol that may expand to a
@@ -2577,6 +3161,10 @@ Timed input
 
 -  `Variants <textproc.html#TRVARIANTS>`__
 
+.. raw:: html
+
+   </p>
+
 `*Trap* <debugging.html#TRAPREF1>`__, specifying an action upon receipt
 of a `signal <debugging.html#SIGNALD>`__
 
@@ -2586,12 +3174,20 @@ of a `signal <debugging.html#SIGNALD>`__
 
 -  `in *let* construct <internal.html#EX46>`__
 
+.. raw:: html
+
+   </p>
+
 `true <internal.html#TRUEREF>`__, returns *successful* (0) `exit
 status <exit-status.html#EXITSTATUSREF>`__
 
 `typeset <declareref.html#DECLARE1REF>`__ builtin
 
 -  `options <declareref.html#DECLAREOPSREF1>`__
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -2606,6 +3202,10 @@ status <exit-status.html#EXITSTATUSREF>`__
 representing letters and symbols
 
 -  `Disabling *unicode* <optimizations.html#LCALL>`__ to optimize script
+
+.. raw:: html
+
+   </p>
 
 `Uninitialized variables <gotchas.html#UNINITVAR>`__
 
@@ -2708,11 +3308,19 @@ a sorted file
 
 -  `Untyped <untyped.html#BVUNTYPED>`__
 
+.. raw:: html
+
+   </p>
+
 \* \* \*
 
 `wait <x9644.html#WAITREF>`__, suspend script execution
 
 -  `To remedy script hang <x9644.html#WAITHANG>`__
+
+.. raw:: html
+
+   </p>
 
 `*Weak* quoting <varsubn.html#DBLQUO>`__ **" ... "**
 
@@ -2733,6 +3341,10 @@ a sorted file
 
    `Avoiding a *subshell* <process-sub.html#GOODREAD0>`__
 
+.. raw:: html
+
+   </p>
+
 `Whitespace <special-chars.html#WHITESPACEREF>`__, spaces, tabs, and
 newline characters
 
@@ -2750,6 +3362,10 @@ newline characters
 
 -  `[:space:] <x17129.html#WSPOSIX>`__, *POSIX* character class
 
+.. raw:: html
+
+   </p>
+
 `who <system.html#WHOREF>`__, information about logged on users
 
 -  `w <system.html#WREF>`__
@@ -2757,6 +3373,10 @@ newline characters
 -  `whoami <system.html#WHOAMIREF>`__
 
 -  `logname <system.html#LOGNAMEREF>`__
+
+.. raw:: html
+
+   </p>
 
 `Widgets <assortedtips.html#WIDGETREF>`__
 
@@ -2770,11 +3390,19 @@ newline characters
 
 -  `Will not match ``dot files`` <globbingref.html#WDOTFILEWC>`__
 
+.. raw:: html
+
+   </p>
+
 Word splitting
 
 -  `Definition <quotingvar.html#WSPLITREF>`__
 
 -  `Resulting from *command substitution* <commandsub.html#CSWS>`__
+
+.. raw:: html
+
+   </p>
 
 `Wrapper <wrapper.html#SHWRAPPER>`__, shell
 
@@ -2792,11 +3420,19 @@ Word splitting
 
 -  `Whitespace <moreadv.html#XARGSWS>`__, handling
 
+.. raw:: html
+
+   </p>
+
 \* \* \*
 
 `yes <extmisc.html#YESREF>`__
 
 -  `Emulation <extmisc.html#YESEMU>`__
+
+.. raw:: html
+
+   </p>
 
 \* \* \*
 
@@ -2806,6 +3442,14 @@ Word splitting
 not yet been `killed <x9644.html#KILLREF>`__ by its
 `parent <internal.html#PARENTREF>`__
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -2814,5 +3458,9 @@ not yet been `killed <x9644.html#KILLREF>`__ by its
 | `Home <index.html>`__    |                          |
 |                          |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif

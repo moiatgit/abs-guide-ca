@@ -1,17 +1,89 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <scriptanalysis.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Appendix O. Exercises
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <revisionhistory.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 O.2. Writing Scripts
 ====================
 
 Write a script to carry out each of the following tasks.
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **EASY**
 
@@ -105,6 +177,14 @@ Write a script to carry out each of the following tasks.
     generated. (If your script consistently generates *winning* lottery
     numbers, then you can retire on the proceeds and leave shell
     scripting to those of us who have to work for a living.)
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **INTERMEDIATE**
 
@@ -246,18 +326,23 @@ Write a script to carry out each of the following tasks.
     therefore never lose. To simplify matters, you may use ASCII
     graphics:
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |        o | x |                                                           |
-    |        ----------                                                        |
-    |          | x |                                                           |
-    |        ----------                                                        |
-    |          | o |                                                           |
-    |                                                                          |
-    |        Your move, human (row, column)?                                   |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |        o | x |           |
+    |        ----------        |
+    |          | x |           |
+    |        ----------        |
+    |          | o |           |
+    |                          |
+    |        Your move, human  |
+    | (row, column)?           |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 **Alphabetizing a String**
     Alphabetize (in ASCII order) an arbitrary string read from the
@@ -280,17 +365,25 @@ Write a script to carry out each of the following tasks.
     Given a data file with comma-separated
     `fields <special-chars.html#FIELDREF>`__, of the form:
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     Jones,Bill,235 S. Williams St.,Denver,CO,80221,(303) 244-7989        |
-    |     Smith,Tom,404 Polk Ave.,Los Angeles,CA,90003,(213) 879-5612          |
-    |     ...                                                                  |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     Jones,Bill,235 S. Wi |
+    | lliams St.,Denver,CO,802 |
+    | 21,(303) 244-7989        |
+    |     Smith,Tom,404 Polk A |
+    | ve.,Los Angeles,CA,90003 |
+    | ,(213) 879-5612          |
+    |     ...                  |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
     Reformat the data and print it out to ``stdout`` in labeled,
     evenly-spaced columns.
+
+    .. raw:: html
+
+       </p>
 
 **Justification**
     Given ASCII text input either from ``stdin`` or a file, adjust the
@@ -325,6 +418,14 @@ Write a script to carry out each of the following tasks.
     Using `lynx <communications.html#LYNXREF>`__ with the ``-traversal``
     option, write a script that checks a Web site for broken links.
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 **DIFFICULT**
 
 **Testing Passwords**
@@ -342,6 +443,10 @@ Write a script to carry out each of the following tasks.
     -  Must contain at least one of the following non-alphabetic
        characters: @, #, $, %, &, \*, +, -, =
 
+    .. raw:: html
+
+       </p>
+
     Optional:
 
     -  Do a dictionary check on every sequence of at least four
@@ -352,6 +457,10 @@ Write a script to carry out each of the following tasks.
     -  Enable the script to check all the passwords on your system.
        These do not reside in
        ```/etc/passwd`` <files.html#DATAFILESREF1>`__.
+
+    .. raw:: html
+
+       </p>
 
     This exercise tests mastery of `Regular
     Expressions <regexp.html#REGEXREF>`__.
@@ -366,67 +475,121 @@ Write a script to carry out each of the following tasks.
     `Example 16-12 <textproc.html#WF>`__ is probably *not* a good place
     to start.
 
-**Square Root**
+\ **Square Root**
     Write a script to calculate square roots of numbers using *Newton's
     Method*.
 
     The algorithm for this, expressed as a snippet of Bash
     `pseudo-code <assortedtips.html#PSEUDOCODEREF>`__ is:
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #  (Isaac) Newton's Method for speedy extraction                     |
-    |     #+ of square roots.                                                  |
-    |                                                                          |
-    |     guess = $argument                                                    |
-    |     #  $argument is the number to find the square root of.               |
-    |     #  $guess is each successive calculated "guess" -- or trial solution |
-    |  --                                                                      |
-    |     #+ of the square root.                                               |
-    |     #  Our first "guess" at a square root is the argument itself.        |
-    |                                                                          |
-    |     oldguess = 0                                                         |
-    |     # $oldguess is the previous $guess.                                  |
-    |                                                                          |
-    |     tolerance = .000001                                                  |
-    |     # To how close a tolerance we wish to calculate.                     |
-    |                                                                          |
-    |     loopcnt = 0                                                          |
-    |     # Let's keep track of how many times through the loop.               |
-    |     # Some arguments will require more loop iterations than others.      |
-    |                                                                          |
-    |                                                                          |
-    |     while [ ABS( $guess $oldguess ) -gt $tolerance ]                     |
-    |     #       ^^^^^^^^^^^^^^^^^^^^^^^ Fix up syntax, of course.            |
-    |                                                                          |
-    |     #      "ABS" is a (floating point) function to find the absolute val |
-    | ue                                                                       |
-    |     #+      of the difference between the two terms.                     |
-    |     #             So, as long as difference between current and previous |
-    |     #+            trial solution (guess) exceeds the tolerance, keep loo |
-    | ping.                                                                    |
-    |                                                                          |
-    |     do                                                                   |
-    |        oldguess = $guess  # Update $oldguess to previous $guess.         |
-    |                                                                          |
-    |     #  =======================================================           |
-    |        guess = ( $oldguess + ( $argument / $oldguess ) ) / 2.0           |
-    |     #        = 1/2 ( ($oldguess **2 + $argument) / $oldguess )           |
-    |     #  equivalent to:                                                    |
-    |     #        = 1/2 ( $oldguess + $argument / $oldguess )                 |
-    |     #  that is, "averaging out" the trial solution and                   |
-    |     #+ the proportion of argument deviation                              |
-    |     #+ (in effect, splitting the error in half).                         |
-    |     #  This converges on an accurate solution                            |
-    |     #+ with surprisingly few loop iterations . . .                       |
-    |     #+ for arguments > $tolerance, of course.                            |
-    |     #  =======================================================           |
-    |                                                                          |
-    |        (( loopcnt++ ))     # Update loop counter.                        |
-    |     done                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #  (Isaac) Newton's  |
+    | Method for speedy extrac |
+    | tion                     |
+    |     #+ of square roots.  |
+    |                          |
+    |     guess = $argument    |
+    |     #  $argument is the  |
+    | number to find the squar |
+    | e root of.               |
+    |     #  $guess is each su |
+    | ccessive calculated "gue |
+    | ss" -- or trial solution |
+    |  --                      |
+    |     #+ of the square roo |
+    | t.                       |
+    |     #  Our first "guess" |
+    |  at a square root is the |
+    |  argument itself.        |
+    |                          |
+    |     oldguess = 0         |
+    |     # $oldguess is the p |
+    | revious $guess.          |
+    |                          |
+    |     tolerance = .000001  |
+    |     # To how close a tol |
+    | erance we wish to calcul |
+    | ate.                     |
+    |                          |
+    |     loopcnt = 0          |
+    |     # Let's keep track o |
+    | f how many times through |
+    |  the loop.               |
+    |     # Some arguments wil |
+    | l require more loop iter |
+    | ations than others.      |
+    |                          |
+    |                          |
+    |     while [ ABS( $guess  |
+    | $oldguess ) -gt $toleran |
+    | ce ]                     |
+    |     #       ^^^^^^^^^^^^ |
+    | ^^^^^^^^^^^ Fix up synta |
+    | x, of course.            |
+    |                          |
+    |     #      "ABS" is a (f |
+    | loating point) function  |
+    | to find the absolute val |
+    | ue                       |
+    |     #+      of the diffe |
+    | rence between the two te |
+    | rms.                     |
+    |     #             So, as |
+    |  long as difference betw |
+    | een current and previous |
+    |     #+            trial  |
+    | solution (guess) exceeds |
+    |  the tolerance, keep loo |
+    | ping.                    |
+    |                          |
+    |     do                   |
+    |        oldguess = $guess |
+    |   # Update $oldguess to  |
+    | previous $guess.         |
+    |                          |
+    |     #  ================= |
+    | ======================== |
+    | ==============           |
+    |        guess = ( $oldgue |
+    | ss + ( $argument / $oldg |
+    | uess ) ) / 2.0           |
+    |     #        = 1/2 ( ($o |
+    | ldguess **2 + $argument) |
+    |  / $oldguess )           |
+    |     #  equivalent to:    |
+    |     #        = 1/2 ( $ol |
+    | dguess + $argument / $ol |
+    | dguess )                 |
+    |     #  that is, "averagi |
+    | ng out" the trial soluti |
+    | on and                   |
+    |     #+ the proportion of |
+    |  argument deviation      |
+    |     #+ (in effect, split |
+    | ting the error in half). |
+    |     #  This converges on |
+    |  an accurate solution    |
+    |     #+ with surprisingly |
+    |  few loop iterations . . |
+    |  .                       |
+    |     #+ for arguments > $ |
+    | tolerance, of course.    |
+    |     #  ================= |
+    | ======================== |
+    | ==============           |
+    |                          |
+    |        (( loopcnt++ ))   |
+    |    # Update loop counter |
+    | .                        |
+    |     done                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     It's a simple enough recipe, and *seems* at first glance easy enough
     to convert into a working Bash script. The problem, though, is that
@@ -468,7 +631,7 @@ Write a script to carry out each of the following tasks.
 
     Optional: A script that converts Docbook/SGML to XML.
 
-**Chasing Spammers**
+\ **Chasing Spammers**
     Write a script that analyzes a spam e-mail by doing DNS lookups on
     the IP addresses in the headers to identify the relay hosts as well
     as the originating ISP. The script will forward the unaltered spam
@@ -546,13 +709,21 @@ Write a script to carry out each of the following tasks.
 
     For example, to "ladder" from *mark* to *vase*:
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     mark --> park --> part --> past --> vast --> vase                    |
-    |              ^           ^       ^      ^           ^                    |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     mark --> park --> pa |
+    | rt --> past --> vast --> |
+    |  vase                    |
+    |              ^           |
+    |  ^       ^      ^        |
+    |     ^                    |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Write a script that solves word ladder puzzles. Given a starting and
     an ending word, the script will list all intermediate steps in the
@@ -623,86 +794,145 @@ Write a script to carry out each of the following tasks.
     (2-letter groupings). It is traditional to use a 5 x 5 letter
     scrambled-alphabet *key square* for the encryption and decryption.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |        C O D E S                                                         |
-    |        A B F G H                                                         |
-    |        I K L M N                                                         |
-    |        P Q R T U                                                         |
-    |        V W X Y Z                                                         |
-    |                                                                          |
-    |     Each letter of the alphabet appears once, except "I" also represents |
-    |     "J". The arbitrarily chosen key word, "CODES" comes first, then all  |
-    |     the rest of the alphabet, in order from left to right, skipping lett |
-    | ers                                                                      |
-    |     already used.                                                        |
-    |                                                                          |
-    |     To encrypt, separate the plaintext message into digrams (2-letter    |
-    |     groups). If a group has two identical letters, delete the second, an |
-    | d                                                                        |
-    |     form a new group. If there is a single letter left over at the end,  |
-    |     insert a "null" character, typically an "X."                         |
-    |                                                                          |
-    |     THIS IS A TOP SECRET MESSAGE                                         |
-    |                                                                          |
-    |     TH IS IS AT OP SE CR ET ME SA GE                                     |
-    |                                                                          |
-    |                                                                          |
-    |                                                                          |
-    |     For each digram, there are three possibilities.                      |
-    |     -----------------------------------------------                      |
-    |                                                                          |
-    |     1) Both letters will be on the same row of the key square:           |
-    |        For each letter, substitute the one immediately to the right, in  |
-    | that                                                                     |
-    |        row. If necessary, wrap around left to the beginning of the row.  |
-    |                                                                          |
-    |     or                                                                   |
-    |                                                                          |
-    |     2) Both letters will be in the same column of the key square:        |
-    |        For each letter, substitute the one immediately below it, in that |
-    |        row. If necessary, wrap around to the top of the column.          |
-    |                                                                          |
-    |     or                                                                   |
-    |                                                                          |
-    |     3) Both letters will form the corners of a rectangle within the key  |
-    | square:                                                                  |
-    |        For each letter, substitute the one on the other corner the recta |
-    | ngle                                                                     |
-    |        which lies on the same row.                                       |
-    |                                                                          |
-    |                                                                          |
-    |     The "TH" digram falls under case #3.                                 |
-    |     G H                                                                  |
-    |     M N                                                                  |
-    |     T U           (Rectangle with "T" and "H" at corners)                |
-    |                                                                          |
-    |     T --> U                                                              |
-    |     H --> G                                                              |
-    |                                                                          |
-    |                                                                          |
-    |     The "SE" digram falls under case #1.                                 |
-    |     C O D E S     (Row containing "S" and "E")                           |
-    |                                                                          |
-    |     S --> C  (wraps around left to beginning of row)                     |
-    |     E --> S                                                              |
-    |                                                                          |
-    |     ==================================================================== |
-    | =====                                                                    |
-    |                                                                          |
-    |     To decrypt encrypted text, reverse the above procedure under cases # |
-    | 1                                                                        |
-    |     and #2 (move in opposite direction for substitution). Under case #3, |
-    |     just take the remaining two corners of the rectangle.                |
-    |                                                                          |
-    |                                                                          |
-    |     Helen Fouche Gaines' classic work, ELEMENTARY CRYPTANALYSIS (1939),  |
-    | gives a                                                                  |
-    |     fairly detailed description of the Playfair Cipher and its solution  |
-    | methods.                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |        C O D E S         |
+    |        A B F G H         |
+    |        I K L M N         |
+    |        P Q R T U         |
+    |        V W X Y Z         |
+    |                          |
+    |     Each letter of the a |
+    | lphabet appears once, ex |
+    | cept "I" also represents |
+    |     "J". The arbitrarily |
+    |  chosen key word, "CODES |
+    | " comes first, then all  |
+    |     the rest of the alph |
+    | abet, in order from left |
+    |  to right, skipping lett |
+    | ers                      |
+    |     already used.        |
+    |                          |
+    |     To encrypt, separate |
+    |  the plaintext message i |
+    | nto digrams (2-letter    |
+    |     groups). If a group  |
+    | has two identical letter |
+    | s, delete the second, an |
+    | d                        |
+    |     form a new group. If |
+    |  there is a single lette |
+    | r left over at the end,  |
+    |     insert a "null" char |
+    | acter, typically an "X." |
+    |                          |
+    |     THIS IS A TOP SECRET |
+    |  MESSAGE                 |
+    |                          |
+    |     TH IS IS AT OP SE CR |
+    |  ET ME SA GE             |
+    |                          |
+    |                          |
+    |                          |
+    |     For each digram, the |
+    | re are three possibiliti |
+    | es.                      |
+    |     -------------------- |
+    | ------------------------ |
+    | ---                      |
+    |                          |
+    |     1) Both letters will |
+    |  be on the same row of t |
+    | he key square:           |
+    |        For each letter,  |
+    | substitute the one immed |
+    | iately to the right, in  |
+    | that                     |
+    |        row. If necessary |
+    | , wrap around left to th |
+    | e beginning of the row.  |
+    |                          |
+    |     or                   |
+    |                          |
+    |     2) Both letters will |
+    |  be in the same column o |
+    | f the key square:        |
+    |        For each letter,  |
+    | substitute the one immed |
+    | iately below it, in that |
+    |        row. If necessary |
+    | , wrap around to the top |
+    |  of the column.          |
+    |                          |
+    |     or                   |
+    |                          |
+    |     3) Both letters will |
+    |  form the corners of a r |
+    | ectangle within the key  |
+    | square:                  |
+    |        For each letter,  |
+    | substitute the one on th |
+    | e other corner the recta |
+    | ngle                     |
+    |        which lies on the |
+    |  same row.               |
+    |                          |
+    |                          |
+    |     The "TH" digram fall |
+    | s under case #3.         |
+    |     G H                  |
+    |     M N                  |
+    |     T U           (Recta |
+    | ngle with "T" and "H" at |
+    |  corners)                |
+    |                          |
+    |     T --> U              |
+    |     H --> G              |
+    |                          |
+    |                          |
+    |     The "SE" digram fall |
+    | s under case #1.         |
+    |     C O D E S     (Row c |
+    | ontaining "S" and "E")   |
+    |                          |
+    |     S --> C  (wraps arou |
+    | nd left to beginning of  |
+    | row)                     |
+    |     E --> S              |
+    |                          |
+    |     ==================== |
+    | ======================== |
+    | ======================== |
+    | =====                    |
+    |                          |
+    |     To decrypt encrypted |
+    |  text, reverse the above |
+    |  procedure under cases # |
+    | 1                        |
+    |     and #2 (move in oppo |
+    | site direction for subst |
+    | itution). Under case #3, |
+    |     just take the remain |
+    | ing two corners of the r |
+    | ectangle.                |
+    |                          |
+    |                          |
+    |     Helen Fouche Gaines' |
+    |  classic work, ELEMENTAR |
+    | Y CRYPTANALYSIS (1939),  |
+    | gives a                  |
+    |     fairly detailed desc |
+    | ription of the Playfair  |
+    | Cipher and its solution  |
+    | methods.                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     This script will have three main sections
 
@@ -717,75 +947,84 @@ Write a script to carry out each of the following tasks.
     `functions <functions.html#FUNCTIONREF>`__. You may use `Example
     A-56 <contributed-scripts.html#GRONSFELD>`__ as an inspiration.
 
+.. raw:: html
+
+   </div>
+
 --
 
 Please do not send the author your solutions to these exercises. There
 are more appropriate ways to impress him with your cleverness, such as
 submitting bugfixes and suggestions for improving the book.
 
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
-+--------------------------+--------------------------+--------------------------+
-| `[1] <writingscripts.htm |
-| l#AEN25254>`__           |
-| For all you clever types |
-| who failed intermediate  |
-| algebra, a *determinant* |
-| is a numerical value     |
-| associated with a        |
-| multidimensional         |
-| *matrix*                 |
-| (`array <arrays.html#ARR |
-| AYREF>`__                |
-| of numbers).             |
-|                          |
-| +----------------------- |
-| ------------------------ |
-| ------------------------ |
-| ---+                     |
-| | .. code:: PROGRAMLISTI |
-| NG                       |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     For the simple cas |
-| e of a 2 x 2 determinant |
-| :                        |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |       |a  b|           |
-|                          |
-|                          |
-|    |                     |
-| |       |b  a|           |
-|                          |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     The solution is a* |
-| a - b*b, where "a" and " |
-| b" represent numbers.    |
-|    |                     |
-|                          |
-|                          |
-|                          |
-|                          |
-| +----------------------- |
-| ------------------------ |
-| ------------------------ |
-| ---+                     |
-                          
-+--------------------------+--------------------------+--------------------------+
++--------------------+--------------------+--------------------+--------------------+
+| `[1] <writingscrip |
+| ts.html#AEN25254>` |
+| __                 |
+| For all you clever |
+| types who failed   |
+| intermediate       |
+| algebra, a         |
+| *determinant* is a |
+| numerical value    |
+| associated with a  |
+| multidimensional   |
+| *matrix*           |
+| (`array <arrays.ht |
+| ml#ARRAYREF>`__    |
+| of numbers).       |
+|                    |
+| +----------------- |
+| ---------+-------- |
+| ------------------ |
+| +----------------- |
+| ---------+         |
+| | .. code:: PROGRA |
+| MLISTING |         |
+| |                  |
+|          |         |
+| |     For the simp |
+| le case  |         |
+| | of a 2 x 2 deter |
+| minant:  |         |
+| |                  |
+|          |         |
+| |       |a  b|     |
+|          |         |
+| |       |b  a|     |
+|          |         |
+| |                  |
+|          |         |
+| |     The solution |
+|  is a*a  |         |
+| | - b*b, where "a" |
+|  and "b" |         |
+| |  represent numbe |
+| rs.      |         |
+|                    |
+|                    |
+| +----------------- |
+| ---------+-------- |
+| ------------------ |
+| +----------------- |
+| ---------+         |
+|                    |
+| .. raw:: html      |
+|                    |
+|    </p>            |
+                    
++--------------------+--------------------+--------------------+--------------------+
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -796,4 +1035,8 @@ Notes
 | `Next <revisionhistory.h |                          |
 | tml>`__                  |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <miscellany.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 36. Miscellany
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <wrapper.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 36.1. Interactive and non-interactive shells and scripts
 ========================================================
@@ -20,24 +88,32 @@ A shell running a script is always a non-interactive shell. All the
 same, the script can still access its ``tty``. It is even possible to
 emulate an interactive shell in a script.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     MY_PROMPT='$ '                                                       |
-|     while :                                                              |
-|     do                                                                   |
-|       echo -n "$MY_PROMPT"                                               |
-|       read line                                                          |
-|       eval "$line"                                                       |
-|       done                                                               |
-|                                                                          |
-|     exit 0                                                               |
-|                                                                          |
-|     # This example script, and much of the above explanation supplied by |
-|     # Stéphane Chazelas (thanks again).                                  |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     MY_PROMPT='$ '       |
+|     while :              |
+|     do                   |
+|       echo -n "$MY_PROMP |
+| T"                       |
+|       read line          |
+|       eval "$line"       |
+|       done               |
+|                          |
+|     exit 0               |
+|                          |
+|     # This example scrip |
+| t, and much of the above |
+|  explanation supplied by |
+|     # Stéphane Chazelas  |
+| (thanks again).          |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 Let us consider an *interactive* script to be one that requires input
 from the user, usually with `read <internal.html#READREF>`__ statements
@@ -64,70 +140,106 @@ it is simply a matter of finding whether the *prompt* variable,
 `$PS1 <internalvariables.html#PS1REF>`__ is set. (If the user is being
 prompted for input, then the script needs to display a prompt.)
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     if [ -z $PS1 ] # no prompt?                                          |
-|     ### if [ -v PS1 ]   # On Bash 4.2+ ...                               |
-|     then                                                                 |
-|       # non-interactive                                                  |
-|       ...                                                                |
-|     else                                                                 |
-|       # interactive                                                      |
-|       ...                                                                |
-|     fi                                                                   |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     if [ -z $PS1 ] # no  |
+| prompt?                  |
+|     ### if [ -v PS1 ]    |
+| # On Bash 4.2+ ...       |
+|     then                 |
+|       # non-interactive  |
+|       ...                |
+|     else                 |
+|       # interactive      |
+|       ...                |
+|     fi                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 Alternatively, the script can test for the presence of option "i" in the
 `$- <internalvariables.html#FLPREF>`__ flag.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     case $- in                                                           |
-|     *i*)    # interactive shell                                          |
-|     ;;                                                                   |
-|     *)      # non-interactive shell                                      |
-|     ;;                                                                   |
-|     # (Courtesy of "UNIX F.A.Q.," 1993)                                  |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     case $- in           |
+|     *i*)    # interactiv |
+| e shell                  |
+|     ;;                   |
+|     *)      # non-intera |
+| ctive shell              |
+|     ;;                   |
+|     # (Courtesy of "UNIX |
+|  F.A.Q.," 1993)          |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 However, John Lange describes an alternative method, using the `-t
 *test* operator <fto.html#TERMTEST>`__.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     # Test for a terminal!                                               |
-|                                                                          |
-|     fd=0   # stdin                                                       |
-|                                                                          |
-|     #  As we recall, the -t test option checks whether the stdin, [ -t 0 |
-|  ],                                                                      |
-|     #+ or stdout, [ -t 1 ], in a given script is running in a terminal.  |
-|     if [ -t "$fd" ]                                                      |
-|     then                                                                 |
-|       echo interactive                                                   |
-|     else                                                                 |
-|       echo non-interactive                                               |
-|     fi                                                                   |
-|                                                                          |
-|                                                                          |
-|     #  But, as John points out:                                          |
-|     #    if [ -t 0 ] works ... when you're logged in locally             |
-|     #    but fails when you invoke the command remotely via ssh.         |
-|     #    So for a true test you also have to test for a socket.          |
-|                                                                          |
-|     if [[ -t "$fd" || -p /dev/stdin ]]                                   |
-|     then                                                                 |
-|       echo interactive                                                   |
-|     else                                                                 |
-|       echo non-interactive                                               |
-|     fi                                                                   |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     # Test for a termina |
+| l!                       |
+|                          |
+|     fd=0   # stdin       |
+|                          |
+|     #  As we recall, the |
+|  -t test option checks w |
+| hether the stdin, [ -t 0 |
+|  ],                      |
+|     #+ or stdout, [ -t 1 |
+|  ], in a given script is |
+|  running in a terminal.  |
+|     if [ -t "$fd" ]      |
+|     then                 |
+|       echo interactive   |
+|     else                 |
+|       echo non-interacti |
+| ve                       |
+|     fi                   |
+|                          |
+|                          |
+|     #  But, as John poin |
+| ts out:                  |
+|     #    if [ -t 0 ] wor |
+| ks ... when you're logge |
+| d in locally             |
+|     #    but fails when  |
+| you invoke the command r |
+| emotely via ssh.         |
+|     #    So for a true t |
+| est you also have to tes |
+| t for a socket.          |
+|                          |
+|     if [[ -t "$fd" || -p |
+|  /dev/stdin ]]           |
+|     then                 |
+|       echo interactive   |
+|     else                 |
+|       echo non-interacti |
+| ve                       |
+|     fi                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div class="NOTE">
 
 +--------------------------------------+--------------------------------------+
 | |Note|                               |
@@ -140,6 +252,18 @@ However, John Lange describes an alternative method, using the `-t
 | present.                             |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -148,5 +272,9 @@ However, John Lange describes an alternative method, using the `-t
 | `Home <index.html>`__    | Shell Wrappers           |
 | `Next <wrapper.html>`__  |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif

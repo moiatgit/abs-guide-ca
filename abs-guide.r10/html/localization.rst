@@ -1,10 +1,78 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <tabexpansion.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
+
 `Next <histcommands.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="APPENDIX">
 
 Appendix K. Localization
 ========================
@@ -19,128 +87,231 @@ get output from the same script in English.
 To create a localized script, use the following template to write all
 messages to the user (error messages, prompts, etc.).
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # localized.sh                                                       |
-|     #  Script by Stéphane Chazelas,                                      |
-|     #+ modified by Bruno Haible, bugfixed by Alfredo Pironti.            |
-|                                                                          |
-|     . gettext.sh                                                         |
-|                                                                          |
-|     E_CDERROR=65                                                         |
-|                                                                          |
-|     error()                                                              |
-|     {                                                                    |
-|       printf "$@" >&2                                                    |
-|       exit $E_CDERROR                                                    |
-|     }                                                                    |
-|                                                                          |
-|     cd $var || error "`eval_gettext \"Can\'t cd to \\\$var.\"`"          |
-|     #  The triple backslashes (escapes) in front of $var needed          |
-|     #+ "because eval_gettext expects a string                            |
-|     #+ where the variable values have not yet been substituted."         |
-|     #    -- per Bruno Haible                                             |
-|     read -p "`gettext \"Enter the value: \"`" var                        |
-|     #  ...                                                               |
-|                                                                          |
-|                                                                          |
-|     #  ----------------------------------------------------------------- |
-| -                                                                        |
-|     #  Alfredo Pironti comments:                                         |
-|                                                                          |
-|     #  This script has been modified to not use the $"..." syntax in     |
-|     #+ favor of the "`gettext \"...\"`" syntax.                          |
-|     #  This is ok, but with the new localized.sh program, the commands   |
-|     #+ "bash -D filename" and "bash --dump-po-string filename"           |
-|     #+ will produce no output                                            |
-|     #+ (because those command are only searching for the $"..." strings) |
-| !                                                                        |
-|     #  The ONLY way to extract strings from the new file is to use the   |
-|     # 'xgettext' program. However, the xgettext program is buggy.        |
-|                                                                          |
-|     # Note that 'xgettext' has another bug.                              |
-|     #                                                                    |
-|     # The shell fragment:                                                |
-|     #    gettext -s "I like Bash"                                        |
-|     # will be correctly extracted, but . . .                             |
-|     #    xgettext -s "I like Bash"                                       |
-|     # . . . fails!                                                       |
-|     #  'xgettext' will extract "-s" because                              |
-|     #+ the command only extracts the                                     |
-|     #+ very first argument after the 'gettext' word.                     |
-|                                                                          |
-|                                                                          |
-|     #  Escape characters:                                                |
-|     #                                                                    |
-|     #  To localize a sentence like                                       |
-|     #     echo -e "Hello\tworld!"                                        |
-|     #+ you must use                                                      |
-|     #     echo -e "`gettext \"Hello\\tworld\"`"                          |
-|     #  The "double escape character" before the `t' is needed because    |
-|     #+ 'gettext' will search for a string like: 'Hello\tworld'           |
-|     #  This is because gettext will read one literal `\')                |
-|     #+ and will output a string like "Bonjour\tmonde",                   |
-|     #+ so the 'echo' command will display the message correctly.         |
-|     #                                                                    |
-|     #  You may not use                                                   |
-|     #     echo "`gettext -e \"Hello\tworld\"`"                           |
-|     #+ due to the xgettext bug explained above.                          |
-|                                                                          |
-|                                                                          |
-|                                                                          |
-|     # Let's localize the following shell fragment:                       |
-|     #     echo "-h display help and exit"                                |
-|     #                                                                    |
-|     # First, one could do this:                                          |
-|     #     echo "`gettext \"-h display help and exit\"`"                  |
-|     #  This way 'xgettext' will work ok,                                 |
-|     #+ but the 'gettext' program will read "-h" as an option!            |
-|     #                                                                    |
-|     # One solution could be                                              |
-|     #     echo "`gettext -- \"-h display help and exit\"`"               |
-|     #  This way 'gettext' will work,                                     |
-|     #+ but 'xgettext' will extract "--", as referred to above.           |
-|     #                                                                    |
-|     # The workaround you may use to get this string localized is         |
-|     #     echo -e "`gettext \"\\0-h display help and exit\"`"            |
-|     #  We have added a \0 (NULL) at the beginning of the sentence.       |
-|     #  This way 'gettext' works correctly, as does 'xgettext.'           |
-|     #  Moreover, the NULL character won't change the behavior            |
-|     #+ of the 'echo' command.                                            |
-|     #  ----------------------------------------------------------------- |
-| -                                                                        |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # localized.sh       |
+|     #  Script by Stéphan |
+| e Chazelas,              |
+|     #+ modified by Bruno |
+|  Haible, bugfixed by Alf |
+| redo Pironti.            |
+|                          |
+|     . gettext.sh         |
+|                          |
+|     E_CDERROR=65         |
+|                          |
+|     error()              |
+|     {                    |
+|       printf "$@" >&2    |
+|       exit $E_CDERROR    |
+|     }                    |
+|                          |
+|     cd $var || error "`e |
+| val_gettext \"Can\'t cd  |
+| to \\\$var.\"`"          |
+|     #  The triple backsl |
+| ashes (escapes) in front |
+|  of $var needed          |
+|     #+ "because eval_get |
+| text expects a string    |
+|     #+ where the variabl |
+| e values have not yet be |
+| en substituted."         |
+|     #    -- per Bruno Ha |
+| ible                     |
+|     read -p "`gettext \" |
+| Enter the value: \"`" va |
+| r                        |
+|     #  ...               |
+|                          |
+|                          |
+|     #  ----------------- |
+| ------------------------ |
+| ------------------------ |
+| -                        |
+|     #  Alfredo Pironti c |
+| omments:                 |
+|                          |
+|     #  This script has b |
+| een modified to not use  |
+| the $"..." syntax in     |
+|     #+ favor of the "`ge |
+| ttext \"...\"`" syntax.  |
+|     #  This is ok, but w |
+| ith the new localized.sh |
+|  program, the commands   |
+|     #+ "bash -D filename |
+| " and "bash --dump-po-st |
+| ring filename"           |
+|     #+ will produce no o |
+| utput                    |
+|     #+ (because those co |
+| mmand are only searching |
+|  for the $"..." strings) |
+| !                        |
+|     #  The ONLY way to e |
+| xtract strings from the  |
+| new file is to use the   |
+|     # 'xgettext' program |
+| . However, the xgettext  |
+| program is buggy.        |
+|                          |
+|     # Note that 'xgettex |
+| t' has another bug.      |
+|     #                    |
+|     # The shell fragment |
+| :                        |
+|     #    gettext -s "I l |
+| ike Bash"                |
+|     # will be correctly  |
+| extracted, but . . .     |
+|     #    xgettext -s "I  |
+| like Bash"               |
+|     # . . . fails!       |
+|     #  'xgettext' will e |
+| xtract "-s" because      |
+|     #+ the command only  |
+| extracts the             |
+|     #+ very first argume |
+| nt after the 'gettext' w |
+| ord.                     |
+|                          |
+|                          |
+|     #  Escape characters |
+| :                        |
+|     #                    |
+|     #  To localize a sen |
+| tence like               |
+|     #     echo -e "Hello |
+| \tworld!"                |
+|     #+ you must use      |
+|     #     echo -e "`gett |
+| ext \"Hello\\tworld\"`"  |
+|     #  The "double escap |
+| e character" before the  |
+| `t' is needed because    |
+|     #+ 'gettext' will se |
+| arch for a string like:  |
+| 'Hello\tworld'           |
+|     #  This is because g |
+| ettext will read one lit |
+| eral `\')                |
+|     #+ and will output a |
+|  string like "Bonjour\tm |
+| onde",                   |
+|     #+ so the 'echo' com |
+| mand will display the me |
+| ssage correctly.         |
+|     #                    |
+|     #  You may not use   |
+|     #     echo "`gettext |
+|  -e \"Hello\tworld\"`"   |
+|     #+ due to the xgette |
+| xt bug explained above.  |
+|                          |
+|                          |
+|                          |
+|     # Let's localize the |
+|  following shell fragmen |
+| t:                       |
+|     #     echo "-h displ |
+| ay help and exit"        |
+|     #                    |
+|     # First, one could d |
+| o this:                  |
+|     #     echo "`gettext |
+|  \"-h display help and e |
+| xit\"`"                  |
+|     #  This way 'xgettex |
+| t' will work ok,         |
+|     #+ but the 'gettext' |
+|  program will read "-h"  |
+| as an option!            |
+|     #                    |
+|     # One solution could |
+|  be                      |
+|     #     echo "`gettext |
+|  -- \"-h display help an |
+| d exit\"`"               |
+|     #  This way 'gettext |
+| ' will work,             |
+|     #+ but 'xgettext' wi |
+| ll extract "--", as refe |
+| rred to above.           |
+|     #                    |
+|     # The workaround you |
+|  may use to get this str |
+| ing localized is         |
+|     #     echo -e "`gett |
+| ext \"\\0-h display help |
+|  and exit\"`"            |
+|     #  We have added a \ |
+| 0 (NULL) at the beginnin |
+| g of the sentence.       |
+|     #  This way 'gettext |
+| ' works correctly, as do |
+| es 'xgettext.'           |
+|     #  Moreover, the NUL |
+| L character won't change |
+|  the behavior            |
+|     #+ of the 'echo' com |
+| mand.                    |
+|     #  ----------------- |
+| ------------------------ |
+| ------------------------ |
+| -                        |
+                          
++--------------------------+--------------------------+--------------------------+
 
-+--------------------------------------------------------------------------+
-| .. code:: SCREEN                                                         |
-|                                                                          |
-|     bash$ bash -D localized.sh                                           |
-|     "Can't cd to %s."                                                    |
-|      "Enter the value: "                                                 |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
+
+   </p>
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ bash -D locali |
+| zed.sh                   |
+|     "Can't cd to %s."    |
+|      "Enter the value: " |
+                          
++--------------------------+--------------------------+--------------------------+
 
 This lists all the localized text. (The ``-D`` option lists
 double-quoted strings prefixed by a $, without executing the script.)
 
-+--------------------------------------------------------------------------+
-| .. code:: SCREEN                                                         |
-|                                                                          |
-|     bash$ bash --dump-po-strings localized.sh                            |
-|     #: a:6                                                               |
-|      msgid "Can't cd to %s."                                             |
-|      msgstr ""                                                           |
-|      #: a:7                                                              |
-|      msgid "Enter the value: "                                           |
-|      msgstr ""                                                           |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
+
+   </p>
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ bash --dump-po |
+| -strings localized.sh    |
+|     #: a:6               |
+|      msgid "Can't cd to  |
+| %s."                     |
+|      msgstr ""           |
+|      #: a:7              |
+|      msgid "Enter the va |
+| lue: "                   |
+|      msgstr ""           |
+                          
++--------------------------+--------------------------+--------------------------+
 
 The ``--dump-po-strings`` option to Bash resembles the ``-D`` option,
 but uses `gettext <textproc.html#GETTEXTREF>`__ "po" format.
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div class="NOTE">
 
 +--------------+--------------+--------------+--------------+--------------+--------------+
 | |Note|       |
@@ -210,29 +381,48 @@ but uses `gettext <textproc.html#GETTEXTREF>`__ "po" format.
 | ons.         |
 +--------------+--------------+--------------+--------------+--------------+--------------+
 
+.. raw:: html
+
+   </div>
+
 Now, build a ``language.po`` file for each language that the script will
 be translated into, specifying the ``msgstr``. Alfredo Pironti gives the
 following example:
 
 fr.po:
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #: a:6                                                               |
-|     msgid "Can't cd to $var."                                            |
-|     msgstr "Impossible de se positionner dans le repertoire $var."       |
-|     #: a:7                                                               |
-|     msgid "Enter the value: "                                            |
-|     msgstr "Entrez la valeur : "                                         |
-|                                                                          |
-|     #  The string are dumped with the variable names, not with the %s sy |
-| ntax,                                                                    |
-|     #+ similar to C programs.                                            |
-|     #+ This is a very cool feature if the programmer uses                |
-|     #+ variable names that make sense!                                   |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #: a:6               |
+|     msgid "Can't cd to $ |
+| var."                    |
+|     msgstr "Impossible d |
+| e se positionner dans le |
+|  repertoire $var."       |
+|     #: a:7               |
+|     msgid "Enter the val |
+| ue: "                    |
+|     msgstr "Entrez la va |
+| leur : "                 |
+|                          |
+|     #  The string are du |
+| mped with the variable n |
+| ames, not with the %s sy |
+| ntax,                    |
+|     #+ similar to C prog |
+| rams.                    |
+|     #+ This is a very co |
+| ol feature if the progra |
+| mmer uses                |
+|     #+ variable names th |
+| at make sense!           |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 Then, run `msgfmt <textproc.html#MSGFMTREF>`__.
 
@@ -242,129 +432,108 @@ Place the resulting ``localized.sh.mo`` file in the
 ``/usr/local/share/locale/fr/LC_MESSAGES`` directory, and at the
 beginning of the script, insert the lines:
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     TEXTDOMAINDIR=/usr/local/share/locale                                |
-|     TEXTDOMAIN=localized.sh                                              |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     TEXTDOMAINDIR=/usr/l |
+| ocal/share/locale        |
+|     TEXTDOMAIN=localized |
+| .sh                      |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 If a user on a French system runs the script, she will get French
 messages.
 
-+--------------------+--------------------+--------------------+--------------------+
-| |Note|             |
-| With older         |
-| versions of Bash   |
-| or other shells,   |
-| localization       |
-| requires           |
-| `gettext <textproc |
-| .html#GETTEXTREF>` |
-| __,                |
-| using the ``-s``   |
-| option. In this    |
-| case, the script   |
-| becomes:           |
-|                    |
-| +----------------- |
-| ------------------ |
-| ------------------ |
-| ------------------ |
-| ---+               |
-| | .. code:: PROGRA |
-| MLISTING           |
-|                    |
-|                    |
-|    |               |
-| |                  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     #!/bin/bash  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     # localized. |
-| sh                 |
-|                    |
-|                    |
-|    |               |
-| |                  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     E_CDERROR=65 |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |                  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     error() {    |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |       local form |
-| at=$1              |
-|                    |
-|                    |
-|    |               |
-| |       shift      |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |       printf "$( |
-| gettext -s "$forma |
-| t")" "$@" >&2      |
-|                    |
-|    |               |
-| |       exit $E_CD |
-| ERROR              |
-|                    |
-|                    |
-|    |               |
-| |     }            |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     cd $var || e |
-| rror "Can't cd to  |
-| %s." "$var"        |
-|                    |
-|    |               |
-| |     read -p "$(g |
-| ettext -s "Enter t |
-| he value: ")" var  |
-|                    |
-|    |               |
-| |     # ...        |
-|                    |
-|                    |
-|                    |
-|    |               |
-|                    |
-|                    |
-|                    |
-|                    |
-|                    |
-| +----------------- |
-| ------------------ |
-| ------------------ |
-| ------------------ |
-| ---+               |
-                    
-+--------------------+--------------------+--------------------+--------------------+
+.. raw:: html
+
+   <div class="NOTE">
+
++----------------+----------------+----------------+----------------+----------------+
+| |Note|         |
+| With older     |
+| versions of    |
+| Bash or other  |
+| shells,        |
+| localization   |
+| requires       |
+| `gettext <text |
+| proc.html#GETT |
+| EXTREF>`__,    |
+| using the      |
+| ``-s`` option. |
+| In this case,  |
+| the script     |
+| becomes:       |
+|                |
+| +------------- |
+| -------------+ |
+| -------------- |
+| ------------+- |
+| -------------- |
+| -----------+   |
+| | .. code:: PR |
+| OGRAMLISTING | |
+| |              |
+|              | |
+| |     #!/bin/b |
+| ash          | |
+| |     # locali |
+| zed.sh       | |
+| |              |
+|              | |
+| |     E_CDERRO |
+| R=65         | |
+| |              |
+|              | |
+| |     error()  |
+| {            | |
+| |       local  |
+| format=$1    | |
+| |       shift  |
+|              | |
+| |       printf |
+|  "$(gettext  | |
+| | -s "$format" |
+| )" "$@" >&2  | |
+| |       exit $ |
+| E_CDERROR    | |
+| |     }        |
+|              | |
+| |     cd $var  |
+| || error "Ca | |
+| | n't cd to %s |
+| ." "$var"    | |
+| |     read -p  |
+| "$(gettext - | |
+| | s "Enter the |
+|  value: ")"  | |
+| | var          |
+|              | |
+| |     # ...    |
+|              | |
+|                |
+|                |
+| +------------- |
+| -------------+ |
+| -------------- |
+| ------------+- |
+| -------------- |
+| -----------+   |
+|                |
+| .. raw:: html  |
+|                |
+|    </p>        |
+                
++----------------+----------------+----------------+----------------+----------------+
+
+.. raw:: html
+
+   </div>
 
 The ``TEXTDOMAIN`` and ``TEXTDOMAINDIR`` variables need to be set and
 exported to the environment. This should be done within the script
@@ -376,6 +545,14 @@ This appendix written by Stéphane Chazelas, with modifications suggested
 by Alfredo Pironti, and by Bruno Haible, maintainer of GNU
 `gettext <textproc.html#GETTEXTREF>`__.
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -385,5 +562,9 @@ by Alfredo Pironti, and by Bruno Haible, maintainer of GNU
 | `Next <histcommands.html | History Commands         |
 | >`__                     |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif

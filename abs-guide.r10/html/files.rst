@@ -1,13 +1,85 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <bash-options.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
+
 `Next <systemdirs.html>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
 
 --------------
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="APPENDIX">
+
 Appendix H. Important Files
 ===========================
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **startup files**
 
@@ -34,12 +106,28 @@ Appendix H. Important Files
     and user scripts read this file. See `Appendix
     M <sample-bashrc.html>`__ for a sample ``.bashrc`` file.
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 **logout file**
 
 ``$HOME``/.bash\_logout
     user-specific instruction file, found in each user's home directory.
     Upon exit from a login (Bash) shell, the commands in this file
     execute.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **data files**
 
@@ -50,25 +138,46 @@ Appendix H. Important Files
     `[2] <files.html#FTN.AEN23937>`__ but in ``/etc/shadow`` in
     encrypted form.
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 **system configuration files**
 
 ``/etc/sysconfig/hwconf``
     Listing and description of attached hardware devices. This
     information is in text form and can be extracted and parsed.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ grep -A 5 AUDIO /etc/sysconfig/hwconf                          |
-    |     class: AUDIO                                                         |
-    |      bus: PCI                                                            |
-    |      detached: 0                                                         |
-    |      driver: snd-intel8x0                                                |
-    |      desc: "Intel Corporation 82801CA/CAM AC'97 Audio Controller"        |
-    |      vendorId: 8086                                                      |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ grep -A 5 AUDI |
+    | O /etc/sysconfig/hwconf  |
+    |                          |
+    |     class: AUDIO         |
+    |      bus: PCI            |
+    |      detached: 0         |
+    |      driver: snd-intel8x |
+    | 0                        |
+    |      desc: "Intel Corpor |
+    | ation 82801CA/CAM AC'97  |
+    | Audio Controller"        |
+    |      vendorId: 8086      |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -76,6 +185,18 @@ Appendix H. Important Files
     | Fedora Core installations, but may   |
     | be missing from other distros.       |
     +--------------------------------------+--------------------------------------+
+
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -88,6 +209,10 @@ Notes
 | classic Bourne shell (**sh**).       | file.                                |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -97,5 +222,9 @@ Notes
 | `Next <systemdirs.html>` | Important System         |
 | __                       | Directories              |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif

@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <command-line-options.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Appendix G. Command-Line Options
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <bash-options.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 G.1. Standard Command-Line Options
 ==================================
@@ -96,6 +164,10 @@ However:
 
    *Force*: force overwrite of target file(s).
 
+.. raw:: html
+
+   <div class="CAUTION">
+
 +--------------------------------------+--------------------------------------+
 | |Caution|                            |
 | Many UNIX and Linux utilities        |
@@ -107,9 +179,21 @@ However:
 | when in doubt.                       |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   </div>
+
 A complete table of recommended options for the GNU utilities is
 available at `the GNU standards
 page <http://www.gnu.org/prep/standards/>`__.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -120,5 +204,9 @@ page <http://www.gnu.org/prep/standards/>`__.
 | `Next <bash-options.html | Bash Command-Line        |
 | >`__                     | Options                  |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Caution| image:: ../images/caution.gif

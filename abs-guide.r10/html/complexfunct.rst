@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <functions.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 24. Functions
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <localvar.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 24.1. Complex Functions and Function Complexities
 =================================================
@@ -15,85 +83,137 @@ Functions may process arguments passed to them and return an `exit
 status <exit-status.html#EXITSTATUSREF>`__ to the script for further
 processing.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     function_name $arg1 $arg2                                            |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     function_name $arg1  |
+| $arg2                    |
+                          
++--------------------------+--------------------------+--------------------------+
 
 The function refers to the passed arguments by position (as if they were
 `positional parameters <internalvariables.html#POSPARAMREF>`__), that
 is, ``$1``, ``$2``, and so forth.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 24-2. Function Taking Parameters**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # Functions and parameters                                           |
-|                                                                          |
-|     DEFAULT=default                             # Default param value.   |
-|                                                                          |
-|     func2 () {                                                           |
-|        if [ -z "$1" ]                           # Is parameter #1 zero l |
-| ength?                                                                   |
-|        then                                                              |
-|          echo "-Parameter #1 is zero length.-"  # Or no parameter passed |
-| .                                                                        |
-|        else                                                              |
-|          echo "-Parameter #1 is \"$1\".-"                                |
-|        fi                                                                |
-|                                                                          |
-|        variable=${1-$DEFAULT}                   #  What does             |
-|        echo "variable = $variable"              #+ parameter substitutio |
-| n show?                                                                  |
-|                                                 #  --------------------- |
-| ------                                                                   |
-|                                                 #  It distinguishes betw |
-| een                                                                      |
-|                                                 #+ no param and a null p |
-| aram.                                                                    |
-|                                                                          |
-|        if [ "$2" ]                                                       |
-|        then                                                              |
-|          echo "-Parameter #2 is \"$2\".-"                                |
-|        fi                                                                |
-|                                                                          |
-|        return 0                                                          |
-|     }                                                                    |
-|                                                                          |
-|     echo                                                                 |
-|                                                                          |
-|     echo "Nothing passed."                                               |
-|     func2                          # Called with no params               |
-|     echo                                                                 |
-|                                                                          |
-|                                                                          |
-|     echo "Zero-length parameter passed."                                 |
-|     func2 ""                       # Called with zero-length param       |
-|     echo                                                                 |
-|                                                                          |
-|     echo "Null parameter passed."                                        |
-|     func2 "$uninitialized_param"   # Called with uninitialized param     |
-|     echo                                                                 |
-|                                                                          |
-|     echo "One parameter passed."                                         |
-|     func2 first           # Called with one param                        |
-|     echo                                                                 |
-|                                                                          |
-|     echo "Two parameters passed."                                        |
-|     func2 first second    # Called with two params                       |
-|     echo                                                                 |
-|                                                                          |
-|     echo "\"\" \"second\" passed."                                       |
-|     func2 "" second       # Called with zero-length first parameter      |
-|     echo                  # and ASCII string as a second one.            |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # Functions and para |
+| meters                   |
+|                          |
+|     DEFAULT=default      |
+|                          |
+| # Default param value.   |
+|                          |
+|     func2 () {           |
+|        if [ -z "$1" ]    |
+|                          |
+| # Is parameter #1 zero l |
+| ength?                   |
+|        then              |
+|          echo "-Paramete |
+| r #1 is zero length.-"   |
+| # Or no parameter passed |
+| .                        |
+|        else              |
+|          echo "-Paramete |
+| r #1 is \"$1\".-"        |
+|        fi                |
+|                          |
+|        variable=${1-$DEF |
+| AULT}                    |
+| #  What does             |
+|        echo "variable =  |
+| $variable"               |
+| #+ parameter substitutio |
+| n show?                  |
+|                          |
+|                          |
+| #  --------------------- |
+| ------                   |
+|                          |
+|                          |
+| #  It distinguishes betw |
+| een                      |
+|                          |
+|                          |
+| #+ no param and a null p |
+| aram.                    |
+|                          |
+|        if [ "$2" ]       |
+|        then              |
+|          echo "-Paramete |
+| r #2 is \"$2\".-"        |
+|        fi                |
+|                          |
+|        return 0          |
+|     }                    |
+|                          |
+|     echo                 |
+|                          |
+|     echo "Nothing passed |
+| ."                       |
+|     func2                |
+|            # Called with |
+|  no params               |
+|     echo                 |
+|                          |
+|                          |
+|     echo "Zero-length pa |
+| rameter passed."         |
+|     func2 ""             |
+|            # Called with |
+|  zero-length param       |
+|     echo                 |
+|                          |
+|     echo "Null parameter |
+|  passed."                |
+|     func2 "$uninitialize |
+| d_param"   # Called with |
+|  uninitialized param     |
+|     echo                 |
+|                          |
+|     echo "One parameter  |
+| passed."                 |
+|     func2 first          |
+|   # Called with one para |
+| m                        |
+|     echo                 |
+|                          |
+|     echo "Two parameters |
+|  passed."                |
+|     func2 first second   |
+|   # Called with two para |
+| ms                       |
+|     echo                 |
+|                          |
+|     echo "\"\" \"second\ |
+| " passed."               |
+|     func2 "" second      |
+|   # Called with zero-len |
+| gth first parameter      |
+|     echo                 |
+|   # and ASCII string as  |
+| a second one.            |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="IMPORTANT">
 
 +--------------------------------------+--------------------------------------+
 | |Important|                          |
@@ -106,40 +226,67 @@ is, ``$1``, ``$2``, and so forth.
 | ION>`__).                            |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   </div>
+
 But, what about command-line arguments passed to the script? Does a
 function see them? Well, let's clear up the confusion.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 24-3. Functions and command-line args passed to the script**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # func-cmdlinearg.sh                                                 |
-|     #  Call this script with a command-line argument,                    |
-|     #+ something like $0 arg1.                                           |
-|                                                                          |
-|                                                                          |
-|     func ()                                                              |
-|                                                                          |
-|     {                                                                    |
-|     echo "$1"   # Echoes first arg passed to the function.               |
-|     }           # Does a command-line arg qualify?                       |
-|                                                                          |
-|     echo "First call to function: no arg passed."                        |
-|     echo "See if command-line arg is seen."                              |
-|     func                                                                 |
-|     # No! Command-line arg not seen.                                     |
-|                                                                          |
-|     echo "============================================================"  |
-|     echo                                                                 |
-|     echo "Second call to function: command-line arg passed explicitly."  |
-|     func $1                                                              |
-|     # Now it's seen!                                                     |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # func-cmdlinearg.sh |
+|     #  Call this script  |
+| with a command-line argu |
+| ment,                    |
+|     #+ something like $0 |
+|  arg1.                   |
+|                          |
+|                          |
+|     func ()              |
+|                          |
+|     {                    |
+|     echo "$1"   # Echoes |
+|  first arg passed to the |
+|  function.               |
+|     }           # Does a |
+|  command-line arg qualif |
+| y?                       |
+|                          |
+|     echo "First call to  |
+| function: no arg passed. |
+| "                        |
+|     echo "See if command |
+| -line arg is seen."      |
+|     func                 |
+|     # No! Command-line a |
+| rg not seen.             |
+|                          |
+|     echo "============== |
+| ======================== |
+| ======================"  |
+|     echo                 |
+|     echo "Second call to |
+|  function: command-line  |
+| arg passed explicitly."  |
+|     func $1              |
+|     # Now it's seen!     |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 In contrast to certain other programming languages, shell scripts
 normally pass only value parameters to functions. Variable names (which
@@ -151,118 +298,191 @@ literally.*
 37-2 <bashver2.html#EX78>`__) provide a clumsy sort of mechanism for
 passing variable pointers to functions.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 24-4. Passing an indirect reference to a function**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # ind-func.sh: Passing an indirect reference to a function.          |
-|                                                                          |
-|     echo_var ()                                                          |
-|     {                                                                    |
-|     echo "$1"                                                            |
-|     }                                                                    |
-|                                                                          |
-|     message=Hello                                                        |
-|     Hello=Goodbye                                                        |
-|                                                                          |
-|     echo_var "$message"        # Hello                                   |
-|     # Now, let's pass an indirect reference to the function.             |
-|     echo_var "${!message}"     # Goodbye                                 |
-|                                                                          |
-|     echo "-------------"                                                 |
-|                                                                          |
-|     # What happens if we change the contents of "hello" variable?        |
-|     Hello="Hello, again!"                                                |
-|     echo_var "$message"        # Hello                                   |
-|     echo_var "${!message}"     # Hello, again!                           |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # ind-func.sh: Passi |
+| ng an indirect reference |
+|  to a function.          |
+|                          |
+|     echo_var ()          |
+|     {                    |
+|     echo "$1"            |
+|     }                    |
+|                          |
+|     message=Hello        |
+|     Hello=Goodbye        |
+|                          |
+|     echo_var "$message"  |
+|        # Hello           |
+|     # Now, let's pass an |
+|  indirect reference to t |
+| he function.             |
+|     echo_var "${!message |
+| }"     # Goodbye         |
+|                          |
+|     echo "-------------" |
+|                          |
+|     # What happens if we |
+|  change the contents of  |
+| "hello" variable?        |
+|     Hello="Hello, again! |
+| "                        |
+|     echo_var "$message"  |
+|        # Hello           |
+|     echo_var "${!message |
+| }"     # Hello, again!   |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 The next logical question is whether parameters can be dereferenced
 *after* being passed to a function.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 24-5. Dereferencing a parameter passed to a function**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # dereference.sh                                                     |
-|     # Dereferencing parameter passed to a function.                      |
-|     # Script by Bruce W. Clare.                                          |
-|                                                                          |
-|     dereference ()                                                       |
-|     {                                                                    |
-|          y=\$"$1"   # Name of variable (not value!).                     |
-|          echo $y    # $Junk                                              |
-|                                                                          |
-|          x=`eval "expr \"$y\" "`                                         |
-|          echo $1=$x                                                      |
-|          eval "$1=\"Some Different Text \""  # Assign new value.         |
-|     }                                                                    |
-|                                                                          |
-|     Junk="Some Text"                                                     |
-|     echo $Junk "before"    # Some Text before                            |
-|                                                                          |
-|     dereference Junk                                                     |
-|     echo $Junk "after"     # Some Different Text after                   |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # dereference.sh     |
+|     # Dereferencing para |
+| meter passed to a functi |
+| on.                      |
+|     # Script by Bruce W. |
+|  Clare.                  |
+|                          |
+|     dereference ()       |
+|     {                    |
+|          y=\$"$1"   # Na |
+| me of variable (not valu |
+| e!).                     |
+|          echo $y    # $J |
+| unk                      |
+|                          |
+|          x=`eval "expr \ |
+| "$y\" "`                 |
+|          echo $1=$x      |
+|          eval "$1=\"Some |
+|  Different Text \""  # A |
+| ssign new value.         |
+|     }                    |
+|                          |
+|     Junk="Some Text"     |
+|     echo $Junk "before"  |
+|    # Some Text before    |
+|                          |
+|     dereference Junk     |
+|     echo $Junk "after"   |
+|    # Some Different Text |
+|  after                   |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
 
 **Example 24-6. Again, dereferencing a parameter passed to a function**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # ref-params.sh: Dereferencing a parameter passed to a function.     |
-|     #                (Complex Example)                                   |
-|                                                                          |
-|     ITERATIONS=3  # How many times to get input.                         |
-|     icount=1                                                             |
-|                                                                          |
-|     my_read () {                                                         |
-|       #  Called with my_read varname,                                    |
-|       #+ outputs the previous value between brackets as the default valu |
-| e,                                                                       |
-|       #+ then asks for a new value.                                      |
-|                                                                          |
-|       local local_var                                                    |
-|                                                                          |
-|       echo -n "Enter a value "                                           |
-|       eval 'echo -n "[$'$1'] "'  #  Previous value.                      |
-|     # eval echo -n "[\$$1] "     #  Easier to understand,                |
-|                                  #+ but loses trailing space in user pro |
-| mpt.                                                                     |
-|       read local_var                                                     |
-|       [ -n "$local_var" ] && eval $1=\$local_var                         |
-|                                                                          |
-|       # "And-list": if "local_var" then set "$1" to its value.           |
-|     }                                                                    |
-|                                                                          |
-|     echo                                                                 |
-|                                                                          |
-|     while [ "$icount" -le "$ITERATIONS" ]                                |
-|     do                                                                   |
-|       my_read var                                                        |
-|       echo "Entry #$icount = $var"                                       |
-|       let "icount += 1"                                                  |
-|       echo                                                               |
-|     done                                                                 |
-|                                                                          |
-|                                                                          |
-|     # Thanks to Stephane Chazelas for providing this instructive example |
-| .                                                                        |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # ref-params.sh: Der |
+| eferencing a parameter p |
+| assed to a function.     |
+|     #                (Co |
+| mplex Example)           |
+|                          |
+|     ITERATIONS=3  # How  |
+| many times to get input. |
+|     icount=1             |
+|                          |
+|     my_read () {         |
+|       #  Called with my_ |
+| read varname,            |
+|       #+ outputs the pre |
+| vious value between brac |
+| kets as the default valu |
+| e,                       |
+|       #+ then asks for a |
+|  new value.              |
+|                          |
+|       local local_var    |
+|                          |
+|       echo -n "Enter a v |
+| alue "                   |
+|       eval 'echo -n "[$' |
+| $1'] "'  #  Previous val |
+| ue.                      |
+|     # eval echo -n "[\$$ |
+| 1] "     #  Easier to un |
+| derstand,                |
+|                          |
+|          #+ but loses tr |
+| ailing space in user pro |
+| mpt.                     |
+|       read local_var     |
+|       [ -n "$local_var"  |
+| ] && eval $1=\$local_var |
+|                          |
+|       # "And-list": if " |
+| local_var" then set "$1" |
+|  to its value.           |
+|     }                    |
+|                          |
+|     echo                 |
+|                          |
+|     while [ "$icount" -l |
+| e "$ITERATIONS" ]        |
+|     do                   |
+|       my_read var        |
+|       echo "Entry #$icou |
+| nt = $var"               |
+|       let "icount += 1"  |
+|       echo               |
+|     done                 |
+|                          |
+|                          |
+|     # Thanks to Stephane |
+|  Chazelas for providing  |
+| this instructive example |
+| .                        |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **Exit and Return**
 
@@ -285,242 +505,315 @@ The next logical question is whether parameters can be dereferenced
     "exit status" of the function, and this exit status is assigned to
     the variable `$? <internalvariables.html#XSTATVARREF>`__.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 24-7. Maximum of two numbers**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # max.sh: Maximum of two integers.                                   |
-    |                                                                          |
-    |     E_PARAM_ERR=250    # If less than 2 params passed to function.       |
-    |     EQUAL=251          # Return value if both params equal.              |
-    |     #  Error values out of range of any                                  |
-    |     #+ params that might be fed to the function.                         |
-    |                                                                          |
-    |     max2 ()             # Returns larger of two numbers.                 |
-    |     {                   # Note: numbers compared must be less than 250.  |
-    |     if [ -z "$2" ]                                                       |
-    |     then                                                                 |
-    |       return $E_PARAM_ERR                                                |
-    |     fi                                                                   |
-    |                                                                          |
-    |     if [ "$1" -eq "$2" ]                                                 |
-    |     then                                                                 |
-    |       return $EQUAL                                                      |
-    |     else                                                                 |
-    |       if [ "$1" -gt "$2" ]                                               |
-    |       then                                                               |
-    |         return $1                                                        |
-    |       else                                                               |
-    |         return $2                                                        |
-    |       fi                                                                 |
-    |     fi                                                                   |
-    |     }                                                                    |
-    |                                                                          |
-    |     max2 33 34                                                           |
-    |     return_val=$?                                                        |
-    |                                                                          |
-    |     if [ "$return_val" -eq $E_PARAM_ERR ]                                |
-    |     then                                                                 |
-    |       echo "Need to pass two parameters to the function."                |
-    |     elif [ "$return_val" -eq $EQUAL ]                                    |
-    |       then                                                               |
-    |         echo "The two numbers are equal."                                |
-    |     else                                                                 |
-    |         echo "The larger of the two numbers is $return_val."             |
-    |     fi                                                                   |
-    |                                                                          |
-    |                                                                          |
-    |     exit 0                                                               |
-    |                                                                          |
-    |     #  Exercise (easy):                                                  |
-    |     #  ---------------                                                   |
-    |     #  Convert this to an interactive script,                            |
-    |     #+ that is, have the script ask for input (two numbers).             |
-                                                                              
-    +--------------------------------------------------------------------------+
-
     +--------------------------+--------------------------+--------------------------+
-    | |Tip|                    |
-    | For a function to return |
-    | a string or array, use a |
-    | dedicated variable.      |
+    | .. code:: PROGRAMLISTING |
     |                          |
-    | +----------------------- |
-    | ------------------------ |
-    | ------------------------ |
-    | ---+                     |
-    | | .. code:: PROGRAMLISTI |
-    | NG                       |
+    |     #!/bin/bash          |
+    |     # max.sh: Maximum of |
+    |  two integers.           |
     |                          |
-    |    |                     |
-    | |                        |
+    |     E_PARAM_ERR=250    # |
+    |  If less than 2 params p |
+    | assed to function.       |
+    |     EQUAL=251          # |
+    |  Return value if both pa |
+    | rams equal.              |
+    |     #  Error values out  |
+    | of range of any          |
+    |     #+ params that might |
+    |  be fed to the function. |
     |                          |
+    |     max2 ()              |
+    | # Returns larger of two  |
+    | numbers.                 |
+    |     {                    |
+    | # Note: numbers compared |
+    |  must be less than 250.  |
+    |     if [ -z "$2" ]       |
+    |     then                 |
+    |       return $E_PARAM_ER |
+    | R                        |
+    |     fi                   |
     |                          |
-    |    |                     |
-    | |     count_lines_in_etc |
-    | _passwd()                |
+    |     if [ "$1" -eq "$2" ] |
+    |     then                 |
+    |       return $EQUAL      |
+    |     else                 |
+    |       if [ "$1" -gt "$2" |
+    |  ]                       |
+    |       then               |
+    |         return $1        |
+    |       else               |
+    |         return $2        |
+    |       fi                 |
+    |     fi                   |
+    |     }                    |
     |                          |
-    |    |                     |
-    | |     {                  |
+    |     max2 33 34           |
+    |     return_val=$?        |
     |                          |
-    |                          |
-    |    |                     |
-    | |       [[ -r /etc/passw |
-    | d ]] && REPLY=$(echo $(w |
-    | c -l < /etc/passwd))     |
-    |    |                     |
-    | |       #  If /etc/passw |
-    | d is readable, set REPLY |
-    |  to line count.          |
-    |    |                     |
-    | |       #  Returns both  |
-    | a parameter value and st |
-    | atus information.        |
-    |    |                     |
-    | |       #  The 'echo' se |
-    | ems unnecessary, but . . |
-    |  .                       |
-    |    |                     |
-    | |       #+ it removes ex |
-    | cess whitespace from the |
-    |  output.                 |
-    |    |                     |
-    | |     }                  |
-    |                          |
-    |                          |
-    |    |                     |
-    | |                        |
-    |                          |
-    |                          |
-    |    |                     |
-    | |     if count_lines_in_ |
-    | etc_passwd               |
-    |                          |
-    |    |                     |
-    | |     then               |
-    |                          |
-    |                          |
-    |    |                     |
-    | |       echo "There are  |
-    | $REPLY lines in /etc/pas |
-    | swd."                    |
-    |    |                     |
-    | |     else               |
+    |     if [ "$return_val" - |
+    | eq $E_PARAM_ERR ]        |
+    |     then                 |
+    |       echo "Need to pass |
+    |  two parameters to the f |
+    | unction."                |
+    |     elif [ "$return_val" |
+    |  -eq $EQUAL ]            |
+    |       then               |
+    |         echo "The two nu |
+    | mbers are equal."        |
+    |     else                 |
+    |         echo "The larger |
+    |  of the two numbers is $ |
+    | return_val."             |
+    |     fi                   |
     |                          |
     |                          |
-    |    |                     |
-    | |       echo "Cannot cou |
-    | nt lines in /etc/passwd. |
-    | "                        |
-    |    |                     |
-    | |     fi                 |
+    |     exit 0               |
     |                          |
-    |                          |
-    |    |                     |
-    | |                        |
-    |                          |
-    |                          |
-    |    |                     |
-    | |     # Thanks, S.C.     |
-    |                          |
-    |                          |
-    |    |                     |
-    |                          |
-    |                          |
-    |                          |
-    |                          |
-    | +----------------------- |
-    | ------------------------ |
-    | ------------------------ |
-    | ---+                     |
+    |     #  Exercise (easy):  |
+    |     #  ---------------   |
+    |     #  Convert this to a |
+    | n interactive script,    |
+    |     #+ that is, have the |
+    |  script ask for input (t |
+    | wo numbers).             |
                               
     +--------------------------+--------------------------+--------------------------+
 
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="TIP">
+
+    +--------------------+--------------------+--------------------+--------------------+
+    | |Tip|              |
+    | For a function to  |
+    | return a string or |
+    | array, use a       |
+    | dedicated          |
+    | variable.          |
+    |                    |
+    | +----------------- |
+    | ---------+-------- |
+    | ------------------ |
+    | +----------------- |
+    | ---------+         |
+    | | .. code:: PROGRA |
+    | MLISTING |         |
+    | |                  |
+    |          |         |
+    | |     count_lines_ |
+    | in_etc_p |         |
+    | | asswd()          |
+    |          |         |
+    | |     {            |
+    |          |         |
+    | |       [[ -r /etc |
+    | /passwd  |         |
+    | | ]] && REPLY=$(ec |
+    | ho $(wc  |         |
+    | | -l < /etc/passwd |
+    | ))       |         |
+    | |       #  If /etc |
+    | /passwd  |         |
+    | | is readable, set |
+    |  REPLY t |         |
+    | | o line count.    |
+    |          |         |
+    | |       #  Returns |
+    |  both a  |         |
+    | | parameter value  |
+    | and stat |         |
+    | | us information.  |
+    |          |         |
+    | |       #  The 'ec |
+    | ho' seem |         |
+    | | s unnecessary, b |
+    | ut . . . |         |
+    | |       #+ it remo |
+    | ves exce |         |
+    | | ss whitespace fr |
+    | om the o |         |
+    | | utput.           |
+    |          |         |
+    | |     }            |
+    |          |         |
+    | |                  |
+    |          |         |
+    | |     if count_lin |
+    | es_in_et |         |
+    | | c_passwd         |
+    |          |         |
+    | |     then         |
+    |          |         |
+    | |       echo "Ther |
+    | e are $R |         |
+    | | EPLY lines in /e |
+    | tc/passw |         |
+    | | d."              |
+    |          |         |
+    | |     else         |
+    |          |         |
+    | |       echo "Cann |
+    | ot count |         |
+    | |  lines in /etc/p |
+    | asswd."  |         |
+    | |     fi           |
+    |          |         |
+    | |                  |
+    |          |         |
+    | |     # Thanks, S. |
+    | C.       |         |
+    |                    |
+    |                    |
+    | +----------------- |
+    | ---------+-------- |
+    | ------------------ |
+    | +----------------- |
+    | ---------+         |
+    |                    |
+    | .. raw:: html      |
+    |                    |
+    |    </p>            |
+                        
+    +--------------------+--------------------+--------------------+--------------------+
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 24-8. Converting numbers to Roman numerals**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     # Arabic number to Roman numeral conversion                          |
-    |     # Range: 0 - 200                                                     |
-    |     # It's crude, but it works.                                          |
-    |                                                                          |
-    |     # Extending the range and otherwise improving the script is left as  |
-    | an exercise.                                                             |
-    |                                                                          |
-    |     # Usage: roman number-to-convert                                     |
-    |                                                                          |
-    |     LIMIT=200                                                            |
-    |     E_ARG_ERR=65                                                         |
-    |     E_OUT_OF_RANGE=66                                                    |
-    |                                                                          |
-    |     if [ -z "$1" ]                                                       |
-    |     then                                                                 |
-    |       echo "Usage: `basename $0` number-to-convert"                      |
-    |       exit $E_ARG_ERR                                                    |
-    |     fi                                                                   |
-    |                                                                          |
-    |     num=$1                                                               |
-    |     if [ "$num" -gt $LIMIT ]                                             |
-    |     then                                                                 |
-    |       echo "Out of range!"                                               |
-    |       exit $E_OUT_OF_RANGE                                               |
-    |     fi                                                                   |
-    |                                                                          |
-    |     to_roman ()   # Must declare function before first call to it.       |
-    |     {                                                                    |
-    |     number=$1                                                            |
-    |     factor=$2                                                            |
-    |     rchar=$3                                                             |
-    |     let "remainder = number - factor"                                    |
-    |     while [ "$remainder" -ge 0 ]                                         |
-    |     do                                                                   |
-    |       echo -n $rchar                                                     |
-    |       let "number -= factor"                                             |
-    |       let "remainder = number - factor"                                  |
-    |     done                                                                 |
-    |                                                                          |
-    |     return $number                                                       |
-    |            # Exercises:                                                  |
-    |            # ---------                                                   |
-    |            # 1) Explain how this function works.                         |
-    |            #    Hint: division by successive subtraction.                |
-    |            # 2) Extend to range of the function.                         |
-    |            #    Hint: use "echo" and command-substitution capture.       |
-    |     }                                                                    |
-    |                                                                          |
-    |                                                                          |
-    |     to_roman $num 100 C                                                  |
-    |     num=$?                                                               |
-    |     to_roman $num 90 LXXXX                                               |
-    |     num=$?                                                               |
-    |     to_roman $num 50 L                                                   |
-    |     num=$?                                                               |
-    |     to_roman $num 40 XL                                                  |
-    |     num=$?                                                               |
-    |     to_roman $num 10 X                                                   |
-    |     num=$?                                                               |
-    |     to_roman $num 9 IX                                                   |
-    |     num=$?                                                               |
-    |     to_roman $num 5 V                                                    |
-    |     num=$?                                                               |
-    |     to_roman $num 4 IV                                                   |
-    |     num=$?                                                               |
-    |     to_roman $num 1 I                                                    |
-    |     # Successive calls to conversion function!                           |
-    |     # Is this really necessary??? Can it be simplified?                  |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     exit                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     # Arabic number to R |
+    | oman numeral conversion  |
+    |     # Range: 0 - 200     |
+    |     # It's crude, but it |
+    |  works.                  |
+    |                          |
+    |     # Extending the rang |
+    | e and otherwise improvin |
+    | g the script is left as  |
+    | an exercise.             |
+    |                          |
+    |     # Usage: roman numbe |
+    | r-to-convert             |
+    |                          |
+    |     LIMIT=200            |
+    |     E_ARG_ERR=65         |
+    |     E_OUT_OF_RANGE=66    |
+    |                          |
+    |     if [ -z "$1" ]       |
+    |     then                 |
+    |       echo "Usage: `base |
+    | name $0` number-to-conve |
+    | rt"                      |
+    |       exit $E_ARG_ERR    |
+    |     fi                   |
+    |                          |
+    |     num=$1               |
+    |     if [ "$num" -gt $LIM |
+    | IT ]                     |
+    |     then                 |
+    |       echo "Out of range |
+    | !"                       |
+    |       exit $E_OUT_OF_RAN |
+    | GE                       |
+    |     fi                   |
+    |                          |
+    |     to_roman ()   # Must |
+    |  declare function before |
+    |  first call to it.       |
+    |     {                    |
+    |     number=$1            |
+    |     factor=$2            |
+    |     rchar=$3             |
+    |     let "remainder = num |
+    | ber - factor"            |
+    |     while [ "$remainder" |
+    |  -ge 0 ]                 |
+    |     do                   |
+    |       echo -n $rchar     |
+    |       let "number -= fac |
+    | tor"                     |
+    |       let "remainder = n |
+    | umber - factor"          |
+    |     done                 |
+    |                          |
+    |     return $number       |
+    |            # Exercises:  |
+    |            # ---------   |
+    |            # 1) Explain  |
+    | how this function works. |
+    |            #    Hint: di |
+    | vision by successive sub |
+    | traction.                |
+    |            # 2) Extend t |
+    | o range of the function. |
+    |            #    Hint: us |
+    | e "echo" and command-sub |
+    | stitution capture.       |
+    |     }                    |
+    |                          |
+    |                          |
+    |     to_roman $num 100 C  |
+    |     num=$?               |
+    |     to_roman $num 90 LXX |
+    | XX                       |
+    |     num=$?               |
+    |     to_roman $num 50 L   |
+    |     num=$?               |
+    |     to_roman $num 40 XL  |
+    |     num=$?               |
+    |     to_roman $num 10 X   |
+    |     num=$?               |
+    |     to_roman $num 9 IX   |
+    |     num=$?               |
+    |     to_roman $num 5 V    |
+    |     num=$?               |
+    |     to_roman $num 4 IV   |
+    |     num=$?               |
+    |     to_roman $num 1 I    |
+    |     # Successive calls t |
+    | o conversion function!   |
+    |     # Is this really nec |
+    | essary??? Can it be simp |
+    | lified?                  |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     exit                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     See also `Example 11-29 <testbranch.html#ISALPHA>`__.
+
+    .. raw:: html
+
+       <div class="IMPORTANT">
 
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     | |Impo |
@@ -608,6 +901,17 @@ The next logical question is whether parameters can be dereferenced
     | funct |
     | ion.  |
     |       |
+    | .. ra |
+    | w:: h |
+    | tml   |
+    |       |
+    |    <d |
+    | iv    |
+    |    cl |
+    | ass=" |
+    | EXAMP |
+    | LE">  |
+    |       |
     | **Exa |
     | mple  |
     | 24-9. |
@@ -627,586 +931,384 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
     | | ..  |
     | code: |
     | : PRO |
     | GRAML |
     | ISTIN |
-    | G     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | G |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #!/b |
     | in/ba |
     | sh    |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # re |
     | turn- |
     | test. |
     | sh    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # Th |
     | e lar |
     | gest  |
     | posit |
-    | ive v |
-    | alue  |
-    | a fun |
-    | ction |
-    |  can  |
-    | retur |
-    | n is  |
-    | 255.  |
+    | i |   |
+    | | ve  |
+    | value |
+    |  a fu |
+    | nctio |
+    | n can |
+    |   |   |
+    | | ret |
+    | urn i |
+    | s 255 |
+    | .     |
     |       |
-    |       |
+    |   |   |
     | |     |
-    | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  retu |
     | rn_te |
     | st () |
     |       |
-    |     # |
-    |  Retu |
-    | rns w |
-    | hatev |
-    | er pa |
-    | ssed  |
-    | to it |
-    | .     |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Ret |
+    | urns  |
+    | whate |
+    | ver p |
+    | a |   |
+    | | sse |
+    | d to  |
+    | it.   |
+    |       |
+    |       |
+    |   |   |
     | |     |
     |  {    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    re |
     | turn  |
     | $1    |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  }    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  retu |
     | rn_te |
     | st 27 |
     |       |
-    |     # |
-    |  o.k. |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # o.k |
+    | .     |
+    |       |
+    |       |
+    |   |   |
     | |     |
     |  echo |
     |  $?   |
     |       |
     |       |
-    |     # |
-    |  Retu |
-    | rns 2 |
-    | 7.    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Ret |
+    | urns  |
+    | 27.   |
+    |       |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  retu |
     | rn_te |
     | st 25 |
     | 5     |
-    |     # |
-    |  Stil |
-    | l o.k |
-    | .     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Sti |
+    | ll o. |
+    | k.    |
+    |       |
+    |   |   |
     | |     |
     |  echo |
     |  $?   |
     |       |
     |       |
-    |     # |
-    |  Retu |
-    | rns 2 |
-    | 55.   |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Ret |
+    | urns  |
+    | 255.  |
+    |       |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  retu |
     | rn_te |
     | st 25 |
     | 7     |
-    |     # |
-    |  Erro |
-    | r!    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Err |
+    | or!   |
+    |       |
+    |       |
+    |   |   |
     | |     |
     |  echo |
     |  $?   |
     |       |
     |       |
-    |     # |
-    |  Retu |
-    | rns 1 |
-    |  (ret |
-    | urn c |
-    | ode f |
-    | or mi |
-    | scell |
-    | aneou |
-    | s er  |
+    |   |   |
     | |     |
+    | # Ret |
+    | urns  |
+    | 1 (re |
+    | turn  |
+    | c |   |
+    | | ode |
+    |  for  |
+    | misce |
+    | llane |
+    | ous e |
+    | r |   |
     | | ror |
     | ).    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # == |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
-    | ===== |
-    | ===== |
+    | ==    |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  retu |
     | rn_te |
     | st -1 |
     | 51896 |
-    |     # |
-    |  Do l |
-    | arge  |
-    | negat |
-    | ive n |
-    | umber |
-    | s wor |
-    | k?    |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Do  |
+    | large |
+    |  nega |
+    | tive  |
+    | n |   |
+    | | umb |
+    | ers w |
+    | ork?  |
+    |       |
+    |       |
+    |   |   |
     | |     |
     |  echo |
     |  $?   |
     |       |
     |       |
-    |     # |
-    |  Will |
-    |  this |
-    |  retu |
-    | rn -1 |
-    | 51896 |
-    | ?     |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # Wil |
+    | l thi |
+    | s ret |
+    | urn - |
+    | 1 |   |
+    | | 518 |
+    | 96?   |
+    |       |
+    |       |
+    |       |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |     # |
-    |  No!  |
-    | It re |
-    | turns |
-    |  168. |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    | # No! |
+    |  It r |
+    | eturn |
+    | s 168 |
+    | . |   |
     | |     |
     |  #  V |
     | ersio |
     | n of  |
     | Bash  |
-    | befor |
-    | e 2.0 |
-    | 5b pe |
-    | rmitt |
-    | ed    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | b |   |
+    | | efo |
+    | re 2. |
+    | 05b p |
+    | ermit |
+    | ted   |
+    |   |   |
     | |     |
     |  #+ l |
     | arge  |
     | negat |
     | ive i |
-    | ntege |
-    | r ret |
-    | urn v |
-    | alues |
-    | .     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | n |   |
+    | | teg |
+    | er re |
+    | turn  |
+    | value |
+    | s.    |
+    |   |   |
     | |     |
     |  #  I |
     | t hap |
     | pened |
     |  to b |
-    | e a u |
-    | seful |
-    |  feat |
-    | ure.  |
+    | e |   |
+    | |  a  |
+    | usefu |
+    | l fea |
+    | ture. |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  N |
     | ewer  |
     | versi |
     | ons o |
-    | f Bas |
-    | h unf |
-    | ortun |
-    | ately |
-    |  plug |
-    |  this |
-    |  loop |
-    | hole. |
+    | f |   |
+    | |  Ba |
+    | sh un |
+    | fortu |
+    | natel |
+    | y plu |
+    | g |   |
+    | |  th |
+    | is lo |
+    | ophol |
+    | e.    |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  T |
     | his m |
     | ay br |
     | eak o |
-    | lder  |
-    | scrip |
-    | ts.   |
+    | l |   |
+    | | der |
+    |  scri |
+    | pts.  |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  C |
     | autio |
     | n!    |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # == |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
-    | ===== |
-    | ===== |
+    | ==    |
     |       |
-    |       |
+    |   |   |
     | |     |
-    | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  exit |
     |  0    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     |       |
     |       |
     |       |
@@ -1218,17 +1320,25 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
+    |       |
+    | .. ra |
+    | w:: h |
+    | tml   |
+    |       |
+    |    </ |
+    | div>  |
     |       |
     | A     |
     | worka |
@@ -1264,410 +1374,216 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
     | | ..  |
     | code: |
     | : PRO |
     | GRAML |
     | ISTIN |
-    | G     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | G |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  Retu |
     | rn_Va |
     | l=    |
     | # Glo |
-    | bal v |
-    | ariab |
-    | le to |
-    |  hold |
-    |  over |
-    | size  |
-    | retur |
-    | n val |
-    | ue of |
-    |  fun  |
-    | |     |
+    | b |   |
+    | | al  |
+    | varia |
+    | ble t |
+    | o hol |
+    | d ove |
+    | r |   |
+    | | siz |
+    | e ret |
+    | urn v |
+    | alue  |
+    | of fu |
+    | n |   |
     | | cti |
     | on.   |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  alt_ |
     | retur |
     | n_tes |
     | t ()  |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  {    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    fv |
     | ar=$1 |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    Re |
     | turn_ |
     | Val=$ |
     | fvar  |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    re |
     | turn  |
     |   # R |
     | eturn |
-    | s 0 ( |
-    | succe |
-    | ss).  |
+    | s |   |
+    | |  0  |
+    | (succ |
+    | ess). |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  }    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  alt_ |
     | retur |
     | n_tes |
     | t 1   |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  echo |
     |  $?   |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |    #  |
-    | 0     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    |       |
+    |       |
+    |     # |
+    |  0    |
+    |   |   |
     | |     |
     |  echo |
     |  "ret |
     | urn v |
     | alue  |
-    | = $Re |
-    | turn_ |
-    | Val"  |
-    |    #  |
-    | 1     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | = |   |
+    | |  $R |
+    | eturn |
+    | _Val" |
+    |     # |
+    |  1    |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  alt_ |
     | retur |
     | n_tes |
     | t 256 |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  echo |
     |  "ret |
     | urn v |
     | alue  |
-    | = $Re |
-    | turn_ |
-    | Val"  |
-    |    #  |
-    | 256   |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | = |   |
+    | |  $R |
+    | eturn |
+    | _Val" |
+    |     # |
+    |  256  |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  alt_ |
     | retur |
     | n_tes |
     | t 257 |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  echo |
     |  "ret |
     | urn v |
     | alue  |
-    | = $Re |
-    | turn_ |
-    | Val"  |
-    |    #  |
-    | 257   |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | = |   |
+    | |  $R |
+    | eturn |
+    | _Val" |
+    |     # |
+    |  257  |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  alt_ |
     | retur |
     | n_tes |
     | t 257 |
-    | 01    |
+    | 0 |   |
+    | | 1   |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  echo |
     |  "ret |
     | urn v |
     | alue  |
-    | = $Re |
-    | turn_ |
-    | Val"  |
-    |    #2 |
-    | 5701  |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    | = |   |
+    | |  $R |
+    | eturn |
+    | _Val" |
+    |     # |
+    | 25701 |
+    |   |   |
     |       |
     |       |
     |       |
@@ -1679,17 +1595,25 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
+    |       |
+    | .. ra |
+    | w:: h |
+    | tml   |
+    |       |
+    |    </ |
+    | p>    |
     |       |
     | A     |
     | more  |
@@ -1752,6 +1676,17 @@ The next logical question is whether parameters can be dereferenced
     | tml>` |
     | __.   |
     |       |
+    | .. ra |
+    | w:: h |
+    | tml   |
+    |       |
+    |    <d |
+    | iv    |
+    |    cl |
+    | ass=" |
+    | EXAMP |
+    | LE">  |
+    |       |
     | **Exa |
     | mple  |
     | 24-10 |
@@ -1768,1130 +1703,684 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
     | | ..  |
     | code: |
     | : PRO |
     | GRAML |
     | ISTIN |
-    | G     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | G |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #!/b |
     | in/ba |
     | sh    |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # ma |
     | x2.sh |
     | : Max |
     | imum  |
-    | of tw |
-    | o LAR |
-    | GE in |
-    | teger |
-    | s.    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | o |   |
+    | | f t |
+    | wo LA |
+    | RGE i |
+    | ntege |
+    | rs.   |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  T |
     | his i |
     | s the |
     |  prev |
-    | ious  |
-    | "max. |
-    | sh" e |
-    | xampl |
-    | e,    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | i |   |
+    | | ous |
+    |  "max |
+    | .sh"  |
+    | examp |
+    | le,   |
+    |   |   |
     | |     |
     |  #+ m |
     | odifi |
     | ed to |
     |  perm |
-    | it co |
-    | mpari |
-    | ng la |
-    | rge i |
-    | ntege |
-    | rs.   |
+    | i |   |
+    | | t c |
+    | ompar |
+    | ing l |
+    | arge  |
+    | integ |
+    | e |   |
+    | | rs. |
     |       |
     |       |
     |       |
     |       |
+    |   |   |
     | |     |
-    | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  EQUA |
     | L=0   |
     |       |
     |       |
-    |  # Re |
-    | turn  |
-    | value |
-    |  if b |
-    | oth p |
-    | arams |
-    |  equa |
-    | l.    |
+    |   |   |
+    | | # R |
+    | eturn |
+    |  valu |
+    | e if  |
+    | both  |
+    | p |   |
+    | | ara |
+    | ms eq |
+    | ual.  |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  E_PA |
     | RAM_E |
     | RR=-9 |
     | 9999  |
-    |  # No |
-    | t eno |
-    | ugh p |
-    | arams |
-    |  pass |
-    | ed to |
-    |  func |
-    | tion. |
+    |   |   |
+    | | # N |
+    | ot en |
+    | ough  |
+    | param |
+    | s pas |
+    | s |   |
+    | | ed  |
+    | to fu |
+    | nctio |
+    | n.    |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |       |
     |    ^^ |
     | ^^^^  |
-    |    Ou |
-    | t of  |
-    | range |
-    |  of a |
-    | ny pa |
-    | rams  |
-    | that  |
-    | might |
-    |  be p |
-    | asse  |
-    | |     |
+    |   |   |
+    | |   O |
+    | ut of |
+    |  rang |
+    | e of  |
+    | any p |
+    | a |   |
+    | | ram |
+    | s tha |
+    | t mig |
+    | ht be |
+    |  pass |
+    | e |   |
     | | d.  |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  max2 |
     |  ()   |
     |       |
     |       |
-    |  # "R |
-    | eturn |
-    | s" la |
-    | rger  |
-    | of tw |
-    | o num |
-    | bers. |
+    |   |   |
+    | | # " |
+    | Retur |
+    | ns" l |
+    | arger |
+    |  of t |
+    | w |   |
+    | | o n |
+    | umber |
+    | s.    |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  {    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  if [ |
     |  -z " |
     | $2" ] |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  then |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    ec |
     | ho $E |
     | _PARA |
     | M_ERR |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    re |
     | turn  |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  fi   |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  if [ |
     |  "$1" |
     |  -eq  |
     | "$2"  |
-    | ]     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | ] |   |
     | |     |
     |  then |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    ec |
     | ho $E |
     | QUAL  |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    re |
     | turn  |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  else |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    if |
     |  [ "$ |
     | 1" -g |
     | t "$2 |
-    | " ]   |
+    | " |   |
+    | |  ]  |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    th |
     | en    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     | retva |
     | l=$1  |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    el |
     | se    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     | retva |
     | l=$2  |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    fi |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  fi   |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  echo |
     |  $ret |
     | val   |
     |       |
-    |  # Ec |
-    | hoes  |
-    | (to s |
-    | tdout |
-    | ), ra |
-    | ther  |
-    | than  |
-    | retur |
-    | ning  |
-    | valu  |
-    | |     |
+    |   |   |
+    | | # E |
+    | choes |
+    |  (to  |
+    | stdou |
+    | t), r |
+    | a |   |
+    | | the |
+    | r tha |
+    | n ret |
+    | urnin |
+    | g val |
+    | u |   |
     | | e.  |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |  # Wh |
-    | y?    |
+    |   |   |
+    | | # W |
+    | hy?   |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  }    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  retu |
     | rn_va |
     | l=$(m |
     | ax2 3 |
-    | 3001  |
-    | 33997 |
-    | )     |
+    | 3 |   |
+    | | 001 |
+    |  3399 |
+    | 7)    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |       |
     |     ^ |
     | ^^^   |
-    |       |
-    |       |
-    |  Func |
-    | tion  |
-    | name  |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    |       |
+    |   Fun |
+    | ction |
+    |  name |
+    |   |   |
     | |     |
     |  #    |
     |       |
     |       |
     |     ^ |
-    | ^^^^  |
-    | ^^^^^ |
-    |  Para |
-    | ms pa |
-    | ssed  |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | ^ |   |
+    | | ^^^ |
+    |  ^^^^ |
+    | ^ Par |
+    | ams p |
+    | assed |
+    |   |   |
     | |     |
     |  #  T |
     | his i |
     | s act |
     | ually |
-    |  a fo |
-    | rm of |
-    |  comm |
-    | and s |
-    | ubsti |
-    | tutio |
-    | n:    |
+    |   |   |
+    | | a f |
+    | orm o |
+    | f com |
+    | mand  |
+    | subst |
+    | i |   |
+    | | tut |
+    | ion:  |
     |       |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  #+ t |
     | reati |
     | ng a  |
     | funct |
-    | ion a |
-    | s if  |
-    | it we |
-    | re a  |
-    | comma |
-    | nd,   |
+    | i |   |
+    | | on  |
+    | as if |
+    |  it w |
+    | ere a |
+    |  comm |
+    | a |   |
+    | | nd, |
     |       |
     |       |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  #+ a |
     | nd as |
     | signi |
     | ng th |
-    | e std |
-    | out o |
-    | f the |
-    |  func |
-    | tion  |
-    | to th |
-    | e var |
-    | iable |
-    |  "ret |
-    | urn_  |
-    | |     |
+    | e |   |
+    | |  st |
+    | dout  |
+    | of th |
+    | e fun |
+    | ction |
+    |   |   |
+    | | to  |
+    | the v |
+    | ariab |
+    | le "r |
+    | eturn |
+    | _ |   |
     | | val |
     | ."    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # == |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
+    | ====  |
+    | OUTPU |
+    | T === |
     | ===== |
-    | === O |
-    | UTPUT |
-    |  ==== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
-    | ===== |
-    | ===== |
+    | ==    |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  if [ |
     |  "$re |
     | turn_ |
     | val"  |
-    | -eq " |
-    | $E_PA |
-    | RAM_E |
-    | RR" ] |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | - |   |
+    | | eq  |
+    | "$E_P |
+    | ARAM_ |
+    | ERR"  |
+    | ]     |
+    |   |   |
     | |     |
     |    th |
     | en    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    ec |
     | ho "E |
     | rror  |
     | in pa |
-    | ramet |
-    | ers p |
-    | assed |
-    |  to c |
-    | ompar |
-    | ison  |
-    | funct |
-    | ion!" |
+    | r |   |
+    | | ame |
+    | ters  |
+    | passe |
+    | d to  |
+    | compa |
+    | r |   |
+    | | iso |
+    | n fun |
+    | ction |
+    | !"    |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  elif |
     |  [ "$ |
     | retur |
     | n_val |
-    | " -eq |
-    |  "$EQ |
-    | UAL"  |
-    | ]     |
+    | " |   |
+    | |  -e |
+    | q "$E |
+    | QUAL" |
+    |  ]    |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |    th |
     | en    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     | echo  |
     | "The  |
     | two n |
-    | umber |
-    | s are |
-    |  equa |
-    | l."   |
+    | u |   |
+    | | mbe |
+    | rs ar |
+    | e equ |
+    | al."  |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  else |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     | echo  |
     | "The  |
     | large |
-    | r of  |
-    | the t |
-    | wo nu |
-    | mbers |
-    |  is $ |
-    | retur |
-    | n_val |
-    | ."    |
+    | r |   |
+    | |  of |
+    |  the  |
+    | two n |
+    | umber |
+    | s is  |
+    | $ |   |
+    | | ret |
+    | urn_v |
+    | al."  |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  fi   |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # == |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
     | ===== |
     | ===== |
+    | = |   |
+    | | === |
     | ===== |
     | ===== |
-    | ===== |
-    | ===== |
+    | ==    |
     |       |
-    |       |
+    |   |   |
     | |     |
-    | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  exit |
     |  0    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  E |
     | xerci |
     | ses:  |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  - |
     | ----- |
     | ---   |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  1 |
     | ) Fin |
     | d a m |
     | ore e |
-    | legan |
-    | t way |
-    |  of t |
-    | estin |
-    | g     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | l |   |
+    | | ega |
+    | nt wa |
+    | y of  |
+    | testi |
+    | ng    |
+    |   |   |
     | |     |
     |  #+   |
     |   the |
     |  para |
     | meter |
-    | s pas |
-    | sed t |
-    | o the |
-    |  func |
-    | tion. |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | s |   |
+    | |  pa |
+    | ssed  |
+    | to th |
+    | e fun |
+    | ction |
+    | . |   |
     | |     |
     |  #  2 |
     | ) Sim |
     | plify |
     |  the  |
-    | if/th |
-    | en st |
-    | ructu |
-    | re at |
-    |  "OUT |
-    | PUT." |
+    | i |   |
+    | | f/t |
+    | hen s |
+    | truct |
+    | ure a |
+    | t "OU |
+    | T |   |
+    | | PUT |
+    | ."    |
     |       |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  3 |
     | ) Rew |
     | rite  |
     | the s |
-    | cript |
-    |  to t |
-    | ake i |
-    | nput  |
-    | from  |
-    | comma |
-    | nd-li |
-    | ne pa |
-    | ramet |
-    | ers.  |
-    | |     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    | c |   |
+    | | rip |
+    | t to  |
+    | take  |
+    | input |
+    |  from |
+    |   |   |
+    | | com |
+    | mand- |
+    | line  |
+    | param |
+    | eters |
+    | . |   |
     |       |
     |       |
     |       |
@@ -2903,17 +2392,25 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
+    |       |
+    | .. ra |
+    | w:: h |
+    | tml   |
+    |       |
+    |    </ |
+    | div>  |
     |       |
     | Here  |
     | is    |
@@ -2953,490 +2450,408 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
     | | ..  |
     | code: |
     | : PRO |
     | GRAML |
     | ISTIN |
-    | G     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    | G |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  mont |
     | h_len |
     | gth ( |
     | )  #  |
-    | Takes |
-    |  mont |
-    | h num |
-    | ber a |
-    | s an  |
-    | argum |
-    | ent.  |
+    | T |   |
+    | | ake |
+    | s mon |
+    | th nu |
+    | mber  |
+    | as an |
+    |   |   |
+    | | arg |
+    | ument |
+    | .     |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  {    |
     |       |
     |       |
     |    #  |
-    | Retur |
-    | ns nu |
-    | mber  |
-    | of da |
-    | ys in |
-    |  mont |
-    | h.    |
+    | R |   |
+    | | etu |
+    | rns n |
+    | umber |
+    |  of d |
+    | ays i |
+    | n |   |
+    | |  mo |
+    | nth.  |
     |       |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  mont |
     | hD="3 |
     | 1 28  |
     | 31 30 |
+    |   |   |
+    | | 31  |
+    | 30 31 |
     |  31 3 |
     | 0 31  |
-    | 31 30 |
-    |  31 3 |
-    | 0 31" |
-    |   # D |
-    | eclar |
-    | e as  |
-    | local |
-    | ?     |
-    | |     |
+    | 30 31 |
+    | " |   |
+    | |   # |
+    |  Decl |
+    | are a |
+    | s loc |
+    | al?   |
+    |   |   |
     | |     |
     |  echo |
     |  "$mo |
     | nthD" |
     |  | aw |
-    | k '{  |
-    | print |
-    |  $'"$ |
-    | {1}"' |
-    |  }'   |
-    |   # T |
-    | ricky |
-    | .     |
+    | k |   |
+    | |  '{ |
+    |  prin |
+    | t $'" |
+    | ${1}" |
+    | ' }'  |
+    |   |   |
+    | |   # |
+    |  Tric |
+    | ky.   |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |  ^^^^ |
-    | ^^^^^ |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    |       |
+    |   ^^^ |
+    | ^^^^^ |
+    | ^     |
+    |   |   |
     | |     |
     |  # Pa |
     | ramet |
     | er pa |
     | ssed  |
-    | to fu |
-    | nctio |
-    | n  ($ |
-    | 1 --  |
-    | month |
-    |  numb |
-    | er),  |
-    | then  |
-    | to aw |
-    | k.    |
-    | |     |
+    | t |   |
+    | | o f |
+    | uncti |
+    | on  ( |
+    | $1 -- |
+    |  mont |
+    | h |   |
+    | |  nu |
+    | mber) |
+    | , the |
+    | n to  |
+    | awk.  |
+    |   |   |
     | |     |
     |  # Aw |
     | k see |
     | s thi |
     | s as  |
-    | "prin |
-    | t $1  |
-    | . . . |
-    |  prin |
-    | t $12 |
-    | " (de |
-    | pendi |
-    | ng on |
-    |  mont |
-    | h nu  |
-    | |     |
+    | " |   |
+    | | pri |
+    | nt $1 |
+    |  . .  |
+    | . pri |
+    | nt $1 |
+    | 2 |   |
+    | | " ( |
+    | depen |
+    | ding  |
+    | on mo |
+    | nth n |
+    | u |   |
     | | mbe |
     | r)    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # Te |
     | mplat |
     | e for |
     |  pass |
-    | ing a |
-    |  para |
-    | meter |
-    |  to e |
-    | mbedd |
-    | ed aw |
-    | k scr |
-    | ipt:  |
+    | i |   |
+    | | ng  |
+    | a par |
+    | amete |
+    | r to  |
+    | embed |
+    | d |   |
+    | | ed  |
+    | awk s |
+    | cript |
+    | :     |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    | $'"${ |
-    | scrip |
-    | t_par |
-    | amete |
-    | r}"'  |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
+    |  $'"$ |
+    | {scri |
+    | p |   |
+    | | t_p |
+    | arame |
+    | ter}" |
+    | '     |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     | |     |
+    |       |
+    |       |
+    |       |
+    |       |
+    |   |   |
     | |     |
     |  #    |
     |  Here |
     | 's a  |
     | sligh |
-    | tly s |
-    | imple |
-    | r awk |
-    |  cons |
-    | truct |
-    | :     |
+    | t |   |
+    | | ly  |
+    | simpl |
+    | er aw |
+    | k con |
+    | struc |
+    | t |   |
+    | | :   |
     |       |
     |       |
     |       |
     |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |  echo |
     |  $mon |
     | thD | |
-    |  awk  |
-    | -v mo |
-    | nth=$ |
-    | 1 '{p |
-    | rint  |
-    | $(mon |
-    | th)}' |
+    |   |   |
+    | | awk |
+    |  -v m |
+    | onth= |
+    | $1 '{ |
+    | print |
+    |   |   |
+    | | $(m |
+    | onth) |
+    | }'    |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |  Uses |
     |  the  |
     | -v aw |
-    | k opt |
-    | ion,  |
-    | which |
-    |  assi |
-    | gns a |
-    |  vari |
-    | able  |
-    | value |
+    | k |   |
+    | |  op |
+    | tion, |
+    |  whic |
+    | h ass |
+    | igns  |
+    | a |   |
+    | |  va |
+    | riabl |
+    | e val |
+    | ue    |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #+   |
     |  prio |
     | r to  |
     | execu |
-    | tion  |
-    | of th |
-    | e awk |
-    |  prog |
-    | ram b |
-    | lock. |
+    | t |   |
+    | | ion |
+    |  of t |
+    | he aw |
+    | k pro |
+    | gram  |
+    | b |   |
+    | | loc |
+    | k.    |
     |       |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #    |
     |  Than |
     | k you |
     | , Ric |
-    | h.    |
+    | h |   |
+    | | .   |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #  N |
     | eeds  |
     | error |
     |  chec |
-    | king  |
-    | for c |
-    | orrec |
-    | t par |
-    | amete |
-    | r ran |
-    | ge (1 |
-    | -12)  |
+    | k |   |
+    | | ing |
+    |  for  |
+    | corre |
+    | ct pa |
+    | ramet |
+    | e |   |
+    | | r r |
+    | ange  |
+    | (1-12 |
+    | )     |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  #+ a |
     | nd fo |
     | r Feb |
     | ruary |
-    |  in l |
-    | eap y |
-    | ear.  |
+    |   |   |
+    | | in  |
+    | leap  |
+    | year. |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  }    |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |       |
     |       |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # -- |
     | ----- |
     | ----- |
     | ----- |
+    | - |   |
+    | | --- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----  |
+    | - |   |
+    | | --- |
+    | -     |
     |       |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # Us |
     | age e |
     | xampl |
     | e:    |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  mont |
     | h=4   |
     |       |
     |  # Ap |
-    | ril,  |
-    | for e |
-    | xampl |
-    | e (4t |
-    | h mon |
-    | th).  |
+    | r |   |
+    | | il, |
+    |  for  |
+    | examp |
+    | le (4 |
+    | th mo |
+    | n |   |
+    | | th) |
+    | .     |
     |       |
     |       |
     |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  days |
     | _in=$ |
     | (mont |
     | h_len |
-    | gth $ |
-    | month |
-    | )     |
+    | g |   |
+    | | th  |
+    | $mont |
+    | h)    |
     |       |
     |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  echo |
     |  $day |
     | s_in  |
     |  # 30 |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    | |     |
+    |   |   |
     | |     |
     |  # -- |
     | ----- |
     | ----- |
     | ----- |
+    | - |   |
+    | | --- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----  |
+    | - |   |
+    | | --- |
+    | -     |
     |       |
     |       |
     |       |
-    |       |
-    | |     |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
-    |       |
+    |   |   |
     |       |
     |       |
     |       |
@@ -3448,17 +2863,25 @@ The next logical question is whether parameters can be dereferenced
     | ----- |
     | ----- |
     | ----- |
+    | --+-- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----- |
+    | ----+ |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
     | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | ----- |
-    | +     |
+    | -+    |
+    |       |
+    | .. ra |
+    | w:: h |
+    | tml   |
+    |       |
+    |    </ |
+    | p>    |
     |       |
     | See   |
     | also  |
@@ -3523,6 +2946,18 @@ The next logical question is whether parameters can be dereferenced
     | .     |
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 **Redirection**
 
 ``Redirecting the stdin         of a function``
@@ -3531,92 +2966,135 @@ The next logical question is whether parameters can be dereferenced
     ``stdin`` can be redirected (as in `Example
     3-1 <special-chars.html#EX8>`__).
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 24-11. Real name from username**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # realname.sh                                                        |
-    |     #                                                                    |
-    |     # From username, gets "real name" from /etc/passwd.                  |
-    |                                                                          |
-    |                                                                          |
-    |     ARGCOUNT=1       # Expect one arg.                                   |
-    |     E_WRONGARGS=85                                                       |
-    |                                                                          |
-    |     file=/etc/passwd                                                     |
-    |     pattern=$1                                                           |
-    |                                                                          |
-    |     if [ $# -ne "$ARGCOUNT" ]                                            |
-    |     then                                                                 |
-    |       echo "Usage: `basename $0` USERNAME"                               |
-    |       exit $E_WRONGARGS                                                  |
-    |     fi                                                                   |
-    |                                                                          |
-    |     file_excerpt ()    #  Scan file for pattern,                         |
-    |     {                  #+ then print relevant portion of line.           |
-    |       while read line  # "while" does not necessarily need [ condition ] |
-    |       do                                                                 |
-    |         echo "$line" | grep $1 | awk -F":" '{ print $5 }'                |
-    |         # Have awk use ":" delimiter.                                    |
-    |       done                                                               |
-    |     } <$file  # Redirect into function's stdin.                          |
-    |                                                                          |
-    |     file_excerpt $pattern                                                |
-    |                                                                          |
-    |     # Yes, this entire script could be reduced to                        |
-    |     #       grep PATTERN /etc/passwd | awk -F":" '{ print $5 }'          |
-    |     # or                                                                 |
-    |     #       awk -F: '/PATTERN/ {print $5}'                               |
-    |     # or                                                                 |
-    |     #       awk -F: '($1 == "username") { print $5 }' # real name from u |
-    | sername                                                                  |
-    |     # However, it might not be as instructive.                           |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # realname.sh        |
+    |     #                    |
+    |     # From username, get |
+    | s "real name" from /etc/ |
+    | passwd.                  |
+    |                          |
+    |                          |
+    |     ARGCOUNT=1       # E |
+    | xpect one arg.           |
+    |     E_WRONGARGS=85       |
+    |                          |
+    |     file=/etc/passwd     |
+    |     pattern=$1           |
+    |                          |
+    |     if [ $# -ne "$ARGCOU |
+    | NT" ]                    |
+    |     then                 |
+    |       echo "Usage: `base |
+    | name $0` USERNAME"       |
+    |       exit $E_WRONGARGS  |
+    |     fi                   |
+    |                          |
+    |     file_excerpt ()    # |
+    |   Scan file for pattern, |
+    |     {                  # |
+    | + then print relevant po |
+    | rtion of line.           |
+    |       while read line  # |
+    |  "while" does not necess |
+    | arily need [ condition ] |
+    |       do                 |
+    |         echo "$line" | g |
+    | rep $1 | awk -F":" '{ pr |
+    | int $5 }'                |
+    |         # Have awk use " |
+    | :" delimiter.            |
+    |       done               |
+    |     } <$file  # Redirect |
+    |  into function's stdin.  |
+    |                          |
+    |     file_excerpt $patter |
+    | n                        |
+    |                          |
+    |     # Yes, this entire s |
+    | cript could be reduced t |
+    | o                        |
+    |     #       grep PATTERN |
+    |  /etc/passwd | awk -F":" |
+    |  '{ print $5 }'          |
+    |     # or                 |
+    |     #       awk -F: '/PA |
+    | TTERN/ {print $5}'       |
+    |     # or                 |
+    |     #       awk -F: '($1 |
+    |  == "username") { print  |
+    | $5 }' # real name from u |
+    | sername                  |
+    |     # However, it might  |
+    | not be as instructive.   |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     There is an alternate, and perhaps less confusing method of
     redirecting a function's ``stdin``. This involves redirecting the
     ``stdin`` to an embedded bracketed code block within the function.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     # Instead of:                                                        |
-    |     Function ()                                                          |
-    |     {                                                                    |
-    |      ...                                                                 |
-    |      } < file                                                            |
-    |                                                                          |
-    |     # Try this:                                                          |
-    |     Function ()                                                          |
-    |     {                                                                    |
-    |       {                                                                  |
-    |         ...                                                              |
-    |        } < file                                                          |
-    |     }                                                                    |
-    |                                                                          |
-    |     # Similarly,                                                         |
-    |                                                                          |
-    |     Function ()  # This works.                                           |
-    |     {                                                                    |
-    |       {                                                                  |
-    |        echo $*                                                           |
-    |       } | tr a b                                                         |
-    |     }                                                                    |
-    |                                                                          |
-    |     Function ()  # This doesn't work.                                    |
-    |     {                                                                    |
-    |       echo $*                                                            |
-    |     } | tr a b   # A nested code block is mandatory here.                |
-    |                                                                          |
-    |                                                                          |
-    |     # Thanks, S.C.                                                       |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     # Instead of:        |
+    |     Function ()          |
+    |     {                    |
+    |      ...                 |
+    |      } < file            |
+    |                          |
+    |     # Try this:          |
+    |     Function ()          |
+    |     {                    |
+    |       {                  |
+    |         ...              |
+    |        } < file          |
+    |     }                    |
+    |                          |
+    |     # Similarly,         |
+    |                          |
+    |     Function ()  # This  |
+    | works.                   |
+    |     {                    |
+    |       {                  |
+    |        echo $*           |
+    |       } | tr a b         |
+    |     }                    |
+    |                          |
+    |     Function ()  # This  |
+    | doesn't work.            |
+    |     {                    |
+    |       echo $*            |
+    |     } | tr a b   # A nes |
+    | ted code block is mandat |
+    | ory here.                |
+    |                          |
+    |                          |
+    |     # Thanks, S.C.       |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -3625,6 +3103,18 @@ The next logical question is whether parameters can be dereferenced
     | contains some instructive examples   |
     | of functions.                        |
     +--------------------------------------+--------------------------------------+
+
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -3636,6 +3126,10 @@ Notes
 | __.                                  |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -3644,6 +3138,10 @@ Notes
 | `Home <index.html>`__    | Local Variables          |
 | `Next <localvar.html>`__ |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Important| image:: ../images/important.gif
 .. |Tip| image:: ../images/tip.gif

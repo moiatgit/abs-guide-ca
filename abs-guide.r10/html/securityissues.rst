@@ -1,15 +1,87 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <assortedtips.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 36. Miscellany
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <portabilityissues.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 36.8. Security Issues
 =====================
+
+.. raw:: html
+
+   <div class="SECT2">
 
 36.8.1. Infected Shell Scripts
 ------------------------------
@@ -31,6 +103,14 @@ Here is yet another reason to learn scripting. Being able to look at and
 understand scripts may protect your system from being compromised by a
 rogue script.
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT2">
+
 36.8.2. Hiding Shell Script Source
 ----------------------------------
 
@@ -46,6 +126,14 @@ article <http://www.linuxjournal.com/article/8256>`__ in the October,
 decrypted to recover the original script source. Still, this could be a
 useful method of keeping scripts secure from all but the most skilled
 hackers.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT2">
 
 36.8.3. Writing Secure Shell Scripts
 ------------------------------------
@@ -67,6 +155,18 @@ hackers.
    the caller put something misleading in the variable, e.g., if the
    caller set `$HOME <internalvariables.html#HOMEDIRREF>`__ to ``/etc``.
 
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
@@ -84,6 +184,10 @@ Notes
 | in the *bibliography*.               |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -93,4 +197,8 @@ Notes
 | `Next <portabilityissues |                          |
 | .html>`__                |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

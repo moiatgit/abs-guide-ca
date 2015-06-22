@@ -1,15 +1,87 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <testconstructs.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 7. Tests
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <comparison-ops.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 7.2. File test operators
 ========================
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **Returns true if...**
 
@@ -38,46 +110,69 @@ Chapter 7. Tests
 -c
     file is a `character device <devref1.html#CHARDEVREF>`__
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     device0="/dev/sda2"    # /   (root directory)                        |
-    |     if [ -b "$device0" ]                                                 |
-    |     then                                                                 |
-    |       echo "$device0 is a block device."                                 |
-    |     fi                                                                   |
-    |                                                                          |
-    |     # /dev/sda2 is a block device.                                       |
-    |                                                                          |
-    |                                                                          |
-    |                                                                          |
-    |     device1="/dev/ttyS1"   # PCMCIA modem card.                          |
-    |     if [ -c "$device1" ]                                                 |
-    |     then                                                                 |
-    |       echo "$device1 is a character device."                             |
-    |     fi                                                                   |
-    |                                                                          |
-    |     # /dev/ttyS1 is a character device.                                  |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     device0="/dev/sda2"  |
+    |    # /   (root directory |
+    | )                        |
+    |     if [ -b "$device0" ] |
+    |     then                 |
+    |       echo "$device0 is  |
+    | a block device."         |
+    |     fi                   |
+    |                          |
+    |     # /dev/sda2 is a blo |
+    | ck device.               |
+    |                          |
+    |                          |
+    |                          |
+    |     device1="/dev/ttyS1" |
+    |    # PCMCIA modem card.  |
+    |     if [ -c "$device1" ] |
+    |     then                 |
+    |       echo "$device1 is  |
+    | a character device."     |
+    |     fi                   |
+    |                          |
+    |     # /dev/ttyS1 is a ch |
+    | aracter device.          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 -p
     file is a `pipe <special-chars.html#PIPEREF>`__
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     function show_input_type()                                           |
-    |     {                                                                    |
-    |        [ -p /dev/fd/0 ] && echo PIPE || echo STDIN                       |
-    |     }                                                                    |
-    |                                                                          |
-    |     show_input_type "Input"                           # STDIN            |
-    |     echo "Input" | show_input_type                    # PIPE             |
-    |                                                                          |
-    |     # This example courtesy of Carl Anderson.                            |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     function show_input_ |
+    | type()                   |
+    |     {                    |
+    |        [ -p /dev/fd/0 ]  |
+    | && echo PIPE || echo STD |
+    | IN                       |
+    |     }                    |
+    |                          |
+    |     show_input_type "Inp |
+    | ut"                      |
+    |       # STDIN            |
+    |     echo "Input" | show_ |
+    | input_type               |
+    |       # PIPE             |
+    |                          |
+    |     # This example court |
+    | esy of Carl Anderson.    |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 -h
     file is a `symbolic link <basic.html#SYMLINKREF>`__
@@ -124,14 +219,20 @@ Chapter 7. Tests
     Lacking the *suid* flag, these binaries could not be invoked by a
     *non-root* user.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |              -rwsr-xr-t    1 root       178236 Oct  2  2000 /usr/sbin/pp |
-    | pd                                                                       |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |              -rwsr-xr-t  |
+    |    1 root       178236 O |
+    | ct  2  2000 /usr/sbin/pp |
+    | pd                       |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     A file with the ``suid`` flag set shows an *s* in its permissions.
 
@@ -147,13 +248,19 @@ Chapter 7. Tests
     altering or deleting specific files in that directory to the owner
     of those files.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |              drwxrwxrwt    7 root         1024 May 19 21:26 tmp/         |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |              drwxrwxrwt  |
+    |    7 root         1024 M |
+    | ay 19 21:26 tmp/         |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     If a user does not own a directory that has the sticky bit set, but
     has write permission in that directory, she can only delete those
@@ -184,71 +291,133 @@ f1 -ef f2
     "not" -- reverses the sense of the tests above (returns true if
     condition absent).
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 7-4. Testing for broken links**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # broken-link.sh                                                     |
-|     # Written by Lee bigelow <ligelowbee@yahoo.com>                      |
-|     # Used in ABS Guide with permission.                                 |
-|                                                                          |
-|     #  A pure shell script to find dead symlinks and output them quoted  |
-|     #+ so they can be fed to xargs and dealt with :)                     |
-|     #+ eg. sh broken-link.sh /somedir /someotherdir|xargs rm             |
-|     #                                                                    |
-|     #  This, however, is a better method:                                |
-|     #                                                                    |
-|     #  find "somedir" -type l -print0|\                                  |
-|     #  xargs -r0 file|\                                                  |
-|     #  grep "broken symbolic"|                                           |
-|     #  sed -e 's/^\|: *broken symbolic.*$/"/g'                           |
-|     #                                                                    |
-|     #+ but that wouldn't be pure Bash, now would it.                     |
-|     #  Caution: beware the /proc file system and any circular links!     |
-|     ################################################################     |
-|                                                                          |
-|                                                                          |
-|     #  If no args are passed to the script set directories-to-search     |
-|     #+ to current directory.  Otherwise set the directories-to-search    |
-|     #+ to the args passed.                                               |
-|     ######################                                               |
-|                                                                          |
-|     [ $# -eq 0 ] && directorys=`pwd` || directorys=$@                    |
-|                                                                          |
-|                                                                          |
-|     #  Setup the function linkchk to check the directory it is passed    |
-|     #+ for files that are links and don't exist, then print them quoted. |
-|     #  If one of the elements in the directory is a subdirectory then    |
-|     #+ send that subdirectory to the linkcheck function.                 |
-|     ##########                                                           |
-|                                                                          |
-|     linkchk () {                                                         |
-|         for element in $1/*; do                                          |
-|           [ -h "$element" -a ! -e "$element" ] && echo \"$element\"      |
-|           [ -d "$element" ] && linkchk $element                          |
-|         # Of course, '-h' tests for symbolic link, '-d' for directory.   |
-|         done                                                             |
-|     }                                                                    |
-|                                                                          |
-|     #  Send each arg that was passed to the script to the linkchk() func |
-| tion                                                                     |
-|     #+ if it is a valid directoy.  If not, then print the error message  |
-|     #+ and usage info.                                                   |
-|     ##################                                                   |
-|     for directory in $directorys; do                                     |
-|         if [ -d $directory ]                                             |
-|         then linkchk $directory                                          |
-|         else                                                             |
-|             echo "$directory is not a directory"                         |
-|             echo "Usage: $0 dir1 dir2 ..."                               |
-|         fi                                                               |
-|     done                                                                 |
-|                                                                          |
-|     exit $?                                                              |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # broken-link.sh     |
+|     # Written by Lee big |
+| elow <ligelowbee@yahoo.c |
+| om>                      |
+|     # Used in ABS Guide  |
+| with permission.         |
+|                          |
+|     #  A pure shell scri |
+| pt to find dead symlinks |
+|  and output them quoted  |
+|     #+ so they can be fe |
+| d to xargs and dealt wit |
+| h :)                     |
+|     #+ eg. sh broken-lin |
+| k.sh /somedir /someother |
+| dir|xargs rm             |
+|     #                    |
+|     #  This, however, is |
+|  a better method:        |
+|     #                    |
+|     #  find "somedir" -t |
+| ype l -print0|\          |
+|     #  xargs -r0 file|\  |
+|     #  grep "broken symb |
+| olic"|                   |
+|     #  sed -e 's/^\|: *b |
+| roken symbolic.*$/"/g'   |
+|     #                    |
+|     #+ but that wouldn't |
+|  be pure Bash, now would |
+|  it.                     |
+|     #  Caution: beware t |
+| he /proc file system and |
+|  any circular links!     |
+|     #################### |
+| ######################## |
+| ####################     |
+|                          |
+|                          |
+|     #  If no args are pa |
+| ssed to the script set d |
+| irectories-to-search     |
+|     #+ to current direct |
+| ory.  Otherwise set the  |
+| directories-to-search    |
+|     #+ to the args passe |
+| d.                       |
+|     #################### |
+| ##                       |
+|                          |
+|     [ $# -eq 0 ] && dire |
+| ctorys=`pwd` || director |
+| ys=$@                    |
+|                          |
+|                          |
+|     #  Setup the functio |
+| n linkchk to check the d |
+| irectory it is passed    |
+|     #+ for files that ar |
+| e links and don't exist, |
+|  then print them quoted. |
+|     #  If one of the ele |
+| ments in the directory i |
+| s a subdirectory then    |
+|     #+ send that subdire |
+| ctory to the linkcheck f |
+| unction.                 |
+|     ##########           |
+|                          |
+|     linkchk () {         |
+|         for element in $ |
+| 1/*; do                  |
+|           [ -h "$element |
+| " -a ! -e "$element" ] & |
+| & echo \"$element\"      |
+|           [ -d "$element |
+| " ] && linkchk $element  |
+|         # Of course, '-h |
+| ' tests for symbolic lin |
+| k, '-d' for directory.   |
+|         done             |
+|     }                    |
+|                          |
+|     #  Send each arg tha |
+| t was passed to the scri |
+| pt to the linkchk() func |
+| tion                     |
+|     #+ if it is a valid  |
+| directoy.  If not, then  |
+| print the error message  |
+|     #+ and usage info.   |
+|     ##################   |
+|     for directory in $di |
+| rectorys; do             |
+|         if [ -d $directo |
+| ry ]                     |
+|         then linkchk $di |
+| rectory                  |
+|         else             |
+|             echo "$direc |
+| tory is not a directory" |
+|             echo "Usage: |
+|  $0 dir1 dir2 ..."       |
+|         fi               |
+|     done                 |
+|                          |
+|     exit $?              |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 `Example 31-1 <zeros.html#COOKIES>`__, `Example
 11-8 <loops1.html#BINGREP>`__, `Example 11-3 <loops1.html#FILEINFO>`__,
@@ -256,37 +425,135 @@ f1 -ef f2
 A-1 <contributed-scripts.html#MAILFORMAT>`__ also illustrate uses of the
 file test operators.
 
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
+.. raw:: html
+
+   <table border="0" class="FOOTNOTES" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[1] <fto.html#AEN3289>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 Per the 1913 edition of *Webster's Dictionary*:
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     Deprecate                                                            |
-|     ...                                                                  |
-|                                                                          |
-|     To pray against, as an evil;                                         |
-|     to seek to avert by prayer;                                          |
-|     to desire the removal of;                                            |
-|     to seek deliverance from;                                            |
-|     to express deep regret for;                                          |
-|     to disapprove of strongly.                                           |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     Deprecate            |
+|     ...                  |
+|                          |
+|     To pray against, as  |
+| an evil;                 |
+|     to seek to avert by  |
+| prayer;                  |
+|     to desire the remova |
+| l of;                    |
+|     to seek deliverance  |
+| from;                    |
+|     to express deep regr |
+| et for;                  |
+|     to disapprove of str |
+| ongly.                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
 
 `[2] <fto.html#AEN3400>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 Be aware that *suid* binaries may open security holes. The *suid* flag
 has no effect on shell scripts.
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[3] <fto.html#AEN3423>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 On Linux systems, the sticky bit is no longer used for files, only on
 directories.
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -297,4 +564,8 @@ directories.
 | `Next <comparison-ops.ht | Operators                |
 | ml>`__                   |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

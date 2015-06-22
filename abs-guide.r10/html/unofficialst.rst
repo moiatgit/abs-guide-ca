@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <scrstyle.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 35. Scripting With Style
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <miscellany.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 35.1. Unofficial Shell Scripting Stylesheet
 ===========================================
@@ -14,148 +82,247 @@ Chapter 35. Scripting With Style
 -  Comment your code. This makes it easier for others to understand (and
    appreciate), and easier for you to maintain.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     PASS="$PASS${MATRIX:$(($RANDOM%${#MATRIX})):1}"                      |
-   |     #  It made perfect sense when you wrote it last year,                |
-   |     #+ but now it's a complete mystery.                                  |
-   |     #  (From Antek Sawicki's "pw.sh" script.)                            |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     PASS="$PASS${MATRIX: |
+   | $(($RANDOM%${#MATRIX})): |
+   | 1}"                      |
+   |     #  It made perfect s |
+   | ense when you wrote it l |
+   | ast year,                |
+   |     #+ but now it's a co |
+   | mplete mystery.          |
+   |     #  (From Antek Sawic |
+   | ki's "pw.sh" script.)    |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   .. raw:: html
+
+      </p>
 
    Add descriptive headers to your scripts and functions.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     #!/bin/bash                                                          |
-   |                                                                          |
-   |     #************************************************#                   |
-   |     #                   xyz.sh                       #                   |
-   |     #           written by Bozo Bozeman              #                   |
-   |     #                July 05, 2001                   #                   |
-   |     #                                                #                   |
-   |     #           Clean up project files.              #                   |
-   |     #************************************************#                   |
-   |                                                                          |
-   |     E_BADDIR=85                       # No such directory.               |
-   |     projectdir=/home/bozo/projects    # Directory to clean up.           |
-   |                                                                          |
-   |     # --------------------------------------------------------- #        |
-   |     # cleanup_pfiles ()                                         #        |
-   |     # Removes all files in designated directory.                #        |
-   |     # Parameter: $target_directory                              #        |
-   |     # Returns: 0 on success, $E_BADDIR if something went wrong. #        |
-   |     # --------------------------------------------------------- #        |
-   |     cleanup_pfiles ()                                                    |
-   |     {                                                                    |
-   |       if [ ! -d "$1" ]  # Test if target directory exists.               |
-   |       then                                                               |
-   |         echo "$1 is not a directory."                                    |
-   |         return $E_BADDIR                                                 |
-   |       fi                                                                 |
-   |                                                                          |
-   |       rm -f "$1"/*                                                       |
-   |       return 0   # Success.                                              |
-   |     }                                                                    |
-   |                                                                          |
-   |     cleanup_pfiles $projectdir                                           |
-   |                                                                          |
-   |     exit $?                                                              |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     #!/bin/bash          |
+   |                          |
+   |     #******************* |
+   | ************************ |
+   | *****#                   |
+   |     #                    |
+   | xyz.sh                   |
+   |      #                   |
+   |     #           written  |
+   | by Bozo Bozeman          |
+   |      #                   |
+   |     #                Jul |
+   | y 05, 2001               |
+   |      #                   |
+   |     #                    |
+   |                          |
+   |      #                   |
+   |     #           Clean up |
+   |  project files.          |
+   |      #                   |
+   |     #******************* |
+   | ************************ |
+   | *****#                   |
+   |                          |
+   |     E_BADDIR=85          |
+   |               # No such  |
+   | directory.               |
+   |     projectdir=/home/boz |
+   | o/projects    # Director |
+   | y to clean up.           |
+   |                          |
+   |     # ------------------ |
+   | ------------------------ |
+   | --------------- #        |
+   |     # cleanup_pfiles ()  |
+   |                          |
+   |                 #        |
+   |     # Removes all files  |
+   | in designated directory. |
+   |                 #        |
+   |     # Parameter: $target |
+   | _directory               |
+   |                 #        |
+   |     # Returns: 0 on succ |
+   | ess, $E_BADDIR if someth |
+   | ing went wrong. #        |
+   |     # ------------------ |
+   | ------------------------ |
+   | --------------- #        |
+   |     cleanup_pfiles ()    |
+   |     {                    |
+   |       if [ ! -d "$1" ]   |
+   | # Test if target directo |
+   | ry exists.               |
+   |       then               |
+   |         echo "$1 is not  |
+   | a directory."            |
+   |         return $E_BADDIR |
+   |       fi                 |
+   |                          |
+   |       rm -f "$1"/*       |
+   |       return 0   # Succe |
+   | ss.                      |
+   |     }                    |
+   |                          |
+   |     cleanup_pfiles $proj |
+   | ectdir                   |
+   |                          |
+   |     exit $?              |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   .. raw:: html
+
+      </p>
 
 -  Avoid using "magic numbers," `[1] <unofficialst.html#FTN.AEN20041>`__
    that is, "hard-wired" literal constants. Use meaningful variable
    names instead. This makes the script easier to understand and permits
    making changes and updates without breaking the application.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     if [ -f /var/log/messages ]                                          |
-   |     then                                                                 |
-   |       ...                                                                |
-   |     fi                                                                   |
-   |     #  A year later, you decide to change the script to check /var/log/s |
-   | yslog.                                                                   |
-   |     #  It is now necessary to manually change the script, instance by in |
-   | stance,                                                                  |
-   |     #+ and hope nothing breaks.                                          |
-   |                                                                          |
-   |     # A better way:                                                      |
-   |     LOGFILE=/var/log/messages  # Only line that needs to be changed.     |
-   |     if [ -f "$LOGFILE" ]                                                 |
-   |     then                                                                 |
-   |       ...                                                                |
-   |     fi                                                                   |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     if [ -f /var/log/mes |
+   | sages ]                  |
+   |     then                 |
+   |       ...                |
+   |     fi                   |
+   |     #  A year later, you |
+   |  decide to change the sc |
+   | ript to check /var/log/s |
+   | yslog.                   |
+   |     #  It is now necessa |
+   | ry to manually change th |
+   | e script, instance by in |
+   | stance,                  |
+   |     #+ and hope nothing  |
+   | breaks.                  |
+   |                          |
+   |     # A better way:      |
+   |     LOGFILE=/var/log/mes |
+   | sages  # Only line that  |
+   | needs to be changed.     |
+   |     if [ -f "$LOGFILE" ] |
+   |     then                 |
+   |       ...                |
+   |     fi                   |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   .. raw:: html
+
+      </p>
 
 -  Choose descriptive names for variables and functions.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     fl=`ls -al $dirname`                 # Cryptic.                      |
-   |     file_listing=`ls -al $dirname`       # Better.                       |
-   |                                                                          |
-   |                                                                          |
-   |     MAXVAL=10   # All caps used for a script constant.                   |
-   |     while [ "$index" -le "$MAXVAL" ]                                     |
-   |     ...                                                                  |
-   |                                                                          |
-   |                                                                          |
-   |     E_NOTFOUND=95                        #  Uppercase for an errorcode,  |
-   |                                          #+ and name prefixed with E_.   |
-   |     if [ ! -e "$filename" ]                                              |
-   |     then                                                                 |
-   |       echo "File $filename not found."                                   |
-   |       exit $E_NOTFOUND                                                   |
-   |     fi                                                                   |
-   |                                                                          |
-   |                                                                          |
-   |     MAIL_DIRECTORY=/var/spool/mail/bozo  #  Uppercase for an environment |
-   | al                                                                       |
-   |     export MAIL_DIRECTORY                #+ variable.                    |
-   |                                                                          |
-   |                                                                          |
-   |     GetAnswer ()                         #  Mixed case works well for a  |
-   |     {                                    #+ function name, especially    |
-   |       prompt=$1                          #+ when it improves legibility. |
-   |       echo -n $prompt                                                    |
-   |       read answer                                                        |
-   |       return $answer                                                     |
-   |     }                                                                    |
-   |                                                                          |
-   |     GetAnswer "What is your favorite number? "                           |
-   |     favorite_number=$?                                                   |
-   |     echo $favorite_number                                                |
-   |                                                                          |
-   |                                                                          |
-   |     _uservariable=23                     # Permissible, but not recommen |
-   | ded.                                                                     |
-   |     # It's better for user-defined variables not to start with an unders |
-   | core.                                                                    |
-   |     # Leave that for system variables.                                   |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     fl=`ls -al $dirname` |
+   |                  # Crypt |
+   | ic.                      |
+   |     file_listing=`ls -al |
+   |  $dirname`       # Bette |
+   | r.                       |
+   |                          |
+   |                          |
+   |     MAXVAL=10   # All ca |
+   | ps used for a script con |
+   | stant.                   |
+   |     while [ "$index" -le |
+   |  "$MAXVAL" ]             |
+   |     ...                  |
+   |                          |
+   |                          |
+   |     E_NOTFOUND=95        |
+   |                  #  Uppe |
+   | rcase for an errorcode,  |
+   |                          |
+   |                  #+ and  |
+   | name prefixed with E_.   |
+   |     if [ ! -e "$filename |
+   | " ]                      |
+   |     then                 |
+   |       echo "File $filena |
+   | me not found."           |
+   |       exit $E_NOTFOUND   |
+   |     fi                   |
+   |                          |
+   |                          |
+   |     MAIL_DIRECTORY=/var/ |
+   | spool/mail/bozo  #  Uppe |
+   | rcase for an environment |
+   | al                       |
+   |     export MAIL_DIRECTOR |
+   | Y                #+ vari |
+   | able.                    |
+   |                          |
+   |                          |
+   |     GetAnswer ()         |
+   |                  #  Mixe |
+   | d case works well for a  |
+   |     {                    |
+   |                  #+ func |
+   | tion name, especially    |
+   |       prompt=$1          |
+   |                  #+ when |
+   |  it improves legibility. |
+   |       echo -n $prompt    |
+   |       read answer        |
+   |       return $answer     |
+   |     }                    |
+   |                          |
+   |     GetAnswer "What is y |
+   | our favorite number? "   |
+   |     favorite_number=$?   |
+   |     echo $favorite_numbe |
+   | r                        |
+   |                          |
+   |                          |
+   |     _uservariable=23     |
+   |                  # Permi |
+   | ssible, but not recommen |
+   | ded.                     |
+   |     # It's better for us |
+   | er-defined variables not |
+   |  to start with an unders |
+   | core.                    |
+   |     # Leave that for sys |
+   | tem variables.           |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   .. raw:: html
+
+      </p>
 
 -  Use `exit codes <exit-status.html#EXITCOMMANDREF>`__ in a systematic
    and meaningful way.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     E_WRONG_ARGS=95                                                      |
-   |     ...                                                                  |
-   |     ...                                                                  |
-   |     exit $E_WRONG_ARGS                                                   |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     E_WRONG_ARGS=95      |
+   |     ...                  |
+   |     ...                  |
+   |     exit $E_WRONG_ARGS   |
+                             
+   +--------------------------+--------------------------+--------------------------+
 
    See also `Appendix E <exitcodes.html>`__.
+
+   .. raw:: html
+
+      </p>
 
    *Ender* suggests using the `exit codes in
    ``/usr/include/sysexits.h`` <exitcodes.html#SYSEXITSREF>`__ in shell
@@ -165,28 +332,59 @@ Chapter 35. Scripting With Style
 -  Use standardized parameter flags for script invocation. *Ender*
    proposes the following set of flags.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     -a      All: Return all information (including hidden file info).    |
-   |     -b      Brief: Short version, usually for other scripts.             |
-   |     -c      Copy, concatenate, etc.                                      |
-   |     -d      Daily: Use information from the whole day, and not merely    |
-   |             information for a specific instance/user.                    |
-   |     -e      Extended/Elaborate: (often does not include hidden file info |
-   | ).                                                                       |
-   |     -h      Help: Verbose usage w/descs, aux info, discussion, help.     |
-   |             See also -V.                                                 |
-   |     -l      Log output of script.                                        |
-   |     -m      Manual: Launch man-page for base command.                    |
-   |     -n      Numbers: Numerical data only.                                |
-   |     -r      Recursive: All files in a directory (and/or all sub-dirs).   |
-   |     -s      Setup & File Maintenance: Config files for this script.      |
-   |     -u      Usage: List of invocation flags for the script.              |
-   |     -v      Verbose: Human readable output, more or less formatted.      |
-   |     -V      Version / License / Copy(right|left) / Contribs (email too). |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     -a      All: Return  |
+   | all information (includi |
+   | ng hidden file info).    |
+   |     -b      Brief: Short |
+   |  version, usually for ot |
+   | her scripts.             |
+   |     -c      Copy, concat |
+   | enate, etc.              |
+   |     -d      Daily: Use i |
+   | nformation from the whol |
+   | e day, and not merely    |
+   |             information  |
+   | for a specific instance/ |
+   | user.                    |
+   |     -e      Extended/Ela |
+   | borate: (often does not  |
+   | include hidden file info |
+   | ).                       |
+   |     -h      Help: Verbos |
+   | e usage w/descs, aux inf |
+   | o, discussion, help.     |
+   |             See also -V. |
+   |     -l      Log output o |
+   | f script.                |
+   |     -m      Manual: Laun |
+   | ch man-page for base com |
+   | mand.                    |
+   |     -n      Numbers: Num |
+   | erical data only.        |
+   |     -r      Recursive: A |
+   | ll files in a directory  |
+   | (and/or all sub-dirs).   |
+   |     -s      Setup & File |
+   |  Maintenance: Config fil |
+   | es for this script.      |
+   |     -u      Usage: List  |
+   | of invocation flags for  |
+   | the script.              |
+   |     -v      Verbose: Hum |
+   | an readable output, more |
+   |  or less formatted.      |
+   |     -V      Version / Li |
+   | cense / Copy(right|left) |
+   |  / Contribs (email too). |
+                             
+   +--------------------------+--------------------------+--------------------------+
+
+   .. raw:: html
+
+      </p>
 
    See also `Section G.1 <standard-options.html>`__.
 
@@ -195,41 +393,58 @@ Chapter 35. Scripting With Style
 
 -  Don't use a complex construct where a simpler one will do.
 
-   +--------------------------------------------------------------------------+
-   | .. code:: PROGRAMLISTING                                                 |
-   |                                                                          |
-   |     COMMAND                                                              |
-   |     if [ $? -eq 0 ]                                                      |
-   |     ...                                                                  |
-   |     # Redundant and non-intuitive.                                       |
-   |                                                                          |
-   |     if COMMAND                                                           |
-   |     ...                                                                  |
-   |     # More concise (if perhaps not quite as legible).                    |
-                                                                             
-   +--------------------------------------------------------------------------+
+   +--------------------------+--------------------------+--------------------------+
+   | .. code:: PROGRAMLISTING |
+   |                          |
+   |     COMMAND              |
+   |     if [ $? -eq 0 ]      |
+   |     ...                  |
+   |     # Redundant and non- |
+   | intuitive.               |
+   |                          |
+   |     if COMMAND           |
+   |     ...                  |
+   |     # More concise (if p |
+   | erhaps not quite as legi |
+   | ble).                    |
+                             
+   +--------------------------+--------------------------+--------------------------+
 
-+--------------------+--------------------+--------------------+--------------------+
-|                    |
-| **                 |
-| *... reading the   |
-| UNIX source code   |
-| to the Bourne      |
-| shell (/bin/sh). I |
-| was shocked at how |
-| much simple        |
-| algorithms could   |
-| be made cryptic,   |
-| and therefore      |
-| useless, by a poor |
-| choice of code     |
-| style. I asked     |
-| myself, "Could     |
-| someone be proud   |
-| of this code?"*    |
-|                    |
-| *--Landon Noll*    |
-+--------------------+--------------------+--------------------+--------------------+
+   .. raw:: html
+
+      </p>
+
++----------------+----------------+----------------+----------------+----------------+
+|                |
+| **             |
+| *... reading   |
+| the UNIX       |
+| source code to |
+| the Bourne     |
+| shell          |
+| (/bin/sh). I   |
+| was shocked at |
+| how much       |
+| simple         |
+| algorithms     |
+| could be made  |
+| cryptic, and   |
+| therefore      |
+| useless, by a  |
+| poor choice of |
+| code style. I  |
+| asked myself,  |
+| "Could someone |
+| be proud of    |
+| this code?"*   |
+|                |
+| *--Landon      |
+| Noll*          |
++----------------+----------------+----------------+----------------+----------------+
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -243,6 +458,10 @@ Notes
 | used to designate file types.        |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -251,4 +470,8 @@ Notes
 | `Next <miscellany.html>` | Miscellany               |
 | __                       |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

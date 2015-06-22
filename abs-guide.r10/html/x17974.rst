@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <io-redirection.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 20. I/O Redirection
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <redircb.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 20.1. Using *exec*
 ==================
@@ -17,53 +85,87 @@ source (usually keyboard input). This provides a method of reading a
 file line by line and possibly parsing each line of input using
 `sed <sedawk.html#SEDREF>`__ and/or `awk <awk.html#AWKREF>`__.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 20-1. Redirecting ``stdin`` using *exec***
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # Redirecting stdin using 'exec'.                                    |
-|                                                                          |
-|                                                                          |
-|     exec 6<&0          # Link file descriptor #6 with stdin.             |
-|                        # Saves stdin.                                    |
-|                                                                          |
-|     exec < data-file   # stdin replaced by file "data-file"              |
-|                                                                          |
-|     read a1            # Reads first line of file "data-file".           |
-|     read a2            # Reads second line of file "data-file."          |
-|                                                                          |
-|     echo                                                                 |
-|     echo "Following lines read from file."                               |
-|     echo "-------------------------------"                               |
-|     echo $a1                                                             |
-|     echo $a2                                                             |
-|                                                                          |
-|     echo; echo; echo                                                     |
-|                                                                          |
-|     exec 0<&6 6<&-                                                       |
-|     #  Now restore stdin from fd #6, where it had been saved,            |
-|     #+ and close fd #6 ( 6<&- ) to free it for other processes to use.   |
-|     #                                                                    |
-|     # <&6 6<&-    also works.                                            |
-|                                                                          |
-|     echo -n "Enter data  "                                               |
-|     read b1  # Now "read" functions as expected, reading from normal std |
-| in.                                                                      |
-|     echo "Input read from stdin."                                        |
-|     echo "----------------------"                                        |
-|     echo "b1 = $b1"                                                      |
-|                                                                          |
-|     echo                                                                 |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # Redirecting stdin  |
+| using 'exec'.            |
+|                          |
+|                          |
+|     exec 6<&0          # |
+|  Link file descriptor #6 |
+|  with stdin.             |
+|                        # |
+|  Saves stdin.            |
+|                          |
+|     exec < data-file   # |
+|  stdin replaced by file  |
+| "data-file"              |
+|                          |
+|     read a1            # |
+|  Reads first line of fil |
+| e "data-file".           |
+|     read a2            # |
+|  Reads second line of fi |
+| le "data-file."          |
+|                          |
+|     echo                 |
+|     echo "Following line |
+| s read from file."       |
+|     echo "-------------- |
+| -----------------"       |
+|     echo $a1             |
+|     echo $a2             |
+|                          |
+|     echo; echo; echo     |
+|                          |
+|     exec 0<&6 6<&-       |
+|     #  Now restore stdin |
+|  from fd #6, where it ha |
+| d been saved,            |
+|     #+ and close fd #6 ( |
+|  6<&- ) to free it for o |
+| ther processes to use.   |
+|     #                    |
+|     # <&6 6<&-    also w |
+| orks.                    |
+|                          |
+|     echo -n "Enter data  |
+|  "                       |
+|     read b1  # Now "read |
+| " functions as expected, |
+|  reading from normal std |
+| in.                      |
+|     echo "Input read fro |
+| m stdin."                |
+|     echo "-------------- |
+| --------"                |
+|     echo "b1 = $b1"      |
+|                          |
+|     echo                 |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 Similarly, an **exec >filename** command redirects ``stdout`` to a
 designated file. This sends all command output that would normally go to
 ``stdout`` to that file.
+
+.. raw:: html
+
+   <div class="IMPORTANT">
 
 +--------------------+--------------------+--------------------+--------------------+
 | |Important|        |
@@ -94,171 +196,283 @@ designated file. This sends all command output that would normally go to
 | pointing this out. |
 +--------------------+--------------------+--------------------+--------------------+
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 20-2. Redirecting ``stdout`` using *exec***
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # reassign-stdout.sh                                                 |
-|                                                                          |
-|     LOGFILE=logfile.txt                                                  |
-|                                                                          |
-|     exec 6>&1           # Link file descriptor #6 with stdout.           |
-|                         # Saves stdout.                                  |
-|                                                                          |
-|     exec > $LOGFILE     # stdout replaced with file "logfile.txt".       |
-|                                                                          |
-|     # ----------------------------------------------------------- #      |
-|     # All output from commands in this block sent to file $LOGFILE.      |
-|                                                                          |
-|     echo -n "Logfile: "                                                  |
-|     date                                                                 |
-|     echo "-------------------------------------"                         |
-|     echo                                                                 |
-|                                                                          |
-|     echo "Output of \"ls -al\" command"                                  |
-|     echo                                                                 |
-|     ls -al                                                               |
-|     echo; echo                                                           |
-|     echo "Output of \"df\" command"                                      |
-|     echo                                                                 |
-|     df                                                                   |
-|                                                                          |
-|     # ----------------------------------------------------------- #      |
-|                                                                          |
-|     exec 1>&6 6>&-      # Restore stdout and close file descriptor #6.   |
-|                                                                          |
-|     echo                                                                 |
-|     echo "== stdout now restored to default == "                         |
-|     echo                                                                 |
-|     ls -al                                                               |
-|     echo                                                                 |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # reassign-stdout.sh |
+|                          |
+|     LOGFILE=logfile.txt  |
+|                          |
+|     exec 6>&1            |
+| # Link file descriptor # |
+| 6 with stdout.           |
+|                          |
+| # Saves stdout.          |
+|                          |
+|     exec > $LOGFILE      |
+| # stdout replaced with f |
+| ile "logfile.txt".       |
+|                          |
+|     # ------------------ |
+| ------------------------ |
+| ----------------- #      |
+|     # All output from co |
+| mmands in this block sen |
+| t to file $LOGFILE.      |
+|                          |
+|     echo -n "Logfile: "  |
+|     date                 |
+|     echo "-------------- |
+| -----------------------" |
+|     echo                 |
+|                          |
+|     echo "Output of \"ls |
+|  -al\" command"          |
+|     echo                 |
+|     ls -al               |
+|     echo; echo           |
+|     echo "Output of \"df |
+| \" command"              |
+|     echo                 |
+|     df                   |
+|                          |
+|     # ------------------ |
+| ------------------------ |
+| ----------------- #      |
+|                          |
+|     exec 1>&6 6>&-       |
+| # Restore stdout and clo |
+| se file descriptor #6.   |
+|                          |
+|     echo                 |
+|     echo "== stdout now  |
+| restored to default == " |
+|     echo                 |
+|     ls -al               |
+|     echo                 |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
 
 **Example 20-3. Redirecting both ``stdin`` and ``stdout`` in the same
 script with *exec***
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # upperconv.sh                                                       |
-|     # Converts a specified input file to uppercase.                      |
-|                                                                          |
-|     E_FILE_ACCESS=70                                                     |
-|     E_WRONG_ARGS=71                                                      |
-|                                                                          |
-|     if [ ! -r "$1" ]     # Is specified input file readable?             |
-|     then                                                                 |
-|       echo "Can't read from input file!"                                 |
-|       echo "Usage: $0 input-file output-file"                            |
-|       exit $E_FILE_ACCESS                                                |
-|     fi                   #  Will exit with same error                    |
-|                          #+ even if input file ($1) not specified (why?) |
-| .                                                                        |
-|                                                                          |
-|     if [ -z "$2" ]                                                       |
-|     then                                                                 |
-|       echo "Need to specify output file."                                |
-|       echo "Usage: $0 input-file output-file"                            |
-|       exit $E_WRONG_ARGS                                                 |
-|     fi                                                                   |
-|                                                                          |
-|                                                                          |
-|     exec 4<&0                                                            |
-|     exec < $1            # Will read from input file.                    |
-|                                                                          |
-|     exec 7>&1                                                            |
-|     exec > $2            # Will write to output file.                    |
-|                          # Assumes output file writable (add check?).    |
-|                                                                          |
-|     # -----------------------------------------------                    |
-|         cat - | tr a-z A-Z   # Uppercase conversion.                     |
-|     #   ^^^^^                # Reads from stdin.                         |
-|     #           ^^^^^^^^^^   # Writes to stdout.                         |
-|     # However, both stdin and stdout were redirected.                    |
-|     # Note that the 'cat' can be omitted.                                |
-|     # -----------------------------------------------                    |
-|                                                                          |
-|     exec 1>&7 7>&-       # Restore stout.                                |
-|     exec 0<&4 4<&-       # Restore stdin.                                |
-|                                                                          |
-|     # After restoration, the following line prints to stdout as expected |
-| .                                                                        |
-|     echo "File \"$1\" written to \"$2\" as uppercase conversion."        |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # upperconv.sh       |
+|     # Converts a specifi |
+| ed input file to upperca |
+| se.                      |
+|                          |
+|     E_FILE_ACCESS=70     |
+|     E_WRONG_ARGS=71      |
+|                          |
+|     if [ ! -r "$1" ]     |
+|  # Is specified input fi |
+| le readable?             |
+|     then                 |
+|       echo "Can't read f |
+| rom input file!"         |
+|       echo "Usage: $0 in |
+| put-file output-file"    |
+|       exit $E_FILE_ACCES |
+| S                        |
+|     fi                   |
+|  #  Will exit with same  |
+| error                    |
+|                          |
+|  #+ even if input file ( |
+| $1) not specified (why?) |
+| .                        |
+|                          |
+|     if [ -z "$2" ]       |
+|     then                 |
+|       echo "Need to spec |
+| ify output file."        |
+|       echo "Usage: $0 in |
+| put-file output-file"    |
+|       exit $E_WRONG_ARGS |
+|     fi                   |
+|                          |
+|                          |
+|     exec 4<&0            |
+|     exec < $1            |
+|  # Will read from input  |
+| file.                    |
+|                          |
+|     exec 7>&1            |
+|     exec > $2            |
+|  # Will write to output  |
+| file.                    |
+|                          |
+|  # Assumes output file w |
+| ritable (add check?).    |
+|                          |
+|     # ------------------ |
+| ------------------------ |
+| -----                    |
+|         cat - | tr a-z A |
+| -Z   # Uppercase convers |
+| ion.                     |
+|     #   ^^^^^            |
+|      # Reads from stdin. |
+|     #           ^^^^^^^^ |
+| ^^   # Writes to stdout. |
+|     # However, both stdi |
+| n and stdout were redire |
+| cted.                    |
+|     # Note that the 'cat |
+| ' can be omitted.        |
+|     # ------------------ |
+| ------------------------ |
+| -----                    |
+|                          |
+|     exec 1>&7 7>&-       |
+|  # Restore stout.        |
+|     exec 0<&4 4<&-       |
+|  # Restore stdin.        |
+|                          |
+|     # After restoration, |
+|  the following line prin |
+| ts to stdout as expected |
+| .                        |
+|     echo "File \"$1\" wr |
+| itten to \"$2\" as upper |
+| case conversion."        |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 I/O redirection is a clever way of avoiding the dreaded `inaccessible
 variables within a subshell <subshells.html#PARVIS>`__ problem.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 20-4. Avoiding a subshell**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # avoid-subshell.sh                                                  |
-|     # Suggested by Matthew Walker.                                       |
-|                                                                          |
-|     Lines=0                                                              |
-|                                                                          |
-|     echo                                                                 |
-|                                                                          |
-|     cat myfile.txt | while read line;                                    |
-|                      do {                                                |
-|                        echo $line                                        |
-|                        (( Lines++ ));  #  Incremented values of this var |
-| iable                                                                    |
-|                                        #+ inaccessible outside loop.     |
-|                                        #  Subshell problem.              |
-|                      }                                                   |
-|                      done                                                |
-|                                                                          |
-|     echo "Number of lines read = $Lines"     # 0                         |
-|                                              # Wrong!                    |
-|                                                                          |
-|     echo "------------------------"                                      |
-|                                                                          |
-|                                                                          |
-|     exec 3<> myfile.txt                                                  |
-|     while read line <&3                                                  |
-|     do {                                                                 |
-|       echo "$line"                                                       |
-|       (( Lines++ ));                   #  Incremented values of this var |
-| iable                                                                    |
-|                                        #+ accessible outside loop.       |
-|                                        #  No subshell, no problem.       |
-|     }                                                                    |
-|     done                                                                 |
-|     exec 3>&-                                                            |
-|                                                                          |
-|     echo "Number of lines read = $Lines"     # 8                         |
-|                                                                          |
-|     echo                                                                 |
-|                                                                          |
-|     exit 0                                                               |
-|                                                                          |
-|     # Lines below not seen by script.                                    |
-|                                                                          |
-|     $ cat myfile.txt                                                     |
-|                                                                          |
-|     Line 1.                                                              |
-|     Line 2.                                                              |
-|     Line 3.                                                              |
-|     Line 4.                                                              |
-|     Line 5.                                                              |
-|     Line 6.                                                              |
-|     Line 7.                                                              |
-|     Line 8.                                                              |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # avoid-subshell.sh  |
+|     # Suggested by Matth |
+| ew Walker.               |
+|                          |
+|     Lines=0              |
+|                          |
+|     echo                 |
+|                          |
+|     cat myfile.txt | whi |
+| le read line;            |
+|                      do  |
+| {                        |
+|                        e |
+| cho $line                |
+|                        ( |
+| ( Lines++ ));  #  Increm |
+| ented values of this var |
+| iable                    |
+|                          |
+|                #+ inacce |
+| ssible outside loop.     |
+|                          |
+|                #  Subshe |
+| ll problem.              |
+|                      }   |
+|                      don |
+| e                        |
+|                          |
+|     echo "Number of line |
+| s read = $Lines"     # 0 |
+|                          |
+|                      # W |
+| rong!                    |
+|                          |
+|     echo "-------------- |
+| ----------"              |
+|                          |
+|                          |
+|     exec 3<> myfile.txt  |
+|     while read line <&3  |
+|     do {                 |
+|       echo "$line"       |
+|       (( Lines++ ));     |
+|                #  Increm |
+| ented values of this var |
+| iable                    |
+|                          |
+|                #+ access |
+| ible outside loop.       |
+|                          |
+|                #  No sub |
+| shell, no problem.       |
+|     }                    |
+|     done                 |
+|     exec 3>&-            |
+|                          |
+|     echo "Number of line |
+| s read = $Lines"     # 8 |
+|                          |
+|     echo                 |
+|                          |
+|     exit 0               |
+|                          |
+|     # Lines below not se |
+| en by script.            |
+|                          |
+|     $ cat myfile.txt     |
+|                          |
+|     Line 1.              |
+|     Line 2.              |
+|     Line 3.              |
+|     Line 4.              |
+|     Line 5.              |
+|     Line 6.              |
+|     Line 7.              |
+|     Line 8.              |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -268,5 +482,9 @@ variables within a subshell <subshells.html#PARVIS>`__ problem.
 | `Home <index.html>`__    | >`__                     |
 | `Next <redircb.html>`__  | Redirecting Code Blocks  |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Important| image:: ../images/important.gif

@@ -1,165 +1,305 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <variables2.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 9. Another Look at Variables
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <declareref.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 9.1. Internal Variables
 =======================
 
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 ``Builtin variables:``
     variables affecting bash script behavior
 
-``$BASH``
+\ ``$BASH``
     The path to the *Bash* binary itself
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $BASH                                                     |
-    |     /bin/bash                                                            |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $BASH     |
+    |     /bin/bash            |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$BASH_ENV``
+    .. raw:: html
+
+       </p>
+
+\ ``$BASH_ENV``
     An `environmental variable <othertypesv.html#ENVREF>`__ pointing to
     a Bash startup file to be read when a script is invoked
 
-``$BASH_SUBSHELL``
+\ ``$BASH_SUBSHELL``
     A variable indicating the `subshell <subshells.html#SUBSHELLSREF>`__
     level. This is a new addition to Bash, `version
     3 <bashver3.html#BASH3REF>`__.
 
     See `Example 21-1 <subshells.html#SUBSHELL>`__ for usage.
 
-``$BASHPID``
+\ ``$BASHPID``
     *Process ID* of the current instance of Bash. This is not the same
     as the `$$ <internalvariables.html#PROCCID>`__ variable, but it
     often gives the same result.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash4$ echo $$                                                       |
-    |     11015                                                                |
-    |                                                                          |
-    |                                                                          |
-    |     bash4$ echo $BASHPID                                                 |
-    |     11015                                                                |
-    |                                                                          |
-    |                                                                          |
-    |     bash4$ ps ax | grep bash4                                            |
-    |     11015 pts/2    R      0:00 bash4                                     |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash4$ echo $$       |
+    |     11015                |
+    |                          |
+    |                          |
+    |     bash4$ echo $BASHPID |
+    |     11015                |
+    |                          |
+    |                          |
+    |     bash4$ ps ax | grep  |
+    | bash4                    |
+    |     11015 pts/2    R     |
+    |   0:00 bash4             |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     But ...
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash4                                                         |
-    |                                                                          |
-    |     echo "\$\$ outside of subshell = $$"                              #  |
-    | 9602                                                                     |
-    |     echo "\$BASH_SUBSHELL  outside of subshell = $BASH_SUBSHELL"      #  |
-    | 0                                                                        |
-    |     echo "\$BASHPID outside of subshell = $BASHPID"                   #  |
-    | 9602                                                                     |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     ( echo "\$\$ inside of subshell = $$"                             #  |
-    | 9602                                                                     |
-    |       echo "\$BASH_SUBSHELL inside of subshell = $BASH_SUBSHELL"      #  |
-    | 1                                                                        |
-    |       echo "\$BASHPID inside of subshell = $BASHPID" )                #  |
-    | 9603                                                                     |
-    |       # Note that $$ returns PID of parent process.                      |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash4         |
+    |                          |
+    |     echo "\$\$ outside o |
+    | f subshell = $$"         |
+    |                       #  |
+    | 9602                     |
+    |     echo "\$BASH_SUBSHEL |
+    | L  outside of subshell = |
+    |  $BASH_SUBSHELL"      #  |
+    | 0                        |
+    |     echo "\$BASHPID outs |
+    | ide of subshell = $BASHP |
+    | ID"                   #  |
+    | 9602                     |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     ( echo "\$\$ inside  |
+    | of subshell = $$"        |
+    |                       #  |
+    | 9602                     |
+    |       echo "\$BASH_SUBSH |
+    | ELL inside of subshell = |
+    |  $BASH_SUBSHELL"      #  |
+    | 1                        |
+    |       echo "\$BASHPID in |
+    | side of subshell = $BASH |
+    | PID" )                #  |
+    | 9603                     |
+    |       # Note that $$ ret |
+    | urns PID of parent proce |
+    | ss.                      |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 ``$BASH_VERSINFO[n]``
     A 6-element `array <arrays.html#ARRAYREF>`__ containing version
     information about the installed release of Bash. This is similar to
     ``$BASH_VERSION``, below, but a bit more detailed.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     # Bash version info:                                                 |
-    |                                                                          |
-    |     for n in 0 1 2 3 4 5                                                 |
-    |     do                                                                   |
-    |       echo "BASH_VERSINFO[$n] = ${BASH_VERSINFO[$n]}"                    |
-    |     done                                                                 |
-    |                                                                          |
-    |     # BASH_VERSINFO[0] = 3                      # Major version no.      |
-    |     # BASH_VERSINFO[1] = 00                     # Minor version no.      |
-    |     # BASH_VERSINFO[2] = 14                     # Patch level.           |
-    |     # BASH_VERSINFO[3] = 1                      # Build version.         |
-    |     # BASH_VERSINFO[4] = release                # Release status.        |
-    |     # BASH_VERSINFO[5] = i386-redhat-linux-gnu  # Architecture           |
-    |                                                 # (same as $MACHTYPE).   |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     # Bash version info: |
+    |                          |
+    |     for n in 0 1 2 3 4 5 |
+    |     do                   |
+    |       echo "BASH_VERSINF |
+    | O[$n] = ${BASH_VERSINFO[ |
+    | $n]}"                    |
+    |     done                 |
+    |                          |
+    |     # BASH_VERSINFO[0] = |
+    |  3                       |
+    | # Major version no.      |
+    |     # BASH_VERSINFO[1] = |
+    |  00                      |
+    | # Minor version no.      |
+    |     # BASH_VERSINFO[2] = |
+    |  14                      |
+    | # Patch level.           |
+    |     # BASH_VERSINFO[3] = |
+    |  1                       |
+    | # Build version.         |
+    |     # BASH_VERSINFO[4] = |
+    |  release                 |
+    | # Release status.        |
+    |     # BASH_VERSINFO[5] = |
+    |  i386-redhat-linux-gnu   |
+    | # Architecture           |
+    |                          |
+    |                          |
+    | # (same as $MACHTYPE).   |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 ``$BASH_VERSION``
     The version of Bash installed on the system
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $BASH_VERSION                                             |
-    |     3.2.25(1)-release                                                    |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $BASH_VER |
+    | SION                     |
+    |     3.2.25(1)-release    |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     tcsh% echo $BASH_VERSION                                             |
-    |     BASH_VERSION: Undefined variable.                                    |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    .. raw:: html
+
+       </p>
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     tcsh% echo $BASH_VER |
+    | SION                     |
+    |     BASH_VERSION: Undefi |
+    | ned variable.            |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Checking $BASH\_VERSION is a good method of determining which shell
     is running. `$SHELL <internalvariables.html#SHELLVARREF>`__ does not
     necessarily give the correct answer.
 
-``$CDPATH``
+\ ``$CDPATH``
     A colon-separated list of search paths available to the
     `cd <internal.html#CDREF>`__ command, similar in function to the
     `$PATH <internalvariables.html#PATHREF>`__ variable for binaries.
     The ``$CDPATH`` variable may be set in the local
     ```~/.bashrc`` <sample-bashrc.html#BASHRC>`__ file.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ cd bash-doc                                                    |
-    |     bash: cd: bash-doc: No such file or directory                        |
-    |                                                                          |
-    |                                                                          |
-    |     bash$ CDPATH=/usr/share/doc                                          |
-    |     bash$ cd bash-doc                                                    |
-    |     /usr/share/doc/bash-doc                                              |
-    |                                                                          |
-    |                                                                          |
-    |     bash$ echo $PWD                                                      |
-    |     /usr/share/doc/bash-doc                                              |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ cd bash-doc    |
+    |     bash: cd: bash-doc:  |
+    | No such file or director |
+    | y                        |
+    |                          |
+    |                          |
+    |     bash$ CDPATH=/usr/sh |
+    | are/doc                  |
+    |     bash$ cd bash-doc    |
+    |     /usr/share/doc/bash- |
+    | doc                      |
+    |                          |
+    |                          |
+    |     bash$ echo $PWD      |
+    |     /usr/share/doc/bash- |
+    | doc                      |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$DIRSTACK``
+    .. raw:: html
+
+       </p>
+
+\ ``$DIRSTACK``
     The top value in the directory stack
     `[1] <internalvariables.html#FTN.AEN4671>`__ (affected by
     `pushd <internal.html#PUSHDREF>`__ and
@@ -172,11 +312,15 @@ Chapter 9. Another Look at Variables
 ``$EDITOR``
     The default editor invoked by a script, usually **vi** or **emacs**.
 
-``$EUID``
+\ ``$EUID``
     "effective" user ID number
 
     Identification number of whatever identity the current user has
     assumed, perhaps by means of `su <system.html#SUREF>`__.
+
+    .. raw:: html
+
+       <div class="CAUTION">
 
     +--------------------------------------+--------------------------------------+
     | |Caution|                            |
@@ -186,23 +330,37 @@ Chapter 9. Another Look at Variables
     | >`__.                                |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
 ``$FUNCNAME``
     Name of the current function
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     xyz23 ()                                                             |
-    |     {                                                                    |
-    |       echo "$FUNCNAME now executing."  # xyz23 now executing.            |
-    |     }                                                                    |
-    |                                                                          |
-    |     xyz23                                                                |
-    |                                                                          |
-    |     echo "FUNCNAME = $FUNCNAME"        # FUNCNAME =                      |
-    |                                        # Null value outside a function.  |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     xyz23 ()             |
+    |     {                    |
+    |       echo "$FUNCNAME no |
+    | w executing."  # xyz23 n |
+    | ow executing.            |
+    |     }                    |
+    |                          |
+    |     xyz23                |
+    |                          |
+    |     echo "FUNCNAME = $FU |
+    | NCNAME"        # FUNCNAM |
+    | E =                      |
+    |                          |
+    |                # Null va |
+    | lue outside a function.  |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     See also `Example A-50 <contributed-scripts.html#USEGETOPT>`__.
 
@@ -210,35 +368,41 @@ Chapter 9. Another Look at Variables
     A list of filename patterns to be excluded from matching in
     `globbing <globbingref.html>`__.
 
-``$GROUPS``
+\ ``$GROUPS``
     Groups current user belongs to
 
     This is a listing (array) of the group id numbers for current user,
     as recorded in ```/etc/passwd`` <files.html#DATAFILESREF1>`__ and
     ``/etc/group``.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     root# echo $GROUPS                                                   |
-    |     0                                                                    |
-    |                                                                          |
-    |                                                                          |
-    |     root# echo ${GROUPS[1]}                                              |
-    |     1                                                                    |
-    |                                                                          |
-    |                                                                          |
-    |     root# echo ${GROUPS[5]}                                              |
-    |     6                                                                    |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     root# echo $GROUPS   |
+    |     0                    |
+    |                          |
+    |                          |
+    |     root# echo ${GROUPS[ |
+    | 1]}                      |
+    |     1                    |
+    |                          |
+    |                          |
+    |     root# echo ${GROUPS[ |
+    | 5]}                      |
+    |     6                    |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$HOME``
+    .. raw:: html
+
+       </p>
+
+\ ``$HOME``
     Home directory of the user, usually ``/home/username`` (see `Example
     10-7 <parameter-substitution.html#EX6>`__)
 
-``$HOSTNAME``
+\ ``$HOSTNAME``
     The `hostname <system.html#HNAMEREF>`__ command assigns the system
     host name at bootup in an init script. However, the
     ``gethostname()`` function sets the Bash internal variable
@@ -251,15 +415,15 @@ Chapter 9. Another Look at Variables
     Like `$MACHTYPE <internalvariables.html#MACHTYPEREF>`__, identifies
     the system hardware.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $HOSTTYPE                                                 |
-    |     i686                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $HOSTTYPE |
+    |     i686                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$IFS``
+\ ``$IFS``
     internal field separator
 
     This variable determines how Bash recognizes
@@ -272,39 +436,64 @@ Chapter 9. Another Look at Variables
     `$\* <internalvariables.html#APPREF>`__ uses the first character
     held in ``$IFS``. See `Example 5-1 <quotingvar.html#WEIRDVARS>`__.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo "$IFS"                                                    |
-    |                                                                          |
-    |     (With $IFS set to default, a blank line displays.)                   |
-    |                                                                          |
-    |                                                                          |
-    |                                                                          |
-    |     bash$ echo "$IFS" | cat -vte                                         |
-    |      ^I$                                                                 |
-    |      $                                                                   |
-    |     (Show whitespace: here a single space, ^I [horizontal tab],          |
-    |       and newline, and display "$" at end-of-line.)                      |
-    |                                                                          |
-    |                                                                          |
-    |                                                                          |
-    |     bash$ bash -c 'set w x y z; IFS=":-;"; echo "$*"'                    |
-    |     w:x:y:z                                                              |
-    |     (Read commands from string and assign any arguments to pos params.)  |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo "$IFS"    |
+    |                          |
+    |     (With $IFS set to de |
+    | fault, a blank line disp |
+    | lays.)                   |
+    |                          |
+    |                          |
+    |                          |
+    |     bash$ echo "$IFS" |  |
+    | cat -vte                 |
+    |      ^I$                 |
+    |      $                   |
+    |     (Show whitespace: he |
+    | re a single space, ^I [h |
+    | orizontal tab],          |
+    |       and newline, and d |
+    | isplay "$" at end-of-lin |
+    | e.)                      |
+    |                          |
+    |                          |
+    |                          |
+    |     bash$ bash -c 'set w |
+    |  x y z; IFS=":-;"; echo  |
+    | "$*"'                    |
+    |     w:x:y:z              |
+    |     (Read commands from  |
+    | string and assign any ar |
+    | guments to pos params.)  |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Set ``$IFS`` to eliminate whitespace in
     `pathnames <special-chars.html#PATHNAMEREF>`__.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     IFS="$(printf '\n\t')"   # Per David Wheeler.                        |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     IFS="$(printf '\n\t' |
+    | )"   # Per David Wheeler |
+    | .                        |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="CAUTION">
 
     +--------------------+--------------------+--------------------+--------------------+
     | |Caution|          |
@@ -314,482 +503,312 @@ Chapter 9. Another Look at Variables
     | does other         |
     | characters.        |
     |                    |
+    | .. raw:: html      |
+    |                    |
+    |    <div            |
+    |    class="EXAMPLE" |
+    | >                  |
+    |                    |
     | **Example 9-1.     |
     | $IFS and           |
     | whitespace**       |
     |                    |
     | +----------------- |
+    | ---------+-------- |
     | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
+    | +----------------- |
+    | ---------+         |
     | | .. code:: PROGRA |
-    | MLISTING           |
-    |                    |
-    |                    |
-    |    |               |
+    | MLISTING |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     #!/bin/bash  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # ifs.sh     |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     var1="a+b+c" |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     var2="d-e-f" |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     var3="g,h,i" |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     IFS=+        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # The plus s |
-    | ign will be interp |
-    | reted as a separat |
-    | or.                |
-    |    |               |
+    | ign will |         |
+    | |  be interpreted  |
+    | as a sep |         |
+    | | arator.          |
+    |          |         |
     | |     echo $var1   |
-    |    # a b c         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # a b |         |
+    | |  c               |
+    |          |         |
     | |     echo $var2   |
-    |    # d-e-f         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # d-e |         |
+    | | -f               |
+    |          |         |
     | |     echo $var3   |
-    |    # g,h,i         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # g,h |         |
+    | | ,i               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     echo         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     IFS="-"      |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # The plus s |
-    | ign reverts to def |
-    | ault interpretatio |
-    | n.                 |
-    |    |               |
+    | ign reve |         |
+    | | rts to default i |
+    | nterpret |         |
+    | | ation.           |
+    |          |         |
     | |     # The minus  |
-    | sign will be inter |
-    | preted as a separa |
-    | tor.               |
-    |    |               |
+    | sign wil |         |
+    | | l be interpreted |
+    |  as a se |         |
+    | | parator.         |
+    |          |         |
     | |     echo $var1   |
-    |    # a+b+c         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # a+b |         |
+    | | +c               |
+    |          |         |
     | |     echo $var2   |
-    |    # d e f         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # d e |         |
+    | |  f               |
+    |          |         |
     | |     echo $var3   |
-    |    # g,h,i         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # g,h |         |
+    | | ,i               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     echo         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     IFS=","      |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # The comma  |
-    | will be interprete |
-    | d as a separator.  |
-    |                    |
-    |    |               |
+    | will be  |         |
+    | | interpreted as a |
+    |  separat |         |
+    | | or.              |
+    |          |         |
     | |     # The minus  |
-    | sign reverts to de |
-    | fault interpretati |
-    | on.                |
-    |    |               |
+    | sign rev |         |
+    | | erts to default  |
+    | interpre |         |
+    | | tation.          |
+    |          |         |
     | |     echo $var1   |
-    |    # a+b+c         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # a+b |         |
+    | | +c               |
+    |          |         |
     | |     echo $var2   |
-    |    # d-e-f         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # d-e |         |
+    | | -f               |
+    |          |         |
     | |     echo $var3   |
-    |    # g h i         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # g h |         |
+    | |  i               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     echo         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     IFS=" "      |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # The space  |
-    | character will be  |
-    | interpreted as a s |
-    | eparator.          |
-    |    |               |
+    | characte |         |
+    | | r will be interp |
+    | reted as |         |
+    | |  a separator.    |
+    |          |         |
     | |     # The comma  |
-    | reverts to default |
-    |  interpretation.   |
-    |                    |
-    |    |               |
+    | reverts  |         |
+    | | to default inter |
+    | pretatio |         |
+    | | n.               |
+    |          |         |
     | |     echo $var1   |
-    |    # a+b+c         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # a+b |         |
+    | | +c               |
+    |          |         |
     | |     echo $var2   |
-    |    # d-e-f         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # d-e |         |
+    | | -f               |
+    |          |         |
     | |     echo $var3   |
-    |    # g,h,i         |
-    |                    |
-    |                    |
-    |    |               |
+    |    # g,h |         |
+    | | ,i               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # ========== |
-    | ================== |
-    | ================== |
-    | ========== #       |
-    |    |               |
+    | ======== |         |
+    | | ================ |
+    | ======== |         |
+    | | ============== # |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # However .. |
-    | .                  |
-    |                    |
-    |                    |
-    |    |               |
+    | .        |         |
     | |     # $IFS treat |
-    | s whitespace diffe |
-    | rently than other  |
-    | characters.        |
-    |    |               |
+    | s whites |         |
+    | | pace differently |
+    |  than ot |         |
+    | | her characters.  |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     output_args_ |
-    | one_per_line()     |
-    |                    |
-    |                    |
-    |    |               |
+    | one_per_ |         |
+    | | line()           |
+    |          |         |
     | |     {            |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |       for arg    |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |       do         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |         echo "[$ |
-    | arg]"              |
-    |                    |
-    |                    |
-    |    |               |
+    | arg]"    |         |
     | |       done #  ^  |
-    |    ^   Embed withi |
-    | n brackets, for yo |
-    | ur viewing pleasur |
-    | e. |               |
+    |    ^   E |         |
+    | | mbed within brac |
+    | kets, fo |         |
+    | | r your viewing p |
+    | leasure. |         |
     | |     }            |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     echo; echo " |
-    | IFS=\" \""         |
-    |                    |
-    |                    |
-    |    |               |
+    | IFS=\" \ |         |
+    | | ""               |
+    |          |         |
     | |     echo "------ |
-    | -"                 |
-    |                    |
-    |                    |
-    |    |               |
+    | -"       |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     IFS=" "      |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     var=" a  b c |
-    |    "               |
-    |                    |
-    |                    |
-    |    |               |
+    |    "     |         |
     | |     #    ^ ^^    |
-    | ^^^                |
-    |                    |
-    |                    |
-    |    |               |
+    | ^^^      |         |
     | |     output_args_ |
-    | one_per_line $var  |
-    |  # output_args_one |
-    | _per_line `echo "  |
-    | a  |               |
+    | one_per_ |         |
+    | | line $var  # out |
+    | put_args |         |
+    | | _one_per_line `e |
+    | cho " a  |         |
     | |  b c   "`        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # [a]        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # [b]        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # [c]        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     echo; echo " |
-    | IFS=:"             |
-    |                    |
-    |                    |
-    |    |               |
+    | IFS=:"   |         |
     | |     echo "-----" |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     IFS=:        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     var=":a::b:c |
-    | :::"               |
-    |  # Same pattern as |
-    |  above,            |
-    |    |               |
+    | :::"     |         |
+    | |            # Sam |
+    | e patter |         |
+    | | n as above,      |
+    |          |         |
     | |     #    ^ ^^    |
-    | ^^^                |
-    |  #+ but substituti |
-    | ng ":" for " "  .. |
-    | .  |               |
+    | ^^^      |         |
+    | |            #+ bu |
+    | t substi |         |
+    | | tuting ":" for " |
+    |  "  ...  |         |
     | |     output_args_ |
-    | one_per_line $var  |
-    |                    |
-    |                    |
-    |    |               |
+    | one_per_ |         |
+    | | line $var        |
+    |          |         |
     | |     # []         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # [a]        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # []         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # [b]        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # [c]        |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # []         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # []         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     # Note "empt |
-    | y" brackets.       |
-    |                    |
-    |                    |
-    |    |               |
+    | y" brack |         |
+    | | ets.             |
+    |          |         |
     | |     # The same t |
-    | hing happens with  |
-    | the "FS" field sep |
-    | arator in awk.     |
-    |    |               |
+    | hing hap |         |
+    | | pens with the "F |
+    | S" field |         |
+    | |  separator in aw |
+    | k.       |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     echo         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
+    |          |         |
     | |     exit         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    |                    |
-    |                    |
-    |                    |
+    |          |         |
     |                    |
     |                    |
     | +----------------- |
+    | ---------+-------- |
     | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
+    | +----------------- |
+    | ---------+         |
+    |                    |
+    | .. raw:: html      |
+    |                    |
+    |    </div>          |
+    |                    |
+    | .. raw:: html      |
+    |                    |
+    |    </p>            |
                         
     +--------------------+--------------------+--------------------+--------------------+
+
+    .. raw:: html
+
+       </div>
 
     (Many thanks, Stéphane Chazelas, for clarification and above
     examples.)
@@ -810,6 +829,10 @@ Chapter 9. Another Look at Variables
     ``LC_COLLATE`` can cause unexpected results in `filename
     globbing <globbingref.html>`__.
 
+    .. raw:: html
+
+       <div class="NOTE">
+
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
     | As of version 2.05 of Bash, filename |
@@ -827,56 +850,71 @@ Chapter 9. Another Look at Variables
     | ``~/.bashrc``.                       |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
 ``$LC_CTYPE``
     This internal variable controls character interpretation in
     `globbing <globbingref.html>`__ and pattern matching.
 
-``$LINENO``
+\ ``$LINENO``
     This variable is the line number of the shell script in which this
     variable appears. It has significance only within the script in
     which it appears, and is chiefly useful for debugging purposes.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     # *** BEGIN DEBUG BLOCK ***                                          |
-    |     last_cmd_arg=$_  # Save it.                                          |
-    |                                                                          |
-    |     echo "At line number $LINENO, variable \"v1\" = $v1"                 |
-    |     echo "Last command argument processed = $last_cmd_arg"               |
-    |     # *** END DEBUG BLOCK ***                                            |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     # *** BEGIN DEBUG BL |
+    | OCK ***                  |
+    |     last_cmd_arg=$_  # S |
+    | ave it.                  |
+    |                          |
+    |     echo "At line number |
+    |  $LINENO, variable \"v1\ |
+    | " = $v1"                 |
+    |     echo "Last command a |
+    | rgument processed = $las |
+    | t_cmd_arg"               |
+    |     # *** END DEBUG BLOC |
+    | K ***                    |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$MACHTYPE``
+    .. raw:: html
+
+       </p>
+
+\ ``$MACHTYPE``
     machine type
 
     Identifies the system hardware.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $MACHTYPE                                                 |
-    |     i686                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $MACHTYPE |
+    |     i686                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$OLDPWD``
+\ ``$OLDPWD``
     Old working directory ("OLD-Print-Working-Directory", previous
     directory you were in).
 
 ``$OSTYPE``
     operating system type
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $OSTYPE                                                   |
-    |     linux                                                                |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $OSTYPE   |
+    |     linux                |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$PATH``
+\ ``$PATH``
     Path to binaries, usually ``/usr/bin/``, ``/usr/X11R6/bin/``,
     ``/usr/local/bin``, etc.
 
@@ -889,19 +927,29 @@ Chapter 9. Another Look at Variables
     ```~/.bashrc`` <sample-bashrc.html>`__ (see `Appendix
     H <files.html>`__).
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $PATH                                                     |
-    |     /bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin:/sbin:/usr/sbin          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $PATH     |
+    |     /bin:/usr/bin:/usr/l |
+    | ocal/bin:/usr/X11R6/bin: |
+    | /sbin:/usr/sbin          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     ``PATH=${PATH}:/opt/bin`` appends the ``/opt/bin`` directory to the
     current path. In a script, it may be expedient to temporarily add a
     directory to the path in this way. When the script exits, this
     restores the original ``$PATH`` (a child process, such as a script,
     may not change the environment of the parent process, the shell).
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -910,367 +958,362 @@ Chapter 9. Another Look at Variables
     | ``$PATH`` as a security measure.     |
     +--------------------------------------+--------------------------------------+
 
-``$PIPESTATUS``
+    .. raw:: html
+
+       </div>
+
+\ ``$PIPESTATUS``
     `Array <arrays.html#ARRAYREF>`__ variable holding `exit
     status <exit-status.html#EXITSTATUSREF>`__\ (es) of last executed
     *foreground* `pipe <special-chars.html#PIPEREF>`__.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $PIPESTATUS                                               |
-    |     0                                                                    |
-    |                                                                          |
-    |     bash$ ls -al | bogus_command                                         |
-    |     bash: bogus_command: command not found                               |
-    |     bash$ echo ${PIPESTATUS[1]}                                          |
-    |     127                                                                  |
-    |                                                                          |
-    |     bash$ ls -al | bogus_command                                         |
-    |     bash: bogus_command: command not found                               |
-    |     bash$ echo $?                                                        |
-    |     127                                                                  |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $PIPESTAT |
+    | US                       |
+    |     0                    |
+    |                          |
+    |     bash$ ls -al | bogus |
+    | _command                 |
+    |     bash: bogus_command: |
+    |  command not found       |
+    |     bash$ echo ${PIPESTA |
+    | TUS[1]}                  |
+    |     127                  |
+    |                          |
+    |     bash$ ls -al | bogus |
+    | _command                 |
+    |     bash: bogus_command: |
+    |  command not found       |
+    |     bash$ echo $?        |
+    |     127                  |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     The members of the ``$PIPESTATUS`` array hold the exit status of
     each respective command executed in a pipe. ``$PIPESTATUS[0]`` holds
     the exit status of the first command in the pipe, ``$PIPESTATUS[1]``
     the exit status of the second command, and so on.
 
+    .. raw:: html
+
+       <div class="CAUTION">
+
+    +------------+------------+------------+------------+------------+------------+------------+
+    | |Caution|  |
+    | The        |
+    | ``$PIPESTA |
+    | TUS``      |
+    | variable   |
+    | may        |
+    | contain an |
+    | erroneous  |
+    | 0 value in |
+    | a login    |
+    | shell (in  |
+    | releases   |
+    | prior to   |
+    | 3.0 of     |
+    | Bash).     |
+    |            |
+    | +--------- |
+    | ---------- |
+    | -------+-- |
+    | ---------- |
+    | ---------- |
+    | ----+----- |
+    | ---------- |
+    | ---------- |
+    | -+         |
+    | | .. code: |
+    | : SCREEN   |
+    |        |   |
+    | |          |
+    |            |
+    |        |   |
+    | |     tcsh |
+    | % bash     |
+    |        |   |
+    | |          |
+    |            |
+    |        |   |
+    | |     bash |
+    | $ who | gr |
+    | ep nob |   |
+    | | ody | so |
+    | rt         |
+    |        |   |
+    | |     bash |
+    | $ echo ${P |
+    | IPESTA |   |
+    | | TUS[*]}  |
+    |            |
+    |        |   |
+    | |     0    |
+    |            |
+    |        |   |
+    | |          |
+    |            |
+    |        |   |
+    |            |
+    |            |
+    |            |
+    | +--------- |
+    | ---------- |
+    | -------+-- |
+    | ---------- |
+    | ---------- |
+    | ----+----- |
+    | ---------- |
+    | ---------- |
+    | -+         |
+    |            |
+    | .. raw:: h |
+    | tml        |
+    |            |
+    |    </p>    |
+    |            |
+    | The above  |
+    | lines      |
+    | contained  |
+    | in a       |
+    | script     |
+    | would      |
+    | produce    |
+    | the        |
+    | expected   |
+    | ``0 1 0``  |
+    | output.    |
+    |            |
+    | Thank you, |
+    | Wayne      |
+    | Pollock    |
+    | for        |
+    | pointing   |
+    | this out   |
+    | and        |
+    | supplying  |
+    | the above  |
+    | example.   |
+    +------------+------------+------------+------------+------------+------------+------------+
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="NOTE">
+
     +--------------+--------------+--------------+--------------+--------------+--------------+
-    | |Caution|    |
+    | |Note|       |
     | The          |
     | ``$PIPESTATU |
     | S``          |
-    | variable may |
-    | contain an   |
-    | erroneous 0  |
-    | value in a   |
-    | login shell  |
-    | (in releases |
-    | prior to 3.0 |
-    | of Bash).    |
+    | variable     |
+    | gives        |
+    | unexpected   |
+    | results in   |
+    | some         |
+    | contexts.    |
     |              |
     | +----------- |
     | ------------ |
+    | ---+-------- |
     | ------------ |
+    | ------+----- |
     | ------------ |
-    | ------------ |
-    | ------------ |
-    | ---+         |
+    | ---------+   |
     | | .. code::  |
     | SCREEN       |
-    |              |
-    |              |
-    |              |
-    |              |
     |    |         |
     | |            |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    | |     tcsh%  |
-    | bash         |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    | |            |
-    |              |
-    |              |
-    |              |
-    |              |
     |              |
     |    |         |
     | |     bash$  |
-    | who | grep n |
-    | obody | sort |
+    | echo $BASH_V |
+    | ER |         |
+    | | SION       |
     |              |
+    |    |         |
+    | |     3.00.1 |
+    | 4(1)-release |
+    |    |         |
+    | |            |
     |              |
+    |    |         |
+    | |     bash$  |
+    | $ ls | bogus |
+    | _c |         |
+    | | ommand | w |
+    | c            |
+    |    |         |
+    | |     bash:  |
+    | bogus_comman |
+    | d: |         |
+    | |  command n |
+    | ot found     |
+    |    |         |
+    | |      0     |
+    |    0       0 |
+    |    |         |
+    | |            |
     |              |
     |    |         |
     | |     bash$  |
     | echo ${PIPES |
-    | TATUS[*]}    |
-    |              |
-    |              |
+    | TA |         |
+    | | TUS[@]}    |
     |              |
     |    |         |
-    | |     0      |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
+    | |     141 12 |
+    | 7 0          |
     |    |         |
     | |            |
     |              |
-    |              |
-    |              |
-    |              |
-    |              |
     |    |         |
-    |              |
-    |              |
-    |              |
-    |              |
     |              |
     |              |
     |              |
     | +----------- |
     | ------------ |
+    | ---+-------- |
     | ------------ |
+    | ------+----- |
     | ------------ |
-    | ------------ |
-    | ------------ |
-    | ---+         |
+    | ---------+   |
     |              |
-    | The above    |
-    | lines        |
-    | contained in |
-    | a script     |
-    | would        |
-    | produce the  |
-    | expected     |
-    | ``0 1 0``    |
-    | output.      |
+    | .. raw:: htm |
+    | l            |
     |              |
-    | Thank you,   |
-    | Wayne        |
-    | Pollock for  |
-    | pointing     |
-    | this out and |
-    | supplying    |
+    |    </p>      |
+    |              |
+    | Chet Ramey   |
+    | attributes   |
     | the above    |
-    | example.     |
+    | output to    |
+    | the behavior |
+    | of           |
+    | `ls <basic.h |
+    | tml#LSREF>`_ |
+    | _.           |
+    | If *ls*      |
+    | writes to a  |
+    | *pipe* whose |
+    | output is    |
+    | not read,    |
+    | then         |
+    | ``SIGPIPE``  |
+    | kills it,    |
+    | and its      |
+    | `exit        |
+    | status <exit |
+    | -status.html |
+    | #EXITSTATUSR |
+    | EF>`__       |
+    | is 141.      |
+    | Otherwise    |
+    | its exit     |
+    | status is 0, |
+    | as expected. |
+    | This         |
+    | likewise is  |
+    | the case for |
+    | `tr <textpro |
+    | c.html#TRREF |
+    | >`__.        |
     +--------------+--------------+--------------+--------------+--------------+--------------+
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +----------------+----------------+----------------+----------------+----------------+
     | |Note|         |
-    | The            |
     | ``$PIPESTATUS` |
     | `              |
-    | variable gives |
-    | unexpected     |
-    | results in     |
-    | some contexts. |
+    | is a           |
+    | "volatile"     |
+    | variable. It   |
+    | needs to be    |
+    | captured       |
+    | immediately    |
+    | after the pipe |
+    | in question,   |
+    | before any     |
+    | other command  |
+    | intervenes.    |
     |                |
     | +------------- |
+    | -------------+ |
     | -------------- |
+    | ------------+- |
     | -------------- |
-    | -------------- |
-    | -------------- |
-    | -----+         |
+    | -----------+   |
     | | .. code:: SC |
-    | REEN           |
-    |                |
-    |                |
-    |                |
-    |      |         |
+    | REEN         | |
     | |              |
-    |                |
-    |                |
-    |                |
-    |                |
-    |      |         |
-    | |     bash$ ec |
-    | ho $BASH_VERSI |
-    | ON             |
-    |                |
-    |                |
-    |      |         |
-    | |     3.00.14( |
-    | 1)-release     |
-    |                |
-    |                |
-    |                |
-    |      |         |
-    | |              |
-    |                |
-    |                |
-    |                |
-    |                |
-    |      |         |
+    |              | |
     | |     bash$ $  |
-    | ls | bogus_com |
-    | mand | wc      |
-    |                |
-    |                |
-    |      |         |
+    | ls | bogus_c | |
+    | | ommand | wc  |
+    |              | |
     | |     bash: bo |
-    | gus_command: c |
-    | ommand not fou |
-    | nd             |
-    |                |
-    |      |         |
+    | gus_command: | |
+    | |  command not |
+    |  found       | |
     | |      0       |
-    |  0       0     |
-    |                |
-    |                |
-    |                |
-    |      |         |
+    |  0       0   | |
     | |              |
-    |                |
-    |                |
-    |                |
-    |                |
-    |      |         |
+    |              | |
     | |     bash$ ec |
-    | ho ${PIPESTATU |
-    | S[@]}          |
-    |                |
-    |                |
-    |      |         |
-    | |     141 127  |
-    | 0              |
-    |                |
-    |                |
-    |                |
-    |      |         |
+    | ho ${PIPESTA | |
+    | | TUS[@]}      |
+    |              | |
+    | |     0 127 0  |
+    |              | |
     | |              |
-    |                |
-    |                |
-    |                |
-    |                |
-    |      |         |
-    |                |
-    |                |
-    |                |
-    |                |
+    |              | |
+    | |     bash$ ec |
+    | ho ${PIPESTA | |
+    | | TUS[@]}      |
+    |              | |
+    | |     0        |
+    |              | |
+    | |              |
+    |              | |
     |                |
     |                |
     | +------------- |
+    | -------------+ |
     | -------------- |
+    | ------------+- |
     | -------------- |
-    | -------------- |
-    | -------------- |
-    | -----+         |
+    | -----------+   |
     |                |
-    | Chet Ramey     |
-    | attributes the |
-    | above output   |
-    | to the         |
-    | behavior of    |
-    | `ls <basic.htm |
-    | l#LSREF>`__.   |
-    | If *ls* writes |
-    | to a *pipe*    |
-    | whose output   |
-    | is not read,   |
-    | then           |
-    | ``SIGPIPE``    |
-    | kills it, and  |
-    | its `exit      |
-    | status <exit-s |
-    | tatus.html#EXI |
-    | TSTATUSREF>`__ |
-    | is 141.        |
-    | Otherwise its  |
-    | exit status is |
-    | 0, as          |
-    | expected. This |
-    | likewise is    |
-    | the case for   |
-    | `tr <textproc. |
-    | html#TRREF>`__ |
-    | .              |
+    | .. raw:: html  |
+    |                |
+    |    </p>        |
+                    
     +----------------+----------------+----------------+----------------+----------------+
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Note|             |
-    | ``$PIPESTATUS`` is |
-    | a "volatile"       |
-    | variable. It needs |
-    | to be captured     |
-    | immediately after  |
-    | the pipe in        |
-    | question, before   |
-    | any other command  |
-    | intervenes.        |
-    |                    |
-    | +----------------- |
-    | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
-    | | .. code:: SCREEN |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bash$ $ ls | |
-    |  bogus_command | w |
-    | c                  |
-    |                    |
-    |    |               |
-    | |     bash: bogus_ |
-    | command: command n |
-    | ot found           |
-    |                    |
-    |    |               |
-    | |      0       0   |
-    |      0             |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bash$ echo $ |
-    | {PIPESTATUS[@]}    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     0 127 0      |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bash$ echo $ |
-    | {PIPESTATUS[@]}    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     0            |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    |                    |
-    |                    |
-    |                    |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -1282,7 +1325,11 @@ Chapter 9. Another Look at Variables
     | desired information.                 |
     +--------------------------------------+--------------------------------------+
 
-``$PPID``
+    .. raw:: html
+
+       </div>
+
+\ ``$PPID``
     The ``$PPID`` of a process is the process ID (``pid``) of its parent
     process. `[2] <internalvariables.html#FTN.AEN5154>`__
 
@@ -1292,10 +1339,10 @@ Chapter 9. Another Look at Variables
     A variable holding a command to be executed just before the primary
     prompt, ``$PS1`` is to be displayed.
 
-``$PS1``
+\ ``$PS1``
     This is the main prompt, seen at the command-line.
 
-``$PS2``
+\ ``$PS2``
     The secondary prompt, seen when additional input is expected. It
     displays as ">".
 
@@ -1312,163 +1359,252 @@ Chapter 9. Another Look at Variables
     As a debugging aid, it may be useful to embed diagnostic information
     in ``$PS4``.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     P4='$(read time junk < /proc/$$/schedstat; echo "@@@ $time @@@ " )'  |
-    |     # Per suggestion by Erik Brandsberg.                                 |
-    |     set -x                                                               |
-    |     # Various commands follow ...                                        |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     P4='$(read time junk |
+    |  < /proc/$$/schedstat; e |
+    | cho "@@@ $time @@@ " )'  |
+    |     # Per suggestion by  |
+    | Erik Brandsberg.         |
+    |     set -x               |
+    |     # Various commands f |
+    | ollow ...                |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$PWD``
+    .. raw:: html
+
+       </p>
+
+\ ``$PWD``
     Working directory (directory you are in at the time)
 
     This is the analog to the `pwd <internal.html#PWD2REF>`__ builtin
     command.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     E_WRONG_DIRECTORY=85                                                 |
-    |                                                                          |
-    |     clear # Clear the screen.                                            |
-    |                                                                          |
-    |     TargetDirectory=/home/bozo/projects/GreatAmericanNovel               |
-    |                                                                          |
-    |     cd $TargetDirectory                                                  |
-    |     echo "Deleting stale files in $TargetDirectory."                     |
-    |                                                                          |
-    |     if [ "$PWD" != "$TargetDirectory" ]                                  |
-    |     then    # Keep from wiping out wrong directory by accident.          |
-    |       echo "Wrong directory!"                                            |
-    |       echo "In $PWD, rather than $TargetDirectory!"                      |
-    |       echo "Bailing out!"                                                |
-    |       exit $E_WRONG_DIRECTORY                                            |
-    |     fi                                                                   |
-    |                                                                          |
-    |     rm -rf *                                                             |
-    |     rm .[A-Za-z0-9]*    # Delete dotfiles.                               |
-    |     # rm -f .[^.]* ..?*   to remove filenames beginning with multiple do |
-    | ts.                                                                      |
-    |     # (shopt -s dotglob; rm -f *)   will also work.                      |
-    |     # Thanks, S.C. for pointing this out.                                |
-    |                                                                          |
-    |     #  A filename (`basename`) may contain all characters in the 0 - 255 |
-    |  range,                                                                  |
-    |     #+ except "/".                                                       |
-    |     #  Deleting files beginning with weird characters, such as -         |
-    |     #+ is left as an exercise. (Hint: rm ./-weirdname or rm -- -weirdnam |
-    | e)                                                                       |
-    |     result=$?   # Result of delete operations. If successful = 0.        |
-    |                                                                          |
-    |     echo                                                                 |
-    |     ls -al              # Any files left?                                |
-    |     echo "Done."                                                         |
-    |     echo "Old files deleted in $TargetDirectory."                        |
-    |     echo                                                                 |
-    |                                                                          |
-    |     # Various other operations here, as necessary.                       |
-    |                                                                          |
-    |     exit $result                                                         |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     E_WRONG_DIRECTORY=85 |
+    |                          |
+    |     clear # Clear the sc |
+    | reen.                    |
+    |                          |
+    |     TargetDirectory=/hom |
+    | e/bozo/projects/GreatAme |
+    | ricanNovel               |
+    |                          |
+    |     cd $TargetDirectory  |
+    |     echo "Deleting stale |
+    |  files in $TargetDirecto |
+    | ry."                     |
+    |                          |
+    |     if [ "$PWD" != "$Tar |
+    | getDirectory" ]          |
+    |     then    # Keep from  |
+    | wiping out wrong directo |
+    | ry by accident.          |
+    |       echo "Wrong direct |
+    | ory!"                    |
+    |       echo "In $PWD, rat |
+    | her than $TargetDirector |
+    | y!"                      |
+    |       echo "Bailing out! |
+    | "                        |
+    |       exit $E_WRONG_DIRE |
+    | CTORY                    |
+    |     fi                   |
+    |                          |
+    |     rm -rf *             |
+    |     rm .[A-Za-z0-9]*     |
+    | # Delete dotfiles.       |
+    |     # rm -f .[^.]* ..?*  |
+    |   to remove filenames be |
+    | ginning with multiple do |
+    | ts.                      |
+    |     # (shopt -s dotglob; |
+    |  rm -f *)   will also wo |
+    | rk.                      |
+    |     # Thanks, S.C. for p |
+    | ointing this out.        |
+    |                          |
+    |     #  A filename (`base |
+    | name`) may contain all c |
+    | haracters in the 0 - 255 |
+    |  range,                  |
+    |     #+ except "/".       |
+    |     #  Deleting files be |
+    | ginning with weird chara |
+    | cters, such as -         |
+    |     #+ is left as an exe |
+    | rcise. (Hint: rm ./-weir |
+    | dname or rm -- -weirdnam |
+    | e)                       |
+    |     result=$?   # Result |
+    |  of delete operations. I |
+    | f successful = 0.        |
+    |                          |
+    |     echo                 |
+    |     ls -al               |
+    | # Any files left?        |
+    |     echo "Done."         |
+    |     echo "Old files dele |
+    | ted in $TargetDirectory. |
+    | "                        |
+    |     echo                 |
+    |                          |
+    |     # Various other oper |
+    | ations here, as necessar |
+    | y.                       |
+    |                          |
+    |     exit $result         |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$REPLY``
+    .. raw:: html
+
+       </p>
+
+\ ``$REPLY``
     The default value when a variable is not supplied to
     `read <internal.html#READREF>`__. Also applicable to
     `select <testbranch.html#SELECTREF>`__ menus, but only supplies the
     item number of the variable chosen, not the value of the variable
     itself.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # reply.sh                                                           |
-    |                                                                          |
-    |     # REPLY is the default value for a 'read' command.                   |
-    |                                                                          |
-    |     echo                                                                 |
-    |     echo -n "What is your favorite vegetable? "                          |
-    |     read                                                                 |
-    |                                                                          |
-    |     echo "Your favorite vegetable is $REPLY."                            |
-    |     #  REPLY holds the value of last "read" if and only if               |
-    |     #+ no variable supplied.                                             |
-    |                                                                          |
-    |     echo                                                                 |
-    |     echo -n "What is your favorite fruit? "                              |
-    |     read fruit                                                           |
-    |     echo "Your favorite fruit is $fruit."                                |
-    |     echo "but..."                                                        |
-    |     echo "Value of \$REPLY is still $REPLY."                             |
-    |     #  $REPLY is still set to its previous value because                 |
-    |     #+ the variable $fruit absorbed the new "read" value.                |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # reply.sh           |
+    |                          |
+    |     # REPLY is the defau |
+    | lt value for a 'read' co |
+    | mmand.                   |
+    |                          |
+    |     echo                 |
+    |     echo -n "What is you |
+    | r favorite vegetable? "  |
+    |     read                 |
+    |                          |
+    |     echo "Your favorite  |
+    | vegetable is $REPLY."    |
+    |     #  REPLY holds the v |
+    | alue of last "read" if a |
+    | nd only if               |
+    |     #+ no variable suppl |
+    | ied.                     |
+    |                          |
+    |     echo                 |
+    |     echo -n "What is you |
+    | r favorite fruit? "      |
+    |     read fruit           |
+    |     echo "Your favorite  |
+    | fruit is $fruit."        |
+    |     echo "but..."        |
+    |     echo "Value of \$REP |
+    | LY is still $REPLY."     |
+    |     #  $REPLY is still s |
+    | et to its previous value |
+    |  because                 |
+    |     #+ the variable $fru |
+    | it absorbed the new "rea |
+    | d" value.                |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 ``$SECONDS``
     The number of seconds the script has been running.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     TIME_LIMIT=10                                                        |
-    |     INTERVAL=1                                                           |
-    |                                                                          |
-    |     echo                                                                 |
-    |     echo "Hit Control-C to exit before $TIME_LIMIT seconds."             |
-    |     echo                                                                 |
-    |                                                                          |
-    |     while [ "$SECONDS" -le "$TIME_LIMIT" ]                               |
-    |     do   #   $SECONDS is an internal shell variable.                     |
-    |       if [ "$SECONDS" -eq 1 ]                                            |
-    |       then                                                               |
-    |         units=second                                                     |
-    |       else                                                               |
-    |         units=seconds                                                    |
-    |       fi                                                                 |
-    |                                                                          |
-    |       echo "This script has been running $SECONDS $units."               |
-    |       #  On a slow or overburdened machine, the script may skip a count  |
-    |       #+ every once in a while.                                          |
-    |       sleep $INTERVAL                                                    |
-    |     done                                                                 |
-    |                                                                          |
-    |     echo -e "\a"  # Beep!                                                |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     TIME_LIMIT=10        |
+    |     INTERVAL=1           |
+    |                          |
+    |     echo                 |
+    |     echo "Hit Control-C  |
+    | to exit before $TIME_LIM |
+    | IT seconds."             |
+    |     echo                 |
+    |                          |
+    |     while [ "$SECONDS" - |
+    | le "$TIME_LIMIT" ]       |
+    |     do   #   $SECONDS is |
+    |  an internal shell varia |
+    | ble.                     |
+    |       if [ "$SECONDS" -e |
+    | q 1 ]                    |
+    |       then               |
+    |         units=second     |
+    |       else               |
+    |         units=seconds    |
+    |       fi                 |
+    |                          |
+    |       echo "This script  |
+    | has been running $SECOND |
+    | S $units."               |
+    |       #  On a slow or ov |
+    | erburdened machine, the  |
+    | script may skip a count  |
+    |       #+ every once in a |
+    |  while.                  |
+    |       sleep $INTERVAL    |
+    |     done                 |
+    |                          |
+    |     echo -e "\a"  # Beep |
+    | !                        |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
 ``$SHELLOPTS``
     The list of enabled shell `options <options.html#OPTIONSREF>`__, a
     readonly variable.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ echo $SHELLOPTS                                                |
-    |     braceexpand:hashall:histexpand:monitor:history:interactive-comments: |
-    | emacs                                                                    |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ echo $SHELLOPT |
+    | S                        |
+    |     braceexpand:hashall: |
+    | histexpand:monitor:histo |
+    | ry:interactive-comments: |
+    | emacs                    |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$SHLVL``
+    .. raw:: html
+
+       </p>
+
+\ ``$SHLVL``
     Shell level, how deeply Bash is nested.
     `[3] <internalvariables.html#FTN.AEN5320>`__ If, at the
     command-line, $SHLVL is 1, then in a script it will increment to 2.
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -1482,7 +1618,11 @@ Chapter 9. Another Look at Variables
     | subshell nesting.                    |
     +--------------------------------------+--------------------------------------+
 
-``$TMOUT``
+    .. raw:: html
+
+       </div>
+
+\ ``$TMOUT``
     If the ``$TMOUT`` environmental variable is set to a non-zero value
     ``time``, then the shell prompt will time out after ``$time``
     seconds. This will cause a logout.
@@ -1490,26 +1630,39 @@ Chapter 9. Another Look at Variables
     As of version 2.05b of Bash, it is now possible to use ``$TMOUT`` in
     a script in combination with `read <internal.html#READREF>`__.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     # Works in scripts for Bash, versions 2.05b and later.               |
-    |                                                                          |
-    |     TMOUT=3    # Prompt times out at three seconds.                      |
-    |                                                                          |
-    |     echo "What is your favorite song?"                                   |
-    |     echo "Quickly now, you only have $TMOUT seconds to answer!"          |
-    |     read song                                                            |
-    |                                                                          |
-    |     if [ -z "$song" ]                                                    |
-    |     then                                                                 |
-    |       song="(no answer)"                                                 |
-    |       # Default response.                                                |
-    |     fi                                                                   |
-    |                                                                          |
-    |     echo "Your favorite song is $song."                                  |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     # Works in scripts f |
+    | or Bash, versions 2.05b  |
+    | and later.               |
+    |                          |
+    |     TMOUT=3    # Prompt  |
+    | times out at three secon |
+    | ds.                      |
+    |                          |
+    |     echo "What is your f |
+    | avorite song?"           |
+    |     echo "Quickly now, y |
+    | ou only have $TMOUT seco |
+    | nds to answer!"          |
+    |     read song            |
+    |                          |
+    |     if [ -z "$song" ]    |
+    |     then                 |
+    |       song="(no answer)" |
+    |       # Default response |
+    | .                        |
+    |     fi                   |
+    |                          |
+    |     echo "Your favorite  |
+    | song is $song."          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     There are other, more complex, ways of implementing timed input in a
     script. One alternative is to set up a timing loop to signal the
@@ -1518,158 +1671,251 @@ Chapter 9. Another Look at Variables
     32-5 <debugging.html#EX76>`__) the interrupt generated by the timing
     loop (whew!).
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-2. Timed Input**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # timed-input.sh                                                     |
-    |                                                                          |
-    |     # TMOUT=3    Also works, as of newer versions of Bash.               |
-    |                                                                          |
-    |     TIMER_INTERRUPT=14                                                   |
-    |     TIMELIMIT=3  # Three seconds in this instance.                       |
-    |                  # May be set to different value.                        |
-    |                                                                          |
-    |     PrintAnswer()                                                        |
-    |     {                                                                    |
-    |       if [ "$answer" = TIMEOUT ]                                         |
-    |       then                                                               |
-    |         echo $answer                                                     |
-    |       else       # Don't want to mix up the two instances.               |
-    |         echo "Your favorite veggie is $answer"                           |
-    |         kill $!  #  Kills no-longer-needed TimerOn function              |
-    |                  #+ running in background.                               |
-    |                  #  $! is PID of last job running in background.         |
-    |       fi                                                                 |
-    |                                                                          |
-    |     }                                                                    |
-    |                                                                          |
-    |                                                                          |
-    |     TimerOn()                                                            |
-    |     {                                                                    |
-    |       sleep $TIMELIMIT && kill -s 14 $$ &                                |
-    |       # Waits 3 seconds, then sends sigalarm to script.                  |
-    |     }                                                                    |
-    |                                                                          |
-    |                                                                          |
-    |     Int14Vector()                                                        |
-    |     {                                                                    |
-    |       answer="TIMEOUT"                                                   |
-    |       PrintAnswer                                                        |
-    |       exit $TIMER_INTERRUPT                                              |
-    |     }                                                                    |
-    |                                                                          |
-    |     trap Int14Vector $TIMER_INTERRUPT                                    |
-    |     # Timer interrupt (14) subverted for our purposes.                   |
-    |                                                                          |
-    |     echo "What is your favorite vegetable "                              |
-    |     TimerOn                                                              |
-    |     read answer                                                          |
-    |     PrintAnswer                                                          |
-    |                                                                          |
-    |                                                                          |
-    |     #  Admittedly, this is a kludgy implementation of timed input.       |
-    |     #  However, the "-t" option to "read" simplifies this task.          |
-    |     #  See the "t-out.sh" script.                                        |
-    |     #  However, what about timing not just single user input,            |
-    |     #+ but an entire script?                                             |
-    |                                                                          |
-    |     #  If you need something really elegant ...                          |
-    |     #+ consider writing the application in C or C++,                     |
-    |     #+ using appropriate library functions, such as 'alarm' and 'setitim |
-    | er.'                                                                     |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # timed-input.sh     |
+    |                          |
+    |     # TMOUT=3    Also wo |
+    | rks, as of newer version |
+    | s of Bash.               |
+    |                          |
+    |     TIMER_INTERRUPT=14   |
+    |     TIMELIMIT=3  # Three |
+    |  seconds in this instanc |
+    | e.                       |
+    |                  # May b |
+    | e set to different value |
+    | .                        |
+    |                          |
+    |     PrintAnswer()        |
+    |     {                    |
+    |       if [ "$answer" = T |
+    | IMEOUT ]                 |
+    |       then               |
+    |         echo $answer     |
+    |       else       # Don't |
+    |  want to mix up the two  |
+    | instances.               |
+    |         echo "Your favor |
+    | ite veggie is $answer"   |
+    |         kill $!  #  Kill |
+    | s no-longer-needed Timer |
+    | On function              |
+    |                  #+ runn |
+    | ing in background.       |
+    |                  #  $! i |
+    | s PID of last job runnin |
+    | g in background.         |
+    |       fi                 |
+    |                          |
+    |     }                    |
+    |                          |
+    |                          |
+    |     TimerOn()            |
+    |     {                    |
+    |       sleep $TIMELIMIT & |
+    | & kill -s 14 $$ &        |
+    |       # Waits 3 seconds, |
+    |  then sends sigalarm to  |
+    | script.                  |
+    |     }                    |
+    |                          |
+    |                          |
+    |     Int14Vector()        |
+    |     {                    |
+    |       answer="TIMEOUT"   |
+    |       PrintAnswer        |
+    |       exit $TIMER_INTERR |
+    | UPT                      |
+    |     }                    |
+    |                          |
+    |     trap Int14Vector $TI |
+    | MER_INTERRUPT            |
+    |     # Timer interrupt (1 |
+    | 4) subverted for our pur |
+    | poses.                   |
+    |                          |
+    |     echo "What is your f |
+    | avorite vegetable "      |
+    |     TimerOn              |
+    |     read answer          |
+    |     PrintAnswer          |
+    |                          |
+    |                          |
+    |     #  Admittedly, this  |
+    | is a kludgy implementati |
+    | on of timed input.       |
+    |     #  However, the "-t" |
+    |  option to "read" simpli |
+    | fies this task.          |
+    |     #  See the "t-out.sh |
+    | " script.                |
+    |     #  However, what abo |
+    | ut timing not just singl |
+    | e user input,            |
+    |     #+ but an entire scr |
+    | ipt?                     |
+    |                          |
+    |     #  If you need somet |
+    | hing really elegant ...  |
+    |     #+ consider writing  |
+    | the application in C or  |
+    | C++,                     |
+    |     #+ using appropriate |
+    |  library functions, such |
+    |  as 'alarm' and 'setitim |
+    | er.'                     |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     An alternative is using `stty <system.html#STTYREF>`__.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-3. Once more, timed input**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # timeout.sh                                                         |
-    |                                                                          |
-    |     #  Written by Stephane Chazelas,                                     |
-    |     #+ and modified by the document author.                              |
-    |                                                                          |
-    |     INTERVAL=5                # timeout interval                         |
-    |                                                                          |
-    |     timedout_read() {                                                    |
-    |       timeout=$1                                                         |
-    |       varname=$2                                                         |
-    |       old_tty_settings=`stty -g`                                         |
-    |       stty -icanon min 0 time ${timeout}0                                |
-    |       eval read $varname      # or just  read $varname                   |
-    |       stty "$old_tty_settings"                                           |
-    |       # See man page for "stty."                                         |
-    |     }                                                                    |
-    |                                                                          |
-    |     echo; echo -n "What's your name? Quick! "                            |
-    |     timedout_read $INTERVAL your_name                                    |
-    |                                                                          |
-    |     #  This may not work on every terminal type.                         |
-    |     #  The maximum timeout depends on the terminal.                      |
-    |     #+ (it is often 25.5 seconds).                                       |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     if [ ! -z "$your_name" ]  # If name input before timeout ...         |
-    |     then                                                                 |
-    |       echo "Your name is $your_name."                                    |
-    |     else                                                                 |
-    |       echo "Timed out."                                                  |
-    |     fi                                                                   |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     # The behavior of this script differs somewhat from "timed-input.sh. |
-    | "                                                                        |
-    |     # At each keystroke, the counter resets.                             |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # timeout.sh         |
+    |                          |
+    |     #  Written by Stepha |
+    | ne Chazelas,             |
+    |     #+ and modified by t |
+    | he document author.      |
+    |                          |
+    |     INTERVAL=5           |
+    |       # timeout interval |
+    |                          |
+    |     timedout_read() {    |
+    |       timeout=$1         |
+    |       varname=$2         |
+    |       old_tty_settings=` |
+    | stty -g`                 |
+    |       stty -icanon min 0 |
+    |  time ${timeout}0        |
+    |       eval read $varname |
+    |       # or just  read $v |
+    | arname                   |
+    |       stty "$old_tty_set |
+    | tings"                   |
+    |       # See man page for |
+    |  "stty."                 |
+    |     }                    |
+    |                          |
+    |     echo; echo -n "What' |
+    | s your name? Quick! "    |
+    |     timedout_read $INTER |
+    | VAL your_name            |
+    |                          |
+    |     #  This may not work |
+    |  on every terminal type. |
+    |     #  The maximum timeo |
+    | ut depends on the termin |
+    | al.                      |
+    |     #+ (it is often 25.5 |
+    |  seconds).               |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     if [ ! -z "$your_nam |
+    | e" ]  # If name input be |
+    | fore timeout ...         |
+    |     then                 |
+    |       echo "Your name is |
+    |  $your_name."            |
+    |     else                 |
+    |       echo "Timed out."  |
+    |     fi                   |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     # The behavior of th |
+    | is script differs somewh |
+    | at from "timed-input.sh. |
+    | "                        |
+    |     # At each keystroke, |
+    |  the counter resets.     |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     Perhaps the simplest method is using the ``-t`` option to
     `read <internal.html#READREF>`__.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-4. Timed *read***
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # t-out.sh [time-out]                                                |
-    |     # Inspired by a suggestion from "syngin seven" (thanks).             |
-    |                                                                          |
-    |                                                                          |
-    |     TIMELIMIT=4         # 4 seconds                                      |
-    |                                                                          |
-    |     read -t $TIMELIMIT variable <&1                                      |
-    |     #                           ^^^                                      |
-    |     #  In this instance, "<&1" is needed for Bash 1.x and 2.x,           |
-    |     #  but unnecessary for Bash 3+.                                      |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     if [ -z "$variable" ]  # Is null?                                    |
-    |     then                                                                 |
-    |       echo "Timed out, variable still unset."                            |
-    |     else                                                                 |
-    |       echo "variable = $variable"                                        |
-    |     fi                                                                   |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # t-out.sh [time-out |
+    | ]                        |
+    |     # Inspired by a sugg |
+    | estion from "syngin seve |
+    | n" (thanks).             |
+    |                          |
+    |                          |
+    |     TIMELIMIT=4          |
+    | # 4 seconds              |
+    |                          |
+    |     read -t $TIMELIMIT v |
+    | ariable <&1              |
+    |     #                    |
+    |         ^^^              |
+    |     #  In this instance, |
+    |  "<&1" is needed for Bas |
+    | h 1.x and 2.x,           |
+    |     #  but unnecessary f |
+    | or Bash 3+.              |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     if [ -z "$variable"  |
+    | ]  # Is null?            |
+    |     then                 |
+    |       echo "Timed out, v |
+    | ariable still unset."    |
+    |     else                 |
+    |       echo "variable = $ |
+    | variable"                |
+    |     fi                   |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$UID``
+    .. raw:: html
+
+       </div>
+
+\ ``$UID``
     User ID number
 
     Current user's user identification number, as recorded in
@@ -1681,205 +1927,220 @@ Chapter 9. Another Look at Variables
     command line or within a script, and is the counterpart to the
     `id <system.html#IDREF>`__ builtin.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-5. Am I root?**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # am-i-root.sh:   Am I root or not?                                  |
-    |                                                                          |
-    |     ROOT_UID=0   # Root has $UID 0.                                      |
-    |                                                                          |
-    |     if [ "$UID" -eq "$ROOT_UID" ]  # Will the real "root" please stand u |
-    | p?                                                                       |
-    |     then                                                                 |
-    |       echo "You are root."                                               |
-    |     else                                                                 |
-    |       echo "You are just an ordinary user (but mom loves you just the sa |
-    | me)."                                                                    |
-    |     fi                                                                   |
-    |                                                                          |
-    |     exit 0                                                               |
-    |                                                                          |
-    |                                                                          |
-    |     # ============================================================= #    |
-    |     # Code below will not execute, because the script already exited.    |
-    |                                                                          |
-    |     # An alternate method of getting to the root of matters:             |
-    |                                                                          |
-    |     ROOTUSER_NAME=root                                                   |
-    |                                                                          |
-    |     username=`id -nu`              # Or...   username=`whoami`           |
-    |     if [ "$username" = "$ROOTUSER_NAME" ]                                |
-    |     then                                                                 |
-    |       echo "Rooty, toot, toot. You are root."                            |
-    |     else                                                                 |
-    |       echo "You are just a regular fella."                               |
-    |     fi                                                                   |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # am-i-root.sh:   Am |
+    |  I root or not?          |
+    |                          |
+    |     ROOT_UID=0   # Root  |
+    | has $UID 0.              |
+    |                          |
+    |     if [ "$UID" -eq "$RO |
+    | OT_UID" ]  # Will the re |
+    | al "root" please stand u |
+    | p?                       |
+    |     then                 |
+    |       echo "You are root |
+    | ."                       |
+    |     else                 |
+    |       echo "You are just |
+    |  an ordinary user (but m |
+    | om loves you just the sa |
+    | me)."                    |
+    |     fi                   |
+    |                          |
+    |     exit 0               |
+    |                          |
+    |                          |
+    |     # ================== |
+    | ======================== |
+    | =================== #    |
+    |     # Code below will no |
+    | t execute, because the s |
+    | cript already exited.    |
+    |                          |
+    |     # An alternate metho |
+    | d of getting to the root |
+    |  of matters:             |
+    |                          |
+    |     ROOTUSER_NAME=root   |
+    |                          |
+    |     username=`id -nu`    |
+    |            # Or...   use |
+    | rname=`whoami`           |
+    |     if [ "$username" = " |
+    | $ROOTUSER_NAME" ]        |
+    |     then                 |
+    |       echo "Rooty, toot, |
+    |  toot. You are root."    |
+    |     else                 |
+    |       echo "You are just |
+    |  a regular fella."       |
+    |     fi                   |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     See also `Example 2-3 <sha-bang.html#EX2>`__.
 
-    +--------------------+--------------------+--------------------+--------------------+
-    | |Note|             |
-    | The variables      |
-    | ``$ENV``,          |
-    | ``$LOGNAME``,      |
-    | ``$MAIL``,         |
-    | ``$TERM``,         |
-    | ``$USER``, and     |
-    | ``$USERNAME`` are  |
-    | *not* Bash         |
-    | `builtins <interna |
-    | l.html#BUILTINREF> |
-    | `__.               |
-    | These are,         |
-    | however, often set |
-    | as `environmental  |
-    | variables <otherty |
-    | pesv.html#ENVREF>` |
-    | __                 |
-    | in one of the      |
-    | `Bash <files.html# |
-    | FILESREF1>`__      |
-    | or *login* startup |
-    | files. ``$SHELL``, |
-    | the name of the    |
-    | user's login       |
-    | shell, may be set  |
-    | from               |
-    | ``/etc/passwd`` or |
-    | in an "init"       |
-    | script, and it is  |
-    | likewise not a     |
-    | Bash builtin.      |
-    |                    |
-    | +----------------- |
-    | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
-    | | .. code:: SCREEN |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     tcsh% echo $ |
-    | LOGNAME            |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bozo         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     tcsh% echo $ |
-    | SHELL              |
-    |                    |
-    |                    |
-    |    |               |
-    | |     /bin/tcsh    |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     tcsh% echo $ |
-    | TERM               |
-    |                    |
-    |                    |
-    |    |               |
-    | |     rxvt         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bash$ echo $ |
-    | LOGNAME            |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bozo         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bash$ echo $ |
-    | SHELL              |
-    |                    |
-    |                    |
-    |    |               |
-    | |     /bin/tcsh    |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |     bash$ echo $ |
-    | TERM               |
-    |                    |
-    |                    |
-    |    |               |
-    | |     rxvt         |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    | |                  |
-    |                    |
-    |                    |
-    |                    |
-    |    |               |
-    |                    |
-    |                    |
-    |                    |
-    |                    |
-    |                    |
-    | +----------------- |
-    | ------------------ |
-    | ------------------ |
-    | ------------------ |
-    | ---+               |
-                        
-    +--------------------+--------------------+--------------------+--------------------+
+    .. raw:: html
+
+       <div class="NOTE">
+
+    +----------------+----------------+----------------+----------------+----------------+
+    | |Note|         |
+    | The variables  |
+    | ``$ENV``,      |
+    | ``$LOGNAME``,  |
+    | ``$MAIL``,     |
+    | ``$TERM``,     |
+    | ``$USER``, and |
+    | ``$USERNAME``  |
+    | are *not* Bash |
+    | `builtins <int |
+    | ernal.html#BUI |
+    | LTINREF>`__.   |
+    | These are,     |
+    | however, often |
+    | set as         |
+    | `environmental |
+    | variables <oth |
+    | ertypesv.html# |
+    | ENVREF>`__     |
+    | in one of the  |
+    | `Bash <files.h |
+    | tml#FILESREF1> |
+    | `__            |
+    | or *login*     |
+    | startup files. |
+    | \ ``$SHELL``,  |
+    | the name of    |
+    | the user's     |
+    | login shell,   |
+    | may be set     |
+    | from           |
+    | ``/etc/passwd` |
+    | `              |
+    | or in an       |
+    | "init" script, |
+    | and it is      |
+    | likewise not a |
+    | Bash builtin.  |
+    |                |
+    | +------------- |
+    | -------------+ |
+    | -------------- |
+    | ------------+- |
+    | -------------- |
+    | -----------+   |
+    | | .. code:: SC |
+    | REEN         | |
+    | |              |
+    |              | |
+    | |     tcsh% ec |
+    | ho $LOGNAME  | |
+    | |     bozo     |
+    |              | |
+    | |     tcsh% ec |
+    | ho $SHELL    | |
+    | |     /bin/tcs |
+    | h            | |
+    | |     tcsh% ec |
+    | ho $TERM     | |
+    | |     rxvt     |
+    |              | |
+    | |              |
+    |              | |
+    | |     bash$ ec |
+    | ho $LOGNAME  | |
+    | |     bozo     |
+    |              | |
+    | |     bash$ ec |
+    | ho $SHELL    | |
+    | |     /bin/tcs |
+    | h            | |
+    | |     bash$ ec |
+    | ho $TERM     | |
+    | |     rxvt     |
+    |              | |
+    | |              |
+    |              | |
+    |                |
+    |                |
+    | +------------- |
+    | -------------+ |
+    | -------------- |
+    | ------------+- |
+    | -------------- |
+    | -----------+   |
+    |                |
+    | .. raw:: html  |
+    |                |
+    |    </p>        |
+                    
+    +----------------+----------------+----------------+----------------+----------------+
+
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **Positional Parameters**
 
-``$0``, ``$1``, ``$2``, etc.
+\ ``$0``, ``$1``, ``$2``, etc.
     Positional parameters, passed from command line to script, passed to
     a function, or `set <internal.html#SETREF>`__ to a variable (see
     `Example 4-5 <othertypesv.html#EX17>`__ and `Example
     15-16 <internal.html#EX34>`__)
 
-``$#``
+\ ``$#``
     Number of command-line arguments
     `[4] <internalvariables.html#FTN.AEN5479>`__ or positional
     parameters (see `Example 36-2 <wrapper.html#EX4>`__)
 
-``$*``
+\ ``$*``
     All of the positional parameters, seen as a single word
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
     | "``$*``\ " must be quoted.           |
     +--------------------------------------+--------------------------------------+
 
-``$@``
+    .. raw:: html
+
+       </div>
+
+\ ``$@``
     Same as $\*, but each parameter is a quoted string, that is, the
     parameters are passed on intact, without interpretation or
     expansion. This means, among other things, that each parameter in
     the argument list is seen as a separate word.
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -1887,90 +2148,142 @@ Chapter 9. Another Look at Variables
     | quoted.                              |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-6. *arglist*: Listing arguments with $\* and $@**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # arglist.sh                                                         |
-    |     # Invoke this script with several arguments, such as "one two three" |
-    |  ...                                                                     |
-    |                                                                          |
-    |     E_BADARGS=85                                                         |
-    |                                                                          |
-    |     if [ ! -n "$1" ]                                                     |
-    |     then                                                                 |
-    |       echo "Usage: `basename $0` argument1 argument2 etc."               |
-    |       exit $E_BADARGS                                                    |
-    |     fi                                                                   |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     index=1          # Initialize count.                                 |
-    |                                                                          |
-    |     echo "Listing args with \"\$*\":"                                    |
-    |     for arg in "$*"  # Doesn't work properly if "$*" isn't quoted.       |
-    |     do                                                                   |
-    |       echo "Arg #$index = $arg"                                          |
-    |       let "index+=1"                                                     |
-    |     done             # $* sees all arguments as single word.             |
-    |     echo "Entire arg list seen as single word."                          |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     index=1          # Reset count.                                      |
-    |                      # What happens if you forget to do this?            |
-    |                                                                          |
-    |     echo "Listing args with \"\$@\":"                                    |
-    |     for arg in "$@"                                                      |
-    |     do                                                                   |
-    |       echo "Arg #$index = $arg"                                          |
-    |       let "index+=1"                                                     |
-    |     done             # $@ sees arguments as separate words.              |
-    |     echo "Arg list seen as separate words."                              |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     index=1          # Reset count.                                      |
-    |                                                                          |
-    |     echo "Listing args with \$* (unquoted):"                             |
-    |     for arg in $*                                                        |
-    |     do                                                                   |
-    |       echo "Arg #$index = $arg"                                          |
-    |       let "index+=1"                                                     |
-    |     done             # Unquoted $* sees arguments as separate words.     |
-    |     echo "Arg list seen as separate words."                              |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # arglist.sh         |
+    |     # Invoke this script |
+    |  with several arguments, |
+    |  such as "one two three" |
+    |  ...                     |
+    |                          |
+    |     E_BADARGS=85         |
+    |                          |
+    |     if [ ! -n "$1" ]     |
+    |     then                 |
+    |       echo "Usage: `base |
+    | name $0` argument1 argum |
+    | ent2 etc."               |
+    |       exit $E_BADARGS    |
+    |     fi                   |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     index=1          # I |
+    | nitialize count.         |
+    |                          |
+    |     echo "Listing args w |
+    | ith \"\$*\":"            |
+    |     for arg in "$*"  # D |
+    | oesn't work properly if  |
+    | "$*" isn't quoted.       |
+    |     do                   |
+    |       echo "Arg #$index  |
+    | = $arg"                  |
+    |       let "index+=1"     |
+    |     done             # $ |
+    | * sees all arguments as  |
+    | single word.             |
+    |     echo "Entire arg lis |
+    | t seen as single word."  |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     index=1          # R |
+    | eset count.              |
+    |                      # W |
+    | hat happens if you forge |
+    | t to do this?            |
+    |                          |
+    |     echo "Listing args w |
+    | ith \"\$@\":"            |
+    |     for arg in "$@"      |
+    |     do                   |
+    |       echo "Arg #$index  |
+    | = $arg"                  |
+    |       let "index+=1"     |
+    |     done             # $ |
+    | @ sees arguments as sepa |
+    | rate words.              |
+    |     echo "Arg list seen  |
+    | as separate words."      |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     index=1          # R |
+    | eset count.              |
+    |                          |
+    |     echo "Listing args w |
+    | ith \$* (unquoted):"     |
+    |     for arg in $*        |
+    |     do                   |
+    |       echo "Arg #$index  |
+    | = $arg"                  |
+    |       let "index+=1"     |
+    |     done             # U |
+    | nquoted $* sees argument |
+    | s as separate words.     |
+    |     echo "Arg list seen  |
+    | as separate words."      |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     Following a **shift**, the ``$@`` holds the remaining command-line
     parameters, lacking the previous ``$1``, which was lost.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # Invoke with ./scriptname 1 2 3 4 5                                 |
-    |                                                                          |
-    |     echo "$@"    # 1 2 3 4 5                                             |
-    |     shift                                                                |
-    |     echo "$@"    # 2 3 4 5                                               |
-    |     shift                                                                |
-    |     echo "$@"    # 3 4 5                                                 |
-    |                                                                          |
-    |     # Each "shift" loses parameter $1.                                   |
-    |     # "$@" then contains the remaining parameters.                       |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # Invoke with ./scri |
+    | ptname 1 2 3 4 5         |
+    |                          |
+    |     echo "$@"    # 1 2 3 |
+    |  4 5                     |
+    |     shift                |
+    |     echo "$@"    # 2 3 4 |
+    |  5                       |
+    |     shift                |
+    |     echo "$@"    # 3 4 5 |
+    |                          |
+    |     # Each "shift" loses |
+    |  parameter $1.           |
+    |     # "$@" then contains |
+    |  the remaining parameter |
+    | s.                       |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     The ``$@`` special parameter finds use as a tool for filtering input
     into shell scripts. The **cat "$@"** construction accepts input to a
     script either from ``stdin`` or from files given as parameters to
     the script. See `Example 16-24 <textproc.html#ROT13>`__ and `Example
     16-25 <textproc.html#CRYPTOQUOTE>`__.
+
+    .. raw:: html
+
+       <div class="CAUTION">
 
     +--------------------------------------+--------------------------------------+
     | |Caution|                            |
@@ -1982,152 +2295,219 @@ Chapter 9. Another Look at Variables
     | >`__.                                |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-7. Inconsistent ``$*`` and ``$@`` behavior**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     #  Erratic behavior of the "$*" and "$@" internal Bash variables,    |
-    |     #+ depending on whether or not they are quoted.                      |
-    |     #  Demonstrates inconsistent handling of word splitting and linefeed |
-    | s.                                                                       |
-    |                                                                          |
-    |                                                                          |
-    |     set -- "First one" "second" "third:one" "" "Fifth: :one"             |
-    |     # Setting the script arguments, $1, $2, $3, etc.                     |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     echo 'IFS unchanged, using "$*"'                                     |
-    |     c=0                                                                  |
-    |     for i in "$*"               # quoted                                 |
-    |     do echo "$((c+=1)): [$i]"   # This line remains the same in every in |
-    | stance.                                                                  |
-    |                                 # Echo args.                             |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS unchanged, using $*'                                       |
-    |     c=0                                                                  |
-    |     for i in $*                 # unquoted                               |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS unchanged, using "$@"'                                     |
-    |     c=0                                                                  |
-    |     for i in "$@"                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS unchanged, using $@'                                       |
-    |     c=0                                                                  |
-    |     for i in $@                                                          |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     IFS=:                                                                |
-    |     echo 'IFS=":", using "$*"'                                           |
-    |     c=0                                                                  |
-    |     for i in "$*"                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using $*'                                             |
-    |     c=0                                                                  |
-    |     for i in $*                                                          |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     var=$*                                                               |
-    |     echo 'IFS=":", using "$var" (var=$*)'                                |
-    |     c=0                                                                  |
-    |     for i in "$var"                                                      |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using $var (var=$*)'                                  |
-    |     c=0                                                                  |
-    |     for i in $var                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     var="$*"                                                             |
-    |     echo 'IFS=":", using $var (var="$*")'                                |
-    |     c=0                                                                  |
-    |     for i in $var                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using "$var" (var="$*")'                              |
-    |     c=0                                                                  |
-    |     for i in "$var"                                                      |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using "$@"'                                           |
-    |     c=0                                                                  |
-    |     for i in "$@"                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using $@'                                             |
-    |     c=0                                                                  |
-    |     for i in $@                                                          |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     var=$@                                                               |
-    |     echo 'IFS=":", using $var (var=$@)'                                  |
-    |     c=0                                                                  |
-    |     for i in $var                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using "$var" (var=$@)'                                |
-    |     c=0                                                                  |
-    |     for i in "$var"                                                      |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     var="$@"                                                             |
-    |     echo 'IFS=":", using "$var" (var="$@")'                              |
-    |     c=0                                                                  |
-    |     for i in "$var"                                                      |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |     echo ---                                                             |
-    |                                                                          |
-    |     echo 'IFS=":", using $var (var="$@")'                                |
-    |     c=0                                                                  |
-    |     for i in $var                                                        |
-    |     do echo "$((c+=1)): [$i]"                                            |
-    |     done                                                                 |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     # Try this script with ksh or zsh -y.                                |
-    |                                                                          |
-    |     exit 0                                                               |
-    |                                                                          |
-    |     #  This example script written by Stephane Chazelas,                 |
-    |     #+ and slightly modified by the document author.                     |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     #  Erratic behavior  |
+    | of the "$*" and "$@" int |
+    | ernal Bash variables,    |
+    |     #+ depending on whet |
+    | her or not they are quot |
+    | ed.                      |
+    |     #  Demonstrates inco |
+    | nsistent handling of wor |
+    | d splitting and linefeed |
+    | s.                       |
+    |                          |
+    |                          |
+    |     set -- "First one" " |
+    | second" "third:one" "" " |
+    | Fifth: :one"             |
+    |     # Setting the script |
+    |  arguments, $1, $2, $3,  |
+    | etc.                     |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     echo 'IFS unchanged, |
+    |  using "$*"'             |
+    |     c=0                  |
+    |     for i in "$*"        |
+    |         # quoted         |
+    |     do echo "$((c+=1)):  |
+    | [$i]"   # This line rema |
+    | ins the same in every in |
+    | stance.                  |
+    |                          |
+    |         # Echo args.     |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS unchanged, |
+    |  using $*'               |
+    |     c=0                  |
+    |     for i in $*          |
+    |         # unquoted       |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS unchanged, |
+    |  using "$@"'             |
+    |     c=0                  |
+    |     for i in "$@"        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS unchanged, |
+    |  using $@'               |
+    |     c=0                  |
+    |     for i in $@          |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     IFS=:                |
+    |     echo 'IFS=":", using |
+    |  "$*"'                   |
+    |     c=0                  |
+    |     for i in "$*"        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  $*'                     |
+    |     c=0                  |
+    |     for i in $*          |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     var=$*               |
+    |     echo 'IFS=":", using |
+    |  "$var" (var=$*)'        |
+    |     c=0                  |
+    |     for i in "$var"      |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  $var (var=$*)'          |
+    |     c=0                  |
+    |     for i in $var        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     var="$*"             |
+    |     echo 'IFS=":", using |
+    |  $var (var="$*")'        |
+    |     c=0                  |
+    |     for i in $var        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  "$var" (var="$*")'      |
+    |     c=0                  |
+    |     for i in "$var"      |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  "$@"'                   |
+    |     c=0                  |
+    |     for i in "$@"        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  $@'                     |
+    |     c=0                  |
+    |     for i in $@          |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     var=$@               |
+    |     echo 'IFS=":", using |
+    |  $var (var=$@)'          |
+    |     c=0                  |
+    |     for i in $var        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  "$var" (var=$@)'        |
+    |     c=0                  |
+    |     for i in "$var"      |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     var="$@"             |
+    |     echo 'IFS=":", using |
+    |  "$var" (var="$@")'      |
+    |     c=0                  |
+    |     for i in "$var"      |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |     echo ---             |
+    |                          |
+    |     echo 'IFS=":", using |
+    |  $var (var="$@")'        |
+    |     c=0                  |
+    |     for i in $var        |
+    |     do echo "$((c+=1)):  |
+    | [$i]"                    |
+    |     done                 |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     # Try this script wi |
+    | th ksh or zsh -y.        |
+    |                          |
+    |     exit 0               |
+    |                          |
+    |     #  This example scri |
+    | pt written by Stephane C |
+    | hazelas,                 |
+    |     #+ and slightly modi |
+    | fied by the document aut |
+    | hor.                     |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -2136,49 +2516,90 @@ Chapter 9. Another Look at Variables
     | quotes.                              |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 9-8. ``$*`` and ``$@`` when ``$IFS`` is empty**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     #  If $IFS set, but empty,                                           |
-    |     #+ then "$*" and "$@" do not echo positional params as expected.     |
-    |                                                                          |
-    |     mecho ()       # Echo positional parameters.                         |
-    |     {                                                                    |
-    |     echo "$1,$2,$3";                                                     |
-    |     }                                                                    |
-    |                                                                          |
-    |                                                                          |
-    |     IFS=""         # Set, but empty.                                     |
-    |     set a b c      # Positional parameters.                              |
-    |                                                                          |
-    |     mecho "$*"     # abc,,                                               |
-    |     #                   ^^                                               |
-    |     mecho $*       # a,b,c                                               |
-    |                                                                          |
-    |     mecho $@       # a,b,c                                               |
-    |     mecho "$@"     # a,b,c                                               |
-    |                                                                          |
-    |     #  The behavior of $* and $@ when $IFS is empty depends              |
-    |     #+ on which Bash or sh version being run.                            |
-    |     #  It is therefore inadvisable to depend on this "feature" in a scri |
-    | pt.                                                                      |
-    |                                                                          |
-    |                                                                          |
-    |     # Thanks, Stephane Chazelas.                                         |
-    |                                                                          |
-    |     exit                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     #  If $IFS set, but  |
+    | empty,                   |
+    |     #+ then "$*" and "$@ |
+    | " do not echo positional |
+    |  params as expected.     |
+    |                          |
+    |     mecho ()       # Ech |
+    | o positional parameters. |
+    |     {                    |
+    |     echo "$1,$2,$3";     |
+    |     }                    |
+    |                          |
+    |                          |
+    |     IFS=""         # Set |
+    | , but empty.             |
+    |     set a b c      # Pos |
+    | itional parameters.      |
+    |                          |
+    |     mecho "$*"     # abc |
+    | ,,                       |
+    |     #                    |
+    | ^^                       |
+    |     mecho $*       # a,b |
+    | ,c                       |
+    |                          |
+    |     mecho $@       # a,b |
+    | ,c                       |
+    |     mecho "$@"     # a,b |
+    | ,c                       |
+    |                          |
+    |     #  The behavior of $ |
+    | * and $@ when $IFS is em |
+    | pty depends              |
+    |     #+ on which Bash or  |
+    | sh version being run.    |
+    |     #  It is therefore i |
+    | nadvisable to depend on  |
+    | this "feature" in a scri |
+    | pt.                      |
+    |                          |
+    |                          |
+    |     # Thanks, Stephane C |
+    | hazelas.                 |
+    |                          |
+    |     exit                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 **Other Special Parameters**
 
-``$-``
+\ ``$-``
     Flags passed to script (using `set <internal.html#SETREF>`__). See
     `Example 15-16 <internal.html#EX34>`__.
+
+    .. raw:: html
+
+       <div class="CAUTION">
 
     +--------------------------------------+--------------------------------------+
     | |Caution|                            |
@@ -2192,132 +2613,221 @@ Chapter 9. Another Look at Variables
     | T>`__.                               |
     +--------------------------------------+--------------------------------------+
 
-``$!``
+    .. raw:: html
+
+       </div>
+
+\ ``$!``
     `PID <special-chars.html#PROCESSIDDEF>`__ (process ID) of last job
     run in background
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     LOG=$0.log                                                           |
-    |                                                                          |
-    |     COMMAND1="sleep 100"                                                 |
-    |                                                                          |
-    |     echo "Logging PIDs background commands for script: $0" >> "$LOG"     |
-    |     # So they can be monitored, and killed as necessary.                 |
-    |     echo >> "$LOG"                                                       |
-    |                                                                          |
-    |     # Logging commands.                                                  |
-    |                                                                          |
-    |     echo -n "PID of \"$COMMAND1\":  " >> "$LOG"                          |
-    |     ${COMMAND1} &                                                        |
-    |     echo $! >> "$LOG"                                                    |
-    |     # PID of "sleep 100":  1506                                          |
-    |                                                                          |
-    |     # Thank you, Jacques Lederer, for suggesting this.                   |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     LOG=$0.log           |
+    |                          |
+    |     COMMAND1="sleep 100" |
+    |                          |
+    |     echo "Logging PIDs b |
+    | ackground commands for s |
+    | cript: $0" >> "$LOG"     |
+    |     # So they can be mon |
+    | itored, and killed as ne |
+    | cessary.                 |
+    |     echo >> "$LOG"       |
+    |                          |
+    |     # Logging commands.  |
+    |                          |
+    |     echo -n "PID of \"$C |
+    | OMMAND1\":  " >> "$LOG"  |
+    |     ${COMMAND1} &        |
+    |     echo $! >> "$LOG"    |
+    |     # PID of "sleep 100" |
+    | :  1506                  |
+    |                          |
+    |     # Thank you, Jacques |
+    |  Lederer, for suggesting |
+    |  this.                   |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Using ``$!`` for job control:
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     possibly_hanging_job & { sleep ${TIMEOUT}; eval 'kill -9 $!' &> /dev |
-    | /null; }                                                                 |
-    |     # Forces completion of an ill-behaved program.                       |
-    |     # Useful, for example, in init scripts.                              |
-    |                                                                          |
-    |     # Thank you, Sylvain Fourmanoit, for this creative use of the "!" va |
-    | riable.                                                                  |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     possibly_hanging_job |
+    |  & { sleep ${TIMEOUT}; e |
+    | val 'kill -9 $!' &> /dev |
+    | /null; }                 |
+    |     # Forces completion  |
+    | of an ill-behaved progra |
+    | m.                       |
+    |     # Useful, for exampl |
+    | e, in init scripts.      |
+    |                          |
+    |     # Thank you, Sylvain |
+    |  Fourmanoit, for this cr |
+    | eative use of the "!" va |
+    | riable.                  |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Or, alternately:
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     # This example by Matthew Sage.                                      |
-    |     # Used with permission.                                              |
-    |                                                                          |
-    |     TIMEOUT=30   # Timeout value in seconds                              |
-    |     count=0                                                              |
-    |                                                                          |
-    |     possibly_hanging_job & {                                             |
-    |             while ((count < TIMEOUT )); do                               |
-    |                     eval '[ ! -d "/proc/$!" ] && ((count = TIMEOUT))'    |
-    |                     # /proc is where information about running processes |
-    |  is found.                                                               |
-    |                     # "-d" tests whether it exists (whether directory ex |
-    | ists).                                                                   |
-    |                     # So, we're waiting for the job in question to show  |
-    | up.                                                                      |
-    |                     ((count++))                                          |
-    |                     sleep 1                                              |
-    |             done                                                         |
-    |             eval '[ -d "/proc/$!" ] && kill -15 $!'                      |
-    |             # If the hanging job is running, kill it.                    |
-    |     }                                                                    |
-    |                                                                          |
-    |     #  -------------------------------------------------------------- #  |
-    |                                                                          |
-    |     #  However, this may not not work as specified if another process    |
-    |     #+ begins to run after the "hanging_job" . . .                       |
-    |     #  In such a case, the wrong job may be killed.                      |
-    |     #  Ariel Meragelman suggests the following fix.                      |
-    |                                                                          |
-    |     TIMEOUT=30                                                           |
-    |     count=0                                                              |
-    |     # Timeout value in seconds                                           |
-    |     possibly_hanging_job & {                                             |
-    |                                                                          |
-    |     while ((count < TIMEOUT )); do                                       |
-    |       eval '[ ! -d "/proc/$lastjob" ] && ((count = TIMEOUT))'            |
-    |       lastjob=$!                                                         |
-    |       ((count++))                                                        |
-    |       sleep 1                                                            |
-    |     done                                                                 |
-    |     eval '[ -d "/proc/$lastjob" ] && kill -15 $lastjob'                  |
-    |                                                                          |
-    |     }                                                                    |
-    |                                                                          |
-    |     exit                                                                 |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     # This example by Ma |
+    | tthew Sage.              |
+    |     # Used with permissi |
+    | on.                      |
+    |                          |
+    |     TIMEOUT=30   # Timeo |
+    | ut value in seconds      |
+    |     count=0              |
+    |                          |
+    |     possibly_hanging_job |
+    |  & {                     |
+    |             while ((coun |
+    | t < TIMEOUT )); do       |
+    |                     eval |
+    |  '[ ! -d "/proc/$!" ] && |
+    |  ((count = TIMEOUT))'    |
+    |                     # /p |
+    | roc is where information |
+    |  about running processes |
+    |  is found.               |
+    |                     # "- |
+    | d" tests whether it exis |
+    | ts (whether directory ex |
+    | ists).                   |
+    |                     # So |
+    | , we're waiting for the  |
+    | job in question to show  |
+    | up.                      |
+    |                     ((co |
+    | unt++))                  |
+    |                     slee |
+    | p 1                      |
+    |             done         |
+    |             eval '[ -d " |
+    | /proc/$!" ] && kill -15  |
+    | $!'                      |
+    |             # If the han |
+    | ging job is running, kil |
+    | l it.                    |
+    |     }                    |
+    |                          |
+    |     #  ----------------- |
+    | ------------------------ |
+    | --------------------- #  |
+    |                          |
+    |     #  However, this may |
+    |  not not work as specifi |
+    | ed if another process    |
+    |     #+ begins to run aft |
+    | er the "hanging_job" . . |
+    |  .                       |
+    |     #  In such a case, t |
+    | he wrong job may be kill |
+    | ed.                      |
+    |     #  Ariel Meragelman  |
+    | suggests the following f |
+    | ix.                      |
+    |                          |
+    |     TIMEOUT=30           |
+    |     count=0              |
+    |     # Timeout value in s |
+    | econds                   |
+    |     possibly_hanging_job |
+    |  & {                     |
+    |                          |
+    |     while ((count < TIME |
+    | OUT )); do               |
+    |       eval '[ ! -d "/pro |
+    | c/$lastjob" ] && ((count |
+    |  = TIMEOUT))'            |
+    |       lastjob=$!         |
+    |       ((count++))        |
+    |       sleep 1            |
+    |     done                 |
+    |     eval '[ -d "/proc/$l |
+    | astjob" ] && kill -15 $l |
+    | astjob'                  |
+    |                          |
+    |     }                    |
+    |                          |
+    |     exit                 |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$_``
+    .. raw:: html
+
+       </p>
+
+\ ``$_``
     Special variable set to final argument of previous command executed.
+
+    .. raw:: html
+
+       <div class="EXAMPLE">
 
     **Example 9-9. Underscore variable**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     echo $_              #  /bin/bash                                    |
-    |                          #  Just called /bin/bash to run the script.     |
-    |                          #  Note that this will vary according to        |
-    |                          #+ how the script is invoked.                   |
-    |                                                                          |
-    |     du >/dev/null        #  So no output from command.                   |
-    |     echo $_              #  du                                           |
-    |                                                                          |
-    |     ls -al >/dev/null    #  So no output from command.                   |
-    |     echo $_              #  -al  (last argument)                         |
-    |                                                                          |
-    |     :                                                                    |
-    |     echo $_              #  :                                            |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     echo $_              |
+    |  #  /bin/bash            |
+    |                          |
+    |  #  Just called /bin/bas |
+    | h to run the script.     |
+    |                          |
+    |  #  Note that this will  |
+    | vary according to        |
+    |                          |
+    |  #+ how the script is in |
+    | voked.                   |
+    |                          |
+    |     du >/dev/null        |
+    |  #  So no output from co |
+    | mmand.                   |
+    |     echo $_              |
+    |  #  du                   |
+    |                          |
+    |     ls -al >/dev/null    |
+    |  #  So no output from co |
+    | mmand.                   |
+    |     echo $_              |
+    |  #  -al  (last argument) |
+    |                          |
+    |     :                    |
+    |     echo $_              |
+    |  #  :                    |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-``$?``
+    .. raw:: html
+
+       </div>
+
+\ ``$?``
     `Exit status <exit-status.html#EXITSTATUSREF>`__ of a command,
     `function <functions.html#FUNCTIONREF>`__, or the script itself (see
     `Example 24-7 <complexfunct.html#MAX>`__)
 
-``$$``
+\ ``$$``
     Process ID (*PID*) of the script itself.
     `[5] <internalvariables.html#FTN.AEN5654>`__ The ``$$`` variable
     often finds use in scripts to construct "unique" temp file names
@@ -2326,13 +2836,21 @@ Chapter 9. Another Look at Variables
     15-27 <x9644.html#SELFDESTRUCT>`__). This is usually simpler than
     invoking `mktemp <filearchiv.html#MKTEMPREF>`__.
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
 +--------------------------------------+--------------------------------------+
 | `[1] <internalvariables.html#AEN4671 | `[2] <internalvariables.html#AEN5154 |
 | >`__                                 | >`__                                 |
-| A *stack register* is a set of       | The PID of the currently running     |
+|  A *stack register* is a set of      | The PID of the currently running     |
 | consecutive memory locations, such   | script is ``$$``, of course.         |
 | that the values stored (*pushed*)    |                                      |
 | are retrieved (*popped*) in          |                                      |
@@ -2342,6 +2860,10 @@ Notes
 | (*last-in-first-out*) or *pushdown*  |                                      |
 | stack.                               |                                      |
 +--------------------------------------+--------------------------------------+
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -2353,6 +2875,10 @@ Notes
 | __                       | **declare** or           |
 |                          | **typeset**              |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

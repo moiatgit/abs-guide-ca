@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <intandnonint.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 36. Miscellany
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <testsandcomparisons.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 36.2. Shell Wrappers
 ====================
@@ -18,8 +86,8 @@ command-line simplifies invoking it. This is expecially useful with
 `sed <sedawk.html#SEDREF>`__ and `awk <awk.html#AWKREF>`__.
 
 A **sed** or **awk** script would normally be invoked from the
-command-line by a ``sed -e         'commands'`` or
-``awk         'commands'``. Embedding such a script in a Bash script
+command-line by a ``sed -e         'commands'``\  or
+``awk         'commands'``\ . Embedding such a script in a Bash script
 permits calling it more simply, and makes it *reusable*. This also
 enables combining the functionality of *sed* and *awk*, for example
 `piping <special-chars.html#PIPEREF>`__ the output of a set of *sed*
@@ -27,251 +95,421 @@ commands to *awk*. As a saved executable file, you can then repeatedly
 invoke it in its original form or modified, without the inconvenience of
 retyping it on the command-line.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 36-1. *shell wrapper***
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|                                                                          |
-|     # This simple script removes blank lines from a file.                |
-|     # No argument checking.                                              |
-|     #                                                                    |
-|     # You might wish to add something like:                              |
-|     #                                                                    |
-|     # E_NOARGS=85                                                        |
-|     # if [ -z "$1" ]                                                     |
-|     # then                                                               |
-|     #  echo "Usage: `basename $0` target-file"                           |
-|     #  exit $E_NOARGS                                                    |
-|     # fi                                                                 |
-|                                                                          |
-|                                                                          |
-|                                                                          |
-|     sed -e /^$/d "$1"                                                    |
-|     # Same as                                                            |
-|     #    sed -e '/^$/d' filename                                         |
-|     # invoked from the command-line.                                     |
-|                                                                          |
-|     #  The '-e' means an "editing" command follows (optional here).      |
-|     #  '^' indicates the beginning of line, '$' the end.                 |
-|     #  This matches lines with nothing between the beginning and the end |
-|  --                                                                      |
-|     #+ blank lines.                                                      |
-|     #  The 'd' is the delete command.                                    |
-|                                                                          |
-|     #  Quoting the command-line arg permits                              |
-|     #+ whitespace and special characters in the filename.                |
-|                                                                          |
-|     #  Note that this script doesn't actually change the target file.    |
-|     #  If you need to do that, redirect its output.                      |
-|                                                                          |
-|     exit                                                                 |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     # This simple script |
+|  removes blank lines fro |
+| m a file.                |
+|     # No argument checki |
+| ng.                      |
+|     #                    |
+|     # You might wish to  |
+| add something like:      |
+|     #                    |
+|     # E_NOARGS=85        |
+|     # if [ -z "$1" ]     |
+|     # then               |
+|     #  echo "Usage: `bas |
+| ename $0` target-file"   |
+|     #  exit $E_NOARGS    |
+|     # fi                 |
+|                          |
+|                          |
+|                          |
+|     sed -e /^$/d "$1"    |
+|     # Same as            |
+|     #    sed -e '/^$/d'  |
+| filename                 |
+|     # invoked from the c |
+| ommand-line.             |
+|                          |
+|     #  The '-e' means an |
+|  "editing" command follo |
+| ws (optional here).      |
+|     #  '^' indicates the |
+|  beginning of line, '$'  |
+| the end.                 |
+|     #  This matches line |
+| s with nothing between t |
+| he beginning and the end |
+|  --                      |
+|     #+ blank lines.      |
+|     #  The 'd' is the de |
+| lete command.            |
+|                          |
+|     #  Quoting the comma |
+| nd-line arg permits      |
+|     #+ whitespace and sp |
+| ecial characters in the  |
+| filename.                |
+|                          |
+|     #  Note that this sc |
+| ript doesn't actually ch |
+| ange the target file.    |
+|     #  If you need to do |
+|  that, redirect its outp |
+| ut.                      |
+|                          |
+|     exit                 |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
 
 **Example 36-2. A slightly more complex *shell wrapper***
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|                                                                          |
-|     #  subst.sh: a script that substitutes one pattern for               |
-|     #+ another in a file,                                                |
-|     #+ i.e., "sh subst.sh Smith Jones letter.txt".                       |
-|     #                     Jones replaces Smith.                          |
-|                                                                          |
-|     ARGS=3         # Script requires 3 arguments.                        |
-|     E_BADARGS=85   # Wrong number of arguments passed to script.         |
-|                                                                          |
-|     if [ $# -ne "$ARGS" ]                                                |
-|     then                                                                 |
-|       echo "Usage: `basename $0` old-pattern new-pattern filename"       |
-|       exit $E_BADARGS                                                    |
-|     fi                                                                   |
-|                                                                          |
-|     old_pattern=$1                                                       |
-|     new_pattern=$2                                                       |
-|                                                                          |
-|     if [ -f "$3" ]                                                       |
-|     then                                                                 |
-|         file_name=$3                                                     |
-|     else                                                                 |
-|         echo "File \"$3\" does not exist."                               |
-|         exit $E_BADARGS                                                  |
-|     fi                                                                   |
-|                                                                          |
-|                                                                          |
-|     # -----------------------------------------------                    |
-|     #  Here is where the heavy work gets done.                           |
-|     sed -e "s/$old_pattern/$new_pattern/g" $file_name                    |
-|     # -----------------------------------------------                    |
-|                                                                          |
-|     #  's' is, of course, the substitute command in sed,                 |
-|     #+ and /pattern/ invokes address matching.                           |
-|     #  The 'g,' or global flag causes substitution for EVERY             |
-|     #+ occurence of $old_pattern on each line, not just the first.       |
-|     #  Read the 'sed' docs for an in-depth explanation.                  |
-|                                                                          |
-|     exit $?  # Redirect the output of this script to write to a file.    |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     #  subst.sh: a scrip |
+| t that substitutes one p |
+| attern for               |
+|     #+ another in a file |
+| ,                        |
+|     #+ i.e., "sh subst.s |
+| h Smith Jones letter.txt |
+| ".                       |
+|     #                    |
+|   Jones replaces Smith.  |
+|                          |
+|     ARGS=3         # Scr |
+| ipt requires 3 arguments |
+| .                        |
+|     E_BADARGS=85   # Wro |
+| ng number of arguments p |
+| assed to script.         |
+|                          |
+|     if [ $# -ne "$ARGS"  |
+| ]                        |
+|     then                 |
+|       echo "Usage: `base |
+| name $0` old-pattern new |
+| -pattern filename"       |
+|       exit $E_BADARGS    |
+|     fi                   |
+|                          |
+|     old_pattern=$1       |
+|     new_pattern=$2       |
+|                          |
+|     if [ -f "$3" ]       |
+|     then                 |
+|         file_name=$3     |
+|     else                 |
+|         echo "File \"$3\ |
+| " does not exist."       |
+|         exit $E_BADARGS  |
+|     fi                   |
+|                          |
+|                          |
+|     # ------------------ |
+| ------------------------ |
+| -----                    |
+|     #  Here is where the |
+|  heavy work gets done.   |
+|     sed -e "s/$old_patte |
+| rn/$new_pattern/g" $file |
+| _name                    |
+|     # ------------------ |
+| ------------------------ |
+| -----                    |
+|                          |
+|     #  's' is, of course |
+| , the substitute command |
+|  in sed,                 |
+|     #+ and /pattern/ inv |
+| okes address matching.   |
+|     #  The 'g,' or globa |
+| l flag causes substituti |
+| on for EVERY             |
+|     #+ occurence of $old |
+| _pattern on each line, n |
+| ot just the first.       |
+|     #  Read the 'sed' do |
+| cs for an in-depth expla |
+| nation.                  |
+|                          |
+|     exit $?  # Redirect  |
+| the output of this scrip |
+| t to write to a file.    |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
 
 **Example 36-3. A generic *shell wrapper* that writes to a logfile**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     #  logging-wrapper.sh                                                |
-|     #  Generic shell wrapper that performs an operation                  |
-|     #+ and logs it.                                                      |
-|                                                                          |
-|     DEFAULT_LOGFILE=logfile.txt                                          |
-|                                                                          |
-|     # Set the following two variables.                                   |
-|     OPERATION=                                                           |
-|     #         Can be a complex chain of commands,                        |
-|     #+        for example an awk script or a pipe . . .                  |
-|                                                                          |
-|     LOGFILE=                                                             |
-|     if [ -z "$LOGFILE" ]                                                 |
-|     then     # If not set, default to ...                                |
-|       LOGFILE="$DEFAULT_LOGFILE"                                         |
-|     fi                                                                   |
-|                                                                          |
-|     #         Command-line arguments, if any, for the operation.         |
-|     OPTIONS="$@"                                                         |
-|                                                                          |
-|                                                                          |
-|     # Log it.                                                            |
-|     echo "`date` + `whoami` + $OPERATION "$@"" >> $LOGFILE               |
-|     # Now, do it.                                                        |
-|     exec $OPERATION "$@"                                                 |
-|                                                                          |
-|     # It's necessary to do the logging before the operation.             |
-|     # Why?                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     #  logging-wrapper.s |
+| h                        |
+|     #  Generic shell wra |
+| pper that performs an op |
+| eration                  |
+|     #+ and logs it.      |
+|                          |
+|     DEFAULT_LOGFILE=logf |
+| ile.txt                  |
+|                          |
+|     # Set the following  |
+| two variables.           |
+|     OPERATION=           |
+|     #         Can be a c |
+| omplex chain of commands |
+| ,                        |
+|     #+        for exampl |
+| e an awk script or a pip |
+| e . . .                  |
+|                          |
+|     LOGFILE=             |
+|     if [ -z "$LOGFILE" ] |
+|     then     # If not se |
+| t, default to ...        |
+|       LOGFILE="$DEFAULT_ |
+| LOGFILE"                 |
+|     fi                   |
+|                          |
+|     #         Command-li |
+| ne arguments, if any, fo |
+| r the operation.         |
+|     OPTIONS="$@"         |
+|                          |
+|                          |
+|     # Log it.            |
+|     echo "`date` + `whoa |
+| mi` + $OPERATION "$@"" > |
+| > $LOGFILE               |
+|     # Now, do it.        |
+|     exec $OPERATION "$@" |
+|                          |
+|     # It's necessary to  |
+| do the logging before th |
+| e operation.             |
+|     # Why?               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
 
 **Example 36-4. A *shell wrapper* around an awk script**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # pr-ascii.sh: Prints a table of ASCII characters.                   |
-|                                                                          |
-|     START=33   # Range of printable ASCII characters (decimal).          |
-|     END=127    # Will not work for unprintable characters (> 127).       |
-|                                                                          |
-|     echo " Decimal   Hex     Character"   # Header.                      |
-|     echo " -------   ---     ---------"                                  |
-|                                                                          |
-|     for ((i=START; i<=END; i++))                                         |
-|     do                                                                   |
-|       echo $i | awk '{printf("  %3d       %2x         %c\n", $1, $1, $1) |
-| }'                                                                       |
-|     # The Bash printf builtin will not work in this context:             |
-|     #     printf "%c" "$i"                                               |
-|     done                                                                 |
-|                                                                          |
-|     exit 0                                                               |
-|                                                                          |
-|                                                                          |
-|     #  Decimal   Hex     Character                                       |
-|     #  -------   ---     ---------                                       |
-|     #    33       21         !                                           |
-|     #    34       22         "                                           |
-|     #    35       23         #                                           |
-|     #    36       24         $                                           |
-|     #                                                                    |
-|     #    . . .                                                           |
-|     #                                                                    |
-|     #   122       7a         z                                           |
-|     #   123       7b         {                                           |
-|     #   124       7c         |                                           |
-|     #   125       7d         }                                           |
-|                                                                          |
-|                                                                          |
-|     #  Redirect the output of this script to a file                      |
-|     #+ or pipe it to "more":  sh pr-asc.sh | more                        |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # pr-ascii.sh: Print |
+| s a table of ASCII chara |
+| cters.                   |
+|                          |
+|     START=33   # Range o |
+| f printable ASCII charac |
+| ters (decimal).          |
+|     END=127    # Will no |
+| t work for unprintable c |
+| haracters (> 127).       |
+|                          |
+|     echo " Decimal   Hex |
+|      Character"   # Head |
+| er.                      |
+|     echo " -------   --- |
+|      ---------"          |
+|                          |
+|     for ((i=START; i<=EN |
+| D; i++))                 |
+|     do                   |
+|       echo $i | awk '{pr |
+| intf("  %3d       %2x    |
+|       %c\n", $1, $1, $1) |
+| }'                       |
+|     # The Bash printf bu |
+| iltin will not work in t |
+| his context:             |
+|     #     printf "%c" "$ |
+| i"                       |
+|     done                 |
+|                          |
+|     exit 0               |
+|                          |
+|                          |
+|     #  Decimal   Hex     |
+|  Character               |
+|     #  -------   ---     |
+|  ---------               |
+|     #    33       21     |
+|      !                   |
+|     #    34       22     |
+|      "                   |
+|     #    35       23     |
+|      #                   |
+|     #    36       24     |
+|      $                   |
+|     #                    |
+|     #    . . .           |
+|     #                    |
+|     #   122       7a     |
+|      z                   |
+|     #   123       7b     |
+|      {                   |
+|     #   124       7c     |
+|      |                   |
+|     #   125       7d     |
+|      }                   |
+|                          |
+|                          |
+|     #  Redirect the outp |
+| ut of this script to a f |
+| ile                      |
+|     #+ or pipe it to "mo |
+| re":  sh pr-asc.sh | mor |
+| e                        |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="EXAMPLE">
 
 **Example 36-5. A *shell wrapper* around another awk script**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|                                                                          |
-|     # Adds up a specified column (of numbers) in the target file.        |
-|     # Floating-point (decimal) numbers okay, because awk can handle them |
-| .                                                                        |
-|                                                                          |
-|     ARGS=2                                                               |
-|     E_WRONGARGS=85                                                       |
-|                                                                          |
-|     if [ $# -ne "$ARGS" ] # Check for proper number of command-line args |
-| .                                                                        |
-|     then                                                                 |
-|        echo "Usage: `basename $0` filename column-number"                |
-|        exit $E_WRONGARGS                                                 |
-|     fi                                                                   |
-|                                                                          |
-|     filename=$1                                                          |
-|     column_number=$2                                                     |
-|                                                                          |
-|     #  Passing shell variables to the awk part of the script is a bit tr |
-| icky.                                                                    |
-|     #  One method is to strong-quote the Bash-script variable            |
-|     #+ within the awk script.                                            |
-|     #     $'$BASH_SCRIPT_VAR'                                            |
-|     #      ^                ^                                            |
-|     #  This is done in the embedded awk script below.                    |
-|     #  See the awk documentation for more details.                       |
-|                                                                          |
-|     # A multi-line awk script is here invoked by                         |
-|     #   awk '                                                            |
-|     #   ...                                                              |
-|     #   ...                                                              |
-|     #   ...                                                              |
-|     #   '                                                                |
-|                                                                          |
-|                                                                          |
-|     # Begin awk script.                                                  |
-|     # -----------------------------                                      |
-|     awk '                                                                |
-|                                                                          |
-|     { total += $'"${column_number}"'                                     |
-|     }                                                                    |
-|     END {                                                                |
-|          print total                                                     |
-|     }                                                                    |
-|                                                                          |
-|     ' "$filename"                                                        |
-|     # -----------------------------                                      |
-|     # End awk script.                                                    |
-|                                                                          |
-|                                                                          |
-|     #   It may not be safe to pass shell variables to an embedded awk sc |
-| ript,                                                                    |
-|     #+  so Stephane Chazelas proposes the following alternative:         |
-|     #   ---------------------------------------                          |
-|     #   awk -v column_number="$column_number" '                          |
-|     #   { total += $column_number                                        |
-|     #   }                                                                |
-|     #   END {                                                            |
-|     #       print total                                                  |
-|     #   }' "$filename"                                                   |
-|     #   ---------------------------------------                          |
-|                                                                          |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     # Adds up a specifie |
+| d column (of numbers) in |
+|  the target file.        |
+|     # Floating-point (de |
+| cimal) numbers okay, bec |
+| ause awk can handle them |
+| .                        |
+|                          |
+|     ARGS=2               |
+|     E_WRONGARGS=85       |
+|                          |
+|     if [ $# -ne "$ARGS"  |
+| ] # Check for proper num |
+| ber of command-line args |
+| .                        |
+|     then                 |
+|        echo "Usage: `bas |
+| ename $0` filename colum |
+| n-number"                |
+|        exit $E_WRONGARGS |
+|     fi                   |
+|                          |
+|     filename=$1          |
+|     column_number=$2     |
+|                          |
+|     #  Passing shell var |
+| iables to the awk part o |
+| f the script is a bit tr |
+| icky.                    |
+|     #  One method is to  |
+| strong-quote the Bash-sc |
+| ript variable            |
+|     #+ within the awk sc |
+| ript.                    |
+|     #     $'$BASH_SCRIPT |
+| _VAR'                    |
+|     #      ^             |
+|     ^                    |
+|     #  This is done in t |
+| he embedded awk script b |
+| elow.                    |
+|     #  See the awk docum |
+| entation for more detail |
+| s.                       |
+|                          |
+|     # A multi-line awk s |
+| cript is here invoked by |
+|     #   awk '            |
+|     #   ...              |
+|     #   ...              |
+|     #   ...              |
+|     #   '                |
+|                          |
+|                          |
+|     # Begin awk script.  |
+|     # ------------------ |
+| -----------              |
+|     awk '                |
+|                          |
+|     { total += $'"${colu |
+| mn_number}"'             |
+|     }                    |
+|     END {                |
+|          print total     |
+|     }                    |
+|                          |
+|     ' "$filename"        |
+|     # ------------------ |
+| -----------              |
+|     # End awk script.    |
+|                          |
+|                          |
+|     #   It may not be sa |
+| fe to pass shell variabl |
+| es to an embedded awk sc |
+| ript,                    |
+|     #+  so Stephane Chaz |
+| elas proposes the follow |
+| ing alternative:         |
+|     #   ---------------- |
+| -----------------------  |
+|     #   awk -v column_nu |
+| mber="$column_number" '  |
+|     #   { total += $colu |
+| mn_number                |
+|     #   }                |
+|     #   END {            |
+|     #       print total  |
+|     #   }' "$filename"   |
+|     #   ---------------- |
+| -----------------------  |
+|                          |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 For those scripts needing a single do-it-all tool, a Swiss army knife,
 there is *Perl*. Perl combines the capabilities of
@@ -283,138 +521,239 @@ embedding within shell scripts, and there may be some substance to the
 claim that Perl can totally replace shell scripting (though the author
 of the *ABS Guide* remains skeptical).
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 36-6. Perl embedded in a *Bash* script**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|                                                                          |
-|     # Shell commands may precede the Perl script.                        |
-|     echo "This precedes the embedded Perl script within \"$0\"."         |
-|     echo "============================================================== |
-| ="                                                                       |
-|                                                                          |
-|     perl -e 'print "This line prints from an embedded Perl script.\n";'  |
-|     # Like sed, Perl also uses the "-e" option.                          |
-|                                                                          |
-|     echo "============================================================== |
-| ="                                                                       |
-|     echo "However, the script may also contain shell and system commands |
-| ."                                                                       |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|                          |
+|     # Shell commands may |
+|  precede the Perl script |
+| .                        |
+|     echo "This precedes  |
+| the embedded Perl script |
+|  within \"$0\"."         |
+|     echo "============== |
+| ======================== |
+| ======================== |
+| ="                       |
+|                          |
+|     perl -e 'print "This |
+|  line prints from an emb |
+| edded Perl script.\n";'  |
+|     # Like sed, Perl als |
+| o uses the "-e" option.  |
+|                          |
+|     echo "============== |
+| ======================== |
+| ======================== |
+| ="                       |
+|     echo "However, the s |
+| cript may also contain s |
+| hell and system commands |
+| ."                       |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 It is even possible to combine a Bash script and Perl script within the
 same file. Depending on how the script is invoked, either the Bash part
 or the Perl part will execute.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 36-7. Bash and Perl scripts combined**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # bashandperl.sh                                                     |
-|                                                                          |
-|     echo "Greetings from the Bash part of the script, $0."               |
-|     # More Bash commands may follow here.                                |
-|                                                                          |
-|     exit                                                                 |
-|     # End of Bash part of the script.                                    |
-|                                                                          |
-|     # =======================================================            |
-|                                                                          |
-|     #!/usr/bin/perl                                                      |
-|     # This part of the script must be invoked with                       |
-|     #    perl -x bashandperl.sh                                          |
-|                                                                          |
-|     print "Greetings from the Perl part of the script, $0.\n";           |
-|     #      Perl doesn't seem to like "echo" ...                          |
-|     # More Perl commands may follow here.                                |
-|                                                                          |
-|     # End of Perl part of the script.                                    |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # bashandperl.sh     |
+|                          |
+|     echo "Greetings from |
+|  the Bash part of the sc |
+| ript, $0."               |
+|     # More Bash commands |
+|  may follow here.        |
+|                          |
+|     exit                 |
+|     # End of Bash part o |
+| f the script.            |
+|                          |
+|     # ================== |
+| ======================== |
+| =============            |
+|                          |
+|     #!/usr/bin/perl      |
+|     # This part of the s |
+| cript must be invoked wi |
+| th                       |
+|     #    perl -x bashand |
+| perl.sh                  |
+|                          |
+|     print "Greetings fro |
+| m the Perl part of the s |
+| cript, $0.\n";           |
+|     #      Perl doesn't  |
+| seem to like "echo" ...  |
+|     # More Perl commands |
+|  may follow here.        |
+|                          |
+|     # End of Perl part o |
+| f the script.            |
+                          
++--------------------------+--------------------------+--------------------------+
 
-+--------------------------------------------------------------------------+
-| .. code:: SCREEN                                                         |
-|                                                                          |
-|     bash$ bash bashandperl.sh                                            |
-|     Greetings from the Bash part of the script.                          |
-|                                                                          |
-|                                                                          |
-|     bash$ perl -x bashandperl.sh                                         |
-|     Greetings from the Perl part of the script.                          |
-|                                                                          |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
+
+   </div>
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ bash bashandpe |
+| rl.sh                    |
+|     Greetings from the B |
+| ash part of the script.  |
+|                          |
+|                          |
+|     bash$ perl -x bashan |
+| dperl.sh                 |
+|     Greetings from the P |
+| erl part of the script.  |
+|                          |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 It is, of course, possible to embed even more exotic scripting languages
 within shell wrappers. *Python*, for example ...
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 36-8. Python embedded in a *Bash* script**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     # ex56py.sh                                                          |
-|                                                                          |
-|     # Shell commands may precede the Python script.                      |
-|     echo "This precedes the embedded Python script within \"$0.\""       |
-|     echo "============================================================== |
-| ="                                                                       |
-|                                                                          |
-|     python -c 'print "This line prints from an embedded Python script.\n |
-| ";'                                                                      |
-|     # Unlike sed and perl, Python uses the "-c" option.                  |
-|     python -c 'k = raw_input( "Hit a key to exit to outer script. " )'   |
-|                                                                          |
-|     echo "============================================================== |
-| ="                                                                       |
-|     echo "However, the script may also contain shell and system commands |
-| ."                                                                       |
-|                                                                          |
-|     exit 0                                                               |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # ex56py.sh          |
+|                          |
+|     # Shell commands may |
+|  precede the Python scri |
+| pt.                      |
+|     echo "This precedes  |
+| the embedded Python scri |
+| pt within \"$0.\""       |
+|     echo "============== |
+| ======================== |
+| ======================== |
+| ="                       |
+|                          |
+|     python -c 'print "Th |
+| is line prints from an e |
+| mbedded Python script.\n |
+| ";'                      |
+|     # Unlike sed and per |
+| l, Python uses the "-c"  |
+| option.                  |
+|     python -c 'k = raw_i |
+| nput( "Hit a key to exit |
+|  to outer script. " )'   |
+|                          |
+|     echo "============== |
+| ======================== |
+| ======================== |
+| ="                       |
+|     echo "However, the s |
+| cript may also contain s |
+| hell and system commands |
+| ."                       |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 Wrapping a script around *mplayer* and the Google's translation server,
 you can create something that talks back to you.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 36-9. A script that speaks**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #!/bin/bash                                                          |
-|     #   Courtesy of:                                                     |
-|     #   http://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)          |
-|                                                                          |
-|     #  You must be on-line for this script to work,                      |
-|     #+ so you can access the Google translation server.                  |
-|     #  Of course, mplayer must be present on your computer.              |
-|                                                                          |
-|     speak()                                                              |
-|       {                                                                  |
-|       local IFS=+                                                        |
-|       # Invoke mplayer, then connect to Google translation server.       |
-|       /usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols \       |
-|      "http://translate.google.com/translate_tts?tl=en&q="$*""            |
-|       # Google translates, but can also speak.                           |
-|       }                                                                  |
-|                                                                          |
-|     LINES=4                                                              |
-|                                                                          |
-|     spk=$(tail -$LINES $0) # Tail end of same script!                    |
-|     speak "$spk"                                                         |
-|     exit                                                                 |
-|     # Browns. Nice talking to you.                                       |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     #   Courtesy of:     |
+|     #   http://elinux.or |
+| g/RPi_Text_to_Speech_(Sp |
+| eech_Synthesis)          |
+|                          |
+|     #  You must be on-li |
+| ne for this script to wo |
+| rk,                      |
+|     #+ so you can access |
+|  the Google translation  |
+| server.                  |
+|     #  Of course, mplaye |
+| r must be present on you |
+| r computer.              |
+|                          |
+|     speak()              |
+|       {                  |
+|       local IFS=+        |
+|       # Invoke mplayer,  |
+| then connect to Google t |
+| ranslation server.       |
+|       /usr/bin/mplayer - |
+| ao alsa -really-quiet -n |
+| oconsolecontrols \       |
+|      "http://translate.g |
+| oogle.com/translate_tts? |
+| tl=en&q="$*""            |
+|       # Google translate |
+| s, but can also speak.   |
+|       }                  |
+|                          |
+|     LINES=4              |
+|                          |
+|     spk=$(tail -$LINES $ |
+| 0) # Tail end of same sc |
+| ript!                    |
+|     speak "$spk"         |
+|     exit                 |
+|     # Browns. Nice talki |
+| ng to you.               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 One interesting example of a complex shell wrapper is Martin Matusiak's
 `*undvd* script <http://sourceforge.net/projects/undvd/>`__, which
@@ -423,6 +762,10 @@ provides an easy-to-use command-line interface to the complex
 utility. Another example is Itzchak Rehberg's
 `Ext3Undel <http://projects.izzysoft.de/trac/ext3undel>`__, a set of
 scripts to recover deleted file on an *ext3* filesystem.
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -436,6 +779,10 @@ Notes
 | ``/usr/bin/xmkmf``.                  |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -446,4 +793,8 @@ Notes
 | ns.html>`__              | Tests and Comparisons:   |
 |                          | Alternatives             |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

@@ -1,15 +1,87 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <untyped.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 4. Introduction to Variables and Parameters
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <quoting.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 4.4. Special Variable Types
 ===========================
+
+.. raw:: html
+
+   <div class="VARIABLELIST">
 
 ``Local variables``
     Variables `visible <subshells.html#SCOPEREF>`__ only within a `code
@@ -17,8 +89,12 @@ Chapter 4. Introduction to Variables and Parameters
     `local variables <localvar.html#LOCALREF>`__ in
     `functions <functions.html#FUNCTIONREF>`__)
 
-``Environmental variables``
+\ ``Environmental variables``
     Variables that affect the behavior of the shell and user interface
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------+--------------------------+--------------------------+
     | |Note|                   |
@@ -50,119 +126,126 @@ Chapter 4. Introduction to Variables and Parameters
     | environment.             |
     +--------------------------+--------------------------+--------------------------+
 
-    +--------------+--------------+--------------+--------------+--------------+--------------+
-    | |Caution|    |
-    | The space    |
-    | allotted to  |
-    | the          |
-    | environment  |
-    | is limited.  |
-    | Creating too |
-    | many         |
-    | environmenta |
-    | l            |
-    | variables or |
-    | ones that    |
-    | use up       |
-    | excessive    |
-    | space may    |
-    | cause        |
-    | problems.    |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ------------ |
-    | ------------ |
-    | ------------ |
-    | ------------ |
-    | ---+         |
-    | | .. code::  |
-    | SCREEN       |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    | |            |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    | |     bash$  |
-    | eval "`seq 1 |
-    | 0000 | sed - |
-    | e 's/.*/expo |
-    | rt var&=ZZZZ |
-    | ZZZZZZZZZZ/' |
-    | `" |         |
-    | |            |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    | |     bash$  |
-    | du           |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    | |     bash:  |
-    | /usr/bin/du: |
-    |  Argument li |
-    | st too long  |
-    |              |
-    |              |
-    |    |         |
-    | |            |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    |    |         |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    |              |
-    | +----------- |
-    | ------------ |
-    | ------------ |
-    | ------------ |
-    | ------------ |
-    | ------------ |
-    | ---+         |
-    |              |
-    | Note: this   |
-    | "error" has  |
-    | been fixed,  |
-    | as of kernel |
-    | version      |
-    | 2.6.23.      |
-    |              |
-    | (Thank you,  |
-    | Stéphane     |
-    | Chazelas for |
-    | the          |
-    | clarificatio |
-    | n,           |
-    | and for      |
-    | providing    |
-    | the above    |
-    | example.)    |
-    +--------------+--------------+--------------+--------------+--------------+--------------+
+    .. raw:: html
+
+       </div>
+
+    .. raw:: html
+
+       <div class="CAUTION">
+
+    +------------+------------+------------+------------+------------+------------+------------+
+    | |Caution|  |
+    | The space  |
+    | allotted   |
+    | to the     |
+    | environmen |
+    | t          |
+    | is         |
+    | limited.   |
+    | Creating   |
+    | too many   |
+    | environmen |
+    | tal        |
+    | variables  |
+    | or ones    |
+    | that use   |
+    | up         |
+    | excessive  |
+    | space may  |
+    | cause      |
+    | problems.  |
+    |            |
+    | +--------- |
+    | ---------- |
+    | -------+-- |
+    | ---------- |
+    | ---------- |
+    | ----+----- |
+    | ---------- |
+    | ---------- |
+    | -+         |
+    | | .. code: |
+    | : SCREEN   |
+    |        |   |
+    | |          |
+    |            |
+    |        |   |
+    | |     bash |
+    | $ eval "`s |
+    | eq 100 |   |
+    | | 00 | sed |
+    |  -e 's/.*/ |
+    | export |   |
+    | |  var&=ZZ |
+    | ZZZZZZZZZZ |
+    | ZZ/'`" |   |
+    | |          |
+    |            |
+    |        |   |
+    | |     bash |
+    | $ du       |
+    |        |   |
+    | |     bash |
+    | : /usr/bin |
+    | /du: A |   |
+    | | rgument  |
+    | list too l |
+    | ong    |   |
+    | |          |
+    |            |
+    |        |   |
+    |            |
+    |            |
+    |            |
+    | +--------- |
+    | ---------- |
+    | -------+-- |
+    | ---------- |
+    | ---------- |
+    | ----+----- |
+    | ---------- |
+    | ---------- |
+    | -+         |
+    |            |
+    | .. raw:: h |
+    | tml        |
+    |            |
+    |    </p>    |
+    |            |
+    | Note: this |
+    | "error"    |
+    | has been   |
+    | fixed, as  |
+    | of kernel  |
+    | version    |
+    | 2.6.23.    |
+    |            |
+    | (Thank     |
+    | you,       |
+    | Stéphane   |
+    | Chazelas   |
+    | for the    |
+    | clarificat |
+    | ion,       |
+    | and for    |
+    | providing  |
+    | the above  |
+    | example.)  |
+    +------------+------------+------------+------------+------------+------------+------------+
+
+    .. raw:: html
+
+       </div>
 
     If a script sets environmental variables, they need to be
     "exported," that is, reported to the *environment* local to the
     script. This is the function of the
     `export <internal.html#EXPORTREF>`__ command.
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------+--------------------------+--------------------------+
     | |Note|                   |
@@ -186,20 +269,24 @@ Chapter 4. Introduction to Variables and Parameters
     | processes that spawned   |
     | them.*                   |
     |                          |
-    | ``Definition:`` A *child |
-    | process* is a subprocess |
-    | launched by another      |
-    | process, its             |
+    | \ ``Definition:`` A      |
+    | *child process* is a     |
+    | subprocess launched by   |
+    | another process, its     |
     | `parent <internal.html#P |
     | ARENTREF>`__.            |
     +--------------------------+--------------------------+--------------------------+
 
-``Positional parameters``
+    .. raw:: html
+
+       </div>
+
+\ ``Positional parameters``
     Arguments passed to the script from the command line
     `[1] <othertypesv.html#FTN.AEN2450>`__ : ``$0``, ``$1``, ``$2``,
     ``$3`` . . .
 
-    ``$0`` is the name of the script itself, ``$1`` is the first
+    \ ``$0`` is the name of the script itself, ``$1`` is the first
     argument, ``$2`` the second, ``$3`` the third, and so forth.
     `[2] <othertypesv.html#FTN.AEN2464>`__ After ``$9``, the arguments
     must be enclosed in brackets, for example, ``${10}``, ``${11}``,
@@ -208,83 +295,126 @@ Chapter 4. Introduction to Variables and Parameters
     The special variables `$\* and $@ <internalvariables.html#APPREF>`__
     denote *all* the positional parameters.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 4-5. Positional Parameters**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |                                                                          |
-    |     # Call this script with at least 10 parameters, for example          |
-    |     # ./scriptname 1 2 3 4 5 6 7 8 9 10                                  |
-    |     MINPARAMS=10                                                         |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     echo "The name of this script is \"$0\"."                            |
-    |     # Adds ./ for current directory                                      |
-    |     echo "The name of this script is \"`basename $0`\"."                 |
-    |     # Strips out path name info (see 'basename')                         |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     if [ -n "$1" ]              # Tested variable is quoted.             |
-    |     then                                                                 |
-    |      echo "Parameter #1 is $1"  # Need quotes to escape #                |
-    |     fi                                                                   |
-    |                                                                          |
-    |     if [ -n "$2" ]                                                       |
-    |     then                                                                 |
-    |      echo "Parameter #2 is $2"                                           |
-    |     fi                                                                   |
-    |                                                                          |
-    |     if [ -n "$3" ]                                                       |
-    |     then                                                                 |
-    |      echo "Parameter #3 is $3"                                           |
-    |     fi                                                                   |
-    |                                                                          |
-    |     # ...                                                                |
-    |                                                                          |
-    |                                                                          |
-    |     if [ -n "${10}" ]  # Parameters > $9 must be enclosed in {brackets}. |
-    |     then                                                                 |
-    |      echo "Parameter #10 is ${10}"                                       |
-    |     fi                                                                   |
-    |                                                                          |
-    |     echo "-----------------------------------"                           |
-    |     echo "All the command-line parameters are: "$*""                     |
-    |                                                                          |
-    |     if [ $# -lt "$MINPARAMS" ]                                           |
-    |     then                                                                 |
-    |       echo                                                               |
-    |       echo "This script needs at least $MINPARAMS command-line arguments |
-    | !"                                                                       |
-    |     fi                                                                   |
-    |                                                                          |
-    |     echo                                                                 |
-    |                                                                          |
-    |     exit 0                                                               |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |                          |
+    |     # Call this script w |
+    | ith at least 10 paramete |
+    | rs, for example          |
+    |     # ./scriptname 1 2 3 |
+    |  4 5 6 7 8 9 10          |
+    |     MINPARAMS=10         |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     echo "The name of th |
+    | is script is \"$0\"."    |
+    |     # Adds ./ for curren |
+    | t directory              |
+    |     echo "The name of th |
+    | is script is \"`basename |
+    |  $0`\"."                 |
+    |     # Strips out path na |
+    | me info (see 'basename') |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     if [ -n "$1" ]       |
+    |         # Tested variabl |
+    | e is quoted.             |
+    |     then                 |
+    |      echo "Parameter #1  |
+    | is $1"  # Need quotes to |
+    |  escape #                |
+    |     fi                   |
+    |                          |
+    |     if [ -n "$2" ]       |
+    |     then                 |
+    |      echo "Parameter #2  |
+    | is $2"                   |
+    |     fi                   |
+    |                          |
+    |     if [ -n "$3" ]       |
+    |     then                 |
+    |      echo "Parameter #3  |
+    | is $3"                   |
+    |     fi                   |
+    |                          |
+    |     # ...                |
+    |                          |
+    |                          |
+    |     if [ -n "${10}" ]  # |
+    |  Parameters > $9 must be |
+    |  enclosed in {brackets}. |
+    |     then                 |
+    |      echo "Parameter #10 |
+    |  is ${10}"               |
+    |     fi                   |
+    |                          |
+    |     echo "-------------- |
+    | ---------------------"   |
+    |     echo "All the comman |
+    | d-line parameters are: " |
+    | $*""                     |
+    |                          |
+    |     if [ $# -lt "$MINPAR |
+    | AMS" ]                   |
+    |     then                 |
+    |       echo               |
+    |       echo "This script  |
+    | needs at least $MINPARAM |
+    | S command-line arguments |
+    | !"                       |
+    |     fi                   |
+    |                          |
+    |     echo                 |
+    |                          |
+    |     exit 0               |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     *Bracket notation* for positional parameters leads to a fairly
     simple way of referencing the *last* argument passed to a script on
     the command-line. This also requires `indirect
     referencing <bashver2.html#VARREFNEW>`__.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     args=$#           # Number of args passed.                           |
-    |     lastarg=${!args}                                                     |
-    |     # Note: This is an *indirect reference* to $args ...                 |
-    |                                                                          |
-    |                                                                          |
-    |     # Or:       lastarg=${!#}             (Thanks, Chris Monson.)        |
-    |     # This is an *indirect reference* to the $# variable.                |
-    |     # Note that lastarg=${!$#} doesn't work.                             |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     args=$#           #  |
+    | Number of args passed.   |
+    |     lastarg=${!args}     |
+    |     # Note: This is an * |
+    | indirect reference* to $ |
+    | args ...                 |
+    |                          |
+    |                          |
+    |     # Or:       lastarg= |
+    | ${!#}             (Thank |
+    | s, Chris Monson.)        |
+    |     # This is an *indire |
+    | ct reference* to the $#  |
+    | variable.                |
+    |     # Note that lastarg= |
+    | ${!$#} doesn't work.     |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Some scripts can perform different operations, depending on which
     name they are invoked with. For this to work, the script needs to
@@ -292,6 +422,10 @@ Chapter 4. Introduction to Variables and Parameters
     `[3] <othertypesv.html#FTN.AEN2501>`__ There must also exist
     symbolic links to all the alternate names of the script. See
     `Example 16-2 <basic.html#HELLOL>`__.
+
+    .. raw:: html
+
+       <div class="TIP">
 
     +--------------------------------------+--------------------------------------+
     | |Tip|                                |
@@ -306,81 +440,142 @@ Chapter 4. Introduction to Variables and Parameters
     | expected positional parameter.       |
     +--------------------------------------+--------------------------------------+
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     variable1_=$1_  # Rather than variable1=$1                           |
-    |     # This will prevent an error, even if positional parameter is absent |
-    | .                                                                        |
-    |                                                                          |
-    |     critical_argument01=$variable1_                                      |
-    |                                                                          |
-    |     # The extra character can be stripped off later, like so.            |
-    |     variable1=${variable1_/_/}                                           |
-    |     # Side effects only if $variable1_ begins with an underscore.        |
-    |     # This uses one of the parameter substitution templates discussed la |
-    | ter.                                                                     |
-    |     # (Leaving out the replacement pattern results in a deletion.)       |
-    |                                                                          |
-    |     #  A more straightforward way of dealing with this is                |
-    |     #+ to simply test whether expected positional parameters have been p |
-    | assed.                                                                   |
-    |     if [ -z $1 ]                                                         |
-    |     then                                                                 |
-    |       exit $E_MISSING_POS_PARAM                                          |
-    |     fi                                                                   |
-    |                                                                          |
-    |                                                                          |
-    |     #  However, as Fabian Kreutz points out,                             |
-    |     #+ the above method may have unexpected side-effects.                |
-    |     #  A better method is parameter substitution:                        |
-    |     #         ${1:-$DefaultVal}                                          |
-    |     #  See the "Parameter Substition" section                            |
-    |     #+ in the "Variables Revisited" chapter.                             |
-                                                                              
-    +--------------------------------------------------------------------------+
+    .. raw:: html
+
+       </div>
+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     variable1_=$1_  # Ra |
+    | ther than variable1=$1   |
+    |     # This will prevent  |
+    | an error, even if positi |
+    | onal parameter is absent |
+    | .                        |
+    |                          |
+    |     critical_argument01= |
+    | $variable1_              |
+    |                          |
+    |     # The extra characte |
+    | r can be stripped off la |
+    | ter, like so.            |
+    |     variable1=${variable |
+    | 1_/_/}                   |
+    |     # Side effects only  |
+    | if $variable1_ begins wi |
+    | th an underscore.        |
+    |     # This uses one of t |
+    | he parameter substitutio |
+    | n templates discussed la |
+    | ter.                     |
+    |     # (Leaving out the r |
+    | eplacement pattern resul |
+    | ts in a deletion.)       |
+    |                          |
+    |     #  A more straightfo |
+    | rward way of dealing wit |
+    | h this is                |
+    |     #+ to simply test wh |
+    | ether expected positiona |
+    | l parameters have been p |
+    | assed.                   |
+    |     if [ -z $1 ]         |
+    |     then                 |
+    |       exit $E_MISSING_PO |
+    | S_PARAM                  |
+    |     fi                   |
+    |                          |
+    |                          |
+    |     #  However, as Fabia |
+    | n Kreutz points out,     |
+    |     #+ the above method  |
+    | may have unexpected side |
+    | -effects.                |
+    |     #  A better method i |
+    | s parameter substitution |
+    | :                        |
+    |     #         ${1:-$Defa |
+    | ultVal}                  |
+    |     #  See the "Paramete |
+    | r Substition" section    |
+    |     #+ in the "Variables |
+    |  Revisited" chapter.     |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
     ---
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 4-6. *wh*, *whois* domain name lookup**
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # ex18.sh                                                            |
-    |                                                                          |
-    |     # Does a 'whois domain-name' lookup on any of 3 alternate servers:   |
-    |     #                    ripe.net, cw.net, radb.net                      |
-    |                                                                          |
-    |     # Place this script -- renamed 'wh' -- in /usr/local/bin             |
-    |                                                                          |
-    |     # Requires symbolic links:                                           |
-    |     # ln -s /usr/local/bin/wh /usr/local/bin/wh-ripe                     |
-    |     # ln -s /usr/local/bin/wh /usr/local/bin/wh-apnic                    |
-    |     # ln -s /usr/local/bin/wh /usr/local/bin/wh-tucows                   |
-    |                                                                          |
-    |     E_NOARGS=75                                                          |
-    |                                                                          |
-    |                                                                          |
-    |     if [ -z "$1" ]                                                       |
-    |     then                                                                 |
-    |       echo "Usage: `basename $0` [domain-name]"                          |
-    |       exit $E_NOARGS                                                     |
-    |     fi                                                                   |
-    |                                                                          |
-    |     # Check script name and call proper server.                          |
-    |     case `basename $0` in    # Or:    case ${0##*/} in                   |
-    |         "wh"       ) whois $1@whois.tucows.com;;                         |
-    |         "wh-ripe"  ) whois $1@whois.ripe.net;;                           |
-    |         "wh-apnic" ) whois $1@whois.apnic.net;;                          |
-    |         "wh-cw"    ) whois $1@whois.cw.net;;                             |
-    |         *          ) echo "Usage: `basename $0` [domain-name]";;         |
-    |     esac                                                                 |
-    |                                                                          |
-    |     exit $?                                                              |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # ex18.sh            |
+    |                          |
+    |     # Does a 'whois doma |
+    | in-name' lookup on any o |
+    | f 3 alternate servers:   |
+    |     #                    |
+    |  ripe.net, cw.net, radb. |
+    | net                      |
+    |                          |
+    |     # Place this script  |
+    | -- renamed 'wh' -- in /u |
+    | sr/local/bin             |
+    |                          |
+    |     # Requires symbolic  |
+    | links:                   |
+    |     # ln -s /usr/local/b |
+    | in/wh /usr/local/bin/wh- |
+    | ripe                     |
+    |     # ln -s /usr/local/b |
+    | in/wh /usr/local/bin/wh- |
+    | apnic                    |
+    |     # ln -s /usr/local/b |
+    | in/wh /usr/local/bin/wh- |
+    | tucows                   |
+    |                          |
+    |     E_NOARGS=75          |
+    |                          |
+    |                          |
+    |     if [ -z "$1" ]       |
+    |     then                 |
+    |       echo "Usage: `base |
+    | name $0` [domain-name]"  |
+    |       exit $E_NOARGS     |
+    |     fi                   |
+    |                          |
+    |     # Check script name  |
+    | and call proper server.  |
+    |     case `basename $0` i |
+    | n    # Or:    case ${0## |
+    | */} in                   |
+    |         "wh"       ) who |
+    | is $1@whois.tucows.com;; |
+    |         "wh-ripe"  ) who |
+    | is $1@whois.ripe.net;;   |
+    |         "wh-apnic" ) who |
+    | is $1@whois.apnic.net;;  |
+    |         "wh-cw"    ) who |
+    | is $1@whois.cw.net;;     |
+    |         *          ) ech |
+    | o "Usage: `basename $0`  |
+    | [domain-name]";;         |
+    |     esac                 |
+    |                          |
+    |     exit $?              |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     ---
 
@@ -395,82 +590,140 @@ Chapter 4. Introduction to Variables and Parameters
     `{bracket} notation <othertypesv.html#BRACKETNOTATION>`__ also
     permits this.
 
+    .. raw:: html
+
+       <div class="EXAMPLE">
+
     **Example 4-7. Using *shift***
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # shft.sh: Using 'shift' to step through all the positional paramete |
-    | rs.                                                                      |
-    |                                                                          |
-    |     #  Name this script something like shft.sh,                          |
-    |     #+ and invoke it with some parameters.                               |
-    |     #+ For example:                                                      |
-    |     #             sh shft.sh a b c def 83 barndoor                       |
-    |                                                                          |
-    |     until [ -z "$1" ]  # Until all parameters used up . . .              |
-    |     do                                                                   |
-    |       echo -n "$1 "                                                      |
-    |       shift                                                              |
-    |     done                                                                 |
-    |                                                                          |
-    |     echo               # Extra linefeed.                                 |
-    |                                                                          |
-    |     # But, what happens to the "used-up" parameters?                     |
-    |     echo "$2"                                                            |
-    |     #  Nothing echoes!                                                   |
-    |     #  When $2 shifts into $1 (and there is no $3 to shift into $2)      |
-    |     #+ then $2 remains empty.                                            |
-    |     #  So, it is not a parameter *copy*, but a *move*.                   |
-    |                                                                          |
-    |     exit                                                                 |
-    |                                                                          |
-    |     #  See also the echo-params.sh script for a "shiftless"              |
-    |     #+ alternative method of stepping through the positional params.     |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # shft.sh: Using 'sh |
+    | ift' to step through all |
+    |  the positional paramete |
+    | rs.                      |
+    |                          |
+    |     #  Name this script  |
+    | something like shft.sh,  |
+    |     #+ and invoke it wit |
+    | h some parameters.       |
+    |     #+ For example:      |
+    |     #             sh shf |
+    | t.sh a b c def 83 barndo |
+    | or                       |
+    |                          |
+    |     until [ -z "$1" ]  # |
+    |  Until all parameters us |
+    | ed up . . .              |
+    |     do                   |
+    |       echo -n "$1 "      |
+    |       shift              |
+    |     done                 |
+    |                          |
+    |     echo               # |
+    |  Extra linefeed.         |
+    |                          |
+    |     # But, what happens  |
+    | to the "used-up" paramet |
+    | ers?                     |
+    |     echo "$2"            |
+    |     #  Nothing echoes!   |
+    |     #  When $2 shifts in |
+    | to $1 (and there is no $ |
+    | 3 to shift into $2)      |
+    |     #+ then $2 remains e |
+    | mpty.                    |
+    |     #  So, it is not a p |
+    | arameter *copy*, but a * |
+    | move*.                   |
+    |                          |
+    |     exit                 |
+    |                          |
+    |     #  See also the echo |
+    | -params.sh script for a  |
+    | "shiftless"              |
+    |     #+ alternative metho |
+    | d of stepping through th |
+    | e positional params.     |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </div>
 
     The **shift** command can take a numerical parameter indicating how
     many positions to shift.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: PROGRAMLISTING                                                 |
-    |                                                                          |
-    |     #!/bin/bash                                                          |
-    |     # shift-past.sh                                                      |
-    |                                                                          |
-    |     shift 3    # Shift 3 positions.                                      |
-    |     #  n=3; shift $n                                                     |
-    |     #  Has the same effect.                                              |
-    |                                                                          |
-    |     echo "$1"                                                            |
-    |                                                                          |
-    |     exit 0                                                               |
-    |                                                                          |
-    |     # ======================== #                                         |
-    |                                                                          |
-    |                                                                          |
-    |     $ sh shift-past.sh 1 2 3 4 5                                         |
-    |     4                                                                    |
-    |                                                                          |
-    |     #  However, as Eleni Fragkiadaki, points out,                        |
-    |     #+ attempting a 'shift' past the number of                           |
-    |     #+ positional parameters ($#) returns an exit status of 1,           |
-    |     #+ and the positional parameters themselves do not change.           |
-    |     #  This means possibly getting stuck in an endless loop. . . .       |
-    |     #  For example:                                                      |
-    |     #      until [ -z "$1" ]                                             |
-    |     #      do                                                            |
-    |     #         echo -n "$1 "                                              |
-    |     #         shift 20    #  If less than 20 pos params,                 |
-    |     #      done           #+ then loop never ends!                       |
-    |     #                                                                    |
-    |     # When in doubt, add a sanity check. . . .                           |
-    |     #           shift 20 || break                                        |
-    |     #                    ^^^^^^^^                                        |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: PROGRAMLISTING |
+    |                          |
+    |     #!/bin/bash          |
+    |     # shift-past.sh      |
+    |                          |
+    |     shift 3    # Shift 3 |
+    |  positions.              |
+    |     #  n=3; shift $n     |
+    |     #  Has the same effe |
+    | ct.                      |
+    |                          |
+    |     echo "$1"            |
+    |                          |
+    |     exit 0               |
+    |                          |
+    |     # ================== |
+    | ====== #                 |
+    |                          |
+    |                          |
+    |     $ sh shift-past.sh 1 |
+    |  2 3 4 5                 |
+    |     4                    |
+    |                          |
+    |     #  However, as Eleni |
+    |  Fragkiadaki, points out |
+    | ,                        |
+    |     #+ attempting a 'shi |
+    | ft' past the number of   |
+    |     #+ positional parame |
+    | ters ($#) returns an exi |
+    | t status of 1,           |
+    |     #+ and the positiona |
+    | l parameters themselves  |
+    | do not change.           |
+    |     #  This means possib |
+    | ly getting stuck in an e |
+    | ndless loop. . . .       |
+    |     #  For example:      |
+    |     #      until [ -z "$ |
+    | 1" ]                     |
+    |     #      do            |
+    |     #         echo -n "$ |
+    | 1 "                      |
+    |     #         shift 20   |
+    |   #  If less than 20 pos |
+    |  params,                 |
+    |     #      done          |
+    |   #+ then loop never end |
+    | s!                       |
+    |     #                    |
+    |     # When in doubt, add |
+    |  a sanity check. . . .   |
+    |     #           shift 20 |
+    |  || break                |
+    |     #                    |
+    |  ^^^^^^^^                |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
+
+    .. raw:: html
+
+       <div class="NOTE">
 
     +--------------------------------------+--------------------------------------+
     | |Note|                               |
@@ -484,15 +737,71 @@ Chapter 4. Introduction to Variables and Parameters
     | ION>`__.                             |
     +--------------------------------------+--------------------------------------+
 
+    .. raw:: html
+
+       </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
+.. raw:: html
+
+   <table border="0" class="FOOTNOTES" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[1] <othertypesv.html#AEN2450>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 Note that `*functions* also take positional
 parameters <complexfunct.html#PASSEDARGS>`__.
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[2] <othertypesv.html#AEN2464>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 The process calling the script sets the ``$0`` parameter. By convention,
 this parameter is the name of the script. See the
@@ -500,22 +809,66 @@ this parameter is the name of the script. See the
 
 From the *command-line*, however, ``$0`` is the name of the shell.
 
-+--------------------------------------------------------------------------+
-| .. code:: SCREEN                                                         |
-|                                                                          |
-|     bash$ echo $0                                                        |
-|     bash                                                                 |
-|                                                                          |
-|     tcsh% echo $0                                                        |
-|     tcsh                                                                 |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ echo $0        |
+|     bash                 |
+|                          |
+|     tcsh% echo $0        |
+|     tcsh                 |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
 
 `[3] <othertypesv.html#AEN2501>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 If the the script is `sourced <internal.html#SOURCEREF>`__ or
 `symlinked <basic.html#SYMLINKREF>`__, then this will not work. It is
 safer to check `$BASH\_Source <debugging.html#BASHSOURCEREF>`__.
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -525,6 +878,10 @@ safer to check `$BASH\_Source <debugging.html#BASHSOURCEREF>`__.
 | `Next <quoting.html>`__  | `Up <variables.html>`__  |
 |                          | Quoting                  |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

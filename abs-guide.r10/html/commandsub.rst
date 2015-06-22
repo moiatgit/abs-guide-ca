@@ -1,15 +1,83 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <testbranch.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
+
 `Next <arithexp.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="CHAPTER">
 
 Chapter 12. Command Substitution
 ================================
 
-**Command substitution** reassigns the output of a command
+\ **Command substitution** reassigns the output of a command
 `[1] <commandsub.html#FTN.AEN7205>`__ or even multiple commands; it
 literally plugs the command output into another context.
 `[2] <commandsub.html#FTN.AEN7211>`__
@@ -17,50 +85,96 @@ literally plugs the command output into another context.
 The classic form of command substitution uses *backquotes* (\`...\`).
 Commands within backquotes (backticks) generate command-line text.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     script_name=`basename $0`                                            |
-|     echo "The name of this script is $script_name."                      |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     script_name=`basenam |
+| e $0`                    |
+|     echo "The name of th |
+| is script is $script_nam |
+| e."                      |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div class="FORMALPARA">
 
 **The output of commands can be used as arguments to another command, to
 set a variable, and even for generating the argument list in a
 `for <loops1.html#FORLOOPREF1>`__ loop.**
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     rm `cat filename`   # "filename" contains a list of files to delete. |
-|     #                                                                    |
-|     # S. C. points out that "arg list too long" error might result.      |
-|     # Better is              xargs rm -- < filename                      |
-|     # ( -- covers those cases where "filename" begins with a "-" )       |
-|                                                                          |
-|     textfile_listing=`ls *.txt`                                          |
-|     # Variable contains names of all *.txt files in current working dire |
-| ctory.                                                                   |
-|     echo $textfile_listing                                               |
-|                                                                          |
-|     textfile_listing2=$(ls *.txt)   # The alternative form of command su |
-| bstitution.                                                              |
-|     echo $textfile_listing2                                              |
-|     # Same result.                                                       |
-|                                                                          |
-|     # A possible problem with putting a list of files into a single stri |
-| ng                                                                       |
-|     # is that a newline may creep in.                                    |
-|     #                                                                    |
-|     # A safer way to assign a list of files to a parameter is with an ar |
-| ray.                                                                     |
-|     #      shopt -s nullglob    # If no match, filename expands to nothi |
-| ng.                                                                      |
-|     #      textfile_listing=( *.txt )                                    |
-|     #                                                                    |
-|     # Thanks, S.C.                                                       |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
+
+   </div>
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     rm `cat filename`    |
+| # "filename" contains a  |
+| list of files to delete. |
+|     #                    |
+|     # S. C. points out t |
+| hat "arg list too long"  |
+| error might result.      |
+|     # Better is          |
+|      xargs rm -- < filen |
+| ame                      |
+|     # ( -- covers those  |
+| cases where "filename" b |
+| egins with a "-" )       |
+|                          |
+|     textfile_listing=`ls |
+|  *.txt`                  |
+|     # Variable contains  |
+| names of all *.txt files |
+|  in current working dire |
+| ctory.                   |
+|     echo $textfile_listi |
+| ng                       |
+|                          |
+|     textfile_listing2=$( |
+| ls *.txt)   # The altern |
+| ative form of command su |
+| bstitution.              |
+|     echo $textfile_listi |
+| ng2                      |
+|     # Same result.       |
+|                          |
+|     # A possible problem |
+|  with putting a list of  |
+| files into a single stri |
+| ng                       |
+|     # is that a newline  |
+| may creep in.            |
+|     #                    |
+|     # A safer way to ass |
+| ign a list of files to a |
+|  parameter is with an ar |
+| ray.                     |
+|     #      shopt -s null |
+| glob    # If no match, f |
+| ilename expands to nothi |
+| ng.                      |
+|     #      textfile_list |
+| ing=( *.txt )            |
+|     #                    |
+|     # Thanks, S.C.       |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div class="NOTE">
 
 +--------------------------------------+--------------------------------------+
 | |Note|                               |
@@ -69,2617 +183,2051 @@ set a variable, and even for generating the argument list in a
 | EF>`__.                              |
 +--------------------------------------+--------------------------------------+
 
-+--------------+--------------+--------------+--------------+--------------+--------------+
-| |Caution|    |
-| Command      |
-| substitution |
-| may result   |
-| in `word     |
-| splitting <q |
-| uotingvar.ht |
-| ml#WSPLITREF |
-| >`__.        |
-|              |
-| +----------- |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ---+         |
-| | .. code::  |
-| PROGRAMLISTI |
-| NG           |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     COMMAN |
-| D `echo a b` |
-|      # 2 arg |
-| s: a and b   |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     COMMAN |
-| D "`echo a b |
-| `"   # 1 arg |
-| : "a b"      |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     COMMAN |
-| D `echo`     |
-|      # no ar |
-| g            |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     COMMAN |
-| D "`echo`"   |
-|      # one e |
-| mpty arg     |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     # Than |
-| ks, S.C.     |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-|              |
-|              |
-|              |
-|              |
-|              |
-|              |
-|              |
-| +----------- |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ---+         |
-|              |
-| Even when    |
-| there is no  |
-| word         |
-| splitting,   |
-| command      |
-| substitution |
-| can remove   |
-| trailing     |
-| newlines.    |
-|              |
-| +----------- |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ---+         |
-| | .. code::  |
-| PROGRAMLISTI |
-| NG           |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     # cd " |
-| `pwd`"  # Th |
-| is should al |
-| ways work.   |
-|              |
-|              |
-|    |         |
-| |     # Howe |
-| ver...       |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     mkdir  |
-| 'dir with tr |
-| ailing newli |
-| ne           |
-|              |
-|              |
-|    |         |
-| |     '      |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     cd 'di |
-| r with trail |
-| ing newline  |
-|              |
-|              |
-|              |
-|    |         |
-| |     '      |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     cd "`p |
-| wd`"  # Erro |
-| r message:   |
-|              |
-|              |
-|              |
-|    |         |
-| |     # bash |
-| : cd: /tmp/f |
-| ile with tra |
-| iling newlin |
-| e: No such f |
-| ile or direc |
-| to |         |
-| | ry         |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     cd "$P |
-| WD"   # Work |
-| s fine.      |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     old_tt |
-| y_setting=$( |
-| stty -g)   # |
-|  Save old te |
-| rminal setti |
-| ng.          |
-|    |         |
-| |     echo " |
-| Hit a key "  |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     stty - |
-| icanon -echo |
-|            # |
-|  Disable "ca |
-| nonical" mod |
-| e for termin |
-| al |         |
-| | .          |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |            |
-|              |
-|            # |
-|  Also, disab |
-| le *local* e |
-| cho.         |
-|    |         |
-| |     key=$( |
-| dd bs=1 coun |
-| t=1 2> /dev/ |
-| null)   # Us |
-| ing 'dd' to  |
-| get a keypre |
-| ss |         |
-| | .          |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     stty " |
-| $old_tty_set |
-| ting"      # |
-|  Restore old |
-|  setting.    |
-|              |
-|    |         |
-| |     echo " |
-| You hit ${#k |
-| ey} key."  # |
-|  ${#variable |
-| } = number o |
-| f characters |
-|  i |         |
-| | n $variabl |
-| e            |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     #      |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     # Hit  |
-| any key exce |
-| pt RETURN, a |
-| nd the outpu |
-| t is "You hi |
-| t 1 key."    |
-|    |         |
-| |     # Hit  |
-| RETURN, and  |
-| it's "You hi |
-| t 0 key."    |
-|              |
-|              |
-|    |         |
-| |     # The  |
-| newline gets |
-|  eaten in th |
-| e command su |
-| bstitution.  |
-|              |
-|    |         |
-| |            |
-|              |
-|              |
-|              |
-|              |
-|              |
-|    |         |
-| |     #Code  |
-| snippet by S |
-| téphane Chaz |
-| elas.        |
-|              |
-|              |
-|    |         |
-|              |
-|              |
-|              |
-|              |
-|              |
-|              |
-|              |
-| +----------- |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ------------ |
-| ---+         |
-              
-+--------------+--------------+--------------+--------------+--------------+--------------+
+.. raw:: html
 
-+--------------------------+--------------------------+--------------------------+
-| |Caution|                |
-| Using **echo** to output |
-| an *unquoted* variable   |
-| set with command         |
-| substitution removes     |
-| trailing newlines        |
-| characters from the      |
-| output of the reassigned |
-| command(s). This can     |
-| cause unpleasant         |
-| surprises.               |
-|                          |
-| +----------------------- |
-| ------------------------ |
-| ------------------------ |
-| ---+                     |
-| | .. code:: PROGRAMLISTI |
-| NG                       |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     dir_listing=`ls -l |
-| `                        |
-|                          |
-|    |                     |
-| |     echo $dir_listing  |
-|     # unquoted           |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     # Expecting a nice |
-| ly ordered directory lis |
-| ting.                    |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     # However, what yo |
-| u get is:                |
-|                          |
-|    |                     |
-| |     # total 3 -rw-rw-r |
-| -- 1 bozo bozo 30 May 13 |
-|  17:15 1.txt -rw-rw-r--  |
-| 1  |                     |
-| | bozo                   |
-|                          |
-|                          |
-|    |                     |
-| |     # bozo 51 May 15 2 |
-| 0:57 t2.sh -rwxr-xr-x 1  |
-| bozo bozo 217 Mar 5 21:1 |
-| 3  |                     |
-| | wi.sh                  |
-|                          |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     # The newlines dis |
-| appeared.                |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |                        |
-|                          |
-|                          |
-|    |                     |
-| |     echo "$dir_listing |
-| "   # quoted             |
-|                          |
-|    |                     |
-| |     # -rw-rw-r--    1  |
-| bozo       30 May 13 17: |
-| 15 1.txt                 |
-|    |                     |
-| |     # -rw-rw-r--    1  |
-| bozo       51 May 15 20: |
-| 57 t2.sh                 |
-|    |                     |
-| |     # -rwxr-xr-x    1  |
-| bozo      217 Mar  5 21: |
-| 13 wi.sh                 |
-|    |                     |
-|                          |
-|                          |
-|                          |
-|                          |
-| +----------------------- |
-| ------------------------ |
-| ------------------------ |
-| ---+                     |
-                          
-+--------------------------+--------------------------+--------------------------+
+   </div>
+
+.. raw:: html
+
+   <div class="CAUTION">
+
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+| |Caution| |
+| Command   |
+| substitut |
+| ion       |
+| may       |
+| result in |
+| `word     |
+| splitting |
+|  <quoting |
+| var.html# |
+| WSPLITREF |
+| >`__.     |
+|           |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +         |
+| | .. code |
+| :: PROGRA |
+| MLISTING  |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     COM |
+| MAND `ech |
+| o a b`    |
+| |         |
+| |    # 2  |
+| args: a a |
+| nd b      |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     COM |
+| MAND "`ec |
+| ho a b`"  |
+| |         |
+| |    # 1  |
+| arg: "a b |
+| "         |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     COM |
+| MAND `ech |
+| o`        |
+| |         |
+| |    # no |
+|  arg      |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     COM |
+| MAND "`ec |
+| ho`"      |
+| |         |
+| |    # on |
+| e empty a |
+| rg        |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     # T |
+| hanks, S. |
+| C.        |
+| |         |
+|           |
+|           |
+|           |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +         |
+|           |
+| .. raw::  |
+| html      |
+|           |
+|    </p>   |
+|           |
+| Even when |
+| there is  |
+| no word   |
+| splitting |
+| ,         |
+| command   |
+| substitut |
+| ion       |
+| can       |
+| remove    |
+| trailing  |
+| newlines. |
+|           |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +         |
+| | .. code |
+| :: PROGRA |
+| MLISTING  |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     # c |
+| d "`pwd`" |
+|   # This  |
+| |         |
+| |  should |
+|  always w |
+| ork.      |
+| |         |
+| |     # H |
+| owever... |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     mkd |
+| ir 'dir w |
+| ith trai  |
+| |         |
+| | ling ne |
+| wline     |
+|           |
+| |         |
+| |     '   |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     cd  |
+| 'dir with |
+|  trailin  |
+| |         |
+| | g newli |
+| ne        |
+|           |
+| |         |
+| |     '   |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     cd  |
+| "`pwd`"   |
+| # Error   |
+| |         |
+| | message |
+| :         |
+|           |
+| |         |
+| |     # b |
+| ash: cd:  |
+| /tmp/fil  |
+| |         |
+| | e with  |
+| trailing  |
+| newline:  |
+| |         |
+| |  No suc |
+| h file or |
+|  directo  |
+| |         |
+| | ry      |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     cd  |
+| "$PWD"    |
+| # Works   |
+| |         |
+| | fine.   |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     old |
+| _tty_sett |
+| ing=$(st  |
+| |         |
+| | ty -g)  |
+|   # Save  |
+| old term  |
+| |         |
+| | inal se |
+| tting.    |
+|           |
+| |         |
+| |     ech |
+| o "Hit a  |
+| key "     |
+| |         |
+| |     stt |
+| y -icanon |
+|  -echo    |
+| |         |
+| |         |
+|   # Disab |
+| le "cano  |
+| |         |
+| | nical"  |
+| mode for  |
+| terminal  |
+| |         |
+| | .       |
+|           |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |         |
+|   # Also, |
+|  disable  |
+| |         |
+| |  *local |
+| * echo.   |
+|           |
+| |         |
+| |     key |
+| =$(dd bs= |
+| 1 count=  |
+| |         |
+| | 1 2> /d |
+| ev/null)  |
+|   # Usin  |
+| |         |
+| | g 'dd'  |
+| to get a  |
+| keypress  |
+| |         |
+| | .       |
+|           |
+|           |
+| |         |
+| |     stt |
+| y "$old_t |
+| ty_setti  |
+| |         |
+| | ng"     |
+|   # Resto |
+| re old s  |
+| |         |
+| | etting. |
+|           |
+|           |
+| |         |
+| |     ech |
+| o "You hi |
+| t ${#key  |
+| |         |
+| | } key." |
+|   # ${#va |
+| riable}   |
+| |         |
+| | = numbe |
+| r of char |
+| acters i  |
+| |         |
+| | n $vari |
+| able      |
+|           |
+| |         |
+| |     #   |
+|           |
+|           |
+| |         |
+| |     # H |
+| it any ke |
+| y except  |
+| |         |
+| |  RETURN |
+| , and the |
+|  output   |
+| |         |
+| | is "You |
+|  hit 1 ke |
+| y."       |
+| |         |
+| |     # H |
+| it RETURN |
+| , and it  |
+| |         |
+| | 's "You |
+|  hit 0 ke |
+| y."       |
+| |         |
+| |     # T |
+| he newlin |
+| e gets e  |
+| |         |
+| | aten in |
+|  the comm |
+| and subs  |
+| |         |
+| | titutio |
+| n.        |
+|           |
+| |         |
+| |         |
+|           |
+|           |
+| |         |
+| |     #Co |
+| de snippe |
+| t by Sté  |
+| |         |
+| | phane C |
+| hazelas.  |
+|           |
+| |         |
+|           |
+|           |
+|           |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +-------- |
+| --------- |
+| --------- |
+| +         |
+|           |
+| .. raw::  |
+| html      |
+|           |
+|    </p>   |
+           
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="CAUTION">
+
++--------------------+--------------------+--------------------+--------------------+
+| |Caution|          |
+| Using **echo** to  |
+| output an          |
+| *unquoted*         |
+| variable set with  |
+| command            |
+| substitution       |
+| removes trailing   |
+| newlines           |
+| characters from    |
+| the output of the  |
+| reassigned         |
+| command(s). This   |
+| can cause          |
+| unpleasant         |
+| surprises.         |
+|                    |
+| +----------------- |
+| ---------+-------- |
+| ------------------ |
+| +----------------- |
+| ---------+         |
+| | .. code:: PROGRA |
+| MLISTING |         |
+| |                  |
+|          |         |
+| |     dir_listing= |
+| `ls -l`  |         |
+| |     echo $dir_li |
+| sting    |         |
+| |   # unquoted     |
+|          |         |
+| |                  |
+|          |         |
+| |     # Expecting  |
+| a nicely |         |
+| |  ordered directo |
+| ry listi |         |
+| | ng.              |
+|          |         |
+| |                  |
+|          |         |
+| |     # However, w |
+| hat you  |         |
+| | get is:          |
+|          |         |
+| |     # total 3 -r |
+| w-rw-r-- |         |
+| |  1 bozo bozo 30  |
+| May 13 1 |         |
+| | 7:15 1.txt -rw-r |
+| w-r-- 1  |         |
+| | bozo             |
+|          |         |
+| |     # bozo 51 Ma |
+| y 15 20: |         |
+| | 57 t2.sh -rwxr-x |
+| r-x 1 bo |         |
+| | zo bozo 217 Mar  |
+| 5 21:13  |         |
+| | wi.sh            |
+|          |         |
+| |                  |
+|          |         |
+| |     # The newlin |
+| es disap |         |
+| | peared.          |
+|          |         |
+| |                  |
+|          |         |
+| |                  |
+|          |         |
+| |     echo "$dir_l |
+| isting"  |         |
+| |   # quoted       |
+|          |         |
+| |     # -rw-rw-r-- |
+|     1 bo |         |
+| | zo       30 May  |
+| 13 17:15 |         |
+| |  1.txt           |
+|          |         |
+| |     # -rw-rw-r-- |
+|     1 bo |         |
+| | zo       51 May  |
+| 15 20:57 |         |
+| |  t2.sh           |
+|          |         |
+| |     # -rwxr-xr-x |
+|     1 bo |         |
+| | zo      217 Mar  |
+|  5 21:13 |         |
+| |  wi.sh           |
+|          |         |
+|                    |
+|                    |
+| +----------------- |
+| ---------+-------- |
+| ------------------ |
+| +----------------- |
+| ---------+         |
+|                    |
+| .. raw:: html      |
+|                    |
+|    </p>            |
+                    
++--------------------+--------------------+--------------------+--------------------+
+
+.. raw:: html
+
+   </div>
 
 Command substitution even permits setting a variable to the contents of
 a file, using either `redirection <io-redirection.html#IOREDIRREF>`__ or
 the `cat <basic.html#CATREF>`__ command.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     variable1=`<file1`      #  Set "variable1" to contents of "file1".   |
-|     variable2=`cat file2`   #  Set "variable2" to contents of "file2".   |
-|                             #  This, however, forks a new process,       |
-|                             #+ so the line of code executes slower than  |
-| the above version.                                                       |
-|                                                                          |
-|     #  Note that the variables may contain embedded whitespace,          |
-|     #+ or even (horrors), control characters.                            |
-|                                                                          |
-|     #  It is not necessary to explicitly assign a variable.              |
-|     echo "` <$0`"           # Echoes the script itself to stdout.        |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     variable1=`<file1`   |
+|     #  Set "variable1" t |
+| o contents of "file1".   |
+|     variable2=`cat file2 |
+| `   #  Set "variable2" t |
+| o contents of "file2".   |
+|                          |
+|     #  This, however, fo |
+| rks a new process,       |
+|                          |
+|     #+ so the line of co |
+| de executes slower than  |
+| the above version.       |
+|                          |
+|     #  Note that the var |
+| iables may contain embed |
+| ded whitespace,          |
+|     #+ or even (horrors) |
+| , control characters.    |
+|                          |
+|     #  It is not necessa |
+| ry to explicitly assign  |
+| a variable.              |
+|     echo "` <$0`"        |
+|     # Echoes the script  |
+| itself to stdout.        |
+                          
++--------------------------+--------------------------+--------------------------+
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     #  Excerpts from system file, /etc/rc.d/rc.sysinit                   |
-|     #+ (on a Red Hat Linux installation)                                 |
-|                                                                          |
-|                                                                          |
-|     if [ -f /fsckoptions ]; then                                         |
-|             fsckoptions=`cat /fsckoptions`                               |
-|     ...                                                                  |
-|     fi                                                                   |
-|     #                                                                    |
-|     #                                                                    |
-|     if [ -e "/proc/ide/${disk[$device]}/media" ] ; then                  |
-|                  hdmedia=`cat /proc/ide/${disk[$device]}/media`          |
-|     ...                                                                  |
-|     fi                                                                   |
-|     #                                                                    |
-|     #                                                                    |
-|     if [ ! -n "`uname -r | grep -- "-"`" ]; then                         |
-|            ktag="`cat /proc/version`"                                    |
-|     ...                                                                  |
-|     fi                                                                   |
-|     #                                                                    |
-|     #                                                                    |
-|     if [ $usb = "1" ]; then                                              |
-|         sleep 5                                                          |
-|         mouseoutput=`cat /proc/bus/usb/devices 2>/dev/null|grep -E "^I.* |
-| Cls=03.*Prot=02"`                                                        |
-|         kbdoutput=`cat /proc/bus/usb/devices 2>/dev/null|grep -E "^I.*Cl |
-| s=03.*Prot=01"`                                                          |
-|     ...                                                                  |
-|     fi                                                                   |
-                                                                          
-+--------------------------------------------------------------------------+
+.. raw:: html
 
-+----------------+----------------+----------------+----------------+----------------+
-| |Caution|      |
-| Do not set a   |
-| variable to    |
-| the contents   |
-| of a *long*    |
-| text file      |
-| unless you     |
-| have a very    |
-| good reason    |
-| for doing so.  |
-| Do not set a   |
-| variable to    |
-| the contents   |
-| of a *binary*  |
-| file, even as  |
-| a joke.        |
-|                |
-| **Example      |
-| 12-1. Stupid   |
-| script         |
-| tricks**       |
-|                |
-| +------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -----+         |
-| | .. code:: PR |
-| OGRAMLISTING   |
-|                |
-|                |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     #!/bin/b |
-| ash            |
-|                |
-|                |
-|                |
-|      |         |
-| |     # stupid |
-| -script-tricks |
-| .sh: Don't try |
-|  this at home, |
-|  folks.        |
-|      |         |
-| |     # From " |
-| Stupid Script  |
-| Tricks," Volum |
-| e I.           |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     exit 99  |
-|  ### Comment o |
-| ut this line i |
-| f you dare.    |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     dangerou |
-| s_variable=`ca |
-| t /boot/vmlinu |
-| z`   # The com |
-| pressed Linux  |
-| kern |         |
-| | el itself.   |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     echo "st |
-| ring-length of |
-|  \$dangerous_v |
-| ariable = ${#d |
-| angerous_varia |
-| ble} |         |
-| | "            |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     # string |
-| -length of $da |
-| ngerous_variab |
-| le = 794151    |
-|                |
-|      |         |
-| |     # (Newer |
-|  kernels are b |
-| igger.)        |
-|                |
-|                |
-|      |         |
-| |     # Does n |
-| ot give same c |
-| ount as 'wc -c |
-|  /boot/vmlinuz |
-| '.             |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     # echo " |
-| $dangerous_var |
-| iable"         |
-|                |
-|                |
-|      |         |
-| |     # Don't  |
-| try this! It w |
-| ould hang the  |
-| script.        |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     #  The d |
-| ocument author |
-|  is aware of n |
-| o useful appli |
-| cations for    |
-|      |         |
-| |     #+ setti |
-| ng a variable  |
-| to the content |
-| s of a binary  |
-| file.          |
-|      |         |
-| |              |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-| |     exit 0   |
-|                |
-|                |
-|                |
-|                |
-|      |         |
-|                |
-|                |
-|                |
-|                |
-|                |
-|                |
-| +------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -------------- |
-| -----+         |
-|                |
-| Notice that a  |
-| *buffer        |
-| overrun* does  |
-| not occur.     |
-| This is one    |
-| instance where |
-| an interpreted |
-| language, such |
-| as Bash,       |
-| provides more  |
-| protection     |
-| from           |
-| programmer     |
-| mistakes than  |
-| a compiled     |
-| language.      |
-+----------------+----------------+----------------+----------------+----------------+
+   </p>
+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #  Excerpts from sys |
+| tem file, /etc/rc.d/rc.s |
+| ysinit                   |
+|     #+ (on a Red Hat Lin |
+| ux installation)         |
+|                          |
+|                          |
+|     if [ -f /fsckoptions |
+|  ]; then                 |
+|             fsckoptions= |
+| `cat /fsckoptions`       |
+|     ...                  |
+|     fi                   |
+|     #                    |
+|     #                    |
+|     if [ -e "/proc/ide/$ |
+| {disk[$device]}/media" ] |
+|  ; then                  |
+|                  hdmedia |
+| =`cat /proc/ide/${disk[$ |
+| device]}/media`          |
+|     ...                  |
+|     fi                   |
+|     #                    |
+|     #                    |
+|     if [ ! -n "`uname -r |
+|  | grep -- "-"`" ]; then |
+|            ktag="`cat /p |
+| roc/version`"            |
+|     ...                  |
+|     fi                   |
+|     #                    |
+|     #                    |
+|     if [ $usb = "1" ]; t |
+| hen                      |
+|         sleep 5          |
+|         mouseoutput=`cat |
+|  /proc/bus/usb/devices 2 |
+| >/dev/null|grep -E "^I.* |
+| Cls=03.*Prot=02"`        |
+|         kbdoutput=`cat / |
+| proc/bus/usb/devices 2>/ |
+| dev/null|grep -E "^I.*Cl |
+| s=03.*Prot=01"`          |
+|     ...                  |
+|     fi                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div class="CAUTION">
+
++--------------------+--------------------+--------------------+--------------------+
+| |Caution|          |
+| Do not set a       |
+| variable to the    |
+| contents of a      |
+| *long* text file   |
+| unless you have a  |
+| very good reason   |
+| for doing so. Do   |
+| not set a variable |
+| to the contents of |
+| a *binary* file,   |
+| even as a joke.    |
+|                    |
+| .. raw:: html      |
+|                    |
+|    <div            |
+|    class="EXAMPLE" |
+| >                  |
+|                    |
+| **Example 12-1.    |
+| Stupid script      |
+| tricks**           |
+|                    |
+| +----------------- |
+| ---------+-------- |
+| ------------------ |
+| +----------------- |
+| ---------+         |
+| | .. code:: PROGRA |
+| MLISTING |         |
+| |                  |
+|          |         |
+| |     #!/bin/bash  |
+|          |         |
+| |     # stupid-scr |
+| ipt-tric |         |
+| | ks.sh: Don't try |
+|  this at |         |
+| |  home, folks.    |
+|          |         |
+| |     # From "Stup |
+| id Scrip |         |
+| | t Tricks," Volum |
+| e I.     |         |
+| |                  |
+|          |         |
+| |     exit 99  ### |
+|  Comment |         |
+| |  out this line i |
+| f you da |         |
+| | re.              |
+|          |         |
+| |                  |
+|          |         |
+| |     dangerous_va |
+| riable=` |         |
+| | cat /boot/vmlinu |
+| z`   # T |         |
+| | he compressed Li |
+| nux kern |         |
+| | el itself.       |
+|          |         |
+| |                  |
+|          |         |
+| |     echo "string |
+| -length  |         |
+| | of \$dangerous_v |
+| ariable  |         |
+| | = ${#dangerous_v |
+| ariable} |         |
+| | "                |
+|          |         |
+| |     # string-len |
+| gth of $ |         |
+| | dangerous_variab |
+| le = 794 |         |
+| | 151              |
+|          |         |
+| |     # (Newer ker |
+| nels are |         |
+| |  bigger.)        |
+|          |         |
+| |     # Does not g |
+| ive same |         |
+| |  count as 'wc -c |
+|  /boot/v |         |
+| | mlinuz'.         |
+|          |         |
+| |                  |
+|          |         |
+| |     # echo "$dan |
+| gerous_v |         |
+| | ariable"         |
+|          |         |
+| |     # Don't try  |
+| this! It |         |
+| |  would hang the  |
+| script.  |         |
+| |                  |
+|          |         |
+| |                  |
+|          |         |
+| |     #  The docum |
+| ent auth |         |
+| | or is aware of n |
+| o useful |         |
+| |  applications fo |
+| r        |         |
+| |     #+ setting a |
+|  variabl |         |
+| | e to the content |
+| s of a b |         |
+| | inary file.      |
+|          |         |
+| |                  |
+|          |         |
+| |     exit 0       |
+|          |         |
+|                    |
+|                    |
+| +----------------- |
+| ---------+-------- |
+| ------------------ |
+| +----------------- |
+| ---------+         |
+|                    |
+| .. raw:: html      |
+|                    |
+|    </div>          |
+|                    |
+| Notice that a      |
+| *buffer overrun*   |
+| does not occur.    |
+| This is one        |
+| instance where an  |
+| interpreted        |
+| language, such as  |
+| Bash, provides     |
+| more protection    |
+| from programmer    |
+| mistakes than a    |
+| compiled language. |
++--------------------+--------------------+--------------------+--------------------+
+
+.. raw:: html
+
+   </div>
 
 Command substitution permits setting a variable to the output of a
 `loop <loops1.html#FORLOOPREF1>`__. The key to this is grabbing the
 output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 
+.. raw:: html
+
+   <div class="EXAMPLE">
+
 **Example 12-2. Generating a variable from a loop**
 
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     #!/bin/bash          |
+|     # csubloop.sh: Setti |
+| ng a variable to the out |
+| put of a loop.           |
+|                          |
+|     variable1=`for i in  |
+| 1 2 3 4 5                |
+|     do                   |
+|       echo -n "$i"       |
+|            #  The 'echo' |
+|  command is critical     |
+|     done`                |
+|            #+ to command |
+|  substitution here.      |
+|                          |
+|     echo "variable1 = $v |
+| ariable1"  # variable1 = |
+|  12345                   |
+|                          |
+|                          |
+|     i=0                  |
+|     variable2=`while [ " |
+| $i" -lt 10 ]             |
+|     do                   |
+|       echo -n "$i"       |
+|            # Again, the  |
+| necessary 'echo'.        |
+|       let "i += 1"       |
+|            # Increment.  |
+|     done`                |
+|                          |
+|     echo "variable2 = $v |
+| ariable2"  # variable2 = |
+|  0123456789              |
+|                          |
+|     #  Demonstrates that |
+|  it's possible to embed  |
+| a loop                   |
+|     #+ inside a variable |
+|  declaration.            |
+|                          |
+|     exit 0               |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
+
 +--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
+| .. raw:: html                                                            |
 |                                                                          |
-|     #!/bin/bash                                                          |
-|     # csubloop.sh: Setting a variable to the output of a loop.           |
+|    <div class="SIDEBAR">                                                 |
 |                                                                          |
-|     variable1=`for i in 1 2 3 4 5                                        |
-|     do                                                                   |
-|       echo -n "$i"                 #  The 'echo' command is critical     |
-|     done`                          #+ to command substitution here.      |
+| Command substitution makes it possible to extend the toolset available   |
+| to Bash. It is simply a matter of writing a program or script that       |
+| outputs to ``stdout`` (like a well-behaved UNIX tool should) and         |
+| assigning that output to a variable.                                     |
 |                                                                          |
-|     echo "variable1 = $variable1"  # variable1 = 12345                   |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
+| | .. code:: PROGRAMLISTING |                                             |
+| |                          |                                             |
+| |     #include <stdio.h>   |                                             |
+| |                          |                                             |
+| |     /*  "Hello, world."  |                                             |
+| | C program  */            |                                             |
+| |                          |                                             |
+| |     int main()           |                                             |
+| |     {                    |                                             |
+| |       printf( "Hello, wo |                                             |
+| | rld.\n" );               |                                             |
+| |       return (0);        |                                             |
+| |     }                    |                                             |
 |                                                                          |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
 |                                                                          |
-|     i=0                                                                  |
-|     variable2=`while [ "$i" -lt 10 ]                                     |
-|     do                                                                   |
-|       echo -n "$i"                 # Again, the necessary 'echo'.        |
-|       let "i += 1"                 # Increment.                          |
-|     done`                                                                |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
+| | .. code:: SCREEN         |                                             |
+| |                          |                                             |
+| |     bash$ gcc -o hello h |                                             |
+| | ello.c                   |                                             |
+| |                          |                                             |
 |                                                                          |
-|     echo "variable2 = $variable2"  # variable2 = 0123456789              |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
 |                                                                          |
-|     #  Demonstrates that it's possible to embed a loop                   |
-|     #+ inside a variable declaration.                                    |
+| .. raw:: html                                                            |
 |                                                                          |
-|     exit 0                                                               |
+|    </p>                                                                  |
+|                                                                          |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
+| | .. code:: PROGRAMLISTING |                                             |
+| |                          |                                             |
+| |     #!/bin/bash          |                                             |
+| |     # hello.sh           |                                             |
+| |                          |                                             |
+| |     greeting=`./hello`   |                                             |
+| |     echo $greeting       |                                             |
+|                                                                          |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
+|                                                                          |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
+| | .. code:: SCREEN         |                                             |
+| |                          |                                             |
+| |     bash$ sh hello.sh    |                                             |
+| |     Hello, world.        |                                             |
+| |                          |                                             |
+|                                                                          |
+| +--------------------------+--------------------------+----------------- |
+| ---------+                                                               |
+|                                                                          |
+| .. raw:: html                                                            |
+|                                                                          |
+|    </p>                                                                  |
+|                                                                          |
+| .. raw:: html                                                            |
+|                                                                          |
+|    </div>                                                                |
                                                                           
 +--------------------------------------------------------------------------+
 
-+----------+----------+----------+----------+----------+----------+----------+----------+----------+
-| Command  |
-| substitu |
-| tion     |
-| makes it |
-| possible |
-| to       |
-| extend   |
-| the      |
-| toolset  |
-| availabl |
-| e        |
-| to Bash. |
-| It is    |
-| simply a |
-| matter   |
-| of       |
-| writing  |
-| a        |
-| program  |
-| or       |
-| script   |
-| that     |
-| outputs  |
-| to       |
-| ``stdout |
-| ``       |
-| (like a  |
-| well-beh |
-| aved     |
-| UNIX     |
-| tool     |
-| should)  |
-| and      |
-| assignin |
-| g        |
-| that     |
-| output   |
-| to a     |
-| variable |
-| .        |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-| | .. cod |
-| e:: PROG |
-| RAMLISTI |
-| NG       |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     #i |
-| nclude < |
-| stdio.h> |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     /* |
-|   "Hello |
-| , world. |
-| " C prog |
-| ram  */  |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     in |
-| t main() |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     {  |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-| printf(  |
-| "Hello,  |
-| world.\n |
-| " );     |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-| return ( |
-| 0);      |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     }  |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-| | .. cod |
-| e:: SCRE |
-| EN       |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     ba |
-| sh$ gcc  |
-| -o hello |
-|  hello.c |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-| | .. cod |
-| e:: PROG |
-| RAMLISTI |
-| NG       |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     #! |
-| /bin/bas |
-| h        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     #  |
-| hello.sh |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     gr |
-| eeting=` |
-| ./hello` |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     ec |
-| ho $gree |
-| ting     |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-| | .. cod |
-| e:: SCRE |
-| EN       |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     ba |
-| sh$ sh h |
-| ello.sh  |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |     He |
-| llo, wor |
-| ld.      |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-| |        |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|    |     |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-|          |
-| +------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| -------- |
-| ---+     |
-|          |
-          
-+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+.. raw:: html
 
-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| |Note |
-| |     |
-| The   |
-| **$(. |
-| ..)** |
-| form  |
-| has   |
-| super |
-| seded |
-| backt |
-| icks  |
-| for   |
-| comma |
-| nd    |
-| subst |
-| ituti |
-| on.   |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-| | ..  |
-| code: |
-| : PRO |
-| GRAML |
-| ISTIN |
-| G     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  outp |
-| ut=$( |
-| sed - |
-| n /"$ |
-| 1"/p  |
-| $file |
-| )   # |
-|  From |
-|  "grp |
-| .sh"  |
-|   exa |
-| mple. |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  # Se |
-| tting |
-|  a va |
-| riabl |
-| e to  |
-| the c |
-| onten |
-| ts of |
-|  a te |
-| xt fi |
-| le.   |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  File |
-| _cont |
-| ents1 |
-| =$(ca |
-| t $fi |
-| le1)  |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  File |
-| _cont |
-| ents2 |
-| =$(<$ |
-| file2 |
-| )     |
-|     # |
-|  Bash |
-|  perm |
-| its t |
-| his a |
-| lso.  |
-|       |
-|       |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-|       |
-| The   |
-| **$(. |
-| ..)** |
-| form  |
-| of    |
-| comma |
-| nd    |
-| subst |
-| ituti |
-| on    |
-| treat |
-| s     |
-| a     |
-| doubl |
-| e     |
-| backs |
-| lash  |
-| in a  |
-| diffe |
-| rent  |
-| way   |
-| than  |
-| **\`. |
-| ..\`* |
-| *.    |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-| | ..  |
-| code: |
-| : SCR |
-| EEN   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  bash |
-| $ ech |
-| o `ec |
-| ho \\ |
-| `     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  bash |
-| $ ech |
-| o $(e |
-| cho \ |
-| \)    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  \    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-|       |
-| The   |
-| **$(. |
-| ..)** |
-| form  |
-| of    |
-| comma |
-| nd    |
-| subst |
-| ituti |
-| on    |
-| permi |
-| ts    |
-| nesti |
-| ng.   |
-| `[3]  |
-| <comm |
-| andsu |
-| b.htm |
-| l#FTN |
-| .AEN7 |
-| 308>` |
-| __    |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-| | ..  |
-| code: |
-| : PRO |
-| GRAML |
-| ISTIN |
-| G     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  word |
-| _coun |
-| t=$(  |
-| wc -w |
-|  $(ec |
-| ho *  |
-| | awk |
-|  '{pr |
-| int $ |
-| 8}')  |
-| )     |
-|       |
-|       |
-|       |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-|       |
-| Or,   |
-| for   |
-| somet |
-| hing  |
-| a bit |
-| more  |
-| elabo |
-| rate  |
-| . . . |
-|       |
-| **Exa |
-| mple  |
-| 12-3. |
-| Findi |
-| ng    |
-| anagr |
-| ams** |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-| | ..  |
-| code: |
-| : PRO |
-| GRAML |
-| ISTIN |
-| G     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #!/b |
-| in/ba |
-| sh    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  # ag |
-| ram2. |
-| sh    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  # Ex |
-| ample |
-|  of n |
-| ested |
-|  comm |
-| and s |
-| ubsti |
-| tutio |
-| n.    |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #  U |
-| ses " |
-| anagr |
-| am" u |
-| tilit |
-| y     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #+ t |
-| hat i |
-| s par |
-| t of  |
-| the a |
-| uthor |
-| 's "y |
-| awl"  |
-| word  |
-| list  |
-| packa |
-| ge.   |
-|       |
-|       |
-| |     |
-| |     |
-|  #  h |
-| ttp:/ |
-| /ibib |
-| lio.o |
-| rg/pu |
-| b/Lin |
-| ux/li |
-| bs/ya |
-| wl-0. |
-| 3.2.t |
-| ar.gz |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #  h |
-| ttp:/ |
-| /bash |
-| .deta |
-| .in/y |
-| awl-0 |
-| .3.2. |
-| tar.g |
-| z     |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  E_NO |
-| ARGS= |
-| 86    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  E_BA |
-| DARG= |
-| 87    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  MINL |
-| EN=7  |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  if [ |
-|  -z " |
-| $1" ] |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  then |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|    ec |
-| ho "U |
-| sage  |
-| $0 LE |
-| TTERS |
-| ET"   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|    ex |
-| it $E |
-| _NOAR |
-| GS    |
-|       |
-|  # Sc |
-| ript  |
-| needs |
-|  a co |
-| mmand |
-| -line |
-|  argu |
-| ment. |
-|       |
-| |     |
-| |     |
-|  elif |
-|  [ ${ |
-| #1} - |
-| lt $M |
-| INLEN |
-|  ]    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  then |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|    ec |
-| ho "A |
-| rgume |
-| nt mu |
-| st ha |
-| ve at |
-|  leas |
-| t $MI |
-| NLEN  |
-| lette |
-| rs."  |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|    ex |
-| it $E |
-| _BADA |
-| RG    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  fi   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  FILT |
-| ER='. |
-| ..... |
-| .'    |
-|       |
-|  # Mu |
-| st ha |
-| ve at |
-|  leas |
-| t 7 l |
-| etter |
-| s.    |
-|       |
-|       |
-| |     |
-| |     |
-|  #    |
-|     1 |
-| 23456 |
-| 7     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  Anag |
-| rams= |
-| ( $(e |
-| cho $ |
-| (anag |
-| ram $ |
-| 1 | g |
-| rep $ |
-| FILTE |
-| R) )  |
-| )     |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #    |
-|       |
-|   $(  |
-|     $ |
-| (  ne |
-| sted  |
-| comma |
-| nd su |
-| b.    |
-|  ) )  |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #    |
-|       |
-| (     |
-|       |
-|       |
-| array |
-|  assi |
-| gnmen |
-| t     |
-|       |
-| )     |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  echo |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  echo |
-|  "${# |
-| Anagr |
-| ams[* |
-| ]}  7 |
-| + let |
-| ter a |
-| nagra |
-| ms fo |
-| und"  |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  echo |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  echo |
-|  ${An |
-| agram |
-| s[0]} |
-|       |
-|  # Fi |
-| rst a |
-| nagra |
-| m.    |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  echo |
-|  ${An |
-| agram |
-| s[1]} |
-|       |
-|  # Se |
-| cond  |
-| anagr |
-| am.   |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|  # Et |
-| c.    |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  # ec |
-| ho "$ |
-| {Anag |
-| rams[ |
-| *]}"  |
-|  # To |
-|  list |
-|  all  |
-| the a |
-| nagra |
-| ms in |
-|  a si |
-| ngle  |
-| line  |
-| |     |
-| |  .  |
-| . .   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  #  L |
-| ook a |
-| head  |
-| to th |
-| e Arr |
-| ays c |
-| hapte |
-| r for |
-|  enli |
-| ghten |
-| ment  |
-| on    |
-|       |
-|       |
-| |     |
-| |     |
-|  #+ w |
-| hat's |
-|  goin |
-| g on  |
-| here. |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  # Se |
-| e als |
-| o the |
-|  agra |
-| m.sh  |
-| scrip |
-| t for |
-|  an e |
-| xerci |
-| se in |
-|  anag |
-| ram f |
-| indin |
-| g.    |
-| |     |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-| |     |
-|  exit |
-|  $?   |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| |     |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-|       |
-| +---- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| ----- |
-| +     |
-       
-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   <div class="NOTE">
+
++------+------+------+------+------+------+------+------+------+------+------+------+------+------+------+------+
+| |Not |
+| e|   |
+| The  |
+| **$( |
+| ...) |
+| **   |
+| form |
+| has  |
+| supe |
+| rsed |
+| ed   |
+| back |
+| tick |
+| s    |
+| for  |
+| comm |
+| and  |
+| subs |
+| titu |
+| tion |
+| .    |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+| | .. |
+|  cod |
+| e::  |
+| PROG |
+| RAML |
+| ISTI |
+| NG | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ou |
+| tput |
+| =$(s |
+| ed - |
+| n /" |
+| $1 | |
+| | "/ |
+| p $f |
+| ile) |
+|    # |
+|  Fro |
+| m "g |
+| rp | |
+| | .s |
+| h"   |
+|  exa |
+| mple |
+| .    |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+| Sett |
+| ing  |
+| a va |
+| riab |
+| le | |
+| |  t |
+| o th |
+| e co |
+| nten |
+| ts o |
+| f a  |
+| te | |
+| | xt |
+|  fil |
+| e.   |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   Fi |
+| le_c |
+| onte |
+| nts1 |
+| =$(c |
+| at | |
+| |  $ |
+| file |
+| 1)   |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   Fi |
+| le_c |
+| onte |
+| nts2 |
+| =$(< |
+| $f | |
+| | il |
+| e2)  |
+|      |
+|    # |
+|  Bas |
+| h pe |
+| rm | |
+| | it |
+| s th |
+| is a |
+| lso. |
+|      |
+|      |
+|    | |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+|      |
+| .. r |
+| aw:: |
+|  htm |
+| l    |
+|      |
+|    < |
+| /p>  |
+|      |
+| The  |
+| **$( |
+| ...) |
+| **   |
+| form |
+| of   |
+| comm |
+| and  |
+| subs |
+| titu |
+| tion |
+| trea |
+| ts   |
+| a    |
+| doub |
+| le   |
+| back |
+| slas |
+| h    |
+| in a |
+| diff |
+| eren |
+| t    |
+| way  |
+| than |
+| **\` |
+| ...\ |
+| `**. |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+| | .. |
+|  cod |
+| e::  |
+| SCRE |
+| EN   |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ba |
+| sh$  |
+| echo |
+|  `ec |
+| ho \ |
+| \` | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ba |
+| sh$  |
+| echo |
+|  $(e |
+| cho  |
+| \\ | |
+| | )  |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   \  |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+|      |
+| .. r |
+| aw:: |
+|  htm |
+| l    |
+|      |
+|    < |
+| /p>  |
+|      |
+| The  |
+| **$( |
+| ...) |
+| **   |
+| form |
+| of   |
+| comm |
+| and  |
+| subs |
+| titu |
+| tion |
+| perm |
+| its  |
+| nest |
+| ing. |
+| `[3] |
+|  <co |
+| mman |
+| dsub |
+| .htm |
+| l#FT |
+| N.AE |
+| N730 |
+| 8>`_ |
+| _    |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+| | .. |
+|  cod |
+| e::  |
+| PROG |
+| RAML |
+| ISTI |
+| NG | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   wo |
+| rd_c |
+| ount |
+| =$(  |
+| wc - |
+| w  | |
+| | $( |
+| echo |
+|  * | |
+|  awk |
+|  '{p |
+| rint |
+|  $ | |
+| | 8} |
+| ') ) |
+|      |
+|      |
+|      |
+|      |
+|    | |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+|      |
+| .. r |
+| aw:: |
+|  htm |
+| l    |
+|      |
+|    < |
+| /p>  |
+|      |
+| Or,  |
+| for  |
+| some |
+| thin |
+| g    |
+| a    |
+| bit  |
+| more |
+| elab |
+| orat |
+| e    |
+| . .  |
+| .    |
+|      |
+| .. r |
+| aw:: |
+|  htm |
+| l    |
+|      |
+|    < |
+| div  |
+|    c |
+| lass |
+| ="EX |
+| AMPL |
+| E">  |
+|      |
+| **Ex |
+| ampl |
+| e    |
+| 12-3 |
+| .    |
+| Find |
+| ing  |
+| anag |
+| rams |
+| **   |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+| | .. |
+|  cod |
+| e::  |
+| PROG |
+| RAML |
+| ISTI |
+| NG | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #! |
+| /bin |
+| /bas |
+| h    |
+|      |
+|    | |
+| |    |
+|   #  |
+| agra |
+| m2.s |
+| h    |
+|      |
+|    | |
+| |    |
+|   #  |
+| Exam |
+| ple  |
+| of n |
+| este |
+| d  | |
+| | co |
+| mman |
+| d su |
+| bsti |
+| tuti |
+| on.  |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|  Use |
+| s "a |
+| nagr |
+| am"  |
+| ut | |
+| | il |
+| ity  |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #+ |
+|  tha |
+| t is |
+|  par |
+| t of |
+|  t | |
+| | he |
+|  aut |
+| hor' |
+| s "y |
+| awl" |
+|  wor |
+| d  | |
+| | li |
+| st p |
+| acka |
+| ge.  |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|  htt |
+| p:// |
+| ibib |
+| lio. |
+| or | |
+| | g/ |
+| pub/ |
+| Linu |
+| x/li |
+| bs/y |
+| awl- |
+| 0. | |
+| | 3. |
+| 2.ta |
+| r.gz |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|  htt |
+| p:// |
+| bash |
+| .det |
+| a. | |
+| | in |
+| /yaw |
+| l-0. |
+| 3.2. |
+| tar. |
+| gz   |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   E_ |
+| NOAR |
+| GS=8 |
+| 6    |
+|      |
+|    | |
+| |    |
+|   E_ |
+| BADA |
+| RG=8 |
+| 7    |
+|      |
+|    | |
+| |    |
+|   MI |
+| NLEN |
+| =7   |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   if |
+|  [ - |
+| z "$ |
+| 1" ] |
+|      |
+|    | |
+| |    |
+|   th |
+| en   |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+| echo |
+|  "Us |
+| age  |
+| $0 L |
+| ET | |
+| | TE |
+| RSET |
+| "    |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+| exit |
+|  $E_ |
+| NOAR |
+| GS   |
+|    | |
+| |    |
+|    # |
+|  Scr |
+| ipt  |
+| need |
+| s a  |
+| co | |
+| | mm |
+| and- |
+| line |
+|  arg |
+| umen |
+| t.   |
+|    | |
+| |    |
+|   el |
+| if [ |
+|  ${# |
+| 1} - |
+| lt $ |
+| MI | |
+| | NL |
+| EN ] |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   th |
+| en   |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+| echo |
+|  "Ar |
+| gume |
+| nt m |
+| us | |
+| | t  |
+| have |
+|  at  |
+| leas |
+| t $M |
+| INLE |
+| N  | |
+| | le |
+| tter |
+| s."  |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+| exit |
+|  $E_ |
+| BADA |
+| RG   |
+|    | |
+| |    |
+|   fi |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   FI |
+| LTER |
+| ='.. |
+| .... |
+| .'   |
+|    | |
+| |    |
+|    # |
+|  Mus |
+| t ha |
+| ve a |
+| t le |
+| as | |
+| | t  |
+| 7 le |
+| tter |
+| s.   |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|      |
+|   12 |
+| 3456 |
+| 7    |
+|    | |
+| |    |
+|   An |
+| agra |
+| ms=( |
+|  $(e |
+| cho  |
+| $( | |
+| | an |
+| agra |
+| m $1 |
+|  | g |
+| rep  |
+| $FIL |
+| TE | |
+| | R) |
+|  ) ) |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|      |
+|      |
+|  $(  |
+|      |
+| $( | |
+| |    |
+| nest |
+| ed c |
+| omma |
+| nd s |
+| ub.  |
+|    | |
+| |  ) |
+|  )   |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|      |
+|    ( |
+|      |
+|      |
+|    | |
+| |    |
+|   ar |
+| ray  |
+| assi |
+| gnme |
+| nt   |
+|    | |
+| |    |
+|    ) |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ec |
+| ho   |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ec |
+| ho " |
+| ${#A |
+| nagr |
+| ams[ |
+| *] | |
+| | }  |
+|  7+  |
+| lett |
+| er a |
+| nagr |
+| ams  |
+| fo | |
+| | un |
+| d"   |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ec |
+| ho   |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ec |
+| ho $ |
+| {Ana |
+| gram |
+| s[0] |
+| }  | |
+| |    |
+|    # |
+|  Fir |
+| st a |
+| nagr |
+| am.  |
+|    | |
+| |    |
+|   ec |
+| ho $ |
+| {Ana |
+| gram |
+| s[1] |
+| }  | |
+| |    |
+|    # |
+|  Sec |
+| ond  |
+| anag |
+| ram. |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|    # |
+|  Etc |
+| .    |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+| echo |
+|  "${ |
+| Anag |
+| rams |
+| [* | |
+| | ]} |
+| "  # |
+|  To  |
+| list |
+|  all |
+|  the |
+|  a | |
+| | na |
+| gram |
+| s in |
+|  a s |
+| ingl |
+| e li |
+| ne | |
+| |  . |
+|  . . |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+|  Loo |
+| k ah |
+| ead  |
+| to t |
+| he | |
+| |  A |
+| rray |
+| s ch |
+| apte |
+| r fo |
+| r en |
+| li | |
+| | gh |
+| tenm |
+| ent  |
+| on   |
+|      |
+|      |
+|    | |
+| |    |
+|   #+ |
+|  wha |
+| t's  |
+| goin |
+| g on |
+|  h | |
+| | er |
+| e.   |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   #  |
+| See  |
+| also |
+|  the |
+|  agr |
+| am | |
+| | .s |
+| h sc |
+| ript |
+|  for |
+|  an  |
+| exer |
+| ci | |
+| | se |
+|  in  |
+| anag |
+| ram  |
+| find |
+| ing. |
+|    | |
+| |    |
+|      |
+|      |
+|      |
+|      |
+|      |
+|    | |
+| |    |
+|   ex |
+| it $ |
+| ?    |
+|      |
+|      |
+|    | |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+| +--- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---+ |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| --+- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| ---- |
+| -+   |
+|      |
+| .. r |
+| aw:: |
+|  htm |
+| l    |
+|      |
+|    < |
+| /div |
+| >    |
+      
++------+------+------+------+------+------+------+------+------+------+------+------+------+------+------+------+
+
+.. raw:: html
+
+   </div>
 
 Examples of command substitution in shell scripts:
 
@@ -2715,33 +2263,131 @@ Examples of command substitution in shell scripts:
 
 #. `Example 16-49 <mathc.html#ALTBC>`__
 
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </div>
+
 Notes
 ~~~~~
 
+.. raw:: html
+
+   <table border="0" class="FOOTNOTES" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[1] <commandsub.html#AEN7205>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 For purposes of *command substitution*, a **command** may be an external
 system command, an internal scripting
 `builtin <internal.html#BUILTINREF>`__, or even `a script
 function <assortedtips.html#RVT>`__.
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[2] <commandsub.html#AEN7211>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 In a more technically correct sense, *command substitution* extracts the
 ``stdout`` of a command, then assigns it to a variable using the =
 operator.
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[3] <commandsub.html#AEN7308>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 In fact, nesting with backticks is also possible, but only by escaping
 the inner backticks, as John Default points out.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     word_count=` wc -w \`echo * | awk '{print $8}'\` `                   |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     word_count=` wc -w \ |
+| `echo * | awk '{print $8 |
+| }'\` `                   |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -2751,6 +2397,10 @@ the inner backticks, as John Default points out.
 | `Home <index.html>`__    | Arithmetic Expansion     |
 | `Next <arithexp.html>`__ |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

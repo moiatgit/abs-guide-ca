@@ -1,33 +1,110 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <communications.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 16. External Filters, Programs and Commands
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <mathc.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 16.7. Terminal Control Commands
 ===============================
 
+.. raw:: html
+
+   <div class="VARIABLELIST">
+
 **Command affecting the console or terminal**
 
-**tput**
+\ **tput**
     Initialize terminal and/or fetch information about it from terminfo
     data. Various options permit certain terminal operations: **tput
     clear** is the equivalent of
     `clear <terminalccmds.html#CLEARREF>`__; **tput reset** is the
     equivalent of `reset <terminalccmds.html#RESETREF>`__.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ tput longname                                                  |
-    |     xterm terminal emulator (X Window System)                            |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ tput longname  |
+    |     xterm terminal emula |
+    | tor (X Window System)    |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
+
+    .. raw:: html
+
+       </p>
 
     Issuing a **tput cup X Y** moves the cursor to the (X,Y) coordinates
     in the current terminal. A **clear** to erase the terminal screen
@@ -44,6 +121,10 @@ Chapter 16. External Filters, Programs and Commands
     -  ``sgr0``, to reset the terminal parameters (to normal), without
        clearing the screen
 
+    .. raw:: html
+
+       </p>
+
     Example scripts using *tput*:
 
     #. `Example 36-15 <colorizing.html#COLORECHO>`__
@@ -56,63 +137,102 @@ Chapter 16. External Filters, Programs and Commands
 
     #. `Example 27-2 <arrays.html#POEM>`__
 
+    .. raw:: html
+
+       </p>
+
     Note that `stty <system.html#STTYREF>`__ offers a more powerful
     command set for controlling a terminal.
 
-**infocmp**
+\ **infocmp**
     This command prints out extensive information about the current
     terminal. It references the *terminfo* database.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ infocmp                                                        |
-    |     #       Reconstructed via infocmp from file:                         |
-    |      /usr/share/terminfo/r/rxvt                                          |
-    |      rxvt|rxvt terminal emulator (X Window System),                      |
-    |              am, bce, eo, km, mir, msgr, xenl, xon,                      |
-    |              colors#8, cols#80, it#8, lines#24, pairs#64,                |
-    |              acsc=``aaffggjjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~,    |
-    |              bel=^G, blink=\E[5m, bold=\E[1m,                            |
-    |              civis=\E[?25l,                                              |
-    |              clear=\E[H\E[2J, cnorm=\E[?25h, cr=^M,                      |
-    |              ...                                                         |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ infocmp        |
+    |     #       Reconstructe |
+    | d via infocmp from file: |
+    |      /usr/share/terminfo |
+    | /r/rxvt                  |
+    |      rxvt|rxvt terminal  |
+    | emulator (X Window Syste |
+    | m),                      |
+    |              am, bce, eo |
+    | , km, mir, msgr, xenl, x |
+    | on,                      |
+    |              colors#8, c |
+    | ols#80, it#8, lines#24,  |
+    | pairs#64,                |
+    |              acsc=``aaff |
+    | ggjjkkllmmnnooppqqrrsstt |
+    | uuvvwwxxyyzz{{||}}~~,    |
+    |              bel=^G, bli |
+    | nk=\E[5m, bold=\E[1m,    |
+    |              civis=\E[?2 |
+    | 5l,                      |
+    |              clear=\E[H\ |
+    | E[2J, cnorm=\E[?25h, cr= |
+    | ^M,                      |
+    |              ...         |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-**reset**
+    .. raw:: html
+
+       </p>
+
+\ **reset**
     Reset terminal parameters and clear text screen. As with **clear**,
     the cursor and prompt reappear in the upper lefthand corner of the
     terminal.
 
-**clear**
+\ **clear**
     The **clear** command simply clears the text screen at the console
     or in an *xterm*. The prompt and cursor reappear at the upper
     lefthand corner of the screen or xterm window. This command may be
     used either at the command line or in a script. See `Example
     11-26 <testbranch.html#EX30>`__.
 
-**resize**
+\ **resize**
     Echoes commands necessary to set ``$TERM`` and ``$TERMCAP`` to
     duplicate the *size* (dimensions) of the current terminal.
 
-    +--------------------------------------------------------------------------+
-    | .. code:: SCREEN                                                         |
-    |                                                                          |
-    |     bash$ resize                                                         |
-    |     set noglob;                                                          |
-    |      setenv COLUMNS '80';                                                |
-    |      setenv LINES '24';                                                  |
-    |      unset noglob;                                                       |
-    |                                                                          |
-                                                                              
-    +--------------------------------------------------------------------------+
+    +--------------------------+--------------------------+--------------------------+
+    | .. code:: SCREEN         |
+    |                          |
+    |     bash$ resize         |
+    |     set noglob;          |
+    |      setenv COLUMNS '80' |
+    | ;                        |
+    |      setenv LINES '24';  |
+    |      unset noglob;       |
+    |                          |
+                              
+    +--------------------------+--------------------------+--------------------------+
 
-**script**
+    .. raw:: html
+
+       </p>
+
+\ **script**
     This utility records (saves to a file) all the user keystrokes at
     the command-line in a console or an xterm window. This, in effect,
     creates a record of a session.
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -122,4 +242,8 @@ Chapter 16. External Filters, Programs and Commands
 | `Home <index.html>`__    | Math Commands            |
 | `Next <mathc.html>`__    |                          |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 

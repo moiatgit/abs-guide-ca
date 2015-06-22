@@ -1,12 +1,80 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <x17129.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
 Chapter 18. Regular Expressions
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
 
 `Next <here-docs.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="SECT1">
 
 18.2. Globbing
 ==============
@@ -30,59 +98,107 @@ filenames that start with a dot, as, for example,
 `[3] <globbingref.html#FTN.AEN17592>`__ Likewise, the ``?`` has a
 different meaning in globbing than as part of an RE.
 
-+--------------------------------------------------------------------------+
-| .. code:: SCREEN                                                         |
-|                                                                          |
-|     bash$ ls -l                                                          |
-|     total 2                                                              |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 a.1               |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 b.1               |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 c.1               |
-|      -rw-rw-r--    1 bozo  bozo       466 Aug  6 17:48 t2.sh             |
-|      -rw-rw-r--    1 bozo  bozo       758 Jul 30 09:02 test1.txt         |
-|                                                                          |
-|     bash$ ls -l t?.sh                                                    |
-|     -rw-rw-r--    1 bozo  bozo       466 Aug  6 17:48 t2.sh              |
-|                                                                          |
-|     bash$ ls -l [ab]*                                                    |
-|     -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 a.1                |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 b.1               |
-|                                                                          |
-|     bash$ ls -l [a-c]*                                                   |
-|     -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 a.1                |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 b.1               |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 c.1               |
-|                                                                          |
-|     bash$ ls -l [^ab]*                                                   |
-|     -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 c.1                |
-|      -rw-rw-r--    1 bozo  bozo       466 Aug  6 17:48 t2.sh             |
-|      -rw-rw-r--    1 bozo  bozo       758 Jul 30 09:02 test1.txt         |
-|                                                                          |
-|     bash$ ls -l {b*,c*,*est*}                                            |
-|     -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 b.1                |
-|      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 c.1               |
-|      -rw-rw-r--    1 bozo  bozo       758 Jul 30 09:02 test1.txt         |
-|                                                                          |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ ls -l          |
+|     total 2              |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 a.1               |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 b.1               |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 c.1               |
+|      -rw-rw-r--    1 boz |
+| o  bozo       466 Aug  6 |
+|  17:48 t2.sh             |
+|      -rw-rw-r--    1 boz |
+| o  bozo       758 Jul 30 |
+|  09:02 test1.txt         |
+|                          |
+|     bash$ ls -l t?.sh    |
+|     -rw-rw-r--    1 bozo |
+|   bozo       466 Aug  6  |
+| 17:48 t2.sh              |
+|                          |
+|     bash$ ls -l [ab]*    |
+|     -rw-rw-r--    1 bozo |
+|   bozo         0 Aug  6  |
+| 18:42 a.1                |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 b.1               |
+|                          |
+|     bash$ ls -l [a-c]*   |
+|     -rw-rw-r--    1 bozo |
+|   bozo         0 Aug  6  |
+| 18:42 a.1                |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 b.1               |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 c.1               |
+|                          |
+|     bash$ ls -l [^ab]*   |
+|     -rw-rw-r--    1 bozo |
+|   bozo         0 Aug  6  |
+| 18:42 c.1                |
+|      -rw-rw-r--    1 boz |
+| o  bozo       466 Aug  6 |
+|  17:48 t2.sh             |
+|      -rw-rw-r--    1 boz |
+| o  bozo       758 Jul 30 |
+|  09:02 test1.txt         |
+|                          |
+|     bash$ ls -l {b*,c*,* |
+| est*}                    |
+|     -rw-rw-r--    1 bozo |
+|   bozo         0 Aug  6  |
+| 18:42 b.1                |
+|      -rw-rw-r--    1 boz |
+| o  bozo         0 Aug  6 |
+|  18:42 c.1               |
+|      -rw-rw-r--    1 boz |
+| o  bozo       758 Jul 30 |
+|  09:02 test1.txt         |
+|                          |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
 
 Bash performs filename expansion on unquoted command-line arguments. The
 `echo <internal.html#ECHOREF>`__ command demonstrates this.
 
-+--------------------------------------------------------------------------+
-| .. code:: SCREEN                                                         |
-|                                                                          |
-|     bash$ echo *                                                         |
-|     a.1 b.1 c.1 t2.sh test1.txt                                          |
-|                                                                          |
-|     bash$ echo t*                                                        |
-|     t2.sh test1.txt                                                      |
-|                                                                          |
-|     bash$ echo t?.sh                                                     |
-|     t2.sh                                                                |
-|                                                                          |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: SCREEN         |
+|                          |
+|     bash$ echo *         |
+|     a.1 b.1 c.1 t2.sh te |
+| st1.txt                  |
+|                          |
+|     bash$ echo t*        |
+|     t2.sh test1.txt      |
+|                          |
+|     bash$ echo t?.sh     |
+|     t2.sh                |
+|                          |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   <div class="NOTE">
 
 +--------------------------------------+--------------------------------------+
 | |Note|                               |
@@ -96,145 +212,247 @@ Bash performs filename expansion on unquoted command-line arguments. The
 | change globbing behavior.            |
 +--------------------------------------+--------------------------------------+
 
+.. raw:: html
+
+   </div>
+
 See also `Example 11-5 <loops1.html#LISTGLOB>`__.
 
-+--------------------+--------------------+--------------------+--------------------+
-| |Caution|          |
-| Filenames with     |
-| embedded           |
-| `whitespace <speci |
-| al-chars.html#WHIT |
-| ESPACEREF>`__      |
-| can cause          |
-| *globbing* to      |
-| choke. `David      |
-| Wheeler <http://ww |
-| w.dwheeler.com/ess |
-| ays/filenames-in-s |
-| hell.html>`__      |
-| shows how to avoid |
-| many such          |
-| pitfalls.          |
-|                    |
-| +----------------- |
-| ------------------ |
-| ------------------ |
-| ------------------ |
-| ---+               |
-| | .. code:: PROGRA |
-| MLISTING           |
-|                    |
-|                    |
-|    |               |
-| |                  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     IFS="$(print |
-| f '\n\t')"   # Rem |
-| ove space.         |
-|                    |
-|    |               |
-| |                  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     #  Correct g |
-| lob use:           |
-|                    |
-|                    |
-|    |               |
-| |     #  Always us |
-| e for-loop, prefix |
-|  glob, check if ex |
-| ists file.         |
-|    |               |
-| |     for file in  |
-| ./* ; do         # |
-|  Use ./* ... NEVER |
-|  bare *            |
-|    |               |
-| |       if [ -e "$ |
-| file" ] ; then   # |
-|  Check whether fil |
-| e exists.          |
-|    |               |
-| |          COMMAND |
-|  ... "$file" ...   |
-|                    |
-|                    |
-|    |               |
-| |       fi         |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     done         |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |                  |
-|                    |
-|                    |
-|                    |
-|    |               |
-| |     # This examp |
-| le taken from Davi |
-| d Wheeler's site,  |
-| with permission.   |
-|    |               |
-|                    |
-|                    |
-|                    |
-|                    |
-|                    |
-| +----------------- |
-| ------------------ |
-| ------------------ |
-| ------------------ |
-| ---+               |
-                    
-+--------------------+--------------------+--------------------+--------------------+
+.. raw:: html
+
+   <div class="CAUTION">
+
++----------------+----------------+----------------+----------------+----------------+
+| |Caution|      |
+| Filenames with |
+| embedded       |
+| `whitespace <s |
+| pecial-chars.h |
+| tml#WHITESPACE |
+| REF>`__        |
+| can cause      |
+| *globbing* to  |
+| choke. `David  |
+| Wheeler <http: |
+| //www.dwheeler |
+| .com/essays/fi |
+| lenames-in-she |
+| ll.html>`__    |
+| shows how to   |
+| avoid many     |
+| such pitfalls. |
+|                |
+| +------------- |
+| -------------+ |
+| -------------- |
+| ------------+- |
+| -------------- |
+| -----------+   |
+| | .. code:: PR |
+| OGRAMLISTING | |
+| |              |
+|              | |
+| |     IFS="$(p |
+| rintf '\n\t' | |
+| | )"   # Remov |
+| e space.     | |
+| |              |
+|              | |
+| |     #  Corre |
+| ct glob use: | |
+| |     #  Alway |
+| s use for-lo | |
+| | op, prefix g |
+| lob, check i | |
+| | f exists fil |
+| e.           | |
+| |     for file |
+|  in ./* ; do | |
+| |          # U |
+| se ./* ... N | |
+| | EVER bare *  |
+|              | |
+| |       if [ - |
+| e "$file" ]  | |
+| | ; then   # C |
+| heck whether | |
+| |  file exists |
+| .            | |
+| |          COM |
+| MAND ... "$f | |
+| | ile" ...     |
+|              | |
+| |       fi     |
+|              | |
+| |     done     |
+|              | |
+| |              |
+|              | |
+| |     # This e |
+| xample taken | |
+| |  from David  |
+| Wheeler's si | |
+| | te, with per |
+| mission.     | |
+|                |
+|                |
+| +------------- |
+| -------------+ |
+| -------------- |
+| ------------+- |
+| -------------- |
+| -----------+   |
+|                |
+| .. raw:: html  |
+|                |
+|    </p>        |
+                
++----------------+----------------+----------------+----------------+----------------+
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
 
+.. raw:: html
+
+   <table border="0" class="FOOTNOTES" width="100%">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[1] <globbingref.html#AEN17572>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 *Filename expansion* means expanding filename patterns or templates
 containing special characters. For example, ``example.???`` might expand
 to ``example.001`` and/or ``example.txt``.
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[2] <globbingref.html#AEN17581>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 A *wild card* character, analogous to a wild card in poker, can
 represent (almost) any other character.
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="5%">
+
 `[3] <globbingref.html#AEN17592>`__
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="LEFT" valign="TOP" width="95%">
 
 Filename expansion *can* match dotfiles, but only if the pattern
 explicitly includes the dot as a literal character.
 
-+--------------------------------------------------------------------------+
-| .. code:: PROGRAMLISTING                                                 |
-|                                                                          |
-|     ~/[.]bashrc    #  Will not expand to ~/.bashrc                       |
-|     ~/?bashrc      #  Neither will this.                                 |
-|                    #  Wild cards and metacharacters will NOT             |
-|                    #+ expand to a dot in globbing.                       |
-|                                                                          |
-|     ~/.[b]ashrc    #  Will expand to ~/.bashrc                           |
-|     ~/.ba?hrc      #  Likewise.                                          |
-|     ~/.bashr*      #  Likewise.                                          |
-|                                                                          |
-|     # Setting the "dotglob" option turns this off.                       |
-|                                                                          |
-|     # Thanks, S.C.                                                       |
-                                                                          
-+--------------------------------------------------------------------------+
++--------------------------+--------------------------+--------------------------+
+| .. code:: PROGRAMLISTING |
+|                          |
+|     ~/[.]bashrc    #  Wi |
+| ll not expand to ~/.bash |
+| rc                       |
+|     ~/?bashrc      #  Ne |
+| ither will this.         |
+|                    #  Wi |
+| ld cards and metacharact |
+| ers will NOT             |
+|                    #+ ex |
+| pand to a dot in globbin |
+| g.                       |
+|                          |
+|     ~/.[b]ashrc    #  Wi |
+| ll expand to ~/.bashrc   |
+|     ~/.ba?hrc      #  Li |
+| kewise.                  |
+|     ~/.bashr*      #  Li |
+| kewise.                  |
+|                          |
+|     # Setting the "dotgl |
+| ob" option turns this of |
+| f.                       |
+|                          |
+|     # Thanks, S.C.       |
+                          
++--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+.. raw:: html
+
+   <div class="NAVFOOTER">
 
 --------------
 
@@ -244,6 +462,10 @@ explicitly includes the dot as a literal character.
 | `Next <here-docs.html>`_ | `Up <regexp.html>`__     |
 | _                        | Here Documents           |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

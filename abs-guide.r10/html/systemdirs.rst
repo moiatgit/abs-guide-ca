@@ -1,10 +1,78 @@
+.. raw:: html
+
+   <div class="NAVHEADER">
+
+.. raw:: html
+
+   <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th colspan="3" align="center">
+
 Advanced Bash-Scripting Guide:
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td width="10%" align="left" valign="bottom">
 
 `Prev <files.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="80%" align="center" valign="bottom">
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td width="10%" align="right" valign="bottom">
+
 `Next <tabexpansion.html>`__
 
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
 --------------
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div class="APPENDIX">
 
 Appendix I. Important System Directories
 ========================================
@@ -113,11 +181,23 @@ intimately familiar with the following system directories.
    System *boot* directory. The kernel, module links, system map, and
    boot manager reside here.
 
+   .. raw:: html
+
+      <div class="WARNING">
+
    +--------------------------------------+--------------------------------------+
    | |Warning|                            |
    | Altering files in this directory may |
    | result in an unbootable system.      |
    +--------------------------------------+--------------------------------------+
+
+   .. raw:: html
+
+      </div>
+
+.. raw:: html
+
+   </div>
 
 Notes
 ~~~~~
@@ -149,6 +229,10 @@ Notes
 | and ``/usr/lib``, etc.   |
 +--------------------------+--------------------------+--------------------------+
 
+.. raw:: html
+
+   <div class="NAVFOOTER">
+
 --------------
 
 +--------------------------+--------------------------+--------------------------+
@@ -157,5 +241,9 @@ Notes
 | `Next <tabexpansion.html | An Introduction to       |
 | >`__                     | Programmable Completion  |
 +--------------------------+--------------------------+--------------------------+
+
+.. raw:: html
+
+   </div>
 
 .. |Warning| image:: ../images/warning.gif
