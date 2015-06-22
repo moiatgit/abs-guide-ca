@@ -1,0 +1,669 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title>
+   Shell Programming!
+  </title>
+  <meta content="Modular DocBook HTML Stylesheet Version 1.7" name="GENERATOR"/>
+  <link href="index.html" rel="HOME" title="Advanced Bash-Scripting Guide"/>
+  <link href="part1.html" rel="UP" title="Introduction"/>
+  <link href="part1.html" rel="PREVIOUS" title="Introduction"/>
+  <link href="sha-bang.html" rel="NEXT" title="Starting Off With a Sha-Bang"/>
+ </head>
+ <body alink="#0000FF" bgcolor="#FFFFFF" class="CHAPTER" link="#0000FF" text="#000000" vlink="#840084">
+  <div class="NAVHEADER">
+   <table border="0" cellpadding="0" cellspacing="0" summary="Header navigation table" width="100%">
+    <tr>
+     <th align="center" colspan="3">
+      Advanced Bash-Scripting Guide:
+     </th>
+    </tr>
+    <tr>
+     <td align="left" valign="bottom" width="10%">
+      <a accesskey="P" href="part1.html">
+       Prev
+      </a>
+     </td>
+     <td align="center" valign="bottom" width="80%">
+     </td>
+     <td align="right" valign="bottom" width="10%">
+      <a accesskey="N" href="sha-bang.html">
+       Next
+      </a>
+     </td>
+    </tr>
+   </table>
+   <hr align="LEFT" width="100%"/>
+  </div>
+  <div class="CHAPTER">
+   <h1>
+    <a name="WHY-SHELL">
+    </a>
+    Chapter 1. Shell Programming!
+   </h1>
+   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
+    <tr>
+     <td width="45%">
+     </td>
+     <td align="LEFT" valign="TOP" width="45%">
+      <i>
+      </i>
+      <p>
+       <i>
+        No programming language is perfect. There is not even a single
+        best language; there are only languages well suited or perhaps
+        poorly suited for particular purposes.
+       </i>
+      </p>
+      <p>
+       <i>
+        --Herbert Mayer
+       </i>
+      </p>
+     </td>
+    </tr>
+   </table>
+   <p>
+    A working knowledge of shell scripting is essential to anyone
+      wishing to become reasonably proficient at system administration,
+      even if they do not anticipate ever having to actually write a
+      script. Consider that as a Linux machine boots up, it executes the
+      shell scripts in
+    <tt class="FILENAME">
+     /etc/rc.d
+    </tt>
+    to restore the system configuration and set up services. A detailed
+      understanding of these startup scripts is important for analyzing
+      the behavior of a system, and possibly modifying it.
+   </p>
+   <p>
+    The craft of scripting is not hard to master,
+      since scripts can be built in bite-sized sections and there
+      is only a fairly small set of shell-specific operators and options
+    <a href="why-shell.html#FTN.AEN62" name="AEN62">
+     <span class="footnote">
+      [1]
+     </span>
+    </a>
+    to learn. The syntax is simple -- even austere -- similar to
+      that of invoking and chaining together utilities at the command
+      line, and there are only a few
+    <span class="QUOTE">
+     "rules"
+    </span>
+    governing
+      their use. Most short scripts work right the first time, and
+      debugging even the longer ones is straightforward.
+   </p>
+   <p>
+    <a name="AEN67">
+    </a>
+   </p>
+   <blockquote class="BLOCKQUOTE">
+    <p class="LITERALLAYOUT">
+     In the early days of personal computing, the BASIC language enabled
+     <br/>
+     anyone reasonably computer proficient to write programs on an early
+     <br/>
+     generation of microcomputers. Decades later, the Bash scripting
+     <br/>
+     language enables anyone with a rudimentary knowledge of Linux or
+     <br/>
+     UNIX to do the same on modern machines.
+     <br/>
+     <br/>
+     We now have miniaturized single-board computers with amazing
+     <br/>
+     capabilities, such as the
+     <a href="http://www.raspberrypi.org/" target="_top">
+      Raspberry Pi
+     </a>
+     .
+     <br/>
+     Bash scripting provides a way to explore the capabilities of these
+     <br/>
+     fascinating devices.
+     <br/>
+    </p>
+   </blockquote>
+   <p>
+    A shell script is a quick-and-dirty method of prototyping
+      a complex application. Getting even a limited subset of
+      the functionality to work in a script is often a useful
+      first stage in project development. In this way, the structure
+      of the application can be tested and tinkered with, and the
+      major pitfalls found before proceeding to the final coding
+      in
+    <i class="FIRSTTERM">
+     C
+    </i>
+    ,
+    <i class="FIRSTTERM">
+     C++
+    </i>
+    ,
+    <i class="FIRSTTERM">
+     Java
+    </i>
+    ,
+    <a href="wrapper.html#PERLREF">
+     Perl
+    </a>
+    ,
+      or
+    <i class="FIRSTTERM">
+     Python
+    </i>
+    .
+   </p>
+   <p>
+    Shell scripting hearkens back to the classic UNIX philosophy
+      of breaking complex projects into simpler subtasks, of chaining
+      together components and utilities. Many consider this a better,
+      or at least more esthetically pleasing approach to problem solving
+      than using one of the new generation of high-powered all-in-one
+      languages, such as
+    <i class="FIRSTTERM">
+     Perl
+    </i>
+    , which attempt to
+      be all things to all people, but at the cost of forcing you to
+      alter your thinking processes to fit the tool.
+   </p>
+   <p>
+    According to
+    <a href="biblio.html#MAYERREF">
+     Herbert Mayer
+    </a>
+    ,
+    <span class="QUOTE">
+     "a useful language needs arrays, pointers,
+	and a generic mechanism for building data structures."
+    </span>
+    By these criteria, shell scripting falls somewhat short of being
+    <span class="QUOTE">
+     "useful."
+    </span>
+    Or, perhaps not. . . .
+   </p>
+   <table border="1" cellpadding="5" class="SIDEBAR">
+    <tr>
+     <td>
+      <div class="SIDEBAR">
+       <a name="AEN82">
+       </a>
+       <p>
+       </p>
+       <p>
+        When not to use shell scripts
+       </p>
+       <p>
+       </p>
+       <ul>
+        <li>
+         <p>
+          Resource-intensive tasks, especially where speed is
+	    a factor (sorting, hashing, recursion
+          <a href="why-shell.html#FTN.AEN87" name="AEN87">
+           <span class="footnote">
+            [2]
+           </span>
+          </a>
+          ...)
+         </p>
+        </li>
+        <li>
+         <p>
+          Procedures involving heavy-duty math operations,
+	    especially floating point arithmetic, arbitrary
+	    precision calculations, or complex numbers (use
+          <i class="FIRSTTERM">
+           C++
+          </i>
+          or
+          <i class="FIRSTTERM">
+           FORTRAN
+          </i>
+          instead)
+         </p>
+        </li>
+        <li>
+         <p>
+          Cross-platform portability required (use
+          <i class="FIRSTTERM">
+           C
+          </i>
+          or
+          <i class="FIRSTTERM">
+           Java
+          </i>
+          instead)
+         </p>
+        </li>
+        <li>
+         <p>
+          Complex applications, where structured programming is
+	    a necessity (type-checking of variables, function
+	    prototypes, etc.)
+         </p>
+        </li>
+        <li>
+         <p>
+          Mission-critical applications upon which you are betting the
+	     future of the company
+         </p>
+        </li>
+        <li>
+         <p>
+          Situations where
+          <em>
+           security
+          </em>
+          is
+	    important, where you need to guarantee the integrity of
+	    your system and protect against intrusion, cracking, and
+	    vandalism
+         </p>
+        </li>
+        <li>
+         <p>
+          Project consists of subcomponents with interlocking
+	    dependencies
+         </p>
+        </li>
+        <li>
+         <p>
+          Extensive file operations required
+	    (
+          <i class="FIRSTTERM">
+           Bash
+          </i>
+          is limited to serial file access,
+	    and that only in a particularly clumsy and inefficient
+	    line-by-line fashion.)
+         </p>
+        </li>
+        <li>
+         <p>
+          Need native support for multi-dimensional arrays
+         </p>
+        </li>
+        <li>
+         <p>
+          Need data structures, such as linked lists or trees
+         </p>
+        </li>
+        <li>
+         <p>
+          Need to generate / manipulate graphics or GUIs
+         </p>
+        </li>
+        <li>
+         <p>
+          Need direct access to system hardware or
+	    external peripherals
+         </p>
+        </li>
+        <li>
+         <p>
+          Need port or
+          <a href="devref1.html#SOCKETREF">
+           socket
+          </a>
+          I/O
+         </p>
+        </li>
+        <li>
+         <p>
+          Need to use libraries or interface with legacy code
+         </p>
+        </li>
+        <li>
+         <p>
+          Proprietary, closed-source applications (Shell scripts
+	    put the source code right out in the open for all the world
+	    to see.)
+         </p>
+        </li>
+       </ul>
+       <p>
+        If any of the above applies, consider a more powerful scripting
+      language -- perhaps
+        <i class="FIRSTTERM">
+         Perl
+        </i>
+        ,
+        <i class="FIRSTTERM">
+         Tcl
+        </i>
+        ,
+        <i class="FIRSTTERM">
+         Python
+        </i>
+        ,
+        <i class="FIRSTTERM">
+         Ruby
+        </i>
+        -- or possibly a
+      compiled language such as
+        <i class="FIRSTTERM">
+         C
+        </i>
+        ,
+        <i class="FIRSTTERM">
+         C++
+        </i>
+        , or
+        <i class="FIRSTTERM">
+         Java
+        </i>
+        . Even
+      then, prototyping the application as a shell script might still
+      be a useful development step.
+       </p>
+       <p>
+       </p>
+      </div>
+     </td>
+    </tr>
+   </table>
+   <p>
+    <a name="BASHDEF">
+    </a>
+   </p>
+   <p>
+    We will be using
+    <span class="ACRONYM">
+     Bash
+    </span>
+    , an acronym
+    <a href="why-shell.html#FTN.AEN139" name="AEN139">
+     <span class="footnote">
+      [3]
+     </span>
+    </a>
+    for
+    <span class="QUOTE">
+     "Bourne-Again shell"
+    </span>
+    and a pun on Stephen Bourne's
+      now classic
+    <i class="FIRSTTERM">
+     Bourne
+    </i>
+    shell. Bash has become
+      a
+    <i class="FOREIGNPHRASE">
+     de facto
+    </i>
+    standard for shell
+      scripting on most flavors of UNIX. Most of the principles this
+      book covers apply equally well to scripting with other shells,
+      such as the
+    <i class="FIRSTTERM">
+     Korn Shell
+    </i>
+    , from which Bash
+      derives some of its features,
+    <a href="why-shell.html#FTN.AEN147" name="AEN147">
+     <span class="footnote">
+      [4]
+     </span>
+    </a>
+    and the
+    <i class="FIRSTTERM">
+     C Shell
+    </i>
+    and its variants. (Note that
+    <i class="FIRSTTERM">
+     C Shell
+    </i>
+    programming is not recommended due to
+      certain inherent problems, as pointed out in an October, 1993
+    <a href="http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/" target="_top">
+     Usenet
+      post
+    </a>
+    by Tom Christiansen.)
+   </p>
+   <p>
+    What follows is a tutorial on shell scripting. It relies
+      heavily on examples to illustrate various features of the shell.
+      The example scripts work -- they've been tested, insofar as
+      possible -- and some of them are even useful in real life. The
+      reader can play with the actual working code of the examples
+      in the source archive (
+    <tt class="FILENAME">
+     scriptname.sh
+    </tt>
+    or
+    <tt class="FILENAME">
+     scriptname.bash
+    </tt>
+    ),
+    <a href="why-shell.html#FTN.AEN157" name="AEN157">
+     <span class="footnote">
+      [5]
+     </span>
+    </a>
+    give them
+    <i class="FIRSTTERM">
+     execute
+    </i>
+    permission
+      (
+    <tt class="USERINPUT">
+     <b>
+      chmod u+rx scriptname
+     </b>
+    </tt>
+    ),
+      then run them to see what happens. Should the
+    <a href="http://bash.deta.in/abs-guide-latest.tar.bz2" target="_top">
+     source
+      archive
+    </a>
+    not be available, then cut-and-paste from the
+    <a href="http://www.tldp.org/LDP/abs/abs-guide.html.tar.gz" target="_top">
+     HTML
+    </a>
+    or
+    <a href="http://bash.deta.in/abs-guide.pdf" target="_top">
+     pdf
+    </a>
+    rendered versions. Be aware that some of the scripts presented here
+      introduce features before they are explained, and this may require
+      the reader to temporarily skip ahead for enlightenment.
+   </p>
+   <p>
+    Unless otherwise noted,
+    <a href="mailto:thegrendel.abs@gmail.com" target="_top">
+     the author
+    </a>
+    of this
+       book wrote the example scripts that follow.
+   </p>
+   <table border="0" cellpadding="0" cellspacing="0" class="EPIGRAPH" width="100%">
+    <tr>
+     <td width="45%">
+     </td>
+     <td align="LEFT" valign="TOP" width="45%">
+      <i>
+      </i>
+      <p>
+       <i>
+        His countenance was bold and bashed not.
+       </i>
+      </p>
+      <p>
+       <i>
+        --Edmund Spenser
+       </i>
+      </p>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <h3 class="FOOTNOTES">
+   Notes
+  </h3>
+  <table border="0" class="FOOTNOTES" width="100%">
+   <tr>
+    <td align="LEFT" valign="TOP" width="5%">
+     <a href="why-shell.html#AEN62" name="FTN.AEN62">
+      <span class="footnote">
+       [1]
+      </span>
+     </a>
+    </td>
+    <td align="LEFT" valign="TOP" width="95%">
+     <p>
+      These are referred to as
+      <a href="internal.html#BUILTINREF">
+       builtins
+      </a>
+      , features internal to the
+        shell.
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="LEFT" valign="TOP" width="5%">
+     <a href="why-shell.html#AEN87" name="FTN.AEN87">
+      <span class="footnote">
+       [2]
+      </span>
+     </a>
+    </td>
+    <td align="LEFT" valign="TOP" width="95%">
+     <p>
+      Although
+      <a href="localvar.html#RECURSIONREF0">
+       recursion
+       <em>
+        is
+       </em>
+       possible in a shell script
+      </a>
+      ,
+	      it tends to be slow and its implementation is often
+	      an
+      <a href="recurnolocvar.html#FIBOREF">
+       ugly kludge
+      </a>
+      .
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="LEFT" valign="TOP" width="5%">
+     <a href="why-shell.html#AEN139" name="FTN.AEN139">
+      <span class="footnote">
+       [3]
+      </span>
+     </a>
+    </td>
+    <td align="LEFT" valign="TOP" width="95%">
+     <p>
+      An
+      <i class="FIRSTTERM">
+       acronym
+      </i>
+      is an
+      <em>
+       ersatz
+      </em>
+      word formed by pasting
+        together the initial letters of the words into a tongue-tripping
+	phrase. This morally corrupt and pernicious practice
+	deserves appropriately severe punishment. Public
+	flogging suggests itself.
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="LEFT" valign="TOP" width="5%">
+     <a href="why-shell.html#AEN147" name="FTN.AEN147">
+      <span class="footnote">
+       [4]
+      </span>
+     </a>
+    </td>
+    <td align="LEFT" valign="TOP" width="95%">
+     <p>
+      Many of the features of
+      <i class="FIRSTTERM">
+       ksh88
+      </i>
+      ,
+	 and even a few from the updated
+      <i class="FIRSTTERM">
+       ksh93
+      </i>
+      have been merged into Bash.
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="LEFT" valign="TOP" width="5%">
+     <a href="why-shell.html#AEN157" name="FTN.AEN157">
+      <span class="footnote">
+       [5]
+      </span>
+     </a>
+    </td>
+    <td align="LEFT" valign="TOP" width="95%">
+     <p>
+      By convention, user-written shell scripts
+         that are Bourne shell compliant generally take a name with a
+      <tt class="FILENAME">
+       .sh
+      </tt>
+      extension.  System scripts, such as
+         those found in
+      <tt class="FILENAME">
+       /etc/rc.d
+      </tt>
+      ,
+         do not necessarily conform to this nomenclature.
+     </p>
+    </td>
+   </tr>
+  </table>
+  <div class="NAVFOOTER">
+   <hr align="LEFT" width="100%"/>
+   <table border="0" cellpadding="0" cellspacing="0" summary="Footer navigation table" width="100%">
+    <tr>
+     <td align="left" valign="top" width="33%">
+      <a accesskey="P" href="part1.html">
+       Prev
+      </a>
+     </td>
+     <td align="center" valign="top" width="34%">
+      <a accesskey="H" href="index.html">
+       Home
+      </a>
+     </td>
+     <td align="right" valign="top" width="33%">
+      <a accesskey="N" href="sha-bang.html">
+       Next
+      </a>
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" width="33%">
+      Introduction
+     </td>
+     <td align="center" valign="top" width="34%">
+      <a accesskey="U" href="part1.html">
+       Up
+      </a>
+     </td>
+     <td align="right" valign="top" width="33%">
+      Starting Off With a Sha-Bang
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>
