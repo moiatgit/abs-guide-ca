@@ -57,6 +57,7 @@ Taula de continguts
    part4/part4
    part5/part5
    endnotes/endnotes
+   biblio
 
 Índexs i taules
 ===============
