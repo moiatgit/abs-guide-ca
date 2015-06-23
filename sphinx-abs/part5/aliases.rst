@@ -6,10 +6,10 @@ XXX Capítol 25. Àlies
 
 En Bash, un *àlies* no és més que una drecera de teclat, una
 abreviació, una manera d'evitar escriure una seqüència llarga de
-comandes. Si, per exemple, incloem ``alias lm="ls -l \| more"`` en el
+comandes. Si, per exemple, incloem ``alias lm="ls -l | more"`` en el
 fitxer :doc:`~/.bashrc <sample-bashrc>`, cada cop que escrivim ``lm``
 a la línia de comandes [#primeraparaula]_, automàticament serà
-reemplaçat per la comanda ``ls -l \| more``.
+reemplaçat per la comanda ``ls -l | more``.
 
 Tot plegat, podem estalviar-nos escriure un munt a la línia de
 comandes i evitar-nos haver de recordar combinacions complexes de
