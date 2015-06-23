@@ -124,7 +124,7 @@ de shell:
   shell mostren el codi obertament llegible per tothom.
 
 Si el teu projecte presenta alguna de les necessitats anteriors,
-planteja't fer servir un llenguatge de programació de guions més potent (com ara *Perl*, *Tcl*, *Python*, *Ruby*) o fins i tot algun llenguatge compilat com *C*, *C*, o *Java*. 
+planteja't fer servir un llenguatge de programació de guions més potent (com ara *Perl*, *Tcl*, *Python*, *Ruby*) o fins i tot algun llenguatge compilat com *C*, *C*, o *Java*.
 Fins i tot en aquests casos és probable que et continuï resultant útil
 començant construir prototips de la teva aplicació amb shell script.
 
@@ -138,7 +138,7 @@ Shell* i les seves variants.
 Cal tenir present que la programació en *C Shell* no està recomanada
 per problemes inherents, tal i com va ser indicat a una `entrada a
 Usenet <http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/>`_ del Tom
-Christiansen d'octubre de 1993 
+Christiansen d'octubre de 1993
 
 A continuació trobareu un tutorial de programació de guions (o shell
 scripting). Es recolça fortament en exemples a l'hora d'il·lustrar les
@@ -155,10 +155,11 @@ momentània del que trobaràs més endavant.
 
 A menys que s'indiqui el contrari, `l'autor <mailto:thegrendel.abs@gmail.com>`_ d'aquest llibre va escriure cada guió que hi apareix.
 
+.. epigraph:: 
  
-    *His countenance was bold and bashed not.* 
+        *His countenance was bold and bashed not.*
 
-    -- Edmund Spenser
+        -- Edmund Spenser
 
 
 .. rubric:: Notes

@@ -2,11 +2,20 @@
 XXX Part 2. Basics
 ##################
 
-**Table of Contents**
+.. toctree::
+   :titlesonly:
 
-3. `Special Characters <special-chars.html>`_
+   special-chars
+   variables
+   quoting
+   exit-status
+   tests
+   operations
 
-4. `Introduction to Variables and Parameters <variables.html>`_
+
+
+
+
 
 4.1. `Variable Substitution <varsubn.html>`_
 
@@ -16,15 +25,10 @@ XXX Part 2. Basics
 
 4.4. `Special Variable Types <othertypesv.html>`_
 
-5. `Quoting <quoting.html>`_
 
 5.1. `Quoting Variables <quotingvar.html>`_
 
 5.2. `Escaping <escapingsection.html>`_
-
-6. `Exit and Exit Status <exit-status.html>`_
-
-7. `Tests <tests.html>`_
 
 7.1. `Test Constructs <testconstructs.html>`_
 
@@ -35,9 +39,6 @@ XXX Part 2. Basics
 7.4. `Nested ``if/then`` Condition Tests <nestedifthen.html>`_
 
 7.5. `Testing Your Knowledge of Tests <testtest.html>`_
-
-8. `Operations and Related Topics <operations.html>`_
-
 8.1. `Operators <ops.html>`_
 
 8.2. `Numerical Constants <numerical-constants.html>`_

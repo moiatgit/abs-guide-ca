@@ -36,3 +36,12 @@ llibre, amb la versió en anglès entre parèntesis.
    Shell script
        És refereix al llenguatge de programació de guions que ofereix la
        shell.
+
+   Programació shell (Shell scripting)
+        Desenvolupament de guions de shell.
+
+   Uptime
+
+        Temps durant el qual, l'equip o sistema està operatiu. En
+        contra de *downtime* que indica el temps en que no és
+        operatiu.

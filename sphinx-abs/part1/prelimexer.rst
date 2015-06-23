@@ -1,13 +1,33 @@
-#########################
-XXX Uns primers exercicis
-#########################
+#####################
+Uns primers exercicis
+#####################
 
-#. System administrators often write scripts to automate common tasks.
-   Give several instances where such scripts would be useful.
+Troba aquí uns primers exercicis:
 
-#. Write a script that upon invocation shows the `time and
-   date <timedate.html#DATEREF>`_, `lists all logged-in
-   users <system.html#WHOREF>`_, and gives the system
-   `uptime <system.html#UPTIMEREF>`_. The script then `saves this
-   information <io-redirection.html#IOREDIRREF>`_ to a logfile.
+#. Els administradors de sistemes sovint escriuen guions per a
+   automatitzar tarees habituals.
+
+   Pensa diferents exemples pels que els guions poden ser útils.
+
+#. Escriu un guió que, en ser invocat, mostri:
+
+   - l'hora i la data
+
+   - la llista de tots els usuaris logats
+
+   - el temps durant el qual el sistema és operatiu (*uptime*)
+
+   Finalment, el guió guardarà tota aquesta informació en un fitxer de
+   log.
+
+   .. tip::
+
+        Trobaràs ajuda per a resoldre aquest exercici als següents
+        documents:
+
+        * :doc:`timedate`
+
+        * :doc:`system`
+
+        * :doc:`io-redirection`
 
