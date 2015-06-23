@@ -22,9 +22,6 @@ dot, as, for example, ```       .bashrc      `` <sample-bashrc.html>`__
 ``             ?           `` has a different meaning in globbing than
 as part of an RE.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -57,22 +54,13 @@ as part of an RE.
     -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 b.1
      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 c.1
      -rw-rw-r--    1 bozo  bozo       758 Jul 30 09:02 test1.txt
-              
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
 
 Bash performs filename expansion on unquoted command-line arguments. The
 `echo <internal.html#ECHOREF>`__ command demonstrates this.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -84,54 +72,27 @@ Bash performs filename expansion on unquoted command-line arguments. The
 
     bash$ echo t?.sh
     t2.sh
-              
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
-
-|Note|
+Note
 
 It is possible to modify the way Bash interprets special characters in
 globbing. A **set -f** command disables globbing, and the
 ``         nocaseglob        `` and ``         nullglob        ``
 options to `shopt <internal.html#SHOPTREF>`__ change globbing behavior.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 See also `Example 11-5 <loops1.html#LISTGLOB>`__ .
 
-.. raw:: html
 
-   <div class="CAUTION">
 
-.. raw:: html
-
-   <div>
-
-|Caution|
+Caution
 
  Filenames with embedded
 `whitespace <special-chars.html#WHITESPACEREF>`__ can cause *globbing*
@@ -140,35 +101,32 @@ Wheeler <http://www.dwheeler.com/essays/filenames-in-shell.html>`__
 shows how to avoid many such pitfalls.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     IFS="$(printf '\n\t' |
-| )"   # Remove space.     |
-|                          |
-|     #  Correct glob use: |
-|     #  Always use for-lo |
-| op, prefix glob, check i |
-| f exists file.           |
-|     for file in ./* ; do |
-|          # Use ./* ... N |
-| EVER bare *              |
-|       if [ -e "$file" ]  |
-| ; then   # Check whether |
-|  file exists.            |
-|          COMMAND ... "$f |
-| ile" ...                 |
-|       fi                 |
-|     done                 |
-|                          |
-|     # This example taken |
-|  from David Wheeler's si |
-| te, with permission.     |
-                          
+ .. code:: PROGRAMLISTING
+
+     IFS="$(printf '\n\t'
+ )"   # Remove space.
+
+     #  Correct glob use:
+     #  Always use for-lo
+ op, prefix glob, check i
+ f exists file.
+     for file in ./* ; do
+          # Use ./* ... N
+ EVER bare *
+       if [ -e "$file" ]
+ ; then   # Check whether
+  file exists.
+          COMMAND ... "$f
+ ile" ...
+       fi
+     done
+
+     # This example taken
+  from David Wheeler's si
+ te, with permission.
+
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -184,9 +142,6 @@ shows how to avoid many such pitfalls.
 
     # This example taken from David Wheeler's site, with permission.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -202,28 +157,13 @@ shows how to avoid many such pitfalls.
 
     # This example taken from David Wheeler's site, with permission.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <globbingref.html#AEN17572>`__
 
@@ -232,57 +172,46 @@ containing special characters. For example, ``       example.???      ``
 might expand to ``       example.001      `` and/or
 ``       example.txt      `` .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <globbingref.html#AEN17581>`__
 
  A *wild card* character, analogous to a wild card in poker, can
 represent (almost) any other character.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <globbingref.html#AEN17592>`__
 
 Filename expansion *can* match dotfiles, but only if the pattern
 explicitly includes the dot as a literal character.
 
-+--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
-|                          |
-|     ~/[.]bashrc    #  Wi |
-| ll not expand to ~/.bash |
-| rc                       |
-|     ~/?bashrc      #  Ne |
-| ither will this.         |
-|                    #  Wi |
-| ld cards and metacharact |
-| ers will NOT             |
-|                    #+ ex |
-| pand to a dot in globbin |
-| g.                       |
-|                          |
-|     ~/.[b]ashrc    #  Wi |
-| ll expand to ~/.bashrc   |
-|     ~/.ba?hrc      #  Li |
-| kewise.                  |
-|     ~/.bashr*      #  Li |
-| kewise.                  |
-|                          |
-|     # Setting the "dotgl |
-| ob" option turns this of |
-| f.                       |
-|                          |
-|     # Thanks, S.C.       |
-                          
-+--------------------------+--------------------------+--------------------------+
+.. code:: PROGRAMLISTING
 
-.. raw:: html
+     ~/[.]bashrc    #  Wi
+ ll not expand to ~/.bash
+ rc
+     ~/?bashrc      #  Ne
+ ither will this.
+                    #  Wi
+ ld cards and metacharact
+ ers will NOT
+                    #+ ex
+ pand to a dot in globbin
+ g.
 
-   </p>
+     ~/.[b]ashrc    #  Wi
+ ll expand to ~/.bashrc
+     ~/.ba?hrc      #  Li
+ kewise.
+     ~/.bashr*      #  Li
+ kewise.
+
+     # Setting the "dotgl
+ ob" option turns this of
+ f.
+
+     # Thanks, S.C.
+
+
 
 .. code:: PROGRAMLISTING
 
@@ -299,9 +228,6 @@ explicitly includes the dot as a literal character.
 
     # Thanks, S.C.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -318,13 +244,7 @@ explicitly includes the dot as a literal character.
 
     # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

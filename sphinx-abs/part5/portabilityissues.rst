@@ -2,9 +2,6 @@
 XXX 36.9. Portability Issues
 ############################
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -12,13 +9,7 @@ XXX 36.9. Portability Issues
 
 *--Larry Wall*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 This book deals specifically with Bash scripting on a GNU/Linux system.
 All the same, users of **sh** and **ksh** will find much of value here.
@@ -82,9 +73,6 @@ shell <why-shell.html#BASHDEF>`__ lacks. Among these are:
 See the `Bash F.A.Q. <ftp://ftp.cwru.edu/pub/bash/FAQ>`__ for a complete
 listing.
 
-.. raw:: html
-
-   <div class="SECT2">
 
   36.9.1. A Test Suite
 ---------------------
@@ -94,15 +82,9 @@ classic Bourne shell. Download and install the ` "Heirloom Bourne Shell"
  <http://freshmeat.net/projects/bournesh>`__ and run the following
 script, first using Bash, then the classic *sh* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-23. Test Suite**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -167,42 +149,18 @@ script, first using Bash, then the classic *sh* .
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <portabilityissues.html#AEN20799>`__
 
 Or, better yet, `#!/bin/env sh <system.html#ENVV2REF>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
