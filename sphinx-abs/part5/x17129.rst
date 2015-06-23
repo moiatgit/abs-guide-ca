@@ -2,6 +2,8 @@
 XXX 18.1. A Brief Introduction to Regular Expressions
 #####################################################
 
+.. XXX TODO: change the name of this file please!
+
 An expression is a string of characters. Those characters having an
 interpretation above and beyond their literal meaning are called
 *metacharacters* . A quote symbol, for example, may denote speech by a
