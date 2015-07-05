@@ -10,64 +10,60 @@ els fonaments de la programació Bash.
 Considera la següent llista de caràcters especials que podem trobar en
 guions de shell:
 
-* #
+Sostingut: #
+============
 
-  **Comentaris.** Les línies que comencen amb un # (excepte
-  :doc:`sha-bang</part1/sha-bang>`) es consideren comentaris i *no*
-  seran processats.
+El símbol de *sostingut* (#) en Bash normalment indica l'inici d'un
+comentari.
 
-  .. code-block:: sh
+Les línies que comencen amb un # (excepte
+:doc:`sha-bang</part1/sha-bang>`) es consideren comentaris i *no*
+seran processades.
 
-        # Aquesta línia és un comentari
+.. code-block:: sh
 
-  Els comentaris poden aparèixer també després d'una comanda. Per
-  exemple:
+    # Aquesta línia és un comentari. El sostingut és el primer caràcter de la línia.
 
-  .. code-block:: sh
+També es considera un comentari, quan el símbol de *sostingut* apareix
+després d'un o més :ref:`caràcters en blanc <_whitespaces>` (espai,
+tabulador) a l'inici de la línia.
 
-        echo "A continuació bé un comentari" # El comentari
-        #                                   ^ Atenció a l'espai abans de #
+.. code-block:: sh
 
+    # Aquesta línia és un comentari com la de l'exemple anterior
+        # aquest comentari està precedit per un tabulador
 
-  XXX TODO: Per aquí
+Els comentaris poden aparèixer també després d'una comanda. Per
+exemple:
 
-     Comments may also follow
-    `whitespace <special-chars.html#WHITESPACEREF>`__ at the beginning
-    of a line.
+.. code-block:: sh
 
+      echo "A continuació bé un comentari" # El comentari
+      #                                   ^ Atenció a l'espai abans de #
 
-    .. code:: PROGRAMLISTING
+Podem trobar comentaris, fins i tot, en una :ref:`pipe`.
 
-             # A tab precedes this comment.
+.. literalinclude:: _scripts/comentarisenpipe.sh
+   :language: bash
+   :linenos:
+   :emphasize-lines: 11,13
 
+.. caution::
 
-
-     Comments may even be embedded within a
-    `pipe <special-chars.html#PIPEREF>`__ .
-
-
-    .. code:: PROGRAMLISTING
-
-        initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
-        # Delete lines containing '#' comment character.
-                   sed -e 's/\./\. /g' -e 's/_/_ /g'` )
-        # Excerpted from life.sh script
-
-    |Caution|
-
+    XXX per aquí
     A command may not follow a comment on the same line. There is no
     method of terminating the comment, in order for "live code" to begin
     on the same line. Use a new line for the next command.
 
 
-    |Note|
+|Note|
 
-    Of course, a `quoted <quoting.html#QUOTINGREF>`__ or an
-    `escaped <escapingsection.html#ESCP>`__ # in an
-    `echo <internal.html#ECHOREF>`__ statement does *not* begin a
-    comment. Likewise, a # appears in `certain parameter-substitution
-    constructs <parameter-substitution.html#PSUB2>`__ and in `numerical
-    constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
+Of course, a `quoted <quoting.html#QUOTINGREF>`__ or an
+`escaped <escapingsection.html#ESCP>`__ # in an
+`echo <internal.html#ECHOREF>`__ statement does *not* begin a
+comment. Likewise, a # appears in `certain parameter-substitution
+constructs <parameter-substitution.html#PSUB2>`__ and in `numerical
+constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
      .. code:: PROGRAMLISTING
 
@@ -2262,7 +2258,11 @@ guions de shell:
        ``                       EOF                     `` (end-of-file)
        character in the MSDOS filesystem.
 
- Whitespace
+
+.. _whitespaces:
+
+Caràcters en blanc
+==================
 
     **functions as a separator between commands and/or variables.**
     Whitespace consists of either *spaces* , *tabs* , *blank lines* , or
