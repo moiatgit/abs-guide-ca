@@ -31,12 +31,3 @@ starving <g>, but not too proud to accept donations.
    (O'Reilly, ISBN 1-56592-580-7). This is still the standard reference
    for anyone attempting to write a document in Docbook SGML format.
 
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <wherehelp.html>`_ | Where to Go For Help     |
-| _                        | `Up <endnotes.html>`__   |
-| `Home <index.html>`__    | Credits                  |
-| `Next <credits.html>`__  |                          |
-+--------------------------+--------------------------+--------------------------+
-

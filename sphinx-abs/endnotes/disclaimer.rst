@@ -18,11 +18,3 @@ suffer ill effects, aside from uncontrollable hiccups. In fact, the
 scripts and determine whether they have `unanticipated
 consequences <gotchas.html>`__.
 
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <credits.html>`__  | Credits                  |
-| `Home <index.html>`__    | `Up <endnotes.html>`__   |
-| `Next <biblio.html>`__   | Bibliography             |
-+--------------------------+--------------------------+--------------------------+
-

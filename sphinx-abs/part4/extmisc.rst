@@ -250,7 +250,6 @@ XXX 16.9. Miscellaneous Commands
     Unlike *seq* , **jot** can generate a sequence of random numbers,
     using the ``            -r           `` option.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ jot -r 3 999   |
@@ -258,7 +257,6 @@ XXX 16.9. Miscellaneous Commands
     |      1272                |
     |      1428                |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -388,14 +386,12 @@ XXX 16.9. Miscellaneous Commands
     to correctly process
     `whitespace <special-chars.html#WHITESPACEREF>`__ and *quotes* .
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     args=$(getopt -o a:b |
     | c:d -- "$@")             |
     |     eval set -- "$args"  |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -503,7 +499,6 @@ XXX 16.9. Miscellaneous Commands
     The *yes* command parses variables, or more accurately, it echoes
     parsed variables. For example:
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ yes $BASH_VERS |
@@ -516,12 +511,10 @@ XXX 16.9. Miscellaneous Commands
     |      . . .               |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     This particular "feature" may be used to create a *very large* ASCII
     file on the fly:
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ yes $PATH > hu |
@@ -529,7 +522,6 @@ XXX 16.9. Miscellaneous Commands
     |     Ctl-C                |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     Hit ``                       Ctl-C                     `` *very
     quickly* , or you just might get more than you bargained for. . . .
@@ -1603,7 +1595,6 @@ XXX 16.9. Miscellaneous Commands
     code of the executable itself, analogous to something like the
     following in a shell script:
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     case `basename $0` i |
@@ -1617,7 +1608,6 @@ XXX 16.9. Miscellaneous Commands
     |     *       ) bail_out;; |
     |     esac                 |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -1739,7 +1729,6 @@ Coded Decimal Interchange Code, an obsolete IBM data format. A bizarre
 application of the ``       conv=ebcdic      `` option of **dd** is as a
 quick 'n easy, but not very secure text file encoder.
 
-+--------------------------+--------------------------+--------------------------+
 | .. code:: PROGRAMLISTING |
 |                          |
 |     cat $file | dd conv= |
@@ -1757,7 +1746,6 @@ quick 'n easy, but not very secure text file encoder.
 | file_plaintext           |
 |     # Decode.            |
                           
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

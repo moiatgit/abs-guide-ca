@@ -704,7 +704,7 @@ guions de shell:
     read variables created in the child
     process <subshells.html#PARVIS>`__ , the subshell.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     a=123                |
@@ -716,7 +716,7 @@ guions de shell:
     | eses acts like a local v |
     | ariable.                 |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
 
     .. code:: PROGRAMLISTING
@@ -1093,7 +1093,7 @@ guions de shell:
      This is useful for suppressing output when testing for a condition.
     For example, let us test whether a certain command exists.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ type bogus_com |
@@ -1105,11 +1105,11 @@ guions de shell:
     |     1                    |
     |                          |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
     Or in a script:
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     command_test () { ty |
@@ -1128,7 +1128,7 @@ guions de shell:
     |     command_test $cmd; e |
     | cho $?   # 1             |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
 
     .. code:: SCREEN
@@ -1335,7 +1335,7 @@ guions de shell:
     is not the case, the data stream will *block* , and the pipe will
     not behave as expected.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     cat file1 file2 | ls |
@@ -1344,12 +1344,12 @@ guions de shell:
     | at file1 file2" disappea |
     | rs.                      |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
     A pipe runs as a `child process <othertypesv.html#CHILDREF>`__ , and
     therefore cannot alter script variables.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     variable="initial_va |
@@ -1360,7 +1360,7 @@ guions de shell:
     | riable"     # variable = |
     |  initial_value           |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
     If one of the commands in the pipe aborts, this prematurely
     terminates execution of the pipe. Called a *broken pipe* , this
@@ -1557,7 +1557,7 @@ guions de shell:
     This provides a handy means of removing files whose *names begin
     with a dash* .
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ ls -l          |
@@ -1571,7 +1571,7 @@ guions de shell:
     |     bash$ ls -l          |
     |     total 0              |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
 
     .. code:: SCREEN
@@ -1812,7 +1812,7 @@ guions de shell:
     ``                         -                       `` , this may
     likewise create problems.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     var="-n"             |
@@ -1821,7 +1821,7 @@ guions de shell:
     | "echo -n", and outputs n |
     | othing.                  |
 
-    +--------------------------+--------------------------+--------------------------+
+
 
 
     .. code:: PROGRAMLISTING
@@ -2299,9 +2299,9 @@ guions de shell:
     character class `[:space:] <x17129.html#WSPOSIX>`__ .
 
 
+.. rubric:: Notes
 
-Notes
-~~~~~
+
 .. [#metameaning] Consulta :doc:`/part5/x17129` per més informació
    sobre el concepte de *meta-significat*.
 

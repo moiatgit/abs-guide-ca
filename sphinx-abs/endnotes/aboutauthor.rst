@@ -51,30 +51,23 @@ Living in an out-of-the-way community with wife and orange tabby, he
 cherishes human frailty, especially his own.
 `[3] <aboutauthor.html#FTN.AEN21318>`__
 
-Notes
-~~~~~
+.. rubric:: Notes
 
-+--------------------------------------+--------------------------------------+
-| `[1] <aboutauthor.html#AEN21292>`__  | `[2] <aboutauthor.html#AEN21295>`__  |
-| In fact, he has no credentials or    | Those who can, do. Those who can't . |
-| special qualifications. He's a       | . . get an MCSE.                     |
-| school dropout with no formal        |                                      |
-| credentials or professional          |                                      |
-| experience whatsoever. None. Zero.   |                                      |
-| Nada. Aside from the *ABS Guide*,    |                                      |
-| his major claim to fame is a First   |                                      |
-| Place in the sack race at the Colfax |                                      |
-| Elementary School Field Day in June, |                                      |
-| 1958.                                |                                      |
-+--------------------------------------+--------------------------------------+
 
---------------
+`[1] <aboutauthor.html#AEN21292>`__  
+In fact, he has no credentials or    
+special qualifications. He's a       
+school dropout with no formal        
+credentials or professional          
+experience whatsoever. None. Zero.   
+Nada. Aside from the *ABS Guide*,    
+his major claim to fame is a First   
+Place in the sack race at the Colfax 
+Elementary School Field Day in June, 
+1958.                                
 
-+--------------------------+--------------------------+--------------------------+
-| `Prev <authorsnote.html> | Author's Note            |
-| `__                      | `Up <endnotes.html>`__   |
-| `Home <index.html>`__    | Where to Go For Help     |
-| `Next <wherehelp.html>`_ |                          |
-| _                        |                          |
-+--------------------------+--------------------------+--------------------------+
 
+`[2] <aboutauthor.html#AEN21295>`__  
+Those who can, do. Those who can't . 
+. . get an MCSE.                     
+                                     

@@ -20,7 +20,6 @@ retyping it on the command-line.
 
 **Example 36-1. *shell wrapper***
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -59,11 +58,9 @@ retyping it on the command-line.
 |                                                                          |
 |     exit                                                                 |
                                                                           
-+--------------------------------------------------------------------------+
 
 **Example 36-2. A slightly more complex *shell wrapper***
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -107,11 +104,9 @@ retyping it on the command-line.
 |                                                                          |
 |     exit $?  # Redirect the output of this script to write to a file.    |
                                                                           
-+--------------------------------------------------------------------------+
 
 **Example 36-3. A generic *shell wrapper* that writes to a logfile**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -144,11 +139,9 @@ retyping it on the command-line.
 |     # It's necessary to do the logging before the operation.             |
 |     # Why?                                                               |
                                                                           
-+--------------------------------------------------------------------------+
 
 **Example 36-4. A *shell wrapper* around an awk script**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -189,11 +182,9 @@ retyping it on the command-line.
 |     #  Redirect the output of this script to a file                      |
 |     #+ or pipe it to "more":  sh pr-asc.sh | more                        |
                                                                           
-+--------------------------------------------------------------------------+
 
 **Example 36-5. A *shell wrapper* around another awk script**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -262,7 +253,6 @@ retyping it on the command-line.
 |                                                                          |
 |     exit 0                                                               |
                                                                           
-+--------------------------------------------------------------------------+
 
 For those scripts needing a single do-it-all tool, a Swiss army knife,
 there is *Perl*. Perl combines the capabilities of
@@ -276,7 +266,6 @@ of the *ABS Guide* remains skeptical).
 
 **Example 36-6. Perl embedded in a *Bash* script**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -296,7 +285,6 @@ of the *ABS Guide* remains skeptical).
 |                                                                          |
 |     exit 0                                                               |
                                                                           
-+--------------------------------------------------------------------------+
 
 It is even possible to combine a Bash script and Perl script within the
 same file. Depending on how the script is invoked, either the Bash part
@@ -304,7 +292,6 @@ or the Perl part will execute.
 
 **Example 36-7. Bash and Perl scripts combined**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -328,9 +315,7 @@ or the Perl part will execute.
 |                                                                          |
 |     # End of Perl part of the script.                                    |
                                                                           
-+--------------------------------------------------------------------------+
 
-+--------------------------------------------------------------------------+
 | .. code:: SCREEN                                                         |
 |                                                                          |
 |     bash$ bash bashandperl.sh                                            |
@@ -341,14 +326,12 @@ or the Perl part will execute.
 |     Greetings from the Perl part of the script.                          |
 |                                                                          |
                                                                           
-+--------------------------------------------------------------------------+
 
 It is, of course, possible to embed even more exotic scripting languages
 within shell wrappers. *Python*, for example ...
 
 **Example 36-8. Python embedded in a *Bash* script**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -371,14 +354,12 @@ within shell wrappers. *Python*, for example ...
 |                                                                          |
 |     exit 0                                                               |
                                                                           
-+--------------------------------------------------------------------------+
 
 Wrapping a script around *mplayer* and the Google's translation server,
 you can create something that talks back to you.
 
 **Example 36-9. A script that speaks**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -405,7 +386,6 @@ you can create something that talks back to you.
 |     exit                                                                 |
 |     # Browns. Nice talking to you.                                       |
                                                                           
-+--------------------------------------------------------------------------+
 
 One interesting example of a complex shell wrapper is Martin Matusiak's
 `*undvd* script <http://sourceforge.net/projects/undvd/>`__, which
@@ -418,23 +398,10 @@ scripts to recover deleted file on an *ext3* filesystem.
 Notes
 ~~~~~
 
-+--------------------------------------+--------------------------------------+
 | `[1] <wrapper.html#AEN20130>`__      |
 | Quite a number of Linux utilities    |
 | are, in fact, shell wrappers. Some   |
 | examples are ``/usr/bin/pdf2ps``,    |
 | ``/usr/bin/batch``, and              |
 | ``/usr/bin/xmkmf``.                  |
-+--------------------------------------+--------------------------------------+
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <intandnonint.html | Interactive and          |
-| >`__                     | non-interactive shells   |
-| `Home <index.html>`__    | and scripts              |
-| `Next <testsandcompariso | `Up <miscellany.html>`__ |
-| ns.html>`__              | Tests and Comparisons:   |
-|                          | Alternatives             |
-+--------------------------+--------------------------+--------------------------+
 

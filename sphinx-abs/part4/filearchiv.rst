@@ -145,7 +145,6 @@ XXX  16.5. File and Archiving Commands
     ``                         rpm -qf                       ``
     identifies which package a file originates from.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rpm -qf /bin/l |
@@ -153,7 +152,6 @@ XXX  16.5. File and Archiving Commands
     |     coreutils-5.2.1-31   |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -203,7 +201,6 @@ XXX  16.5. File and Archiving Commands
     lists only the package(s) corresponding to
     ``            package_name           `` .
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rpm -qa        |
@@ -244,7 +241,6 @@ XXX  16.5. File and Archiving Commands
     | -2                       |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -1334,7 +1330,6 @@ XXX  16.5. File and Archiving Commands
     The **diff** command can also recursively compare directories (for
     the filenames present).
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ diff -r ~/note |
@@ -1347,7 +1342,6 @@ XXX  16.5. File and Archiving Commands
     | notes2: file04           |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -2023,7 +2017,6 @@ XXX  16.5. File and Archiving Commands
     so the more secure 160-bit **sha1sum** is a welcome new addition to
     the checksum toolkit.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ md5sum testfil |
@@ -2039,7 +2032,6 @@ XXX  16.5. File and Archiving Commands
     | stfile                   |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 

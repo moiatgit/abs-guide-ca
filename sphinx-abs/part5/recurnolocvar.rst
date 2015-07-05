@@ -7,7 +7,6 @@ variables.
 
 **Example 24-16. *The Fibonacci Sequence***
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -58,11 +57,9 @@ variables.
 |                                                                          |
 |     exit 0                                                               |
                                                                           
-+--------------------------------------------------------------------------+
 
 **Example 24-17. *The Towers of Hanoi***
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #! /bin/bash                                                         |
@@ -169,13 +166,3 @@ variables.
 |     # 2) Explain the workings of the workings of the "dohanoi" function. |
 |     #    (Difficult -- see the Dewdney reference, above.)                |
                                                                           
-+--------------------------------------------------------------------------+
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <localvar.html>`__ | Local Variables          |
-| `Home <index.html>`__    | `Up <functions.html>`__  |
-| `Next <aliases.html>`__  | Aliases                  |
-+--------------------------+--------------------------+--------------------------+
-

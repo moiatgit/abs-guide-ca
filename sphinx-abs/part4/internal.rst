@@ -254,7 +254,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
     An **echo** can be used to feed a sequence of commands down a pipe.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     if echo "$VAR" | gre |
@@ -266,7 +265,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |  \"txt\""                |
     |     fi                   |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -447,7 +445,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``            /bin/echo           `` , although its behavior is
     similar.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ type -a echo   |
@@ -456,7 +453,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |      echo is /bin/echo   |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -1148,7 +1144,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
      Yet, piping the output of `cat <basic.html#CATREF>`__ *seems* to
     work.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     cat file1 file2 |    |
@@ -1157,7 +1152,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     echo $line           |
     |     done                 |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     However, as Bjรถn Eriksson shows:
 
@@ -1234,7 +1228,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     output of `find <moreadv.html#FINDREF>`__ to a *while read*
     construct.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     find $1 \( -name "*$ |
@@ -1243,7 +1236,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     while read f; do     |
     |     . . .                |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -1480,7 +1472,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     The **cd** command does not function as expected when presented with
     two forward slashes.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ cd //          |
@@ -1488,7 +1479,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     //                   |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     The output should, of course, be ``           /          `` . This
     is a problem both from the command-line and in a script.
@@ -1715,7 +1705,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     The *let* command can, in certain contexts, return a surprising
     `exit status <exit-status.html#EXITSTATUSREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     # Evgeniy Ivanov poi |
@@ -1759,7 +1748,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     #  let returns 0 oth |
     | erwise." ['help let']    |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -2792,7 +2780,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     However, as Greg Keraunen points out, in certain situations this may
     have a different effect than setting a variable, then exporting it.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ export var=(a  |
@@ -2806,7 +2793,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     a                    |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 

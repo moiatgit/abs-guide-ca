@@ -1904,7 +1904,6 @@ damage your system if misused.
     The network address of a typical non-networked Linux machine, is
     found in ``            /etc/hosts           `` .
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ cat /etc/hosts |
@@ -1912,7 +1911,6 @@ damage your system if misused.
     |     localhost.localdomai |
     | n localhost              |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     As it happens, transposing the bytes of
     ``                         127.0.0.1                       `` , we
@@ -3723,7 +3721,6 @@ damage your system if misused.
     Judicious use of **ulimit** can protect a system against the dreaded
     *fork bomb* .
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     #!/bin/bash          |
@@ -3757,7 +3754,6 @@ damage your system if misused.
     | his script will never te |
     | rminate.                 |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     A **ulimit -Hu XX** (where *XX* is the user process limit) in
     ``            /etc/profile           `` would abort this script when
@@ -4021,7 +4017,6 @@ damage your system if misused.
      The first line of a script (the "sha-bang" line) may use **env**
     when the path to the shell or interpreter is unknown.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     #! /usr/bin/env perl |
@@ -4039,11 +4034,9 @@ damage your system if misused.
     | expected place.          |
     |     # Thanks, S.C.       |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     Or even ...
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     #!/bin/env bash      |
@@ -4057,7 +4050,6 @@ damage your system if misused.
     | .                        |
     |     ...                  |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -4464,7 +4456,6 @@ to subtraction.
 In Bash and other Bourne shell derivatives, it is possible to set
 variables in a single command's environment.
 
-+--------------------------+--------------------------+--------------------------+
 | .. code:: PROGRAMLISTING |
 |                          |
 |     var1=value1 var2=val |
@@ -4473,7 +4464,6 @@ variables in a single command's environment.
 | t in the environment of  |
 | 'commandXXX' only.       |
                           
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 

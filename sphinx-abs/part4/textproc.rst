@@ -335,7 +335,6 @@ XXX  16.4. Text Processing Commands
     is to actually embed a linefeed ( **RETURN** ) in the command
     sequence.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ cut -d'        |
@@ -348,7 +347,6 @@ XXX  16.4. Text Processing Commands
     | testfile.                |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     Thank you, Jaka Kranjc, for pointing this out.
 
@@ -760,7 +758,6 @@ XXX  16.4. Text Processing Commands
 
     To set a variable to a given block of a text file:
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     var=$(head -n $m $fi |
@@ -775,7 +772,6 @@ XXX  16.4. Text Processing Commands
     | s to set variable to (tr |
     | im from end of block)    |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -1086,7 +1082,6 @@ XXX  16.4. Text Processing Commands
     target file, simply give ``            /dev/null           `` as the
     second file.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ grep Linux osi |
@@ -1100,7 +1095,6 @@ XXX  16.4. Text Processing Commands
     | system.                  |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 

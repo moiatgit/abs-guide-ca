@@ -139,14 +139,3 @@ loss.
 
 Thanks most of all to my wife, Anita, for her encouragement,
 inspiration, and emotional support.
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <toolsused.html>`_ | Tools Used to Produce    |
-| _                        | This Book                |
-| `Home <index.html>`__    | `Up <endnotes.html>`__   |
-| `Next <disclaimer.html>` | Disclaimer               |
-| __                       |                          |
-+--------------------------+--------------------------+--------------------------+
-

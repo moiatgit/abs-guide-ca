@@ -9,7 +9,6 @@ called *device files*. As an example, the hard drive partitions
 containing the mounted filesystem(s) have entries in ``/dev``, as
 `df <system.html#DFREF>`__ shows.
 
-+--------------------------------------------------------------------------+
 | .. code:: SCREEN                                                         |
 |                                                                          |
 |     bash$ df                                                             |
@@ -21,7 +20,6 @@ containing the mounted filesystem(s) have entries in ``/dev``, as
 |      /dev/hda5              1714416   1123624    503704  70% /usr        |
 |                                                                          |
                                                                           
-+--------------------------------------------------------------------------+
 
 Among other things, the ``/dev`` directory contains *loopback* devices,
 such as ``/dev/loop0``. A loopback device is a gimmick that allows an
@@ -44,19 +42,16 @@ To manually `mount <system.html#MOUNTREF>`__ a USB flash drive, append
 the following line to ```/etc/fstab`` <system.html#FSTABREF>`__.
 `[3] <devref1.html#FTN.AEN19093>`__
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     /dev/sda1    /mnt/flashdrive    auto    noauto,user,noatime    0 0   |
                                                                           
-+--------------------------------------------------------------------------+
 
 (See also `Example A-23 <contributed-scripts.html#USBINST>`__.)
 
 Checking whether a disk is in the CD-burner (soft-linked to
 ``/dev/hdc``):
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     head -1 /dev/hdc                                                     |
@@ -80,12 +75,10 @@ Checking whether a disk is in the CD-burner (soft-linked to
 |     #  Now, it's just a matter of checking/parsing the output and taking |
 |     #+ appropriate action.                                               |
                                                                           
-+--------------------------------------------------------------------------+
 
 When executing a command on a ``/dev/tcp/$host/$port`` pseudo-device
 file, Bash opens a TCP connection to the associated *socket*.
 
-+--------------------------+--------------------------+--------------------------+
 | A *socket* is a          |
 | communications node      |
 | associated with a        |
@@ -107,26 +100,22 @@ file, Bash opens a TCP connection to the associated *socket*.
 | Internet.                |
 |                          |
                           
-+--------------------------+--------------------------+--------------------------+
 
 The following examples assume an active Internet connection.
 
 Getting the time from ``nist.gov``:
 
-+--------------------------------------------------------------------------+
 | .. code:: SCREEN                                                         |
 |                                                                          |
 |     bash$ cat </dev/tcp/time.nist.gov/13                                 |
 |     53082 04-03-18 04:26:54 68 0 0 502.3 UTC(NIST) *                     |
 |                                                                          |
                                                                           
-+--------------------------------------------------------------------------+
 
 [Mark contributed this example.]
 
 Generalizing the above into a script:
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -141,11 +130,9 @@ Generalizing the above into a script:
 |                                                                          |
 |     echo "UTC Time = "$UTC""                                             |
                                                                           
-+--------------------------------------------------------------------------+
 
 Downloading a URL:
 
-+--------------------------------------------------------------------------+
 | .. code:: SCREEN                                                         |
 |                                                                          |
 |     bash$ exec 5<>/dev/tcp/www.net.cn/80                                 |
@@ -153,13 +140,11 @@ Downloading a URL:
 |     bash$ cat <&5                                                        |
 |                                                                          |
                                                                           
-+--------------------------------------------------------------------------+
 
 [Thanks, Mark and Mihai Maties.]
 
 **Example 29-1. Using ``/dev/tcp`` for troubleshooting**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -204,11 +189,9 @@ Downloading a URL:
 |                                                                          |
 |     exit $MYEXIT                                                         |
                                                                           
-+--------------------------------------------------------------------------+
 
 **Example 29-2. Playing music**
 
-+--------------------------------------------------------------------------+
 | .. code:: PROGRAMLISTING                                                 |
 |                                                                          |
 |     #!/bin/bash                                                          |
@@ -255,7 +238,6 @@ Downloading a URL:
 |                                                                          |
 |     exit      # A "bonny" example of an elegant shell script!            |
                                                                           
-+--------------------------------------------------------------------------+
 
 Notes
 ~~~~~
@@ -287,12 +269,4 @@ To actually mount the drive, use the following command: **mount
 
 Newer Linux distros automount flash drives in the ``/media`` directory
 without user intervention.
-
---------------
-
-+--------------------------+--------------------------+--------------------------+
-| `Prev <devproc.html>`__  | ``/dev`` and ``/proc``   |
-| `Home <index.html>`__    | `Up <devproc.html>`__    |
-| `Next <procref1.html>`__ | ``/proc``                |
-+--------------------------+--------------------------+--------------------------+
 

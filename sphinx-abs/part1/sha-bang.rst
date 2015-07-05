@@ -52,17 +52,17 @@ millorar l'efectivitat.
 
 -----
 
-El *shabang* ( #!) [#shabang]_ 
+El *sha-bang* ( #!) [#sha-bang]_ 
 a l'inici d'un fitxer permet al sistema saber que el contingut d'aquest fitxer ha de ser processat per un determinat intèrpret.
 De fet, #! és un *número màgic* de dos bytes [#omesdedos]_, una marca especial que
 designa el tipus de fitxer. En aquest cas indica que és un executable.
 Trobaràs més informació sobre aquest fascinant tema escrivint ``man magic``
 a la teva consola.
-Tot just després del *shabang* apareix el programa que
+Tot just després del *sha-bang* apareix el programa que
 interpreta el contingut del fitxer, ja sigui comandes de la shell,
 d'un altre llenguatge de programació (ex. Python) o qualsevol altra
 utilitat.
-El que apareix a continuació del *shabang* és interpretat per a aquest
+El que apareix a continuació del *sha-bang* és interpretat per a aquest
 programa [#elprimer]_.
 
 Considera les següents capçaleres:
@@ -89,7 +89,7 @@ l'estàndard POSIX [#posixstandard]_. Per més informació, mira
 :doc:`/part5/portabilityissues` i :doc:`/part5/gotchas`.
 
 
-Fixat que el camí que s'indica al shabang ha de ser correcte,
+Fixat que el camí que s'indica al sha-bang ha de ser correcte,
 altrament generarà un missatge d'error (normalment *No es troba
 la comanda*) com a única resposta d'executar el guió [#envline].
 
@@ -115,7 +115,7 @@ et cal executar el guió des d'alguna altra shell com ara *tcsh*.
 
 .. rubric:: Notes
 
-.. [#shabang] En la literatura es sol trobar com *she-bang* o
+.. [#sha-bang] En la literatura es sol trobar com *she-bang* o
    *sh-bang*.  El nom està format per les inicials dels mots amb els
    que sovint s'anomenen els símbols que el composen: *sharp* (#) i
    *bang* (!).
@@ -127,7 +127,7 @@ et cal executar el guió des d'alguna altra shell com ara *tcsh*.
    Mascheck
    <http://www.in-ulm.de/~mascheck/various/shebang/#details>`_.
 
-.. [#elprimer] El *shabang* en un guió de shell serà la primera
+.. [#elprimer] El *sha-bang* en un guió de shell serà la primera
    línia que veurà l'intèrpret de comandes (*sh* o *bash* per
    exemple).  Donat que la línia comença amb  #, serà interpretat
    correctament com un comentari. La línia ja haurà fet la seva feina,
@@ -140,14 +140,14 @@ et cal executar el guió des d'alguna altra shell com ara *tcsh*.
        :language: bash
        :linenos:
 
-.. [#cutetrick] El shabang permet fer alguns trucs interessants, com per exemple:
+.. [#cutetrick] El sha-bang permet fer alguns trucs interessants, com per exemple:
 
    .. literalinclude:: _scripts/selfdeleting.sh
        :language: bash
        :linenos:
 
    També pots intentar afegir a un fitxer de text, com ara ``README``,
-   el shabang ``#!/bin/more`` i donar-li permissos d'execució.
+   el sha-bang ``#!/bin/more`` i donar-li permissos d'execució.
    El resultat és un fitxer de documentació que s'auto llista.
 
 .. [#posixstandard] (P)ortable (O)perating (S)ystem (I)nterface

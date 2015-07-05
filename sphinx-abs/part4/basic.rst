@@ -71,7 +71,7 @@ XXX  16.1. Basic Commands
     status <exit-status.html#EXITSTATUSREF>`__ when attempting to list a
     non-existent file.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ ls abc         |
@@ -81,8 +81,8 @@ XXX  16.1. Basic Commands
     |                          |
     |     bash$ echo $?        |
     |     2                    |
-                              
-    +--------------------------+--------------------------+--------------------------+
+
+
 
     .. raw:: html
 
@@ -247,7 +247,7 @@ XXX  16.1. Basic Commands
     ``            stdin           `` to a file, rather than to **cat**
     the file.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     cat filename | tr a- |
@@ -259,8 +259,8 @@ XXX  16.1. Basic Commands
     |                          |
     |     #+ and also dispense |
     | s with the pipe.         |
-                              
-    +--------------------------+--------------------------+--------------------------+
+
+
 
     .. raw:: html
 
@@ -358,7 +358,7 @@ XXX  16.1. Basic Commands
     ``            -r           `` and ``            -R           ``
     recursive flags.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     cp -u source_dir/* d |
@@ -369,7 +369,7 @@ XXX  16.1. Basic Commands
     | all newer and not previo |
     | usly existing files.     |
                               
-    +--------------------------+--------------------------+--------------------------+
+
 
     .. raw:: html
 
@@ -428,7 +428,7 @@ XXX  16.1. Basic Commands
     When a directory is moved to a preexisting directory, it becomes a
     subdirectory of the destination directory.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ mv source_dire |
@@ -442,7 +442,7 @@ XXX  16.1. Basic Commands
     |  19:20 source_directory/ |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
+
 
     .. raw:: html
 
@@ -501,7 +501,7 @@ XXX  16.1. Basic Commands
     with a dash. Why? Because *rm* sees a dash-prefixed filename as an
     *option* .
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rm -badname    |
@@ -510,27 +510,27 @@ XXX  16.1. Basic Commands
     |      Try `rm --help' for |
     |  more information.       |
                               
-    +--------------------------+--------------------------+--------------------------+
+
 
     One clever workaround is to precede the filename with a " -- " (the
     *end-of-options* flag).
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rm -- -badname |
                               
-    +--------------------------+--------------------------+--------------------------+
+
 
     Another method to is to preface the filename to be removed with a
     ``            dot-slash           `` .
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rm ./-badname  |
                               
-    +--------------------------+--------------------------+--------------------------+
+
 
     .. raw:: html
 

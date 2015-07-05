@@ -390,7 +390,6 @@ XXX  16.2. Complex Commands
     Note that *xargs* processes the arguments passed to it sequentially,
     *one at a time* .
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: SCREEN         |
     |                          |
     |     bash$ find /usr/bin  |
@@ -403,7 +402,6 @@ XXX  16.2. Complex Commands
     |      . . .               |
     |                          |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -498,7 +496,6 @@ XXX  16.2. Complex Commands
 
     Or:
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     cat /proc/"$pid"/"$O |
@@ -511,7 +508,6 @@ XXX  16.2. Complex Commands
     |     #+ script in "/dev a |
     | nd /proc" chapter.       |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -561,7 +557,6 @@ XXX  16.2. Complex Commands
     processes in parallel. This speeds up execution in a machine with a
     multicore CPU.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     #!/bin/bash          |
@@ -586,7 +581,6 @@ XXX  16.2. Complex Commands
     |  Polli, for the inspirat |
     | ion.                     |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 
@@ -1081,7 +1075,6 @@ XXX  16.2. Complex Commands
     ``                         b=`expr match $a           [0-9]*`                       ``
     in the above listing.
 
-    +--------------------------+--------------------------+--------------------------+
     | .. code:: PROGRAMLISTING |
     |                          |
     |     #!/bin/bash          |
@@ -1174,7 +1167,6 @@ XXX  16.2. Complex Commands
     |                          |
     |     exit 0               |
                               
-    +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
 

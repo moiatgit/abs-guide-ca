@@ -54,7 +54,7 @@ When a script ends with an **exit** that has no parameter, the exit
 status of the script is the exit status of the last command executed in
 the script (previous to the **exit** ).
 
-+--------------------------+--------------------------+--------------------------+
+
 | .. code:: PROGRAMLISTING |
 |                          |
 |     #!/bin/bash          |
@@ -69,13 +69,12 @@ the script (previous to the **exit** ).
 | tus of last command.     |
 |                          |
 |     exit                 |
-                          
-+--------------------------+--------------------------+--------------------------+
+
 
 The equivalent of a bare **exit** is **exit $?** or even just omitting
 the **exit** .
 
-+--------------------------+--------------------------+--------------------------+
+
 | .. code:: PROGRAMLISTING |
 |                          |
 |     #!/bin/bash          |
@@ -90,10 +89,7 @@ the **exit** .
 | tus of last command.     |
 |                          |
 |     exit $?              |
-                          
-+--------------------------+--------------------------+--------------------------+
 
-+--------------------------+--------------------------+--------------------------+
 | .. code:: PROGRAMLISTING |
 |                          |
 |     #!/bin/bash          |
@@ -106,8 +102,6 @@ the **exit** .
 |                          |
 |     # Will exit with sta |
 | tus of last command.     |
-                          
-+--------------------------+--------------------------+--------------------------+
 
 .. raw:: html
 
