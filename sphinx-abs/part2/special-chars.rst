@@ -25,7 +25,7 @@ seran processades.
     # Aquesta línia és un comentari. El sostingut és el primer caràcter de la línia.
 
 També es considera un comentari, quan el símbol de *sostingut* apareix
-després d'un o més :ref:`caràcters en blanc <_whitespaces>` (espai,
+després d'un o més :ref:`caràcters en blanc <specialchars_whitespaces>` (espai,
 tabulador) a l'inici de la línia.
 
 .. code-block:: sh
@@ -41,133 +41,63 @@ exemple:
       echo "A continuació bé un comentari" # El comentari
       #                                   ^ Atenció a l'espai abans de #
 
-Podem trobar comentaris, fins i tot, en una :ref:`pipe`.
+Podem trobar comentaris, fins i tot, en una :ref:`pipe <specialchars-pipe>`.
 
 .. literalinclude:: _scripts/comentarisenpipe.sh
    :language: bash
-   :linenos:
-   :emphasize-lines: 11,13
+   :emphasize-lines: 11
 
-.. caution::
+Un cop començat el comentari, tot el que vingui després en la mateixa
+línia serà considerat com a comentari. No hi ha manera d'indicar que
+el comentari ha finalitzat, a banda del salt de línia.
 
-    XXX per aquí
-    A command may not follow a comment on the same line. There is no
-    method of terminating the comment, in order for "live code" to begin
-    on the same line. Use a new line for the next command.
+Quan el sostingut apareix, però, :doc:`entre cometes <quoting>` o
+:doc:`escapat <escapingsection>` com a argument d'una comanda *echo*,
+no es considera com a marca de comentari.
 
+Per altra banda, # tampoc no es considera inici de comentari quan
+apareix en una :doc:`substitució de paràmetres
+</part3/parameter-substitution>` ni en :doc:`expressions amb constants
+numèriques <numerical-constants>`.
 
-|Note|
+.. literalinclude:: _scripts/nocomments.sh
+   :language: bash
 
-Of course, a `quoted <quoting.html#QUOTINGREF>`__ or an
-`escaped <escapingsection.html#ESCP>`__ # in an
-`echo <internal.html#ECHOREF>`__ statement does *not* begin a
-comment. Likewise, a # appears in `certain parameter-substitution
-constructs <parameter-substitution.html#PSUB2>`__ and in `numerical
-constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
+Punt i coma: ;
+==============
 
-     .. code:: PROGRAMLISTING
+Per Bash, el punt i coma és interpretat com a separador entre comandes
+que apareixen seqüencialment a una mateixa línia.
 
-         echo "The # here doe
-     s not begin a comment."
-         echo 'The # here doe
-     s not begin a comment.'
-         echo The \# here doe
-     s not begin a comment.
-         echo The # here begi
-     ns a comment.
+.. literalinclude:: _scripts/semicolons.sh
+   :language: bash
 
-         echo ${PATH#*:}
-       # Parameter substituti
-     on, not a comment.
-         echo $(( 2#101011 ))
-       # Base conversion, not
-      a comment.
+.. note::
 
-         # Thanks, S.C.
-
-    The standard `quoting and escape <quoting.html#QUOTINGREF>`__
-    characters (" ' \\) escape the #.
+    De vegades el ; ha de ser escapat. Considera l'opció :ref:`-exec de la comanda find <moreadv-find-exec>`.
 
 
-    .. code:: PROGRAMLISTING
+Quan el punt i coma apareix duplicat (;;), el seu significat passa a
+ser de terminador en una opció *case*.  Mira :doc:`/part3/testbranch`.
 
-        echo "The # here does not begin a comment."
-        echo 'The # here does not begin a comment.'
-        echo The \# here does not begin a comment.
-        echo The # here begins a comment.
+.. code-block:: sh
 
-        echo ${PATH#*:}       # Parameter substitution, not a comment.
-        echo $(( 2#101011 ))  # Base conversion, not a comment.
+    case "$variable" in
+      abc)  echo "\$variable = abc" ;;
+      xyz)  echo "\$variable = xyz" ;;
+    esac
 
-        # Thanks, S.C.
+Hi ha altres versions del punt i coma doble (;;& i ;&).  Són també
+terminadors d'opció *case*, en aquest cas, per versions de Bash a
+partir de la 4. Mira :doc:`/part5/bashver4`.
 
+Punt: .
+=======
 
-    .. code:: PROGRAMLISTING
+A l'inici de la línia, el punt equival a la comanda :ref:`source
+<dotcommandref>`
 
-        echo "The # here does not begin a comment."
-        echo 'The # here does not begin a comment.'
-        echo The \# here does not begin a comment.
-        echo The # here begins a comment.
-
-        echo ${PATH#*:}       # Parameter substitution, not a comment.
-        echo $(( 2#101011 ))  # Base conversion, not a comment.
-
-        # Thanks, S.C.
-
-
-
-
-    Certain `pattern matching
-    operations <parameter-substitution.html#PSOREX1>`__ also use the # .
-
- ;
-
-    **Command separator [semicolon].** Permits putting two or more
-    commands on the same line.
-
-
-
-    .. code:: PROGRAMLISTING
-
-        echo hello; echo there
-
-
-        if [ -x "$filename" ]; then    #  Note the space after the semicolon.
-        #+                   ^^
-          echo "File $filename exists."; cp $filename $filename.bak
-        else   #                       ^^
-          echo "File $filename not found."; touch $filename
-        fi; echo "File test complete."
-
-
-
-    Note that the " ; " `sometimes needs to be
-    *escaped* <moreadv.html#FINDREF0>`__ .
-
- ;;
-
-    **Terminator in a `case <testbranch.html#CASEESAC1>`__ option
-    [double semicolon].**
-
-
-
-    .. code:: PROGRAMLISTING
-
-        case "$variable" in
-          abc)  echo "\$variable = abc" ;;
-          xyz)  echo "\$variable = xyz" ;;
-        esac
-
-
-
- ;;& , ;&
-
-    **`Terminators <bashver4.html#NCTERM>`__ in a *case* option (
-    `version 4+ <bashver4.html#BASH4REF>`__ of Bash).**
-
-
- .
-
+XXX TODO: vas per aquí
 
     ** "dot" command [period].** Equivalent to
     `source <internal.html#SOURCEREF>`__ (see `Example
@@ -175,14 +105,12 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     `builtin <internal.html#BUILTINREF>`__ .
 
 
- .
-
     ** "dot" , as a component of a filename.** When working with
     filenames, a leading dot is the prefix of a "hidden" file, a file
     that an `ls <basic.html#LSREF>`__ will not normally show.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ touch .hidden-file
         bash$ ls -l
@@ -208,7 +136,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     directory.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ pwd
         /home/bozo/projects
@@ -228,7 +156,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     movement command, in this context meaning *current directory* .
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ cp /home/bozo/current_work/junk/* .
 
@@ -238,7 +166,6 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Copy all the "junk" files to
     `$PWD <internalvariables.html#PWDREF>`__ .
 
- .
 
     ** "dot" character match.** When `matching
     characters <x17129.html#REGEXDOT>`__ , as part of a `regular
@@ -246,14 +173,16 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     character <x17129.html#REGEXDOT>`__ .
 
 
- "
+Cometes dobles: "
+=================
 
     **`partial quoting <varsubn.html#DBLQUO>`__ [double quote].**
     *"STRING"* preserves (from interpretation) most of the special
     characters within *STRING* . See `Chapter 5 <quoting.html>`__ .
 
 
- '
+Cometes simples: '
+==================
 
     **`full quoting <varsubn.html#SNGLQUO>`__ [single quote].**
     *'STRING'* preserves all special characters within *STRING* . This
@@ -261,7 +190,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     5 <quoting.html>`__ .
 
 
- ,
+Coma: ,
+=======
 
     **`comma operator <ops.html#COMMAOP>`__ .** The *comma operator* `
     [1]  <special-chars.html#FTN.AEN612>`__ links together a series of
@@ -269,7 +199,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     returned.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         let "t2 = ((a = 9, 15 / 3))"
         # Set "a = 9" and "t2 = 15 / 3"
@@ -280,7 +210,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
      The *comma* operator can also concatenate strings.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         for file in /{,usr/}bin/*calc
         #             ^    Find all executable files ending in "calc"
@@ -309,7 +239,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     4 <bashver4.html#BASH4REF>`__ of Bash).**
 
 
- \\
+Contrabarra: \\
+===============
 
     **`escape <escapingsection.html#ESCP>`__ [backslash].** A quoting
     mechanism for single characters.
@@ -323,7 +254,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     See `Chapter 5 <quoting.html>`__ for an in-depth explanation of
     escaped characters.
 
- /
+Barra: /
+========
 
     **Filename path separator [forward slash].** Separates the
     components of a filename (as in
@@ -333,7 +265,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     This is also the division `arithmetic operator <ops.html#AROPS1>`__
     .
 
- \`
+Tilde oberta: \`
+================
 
     **`command substitution <commandsub.html#COMMANDSUBREF>`__ .** The
     **\`command\`** construct makes available the output of **command**
@@ -341,8 +274,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     `backquotes <commandsub.html#BACKQUOTESREF>`__ or backticks.
 
 
- :
-
+Dos punts: :
+============
 
     **null command [colon].** This is the shell equivalent of a "NOP" (
     ``                     no op                   `` , a do-nothing
@@ -353,7 +286,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         :
         echo $?   # 0
@@ -363,7 +296,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Endless loop:
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         while :
         do
@@ -384,7 +317,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Placeholder in if/then test:
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         if condition
         then :   # Do nothing and branch ahead
@@ -399,7 +332,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     parameters <parameter-substitution.html#DEFPARAM>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         : ${username=`whoami`}
         # ${username=`whoami`}   Gives an error without the leading :
@@ -418,7 +351,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     `Example 10-7 <parameter-substitution.html#EX6>`__ ).
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         : ${HOSTNAME?} ${USER?} ${MAIL?}
         #  Prints error message
@@ -435,7 +368,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     previously exist, creates it.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         : > data.xxx   # File "data.xxx" now empty.
 
@@ -467,7 +400,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     However, this is not the case with : .
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         : This is a comment that generates an error, ( if [ $x -eq 3] ).
 
@@ -479,7 +412,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ echo $PATH
         /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
@@ -490,7 +423,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     name <functions.html#FSTRANGEREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         :()
         {
@@ -513,7 +446,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     A *colon* can serve as a placeholder in an otherwise empty function.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         not_empty ()
         {
@@ -522,7 +455,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
- !
+Exclamació: !
+=============
 
     **reverse (or negate) the sense of a test or exit status [bang].**
     The ! operator inverts the `exit
@@ -541,7 +475,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Bash *history mechanism* (see `Appendix L <histcommands.html>`__ ).
     Note that within a script, the history mechanism is disabled.
 
- \*
+Asterisc: \*
+============
 
     **wild card [asterisk].** The \* character serves as a "wild card"
     for filename expansion in `globbing <globbingref.html>`__ . By
@@ -549,7 +484,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ echo *
         abs-book.sgml add-drive.sh agram.sh alias.sh
@@ -571,7 +506,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     `exponentiation <ops.html#EXPONENTIATIONREF>`__ operator or
     `extended file-match <bashver4.html#GLOBSTARREF>`__ *globbing* .
 
- ?
+Interrogant: ?
+==============
 
     **test operator.** Within certain expressions, the ? indicates a
     test for a condition.
@@ -586,7 +522,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     ``         result-if-false        ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         (( var0 = var1<98?9:21 ))
         #                ^ ^
@@ -613,13 +549,14 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     `extended regular expression <x17129.html#EXTREGEX>`__ .
 
 
- $
+Dollar: $
+=========
 
     **`Variable substitution <varsubn.html>`__ (contents of a
     variable).**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         var1=5
         var2=23skidoo
@@ -675,12 +612,13 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     appears.
 
 
- ()
+Parèntesis: ()
+==============
 
     **command group.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         (a=hello; echo $a)
 
@@ -701,7 +639,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     process <subshells.html#PARVIS>`__ , the subshell.
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code:: sh
     |                          |
     |     a=123                |
     |     ( a=321; )           |
@@ -715,7 +653,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         a=123
         ( a=321; )
@@ -724,7 +662,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
         # "a" within parentheses acts like a local variable.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         a=123
         ( a=321; )
@@ -739,19 +677,20 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **array initialization.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         Array=(element1 element2 element3)
 
 
-
+Claus: {}
+=========
 
  {xxx,yyy,zzz,...}
 
     **Brace expansion.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         echo \"{These,words,are,quoted}\"   # " prefix and suffix
         # "These" "words" "are" "quoted"
@@ -791,7 +730,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **Extended Brace expansion.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
         # Echoes characters between a and z.
@@ -821,7 +760,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ { local a;
                   a=123; }
@@ -832,7 +771,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         a=123
         { a=321; }
@@ -849,7 +788,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **Example 3-1. Code blocks and I/O redirection**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         #!/bin/bash
         # Reading lines in /etc/fstab.
@@ -880,7 +819,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **Example 3-2. Saving the output of a code block to a file**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         #!/bin/bash
         # rpm-check.sh
@@ -951,7 +890,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         ls . | xargs -i -t cp ./{} $1
         #            ^^         ^^
@@ -987,8 +926,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-
- [ ]
+Claudàtors: [ ]
+===============
 
     **test.**
 
@@ -1020,7 +959,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     off the numbering of each element of that array.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         Array[1]=slot_1
         echo ${Array[1]}
@@ -1044,7 +983,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Evaluate integer expression between $[ ] .
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         a=3
         b=7
@@ -1090,7 +1029,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     For example, let us test whether a certain command exists.
 
 
-    | .. code:: SCREEN         |
+    | .. code:: sh
     |                          |
     |     bash$ type bogus_com |
     | mand &>/dev/null         |
@@ -1106,7 +1045,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Or in a script:
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code:: sh
     |                          |
     |     command_test () { ty |
     | pe "$1" &>/dev/null; }   |
@@ -1127,7 +1066,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ type bogus_command &>/dev/null
 
@@ -1138,7 +1077,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         command_test () { type "$1" &>/dev/null; }
         #                                      ^
@@ -1151,7 +1090,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
         command_test $cmd; echo $?   # 1
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ type bogus_command &>/dev/null
 
@@ -1162,7 +1101,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         command_test () { type "$1" &>/dev/null; }
         #                                      ^
@@ -1208,6 +1147,9 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     operators <comparison-ops.html#ICOMPARISON1>`__ . See also `Example
     16-9 <moreadv.html#EX45>`__ .
 
+Signes de menor i major: < >
+============================
+
  <<
 
     **redirection used in a `here
@@ -1225,7 +1167,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **`ASCII comparison <comparison-ops.html#LTREF>`__ .**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         veg1=carrots
         veg2=tomatoes
@@ -1251,7 +1193,10 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     ``         bash$        ``
     ``                   grep '\<the\>' textfile                 ``
 
- \|
+.. _specialchars-pipe:
+
+Barra vertical o *pipe*: \|
+===========================
 
 
     **pipe.** Passes the output ( ``          stdout         `` ) of a
@@ -1261,7 +1206,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         echo ls -l | sh
         #  Passes the output of "echo ls -l" to the shell,
@@ -1296,7 +1241,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
      The output of a command or commands may be piped to a script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         #!/bin/bash
         # uppercase.sh : Changes input to uppercase.
@@ -1312,7 +1257,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     Now, let us pipe the output of **ls -l** to this script.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ ls -l | ./uppercase.sh
         -RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
@@ -1332,7 +1277,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     not behave as expected.
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code:: sh
     |                          |
     |     cat file1 file2 | ls |
     |  -l | sort               |
@@ -1346,7 +1291,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     therefore cannot alter script variables.
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code:: sh
     |                          |
     |     variable="initial_va |
     | lue"                     |
@@ -1365,26 +1310,26 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     `signal <debugging.html#SIGNALD>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         variable="initial_value"
         echo "new_value" | read variable
         echo "variable = $variable"     # variable = initial_value
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         variable="initial_value"
         echo "new_value" | read variable
@@ -1408,14 +1353,15 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     test conditions is true.
 
 
- &
+Símbol d'unió o *ampersand*: &
+==============================
 
     **Run job in background.** A command followed by an & will run in
     the background.
 
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ sleep 10 &
         [1] 850
@@ -1431,7 +1377,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **Example 3-3. Running a loop in the background**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         #!/bin/bash
         # background-loop.sh
@@ -1498,7 +1444,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     conditions are true.
 
 
- -
+Guió: -
+=======
 
     **option, prefix.** Option flag for a command or filter. Prefix for
     an operator. Prefix for a `default
@@ -1513,7 +1460,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     ``                   sort -dfu $filename                 ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         if [ $file1 -ot $file2 ]
         then #      ^
@@ -1554,7 +1501,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     with a dash* .
 
 
-    | .. code:: SCREEN         |
+    | .. code:: sh
     |                          |
     |     bash$ ls -l          |
     |     -rw-r--r-- 1 bozo bo |
@@ -1570,7 +1517,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ ls -l
         -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
@@ -1582,7 +1529,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
         total 0
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ ls -l
         -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
@@ -1609,7 +1556,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ cat -
         abc
@@ -1627,7 +1574,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     have real-world applications?
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
         # Move entire file tree from one directory to another
@@ -1674,7 +1621,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
         #  --uncompress tar file--      | --then pass it to "tar"--
@@ -1689,7 +1636,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     ``         stdout        `` , such as **tar** , **cat** , etc.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ echo "whatever" | cat -
         whatever
@@ -1704,7 +1651,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     method of using a file-oriented utility as a filter in a pipe.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ file
         Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...
@@ -1719,7 +1666,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     user input.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ file -
         abc
@@ -1754,7 +1701,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     **Example 3-4. Backup of all files changed in last day**
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         #!/bin/bash
 
@@ -1809,7 +1756,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     likewise create problems.
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code:: sh
     |                          |
     |     var="-n"             |
     |     echo $var            |
@@ -1820,14 +1767,14 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         var="-n"
         echo $var
         # Has the effect of "echo -n", and outputs nothing.
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         var="-n"
         echo $var
@@ -1861,12 +1808,13 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     operation <ops.html#AROPS1>`__ .
 
 
- =
+Igual: =
+========
 
     **Equals.** `Assignment operator <varassignment.html#EQREF>`__
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         a=28
         echo $a   # 28
@@ -1878,7 +1826,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     " = " is a `string comparison <comparison-ops.html#SCOMPARISON1>`__
     operator.
 
- +
+Suma: +
+=======
 
     **Plus.** Addition `arithmetic operator <ops.html#AROPS1>`__ .
 
@@ -1899,14 +1848,15 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     value <parameter-substitution.html#PARAMALTV>`__ that a variable
     expands to.
 
- %
+Percentatge: %
+==============
 
     **`modulo <ops.html#MODULOREF>`__ .** Modulo (remainder of a
     division) `arithmetic operation <ops.html#AROPS1>`__ .
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code:: sh
 
         let "z = 5 % 3"
         echo $z  # 2
@@ -1917,7 +1867,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     the % is a `pattern matching <parameter-substitution.html#PSUB2>`__
     operator.
 
- ~
+Tilde: ~
+========
 
     **home directory [tilde].** This corresponds to the
     `$HOME <internalvariables.html#HOMEDIRREF>`__ internal variable.
@@ -1926,7 +1877,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     directory, and **ls ~/** lists the contents of it.
 
 
-    .. code:: SCREEN
+    .. code:: sh
 
         bash$ echo ~bozo
         /home/bozo
@@ -1980,7 +1931,8 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
     4 <bashver4.html#BASH4REF>`__ of Bash).**
 
 
- Control Characters
+Caràcters de control
+====================
 
     **change the behavior of the terminal or text display.** A control
     character is a **CONTROL** + **key** combination (pressed
@@ -2050,7 +2002,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
        while backspacing.
 
 
-       .. code:: PROGRAMLISTING
+       .. code:: sh
 
            #!/bin/bash
            # Embedding Ctl-H in a string.
@@ -2124,7 +2076,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
        ``                       Carriage return                     `` .
 
 
-       .. code:: PROGRAMLISTING
+       .. code:: sh
 
            #!/bin/bash
            # Thank you, Lee Maschmeyer, for this example.
@@ -2219,7 +2171,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
        equivalent:
 
 
-       .. code:: PROGRAMLISTING
+       .. code:: sh
 
            echo -e '\x0a'
            echo <Ctl-V><Ctl-J>
@@ -2259,7 +2211,7 @@ constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
        character in the MSDOS filesystem.
 
 
-.. _whitespaces:
+.. _specialchars_whitespaces:
 
 Caràcters en blanc
 ==================
@@ -2351,7 +2303,7 @@ The shell does the *brace expansion* . The command itself acts upon the
 Exception: a code block in braces as part of a pipe *may* run as a
 `subshell <subshells.html#SUBSHELLSREF>`__ .
 
- .. code:: PROGRAMLISTING
+ .. code:: sh
 
      ls | { read firstlin
  e; read secondline; }
@@ -2370,7 +2322,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
      # Thanks, S.C.
 
 
-.. code:: PROGRAMLISTING
+.. code:: sh
 
     ls | { read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,
@@ -2380,7 +2332,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
     # Thanks, S.C.
 
 
-.. code:: PROGRAMLISTING
+.. code:: sh
 
     ls | { read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,

@@ -9,10 +9,8 @@ FINAL
 # Mostrem el fitxer sense línies de comentaris
 cat /tmp/fitxer |\
 # eliminem les línies de comentaris
-sed -e '/^\s*#/d' |\
-# eliminem els comentaris dins de línies
-sed -e 's/#.*$//'
+sed -e '/^\s*#/d'
 # Mostrarà:
 #   Aquesta es mostra
-#   Aquesta també
+#   Aquesta també # es mostra
 

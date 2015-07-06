@@ -8,6 +8,8 @@ XXX  16.2. Complex Commands
 
 ** Commands for more advanced users**
 
+.. _moreadv-find-exec:
+
  **find**
 
     -exec ``                   COMMAND                 `` \\;

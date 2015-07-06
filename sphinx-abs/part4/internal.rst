@@ -3063,6 +3063,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 ** Script Behavior**
 
+.. _dotcommandref:
+
  **source** , . ( `dot <special-chars.html#DOTREF>`__ command)
     This command, when invoked from the command-line, executes a script.
     Within a script, a
