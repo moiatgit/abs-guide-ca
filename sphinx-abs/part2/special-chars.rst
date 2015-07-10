@@ -94,95 +94,69 @@ partir de la 4. Mira :doc:`/part5/bashver4`.
 Punt: .
 =======
 
-A l'inici de la línia, el punt equival a la comanda :ref:`source
-<dotcommandref>`
+A l'inici de la línia, el punt equival a la comanda :ref:`internal_dotcommand`.
 
-XXX TODO: vas per aquí
+Quan el nom d'un fitxer o carpeta comença amb punt, es interpretat com a fitxer *ocult* i, per
+exemple, no serà llistat per defecte per la comanda ``ls``.
 
-    ** "dot" command [period].** Equivalent to
-    `source <internal.html#SOURCEREF>`__ (see `Example
-    15-22 <internal.html#EX38>`__ ). This is a bash
-    `builtin <internal.html#BUILTINREF>`__ .
+.. code:: sh
 
-
-    ** "dot" , as a component of a filename.** When working with
-    filenames, a leading dot is the prefix of a "hidden" file, a file
-    that an `ls <basic.html#LSREF>`__ will not normally show.
-
-
-    .. code:: sh
-
-        bash$ touch .hidden-file
-        bash$ ls -l
-        total 10
-         -rw-r--r--    1 bozo      4034 Jul 18 22:04 data1.addressbook
-         -rw-r--r--    1 bozo      4602 May 25 13:58 data1.addressbook.bak
-         -rw-r--r--    1 bozo       877 Dec 17  2000 employment.addressbook
+    bash$ touch .fitxerocult
+    bash$ ls -l
+    total 10
+     -rw-r--r--    1 usuari      4034 Jul 18 22:04 data1.addressbook
+     -rw-r--r--    1 usuari      4602 May 25 13:58 data1.addressbook.bak
+     -rw-r--r--    1 usuari       877 Dec 17  2000 employment.addressbook
 
 
-        bash$ ls -al
-        total 14
-         drwxrwxr-x    2 bozo  bozo      1024 Aug 29 20:54 ./
-         drwx------   52 bozo  bozo      3072 Aug 29 20:51 ../
-         -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.addressbook
-         -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.addressbook.bak
-         -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.addressbook
-         -rw-rw-r--    1 bozo  bozo         0 Aug 29 20:54 .hidden-file
+    bash$ ls -al
+    total 14
+     drwxrwxr-x    2 usuari  usuari      1024 Aug 29 20:54 ./
+     drwx------   52 usuari  usuari      3072 Aug 29 20:51 ../
+     -rw-r--r--    1 usuari  usuari      4034 Jul 18 22:04 data1.addressbook
+     -rw-r--r--    1 usuari  usuari      4602 May 25 13:58 data1.addressbook.bak
+     -rw-r--r--    1 usuari  usuari       877 Dec 17  2000 employment.addressbook
+     -rw-rw-r--    1 usuari  usuari         0 Aug 29 20:54 .fitxerocult
 
+En el cas del nom d'una carpeta, un punt sol representa el directori actual, mentre que dos punts
+denoten la carpeta superior.
 
+.. code:: sh
 
-    When considering directory names, *a single dot* represents the
-    current working directory, and *two dots* denote the parent
-    directory.
+    bash$ pwd
+    /home/usuari/projects
 
+    bash$ cd .
+    bash$ pwd
+    /home/usuari/projects
 
-    .. code:: sh
+    bash$ cd ..
+    bash$ pwd
+    /home/usuari/
 
-        bash$ pwd
-        /home/bozo/projects
+El punt apareix sovint com la destinació (carpeta) d'una comanda de moviment o còpia de fitxers. En
+aquest cas, s'indica que la destinació és la carpeta actual:
 
-        bash$ cd .
-        bash$ pwd
-        /home/bozo/projects
+.. code:: sh
 
-        bash$ cd ..
-        bash$ pwd
-        /home/bozo/
+    bash$ cp /home/usuari/feina/brossa/* .
 
+La comanda anterior copiarà tots els fitxers de la carpeta brossa/ a la carpeta actual o $PWD (mira
+:ref:`internalvars_pwd`)
 
+Finalment, el caràcter punt serveix per indicar *qualsevol caràcter* quan forma part d'una
+:doc:`expressió regular </part5/regexp>`.
 
+Cometes dobles: \"
+==================
 
-    The *dot* often appears as the destination (directory) of a file
-    movement command, in this context meaning *current directory* .
-
-
-    .. code:: sh
-
-        bash$ cp /home/bozo/current_work/junk/* .
-
-
-
-
-    Copy all the "junk" files to
-    `$PWD <internalvariables.html#PWDREF>`__ .
-
-
-    ** "dot" character match.** When `matching
-    characters <x17129.html#REGEXDOT>`__ , as part of a `regular
-    expression <regexp.html#REGEXREF>`__ , a "dot" `matches a single
-    character <x17129.html#REGEXDOT>`__ .
-
-
-Cometes dobles: "
-=================
-
-    **`partial quoting <varsubn.html#DBLQUO>`__ [double quote].**
-    *"STRING"* preserves (from interpretation) most of the special
-    characters within *STRING* . See `Chapter 5 <quoting.html>`__ .
-
+Envoltar un text entre cometes dobles, evita que la majoria dels caràcters especials que conté el
+text, siguin interpretats. Mira :doc:`/part2/quoting`.
 
 Cometes simples: '
 ==================
+
+XXX TODO: per aquí
 
     **`full quoting <varsubn.html#SNGLQUO>`__ [single quote].**
     *'STRING'* preserves all special characters within *STRING* . This
