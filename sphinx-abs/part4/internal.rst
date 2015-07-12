@@ -154,9 +154,12 @@ almost identical.
     echo "This line uses the \"echo\" builtin."
     /bin/echo "This line uses the /bin/echo system command."
 
+.. _internal_keyword:
 
+Keyword
+-------
 
- A *keyword* is a *reserved* word, token or operator. Keywords have a
+A *keyword* is a *reserved* word, token or operator. Keywords have a
 special meaning to the shell, and indeed are the building blocks of the
 shell's syntax. As examples, *for* , *while* , *do* , and *!* are
 keywords. Similar to a `builtin <internal.html#BUILTINREF>`__ , a

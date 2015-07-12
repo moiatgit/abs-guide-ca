@@ -151,60 +151,35 @@ Cometes dobles: \"
 ==================
 
 Envoltar un text entre cometes dobles, evita que la majoria dels caràcters especials que conté el
-text, siguin interpretats. Mira :doc:`/part2/quoting`.
+text, siguin interpretats. Es coneix com *partial quoting*. Mira
+:doc:`/part2/quoting`.
 
 Cometes simples: '
 ==================
 
-XXX TODO: per aquí
-
-    **`full quoting <varsubn.html#SNGLQUO>`__ [single quote].**
-    *'STRING'* preserves all special characters within *STRING* . This
-    is a stronger form of quoting than *"STRING"* . See `Chapter
-    5 <quoting.html>`__ .
-
+Quan envoltem un text entre cometes simples (*full quoting*), tots els caràcters especials deixen de
+ser interpretats.
+És, per tant, una forma més forta de posar entre cometes un text que amb les cometes dobles.
+Mira :doc:`/part2/quoting`.
 
 Coma: ,
 =======
 
-    **`comma operator <ops.html#COMMAOP>`__ .** The *comma operator* `
-    [1]  <special-chars.html#FTN.AEN612>`__ links together a series of
-    arithmetic operations. All are evaluated, but only the last one is
-    returned.
+L'*operador coma* [#operadors]_ enllaça una sèrie d'operacions aritmètiques. Totes són avaluades, i
+finalment es retorna el resultat de la darrera.
+
+.. code-block:: sh
+
+    let "v2 = ((v1 = 9, 15 / 3))"
+    # Assigna un 9 a v1 i 15/3 a v2.
 
 
-    .. code:: sh
+Amb l'operador coma també podem concatenar Strings, com al següent exemple:
 
-        let "t2 = ((a = 9, 15 / 3))"
-        # Set "a = 9" and "t2 = 15 / 3"
+.. literalinclude:: _scripts/mostraexecutablesctl.sh
+   :language: bash
 
-
-
-
-     The *comma* operator can also concatenate strings.
-
-
-    .. code:: sh
-
-        for file in /{,usr/}bin/*calc
-        #             ^    Find all executable files ending in "calc"
-        #+                 in /bin and /usr/bin directories.
-        do
-                if [ -x "$file" ]
-                then
-                  echo $file
-                fi
-        done
-
-        # /bin/ipcalc
-        # /usr/bin/kcalc
-        # /usr/bin/oidcalc
-        # /usr/bin/oocalc
-
-
-        # Thank you, Rory Winston, for pointing this out.
-
-
+XXX TODO per aquí
 
  , , ,
 
@@ -2231,13 +2206,11 @@ Caràcters en blanc
 .. [#metameaning] Consulta :doc:`/part5/x17129` per més informació
    sobre el concepte de *meta-significat*.
 
-` [1]  <special-chars.html#AEN612>`__
+.. [#operadors] Els *operadors* defineixen l'operació a realitzar en una expressió. Alguns exemples
+   són els coneguts operadors aritmètics (+, -, \* i \/) (mira :doc:`ops`) per més detalls.
 
- An *operator* is an agent that carries out an *operation* . Some
-examples are the common `arithmetic operators <ops.html#AROPS1>`__ , **+
-- \* /** . In Bash, there is some overlap between the concepts of
-*operator* and `keyword <internal.html#KEYWORDREF>`__ .
-
+   En Bash els conceptes d'*operador* i de *paraula clau* apareixen una mica superposats. Mira
+   :ref:`internal_keyword`.
 
 ` [2]  <special-chars.html#AEN888>`__
 

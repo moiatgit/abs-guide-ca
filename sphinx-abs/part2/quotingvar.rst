@@ -1,9 +1,6 @@
-.. raw:: html
-
-   <div class="SECT1">
-
-  5.1. Quoting Variables
-=======================
+###########################
+XXX  5.1. Quoting Variables
+###########################
 
 When referencing a variable, it is generally advisable to enclose its
 name in double quotes. This prevents reinterpretation of all special
