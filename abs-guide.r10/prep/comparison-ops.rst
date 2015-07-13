@@ -99,7 +99,7 @@ operators.*
     within single brackets.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     [[ $a == z* ]]   # T |
     | rue if $a starts with an |
@@ -121,7 +121,7 @@ operators.*
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         [[ $a == z* ]]   # True if $a starts with an "z" (pattern matching).
         [[ $a == "z*" ]] # True if $a is equal to z* (literal matching).
@@ -132,7 +132,7 @@ operators.*
         # Thanks, StÃ©phane Chazelas
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         [[ $a == z* ]]   # True if $a starts with an "z" (pattern matching).
         [[ $a == "z*" ]] # True if $a is equal to z* (literal matching).
@@ -182,7 +182,7 @@ operators.*
     string is *null* , that is, has zero length
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
          String=''   # Zero-length ("null") string variable.
 
@@ -218,7 +218,7 @@ operators.*
 **Example 7-5. Arithmetic and string comparisons**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -264,7 +264,7 @@ operators.*
 **Example 7-6. Testing whether a string is *null***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  str-test.sh: Testing null strings and unquoted strings,
@@ -342,7 +342,7 @@ operators.*
 **Example 7-7. *zmore***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # zmore
@@ -409,7 +409,7 @@ These are similar to the Bash comparison operators **&&** and **\|\|** ,
 used within `double brackets <testconstructs.html#DBLBRACKETS>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     [[ condition1 && condition2 ]]
 
@@ -420,7 +420,7 @@ The **-o** and **-a** operators work with the
 test brackets.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ "$expr1" -a "$expr2" ]
     then
@@ -438,7 +438,7 @@ test brackets.
 But, as *rihad* points out:
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     [ 1 -eq 1 ] && [ -n  |
 | "`echo true 1>&2`" ]   # |
@@ -473,7 +473,7 @@ But, as *rihad* points out:
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     [ 1 -eq 1 ] && [ -n "`echo true 1>&2`" ]   # true
     [ 1 -eq 2 ] && [ -n "`echo true 1>&2`" ]   # (no output)
@@ -490,7 +490,7 @@ But, as *rihad* points out:
     # Apparently && and || "short-circuit" while -a and -o do not.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     [ 1 -eq 1 ] && [ -n "`echo true 1>&2`" ]   # true
     [ 1 -eq 2 ] && [ -n "`echo true 1>&2`" ]   # (no output)

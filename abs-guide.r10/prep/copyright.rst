@@ -7,7 +7,7 @@ The *Advanced Bash Scripting Guide* is herewith granted to the PUBLIC
 DOMAIN. This has the following implications and consequences.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     A.  All previous releases of the Advanced Bash Scripting Guide
         are as well granted to the Public Domain.
@@ -46,7 +46,7 @@ any copyright notice. Any copyright notice is void.
 *Additionally, the author wishes to state his intention that:*
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     If you copy or distribute this book, kindly DO NOT
     use the materials within, or any portion thereof, in a patent or copyright

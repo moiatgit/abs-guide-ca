@@ -27,7 +27,7 @@ down. <gotchas.html#PARCHILDPROBREF>`__
 **Example 15-1. A script that spawns multiple instances of itself**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # spawn.sh
@@ -70,7 +70,7 @@ usually *will* fork a subprocess.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # spawn.sh
@@ -105,7 +105,7 @@ usually *will* fork a subprocess.
     #  Why or why not?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # spawn.sh
@@ -147,7 +147,7 @@ is not the same as ``      /bin/echo     `` , although their behavior is
 almost identical.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -172,7 +172,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     (see `Example 4-1 <varsubn.html#EX9>`__ ).
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo Hello
         echo $a
@@ -193,7 +193,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     An **echo** can be used to feed a sequence of commands down a pipe.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     if echo "$VAR" | gre |
     | p -q txt   # if [[ $VAR  |
@@ -207,7 +207,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
         then
@@ -215,7 +215,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         fi
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
         then
@@ -254,7 +254,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     separated by spaces.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l /usr/share/apps/kjezz/sounds
         -rw-r--r--    1 root     root         1407 Nov  7  2000 reflect.au
@@ -273,7 +273,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `echoed <internal.html#ECHOREF>`__ character string?
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Embedding a linefeed?
         echo "Why doesn't this string \n split on two lines?"
@@ -332,7 +332,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     similar.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ type -a echo   |
     |     echo is a shell buil |
@@ -343,7 +343,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type -a echo
         echo is a shell builtin
@@ -351,7 +351,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type -a echo
         echo is a shell builtin
@@ -389,7 +389,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-2. *printf* in action**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # printf demo
@@ -439,7 +439,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     Formatting error messages is a useful application of **printf**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         E_BADDIR=85
 
@@ -471,7 +471,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-3. Variable assignment, using *read***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # "Reading" variables.
@@ -507,7 +507,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-4. What happens when *read* has no variable**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # read-novar.sh
@@ -572,7 +572,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-5. Multi-line input to *read***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -614,7 +614,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **ENTER** .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Read a keypress without hitting ENTER.
 
@@ -636,7 +636,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-6. Detecting the arrow keys**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # arrow-detect.sh: Detects the arrow keys, and a few more.
@@ -799,7 +799,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     redirection <io-redirection.html#IOREDIRREF>`__**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -874,7 +874,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     work.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cat file1 file2 |    |
     |     while read line      |
@@ -890,7 +890,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-8. Problems reading from a pipe**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # readpipe.sh
@@ -945,7 +945,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     construct.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     find $1 \( -name "*$ |
     | 2" -o -name ".*$2" \) -p |
@@ -956,7 +956,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat file1 file2 |
         while read line
@@ -965,7 +965,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         done
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # readpipe.sh
@@ -1012,14 +1012,14 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         but its value does not persist outside the loop.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find $1 \( -name "*$2" -o -name ".*$2" \) -print |
         while read f; do
         . . .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat file1 file2 |
         while read line
@@ -1028,7 +1028,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         done
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # readpipe.sh
@@ -1075,7 +1075,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         but its value does not persist outside the loop.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find $1 \( -name "*$2" -o -name ".*$2" \) -print |
         while read f; do
@@ -1105,7 +1105,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     directory.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
 
@@ -1128,7 +1128,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     two forward slashes.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ cd //          |
     |     bash$ pwd            |
@@ -1141,7 +1141,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     is a problem both from the command-line and in a script.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cd //
         bash$ pwd
@@ -1149,7 +1149,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cd //
         bash$ pwd
@@ -1197,7 +1197,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-9. Changing the current working directory**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1243,7 +1243,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-10. Letting *let* do arithmetic.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1306,7 +1306,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `exit status <exit-status.html#EXITSTATUSREF>`__ .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     # Evgeniy Ivanov poi |
     | nts out:                 |
@@ -1352,7 +1352,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Evgeniy Ivanov points out:
 
@@ -1382,7 +1382,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         #  let returns 0 otherwise." ['help let']
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Evgeniy Ivanov points out:
 
@@ -1433,7 +1433,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ command_string="ps ax"
         bash$ process="ps ax"
@@ -1448,7 +1448,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     arguments.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a='$b'
         b='$c'
@@ -1469,7 +1469,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-11. Showing the effect of *eval***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Exercising "eval" ...
@@ -1519,7 +1519,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-12. Using *eval* to select among variables**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # arr-choice.sh
@@ -1564,7 +1564,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-13. *Echoing* the *command-line parameters***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # echo-params.sh
@@ -1613,7 +1613,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-14. Forcing a log-off**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Killing ppp to force a log-off.
@@ -1658,7 +1658,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-15. A version of *rot13***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # A version of "rot13" using 'eval'.
@@ -1693,7 +1693,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         eval ${1}+=\"${x} ${y} \"
 
@@ -1707,7 +1707,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     referencing <ivr.html#IVRREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         eval var=\$$var
 
@@ -1754,7 +1754,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-16. Using *set* with positional parameters**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex34.sh
@@ -1801,7 +1801,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-17. Reversing the positional parameters**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # revposparams.sh: Reverse positional parameters.
@@ -1877,7 +1877,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     that have been initialized.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ set
         AUTHORCOPY=/home/bozo/posts
@@ -1901,7 +1901,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-18. Reassigning the positional parameters**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1954,7 +1954,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     parameters.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ unset PATH
 
@@ -1968,7 +1968,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-19. "Unsetting" a variable**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # unset.sh: Unsetting a variable.
@@ -2028,7 +2028,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     *awk* script**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2083,7 +2083,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     have a different effect than setting a variable, then exporting it.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ export var=(a  |
     | b); echo ${var[0]}       |
@@ -2099,7 +2099,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ export var=(a b); echo ${var[0]}
         (a b)
@@ -2111,7 +2111,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ export var=(a b); echo ${var[0]}
         (a b)
@@ -2191,7 +2191,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         while getopts ":abcde:fg" Option
         # Initial declaration.
@@ -2220,7 +2220,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     passed to a script**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex33.sh: Exercising getopts and OPTIND
@@ -2309,7 +2309,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-22. "Including" a data file**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  Note that this example must be invoked with bash, i.e., bash ex38.sh
@@ -2344,7 +2344,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     directory.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # This is a data file loaded by a script.
         # Files of this type may contain variables, functions, etc.
@@ -2394,7 +2394,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `positional parameters <othertypesv.html#POSPARAMREF1>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         source $filename $arg1 arg2
 
@@ -2407,7 +2407,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-23. A (useless) script that sources itself**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # self-source.sh: a script sourcing itself "recursively."
@@ -2498,7 +2498,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-24. Effects of *exec***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2522,7 +2522,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **Example 15-25. A script that *exec's* itself**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # self-exec.sh
@@ -2577,7 +2577,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     Needs `version 2 <bashver2.html#BASH2REF>`__ or later of Bash.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         shopt -s cdspell
         # Allows minor misspelling of directory names with 'cd'
@@ -2596,7 +2596,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     function.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2632,7 +2632,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ true
         bash$ echo $?
@@ -2642,7 +2642,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Endless loop
         while true   # alias for ":"
@@ -2661,7 +2661,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ false
         bash$ echo $?
@@ -2671,7 +2671,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Testing "false" 
         if false
@@ -2705,7 +2705,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     locates system commands with identical names.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type '['
         [ is a shell builtin
@@ -2743,7 +2743,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     in the `version 4 release <bashver4.html#BASH4REF>`__ of Bash.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ help exit
         exit: exit [n]

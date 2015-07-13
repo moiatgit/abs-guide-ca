@@ -27,7 +27,7 @@ script do parallel processing, in effect executing multiple subtasks
 simultaneously.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # subshell-test.sh
@@ -93,7 +93,7 @@ subshell. These are, in effect, variables
 **Example 21-1. Variable scope in a subshell**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # subshell.sh
@@ -193,7 +193,7 @@ internal variable indicates the nesting level of a subshell, the
 within a subshell.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     echo " \$BASH_SUBSHE |
 | LL outside subshell      |
@@ -224,7 +224,7 @@ within a subshell.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo " \$BASH_SUBSHELL outside subshell       = $BASH_SUBSHELL"           # 0
       ( echo " \$BASH_SUBSHELL inside subshell        = $BASH_SUBSHELL" )     # 1
@@ -237,7 +237,7 @@ within a subshell.
     ( echo " \$SHLVL inside subshell  = $SHLVL" )   # 3 (No change!)
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo " \$BASH_SUBSHELL outside subshell       = $BASH_SUBSHELL"           # 0
       ( echo " \$BASH_SUBSHELL inside subshell        = $BASH_SUBSHELL" )     # 1
@@ -259,7 +259,7 @@ shell.
 **Example 21-2. List User Profiles**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # allprofs.sh: Print all user profiles.
@@ -288,7 +288,7 @@ A subshell may be used to set up a "dedicated environment" for a command
 group.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     COMMAND1
     COMMAND2
@@ -316,7 +316,7 @@ One application of such a "dedicated environment" is testing whether a
 variable is defined.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if (set -u; : $variable) 2> /dev/null
     then
@@ -335,7 +335,7 @@ variable is defined.
 Another application is checking for a lock file:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if (set -C; : > lock_file) 2> /dev/null
     then
@@ -360,7 +360,7 @@ concurrently.
 **Example 21-3. Running parallel processes in subshells**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
      (cat list1 list2 list3 | sort | uniq > list123) &
         (cat list4 list5 list6 | sort | uniq > list456) &
@@ -392,7 +392,7 @@ subshell.
 { command1; command2; command3; . . . commandN; }
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     var1=23              |
 |     echo "$var1"   # 23  |
@@ -403,7 +403,7 @@ subshell.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     var1=23
     echo "$var1"   # 23
@@ -412,7 +412,7 @@ subshell.
     echo "$var1"   # 76
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     var1=23
     echo "$var1"   # 23

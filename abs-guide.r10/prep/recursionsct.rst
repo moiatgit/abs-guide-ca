@@ -10,7 +10,7 @@ Indeed.
 **Example 36-10. A (useless) script that recursively calls itself**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recurse.sh
@@ -50,7 +50,7 @@ Indeed.
 **Example 36-11. A (useful) script that recursively calls itself**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # pb.sh: phone book
@@ -110,7 +110,7 @@ Indeed.
 **Example 36-12. Another (useful) script that recursively calls itself**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # usrmnt.sh, written by Anthony Richardson

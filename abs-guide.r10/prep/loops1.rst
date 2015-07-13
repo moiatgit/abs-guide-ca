@@ -34,7 +34,7 @@ control condition* is true.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         for arg in "$var1" "$var2" "$var3" ... "$varN"  
         # In pass 1 of the loop, arg = $var1        
@@ -60,7 +60,7 @@ control condition* is true.
     **Example 11-1. Simple *for* loops**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Listing the planets.
@@ -100,7 +100,7 @@ control condition* is true.
     element**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Planets revisited.
@@ -138,7 +138,7 @@ control condition* is true.
     variable**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # fileinfo.sh
@@ -181,7 +181,7 @@ control condition* is true.
     **Example 11-4. Operating on a parameterized file list**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -206,7 +206,7 @@ control condition* is true.
     **Example 11-5. Operating on files with a *for* loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # list-glob.sh: Generating [list] in a for-loop, using "globbing" ...
@@ -256,7 +256,7 @@ control condition* is true.
     loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -291,7 +291,7 @@ control condition* is true.
     loop with command substitution**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  for-loopcmd.sh: for-loop with [list]
@@ -318,7 +318,7 @@ control condition* is true.
     **Example 11-8. A *grep* replacement for binary files**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # bin-grep.sh: Locates matching strings in a binary file.
@@ -369,7 +369,7 @@ control condition* is true.
     **Example 11-9. Listing all users on the system**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # userlist.sh
@@ -413,7 +413,7 @@ control condition* is true.
     authorship**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # findstring.sh:
@@ -446,7 +446,7 @@ control condition* is true.
     `function <functions.html#FUNCTIONREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         generate_list ()
         {
@@ -470,7 +470,7 @@ control condition* is true.
     **Example 11-11. Listing the *symbolic links* in a directory**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # symlinks.sh: Lists symbolic links in a directory.
@@ -547,7 +547,7 @@ control condition* is true.
     **Example 11-12. Symbolic links in a directory, saved to a file**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # symlinks.sh: Lists symbolic links in a directory.
@@ -583,7 +583,7 @@ control condition* is true.
     **Example 11-13. A C-style *for* loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Multiple ways to count up to 10.
@@ -660,7 +660,7 @@ control condition* is true.
     **Example 11-14. Using *efax* in batch mode**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Faxing (must have 'efax' package installed).
@@ -718,7 +718,7 @@ control condition* is true.
     `curly brackets <special-chars.html#CODEBLOCKREF>`__
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     for((n=1; n<=10; n++ |
     | ))                       |
@@ -758,7 +758,7 @@ control condition* is true.
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         for((n=1; n<=10; n++)) 
         # No do!
@@ -787,7 +787,7 @@ control condition* is true.
         # Thank you, YongYe, for pointing this out.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         for((n=1; n<=10; n++)) 
         # No do!
@@ -852,7 +852,7 @@ control condition* is true.
     **Example 11-15. Simple *while* loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -882,7 +882,7 @@ control condition* is true.
     **Example 11-16. Another *while* loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -911,7 +911,7 @@ control condition* is true.
     **Example 11-17. *while* loop with multiple conditions**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -946,7 +946,7 @@ control condition* is true.
     **Example 11-18. C-style syntax in a *while* loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # wh-loopc.sh: Count to 10 in a "while" loop.
@@ -990,7 +990,7 @@ control condition* is true.
     `function <functions.html#FUNCTIONREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         t=0
 
@@ -1026,7 +1026,7 @@ control condition* is true.
     construct, a *while* loop can omit the test brackets.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         while condition
         do
@@ -1037,7 +1037,7 @@ control condition* is true.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         while condition
         do
@@ -1045,7 +1045,7 @@ control condition* is true.
         done
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         while condition
         do
@@ -1060,7 +1060,7 @@ control condition* is true.
     and parsing files.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat $filename |   # Supply input from a file.
         while read line   # As long as there is another line to read ...
@@ -1124,7 +1124,7 @@ control condition* is true.
     **Example 11-19. *until* loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 

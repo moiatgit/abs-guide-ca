@@ -15,7 +15,7 @@ variables in Bash, for example, ``      (( var++ ))     `` .
 **Example 8-5. C-style manipulation of variables**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # c-vars.sh

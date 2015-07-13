@@ -7,7 +7,7 @@ The current version of *Bash* , the one you have running on your
 machine, is most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo $BASH_VERSION
     3.2.25(1)-release
@@ -23,7 +23,7 @@ indirect variable references, among other features.
 **Example 37-1. String expansion**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -52,7 +52,7 @@ indirect variable references, among other features.
 **Example 37-2. Indirect variable references - the new way**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -95,7 +95,7 @@ indirect variable references, among other features.
 referencing**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # resistor-inventory.sh
@@ -179,7 +179,7 @@ referencing**
 four random hands from a deck of cards**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # cards.sh

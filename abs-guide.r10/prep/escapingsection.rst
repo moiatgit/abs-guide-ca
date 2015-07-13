@@ -62,7 +62,7 @@ special meaning for that character.
     **Example 5-2. Escaped Characters**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # escaped.sh: escaped characters
@@ -165,7 +165,7 @@ special meaning for that character.
     **Example 5-3. Detecting key-presses**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Author: Sigurd Solaas, 20 Apr 2011
@@ -279,7 +279,7 @@ special meaning for that character.
     gives the quote its literal meaning
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "Hello"                     # Hello
         echo "\"Hello\" ... he said."    # "Hello" ... he said.
@@ -291,7 +291,7 @@ special meaning for that character.
     \\$ will not be referenced)
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "\$variable01"           # $variable01
         echo "The book cost \$7.98."  # The book cost $7.98.
@@ -302,7 +302,7 @@ special meaning for that character.
     gives the backslash its literal meaning
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "\\"  # Results in \
 
@@ -329,7 +329,7 @@ substitution <commandsub.html#COMMANDSUBREF>`__ or a `here
 document <here-docs.html#HEREDOCREF>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |                          |
 |   #  Simple escaping and |
@@ -393,7 +393,7 @@ Elements of a string assigned to a variable may be escaped, but the
 escape character alone may not be assigned to a variable.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     variable=\           |
 |     echo "$variable"     |
@@ -464,7 +464,7 @@ escape character alone may not be assigned to a variable.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
                           #  Simple escaping and quoting
     echo \z               #  z
@@ -496,7 +496,7 @@ escape character alone may not be assigned to a variable.
     # These examples supplied by Stéphane Chazelas.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     variable=\
     echo "$variable"
@@ -535,7 +535,7 @@ escape character alone may not be assigned to a variable.
                             # This is o.k.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
                           #  Simple escaping and quoting
     echo \z               #  z
@@ -567,7 +567,7 @@ escape character alone may not be assigned to a variable.
     # These examples supplied by Stéphane Chazelas.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     variable=\
     echo "$variable"
@@ -612,7 +612,7 @@ Escaping a space can prevent word splitting in a command's argument
 list.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     file_list="/bin/cat /bin/gzip /bin/more /usr/bin/less /usr/bin/emacs-20.7"
     # List of files as argument(s) to a command.
@@ -635,7 +635,7 @@ escape at the end of a line *escapes the newline character* , and the
 command sequence continues on to the next line.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     (cd /source/directory && tar cf - . ) | \
     (cd /dest/directory && tar xpvf -)
@@ -663,7 +663,7 @@ the following line.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo "foo
     bar" 

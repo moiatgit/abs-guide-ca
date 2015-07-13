@@ -18,7 +18,7 @@ presents itself as a single word, even if it contains
 `whitespace <special-chars.html#WHITESPACEREF>`__ separators.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     List="one two three"
 
@@ -43,7 +43,7 @@ presents itself as a single word, even if it contains
 A more elaborate example:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     variable1="a variable containing five words"
     COMMAND This is $variable1    # Executes COMMAND with 7 arguments:
@@ -81,7 +81,7 @@ necessary only when word splitting or preservation of
 **Example 5-1. Echoing Weird Variables**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # weirdvars.sh: Echoing weird variables.
@@ -152,7 +152,7 @@ within single quotes, trying to enclose a single quote within single
 quotes will not yield the expected result.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     echo "Why can't I wr |
 | ite 's between single qu |
@@ -180,7 +180,7 @@ quotes will not yield the expected result.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo "Why can't I write 's between single quotes"
 
@@ -194,7 +194,7 @@ quotes will not yield the expected result.
     # This example courtesy of Stéphane Chazelas.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo "Why can't I write 's between single quotes"
 
@@ -227,7 +227,7 @@ Of more concern is the *apparently* inconsistent behavior of
 following an **echo -e** command.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |     bash$ echo hello\!   |
 |     hello!               |
@@ -266,7 +266,7 @@ option to *echo* causes the "\\t" to be interpreted as a *tab* .
 Daniel Barclay for explaining it.)
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo hello\!
     hello!
@@ -296,7 +296,7 @@ Daniel Barclay for explaining it.)
               
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo hello\!
     hello!

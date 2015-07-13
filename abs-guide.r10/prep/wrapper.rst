@@ -25,7 +25,7 @@ retyping it on the command-line.
 **Example 36-1. *shell wrapper***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -69,7 +69,7 @@ retyping it on the command-line.
 **Example 36-2. A slightly more complex *shell wrapper***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -119,7 +119,7 @@ retyping it on the command-line.
 **Example 36-3. A generic *shell wrapper* that writes to a logfile**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  logging-wrapper.sh
@@ -158,7 +158,7 @@ retyping it on the command-line.
 **Example 36-4. A *shell wrapper* around an awk script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # pr-ascii.sh: Prints a table of ASCII characters.
@@ -204,7 +204,7 @@ retyping it on the command-line.
 **Example 36-5. A *shell wrapper* around another awk script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -285,7 +285,7 @@ of the *ABS Guide* remains skeptical).
 **Example 36-6. Perl embedded in a *Bash* script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -312,7 +312,7 @@ or the Perl part will execute.
 **Example 36-7. Bash and Perl scripts combined**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # bashandperl.sh
@@ -339,7 +339,7 @@ or the Perl part will execute.
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ bash bashandperl.sh
     Greetings from the Bash part of the script.
@@ -358,7 +358,7 @@ within shell wrappers. *Python* , for example ...
 **Example 36-8. Python embedded in a *Bash* script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ex56py.sh
@@ -386,7 +386,7 @@ you can create something that talks back to you.
 **Example 36-9. A script that speaks**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #   Courtesy of:

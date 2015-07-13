@@ -58,7 +58,7 @@ second line.
 A function may be "compacted" into a single line.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     fun () { echo "This  |
 | is a function"; echo; }  |
@@ -71,7 +71,7 @@ In this case, however, a *semicolon* must follow the final command in
 the function.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     fun () { echo "This  |
 | is a function"; echo } # |
@@ -89,13 +89,13 @@ the function.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     fun () { echo "This is a function"; echo; }
     #                                 ^     ^
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     fun () { echo "This is a function"; echo } # Error!
     #                                       ^
@@ -104,13 +104,13 @@ the function.
     #                                                    ^
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     fun () { echo "This is a function"; echo; }
     #                                 ^     ^
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     fun () { echo "This is a function"; echo } # Error!
     #                                       ^
@@ -128,7 +128,7 @@ function call is equivalent to a command.*
 **Example 24-1. Simple functions**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ex59.sh: Exercising functions (simple).
@@ -176,7 +176,7 @@ The function definition must precede the first call to it. There is no
 method of "declaring" the function, as, for example, in C.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     f1
     # Will give an error message, since function "f1" not yet defined.
@@ -213,7 +213,7 @@ method of "declaring" the function, as, for example, in C.
  Functions may not be empty!
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |     # empty-function.sh  |
@@ -281,7 +281,7 @@ method of "declaring" the function, as, for example, in C.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # empty-function.sh
@@ -329,7 +329,7 @@ method of "declaring" the function, as, for example, in C.
     # Thank you, Dominick Geyer and Thiemo Kellner.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # empty-function.sh
@@ -383,7 +383,7 @@ It is even possible to nest a function within another function, although
 this is not very useful.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     f1 ()
     {
@@ -412,7 +412,7 @@ Function declarations can appear in unlikely places, even where a
 command would otherwise go.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ls -l | foo() { echo "foo"; }  # Permissible, but useless.
 
@@ -457,7 +457,7 @@ command would otherwise go.
  Function names can take strange forms.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
       _(){ for i in {1..10}; do echo -n "$FUNCNAME"; done; echo; }
     # ^^^         No space between function name and parentheses.
@@ -488,7 +488,7 @@ What happens when different versions of the same function appear in a
 script?
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #  As Yan Chen point |
 | s out,                   |
@@ -529,7 +529,7 @@ script?
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #  As Yan Chen points out,
     #  when a function is defined multiple times,
@@ -555,7 +555,7 @@ script?
     #  Of course, this is *not* advisable.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #  As Yan Chen points out,
     #  when a function is defined multiple times,

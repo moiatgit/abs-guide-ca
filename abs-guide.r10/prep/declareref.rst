@@ -22,7 +22,7 @@ Bash. The *typeset* command also works in ksh scripts.
     error message.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -r var1=1
         echo "var1 = $var1"   # var1 = 1
@@ -34,7 +34,7 @@ Bash. The *typeset* command also works in ksh scripts.
  -i ``                 integer               ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -i number
         # The script will treat subsequent occurrences of "number" as an integer.       
@@ -53,7 +53,7 @@ Bash. The *typeset* command also works in ksh scripts.
     `let <internal.html#LETREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         n=6/3
         echo "n = $n"       # n = 6/3
@@ -67,7 +67,7 @@ Bash. The *typeset* command also works in ksh scripts.
  -a ``                 array               ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -a indices
 
@@ -79,7 +79,7 @@ Bash. The *typeset* command also works in ksh scripts.
  -f ``                 function(s)               ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -f
 
@@ -91,7 +91,7 @@ Bash. The *typeset* command also works in ksh scripts.
     that script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -f function_name
 
@@ -103,7 +103,7 @@ Bash. The *typeset* command also works in ksh scripts.
  -x `export <internal.html#EXPORTREF>`__
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -x var3
 
@@ -115,7 +115,7 @@ Bash. The *typeset* command also works in ksh scripts.
  -x var=$value
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         declare -x var3=373
 
@@ -129,7 +129,7 @@ Bash. The *typeset* command also works in ksh scripts.
 **Example 9-10. Using *declare* to type variables**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -174,7 +174,7 @@ Using the *declare* builtin restricts the
 `scope <subshells.html#SCOPEREF>`__ of a variable.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     foo ()               |
 |     {                    |
@@ -194,7 +194,7 @@ Using the *declare* builtin restricts the
 However . . .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     foo (){              |
 |     declare FOO="bar"    |
@@ -217,7 +217,7 @@ However . . .
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     foo ()
     {
@@ -233,7 +233,7 @@ However . . .
     bar   # Prints bar.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     foo (){
     declare FOO="bar"
@@ -251,7 +251,7 @@ However . . .
     # Thank you, Michael Iatrou, for pointing this out.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     foo ()
     {
@@ -267,7 +267,7 @@ However . . .
     bar   # Prints bar.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     foo (){
     declare FOO="bar"
@@ -296,7 +296,7 @@ The *declare* command can be helpful in identifying variables,
 especially useful with `arrays <arrays.html#ARRAYREF>`__ .
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ declare | grep HOME
     HOME=/home/bozo
@@ -330,7 +330,7 @@ integer is no longer available for `string
 operations <refcards.html#STRINGOPSTAB>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     declare -i intvar    |
 |                          |
@@ -343,7 +343,7 @@ operations <refcards.html#STRINGOPSTAB>`__ .
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     declare -i intvar
 
@@ -353,7 +353,7 @@ operations <refcards.html#STRINGOPSTAB>`__ .
     echo "$intvar"   # 0
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     declare -i intvar
 

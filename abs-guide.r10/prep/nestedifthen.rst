@@ -8,7 +8,7 @@ may be nested. The net result is equivalent to using the
 `*&&* <ops.html#LOGOPS1>`__ compound comparison operator.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     a=3
 

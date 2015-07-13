@@ -17,7 +17,7 @@ XXX  24.2. Local Variables
     **Example 24-12. Local variable visibility**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex62.sh: Global and local variables inside a function.
@@ -61,7 +61,7 @@ XXX  24.2. Local Variables
     those explicitly declared as *local* .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |                          |
@@ -99,7 +99,7 @@ XXX  24.2. Local Variables
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -118,7 +118,7 @@ XXX  24.2. Local Variables
                                          # Has been set by function call.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -150,7 +150,7 @@ XXX  24.2. Local Variables
     value <exit-status.html#EXITSTATUSREF>`__ .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |                          |
@@ -206,7 +206,7 @@ XXX  24.2. Local Variables
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -246,7 +246,7 @@ XXX  24.2. Local Variables
         function0
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -310,7 +310,7 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 **Example 24-13. Demonstration of a simple recursive function**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recursion-demo.sh
@@ -342,7 +342,7 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 **Example 24-14. Another simple demonstration**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recursion-def.sh
@@ -377,7 +377,7 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recursion-demo.sh
@@ -403,7 +403,7 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
     exit $?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recursion-def.sh
@@ -434,7 +434,7 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
     exit $?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recursion-demo.sh
@@ -460,7 +460,7 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
     exit $?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # recursion-def.sh
@@ -501,7 +501,7 @@ is definitely *not* recommended in a shell script. ` [6]
 **Example 24-15. Recursion, using a local variable**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -576,7 +576,7 @@ However, as Thomas Braunberger points out, a local variable declared in
 a function *is also visible to functions called by the parent function.*
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -621,7 +621,7 @@ have a visible scope restricted to that function *and its children* ."
 bug.*
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -650,7 +650,7 @@ bug.*
     # Within function2, $func1var = 20.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -704,7 +704,7 @@ Otherwise known as a *recursive function* .
 Too many levels of recursion may crash a script with a segfault.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -761,7 +761,7 @@ Too many levels of recursion may crash a script with a segfault.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -789,7 +789,7 @@ Too many levels of recursion may crash a script with a segfault.
     #  Thanks, StÃ©phane Chazelas.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 

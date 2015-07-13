@@ -11,7 +11,7 @@ mounted filesystem(s) have entries in ``      /dev     `` , as
 `df <system.html#DFREF>`__ shows.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ df
     Filesystem           1k-blocks      Used Available Use%
@@ -49,7 +49,7 @@ the following line to
  <devref1.html#FTN.AEN19093>`__
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     /dev/sda1    /mnt/flashdrive    auto    noauto,user,noatime    0 0
 
@@ -60,7 +60,7 @@ Checking whether a disk is in the CD-burner (soft-linked to
 ``      /dev/hdc     `` ):
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     head -1 /dev/hdc
 
@@ -105,7 +105,7 @@ locations on the Internet.
 Getting the time from ``      nist.gov     `` :
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ cat </dev/tcp/time.nist.gov/13
     53082 04-03-18 04:26:54 68 0 0 502.3 UTC(NIST) *
@@ -118,7 +118,7 @@ Getting the time from ``      nist.gov     `` :
 Generalizing the above into a script:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # This script must run with root permissions.
@@ -136,7 +136,7 @@ Generalizing the above into a script:
  Downloading a URL:
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ exec 5<>/dev/tcp/www.net.cn/80
     bash$ echo -e "GET / HTTP/1.0\n" >&5
@@ -151,7 +151,7 @@ Generalizing the above into a script:
 **Example 29-1. Using ``        /dev/tcp       `` for troubleshooting**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # dev-tcp.sh: /dev/tcp redirection to check Internet connection.
@@ -197,7 +197,7 @@ Generalizing the above into a script:
 **Example 29-2. Playing music**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # music.sh

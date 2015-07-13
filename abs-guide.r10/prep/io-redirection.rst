@@ -45,7 +45,7 @@ simplifies restoration to normal after complex redirection and
 reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
        COMMAND_OUTPUT >
           # Redirect stdout to a file.
@@ -118,7 +118,7 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
        2>&1
           # Redirects stderr to stdout.
@@ -142,7 +142,7 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
        0< FILENAME
         < FILENAME
@@ -184,7 +184,7 @@ Multiple instances of input and output redirection and/or pipes can be
 combined in a single command line.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     command < input-file > output-file
     # Or the equivalent:
@@ -199,7 +199,7 @@ A-14 <contributed-scripts.html#FIFO>`__ .
 Multiple output streams may be redirected to one file.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ls -yz >> command.log 2>&1
     #  Capture result of illegal options "yz" in file "command.log."
@@ -239,7 +239,7 @@ Child processes inherit open file descriptors. This is why pipes work.
 To prevent an fd from being inherited, close it.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Redirecting only stderr to a pipe.
 

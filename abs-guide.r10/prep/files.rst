@@ -60,7 +60,7 @@ XXX  Appendix H. Important Files
     information is in text form and can be extracted and parsed.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep -A 5 AUDIO /etc/sysconfig/hwconf        
         class: AUDIO

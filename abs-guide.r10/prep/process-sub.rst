@@ -37,7 +37,7 @@ technique. But, what if you need to pipe the ``      stdout     `` of
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo >(true)
     /dev/fd/63
@@ -82,7 +82,7 @@ Process substitution can compare the output of two different commands,
 or even the output of different options to the same command.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ comm <(ls -l) <(ls -al)
     total 12
@@ -102,7 +102,7 @@ Process substitution can compare the contents of two directories -- to
 see which filenames are in one, but not the other.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     diff <(ls $first_directory) <(ls $second_directory)
 
@@ -111,7 +111,7 @@ see which filenames are in one, but not the other.
 Some other usages and uses of process substitution:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     read -a list < <( od -Ad -w24 -t u2 /dev/urandom )
     #  Read a list of random numbers from /dev/urandom,
@@ -124,7 +124,7 @@ Some other usages and uses of process substitution:
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     PORT=6881   # bittorrent
 
@@ -142,7 +142,7 @@ Some other usages and uses of process substitution:
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     cat <(ls -l)
     # Same as     ls -l | cat
@@ -182,7 +182,7 @@ Some other usages and uses of process substitution:
 **Example 23-1. Code block redirection without forking**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # wr-ps.bash: while-read loop with process substitution.
@@ -260,7 +260,7 @@ Some other usages and uses of process substitution:
 loop.**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # psub.bash
@@ -292,7 +292,7 @@ A reader sent in the following interesting example of process
 substitution.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Script fragment taken from SuSE distribution:
 

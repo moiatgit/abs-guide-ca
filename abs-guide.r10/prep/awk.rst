@@ -22,7 +22,7 @@ brackets <special-chars.html#CODEBLOCKREF>`__ enclose blocks of awk code
 within a shell script.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # $1 is field #1, $2 is field #2, etc.
 
@@ -55,7 +55,7 @@ feature of awk we need to deal with here is variables. Awk handles
 variables similarly to shell scripts, though a bit more flexibly.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     { total += ${column_number} }
 
@@ -67,7 +67,7 @@ running total of ``           total         `` >. Finally, to print
 has processed all its input.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     END { print total }
 
@@ -83,7 +83,7 @@ to a shell script.
 **Example C-1. Counting Letter Occurrences**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/sh
     # letter-count2.sh: Counting letter occurrences in a text file.

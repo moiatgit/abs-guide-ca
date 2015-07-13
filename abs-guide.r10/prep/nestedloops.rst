@@ -14,7 +14,7 @@ outer loop would interrupt this process.
 **Example 11-20. Nested Loop**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # nested-loop.sh: Nested "for" loops.

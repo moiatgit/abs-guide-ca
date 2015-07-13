@@ -14,7 +14,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
  and list
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         command-1 && command-2 && command-3 && ... command-n
 
@@ -32,7 +32,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     script <http://bash.deta.in/Tetris_Game.sh>`__ :
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         equation()
 
@@ -48,7 +48,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     arguments**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # and list
@@ -95,7 +95,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     **Example 26-2. Another command-line arg test using an *and list***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -123,7 +123,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     value.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         arg1=$@ && [ -z "$arg1" ] && arg1=DEFAULT
                 
@@ -135,7 +135,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
  or list
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         command-1 || command-2 || command-3 || ... command-n
 
@@ -150,7 +150,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     **Example 26-3. Using *or lists* in combination with an *and list***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -196,7 +196,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # ==> The following snippets from the /etc/rc.d/init.d/single
     #+==> script by Miquel van Smoorenburg
@@ -249,7 +249,7 @@ precedence rules <opprecedence.html#OPPRECEDENCE1>`__ , and possibly
 extensive debugging.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     false && true || echo false         # false
 

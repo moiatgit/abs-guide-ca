@@ -13,7 +13,7 @@ same, the script can still access its ``      tty     `` . It is even
 possible to emulate an interactive shell in a script.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     MY_PROMPT='$ '
@@ -57,7 +57,7 @@ it is simply a matter of finding whether the *prompt* variable,
 prompted for input, then the script needs to display a prompt.)
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ -z $PS1 ] # no prompt?
     ### if [ -v PS1 ]   # On Bash 4.2+ ...
@@ -75,7 +75,7 @@ prompted for input, then the script needs to display a prompt.)
 the `$- <internalvariables.html#FLPREF>`__ flag.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     case $- in
     *i*)    # interactive shell
@@ -90,7 +90,7 @@ the `$- <internalvariables.html#FLPREF>`__ flag.
 *test* operator <fto.html#TERMTEST>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Test for a terminal!
 

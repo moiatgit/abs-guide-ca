@@ -10,7 +10,7 @@ XXX  16.8. Math Commands
     Decompose an integer into prime factors.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ factor 27417
         27417: 3 13 19 37
@@ -22,7 +22,7 @@ XXX  16.8. Math Commands
     **Example 16-46. Generating prime numbers**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # primes2.sh
@@ -85,7 +85,7 @@ XXX  16.8. Math Commands
     substitution <commandsub.html#COMMANDSUBREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
                  variable=$(echo "OPTIONS; OPERATIONS" | bc)
                   
@@ -96,7 +96,7 @@ XXX  16.8. Math Commands
     **Example 16-47. Monthly Payment on a Mortgage**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # monthlypmt.sh: Calculates monthly payment on a mortgage.
@@ -206,7 +206,7 @@ XXX  16.8. Math Commands
     **Example 16-48. Base Conversion**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         ###########################################################################
@@ -327,7 +327,7 @@ XXX  16.8. Math Commands
     and commands to **bc** .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         variable=`bc << LIMIT_STRING
         options
@@ -352,7 +352,7 @@ XXX  16.8. Math Commands
     **Example 16-49. Invoking *bc* using a *here document***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Invoking 'bc' using command substitution
@@ -418,7 +418,7 @@ XXX  16.8. Math Commands
     **Example 16-50. Calculating PI**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # cannon.sh: Approximating PI by firing cannonballs.
@@ -579,7 +579,7 @@ XXX  16.8. Math Commands
     `echo <internal.html#ECHOREF>`__ a command-string to **dc** .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "[Printing a string ... ]P" | dc
         # The P command prints the string between the preceding brackets.
@@ -598,7 +598,7 @@ XXX  16.8. Math Commands
     **Example 16-51. Converting a decimal number to hexadecimal**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # hexconvert.sh: Convert a decimal number to hexadecimal.
@@ -641,7 +641,7 @@ XXX  16.8. Math Commands
     mastery of this powerful, but arcane utility.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "16i[q]sa[ln0=aln100%Pln100/snlbx]sbA0D68736142snlbxq" | dc
         Bash
@@ -650,7 +650,7 @@ XXX  16.8. Math Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         dc <<< 10k5v1+2/p # 1.6180339887
         #  ^^^            Feed operations to dc using a Here String.
@@ -669,7 +669,7 @@ XXX  16.8. Math Commands
     **Example 16-52. Factoring**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # factr.sh: Factor a number
@@ -721,7 +721,7 @@ XXX  16.8. Math Commands
     **Example 16-53. Calculating the hypotenuse of a triangle**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # hypotenuse.sh: Returns the "hypotenuse" of a right triangle.

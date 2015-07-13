@@ -30,7 +30,7 @@ XXX  16.4. Text Processing Commands
     seen in a pipe coupled with `sort <textproc.html#SORTREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat list-1 list-2 list-3 | sort | uniq > final.list
         # Concatenates the list files,
@@ -44,7 +44,7 @@ XXX  16.4. Text Processing Commands
     input file with its number of occurrences.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat testfile
         This line occurs only once.
@@ -81,7 +81,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-12. Word Frequency Analysis**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # wf.sh: Crude word frequency analysis on a text file.
@@ -148,7 +148,7 @@ XXX  16.4. Text Processing Commands
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat testfile
         This line occurs only once.
@@ -191,7 +191,7 @@ XXX  16.4. Text Processing Commands
     Using **cut** to obtain a listing of the mounted filesystems:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cut -d ' ' -f1,2 /etc/mtab
 
@@ -200,7 +200,7 @@ XXX  16.4. Text Processing Commands
     Using **cut** to list the OS and kernel version:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         uname -a | cut -d" " -f1,3,11,12
 
@@ -209,7 +209,7 @@ XXX  16.4. Text Processing Commands
     Using **cut** to extract message headers from an e-mail folder:
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep '^Subject:' read-messages | cut -c10-80
         Re: Linux suitable for mission-critical apps?
@@ -222,7 +222,7 @@ XXX  16.4. Text Processing Commands
     Using **cut** to parse a file:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # List all the users in /etc/passwd.
 
@@ -250,7 +250,7 @@ XXX  16.4. Text Processing Commands
     sequence.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ cut -d'        |
     |      ' -f3,7,19 testfile |
@@ -267,7 +267,7 @@ XXX  16.4. Text Processing Commands
     Thank you, Jaka Kranjc, for pointing this out.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cut -d'
          ' -f3,7,19 testfile
@@ -277,7 +277,7 @@ XXX  16.4. Text Processing Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cut -d'
          ' -f3,7,19 testfile
@@ -298,7 +298,7 @@ XXX  16.4. Text Processing Commands
     files.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat items
         alphabet blocks
@@ -330,7 +330,7 @@ XXX  16.4. Text Processing Commands
     matchups to work properly.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         File: 1.data
 
@@ -341,7 +341,7 @@ XXX  16.4. Text Processing Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         File: 2.data
 
@@ -352,7 +352,7 @@ XXX  16.4. Text Processing Commands
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ join 1.data 2.data
         File: 1.data 2.data
@@ -382,7 +382,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-13. Which files are scripts?**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # script-detector.sh: Detects scripts within a directory.
@@ -422,7 +422,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-14. Generating 10-digit random numbers**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rnd.sh: Outputs a 10-digit random number
@@ -523,7 +523,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-15. Using *tail* to monitor the system log**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -558,7 +558,7 @@ XXX  16.4. Text Processing Commands
     To set a variable to a given block of a text file:
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     var=$(head -n $m $fi |
     | lename | tail -n $n)     |
@@ -575,7 +575,7 @@ XXX  16.4. Text Processing Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var=$(head -n $m $filename | tail -n $n)
 
@@ -584,7 +584,7 @@ XXX  16.4. Text Processing Commands
         # n = number of lines to set variable to (trim from end of block)
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var=$(head -n $m $filename | tail -n $n)
 
@@ -626,7 +626,7 @@ XXX  16.4. Text Processing Commands
     Regular Expression.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep '[rst]ystem.$' osinfo.txt
         The GPL governs the distribution of the Linux operating system.
@@ -639,7 +639,7 @@ XXX  16.4. Text Processing Commands
     `pipe <special-chars.html#PIPEREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ps ax | grep clock
         765 tty1     S      0:00 xclock
@@ -662,7 +662,7 @@ XXX  16.4. Text Processing Commands
     together with line numbers.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep -n Linux osinfo.txt
         2:This is a file containing information about Linux.
@@ -675,7 +675,7 @@ XXX  16.4. Text Processing Commands
     ) option *filters out* matches.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         grep pattern1 *.txt | grep -v pattern2
 
@@ -689,7 +689,7 @@ XXX  16.4. Text Processing Commands
     matches.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         grep -c txt *.sgml   # (number of occurrences of "txt" in "*.sgml" files)
 
@@ -725,7 +725,7 @@ XXX  16.4. Text Processing Commands
     messages**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # from.sh
@@ -760,7 +760,7 @@ XXX  16.4. Text Processing Commands
     specifies which file contains matches.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux osinfo.txt misc.txt
         osinfo.txt:This is a file containing information about Linux.
@@ -779,7 +779,7 @@ XXX  16.4. Text Processing Commands
     second file.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ grep Linux osi |
     | nfo.txt /dev/null        |
@@ -795,7 +795,7 @@ XXX  16.4. Text Processing Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux osinfo.txt /dev/null
         osinfo.txt:This is a file containing information about Linux.
@@ -803,7 +803,7 @@ XXX  16.4. Text Processing Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux osinfo.txt /dev/null
         osinfo.txt:This is a file containing information about Linux.
@@ -819,7 +819,7 @@ XXX  16.4. Text Processing Commands
     with the ``         -q        `` option to suppress output.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         SUCCESS=0                      # if grep lookup succeeds
         word=Linux
@@ -844,7 +844,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-17. Emulating *grep* in a script**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # grp.sh: Rudimentary reimplementation of grep.
@@ -894,7 +894,7 @@ XXX  16.4. Text Processing Commands
     For example, given the following file:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Filename: tstfile
 
@@ -910,7 +910,7 @@ XXX  16.4. Text Processing Commands
     "text" . . .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep file tstfile
         # Filename: tstfile
@@ -931,7 +931,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-18. Crossword puzzle solver**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # cw-solver.sh
@@ -1009,7 +1009,7 @@ XXX  16.4. Text Processing Commands
     bit more flexible. It also allows the boolean \| ( *or* ) operator.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash $ egrep 'matches|Matches' file.txt
         Line 1 matches.
@@ -1041,7 +1041,7 @@ XXX  16.4. Text Processing Commands
     Dictionary***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # dict-lookup.sh
@@ -1172,7 +1172,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-20. Checking words in a list for validity**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # lookup: Does a dictionary lookup on each word in a data file.
@@ -1241,7 +1241,7 @@ XXX  16.4. Text Processing Commands
     *wc* gives a "word count" on a file or I/O stream:
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash $ wc /usr/share/doc/sed-4.1.2/README
         13  70  447 README
@@ -1268,7 +1268,7 @@ XXX  16.4. Text Processing Commands
     in current working directory:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         $ ls *.txt | wc -l
         #  Will work as long as none of the "*.txt" files
@@ -1286,7 +1286,7 @@ XXX  16.4. Text Processing Commands
     with letters in the range d - h
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ wc [d-h]* | grep total | awk '{print $3}'
         71832
@@ -1298,7 +1298,7 @@ XXX  16.4. Text Processing Commands
     source file for this book.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux abs-book.sgml | wc -l
         138
@@ -1313,7 +1313,7 @@ XXX  16.4. Text Processing Commands
     options.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         ... | grep foo | wc -l
         # This frequently used construct can be more concisely rendered.
@@ -1352,7 +1352,7 @@ XXX  16.4. Text Processing Commands
     The ``         -d        `` option deletes a range of characters.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "abcdef"                 # abcdef
         echo "abcdef" | tr -d b-d     # aef
@@ -1369,7 +1369,7 @@ XXX  16.4. Text Processing Commands
     removing excess `whitespace <special-chars.html#WHITESPACEREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "XXXXX" | tr --squeeze-repeats 'X'
         X
@@ -1381,7 +1381,7 @@ XXX  16.4. Text Processing Commands
     those characters *not* matching the specified set.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "acfdeb123" | tr -c b-d +
         +c+d+b++++
@@ -1393,7 +1393,7 @@ XXX  16.4. Text Processing Commands
      <textproc.html#FTN.AEN11502>`__
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "abcd2ef1" | tr '[:alpha:]' -
         ----2--1
@@ -1405,7 +1405,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-21. *toupper* : Transforms a file to all uppercase.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Changes a file to all uppercase.
@@ -1443,7 +1443,7 @@ XXX  16.4. Text Processing Commands
     directory to lowercase.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #
@@ -1496,7 +1496,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-23. *du* : DOS to UNIX text file conversion.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Du.sh: DOS to UNIX text file converter.
@@ -1535,7 +1535,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-24. *rot13* : ultra-weak encryption.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rot13.sh: Classic rot13 algorithm,
@@ -1559,7 +1559,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-25. Generating "Crypto-Quote" Puzzles**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # crypto-quote.sh: Encrypt quotes
@@ -1611,7 +1611,7 @@ XXX  16.4. Text Processing Commands
      Of course, *tr* lends itself to *code obfuscation* .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # jabh.sh
@@ -1652,7 +1652,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-26. Formatted file listing.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1696,7 +1696,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-27. Using *column* to format a directory listing**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # colms.sh
@@ -1754,7 +1754,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-28. *nl* : A self-numbering script.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # line-number.sh
@@ -1814,7 +1814,7 @@ XXX  16.4. Text Processing Commands
     set). Its chief use is for `localization <localization.html>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Convert a string from UTF-8 to UTF-16 and print to the BookList
         function write_utf8_string {
@@ -1853,7 +1853,7 @@ XXX  16.4. Text Processing Commands
     `Perl <wrapper.html#PERLREF>`__ to invoke *Tex* .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         texexec --pdfarrange --result=Concatenated.pdf *pdf
 
@@ -1888,7 +1888,7 @@ XXX  16.4. Text Processing Commands
     **Example 16-29. *manview* : Viewing formatted manpages**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # manview.sh: Formats the source of a man page for viewing.

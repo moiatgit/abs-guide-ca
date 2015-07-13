@@ -14,7 +14,7 @@ input using `sed <sedawk.html#SEDREF>`__ and/or
 **Example 20-1. Redirecting ``        stdin       `` using *exec***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Redirecting stdin using 'exec'.
@@ -79,7 +79,7 @@ Thank you, Ahmed Darwish, for pointing this out.
 **Example 20-2. Redirecting ``        stdout       `` using *exec***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # reassign-stdout.sh
@@ -127,7 +127,7 @@ Thank you, Ahmed Darwish, for pointing this out.
 ``        stdout       `` in the same script with *exec***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # upperconv.sh
@@ -185,7 +185,7 @@ variables within a subshell <subshells.html#PARVIS>`__ problem.
 **Example 20-4. Avoiding a subshell**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # avoid-subshell.sh

@@ -15,7 +15,7 @@ The < operator at the end of the code block accomplishes this.
 **Example 20-5. Redirected *while* loop**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # redir2.sh
@@ -74,7 +74,7 @@ The < operator at the end of the code block accomplishes this.
 **Example 20-6. Alternate form of redirected *while* loop**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -129,7 +129,7 @@ The < operator at the end of the code block accomplishes this.
 **Example 20-7. Redirected *until* loop**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Same as previous example, but with "until" loop.
@@ -160,7 +160,7 @@ The < operator at the end of the code block accomplishes this.
 **Example 20-8. Redirected *for* loop**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -206,7 +206,7 @@ loop.
 ``        stdout       `` redirected)**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -243,7 +243,7 @@ loop.
 **Example 20-10. Redirected *if/then* test**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -275,7 +275,7 @@ loop.
 **Example 20-11. Data file *names.data* for above examples**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Aristotle
     Arrhenius
@@ -316,7 +316,7 @@ feed the output of a *here document* into the ``      stdin     `` for a
 *while loop* .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # This example by Albert Siersema
     # Used with permission (thanks!).

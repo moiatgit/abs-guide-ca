@@ -8,7 +8,7 @@ status <exit-status.html#EXITSTATUSREF>`__ to the script for further
 processing.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     function_name $arg1 $arg2
 
@@ -22,7 +22,7 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
 **Example 24-2. Function Taking Parameters**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Functions and parameters
@@ -101,7 +101,7 @@ function see them? Well, let's clear up the confusion.
 **Example 24-3. Functions and command-line args passed to the script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # func-cmdlinearg.sh
@@ -145,7 +145,7 @@ passing variable pointers to functions.
 **Example 24-4. Passing an indirect reference to a function**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ind-func.sh: Passing an indirect reference to a function.
@@ -181,7 +181,7 @@ The next logical question is whether parameters can be dereferenced
 **Example 24-5. Dereferencing a parameter passed to a function**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # dereference.sh
@@ -213,7 +213,7 @@ The next logical question is whether parameters can be dereferenced
 **Example 24-6. Again, dereferencing a parameter passed to a function**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ref-params.sh: Dereferencing a parameter passed to a function.
@@ -284,7 +284,7 @@ The next logical question is whether parameters can be dereferenced
     **Example 24-7. Maximum of two numbers**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # max.sh: Maximum of two integers.
@@ -346,7 +346,7 @@ The next logical question is whether parameters can be dereferenced
     variable.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     count_lines_in_etc_p |
     | asswd()                  |
@@ -383,7 +383,7 @@ The next logical question is whether parameters can be dereferenced
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         count_lines_in_etc_passwd()
         {
@@ -404,7 +404,7 @@ The next logical question is whether parameters can be dereferenced
         # Thanks, S.C.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         count_lines_in_etc_passwd()
         {
@@ -431,7 +431,7 @@ The next logical question is whether parameters can be dereferenced
     **Example 24-8. Converting numbers to Roman numerals**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -527,7 +527,7 @@ The next logical question is whether parameters can be dereferenced
     **Example 24-9. Testing large return values in a function**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # return-test.sh
@@ -569,7 +569,7 @@ The next logical question is whether parameters can be dereferenced
     simply assign the "return value" to a global variable.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     Return_Val=   # Glob |
     | al variable to hold over |
@@ -615,7 +615,7 @@ The next logical question is whether parameters can be dereferenced
     **Example 24-10. Comparing two large integers**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # max2.sh: Maximum of two LARGE integers.
@@ -690,7 +690,7 @@ The next logical question is whether parameters can be dereferenced
     `awk <awk.html#AWKREF>`__ .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     month_length ()  # T |
     | akes month number as an  |
@@ -767,7 +767,7 @@ The next logical question is whether parameters can be dereferenced
     input.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # return-test.sh
@@ -803,7 +803,7 @@ The next logical question is whether parameters can be dereferenced
         exit 0
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         Return_Val=   # Global variable to hold oversize return value of function.
 
@@ -828,7 +828,7 @@ The next logical question is whether parameters can be dereferenced
         echo "return value = $Return_Val"    #25701
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # max2.sh: Maximum of two LARGE integers.
@@ -896,7 +896,7 @@ The next logical question is whether parameters can be dereferenced
         #  3) Rewrite the script to take input from command-line parameters.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         month_length ()  # Takes month number as an argument.
         {                # Returns number of days in month.
@@ -926,7 +926,7 @@ The next logical question is whether parameters can be dereferenced
         # ----------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # return-test.sh
@@ -962,7 +962,7 @@ The next logical question is whether parameters can be dereferenced
         exit 0
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         Return_Val=   # Global variable to hold oversize return value of function.
 
@@ -987,7 +987,7 @@ The next logical question is whether parameters can be dereferenced
         echo "return value = $Return_Val"    #25701
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # max2.sh: Maximum of two LARGE integers.
@@ -1055,7 +1055,7 @@ The next logical question is whether parameters can be dereferenced
         #  3) Rewrite the script to take input from command-line parameters.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         month_length ()  # Takes month number as an argument.
         {                # Returns number of days in month.
@@ -1102,7 +1102,7 @@ The next logical question is whether parameters can be dereferenced
     **Example 24-11. Real name from username**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # realname.sh
@@ -1152,7 +1152,7 @@ The next logical question is whether parameters can be dereferenced
     code block within the function.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Instead of:
         Function ()

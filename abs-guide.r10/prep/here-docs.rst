@@ -19,7 +19,7 @@ list to an interactive program or a command, such as
 the *ex* text editor.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     COMMAND <<InputComesFromHERE
     ...
@@ -37,7 +37,7 @@ program or command. It is similar to
 where ``      command-file     `` contains
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     command #1
     command #2
@@ -48,7 +48,7 @@ where ``      command-file     `` contains
 The *here document* equivalent looks like this:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     interactive-program <<LimitString
     command #1
@@ -69,7 +69,7 @@ non-interactive utilities and commands, such as, for example,
 **Example 19-1. *broadcast* : Sends message to everyone logged in**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -97,7 +97,7 @@ Even such unlikely candidates as the *vi* text editor lend themselves to
 **Example 19-2. *dummyfile* : Creates a 2-line dummy file**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -142,7 +142,7 @@ The above script could just as effectively have been implemented with
 *ex scripts* .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  Replace all instances of "Smith" with "Jones"
@@ -171,7 +171,7 @@ Analogous to "ex scripts" are *cat scripts* .
 **Example 19-3. Multi-line message using *cat***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -222,7 +222,7 @@ more readable.
 **Example 19-4. Multi-line message, with tabs suppressed**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Same as previous example, but...
@@ -259,7 +259,7 @@ document, changing its output accordingly.
 **Example 19-5. Here document with replaceable parameters**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Another 'cat' here document, using parameter substitution.
@@ -306,7 +306,7 @@ substitution.
 **Example 19-6. Upload a file pair to *Sunsite* incoming directory**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # upload.sh
@@ -365,7 +365,7 @@ interpreted literally. (Thank you, Allen Halsey, for pointing this out.)
 **Example 19-7. Parameter substitution turned off**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  A 'cat' here-document, but with parameter substitution disabled.
@@ -419,7 +419,7 @@ Generating scripts or even program code is one use for this.
 **Example 19-8. A script that generates another script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # generate-script.sh
@@ -480,7 +480,7 @@ This is actually a devious form of `command
 substitution <commandsub.html#COMMANDSUBREF>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     variable=$(cat <<SETVAR
     This variable
@@ -498,7 +498,7 @@ A here document can supply input to a function in the same script.
 **Example 19-9. Here documents and functions**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # here-function.sh
@@ -543,7 +543,7 @@ document. This, in effect, creates an "anonymous" here document.
 **Example 19-10. "Anonymous" Here Document**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -570,7 +570,7 @@ code.
 **Example 19-11. Commenting out a block of code**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # commentblock.sh
@@ -656,7 +656,7 @@ possible.
 **Example 19-12. A self-documenting script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # self-document.sh: self-documenting script
@@ -700,7 +700,7 @@ Using a `cat script <here-docs.html#CATSCRIPTREF>`__ is an alternate way
 of accomplishing this.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     DOC_REQUEST=70
 
@@ -733,7 +733,7 @@ Here documents create temporary files, but these files are deleted after
 opening and are not accessible to any other process.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |     bash$ bash -c 'lsof  |
 | -a -p $$ -d0' << EOF     |
@@ -747,7 +747,7 @@ opening and are not accessible to any other process.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ bash -c 'lsof -a -p $$ -d0' << EOF
     > EOF
@@ -755,7 +755,7 @@ opening and are not accessible to any other process.
               
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ bash -c 'lsof -a -p $$ -d0' << EOF
     > EOF
@@ -785,7 +785,7 @@ unexpected behavior. The whitespace prevents the limit string from being
 recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -834,7 +834,7 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -859,7 +859,7 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
     echo "This line had better not echo."  # Follows an 'exit' command.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -894,7 +894,7 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 not necessarily a good idea.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     # This works.        |
 |     cat <<!              |
@@ -930,7 +930,7 @@ not necessarily a good idea.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # This works.
     cat <<!
@@ -957,7 +957,7 @@ not necessarily a good idea.
     # It's safer to use a multi-character limit string.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # This works.
     cat <<!

@@ -19,7 +19,7 @@ your scripts.
 **Example M-1. Sample ``        .bashrc       `` file**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # =============================================================== #
     #
@@ -955,7 +955,7 @@ And, here is a snippet from Andrzej Szelachowski's instructive
 **Example M-2. ``        .bash_profile       `` file**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # From Andrzej Szelachowski's ~/.bash_profile:
 

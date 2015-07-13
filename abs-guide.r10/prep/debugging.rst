@@ -23,7 +23,7 @@ help in debugging a non-functional script.
 **Example 32-1. A buggy script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ex74.sh
@@ -46,7 +46,7 @@ help in debugging a non-functional script.
 Output from script:
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     ./ex74.sh: [37: command not found
 
@@ -58,7 +58,7 @@ What's wrong with the above script? Hint: after the *if* .
 **Example 32-2. Missing `keyword <internal.html#KEYWORDREF>`__**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # missing-keyword.sh
@@ -82,7 +82,7 @@ What's wrong with the above script? Hint: after the *if* .
 Output from script:
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     missing-keyword.sh: line 10: syntax error: unexpected end of file
         
@@ -102,7 +102,7 @@ all too familiar logic error.
 **Example 32-3. *test24* : another buggy script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -138,7 +138,7 @@ to contain only a newline, ``             IFS=$'\n'           `` .
 However, there are simpler ways of going about it.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Correct methods of deleting filenames containing spaces.
     rm *\ *
@@ -170,7 +170,7 @@ Tools for debugging non-working scripts include
    Even better is an **echo** that echoes only when *debug* is on.
 
    +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
+   | .. code-block:: sh
    |                          |
    |     ### debecho (debug-e |
    | cho), by Stefano Falsett |
@@ -200,7 +200,7 @@ Tools for debugging non-working scripts include
    +--------------------------+--------------------------+--------------------------+
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        ### debecho (debug-echo), by Stefano Falsetto ###
        ### Will echo passed parameters only if DEBUG is set to a value. ###
@@ -220,7 +220,7 @@ Tools for debugging non-working scripts include
        debecho $Whatever   # (Will not echo.)
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        ### debecho (debug-echo), by Stefano Falsetto ###
        ### Will echo passed parameters only if DEBUG is set to a value. ###
@@ -275,7 +275,7 @@ Tools for debugging non-working scripts include
    script.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        set -u   # Or   set -o nounset
 
@@ -298,7 +298,7 @@ Tools for debugging non-working scripts include
    **Example 32-4. Testing a condition with an *assert***
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # assert.sh
@@ -384,7 +384,7 @@ Tools for debugging non-working scripts include
     *A simple instance:*
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         trap '' 2
         # Ignore interrupt 2 (Control-C), with no action specified. 
@@ -399,7 +399,7 @@ Tools for debugging non-working scripts include
 **Example 32-5. Trapping at exit**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Hunting variables with a trap.
@@ -429,7 +429,7 @@ Tools for debugging non-working scripts include
 **Example 32-6. Cleaning up after **Control-C****
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # logon.sh: A quick 'n dirty script to check whether you are on-line yet.
@@ -526,7 +526,7 @@ Tools for debugging non-working scripts include
 **Example 32-7. A Simple Implementation of a Progress Bar**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # progress-bar2.sh
@@ -575,7 +575,7 @@ variables, for example.
 **Example 32-8. Tracing a variable**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -613,7 +613,7 @@ variables, for example.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -648,7 +648,7 @@ variables, for example.
     VARIABLE-TRACE> $variable = "87"
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -693,7 +693,7 @@ A-43 <contributed-scripts.html#STOPWATCH>`__ ).
 **Example 32-9. Running multiple processes (on an SMP box)**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # parent.sh
@@ -873,7 +873,7 @@ portion of a script from an undesirable interrupt.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
       trap '' 2  # Signal 2 is Control-C, now disabled.
         command

@@ -24,7 +24,7 @@ dot, as, for example, ```       .bashrc      `` <sample-bashrc.html>`__
 as part of an RE.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ ls -l
     total 2
@@ -63,7 +63,7 @@ Bash performs filename expansion on unquoted command-line arguments. The
 `echo <internal.html#ECHOREF>`__ command demonstrates this.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo *
     a.1 b.1 c.1 t2.sh test1.txt
@@ -102,7 +102,7 @@ Wheeler <http://www.dwheeler.com/essays/filenames-in-shell.html>`__
 shows how to avoid many such pitfalls.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     IFS="$(printf '\n\t' |
 | )"   # Remove space.     |
@@ -129,7 +129,7 @@ shows how to avoid many such pitfalls.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     IFS="$(printf '\n\t')"   # Remove space.
 
@@ -144,7 +144,7 @@ shows how to avoid many such pitfalls.
     # This example taken from David Wheeler's site, with permission.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     IFS="$(printf '\n\t')"   # Remove space.
 
@@ -186,7 +186,7 @@ Filename expansion *can* match dotfiles, but only if the pattern
 explicitly includes the dot as a literal character.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     ~/[.]bashrc    #  Wi |
 | ll not expand to ~/.bash |
@@ -216,7 +216,7 @@ explicitly includes the dot as a literal character.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ~/[.]bashrc    #  Will not expand to ~/.bashrc
     ~/?bashrc      #  Neither will this.
@@ -232,7 +232,7 @@ explicitly includes the dot as a literal character.
     # Thanks, S.C.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ~/[.]bashrc    #  Will not expand to ~/.bashrc
     ~/?bashrc      #  Neither will this.

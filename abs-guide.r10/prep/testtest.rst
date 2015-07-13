@@ -9,7 +9,7 @@ following is excerpted from an "ancient" version of
 ``      xinitrc     `` ( *Red Hat 7.1* , or thereabouts).
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ -f $HOME/.Xclients ]; then
       exec $HOME/.Xclients

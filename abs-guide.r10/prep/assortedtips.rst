@@ -15,7 +15,7 @@ XXX  36.7. Assorted Tips
    and write the hard parts as *pseudo-code* .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -59,7 +59,7 @@ XXX  36.7. Assorted Tips
    record of the script names and invocation times.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # Append (>>) following to end of each script tracked.
 
@@ -80,7 +80,7 @@ XXX  36.7. Assorted Tips
    beginning?
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        file=data.txt
        title="***This is the title line of data text file***"
@@ -122,7 +122,7 @@ XXX  36.7. Assorted Tips
    `source <internal.html#SOURCEREF>`__ command.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # SCRIPT LIBRARY
        # ------ -------
@@ -238,7 +238,7 @@ XXX  36.7. Assorted Tips
    legibility in scripts.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        ## Caution.
        rm -rf *.zzy   ##  The "-rf" options to "rm" are very dangerous,
@@ -267,7 +267,7 @@ XXX  36.7. Assorted Tips
    **Example 36-17. A Progress Bar**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # progress-bar.sh
@@ -332,7 +332,7 @@ XXX  36.7. Assorted Tips
    comment blocks.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -372,7 +372,7 @@ XXX  36.7. Assorted Tips
    integer.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -411,7 +411,7 @@ XXX  36.7. Assorted Tips
    **Example 36-18. Return value trickery**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # multiplication.sh
@@ -452,7 +452,7 @@ XXX  36.7. Assorted Tips
    that a function can "return" a non-numeric value.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        capitalize_ichar ()          #  Capitalizes initial character
        {                            #+ of argument string(s) passed.
@@ -481,7 +481,7 @@ XXX  36.7. Assorted Tips
    **Example 36-19. Even more return value trickery**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # sum-product.sh
@@ -523,7 +523,7 @@ XXX  36.7. Assorted Tips
    to work. If you alter the previous example:
 
    +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
+   | .. code-block:: sh
    |                          |
    |     sum_and_product ()   |
    |     {                    |
@@ -545,7 +545,7 @@ XXX  36.7. Assorted Tips
    +--------------------------+--------------------------+--------------------------+
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        sum_and_product ()
        {
@@ -557,7 +557,7 @@ XXX  36.7. Assorted Tips
        # Now, this will not work correctly.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        sum_and_product ()
        {
@@ -590,7 +590,7 @@ XXX  36.7. Assorted Tips
    **Example 36-20. Passing and returning arrays**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # array-function.sh: Passing an array to a function and ...
@@ -696,7 +696,7 @@ XXX  36.7. Assorted Tips
    ``         $PATH        `` and **umask** .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        PATH=/bin:/usr/bin:/usr/local/bin ; export PATH
@@ -714,7 +714,7 @@ XXX  36.7. Assorted Tips
    `tr <textproc.html#TRREF>`__ and `grep <textproc.html#GREPREF>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # From "wstrings.sh" example.
 
@@ -727,7 +727,7 @@ XXX  36.7. Assorted Tips
    **Example 36-21. Fun with anagrams**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # agram.sh: Playing games with anagrams.
@@ -790,7 +790,7 @@ XXX  36.7. Assorted Tips
    to avoid potential problems with this.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        CMD=command1                 # First choice.
        PlanB=command2               # Fallback option.
@@ -824,7 +824,7 @@ XXX  36.7. Assorted Tips
    .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        if ls -l nonexistent_filename | grep -q 'No such file or directory'
          then echo "File \"nonexistent_filename\" does not exist."
@@ -837,7 +837,7 @@ XXX  36.7. Assorted Tips
    this.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        if ls -l nonexistent_filename 2>&1 | grep -q 'No such file or directory'
        #                             ^^^^
@@ -852,7 +852,7 @@ XXX  36.7. Assorted Tips
    subshell, here's a way to do it.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        TMPFILE=tmpfile                  # Create a temp file to store the variable.
 
@@ -894,7 +894,7 @@ XXX  36.7. Assorted Tips
    something like:
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # $Id: hello-world.sh,v 1.1 2004/10/16 02:43:05 bozo Exp $
 
@@ -935,7 +935,7 @@ X-Windows-based widget sets.
 **Example 36-22. Widgets invoked from a shell script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # dialog.sh: Using 'gdialog' widgets.
@@ -1002,7 +1002,7 @@ X-Windows-based widget sets.
 of popping up a message/query window. For example:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     xmessage Fatal error in script! -button exit
 
@@ -1013,7 +1013,7 @@ of popping up a message/query window. For example:
 widgets-and-windows, and it works very nicely within a script.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     get_info ()
     {

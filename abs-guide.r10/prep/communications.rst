@@ -15,7 +15,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     address, using DNS.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ host surfacemail.com
         surfacemail.com. has address 202.92.42.236
@@ -29,7 +29,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     the host (server) from the IP address.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ipcalc -h 202.92.42.236
         HOSTNAME=surfacemail.com
@@ -47,7 +47,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     still useful.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ nslookup -sil 66.97.104.180
         nslookup kuhleersparnis.ch
@@ -76,7 +76,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ dig -x 81.9.6.2
         ;; Got answer:
@@ -102,7 +102,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     **Example 16-40. Finding out where to report a spammer**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # spam-lookup.sh: Look up abuse contact to report a spammer.
@@ -157,7 +157,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     **Example 16-41. Analyzing a spam domain**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #! /bin/bash
         # is-spammer.sh: Identifying spam domains
@@ -320,7 +320,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     `sed <sedawk.html#SEDREF>`__ in a pipe.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ traceroute 81.9.6.2
         traceroute to 81.9.6.2 (81.9.6.2), 30 hops max, 38 byte packets
@@ -340,7 +340,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     be used with caution.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ping localhost
         PING localhost.localdomain (127.0.0.1) from 127.0.0.1 : 56(84) bytes of data.
@@ -359,7 +359,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     for in a script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
           HNAME=news-15.net  # Notorious spammer.
         # HNAME=$HOST     # Debug: test for localhost.
@@ -387,7 +387,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     ``         ~/.forward        `` files, if present.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ finger
         Login  Name           Tty      Idle  Login Time   Office     Office Phone
@@ -488,7 +488,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     from a Web or ftp site. It works well in a script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         wget -p http://www.xyz23.com/file01.html
         #  The -p or --page-requisite option causes wget to fetch all files
@@ -508,7 +508,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     **Example 16-42. Getting a stock quote**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # quote-fetch.sh: Download a stock quote.
@@ -563,7 +563,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     or ftp site noninteractively.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         lynx -dump http://www.xyz23.com/file01.html >$SAVEFILE
 
@@ -593,7 +593,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     (synchronizes) files between two different networked machines.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rsync -a ~/sourcedir/*txt /node1/subdirectory/
                   
@@ -604,7 +604,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     **Example 16-43. Updating FC4**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # fc4upd.sh
@@ -853,7 +853,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     **Example 16-44. Using *ssh***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # remote.bash: Using ssh.
@@ -982,7 +982,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     **Example 16-45. A script that mails itself**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # self-mailer.sh: Self-mailing script
@@ -1029,7 +1029,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# mailstats
         Statistics from Tue Jan  1 20:32:08 2008

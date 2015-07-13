@@ -167,7 +167,7 @@ couple of lines from the ``      /etc/init.d/functions file     `` , as
 found in the *Fedora Core* Linux distro.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     while [ -n "$remaining" -a "$retry" -gt 0 ]; do
 
@@ -226,7 +226,7 @@ To avoid confusion or error in a complex sequence of test operators,
 break up the sequence into bracketed sections.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     if [ "$v1" -gt "$v2" |
 |   -o  "$v1" -lt "$v2"  - |
@@ -246,7 +246,7 @@ break up the sequence into bracketed sections.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ "$v1" -gt "$v2"  -o  "$v1" -lt "$v2"  -a  -e "$filename" ]
     # Unclear what's going on here...
@@ -255,7 +255,7 @@ break up the sequence into bracketed sections.
     # Much better -- the condition tests are grouped in logical sections.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ "$v1" -gt "$v2"  -o  "$v1" -lt "$v2"  -a  -e "$filename" ]
     # Unclear what's going on here...

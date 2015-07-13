@@ -14,7 +14,7 @@ Bash history commands:
 #. **fc**
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ history
        1  mount /mnt/cdrom
@@ -60,7 +60,7 @@ Internal variables associated with Bash history commands:
 Unfortunately, the Bash history tools find no use in scripting.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # history.sh
@@ -81,7 +81,7 @@ Unfortunately, the Bash history tools find no use in scripting.
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ ./history.sh
     (no output)       

@@ -41,7 +41,7 @@ status of the script is the exit status of the last command executed in
 the script (previous to the **exit** ).
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -62,7 +62,7 @@ The equivalent of a bare **exit** is **exit $?** or even just omitting
 the **exit** .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -80,7 +80,7 @@ the **exit** .
 +--------------------------+--------------------------+--------------------------+
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -96,7 +96,7 @@ the **exit** .
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -111,7 +111,7 @@ the **exit** .
     exit
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -126,7 +126,7 @@ the **exit** .
     exit $?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -139,7 +139,7 @@ the **exit** .
     # Will exit with status of last command.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -154,7 +154,7 @@ the **exit** .
     exit
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -169,7 +169,7 @@ the **exit** .
     exit $?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -201,7 +201,7 @@ success or an integer in the range 1 - 255 on error.
 **Example 6-1. exit / exit status**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -240,7 +240,7 @@ status <exit-status.html#EXITSTATUSREF>`__ .
 **Example 6-2. Negating a condition using ! **
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     true    # The "true" builtin.
     echo "exit status of \"true\" = $?"     # 0
@@ -275,7 +275,7 @@ status <exit-status.html#EXITSTATUSREF>`__ .
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     true    # The "true" builtin.
     echo "exit status of \"true\" = $?"     # 0
@@ -307,7 +307,7 @@ status <exit-status.html#EXITSTATUSREF>`__ .
     # Thanks, StÃ©phane Chazelas and Kristopher Newsome.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     true    # The "true" builtin.
     echo "exit status of \"true\" = $?"     # 0

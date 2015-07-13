@@ -23,7 +23,7 @@ damage your system if misused.
     numbers.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ groups
         bozita cdrom cdwriter audio xgrp
@@ -41,7 +41,7 @@ damage your system if misused.
      <system.html#FTN.AEN14695>`__
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# chown bozo *.txt
 
@@ -55,7 +55,7 @@ damage your system if misused.
     destination group (or *root* ) to use this operation.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         chgrp --recursive dunderheads *.data
         #  The "dunderheads" group will now own all the "*.data" files
@@ -99,7 +99,7 @@ damage your system if misused.
     variables.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ id
         uid=501(bozo) gid=501(bozo) groups=501(bozo),22(cdrom),80(cdwriter),81(audio)
@@ -127,7 +127,7 @@ damage your system if misused.
     May be invoked only by root.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# lid bozo
          bozo(gid=500)
@@ -146,7 +146,7 @@ damage your system if misused.
     Show all users logged on to the system.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ who
         bozo  tty1     Apr 27 17:45
@@ -162,7 +162,7 @@ damage your system if misused.
     equivalent of **who -m** , as in **who am i** or **who The Man** .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ who -m
         localhost.localdomain!bozo  pts/2    Apr 27 17:49
@@ -173,7 +173,7 @@ damage your system if misused.
      **whoami** is similar to **who -m** , but only lists the user name.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ whoami
         bozo
@@ -188,7 +188,7 @@ damage your system if misused.
     process.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ w | grep startx
         bozo  tty1     -                 4:22pm  6:41   4.47s  0.45s  startx
@@ -201,7 +201,7 @@ damage your system if misused.
     `whoami <system.html#WHOAMIREF>`__ , above.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ logname
         bozo
@@ -214,7 +214,7 @@ damage your system if misused.
     However . . .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ su
         Password: ......
@@ -247,7 +247,7 @@ damage your system if misused.
     script, thus permitting a *regular user* to run the script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -270,7 +270,7 @@ damage your system if misused.
     **Example 17-1. Setting a new password**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  setnew-password.sh: For demonstration purposes only.
@@ -332,7 +332,7 @@ damage your system if misused.
     accounting utilities.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ac
                 total       68.08
@@ -347,7 +347,7 @@ damage your system if misused.
     For example, to show the last few times the system rebooted:
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ last reboot
         reboot   system boot  2.6.9-1.667      Fri Feb  4 18:18          (00:02)    
@@ -386,7 +386,7 @@ damage your system if misused.
     each separate *xterm* window counts as a different terminal.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ tty
         /dev/pts/1
@@ -402,7 +402,7 @@ damage your system if misused.
     **Example 17-2. Setting an *erase* character**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # erase.sh: Using "stty" to set an erase character when reading input.
@@ -430,7 +430,7 @@ damage your system if misused.
     **Example 17-3. *secret password* : Turning off terminal echoing**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # secret-pw.sh: secret password
@@ -472,7 +472,7 @@ damage your system if misused.
     **Example 17-4. Keypress detection**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # keypress.sh: Detect a user keypress ("hot keys").
@@ -512,7 +512,7 @@ damage your system if misused.
     is even a basic line editor inside the terminal.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ stty -a
         speed 9600 baud; rows 36; columns 96; line = 0;
@@ -528,7 +528,7 @@ damage your system if misused.
     for the local terminal line editor.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat > filexxx
         wha<ctl-W>I<ctl-H>foo bar<ctl-U>hello world<ENTER>
@@ -558,7 +558,7 @@ damage your system if misused.
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ stty -a
         speed 9600 baud; rows 36; columns 96; line = 0;
@@ -569,7 +569,7 @@ damage your system if misused.
                         
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat > filexxx
         wha<ctl-W>I<ctl-H>foo bar<ctl-U>hello world<ENTER>
@@ -581,7 +581,7 @@ damage your system if misused.
                         
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ stty -a
         speed 9600 baud; rows 36; columns 96; line = 0;
@@ -592,7 +592,7 @@ damage your system if misused.
                         
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat > filexxx
         wha<ctl-W>I<ctl-H>foo bar<ctl-U>hello world<ENTER>
@@ -611,7 +611,7 @@ damage your system if misused.
     behavior of that terminal.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ setterm -cursor off
         bash$
@@ -625,7 +625,7 @@ damage your system if misused.
     available for this purpose.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         setterm -bold on
         echo bold hello
@@ -640,7 +640,7 @@ damage your system if misused.
     of **stty** .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ tset -r
         Terminal type is xterm-xfree86.
@@ -655,7 +655,7 @@ damage your system if misused.
     *root* and is usually found in a system setup script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # From /etc/pcmcia/serial script:
 
@@ -696,7 +696,7 @@ damage your system if misused.
     19-1 <here-docs.html#EX70>`__ ).
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ wall System going down for maintenance in 5 minutes!
         Broadcast message from bozo (pts/1) Sun Jul  8 13:53:27 2001...
@@ -728,7 +728,7 @@ damage your system if misused.
     option shows only the OS type.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ uname
         Linux
@@ -748,7 +748,7 @@ damage your system if misused.
     11-27 <testbranch.html#CASECMD>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ arch
         i686
@@ -769,7 +769,7 @@ damage your system if misused.
     ``         /var/log/lastlog        `` file.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lastlog
         root          tty1                      Fri Dec  7 18:43:21 -0700 2001
@@ -804,7 +804,7 @@ damage your system if misused.
     `awk <awk.html#AWKREF>`__ to parse and analyze its results.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lsof
         COMMAND    PID    USER   FD   TYPE     DEVICE    SIZE     NODE NAME
@@ -825,7 +825,7 @@ damage your system if misused.
     intrusion or hack attempts.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lsof -an -i tcp
         COMMAND  PID USER  FD  TYPE DEVICE SIZE NODE NAME
@@ -845,7 +845,7 @@ damage your system if misused.
     run . . . perhaps due to missing libraries or related causes.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ strace df
         execve("/bin/df", ["df"], [/* 45 vars */]) = 0
@@ -864,7 +864,7 @@ damage your system if misused.
     *library calls* invoked by a given command.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ltrace df
         __libc_start_main(0x804a910, 1, 0xbfb589a4, 0x804fb70, 0x804fb68 <unfinished ...>:
@@ -886,7 +886,7 @@ damage your system if misused.
     clients and servers.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ nc localhost.localdomain 25
         220 localhost.localdomain ESMTP Sendmail 8.13.1/8.13.1;
@@ -900,7 +900,7 @@ damage your system if misused.
     **Example 17-5. Checking a remote server for *identd***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #! /bin/sh
         ## Duplicate DaveG's ident-scan thingie using netcat. Oooh, he'll be p*ssed.
@@ -977,7 +977,7 @@ damage your system if misused.
     script in the BitKeeper Affair:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo clone | nc thunk.org 5000 > e2fsprogs.dat
 
@@ -991,7 +991,7 @@ damage your system if misused.
     **free** does, and much more.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ free
                         total       used       free     shared    buffers     cached
@@ -1004,7 +1004,7 @@ damage your system if misused.
     To show unused RAM memory:
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ free | grep Mem | awk '{ print $4 }'
         1880
@@ -1018,7 +1018,7 @@ damage your system if misused.
     extensive and detailed listing.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ procinfo | grep Bootup
         Bootup: Wed Mar 21 15:15:50 2001    Load average: 0.04 0.21 0.34 3/47 6829
@@ -1029,7 +1029,7 @@ damage your system if misused.
     List devices, that is, show installed hardware.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lsdev
         Device            DMA   IRQ  I/O Ports
@@ -1050,7 +1050,7 @@ damage your system if misused.
     directory, unless otherwise specified.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ du -ach
         1.0k    ./wi.sh
@@ -1065,7 +1065,7 @@ damage your system if misused.
     Shows filesystem usage in tabular form.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ df
         Filesystem           1k-blocks      Used Available Use% Mounted on
@@ -1084,7 +1084,7 @@ damage your system if misused.
     `awk <awk.html#AWKREF>`__ from within a script.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ dmesg | grep hda
         Kernel command line: ro root=/dev/hda2
@@ -1100,7 +1100,7 @@ damage your system if misused.
     directory or device file) or set of files.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ stat test.cru
           File: "test.cru"
@@ -1118,7 +1118,7 @@ damage your system if misused.
     message.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ stat nonexistent-file
         nonexistent-file: No such file or directory
@@ -1130,7 +1130,7 @@ damage your system if misused.
     (and filesystems) and set variables accordingly.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # fileinfo2.sh
@@ -1173,7 +1173,7 @@ damage your system if misused.
     Display virtual memory statistics.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ vmstat
            procs                      memory    swap          io system         cpu
@@ -1188,7 +1188,7 @@ damage your system if misused.
     statistics.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ uptime
         10:28pm  up  1:57,  3 users,  load average: 0.17, 0.34, 0.27
@@ -1217,7 +1217,7 @@ damage your system if misused.
     variable.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ hostname
         localhost.localdomain
@@ -1237,7 +1237,7 @@ damage your system if misused.
     Echo a 32-bit hexadecimal numerical identifier for the host machine.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ hostid
         7f0100
@@ -1258,7 +1258,7 @@ damage your system if misused.
     found in ``            /etc/hosts           `` .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ cat /etc/hosts |
     |     127.0.0.1            |
@@ -1276,13 +1276,13 @@ damage your system if misused.
     a few million other Linux machines with this identical *hostid* .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat /etc/hosts
         127.0.0.1               localhost.localdomain localhost
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat /etc/hosts
         127.0.0.1               localhost.localdomain localhost
@@ -1302,7 +1302,7 @@ damage your system if misused.
     .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ sar
         Linux 2.4.9 (brooks.seringas.fr)     09/26/03
@@ -1329,7 +1329,7 @@ damage your system if misused.
     This is part of the *binutils* package.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ readelf -h /bin/bash
         ELF Header:
@@ -1350,7 +1350,7 @@ damage your system if misused.
     programmers.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ size /bin/bash
            text    data     bss     dec     hex filename
@@ -1369,7 +1369,7 @@ damage your system if misused.
     *root* to invoke **logger** .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         logger Experiencing instability in network connection at 23:10, 05/21.
         # Now, do a 'tail /var/log/messages'.
@@ -1381,7 +1381,7 @@ damage your system if misused.
     ``         /var/log/messages        `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         logger -t $0 -i Logging at line "$LINENO".
         # The "-t" option specifies the tag for the logger entry.
@@ -1430,7 +1430,7 @@ damage your system if misused.
     29-3 <procref1.html#PIDID>`__ ).
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$  ps ax | grep sendmail
         295 ?       S      0:00 sendmail: accepting connections on port 25
@@ -1445,7 +1445,7 @@ damage your system if misused.
     or `kill <x9644.html#KILLREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ps a | grep mingetty
         2212 tty2     Ss+    0:00 /sbin/mingetty tty2
@@ -1480,7 +1480,7 @@ damage your system if misused.
     output may be parsed or accessed from a script.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ top -b
           8:30pm  up 3 min,  3 users,  load average: 0.49, 0.32, 0.13
@@ -1523,7 +1523,7 @@ damage your system if misused.
     `$PPID <internalvariables.html#PPIDREF>`__ internal variable.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ pidof xclock
         880
@@ -1535,7 +1535,7 @@ damage your system if misused.
     **Example 17-6. *pidof* helps kill a process**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # kill-process.sh
@@ -1585,7 +1585,7 @@ damage your system if misused.
     services.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ fuser -u /usr/bin/vim
         /usr/bin/vim:         3207e(bozo)
@@ -1607,7 +1607,7 @@ damage your system if misused.
     relevant processes.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ umount /mnt/usbdrive
         umount: /mnt/usbdrive: device is busy
@@ -1629,7 +1629,7 @@ damage your system if misused.
     .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# nmap localhost.localdomain
         PORT     STATE SERVICE
@@ -1712,7 +1712,7 @@ damage your system if misused.
     use this command to start services at bootup.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# /sbin/service iptables stop
         Flushing firewall rules:                                   [  OK  ]
@@ -1734,7 +1734,7 @@ damage your system if misused.
     network against hacking attempts.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1755,7 +1755,7 @@ damage your system if misused.
     Network *interface configuration* and tuning utility.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ifconfig -a
         lo        Link encap:Local Loopback
@@ -1772,7 +1772,7 @@ damage your system if misused.
     interfaces, or to shut them down when rebooting.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Code snippets from /etc/rc.d/init.d/network
 
@@ -1816,7 +1816,7 @@ damage your system if misused.
     **netstat -r** is equivalent to `route <system.html#ROUTEREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ netstat
         Active Internet connections (w/o servers)
@@ -1852,7 +1852,7 @@ damage your system if misused.
     part of the *iproute2* package.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ip link show
         1: lo: <LOOPBACK,UP> mtu 16436 qdisc noqueue 
@@ -1872,7 +1872,7 @@ damage your system if misused.
     Or, in a script:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Script by Juan Nicolas Ruiz
@@ -1912,7 +1912,7 @@ damage your system if misused.
     Show info about or make changes to the kernel routing table.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ route
         Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
@@ -1943,7 +1943,7 @@ damage your system if misused.
     be part of the core installation of some Linux flavors.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ chkconfig --list
         atd             0:off   1:off   2:off   3:on    4:on    5:on    6:off
@@ -1961,7 +1961,7 @@ damage your system if misused.
     Dump ip packet traffic between hosts *bozoville* and *caduceus* :
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ tcpdump ip host bozoville and caduceus
                   
@@ -1992,7 +1992,7 @@ damage your system if misused.
     something similar) invokes this to get everything mounted.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         mount -t iso9660 /dev/cdrom /mnt/cdrom
         # Mounts CD ROM. ISO 9660 is a standard CD ROM filesystem.
@@ -2012,7 +2012,7 @@ damage your system if misused.
     **Example 17-7. Checking a CD image**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # As root...
 
@@ -2033,7 +2033,7 @@ damage your system if misused.
     **umount** ed, else filesystem corruption may result.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         umount /mnt/cdrom
         # You may now press the eject button and safely remove the disk.
@@ -2063,7 +2063,7 @@ damage your system if misused.
     For example, to mount a USB flash drive:
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ gnome-mount -d /dev/sda1
         gnome-mount 0.4
@@ -2098,7 +2098,7 @@ damage your system if misused.
     **Example 17-8. Creating a filesystem in a file**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         SIZE=1000000  # 1 meg
 
@@ -2128,7 +2128,7 @@ damage your system if misused.
     **Example 17-9. Adding a new hard drive**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2200,7 +2200,7 @@ damage your system if misused.
     info. This must be invoked as *root* .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# dumpe2fs /dev/hda7 | grep 'ount count'
         dumpe2fs 1.19, 13-Jul-2000 for EXT2 FS 0.5b, 95/08/09
@@ -2270,7 +2270,7 @@ damage your system if misused.
     modules for connected USB devices.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lsusb
         Bus 001 Device 001: ID 0000:0000  
@@ -2294,7 +2294,7 @@ damage your system if misused.
     Lists *pci* busses present.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lspci
         00:00.0 Host bridge: Intel Corporation 82845 845
@@ -2393,7 +2393,7 @@ damage your system if misused.
     access) to other processes.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         lockfile /home/bozo/lockfiles/$0.lock
         # Creates a write-protected lockfile prefixed with the name of the script.
@@ -2417,7 +2417,7 @@ damage your system if misused.
     a lock file by something like the following.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         appname=xyzip
         # Application "xyzip" created lock file "/var/lock/xyzip.lock".
@@ -2436,7 +2436,7 @@ damage your system if misused.
     lock on that file until completion of the specified command.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         flock $0 cat $0 > lockfile__$0
         #  Set a lock on the script the above line appears in,
@@ -2510,7 +2510,7 @@ damage your system if misused.
     *fork bomb* .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |     # This script is for |
@@ -2550,7 +2550,7 @@ damage your system if misused.
     it exceeded the preset limit.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # This script is for illustrative purposes only.
@@ -2566,7 +2566,7 @@ damage your system if misused.
         exit 0      #  Will not exit here, because this script will never terminate.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # This script is for illustrative purposes only.
@@ -2608,7 +2608,7 @@ damage your system if misused.
     eyes**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rot13a.sh: Same as "rot13.sh" script, but writes output to "secure" file.
@@ -2647,7 +2647,7 @@ damage your system if misused.
     List installed kernel modules.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ lsmod
         Module                  Size  Used by
@@ -2694,7 +2694,7 @@ damage your system if misused.
     Output information about a loadable module.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ modinfo hid
         filename:    /lib/modules/2.4.20-6/kernel/drivers/usb/hid.o
@@ -2727,7 +2727,7 @@ damage your system if misused.
     when the path to the shell or interpreter is unknown.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #! /usr/bin/env perl |
     |                          |
@@ -2749,7 +2749,7 @@ damage your system if misused.
     Or even ...
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/env bash      |
     |     # Queries the $PATH  |
@@ -2765,7 +2765,7 @@ damage your system if misused.
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #! /usr/bin/env perl
 
@@ -2777,7 +2777,7 @@ damage your system if misused.
         # Thanks, S.C.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/env bash
         # Queries the $PATH enviromental variable for the location of bash.
@@ -2786,7 +2786,7 @@ damage your system if misused.
         ...
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #! /usr/bin/env perl
 
@@ -2798,7 +2798,7 @@ damage your system if misused.
         # Thanks, S.C.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/env bash
         # Queries the $PATH enviromental variable for the location of bash.
@@ -2813,7 +2813,7 @@ damage your system if misused.
     Show shared lib dependencies for an executable file.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ldd /bin/ls
         libc.so.6 => /lib/libc.so.6 (0x4000c000)
@@ -2828,7 +2828,7 @@ damage your system if misused.
     the ``         -n        `` option.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         watch -n 5 tail /var/log/messages
         # Shows tail end of system log, /var/log/messages, every five seconds.
@@ -2864,7 +2864,7 @@ damage your system if misused.
     (laptop) screen backlight**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # backlight.sh
@@ -3068,7 +3068,7 @@ In Bash and other Bourne shell derivatives, it is possible to set
 variables in a single command's environment.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     var1=value1 var2=val |
 | ue2 commandXXX           |
@@ -3079,13 +3079,13 @@ variables in a single command's environment.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     var1=value1 var2=value2 commandXXX
     # $var1 and $var2 set in the environment of 'commandXXX' only.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     var1=value1 var2=value2 commandXXX
     # $var1 and $var2 set in the environment of 'commandXXX' only.

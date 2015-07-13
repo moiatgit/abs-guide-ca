@@ -20,7 +20,7 @@ command syntax and overlap of functionality, not to mention confusion.
  expr "$string" : '.\*'
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
 
@@ -36,7 +36,7 @@ command syntax and overlap of functionality, not to mention confusion.
 file**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # paragraph-space.sh
@@ -87,7 +87,7 @@ file**
     expression.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #       |------|
@@ -107,7 +107,7 @@ file**
     matches.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #       123456 ...
@@ -142,7 +142,7 @@ file**
     ``                   $position                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #       0123456789.....
@@ -179,7 +179,7 @@ file**
     **Example 10-2. Generating an 8-character "random" string**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rand-string.sh
@@ -220,7 +220,7 @@ file**
     positional parameters, starting at ``         $position        `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo ${*:2}          # Echoes second and following positional parameters.
         echo ${@:2}          # Same as above.
@@ -235,7 +235,7 @@ file**
     ``                   $position                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #       123456789......
@@ -259,7 +259,7 @@ file**
     expression.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #       =======     
@@ -284,7 +284,7 @@ file**
     expression.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #                ======
@@ -309,7 +309,7 @@ file**
     ``                   $string                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #       |----|          shortest
@@ -341,7 +341,7 @@ file**
     For example:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Rename all filenames in $PWD with "TXT" suffix to a "txt" suffix.
         # For example, "file1.TXT" becomes "file1.txt" . . .
@@ -366,7 +366,7 @@ file**
     ``                   $string                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
         #                    ||     shortest
@@ -387,7 +387,7 @@ file**
     change**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  cvt.sh:
@@ -456,7 +456,7 @@ file**
     **Example 10-4. Converting streaming audio files to *ogg***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ra2ogg.sh: Convert streaming audio files (*.ra) to ogg.
@@ -520,7 +520,7 @@ file**
     **Example 10-5. Emulating *getopt***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # getopt-simple.sh
@@ -586,7 +586,7 @@ file**
     ``                   $replacement                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
 
@@ -631,7 +631,7 @@ file**
     ``                   $substring                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         stringZ=abcABC123ABCabc
 
@@ -656,7 +656,7 @@ operations.
 **Example 10-6. Alternate ways of extracting and locating substrings**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # substring-extraction.sh

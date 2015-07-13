@@ -18,7 +18,7 @@ substitution* .
      <varsubn.html#FTN.AEN2258>`__
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ variable1=23
 
@@ -63,7 +63,7 @@ substitution* .
     **Example 4-1. Variable assignment and substitution**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex9.sh
@@ -186,7 +186,7 @@ substitution* .
     all ( *not* zero!).
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     if [ -z "$unassigned |
     | " ]                      |
@@ -203,7 +203,7 @@ substitution* .
     uninitialized variable.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     echo "$uninitialized |
     | "                        |
@@ -227,7 +227,7 @@ substitution* .
     See also `Example 15-23 <internal.html#SELFSOURCE>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ -z "$unassigned" ]
         then
@@ -235,7 +235,7 @@ substitution* .
         fi     # $unassigned is NULL.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "$uninitialized"                                # (blank line)
         let "uninitialized += 5"                             # Add 5 to it.
@@ -246,7 +246,7 @@ substitution* .
         #+ however it evaluates as 0 in an arithmetic operation.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ -z "$unassigned" ]
         then
@@ -254,7 +254,7 @@ substitution* .
         fi     # $unassigned is NULL.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "$uninitialized"                                # (blank line)
         let "uninitialized += 5"                             # Add 5 to it.

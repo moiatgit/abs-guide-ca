@@ -36,7 +36,7 @@ XXX  7.1. Test Constructs
    comparisons <comparison-ops.html#ICOMPARISON1>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        (( 0 && 1 ))                 # Logical AND
        echo $?     # 1     ***
@@ -78,7 +78,7 @@ XXX  7.1. Test Constructs
    *not* an error value.
 
    +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
+   | .. code-block:: sh
    |                          |
    |     var=-2 && (( var+=2  |
    | ))                       |
@@ -94,7 +94,7 @@ XXX  7.1. Test Constructs
    +--------------------------+--------------------------+--------------------------+
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        var=-2 && (( var+=2 ))
        echo $?                   # 1
@@ -103,7 +103,7 @@ XXX  7.1. Test Constructs
                                  # Will not echo $var!
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        var=-2 && (( var+=2 ))
        echo $?                   # 1
@@ -120,7 +120,7 @@ XXX  7.1. Test Constructs
    brackets.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        if cmp a b &> /dev/null  # Suppress output.
        then echo "Files a and b are identical."
@@ -157,7 +157,7 @@ XXX  7.1. Test Constructs
 **Example 7-1. What is truth?**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -289,7 +289,7 @@ XXX  7.1. Test Constructs
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ condition-true ]
     then
@@ -316,7 +316,7 @@ statements, and before a new statement on the same line begins, the old
 one must terminate.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     if [ -x "$filename"  |
 | ]; then                  |
@@ -324,12 +324,12 @@ one must terminate.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ -x "$filename" ]; then
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     if [ -x "$filename" ]; then
 
@@ -345,7 +345,7 @@ one must terminate.
     an outer one.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ condition1 ]
         then
@@ -385,7 +385,7 @@ script, **test** does *not* call the external
 ``         /usr/bin/test        `` .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |     bash$ type test      |
 |     test is a shell buil |
@@ -409,7 +409,7 @@ If, for some reason, you wish to use ``         /usr/bin/test        ``
 in a Bash script, then specify it by full pathname.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ type test
     test is a shell builtin
@@ -424,7 +424,7 @@ in a Bash script, then specify it by full pathname.
               
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ type test
     test is a shell builtin
@@ -446,7 +446,7 @@ in a Bash script, then specify it by full pathname.
 , [ ] , and ``        /usr/bin/[       ``**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -511,7 +511,7 @@ No filename expansion or word splitting takes place between [[ and ]] ,
 but there is parameter expansion and command substitution.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     file=/etc/passwd
 
@@ -531,7 +531,7 @@ a [ ] construct.
 automatically within a [[ ... ]] construct.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # [[ Octal and hexadecimal evaluation ]]
     # Thank you, Moritz Gronbach, for pointing this out.
@@ -567,7 +567,7 @@ automatically within a [[ ... ]] construct.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     file=/etc/passwd
 
@@ -577,7 +577,7 @@ automatically within a [[ ... ]] construct.
     fi
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # [[ Octal and hexadecimal evaluation ]]
     # Thank you, Moritz Gronbach, for pointing this out.
@@ -610,7 +610,7 @@ automatically within a [[ ... ]] construct.
     fi      # [[ $hexadecimal ]] also evaluates!
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     file=/etc/passwd
 
@@ -620,7 +620,7 @@ automatically within a [[ ... ]] construct.
     fi
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # [[ Octal and hexadecimal evaluation ]]
     # Thank you, Moritz Gronbach, for pointing this out.
@@ -662,7 +662,7 @@ Following an **if** , neither the **test** command nor the test brackets
 ( [ ] or [[ ]] ) are strictly necessary.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     dir=/home/bozo       |
 |                          |
@@ -685,7 +685,7 @@ Similarly, a condition within test brackets may stand alone without an
 construct <list-cons.html#LISTCONSREF>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     var1=20              |
 |     var2=22              |
@@ -701,7 +701,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     dir=/home/bozo
 
@@ -712,7 +712,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
     fi
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     var1=20
     var2=22
@@ -722,7 +722,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
     [ -d "$home" ] || echo "$home directory does not exist."
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     dir=/home/bozo
 
@@ -733,7 +733,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
     fi
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     var1=20
     var2=22
@@ -756,7 +756,7 @@ discussed.
 **Example 7-3. Arithmetic Tests using (( )) **
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # arith-tests.sh

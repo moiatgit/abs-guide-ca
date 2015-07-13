@@ -25,7 +25,7 @@ XXX  4.2. Variable Assignment
     **Example 4-2. Plain Variable Assignment**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Naked variables
@@ -71,7 +71,7 @@ XXX  4.2. Variable Assignment
     **Example 4-3. Variable Assignment, plain and fancy**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -106,7 +106,7 @@ XXX  4.2. Variable Assignment
     substitution <commandsub.html#COMMANDSUBREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # From /etc/rc.d/rc.local
         R=$(cat /etc/redhat-release)

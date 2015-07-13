@@ -254,7 +254,7 @@ Write a script to carry out each of the following tasks.
     graphics:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
            o | x |
            ----------
@@ -289,7 +289,7 @@ Write a script to carry out each of the following tasks.
     `fields <special-chars.html#FIELDREF>`__ , of the form:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         Jones,Bill,235 S. Williams St.,Denver,CO,80221,(303) 244-7989
         Smith,Tom,404 Polk Ave.,Los Angeles,CA,90003,(213) 879-5612
@@ -387,7 +387,7 @@ Write a script to carry out each of the following tasks.
     `pseudo-code <assortedtips.html#PSEUDOCODEREF>`__ is:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #  (Isaac) Newton's Method for speedy extraction
         #+ of square roots.
@@ -558,7 +558,7 @@ Write a script to carry out each of the following tasks.
     For example, to "ladder" from *mark* to *vase* :
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         mark --> park --> part --> past --> vast --> vase
                  ^           ^       ^      ^           ^
@@ -637,7 +637,7 @@ Write a script to carry out each of the following tasks.
     scrambled-alphabet *key square* for the encryption and decryption.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
            C O D E S
            A B F G H
@@ -740,7 +740,7 @@ For all you clever types who failed intermediate algebra, a
 *matrix* ( `array <arrays.html#ARRAYREF>`__ of numbers).
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     For the simple case  |
 | of a 2 x 2 determinant:  |
@@ -755,7 +755,7 @@ For all you clever types who failed intermediate algebra, a
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     For the simple case of a 2 x 2 determinant:
 
@@ -765,7 +765,7 @@ For all you clever types who failed intermediate algebra, a
     The solution is a*a - b*b, where "a" and "b" represent numbers.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     For the simple case of a 2 x 2 determinant:
 

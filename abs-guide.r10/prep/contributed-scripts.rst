@@ -11,7 +11,7 @@ useful, too. Have fun analyzing and running them.
 **Example A-1. *mailformat* : Formatting an e-mail message**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # mail-format.sh (ver. 1.1): Format e-mail messages.
@@ -76,7 +76,7 @@ This script is a modification of `Example
 16-22 <textproc.html#LOWERCASE>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # rn.sh
@@ -136,7 +136,7 @@ This script is a modification of `Example
 This is an even simpler-minded version of previous script.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # blank-rename.sh
@@ -176,7 +176,7 @@ This is an even simpler-minded version of previous script.
 encrypted password**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -232,7 +232,7 @@ encrypted password**
 **Example A-5. *copy-cd* : Copying a data CD**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # copy-cd.sh: copying a data CD
@@ -295,7 +295,7 @@ encrypted password**
 **Example A-6. Collatz series**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # collatz.sh
@@ -374,7 +374,7 @@ encrypted password**
 **Example A-7. *days-between* : Days between two dates**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # days-between.sh:    Number of days between two dates.
@@ -539,7 +539,7 @@ encrypted password**
 **Example A-8. Making a *dictionary***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # makedict.sh  [make dictionary]
@@ -591,7 +591,7 @@ encrypted password**
 **Example A-9. Soundex conversion**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # soundex.sh: Calculate "soundex" code for names
@@ -758,7 +758,7 @@ encrypted password**
 **Example A-10. *Game of Life***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # life.sh: "Life in the Slow Lane"
@@ -1156,7 +1156,7 @@ encrypted password**
 **Example A-11. Data file for *Game of Life***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # gen0
     #
@@ -1193,7 +1193,7 @@ tarball <mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* .
 **Example A-12. *behead* : Removing mail and news message headers**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/sh
     #  Strips off the header from a mail/News message i.e. till the first
@@ -1259,7 +1259,7 @@ use of the parameter substitution operators discussed in `Section
 **Example A-13. *password* : Generating random 8-character passwords**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #
@@ -1322,7 +1322,7 @@ in his words, "really exercises quoting and escaping."
 **Example A-14. *fifo* : Making daily backups, using named pipes**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ==> Script by James R. Van Zandt, and used here with his permission.
@@ -1371,7 +1371,7 @@ prime numbers without arrays.
 **Example A-15. Generating prime numbers using the modulo operator**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # primes.sh: Generate prime numbers, without using arrays.
@@ -1434,7 +1434,7 @@ Rick Boivie's revision of Jordi Sanfeliu's *tree* script.
 **Example A-16. *tree* : Displaying a directory tree**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # tree.sh
@@ -1508,7 +1508,7 @@ Patsie's version of a directory *tree* script.
 **Example A-17. *tree2* : Alternate directory tree script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # tree2.sh
@@ -1627,7 +1627,7 @@ functions.
 **Example A-18. *string functions* : C-style string functions**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -1912,7 +1912,7 @@ directory information.
 **Example A-19. Directory information**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # directory-info.sh
@@ -2476,7 +2476,7 @@ library for use in scripts.
 **Example A-20. Library of hash functions**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Hash:
     # Hash function library
@@ -2670,7 +2670,7 @@ Here is an example script using the foregoing hash library.
 **Example A-21. Colorizing text using hash functions**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # hash-example.sh: Colorizing text.
@@ -2742,7 +2742,7 @@ point of view.
 **Example A-22. More on hash functions**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # $Id: ha.sh,v 1.2 2005/04/21 23:24:26 oliver Exp $
@@ -2899,7 +2899,7 @@ solid-state "hard drives."
 **Example A-23. Mounting USB keychain storage devices**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ==> usb.sh
@@ -3053,7 +3053,7 @@ Converting a text file to HTML format.
 **Example A-24. Converting to HTML**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less buggy]
@@ -3207,7 +3207,7 @@ script that saves weblogs.
 **Example A-25. Preserving weblogs**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # archiveweblogs.sh v1.0
@@ -3285,7 +3285,7 @@ script that saves weblogs.
 **Example A-26. Protecting literal strings**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # protect_literal.sh
@@ -3445,7 +3445,7 @@ script that saves weblogs.
 **Example A-27. Unprotecting literal strings**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # unprotect_literal.sh
@@ -3580,7 +3580,7 @@ This interesting script helps hunt down spammers.
 **Example A-28. Spammer Identification**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -5766,7 +5766,7 @@ Another anti-spam script.
 **Example A-29. Spammer Hunt**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # whx.sh: "whois" spammer lookup
@@ -6059,7 +6059,7 @@ Another anti-spam script.
 **Example A-30. Making *wget* easier to use**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # wgetter2.bash
@@ -6554,7 +6554,7 @@ Another anti-spam script.
 **Example A-31. A *podcasting* script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -6644,7 +6644,7 @@ Another anti-spam script.
 **Example A-32. Nightly backup to a firewire HD**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # nightly-backup.sh
@@ -7018,7 +7018,7 @@ Another anti-spam script.
 **Example A-33. An expanded *cd* command**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ###########################################################################
     #
@@ -7795,7 +7795,7 @@ Another anti-spam script.
 **Example A-34. A soundcard setup script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # soundcard-on.sh
@@ -7911,7 +7911,7 @@ Another anti-spam script.
 **Example A-35. Locating split paragraphs in a text file**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # find-splitpara.sh
@@ -7987,7 +7987,7 @@ Another anti-spam script.
 **Example A-36. Insertion sort**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # insertion-sort.bash: Insertion sort implementation in Bash
@@ -8062,7 +8062,7 @@ Another anti-spam script.
 **Example A-37. Standard Deviation**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # sd.sh: Standard Deviation
@@ -8189,7 +8189,7 @@ Another anti-spam script.
 **Example A-38. A *pad* file generator for shareware authors**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # pad.sh
@@ -8442,7 +8442,7 @@ Another anti-spam script.
 **Example A-39. A *man page* editor**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # maned.sh
@@ -8600,7 +8600,7 @@ Another anti-spam script.
 **Example A-40. Petals Around the Rose**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash -i
     # petals.sh
@@ -8804,7 +8804,7 @@ Another anti-spam script.
 **Example A-41. Quacky: a Perquackey-type word game**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # qky.sh
@@ -9280,7 +9280,7 @@ Another anti-spam script.
 **Example A-42. Nim**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # nim.sh: Game of Nim
@@ -9565,7 +9565,7 @@ Another anti-spam script.
 **Example A-43. A command-line stopwatch**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/sh
     # sw.sh
@@ -9706,7 +9706,7 @@ Another anti-spam script.
 solution**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  homework.sh: All-purpose homework assignment solution.
@@ -9812,7 +9812,7 @@ solution**
 **Example A-45. The Knight's Tour**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ktour.sh
@@ -10432,7 +10432,7 @@ solution**
 **Example A-46. Magic Squares**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # msquare.sh
@@ -10554,7 +10554,7 @@ solution**
 **Example A-47. Fifteen Puzzle**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # fifteen.sh
@@ -10737,7 +10737,7 @@ solution**
 **Example A-48. *The Towers of Hanoi, graphic version***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # The Towers Of Hanoi
@@ -10955,7 +10955,7 @@ solution**
 **Example A-49. *The Towers of Hanoi, alternate graphic version***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # The Towers Of Hanoi
@@ -11182,7 +11182,7 @@ solution**
 `getopt-simple.sh <string-manipulation.html#GETOPTSIMPLE>`__ script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # UseGetOpt.sh
@@ -11316,7 +11316,7 @@ solution**
 `Tab Expansion appendix <tabexpansion.html>`__**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -11420,7 +11420,7 @@ solution**
 **Example A-52. Cycling through all the possible color backgrounds**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -11481,7 +11481,7 @@ solution**
 **Example A-53. Morse Code Practice**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # sam.sh, v. .01a
@@ -11648,7 +11648,7 @@ solution**
 **Example A-54. Base64 encoding/decoding**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # base64.sh: Bash implementation of Base64 encoding and decoding.
@@ -11784,7 +11784,7 @@ solution**
 **Example A-55. Inserting text in a file using *sed***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  Prepends a string at a specified line
@@ -11831,7 +11831,7 @@ solution**
 **Example A-56. The Gronsfeld Cipher**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # gronsfeld.bash
@@ -11988,7 +11988,7 @@ solution**
 **Example A-57. Bingo Number Generator**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # bingo.sh
@@ -12126,7 +12126,7 @@ solution**
 **Example A-58. Basics Reviewed**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # basics-reviewed.bash
@@ -13176,7 +13176,7 @@ solution**
 **Example A-59. Testing execution times of various commands**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  test-execution-time.sh
@@ -13256,7 +13256,7 @@ solution**
 times)**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  assoc-arr-test.sh

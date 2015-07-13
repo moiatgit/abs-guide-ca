@@ -23,7 +23,7 @@ By convention, a command reads its input from fd 0 (
 ). If one of those three fd's is not open, you may encounter problems:
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ cat /etc/passwd >&-
     cat: standard output: Bad file descriptor
@@ -50,7 +50,7 @@ for the remainder of the shell (using `exec <internal.html#EXECREF>`__
 fd 1 connected to ``      /dev/null     `` .
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ lsof -a -p $$ -d0,1,2
     COMMAND PID     USER   FD   TYPE DEVICE SIZE NODE NAME
@@ -87,7 +87,7 @@ This works for different types of redirection.
 ``             Exercise:           `` Analyze the following script.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /usr/bin/env bash
 

@@ -14,7 +14,7 @@ Some of the more important added features:
    expansion <special-chars.html#BRACEEXPREF>`__ operator.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -86,7 +86,7 @@ Some of the more important added features:
    given `array <arrays.html#ARRAYREF>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -118,7 +118,7 @@ Some of the more important added features:
    has a similar operator.)
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -139,7 +139,7 @@ Some of the more important added features:
    Or, more usefully:
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -202,7 +202,7 @@ minor changes.
    the = assignment operator was recognized.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        a=1
        echo $a        # 1
@@ -220,7 +220,7 @@ minor changes.
    `let <internal.html#LETREF>`__ construct.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        a=1
        echo $a        # 1
@@ -238,7 +238,7 @@ minor changes.
    ``         $PATH        `` .
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ echo $PATH
        /usr/bin:/bin:/usr/local/bin:/usr/X11R6/bin/:/usr/games

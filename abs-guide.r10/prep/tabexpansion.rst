@@ -10,7 +10,7 @@ completions are possible, then **[Tab]** lists them all. Let's see how
 it works.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ xtra[Tab]
     xtraceroute       xtrapin           xtrapproto
@@ -31,7 +31,7 @@ it works.
 Tab completion also works for variables and path names.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo $BASH[Tab]
     $BASH                 $BASH_COMPLETION      $BASH_SUBSHELL
@@ -54,7 +54,7 @@ In a very simple case, we can use **complete** from the command-line to
 specify a short list of acceptable parameters.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ touch sample_command
     bash$ touch file1.txt file2.txt file2.doc file30.txt file4.zzz
@@ -86,7 +86,7 @@ convention given a filename corresponding to its associated command.
 **Example J-1. Completion script for *UseGetOpt.sh***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # file: UseGetOpt-2
     # UseGetOpt-2.sh parameter-completion
@@ -122,7 +122,7 @@ convention given a filename corresponding to its associated command.
 Now, let's try it.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ source UseGetOpt-2
 

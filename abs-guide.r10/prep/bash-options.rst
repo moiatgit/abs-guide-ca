@@ -12,7 +12,7 @@ more useful ones.
    the `positional parameters <internalvariables.html#POSPARAMREF>`__ .*
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ bash -c 'set a b c d; IFS="+-;"; echo "$*"'
        a+b+c+d

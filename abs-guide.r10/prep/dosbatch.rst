@@ -453,7 +453,7 @@ straightforward, and the result ofttimes reads better than the original.
 **Example N-1. VIEWDATA.BAT: DOS Batch File**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     REM VIEWDATA
 
@@ -485,7 +485,7 @@ The script conversion is somewhat of an improvement. ` [1]
 **Example N-2. *viewdata.sh* : Shell Script Conversion of VIEWDATA.BAT**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # viewdata.sh

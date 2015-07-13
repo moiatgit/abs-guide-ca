@@ -12,7 +12,7 @@ literally plugs the command output into another context. ` [2]
 Commands within backquotes (backticks) generate command-line text.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     script_name=`basename $0`
     echo "The name of this script is $script_name."
@@ -26,7 +26,7 @@ set a variable, and even for generating the argument list in a
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     rm `cat filename`   # "filename" contains a list of files to delete.
     #
@@ -71,7 +71,7 @@ set a variable, and even for generating the argument list in a
 splitting <quotingvar.html#WSPLITREF>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     COMMAND `echo a b`   |
 |    # 2 args: a and b     |
@@ -94,7 +94,7 @@ Even when there is no word splitting, command substitution can remove
 trailing newlines.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     # cd "`pwd`"  # This |
 |  should always work.     |
@@ -160,7 +160,7 @@ trailing newlines.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     COMMAND `echo a b`     # 2 args: a and b
 
@@ -174,7 +174,7 @@ trailing newlines.
     # Thanks, S.C.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # cd "`pwd`"  # This should always work.
     # However...
@@ -209,7 +209,7 @@ trailing newlines.
     #Code snippet by StÃ©phane Chazelas.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     COMMAND `echo a b`     # 2 args: a and b
 
@@ -223,7 +223,7 @@ trailing newlines.
     # Thanks, S.C.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # cd "`pwd`"  # This should always work.
     # However...
@@ -269,7 +269,7 @@ substitution removes trailing newlines characters from the output of the
 reassigned command(s). This can cause unpleasant surprises.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     dir_listing=`ls -l`  |
 |     echo $dir_listing    |
@@ -309,7 +309,7 @@ reassigned command(s). This can cause unpleasant surprises.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     dir_listing=`ls -l`
     echo $dir_listing     # unquoted
@@ -329,7 +329,7 @@ reassigned command(s). This can cause unpleasant surprises.
     # -rwxr-xr-x    1 bozo      217 Mar  5 21:13 wi.sh
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     dir_listing=`ls -l`
     echo $dir_listing     # unquoted
@@ -356,7 +356,7 @@ a file, using either `redirection <io-redirection.html#IOREDIRREF>`__ or
 the `cat <basic.html#CATREF>`__ command.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     variable1=`<file1`      #  Set "variable1" to contents of "file1".
     variable2=`cat file2`   #  Set "variable2" to contents of "file2".
@@ -372,7 +372,7 @@ the `cat <basic.html#CATREF>`__ command.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #  Excerpts from system file, /etc/rc.d/rc.sysinit
     #+ (on a Red Hat Linux installation)
@@ -417,7 +417,7 @@ contents of a *binary* file, even as a joke.
 **Example 12-1. Stupid script tricks**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # stupid-script-tricks.sh: Don't try this at home, folks.
@@ -449,7 +449,7 @@ where an interpreted language, such as Bash, provides more protection
 from programmer mistakes than a compiled language.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # stupid-script-tricks.sh: Don't try this at home, folks.
@@ -474,7 +474,7 @@ from programmer mistakes than a compiled language.
     exit 0
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # stupid-script-tricks.sh: Don't try this at home, folks.
@@ -509,7 +509,7 @@ output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 **Example 12-2. Generating a variable from a loop**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # csubloop.sh: Setting a variable to the output of a loop.
@@ -547,7 +547,7 @@ outputs to ``         stdout        `` (like a well-behaved UNIX tool
 should) and assigning that output to a variable.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #include <stdio.h>
 
@@ -562,7 +562,7 @@ should) and assigning that output to a variable.
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ gcc -o hello hello.c
               
@@ -570,7 +570,7 @@ should) and assigning that output to a variable.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # hello.sh      
@@ -581,7 +581,7 @@ should) and assigning that output to a variable.
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ sh hello.sh
     Hello, world.
@@ -591,7 +591,7 @@ should) and assigning that output to a variable.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #include <stdio.h>
 
@@ -604,13 +604,13 @@ should) and assigning that output to a variable.
     }
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ gcc -o hello hello.c
               
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # hello.sh      
@@ -619,14 +619,14 @@ should) and assigning that output to a variable.
     echo $greeting
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ sh hello.sh
     Hello, world.
                 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #include <stdio.h>
 
@@ -639,13 +639,13 @@ should) and assigning that output to a variable.
     }
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ gcc -o hello hello.c
               
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # hello.sh      
@@ -654,7 +654,7 @@ should) and assigning that output to a variable.
     echo $greeting
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ sh hello.sh
     Hello, world.
@@ -669,7 +669,7 @@ should) and assigning that output to a variable.
  The **$(...)** form has superseded backticks for command substitution.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     output=$(sed -n /"$1 |
 | "/p $file)   # From "grp |
@@ -690,7 +690,7 @@ The **$(...)** form of command substitution treats a double backslash in
 a different way than **\`...\`** .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |     bash$ echo `echo \\` |
 |                          |
@@ -706,7 +706,7 @@ The **$(...)** form of command substitution permits nesting. ` [3]
  <commandsub.html#FTN.AEN7308>`__
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     word_count=$( wc -w  |
 | $(echo * | awk '{print $ |
@@ -720,7 +720,7 @@ Or, for something a bit more elaborate . . .
 **Example 12-3. Finding anagrams**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # agram2.sh
@@ -773,7 +773,7 @@ Or, for something a bit more elaborate . . .
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     output=$(sed -n /"$1"/p $file)   # From "grp.sh" example.
               
@@ -782,7 +782,7 @@ Or, for something a bit more elaborate . . .
     File_contents2=$(<$file2)        # Bash permits this also.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo `echo \\`
 
@@ -792,12 +792,12 @@ Or, for something a bit more elaborate . . .
               
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     word_count=$( wc -w $(echo * | awk '{print $8}') )
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # agram2.sh
@@ -847,7 +847,7 @@ Or, for something a bit more elaborate . . .
     exit $?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     output=$(sed -n /"$1"/p $file)   # From "grp.sh" example.
               
@@ -856,7 +856,7 @@ Or, for something a bit more elaborate . . .
     File_contents2=$(<$file2)        # Bash permits this also.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo `echo \\`
 
@@ -866,12 +866,12 @@ Or, for something a bit more elaborate . . .
               
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     word_count=$( wc -w $(echo * | awk '{print $8}') )
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # agram2.sh
@@ -983,7 +983,7 @@ In fact, nesting with backticks is also possible, but only by escaping
 the inner backticks, as John Default points out.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     word_count=` wc -w \ |
 | `echo * | awk '{print $8 |
@@ -992,12 +992,12 @@ the inner backticks, as John Default points out.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     word_count=` wc -w \`echo * | awk '{print $8}'\` `
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     word_count=` wc -w \`echo * | awk '{print $8}'\` `
 

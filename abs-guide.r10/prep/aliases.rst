@@ -30,7 +30,7 @@ much more effectively with a `function <functions.html#FUNCTIONREF>`__ .
 **Example 25-1. Aliases within a script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # alias.sh
@@ -115,7 +115,7 @@ The **unalias** command removes a previously set *alias* .
 **Example 25-2. *unalias* : Setting and unsetting an alias**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # unalias.sh
@@ -137,7 +137,7 @@ The **unalias** command removes a previously set *alias* .
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ ./unalias.sh
     total 6

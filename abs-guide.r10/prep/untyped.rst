@@ -13,7 +13,7 @@ a variable contains only digits.
 **Example 4-4. Integer or string?**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # int-or-string.sh

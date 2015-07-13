@@ -15,7 +15,7 @@ parentheses* , or *let* .
 (often used in conjunction with `expr <moreadv.html#EXPRREF>`__ )
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         z=`expr $z + 3`          # The 'expr' command performs the expansion.
 
@@ -30,7 +30,7 @@ using `let <internal.html#LETREF>`__
     very convenient `let <internal.html#LETREF>`__ construction.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         z=$(($z+3))
         z=$((z+3))                                  #  Also correct.

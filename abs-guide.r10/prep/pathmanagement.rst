@@ -9,7 +9,7 @@ transforming *filenames* and, in particular,
 functionality of *sed* .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/usr/bin/env bash
     #-----------------------------------------------------------
@@ -106,7 +106,7 @@ functionality of *sed* .
 David Wheeler kindly permitted me to use his instructive examples.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Doing it correctly: A quick summary
     by David Wheeler

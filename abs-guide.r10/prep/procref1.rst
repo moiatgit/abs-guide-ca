@@ -9,7 +9,7 @@ files in ``      /proc     `` mirror currently running system and kernel
 and statistics about them.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ cat /proc/devices
     Character devices:
@@ -98,7 +98,7 @@ Shell scripts may extract data from certain of the files in
 ``      /proc     `` . ` [1]  <procref1.html#FTN.AEN19180>`__
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     FS=iso                       # ISO filesystem support in kernel?
 
@@ -107,14 +107,14 @@ Shell scripts may extract data from certain of the files in
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     kernel_version=$( awk '{ print $3 }' /proc/version )
 
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     CPU=$( awk '/model name/ {print $5}' < /proc/cpuinfo )
 
@@ -137,7 +137,7 @@ Shell scripts may extract data from certain of the files in
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # get-commandline.sh
@@ -167,7 +167,7 @@ Shell scripts may extract data from certain of the files in
 +
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     devfile="/proc/bus/usb/devices"
     text="Spd"
@@ -194,7 +194,7 @@ It is even possible to control certain peripherals with commands sent to
 the ``         /proc        `` directory.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |         root# echo on >  |
 | /proc/acpi/ibm/light     |
@@ -208,13 +208,13 @@ Of course, caution is advised when writing to ``         /proc        ``
 .
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
        root# echo on > /proc/acpi/ibm/light
               
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
        root# echo on > /proc/acpi/ibm/light
               
@@ -238,7 +238,7 @@ be the most interesting from a scripting standpoint.
 **Example 29-3. Finding the process associated with a PID**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # pid-identifier.sh:
@@ -333,7 +333,7 @@ be the most interesting from a scripting standpoint.
 **Example 29-4. On-line connect status**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # connect-stat.sh

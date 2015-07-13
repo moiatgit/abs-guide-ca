@@ -16,7 +16,7 @@ restrictions).
 **Example 8-4. Representation of numerical constants**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # numbers.sh: Representation of numbers in different bases.

@@ -36,7 +36,7 @@ retyping that particular sequence of commands each time it is invoked.
 **Example 2-1. *cleanup* : A script to clean up log files in /var/log**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Cleanup
     # Run as root, of course.
@@ -60,7 +60,7 @@ or customized for a particular application.
 **Example 2-2. *cleanup* : An improved clean-up script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Proper header for a Bash script.
@@ -95,7 +95,7 @@ farther . . .
 scripts.**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Cleanup, version 3
@@ -207,7 +207,7 @@ starting at the top (the line following the *sha-bang* line), and
 ignoring comments. ` [3]  <sha-bang.html#FTN.AEN226>`__
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/sh
     #!/bin/bash
@@ -253,7 +253,7 @@ tests whether the script has been invoked with the correct number of
 parameters.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     E_WRONG_ARGS=85      |
 |     script_parameters="- |
@@ -282,7 +282,7 @@ in that direction, as is replacing repetitive code blocks by
 `functions <functions.html#FUNCTIONREF>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     E_WRONG_ARGS=85
     script_parameters="-a -h -m -z"
@@ -296,7 +296,7 @@ in that direction, as is replacing repetitive code blocks by
     fi
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     E_WRONG_ARGS=85
     script_parameters="-a -h -m -z"
@@ -345,7 +345,7 @@ If, in fact, the script includes an *extra* #! line, then **bash** will
 interpret it as a comment.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -365,7 +365,7 @@ interpret it as a comment.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -379,7 +379,7 @@ interpret it as a comment.
     echo $a  # Value of $a stays at 1.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -398,7 +398,7 @@ interpret it as a comment.
 This allows some cute tricks.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/rm            |
 |     # Self-deleting scri |
@@ -433,7 +433,7 @@ document <here-docs.html#HEREDOCREF>`__ using
 `Example 19-3 <here-docs.html#EX71>`__ ).
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/rm
     # Self-deleting script.
@@ -449,7 +449,7 @@ document <here-docs.html#HEREDOCREF>`__ using
                     # You'll get a 0, not a 85.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/rm
     # Self-deleting script.

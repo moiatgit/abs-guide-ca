@@ -24,7 +24,7 @@ Among the new goodies:
    **Example 37-5. A simple address database**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
        # fetch_address.sh
@@ -56,7 +56,7 @@ Among the new goodies:
    **Example 37-6. A somewhat more elaborate address database**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
        # fetch_address-2.sh
@@ -125,7 +125,7 @@ Among the new goodies:
    containing *only* *whitespace* are *not* permitted.
 
    +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
+   | .. code-block:: sh
    |                          |
    |     address[   ]="Blank" |
    |    # Error!              |
@@ -133,12 +133,12 @@ Among the new goodies:
    +--------------------------+--------------------------+--------------------------+
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        address[   ]="Blank"   # Error!
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        address[   ]="Blank"   # Error!
 
@@ -153,7 +153,7 @@ Among the new goodies:
    **Example 37-7. Testing characters**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -225,7 +225,7 @@ Among the new goodies:
    processes and pipes to communicate <io-redirection.html#FDREF2>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
        # A coprocess communicates with a while-read loop.
@@ -248,7 +248,7 @@ Among the new goodies:
    But, be careful!
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -294,7 +294,7 @@ Among the new goodies:
    it.
 
    +--------------------------+--------------------------+--------------------------+
-   | .. code:: PROGRAMLISTING |
+   | .. code-block:: sh
    |                          |
    |     #!/bin/bash4         |
    |                          |
@@ -355,7 +355,7 @@ Among the new goodies:
    +--------------------------+--------------------------+--------------------------+
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -390,7 +390,7 @@ Among the new goodies:
        #+ waits for the other to finish writing in its own write-enabled pipe.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -432,7 +432,7 @@ Among the new goodies:
    substitution <arrays.html#ARRAYINITCS>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -462,7 +462,7 @@ Among the new goodies:
    gets *case-modification* operators.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -486,7 +486,7 @@ Among the new goodies:
    *capitalize* options.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -508,7 +508,7 @@ Among the new goodies:
    *Increment/decrement* , specified in the final term within braces.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -534,7 +534,7 @@ Among the new goodies:
    each term in the output with the *same number* of zeroes.
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash4$ echo {010..15}
        010 011 012 013 014 015
@@ -554,7 +554,7 @@ Among the new goodies:
    corrects an inconsistency in the treatment of positional parameters.)
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # show-params.bash
@@ -587,7 +587,7 @@ Among the new goodies:
    `recursively <localvar.html#RECURSIONREF0>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
        # filelist.bash4
@@ -642,7 +642,7 @@ Among the new goodies:
    function named **command\_not\_found\_handle** .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash4
 
@@ -702,7 +702,7 @@ update.
    **Example 37-8. Reading N characters**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # Requires Bash version -ge 4.1 ...
@@ -732,7 +732,7 @@ update.
    **Example 37-9. Using a *here document* to set a variable**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # here-commsub.sh
@@ -784,7 +784,7 @@ new features and enhancements, in addition to bugfixes.
 
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        echo -e '\u2630'   # Horizontal triple bar character.
        # Equivalent to the more roundabout:
@@ -859,7 +859,7 @@ new features and enhancements, in addition to bugfixes.
    **Example 37-10. Piping input to a `read <internal.html#READREF>`__**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # lastpipe-option.sh
@@ -896,7 +896,7 @@ new features and enhancements, in addition to bugfixes.
    **Example 37-11. Negative array indices**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # neg-array.sh
@@ -950,7 +950,7 @@ new features and enhancements, in addition to bugfixes.
    **Example 37-12. Negative parameter in string-extraction construct**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # Bash, version -ge 4.2

@@ -111,7 +111,7 @@ XXX  16.5. File and Archiving Commands
     identifies which package a file originates from.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ rpm -qf /bin/l |
     | s                        |
@@ -121,14 +121,14 @@ XXX  16.5. File and Archiving Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rpm -qf /bin/ls
         coreutils-5.2.1-31
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rpm -qf /bin/ls
         coreutils-5.2.1-31
@@ -148,7 +148,7 @@ XXX  16.5. File and Archiving Commands
     ``            package_name           `` .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ rpm -qa        |
     |     redhat-logos-1.1.3-1 |
@@ -191,7 +191,7 @@ XXX  16.5. File and Archiving Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rpm -qa
         redhat-logos-1.1.3-1
@@ -221,7 +221,7 @@ XXX  16.5. File and Archiving Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rpm -qa
         redhat-logos-1.1.3-1
@@ -264,7 +264,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-30. Using *cpio* to move a directory tree**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -315,7 +315,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-31. Unpacking an *rpm* archive**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # de-rpm.sh: Unpack an 'rpm' archive
@@ -350,7 +350,7 @@ XXX  16.5. File and Archiving Commands
     `cpio <filearchiv.html#CPIOREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         pax -wf daily_backup.pax ~/linux-server/files 
         #  Creates a tar archive of all files in the target directory.
@@ -503,7 +503,7 @@ XXX  16.5. File and Archiving Commands
     file, forces an attempt to analyze the uncompressed file type.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ file test.tar.gz
         test.tar.gz: gzip compressed data, deflated,
@@ -517,7 +517,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Find sh and Bash scripts in a given directory:
 
@@ -541,7 +541,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-32. Stripping comments from C program files**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # strip-comment.sh: Strips out the comments (/* COMMENT */) in a C program.
@@ -634,7 +634,7 @@ XXX  16.5. File and Archiving Commands
     ``                   $bash which rm                 ``
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         /usr/bin/rm
 
@@ -650,7 +650,7 @@ XXX  16.5. File and Archiving Commands
     ``                   $bash whereis rm                 ``
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         rm: /bin/rm /usr/share/man/man1/rm.1.bz2
 
@@ -665,7 +665,7 @@ XXX  16.5. File and Archiving Commands
     ``                   $bash whatis whatis                 ``
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         whatis               (1)  - search the whatis database for complete words
 
@@ -675,7 +675,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-33. Exploring ``           /usr/X11R6/bin          ``**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -710,7 +710,7 @@ XXX  16.5. File and Archiving Commands
     This is one of the GNU *fileutils* .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ vdir
         total 10
@@ -735,7 +735,7 @@ XXX  16.5. File and Archiving Commands
     ``                   $bash locate hickson                 ``
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         /usr/lib/xephem/catalogs/hickson.edb
 
@@ -746,7 +746,7 @@ XXX  16.5. File and Archiving Commands
     ontrol **l** ist -- the *owner* , *group* , and file permissions.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ getfacl *
         # file: test1.txt
@@ -784,7 +784,7 @@ XXX  16.5. File and Archiving Commands
     Disclose the file that a symbolic link points to.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ readlink /usr/bin/awk
         ../../bin/gawk
@@ -810,7 +810,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-34. An "improved" *strings* command**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # wstrings.sh: "word-strings" (enhanced "strings" command)
@@ -937,7 +937,7 @@ XXX  16.5. File and Archiving Commands
     method of distributing the frequent releases of the Linux kernel.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         patch -p1 <patch-file
         # Takes all the changes listed in 'patch-file'
@@ -949,7 +949,7 @@ XXX  16.5. File and Archiving Commands
     Patching the kernel:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cd /usr/src
         gzip -cd patchXX.gz | patch -p0
@@ -967,7 +967,7 @@ XXX  16.5. File and Archiving Commands
     the filenames present).
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ diff -r ~/note |
     | s1 ~/notes2              |
@@ -982,7 +982,7 @@ XXX  16.5. File and Archiving Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ diff -r ~/notes1 ~/notes2
         Only in /home/bozo/notes1: file02
@@ -991,7 +991,7 @@ XXX  16.5. File and Archiving Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ diff -r ~/notes1 ~/notes2
         Only in /home/bozo/notes1: file02
@@ -1028,7 +1028,7 @@ XXX  16.5. File and Archiving Commands
     comparison.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ diff3 file-1 file-2 file-3
         ====
@@ -1075,7 +1075,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-35. Using *cmp* to compare two files within a script.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # file-comparison.sh
@@ -1172,7 +1172,7 @@ XXX  16.5. File and Archiving Commands
     missing arguments:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "Usage: `basename $0` arg1 arg2 ... argn"
 
@@ -1198,7 +1198,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-36. *basename* and *dirname***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1227,7 +1227,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-37. A script that copies itself in sections**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # splitcopy.sh
@@ -1274,7 +1274,7 @@ XXX  16.5. File and Archiving Commands
     Algorithm). ` [4]  <filearchiv.html#FTN.AEN12849>`__
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cksum /boot/vmlinuz
         1670054224 804083 /boot/vmlinuz
@@ -1311,7 +1311,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-38. Checking file integrity**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # file-integrity.sh: Checking whether files in a given directory
@@ -1446,7 +1446,7 @@ XXX  16.5. File and Archiving Commands
     the checksum toolkit.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ md5sum testfil |
     | e                        |
@@ -1464,7 +1464,7 @@ XXX  16.5. File and Archiving Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ md5sum testfile
         e181e2c8720c60522c4c4c981108e367  testfile
@@ -1475,7 +1475,7 @@ XXX  16.5. File and Archiving Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ md5sum testfile
         e181e2c8720c60522c4c4c981108e367  testfile
@@ -1508,7 +1508,7 @@ XXX  16.5. File and Archiving Commands
     **Example 16-39. Uudecoding encoded files**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Uudecodes all uuencoded files in current working directory.
@@ -1580,7 +1580,7 @@ XXX  16.5. File and Archiving Commands
     encryption.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # To encrypt a file:
         openssl aes-128-ecb -salt -in file.txt -out file.encrypted \
@@ -1600,7 +1600,7 @@ XXX  16.5. File and Archiving Commands
     entire directory tree.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # To encrypt a directory:
 
@@ -1653,7 +1653,7 @@ XXX  16.5. File and Archiving Commands
     ``         /tmp        `` directory.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ mktemp
         /tmp/tmp.zzsvql3154
@@ -1662,7 +1662,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         PREFIX=filename
         tempfile=`mktemp $PREFIX.XXXXXX`
@@ -1727,7 +1727,7 @@ XXX  16.5. File and Archiving Commands
     sequence, to forestall potentially unpleasant consequences.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         ls /home/bozo | awk '{print "rm -rf " $1}' | more
         #                                            ^^^^

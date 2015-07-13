@@ -12,7 +12,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
 **Example 36-13. A "colorized" address database**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ex30a.sh: "Colorized" version of ex30.sh.
@@ -97,7 +97,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
 **Example 36-14. Drawing a box**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Draw-box.sh: Drawing a box using ASCII characters.
@@ -257,7 +257,7 @@ attribute, while the "[0" switches it off. The "m" terminates each term
 of the escape sequence.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo -e "\033[1mThis is bold text.\033[0m"
               
@@ -268,7 +268,7 @@ A similar escape sequence switches on the underline attribute (on an
 *rxvt* and an *aterm* ).
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo -e "\033[4mThis is underlined text.\033[0m"
               
@@ -288,7 +288,7 @@ sequences.
 Other escape sequences change the text and/or background color.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo -e '\E[34;47mThis prints in blue.'; tput sgr0
 
@@ -412,7 +412,7 @@ Background
 **Example 36-15. Echoing colored text**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # color-echo.sh: Echoing text messages in color.
@@ -485,7 +485,7 @@ Background
 **Example 36-16. A "horserace" game**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # horserace.sh: Very simple horserace simulation.

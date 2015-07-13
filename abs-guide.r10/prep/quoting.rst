@@ -29,7 +29,7 @@ represents a *wild card* character in `globbing <globbingref.html>`__
 and `Regular Expressions <regexp.html#REGEXREF>`__ ).
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ ls -l [Vv]*
     -rw-rw-r--    1 bozo  bozo       324 Apr  2 15:05 VIEWDATA.BAT
@@ -56,7 +56,7 @@ command-line parameter from the shell, but still letting the calling
 program expand it.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ grep '[Ff]irst' *.txt
     file1.txt:This is the first line of file1.txt.
@@ -71,7 +71,7 @@ Quoting can also suppress `echo's <internal.html#ECHOREF>`__ "appetite"
 for newlines.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo $(ls -l)
     total 8 -rw-rw-r-- 1 bo bo 13 Aug 21 12:57 t.sh -rw-rw-r-- 1 bo bo 78 Aug 21 12:57 u.sh

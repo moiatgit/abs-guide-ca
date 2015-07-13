@@ -11,7 +11,7 @@ effect, use **set -o option-name** or, in short form, **set
 -option-abbrev** . These two forms are equivalent.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
           #!/bin/bash
 
@@ -22,7 +22,7 @@ effect, use **set -o option-name** or, in short form, **set
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
           #!/bin/bash
 
@@ -43,7 +43,7 @@ To *disable* an option within a script, use **set +o option-name** or
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
           #!/bin/bash
 
@@ -78,7 +78,7 @@ An alternate method of enabling options in a script is to specify them
 immediately following the ``             #!           `` script header.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
           #!/bin/bash -x
           #

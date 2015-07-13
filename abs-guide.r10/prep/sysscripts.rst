@@ -12,7 +12,7 @@ running processes at system shutdown.
 **Example 17-12. *killall* , from ``        /etc/rc.d/init.d       ``**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/sh
 

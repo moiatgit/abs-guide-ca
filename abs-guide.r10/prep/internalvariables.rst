@@ -12,7 +12,7 @@ XXX  9.1. Internal Variables
     The path to the *Bash* binary itself
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $BASH
         /bin/bash
@@ -36,7 +36,7 @@ XXX  9.1. Internal Variables
     often gives the same result.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash4$ echo $$
         11015
@@ -55,7 +55,7 @@ XXX  9.1. Internal Variables
      But ...
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash4
 
@@ -78,7 +78,7 @@ XXX  9.1. Internal Variables
     ``         $BASH_VERSION        `` , below, but a bit more detailed.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Bash version info:
 
@@ -101,7 +101,7 @@ XXX  9.1. Internal Variables
     The version of Bash installed on the system
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $BASH_VERSION
         3.2.25(1)-release
@@ -110,7 +110,7 @@ XXX  9.1. Internal Variables
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         tcsh% echo $BASH_VERSION
         BASH_VERSION: Undefined variable.
@@ -131,7 +131,7 @@ XXX  9.1. Internal Variables
     file.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cd bash-doc
         bash: cd: bash-doc: No such file or directory
@@ -182,7 +182,7 @@ XXX  9.1. Internal Variables
     Name of the current function
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         xyz23 ()
         {
@@ -211,7 +211,7 @@ XXX  9.1. Internal Variables
     and ``         /etc/group        `` .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# echo $GROUPS
         0
@@ -246,7 +246,7 @@ XXX  9.1. Internal Variables
     the system hardware.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $HOSTTYPE
         i686
@@ -268,7 +268,7 @@ XXX  9.1. Internal Variables
     5-1 <quotingvar.html#WEIRDVARS>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "$IFS"
 
@@ -295,7 +295,7 @@ XXX  9.1. Internal Variables
     `pathnames <special-chars.html#PATHNAMEREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         IFS="$(printf '\n\t')"   # Per David Wheeler.
 
@@ -312,7 +312,7 @@ XXX  9.1. Internal Variables
     **Example 9-1. $IFS and whitespace**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ifs.sh
@@ -407,7 +407,7 @@ XXX  9.1. Internal Variables
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ifs.sh
@@ -499,7 +499,7 @@ XXX  9.1. Internal Variables
         exit
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ifs.sh
@@ -642,7 +642,7 @@ XXX  9.1. Internal Variables
     which it appears, and is chiefly useful for debugging purposes.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # *** BEGIN DEBUG BLOCK ***
         last_cmd_arg=$_  # Save it.
@@ -659,7 +659,7 @@ XXX  9.1. Internal Variables
     Identifies the system hardware.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $MACHTYPE
         i686
@@ -674,7 +674,7 @@ XXX  9.1. Internal Variables
     operating system type
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $OSTYPE
         linux
@@ -697,7 +697,7 @@ XXX  9.1. Internal Variables
     `Appendix H <files.html>`__ ).
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $PATH
         /bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin:/sbin:/usr/sbin
@@ -729,7 +729,7 @@ XXX  9.1. Internal Variables
     *foreground* `pipe <special-chars.html#PIPEREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $PIPESTATUS
         0
@@ -762,7 +762,7 @@ XXX  9.1. Internal Variables
     Bash).
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     tcsh% bash           |
     |                          |
@@ -782,7 +782,7 @@ XXX  9.1. Internal Variables
     above example.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         tcsh% bash
 
@@ -792,7 +792,7 @@ XXX  9.1. Internal Variables
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         tcsh% bash
 
@@ -812,7 +812,7 @@ XXX  9.1. Internal Variables
     results in some contexts.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ echo $BASH_VER |
     | SION                     |
@@ -840,7 +840,7 @@ XXX  9.1. Internal Variables
     case for `tr <textproc.html#TRREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $BASH_VERSION
         3.00.14(1)-release
@@ -854,7 +854,7 @@ XXX  9.1. Internal Variables
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $BASH_VERSION
         3.00.14(1)-release
@@ -879,7 +879,7 @@ XXX  9.1. Internal Variables
     any other command intervenes.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ $ ls | bogus_c |
     | ommand | wc              |
@@ -899,7 +899,7 @@ XXX  9.1. Internal Variables
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ $ ls | bogus_command | wc
         bash: bogus_command: command not found
@@ -913,7 +913,7 @@ XXX  9.1. Internal Variables
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ $ ls | bogus_command | wc
         bash: bogus_command: command not found
@@ -972,7 +972,7 @@ XXX  9.1. Internal Variables
     in ``         $PS4        `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         P4='$(read time junk < /proc/$$/schedstat; echo "@@@ $time @@@ " )'
         # Per suggestion by Erik Brandsberg.
@@ -988,7 +988,7 @@ XXX  9.1. Internal Variables
     command.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1041,7 +1041,7 @@ XXX  9.1. Internal Variables
     itself.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # reply.sh
@@ -1075,7 +1075,7 @@ XXX  9.1. Internal Variables
     The number of seconds the script has been running.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1112,7 +1112,7 @@ XXX  9.1. Internal Variables
     readonly variable.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $SHELLOPTS
         braceexpand:hashall:histexpand:monitor:history:interactive-comments:emacs
@@ -1148,7 +1148,7 @@ XXX  9.1. Internal Variables
     combination with `read <internal.html#READREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Works in scripts for Bash, versions 2.05b and later.
 
@@ -1179,7 +1179,7 @@ XXX  9.1. Internal Variables
     **Example 9-2. Timed Input**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # timed-input.sh
@@ -1249,7 +1249,7 @@ XXX  9.1. Internal Variables
     **Example 9-3. Once more, timed input**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # timeout.sh
@@ -1302,7 +1302,7 @@ XXX  9.1. Internal Variables
     **Example 9-4. Timed *read***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # t-out.sh [time-out]
@@ -1346,7 +1346,7 @@ XXX  9.1. Internal Variables
     **Example 9-5. Am I root?**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # am-i-root.sh:   Am I root or not?
@@ -1400,7 +1400,7 @@ XXX  9.1. Internal Variables
     an "init" script, and it is likewise not a Bash builtin.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     tcsh% echo $LOGNAME  |
     |     bozo                 |
@@ -1420,7 +1420,7 @@ XXX  9.1. Internal Variables
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         tcsh% echo $LOGNAME
         bozo
@@ -1438,7 +1438,7 @@ XXX  9.1. Internal Variables
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         tcsh% echo $LOGNAME
         bozo
@@ -1505,7 +1505,7 @@ etc.
     **Example 9-6. *arglist* : Listing arguments with $\* and $@**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # arglist.sh
@@ -1566,7 +1566,7 @@ etc.
     ``         $1        `` , which was lost.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Invoke with ./scriptname 1 2 3 4 5
@@ -1606,7 +1606,7 @@ etc.
     ``           $@          `` behavior**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1765,7 +1765,7 @@ etc.
     empty**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1825,7 +1825,7 @@ etc.
     run in background
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         LOG=$0.log
 
@@ -1849,7 +1849,7 @@ etc.
     Using ``         $!        `` for job control:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         possibly_hanging_job & { sleep ${TIMEOUT}; eval 'kill -9 $!' &> /dev/null; }
         # Forces completion of an ill-behaved program.
@@ -1862,7 +1862,7 @@ etc.
     Or, alternately:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # This example by Matthew Sage.
         # Used with permission.
@@ -1916,7 +1916,7 @@ etc.
     **Example 9-9. Underscore variable**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 

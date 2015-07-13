@@ -30,7 +30,7 @@ XXX  11.3. Loop Control
     **Example 11-21. Effects of *break* and **continue** in a loop**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -94,7 +94,7 @@ XXX  11.3. Loop Control
     **Example 11-22. Breaking out of multiple loop levels**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # break-levels.sh: Breaking out of loops.
@@ -138,7 +138,7 @@ XXX  11.3. Loop Control
     **Example 11-23. Continuing at a higher loop level**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # The "continue N" command, continuing at the Nth level loop.
@@ -178,7 +178,7 @@ XXX  11.3. Loop Control
     **Example 11-24. Using *continue N* in an actual task**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Albert Reiner gives an example of how to use "continue N":
         # ---------------------------------------------------------

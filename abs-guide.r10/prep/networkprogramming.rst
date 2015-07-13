@@ -26,7 +26,7 @@ server.
 **Example 30-1. Print the server environment**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # test-cgi.sh
@@ -104,7 +104,7 @@ computer is accessing.
 **Example 30-2. IP addresses**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ip-addresses.sh

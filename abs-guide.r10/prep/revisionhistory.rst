@@ -4,7 +4,7 @@ XXX  Appendix P. Revision History
 #################################
 
 
-.. code:: SYNOPSIS
+.. code-block:: sh
 
           This document first appeared as a 60-page HOWTO in the late spring
           of 2000. Since then, it has gone through quite a number of updates
@@ -19,7 +19,7 @@ Here is the e-mail to the LDP requesting permission to submit version
 0.1.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     From thegrendel@theriver.com Sat Jun 10 09:05:33 2000 -0700
     Date: Sat, 10 Jun 2000 09:05:28 -0700 (MST)

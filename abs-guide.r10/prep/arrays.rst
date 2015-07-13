@@ -14,7 +14,7 @@ bracket* notation, that is, ``             ${element[xx]}           `` .
 **Example 27-1. Simple array usage**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -100,7 +100,7 @@ As we have seen, a convenient way of initializing an entire array is the
 ``      array=( element1 element2 ... elementN )     `` notation.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     base64_charset=( {A..Z} {a..z} {0..9} + / = )
                    #  Using extended brace expansion
@@ -116,7 +116,7 @@ Bash permits array operations on variables, even if the variables are
 not explicitly declared as arrays.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     string=abcABC123ABCabc
     echo ${string[@]}               # abcABC123ABCabc
@@ -137,7 +137,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     string=abcABC123ABCabc
     echo ${string[@]}               # abcABC123ABCabc
@@ -152,7 +152,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
     # Thank you, Michael Zick, for pointing this out.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     string=abcABC123ABCabc
     echo ${string[@]}               # abcABC123ABCabc
@@ -172,7 +172,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
 **Example 27-2. Formatting a poem**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # poem.sh: Pretty-prints one of the ABS Guide author's favorite poems.
@@ -225,7 +225,7 @@ commands and operators have special options adapted for array use.
 **Example 27-3. Various array operations**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # array-ops.sh: More fun with arrays.
@@ -285,7 +285,7 @@ operations <string-manipulation.html#STRINGMANIP>`__ work on arrays.
 **Example 27-4. String operations on arrays**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # array-strops.sh: String operations on arrays.
@@ -416,7 +416,7 @@ the individual elements of an array.
 **Example 27-5. Loading the contents of a script into an array**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # script-array.sh: Loads this script into an array.
@@ -460,7 +460,7 @@ entire array.
 **Example 27-6. Some special properties of arrays**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -540,7 +540,7 @@ either **${#array\_name[@]}** or **${#array\_name[\*]}** .
 **Example 27-7. Of empty arrays and empty elements**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # empty-array.sh
@@ -708,7 +708,7 @@ analogous to that between `$@ and $\* <internalvariables.html#APPREF>`__
 . This powerful array notation has a number of uses.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Copying an array.
     array2=( "${array1[@]}" )
@@ -749,7 +749,7 @@ substitution <commandsub.html#COMMANDSUBREF>`__ , makes it possible to
 load the contents of a text file into an array.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -806,7 +806,7 @@ load the contents of a text file into an array.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -838,7 +838,7 @@ load the contents of a text file into an array.
     echo $element_count          # 8
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -878,7 +878,7 @@ Clever scripting makes it possible to add array operations.
 **Example 27-8. Initializing arrays**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # array-assign.bash
@@ -986,7 +986,7 @@ may speed up execution of subsequent operations on the array.
 **Example 27-9. Copying and concatenating arrays**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # CopyArray.sh
@@ -1061,7 +1061,7 @@ may speed up execution of subsequent operations on the array.
 **Example 27-10. More on concatenating arrays**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #! /bin/bash
     # array-append.bash
@@ -1189,7 +1189,7 @@ decide.
 **Example 27-11. The Bubble Sort**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # bubble.sh: Bubble sort, of sorts.
@@ -1297,7 +1297,7 @@ decide.
 Is it possible to nest arrays within arrays?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # "Nested" array.
@@ -1338,7 +1338,7 @@ possibilities
 **Example 27-12. Embedded arrays and indirect references**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # embedded-arrays.sh
@@ -1422,7 +1422,7 @@ runs excruciatingly slowly as a script.
 **Example 27-13. The Sieve of Eratosthenes**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # sieve.sh (ex68.sh)
@@ -1566,7 +1566,7 @@ runs excruciatingly slowly as a script.
 **Example 27-14. The Sieve of Eratosthenes, Optimized**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Optimized Sieve of Eratosthenes
@@ -1621,7 +1621,7 @@ which Bash has no native support.
 **Example 27-15. Emulating a push-down stack**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # stack.sh: push-down stack simulation
@@ -1757,7 +1757,7 @@ powerful programming language, such as Perl or C.
 mathematical series***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -1831,7 +1831,7 @@ permits simulating multi-dimensional ones.
 **Example 27-17. Simulating a two-dimensional array, then tilting it**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # twodim.sh: Simulating a two-dimensional array.

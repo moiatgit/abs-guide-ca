@@ -16,7 +16,7 @@ reference* .
 **Example 28-1. Indirect Variable References**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ind-ref.sh: Indirect variable referencing.
@@ -124,7 +124,7 @@ their contents. This can be useful when
 `sourcing <internal.html#SOURCEREF>`__ configuration files.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -185,7 +185,7 @@ their contents. This can be useful when
 **Example 28-2. Passing an indirect reference to *awk***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 

@@ -122,7 +122,7 @@ characters -- a string or a part of a string.
    "there," "other," etc.
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ cat textfile
        This is line 1, of which there is only one instance.
@@ -148,7 +148,7 @@ characters -- a string or a part of a string.
 The only way to be certain that a particular RE works is to test it.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     TEST FILE: tstfile                          # No match.
                                                 # No match.
@@ -167,7 +167,7 @@ The only way to be certain that a particular RE works is to test it.
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ grep "1133*" tstfile
     Run   grep "1133*"  on this file.           # Match.
@@ -181,7 +181,7 @@ The only way to be certain that a particular RE works is to test it.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     TEST FILE: tstfile                          # No match.
                                                 # No match.
@@ -198,7 +198,7 @@ The only way to be certain that a particular RE works is to test it.
     This line contains no numbers at all.       # No match.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ grep "1133*" tstfile
     Run   grep "1133*"  on this file.           # Match.
@@ -209,7 +209,7 @@ The only way to be certain that a particular RE works is to test it.
               
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     TEST FILE: tstfile                          # No match.
                                                 # No match.
@@ -226,7 +226,7 @@ The only way to be certain that a particular RE works is to test it.
     This line contains no numbers at all.       # No match.
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ grep "1133*" tstfile
     Run   grep "1133*"  on this file.           # Match.
@@ -257,7 +257,7 @@ The only way to be certain that a particular RE works is to test it.
    role similar to the \* , but does *not* match zero occurrences.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # GNU versions of sed and awk can use "+",
        # but it needs to be escaped.
@@ -292,7 +292,7 @@ The only way to be certain that a particular RE works is to test it.
    (without being escaped).
 
    +--------------------------+--------------------------+--------------------------+
-   | .. code:: SCREEN         |
+   | .. code-block:: sh
    |                          |
    |     bash$ echo 2222 | ga |
    | wk --re-interval '/2{3}/ |
@@ -306,14 +306,14 @@ The only way to be certain that a particular RE works is to test it.
    curly brackets.
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ echo 2222 | gawk --re-interval '/2{3}/'
        2222
                  
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ echo 2222 | gawk --re-interval '/2{3}/'
        2222
@@ -333,7 +333,7 @@ The only way to be certain that a particular RE works is to test it.
    characters.
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ egrep 're(a|e)d' misc.txt
        People who read seem to be better informed than those who do not.
@@ -418,7 +418,7 @@ utilities.
 
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ grep [[:digit:]] test.file
        abc=723
@@ -427,7 +427,7 @@ utilities.
 
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # ...
        if [[ $arow =~ [[:digit:]] ]]   #  Numerical input?
@@ -442,7 +442,7 @@ utilities.
    `globbing <globbingref.html>`__ , to a limited extent.
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ ls -l ?[[:digit:]][[:digit:]]?
        -rw-rw-r--    1 bozo  bozo         0 Aug 21 14:47 a33b
@@ -487,7 +487,7 @@ usually not be a newline to match. In those cases where there is a
 newline in a multiple line expression, the dot will match the newline.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -523,7 +523,7 @@ newline in a multiple line expression, the dot will match the newline.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -553,7 +553,7 @@ newline in a multiple line expression, the dot will match the newline.
     exit 0
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 

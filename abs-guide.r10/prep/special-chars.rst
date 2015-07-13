@@ -20,7 +20,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # This line is a comment.
 
@@ -29,7 +29,7 @@ building blocks of Bash scripts.
     Comments may also occur following the end of a command.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "A comment will follow." # Comment here.
         #                            ^ Note whitespace before #
@@ -41,7 +41,7 @@ building blocks of Bash scripts.
     of a line.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
              # A tab precedes this comment.
 
@@ -51,7 +51,7 @@ building blocks of Bash scripts.
     `pipe <special-chars.html#PIPEREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
         # Delete lines containing '#' comment character.
@@ -83,7 +83,7 @@ building blocks of Bash scripts.
     constant expressions <numerical-constants.html#NUMCONSTANTS>`__ .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     echo "The # here doe |
     | s not begin a comment."  |
@@ -109,7 +109,7 @@ building blocks of Bash scripts.
     characters (" ' \\) escape the #.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "The # here does not begin a comment."
         echo 'The # here does not begin a comment.'
@@ -122,7 +122,7 @@ building blocks of Bash scripts.
         # Thanks, S.C.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "The # here does not begin a comment."
         echo 'The # here does not begin a comment.'
@@ -147,7 +147,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo hello; echo there
 
@@ -171,7 +171,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         case "$variable" in
           abc)  echo "\$variable = abc" ;;
@@ -202,7 +202,7 @@ building blocks of Bash scripts.
     that an `ls <basic.html#LSREF>`__ will not normally show.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ touch .hidden-file
         bash$ ls -l         
@@ -230,7 +230,7 @@ building blocks of Bash scripts.
     directory.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ pwd
         /home/bozo/projects
@@ -250,7 +250,7 @@ building blocks of Bash scripts.
     movement command, in this context meaning *current directory* .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cp /home/bozo/current_work/junk/* .
                     
@@ -291,7 +291,7 @@ building blocks of Bash scripts.
     returned.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         let "t2 = ((a = 9, 15 / 3))"
         # Set "a = 9" and "t2 = 15 / 3"
@@ -302,7 +302,7 @@ building blocks of Bash scripts.
      The *comma* operator can also concatenate strings.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         for file in /{,usr/}bin/*calc
         #             ^    Find all executable files ending in "calc"
@@ -375,7 +375,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         :
         echo $?   # 0
@@ -385,7 +385,7 @@ building blocks of Bash scripts.
     Endless loop:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         while :
         do
@@ -406,7 +406,7 @@ building blocks of Bash scripts.
     Placeholder in if/then test:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if condition
         then :   # Do nothing and branch ahead
@@ -421,7 +421,7 @@ building blocks of Bash scripts.
     parameters <parameter-substitution.html#DEFPARAM>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         : ${username=`whoami`}
         # ${username=`whoami`}   Gives an error without the leading :
@@ -440,7 +440,7 @@ building blocks of Bash scripts.
     `Example 10-7 <parameter-substitution.html#EX6>`__ ).
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         : ${HOSTNAME?} ${USER?} ${MAIL?}
         #  Prints error message
@@ -457,7 +457,7 @@ building blocks of Bash scripts.
     previously exist, creates it.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         : > data.xxx   # File "data.xxx" now empty.       
 
@@ -489,7 +489,7 @@ building blocks of Bash scripts.
     However, this is not the case with : .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         : This is a comment that generates an error, ( if [ $x -eq 3] ).
 
@@ -501,7 +501,7 @@ building blocks of Bash scripts.
     and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $PATH
         /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
@@ -512,7 +512,7 @@ building blocks of Bash scripts.
     name <functions.html#FSTRANGEREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         :()
         {
@@ -535,7 +535,7 @@ building blocks of Bash scripts.
     A *colon* can serve as a placeholder in an otherwise empty function.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         not_empty ()
         {
@@ -571,7 +571,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo *
         abs-book.sgml add-drive.sh agram.sh alias.sh
@@ -608,7 +608,7 @@ building blocks of Bash scripts.
     ``         result-if-false        ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         (( var0 = var1<98?9:21 ))
         #                ^ ^
@@ -641,7 +641,7 @@ building blocks of Bash scripts.
     variable).**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var1=5
         var2=23skidoo
@@ -702,7 +702,7 @@ building blocks of Bash scripts.
     **command group.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         (a=hello; echo $a)
 
@@ -723,7 +723,7 @@ building blocks of Bash scripts.
     process <subshells.html#PARVIS>`__ , the subshell.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     a=123                |
     |     ( a=321; )           |
@@ -737,7 +737,7 @@ building blocks of Bash scripts.
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a=123
         ( a=321; )        
@@ -746,7 +746,7 @@ building blocks of Bash scripts.
         # "a" within parentheses acts like a local variable.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a=123
         ( a=321; )        
@@ -761,7 +761,7 @@ building blocks of Bash scripts.
     **array initialization.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         Array=(element1 element2 element3)
 
@@ -773,7 +773,7 @@ building blocks of Bash scripts.
     **Brace expansion.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo \"{These,words,are,quoted}\"   # " prefix and suffix
         # "These" "words" "are" "quoted"
@@ -813,7 +813,7 @@ building blocks of Bash scripts.
     **Extended Brace expansion.**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
         # Echoes characters between a and z.
@@ -843,7 +843,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ { local a;
                   a=123; }
@@ -854,7 +854,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a=123
         { a=321; }
@@ -871,7 +871,7 @@ building blocks of Bash scripts.
     **Example 3-1. Code blocks and I/O redirection**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Reading lines in /etc/fstab.
@@ -902,7 +902,7 @@ building blocks of Bash scripts.
     **Example 3-2. Saving the output of a code block to a file**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rpm-check.sh
@@ -973,7 +973,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         ls . | xargs -i -t cp ./{} $1
         #            ^^         ^^
@@ -1042,7 +1042,7 @@ building blocks of Bash scripts.
     off the numbering of each element of that array.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         Array[1]=slot_1
         echo ${Array[1]}
@@ -1066,7 +1066,7 @@ building blocks of Bash scripts.
     Evaluate integer expression between $[ ] .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a=3
         b=7
@@ -1112,7 +1112,7 @@ building blocks of Bash scripts.
     For example, let us test whether a certain command exists.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ type bogus_com |
     | mand &>/dev/null         |
@@ -1128,7 +1128,7 @@ building blocks of Bash scripts.
     Or in a script:
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     command_test () { ty |
     | pe "$1" &>/dev/null; }   |
@@ -1149,7 +1149,7 @@ building blocks of Bash scripts.
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type bogus_command &>/dev/null
 
@@ -1160,7 +1160,7 @@ building blocks of Bash scripts.
                             
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         command_test () { type "$1" &>/dev/null; }
         #                                      ^
@@ -1173,7 +1173,7 @@ building blocks of Bash scripts.
         command_test $cmd; echo $?   # 1
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type bogus_command &>/dev/null
 
@@ -1184,7 +1184,7 @@ building blocks of Bash scripts.
                             
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         command_test () { type "$1" &>/dev/null; }
         #                                      ^
@@ -1247,7 +1247,7 @@ building blocks of Bash scripts.
     **`ASCII comparison <comparison-ops.html#LTREF>`__ .**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         veg1=carrots
         veg2=tomatoes
@@ -1283,7 +1283,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo ls -l | sh
         #  Passes the output of "echo ls -l" to the shell,
@@ -1318,7 +1318,7 @@ building blocks of Bash scripts.
      The output of a command or commands may be piped to a script.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # uppercase.sh : Changes input to uppercase.
@@ -1334,7 +1334,7 @@ building blocks of Bash scripts.
     Now, let us pipe the output of **ls -l** to this script.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l | ./uppercase.sh
         -RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
@@ -1354,7 +1354,7 @@ building blocks of Bash scripts.
     not behave as expected.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cat file1 file2 | ls |
     |  -l | sort               |
@@ -1368,7 +1368,7 @@ building blocks of Bash scripts.
     therefore cannot alter script variables.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     variable="initial_va |
     | lue"                     |
@@ -1387,26 +1387,26 @@ building blocks of Bash scripts.
     `signal <debugging.html#SIGNALD>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         variable="initial_value"
         echo "new_value" | read variable
         echo "variable = $variable"     # variable = initial_value
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         variable="initial_value"
         echo "new_value" | read variable
@@ -1437,7 +1437,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ sleep 10 &
         [1] 850
@@ -1453,7 +1453,7 @@ building blocks of Bash scripts.
     **Example 3-3. Running a loop in the background**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # background-loop.sh
@@ -1535,7 +1535,7 @@ building blocks of Bash scripts.
     ``                   sort -dfu $filename                 ``
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ $file1 -ot $file2 ]
         then #      ^
@@ -1576,7 +1576,7 @@ building blocks of Bash scripts.
     with a dash* .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ ls -l          |
     |     -rw-r--r-- 1 bozo bo |
@@ -1592,7 +1592,7 @@ building blocks of Bash scripts.
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l
         -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
@@ -1604,7 +1604,7 @@ building blocks of Bash scripts.
         total 0
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l
         -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
@@ -1631,7 +1631,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat -
         abc
@@ -1649,7 +1649,7 @@ building blocks of Bash scripts.
     have real-world applications?
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
         # Move entire file tree from one directory to another
@@ -1696,7 +1696,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
         #  --uncompress tar file--      | --then pass it to "tar"--
@@ -1711,7 +1711,7 @@ building blocks of Bash scripts.
     ``         stdout        `` , such as **tar** , **cat** , etc.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "whatever" | cat -
         whatever 
@@ -1726,7 +1726,7 @@ building blocks of Bash scripts.
     method of using a file-oriented utility as a filter in a pipe.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ file
         Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...
@@ -1741,7 +1741,7 @@ building blocks of Bash scripts.
     user input.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ file -
         abc
@@ -1776,7 +1776,7 @@ building blocks of Bash scripts.
     **Example 3-4. Backup of all files changed in last day**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1831,7 +1831,7 @@ building blocks of Bash scripts.
     likewise create problems.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     var="-n"             |
     |     echo $var            |
@@ -1842,14 +1842,14 @@ building blocks of Bash scripts.
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var="-n"
         echo $var       
         # Has the effect of "echo -n", and outputs nothing.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var="-n"
         echo $var       
@@ -1888,7 +1888,7 @@ building blocks of Bash scripts.
     **Equals.** `Assignment operator <varassignment.html#EQREF>`__
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a=28
         echo $a   # 28
@@ -1928,7 +1928,7 @@ building blocks of Bash scripts.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         let "z = 5 % 3"
         echo $z  # 2
@@ -1948,7 +1948,7 @@ building blocks of Bash scripts.
     directory, and **ls ~/** lists the contents of it.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo ~bozo
         /home/bozo
@@ -2072,7 +2072,7 @@ building blocks of Bash scripts.
        while backspacing.
 
 
-       .. code:: PROGRAMLISTING
+       .. code-block:: sh
 
            #!/bin/bash
            # Embedding Ctl-H in a string.
@@ -2146,7 +2146,7 @@ building blocks of Bash scripts.
        ``                       Carriage return                     `` .
 
 
-       .. code:: PROGRAMLISTING
+       .. code-block:: sh
 
            #!/bin/bash
            # Thank you, Lee Maschmeyer, for this example.
@@ -2241,7 +2241,7 @@ building blocks of Bash scripts.
        equivalent:
 
 
-       .. code:: PROGRAMLISTING
+       .. code-block:: sh
 
            echo -e '\x0a'
            echo <Ctl-V><Ctl-J>
@@ -2369,7 +2369,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
 `subshell <subshells.html#SUBSHELLSREF>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     ls | { read firstlin |
 | e; read secondline; }    |
@@ -2390,7 +2390,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ls | { read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,
@@ -2400,7 +2400,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
     # Thanks, S.C.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     ls | { read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,

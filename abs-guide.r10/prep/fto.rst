@@ -32,7 +32,7 @@ XXX  7.2. File test operators
      file is a `character device <devref1.html#CHARDEVREF>`__
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         device0="/dev/sda2"    # /   (root directory)
         if [ -b "$device0" ]
@@ -58,7 +58,7 @@ XXX  7.2. File test operators
     file is a `pipe <special-chars.html#PIPEREF>`__
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         function show_input_type()
         {
@@ -124,7 +124,7 @@ XXX  7.2. File test operators
     *non-root* user.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
                  -rwsr-xr-t    1 root       178236 Oct  2  2000 /usr/sbin/pppd
                   
@@ -146,7 +146,7 @@ XXX  7.2. File test operators
     specific files in that directory to the owner of those files.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
                  drwxrwxrwt    7 root         1024 May 19 21:26 tmp/
                   
@@ -191,7 +191,7 @@ XXX  7.2. File test operators
 **Example 7-4. Testing for broken links**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # broken-link.sh
@@ -270,7 +270,7 @@ Notes
 Per the 1913 edition of *Webster's Dictionary* :
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     Deprecate            |
 |     ...                  |
@@ -291,7 +291,7 @@ Per the 1913 edition of *Webster's Dictionary* :
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Deprecate
     ...
@@ -304,7 +304,7 @@ Per the 1913 edition of *Webster's Dictionary* :
     to disapprove of strongly.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Deprecate
     ...

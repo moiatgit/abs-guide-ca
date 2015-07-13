@@ -13,7 +13,7 @@ As a simple example, consider this alternative to the
 `echo-grep <internal.html#ECHOGREPREF>`__ construction.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Instead of:
     if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
@@ -31,7 +31,7 @@ As a simple example, consider this alternative to the
 Or, in combination with `read <internal.html#READREF>`__ :
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     String="This is a string of words."
 
@@ -56,7 +56,7 @@ Or, in combination with `read <internal.html#READREF>`__ :
 the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # As Seamus points out . . .
 
@@ -74,7 +74,7 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 **Example 19-13. Prepending a line to a file**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # prepend.sh: Add text at beginning of file.
@@ -119,7 +119,7 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 **Example 19-14. Parsing a mailbox**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     #  Script by Francisco Lobo,

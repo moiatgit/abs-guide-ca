@@ -14,7 +14,7 @@ To create a localized script, use the following template to write all
 messages to the user (error messages, prompts, etc.).
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # localized.sh
@@ -106,7 +106,7 @@ messages to the user (error messages, prompts, etc.).
 
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ bash -D localized.sh
     "Can't cd to %s."
@@ -118,7 +118,7 @@ This lists all the localized text. (The ``     -D    `` option lists
 double-quoted strings prefixed by a $ , without executing the script.)
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ bash --dump-po-strings localized.sh
     #: a:6
@@ -164,7 +164,7 @@ example:
 fr.po:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #: a:6
     msgid "Can't cd to $var."
@@ -189,7 +189,7 @@ Place the resulting ``      localized.sh.mo     `` file in the
 the beginning of the script, insert the lines:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     TEXTDOMAINDIR=/usr/local/share/locale
     TEXTDOMAIN=localized.sh
@@ -208,7 +208,7 @@ With older versions of Bash or other shells, localization requires
 ``         -s        `` option. In this case, the script becomes:
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |     # localized.sh       |
@@ -232,7 +232,7 @@ With older versions of Bash or other shells, localization requires
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # localized.sh
@@ -250,7 +250,7 @@ With older versions of Bash or other shells, localization requires
     # ...
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # localized.sh

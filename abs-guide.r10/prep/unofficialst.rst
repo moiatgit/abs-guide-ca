@@ -7,7 +7,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
    appreciate), and easier for you to maintain.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        PASS="$PASS${MATRIX:$(($RANDOM%${#MATRIX})):1}"
        #  It made perfect sense when you wrote it last year,
@@ -19,7 +19,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
    Add descriptive headers to your scripts and functions.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -65,7 +65,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
    without breaking the application.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        if [ -f /var/log/messages ]
        then
@@ -87,7 +87,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
 -  Choose descriptive names for variables and functions.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        fl=`ls -al $dirname`                 # Cryptic.
        file_listing=`ls -al $dirname`       # Better.
@@ -134,7 +134,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
    and meaningful way.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        E_WRONG_ARGS=95
        ...
@@ -154,7 +154,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
    proposes the following set of flags.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        -a      All: Return all information (including hidden file info).
        -b      Brief: Short version, usually for other scripts.
@@ -183,7 +183,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
 -  Don't use a complex construct where a simpler one will do.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        COMMAND
        if [ $? -eq 0 ]

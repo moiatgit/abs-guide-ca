@@ -16,7 +16,7 @@ XXX  10.2. Parameter Substitution
     May be used for concatenating variables with strings.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         your_id=${USER}-on-${HOSTNAME}
         echo "$your_id"
@@ -32,7 +32,7 @@ XXX  10.2. Parameter Substitution
     If parameter not set, use default.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var1=1
         var2=2
@@ -65,7 +65,7 @@ XXX  10.2. Parameter Substitution
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # param-sub.sh
@@ -117,7 +117,7 @@ XXX  10.2. Parameter Substitution
     command-line arguments in scripts.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         DEFAULT_FILENAME=generic.data
         filename=${1:-$DEFAULT_FILENAME}
@@ -155,7 +155,7 @@ XXX  10.2. Parameter Substitution
      <parameter-substitution.html#FTN.AEN6310>`__ as above.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo ${var=abc}   # abc
         echo ${var=xyz}   # abc
@@ -174,7 +174,7 @@ XXX  10.2. Parameter Substitution
     and is null, see below.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "###### \${parameter+alt_value} ########"
         echo
@@ -223,7 +223,7 @@ XXX  10.2. Parameter Substitution
 **Example 10-7. Using parameter substitution and error messages**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -290,7 +290,7 @@ XXX  10.2. Parameter Substitution
 **Example 10-8. Parameter substitution and "usage" messages**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # usage-message.sh
@@ -349,7 +349,7 @@ These particular ones are used mostly in parsing file path names.
     **Example 10-9. Length of a variable**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # length.sh
@@ -395,7 +395,7 @@ These particular ones are used mostly in parsing file path names.
     A-7 <contributed-scripts.html#DAYSBETWEEN>`__ :
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Function from "days-between.sh" example.
         # Strips leading zero(s) from argument passed.
@@ -410,7 +410,7 @@ These particular ones are used mostly in parsing file path names.
     Manfred Schwarb's more elaborate variation of the above:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         strip_leading_zero2 () # Strip possible leading zero(s), since otherwise
         {                      # Bash will interpret such numbers as octal values.
@@ -426,7 +426,7 @@ These particular ones are used mostly in parsing file path names.
     Another usage illustration:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo `basename $PWD`        # Basename of current working directory.
         echo "${PWD##*/}"           # Basename of current working directory.
@@ -461,7 +461,7 @@ These particular ones are used mostly in parsing file path names.
 **Example 10-10. Pattern matching in parameter substitution**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # patt-matching.sh
@@ -515,7 +515,7 @@ These particular ones are used mostly in parsing file path names.
 **Example 10-11. Renaming file extensions : **
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # rfe.sh: Renaming file extensions.
@@ -593,7 +593,7 @@ These particular ones are used mostly in parsing file path names.
     **Example 10-12. Using pattern matching to parse arbitrary strings**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -676,7 +676,7 @@ These particular ones are used mostly in parsing file path names.
     **Example 10-13. Matching patterns at prefix or suffix of string**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # var-match.sh:
@@ -722,7 +722,7 @@ These particular ones are used mostly in parsing file path names.
     ``                   varprefix                 `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # This is a variation on indirect reference, but with a * or @.
         # Bash, version 2.04, adds this feature.

@@ -45,7 +45,7 @@ The following commands and actions are disabled:
 **Example 22-1. Running a script in restricted mode**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 

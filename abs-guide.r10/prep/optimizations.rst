@@ -23,7 +23,7 @@ Avoid unnecessary commands, particularly in a
 `pipe <special-chars.html#PIPEREF>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     cat "$file" | grep "$word"
 
@@ -48,7 +48,7 @@ can get potentially a 2x or more improvement in speed by simply setting
 the ``                   LC_ALL                 `` variable.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
        export LC_ALL=C
 
@@ -84,7 +84,7 @@ the ``                   LC_ALL                 `` variable.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
        export LC_ALL=C
 
@@ -117,7 +117,7 @@ the ``                   LC_ALL                 `` variable.
     so why not try?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
        export LC_ALL=C
 
@@ -161,7 +161,7 @@ parentheses <dblparens.html>`__ arithmetic expansion. See `Example
 A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     Math tests           |
 |                          |
@@ -198,7 +198,7 @@ possible, to minimize script execution time. Again, refer to `Example
 A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     Test using "case" co |
 | nstruct:                 |
@@ -242,7 +242,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Math tests
 
@@ -262,7 +262,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     sys           0m0.000s
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Test using "case" construct:
     real          0m0.329s
@@ -288,7 +288,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     sys           0m0.000s
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Math tests
 
@@ -308,7 +308,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     sys           0m0.000s
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Test using "case" construct:
     real          0m0.329s
@@ -348,7 +348,7 @@ associative arrays. Running a test script confirms this. See `Example
 A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     Assignment tests     |
 |                          |
@@ -466,7 +466,7 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Assignment tests
 
@@ -531,7 +531,7 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
     sys           0m0.000s
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     Assignment tests
 

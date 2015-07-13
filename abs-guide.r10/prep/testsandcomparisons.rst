@@ -9,7 +9,7 @@ Likewise, `arithmetic comparisons <comparison-ops.html#ICOMPARISON1>`__
 might benefit from the `(( )) <dblparens.html>`__ construct.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     a=8
 

@@ -14,7 +14,7 @@ XXX  16.9. Miscellaneous Commands
     but this can be changed with the ``         -s        `` option.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ seq 5
         1
@@ -38,7 +38,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-54. Using *seq* to generate loop arguments**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Using "seq"
@@ -100,7 +100,7 @@ XXX  16.9. Miscellaneous Commands
     A simpler example:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #  Create a set of 10 files,
         #+ named file.1, file.2 . . . file.10.
@@ -120,7 +120,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-55. Letter Count"**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # letter-count.sh: Counting letter occurrences in a text file.
@@ -195,7 +195,7 @@ XXX  16.9. Miscellaneous Commands
     using the ``            -r           `` option.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ jot -r 3 999   |
     |     1069                 |
@@ -205,7 +205,7 @@ XXX  16.9. Miscellaneous Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ jot -r 3 999
         1069
@@ -213,7 +213,7 @@ XXX  16.9. Miscellaneous Commands
          1428
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ jot -r 3 999
         1069
@@ -235,7 +235,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-56. Using *getopt* to parse command-line options**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Using getopt
@@ -297,7 +297,7 @@ XXX  16.9. Miscellaneous Commands
     `whitespace <special-chars.html#WHITESPACEREF>`__ and *quotes* .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     args=$(getopt -o a:b |
     | c:d -- "$@")             |
@@ -306,13 +306,13 @@ XXX  16.9. Miscellaneous Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         args=$(getopt -o a:bc:d -- "$@")
         eval set -- "$args"
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         args=$(getopt -o a:bc:d -- "$@")
         eval set -- "$args"
@@ -376,7 +376,7 @@ XXX  16.9. Miscellaneous Commands
     parsed variables. For example:
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ yes $BASH_VERS |
     | ION                      |
@@ -394,7 +394,7 @@ XXX  16.9. Miscellaneous Commands
     file on the fly:
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ yes $PATH > hu |
     | ge_file.txt              |
@@ -407,7 +407,7 @@ XXX  16.9. Miscellaneous Commands
     quickly* , or you just might get more than you bargained for. . . .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ yes $BASH_VERSION
         3.1.17(1)-release
@@ -419,14 +419,14 @@ XXX  16.9. Miscellaneous Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ yes $PATH > huge_file.txt
         Ctl-C       
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ yes $BASH_VERSION
         3.1.17(1)-release
@@ -438,7 +438,7 @@ XXX  16.9. Miscellaneous Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ yes $PATH > huge_file.txt
         Ctl-C       
@@ -451,7 +451,7 @@ XXX  16.9. Miscellaneous Commands
     `function <functions.html#FUNCTIONREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         yes ()
         { # Trivial emulation of "yes" ...
@@ -483,7 +483,7 @@ XXX  16.9. Miscellaneous Commands
     set for a particular user.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ printenv | grep HOME
         HOME=/home/bozo
@@ -530,7 +530,7 @@ XXX  16.9. Miscellaneous Commands
     paper, perhaps to keep track of it for debugging purposes.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
                                      (redirection)
                                     |----> to file
@@ -543,7 +543,7 @@ XXX  16.9. Miscellaneous Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat listfile* | sort | tee check.file | uniq > result.file
         #                      ^^^^^^^^^^^^^^   ^^^^    
@@ -561,7 +561,7 @@ XXX  16.9. Miscellaneous Commands
     A-14 <contributed-scripts.html#FIFO>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # This short script by Omair Eshkenazi.
@@ -614,7 +614,7 @@ XXX  16.9. Miscellaneous Commands
     head or tail of the input file.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Converting a file to all uppercase:
 
@@ -668,7 +668,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-57. A script that copies itself**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # self-copy.sh
@@ -693,7 +693,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-58. Exercising *dd***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # exercising-dd.sh
@@ -727,7 +727,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-59. Capturing Keystrokes**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # dd-keypress.sh: Capture keystrokes without needing to press ENTER.
@@ -757,7 +757,7 @@ XXX  16.9. Miscellaneous Commands
     The **dd** command can do random access on a data stream.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo -n . | dd bs=1 seek=4 of=file conv=notrunc
         #  The "conv=notrunc" option means that the output file
@@ -788,7 +788,7 @@ XXX  16.9. Miscellaneous Commands
     Pi***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rp.sdcard.sh
@@ -863,7 +863,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-61. Securely deleting a file**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # blot-out.sh: Erase "all" traces of a file.
@@ -974,7 +974,7 @@ XXX  16.9. Miscellaneous Commands
     ``         /dev/urandom        `` , and as a filter for binary data.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
         # Sample output: 1324725719, 3918166450, 2989231420, etc.
@@ -994,7 +994,7 @@ XXX  16.9. Miscellaneous Commands
     `less <filearchiv.html#LESSREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         dd if=/bin/ls | hexdump -C | less
         # The -C option nicely formats the output in tabular form.
@@ -1007,7 +1007,7 @@ XXX  16.9. Miscellaneous Commands
     ``         -d        `` option).
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ objdump -d /bin/ls
         /bin/ls:     file format elf32-i386
@@ -1029,7 +1029,7 @@ XXX  16.9. Miscellaneous Commands
     as a "quick 'n dirty" random number.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         random000=$(mcookie)
 
@@ -1039,7 +1039,7 @@ XXX  16.9. Miscellaneous Commands
     for the same purpose.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Generate md5 checksum on the script itself.
         random001=`md5sum $0 | awk '{print $1}'`
@@ -1054,7 +1054,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-62. Filename generator**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # tempfile-name.sh:  temp filename generator
@@ -1097,7 +1097,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-63. Converting meters to miles**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # unit-conversion.sh
@@ -1149,7 +1149,7 @@ XXX  16.9. Miscellaneous Commands
     **Example 16-64. Using *m4***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # m4.sh: Using the m4 macro processor
@@ -1175,7 +1175,7 @@ XXX  16.9. Miscellaneous Commands
     message/query window on the desktop.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         xmessage Left click to continue -button okay
 
@@ -1212,7 +1212,7 @@ XXX  16.9. Miscellaneous Commands
     following in a shell script:
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     case `basename $0` i |
     | n                        |
@@ -1228,7 +1228,7 @@ XXX  16.9. Miscellaneous Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         case `basename $0` in
         "name1" ) do_something;;
@@ -1238,7 +1238,7 @@ XXX  16.9. Miscellaneous Commands
         esac
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         case `basename $0` in
         "name1" ) do_something;;
@@ -1312,7 +1312,7 @@ application of the ``       conv=ebcdic      `` option of **dd** is as a
 quick 'n easy, but not very secure text file encoder.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     cat $file | dd conv= |
 | swab,ebcdic > $file_encr |
@@ -1332,7 +1332,7 @@ quick 'n easy, but not very secure text file encoder.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     cat $file | dd conv=swab,ebcdic > $file_encrypted
     # Encode (looks like gibberish).            
@@ -1342,7 +1342,7 @@ quick 'n easy, but not very secure text file encoder.
     # Decode.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     cat $file | dd conv=swab,ebcdic > $file_encrypted
     # Encode (looks like gibberish).            

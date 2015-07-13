@@ -14,7 +14,7 @@ XXX  16.7. Terminal Control Commands
     `reset <terminalccmds.html#RESETREF>`__ .
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ tput longname
         xterm terminal emulator (X Window System)
@@ -57,7 +57,7 @@ XXX  16.7. Terminal Control Commands
     terminal. It references the *terminfo* database.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ infocmp
         #       Reconstructed via infocmp from file:
@@ -92,7 +92,7 @@ XXX  16.7. Terminal Control Commands
     of the current terminal.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ resize
         set noglob;

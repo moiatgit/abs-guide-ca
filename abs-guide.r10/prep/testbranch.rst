@@ -53,7 +53,7 @@ the block.
     **Example 11-25. Using *case***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Testing ranges of characters.
@@ -92,7 +92,7 @@ the block.
     **Example 11-26. Creating menus using *case***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -167,7 +167,7 @@ the block.
     command-line parameters.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #! /bin/bash
 
@@ -193,7 +193,7 @@ the block.
     handling:
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #! /bin/bash
 
@@ -227,7 +227,7 @@ the block.
     variable**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # case-cmd.sh: Using command substitution to generate a "case" variable.
@@ -253,7 +253,7 @@ the block.
     **Example 11-28. Simple string matching**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # match-string.sh: Simple string matching
@@ -301,7 +301,7 @@ the block.
     **Example 11-29. Checking for alphabetic input**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # isalpha.sh: Using a "case" structure to filter a string.
@@ -433,7 +433,7 @@ the block.
     **Example 11-30. Creating menus using *select***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -482,7 +482,7 @@ the block.
     **Example 11-31. Creating menus using *select* in a function**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -526,7 +526,7 @@ Pattern-match lines may also *start* with a **(** left paren to give the
 layout a more structured appearance.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     case $( arch ) in    |
 | # $( arch ) returns mach |
@@ -547,7 +547,7 @@ layout a more structured appearance.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     case $( arch ) in   # $( arch ) returns machine architecture.
       ( i386 ) echo "80386-based machine";;
@@ -559,7 +559,7 @@ layout a more structured appearance.
     esac
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     case $( arch ) in   # $( arch ) returns machine architecture.
       ( i386 ) echo "80386-based machine";;

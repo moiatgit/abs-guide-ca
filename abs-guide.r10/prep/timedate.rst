@@ -15,7 +15,7 @@ XXX  16.3. Time / Date Commands
     **Example 16-10. Using *date***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Exercising the 'date' command
@@ -46,7 +46,7 @@ XXX  16.3. Time / Date Commands
     Coordinated Time).
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ date
         Fri Mar 29 21:07:39 MST 2002
@@ -66,7 +66,7 @@ XXX  16.3. Time / Date Commands
     **Example 16-11. *Date* calculations**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # date-calc.sh
@@ -120,7 +120,7 @@ XXX  16.3. Time / Date Commands
     integers.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         date +%N | sed -e 's/000$//' -e 's/^0//'
                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -137,7 +137,7 @@ XXX  16.3. Time / Date Commands
     There are many more options (try **man date** ).
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         date +%j
         # Echoes day of the year (days elapsed since January 1).
@@ -166,7 +166,7 @@ XXX  16.3. Time / Date Commands
     Time zone dump: echoes the time in a specified time zone.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ zdump EST
         EST  Tue Sep 18 22:09:22 2001 EST
@@ -181,7 +181,7 @@ XXX  16.3. Time / Date Commands
     like this:
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         real    0m0.067s
          user    0m0.004s
@@ -266,7 +266,7 @@ XXX  16.3. Time / Date Commands
     execute a different set of scripts.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ at 2:30 am Friday < at-jobs.list
         job 2 at 2000-10-27 02:30
@@ -302,7 +302,7 @@ XXX  16.3. Time / Date Commands
     32-6 <debugging.html#ONLINE>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         sleep 3     # Pauses 3 seconds.
 
@@ -316,7 +316,7 @@ XXX  16.3. Time / Date Commands
     days may also be specified.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     sleep 3 h   # Pauses |
     |  3 hours!                |
@@ -324,12 +324,12 @@ XXX  16.3. Time / Date Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         sleep 3 h   # Pauses 3 hours!
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         sleep 3 h   # Pauses 3 hours!
 
@@ -353,7 +353,7 @@ XXX  16.3. Time / Date Commands
     for polling an ongoing process at very frequent intervals.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         usleep 30     # Pauses 30 microseconds.
 

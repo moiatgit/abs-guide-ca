@@ -7,7 +7,7 @@ Examine the following script. Run it, then explain what it does.
 Annotate the script and rewrite it in a more compact and elegant manner.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -52,7 +52,7 @@ Explain what the following script does. It is really just a
 parameterized command-line pipe.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -73,7 +73,7 @@ the listings for `find <moreadv.html#FINDREF>`__ and
 `stat <system.html#STATREF>`__ .
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -98,7 +98,7 @@ the listings for `find <moreadv.html#FINDREF>`__ and
 A reader sent in the following code snippet.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     while read LINE
     do
@@ -120,7 +120,7 @@ Analyze the following "one-liner" (here split into two lines for
 clarity) contributed by Rory Winston:
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     export SUM=0; for f in $(find src -name "*.java");
     do export SUM=$(($SUM + $(wc -l $f | awk '{ print $1 }'))); done; echo $SUM

@@ -12,7 +12,7 @@ complete ASCII table.
 **Example T-1. A script that generates an ASCII table**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ascii.sh
@@ -68,7 +68,7 @@ complete ASCII table.
 **Example T-2. Another ASCII table script**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # Script author: Joseph Steinhauser
@@ -120,7 +120,7 @@ complete ASCII table.
 **Example T-3. A third ASCII table script, using *awk***
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # ASCII table script, using awk.

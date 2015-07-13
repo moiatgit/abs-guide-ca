@@ -12,7 +12,7 @@ log files.
 **Example 20-12. Logging events**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # logevents.sh

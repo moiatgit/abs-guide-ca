@@ -40,7 +40,7 @@ XXX  4.4. Special Variable Types
     cause problems.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ eval "`seq 100 |
     | 00 | sed -e 's/.*/export |
@@ -59,7 +59,7 @@ XXX  4.4. Special Variable Types
     providing the above example.)
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ eval "`seq 10000 | sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
 
@@ -68,7 +68,7 @@ XXX  4.4. Special Variable Types
                       
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ eval "`seq 10000 | sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
 
@@ -125,7 +125,7 @@ XXX  4.4. Special Variable Types
     **Example 4-5. Positional Parameters**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -187,7 +187,7 @@ XXX  4.4. Special Variable Types
     referencing <bashver2.html#VARREFNEW>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         args=$#           # Number of args passed.
         lastarg=${!args}
@@ -221,7 +221,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         variable1_=$1_  # Rather than variable1=$1
         # This will prevent an error, even if positional parameter is absent.
@@ -257,7 +257,7 @@ XXX  4.4. Special Variable Types
     **Example 4-6. *wh* , *whois* domain name lookup**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex18.sh
@@ -315,7 +315,7 @@ XXX  4.4. Special Variable Types
     **Example 4-7. Using *shift***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # shft.sh: Using 'shift' to step through all the positional parameters.
@@ -352,7 +352,7 @@ XXX  4.4. Special Variable Types
     many positions to shift.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # shift-past.sh
@@ -422,7 +422,7 @@ From the *command-line* , however, ``       $0      `` is the name of
 the shell.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |     bash$ echo $0        |
 |     bash                 |
@@ -433,7 +433,7 @@ the shell.
 +--------------------------+--------------------------+--------------------------+
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo $0
     bash
@@ -442,7 +442,7 @@ the shell.
     tcsh
 
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo $0
     bash

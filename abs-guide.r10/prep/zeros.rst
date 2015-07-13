@@ -27,7 +27,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     Suppressing ``         stdout        `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat $filename >/dev/null
         # Contents of the file will not list to stdout.
@@ -38,7 +38,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     16-3 <moreadv.html#EX57>`__ ).
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         rm $badname 2>/dev/null
         #           So error messages [stderr] deep-sixed.
@@ -49,7 +49,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     ``         stderr        `` .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat $filename 2>/dev/null >/dev/null
         # If "$filename" does not exist, there will be no error message output.
@@ -69,7 +69,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     and `Example 2-3 <sha-bang.html#EX2>`__ ):
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat /dev/null > /var/log/messages
         #  : > /var/log/messages   has same effect, but does not spawn a new process.
@@ -86,7 +86,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     **Example 31-1. Hiding the cookie jar**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Obsolete Netscape browser.
         # Same principle applies to newer browsers.
@@ -118,7 +118,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     ``           /dev/zero          ``**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Creating a swap file.
@@ -198,7 +198,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     **Example 31-3. Creating a ramdisk**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ramdisk.sh

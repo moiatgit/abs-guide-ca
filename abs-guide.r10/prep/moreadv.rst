@@ -17,7 +17,7 @@ XXX  16.2. Complex Commands
     as a special character).
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ find ~/ -name '*.txt'
         /home/bozo/.kde/share/apps/karm/karmdata.txt
@@ -32,7 +32,7 @@ XXX  16.2. Complex Commands
     for "{}" .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find ~/ -name 'core*' -exec rm {} \;
         # Removes all core dump files from user's home directory.
@@ -40,7 +40,7 @@ XXX  16.2. Complex Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find /home/bozo/projects -mtime -1
         #                               ^   Note minus sign!
@@ -72,7 +72,7 @@ XXX  16.2. Complex Commands
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find /etc -exec grep '[0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*' {} \;
 
@@ -107,7 +107,7 @@ XXX  16.2. Complex Commands
     `whitespace <special-chars.html#WHITESPACEREF>`__ .**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # badname.sh
@@ -148,7 +148,7 @@ XXX  16.2. Complex Commands
     **Example 16-4. Deleting a file by its *inode* number**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # idelete.sh: Deleting a file by its inode number.
@@ -204,7 +204,7 @@ XXX  16.2. Complex Commands
     ``         -exec        `` option.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  Find suid root files.
@@ -247,7 +247,7 @@ XXX  16.2. Complex Commands
     stripped out.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l
         total 0
@@ -284,7 +284,7 @@ XXX  16.2. Complex Commands
     *one at a time* .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ find /usr/bin  |
     | | xargs file             |
@@ -299,7 +299,7 @@ XXX  16.2. Complex Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ find /usr/bin | xargs file
         /usr/bin:          directory
@@ -308,7 +308,7 @@ XXX  16.2. Complex Commands
                   
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ find /usr/bin | xargs file
         /usr/bin:          directory
@@ -356,7 +356,7 @@ XXX  16.2. Complex Commands
     Or:
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cat /proc/"$pid"/"$O |
     | PTION" | xargs -0 echo   |
@@ -371,7 +371,7 @@ XXX  16.2. Complex Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat /proc/"$pid"/"$OPTION" | xargs -0 echo
         #  Formats output:         ^^^^^^^^^^^^^^^
@@ -379,7 +379,7 @@ XXX  16.2. Complex Commands
         #+ script in "/dev and /proc" chapter.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat /proc/"$pid"/"$OPTION" | xargs -0 echo
         #  Formats output:         ^^^^^^^^^^^^^^^
@@ -398,7 +398,7 @@ XXX  16.2. Complex Commands
     multicore CPU.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |                          |
@@ -425,7 +425,7 @@ XXX  16.2. Complex Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -441,7 +441,7 @@ XXX  16.2. Complex Commands
         # Thank you, Roberto Polli, for the inspiration.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -463,7 +463,7 @@ XXX  16.2. Complex Commands
     **Example 16-5. Logfile: Using *xargs* to monitor system log**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -512,7 +512,7 @@ XXX  16.2. Complex Commands
     **Example 16-6. Copying files in current directory to another**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # copydir.sh
@@ -552,7 +552,7 @@ XXX  16.2. Complex Commands
     **Example 16-7. Killing processes by name**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # kill-byname.sh: Killing processes by name.
@@ -602,7 +602,7 @@ XXX  16.2. Complex Commands
     **Example 16-8. Word frequency analysis using *xargs***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # wf2.sh: Crude word frequency analysis on a text file.
@@ -694,7 +694,7 @@ XXX  16.2. Complex Commands
     **Example 16-9. Using *expr***
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -816,7 +816,7 @@ XXX  16.2. Complex Commands
     in the above listing.
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |                          |
@@ -911,7 +911,7 @@ XXX  16.2. Complex Commands
     +--------------------------+--------------------------+--------------------------+
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -958,7 +958,7 @@ XXX  16.2. Complex Commands
         exit 0
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1014,7 +1014,7 @@ expression <regexp.html#REGEXREF>`__ parsing to match a substring. Here
 is a another example, this time from "real life."
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Strip the whitespace from the beginning and end.
     LRFDATE=`expr "$LRFDATE" : '[[:space:]]*\(.*\)[[:space:]]*$'`
