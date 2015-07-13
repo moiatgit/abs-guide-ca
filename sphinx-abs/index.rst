@@ -51,12 +51,12 @@ Taula de continguts
 .. toctree::
    :titlesonly:
 
-   part1/part1
-   part2/part2
-   part3/part3
-   part4/part4
-   part5/part5
-   endnotes/endnotes
+   part1
+   part2
+   part3
+   part4
+   part5
+   endnotes
    biblio
 
 Índexs i taules

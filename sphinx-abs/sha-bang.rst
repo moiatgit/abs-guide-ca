@@ -86,7 +86,7 @@ variants comercials de UNIX (no així en sistemes Linux que fan servir
 podem fer servir sh, tot i que sacrificarem les característiques
 específiques de Bash. Amb tot, un guió que s'executi amb sh respectarà
 l'estàndard POSIX [#posixstandard]_. Per més informació, mira
-:doc:`/part5/portabilityissues` i :doc:`/part5/gotchas`.
+:doc:`portabilityissues` i :doc:`gotchas`.
 
 
 Fixat que el camí que s'indica al sha-bang ha de ser correcte,

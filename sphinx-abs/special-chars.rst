@@ -4,7 +4,7 @@ XXX Caràcters especials
 
 Diem que un caràcter és especial quan té un significat més enllà del
 seu *valor literal* [#metameaning]_. Juntament amb les comandes i
-:doc:`paraules claus</part4/internal>`, els caràcters especials formen
+:doc:`paraules claus<internal>`, els caràcters especials formen
 els fonaments de la programació Bash.
 
 Considera la següent llista de caràcters especials que podem trobar en
@@ -17,7 +17,7 @@ El símbol de *sostingut* (#) en Bash normalment indica l'inici d'un
 comentari.
 
 Les línies que comencen amb un # (excepte
-:doc:`sha-bang</part1/sha-bang>`) es consideren comentaris i *no*
+:doc:`sha-bang<sha-bang>`) es consideren comentaris i *no*
 seran processades.
 
 .. code-block:: sh
@@ -57,7 +57,7 @@ no es considera com a marca de comentari.
 
 Per altra banda, # tampoc no es considera inici de comentari quan
 apareix en una :doc:`substitució de paràmetres
-</part3/parameter-substitution>` ni en :doc:`expressions amb constants
+<parameter-substitution>` ni en :doc:`expressions amb constants
 numèriques <numerical-constants>`.
 
 .. literalinclude:: /_scripts/nocomments.sh
@@ -78,7 +78,7 @@ que apareixen seqüencialment a una mateixa línia.
 
 
 Quan el punt i coma apareix duplicat (;;), el seu significat passa a
-ser de terminador en una opció *case*.  Mira :doc:`/part3/testbranch`.
+ser de terminador en una opció *case*.  Mira :doc:`testbranch`.
 
 .. code-block:: sh
 
@@ -89,7 +89,7 @@ ser de terminador en una opció *case*.  Mira :doc:`/part3/testbranch`.
 
 Hi ha altres versions del punt i coma doble (;;& i ;&).  Són també
 terminadors d'opció *case*, en aquest cas, per versions de Bash a
-partir de la 4. Mira :doc:`/part5/bashver4`.
+partir de la 4. Mira :doc:`bashver4`.
 
 Punt: .
 =======
@@ -145,14 +145,14 @@ La comanda anterior copiarà tots els fitxers de la carpeta brossa/ a la carpeta
 :ref:`internalvars_pwd`)
 
 Finalment, el caràcter punt serveix per indicar *qualsevol caràcter* quan forma part d'una
-:doc:`expressió regular </part5/regexp>`.
+:doc:`expressió regular <regexp>`.
 
 Cometes dobles: \"
 ==================
 
 Envoltar un text entre cometes dobles, evita que la majoria dels caràcters especials que conté el
 text, siguin interpretats. Es coneix com *partial quoting*. Mira
-:doc:`/part2/quoting`.
+:doc:`quoting`.
 
 Cometes simples: '
 ==================
@@ -160,7 +160,7 @@ Cometes simples: '
 Quan envoltem un text entre cometes simples (*full quoting*), tots els caràcters especials deixen de
 ser interpretats.
 És, per tant, una forma més forta de posar entre cometes un text que amb les cometes dobles.
-Mira :doc:`/part2/quoting`.
+Mira :doc:`quoting`.
 
 Coma: ,
 =======
@@ -235,7 +235,7 @@ fa què:
 #. es retorni com a string el resultat que la comanda escrigui en la sortida estàndard, per exemple,
    per a ser assignat a una variable.
 
-Mira :doc:`/part3/commandsub` per més detalls.
+Mira :doc:`commandsub` per més detalls.
 
 
 
@@ -243,7 +243,7 @@ Dos punts: :
 ============
 
 La comanda nulla: és l'equivalent en Bash del "NOP" (No Operation). Es tracta d'una :doc:`comanda
-interna </part4/internal>` de Bash, que no fa res i sempre té com a :doc:`valor de sortida
+interna <internal>` de Bash, que no fa res i sempre té com a :doc:`valor de sortida
 <exit-status>` ``0``. Es pot considerar sinònim de la comanda ``true``.
 
 .. code-block:: sh
@@ -258,7 +258,7 @@ Amb : podem fer un bucle infinit:
     :language: bash
 
 En algunes ocasions, cal començar una operació aritmètica o una substitució de paràmetres amb els :.
-Considera l'exemple: :ref:`ops_exemple_operadorsaritmetics` i :doc:`/part3/parameter-substitution`.
+Considera l'exemple: :ref:`ops_exemple_operadorsaritmetics` i :doc:`parameter-substitution`.
 
 .. code-block:: sh
 
@@ -1175,7 +1175,7 @@ Barra vertical o *pipe*: \|
 
     For an interesting note on the complexity of using UNIX pipes, see
     `the UNIX FAQ, Part
-    3 <http://www.faqs.org/faqs/unix-faq/faq/part3/>`__ .
+    3 <http://www.faqs.org/faqs/unix-faq/faq>`__ .
 
 
 
@@ -2196,7 +2196,7 @@ Caràcters en blanc
 .. rubric:: Notes
 
 
-.. [#metameaning] Consulta :doc:`/part5/x17129` per més informació
+.. [#metameaning] Consulta :doc:`x17129` per més informació
    sobre el concepte de *meta-significat*.
 
 .. [#operadors] Els *operadors* defineixen l'operació a realitzar en una expressió. Alguns exemples
