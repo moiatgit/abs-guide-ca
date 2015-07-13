@@ -193,33 +193,41 @@ Mira :ref:`bash4_modificacas`
 Contrabarra: \\
 ===============
 
-XXX TODO per aquí
+La contrabarra permet evitar que el caràcter següent sigui interpretat, de manera que s'entengui
+literalment. Aquest mecanisme es coneix com a *escapar* el caràcter per traducció directa del
+*escape* anglès.
 
-    **`escape <escapingsection.html#ESCP>`__ [backslash].** A quoting
-    mechanism for single characters.
+Per exemple:
 
+.. code-block:: sh
 
-    ``                   \X                 `` *escapes* the character
-    *X* . This has the effect of "quoting" *X* , equivalent to *'X'* .
-    The \\ may be used to quote " and ' , so they are expressed
-    literally.
+    echo "Una \" i una \'"
+    #    ^ indica inici de text entre cometes. No es mostra.
+    #         ^^       ^^ aquestes cometes sí es mostren
+    #                    ^ final del text entre cometes. No es mostra.
 
-    See `Chapter 5 <quoting.html>`__ for an in-depth explanation of
-    escaped characters.
+Mira :doc:`escapingsection` per més detalls sobre escapament de caràcters. Considera :doc:`quoting`
+per una explicació global d'aquest tema.
+
 
 Barra: /
 ========
 
-    **Filename path separator [forward slash].** Separates the
-    components of a filename (as in
-    ``          /home/bozo/projects/Makefile         `` ).
+La barra és el separador de carpetes en les especificacions del camí a un fitxer. El que es coneix
+com a *path*.
 
+Per exemple:
 
-    This is also the division `arithmetic operator <ops.html#AROPS1>`__
-    .
+.. code-block:: none
+
+    /home/usuari/traduccions/absguide/Makefile
+
+També es fa servir per indicar l'operador aritmètic de divisió.  Mira :doc:`ops` per més detalls.
 
 Tilde oberta: \`
 ================
+
+XXX TODO Per aquí
 
     **`command substitution <commandsub.html#COMMANDSUBREF>`__ .** The
     **\`command\`** construct makes available the output of **command**
@@ -246,25 +254,10 @@ Dos punts: :
 
 
 
-    Endless loop:
+    Bucle infinit
 
-
-    .. code-block:: sh
-
-        while :
-        do
-           operation-1
-           operation-2
-           ...
-           operation-n
-        done
-
-        # Same as:
-        #    while true
-        #    do
-        #      ...
-        #    done
-
+    .. literalinclude:: /_scripts/bucleinfinit.sh
+        :language: bash
 
 
     Placeholder in if/then test:
