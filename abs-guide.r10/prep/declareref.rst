@@ -1,6 +1,7 @@
 
-  9.2. Typing variables: **declare** or **typeset**
-==================================================
+######################################################
+XXX  9.2. Typing variables: **declare** or **typeset**
+######################################################
 
 The *declare* or *typeset* `builtins <internal.html#BUILTINREF>`__ ,
 which are exact synonyms, permit modifying the properties of variables.

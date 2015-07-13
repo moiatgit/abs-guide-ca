@@ -1,6 +1,7 @@
 
-  Appendix E. Exit Codes With Special Meanings
-=============================================
+#################################################
+XXX  Appendix E. Exit Codes With Special Meanings
+#################################################
 
 
 **Table E-1. *Reserved* Exit Codes**

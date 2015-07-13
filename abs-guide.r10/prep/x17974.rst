@@ -1,6 +1,7 @@
 
-  20.1. Using *exec*
-===================
+#######################
+XXX  20.1. Using *exec*
+#######################
 
 An **exec <filename** command redirects ``      stdin     `` to a file.
 From that point on, all ``      stdin     `` comes from that file,

@@ -1,6 +1,7 @@
 
-  24.2. Local Variables
-======================
+##########################
+XXX  24.2. Local Variables
+##########################
 
 
 ** What makes a variable *local* ?**

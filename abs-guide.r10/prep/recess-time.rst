@@ -1,6 +1,7 @@
 
-  Chapter 14. Recess Time
-========================
+############################
+XXX  Chapter 14. Recess Time
+############################
 
 *This bizarre little intermission gives the reader a chance to relax and
 maybe laugh a bit.*

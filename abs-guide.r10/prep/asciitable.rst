@@ -1,6 +1,7 @@
 
-  Appendix T. ASCII Table
-========================
+############################
+XXX  Appendix T. ASCII Table
+############################
 
 Traditionally, a book of this sort has an
 `ASCII <special-chars.html#ASCIIDEF>`__ Table appendix. This book does

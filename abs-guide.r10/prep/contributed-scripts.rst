@@ -1,6 +1,7 @@
 
-  Appendix A. Contributed Scripts
-================================
+####################################
+XXX  Appendix A. Contributed Scripts
+####################################
 
 These scripts, while not fitting into the text of this document, do
 illustrate some interesting shell programming techniques. Some are

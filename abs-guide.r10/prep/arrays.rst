@@ -1,6 +1,7 @@
 
-  Chapter 27. Arrays
-===================
+#######################
+XXX  Chapter 27. Arrays
+#######################
 
 Newer versions of Bash support one-dimensional arrays. Array elements
 may be initialized with the ``             variable[xx]           ``

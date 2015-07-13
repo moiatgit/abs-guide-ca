@@ -1,6 +1,7 @@
 
-  7.3. Other Comparison Operators
-================================
+####################################
+XXX  7.3. Other Comparison Operators
+####################################
 
 A *binary* comparison operator compares two variables or quantities.
 *Note that integer and string comparison use a different set of

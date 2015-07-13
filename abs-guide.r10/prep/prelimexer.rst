@@ -1,6 +1,7 @@
 
-  2.2. Preliminary Exercises
-===========================
+###############################
+XXX  2.2. Preliminary Exercises
+###############################
 
 #. System administrators often write scripts to automate common tasks.
    Give several instances where such scripts would be useful.

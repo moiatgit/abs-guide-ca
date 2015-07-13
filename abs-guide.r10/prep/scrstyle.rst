@@ -1,6 +1,7 @@
 
-  Chapter 35. Scripting With Style
-=================================
+#####################################
+XXX  Chapter 35. Scripting With Style
+#####################################
 
 Get into the habit of writing shell scripts in a structured and
 systematic manner. Even on-the-fly and "written on the back of an

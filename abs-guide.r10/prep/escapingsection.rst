@@ -1,6 +1,7 @@
 
-  5.2. Escaping
-==============
+##################
+XXX  5.2. Escaping
+##################
 
  *Escaping* is a method of quoting single characters. The escape ( \\ )
 preceding a character tells the shell to interpret that character

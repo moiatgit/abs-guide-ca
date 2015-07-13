@@ -1,6 +1,7 @@
 
-  29.2. ``      /proc     ``
-===========================
+###############################
+XXX  29.2. ``      /proc     ``
+###############################
 
 The ``      /proc     `` directory is actually a pseudo-filesystem. The
 files in ``      /proc     `` mirror currently running system and kernel

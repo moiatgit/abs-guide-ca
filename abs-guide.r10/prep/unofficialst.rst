@@ -1,6 +1,7 @@
 
-  35.1. Unofficial Shell Scripting Stylesheet
-============================================
+################################################
+XXX  35.1. Unofficial Shell Scripting Stylesheet
+################################################
 
 -  Comment your code. This makes it easier for others to understand (and
    appreciate), and easier for you to maintain.

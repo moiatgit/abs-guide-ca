@@ -1,6 +1,7 @@
 
-  37.1. Bash, version 2
-======================
+##########################
+XXX  37.1. Bash, version 2
+##########################
 
 The current version of *Bash* , the one you have running on your
 machine, is most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy.

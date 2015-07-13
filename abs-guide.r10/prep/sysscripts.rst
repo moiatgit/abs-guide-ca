@@ -1,6 +1,7 @@
 
-  17.1. Analyzing a System Script
-================================
+####################################
+XXX  17.1. Analyzing a System Script
+####################################
 
 Using our knowledge of administrative commands, let us examine a system
 script. One of the shortest and simplest to understand scripts is

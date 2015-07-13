@@ -1,6 +1,7 @@
 
-  Chapter 33. Options
-====================
+########################
+XXX  Chapter 33. Options
+########################
 
 Options are settings that change shell and/or script behavior.
 

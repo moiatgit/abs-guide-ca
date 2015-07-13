@@ -1,6 +1,7 @@
 
-  7.5. Testing Your Knowledge of Tests
-=====================================
+#########################################
+XXX  7.5. Testing Your Knowledge of Tests
+#########################################
 
 The systemwide ``      xinitrc     `` file can be used to launch the X
 server. This file contains quite a number of *if/then* tests. The

@@ -1,6 +1,7 @@
 
-  36.7. Assorted Tips
-====================
+########################
+XXX  36.7. Assorted Tips
+########################
 
 
   36.7.1. Ideas for more powerful scripts

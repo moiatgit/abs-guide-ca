@@ -1,6 +1,7 @@
 
-  7.2. File test operators
-=========================
+#############################
+XXX  7.2. File test operators
+#############################
 
 
 ** Returns true if...**

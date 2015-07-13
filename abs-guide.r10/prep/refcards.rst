@@ -1,6 +1,7 @@
 
-  Appendix B. Reference Cards
-============================
+################################
+XXX  Appendix B. Reference Cards
+################################
 
 The following reference cards provide a useful *summary* of certain
 scripting concepts. The foregoing text treats these matters in more

@@ -1,6 +1,7 @@
 
-  G.2. Bash Command-Line Options
-===============================
+###################################
+XXX  G.2. Bash Command-Line Options
+###################################
 
 *Bash* itself has a number of command-line options. Here are some of the
 more useful ones.

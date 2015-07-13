@@ -1,6 +1,7 @@
 
-  Appendix M. Sample ``      .bashrc     `` and ``      .bash_profile     `` Files
-=================================================================================
+#####################################################################################
+XXX  Appendix M. Sample ``      .bashrc     `` and ``      .bash_profile     `` Files
+#####################################################################################
 
 The ``      ~/.bashrc     `` file determines the behavior of interactive
 shells. A good look at this file can lead to a better understanding of

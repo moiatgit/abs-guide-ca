@@ -1,6 +1,7 @@
 
-  19.1. Here Strings
-===================
+#######################
+XXX  19.1. Here Strings
+#######################
 
     | A *here string* can be considered as a stripped-down form of a
     *here document* .

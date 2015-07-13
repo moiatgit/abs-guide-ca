@@ -1,6 +1,7 @@
 
-  36.2. Shell Wrappers
-=====================
+#########################
+XXX  36.2. Shell Wrappers
+#########################
 
 A *wrapper* is a shell script that embeds a system command or utility,
 that accepts and passes a set of parameters to that command. ` [1]

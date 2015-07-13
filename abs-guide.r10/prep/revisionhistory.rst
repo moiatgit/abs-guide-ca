@@ -1,6 +1,7 @@
 
-  Appendix P. Revision History
-=============================
+#################################
+XXX  Appendix P. Revision History
+#################################
 
 
 .. code:: SYNOPSIS

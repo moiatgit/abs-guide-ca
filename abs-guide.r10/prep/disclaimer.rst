@@ -1,6 +1,7 @@
 
-  38.6. Disclaimer
-=================
+#####################
+XXX  38.6. Disclaimer
+#####################
 
 (This is a variant of the standard `LDP <http://www.tldp.org>`__
 disclaimer.)

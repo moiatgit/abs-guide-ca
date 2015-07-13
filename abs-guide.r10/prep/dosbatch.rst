@@ -1,6 +1,7 @@
 
-  Appendix N. Converting DOS Batch Files to Shell Scripts
-========================================================
+############################################################
+XXX  Appendix N. Converting DOS Batch Files to Shell Scripts
+############################################################
 
 Quite a number of programmers learned scripting on a PC running DOS.
 Even the crippled DOS batch file language allowed writing some fairly

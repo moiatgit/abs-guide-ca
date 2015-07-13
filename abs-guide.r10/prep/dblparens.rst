@@ -1,6 +1,7 @@
 
-  8.3. The Double-Parentheses Construct
-======================================
+##########################################
+XXX  8.3. The Double-Parentheses Construct
+##########################################
 
 Similar to the `let <internal.html#LETREF>`__ command, the **(( ... ))**
 construct permits arithmetic expansion and evaluation. In its simplest

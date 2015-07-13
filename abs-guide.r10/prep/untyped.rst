@@ -1,6 +1,7 @@
 
-  4.3. Bash Variables Are Untyped
-================================
+####################################
+XXX  4.3. Bash Variables Are Untyped
+####################################
 
 Unlike many other programming languages, Bash does not segregate its
 variables by "type." Essentially, *Bash variables are character strings*

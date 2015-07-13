@@ -1,6 +1,7 @@
 
-  Chapter 10. Manipulating Variables
-===================================
+#######################################
+XXX  Chapter 10. Manipulating Variables
+#######################################
 
 
 

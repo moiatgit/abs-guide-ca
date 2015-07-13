@@ -1,6 +1,7 @@
 
-  C.1. Sed
-=========
+#############
+XXX  C.1. Sed
+#############
 
 *Sed* is a non-interactive ` [1]  <x23170.html#FTN.AEN23174>`__ **s**
 tream **ed** itor. It receives text input, whether from

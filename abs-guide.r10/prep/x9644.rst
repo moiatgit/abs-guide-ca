@@ -1,6 +1,7 @@
 
-  15.1. Job Control Commands
-===========================
+###############################
+XXX  15.1. Job Control Commands
+###############################
 
 Certain of the following job control commands take a *job identifier* as
 an argument. See the `table <x9644.html#JOBIDTABLE>`__ at end of the

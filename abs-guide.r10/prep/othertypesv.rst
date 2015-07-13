@@ -1,6 +1,7 @@
 
-  4.4. Special Variable Types
-============================
+################################
+XXX  4.4. Special Variable Types
+################################
 
 
  ``                 Local variables               ``

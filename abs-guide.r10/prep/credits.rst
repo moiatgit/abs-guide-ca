@@ -1,6 +1,7 @@
 
-  38.5. Credits
-==============
+##################
+XXX  38.5. Credits
+##################
 
 *Community participation made this project possible.* The author
 gratefully acknowledges that writing this book would have been

@@ -1,6 +1,7 @@
 
-  4.1. Variable Substitution
-===========================
+###############################
+XXX  4.1. Variable Substitution
+###############################
 
 The *name* of a variable is a placeholder for its *value* , the data it
 holds. Referencing (retrieving) its value is called *variable

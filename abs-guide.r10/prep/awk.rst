@@ -1,6 +1,7 @@
 
-  C.2. Awk
-=========
+#############
+XXX  C.2. Awk
+#############
 
 *Awk* ` [1]  <awk.html#FTN.AEN23443>`__ is a full-featured text
 processing language with a syntax reminiscent of *C* . While it

@@ -1,6 +1,7 @@
 
-  24.1. Complex Functions and Function Complexities
-==================================================
+######################################################
+XXX  24.1. Complex Functions and Function Complexities
+######################################################
 
 Functions may process arguments passed to them and return an `exit
 status <exit-status.html#EXITSTATUSREF>`__ to the script for further

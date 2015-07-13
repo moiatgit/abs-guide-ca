@@ -1,6 +1,7 @@
 
-  16.7. Terminal Control Commands
-================================
+####################################
+XXX  16.7. Terminal Control Commands
+####################################
 
 
 ** Command affecting the console or terminal**

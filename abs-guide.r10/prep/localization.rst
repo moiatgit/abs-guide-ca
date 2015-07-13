@@ -1,6 +1,7 @@
 
-  Appendix K. Localization
-=========================
+#############################
+XXX  Appendix K. Localization
+#############################
 
 Localization is an undocumented Bash feature.
 

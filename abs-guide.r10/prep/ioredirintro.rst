@@ -1,6 +1,7 @@
 
-  Appendix F. A Detailed Introduction to I/O and I/O Redirection
-===============================================================
+###################################################################
+XXX  Appendix F. A Detailed Introduction to I/O and I/O Redirection
+###################################################################
 
 *written by StÃ©phane Chazelas, and revised by the document author*
 

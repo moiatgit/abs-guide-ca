@@ -1,6 +1,7 @@
 
-  Chapter 3. Special Characters
-==============================
+##################################
+XXX  Chapter 3. Special Characters
+##################################
 
 What makes a character *special* ? If it has a meaning beyond its
 *literal meaning* , a `meta-meaning <x17129.html#METAMEANINGREF>`__ ,

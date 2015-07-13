@@ -1,6 +1,7 @@
 
-  36.5.  "Colorizing"  Scripts
-===========================
+#################################
+XXX  36.5.  "Colorizing"  Scripts
+#################################
 
 The ANSI ` [1]  <colorizing.html#FTN.AEN20259>`__ escape sequences set
 screen attributes, such as bold text, and color of foreground and

@@ -1,6 +1,7 @@
 
-  Index
-======
+##########
+XXX  Index
+##########
 
 This index / glossary / quick-reference lists many of the important
 topics covered in the text. Terms are arranged in *approximate* ASCII

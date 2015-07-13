@@ -1,6 +1,7 @@
 
-  Chapter 26. List Constructs
-============================
+################################
+XXX  Chapter 26. List Constructs
+################################
 
 The *and list* and *or list* constructs provide a means of processing a
 number of commands consecutively. These can effectively replace complex

@@ -1,6 +1,7 @@
 
-  37.2. Bash, version 3
-======================
+##########################
+XXX  37.2. Bash, version 3
+##########################
 
 On July 27, 2004, Chet Ramey released version 3 of Bash. This update
 fixed quite a number of bugs and added new features.

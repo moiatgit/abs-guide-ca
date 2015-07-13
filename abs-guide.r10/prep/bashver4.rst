@@ -1,6 +1,7 @@
 
-  37.3. Bash, version 4
-======================
+##########################
+XXX  37.3. Bash, version 4
+##########################
 
 Chet Ramey announced Version 4 of Bash on the 20th of February, 2009.
 This release has a number of significant new features, as well as some

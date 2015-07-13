@@ -1,6 +1,7 @@
 
-  Appendix J. An Introduction to Programmable Completion
-=======================================================
+###########################################################
+XXX  Appendix J. An Introduction to Programmable Completion
+###########################################################
 
 The *programmable completion* feature in Bash permits typing a partial
 command, then pressing the **[Tab]** key to auto-complete the command

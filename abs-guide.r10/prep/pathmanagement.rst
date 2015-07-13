@@ -1,6 +1,7 @@
 
-  Appendix D. Parsing and Managing Pathnames
-===========================================
+###############################################
+XXX  Appendix D. Parsing and Managing Pathnames
+###############################################
 
 Emmanual Rouat contributed the following example of parsing and
 transforming *filenames* and, in particular,

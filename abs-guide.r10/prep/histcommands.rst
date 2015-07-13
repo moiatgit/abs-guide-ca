@@ -1,6 +1,7 @@
 
-  Appendix L. History Commands
-=============================
+#################################
+XXX  Appendix L. History Commands
+#################################
 
 The Bash shell provides command-line tools for editing and manipulating
 a user's *command history* . This is primarily a convenience, a means of

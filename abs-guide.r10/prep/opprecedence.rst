@@ -1,6 +1,7 @@
 
-  8.4. Operator Precedence
-=========================
+#############################
+XXX  8.4. Operator Precedence
+#############################
 
 In a script, operations execute in order of *precedence* : the higher
 precedence operations execute *before* the lower precedence ones. ` [1]

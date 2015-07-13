@@ -1,6 +1,7 @@
 
-  Chapter 23. Process Substitution
-=================================
+#####################################
+XXX  Chapter 23. Process Substitution
+#####################################
 
  `Piping <special-chars.html#PIPEREF>`__ the ``      stdout     `` of a
 command into the ``      stdin     `` of another is a powerful

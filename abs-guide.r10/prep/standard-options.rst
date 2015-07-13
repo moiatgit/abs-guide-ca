@@ -1,6 +1,7 @@
 
-  G.1. Standard Command-Line Options
-===================================
+#######################################
+XXX  G.1. Standard Command-Line Options
+#######################################
 
 Over time, there has evolved a loose standard for the meanings of
 command-line option flags. The GNU utilities conform more closely to

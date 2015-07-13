@@ -1,6 +1,7 @@
 
-  Chapter 25. Aliases
-====================
+########################
+XXX  Chapter 25. Aliases
+########################
 
 A Bash *alias* is essentially nothing more than a keyboard shortcut, an
 abbreviation, a means of avoiding typing a long command sequence. If,

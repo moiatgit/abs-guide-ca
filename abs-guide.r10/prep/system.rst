@@ -1,6 +1,7 @@
 
-  Chapter 17. System and Administrative Commands
-===============================================
+###################################################
+XXX  Chapter 17. System and Administrative Commands
+###################################################
 
 The startup and shutdown scripts in ``      /etc/rc.d     `` illustrate
 the uses (and usefulness) of many of these comands. These are usually

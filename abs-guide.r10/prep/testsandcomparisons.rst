@@ -1,6 +1,7 @@
 
-  36.3. Tests and Comparisons: Alternatives
-==========================================
+##############################################
+XXX  36.3. Tests and Comparisons: Alternatives
+##############################################
 
 For tests, the `[[ ]] <testconstructs.html#DBLBRACKETS>`__ construct may
 be more appropriate than ``             [       ]           `` .

@@ -1,6 +1,7 @@
 
-  11.2. Nested Loops
-===================
+#######################
+XXX  11.2. Nested Loops
+#######################
 
 A *nested loop* is a loop within a loop, an inner loop within the body
 of an outer one. How this works is that the first pass of the outer loop

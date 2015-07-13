@@ -1,6 +1,7 @@
 
-  10.1. Manipulating Strings
-===========================
+###############################
+XXX  10.1. Manipulating Strings
+###############################
 
 Bash supports a surprising number of string manipulation operations.
 Unfortunately, these tools lack a unified focus. Some are a subset of

@@ -1,6 +1,7 @@
 
-  Appendix I. Important System Directories
-=========================================
+#############################################
+XXX  Appendix I. Important System Directories
+#############################################
 
 Sysadmins and anyone else writing administrative scripts should be
 intimately familiar with the following system directories.

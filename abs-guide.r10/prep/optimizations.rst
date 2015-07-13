@@ -1,6 +1,7 @@
 
-  36.6. Optimizations
-====================
+########################
+XXX  36.6. Optimizations
+########################
 
 Most shell scripts are quick 'n dirty solutions to non-complex problems.
 As such, optimizing them for speed is not much of an issue. Consider the

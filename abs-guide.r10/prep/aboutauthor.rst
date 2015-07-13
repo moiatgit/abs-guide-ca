@@ -1,6 +1,7 @@
 
-  38.2. About the Author
-=======================
+###########################
+XXX  38.2. About the Author
+###########################
 
  Who is this guy anyhow?
  The author claims no credentials or special qualifications, ` [1]

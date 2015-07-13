@@ -1,6 +1,7 @@
 
-  O.1. Analyzing Scripts
-=======================
+###########################
+XXX  O.1. Analyzing Scripts
+###########################
 
 Examine the following script. Run it, then explain what it does.
 Annotate the script and rewrite it in a more compact and elegant manner.

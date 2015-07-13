@@ -1,6 +1,7 @@
 
-  8.2. Numerical Constants
-=========================
+#############################
+XXX  8.2. Numerical Constants
+#############################
 
  A shell script interprets a number as decimal (base 10), unless that
 number has a special prefix or notation. A number preceded by a

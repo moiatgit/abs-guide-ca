@@ -1,6 +1,7 @@
 
-  Appendix Q. Download and Mirror Sites
-======================================
+##########################################
+XXX  Appendix Q. Download and Mirror Sites
+##########################################
 
 The latest update of this document, as an archived,
 `bzip2-ed <filearchiv.html#BZIPREF>`__ "tarball" including both the SGML

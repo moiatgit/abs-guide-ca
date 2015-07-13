@@ -1,6 +1,7 @@
 
-  Chapter 13. Arithmetic Expansion
-=================================
+#####################################
+XXX  Chapter 13. Arithmetic Expansion
+#####################################
 
  Arithmetic expansion provides a powerful tool for performing (integer)
 arithmetic operations in scripts. Translating a string into a numerical

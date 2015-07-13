@@ -1,6 +1,7 @@
 
-  36.4. Recursion: a script calling itself
-=========================================
+#############################################
+XXX  36.4. Recursion: a script calling itself
+#############################################
 
 Can a script `recursively <localvar.html#RECURSIONREF>`__ call itself?
 Indeed.

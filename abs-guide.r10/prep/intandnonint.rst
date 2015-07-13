@@ -1,6 +1,7 @@
 
-  36.1. Interactive and non-interactive shells and scripts
-=========================================================
+#############################################################
+XXX  36.1. Interactive and non-interactive shells and scripts
+#############################################################
 
 An *interactive* shell reads commands from user input on a
 ``      tty     `` . Among other things, such a shell reads startup

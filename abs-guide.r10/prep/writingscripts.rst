@@ -1,6 +1,7 @@
 
-  O.2. Writing Scripts
-=====================
+#########################
+XXX  O.2. Writing Scripts
+#########################
 
 Write a script to carry out each of the following tasks.
 

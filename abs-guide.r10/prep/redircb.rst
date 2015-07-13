@@ -1,6 +1,7 @@
 
-  20.2. Redirecting Code Blocks
-==============================
+##################################
+XXX  20.2. Redirecting Code Blocks
+##################################
 
  Blocks of code, such as `while <loops1.html#WHILELOOPREF>`__ ,
 `until <loops1.html#UNTILLOOPREF>`__ , and

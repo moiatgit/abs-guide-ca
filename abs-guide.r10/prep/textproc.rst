@@ -1,6 +1,7 @@
 
-  16.4. Text Processing Commands
-===============================
+###################################
+XXX  16.4. Text Processing Commands
+###################################
 
 
 ** Commands affecting text and text files**

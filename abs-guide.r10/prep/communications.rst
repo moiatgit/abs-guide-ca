@@ -1,6 +1,7 @@
 
-  16.6. Communications Commands
-==============================
+##################################
+XXX  16.6. Communications Commands
+##################################
 
 Certain of the following commands find use in network data transfer and
 analysis, as well as in `chasing
