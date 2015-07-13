@@ -67,7 +67,7 @@ programa [#elprimer]_.
 
 Considera les següents capçaleres:
 
-.. code:: bash
+.. code-block:: sh
 
     #!/bin/sh
     #!/bin/bash

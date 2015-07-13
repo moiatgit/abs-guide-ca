@@ -21,7 +21,7 @@ restrictions).
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # numbers.sh: Representation of numbers in different bases.

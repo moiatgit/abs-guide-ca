@@ -61,7 +61,7 @@ and `Regular Expressions <regexp.html#REGEXREF>`__ ).
 
    <div>
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ ls -l [Vv]*
     -rw-rw-r--    1 bozo  bozo       324 Apr  2 15:05 VIEWDATA.BAT
@@ -112,7 +112,7 @@ program expand it.
 
    <div>
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ grep '[Ff]irst' *.txt
     file1.txt:This is the first line of file1.txt.
@@ -136,7 +136,7 @@ for newlines.
 
    <div>
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo $(ls -l)
     total 8 -rw-rw-r-- 1 bo bo 13 Aug 21 12:57 t.sh -rw-rw-r-- 1 bo bo 78 Aug 21 12:57 u.sh

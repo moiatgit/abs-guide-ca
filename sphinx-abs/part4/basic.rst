@@ -25,7 +25,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l
         -rw-rw-r-- 1 bozo bozo 0 Sep 14 18:44 chapter10.txt
@@ -72,7 +72,7 @@ XXX  16.1. Basic Commands
     non-existent file.
 
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ ls abc         |
     |     ls: abc: No such fil |
@@ -88,7 +88,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls abc
         ls: abc: No such file or directory
@@ -101,7 +101,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls abc
         ls: abc: No such file or directory
@@ -133,7 +133,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex40.sh (burn-cd.sh)
@@ -207,7 +207,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Uses of 'cat'
         cat filename                          # Lists the file.
@@ -248,7 +248,7 @@ XXX  16.1. Basic Commands
     the file.
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cat filename | tr a- |
     | z A-Z                    |
@@ -266,7 +266,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat filename | tr a-z A-Z
 
@@ -277,7 +277,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat filename | tr a-z A-Z
 
@@ -309,7 +309,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat file1.txt
         This is line 1.
@@ -359,7 +359,7 @@ XXX  16.1. Basic Commands
     recursive flags.
 
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cp -u source_dir/* d |
     | est_dir                  |
@@ -375,7 +375,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cp -u source_dir/* dest_dir
         #  "Synchronize" dest_dir to source_dir
@@ -385,7 +385,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cp -u source_dir/* dest_dir
         #  "Synchronize" dest_dir to source_dir
@@ -429,7 +429,7 @@ XXX  16.1. Basic Commands
     subdirectory of the destination directory.
 
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ mv source_dire |
     | ctory target_directory   |
@@ -448,7 +448,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ mv source_directory target_directory
 
@@ -461,7 +461,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ mv source_directory target_directory
 
@@ -502,7 +502,7 @@ XXX  16.1. Basic Commands
     *option* .
 
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ rm -badname    |
     |     rm: invalid option - |
@@ -516,7 +516,7 @@ XXX  16.1. Basic Commands
     *end-of-options* flag).
 
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ rm -- -badname |
 
@@ -526,7 +526,7 @@ XXX  16.1. Basic Commands
     ``            dot-slash           `` .
 
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ rm ./-badname  |
 
@@ -536,7 +536,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rm -badname
         rm: invalid option -- b
@@ -546,7 +546,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rm -- -badname
 
@@ -554,7 +554,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rm ./-badname
 
@@ -562,7 +562,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rm -badname
         rm: invalid option -- b
@@ -572,7 +572,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rm -- -badname
 
@@ -580,7 +580,7 @@ XXX  16.1. Basic Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ rm ./-badname
 
@@ -643,7 +643,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         chmod +x filename
         # Makes "filename" executable for all users.
@@ -665,7 +665,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         chmod 644 filename
         #  Makes "filename" readable/writable to owner, readable to others
@@ -691,7 +691,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         chmod 1777 directory-name
         #  Gives everyone read, write, and execute permission in directory,
@@ -743,7 +743,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         root# chattr +i file1.txt
 
@@ -895,7 +895,7 @@ XXX  16.1. Basic Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # hello.sh: Saying "hello" or "goodbye"

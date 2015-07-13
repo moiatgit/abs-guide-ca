@@ -19,7 +19,7 @@ XXX 16.7. Terminal Control Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ tput longname
         xterm terminal emulator (X Window System)
@@ -71,7 +71,7 @@ XXX 16.7. Terminal Control Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ infocmp
         #       Reconstructed via infocmp from file:
@@ -115,7 +115,7 @@ XXX 16.7. Terminal Control Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ resize
         set noglob;

@@ -99,7 +99,7 @@ A l'inici de la línia, el punt equival a la comanda :ref:`internal_dotcommand`.
 Quan el nom d'un fitxer o carpeta comença amb punt, es interpretat com a fitxer *ocult* i, per
 exemple, no serà llistat per defecte per la comanda ``ls``.
 
-.. code:: sh
+.. code-block:: sh
 
     bash$ touch .fitxerocult
     bash$ ls -l
@@ -121,7 +121,7 @@ exemple, no serà llistat per defecte per la comanda ``ls``.
 En el cas del nom d'una carpeta, un punt sol representa el directori actual, mentre que dos punts
 denoten la carpeta superior.
 
-.. code:: sh
+.. code-block:: sh
 
     bash$ pwd
     /home/usuari/projects
@@ -137,7 +137,7 @@ denoten la carpeta superior.
 El punt apareix sovint com la destinació (carpeta) d'una comanda de moviment o còpia de fitxers. En
 aquest cas, s'indica que la destinació és la carpeta actual:
 
-.. code:: sh
+.. code-block:: sh
 
     bash$ cp /home/usuari/feina/brossa/* .
 
@@ -235,7 +235,7 @@ Dos punts: :
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         :
         echo $?   # 0
@@ -245,7 +245,7 @@ Dos punts: :
     Endless loop:
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         while :
         do
@@ -266,7 +266,7 @@ Dos punts: :
     Placeholder in if/then test:
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         if condition
         then :   # Do nothing and branch ahead
@@ -281,7 +281,7 @@ Dos punts: :
     parameters <parameter-substitution.html#DEFPARAM>`__ .
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         : ${username=`whoami`}
         # ${username=`whoami`}   Gives an error without the leading :
@@ -300,7 +300,7 @@ Dos punts: :
     `Example 10-7 <parameter-substitution.html#EX6>`__ ).
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         : ${HOSTNAME?} ${USER?} ${MAIL?}
         #  Prints error message
@@ -317,7 +317,7 @@ Dos punts: :
     previously exist, creates it.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         : > data.xxx   # File "data.xxx" now empty.
 
@@ -349,7 +349,7 @@ Dos punts: :
     However, this is not the case with : .
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         : This is a comment that generates an error, ( if [ $x -eq 3] ).
 
@@ -361,7 +361,7 @@ Dos punts: :
     and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ echo $PATH
         /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
@@ -372,7 +372,7 @@ Dos punts: :
     name <functions.html#FSTRANGEREF>`__ .
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         :()
         {
@@ -395,7 +395,7 @@ Dos punts: :
     A *colon* can serve as a placeholder in an otherwise empty function.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         not_empty ()
         {
@@ -433,7 +433,7 @@ Asterisc: \*
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ echo *
         abs-book.sgml add-drive.sh agram.sh alias.sh
@@ -471,7 +471,7 @@ Interrogant: ?
     ``         result-if-false        ``
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         (( var0 = var1<98?9:21 ))
         #                ^ ^
@@ -505,7 +505,7 @@ Dollar: $
     variable).**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         var1=5
         var2=23skidoo
@@ -567,7 +567,7 @@ Parèntesis: ()
     **command group.**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         (a=hello; echo $a)
 
@@ -588,7 +588,7 @@ Parèntesis: ()
     process <subshells.html#PARVIS>`__ , the subshell.
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     a=123                |
     |     ( a=321; )           |
@@ -602,7 +602,7 @@ Parèntesis: ()
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         a=123
         ( a=321; )
@@ -611,7 +611,7 @@ Parèntesis: ()
         # "a" within parentheses acts like a local variable.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         a=123
         ( a=321; )
@@ -626,7 +626,7 @@ Parèntesis: ()
     **array initialization.**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         Array=(element1 element2 element3)
 
@@ -639,7 +639,7 @@ Claus: {}
     **Brace expansion.**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         echo \"{These,words,are,quoted}\"   # " prefix and suffix
         # "These" "words" "are" "quoted"
@@ -679,7 +679,7 @@ Claus: {}
     **Extended Brace expansion.**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
         # Echoes characters between a and z.
@@ -709,7 +709,7 @@ Claus: {}
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ { local a;
                   a=123; }
@@ -720,7 +720,7 @@ Claus: {}
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         a=123
         { a=321; }
@@ -737,7 +737,7 @@ Claus: {}
     **Example 3-1. Code blocks and I/O redirection**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         #!/bin/bash
         # Reading lines in /etc/fstab.
@@ -768,7 +768,7 @@ Claus: {}
     **Example 3-2. Saving the output of a code block to a file**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         #!/bin/bash
         # rpm-check.sh
@@ -839,7 +839,7 @@ Claus: {}
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         ls . | xargs -i -t cp ./{} $1
         #            ^^         ^^
@@ -908,7 +908,7 @@ Claudàtors: [ ]
     off the numbering of each element of that array.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         Array[1]=slot_1
         echo ${Array[1]}
@@ -932,7 +932,7 @@ Claudàtors: [ ]
     Evaluate integer expression between $[ ] .
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         a=3
         b=7
@@ -978,7 +978,7 @@ Claudàtors: [ ]
     For example, let us test whether a certain command exists.
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     bash$ type bogus_com |
     | mand &>/dev/null         |
@@ -994,7 +994,7 @@ Claudàtors: [ ]
     Or in a script:
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     command_test () { ty |
     | pe "$1" &>/dev/null; }   |
@@ -1015,7 +1015,7 @@ Claudàtors: [ ]
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ type bogus_command &>/dev/null
 
@@ -1026,7 +1026,7 @@ Claudàtors: [ ]
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         command_test () { type "$1" &>/dev/null; }
         #                                      ^
@@ -1039,7 +1039,7 @@ Claudàtors: [ ]
         command_test $cmd; echo $?   # 1
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ type bogus_command &>/dev/null
 
@@ -1050,7 +1050,7 @@ Claudàtors: [ ]
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         command_test () { type "$1" &>/dev/null; }
         #                                      ^
@@ -1116,7 +1116,7 @@ Signes de menor i major: < >
     **`ASCII comparison <comparison-ops.html#LTREF>`__ .**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         veg1=carrots
         veg2=tomatoes
@@ -1155,7 +1155,7 @@ Barra vertical o *pipe*: \|
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         echo ls -l | sh
         #  Passes the output of "echo ls -l" to the shell,
@@ -1190,7 +1190,7 @@ Barra vertical o *pipe*: \|
      The output of a command or commands may be piped to a script.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         #!/bin/bash
         # uppercase.sh : Changes input to uppercase.
@@ -1206,7 +1206,7 @@ Barra vertical o *pipe*: \|
     Now, let us pipe the output of **ls -l** to this script.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ ls -l | ./uppercase.sh
         -RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
@@ -1226,7 +1226,7 @@ Barra vertical o *pipe*: \|
     not behave as expected.
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     cat file1 file2 | ls |
     |  -l | sort               |
@@ -1240,7 +1240,7 @@ Barra vertical o *pipe*: \|
     therefore cannot alter script variables.
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     variable="initial_va |
     | lue"                     |
@@ -1259,26 +1259,26 @@ Barra vertical o *pipe*: \|
     `signal <debugging.html#SIGNALD>`__ .
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         variable="initial_value"
         echo "new_value" | read variable
         echo "variable = $variable"     # variable = initial_value
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         variable="initial_value"
         echo "new_value" | read variable
@@ -1310,7 +1310,7 @@ Símbol d'unió o *ampersand*: &
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ sleep 10 &
         [1] 850
@@ -1326,7 +1326,7 @@ Símbol d'unió o *ampersand*: &
     **Example 3-3. Running a loop in the background**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         #!/bin/bash
         # background-loop.sh
@@ -1409,7 +1409,7 @@ Guió: -
     ``                   sort -dfu $filename                 ``
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         if [ $file1 -ot $file2 ]
         then #      ^
@@ -1450,7 +1450,7 @@ Guió: -
     with a dash* .
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     bash$ ls -l          |
     |     -rw-r--r-- 1 bozo bo |
@@ -1466,7 +1466,7 @@ Guió: -
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ ls -l
         -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
@@ -1478,7 +1478,7 @@ Guió: -
         total 0
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ ls -l
         -rw-r--r-- 1 bozo bozo 0 Nov 25 12:29 -badname
@@ -1505,7 +1505,7 @@ Guió: -
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ cat -
         abc
@@ -1523,7 +1523,7 @@ Guió: -
     have real-world applications?
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
         # Move entire file tree from one directory to another
@@ -1570,7 +1570,7 @@ Guió: -
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
         #  --uncompress tar file--      | --then pass it to "tar"--
@@ -1585,7 +1585,7 @@ Guió: -
     ``         stdout        `` , such as **tar** , **cat** , etc.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ echo "whatever" | cat -
         whatever
@@ -1600,7 +1600,7 @@ Guió: -
     method of using a file-oriented utility as a filter in a pipe.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ file
         Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...
@@ -1615,7 +1615,7 @@ Guió: -
     user input.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ file -
         abc
@@ -1650,7 +1650,7 @@ Guió: -
     **Example 3-4. Backup of all files changed in last day**
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1705,7 +1705,7 @@ Guió: -
     likewise create problems.
 
 
-    | .. code:: sh
+    | .. code-block:: sh
     |                          |
     |     var="-n"             |
     |     echo $var            |
@@ -1716,14 +1716,14 @@ Guió: -
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         var="-n"
         echo $var
         # Has the effect of "echo -n", and outputs nothing.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         var="-n"
         echo $var
@@ -1763,7 +1763,7 @@ Igual: =
     **Equals.** `Assignment operator <varassignment.html#EQREF>`__
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         a=28
         echo $a   # 28
@@ -1805,7 +1805,7 @@ Percentatge: %
 
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         let "z = 5 % 3"
         echo $z  # 2
@@ -1826,7 +1826,7 @@ Tilde: ~
     directory, and **ls ~/** lists the contents of it.
 
 
-    .. code:: sh
+    .. code-block:: sh
 
         bash$ echo ~bozo
         /home/bozo
@@ -1951,7 +1951,7 @@ Caràcters de control
        while backspacing.
 
 
-       .. code:: sh
+       .. code-block:: sh
 
            #!/bin/bash
            # Embedding Ctl-H in a string.
@@ -2025,7 +2025,7 @@ Caràcters de control
        ``                       Carriage return                     `` .
 
 
-       .. code:: sh
+       .. code-block:: sh
 
            #!/bin/bash
            # Thank you, Lee Maschmeyer, for this example.
@@ -2120,7 +2120,7 @@ Caràcters de control
        equivalent:
 
 
-       .. code:: sh
+       .. code-block:: sh
 
            echo -e '\x0a'
            echo <Ctl-V><Ctl-J>
@@ -2250,7 +2250,7 @@ The shell does the *brace expansion* . The command itself acts upon the
 Exception: a code block in braces as part of a pipe *may* run as a
 `subshell <subshells.html#SUBSHELLSREF>`__ .
 
- .. code:: sh
+ .. code-block:: sh
 
      ls | { read firstlin
  e; read secondline; }
@@ -2269,7 +2269,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
      # Thanks, S.C.
 
 
-.. code:: sh
+.. code-block:: sh
 
     ls | { read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,
@@ -2279,7 +2279,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
     # Thanks, S.C.
 
 
-.. code:: sh
+.. code-block:: sh
 
     ls | { read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,

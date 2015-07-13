@@ -10,7 +10,7 @@ may be nested. The net result is equivalent to using the
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     a=3
 

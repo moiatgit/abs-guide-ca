@@ -20,7 +20,7 @@ presents itself as a single word, even if it contains
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     List="one two three"
 
@@ -54,7 +54,7 @@ A more elaborate example:
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     variable1="a variable containing five words"
     COMMAND This is $variable1    # Executes COMMAND with 7 arguments:
@@ -119,7 +119,7 @@ necessary only when word splitting or preservation of
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # weirdvars.sh: Echoing weird variables.
@@ -205,7 +205,7 @@ within single quotes, trying to enclose a single quote within single
 quotes will not yield the expected result.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     echo "Why can't I wr |
 | ite 's between single qu |
@@ -236,7 +236,7 @@ quotes will not yield the expected result.
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo "Why can't I write 's between single quotes"
 
@@ -253,7 +253,7 @@ quotes will not yield the expected result.
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo "Why can't I write 's between single quotes"
 
@@ -301,7 +301,7 @@ Of more concern is the *apparently* inconsistent behavior of
 following an **echo -e** command.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: SCREEN         |
+| .. code-block:: sh
 |                          |
 |     bash$ echo hello\!   |
 |     hello!               |
@@ -343,7 +343,7 @@ Daniel Barclay for explaining it.)
 
    </p>
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo hello\!
     hello!
@@ -376,7 +376,7 @@ Daniel Barclay for explaining it.)
 
    </p>
 
-.. code:: SCREEN
+.. code-block:: sh
 
     bash$ echo hello\!
     hello!

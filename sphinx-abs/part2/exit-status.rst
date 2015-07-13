@@ -55,7 +55,7 @@ status of the script is the exit status of the last command executed in
 the script (previous to the **exit** ).
 
 
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -75,7 +75,7 @@ The equivalent of a bare **exit** is **exit $?** or even just omitting
 the **exit** .
 
 
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -90,7 +90,7 @@ the **exit** .
 |                          |
 |     exit $?              |
 
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
 |                          |
@@ -107,7 +107,7 @@ the **exit** .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -125,7 +125,7 @@ the **exit** .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -143,7 +143,7 @@ the **exit** .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -159,7 +159,7 @@ the **exit** .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -177,7 +177,7 @@ the **exit** .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -195,7 +195,7 @@ the **exit** .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -242,7 +242,7 @@ success or an integer in the range 1 - 255 on error.
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -302,7 +302,7 @@ status <exit-status.html#EXITSTATUSREF>`__ .
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     true    # The "true" builtin.
     echo "exit status of \"true\" = $?"     # 0
@@ -349,7 +349,7 @@ status <exit-status.html#EXITSTATUSREF>`__ .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     true    # The "true" builtin.
     echo "exit status of \"true\" = $?"     # 0
@@ -384,7 +384,7 @@ status <exit-status.html#EXITSTATUSREF>`__ .
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     true    # The "true" builtin.
     echo "exit status of \"true\" = $?"     # 0

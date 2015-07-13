@@ -27,7 +27,7 @@ Exemple 1. A script that spawns multiple instances of itself
 ------------------------------------------------------------
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # spawn.sh
@@ -70,7 +70,7 @@ usually *will* fork a subprocess.
 
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # spawn.sh
@@ -105,7 +105,7 @@ usually *will* fork a subprocess.
     #  Why or why not?
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # spawn.sh
@@ -147,7 +147,7 @@ is not the same as ``      /bin/echo     `` , although their behavior is
 almost identical.
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -175,7 +175,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     (see `Example 4-1 <varsubn.html#EX9>`__ ).
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo Hello
         echo $a
@@ -195,7 +195,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
     An **echo** can be used to feed a sequence of commands down a pipe.
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     if echo "$VAR" | gre |
     | p -q txt   # if [[ $VAR  |
@@ -208,7 +208,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
         then
@@ -216,7 +216,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         fi
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
         then
@@ -255,7 +255,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     separated by spaces.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l /usr/share/apps/kjezz/sounds
         -rw-r--r--    1 root     root         1407 Nov  7  2000 reflect.au
@@ -274,7 +274,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `echoed <internal.html#ECHOREF>`__ character string?
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Embedding a linefeed?
         echo "Why doesn't this string \n split on two lines?"
@@ -332,7 +332,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``            /bin/echo           `` , although its behavior is
     similar.
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ type -a echo   |
     |     echo is a shell buil |
@@ -342,7 +342,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type -a echo
         echo is a shell builtin
@@ -350,7 +350,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type -a echo
         echo is a shell builtin
@@ -389,7 +389,7 @@ Exemple 2. *printf* in action
 -----------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # printf demo
@@ -439,7 +439,7 @@ Exemple 2. *printf* in action
     Formatting error messages is a useful application of **printf**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         E_BADDIR=85
 
@@ -472,7 +472,7 @@ Exemple 3. Variable assignment, using *read*
 --------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # "Reading" variables.
@@ -509,7 +509,7 @@ Exemple 4. What happens when *read* has no variable
 ---------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # read-novar.sh
@@ -575,7 +575,7 @@ Exemple 5. Multi-line input to *read*
 -------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -617,7 +617,7 @@ Exemple 5. Multi-line input to *read*
     **ENTER** .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Read a keypress without hitting ENTER.
 
@@ -640,7 +640,7 @@ Exemple 6. Detecting the arrow keys
 -----------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # arrow-detect.sh: Detects the arrow keys, and a few more.
@@ -803,7 +803,7 @@ Exemple 6. Detecting the arrow keys
     redirection <io-redirection.html#IOREDIRREF>`__**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -877,7 +877,7 @@ Exemple 6. Detecting the arrow keys
      Yet, piping the output of `cat <basic.html#CATREF>`__ *seems* to
     work.
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cat file1 file2 |    |
     |     while read line      |
@@ -893,7 +893,7 @@ Exemple 7. Problems reading from a pipe
 ---------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # readpipe.sh
@@ -947,7 +947,7 @@ Exemple 7. Problems reading from a pipe
     output of `find <moreadv.html#FINDREF>`__ to a *while read*
     construct.
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     find $1 \( -name "*$ |
     | 2" -o -name ".*$2" \) -p |
@@ -957,7 +957,7 @@ Exemple 7. Problems reading from a pipe
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat file1 file2 |
         while read line
@@ -966,7 +966,7 @@ Exemple 7. Problems reading from a pipe
         done
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # readpipe.sh
@@ -1013,14 +1013,14 @@ Exemple 7. Problems reading from a pipe
         but its value does not persist outside the loop.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find $1 \( -name "*$2" -o -name ".*$2" \) -print |
         while read f; do
         . . .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat file1 file2 |
         while read line
@@ -1029,7 +1029,7 @@ Exemple 7. Problems reading from a pipe
         done
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/sh
         # readpipe.sh
@@ -1076,7 +1076,7 @@ Exemple 7. Problems reading from a pipe
         but its value does not persist outside the loop.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find $1 \( -name "*$2" -o -name ".*$2" \) -print |
         while read f; do
@@ -1106,7 +1106,7 @@ Exemple 7. Problems reading from a pipe
     directory.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
 
@@ -1128,7 +1128,7 @@ Exemple 7. Problems reading from a pipe
     The **cd** command does not function as expected when presented with
     two forward slashes.
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ cd //          |
     |     bash$ pwd            |
@@ -1140,7 +1140,7 @@ Exemple 7. Problems reading from a pipe
     is a problem both from the command-line and in a script.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cd //
         bash$ pwd
@@ -1148,7 +1148,7 @@ Exemple 7. Problems reading from a pipe
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cd //
         bash$ pwd
@@ -1197,7 +1197,7 @@ Exemple 8. Changing the current working directory
 -------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1244,7 +1244,7 @@ Exemple 9. Letting *let* do arithmetic.
 ---------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1306,7 +1306,7 @@ Exemple 9. Letting *let* do arithmetic.
     The *let* command can, in certain contexts, return a surprising
     `exit status <exit-status.html#EXITSTATUSREF>`__ .
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     # Evgeniy Ivanov poi |
     | nts out:                 |
@@ -1351,7 +1351,7 @@ Exemple 9. Letting *let* do arithmetic.
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Evgeniy Ivanov points out:
 
@@ -1381,7 +1381,7 @@ Exemple 9. Letting *let* do arithmetic.
         #  let returns 0 otherwise." ['help let']
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Evgeniy Ivanov points out:
 
@@ -1432,7 +1432,7 @@ Exemple 9. Letting *let* do arithmetic.
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ command_string="ps ax"
         bash$ process="ps ax"
@@ -1447,7 +1447,7 @@ Exemple 9. Letting *let* do arithmetic.
     arguments.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         a='$b'
         b='$c'
@@ -1469,7 +1469,7 @@ Exemple 10. Showing the effect of *eval*
 ----------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Exercising "eval" ...
@@ -1520,7 +1520,7 @@ Exemple 11. Using *eval* to select among variables
 --------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # arr-choice.sh
@@ -1566,7 +1566,7 @@ Exemple 12. *Echoing* the *command-line parameters*
 ---------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # echo-params.sh
@@ -1616,7 +1616,7 @@ Exemple 13. Forcing a log-off
 -----------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Killing ppp to force a log-off.
@@ -1662,7 +1662,7 @@ Exemple 14. A version of *rot13*
 --------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # A version of "rot13" using 'eval'.
@@ -1697,7 +1697,7 @@ Exemple 14. A version of *rot13*
     .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         eval ${1}+=\"${x} ${y} \"
 
@@ -1711,7 +1711,7 @@ Exemple 14. A version of *rot13*
     referencing <ivr.html#IVRREF>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         eval var=\$$var
 
@@ -1759,7 +1759,7 @@ Exemple 15. Using *set* with positional parameters
 --------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex34.sh
@@ -1807,7 +1807,7 @@ Exemple 16. Reversing the positional parameters
 -----------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # revposparams.sh: Reverse positional parameters.
@@ -1883,7 +1883,7 @@ Exemple 16. Reversing the positional parameters
     that have been initialized.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ set
         AUTHORCOPY=/home/bozo/posts
@@ -1908,7 +1908,7 @@ Exemple 17. Reassigning the positional parameters
 -------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1961,7 +1961,7 @@ Exemple 17. Reassigning the positional parameters
     parameters.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ unset PATH
 
@@ -1976,7 +1976,7 @@ Exemple 18. "Unsetting" a variable
 ----------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # unset.sh: Unsetting a variable.
@@ -2036,7 +2036,7 @@ Exemple 18. "Unsetting" a variable
     *awk* script**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2090,7 +2090,7 @@ Exemple 18. "Unsetting" a variable
     However, as Greg Keraunen points out, in certain situations this may
     have a different effect than setting a variable, then exporting it.
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ export var=(a  |
     | b); echo ${var[0]}       |
@@ -2105,7 +2105,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ export var=(a b); echo ${var[0]}
         (a b)
@@ -2117,7 +2117,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ export var=(a b); echo ${var[0]}
         (a b)
@@ -2197,7 +2197,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         while getopts ":abcde:fg" Option
         # Initial declaration.
@@ -2226,7 +2226,7 @@ Exemple 18. "Unsetting" a variable
     passed to a script**
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # ex33.sh: Exercising getopts and OPTIND
@@ -2323,7 +2323,7 @@ fitxer de dades o una mateixa biblioteca de funcions.
 Exemple 19. "Including" a data file
 -----------------------------------
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  Note that this example must be invoked with bash, i.e., bash ex38.sh
@@ -2358,7 +2358,7 @@ Exemple 19. "Including" a data file
     directory.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # This is a data file loaded by a script.
         # Files of this type may contain variables, functions, etc.
@@ -2408,7 +2408,7 @@ Exemple 19. "Including" a data file
     `positional parameters <othertypesv.html#POSPARAMREF1>`__ .
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         source $filename $arg1 arg2
 
@@ -2422,7 +2422,7 @@ Exemple 20. A (useless) script that sources itself
 --------------------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # self-source.sh: a script sourcing itself "recursively."
@@ -2514,7 +2514,7 @@ Exemple 21. Effects of *exec*
 -----------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2539,7 +2539,7 @@ Exemple 22. A script that *exec's* itself
 -----------------------------------------
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # self-exec.sh
@@ -2594,7 +2594,7 @@ Exemple 22. A script that *exec's* itself
     Needs `version 2 <bashver2.html#BASH2REF>`__ or later of Bash.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         shopt -s cdspell
         # Allows minor misspelling of directory names with 'cd'
@@ -2613,7 +2613,7 @@ Exemple 22. A script that *exec's* itself
     function.
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2649,7 +2649,7 @@ Exemple 22. A script that *exec's* itself
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ true
         bash$ echo $?
@@ -2659,7 +2659,7 @@ Exemple 22. A script that *exec's* itself
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Endless loop
         while true   # alias for ":"
@@ -2678,7 +2678,7 @@ Exemple 22. A script that *exec's* itself
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ false
         bash$ echo $?
@@ -2688,7 +2688,7 @@ Exemple 22. A script that *exec's* itself
 
 
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Testing "false"
         if false
@@ -2722,7 +2722,7 @@ Exemple 22. A script that *exec's* itself
     locates system commands with identical names.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ type '['
         [ is a shell builtin
@@ -2760,7 +2760,7 @@ Exemple 22. A script that *exec's* itself
     in the `version 4 release <bashver4.html#BASH4REF>`__ of Bash.
 
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ help exit
         exit: exit [n]

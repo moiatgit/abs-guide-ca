@@ -19,7 +19,7 @@ XXX  8.1. Operators
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var=27
         category=minerals  # No spaces allowed after the "=".
@@ -46,7 +46,7 @@ XXX  8.1. Operators
     operator <comparison-ops.html#EQUALSIGNREF>`__ .
 
     +--------------------------+--------------------------+--------------------------+
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #   =  as a test ope |
     | rator                    |
@@ -73,7 +73,7 @@ XXX  8.1. Operators
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #   =  as a test operator
 
@@ -90,7 +90,7 @@ XXX  8.1. Operators
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #   =  as a test operator
 
@@ -144,7 +144,7 @@ XXX  8.1. Operators
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Bash, version 2.02, introduced the "**" exponentiation operator.
 
@@ -167,7 +167,7 @@ XXX  8.1. Operators
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ expr 5 % 3
         2
@@ -202,7 +202,7 @@ XXX  8.1. Operators
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # gcd.sh: greatest common divisor
@@ -318,7 +318,7 @@ XXX  8.1. Operators
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Counting to 11 in 10 different ways.
@@ -404,7 +404,7 @@ integers, in the range of -2147483648 to 2147483647. An operation that
 took a variable outside these limits gave an erroneous result.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     echo $BASH_VERSION   |
 |  # 1.14                  |
@@ -440,7 +440,7 @@ As of version >= 2.05b, Bash supports 64-bit integers.
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo $BASH_VERSION   # 1.14
 
@@ -458,7 +458,7 @@ As of version >= 2.05b, Bash supports 64-bit integers.
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     echo $BASH_VERSION   # 1.14
 
@@ -498,7 +498,7 @@ Bash does not understand floating point arithmetic. It treats numbers
 containing a decimal point as strings.
 
 +--------------------------+--------------------------+--------------------------+
-| .. code:: PROGRAMLISTING |
+| .. code-block:: sh
 |                          |
 |     a=1.5                |
 |                          |
@@ -523,7 +523,7 @@ calculations or math library functions.
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     a=1.5
 
@@ -537,7 +537,7 @@ calculations or math library functions.
 
    </p>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     a=1.5
 
@@ -637,7 +637,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ ! -f $FILENAME ]
         then
@@ -658,7 +658,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ $condition1 ] && [ $condition2 ]
         #  Same as:  if [ $condition1 -a $condition2 ]
@@ -708,7 +708,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         if [ $condition1 ] || [ $condition2 ]
         # Same as:  if [ $condition1 -o $condition2 ]
@@ -761,7 +761,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -844,7 +844,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo $(( 1 && 2 )) $((3 && 0)) $((4 || 0)) $((0 || 0))
         1 0 1 0
@@ -879,7 +879,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         let "t1 = ((5 + 3, 7 - 1, 15 - 4))"
         echo "t1 = $t1"           ^^^^^^  # t1 = 11

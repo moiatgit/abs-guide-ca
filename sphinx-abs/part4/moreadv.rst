@@ -24,7 +24,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ find ~/ -name '*.txt'
         /home/bozo/.kde/share/apps/karm/karmdata.txt
@@ -48,7 +48,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find ~/ -name 'core*' -exec rm {} \;
         # Removes all core dump files from user's home directory.
@@ -65,7 +65,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find /home/bozo/projects -mtime -1
         #                               ^   Note minus sign!
@@ -106,7 +106,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         find /etc -exec grep '[0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*' {} \;
 
@@ -168,7 +168,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # badname.sh
@@ -224,7 +224,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # idelete.sh: Deleting a file by its inode number.
@@ -292,7 +292,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #  Find suid root files.
@@ -344,7 +344,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ls -l
         total 0
@@ -392,7 +392,7 @@ XXX  16.2. Complex Commands
     Note that *xargs* processes the arguments passed to it sequentially,
     *one at a time* .
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ find /usr/bin  |
     | | xargs file             |
@@ -409,7 +409,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ find /usr/bin | xargs file
         /usr/bin:          directory
@@ -421,7 +421,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ find /usr/bin | xargs file
         /usr/bin:          directory
@@ -498,7 +498,7 @@ XXX  16.2. Complex Commands
 
     Or:
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     cat /proc/"$pid"/"$O |
     | PTION" | xargs -0 echo   |
@@ -515,7 +515,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat /proc/"$pid"/"$OPTION" | xargs -0 echo
         #  Formats output:         ^^^^^^^^^^^^^^^
@@ -526,7 +526,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat /proc/"$pid"/"$OPTION" | xargs -0 echo
         #  Formats output:         ^^^^^^^^^^^^^^^
@@ -559,7 +559,7 @@ XXX  16.2. Complex Commands
     processes in parallel. This speeds up execution in a machine with a
     multicore CPU.
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |                          |
@@ -588,7 +588,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -607,7 +607,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -644,7 +644,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -708,7 +708,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # copydir.sh
@@ -763,7 +763,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # kill-byname.sh: Killing processes by name.
@@ -828,7 +828,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # wf2.sh: Crude word frequency analysis on a text file.
@@ -941,7 +941,7 @@ XXX  16.2. Complex Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1077,7 +1077,7 @@ XXX  16.2. Complex Commands
     ``                         b=`expr match $a           [0-9]*`                       ``
     in the above listing.
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     #!/bin/bash          |
     |                          |
@@ -1174,7 +1174,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1224,7 +1224,7 @@ XXX  16.2. Complex Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -1295,7 +1295,7 @@ is a another example, this time from "real life."
 
    <div>
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     # Strip the whitespace from the beginning and end.
     LRFDATE=`expr "$LRFDATE" : '[[:space:]]*\(.*\)[[:space:]]*$'`

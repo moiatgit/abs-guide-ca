@@ -35,7 +35,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cat list-1 list-2 list-3 | sort | uniq > final.list
         # Concatenates the list files,
@@ -58,7 +58,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat testfile
         This line occurs only once.
@@ -107,7 +107,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # wf.sh: Crude word frequency analysis on a text file.
@@ -186,7 +186,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat testfile
         This line occurs only once.
@@ -238,7 +238,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         cut -d ' ' -f1,2 /etc/mtab
 
@@ -256,7 +256,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         uname -a | cut -d" " -f1,3,11,12
 
@@ -274,7 +274,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep '^Subject:' read-messages | cut -c10-80
         Re: Linux suitable for mission-critical apps?
@@ -296,7 +296,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # List all the users in /etc/passwd.
 
@@ -335,7 +335,7 @@ XXX  16.4. Text Processing Commands
     is to actually embed a linefeed ( **RETURN** ) in the command
     sequence.
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ cut -d'        |
     |      ' -f3,7,19 testfile |
@@ -354,7 +354,7 @@ XXX  16.4. Text Processing Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cut -d'
          ' -f3,7,19 testfile
@@ -367,7 +367,7 @@ XXX  16.4. Text Processing Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cut -d'
          ' -f3,7,19 testfile
@@ -400,7 +400,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ cat items
         alphabet blocks
@@ -441,7 +441,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         File: 1.data
 
@@ -461,7 +461,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         File: 2.data
 
@@ -481,7 +481,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ join 1.data 2.data
         File: 1.data 2.data
@@ -538,7 +538,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # script-detector.sh: Detects scripts within a directory.
@@ -593,7 +593,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rnd.sh: Outputs a 10-digit random number
@@ -709,7 +709,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -758,7 +758,7 @@ XXX  16.4. Text Processing Commands
 
     To set a variable to a given block of a text file:
 
-    | .. code:: PROGRAMLISTING |
+    | .. code-block:: sh
     |                          |
     |     var=$(head -n $m $fi |
     | lename | tail -n $n)     |
@@ -777,7 +777,7 @@ XXX  16.4. Text Processing Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var=$(head -n $m $filename | tail -n $n)
 
@@ -789,7 +789,7 @@ XXX  16.4. Text Processing Commands
 
        </p>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         var=$(head -n $m $filename | tail -n $n)
 
@@ -858,7 +858,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep '[rst]ystem.$' osinfo.txt
         The GPL governs the distribution of the Linux operating system.
@@ -880,7 +880,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ ps ax | grep clock
         765 tty1     S      0:00 xclock
@@ -912,7 +912,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep -n Linux osinfo.txt
         2:This is a file containing information about Linux.
@@ -934,7 +934,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         grep pattern1 *.txt | grep -v pattern2
 
@@ -957,7 +957,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         grep -c txt *.sgml   # (number of occurrences of "txt" in "*.sgml" files)
 
@@ -1005,7 +1005,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # from.sh
@@ -1052,7 +1052,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux osinfo.txt misc.txt
         osinfo.txt:This is a file containing information about Linux.
@@ -1082,7 +1082,7 @@ XXX  16.4. Text Processing Commands
     target file, simply give ``            /dev/null           `` as the
     second file.
 
-    | .. code:: SCREEN         |
+    | .. code-block:: sh
     |                          |
     |     bash$ grep Linux osi |
     | nfo.txt /dev/null        |
@@ -1100,7 +1100,7 @@ XXX  16.4. Text Processing Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux osinfo.txt /dev/null
         osinfo.txt:This is a file containing information about Linux.
@@ -1111,7 +1111,7 @@ XXX  16.4. Text Processing Commands
 
        </p>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux osinfo.txt /dev/null
         osinfo.txt:This is a file containing information about Linux.
@@ -1139,7 +1139,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         SUCCESS=0                      # if grep lookup succeeds
         word=Linux
@@ -1176,7 +1176,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # grp.sh: Rudimentary reimplementation of grep.
@@ -1238,7 +1238,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Filename: tstfile
 
@@ -1263,7 +1263,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep file tstfile
         # Filename: tstfile
@@ -1296,7 +1296,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # cw-solver.sh
@@ -1386,7 +1386,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash $ egrep 'matches|Matches' file.txt
         Line 1 matches.
@@ -1445,7 +1445,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # dict-lookup.sh
@@ -1621,7 +1621,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # lookup: Does a dictionary lookup on each word in a data file.
@@ -1702,7 +1702,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash $ wc /usr/share/doc/sed-4.1.2/README
         13  70  447 README
@@ -1738,7 +1738,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         $ ls *.txt | wc -l
         #  Will work as long as none of the "*.txt" files
@@ -1765,7 +1765,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ wc [d-h]* | grep total | awk '{print $3}'
         71832
@@ -1786,7 +1786,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ grep Linux abs-book.sgml | wc -l
         138
@@ -1810,7 +1810,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         ... | grep foo | wc -l
         # This frequently used construct can be more concisely rendered.
@@ -1873,7 +1873,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         echo "abcdef"                 # abcdef
         echo "abcdef" | tr -d b-d     # aef
@@ -1899,7 +1899,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "XXXXX" | tr --squeeze-repeats 'X'
         X
@@ -1920,7 +1920,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "acfdeb123" | tr -c b-d +
         +c+d+b++++
@@ -1941,7 +1941,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: SCREEN
+    .. code-block:: sh
 
         bash$ echo "abcd2ef1" | tr '[:alpha:]' -
         ----2--1
@@ -1965,7 +1965,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Changes a file to all uppercase.
@@ -2018,7 +2018,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         #
@@ -2086,7 +2086,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # Du.sh: DOS to UNIX text file converter.
@@ -2140,7 +2140,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # rot13.sh: Classic rot13 algorithm,
@@ -2179,7 +2179,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # crypto-quote.sh: Encrypt quotes
@@ -2243,7 +2243,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # jabh.sh
@@ -2311,7 +2311,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
 
@@ -2385,7 +2385,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # colms.sh
@@ -2473,7 +2473,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # line-number.sh
@@ -2545,7 +2545,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         # Convert a string from UTF-8 to UTF-16 and print to the BookList
         function write_utf8_string {
@@ -2593,7 +2593,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         texexec --pdfarrange --result=Concatenated.pdf *pdf
 
@@ -2640,7 +2640,7 @@ XXX  16.4. Text Processing Commands
 
        <div>
 
-    .. code:: PROGRAMLISTING
+    .. code-block:: sh
 
         #!/bin/bash
         # manview.sh: Formats the source of a man page for viewing.
