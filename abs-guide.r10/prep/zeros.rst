@@ -140,8 +140,8 @@ XXX  Chapter 31. Of Zeros and Nulls
         then
           echo; echo "You must be root to run this script."; echo
           exit $E_WRONG_USER
-        fi  
-          
+        fi
+
 
         blocks=${1:-$MINBLOCKS}          #  Set to default of 40 blocks,
                                          #+ if nothing specified on command-line.
@@ -159,7 +159,7 @@ XXX  Chapter 31. Of Zeros and Nulls
         if [ "$blocks" -lt $MINBLOCKS ]
         then
           blocks=$MINBLOCKS              # Must be at least 40 blocks long.
-        fi  
+        fi
 
 
         ######################################################################

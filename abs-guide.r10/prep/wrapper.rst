@@ -247,7 +247,7 @@ retyping it on the command-line.
     }
     END {
          print total
-    }     
+    }
 
     ' "$filename"
     # -----------------------------
@@ -347,7 +347,7 @@ or the Perl part will execute.
 
     bash$ perl -x bashandperl.sh
     Greetings from the Perl part of the script.
-              
+
 
 
 

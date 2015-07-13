@@ -50,7 +50,7 @@ XXX  4.4. Special Variable Types
     |     bash: /usr/bin/du: A |
     | rgument list too long    |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Note: this "error" has been fixed, as of kernel version 2.6.23.
@@ -65,7 +65,7 @@ XXX  4.4. Special Variable Types
 
         bash$ du
         bash: /usr/bin/du: Argument list too long
-                      
+
 
 
     .. code-block:: sh
@@ -74,7 +74,7 @@ XXX  4.4. Special Variable Types
 
         bash$ du
         bash: /usr/bin/du: Argument list too long
-                      
+
 
 
 
@@ -145,17 +145,17 @@ XXX  4.4. Special Variable Types
         if [ -n "$1" ]              # Tested variable is quoted.
         then
          echo "Parameter #1 is $1"  # Need quotes to escape #
-        fi 
+        fi
 
         if [ -n "$2" ]
         then
          echo "Parameter #2 is $2"
-        fi 
+        fi
 
         if [ -n "$3" ]
         then
          echo "Parameter #3 is $3"
-        fi 
+        fi
 
         # ...
 
@@ -163,7 +163,7 @@ XXX  4.4. Special Variable Types
         if [ -n "${10}" ]  # Parameters > $9 must be enclosed in {brackets}.
         then
          echo "Parameter #10 is ${10}"
-        fi 
+        fi
 
         echo "-----------------------------------"
         echo "All the command-line parameters are: "$*""
@@ -172,7 +172,7 @@ XXX  4.4. Special Variable Types
         then
           echo
           echo "This script needs at least $MINPARAMS command-line arguments!"
-        fi  
+        fi
 
         echo
 
@@ -288,7 +288,7 @@ XXX  4.4. Special Variable Types
             "wh-apnic" ) whois $1@whois.apnic.net;;
             "wh-cw"    ) whois $1@whois.cw.net;;
             *          ) echo "Usage: `basename $0` [domain-name]";;
-        esac 
+        esac
 
         exit $?
 
@@ -429,7 +429,7 @@ the shell.
 |                          |
 |     tcsh% echo $0        |
 |     tcsh                 |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

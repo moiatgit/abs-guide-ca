@@ -334,7 +334,7 @@ These particular ones are used mostly in parsing file path names.
 
     Exceptions:
 
-    -  
+    -
 
        **${#\*}** and **${#@}** give the *number of positional
        parameters* .
@@ -360,7 +360,7 @@ These particular ones are used mostly in parsing file path names.
         then
           echo "Please invoke this script with one or more command-line arguments."
           exit $E_NO_ARGS
-        fi  
+        fi
 
         var01=abcdEFGH28ij
         echo "var01 = ${var01}"
@@ -483,7 +483,7 @@ These particular ones are used mostly in parsing file path names.
     echo '${var1#$pattern1}  =' "${var1#$pattern1}"    #         d12345abc6789
     # Shortest possible match, strips out first 3 characters  abcd12345abc6789
     #                                     ^^^^^               |-|
-    echo '${var1##$pattern1} =' "${var1##$pattern1}"   #                  6789      
+    echo '${var1##$pattern1} =' "${var1##$pattern1}"   #                  6789
     # Longest possible match, strips out first 12 characters  abcd12345abc6789
     #                                    ^^^^^                |----------|
 
@@ -711,7 +711,7 @@ These particular ones are used mostly in parsing file path names.
         echo "v4 = $v4"         # abc1234zip1234abc
                                 # NO REPLACEMENT.
 
-        exit 0          
+        exit 0
 
 
 

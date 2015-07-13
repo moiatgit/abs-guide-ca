@@ -51,7 +51,7 @@ XXX  11.3. Loop Control
          fi
 
          echo -n "$a "   # This will not execute for 3 and 11.
-        done 
+        done
 
         # Exercise:
         # Why does the loop print up to 20?
@@ -119,7 +119,7 @@ XXX  11.3. Loop Control
           # --------------------------------------------------------
 
           echo
-        done  
+        done
 
         echo
 
@@ -156,10 +156,10 @@ XXX  11.3. Loop Control
               continue 2  # Continue at loop on 2nd level, that is "outer loop".
                           # Replace above line with a simple "continue"
                           # to see normal loop behavior.
-            fi  
+            fi
 
             echo -n "$inner "  # 7 8 9 10 will not echo on "Group III."
-          done  
+          done
           # --------------------------------------------------------------------
 
         done

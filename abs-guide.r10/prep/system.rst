@@ -45,7 +45,7 @@ damage your system if misused.
 
         root# chown bozo *.txt
 
-                  
+
 
 
 
@@ -138,7 +138,7 @@ damage your system if misused.
           daemon(gid=2)
           adm(gid=4)
           lp(gid=7)
-                  
+
 
 
 
@@ -153,7 +153,7 @@ damage your system if misused.
          bozo  pts/0    Apr 27 17:46
          bozo  pts/1    Apr 27 17:47
          bozo  pts/2    Apr 27 17:49
-                  
+
 
 
 
@@ -166,7 +166,7 @@ damage your system if misused.
 
         bash$ who -m
         localhost.localdomain!bozo  pts/2    Apr 27 17:49
-                  
+
 
 
 
@@ -177,7 +177,7 @@ damage your system if misused.
 
         bash$ whoami
         bozo
-                  
+
 
 
 
@@ -293,7 +293,7 @@ damage your system if misused.
           echo "You should know better than to run this script, root."
           echo "Even root users get the blues... "
           echo
-        fi  
+        fi
 
 
         username=bozo
@@ -306,7 +306,7 @@ damage your system if misused.
           echo "User $username does not exist."
           echo "No password changed."
           exit $E_NOSUCHUSER
-        fi  
+        fi
 
         echo "$NEWPASSWORD" | passwd --stdin "$username"
         #  The '--stdin' option to 'passwd' permits
@@ -350,10 +350,10 @@ damage your system if misused.
     .. code-block:: sh
 
         bash$ last reboot
-        reboot   system boot  2.6.9-1.667      Fri Feb  4 18:18          (00:02)    
-         reboot   system boot  2.6.9-1.667      Fri Feb  4 15:20          (01:27)    
-         reboot   system boot  2.6.9-1.667      Fri Feb  4 12:56          (00:49)    
-         reboot   system boot  2.6.9-1.667      Thu Feb  3 21:08          (02:17)    
+        reboot   system boot  2.6.9-1.667      Fri Feb  4 18:18          (00:02)
+         reboot   system boot  2.6.9-1.667      Fri Feb  4 15:20          (01:27)
+         reboot   system boot  2.6.9-1.667      Fri Feb  4 12:56          (00:49)
+         reboot   system boot  2.6.9-1.667      Thu Feb  3 21:08          (02:17)
          . . .
 
          wtmp begins Tue Feb  1 12:50:09 2005
@@ -520,7 +520,7 @@ damage your system if misused.
          start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; flush = ^O;
          ...
          isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
-                        
+
 
 
 
@@ -534,10 +534,10 @@ damage your system if misused.
         wha<ctl-W>I<ctl-H>foo bar<ctl-U>hello world<ENTER>
         <ctl-D>
         bash$ cat filexxx
-        hello world     
+        hello world
         bash$ wc -c < filexxx
-        12      
-                        
+        12
+
 
 
 
@@ -566,7 +566,7 @@ damage your system if misused.
          start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; flush = ^O;
          ...
          isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
-                        
+
 
 
     .. code-block:: sh
@@ -575,10 +575,10 @@ damage your system if misused.
         wha<ctl-W>I<ctl-H>foo bar<ctl-U>hello world<ENTER>
         <ctl-D>
         bash$ cat filexxx
-        hello world     
+        hello world
         bash$ wc -c < filexxx
-        12      
-                        
+        12
+
 
 
     .. code-block:: sh
@@ -589,7 +589,7 @@ damage your system if misused.
          start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; flush = ^O;
          ...
          isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
-                        
+
 
 
     .. code-block:: sh
@@ -598,10 +598,10 @@ damage your system if misused.
         wha<ctl-W>I<ctl-H>foo bar<ctl-U>hello world<ENTER>
         <ctl-D>
         bash$ cat filexxx
-        hello world     
+        hello world
         bash$ wc -c < filexxx
-        12      
-                        
+        12
+
 
 
 
@@ -615,7 +615,7 @@ damage your system if misused.
 
         bash$ setterm -cursor off
         bash$
-                  
+
 
 
 
@@ -646,7 +646,7 @@ damage your system if misused.
         Terminal type is xterm-xfree86.
          Kill is control-U (^U).
          Interrupt is control-C (^C).
-                  
+
 
 
 
@@ -702,7 +702,7 @@ damage your system if misused.
         Broadcast message from bozo (pts/1) Sun Jul  8 13:53:27 2001...
 
          System going down for maintenance in 5 minutes!
-                  
+
 
 
 
@@ -782,7 +782,7 @@ damage your system if misused.
 
         bash$ lastlog | grep root
         root          tty1                      Fri Dec  7 18:43:21 -0700 2001
-                  
+
 
 
 
@@ -813,7 +813,7 @@ damage your system if misused.
          init         1    root  mem    REG        3,5  931668     8075 /lib/libc-2.1.3.so
          cardmgr    213    root  mem    REG        3,5   36956    30357 /sbin/cardmgr
          ...
-                  
+
 
 
 
@@ -831,7 +831,7 @@ damage your system if misused.
         COMMAND  PID USER  FD  TYPE DEVICE SIZE NODE NAME
          firefox 2330 bozo  32u IPv4   9956       TCP 66.0.118.137:57596->67.112.7.104:http ...
          firefox 2330 bozo  38u IPv4  10535       TCP 66.0.118.137:57708->216.79.48.24:http ...
-                  
+
 
 
 
@@ -853,7 +853,7 @@ damage your system if misused.
          brk(0)                                  = 0x804f5e4
 
          ...
-                
+
 
 
 
@@ -875,7 +875,7 @@ damage your system if misused.
         getenv("DF_BLOCK_SIZE")                          = NULL
 
          ...
-                
+
 
 
 
@@ -1034,14 +1034,14 @@ damage your system if misused.
         bash$ lsdev
         Device            DMA   IRQ  I/O Ports
          ------------------------------------------------
-         cascade             4     2 
+         cascade             4     2
          dma                          0080-008f
          dma1                         0000-001f
          dma2                         00c0-00df
          fpu                          00f0-00ff
          ide0                     14  01f0-01f7 03f6-03f6
          ...
-                  
+
 
 
 
@@ -1091,7 +1091,7 @@ damage your system if misused.
          hda: IBM-DLGA-23080, ATA DISK drive
          hda: 6015744 sectors (3080 MB) w/96KiB Cache, CHS=746/128/63
          hda: hda1 hda2 hda3 < hda5 hda6 hda7 > hda4
-                  
+
 
 
 
@@ -1106,11 +1106,11 @@ damage your system if misused.
           File: "test.cru"
            Size: 49970        Allocated Blocks: 100          Filetype: Regular File
            Mode: (0664/-rw-rw-r--)         Uid: (  501/ bozo)  Gid: (  501/ bozo)
-         Device:  3,8   Inode: 18185     Links: 1    
+         Device:  3,8   Inode: 18185     Links: 1
          Access: Sat Jun  2 16:40:24 2001
          Modify: Sat Jun  2 16:40:24 2001
          Change: Sat Jun  2 16:40:24 2001
-                  
+
 
 
 
@@ -1122,7 +1122,7 @@ damage your system if misused.
 
         bash$ stat nonexistent-file
         nonexistent-file: No such file or directory
-                  
+
 
 
 
@@ -1179,7 +1179,7 @@ damage your system if misused.
            procs                      memory    swap          io system         cpu
          r  b  w   swpd   free   buff  cache  si  so    bi    bo   in    cs  us  sy id
          0  0  0      0  11040   2636  38952   0   0    33     7  271    88   8   3 89
-                
+
 
 
 
@@ -1264,7 +1264,7 @@ damage your system if misused.
     |     127.0.0.1            |
     |     localhost.localdomai |
     | n localhost              |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     As it happens, transposing the bytes of
@@ -1320,7 +1320,7 @@ damage your system if misused.
         15:20:00          all      4.07      1.00     11.95      0.00     82.98
         15:30:00          all      0.79      2.94      7.56      0.00     88.71
         Average:          all      6.33      1.70     14.71      0.00     77.26
-                   
+
 
 
 
@@ -1333,7 +1333,7 @@ damage your system if misused.
 
         bash$ readelf -h /bin/bash
         ELF Header:
-           Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+           Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00
            Class:                             ELF32
            Data:                              2's complement, little endian
            Version:                           1 (current)
@@ -1355,7 +1355,7 @@ damage your system if misused.
         bash$ size /bin/bash
            text    data     bss     dec     hex filename
           495971   22496   17392  535859   82d33 /bin/bash
-                  
+
 
 
 
@@ -1462,7 +1462,7 @@ damage your system if misused.
          2214 mingetty
          2215 mingetty
          2216 mingetty
-                  
+
 
 
 
@@ -1493,8 +1493,8 @@ damage your system if misused.
            848 bozo      17   0   996  996   800 R     5.6  1.2   0:00 top
              1 root       8   0   512  512   444 S     0.0  0.6   0:04 init
              2 root       9   0     0    0     0 SW    0.0  0.0   0:00 keventd
-           ...  
-                  
+           ...
+
 
 
 
@@ -1527,7 +1527,7 @@ damage your system if misused.
 
         bash$ pidof xclock
         880
-                  
+
 
 
 
@@ -1557,7 +1557,7 @@ damage your system if misused.
           echo "Process $process was not running."
           echo "Nothing killed."
           exit $NOPROCESS
-        fi  
+        fi
 
         kill $t                  # May need 'kill -9' for stubborn process.
 
@@ -1594,7 +1594,7 @@ damage your system if misused.
 
         bash$ fuser -u /dev/null
         /dev/null:            3009(bozo)  3010(bozo)  3197(bozo)  3199(bozo)
-                  
+
 
 
 
@@ -1619,7 +1619,7 @@ damage your system if misused.
 
         bash$ kill -9 1772
         bash$ umount /mnt/usbdrive
-                  
+
 
 
 
@@ -1642,7 +1642,7 @@ damage your system if misused.
 
         root# ps ax | grep 2095 | grep -v grep
         2095 ?        Ss     0:00 sendmail: accepting connections
-                  
+
 
 
 
@@ -1718,7 +1718,7 @@ damage your system if misused.
         Flushing firewall rules:                                   [  OK  ]
          Setting chains to policy ACCEPT: filter                    [  OK  ]
          Unloading iptables modules:                                [  OK  ]
-                  
+
 
 
 
@@ -1763,7 +1763,7 @@ damage your system if misused.
                    UP LOOPBACK RUNNING  MTU:16436  Metric:1
                    RX packets:10 errors:0 dropped:0 overruns:0 frame:0
                    TX packets:10 errors:0 dropped:0 overruns:0 carrier:0
-                   collisions:0 txqueuelen:0 
+                   collisions:0 txqueuelen:0
                    RX bytes:700 (700.0 b)  TX bytes:700 (700.0 b)
 
 
@@ -1792,7 +1792,7 @@ damage your system if misused.
         #  The GNU-specific "-q" option to "grep" means "quiet", i.e.,
         #+ producing no output.
         #  Redirecting output to /dev/null is therefore not strictly necessary.
-               
+
         # ...
 
         echo "Currently active devices:"
@@ -1820,7 +1820,7 @@ damage your system if misused.
 
         bash$ netstat
         Active Internet connections (w/o servers)
-         Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+         Proto Recv-Q Send-Q Local Address           Foreign Address         State
          Active UNIX domain sockets (w/o servers)
          Proto RefCnt Flags       Type       State         I-Node Path
          unix  11     [ ]         DGRAM                    906    /dev/log
@@ -1855,17 +1855,17 @@ damage your system if misused.
     .. code-block:: sh
 
         bash$ ip link show
-        1: lo: <LOOPBACK,UP> mtu 16436 qdisc noqueue 
+        1: lo: <LOOPBACK,UP> mtu 16436 qdisc noqueue
              link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
          2: eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc pfifo_fast qlen 1000
              link/ether 00:d0:59:ce:af:da brd ff:ff:ff:ff:ff:ff
-         3: sit0: <NOARP> mtu 1480 qdisc noop 
+         3: sit0: <NOARP> mtu 1480 qdisc noop
              link/sit 0.0.0.0 brd 0.0.0.0
 
 
         bash$ ip route list
         169.254.0.0/16 dev lo  scope link
-                  
+
 
 
 
@@ -1919,7 +1919,7 @@ damage your system if misused.
          pm3-67.bozosisp *               255.255.255.255 UH       40 0          0 ppp0
          127.0.0.0       *               255.0.0.0       U        40 0          0 lo
          default         pm3-67.bozosisp 0.0.0.0         UG       40 0          0 ppp0
-                  
+
 
 
 
@@ -1949,7 +1949,7 @@ damage your system if misused.
         atd             0:off   1:off   2:off   3:on    4:on    5:on    6:off
          rwhod           0:off   1:off   2:off   3:off   4:off   5:off   6:off
          ...
-                  
+
 
 
 
@@ -1964,7 +1964,7 @@ damage your system if misused.
     .. code-block:: sh
 
         bash$ tcpdump ip host bozoville and caduceus
-                  
+
 
 
 
@@ -2072,7 +2072,7 @@ damage your system if misused.
         bash$ df
         . . .
          /dev/sda1                63584     12034     51550  19% /media/disk
-         
+
 
 
 
@@ -2144,7 +2144,7 @@ damage your system if misused.
         then
           echo "Must be root to run this script."
           exit $E_NOTROOT
-        fi  
+        fi
 
         # Use with extreme caution!
         # If something goes wrong, you may wipe out your current filesystem.
@@ -2273,20 +2273,20 @@ damage your system if misused.
     .. code-block:: sh
 
         bash$ lsusb
-        Bus 001 Device 001: ID 0000:0000  
+        Bus 001 Device 001: ID 0000:0000
          Device Descriptor:
            bLength                18
            bDescriptorType         1
            bcdUSB               1.00
            bDeviceClass            9 Hub
-           bDeviceSubClass         0 
-           bDeviceProtocol         0 
+           bDeviceSubClass         0
+           bDeviceProtocol         0
            bMaxPacketSize0         8
-           idVendor           0x0000 
+           idVendor           0x0000
            idProduct          0x0000
 
            . . .
-                  
+
 
 
 
@@ -2307,7 +2307,7 @@ damage your system if misused.
          00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev 42)
 
            . . .
-                  
+
 
 
 
@@ -2542,7 +2542,7 @@ damage your system if misused.
     | not exit here, because t |
     | his script will never te |
     | rminate.                 |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     A **ulimit -Hu XX** (where *XX* is the user process limit) in
@@ -2625,8 +2625,8 @@ damage your system if misused.
                                 #+ which can only be read/written
                                 #  by invoker of script (or root).
 
-        cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M' > $OUTFILE 
-        #    ^^ Input from stdin or a file.   ^^^^^^^^^^ Output redirected to file. 
+        cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M' > $OUTFILE
+        #    ^^ Input from stdin or a file.   ^^^^^^^^^^ Output redirected to file.
 
         exit 0
 
@@ -2662,7 +2662,7 @@ damage your system if misused.
          ds                      6448   2 [serial_cs]
          i82365                 22928   2
          pcmcia_core            45984   0 [serial_cs ds i82365]
-                  
+
 
 
 
@@ -2701,7 +2701,7 @@ damage your system if misused.
          description: "USB HID support drivers"
          author:      "Andreas Gal, Vojtech Pavlik <vojtech@suse.cz>"
          license:     "GPL"
-                  
+
 
 
 
@@ -2743,7 +2743,7 @@ damage your system if misused.
     | aries may not be in the  |
     | expected place.          |
     |     # Thanks, S.C.       |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Or even ...
@@ -2761,7 +2761,7 @@ damage your system if misused.
     | its usual place, in /bin |
     | .                        |
     |     ...                  |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -3075,7 +3075,7 @@ variables in a single command's environment.
 |     # $var1 and $var2 se |
 | t in the environment of  |
 | 'commandXXX' only.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

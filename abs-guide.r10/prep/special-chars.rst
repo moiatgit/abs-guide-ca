@@ -102,7 +102,7 @@ building blocks of Bash scripts.
     |  a comment.              |
     |                          |
     |     # Thanks, S.C.       |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     The standard `quoting and escape <quoting.html#QUOTINGREF>`__
@@ -205,14 +205,14 @@ building blocks of Bash scripts.
     .. code-block:: sh
 
         bash$ touch .hidden-file
-        bash$ ls -l         
+        bash$ ls -l
         total 10
          -rw-r--r--    1 bozo      4034 Jul 18 22:04 data1.addressbook
          -rw-r--r--    1 bozo      4602 May 25 13:58 data1.addressbook.bak
          -rw-r--r--    1 bozo       877 Dec 17  2000 employment.addressbook
 
 
-        bash$ ls -al        
+        bash$ ls -al
         total 14
          drwxrwxr-x    2 bozo  bozo      1024 Aug 29 20:54 ./
          drwx------   52 bozo  bozo      3072 Aug 29 20:51 ../
@@ -220,7 +220,7 @@ building blocks of Bash scripts.
          -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.addressbook.bak
          -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.addressbook
          -rw-rw-r--    1 bozo  bozo         0 Aug 29 20:54 .hidden-file
-                    
+
 
 
 
@@ -242,7 +242,7 @@ building blocks of Bash scripts.
         bash$ cd ..
         bash$ pwd
         /home/bozo/
-                    
+
 
 
 
@@ -253,7 +253,7 @@ building blocks of Bash scripts.
     .. code-block:: sh
 
         bash$ cp /home/bozo/current_work/junk/* .
-                    
+
 
 
 
@@ -459,7 +459,7 @@ building blocks of Bash scripts.
 
     .. code-block:: sh
 
-        : > data.xxx   # File "data.xxx" now empty.       
+        : > data.xxx   # File "data.xxx" now empty.
 
         # Same effect as   cat /dev/null >data.xxx
         # However, this does not fork a new process, since ":" is a builtin.
@@ -575,7 +575,7 @@ building blocks of Bash scripts.
 
         bash$ echo *
         abs-book.sgml add-drive.sh agram.sh alias.sh
-                  
+
 
 
 
@@ -733,14 +733,14 @@ building blocks of Bash scripts.
     |     # "a" within parenth |
     | eses acts like a local v |
     | ariable.                 |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
     .. code-block:: sh
 
         a=123
-        ( a=321; )        
+        ( a=321; )
 
         echo "a = $a"   # a = 123
         # "a" within parentheses acts like a local variable.
@@ -749,7 +749,7 @@ building blocks of Bash scripts.
     .. code-block:: sh
 
         a=123
-        ( a=321; )        
+        ( a=321; )
 
         echo "a = $a"   # a = 123
         # "a" within parentheses acts like a local variable.
@@ -849,7 +849,7 @@ building blocks of Bash scripts.
                   a=123; }
         bash: local: can only be used in a
         function
-                  
+
 
 
 
@@ -910,7 +910,7 @@ building blocks of Bash scripts.
         #  Queries an rpm file for description, listing,
         #+ and whether it can be installed.
         #  Saves output to a file.
-        # 
+        #
         #  This script illustrates using a code block.
 
         SUCCESS=0
@@ -920,7 +920,7 @@ building blocks of Bash scripts.
         then
           echo "Usage: `basename $0` rpm-file"
           exit $E_NOARGS
-        fi  
+        fi
 
         { # Begin code block.
           echo
@@ -936,7 +936,7 @@ building blocks of Bash scripts.
             echo "$1 can be installed."
           else
             echo "$1 cannot be installed."
-          fi  
+          fi
           echo              # End code block.
         } > "$1.test"       # Redirects output of everything in block to file.
 
@@ -1122,7 +1122,7 @@ building blocks of Bash scripts.
     |     bash$ echo $?        |
     |     1                    |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Or in a script:
@@ -1145,7 +1145,7 @@ building blocks of Bash scripts.
     |  # Illegitimate command  |
     |     command_test $cmd; e |
     | cho $?   # 1             |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -1157,7 +1157,7 @@ building blocks of Bash scripts.
 
         bash$ echo $?
         1
-                            
+
 
 
     .. code-block:: sh
@@ -1181,7 +1181,7 @@ building blocks of Bash scripts.
 
         bash$ echo $?
         1
-                            
+
 
 
     .. code-block:: sh
@@ -1340,7 +1340,7 @@ building blocks of Bash scripts.
         -RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
          -RW-RW-R--    1 BOZO  BOZO       109 APR 14 16:48 2.TXT
          -RW-R--R--    1 BOZO  BOZO       725 APR 20 20:56 DATA-FILE
-                  
+
 
 
 
@@ -1361,7 +1361,7 @@ building blocks of Bash scripts.
     |     # The output from "c |
     | at file1 file2" disappea |
     | rs.                      |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     A pipe runs as a `child process <othertypesv.html#CHILDREF>`__ , and
@@ -1377,7 +1377,7 @@ building blocks of Bash scripts.
     |     echo "variable = $va |
     | riable"     # variable = |
     |  initial_value           |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     If one of the commands in the pipe aborts, this prematurely
@@ -1442,7 +1442,7 @@ building blocks of Bash scripts.
         bash$ sleep 10 &
         [1] 850
         [1]+  Done                    sleep 10
-                  
+
 
 
 
@@ -1469,18 +1469,18 @@ building blocks of Bash scripts.
         for i in 11 12 13 14 15 16 17 18 19 20   # Second loop.
         do
           echo -n "$i "
-        done  
+        done
 
         echo   # This 'echo' sometimes will not display.
 
         # ======================================================
 
         # The expected output from the script:
-        # 1 2 3 4 5 6 7 8 9 10 
-        # 11 12 13 14 15 16 17 18 19 20 
+        # 1 2 3 4 5 6 7 8 9 10
+        # 11 12 13 14 15 16 17 18 19 20
 
         # Sometimes, though, you get:
-        # 11 12 13 14 15 16 17 18 19 20 
+        # 11 12 13 14 15 16 17 18 19 20
         # 1 2 3 4 5 6 7 8 9 10 bozo $
         # (The second 'echo' doesn't execute. Why?)
 
@@ -1489,7 +1489,7 @@ building blocks of Bash scripts.
         # (The first 'echo' doesn't execute. Why?)
 
         # Very rarely something like:
-        # 11 12 13 1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 
+        # 11 12 13 1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20
         # The foreground loop preempts the background one.
 
         exit 0
@@ -1588,7 +1588,7 @@ building blocks of Bash scripts.
     |                          |
     |     bash$ ls -l          |
     |     total 0              |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -1714,7 +1714,7 @@ building blocks of Bash scripts.
     .. code-block:: sh
 
         bash$ echo "whatever" | cat -
-        whatever 
+        whatever
 
 
 
@@ -1730,7 +1730,7 @@ building blocks of Bash scripts.
 
         bash$ file
         Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...
-                  
+
 
 
 
@@ -1752,7 +1752,7 @@ building blocks of Bash scripts.
         bash$ file -
         #!/bin/bash
         standard input:              Bourne-Again shell script text executable
-                  
+
 
 
 
@@ -1838,21 +1838,21 @@ building blocks of Bash scripts.
     |     # Has the effect of  |
     | "echo -n", and outputs n |
     | othing.                  |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
     .. code-block:: sh
 
         var="-n"
-        echo $var       
+        echo $var
         # Has the effect of "echo -n", and outputs nothing.
 
 
     .. code-block:: sh
 
         var="-n"
-        echo $var       
+        echo $var
         # Has the effect of "echo -n", and outputs nothing.
 
 
@@ -1964,7 +1964,7 @@ building blocks of Bash scripts.
 
         bash$ echo ~nonexistent-user
         ~nonexistent-user
-                  
+
 
 
 
@@ -2021,14 +2021,14 @@ building blocks of Bash scripts.
        ``                       Backspace                     ``
        (nondestructive).
 
-    -  
+    -
 
        ``                       Ctl-C                     ``
 
        ``                       Break                     `` . Terminate
        a foreground job.
 
-    -  
+    -
 
        ``                       Ctl-D                     ``
 
@@ -2055,7 +2055,7 @@ building blocks of Bash scripts.
        Moves cursor forward one character position (on the
        command-line).
 
-    -  
+    -
 
        ``                       Ctl-G                     ``
 
@@ -2063,7 +2063,7 @@ building blocks of Bash scripts.
        old-time teletype terminals, this would actually ring a bell. In
        an *xterm* it might beep.
 
-    -  
+    -
 
        ``                       Ctl-H                     ``
 
@@ -2112,7 +2112,7 @@ building blocks of Bash scripts.
 
        ``                       Horizontal tab                     `` .
 
-    -  
+    -
 
        ``                       Ctl-J                     ``
 
@@ -2139,7 +2139,7 @@ building blocks of Bash scripts.
        ``                       Ctl-L                     `` causes an
        advance to end of the paper sheet.
 
-    -  
+    -
 
        ``                       Ctl-M                     ``
 
@@ -2386,7 +2386,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
 |  work.                   |
 |                          |
 |     # Thanks, S.C.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

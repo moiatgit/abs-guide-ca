@@ -25,7 +25,7 @@ The < operator at the end of the code block accomplishes this.
       Filename=names.data       # Default, if no filename specified.
     else
       Filename=$1
-    fi  
+    fi
     #+ Filename=${1:-names.data}
     #  can replace the above test (parameter substitution).
 
@@ -38,7 +38,7 @@ The < operator at the end of the code block accomplishes this.
       read name                 # Reads from $Filename, rather than stdin.
       echo $name
       let "count += 1"
-    done <"$Filename"           # Redirects stdin to file $Filename. 
+    done <"$Filename"           # Redirects stdin to file $Filename.
     #    ^^^^^^^^^^^^
 
     echo; echo "$count names read"; echo
@@ -91,7 +91,7 @@ The < operator at the end of the code block accomplishes this.
       Filename=names.data     # Default, if no filename specified.
     else
       Filename=$1
-    fi  
+    fi
 
 
     exec 3<&0                 # Save stdin to file descriptor 3.
@@ -110,7 +110,7 @@ The < operator at the end of the code block accomplishes this.
                               #+ because of line 20.
 
     #  The original version of this script terminated the "while" loop with
-    #+      done <"$Filename" 
+    #+      done <"$Filename"
     #  Exercise:
     #  Why is this unnecessary?
 
@@ -139,14 +139,14 @@ The < operator at the end of the code block accomplishes this.
       Filename=names.data         # Default, if no filename specified.
     else
       Filename=$1
-    fi  
+    fi
 
     # while [ "$name" != Smith ]
     until [ "$name" = Smith ]     # Change  !=  to =.
     do
       read name                   # Reads from $Filename, rather than stdin.
       echo $name
-    done <"$Filename"             # Redirects stdin to file $Filename. 
+    done <"$Filename"             # Redirects stdin to file $Filename.
     #    ^^^^^^^^^^^^
 
     # Same results as with "while" loop in previous example.
@@ -169,7 +169,7 @@ The < operator at the end of the code block accomplishes this.
       Filename=names.data          # Default, if no filename specified.
     else
       Filename=$1
-    fi  
+    fi
 
     line_count=`wc $Filename | awk '{ print $1 }'`
     #           Number of lines in target file.
@@ -189,8 +189,8 @@ The < operator at the end of the code block accomplishes this.
       if [ "$name" = Smith ]       # Need all this extra baggage here.
       then
         break
-      fi  
-    done <"$Filename"              # Redirects stdin to file $Filename. 
+      fi
+    done <"$Filename"              # Redirects stdin to file $Filename.
     #    ^^^^^^^^^^^^
 
     exit 0
@@ -215,7 +215,7 @@ loop.
       Filename=names.data          # Default, if no filename specified.
     else
       Filename=$1
-    fi  
+    fi
 
     Savefile=$Filename.new         # Filename to save results in.
     FinalName=Jonah                # Name to terminate "read" on.
@@ -230,7 +230,7 @@ loop.
       if [ "$name" = "$FinalName" ]
       then
         break
-      fi  
+      fi
     done < "$Filename" > "$Savefile"     # Redirects stdin to file $Filename,
     #    ^^^^^^^^^^^^^^^^^^^^^^^^^^^       and saves it to backup file.
 
@@ -252,7 +252,7 @@ loop.
       Filename=names.data   # Default, if no filename specified.
     else
       Filename=$1
-    fi  
+    fi
 
     TRUE=1
 

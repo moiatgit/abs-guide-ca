@@ -36,10 +36,10 @@ control condition* is true.
 
     .. code-block:: sh
 
-        for arg in "$var1" "$var2" "$var3" ... "$varN"  
-        # In pass 1 of the loop, arg = $var1        
-        # In pass 2 of the loop, arg = $var2        
-        # In pass 3 of the loop, arg = $var3        
+        for arg in "$var1" "$var2" "$var3" ... "$varN"
+        # In pass 1 of the loop, arg = $var1
+        # In pass 2 of the loop, arg = $var2
+        # In pass 3 of the loop, arg = $var3
         # ...
         # In pass N of the loop, arg = $varN
 
@@ -167,7 +167,7 @@ control condition* is true.
           # Note that the whatis database needs to have been set up for this to work.
           # To do this, as root run /usr/bin/makewhatis.
           echo
-        done  
+        done
 
         exit 0
 
@@ -304,7 +304,7 @@ control condition* is true.
           echo -n "$number "
         done
 
-        echo 
+        echo
         exit 0
 
 
@@ -339,7 +339,7 @@ control condition* is true.
         then
           echo "File \"$2\" does not exist."
           exit $E_NOFILE
-        fi  
+        fi
 
 
         IFS=$'\012'       # Per suggestion of Anton Filippov.
@@ -384,7 +384,7 @@ control condition* is true.
         do
           echo "USER #$n = $name"
           let "n += 1"
-        done  
+        done
 
 
         # USER #1 = root
@@ -429,7 +429,7 @@ control condition* is true.
           #+ it is necessary to substitute for the normal "/" delimiter
           #+ because "/" happens to be one of the characters filtered out.
           #  Failure to do so gives an error message. (Try it.)
-        done  
+        done
 
         exit $?
 
@@ -504,7 +504,7 @@ control condition* is true.
         #  As Dominik 'Aeneas' Schnitzer points out,
         #+ failing to quote  $( find $directory -type l )
         #+ will choke on filenames with embedded whitespace.
-        #  containing whitespace. 
+        #  containing whitespace.
 
         exit 0
 
@@ -594,7 +594,7 @@ control condition* is true.
         for a in 1 2 3 4 5 6 7 8 9 10
         do
           echo -n "$a "
-        done  
+        done
 
         echo; echo
 
@@ -604,7 +604,7 @@ control condition* is true.
         for a in `seq 10`
         do
           echo -n "$a "
-        done  
+        done
 
         echo; echo
 
@@ -615,7 +615,7 @@ control condition* is true.
         for a in {1..10}
         do
           echo -n "$a "
-        done  
+        done
 
         echo; echo
 
@@ -684,7 +684,7 @@ control condition* is true.
           #     File is not a regular file, or does not exist.
           exit $E_BADARGS
         fi
-          
+
 
         fax make $2              #  Create fax-formatted files from text files.
 
@@ -693,7 +693,7 @@ control condition* is true.
                      #+ in variable list.
         do
           fil="$fil $file"
-        done  
+        done
 
         efax -d "$MODEM_PORT"  -t "T$1" $fil   # Finally, do the work.
         # Trying adding  -o1  if above line fails.
@@ -754,13 +754,13 @@ control condition* is true.
     |                          |
     |     # Thank you, YongYe, |
     |  for pointing this out.  |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
     .. code-block:: sh
 
-        for((n=1; n<=10; n++)) 
+        for((n=1; n<=10; n++))
         # No do!
         {
           echo -n "* $n *"
@@ -789,7 +789,7 @@ control condition* is true.
 
     .. code-block:: sh
 
-        for((n=1; n<=10; n++)) 
+        for((n=1; n<=10; n++))
         # No do!
         {
           echo -n "* $n *"
@@ -896,7 +896,7 @@ control condition* is true.
           # If input is 'end', echoes it here.
           # Does not test for termination condition until top of loop.
           echo
-        done  
+        done
 
         exit 0
 
@@ -928,7 +928,7 @@ control condition* is true.
         echo "Input variable #1 (end to exit) "
           read var1
           echo "variable #1 = $var1"
-        done  
+        done
 
         # Try to figure out how this all works.
         # It's a wee bit tricky.
@@ -1138,7 +1138,7 @@ control condition* is true.
           read var1
           echo "variable #1 = $var1"
           echo
-        done  
+        done
 
         #                     ---                        #
 
@@ -1152,7 +1152,7 @@ control condition* is true.
         do  # ^^ ^     ^     ^^   No brackets, no $ prefixing variables.
           echo -n "$var "
           (( var++ ))
-        done    # 0 1 2 3 4 5 6 7 8 9 10 
+        done    # 0 1 2 3 4 5 6 7 8 9 10
 
 
         exit 0

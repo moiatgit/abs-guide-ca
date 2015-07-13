@@ -21,7 +21,7 @@ Bash history commands:
         2  cd /mnt/cdrom
         3  ls
          ...
-              
+
 
 
 
@@ -84,8 +84,8 @@ Unfortunately, the Bash history tools find no use in scripting.
 .. code-block:: sh
 
     bash$ ./history.sh
-    (no output)       
-              
+    (no output)
+
 
 
 

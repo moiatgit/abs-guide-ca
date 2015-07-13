@@ -62,7 +62,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
         else
           echo "Fewer than 2 arguments passed to script."
           # At least one of the chained commands returns false.
-        fi  
+        fi
         # Note that "if [ ! -z $1 ]" works, but its alleged equivalent,
         #   "if [ -n $1 ]" does not.
         #     However, quoting fixes this.
@@ -126,7 +126,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     .. code-block:: sh
 
         arg1=$@ && [ -z "$arg1" ] && arg1=DEFAULT
-                
+
                       # Set $arg1 to command-line arguments, if any.
                       # But . . . set to DEFAULT if not specified on command-line.
 
@@ -163,9 +163,9 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
         then
           echo "Usage: `basename $0` filename"
           exit $E_BADARGS  # No arg? Bail out.
-        else  
+        else
           file=$1          # Set filename.
-        fi  
+        fi
 
 
         [ ! -f "$file" ] && echo "File \"$file\" not found. \

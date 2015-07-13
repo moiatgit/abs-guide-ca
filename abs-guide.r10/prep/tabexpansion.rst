@@ -24,7 +24,7 @@ it works.
 
     bash$ xtraceroute.r[Tab]
     xtraceroute.real
-          
+
 
 
 
@@ -41,9 +41,9 @@ Tab completion also works for variables and path names.
 
 
     bash$ echo /usr/local/[Tab]
-    bin/     etc/     include/ libexec/ sbin/    src/     
+    bin/     etc/     include/ libexec/ sbin/    src/
      doc/     games/   lib/     man/     share/
-          
+
 
 
 
@@ -65,7 +65,7 @@ specify a short list of acceptable parameters.
     bash$ ./sample[Tab][Tab]
     sample_command
     file1.txt   file2.txt   file30.txt
-      
+
 
 
 
@@ -133,7 +133,7 @@ Now, let's try it.
 
     bash$ ./UseGetOpt-2.sh --[Tab]
     --         --aoption  --debug    --file     --help     --log     --test
-      
+
 
 
 

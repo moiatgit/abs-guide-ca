@@ -37,7 +37,7 @@ Bash. The *typeset* command also works in ksh scripts.
     .. code-block:: sh
 
         declare -i number
-        # The script will treat subsequent occurrences of "number" as an integer.       
+        # The script will treat subsequent occurrences of "number" as an integer.
 
         number=3
         echo "Number = $number"     # Number = 3
@@ -188,7 +188,7 @@ Using the *declare* builtin restricts the
 |     }                    |
 |                          |
 |     bar   # Prints bar.  |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 However . . .
@@ -213,7 +213,7 @@ However . . .
 |     # Thank you, Michael |
 |  Iatrou, for pointing th |
 | is out.                  |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -312,7 +312,7 @@ especially useful with `arrays <arrays.html#ARRAYREF>`__ .
     purple reddish-orange light green
     bash$ declare | grep Colors
     Colors=([0]="purple" [1]="reddish-orange" [2]="light green")
-             
+
 
 
 
@@ -339,7 +339,7 @@ operations <refcards.html#STRINGOPSTAB>`__ .
 | 3                        |
 |     intvar=stringval     |
 |     echo "$intvar"   # 0 |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

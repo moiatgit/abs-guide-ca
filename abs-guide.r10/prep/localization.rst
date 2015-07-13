@@ -228,7 +228,7 @@ With older versions of Bash or other shells, localization requires
 | s "Enter the value: ")"  |
 | var                      |
 |     # ...                |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

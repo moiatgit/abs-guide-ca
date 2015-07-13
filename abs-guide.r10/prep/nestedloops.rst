@@ -38,9 +38,9 @@ outer loop would interrupt this process.
       # End of inner loop.
       # ===============================================
 
-      let "outer+=1"    # Increment outer loop counter. 
+      let "outer+=1"    # Increment outer loop counter.
       echo              # Space between output blocks in pass of outer loop.
-    done               
+    done
     # End of outer loop.
 
     exit 0

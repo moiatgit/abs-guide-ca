@@ -56,11 +56,11 @@ A more elaborate example:
     variable2=""    # Empty.
 
     COMMAND $variable2 $variable2 $variable2
-                    # Executes COMMAND with no arguments. 
+                    # Executes COMMAND with no arguments.
     COMMAND "$variable2" "$variable2" "$variable2"
-                    # Executes COMMAND with 3 empty arguments. 
+                    # Executes COMMAND with 3 empty arguments.
     COMMAND "$variable2 $variable2 $variable2"
-                    # Executes COMMAND with 1 argument (2 spaces). 
+                    # Executes COMMAND with 1 argument (2 spaces).
 
     # Thanks, Stéphane Chazelas.
 
@@ -176,7 +176,7 @@ quotes will not yield the expected result.
 |     # This example court |
 | esy of Stéphane Chazelas |
 | .                        |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -255,7 +255,7 @@ following an **echo -e** command.
 |     bash$ echo -e "x\ty" |
 |     x       y            |
 |                          |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Double quotes following an *echo* *sometimes* escape
@@ -293,7 +293,7 @@ Daniel Barclay for explaining it.)
     xty
     bash$ echo -e "x\ty"
     x       y
-              
+
 
 
 .. code-block:: sh
@@ -323,7 +323,7 @@ Daniel Barclay for explaining it.)
     xty
     bash$ echo -e "x\ty"
     x       y
-              
+
 
 
 ` [2]  <quotingvar.html#AEN2688>`__

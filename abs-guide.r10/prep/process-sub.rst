@@ -58,7 +58,7 @@ technique. But, what if you need to pipe the ``      stdout     `` of
 
     bash$ wc <(grep script /usr/share/dict/linux.words)
         262     262    3601 /dev/fd/63
-              
+
 
 
 
@@ -151,7 +151,7 @@ Some other usages and uses of process substitution:
     # Lists all the files in the 3 main 'bin' directories, and sorts by filename.
     # Note that three (count 'em) distinct commands are fed to 'sort'.
 
-     
+
     diff <(command1) <(command2)    # Gives difference in command output.
 
     tar cf >(bzip2 -c > file.tar.bz2) $directory_name
@@ -299,13 +299,13 @@ substitution.
     # --------------------------------------------------------------#
     while read  des what mask iface; do
     # Some commands ...
-    done < <(route -n)  
+    done < <(route -n)
     #    ^ ^  First < is redirection, second is process substitution.
 
     # To test it, let's make it do something.
     while read  des what mask iface; do
       echo $des $what $mask $iface
-    done < <(route -n)  
+    done < <(route -n)
 
     # Output:
     # Kernel IP routing table
@@ -322,9 +322,9 @@ substitution.
             #  However, as Ulrich Gayer points out . . .
             #+ this simplified equivalent uses a subshell for the while loop,
             #+ and therefore the variables disappear when the pipe terminates.
-        
+
     # --------------------------------------------------------------#
-        
+
     #  However, Filip Moritz comments that there is a subtle difference
     #+ between the above two examples, as the following shows.
 

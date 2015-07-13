@@ -30,7 +30,7 @@ log files.
     then
       echo "Must be root to run this script."
       exit $E_NOTROOT
-    fi  
+    fi
 
 
     FD_DEBUG1=3
@@ -78,7 +78,7 @@ log files.
 
     ls -l >&5 2>&4                             # command1 >&5 2>&4
 
-    echo "Done"                                # command2 
+    echo "Done"                                # command2
 
     echo "sending mail" >&${FD_LOGEVENTS}
     # Writes "sending mail" to file descriptor #7.

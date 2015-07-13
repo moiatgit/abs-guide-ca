@@ -261,7 +261,7 @@ Write a script to carry out each of the following tasks.
              | x |
            ----------
              | o |
-             
+
            Your move, human (row, column)?
 
 
@@ -751,7 +751,7 @@ For all you clever types who failed intermediate algebra, a
 |     The solution is a*a  |
 | - b*b, where "a" and "b" |
 |  represent numbers.      |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

@@ -203,7 +203,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     | s the substring sequence |
     |  \"txt\""                |
     |     fi                   |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -265,7 +265,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         bash$ echo `ls -l /usr/share/apps/kjezz/sounds`
         total 40 -rw-r--r-- 1 root root 716 Nov 7 2000 reflect.au -rw-r--r-- 1 root root ...
-                  
+
 
 
 
@@ -282,7 +282,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # Let's try something else.
 
         echo
-                 
+
         echo $"A line of text containing
         a linefeed."
         # Prints as two distinct lines (embedded linefeed).
@@ -339,7 +339,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     | tin                      |
     |      echo is /bin/echo   |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -348,7 +348,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ type -a echo
         echo is a shell builtin
          echo is /bin/echo
-                  
+
 
 
     .. code-block:: sh
@@ -356,7 +356,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ type -a echo
         echo is a shell builtin
          echo is /bin/echo
-                  
+
 
 
 
@@ -419,7 +419,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # Simulation of C function, sprintf().
         # Loading a variable with a formatted string.
 
-        echo 
+        echo
 
         Pi12=$(printf "%1.12f" $PI)
         echo "Pi to 12 decimal places = $Pi12"      # Roundoff error!
@@ -602,7 +602,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # Data entry terminates with the first <ENTER>.
 
-        echo 
+        echo
 
         exit 0
 
@@ -881,7 +881,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     do                   |
     |     echo $line           |
     |     done                 |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     However, as Bjรถn Eriksson shows:
@@ -918,7 +918,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         #############################################
 
-        ./readpipe.sh 
+        ./readpipe.sh
 
         {#!/bin/sh}
         {last="(null)"}
@@ -952,7 +952,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     | rint |                   |
     |     while read f; do     |
     |     . . .                |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -993,7 +993,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         #############################################
 
-        ./readpipe.sh 
+        ./readpipe.sh
 
         {#!/bin/sh}
         {last="(null)"}
@@ -1056,7 +1056,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         #############################################
 
-        ./readpipe.sh 
+        ./readpipe.sh
 
         {#!/bin/sh}
         {last="(null)"}
@@ -1134,7 +1134,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     |     bash$ pwd            |
     |     //                   |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     The output should, of course, be ``           /          `` . This
@@ -1146,7 +1146,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ cd //
         bash$ pwd
         //
-                  
+
 
 
     .. code-block:: sh
@@ -1154,7 +1154,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ cd //
         bash$ pwd
         //
-                  
+
 
 
 
@@ -1348,7 +1348,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     | ns 1;                    |
     |     #  let returns 0 oth |
     | erwise." ['help let']    |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -1440,7 +1440,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ eval "$command_string" | grep "$process"
         26973 pts/3    R+     0:00 grep --color ps ax
          26974 pts/3    R+     0:00 ps ax
-                  
+
 
 
 
@@ -1628,7 +1628,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
         killppp="eval kill -9 `ps ax | awk '/ppp/ { print $1 }'`"
-        #                     -------- process ID of ppp -------  
+        #                     -------- process ID of ppp -------
 
         $killppp                     # This variable is now a command.
 
@@ -1647,7 +1647,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # ---------
         # 1) Have script check whether root user is invoking it.
         # 2) Do a check on whether the process to be killed
-        #+   is actually running before attempting to kill it.   
+        #+   is actually running before attempting to kill it.
         # 3) Write an alternate version of this script based on 'fuser':
         #+      if [ fuser -s /dev/modem ]; then . . .
 
@@ -1809,7 +1809,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
         set a\ b c d\ e;
-        #     ^      ^     Spaces escaped 
+        #     ^      ^     Spaces escaped
         #       ^ ^        Spaces not escaped
         OIFS=$IFS; IFS=:;
         #              ^   Saving old IFS and setting new one.
@@ -1852,7 +1852,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         $ ./revposparams.sh
 
-        ### k0 = 
+        ### k0 =
         ### k = a b
 
         ### k0 = a b
@@ -1888,7 +1888,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
          _=/etc/bashrc
          variable22=abc
          variable23=xzy
-                  
+
 
 
 
@@ -1960,7 +1960,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         bash$ echo $PATH
 
-        bash$ 
+        bash$
 
 
 
@@ -2095,7 +2095,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     | ort var; echo ${var[0]}  |
     |     a                    |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -2108,7 +2108,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         bash$ var=(a b); export var; echo ${var[0]}
         a
-                  
+
 
 
     .. code-block:: sh
@@ -2120,7 +2120,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         bash$ var=(a b); export var; echo ${var[0]}
         a
-                  
+
 
 
 
@@ -2237,7 +2237,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         #
         #   'scriptname -qr'
         #+      - Unexpected result, takes "r" as the argument to option "q"
-        #   'scriptname -q -r' 
+        #   'scriptname -q -r'
         #+      - Unexpected result, same as above
         #   'scriptname -mnop -mnop'  - Unexpected result
         #   (OPTIND is unreliable at stating where an option came from.)
@@ -2245,7 +2245,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         #  If an option expects an argument ("flag:"), then it will grab
         #+ whatever is next on the command-line.
 
-        NO_ARGS=0 
+        NO_ARGS=0
         E_OPTERROR=85
 
         if [ $# -eq "$NO_ARGS" ]    # Script invoked with no command-line args?
@@ -2254,7 +2254,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
           exit $E_OPTERROR          # Exit and explain usage.
                                     # Usage: scriptname -options
                                     # Note: dash (-) necessary
-        fi  
+        fi
 
 
         while getopts ":mnopq:rs" Option
@@ -2375,7 +2375,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
             echo -n "$1" # Echo args one at a time, suppressing line feeds.
             echo -n " "  # Insert spaces between words.
             shift        # Next one.
-          done  
+          done
 
           echo
 
@@ -2430,7 +2430,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         do
           . $0   # Script "sources" itself, rather than calling itself.
                  # ./$0 (which would be true recursion) doesn't work here. Why?
-        done  
+        done
 
         #  What occurs here is not actually recursion,
         #+ since the script effectively "expands" itself, i.e.,
@@ -2637,7 +2637,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ true
         bash$ echo $?
         0
-                  
+
 
 
 
@@ -2666,14 +2666,14 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         bash$ false
         bash$ echo $?
         1
-                  
+
 
 
 
 
     .. code-block:: sh
 
-        # Testing "false" 
+        # Testing "false"
         if false
         then
           echo "false evaluates \"true\""
@@ -2692,7 +2692,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
            ...
            operation-n
            # Nothing happens!
-        done   
+        done
 
 
 
@@ -2716,7 +2716,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         bash$ type type
         type is a shell builtin
-                  
+
 
 
 
@@ -2749,7 +2749,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         exit: exit [n]
             Exit the shell with a status of N.  If N is omitted, the exit status
             is that of the last command executed.
-                  
+
 
 
 

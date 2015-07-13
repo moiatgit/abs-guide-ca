@@ -52,8 +52,8 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
     }
 
     echo
-       
-    echo "Nothing passed."   
+
+    echo "Nothing passed."
     func2                          # Called with no params
     echo
 
@@ -66,11 +66,11 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
     func2 "$uninitialized_param"   # Called with uninitialized param
     echo
 
-    echo "One parameter passed."   
+    echo "One parameter passed."
     func2 first           # Called with one param
     echo
 
-    echo "Two parameters passed."   
+    echo "Two parameters passed."
     func2 first second    # Called with two params
     echo
 
@@ -247,7 +247,7 @@ The next logical question is whether parameters can be dereferenced
       echo "Entry #$icount = $var"
       let "icount += 1"
       echo
-    done  
+    done
 
 
     # Thanks to Stephane Chazelas for providing this instructive example.
@@ -325,9 +325,9 @@ The next logical question is whether parameters can be dereferenced
             echo "The two numbers are equal."
         else
             echo "The larger of the two numbers is $return_val."
-        fi  
+        fi
 
-          
+
         exit 0
 
         #  Exercise (easy):
@@ -379,7 +379,7 @@ The next logical question is whether parameters can be dereferenced
     |     fi                   |
     |                          |
     |     # Thanks, S.C.       |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -399,7 +399,7 @@ The next logical question is whether parameters can be dereferenced
           echo "There are $REPLY lines in /etc/passwd."
         else
           echo "Cannot count lines in /etc/passwd."
-        fi  
+        fi
 
         # Thanks, S.C.
 
@@ -420,7 +420,7 @@ The next logical question is whether parameters can be dereferenced
           echo "There are $REPLY lines in /etc/passwd."
         else
           echo "Cannot count lines in /etc/passwd."
-        fi  
+        fi
 
         # Thanks, S.C.
 
@@ -451,14 +451,14 @@ The next logical question is whether parameters can be dereferenced
         then
           echo "Usage: `basename $0` number-to-convert"
           exit $E_ARG_ERR
-        fi  
+        fi
 
         num=$1
         if [ "$num" -gt $LIMIT ]
         then
           echo "Out of range!"
           exit $E_OUT_OF_RANGE
-        fi  
+        fi
 
         to_roman ()   # Must declare function before first call to it.
         {
@@ -471,7 +471,7 @@ The next logical question is whether parameters can be dereferenced
           echo -n $rchar
           let "number -= factor"
           let "remainder = number - factor"
-        done  
+        done
 
         return $number
                # Exercises:
@@ -481,7 +481,7 @@ The next logical question is whether parameters can be dereferenced
                # 2) Extend to range of the function.
                #    Hint: use "echo" and command-substitution capture.
         }
-           
+
 
         to_roman $num 100 C
         num=$?
@@ -541,7 +541,7 @@ The next logical question is whether parameters can be dereferenced
 
         return_test 27         # o.k.
         echo $?                # Returns 27.
-          
+
         return_test 255        # Still o.k.
         echo $?                # Returns 255.
 
@@ -602,7 +602,7 @@ The next logical question is whether parameters can be dereferenced
     | 1                        |
     |     echo "return value = |
     |  $Return_Val"    #25701  |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     A more elegant method is to have the function **echo** its "return
@@ -672,7 +672,7 @@ The next logical question is whether parameters can be dereferenced
             echo "The larger of the two numbers is $return_val."
         fi
         # =========================================================
-          
+
         exit 0
 
         #  Exercises:
@@ -755,7 +755,7 @@ The next logical question is whether parameters can be dereferenced
     |     # ------------------ |
     | ------------------------ |
     | ----                     |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     See also `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and
@@ -781,7 +781,7 @@ The next logical question is whether parameters can be dereferenced
 
         return_test 27         # o.k.
         echo $?                # Returns 27.
-          
+
         return_test 255        # Still o.k.
         echo $?                # Returns 255.
 
@@ -885,7 +885,7 @@ The next logical question is whether parameters can be dereferenced
             echo "The larger of the two numbers is $return_val."
         fi
         # =========================================================
-          
+
         exit 0
 
         #  Exercises:
@@ -940,7 +940,7 @@ The next logical question is whether parameters can be dereferenced
 
         return_test 27         # o.k.
         echo $?                # Returns 27.
-          
+
         return_test 255        # Still o.k.
         echo $?                # Returns 255.
 
@@ -1044,7 +1044,7 @@ The next logical question is whether parameters can be dereferenced
             echo "The larger of the two numbers is $return_val."
         fi
         # =========================================================
-          
+
         exit 0
 
         #  Exercises:
@@ -1120,7 +1120,7 @@ The next logical question is whether parameters can be dereferenced
         then
           echo "Usage: `basename $0` USERNAME"
           exit $E_WRONGARGS
-        fi  
+        fi
 
         file_excerpt ()    #  Scan file for pattern,
         {                  #+ then print relevant portion of line.

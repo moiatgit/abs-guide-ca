@@ -242,7 +242,7 @@ break up the sequence into bracketed sections.
 |  condition tests are gro |
 | uped in logical sections |
 | .                        |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

@@ -37,7 +37,7 @@ and statistics about them.
 
 
     bash$ cat /proc/interrupts
-               CPU0       
+               CPU0
        0:      84505          XT-PIC  timer
        1:       3375          XT-PIC  keyboard
        2:          0          XT-PIC  cascade
@@ -45,7 +45,7 @@ and statistics about them.
        8:          1          XT-PIC  rtc
       12:       4231          XT-PIC  PS/2 Mouse
       14:     109373          XT-PIC  ide0
-     NMI:          0 
+     NMI:          0
      ERR:          0
 
 
@@ -84,13 +84,13 @@ and statistics about them.
      serial number:            1133
      battery type:            LION
      OEM info:                Panasonic
-     
-     
-     
+
+
+
     bash$ fgrep Mem /proc/meminfo
     MemTotal:       515216 kB
      MemFree:        266248 kB
-             
+
 
 
 
@@ -199,7 +199,7 @@ the ``         /proc        `` directory.
 |         root# echo on >  |
 | /proc/acpi/ibm/light     |
 |                          |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 This turns on the *Thinklight* in certain models of IBM/Lenovo
@@ -211,13 +211,13 @@ Of course, caution is advised when writing to ``         /proc        ``
 .. code-block:: sh
 
        root# echo on > /proc/acpi/ibm/light
-              
+
 
 
 .. code-block:: sh
 
        root# echo on > /proc/acpi/ibm/light
-              
+
 
 
 
@@ -255,7 +255,7 @@ be the most interesting from a scripting standpoint.
     then
       echo "Usage: `basename $0` PID-number" >&2  # Error message >stderr.
       exit $E_WRONGARGS
-    fi  
+    fi
 
     pidno=$( ps ax | grep $1 | awk '{ print $1 }' | grep $1 )
     # Checks for pid in "ps" listing, field #1.
@@ -269,7 +269,7 @@ be the most interesting from a scripting standpoint.
     then                #+ no running process corresponds to the pid given.
       echo "No such process running."
       exit $E_NOSUCHPROCESS
-    fi  
+    fi
 
     # Alternatively:
     #   if ! ps $1 > /dev/null 2>&1
@@ -286,7 +286,7 @@ be the most interesting from a scripting standpoint.
       echo "Process $1 running, but..."
       echo "Can't get read permission on /proc/$1/$PROCFILE."
       exit $E_NOPERMISSION  # Ordinary user can't access some files in /proc.
-    fi  
+    fi
 
     # The last two tests may be replaced by:
     #    if ! kill -0 $1 > /dev/null 2>&1 # '0' is not a signal, but
@@ -309,7 +309,7 @@ be the most interesting from a scripting standpoint.
       echo "Process #$1 invoked by $exe_file."
     else
       echo "No such process running."
-    fi  
+    fi
 
 
     #  This elaborate script can *almost* be replaced by

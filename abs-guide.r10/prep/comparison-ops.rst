@@ -117,7 +117,7 @@ operators.*
     |                          |
     |     # Thanks, StÃ©phane  |
     | Chazelas                 |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -278,7 +278,7 @@ operators.*
     if [ -n $string1 ]    # string1 has not been declared or initialized.
     then
       echo "String \"string1\" is not null."
-    else  
+    else
       echo "String \"string1\" is null."
     fi                    # Wrong result.
     # Shows $string1 as not null, although it was not initialized.
@@ -290,7 +290,7 @@ operators.*
     if [ -n "$string1" ]  # This time, $string1 is quoted.
     then
       echo "String \"string1\" is not null."
-    else  
+    else
       echo "String \"string1\" is null."
     fi                    # Quote strings within test brackets!
 
@@ -299,7 +299,7 @@ operators.*
     if [ $string1 ]       # This time, $string1 stands naked.
     then
       echo "String \"string1\" is not null."
-    else  
+    else
       echo "String \"string1\" is null."
     fi                    # This works fine.
     # The [ ... ] test operator alone detects whether the string is null.
@@ -307,7 +307,7 @@ operators.*
     #
     # As Stephane Chazelas points out,
     #    if [ $string1 ]    has one argument, "]"
-    #    if [ "$string1" ]  has two arguments, the empty "$string1" and "]" 
+    #    if [ "$string1" ]  has two arguments, the empty "$string1" and "]"
 
 
     echo
@@ -318,7 +318,7 @@ operators.*
     if [ $string1 ]       # Again, $string1 stands unquoted.
     then
       echo "String \"string1\" is not null."
-    else  
+    else
       echo "String \"string1\" is null."
     fi                    # Again, gives correct result.
     # Still, it is better to quote it ("$string1"), because . . .
@@ -329,7 +329,7 @@ operators.*
     if [ $string1 ]       # Again, $string1 stands unquoted.
     then
       echo "String \"string1\" is not null."
-    else  
+    else
       echo "String \"string1\" is null."
     fi                    # Not quoting "$string1" now gives wrong result!
 
@@ -360,7 +360,7 @@ operators.*
       # Error message to stderr.
       exit $E_NOARGS
       # Returns 85 as exit status of script (error code).
-    fi  
+    fi
 
     filename=$1
 
@@ -368,14 +368,14 @@ operators.*
     then
       echo "File $filename not found!" >&2   # Error message to stderr.
       exit $E_NOTFOUND
-    fi  
+    fi
 
     if [ ${filename##*.} != "gz" ]
     # Using bracket in variable substitution.
     then
       echo "File $1 is not a gzipped file!"
       exit $E_NOTGZIP
-    fi  
+    fi
 
     zcat $1 | more
 
@@ -469,7 +469,7 @@ But, as *rihad* points out:
 |     # Apparently && and  |
 | || "short-circuit" while |
 |  -a and -o do not.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

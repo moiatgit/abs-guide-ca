@@ -55,7 +55,7 @@ as part of an RE.
     -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 b.1
      -rw-rw-r--    1 bozo  bozo         0 Aug  6 18:42 c.1
      -rw-rw-r--    1 bozo  bozo       758 Jul 30 09:02 test1.txt
-              
+
 
 
 
@@ -73,7 +73,7 @@ Bash performs filename expansion on unquoted command-line arguments. The
 
     bash$ echo t?.sh
     t2.sh
-              
+
 
 
 
@@ -125,7 +125,7 @@ shows how to avoid many such pitfalls.
 |     # This example taken |
 |  from David Wheeler's si |
 | te, with permission.     |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -212,7 +212,7 @@ explicitly includes the dot as a literal character.
 | f.                       |
 |                          |
 |     # Thanks, S.C.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

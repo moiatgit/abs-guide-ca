@@ -65,7 +65,7 @@ XXX  16.4. Text Processing Commands
               3 This line occurs three times.
                2 This line occurs twice.
                1 This line occurs only once.
-                  
+
 
 
 
@@ -168,7 +168,7 @@ XXX  16.4. Text Processing Commands
                2 twice
                1 only
                1 once
-                   
+
 
 
 
@@ -261,7 +261,7 @@ XXX  16.4. Text Processing Commands
     |      This is line 19 of  |
     | testfile.                |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Thank you, Jaka Kranjc, for pointing this out.
@@ -274,7 +274,7 @@ XXX  16.4. Text Processing Commands
         This is line 3 of testfile.
          This is line 7 of testfile.
          This is line 19 of testfile.
-                  
+
 
 
     .. code-block:: sh
@@ -284,7 +284,7 @@ XXX  16.4. Text Processing Commands
         This is line 3 of testfile.
          This is line 7 of testfile.
          This is line 19 of testfile.
-                  
+
 
 
 
@@ -360,7 +360,7 @@ XXX  16.4. Text Processing Commands
          100 Shoes $40.00
          200 Laces $1.00
          300 Socks $2.00
-                  
+
 
 
 
@@ -402,7 +402,7 @@ XXX  16.4. Text Processing Commands
             echo "File \"$file\" is *not* a script."
           fi
         done
-          
+
         exit 0
 
         #  Exercises:
@@ -444,7 +444,7 @@ XXX  16.4. Text Processing Commands
         # -N4 option limits output to 4 bytes.
         # -tu4 option selects unsigned decimal format for output.
 
-        # sed: 
+        # sed:
         # -n option, in combination with "p" flag to the "s" command,
         # outputs only matched lines.
 
@@ -534,7 +534,7 @@ XXX  16.4. Text Processing Commands
         #+ and truncates it to zero length if it does.
         #  : > filename   and   > filename also work.
 
-        tail /var/log/messages > $filename  
+        tail /var/log/messages > $filename
         # /var/log/messages must have world read permission for this to work.
 
         echo "$filename contains tail end of system log."
@@ -571,7 +571,7 @@ XXX  16.4. Text Processing Commands
     |     # n = number of line |
     | s to set variable to (tr |
     | im from end of block)    |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -630,7 +630,7 @@ XXX  16.4. Text Processing Commands
 
         bash$ grep '[rst]ystem.$' osinfo.txt
         The GPL governs the distribution of the Linux operating system.
-                  
+
 
 
 
@@ -644,7 +644,7 @@ XXX  16.4. Text Processing Commands
         bash$ ps ax | grep clock
         765 tty1     S      0:00 xclock
          901 pts/1    S      0:00 grep clock
-                  
+
 
 
 
@@ -667,7 +667,7 @@ XXX  16.4. Text Processing Commands
         bash$ grep -n Linux osinfo.txt
         2:This is a file containing information about Linux.
          6:The GPL governs the distribution of the Linux operating system.
-                  
+
 
 
 
@@ -680,7 +680,7 @@ XXX  16.4. Text Processing Commands
         grep pattern1 *.txt | grep -v pattern2
 
         # Matches all lines in "*.txt" files containing "pattern1",
-        # but ***not*** "pattern2".       
+        # but ***not*** "pattern2".
 
 
 
@@ -698,13 +698,13 @@ XXX  16.4. Text Processing Commands
         #            ^ dot
         # means count (-c) zero-separated (-z) items matching "."
         # that is, non-empty ones (containing at least 1 character).
-        # 
+        #
         printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz .     # 3
         printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz '$'   # 5
         printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz '^'   # 5
         #
         printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -c '$'    # 9
-        # By default, newline chars (\n) separate items to match. 
+        # By default, newline chars (\n) separate items to match.
 
         # Note that the -z option is GNU "grep" specific.
 
@@ -766,7 +766,7 @@ XXX  16.4. Text Processing Commands
         osinfo.txt:This is a file containing information about Linux.
          osinfo.txt:The GPL governs the distribution of the Linux operating system.
          misc.txt:The Linux operating system is steadily gaining in popularity.
-                  
+
 
 
 
@@ -791,7 +791,7 @@ XXX  16.4. Text Processing Commands
     |  of the Linux operating  |
     | system.                  |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -800,7 +800,7 @@ XXX  16.4. Text Processing Commands
         bash$ grep Linux osinfo.txt /dev/null
         osinfo.txt:This is a file containing information about Linux.
          osinfo.txt:The GPL governs the distribution of the Linux operating system.
-                  
+
 
 
     .. code-block:: sh
@@ -808,7 +808,7 @@ XXX  16.4. Text Processing Commands
         bash$ grep Linux osinfo.txt /dev/null
         osinfo.txt:This is a file containing information about Linux.
          osinfo.txt:The GPL governs the distribution of the Linux operating system.
-                  
+
 
 
 
@@ -855,7 +855,7 @@ XXX  16.4. Text Processing Commands
         then
           echo "Usage: `basename $0` pattern"
           exit $E_BADARGS
-        fi  
+        fi
 
         echo
 
@@ -870,7 +870,7 @@ XXX  16.4. Text Processing Commands
           fi              #  sed -ne "/$1/s|^|${file}: |p"  is equivalent to above.
 
           echo
-        done  
+        done
 
         echo
 
@@ -1015,7 +1015,7 @@ XXX  16.4. Text Processing Commands
         Line 1 matches.
          Line 3 Matches.
          Line 4 contains matches, but also Matches
-                      
+
 
 
 
@@ -1196,7 +1196,7 @@ XXX  16.4. Text Processing Commands
             echo "\"$word\" is valid."
           else
             echo "\"$word\" is invalid."
-          fi  
+          fi
 
         done <"$file"    # Redirects stdin to $file, so "reads" come from there.
 
@@ -1290,7 +1290,7 @@ XXX  16.4. Text Processing Commands
 
         bash$ wc [d-h]* | grep total | awk '{print $3}'
         71832
-                  
+
 
 
 
@@ -1302,7 +1302,7 @@ XXX  16.4. Text Processing Commands
 
         bash$ grep Linux abs-book.sgml | wc -l
         138
-                  
+
 
 
 
@@ -1397,7 +1397,7 @@ XXX  16.4. Text Processing Commands
 
         bash$ echo "abcd2ef1" | tr '[:alpha:]' -
         ----2--1
-                  
+
 
 
 
@@ -1416,7 +1416,7 @@ XXX  16.4. Text Processing Commands
         then
           echo "Usage: `basename $0` filename"
           exit $E_BADARGS
-        fi  
+        fi
 
         tr a-z A-Z <"$1"
 
@@ -1461,8 +1461,8 @@ XXX  16.4. Text Processing Commands
            if [ "$fname" != "$n" ]       # Rename only files not already lowercase.
            then
              mv $fname $n
-           fi  
-        done   
+           fi
+        done
 
         exit $?
 
@@ -1578,7 +1578,7 @@ XXX  16.4. Text Processing Commands
         # Otherwise, specify filename as command-line parameter.
 
         cat "$@" | tr "a-z" "A-Z" | tr "A-Z" "$key"
-        #        |  to uppercase  |     encrypt       
+        #        |  to uppercase  |     encrypt
         # Will work on lowercase, uppercase, or mixed-case quotes.
         # Passes non-alphabetic characters through unchanged.
 
@@ -1664,7 +1664,7 @@ XXX  16.4. Text Processing Commands
 
         # Could also have been done by
         #    echo $b | fold - -s -w $WIDTH
-         
+
         exit 0
 
 

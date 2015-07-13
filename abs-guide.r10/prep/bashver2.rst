@@ -11,7 +11,7 @@ machine, is most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy.
 
     bash$ echo $BASH_VERSION
     3.2.25(1)-release
-              
+
 
 
 
@@ -31,7 +31,7 @@ indirect variable references, among other features.
     # Introduced with version 2 of Bash.
 
     #  Strings of the form $'xxx'
-    #+ have the standard escaped characters interpreted. 
+    #+ have the standard escaped characters interpreted.
 
     echo $'Ringing bell 3 times \a \a \a'
          # May only ring once with certain terminals.
@@ -237,7 +237,7 @@ four random hands from a deck of cards**
     then
       Deck[card_number]=$PICKED
       return $card_number
-    else  
+    else
       return $DUPE_CARD
     fi
     }
@@ -285,8 +285,8 @@ four random hands from a deck of cards**
         fi                  # Each hand set apart with a blank line.
 
         let "cards_picked += 1"
-      fi  
-    done  
+      fi
+    done
 
     echo
 

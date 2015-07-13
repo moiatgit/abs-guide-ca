@@ -17,7 +17,7 @@ effect, use **set -o option-name** or, in short form, **set
 
           set -o verbose
           # Echoes all commands before executing.
-          
+
 
 
 
@@ -28,7 +28,7 @@ effect, use **set -o option-name** or, in short form, **set
 
           set -v
           # Exact same effect as above.
-          
+
 
 
 
@@ -70,7 +70,7 @@ To *disable* an option within a script, use **set +o option-name** or
           command
 
           exit 0
-          
+
 
 
 
@@ -83,7 +83,7 @@ immediately following the ``             #!           `` script header.
           #!/bin/bash -x
           #
           # Body of script follows.
-          
+
 
 
 

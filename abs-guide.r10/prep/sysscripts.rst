@@ -39,7 +39,7 @@ running processes at system shutdown.
             subsys=${i#/var/lock/subsys/}
             # --> Match variable name, which, in this case, is the file name.
             # --> This is the exact equivalent of subsys=`basename $i`.
-        
+
             # -->  It gets it from the lock file name
             # -->+ (if there is a lock file,
             # -->+ that's proof the process has been running).

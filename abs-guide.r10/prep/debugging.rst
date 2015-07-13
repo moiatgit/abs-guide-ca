@@ -36,7 +36,7 @@ help in debugging a non-functional script.
     if [$a -gt 27 ]
     then
       echo $a
-    fi  
+    fi
 
     exit $?   # 0! Why?
 
@@ -85,7 +85,7 @@ Output from script:
 .. code-block:: sh
 
     missing-keyword.sh: line 10: syntax error: unexpected end of file
-        
+
 
 
 
@@ -196,7 +196,7 @@ Tools for debugging non-working scripts include
    |     Whatever=notwhat     |
    |     debecho $Whatever    |
    | # (Will not echo.)       |
-                             
+
    +--------------------------+--------------------------+--------------------------+
 
 
@@ -318,7 +318,7 @@ Tools for debugging non-working scripts include
 
          lineno=$2
 
-         if [ ! $1 ] 
+         if [ ! $1 ]
          then
            echo "Assertion failed:  \"$1\""
            echo "File \"$0\", line $lineno"    # Give name of file and line number.
@@ -326,8 +326,8 @@ Tools for debugging non-working scripts include
          # else
          #   return
          #   and continue executing the script.
-         fi  
-       } # Insert a similar assert() function into a script you need to debug.    
+         fi
+       } # Insert a similar assert() function into a script you need to debug.
        #######################################################################
 
 
@@ -387,7 +387,7 @@ Tools for debugging non-working scripts include
     .. code-block:: sh
 
         trap '' 2
-        # Ignore interrupt 2 (Control-C), with no action specified. 
+        # Ignore interrupt 2 (Control-C), with no action specified.
 
         trap 'echo "Control-C disabled."' 2
         # Message when Control-C pressed.
@@ -478,8 +478,8 @@ Tools for debugging non-working scripts include
                             #+ so you get continuous rows of dots.
       fi
 
-      sleep 1  
-    done  
+      sleep 1
+    done
 
 
     #  Note: if you change the KEYWORD variable to "Exit",
@@ -770,7 +770,7 @@ A-43 <contributed-scripts.html#STOPWATCH>`__ ).
     #+ trap handler but before the next trap is set.  During this time, it may
     #+ be possible to miss a trap signal, thus miss spawning a child process.
 
-    #  No doubt someone may spot the bug and will be writing 
+    #  No doubt someone may spot the bug and will be writing
     #+ . . . in the future.
 
 
@@ -880,7 +880,7 @@ portion of a script from an undesirable interrupt.
         command
         command
         trap 2     # Reenables Control-C
-        
+
 
 
 
@@ -920,7 +920,7 @@ use by the debugger.
    Array variable associated with **=~** `conditional regex
    matching <bashver3.html#REGEXMATCHREF>`__ .
 
-#. 
+#.
 
    ``           $BASH_SOURCE          ``
 

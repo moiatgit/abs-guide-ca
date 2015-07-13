@@ -82,7 +82,7 @@ or customized for a particular application.
 
     exit #  The right and proper method of "exiting" from a script.
          #  A bare "exit" (no parameter) returns the exit status
-         #+ of the preceding command. 
+         #+ of the preceding command.
 
 
 
@@ -121,15 +121,15 @@ scripts.**
     then
       echo "Must be root to run this script."
       exit $E_NOTROOT
-    fi  
+    fi
 
     if [ -n "$1" ]
     # Test whether command-line argument is present (non-empty).
     then
       lines=$1
-    else  
+    else
       lines=$LINES # Default, if not specified on command-line.
-    fi  
+    fi
 
 
     #  Stephane Chazelas suggests the following,
@@ -271,7 +271,7 @@ parameters.
 |  the script's filename.  |
 |       exit $E_WRONG_ARGS |
 |     fi                   |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Many times, you will write a script that carries out one particular
@@ -361,7 +361,7 @@ interpret it as a comment.
 | pt."                     |
 |     echo $a  # Value of  |
 | $a stays at 1.           |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -422,7 +422,7 @@ This allows some cute tricks.
 | t termination.           |
 |                     # Yo |
 | u'll get a 0, not a 85.  |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Also, try starting a ``       README      `` file with a

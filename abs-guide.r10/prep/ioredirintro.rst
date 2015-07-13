@@ -27,7 +27,7 @@ By convention, a command reads its input from fd 0 (
 
     bash$ cat /etc/passwd >&-
     cat: standard output: Bad file descriptor
-          
+
 
 
 

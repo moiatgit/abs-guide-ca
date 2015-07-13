@@ -31,7 +31,7 @@ set a variable, and even for generating the argument list in a
     rm `cat filename`   # "filename" contains a list of files to delete.
     #
     # S. C. points out that "arg list too long" error might result.
-    # Better is              xargs rm -- < filename 
+    # Better is              xargs rm -- < filename
     # ( -- covers those cases where "filename" begins with a "-" )
 
     textfile_listing=`ls *.txt`
@@ -87,7 +87,7 @@ splitting <quotingvar.html#WSPLITREF>`__ .
 |                          |
 |                          |
 |     # Thanks, S.C.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Even when there is no word splitting, command substitution can remove
@@ -156,7 +156,7 @@ trailing newlines.
 |                          |
 |     #Code snippet by StÃ |
 | ©phane Chazelas.         |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -199,7 +199,7 @@ trailing newlines.
     stty -icanon -echo           # Disable "canonical" mode for terminal.
                                  # Also, disable *local* echo.
     key=$(dd bs=1 count=1 2> /dev/null)   # Using 'dd' to get a keypress.
-    stty "$old_tty_setting"      # Restore old setting. 
+    stty "$old_tty_setting"      # Restore old setting.
     echo "You hit ${#key} key."  # ${#variable} = number of characters in $variable
     #
     # Hit any key except RETURN, and the output is "You hit 1 key."
@@ -248,7 +248,7 @@ trailing newlines.
     stty -icanon -echo           # Disable "canonical" mode for terminal.
                                  # Also, disable *local* echo.
     key=$(dd bs=1 count=1 2> /dev/null)   # Using 'dd' to get a keypress.
-    stty "$old_tty_setting"      # Restore old setting. 
+    stty "$old_tty_setting"      # Restore old setting.
     echo "You hit ${#key} key."  # ${#variable} = number of characters in $variable
     #
     # Hit any key except RETURN, and the output is "You hit 1 key."
@@ -305,7 +305,7 @@ reassigned command(s). This can cause unpleasant surprises.
 |     # -rwxr-xr-x    1 bo |
 | zo      217 Mar  5 21:13 |
 |  wi.sh                   |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -551,7 +551,7 @@ should) and assigning that output to a variable.
 
     #include <stdio.h>
 
-    /*  "Hello, world." C program  */       
+    /*  "Hello, world." C program  */
 
     int main()
     {
@@ -565,7 +565,7 @@ should) and assigning that output to a variable.
 .. code-block:: sh
 
     bash$ gcc -o hello hello.c
-              
+
 
 
 
@@ -573,7 +573,7 @@ should) and assigning that output to a variable.
 .. code-block:: sh
 
     #!/bin/bash
-    # hello.sh      
+    # hello.sh
 
     greeting=`./hello`
     echo $greeting
@@ -585,7 +585,7 @@ should) and assigning that output to a variable.
 
     bash$ sh hello.sh
     Hello, world.
-                
+
 
 
 
@@ -595,7 +595,7 @@ should) and assigning that output to a variable.
 
     #include <stdio.h>
 
-    /*  "Hello, world." C program  */       
+    /*  "Hello, world." C program  */
 
     int main()
     {
@@ -607,13 +607,13 @@ should) and assigning that output to a variable.
 .. code-block:: sh
 
     bash$ gcc -o hello hello.c
-              
+
 
 
 .. code-block:: sh
 
     #!/bin/bash
-    # hello.sh      
+    # hello.sh
 
     greeting=`./hello`
     echo $greeting
@@ -623,14 +623,14 @@ should) and assigning that output to a variable.
 
     bash$ sh hello.sh
     Hello, world.
-                
+
 
 
 .. code-block:: sh
 
     #include <stdio.h>
 
-    /*  "Hello, world." C program  */       
+    /*  "Hello, world." C program  */
 
     int main()
     {
@@ -642,13 +642,13 @@ should) and assigning that output to a variable.
 .. code-block:: sh
 
     bash$ gcc -o hello hello.c
-              
+
 
 
 .. code-block:: sh
 
     #!/bin/bash
-    # hello.sh      
+    # hello.sh
 
     greeting=`./hello`
     echo $greeting
@@ -658,7 +658,7 @@ should) and assigning that output to a variable.
 
     bash$ sh hello.sh
     Hello, world.
-                
+
 
 
 
@@ -683,7 +683,7 @@ should) and assigning that output to a variable.
 |     File_contents2=$(<$f |
 | ile2)        # Bash perm |
 | its this also.           |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 The **$(...)** form of command substitution treats a double backslash in
@@ -699,7 +699,7 @@ a different way than **\`...\`** .
 | )                        |
 |     \                    |
 |                          |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 The **$(...)** form of command substitution permits nesting. ` [3]
@@ -711,7 +711,7 @@ The **$(...)** form of command substitution permits nesting. ` [3]
 |     word_count=$( wc -w  |
 | $(echo * | awk '{print $ |
 | 8}') )                   |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Or, for something a bit more elaborate . . .
@@ -776,9 +776,9 @@ Or, for something a bit more elaborate . . .
 .. code-block:: sh
 
     output=$(sed -n /"$1"/p $file)   # From "grp.sh" example.
-              
+
     # Setting a variable to the contents of a text file.
-    File_contents1=$(cat $file1)      
+    File_contents1=$(cat $file1)
     File_contents2=$(<$file2)        # Bash permits this also.
 
 
@@ -789,7 +789,7 @@ Or, for something a bit more elaborate . . .
 
     bash$ echo $(echo \\)
     \
-              
+
 
 
 .. code-block:: sh
@@ -850,9 +850,9 @@ Or, for something a bit more elaborate . . .
 .. code-block:: sh
 
     output=$(sed -n /"$1"/p $file)   # From "grp.sh" example.
-              
+
     # Setting a variable to the contents of a text file.
-    File_contents1=$(cat $file1)      
+    File_contents1=$(cat $file1)
     File_contents2=$(<$file2)        # Bash permits this also.
 
 
@@ -863,7 +863,7 @@ Or, for something a bit more elaborate . . .
 
     bash$ echo $(echo \\)
     \
-              
+
 
 
 .. code-block:: sh
@@ -988,7 +988,7 @@ the inner backticks, as John Default points out.
 |     word_count=` wc -w \ |
 | `echo * | awk '{print $8 |
 | }'\` `                   |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

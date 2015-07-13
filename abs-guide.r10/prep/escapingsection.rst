@@ -190,7 +190,7 @@ special meaning for that character.
          # Convert the separate home-key to home-key_num_7:
          if [ "$key" = $'\x1b\x4f\x48' ]; then
           key=$'\x1b\x5b\x31\x7e'
-          #   Quoted string-expansion construct. 
+          #   Quoted string-expansion construct.
          fi
 
          # Convert the separate end-key to end-key_num_1.
@@ -386,7 +386,7 @@ document <here-docs.html#HEREDOCREF>`__ .
 |     # These examples sup |
 | plied by Stéphane Chazel |
 | as.                      |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Elements of a string assigned to a variable may be escaped, but the
@@ -460,7 +460,7 @@ escape character alone may not be assigned to a variable.
 | escapes escaped.         |
 |                          |
 |     # This is o.k.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -485,12 +485,12 @@ escape character alone may not be assigned to a variable.
     echo `echo "\\z"`     # \z
 
                           # Here document
-    cat <<EOF              
-    \z                      
+    cat <<EOF
+    \z
     EOF                   # \z
 
-    cat <<EOF              
-    \\z                     
+    cat <<EOF
+    \\z
     EOF                   # \z
 
     # These examples supplied by Stéphane Chazelas.
@@ -514,7 +514,7 @@ escape character alone may not be assigned to a variable.
                             #  This works, since the second line
                             #+ is a valid variable assignment.
 
-    variable=\ 
+    variable=\
     #        \^    escape followed by space
     echo "$variable"        # space
 
@@ -556,12 +556,12 @@ escape character alone may not be assigned to a variable.
     echo `echo "\\z"`     # \z
 
                           # Here document
-    cat <<EOF              
-    \z                      
+    cat <<EOF
+    \z
     EOF                   # \z
 
-    cat <<EOF              
-    \\z                     
+    cat <<EOF
+    \\z
     EOF                   # \z
 
     # These examples supplied by Stéphane Chazelas.
@@ -585,7 +585,7 @@ escape character alone may not be assigned to a variable.
                             #  This works, since the second line
                             #+ is a valid variable assignment.
 
-    variable=\ 
+    variable=\
     #        \^    escape followed by space
     echo "$variable"        # space
 
@@ -666,7 +666,7 @@ the following line.
 .. code-block:: sh
 
     echo "foo
-    bar" 
+    bar"
     #foo
     #bar
 

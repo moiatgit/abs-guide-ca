@@ -104,7 +104,7 @@ As we have seen, a convenient way of initializing an entire array is the
 
     base64_charset=( {A..Z} {a..z} {0..9} + / = )
                    #  Using extended brace expansion
-                   #+ to initialize the elements of the array.                
+                   #+ to initialize the elements of the array.
                    #  Excerpted from vladz's "base64.sh" script
                    #+ in the "Contributed Scripts" appendix.
 
@@ -120,7 +120,7 @@ not explicitly declared as arrays.
 
     string=abcABC123ABCabc
     echo ${string[@]}               # abcABC123ABCabc
-    echo ${string[*]}               # abcABC123ABCabc 
+    echo ${string[*]}               # abcABC123ABCabc
     echo ${string[0]}               # abcABC123ABCabc
     echo ${string[1]}               # No output!
                                     # Why?
@@ -141,7 +141,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
     string=abcABC123ABCabc
     echo ${string[@]}               # abcABC123ABCabc
-    echo ${string[*]}               # abcABC123ABCabc 
+    echo ${string[*]}               # abcABC123ABCabc
     echo ${string[0]}               # abcABC123ABCabc
     echo ${string[1]}               # No output!
                                     # Why?
@@ -156,7 +156,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
     string=abcABC123ABCabc
     echo ${string[@]}               # abcABC123ABCabc
-    echo ${string[*]}               # abcABC123ABCabc 
+    echo ${string[*]}               # abcABC123ABCabc
     echo ${string[0]}               # abcABC123ABCabc
     echo ${string[1]}               # No output!
                                     # Why?
@@ -484,7 +484,7 @@ entire array.
     #+ (extracts variables separated by whitespace).
     #
     #  This corresponds to the behavior of "$@" and "$*"
-    #+ in positional parameters. 
+    #+ in positional parameters.
 
     index=0
 
@@ -521,7 +521,7 @@ entire array.
     unset colors                 # Delete entire array.
                                  #  unset colors[*] and
                                  #+ unset colors[@] also work.
-    echo; echo -n "Colors gone."               
+    echo; echo -n "Colors gone."
     echo ${colors[@]}            # List array again, now empty.
 
     exit 0
@@ -697,7 +697,7 @@ either **${#array\_name[@]}** or **${#array\_name[\*]}** .
     #  Pattern matching of 'word' in ${parameter#word} is done after
     #+ parameter expansion and *before* quote removal.
     #  In the normal case, pattern matching is done *after* quote removal.
-     
+
     exit
 
 
@@ -802,7 +802,7 @@ load the contents of a text file into an array.
 | ay1[*]}                  |
 |     echo $element_count  |
 |          # 8             |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -824,7 +824,7 @@ load the contents of a text file into an array.
     #         List file to stdout              #+ of $filename into array1.
     #
     #  array1=( `cat "$filename" | tr '\n' ' '`)
-    #                            change linefeeds in file to spaces. 
+    #                            change linefeeds in file to spaces.
     #  Not necessary because Bash does word splitting,
     #+ changing linefeeds to spaces.
 
@@ -856,7 +856,7 @@ load the contents of a text file into an array.
     #         List file to stdout              #+ of $filename into array1.
     #
     #  array1=( `cat "$filename" | tr '\n' ' '`)
-    #                            change linefeeds in file to spaces. 
+    #                            change linefeeds in file to spaces.
     #  Not necessary because Bash does word splitting,
     #+ changing linefeeds to spaces.
 
@@ -1212,9 +1212,9 @@ decide.
                                   #+ for element getting swapped out.
       Countries[$1]=${Countries[$2]}
       Countries[$2]=$temp
-      
+
       return
-    }  
+    }
 
     declare -a Countries  #  Declare array,
                           #+ optional here since it's initialized below.
@@ -1232,7 +1232,7 @@ decide.
     #+ Kubla Khan did a pleasure dome decree.
 
 
-    clear                      # Clear the screen to start with. 
+    clear                      # Clear the screen to start with.
 
     echo "0: ${Countries[*]}"  # List entire array at pass 0.
 
@@ -1257,7 +1257,7 @@ decide.
         #+ also works.
         then
           exchange $index `expr $index + 1`  # Swap.
-        fi  
+        fi
         let "index += 1"  # Or,   index+=1   on Bash, ver. 3.1 or newer.
       done # End of inner loop
 
@@ -1274,7 +1274,7 @@ decide.
     #     done
     # done
     # ----------------------------------------------------------------------
-      
+
 
     let "comparisons -= 1" #  Since "heaviest" element bubbles to bottom,
                            #+ we need do one less comparison each pass.
@@ -1386,7 +1386,7 @@ possibilities
 
             # Print variable
             echo "Variable VARIABLE: $VARIABLE"
-        
+
             # Print a string element
             IFS="$OLD_IFS"
             TEST2="STRING[*]"
@@ -1477,9 +1477,9 @@ runs excruciatingly slowly as a script.
         printf "%8d" $i
         # 8 spaces per number gives nice, even columns.
       fi
-      
+
       let "i += 1"
-      
+
     done
 
     }
@@ -1506,10 +1506,10 @@ runs excruciatingly slowly as a script.
         # Tag as non-prime all multiples.
       done
 
-    fi  
+    fi
 
       let "i += 1"
-    done  
+    done
 
 
     }
@@ -1553,8 +1553,8 @@ runs excruciatingly slowly as a script.
         do
           Primes[t]=
         done
-      fi  
-    done  
+      fi
+    done
     echo ${Primes[*]}
 
     exit $?
@@ -1636,7 +1636,7 @@ which Bash has no native support.
     SP=$BP            #  Stack Pointer.
                       #  Initialize it to "base" (bottom) of stack.
 
-    Data=             #  Contents of stack location.  
+    Data=             #  Contents of stack location.
                       #  Must use global variable,
                       #+ because of limitation on function return range.
 
@@ -1703,7 +1703,7 @@ which Bash has no native support.
 
     push garbage
     pop
-    status_report     # Garbage in, garbage out.      
+    status_report     # Garbage in, garbage out.
 
     value1=23;        push $value1
     value2=skidoo;    push $value2
@@ -1769,7 +1769,7 @@ mathematical series***
     #  This is a "chaotic" integer series with strange
     #+ and unpredictable behavior.
     #  The first 20 terms of the series are:
-    #  1 1 2 3 3 4 5 5 6 6 6 8 8 8 10 9 10 11 11 12 
+    #  1 1 2 3 3 4 5 5 6 6 6 8 8 8 10 9 10 11 11 12
 
     #  See Hofstadter's book, _Goedel, Escher, Bach: An Eternal Golden Braid_,
     #+ p. 137, ff.
@@ -1793,10 +1793,10 @@ mathematical series***
 
       let "n1 = $n - 1"        # n-1
       let "n2 = $n - 2"        # n-2
-      
+
       t0=`expr $n - ${Q[n1]}`  # n - Q[n-1]
       t1=`expr $n - ${Q[n2]}`  # n - Q[n-2]
-      
+
       T0=${Q[t0]}              # Q[n - Q[n-1]]
       T1=${Q[t1]}              # Q[n - Q[n-2]]
 
@@ -1859,7 +1859,7 @@ permits simulating multi-dimensional ones.
       alpha[$index]=$i
     # alpha[$row][$column]
       let "rc += 1"
-    done  
+    done
 
     #  Simpler would be
     #+   declare -a alpha=( A B C D E F G H I J K L M N O P Q R S T U V W X Y )
@@ -1879,7 +1879,7 @@ permits simulating multi-dimensional ones.
       local column=0
 
       echo -n "       "            #  Lines up "square" array with rotated one.
-      
+
       while [ "$column" -lt "$Columns" ]
       do
         let "index = $row * $Rows + $column"
@@ -1890,7 +1890,7 @@ permits simulating multi-dimensional ones.
       let "row += 1"
       echo
 
-    done  
+    done
 
     # The simpler equivalent is
     #     echo ${alpha[*]} | xargs -n $Columns
@@ -1910,10 +1910,10 @@ permits simulating multi-dimensional ones.
         # Now, print it rotated.
         echo -n " ${alpha[index]}"
         #           alpha[$row][$column]
-    fi    
+    fi
 
     }
-      
+
 
 
 
@@ -1935,7 +1935,7 @@ permits simulating multi-dimensional ones.
         else
           let "t1 = $column"
           let "t2 = $column + $row"
-        fi  
+        fi
 
         filter $t1 $t2   # Filter out negative array indices.
                          # What happens if you don't do this?
@@ -1943,7 +1943,7 @@ permits simulating multi-dimensional ones.
 
       echo; echo
 
-    done 
+    done
 
     #  Array rotation inspired by examples (pp. 143-146) in
     #+ "Advanced C Programming on the IBM PC," by Herbert Mayer
@@ -1956,7 +1956,7 @@ permits simulating multi-dimensional ones.
 
     #--------------- Now, let the show begin. ------------#
     load_alpha     # Load the array.
-    print_alpha    # Print it out.  
+    print_alpha    # Print it out.
     rotate         # Rotate it 45 degrees counterclockwise.
     #-----------------------------------------------------#
 

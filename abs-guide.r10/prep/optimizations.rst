@@ -188,7 +188,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 | 2s                       |
 |     sys           0m0.00 |
 | 0s                       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 `Condition testing <tests.html#IFTHEN>`__ constructs in scripts deserve
@@ -238,7 +238,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 | 6s                       |
 |     sys           0m0.00 |
 | 0s                       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -462,7 +462,7 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
 | 4s                       |
 |     sys           0m0.00 |
 | 0s                       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

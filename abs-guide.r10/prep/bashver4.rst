@@ -129,7 +129,7 @@ Among the new goodies:
    |                          |
    |     address[   ]="Blank" |
    |    # Error!              |
-                             
+
    +--------------------------+--------------------------+--------------------------+
 
 
@@ -206,18 +206,18 @@ Among the new goodies:
    ver. 4.01:
 
        | There is a new 'coproc' reserved word that specifies a coprocess:
-       | 
+       |
        an asynchronous command run with two pipes connected to the creating
-       | 
+       |
        shell. Coprocs can be named. The input and output file descriptors
-       | 
+       |
        and the PID of the coprocess are available to the calling shell in
        |  variables with coproc-specific names.
        |  George Dimitriu explains,
-       | 
+       |
        "... coproc ... is a feature used in Bash process substitution,
        |  which now is made publicly available."
-       | 
+       |
        This means it can be explicitly invoked in a script, rather than
        |  just being a behind-the-scenes mechanism used by Bash.
 
@@ -263,7 +263,7 @@ Among the new goodies:
          echo "Inside while-read loop: ";
          echo "a = $a"; echo "b = $b"; echo "c = $c"
          echo "coproc file descriptor: ${COPROC[0]}"
-       done 
+       done
 
        # a = one
        # b = two
@@ -351,7 +351,7 @@ Among the new goodies:
    | er to finish writing in  |
    | its own write-enabled pi |
    | pe.                      |
-                             
+
    +--------------------------+--------------------------+--------------------------+
 
 
@@ -479,7 +479,7 @@ Among the new goodies:
 
 
 
--  
+-
 
    The `declare <declareref.html>`__ builtin now accepts the
    ``        -l       `` *lowercase* and ``        -c       ``
@@ -542,11 +542,11 @@ Among the new goodies:
 
        bash4$ echo {000..10}
        000 001 002 003 004 005 006 007 008 009 010
-             
 
 
 
--  
+
+-
 
    `*Substring extraction* on *positional
    parameters* <bashver4.html#SUBSTREXTREF4>`__ now starts with
@@ -636,7 +636,7 @@ Among the new goodies:
 -  The new `$BASHPID <internalvariables.html#BASHPIDREF>`__ internal
    variable.
 
--  
+-
 
    There is a new `builtin <internal.html#BUILTINREF>`__ error-handling
    function named **command\_not\_found\_handle** .
@@ -849,7 +849,7 @@ new features and enhancements, in addition to bugfixes.
 
 
 
--  
+-
 
    When the ``                   lastpipe                 `` shell
    option is set, the last command in a
@@ -974,7 +974,7 @@ new features and enhancements, in addition to bugfixes.
        #  Index 3 chars forward from beginning and 6 chars backward from end,
        #+ and extract everything in between.
        #  ${string:offset-from-front:offset-from-end}
-       #  When the "length" parameter is negative, 
+       #  When the "length" parameter is negative,
        #+ it serves as an offset-from-end parameter.
 
        #  See also neg-array.sh.

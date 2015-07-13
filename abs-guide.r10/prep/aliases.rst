@@ -79,7 +79,7 @@ much more effectively with a `function <functions.html#FUNCTIONREF>`__ .
       # Aliases not expanded within compound statements.
       echo "However, previously expanded alias still recognized:"
       ll /usr/X11R6/bin/mk*
-    fi  
+    fi
 
     echo
 
@@ -91,7 +91,7 @@ much more effectively with a `function <functions.html#FUNCTIONREF>`__ .
       rrr /usr/X11R6/bin/mk*   #* Alias will not expand here either.
                                #  alias.sh: line 57: rrr: command not found
       let count+=1
-    done 
+    done
 
     echo; echo
 

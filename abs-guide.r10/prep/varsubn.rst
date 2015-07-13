@@ -195,7 +195,7 @@ substitution* .
     |  is NULL."               |
     |     fi     # $unassigned |
     |  is NULL.                |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Using a variable before assigning a value to it may cause problems.
@@ -221,7 +221,7 @@ substitution* .
     |     #+ however it evalua |
     | tes as 0 in an arithmeti |
     | c operation.             |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     See also `Example 15-23 <internal.html#SELFSOURCE>`__ .

@@ -102,9 +102,9 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
       from 'man bash':
       Here Strings
         A variant of here documents, the format is:
-      
+
             <<<word
-      
+
         The word is expanded and supplied to the command on its standard input.
 
 
@@ -204,7 +204,7 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 
 
     $ mailbox_grep.sh scam_mail
-      MESSAGE of Thu, 5 Jan 2006 08:00:56 -0500 (EST) 
+      MESSAGE of Thu, 5 Jan 2006 08:00:56 -0500 (EST)
       IP address of sender: 196.3.62.4
 
 

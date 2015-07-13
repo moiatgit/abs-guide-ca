@@ -110,14 +110,14 @@ This script is a modification of `Example
          mv $fname $n                          # Rename.
          let "number += 1"
        fi
-    done   
+    done
 
     if [ "$number" -eq "$ONE" ]                # For correct grammar.
     then
      echo "$number file renamed."
-    else 
+    else
      echo "$number files renamed."
-    fi 
+    fi
 
     exit $?
 
@@ -157,14 +157,14 @@ This is an even simpler-minded version of previous script.
            mv "$fname" "$n"                     # Do the actual renaming.
            let "number += 1"
          fi
-    done   
+    done
 
     if [ "$number" -eq "$ONE" ]                 # For correct grammar.
     then
      echo "$number file renamed."
-    else 
+    else
      echo "$number files renamed."
-    fi 
+    fi
 
     exit 0
 
@@ -192,7 +192,7 @@ encrypted password**
     then
       echo "Usage: `basename $0` filename"
       exit $E_BADARGS
-    fi  
+    fi
 
     Username=bozo           # Change to suit.
     pword=/home/bozo/secret/password_encrypted.file
@@ -307,7 +307,7 @@ encrypted password**
     #  3) Print NUMBER.
     #  4)  If NUMBER is even, divide by 2, or
     #  5)+ if odd, multiply by 3 and add 1.
-    #  6) NUMBER <-- result 
+    #  6) NUMBER <-- result
     #  7) Loop back to step 3 (for specified number of iterations).
     #
     #  The theory is that every such sequence,
@@ -335,7 +335,7 @@ encrypted password**
     do
 
     # echo -n "$h   "
-    #            ^^^ 
+    #            ^^^
     #            tab
     # printf does it better ...
     COLWIDTH=%7d
@@ -355,7 +355,7 @@ encrypted password**
     if [ "$line_break" -eq 0 ]
     then
       echo
-    fi  
+    fi
 
     done
 
@@ -410,7 +410,7 @@ encrypted password**
       echo "Usage: `basename $0` [M]M/[D]D/YYYY [M]M/[D]D/YYYY"
       echo "       (date must be after 1/3/1600)"
       exit $E_PARAM_ERR
-    }  
+    }
 
 
     Parse_Date ()                 # Parse date from command-line params.
@@ -419,7 +419,7 @@ encrypted password**
       dm=${1%/**}                 # Day and month.
       day=${dm#*/}
       let "year = `basename $1`"  # Not a filename, but works just the same.
-    }  
+    }
 
 
     check_date ()                 # Checks for invalid date(s) passed.
@@ -451,7 +451,7 @@ encrypted password**
       then
         let "month += 12"
         let "year -= 1"
-      fi  
+      fi
 
       let "year -= $REFYR"
       let "indexyr = $year / $CENTURY"
@@ -465,13 +465,13 @@ encrypted password**
 
       echo $Days
 
-    }  
+    }
 
 
     calculate_difference ()            # Difference between two day indices.
     {
       let "diff = $1 - $2"             # Global variable.
-    }  
+    }
 
 
     abs ()                             #  Absolute value
@@ -489,7 +489,7 @@ encrypted password**
     if [ $# -ne "$ARGS" ]              # Require two command-line params.
     then
       Param_Error
-    fi  
+    fi
 
     Parse_Date $1
     check_date $day $month $year       #  See if valid date.
@@ -563,7 +563,7 @@ encrypted password**
     then                                #+ valid file argument.
       echo "Usage: $0 files-to-process"
       exit $E_BADARGS
-    fi  
+    fi
 
 
     # SORT="sort"                       #  No longer necessary to define
@@ -619,7 +619,7 @@ encrypted password**
     then
       echo "Usage: `basename $0` name"
       exit $E_WRONGARGS
-    fi  
+    fi
 
 
     assign_value ()                #  Assigns numerical value
@@ -649,7 +649,7 @@ encrypted password**
     #
     # The above command substitution lays more pipe than a plumber <g>.
 
-    }  
+    }
 
 
     input_name="$1"
@@ -668,7 +668,7 @@ encrypted password**
     # --------------------------------------------
 
 
-    char_pos=0                     # Initialize character position. 
+    char_pos=0                     # Initialize character position.
     prefix0=${name:$char_pos:1}
     prefix=`echo $prefix0 | tr a-z A-Z`
                                    # Uppercase 1st letter of soundex.
@@ -703,9 +703,9 @@ encrypted password**
     if [[ "$s1" -ne "$s2" || "$s3" -eq 9 ]]
     then
       suffix=$s2
-    else  
+    else
       suffix=${s2:$char_pos}
-    fi  
+    fi
     # ++++++++++++++++++++++ end Exception Patch ++++++++++++++++++++++++++++++
 
 
@@ -799,7 +799,7 @@ encrypted password**
     if [ -n "$1" ]   # Specify another "generation 0" file.
     then
         startfile="$1"
-    fi  
+    fi
 
     ############################################
     #  Abort script if "startfile" not specified
@@ -874,18 +874,18 @@ encrypted password**
       then
         echo                # Newline.
         echo -n "      "    # Indent.
-      fi  
+      fi
 
       cell=${arr[i]}
 
       if [ "$cell" = . ]
       then
         let "alive += 1"
-      fi  
+      fi
 
       echo -n "$cell" | sed -e 's/_/ /g'
       # Print out array, changing underscores to spaces.
-    done  
+    done
 
     return
 
@@ -911,7 +911,7 @@ encrypted password**
     if [ "$1" -lt "$lower_limit" -o "$1" -gt "$upper_limit" ]
     then
       return $FALSE                       # Out of array bounds.
-    fi  
+    fi
 
     row=$2
     let "left = $row * $COLS"             # Left limit.
@@ -920,11 +920,11 @@ encrypted password**
     if [ "$1" -lt "$left" -o "$1" -gt "$right" ]
     then
       return $FALSE                       # Beyond row boundary.
-    fi  
+    fi
 
     return $TRUE                          # Valid coordinate.
 
-    }  
+    }
 
 
     IsAlive ()              #  Test whether cell is alive.
@@ -941,11 +941,11 @@ encrypted password**
       if [ "$3" = "." -a "$nhbd" -eq "$SURVIVE" ]
       then                  # Alive only if previously alive.
         return $ALIVE
-      fi  
+      fi
 
       return $DEAD          # Defaults to dead.
 
-    }  
+    }
 
 
     GetCount ()             # Count live cells in passed cell's neighborhood.
@@ -974,7 +974,7 @@ encrypted password**
       let "bottom = $cell_number + $COLS - 1"
       let "r = $cell_number / $COLS"
 
-      for ((i=0; i<$ROW_NHBD; i++))           # Traverse from left to right. 
+      for ((i=0; i<$ROW_NHBD; i++))           # Traverse from left to right.
       do
         let "t_top = $top + $i"
         let "t_cen = $center + $i"
@@ -988,30 +988,30 @@ encrypted password**
           if [ ${array[$t_cen]} = "$ALIVE1" ] # Is it alive?
           then                                # If yes, then ...
             let "count += 1"                  # Increment count.
-          fi    
-        fi  
+          fi
+        fi
 
-        let "row = $r - 1"                    # Count top row.          
+        let "row = $r - 1"                    # Count top row.
         IsValid $t_top $row
         if [ $? -eq "$TRUE" ]
         then
           if [ ${array[$t_top]} = "$ALIVE1" ] # Redundancy here.
           then                                # Can it be optimized?
             let "count += 1"
-          fi    
-        fi  
+          fi
+        fi
 
         let "row = $r + 1"                    # Count bottom row.
         IsValid $t_bot $row
         if [ $? -eq "$TRUE" ]
         then
-          if [ ${array[$t_bot]} = "$ALIVE1" ] 
+          if [ ${array[$t_bot]} = "$ALIVE1" ]
           then
             let "count += 1"
-          fi    
-        fi  
+          fi
+        fi
 
-      done  
+      done
 
 
       if [ ${array[$cell_number]} = "$ALIVE1" ]
@@ -1021,7 +1021,7 @@ encrypted password**
 
 
       return $count
-      
+
     }
 
     next_gen ()               # Update generation array.
@@ -1038,11 +1038,11 @@ encrypted password**
       if [ $? -eq "$ALIVE" ]
       then                           #  If alive, then
         array[$i]=.                  #+ represent the cell as a period.
-      else  
+      else
         array[$i]="_"                #  Otherwise underscore
        fi                            #+ (will later be converted to space).
-      let "i += 1" 
-    done   
+      let "i += 1"
+    done
 
 
     #    let "generation += 1"       # Increment generation count.
@@ -1132,7 +1132,7 @@ encrypted password**
     # The grid in this script has a "boundary problem."
     # The the top, bottom, and sides border on a void of dead cells.
     # Exercise: Change the script to have the grid wrap around,
-    # +         so that the left and right sides will "touch,"      
+    # +         so that the left and right sides will "touch,"
     # +         as will the top and bottom.
     #
     # Exercise: Create a new "gen0" file to seed this script.
@@ -1205,7 +1205,7 @@ tarball <mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* .
     if [ $# -eq 0 ]; then
     # ==> If no command-line args present, then works on file redirected to stdin.
         sed -e '1,/^$/d' -e '/^[    ]*$/d'
-        # --> Delete empty lines and all lines until 
+        # --> Delete empty lines and all lines until
         # --> first one beginning with white space.
     else
     # ==> If command-line args present, then work on files named.
@@ -1231,8 +1231,8 @@ tarball <mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* .
      * any computer system, and to alter it and redistribute it freely, subject
      * to the following restrictions:
      *
-     * 1. The author and the University of Toronto are not responsible 
-     *    for the consequences of use of this software, no matter how awful, 
+     * 1. The author and the University of Toronto are not responsible
+     *    for the consequences of use of this software, no matter how awful,
      *    even if they arise from flaws in it.
      *
      * 2. The origin of this software must not be misrepresented, either by
@@ -1291,7 +1291,7 @@ use of the parameter substitution operators discussed in `Section
         # ==> and [length of MATRIX] - 1.
 
         # ==> ${MATRIX:$(($RANDOM%${#MATRIX})):1}
-        # ==> returns expansion of MATRIX at random position, by length 1. 
+        # ==> returns expansion of MATRIX at random position, by length 1.
         # ==> See {var:pos:len} parameter substitution in Chapter 9.
         # ==> and the associated examples.
 
@@ -1329,16 +1329,16 @@ in his words, "really exercises quoting and escaping."
 
     # ==> Comments added by author of this document.
 
-      
+
       HERE=`uname -n`    # ==> hostname
       THERE=bilbo
       echo "starting remote backup to $THERE at `date +%r`"
       # ==> `date +%r` returns time in 12-hour format, i.e. "08:08:34 PM".
-      
+
       # make sure /pipe really is a pipe and not a plain file
       rm -rf /pipe
       mkfifo /pipe       # ==> Create a "named pipe", named "/pipe" ...
-      
+
       # ==> 'su xyz' runs commands as user "xyz".
       # ==> 'ssh' invokes secure shell (remote login client).
       su xyz -c "ssh $THERE \"cat > /home/xyz/backup/${HERE}-daily.tar.gz\" < /pipe"&
@@ -1389,7 +1389,7 @@ prime numbers without arrays.
      (( n = $1 + 1 ))             # Bump to next integer.
      shift                        # Next parameter in list.
     #  echo "_n=$n i=$i_"
-     
+
      if (( n == LIMIT ))
      then echo $*
      return
@@ -1646,7 +1646,7 @@ functions.
     #:docstring strcat:
     # Usage: strcat s1 s2
     #
-    # Strcat appends the value of variable s2 to variable s1. 
+    # Strcat appends the value of variable s2 to variable s1.
     #
     # Example:
     #    a="foo"
@@ -1671,7 +1671,7 @@ functions.
 
     #:docstring strncat:
     # Usage: strncat s1 s2 $n
-    # 
+    #
     # Line strcat, but strncat appends a maximum of n characters from the value
     # of variable s2.  It copies fewer if the value of variabl s2 is shorter
     # than n characters.  Echoes result on stdout.
@@ -1725,7 +1725,7 @@ functions.
 
     #:docstring strncmp:
     # Usage: strncmp $s1 $s2 $n
-    # 
+    #
     # Like strcmp, but makes the comparison by examining a maximum of n
     # characters (n less than or equal to zero yields equality).
     #:end docstring:
@@ -1736,7 +1736,7 @@ functions.
         if [ -z "${3}" -o "${3}" -le "0" ]; then
            return 0
         fi
-       
+
         if [ ${3} -ge ${#1} -a ${3} -ge ${#2} ]; then
            strcmp "$1" "$2"
            return $?
@@ -1764,7 +1764,7 @@ functions.
 
     #:docstring strspn:
     # Usage: strspn $s1 $s2
-    # 
+    #
     # Strspn returns the length of the maximum initial segment of string s1,
     # which consists entirely of characters from string s2.
     #:end docstring:
@@ -1772,10 +1772,10 @@ functions.
     ###;;;autoload
     function strspn ()
     {
-        # Unsetting IFS allows whitespace to be handled as normal chars. 
+        # Unsetting IFS allows whitespace to be handled as normal chars.
         local IFS=
         local result="${1%%[!${2}]*}"
-     
+
         echo ${#result}
     }
 
@@ -1789,16 +1789,16 @@ functions.
     ###;;;autoload
     function strcspn ()
     {
-        # Unsetting IFS allows whitspace to be handled as normal chars. 
+        # Unsetting IFS allows whitspace to be handled as normal chars.
         local IFS=
         local result="${1%%[${2}]*}"
-     
+
         echo ${#result}
     }
 
     #:docstring strstr:
     # Usage: strstr s1 s2
-    # 
+    #
     # Strstr echoes a substring starting at the first occurrence of string s2 in
     # string s1, or nothing if s2 does not occur in the string.  If s2 points to
     # a string of zero length, strstr echoes s1.
@@ -1849,7 +1849,7 @@ functions.
     # Usage: strtrunc $n $s1 {$s2} {$...}
     #
     # Used by many functions like strncmp to truncate arguments for comparison.
-    # Echoes the first n characters of each string s1 s2 ... on stdout. 
+    # Echoes the first n characters of each string s1 s2 ... on stdout.
     #:end docstring:
 
     ###;;;autoload
@@ -2633,7 +2633,7 @@ library for use in scripts.
     # 0 - there is such key
     # 1 - there is no such key
     function hash_is_set {
-      eval "if [[ \"\${${Hash_config_varname_prefix}${1}_${2}-a}\" = \"a\" && 
+      eval "if [[ \"\${${Hash_config_varname_prefix}${1}_${2}-a}\" = \"a\" &&
       \"\${${Hash_config_varname_prefix}${1}_${2}-b}\" = \"b\" ]]
         then return 1; else return 0; fi"
     }
@@ -2754,13 +2754,13 @@ point of view.
     #----------------------------------------------------------------
     # pseudo hash based on indirect parameter expansion
     # API: access through functions:
-    # 
+    #
     # create the hash:
-    #  
+    #
     #      newhash Lovers
     #
     # add entries (note single quotes for spaces)
-    #    
+    #
     #      addhash Lovers Tristan Isolde
     #      addhash Lovers 'Romeo Montague' 'Juliet Capulet'
     #
@@ -2801,7 +2801,7 @@ point of view.
         #        NAME should not contain spaces or dots.
         #        Actually: it must be a legal name for a Bash variable.
         # We rely on Bash automatically recognising arrays.
-        local name=$1 
+        local name=$1
         local _keys _values _ptr
         _inihash ${name}
         eval ${_ptr}=0
@@ -2811,7 +2811,7 @@ point of view.
     function addhash () {
         # Usage: addhash NAME KEY 'VALUE with spaces'
         #        arguments with spaces need to be quoted with single quotes ''
-        local name=$1 k="$2" v="$3" 
+        local name=$1 k="$2" v="$3"
         local _keys _values _ptr
         _inihash ${name}
 
@@ -2828,11 +2828,11 @@ point of view.
         #         ERR=0 if entry found, 1 otherwise
         #  That's not a proper hash --
         #+ we simply linearly search through the keys.
-        local name=$1 key="$2" 
-        local _keys _values _ptr 
+        local name=$1 key="$2"
+        local _keys _values _ptr
         local k v i found h
         _inihash ${name}
-        
+
         # _ptr holds the highest index in the hash
         found=0
 
@@ -2846,17 +2846,17 @@ point of view.
         # else: i is the index that matches the key
         h="\${${_values}[${i}]}"
         eval echo "${h}"
-        return 0;   
+        return 0;
     }
 
     function keyshash () {
         # Usage: keyshash NAME
         # Returns list of all keys defined for hash name.
-        local name=$1 key="$2" 
-        local _keys _values _ptr 
+        local name=$1 key="$2"
+        local _keys _values _ptr
         local k i h
         _inihash ${name}
-        
+
         # _ptr holds the highest index in the hash
         for i in $(seq 1 ${!_ptr}); do
         h="\${${_keys}[${i}]}"   #  Safer to do it in two steps,
@@ -2909,7 +2909,7 @@ solid-state "hard drives."
     # ==> Newer Linux distros (2004 or later) autodetect
     # ==> and install USB pen drives, and therefore don't need this script.
     # ==> But, it's still instructive.
-     
+
     #  This code is free software covered by GNU GPL license version 2 or above.
     #  Please refer to http://www.gnu.org/ for the full license text.
     #
@@ -3164,7 +3164,7 @@ Converting a text file to HTML format.
         fi
 
 
-       
+
     #   echo
         echo "$line"
     #   echo
@@ -5500,18 +5500,18 @@ This interesting script helps hunt down spammers.
      Prerequisites
 
       Bash version 2.05b or 3.00 (bash --version)
-      A version of Bash which supports arrays. Array 
+      A version of Bash which supports arrays. Array
       support is included by default Bash configurations.
 
       'dig,' version 9.x.x (dig $HOSTNAME, see first line of output)
-      A version of dig which supports the +short options. 
+      A version of dig which supports the +short options.
       See: dig_wrappers.bash for details.
 
 
      Optional Prerequisites
 
       'named,' a local DNS caching program. Any flavor will do.
-      Do twice: dig $HOSTNAME 
+      Do twice: dig $HOSTNAME
       Check near bottom of output for: SERVER: 127.0.0.1#53
       That means you have one running.
 
@@ -5520,7 +5520,7 @@ This interesting script helps hunt down spammers.
 
       'date,' a standard *nix thing. (date -R)
 
-      dot Program to convert graphic description file to a 
+      dot Program to convert graphic description file to a
       diagram. (dot -V)
       A part of the Graph-Viz set of programs.
       See: [http://www.research.att.com/sw/tools/graphviz||GraphViz]
@@ -5533,7 +5533,7 @@ This interesting script helps hunt down spammers.
 
      Quick Start
 
-    In the same directory as the is_spammer.bash script; 
+    In the same directory as the is_spammer.bash script;
     Do: ./is_spammer.bash
 
      Usage Details
@@ -5542,15 +5542,15 @@ This interesting script helps hunt down spammers.
 
       (a) To use default, built-in list: Do nothing.
 
-      (b) To use your own list: 
+      (b) To use your own list:
 
-        i. Create a file with a single Blacklist server 
+        i. Create a file with a single Blacklist server
            domain name per line.
 
-        ii. Provide that filename as the last argument to 
+        ii. Provide that filename as the last argument to
             the script.
 
-      (c) To use a single Blacklist server: Last argument 
+      (c) To use a single Blacklist server: Last argument
           to the script.
 
       (d) To disable Blacklist lookups:
@@ -5558,20 +5558,20 @@ This interesting script helps hunt down spammers.
         i. Create an empty file (touch spammer.nul)
            Your choice of filename.
 
-        ii. Provide the filename of that empty file as the 
+        ii. Provide the filename of that empty file as the
             last argument to the script.
 
     2. Search depth limit.
 
       (a) To use the default value of 2: Do nothing.
 
-      (b) To set a different limit: 
+      (b) To set a different limit:
           A limit of 0 means: no limit.
 
         i. export SPAMMER_LIMIT=1
            or whatever limit you want.
 
-        ii. OR provide the desired limit as the first 
+        ii. OR provide the desired limit as the first
            argument to the script.
 
     3. Optional execution trace log.
@@ -5594,28 +5594,28 @@ This interesting script helps hunt down spammers.
 
       (a) Starting with a single domain name:
 
-        i. Without a command-line search limit: First 
+        i. Without a command-line search limit: First
            argument to script.
 
-        ii. With a command-line search limit: Second 
+        ii. With a command-line search limit: Second
             argument to script.
 
       (b) Starting with a single IP address:
 
-        i. Without a command-line search limit: First 
+        i. Without a command-line search limit: First
            argument to script.
 
-        ii. With a command-line search limit: Second 
+        ii. With a command-line search limit: Second
             argument to script.
 
       (c) Starting with (mixed) multiple name(s) and/or address(es):
           Create a file with one name or address per line.
           Your choice of filename.
 
-        i. Without a command-line search limit: Filename as 
+        i. Without a command-line search limit: Filename as
            first argument to script.
 
-        ii. With a command-line search limit: Filename as 
+        ii. With a command-line search limit: Filename as
             second argument to script.
 
     6. What to do with the display output.
@@ -5626,8 +5626,8 @@ This interesting script helps hunt down spammers.
 
       (c) To discard display output: Redirect stdout to /dev/null.
 
-    7. Temporary end of decision making. 
-       press RETURN 
+    7. Temporary end of decision making.
+       press RETURN
        wait (optionally, watch the dots and colons).
 
     8. Optionally check the return code.
@@ -5640,22 +5640,22 @@ This interesting script helps hunt down spammers.
 
     9. Where is my graph (diagram)?
 
-    The script does not directly produce a graph (diagram). 
-    It only produces a graphic description file. You can 
-    process the graphic descriptor file that was output 
+    The script does not directly produce a graph (diagram).
+    It only produces a graphic description file. You can
+    process the graphic descriptor file that was output
     with the 'dot' program.
 
-    Until you edit that descriptor file, to describe the 
-    relationships you want shown, all that you will get is 
+    Until you edit that descriptor file, to describe the
+    relationships you want shown, all that you will get is
     a bunch of labeled name and address nodes.
 
-    All of the script's discovered relationships are within 
-    a comment block in the graphic descriptor file, each 
+    All of the script's discovered relationships are within
+    a comment block in the graphic descriptor file, each
     with a descriptive heading.
 
-    The editing required to draw a line between a pair of 
-    nodes from the information in the descriptor file may 
-    be done with a text editor. 
+    The editing required to draw a line between a pair of
+    nodes from the information in the descriptor file may
+    be done with a text editor.
 
     Given these lines somewhere in the descriptor file:
 
@@ -5687,7 +5687,7 @@ This interesting script helps hunt down spammers.
 
      */
 
-    Turn that into the following lines by substituting node 
+    Turn that into the following lines by substituting node
     identifiers into the relationships:
 
     # Known domain name nodes
@@ -5730,20 +5730,20 @@ This interesting script helps hunt down spammers.
 
      */
 
-    Process that with the 'dot' program, and you have your 
+    Process that with the 'dot' program, and you have your
     first network diagram.
 
-    In addition to the conventional graphic edges, the 
-    descriptor file includes similar format pair-data that 
-    describes services, zone records (sub-graphs?), 
-    blacklisted addresses, and other things which might be 
-    interesting to include in your graph. This additional 
-    information could be displayed as different node 
+    In addition to the conventional graphic edges, the
+    descriptor file includes similar format pair-data that
+    describes services, zone records (sub-graphs?),
+    blacklisted addresses, and other things which might be
+    interesting to include in your graph. This additional
+    information could be displayed as different node
     shapes, colors, line sizes, etc.
 
-    The descriptor file can also be read and edited by a 
-    Bash script (of course). You should be able to find 
-    most of the functions required within the 
+    The descriptor file can also be read and edited by a
+    Bash script (of course). You should be able to find
+    most of the functions required within the
     "is_spammer.bash" script.
 
     # End Quickstart.
@@ -6105,7 +6105,7 @@ Another anti-spam script.
     #              Enables re-use of previous value.
     # 05/12/2004.  Modified the file detection routine in the 'runn' function
     #              so it's not fooled by empty values, and is cleaner.
-    # 01/02/2004.  Added cookie finding routine from later version (which 
+    # 01/02/2004.  Added cookie finding routine from later version (which
     #              isn't ready yet), so as not to have hard-coded paths.
     # =======================================================================
 
@@ -6147,7 +6147,7 @@ Another anti-spam script.
     newFile=""          # Used for the run function.
     savePath="$home/w-save"
     Config="$home/.wgetter2rc"
-                        #  This is where some variables can be stored, 
+                        #  This is where some variables can be stored,
                         #+ if permanently changed from within the script.
     Cookie_List="$home/.cookielist"
                         # So we know where the cookies are kept . . .
@@ -6331,7 +6331,7 @@ Another anti-spam script.
     cookie_func() # Give the user the option to use a different cookie file.
     {
     while [ 1 ]; do
-       echo "Change the cookies file. Press return if you don't want to change 
+       echo "Change the cookies file. Press return if you don't want to change
     it."
        read Cookies
        # NB: this is not the same as Cookie, earlier.
@@ -6438,7 +6438,7 @@ Another anti-spam script.
 
     if [ -z "$1" ] && [ -z "$lister" ]; then
                               #  We should be left with at least one URL
-                              #+ on the command-line, unless a list is 
+                              #+ on the command-line, unless a list is
                   #+ being used -- catch empty CL's.
        echo "No URL's given! You must enter them on the same line as wgetter2."
        echo "E.g.,  wgetter2 http://somesite http://anothersite."
@@ -6574,7 +6574,7 @@ Another anti-spam script.
 
 
     # ==> ################################################################
-    # 
+    #
     # ==> What is "podcasting"?
 
     # ==> It's broadcasting "radio shows" over the Internet.
@@ -6631,7 +6631,7 @@ Another anti-spam script.
 
     #################################################
     For a different scripting approach to Podcasting,
-    see Phil Salkie's article, 
+    see Phil Salkie's article,
     "Internet Radio to Podcast with Shell Tools"
     in the September, 2005 issue of LINUX JOURNAL,
     http://www.linuxjournal.com/article/8171
@@ -6676,7 +6676,7 @@ Another anti-spam script.
     #  ii) If the user is sitting at the computer at 5am,
     #+     and files are modified while the rsync is occurring,
     #+     then the BACKUP_JUSTINCASE branch gets triggered.
-    #      To some extent, this is a 
+    #      To some extent, this is a
     #+     feature, but it also causes a "disk-space leak".
 
 
@@ -6797,7 +6797,7 @@ Another anti-spam script.
     if mount | grep $MOUNT_POINT >/dev/null; then
       echo "Mount point $MOUNT_POINT is indeed mounted. OK"
     else
-      echo -n "Attempting to mount $MOUNT_POINT..." 
+      echo -n "Attempting to mount $MOUNT_POINT..."
                # If it isn't mounted, try to mount it.
       sudo mount $MOUNT_POINT 2>/dev/null
 
@@ -7110,14 +7110,14 @@ Another anti-spam script.
         where <n> is a number.
         It's possible to go to the directory by entering cd -a<n>
         on the command line.
-        
+
         The directory for -r<n> or -R<n> may be a number.
         For example:
             $ cd -r3 4  Go to history entry 4 and put it on special entry 3
             $ cd -R3 4  Put current dir on the special entry 3
                         and go to history entry 4
             $ cd -s3    Go to special entry 3
-        
+
         Note that commands R,r,S and s may be used without a number
         and refer to 0:
             $ cd -s     Go to special entry 0
@@ -7166,7 +7166,7 @@ Another anti-spam script.
                          Default is home directory
                 CDFile - Set the default filename for the -f & -u options.
                          Default is cdfile
-            
+
     "
         cd_version
 
@@ -7556,10 +7556,10 @@ Another anti-spam script.
         ~/.profile
         ~/.bashrc
         /etc/bash.bashrc.local
-        
+
     To setup your login, ~/.bashrc is recommended, for global (and root) setup
     add the commands to /etc/bash.bashrc.local
-        
+
     To set up on login, add the command:
         . <dir>/cdll
     For example if cdll is in your local home directory:
@@ -7601,12 +7601,12 @@ Another anti-spam script.
     stack simply enter:
 
         cd .
-        
+
     Note that if the previous entry on the stack is the current directory
     then the stack is not updated.
 
     Usage
-    =====  
+    =====
     cd [dir] [0-9] [@[s|h] [-g <dir>] [-d] [-D] [-r<n>]
        [dir|0-9] [-R<n>] [<dir>|0-9] [-s<n>] [-S<n>]
        [-u] [-U] [-f] [-F] [-h] [-H] [-v]
@@ -7658,26 +7658,26 @@ Another anti-spam script.
         # Most recent two history entries
         0 /home/phil/perl/eg              S0 /home/phil/umm/ummdev
         # and two special entries are shown
-        
+
         /home/phil$ cd /home/phil/utils/Cdll
         # Now change directories
         /home/phil/utils/Cdll$ @
         # Prompt reflects the directory.
         History:
         # New history
-        .....   
+        .....
         1 /home/phil/perl/eg              S1 /home/phil/perl
         # History entry 0 has moved to 1
         0 /home/phil                      S0 /home/phil/umm/ummdev
         # and the most recent has entered
-           
+
     To go to a history entry:
 
         /home/phil/utils/Cdll$ cd 1
         # Go to history entry 1.
         /home/phil/perl/eg$
         # Current directory is now what was 1
-        
+
     To go to a special entry:
 
         /home/phil/perl/eg$ cd -s1
@@ -7690,13 +7690,13 @@ Another anti-spam script.
         /home/phil$ cd -g 1
         # -g ignores the special meaning of 1
         /home/phil/1$
-        
+
     To put current directory on the special list as S1:
         cd -r1 .        #  OR
         cd -R1 .        #  These have the same effect if the directory is
                         #+ . (the current directory)
 
-    To go to a directory and add it as a special  
+    To go to a directory and add it as a special
       The directory for -r<n> or -R<n> may be a number.
       For example:
             $ cd -r3 4  Go to history entry 4 and put it on special entry 3
@@ -7729,7 +7729,7 @@ Another anti-spam script.
             Similarly the special directories S0 - 9 are in the environment
             variable CDS[0] - CDS[9]
             and may be accessed from the command line, for example:
-            
+
                 ls -l ${CDS[3]}
                 cat ${CD[8]}/file.txt
 
@@ -7741,7 +7741,7 @@ Another anti-spam script.
     =============
 
         The following environment variables can be set:
-        
+
             CDL_PROMPTLEN  - Set to the length of prompt you require.
                 Prompt string is set to the right characters of the current
                 directory. If not set, then prompt is left unchanged. Note
@@ -7885,7 +7885,7 @@ Another anti-spam script.
     #   irq 5
     #   dma 1
     #   dma 0
-    #   ^^^   "bla" labels in first field (discarded). 
+    #   ^^^   "bla" labels in first field (discarded).
 
 
     { read # Discard first line, as above.
@@ -7932,7 +7932,7 @@ Another anti-spam script.
     then
       echo "Usage: `basename $0` FILENAME"
       exit $E_WRONGARGS
-    fi  
+    fi
 
     file_read ()     # Scan file for pattern, then print line.
     {
@@ -8212,7 +8212,7 @@ Another anti-spam script.
       savefile=$1
     else
       savefile=save_file.xml               # Default save_file name.
-    fi  
+    fi
 
 
     # ===== PAD file headers =====
@@ -8235,7 +8235,7 @@ Another anti-spam script.
         echo -n "$1? "     # Get user input.
       else
         echo -n "$1 $2? "  # Additional query?
-      fi  
+      fi
 
       read var             # May paste to fill in field.
                            # This shows how flexible "read" can be.
@@ -8248,7 +8248,7 @@ Another anti-spam script.
         echo -e "\t\t<$1>$var</$1>" >>$savefile
         return ${#var}     # Return length of input string.
       fi
-    }    
+    }
 
     check_field_length ()  # Check length of program description fields.
     {
@@ -8258,7 +8258,7 @@ Another anti-spam script.
       then
         echo "Warning: Maximum field length of $1 characters exceeded!"
       fi
-    }  
+    }
 
     clear                  # Clear screen.
     echo "PAD File Creator"
@@ -8282,7 +8282,7 @@ Another anti-spam script.
     fill_in Company_Name
     fill_in Address_1
     fill_in Address_2
-    fill_in City_Town 
+    fill_in City_Town
     fill_in State_Province
     fill_in Zip_Postal_Code
     fill_in Country
@@ -8330,7 +8330,7 @@ Another anti-spam script.
 
     clear
 
-    # Program_Info 
+    # Program_Info
     echo "PROGRAM INFO"
     PROGRAM_HDR="Program_Info"
     echo "<$PROGRAM_HDR>" >>$savefile
@@ -8349,7 +8349,7 @@ Another anti-spam script.
 
     echo; echo
 
-      # File_Info 
+      # File_Info
     echo "FILE INFO"
     FILEINFO_HDR="File_Info"
     echo "<$FILEINFO_HDR>" >>$savefile
@@ -8361,11 +8361,11 @@ Another anti-spam script.
     fill_in File_Size_K
     fill_in File_Size_MB
     echo -e "\t</$FILEINFO_HDR>" >>$savefile
-      # END File_Info 
+      # END File_Info
 
     clear
 
-      # Expire_Info 
+      # Expire_Info
     echo "EXPIRE INFO"
     EXPIRE_HDR="Expire_Info"
     echo "<$EXPIRE_HDR>" >>$savefile
@@ -8377,7 +8377,7 @@ Another anti-spam script.
     fill_in Expire_Day
     fill_in Expire_Year
     echo -e "\t</$EXPIRE_HDR>" >>$savefile
-      # END Expire_Info 
+      # END Expire_Info
 
     clear
 
@@ -8392,7 +8392,7 @@ Another anti-spam script.
       # END More Program_Info
 
     echo "</$PROGRAM_HDR>" >>$savefile
-    # END Program_Info 
+    # END Program_Info
 
     clear
 
@@ -8544,7 +8544,7 @@ Another anti-spam script.
 
       echo >>$savefile
 
-    }    
+    }
 
 
     end ()
@@ -8934,7 +8934,7 @@ Another anti-spam script.
     For competitive ("duplicate") play, a previous letterset
     may be duplicated by repeating the script's random seed,
     command-line parameter \$1.
-    For example, "qky 7633" specifies the letterset 
+    For example, "qky 7633" specifies the letterset
     c a d i f r h u s k ...
     INSTRUCTION3
 
@@ -9132,11 +9132,11 @@ Another anti-spam script.
       iscons=$(is_constructable "$1")
       if [ "$iscons" ]
       then
-        Status[1]="constructable" 
+        Status[1]="constructable"
         v=$(is_valid "$1")
         if [ "$v" -eq "$SUCCESS" ]
         then
-          Status[2]="valid" 
+          Status[2]="valid"
           strlen=${#1}
 
           if [ ${Score[strlen]} -eq "$MAXCAT" ]   # Category full!
@@ -9149,7 +9149,7 @@ Another anti-spam script.
             1 | 2 )
             Status[3]="Two-letter-word-PENALTY"
             return $NG;;
-            * ) 
+            * )
         Status[3]=""
         return $SUCCESS;;
           esac
@@ -9158,7 +9158,7 @@ Another anti-spam script.
           return $NG
         fi
       else
-        Status[3]="Not-constructable-PENALTY" 
+        Status[3]="Not-constructable-PENALTY"
           return $NG
       fi
 
@@ -9178,7 +9178,7 @@ Another anti-spam script.
       echo "------------------------------------------------------------"
 
 
-       
+
       while [ "${Words[idx]}" != '' ]
       do
        wlen0=${#Words[idx]}
@@ -9263,7 +9263,7 @@ Another anti-spam script.
     # 1) Clean up code!
     # 2) Prettify the display_words () function (maybe with widgets?).
     # 3) Improve the time-out ... maybe change to untimed entry,
-    #+   but with a time limit for the overall round.   
+    #+   but with a time limit for the overall round.
     # 4) An on-screen countdown timer would be nice.
     # 5) Implement "vulnerable" mode of play for compatibility with classic
     #+   version of the game.
@@ -9291,7 +9291,7 @@ Another anti-spam script.
 
     ROWS=5     # Five rows of pegs (or matchsticks).
     WON=91     # Exit codes to keep track of wins/losses.
-    LOST=92    # Possibly useful if running in batch mode.  
+    LOST=92    # Possibly useful if running in batch mode.
     QUIT=99
     peg_msg=   # Peg/Pegs?
     Rows=( 0 5 4 3 2 1 )   # Array holding play info.
@@ -9313,11 +9313,11 @@ Another anti-spam script.
     Nim is a game with roots in the distant past.
     This particular variant starts with five rows of pegs.
 
-    1:    | | | | | 
-    2:     | | | | 
-    3:      | | | 
-    4:       | | 
-    5:        | 
+    1:    | | | | |
+    2:     | | | |
+    3:      | | |
+    4:       | |
+    5:        |
 
     The number at the left identifies the row.
 
@@ -9380,7 +9380,7 @@ Another anti-spam script.
 
       echo
       ((index++))
-      done  
+      done
 
       tally_up
 
@@ -10036,7 +10036,7 @@ solution**
       then
         return $FAIL
       fi
-        
+
       return $b_index
 
     }
@@ -10234,7 +10234,7 @@ solution**
           possible_moves $squarel
           mpm=$?
           p_moves[mov]=$mpm
-          
+
           if [ $mpm -lt $lmin ]  # If less than previous minimum ...
           then #     ^^
             lmin=$mpm            # Update minimum.
@@ -10258,7 +10258,7 @@ solution**
           possible_moves $squarel
           mpm=$?
           p_moves[mov]=$mpm
-          
+
           if [ $mpm -le $lmin ]  # If less-than-or equal to prev. minimum!
           then #     ^^
             lmin=$mpm
@@ -10450,9 +10450,9 @@ solution**
     #             Being "square," the array has the same number
     #             of rows and columns. That number is the "order."
     # An example of a magic square of order 3 is:
-    #   8  1  6   
-    #   3  5  7   
-    #   4  9  2   
+    #   8  1  6
+    #   3  5  7
+    #   4  9  2
     # All the rows, columns, and the two long diagonals add up to 15.
 
 
@@ -10500,7 +10500,7 @@ solution**
     {
       local row col idx d1
       let "d1 = $dimension - 1"   # Adjust for zero-indexed array.
-     
+
       for row in $(seq 0 $d1)
       do
 
@@ -10630,7 +10630,7 @@ solution**
       echo ",----.----.----.----."   # Top border.
       for i1 in {1..4}
       do
-        for i2 in {1..4} 
+        for i2 in {1..4}
         do
           printf "| %2s " "${Puzzle[$puzpos]}"
           (( puzpos++ ))
@@ -10647,7 +10647,7 @@ solution**
       local puznum garbage
 
       while true
-      do 
+      do
           echo "Moves: $moves" # Also counts invalid moves.
         read -p "Number to move: " puznum garbage
           if [ "$puznum" = "quit" ]; then echo; exit $E_PREMATURE_EXIT; fi
@@ -10772,8 +10772,8 @@ solution**
 
     ###   Display variables   ###
     let "disks1 = $DISKS - 1"
-    let "spaces1 = $DISKS" 
-    let "spaces2 = 2 * $DISKS" 
+    let "spaces1 = $DISKS"
+    let "spaces2 = 2 * $DISKS"
 
     let "lastmove_t = $DISKS - 1"                      # Final move?
 
@@ -10785,7 +10785,7 @@ solution**
 
     function repeat  {  # $1=char $2=number of repetitions
       local n           # Repeat-print a character.
-      
+
       for (( n=0; n<$2; n++ )); do
         echo -n "$1"
       done
@@ -10810,7 +10810,7 @@ solution**
 
     function ToRod  { # $1=previous (FromRod) weight
       local rod firstfree weight sequence
-      
+
       while true; do
         rod=$2
         test ${rod/[^123]} || continue
@@ -10988,8 +10988,8 @@ solution**
 
     # Display variables.
     let "disks1 = $DISKS - 1"
-    let "spaces1 = $DISKS" 
-    let "spaces2 = 2 * $DISKS" 
+    let "spaces1 = $DISKS"
+    let "spaces2 = 2 * $DISKS"
 
     let "lastmove_t = $DISKS - 1"                # Final move?
 
@@ -11001,7 +11001,7 @@ solution**
 
     function repeat  {  # $1=char $2=number of repetitions
       local n           # Repeat-print a character.
-      
+
       for (( n=0; n<$2; n++ )); do
         echo -n "$1"
       done
@@ -11026,7 +11026,7 @@ solution**
 
     function ToRod  { # $1=previous (FromRod) weight
       local rod firstfree weight sequence
-      
+
       while true; do
         rod=$2
         test ${rod/[^123]} || continue
@@ -11284,7 +11284,7 @@ solution**
         echo "  ++ [$a]"
       done
       #----------------------------------------------------------------------
-      
+
     }
 
     ################################### M A I N ########################
@@ -11408,7 +11408,7 @@ solution**
       done
 
       shift
-      
+
     #  }
 
     exit
@@ -11595,7 +11595,7 @@ solution**
         echo ${usage[*]}
         for index in 0 1 2 3
         do
-          extract_letters ${usage[index]}     
+          extract_letters ${usage[index]}
           usleep $WORDSPACE
           echo -n " "     # Print space between words.
         done
@@ -11708,7 +11708,7 @@ solution**
       (( c6[1] = ((c8[0] &  3) << 4) | (c8[1] >> 4) ))
 
       # The following operations depend on the c8 element number.
-      case ${#c8[*]} in 
+      case ${#c8[*]} in
         3) (( c6[2] = ((c8[1] & 15) << 2) | (c8[2] >> 6) ))
            (( c6[3] = c8[2] & 63 )) ;;
         2) (( c6[2] = (c8[1] & 15) << 2 ))
@@ -11840,7 +11840,7 @@ solution**
     # Reldate 06/23/11
 
     #  This is an implementation of the Gronsfeld Cipher.
-    #  It's essentially a stripped-down variant of the 
+    #  It's essentially a stripped-down variant of the
     #+ polyalphabetic Vigenère Tableau, but with only 10 alphabets.
     #  The classic Gronsfeld has a numeric sequence as the key word,
     #+ but here we substitute a letter string, for ease of use.
@@ -11849,7 +11849,7 @@ solution**
     #  Note that this is ###not### a secure cipher by modern standards.
 
     #  Global Variables  #
-    Enc_suffix="29379"   #  Encrypted text output with this 5-digit suffix. 
+    Enc_suffix="29379"   #  Encrypted text output with this 5-digit suffix.
                          #  This functions as a decryption flag,
                          #+ and when used to generate passwords adds security.
     Default_key="gronsfeldk"
@@ -12157,7 +12157,7 @@ solution**
             ###+ else it will scroll off the page.        ###
             ###                                           ###
             ###  You may also redirect its output         ###
-            ###+ to a file for examination.               ###  
+            ###+ to a file for examination.               ###
             ###-------------------------------------------###
 
 
@@ -12330,7 +12330,7 @@ solution**
     echo "========================================================="
 
     #  Lines 202 - 334 supplied by Cliff Bamford. (Thanks!)
-    #  Demo --- Interaction with Arrays, quoting, IFS, echo, * and @   ---  
+    #  Demo --- Interaction with Arrays, quoting, IFS, echo, * and @   ---
     #+ all affect how things work
 
     ArrayVar[0]='zero'                    # 0 normal
@@ -12375,7 +12375,7 @@ solution**
     echo ${ArrayVar[@]}
 
     echo
-    echo '---Case1: Within double-quotes - Default IFS of space-tab- 
+    echo '---Case1: Within double-quotes - Default IFS of space-tab-
     newline ---'
     IFS=$'\x20'$'\x09'$'\x0A'       #  These three bytes,
     echo 'Here is: printf %q "{${ArrayVar[*]}"'
@@ -12418,7 +12418,7 @@ solution**
     echo "${ArrayVar[@]}"
 
     echo
-    echo '---Case4: Within double-quotes - IFS is ^ followed by  
+    echo '---Case4: Within double-quotes - IFS is ^ followed by
     space,tab,newline'
     IFS=$'^'$'\x20'$'\x09'$'\x0A'       # ^ + space tab newline
     echo 'Here is: printf %q "{${ArrayVar[*]}"'

@@ -32,7 +32,7 @@ use. Most short scripts work right the first time, and debugging even
 the longer ones is straightforward.
 
     | In the early days of personal computing, the BASIC language enabled
-    | 
+    |
     anyone reasonably computer proficient to write programs on an early
     |  generation of microcomputers. Decades later, the Bash scripting
     |  language enables anyone with a rudimentary knowledge of Linux or
@@ -40,7 +40,7 @@ the longer ones is straightforward.
     |  We now have miniaturized single-board computers with amazing
     |  capabilities, such as the `Raspberry
     Pi <http://www.raspberrypi.org/>`__ .
-    | 
+    |
     Bash scripting provides a way to explore the capabilities of these
     |  fascinating devices.
 

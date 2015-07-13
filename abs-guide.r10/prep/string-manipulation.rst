@@ -158,12 +158,12 @@ file**
 
 
         # Is it possible to index from the right end of the string?
-            
+
         echo ${stringZ:-4}                           # abcABC123ABCabc
         # Defaults to full string, as in ${parameter:-default}.
         # However . . .
 
-        echo ${stringZ:(-4)}                         # Cabc 
+        echo ${stringZ:(-4)}                         # Cabc
         echo ${stringZ: -4}                          # Cabc
         # Now, it works.
         # Parentheses or added space "escape" the position parameter.
@@ -262,7 +262,7 @@ file**
     .. code-block:: sh
 
         stringZ=abcABC123ABCabc
-        #       =======     
+        #       =======
 
         echo `expr match "$stringZ" '\(.[b-c]*[A-Z]..[0-9]\)'`   # abcABC1
         echo `expr "$stringZ" : '\(.[b-c]*[A-Z]..[0-9]\)'`       # abcABC1
@@ -398,15 +398,15 @@ file**
         #  Netpbm is a standard part of most Linux distros.
 
         OPERATION=macptopbm
-        SUFFIX=pbm          # New filename suffix. 
+        SUFFIX=pbm          # New filename suffix.
 
         if [ -n "$1" ]
         then
           directory=$1      # If directory name given as a script argument...
         else
           directory=$PWD    # Otherwise use current working directory.
-        fi  
-          
+        fi
+
         #  Assumes all files in the target directory are MacPaint image files,
         #+ with a ".mac" filename suffix.
 
@@ -417,7 +417,7 @@ file**
                         #+ between '.' and 'c', inclusive).
           $OPERATION $file > "$filename.$SUFFIX"
                                     # Redirect conversion to new filename.
-          rm -f $file               # Delete original files after converting.   
+          rm -f $file               # Delete original files after converting.
           echo "$filename.$SUFFIX"  # Log what is happening to stdout.
         done
 

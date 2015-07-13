@@ -23,7 +23,7 @@ XXX  16.2. Complex Commands
         /home/bozo/.kde/share/apps/karm/karmdata.txt
          /home/bozo/misc/irmeyc.txt
          /home/bozo/test-scripts/1.txt
-                  
+
 
 
 
@@ -85,9 +85,9 @@ XXX  16.2. Complex Commands
         | grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
         #
         #  [:digit:] is one of the character classes
-        #+ introduced with the POSIX 1003.2 standard. 
+        #+ introduced with the POSIX 1003.2 standard.
 
-        # Thanks, StÃ©phane Chazelas. 
+        # Thanks, StÃ©phane Chazelas.
 
 
 
@@ -165,13 +165,13 @@ XXX  16.2. Complex Commands
         then
           echo "Usage: `basename $0` filename"
           exit $E_WRONGARGS
-        fi  
+        fi
 
         if [ ! -e "$1" ]
         then
           echo "File \""$1"\" does not exist."
           exit $E_FILE_NOT_EXIST
-        fi  
+        fi
 
         inum=`ls -i | grep "$1" | awk '{print $1}'`
         # inum = inode (index node) number of file
@@ -268,7 +268,7 @@ XXX  16.2. Complex Commands
          ./sent-mail-jul-2005: Subject: Criticism of Bozo's Windows/Linux article
          ./sent-mail-jul-2005: while mentioning that the Linux ext2/ext3 filesystem
          . . .
-                  
+
 
 
 
@@ -295,7 +295,7 @@ XXX  16.2. Complex Commands
     | l script text executable |
     |      . . .               |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -305,7 +305,7 @@ XXX  16.2. Complex Commands
         /usr/bin:          directory
          /usr/bin/foomatic-ppd-options:          perl script text executable
          . . .
-                  
+
 
 
     .. code-block:: sh
@@ -314,7 +314,7 @@ XXX  16.2. Complex Commands
         /usr/bin:          directory
          /usr/bin/foomatic-ppd-options:          perl script text executable
          . . .
-                  
+
 
 
 
@@ -367,7 +367,7 @@ XXX  16.2. Complex Commands
     | .sh"                     |
     |     #+ script in "/dev a |
     | nd /proc" chapter.       |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -421,7 +421,7 @@ XXX  16.2. Complex Commands
     |     # Thank you, Roberto |
     |  Polli, for the inspirat |
     | ion.                     |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -500,7 +500,7 @@ XXX  16.2. Complex Commands
         #  --------
         #  Modify this script to track changes in /var/log/messages at intervals
         #+ of 20 minutes.
-        #  Hint: Use the "watch" command. 
+        #  Hint: Use the "watch" command.
 
 
 
@@ -526,7 +526,7 @@ XXX  16.2. Complex Commands
         then
           echo "Usage: `basename $0` directory-to-copy-to"
           exit $E_NOARGS
-        fi  
+        fi
 
         ls . | xargs -i -t cp ./{} $1
         #            ^^ ^^      ^^
@@ -537,7 +537,7 @@ XXX  16.2. Complex Commands
         #
         #  List the files in current directory (ls .),
         #+ pass the output of "ls" as arguments to "xargs" (-i -t options),
-        #+ then copy (cp) these arguments ({}) to new directory ($1).  
+        #+ then copy (cp) these arguments ({}) to new directory ($1).
         #
         #  The net result is the exact equivalent of
         #+   cp * $1
@@ -633,7 +633,7 @@ XXX  16.2. Complex Commands
 
         #####################################################
         cat "$1" | xargs -n1 | \
-        #  List the file, one word per line. 
+        #  List the file, one word per line.
         tr A-Z a-z | \
         #  Shift characters to lowercase.
         sed -e 's/\.//g'  -e 's/\,//g' -e 's/ /\
@@ -907,7 +907,7 @@ XXX  16.2. Complex Commands
     |     echo                 |
     |                          |
     |     exit 0               |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 

@@ -64,7 +64,7 @@ A function may be "compacted" into a single line.
 | is a function"; echo; }  |
 |     #                    |
 |               ^     ^    |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 In this case, however, a *semicolon* must follow the final command in
@@ -85,7 +85,7 @@ the function.
 |     #                    |
 |                          |
 |          ^               |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -186,7 +186,7 @@ method of "declaring" the function, as, for example, in C.
 
     # However...
 
-          
+
     f1 ()
     {
       echo "Calling function \"f2\" from within function \"f1\"."
@@ -201,7 +201,7 @@ method of "declaring" the function, as, for example, in C.
     f1  #  Function "f2" is not actually called until this point,
         #+ although it is referenced before its definition.
         #  This is permissible.
-        
+
         # Thanks, S.C.
 
 
@@ -277,7 +277,7 @@ method of "declaring" the function, as, for example, in C.
 |     # Thank you, Dominic |
 | k Geyer and Thiemo Kelln |
 | er.                      |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -393,12 +393,12 @@ this is not very useful.
         echo "Function \"f2\", inside \"f1\"."
       }
 
-    }  
+    }
 
     f2  #  Gives an error message.
         #  Even a preceding "declare -f f2" wouldn't help.
 
-    echo    
+    echo
 
     f1  #  Does nothing, since calling "f1" does not automatically call "f2".
     f2  #  Now, it's all right to call "f2",
@@ -424,7 +424,7 @@ command would otherwise go.
       {
         echo "Hello, Bozo."
       }
-    fi  
+    fi
 
     bozo_greet        # Works only for Bozo, and other users get an error.
 
@@ -465,7 +465,7 @@ command would otherwise go.
 
     # Now, let's invoke the function.
       _         # __________
-    #             ^^^^^^^^^^   10 underscores (10 x function name)!  
+    #             ^^^^^^^^^^   10 underscores (10 x function name)!
     # A "naked" underscore is an acceptable function name.
 
 
@@ -525,7 +525,7 @@ script?
 |  commands.               |
 |     #  Of course, this i |
 | s *not* advisable.       |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

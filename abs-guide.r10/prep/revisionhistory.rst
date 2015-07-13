@@ -11,7 +11,7 @@ XXX  Appendix P. Revision History
           and revisions. This book could not have been written without the
           assistance of the Linux community, and especially of the volunteers
           of the Linux Documentation Project.
-        
+
 
 
 

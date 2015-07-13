@@ -59,7 +59,7 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
           # If file not present, creates zero-length file (same effect as 'touch').
           # The : serves as a dummy placeholder, producing no output.
 
-       > filename    
+       > filename
           # The > truncates file "filename" to zero length.
           # If file not present, creates zero-length file (same effect as 'touch').
           # (Same result as ": >", above, but this does not work with some shells.)
@@ -158,7 +158,7 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
           #  If "filename" does not exist, create it.
           #  If file descriptor "j" is not specified, default to fd 0, stdin.
           #
-          #  An application of this is writing at a specified place in a file. 
+          #  An application of this is writing at a specified place in a file.
           echo 1234567890 > File    # Write string to "File".
           exec 3<> File             # Open "File" and assign fd 3 to it.
           read -n 4 <&3             # Read only 4 characters.

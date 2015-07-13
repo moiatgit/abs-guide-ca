@@ -501,7 +501,7 @@ The script conversion is somewhat of an improvement. ` [1]
       less $DATAFILE          # TYPE C:\MYDIR\BOOKLIST.TXT | MORE
     else
       grep "$1" $DATAFILE     # FIND "%1" C:\MYDIR\BOOKLIST.TXT
-    fi  
+    fi
 
     exit 0                    # :EXIT0
 

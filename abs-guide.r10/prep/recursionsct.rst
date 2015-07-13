@@ -68,7 +68,7 @@ Indeed.
     if [ $# -lt $MINARGS ]; then
           echo "Usage: "$PROGNAME" data-to-look-up"
           exit $E_NOARGS
-    fi      
+    fi
 
 
     if [ $# -eq $MINARGS ]; then
@@ -148,7 +148,7 @@ Indeed.
 
     exit 0
 
-    # Additional notes (from the author of this script): 
+    # Additional notes (from the author of this script):
     # -------------------------------------------------
 
     # 1) Linux allows the "users" option in the /etc/fstab

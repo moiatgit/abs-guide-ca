@@ -27,7 +27,7 @@ XXX  16.9. Miscellaneous Commands
 
         bash$ seq -s : 5
         1:2:3:4:5
-                  
+
 
 
 
@@ -51,7 +51,7 @@ XXX  16.9. Miscellaneous Commands
         do
           echo -n "$a "
         done      # 1 2 3 4 5 ... 80
-        # Example of using the output of a command to generate 
+        # Example of using the output of a command to generate
         # the [list] in a "for" loop.
 
         echo; echo
@@ -138,7 +138,7 @@ XXX  16.9. Miscellaneous Commands
 
         show_help(){
                echo
-                   echo Usage: `basename $0` file letters  
+                   echo Usage: `basename $0` file letters
                    echo Note: `basename $0` arguments are case sensitive.
                    echo Example: `basename $0` foobar.txt G n U L i N U x.
                echo
@@ -151,7 +151,7 @@ XXX  16.9. Miscellaneous Commands
            echo
            show_help
            exit $E_BADARGS
-        fi  
+        fi
 
 
         # Checks if file exists.
@@ -169,7 +169,7 @@ XXX  16.9. Miscellaneous Commands
                      echo "$1" -\> `cat $FILE | tr -cd  "$1" | wc -c` #  Counting.
               else
                      echo "$1 is not a  single char."
-              fi  
+              fi
         done
 
         exit $?
@@ -201,7 +201,7 @@ XXX  16.9. Miscellaneous Commands
     |     1069                 |
     |      1272                |
     |      1428                |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -259,7 +259,7 @@ XXX  16.9. Miscellaneous Commands
         then   # Script needs at least one command-line argument.
           echo "Usage $0 -[options a,b,c]"
           exit $E_OPTERR
-        fi  
+        fi
 
         set -- `getopt "abcd:" "$@"`
         # Sets positional parameters to command-line arguments.
@@ -302,7 +302,7 @@ XXX  16.9. Miscellaneous Commands
     |     args=$(getopt -o a:b |
     | c:d -- "$@")             |
     |     eval set -- "$args"  |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -387,7 +387,7 @@ XXX  16.9. Miscellaneous Commands
     |      3.1.17(1)-release   |
     |      . . .               |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     This particular "feature" may be used to create a *very large* ASCII
@@ -400,7 +400,7 @@ XXX  16.9. Miscellaneous Commands
     | ge_file.txt              |
     |     Ctl-C                |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Hit ``                       Ctl-C                     `` *very
@@ -416,14 +416,14 @@ XXX  16.9. Miscellaneous Commands
          3.1.17(1)-release
          3.1.17(1)-release
          . . .
-                  
+
 
 
     .. code-block:: sh
 
         bash$ yes $PATH > huge_file.txt
-        Ctl-C       
-                  
+        Ctl-C
+
 
 
     .. code-block:: sh
@@ -435,14 +435,14 @@ XXX  16.9. Miscellaneous Commands
          3.1.17(1)-release
          3.1.17(1)-release
          . . .
-                  
+
 
 
     .. code-block:: sh
 
         bash$ yes $PATH > huge_file.txt
-        Ctl-C       
-                  
+        Ctl-C
+
 
 
 
@@ -487,7 +487,7 @@ XXX  16.9. Miscellaneous Commands
 
         bash$ printenv | grep HOME
         HOME=/home/bozo
-                  
+
 
 
 
@@ -538,7 +538,7 @@ XXX  16.9. Miscellaneous Commands
           ==========================|====================
           command ---> command ---> |tee ---> command ---> ---> output of pipe
           ===============================================
-                  
+
 
 
 
@@ -546,7 +546,7 @@ XXX  16.9. Miscellaneous Commands
     .. code-block:: sh
 
         cat listfile* | sort | tee check.file | uniq > result.file
-        #                      ^^^^^^^^^^^^^^   ^^^^    
+        #                      ^^^^^^^^^^^^^^   ^^^^
 
         #  The file "check.file" contains the concatenated sorted "listfiles,"
         #+ before the duplicate lines are removed by 'uniq.'
@@ -894,7 +894,7 @@ XXX  16.9. Miscellaneous Commands
         then
           echo "File \"$file\" not found."
           exit $E_NOT_FOUND
-        fi  
+        fi
 
         echo; echo -n "Are you absolutely sure you want to blot out \"$file\" (y/n)? "
         read answer
@@ -925,7 +925,7 @@ XXX  16.9. Miscellaneous Commands
           sync         # Flush buffers yet again.
           let "pass_count += 1"
           echo
-        done  
+        done
 
 
         rm -f $file    # Finally, delete scrambled and shredded file.
@@ -1018,7 +1018,7 @@ XXX  16.9. Miscellaneous Commands
           80490bc:       55                      push   %ebp
           80490bd:       89 e5                   mov    %esp,%ebp
           . . .
-                  
+
 
 
 
@@ -1109,7 +1109,7 @@ XXX  16.9. Miscellaneous Commands
           cf=$(units "$1" "$2" | sed --silent -e '1p' | awk '{print $2}')
           # Strip off everything except the actual conversion factor.
           echo "$cf"
-        }  
+        }
 
         Unit1=miles
         Unit2=meters
@@ -1224,7 +1224,7 @@ XXX  16.9. Miscellaneous Commands
     | ther_thing;;             |
     |     *       ) bail_out;; |
     |     esac                 |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -1328,14 +1328,14 @@ quick 'n easy, but not very secure text file encoder.
 | | dd conv=swab,ascii > $ |
 | file_plaintext           |
 |     # Decode.            |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
 .. code-block:: sh
 
     cat $file | dd conv=swab,ebcdic > $file_encrypted
-    # Encode (looks like gibberish).            
+    # Encode (looks like gibberish).
     # Might as well switch bytes (swab), too, for a little extra obscurity.
 
     cat $file_encrypted | dd conv=swab,ascii > $file_plaintext
@@ -1345,7 +1345,7 @@ quick 'n easy, but not very secure text file encoder.
 .. code-block:: sh
 
     cat $file | dd conv=swab,ebcdic > $file_encrypted
-    # Encode (looks like gibberish).            
+    # Encode (looks like gibberish).
     # Might as well switch bytes (swab), too, for a little extra obscurity.
 
     cat $file_encrypted | dd conv=swab,ascii > $file_plaintext

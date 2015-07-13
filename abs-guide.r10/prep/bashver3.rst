@@ -8,7 +8,7 @@ fixed quite a number of bugs and added new features.
 
 Some of the more important added features:
 
--  
+-
 
    A new, more generalized **{a..z}** `brace
    expansion <special-chars.html#BRACEEXPREF>`__ operator.
@@ -75,7 +75,7 @@ Some of the more important added features:
        end=10
        for index in $(eval echo {$start..$end})
        do
-         echo -n "$index "   # 0 1 2 3 4 5 6 7 8 9 10 
+         echo -n "$index "   # 0 1 2 3 4 5 6 7 8 9 10
        done
 
        echo
@@ -110,7 +110,7 @@ Some of the more important added features:
 
 
 
--  
+-
 
    The **=~** `Regular Expression <regexp.html#REGEXREF>`__ matching
    operator within a `double
@@ -165,7 +165,7 @@ Some of the more important added features:
    A-35 <contributed-scripts.html#FINDSPLIT>`__ , and `Example
    A-24 <contributed-scripts.html#TOHTML>`__ .
 
--  
+-
 
    The new ``        set -o pipefail       `` option is useful for
    debugging `pipes <special-chars.html#PIPEREF>`__ . If this option is
@@ -248,7 +248,7 @@ minor changes.
 
        bash$ echo $PATH
        /usr/bin:/bin:/usr/local/bin:/usr/X11R6/bin/:/usr/games:/opt/bin
-             
+
 
 
 

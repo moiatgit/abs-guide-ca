@@ -112,18 +112,18 @@ to a shell script.
     if [ ! -f "$1" ] ; then
         echo "$1: No such file." 2>&1
         usage                 # Print usage message and exit.
-    fi 
+    fi
 
     if [ -z "$2" ] ; then
         echo "$2: No letters specified." 2>&1
         usage
-    fi 
+    fi
 
     shift                      # Letters specified.
     for letter in `echo $@`    # For each one . . .
       do
       INIT_TAB_AWK="$INIT_TAB_AWK tab_search[${count_case}] = \
-      \"$letter\"; final_tab[${count_case}] = 0; " 
+      \"$letter\"; final_tab[${count_case}] = 0; "
       # Pass as parameter to awk script below.
       count_case=`expr $count_case + 1`
     done

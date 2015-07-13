@@ -7,7 +7,7 @@ XXX  36.7. Assorted Tips
   36.7.1. Ideas for more powerful scripts
 ----------------------------------------
 
--  
+-
 
    You have a problem that you want to solve by writing a Bash script.
    Unfortunately, you don't know quite where to start. One method is to
@@ -31,7 +31,7 @@ XXX  36.7. Assorted Tips
          echo "Usage: name-of-script name"
          #            ^^^^^^^^^^^^^^     More pseudo-code.
          exit $E_WRONGARGS
-       fi 
+       fi
 
        . . .
 
@@ -51,7 +51,7 @@ XXX  36.7. Assorted Tips
    For an example of using pseudo-code, see the `Square
    Root <writingscripts.html#NEWTONSQRT>`__ exercise.
 
--  
+-
 
    To keep a record of which user scripts have run during a particular
    session or over a number of sessions, add the following lines to each
@@ -73,7 +73,7 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    The >> operator *appends* lines to a file. What if you wish to
    *prepend* a line to an existing file, that is, to paste it in at the
@@ -96,7 +96,7 @@ XXX  36.7. Assorted Tips
    19-13 <x17837.html#PREPENDEX>`__ script given earlier. And, of
    course, `sed <sedawk.html#SEDREF>`__ can also do this.
 
--  
+-
 
    A shell script may act as an embedded command inside another shell
    script, a *Tcl* or *wish* script, or even a
@@ -105,7 +105,7 @@ XXX  36.7. Assorted Tips
    ``                   system()                 `` call, i.e.,
    ``                   system("script_name");                 `` .
 
--  
+-
 
    Setting a variable to the contents of an embedded *sed* or *awk*
    script increases the readability of the surrounding `shell
@@ -113,7 +113,7 @@ XXX  36.7. Assorted Tips
    A-1 <contributed-scripts.html#MAILFORMAT>`__ and `Example
    15-20 <internal.html#COLTOTALER3>`__ .
 
--  
+-
 
    Put together files containing your favorite and most useful
    definitions and functions. As necessary, "include" one or more of
@@ -135,7 +135,7 @@ XXX  36.7. Assorted Tips
        # Useful variable definitions
 
        ROOT_UID=0             # Root has $UID 0.
-       E_NOTROOT=101          # Not root user error. 
+       E_NOTROOT=101          # Not root user error.
        MAXRETVAL=255          # Maximum (positive) return value of a function.
        SUCCESS=0
        FAILURE=-1
@@ -154,7 +154,7 @@ XXX  36.7. Assorted Tips
          fi
 
          echo "Usage: `basename $0` "$msg""
-       }  
+       }
 
 
        Check_if_root ()       # Check if root running script.
@@ -164,7 +164,7 @@ XXX  36.7. Assorted Tips
            echo "Must be root to run this script."
            exit $E_NOTROOT
          fi
-       }  
+       }
 
 
        CreateTempfileName ()  # Creates a "unique" temp filename.
@@ -200,7 +200,7 @@ XXX  36.7. Assorted Tips
            absval=$1                    # stays as-is.
          else                           # Otherwise,
            let "absval = (( 0 - $1 ))"  # change sign.
-         fi  
+         fi
 
          return $absval
        }
@@ -213,7 +213,7 @@ XXX  36.7. Assorted Tips
          then                 #+ send error message
            echo "(null)"      #+ (C-style void-pointer error message)
            return             #+ and return from function.
-         fi  
+         fi
 
          echo "$@" | tr A-Z a-z
          # Translate all passed arguments ($@).
@@ -232,7 +232,7 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    Use special-purpose comment headers to increase clarity and
    legibility in scripts.
@@ -258,7 +258,7 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    Dotan Barak contributes template code for a *progress bar* in a
    script.
@@ -325,7 +325,7 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    A particularly clever use of
    `if-test <testconstructs.html#TESTCONSTRUCTS1>`__ constructs is for
@@ -364,7 +364,7 @@ XXX  36.7. Assorted Tips
    Compare this with `using here documents to comment out code
    blocks <here-docs.html#CBLOCK1>`__ .
 
--  
+-
 
    Using the `$? exit status
    variable <internalvariables.html#XSTATVARREF>`__ , a script may test
@@ -467,7 +467,7 @@ XXX  36.7. Assorted Tips
 
          echo "$FirstChar$string1"  # Output to stdout.
 
-       }  
+       }
 
        newstring=`capitalize_ichar "every sentence should start with a capital letter."`
        echo "$newstring"          # Every sentence should start with a capital letter.
@@ -541,7 +541,7 @@ XXX  36.7. Assorted Tips
    | ction.                   |
    |     # Now, this will not |
    |  work correctly.         |
-                             
+
    +--------------------------+--------------------------+--------------------------+
 
 
@@ -571,7 +571,7 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    Next in our bag of tricks are techniques for passing an
    `array <arrays.html#ARRAYREF>`__ to a
@@ -677,7 +677,7 @@ XXX  36.7. Assorted Tips
    For a more elaborate example of passing arrays to functions, see
    `Example A-10 <contributed-scripts.html#LIFESLOW>`__ .
 
--  
+-
 
    Using the `double-parentheses construct <dblparens.html>`__ , it is
    possible to use C-style syntax for setting and
@@ -687,7 +687,7 @@ XXX  36.7. Assorted Tips
    11-13 <loops1.html#FORLOOPC>`__ and `Example
    11-18 <loops1.html#WHLOOPC>`__ .
 
--  
+-
 
    Setting the `path <internalvariables.html#PATHREF>`__ and
    `umask <system.html#UMASKREF>`__ at the beginning of a script makes
@@ -706,7 +706,7 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    A useful scripting technique is to *repeatedly* feed the output of a
    filter (by piping) back to the *same filter* , but with a different
@@ -776,14 +776,14 @@ XXX  36.7. Assorted Tips
    16-25 <textproc.html#CRYPTOQUOTE>`__ , and `Example
    A-9 <contributed-scripts.html#SOUNDEX>`__ .
 
--  
+-
 
    Use " `anonymous here documents <here-docs.html#ANONHEREDOC0>`__ " to
    comment out blocks of code, to save having to individually comment
    out each line with a # . See `Example
    19-11 <here-docs.html#COMMENTBLOCK>`__ .
 
--  
+-
 
    Running a script on a machine that relies on a command that might not
    be installed is dangerous. Use `whatis <filearchiv.html#WHATISREF>`__
@@ -811,12 +811,12 @@ XXX  36.7. Assorted Tips
        then
          $CMD option1 option2       #  Run command1 with options.
        else                         #  Otherwise,
-         $PlanB                     #+ run command2. 
+         $PlanB                     #+ run command2.
        fi
 
 
 
--  
+-
 
    An `if-grep test <testconstructs.html#IFGREPREF>`__ may not return
    expected results in an error case, when text is output to
@@ -875,14 +875,14 @@ XXX  36.7. Assorted Tips
 
 
 
--  
+-
 
    The `run-parts <extmisc.html#RUNPARTSREF>`__ command is handy for
    running a set of command scripts in a particular sequence, especially
    in combination with `cron <system.html#CRONREF>`__ or
    `at <timedate.html#ATREF>`__ .
 
--  
+-
 
    For doing multiple revisions on a complex script, use the *rcs*
    Revision Control System package.

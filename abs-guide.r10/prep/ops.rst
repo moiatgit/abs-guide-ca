@@ -49,7 +49,7 @@ XXX  8.1. Operators
     |     #  (The prepended "X |
     | " characters cancel out. |
     | )                        |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -121,7 +121,7 @@ XXX  8.1. Operators
 
         bash$ expr 5 % 3
         2
-                  
+
 
 
 
@@ -336,7 +336,7 @@ took a variable outside these limits gave an erroneous result.
 |  # +    has been set, ma |
 | king the result negative |
 | .                        |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 As of version >= 2.05b, Bash supports 64-bit integers.
@@ -397,7 +397,7 @@ containing a decimal point as strings.
 |                          |
 |     echo "b = $b"        |
 | # b=1                    |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 Use `bc <mathc.html#BCREF>`__ in scripts that that need floating point
@@ -572,7 +572,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
         #
         #  Note:  if [[ $a -eq 24 && $b -eq 24 ]]  works.
         #  The double-bracket if-test is more flexible
-        #+ than the single-bracket version.       
+        #+ than the single-bracket version.
         #    (The "&&" has a different meaning in line 17 than in line 6.)
         #    Thanks, Stephane Chazelas, for pointing this out.
 
@@ -627,7 +627,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
         bash$ echo $(( 1 && 2 )) $((3 && 0)) $((4 || 0)) $((0 || 0))
         1 0 1 0
-                  
+
 
 
 

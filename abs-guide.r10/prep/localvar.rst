@@ -28,9 +28,9 @@ XXX  24.2. Local Variables
           echo                   # Uses the 'local' builtin.
           echo "\"loc_var\" in function = $loc_var"
           global_var=999         # Not declared as local.
-                                 # Therefore, defaults to global. 
+                                 # Therefore, defaults to global.
           echo "\"global_var\" in function = $global_var"
-        }  
+        }
 
         func
 
@@ -38,12 +38,12 @@ XXX  24.2. Local Variables
 
         echo
         echo "\"loc_var\" outside function = $loc_var"
-                                              # $loc_var outside function = 
+                                              # $loc_var outside function =
                                               # No, $loc_var not visible globally.
         echo "\"global_var\" outside function = $global_var"
                                               # $global_var outside function = 999
                                               # $global_var is visible globally.
-        echo                      
+        echo
 
         exit 0
         #  In contrast to C, a Bash variable declared inside a function
@@ -95,7 +95,7 @@ XXX  24.2. Local Variables
     |                          |
     |              # Has been  |
     | set by function call.    |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -106,7 +106,7 @@ XXX  24.2. Local Variables
         func ()
         {
         global_var=37    #  Visible only within the function block
-                         #+ before the function has been called. 
+                         #+ before the function has been called.
         }                #  END OF FUNCTION
 
         echo "global_var = $global_var"  # global_var =
@@ -125,7 +125,7 @@ XXX  24.2. Local Variables
         func ()
         {
         global_var=37    #  Visible only within the function block
-                         #+ before the function has been called. 
+                         #+ before the function has been called.
         }                #  END OF FUNCTION
 
         echo "global_var = $global_var"  # global_var =
@@ -202,7 +202,7 @@ XXX  24.2. Local Variables
     |     }                    |
     |                          |
     |     function0            |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 
@@ -532,7 +532,7 @@ is definitely *not* recommended in a shell script. ` [6]
       #  If you want greater range than this,
       #+ rewrite it in a Real Programming Language.
       exit $E_RANGE_ERR
-    fi  
+    fi
 
     fact ()
     {
@@ -610,7 +610,7 @@ a function *is also visible to functions called by the parent function.*
 | $func1var = 20.          |
 |     # Within function2,  |
 | $func1var = 20.          |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 This is documented in the Bash manual:
@@ -757,7 +757,7 @@ Too many levels of recursion may crash a script with a segfault.
 |                          |
 |     #  Thanks, StÃ©phane |
 |  Chazelas.               |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -768,7 +768,7 @@ Too many levels of recursion may crash a script with a segfault.
     #  Warning: Running this script could possibly lock up your system!
     #  If you're lucky, it will segfault before using up all available memory.
 
-    recursive_function ()          
+    recursive_function ()
     {
     echo "$1"     # Makes the function do something, and hastens the segfault.
     (( $1 < $2 )) && recursive_function $(( $1 + 1 )) $2;
@@ -796,7 +796,7 @@ Too many levels of recursion may crash a script with a segfault.
     #  Warning: Running this script could possibly lock up your system!
     #  If you're lucky, it will segfault before using up all available memory.
 
-    recursive_function ()          
+    recursive_function ()
     {
     echo "$1"     # Makes the function do something, and hastens the segfault.
     (( $1 < $2 )) && recursive_function $(( $1 + 1 )) $2;

@@ -50,7 +50,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
 
          rm -f "$1"/*
          return 0   # Success.
-       }  
+       }
 
        cleanup_pfiles $projectdir
 
@@ -104,7 +104,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
        then
          echo "File $filename not found."
          exit $E_NOTFOUND
-       fi  
+       fi
 
 
        MAIL_DIRECTORY=/var/spool/mail/bozo  #  Uppercase for an environmental
@@ -117,7 +117,7 @@ XXX  35.1. Unofficial Shell Scripting Stylesheet
          echo -n $prompt
          read answer
          return $answer
-       }  
+       }
 
        GetAnswer "What is your favorite number? "
        favorite_number=$?

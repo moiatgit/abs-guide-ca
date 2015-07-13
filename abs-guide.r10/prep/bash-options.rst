@@ -16,7 +16,7 @@ more useful ones.
 
        bash$ bash -c 'set a b c d; IFS="+-;"; echo "$*"'
        a+b+c+d
-                 
+
 
 
 

@@ -970,7 +970,7 @@ And, here is a snippet from Andrzej Szelachowski's instructive
     LIGHTBLUE='\e[1;34m'
     NC='\e[m'
 
-    PCT="\`if [[ \$EUID -eq 0 ]]; then T='$LIGHTRED' ; else T='$LIGHTBLUE'; fi; 
+    PCT="\`if [[ \$EUID -eq 0 ]]; then T='$LIGHTRED' ; else T='$LIGHTBLUE'; fi;
     echo \$T \`"
 
     #  For "literal" command substitution to be assigned to a variable,
@@ -991,7 +991,7 @@ And, here is a snippet from Andrzej Szelachowski's instructive
 
     #  When a variable is assigned, it should be called escaped:
     #+       echo \$T,
-    #  Otherwise the value of the T variable is taken from the moment the PCT 
+    #  Otherwise the value of the T variable is taken from the moment the PCT
     #+ variable is exported/read from .bash_profile.
     #  So, in this example it would be null.
 
@@ -1003,7 +1003,7 @@ And, here is a snippet from Andrzej Szelachowski's instructive
     #  Variables PCT and PS1 can be merged into a new PS1 variable:
 
     PS1="\`if [[ \$EUID -eq 0 ]]; then PCT='$LIGHTRED';
-    else PCT='$LIGHTBLUE'; fi; 
+    else PCT='$LIGHTBLUE'; fi;
     echo '\n$GREEN[\w] \n$DARKGRAY('\$PCT'\t$DARKGRAY)-\
     ('\$PCT'\u$DARKGRAY)-('\$PCT'\!$DARKGRAY)$YELLOW-> $NC'\`"
 

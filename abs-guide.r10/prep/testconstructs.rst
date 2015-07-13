@@ -25,7 +25,7 @@ XXX  7.1. Test Constructs
    Bash sees ``                 [[ $a -lt $b ]]               `` as a
    single element, which returns an exit status.
 
--  
+-
 
    The `(( ... )) <dblparens.html>`__ and `let
    ... <internal.html#LETREF>`__ constructs return an `exit
@@ -90,7 +90,7 @@ XXX  7.1. Test Constructs
    |                          |
    |       # Will not echo $v |
    | ar!                      |
-                             
+
    +--------------------------+--------------------------+--------------------------+
 
 
@@ -114,7 +114,7 @@ XXX  7.1. Test Constructs
 
 
 
--  
+-
 
    An **if** can test any command, not just conditions enclosed within
    brackets.
@@ -128,7 +128,7 @@ XXX  7.1. Test Constructs
        fi
 
        # The very useful "if-grep" construct:
-       # ----------------------------------- 
+       # -----------------------------------
        if grep -q Bash file
          then echo "File contains at least one occurrence of Bash."
        fi
@@ -320,7 +320,7 @@ one must terminate.
 |                          |
 |     if [ -x "$filename"  |
 | ]; then                  |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -402,7 +402,7 @@ script, **test** does *not* call the external
 |     bash: type: ]: not f |
 | ound                     |
 |                          |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 If, for some reason, you wish to use ``         /usr/bin/test        ``
@@ -421,7 +421,7 @@ in a Bash script, then specify it by full pathname.
     ]] is a shell keyword
     bash$ type ']'
     bash: type: ]: not found
-              
+
 
 
 .. code-block:: sh
@@ -436,7 +436,7 @@ in a Bash script, then specify it by full pathname.
     ]] is a shell keyword
     bash$ type ']'
     bash: type: ]: not found
-              
+
 
 
 
@@ -676,7 +676,7 @@ Following an **if** , neither the **test** command nor the test brackets
 |       echo "Can't change |
 |  to $dir."               |
 |     fi                   |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 The "if COMMAND" construct returns the exit status of COMMAND.
@@ -697,7 +697,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
 |     [ -d "$home" ] || ec |
 | ho "$home directory does |
 |  not exist."             |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

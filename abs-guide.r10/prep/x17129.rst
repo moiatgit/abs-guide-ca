@@ -15,7 +15,7 @@ A Regular Expression contains one or more of the following:
    meaning. The simplest type of Regular Expression consists *only* of a
    character set, with no metacharacters.
 
--  
+-
 
    *An anchor* . These designate ( *anchor* ) the position in the line
    of text that the RE is to match. For example, ^ , and $ are anchors.
@@ -54,7 +54,7 @@ characters -- a string or a part of a string.
    depending on context, negates the meaning of a set of characters in
    an RE.
 
--  
+-
 
    The dollar sign -- $ -- at the end of an RE matches the end of a
    line.
@@ -63,7 +63,7 @@ characters -- a string or a part of a string.
 
     "^$" matches blank lines.
 
--  
+-
 
    Brackets -- [...] -- enclose a set of characters to match in a single
    RE.
@@ -100,7 +100,7 @@ characters -- a string or a part of a string.
    "[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]" matches any Social
    Security number.
 
--  
+-
 
    The backslash -- \\ -- `escapes <escapingsection.html#ESCP>`__ a
    special character, which means that character gets interpreted
@@ -110,7 +110,7 @@ characters -- a string or a part of a string.
    RE meaning of end-of-line. Likewise a "\\\\" has the literal meaning
    of "\\" .
 
--  
+-
 
    `Escaped <escapingsection.html#ESCP>`__ "angle brackets" -- \\<...\\>
    -- mark word boundaries.
@@ -139,7 +139,7 @@ characters -- a string or a part of a string.
 
        bash$ grep '\<the\>' textfile
        This is the only instance of line 2.
-                 
+
 
 
 
@@ -175,9 +175,37 @@ The only way to be certain that a particular RE works is to test it.
      This line contains the number 1133.         # Match.
      This line contains the number 113312.       # Match.
      This line contains the number 113312312.    # Match.
-              
 
 
+
+
+
+
+.. code-block:: sh
+
+    TEST FILE: tstfile                          # No match.
+                                                # No match.
+    Run   grep "1133*"  on this file.           # Match.
+                                                # No match.
+                                                # No match.
+    This line contains the number 113.          # Match.
+    This line contains the number 13.           # No match.
+    This line contains the number 133.          # No match.
+    This line contains the number 1133.         # Match.
+    This line contains the number 113312.       # Match.
+    This line contains the number 1112.         # No match.
+    This line contains the number 113312312.    # Match.
+    This line contains no numbers at all.       # No match.
+
+
+.. code-block:: sh
+
+    bash$ grep "1133*" tstfile
+    Run   grep "1133*"  on this file.           # Match.
+     This line contains the number 113.          # Match.
+     This line contains the number 1133.         # Match.
+     This line contains the number 113312.       # Match.
+     This line contains the number 113312312.    # Match.
 
 
 
@@ -206,39 +234,11 @@ The only way to be certain that a particular RE works is to test it.
      This line contains the number 1133.         # Match.
      This line contains the number 113312.       # Match.
      This line contains the number 113312312.    # Match.
-              
-
-
-.. code-block:: sh
-
-    TEST FILE: tstfile                          # No match.
-                                                # No match.
-    Run   grep "1133*"  on this file.           # Match.
-                                                # No match.
-                                                # No match.
-    This line contains the number 113.          # Match.
-    This line contains the number 13.           # No match.
-    This line contains the number 133.          # No match.
-    This line contains the number 1133.         # Match.
-    This line contains the number 113312.       # Match.
-    This line contains the number 1112.         # No match.
-    This line contains the number 113312312.    # Match.
-    This line contains no numbers at all.       # No match.
-
-
-.. code-block:: sh
-
-    bash$ grep "1133*" tstfile
-    Run   grep "1133*"  on this file.           # Match.
-     This line contains the number 113.          # Match.
-     This line contains the number 1133.         # Match.
-     This line contains the number 113312.       # Match.
-     This line contains the number 113312312.    # Match.
-              
 
 
 
--  
+
+-
 
 
    ** Extended REs.** Additional metacharacters added to the basic set.
@@ -246,12 +246,12 @@ The only way to be certain that a particular RE works is to test it.
    `awk <awk.html#AWKREF>`__ , and `Perl <wrapper.html#PERLREF>`__ .
 
 
--  
+-
 
    The question mark -- ? -- matches zero or one of the previous RE. It
    is generally used for matching single characters.
 
--  
+-
 
    The plus -- + -- matches one or more of the previous RE. It serves a
    role similar to the \* , but does *not* match zero occurrences.
@@ -299,7 +299,7 @@ The only way to be certain that a particular RE works is to test it.
    | '                        |
    |     2222                 |
    |                          |
-                             
+
    +--------------------------+--------------------------+--------------------------+
 
    **Perl** and some **egrep** versions do not require escaping the
@@ -310,19 +310,19 @@ The only way to be certain that a particular RE works is to test it.
 
        bash$ echo 2222 | gawk --re-interval '/2{3}/'
        2222
-                 
+
 
 
    .. code-block:: sh
 
        bash$ echo 2222 | gawk --re-interval '/2{3}/'
        2222
-                 
 
 
 
 
--  
+
+-
 
    Parentheses -- **( )** -- enclose a group of REs. They are useful
    with the following " \| " operator and in `substring
@@ -338,7 +338,7 @@ The only way to be certain that a particular RE works is to test it.
        bash$ egrep 're(a|e)d' misc.txt
        People who read seem to be better informed than those who do not.
         The clarinet produces sound by the vibration of its reed.
-                 
+
 
 
 
@@ -353,7 +353,7 @@ utilities.
 
 
 
--  
+-
 
 
    ** POSIX Character Classes.**
@@ -422,7 +422,7 @@ utilities.
 
        bash$ grep [[:digit:]] test.file
        abc=723
-                 
+
 
 
 
@@ -446,7 +446,7 @@ utilities.
 
        bash$ ls -l ?[[:digit:]][[:digit:]]?
        -rw-rw-r--    1 bozo  bozo         0 Aug 21 14:47 a33b
-                 
+
 
 
 
@@ -519,7 +519,7 @@ newline in a multiple line expression, the dot will match the newline.
 |     # Thanks, S.C.       |
 |                          |
 |     exit 0               |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

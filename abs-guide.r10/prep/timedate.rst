@@ -55,7 +55,7 @@ XXX  16.3. Time / Date Commands
 
         bash$ date -u
         Sat Mar 30 04:07:42 UTC 2002
-                  
+
 
 
 
@@ -89,7 +89,7 @@ XXX  16.3. Time / Date Commands
 
         printf '\nIn 2007, %s ' \
                "$(date -d"$CURRENT +
-                $(( $(diff) /$MPHR /$MPHR /$HPD / 2 )) days" '+%d %B')" 
+                $(( $(diff) /$MPHR /$MPHR /$HPD / 2 )) days" '+%d %B')"
         #       %B = name of month                ^ halfway
         printf 'was halfway between %s ' "$(date -d"$CURRENT" '+%d %B')"
         printf 'and %s\n' "$(date -d"$TARGET" '+%d %B')"
@@ -170,7 +170,7 @@ XXX  16.3. Time / Date Commands
 
         bash$ zdump EST
         EST  Tue Sep 18 22:09:22 2001 EST
-                  
+
 
 
 
@@ -270,7 +270,7 @@ XXX  16.3. Time / Date Commands
 
         bash$ at 2:30 am Friday < at-jobs.list
         job 2 at 2000-10-27 02:30
-                  
+
 
 
 
@@ -320,7 +320,7 @@ XXX  16.3. Time / Date Commands
     |                          |
     |     sleep 3 h   # Pauses |
     |  3 hours!                |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
 

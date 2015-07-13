@@ -32,7 +32,7 @@ chapter.
     |     bash $ jobs          |
     |     [1]+  Running        |
     |           sleep 100 &    |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
      "1" is the job number (jobs are maintained by the current shell).
@@ -99,7 +99,7 @@ chapter.
           echo "Must be root to run this script."
           # "Run along kid, it's past your bedtime."
           exit $E_NOTROOT
-        fi  
+        fi
 
         if [ -z "$1" ]
         then
@@ -150,7 +150,7 @@ chapter.
     |                          |
     |     ls -l &              |
     |     echo "Done."         |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     +--------------------------+--------------------------+--------------------------+
@@ -165,26 +165,26 @@ chapter.
     | Oct 11 15:09 test.sh     |
     |      _                   |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
         | As Walter Brameld IV explains it:
-        | 
+        |
         As far as I can tell, such scripts don't actually hang. It just
-        | 
+        |
         seems that they do because the background command writes text to
-        | 
+        |
         the console after the prompt. The user gets the impression that
-        | 
+        |
         the prompt was never displayed. Here's the sequence of events:
         |  1. Script launches background command.
         |  2. Script exits.
         |  3. Shell displays the prompt.
-        | 
+        |
         4. Background command continues running and writing text to the
         |  console.
         |  5. Background command finishes.
-        | 
+        |
         6. User doesn't see a prompt at the bottom of the output, thinks script
         |  is hanging.
 
@@ -200,7 +200,7 @@ chapter.
     |     ls -l &              |
     |     echo "Done."         |
     |     wait                 |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     +--------------------------+--------------------------+--------------------------+
@@ -214,7 +214,7 @@ chapter.
     | o     bozo           34  |
     | Oct 11 15:09 test.sh     |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     `Redirecting <io-redirection.html#IOREDIRREF>`__ the output of the
@@ -225,7 +225,7 @@ chapter.
     .. code-block:: sh
 
         #!/bin/bash
-        # test.sh         
+        # test.sh
 
         ls -l &
         echo "Done."
@@ -238,13 +238,13 @@ chapter.
          [bozo@localhost test-scripts]$ total 1
          -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
          _
-                       
+
 
 
     .. code-block:: sh
 
         #!/bin/bash
-        # test.sh         
+        # test.sh
 
         ls -l &
         echo "Done."
@@ -257,13 +257,13 @@ chapter.
         Done.
          [bozo@localhost test-scripts]$ total 1
          -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
-                       
+
 
 
     .. code-block:: sh
 
         #!/bin/bash
-        # test.sh         
+        # test.sh
 
         ls -l &
         echo "Done."
@@ -276,13 +276,13 @@ chapter.
          [bozo@localhost test-scripts]$ total 1
          -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
          _
-                       
+
 
 
     .. code-block:: sh
 
         #!/bin/bash
-        # test.sh         
+        # test.sh
 
         ls -l &
         echo "Done."
@@ -295,7 +295,7 @@ chapter.
         Done.
          [bozo@localhost test-scripts]$ total 1
          -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
-                       
+
 
 
 
@@ -404,7 +404,7 @@ chapter.
     .. code-block:: sh
 
         bash$ command ls
-                      
+
 
 
 

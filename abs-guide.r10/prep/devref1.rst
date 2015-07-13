@@ -20,7 +20,7 @@ mounted filesystem(s) have entries in ``      /dev     `` , as
      /dev/hda1                50755      3887     44248   9% /boot
      /dev/hda8               367013     13262    334803   4% /home
      /dev/hda5              1714416   1123624    503704  70% /usr
-              
+
 
 
 
@@ -70,7 +70,7 @@ Checking whether a disk is in the CD-burner (soft-linked to
 
     #  head: error reading '/dev/hdc': Input/output error
     #  (There is a disk in the drive, but it can't be read;
-    #+  possibly it's an unrecorded CDR blank.)   
+    #+  possibly it's an unrecorded CDR blank.)
 
     #  Stream of characters and assorted gibberish
     #  (There is a pre-recorded disk in the drive,
@@ -109,7 +109,7 @@ Getting the time from ``      nist.gov     `` :
 
     bash$ cat </dev/tcp/time.nist.gov/13
     53082 04-03-18 04:26:54 68 0 0 502.3 UTC(NIST) *
-              
+
 
 
 
@@ -141,7 +141,7 @@ Generalizing the above into a script:
     bash$ exec 5<>/dev/tcp/www.net.cn/80
     bash$ echo -e "GET / HTTP/1.0\n" >&5
     bash$ cat <&5
-              
+
 
 
 
@@ -158,11 +158,11 @@ Generalizing the above into a script:
 
     # Script by Troy Engel.
     # Used with permission.
-     
+
     TCP_HOST=news-15.net       # A known spam-friendly ISP.
     TCP_PORT=80                # Port 80 is http.
-      
-    # Try to connect. (Somewhat similar to a 'ping' . . .) 
+
+    # Try to connect. (Somewhat similar to a 'ping' . . .)
     echo "HEAD / HTTP/1.0" >/dev/tcp/${TCP_HOST}/${TCP_PORT}
     MYEXIT=$?
 
@@ -181,7 +181,7 @@ Generalizing the above into a script:
     corresponding socket.
     EXPLANATION
 
-       
+
     if [ "X$MYEXIT" = "X0" ]; then
       echo "Connection successful. Exit code: $MYEXIT"
     else

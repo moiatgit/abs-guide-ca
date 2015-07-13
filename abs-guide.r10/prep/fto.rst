@@ -127,7 +127,7 @@ XXX  7.2. File test operators
     .. code-block:: sh
 
                  -rwsr-xr-t    1 root       178236 Oct  2  2000 /usr/sbin/pppd
-                  
+
 
 
 
@@ -149,7 +149,7 @@ XXX  7.2. File test operators
     .. code-block:: sh
 
                  drwxrwxrwt    7 root         1024 May 19 21:26 tmp/
-                  
+
 
 
 
@@ -214,17 +214,17 @@ XXX  7.2. File test operators
     ################################################################
 
 
-    #  If no args are passed to the script set directories-to-search 
-    #+ to current directory.  Otherwise set the directories-to-search 
+    #  If no args are passed to the script set directories-to-search
+    #+ to current directory.  Otherwise set the directories-to-search
     #+ to the args passed.
     ######################
 
     [ $# -eq 0 ] && directorys=`pwd` || directorys=$@
 
 
-    #  Setup the function linkchk to check the directory it is passed 
+    #  Setup the function linkchk to check the directory it is passed
     #+ for files that are links and don't exist, then print them quoted.
-    #  If one of the elements in the directory is a subdirectory then 
+    #  If one of the elements in the directory is a subdirectory then
     #+ send that subdirectory to the linkcheck function.
     ##########
 
@@ -243,7 +243,7 @@ XXX  7.2. File test operators
     for directory in $directorys; do
         if [ -d $directory ]
         then linkchk $directory
-        else 
+        else
             echo "$directory is not a directory"
             echo "Usage: $0 dir1 dir2 ..."
         fi
@@ -287,7 +287,7 @@ Per the 1913 edition of *Webster's Dictionary* :
 | et for;                  |
 |     to disapprove of str |
 | ongly.                   |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

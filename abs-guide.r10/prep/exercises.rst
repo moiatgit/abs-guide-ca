@@ -24,7 +24,7 @@ Think of them as a challenge, as an entertaining way to take you further
 along the stony path toward UNIX wizardry.
 
 | On a dingy side street in a run-down section of Hoboken, New Jersey,
-| 
+|
 there sits a nondescript squat two-story brick building with an inscription
 |  incised on a marble plate in its wall:
 |  ``      Bash Scripting Hall of Fame     `` .

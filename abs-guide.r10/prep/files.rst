@@ -62,14 +62,14 @@ XXX  Appendix H. Important Files
 
     .. code-block:: sh
 
-        bash$ grep -A 5 AUDIO /etc/sysconfig/hwconf        
+        bash$ grep -A 5 AUDIO /etc/sysconfig/hwconf
         class: AUDIO
          bus: PCI
          detached: 0
          driver: snd-intel8x0
          desc: "Intel Corporation 82801CA/CAM AC'97 Audio Controller"
          vendorId: 8086
-         
+
 
 
 

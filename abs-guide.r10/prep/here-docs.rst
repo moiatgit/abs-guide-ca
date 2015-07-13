@@ -146,7 +146,7 @@ The above script could just as effectively have been implemented with
 
     #!/bin/bash
     #  Replace all instances of "Smith" with "Jones"
-    #+ in files with a ".txt" filename suffix. 
+    #+ in files with a ".txt" filename suffix.
 
     ORIGINAL=Smith
     REPLACEMENT=Jones
@@ -277,10 +277,10 @@ document, changing its output accordingly.
                        #+ then just take the first.
     else
       NAME="John Doe"  #  Default, if no command-line parameter.
-    fi  
+    fi
 
-    RESPONDENT="the author of this fine script"  
-      
+    RESPONDENT="the author of this fine script"
+
 
     cat <<Endofmessage
 
@@ -324,7 +324,7 @@ substitution.
     then
       echo "Usage: `basename $0` Filename-to-upload"
       exit $E_ARGERROR
-    fi  
+    fi
 
 
     Filename=`basename $1`           # Strips pathname out of file name.
@@ -371,7 +371,7 @@ interpreted literally. (Thank you, Allen Halsey, for pointing this out.)
     #  A 'cat' here-document, but with parameter substitution disabled.
 
     NAME="John Doe"
-    RESPONDENT="the author of this fine script"  
+    RESPONDENT="the author of this fine script"
 
     cat <<'Endofmessage'
 
@@ -508,8 +508,8 @@ A here document can supply input to a function in the same script.
       read firstname
       read lastname
       read address
-      read city 
-      read state 
+      read city
+      read state
       read zipcode
     } # This certainly appears to be an interactive function, but . . .
 
@@ -685,7 +685,7 @@ possible.
       directory=.
     else
       directory="$1"
-    fi  
+    fi
 
     echo "Listing of "$directory":"; echo
     (printf "PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\n" \
@@ -743,7 +743,7 @@ opening and are not accessible to any other process.
 | 386 /tmp/t1213-0-sh (del |
 | eted)                    |
 |                          |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -752,7 +752,7 @@ opening and are not accessible to any other process.
     bash$ bash -c 'lsof -a -p $$ -d0' << EOF
     > EOF
     lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)
-              
+
 
 
 .. code-block:: sh
@@ -760,7 +760,7 @@ opening and are not accessible to any other process.
     bash$ bash -c 'lsof -a -p $$ -d0' << EOF
     > EOF
     lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)
-              
+
 
 
 
@@ -830,7 +830,7 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 |     echo "This line had  |
 | better not echo."  # Fol |
 | lows an 'exit' command.  |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 
@@ -926,7 +926,7 @@ not necessarily a good idea.
 |     # It's safer to use  |
 | a multi-character limit  |
 | string.                  |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 

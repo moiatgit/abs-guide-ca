@@ -39,7 +39,7 @@ reference* .
     echo "\\\$\$var = \$$var"       # \$$var = $23
     #  As expected. The first $ is escaped and pasted on to
     #+ the value of var ($var = 23 ).
-    #  Meaningful, but still not useful. 
+    #  Meaningful, but still not useful.
 
     # Now, let's start over and do it the right way.
 
@@ -135,7 +135,7 @@ their contents. This can be useful when
     isdnYourProviderRemoteNet=10.0.0.10
     isdnOnlineService="MyProvider"
     # ---------------------------------------------
-          
+
 
     remoteNet=$(eval "echo \$$(echo isdn${isdnOnlineService}RemoteNet)")
     remoteNet=$(eval "echo \$$(echo isdnMyProviderRemoteNet)")
@@ -151,7 +151,7 @@ their contents. This can be useful when
     #  Consider the following snippet given a variable named getSparc,
     #+ but no such variable getIa64:
 
-    chkMirrorArchs () { 
+    chkMirrorArchs () {
       arch="$1";
       if [ "$(eval "echo \${$(echo get$(echo -ne $arch |
            sed 's/^\(.\).*/\1/g' | tr 'a-z' 'A-Z'; echo $arch |

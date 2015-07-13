@@ -17,7 +17,7 @@ XXX  Chapter 34. Gotchas
 Here are some (non-recommended!) scripting practices that will bring
 excitement into an otherwise dull life.
 
--  
+-
 
    Assigning reserved words or characters to variable names.
 
@@ -51,7 +51,7 @@ excitement into an otherwise dull life.
        function-whatever ()   # Error
        # Use 'function_whatever ()' instead.
 
-        
+
        # As of version 3 of Bash, periods are not allowed within function names.
        function.whatever ()   # Error
        # Use 'functionWhatever ()' instead.
@@ -87,7 +87,7 @@ excitement into an otherwise dull life.
        var1 = 23   # 'var1=23' is correct.
        # On line above, Bash attempts to execute command "var1"
        # with the arguments "=" and "23".
-           
+
        let c = $a - $b   # Instead:   let c=$a-$b   or   let "c = $a - $b"
 
        if [ $a -le 5]    # if [ $a -le 5 ]   is correct.
@@ -96,7 +96,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Not terminating with a
    `semicolon <special-chars.html#SEMICOLONREF>`__ the final command in
@@ -114,7 +114,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Assuming uninitialized variables (variables before a value is
    assigned to them) are "zeroed out" . An uninitialized variable has a
@@ -138,7 +138,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Mixing up *=* and *-eq* in a test. Remember, *=* is for comparing
    literal variables and *-eq* for integers.
@@ -154,11 +154,11 @@ excitement into an otherwise dull life.
 
 
        a=273.0   # Not an integer.
-              
+
        if [ "$a" = 273 ]
        then
          echo "Comparison works."
-       else  
+       else
          echo "Comparison does not work."
        fi    # Comparison does not work.
 
@@ -166,16 +166,16 @@ excitement into an otherwise dull life.
 
 
        # Likewise, problems trying to use "-eq" with non-integer values.
-              
+
        if [ "$a" -eq 273.0 ]
        then
          echo "a = $a"
-       fi  # Aborts with an error message.  
+       fi  # Aborts with an error message.
        # test.sh: [: 273.0: integer expression expected
 
 
 
--  
+-
 
    Misusing `string comparison <comparison-ops.html#SCOMPARISON1>`__
    operators.
@@ -199,7 +199,7 @@ excitement into an otherwise dull life.
        do
          echo -n "$number "
          let "number += 1"
-       done  
+       done
        #  Attempt to run this bombs with the error message:
        #+ bad-op.sh: line 10: 5: No such file or directory
        #  Within single brackets, "<" must be escaped,
@@ -234,7 +234,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Attempting to use `let <internal.html#LETREF>`__ to set string
    variables.
@@ -247,7 +247,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Sometimes variables within "test" brackets ([ ]) need to be quoted
    (double quotes). Failure to do so may cause unexpected behavior. See
@@ -255,13 +255,13 @@ excitement into an otherwise dull life.
    20-5 <redircb.html#REDIR2>`__ , and `Example
    9-6 <internalvariables.html#ARGLIST>`__ .
 
--  
+-
 
    Quoting a variable containing whitespace `prevents
    splitting <quotingvar.html#WSQUO>`__ . Sometimes this produces
    `unintended consequences <quotingvar.html#VARSPLITTING>`__ .
 
--  
+-
 
    Commands issued from a script may fail to execute because the script
    owner lacks execute permission for them. If a user cannot invoke a
@@ -269,7 +269,7 @@ excitement into an otherwise dull life.
    likewise fail. Try changing the attributes of the command in
    question, perhaps even setting the suid bit (as *root* , of course).
 
--  
+-
 
    Attempting to use **-** as a redirection operator (which it is not)
    will usually result in an unpleasant surprise.
@@ -279,7 +279,7 @@ excitement into an otherwise dull life.
 
        command1 2> - | command2
        # Trying to redirect error output of command1 into a pipe . . .
-       # . . . will not work.  
+       # . . . will not work.
 
        command1 2>& - | command2  # Also futile.
 
@@ -287,7 +287,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Using Bash `version 2+ <bashver2.html#BASH2REF>`__ functionality may
    cause a bailout with error messages. Older Linux machines may have
@@ -321,7 +321,7 @@ excitement into an otherwise dull life.
    Linux system usually aliases **sh** to **bash** , but this does not
    necessarily hold true for a generic UNIX machine.
 
--  
+-
 
    Using undocumented features in Bash turns out to be a dangerous
    practice. In previous releases of this book there were several
@@ -332,7 +332,7 @@ excitement into an otherwise dull life.
    and later, that loophole disappeared. See `Example
    24-9 <complexfunct.html#RETURNTEST>`__ .
 
--  
+-
 
    In certain contexts, a misleading `exit
    status <exit-status.html#EXITSTATUSREF>`__ may be returned. This may
@@ -354,7 +354,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    A script with DOS-type newlines (
    ``                 \r\n               `` ) will fail to execute,
@@ -383,7 +383,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    A shell script headed by
    ``                 #!/bin/sh               `` will not run in full
@@ -414,7 +414,7 @@ excitement into an otherwise dull life.
            num2=43
            echo "Sum of $num1 and $num2 = $(add2 $num1 $num2)"
 
-       #   Sum of 12 and 43 = Whatever ... 
+       #   Sum of 12 and 43 = Whatever ...
        #   55
 
        #        The "echoes" concatenate.
@@ -423,7 +423,7 @@ excitement into an otherwise dull life.
 
    This `will not work <assortedtips.html#RVTCAUTION>`__ .
 
--  
+-
 
    A script may not **export** variables back to its `parent
    process <internal.html#FORKREF>`__ , the shell, or to the
@@ -444,13 +444,13 @@ excitement into an otherwise dull life.
 
        bash$ echo $WHATEVER
 
-       bash$ 
+       bash$
 
 
 
    Sure enough, back at the command prompt, $WHATEVER remains unset.
 
--  
+-
 
    Setting and manipulating variables in a
    `subshell <subshells.html#SUBSHELLSREF>`__ , then attempting to use
@@ -501,7 +501,7 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    `Piping <special-chars.html#PIPEREF>`__ **echo** output to a
    `read <internal.html#READREF>`__ may produce unexpected results. In
@@ -552,7 +552,7 @@ excitement into an otherwise dull life.
        echo "-------"
        echo "a = $a"  # a = one
        echo "b = $b"  # b = two
-       echo "c = $c"  # c = three 
+       echo "c = $c"  # c = three
        # Reassignment succeeded.
 
        # ------------------------------
@@ -607,7 +607,7 @@ excitement into an otherwise dull life.
           # Yes, we're inside a subshell.
           # ------------------------------------
        done
-          
+
        #  foundone will always be false here since it is
        #+ set to true inside a subshell
        if [ $foundone = false ]
@@ -624,7 +624,7 @@ excitement into an otherwise dull life.
           echo "Consider moving the file to archives."
           foundone=true
        done
-          
+
        if [ $foundone = false ]
        then
           echo "No files need archiving."
@@ -668,12 +668,12 @@ excitement into an otherwise dull life.
 
 
 
--  
+-
 
    Using "suid" commands within scripts is risky, as it may compromise
    system security. ` [1]  <gotchas.html#FTN.AEN19993>`__
 
--  
+-
 
    Using shell scripts for CGI programming may be problematic. Shell
    script variables are not "typesafe," and this can cause undesirable
@@ -683,7 +683,7 @@ excitement into an otherwise dull life.
 -  Bash does not handle the `double slash ( // )
    string <internal.html#DOUBLESLASHREF>`__ correctly.
 
--  
+-
 
    Bash scripts written for Linux or BSD systems may need fixups to run
    on a commercial UNIX machine. Such scripts often employ the GNU set
@@ -691,7 +691,7 @@ excitement into an otherwise dull life.
    generic UNIX counterparts. This is particularly true of such text
    processing utilites as `tr <textproc.html#TRREF>`__ .
 
--  
+-
 
    Sadly, updates to Bash itself have broken older scripts that `used to
    work perfectly fine <string-manipulation.html#PARAGRAPHSPACE>`__ .
