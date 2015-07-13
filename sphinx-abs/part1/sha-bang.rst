@@ -15,7 +15,7 @@ comandes.
 **Exemple 1. *cleanup*: Un script per netejar els fitxers de log de
 /var/log**
 
-.. literalinclude:: _scripts/cleanup.sh
+.. literalinclude:: /_scripts/cleanup.sh
    :language: bash
    :linenos:
 
@@ -29,7 +29,7 @@ fàcilment modificada o adaptada a requeriments particulars.
 
 **Exemple 2. *cleanup*: versió millorada del guió de neteja.**
 
-.. literalinclude:: _scripts/cleanup2.sh
+.. literalinclude:: /_scripts/cleanup2.sh
    :language: bash
    :linenos:
 
@@ -39,7 +39,7 @@ més lluny...
 **Exemple 3. *cleanup*: Una versió ampliada i generalitzada dels
 guions anteriors.**
 
-.. literalinclude:: _scripts/cleanup3.sh
+.. literalinclude:: /_scripts/cleanup3.sh
    :language: bash
    :linenos:
 
@@ -109,7 +109,7 @@ et cal executar el guió des d'alguna altra shell com ara *tcsh*.
    d'utilitats. Per exemple, considera el següent guió que comprova si
    ha estat cridat amb un cert nombre d'arguments:
 
-   .. literalinclude:: _scripts/testargs.sh
+   .. literalinclude:: /_scripts/testargs.sh
        :language: bash
        :linenos:
 
@@ -136,13 +136,13 @@ et cal executar el guió des d'alguna altra shell com ara *tcsh*.
    De fet, si el guió inclou una línia extra amb #!, **bash** la
    interpretarà com un comentari.
 
-   .. literalinclude:: _scripts/extrashabang.sh
+   .. literalinclude:: /_scripts/extrashabang.sh
        :language: bash
        :linenos:
 
 .. [#cutetrick] El sha-bang permet fer alguns trucs interessants, com per exemple:
 
-   .. literalinclude:: _scripts/selfdeleting.sh
+   .. literalinclude:: /_scripts/selfdeleting.sh
        :language: bash
        :linenos:
 

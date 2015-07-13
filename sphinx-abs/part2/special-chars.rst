@@ -43,7 +43,7 @@ exemple:
 
 Podem trobar comentaris, fins i tot, en una :ref:`pipe <specialchars-pipe>`.
 
-.. literalinclude:: _scripts/comentarisenpipe.sh
+.. literalinclude:: /_scripts/comentarisenpipe.sh
    :language: bash
    :emphasize-lines: 11
 
@@ -60,7 +60,7 @@ apareix en una :doc:`substitució de paràmetres
 </part3/parameter-substitution>` ni en :doc:`expressions amb constants
 numèriques <numerical-constants>`.
 
-.. literalinclude:: _scripts/nocomments.sh
+.. literalinclude:: /_scripts/nocomments.sh
    :language: bash
 
 Punt i coma: ;
@@ -69,7 +69,7 @@ Punt i coma: ;
 Per Bash, el punt i coma és interpretat com a separador entre comandes
 que apareixen seqüencialment a una mateixa línia.
 
-.. literalinclude:: _scripts/semicolons.sh
+.. literalinclude:: /_scripts/semicolons.sh
    :language: bash
 
 .. note::
@@ -176,7 +176,7 @@ finalment es retorna el resultat de la darrera.
 
 Amb l'operador coma també podem concatenar Strings, com al següent exemple:
 
-.. literalinclude:: _scripts/mostraexecutablesctl.sh
+.. literalinclude:: /_scripts/mostraexecutablesctl.sh
    :language: bash
 
 En una substitució de paràmetres, s'interpreta com a passar a minúscules.
