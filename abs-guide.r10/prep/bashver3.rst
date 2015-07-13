@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   37.2. Bash, version 3
 ======================
@@ -15,9 +12,6 @@ Some of the more important added features:
    A new, more generalized **{a..z}** `brace
    expansion <special-chars.html#BRACEEXPREF>`__ operator.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -85,20 +79,11 @@ Some of the more important added features:
 
        echo
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  The **${!array[@]}** operator, which expands to all the indices of a
    given `array <arrays.html#ARRAYREF>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -122,13 +107,7 @@ Some of the more important added features:
                           # All the elements in Array.
        done
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -137,9 +116,6 @@ Some of the more important added features:
    brackets <testconstructs.html#DBLBRACKETS>`__ test expression. (Perl
    has a similar operator.)
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -157,19 +133,10 @@ Some of the more important added features:
              # match found
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    Or, more usefully:
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -189,13 +156,7 @@ Some of the more important added features:
          # Or, ask for corrected input.
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    For additional examples of using the **=~** operator, see `Example
    A-29 <contributed-scripts.html#WHX>`__ , `Example
@@ -214,13 +175,7 @@ Some of the more important added features:
 
    See `Example 16-43 <communications.html#FC4UPD>`__ .
 
-.. raw:: html
 
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -232,21 +187,9 @@ As it happens, a couple of the scripts in the *Advanced Bash Scripting
 Guide* had to be fixed up (see `Example
 9-4 <internalvariables.html#TOUT>`__ , for instance).
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   37.2.1. Bash, version 3.1
 --------------------------
@@ -257,9 +200,6 @@ minor changes.
 -  The += operator is now permitted in in places where previously only
    the = assignment operator was recognized.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -272,21 +212,12 @@ minor changes.
        a+=Hello
        echo $a        # 15Hello
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    Here, += functions as a *string concatenation* operator. Note that
    its behavior in this particular context is different than within a
    `let <internal.html#LETREF>`__ construct.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -299,21 +230,12 @@ minor changes.
        let a+=Hello   # Doesn't "add" anything to a.
        echo $a        # 6
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
     Jeffrey Haemer points out that this concatenation operator can be
    quite useful. In this instance, we append a directory to the
    ``         $PATH        `` .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -327,21 +249,9 @@ minor changes.
        /usr/bin:/bin:/usr/local/bin:/usr/X11R6/bin/:/usr/games:/opt/bin
              
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   37.2.2. Bash, version 3.2
 --------------------------
@@ -360,13 +270,7 @@ This is pretty much a bugfix update.
    `quoting <quoting.html#QUOTINGREF>`__ of the *pattern* within `[[ ...
    ]] <testconstructs.html#DBLBRACKETS>`__ .
 
-   .. raw:: html
 
-      <div class="CAUTION">
-
-   .. raw:: html
-
-      <div>
 
    |Caution|
 
@@ -382,24 +286,9 @@ This is pretty much a bugfix update.
    Setting *shopt -s compat31* in a script causes reversion to the
    original behavior.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
 
-   .. raw:: html
-
-      </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

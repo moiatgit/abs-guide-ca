@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   11.2. Nested Loops
 ===================
@@ -12,15 +9,9 @@ pass of the outer loop triggers the inner loop again. This repeats until
 the outer loop finishes. Of course, a *break* within either the inner or
 outer loop would interrupt this process.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 11-20. Nested Loop**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -53,24 +44,12 @@ outer loop would interrupt this process.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 See `Example 27-11 <arrays.html#BUBBLE>`__ for an illustration of nested
 `while loops <loops1.html#WHILELOOPREF>`__ , and `Example
 27-13 <arrays.html#EX68>`__ to see a while loop nested inside an `until
 loop <loops1.html#UNTILLOOPREF>`__ .
 
-.. raw:: html
-
-   </div>
 

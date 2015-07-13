@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.5.  "Colorizing"  Scripts
 ===========================
@@ -10,15 +7,9 @@ screen attributes, such as bold text, and color of foreground and
 background. `DOS batch files <dosbatch.html#DOSBATCH1>`__ commonly used
 ANSI escape codes for *color* output, and so can Bash scripts.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-13. A "colorized" address database**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -98,27 +89,12 @@ ANSI escape codes for *color* output, and so can Bash scripts.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-14. Drawing a box**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -270,17 +246,8 @@ ANSI escape codes for *color* output, and so can Bash scripts.
     # --------
     # Add the option of printing text within the drawn box.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The simplest, and perhaps most useful ANSI escape sequence is bold text,
 **\\033[1m ... \\033[0m** . The \\033 represents an
@@ -288,73 +255,37 @@ The simplest, and perhaps most useful ANSI escape sequence is bold text,
 attribute, while the "[0" switches it off. The "m" terminates each term
 of the escape sequence.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     bash$ echo -e "\033[1mThis is bold text.\033[0m"
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A similar escape sequence switches on the underline attribute (on an
 *rxvt* and an *aterm* ).
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     bash$ echo -e "\033[4mThis is underlined text.\033[0m"
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
 With an **echo** , the ``         -e        `` option enables the escape
 sequences.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Other escape sequences change the text and/or background color.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -367,75 +298,33 @@ Other escape sequences change the text and/or background color.
     bash$ echo -e '\E[1;33;44m'"BOLD yellow text on blue background"; tput sgr0
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
 It's usually advisable to set the *bold* attribute for light-colored
 foreground text.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The **tput sgr0** restores the terminal settings to normal. Omitting
 this lets all subsequent output from that particular terminal remain
 blue.
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
 Since **tput sgr0** fails to restore terminal settings under certain
 circumstances, **echo -ne \\E[0m** may be a better choice.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Use the following template for writing colored text on a colored
 background.
@@ -452,30 +341,15 @@ immediately after that.
 Note also that `single quotes <varsubn.html#SNGLQUO>`__ enclose the
 remainder of the command sequence following the **echo -e** .
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The numbers in the following table work for an *rxvt* terminal. Results
 may vary for other terminal emulators.
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table 36-1. Numbers representing colors in Escape Sequences**
 
-.. raw:: html
-
-   <div>
 
 Color
 
@@ -531,23 +405,11 @@ Background
 
 47
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-15. Echoing colored text**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -615,27 +477,12 @@ Background
     # 1) Add the "bold" attribute to the 'cecho ()' function.
     # 2) Add options for colored backgrounds.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-16. A "horserace" game**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1030,30 +877,15 @@ Background
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 See also `Example A-21 <contributed-scripts.html#HASHEXAMPLE>`__ ,
 `Example A-44 <contributed-scripts.html#HOMEWORK>`__ , `Example
 A-52 <contributed-scripts.html#SHOWALLC>`__ , and `Example
 A-40 <contributed-scripts.html#PETALS>`__ .
 
-.. raw:: html
 
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -1067,17 +899,8 @@ and possibly relegates this technique to the status of a gimmick.
 Colorized scripts are probably inappropriate in a commercial setting,
 i.e., your supervisor might disapprove.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Alister's `ansi-color <http://code.google.com/p/ansi-color/>`__ utility
 (based on `Moshe Jacobson's color
@@ -1089,16 +912,10 @@ Henry/teikedvl has likewise created a utility (
 http://scriptechocolor.sourceforge.net/ ) to simplify creation of
 colorized scripts.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <colorizing.html#AEN20259>`__
 
@@ -1106,13 +923,7 @@ Notes
 Institute. This august body establishes and maintains various technical
 and industrial standards.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

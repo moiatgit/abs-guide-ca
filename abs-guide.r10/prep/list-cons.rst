@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 26. List Constructs
 ============================
@@ -10,29 +7,17 @@ number of commands consecutively. These can effectively replace complex
 nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 `case <testbranch.html#CASEESAC1>`__ statements.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Chaining together commands**
 
  and list
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         command-1 && command-2 && command-3 && ... command-n
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Each command executes in turn, provided that the previous command
     has given a return value of ``                 true               ``
@@ -45,9 +30,6 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     version of YongYe's `Tetris game
     script <http://bash.deta.in/Tetris_Game.sh>`__ :
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -58,24 +40,12 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
            eval ${1}+=\"${x} ${y} \"
         }
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 26-1. Using an *and list* to test for command-line
     arguments**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -117,27 +87,12 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 26-2. Another command-line arg test using an *and list***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -160,24 +115,12 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
         # To check exit value, do a "echo $?" after script termination.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Of course, an *and list* can also *set* variables to a default
     value.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -186,46 +129,25 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
                       # Set $arg1 to command-line arguments, if any.
                       # But . . . set to DEFAULT if not specified on command-line.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  or list
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         command-1 || command-2 || command-3 || ... command-n
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Each command executes in turn for as long as the previous command
     returns false . At the first true return, the command chain
     terminates (the first command returning true is the last one to
     execute). This is obviously the inverse of the "and list" .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 26-3. Using *or lists* in combination with an *and list***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -258,50 +180,20 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     If the first command in an *or list* returns true , it
     ``                         will                       `` execute.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -336,21 +228,9 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
       # ==> . . .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="IMPORTANT">
-
-.. raw:: html
-
-   <div>
 
 |Important|
 
@@ -359,26 +239,14 @@ The `exit status <exit-status.html#EXITSTATUSREF>`__ of an
 ``                   or list                 `` is the exit status of
 the last command executed.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Clever combinations of *and* and *or* lists are possible, but the logic
 may easily become convoluted and require close attention to `operator
 precedence rules <opprecedence.html#OPPRECEDENCE1>`__ , and possibly
 extensive debugging.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -395,22 +263,13 @@ extensive debugging.
 
     #  Thanks, S.C.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 See `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and `Example
 7-4 <fto.html#BROKENLINK>`__ for illustrations of using
 ``             and     / or list           `` constructs to test
 variables.
 
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Important| image:: ../images/important.gif

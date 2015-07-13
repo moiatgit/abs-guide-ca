@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.6. Optimizations
 ====================
@@ -24,9 +21,6 @@ subshell when invoked.
 Avoid unnecessary commands, particularly in a
 `pipe <special-chars.html#PIPEREF>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -37,24 +31,12 @@ Avoid unnecessary commands, particularly in a
     #  The above command-lines have an identical effect,
     #+ but the second runs faster since it launches one fewer subprocess.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The `cat <basic.html#CATREF>`__ command seems especially prone to
 overuse in scripts.
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Disabling certain Bash options can speed up scripts.
 
@@ -64,9 +46,6 @@ If you don't need `Unicode <bashver4.html#UNICODEREF>`__ support, you
 can get potentially a 2x or more improvement in speed by simply setting
 the ``                   LC_ALL                 `` variable.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -100,21 +79,9 @@ the ``                   LC_ALL                 `` variable.
     with Bash, but I had seen it helped with "grep,"
     so why not try?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -148,9 +115,6 @@ the ``                   LC_ALL                 `` variable.
     with Bash, but I had seen it helped with "grep,"
     so why not try?
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -184,21 +148,9 @@ the ``                   LC_ALL                 `` variable.
     with Bash, but I had seen it helped with "grep,"
     so why not try?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -288,9 +240,6 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -311,9 +260,6 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     user          0m0.372s
     sys           0m0.000s
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -340,9 +286,6 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     user          0m0.456s
     sys           0m0.000s
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -363,9 +306,6 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     user          0m0.372s
     sys           0m0.000s
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -392,25 +332,10 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
     user          0m0.456s
     sys           0m0.000s
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -539,9 +464,6 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -607,9 +529,6 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
     user          0m0.084s
     sys           0m0.000s
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -675,17 +594,8 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
     user          0m0.084s
     sys           0m0.000s
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Use the `time <timedate.html#TIMREF>`__ and
 `times <x9644.html#TIMESREF>`__ tools to profile computation-intensive
@@ -708,28 +618,16 @@ For an excellent demonstration of how optimization can dramatically
 reduce the execution time of a script, see `Example
 16-47 <mathc.html#MONTHLYPMT>`__ .
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <optimizations.html#AEN20452>`__
 
 This usually means liberal use of
 `functions <functions.html#FUNCTIONREF>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

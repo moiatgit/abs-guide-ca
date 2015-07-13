@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   15.1. Job Control Commands
 ===========================
@@ -9,21 +6,12 @@ Certain of the following job control commands take a *job identifier* as
 an argument. See the `table <x9644.html#JOBIDTABLE>`__ at end of the
 chapter.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
  **jobs**
     Lists the jobs running in the background, giving the *job number* .
     Not as useful as `ps <system.html#PPSSREF>`__ .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -53,9 +41,6 @@ chapter.
 
     *Thanks, S.C.*
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -65,9 +50,6 @@ chapter.
         bash $ jobs
         [1]+  Running                 sleep 100 &
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -77,17 +59,8 @@ chapter.
         bash $ jobs
         [1]+  Running                 sleep 100 &
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **disown**
     Remove job(s) from the shell's table of active jobs.
@@ -108,15 +81,9 @@ chapter.
     before a background job finishes executing (this would create a
     dreaded `orphan process <x9644.html#ZOMBIEREF>`__ ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-26. Waiting for a process to finish before proceeding**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -156,17 +123,8 @@ chapter.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Optionally, **wait** can take a *job identifier* as an argument, for
     example, ``                   wait%1                 `` or
@@ -174,13 +132,7 @@ chapter.
     ` [1]  <x9644.html#FTN.AEN9753>`__ See the `job id
     table <x9644.html#JOBIDTABLE>`__ .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -268,9 +220,6 @@ chapter.
     command to a file or even to ``           /dev/null          `` also
     takes care of this problem.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -280,9 +229,6 @@ chapter.
         ls -l &
         echo "Done."
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -293,9 +239,6 @@ chapter.
          _
                        
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -306,9 +249,6 @@ chapter.
         echo "Done."
         wait
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -318,9 +258,6 @@ chapter.
          -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
                        
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -330,9 +267,6 @@ chapter.
         ls -l &
         echo "Done."
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -343,9 +277,6 @@ chapter.
          _
                        
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -356,9 +287,6 @@ chapter.
         echo "Done."
         wait
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -368,17 +296,8 @@ chapter.
          -rwxr-xr-x    1 bozo     bozo           34 Oct 11 15:09 test.sh
                        
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **suspend**
     This has a similar effect to **Control** - **Z** , but it suspends
@@ -393,21 +312,12 @@ chapter.
     Gives statistics on the system time elapsed when executing commands,
     in the following form:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
         0m0.020s 0m0.020s
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This capability is of relatively limited value, since it is not
     common to profile and benchmark shell scripts.
@@ -417,15 +327,9 @@ chapter.
     *terminate* signal (see `Example 17-6 <system.html#KILLPROCESS>`__
     ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-27. A script that kills itself**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -450,25 +354,10 @@ chapter.
         # 143 = 128 + 15
         #             TERM signal
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -485,17 +374,8 @@ chapter.
     can't kill something that is already dead -- but **init** will
     generally clean it up sooner or later.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **killall**
     The **killall** command kills a running process by *name* , rather
@@ -503,13 +383,7 @@ chapter.
     are multiple instances of a particular command running, then doing a
     *killall* on that command will terminate them *all* .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -518,46 +392,22 @@ chapter.
     script <sysscripts.html#KILLALL2REF>`__ in
     ``            /etc/rc.d/init.d           `` .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **command**
     The **command** directive disables aliases and functions for the
     command immediately following it.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
         bash$ command ls
                       
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -565,17 +415,8 @@ chapter.
     processing. The others are `builtin <x9644.html#BLTREF>`__ and
     `enable <x9644.html#ENABLEREF>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **builtin**
     Invoking **builtin BUILTIN\_COMMAND** runs the command
@@ -608,19 +449,10 @@ chapter.
     needs to be loaded in with
     ``                   enable -f                 `` (see above).
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table 15-1. Job identifiers**
 
-.. raw:: html
-
-   <div>
 
 Notation
 
@@ -654,32 +486,17 @@ Last job
 
 Last background process
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <x9644.html#AEN9753>`__
 
 This only applies to *child processes* , of course.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <x9644.html#AEN9928>`__
 
@@ -689,22 +506,13 @@ The C source for a number of loadable builtins is typically found in the
 Note that the ``       -f      `` option to **enable** is not
 `portable <portabilityissues.html>`__ to all systems.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <x9644.html#AEN9949>`__
 
 The same effect as **autoload** can be achieved with `typeset
 -fu <declareref.html>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Tip| image:: ../images/tip.gif

@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   16.3. Time / Date Commands
 ===========================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Time/date and timing**
 
@@ -16,15 +10,9 @@
     ``         stdout        `` . Where this command gets interesting is
     in its formatting and parsing options.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-10. Using *date***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -50,24 +38,12 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -u        `` option gives the UTC (Universal
     Coordinated Time).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -80,26 +56,14 @@
         Sat Mar 30 04:07:42 UTC 2002
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This option facilitates calculating the time between different
     dates.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-11. *Date* calculations**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -146,26 +110,14 @@
         #  Rewrite the diff () function to accept passed parameters,
         #+ rather than using global variables.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The *date* command has quite a number of *output* options. For
     example ``         %N        `` gives the nanosecond portion of the
     current time. One interesting use for this is to generate random
     integers.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -179,19 +131,10 @@
         # 63408725
         # 394504284
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     There are many more options (try **man date** ).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -213,13 +156,7 @@
         OneMonthAgo=$(date --date='1 month ago')  # Four weeks back (not a month!)
         OneYearAgo=$(date --date='1 year ago')
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 3-4 <special-chars.html#EX58>`__ and `Example
     A-43 <contributed-scripts.html#STOPWATCH>`__ .
@@ -227,9 +164,6 @@
  **zdump**
     Time zone dump: echoes the time in a specified time zone.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -237,13 +171,7 @@
         EST  Tue Sep 18 22:09:22 2001 EST
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **time**
     Outputs verbose timing statistics for executing a command.
@@ -251,9 +179,6 @@
     ``                   time ls -l /                 `` gives something
     like this:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -261,24 +186,12 @@
          user    0m0.004s
          sys     0m0.005s
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also the very similar `times <x9644.html#TIMESREF>`__ command in
     the previous section.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -286,17 +199,8 @@
     became a shell reserved word, with slightly altered behavior in a
     pipeline.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **touch**
     Utility for updating access/modification times of a file to current
@@ -308,13 +212,7 @@
     empty files in this way is useful for storing date information, for
     example in keeping track of modification times on a project.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -323,25 +221,10 @@
     ``                         >> newfile                       `` (for
     ordinary files).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -359,17 +242,8 @@
     /home/bozo/financial\_info/spreadsheet\*data /home/bozo/tax\_audit**
     .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **at**
     The **at** job control command executes a given set of commands at a
@@ -390,9 +264,6 @@
     `run-parts <extmisc.html#RUNPARTSREF>`__ command in the file to
     execute a different set of scripts.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -400,13 +271,7 @@
         job 2 at 2000-10-27 02:30
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **batch**
     The **batch** job control command is similar to **at** , but it runs
@@ -414,29 +279,14 @@
     ``         .8        `` . Like **at** , it can read commands from a
     file with the ``         -f        `` option.
 
-    .. raw:: html
 
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     The concept of *batch processing* dates back to the era of mainframe
     computers. It means running a set of commands without user
     intervention.
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **cal**
     Prints a neatly formatted monthly calendar to
@@ -450,29 +300,14 @@
     specific event every so often (polling), as in `Example
     32-6 <debugging.html#ONLINE>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         sleep 3     # Pauses 3 seconds.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -487,58 +322,28 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
         sleep 3 h   # Pauses 3 hours!
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
         sleep 3 h   # Pauses 3 hours!
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The `watch <system.html#WATCHREF>`__ command may be a better choice
     than **sleep** for running commands at timed intervals.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **usleep**
     *Microsleep* (the *u* may be read as the Greek *mu* , or *micro-*
@@ -546,49 +351,25 @@
     microsecond intervals. It can be used for fine-grained timing, or
     for polling an ongoing process at very frequent intervals.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         usleep 30     # Pauses 30 microseconds.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This command is part of the Red Hat *initscripts / rc-scripts*
     package.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     The **usleep** command does not provide particularly accurate
     timing, and is therefore unsuitable for critical timing loops.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **hwclock** , **clock**
     The **hwclock** command accesses or adjusts the machine's hardware
@@ -599,13 +380,7 @@
 
     The **clock** command is a synonym for **hwclock** .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Tip| image:: ../images/tip.gif

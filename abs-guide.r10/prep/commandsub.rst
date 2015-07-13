@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 12. Command Substitution
 =================================
@@ -13,38 +10,20 @@ literally plugs the command output into another context. ` [2]
  The classic form of command substitution uses *backquotes* (\`...\`).
 Commands within backquotes (backticks) generate command-line text.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     script_name=`basename $0`
     echo "The name of this script is $script_name."
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="FORMALPARA">
 
 **The output of commands can be used as arguments to another command, to
 set a variable, and even for generating the argument list in a
 `for <loops1.html#FORLOOPREF1>`__ loop.**
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -71,46 +50,19 @@ set a variable, and even for generating the argument list in a
     #
     # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
  Command substitution invokes a
 `subshell <subshells.html#SUBSHELLSREF>`__ .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -206,9 +158,6 @@ trailing newlines.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -223,9 +172,6 @@ trailing newlines.
 
     # Thanks, S.C.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -261,9 +207,6 @@ trailing newlines.
 
     #Code snippet by StÃ©phane Chazelas.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -278,9 +221,6 @@ trailing newlines.
 
     # Thanks, S.C.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -316,25 +256,10 @@ trailing newlines.
 
     #Code snippet by StÃ©phane Chazelas.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -382,9 +307,6 @@ reassigned command(s). This can cause unpleasant surprises.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -405,9 +327,6 @@ reassigned command(s). This can cause unpleasant surprises.
     # -rw-rw-r--    1 bozo       51 May 15 20:57 t2.sh
     # -rwxr-xr-x    1 bozo      217 Mar  5 21:13 wi.sh
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -428,25 +347,13 @@ reassigned command(s). This can cause unpleasant surprises.
     # -rw-rw-r--    1 bozo       51 May 15 20:57 t2.sh
     # -rwxr-xr-x    1 bozo      217 Mar  5 21:13 wi.sh
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Command substitution even permits setting a variable to the contents of
 a file, using either `redirection <io-redirection.html#IOREDIRREF>`__ or
 the `cat <basic.html#CATREF>`__ command.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -461,17 +368,8 @@ the `cat <basic.html#CATREF>`__ command.
     #  It is not necessary to explicitly assign a variable.
     echo "` <$0`"           # Echoes the script itself to stdout.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -504,21 +402,9 @@ the `cat <basic.html#CATREF>`__ command.
     ...
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -526,15 +412,9 @@ Do not set a variable to the contents of a *long* text file unless you
 have a very good reason for doing so. Do not set a variable to the
 contents of a *binary* file, even as a joke.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 12-1. Stupid script tricks**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -560,25 +440,13 @@ contents of a *binary* file, even as a joke.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notice that a *buffer overrun* does not occur. This is one instance
 where an interpreted language, such as Bash, provides more protection
 from programmer mistakes than a compiled language.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -604,9 +472,6 @@ from programmer mistakes than a compiled language.
 
     exit 0
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -632,31 +497,16 @@ from programmer mistakes than a compiled language.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Command substitution permits setting a variable to the output of a
 `loop <loops1.html#FORLOOPREF1>`__ . The key to this is grabbing the
 output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 12-2. Generating a variable from a loop**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -685,34 +535,16 @@ output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Command substitution makes it possible to extend the toolset available
 to Bash. It is simply a matter of writing a program or script that
 outputs to ``         stdout        `` (like a well-behaved UNIX tool
 should) and assigning that output to a variable.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -726,34 +558,16 @@ should) and assigning that output to a variable.
       return (0);
     }
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     bash$ gcc -o hello hello.c
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -763,17 +577,8 @@ should) and assigning that output to a variable.
     greeting=`./hello`
     echo $greeting
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -781,21 +586,9 @@ should) and assigning that output to a variable.
     Hello, world.
                 
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -809,18 +602,12 @@ should) and assigning that output to a variable.
       return (0);
     }
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
     bash$ gcc -o hello hello.c
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -830,9 +617,6 @@ should) and assigning that output to a variable.
     greeting=`./hello`
     echo $greeting
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -840,9 +624,6 @@ should) and assigning that output to a variable.
     Hello, world.
                 
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -856,18 +637,12 @@ should) and assigning that output to a variable.
       return (0);
     }
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
     bash$ gcc -o hello hello.c
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -877,9 +652,6 @@ should) and assigning that output to a variable.
     greeting=`./hello`
     echo $greeting
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -887,21 +659,9 @@ should) and assigning that output to a variable.
     Hello, world.
                 
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -955,15 +715,9 @@ The **$(...)** form of command substitution permits nesting. ` [3]
 
 Or, for something a bit more elaborate . . .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 12-3. Finding anagrams**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1014,21 +768,9 @@ Or, for something a bit more elaborate . . .
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1038,9 +780,6 @@ Or, for something a bit more elaborate . . .
     File_contents1=$(cat $file1)      
     File_contents2=$(<$file2)        # Bash permits this also.
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -1051,17 +790,11 @@ Or, for something a bit more elaborate . . .
     \
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     word_count=$( wc -w $(echo * | awk '{print $8}') )
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1112,9 +845,6 @@ Or, for something a bit more elaborate . . .
 
     exit $?
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1124,9 +854,6 @@ Or, for something a bit more elaborate . . .
     File_contents1=$(cat $file1)      
     File_contents2=$(<$file2)        # Bash permits this also.
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -1137,17 +864,11 @@ Or, for something a bit more elaborate . . .
     \
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     word_count=$( wc -w $(echo * | awk '{print $8}') )
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1198,17 +919,8 @@ Or, for something a bit more elaborate . . .
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Examples of command substitution in shell scripts:
 
@@ -1244,16 +956,10 @@ Examples of command substitution in shell scripts:
 
 #. `Example 16-49 <mathc.html#ALTBC>`__
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <commandsub.html#AEN7205>`__
 
@@ -1262,9 +968,6 @@ external system command, an internal scripting
 `builtin <internal.html#BUILTINREF>`__ , or even `a script
 function <assortedtips.html#RVT>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <commandsub.html#AEN7211>`__
 
@@ -1272,9 +975,6 @@ In a more technically correct sense, *command substitution* extracts the
 ``       stdout      `` of a command, then assigns it to a variable
 using the = operator.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <commandsub.html#AEN7308>`__
 
@@ -1290,29 +990,17 @@ the inner backticks, as John Default points out.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     word_count=` wc -w \`echo * | awk '{print $8}'\` `
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     word_count=` wc -w \`echo * | awk '{print $8}'\` `
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

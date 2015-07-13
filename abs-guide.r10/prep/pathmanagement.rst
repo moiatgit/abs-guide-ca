@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix D. Parsing and Managing Pathnames
 ===========================================
@@ -10,9 +7,6 @@ transforming *filenames* and, in particular,
 `pathnames <special-chars.html#PATHNAMEREF>`__ . It draws heavily on the
 functionality of *sed* .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -104,21 +98,12 @@ functionality of *sed* .
     echo "(result should be: /a:/b:/b c:/my local pub)"
     echo $BARPATH
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 \*\*\*
 
 David Wheeler kindly permitted me to use his instructive examples.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -219,15 +204,6 @@ David Wheeler kindly permitted me to use his instructive examples.
        COMMAND "$file" # Use quoted "$file", not $file, everywhere.
      done 4< mypipe
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   8.4. Operator Precedence
 =========================
@@ -9,15 +6,9 @@ In a script, operations execute in order of *precedence* : the higher
 precedence operations execute *before* the lower precedence ones. ` [1]
  <opprecedence.html#FTN.AEN4290>`__
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table 8-1. Operator Precedence**
 
-.. raw:: html
-
-   <div>
 
 Operator
 
@@ -157,13 +148,7 @@ links a sequence of operations
 
 **LOWEST PRECEDENCE**
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 In practice, all you really need to remember is the following:
 
@@ -180,9 +165,6 @@ Now, let's utilize our knowledge of operator precedence to analyze a
 couple of lines from the ``      /etc/init.d/functions file     `` , as
 found in the *Fedora Core* Linux distro.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -233,21 +215,9 @@ found in the *Fedora Core* Linux distro.
     #+ in effect declaring it.
     #  This makes a difference in some contexts.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
@@ -274,9 +244,6 @@ break up the sequence into bracketed sections.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -286,9 +253,6 @@ break up the sequence into bracketed sections.
     if [[ "$v1" -gt "$v2" ]] || [[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]]
     # Much better -- the condition tests are grouped in logical sections.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -298,40 +262,19 @@ break up the sequence into bracketed sections.
     if [[ "$v1" -gt "$v2" ]] || [[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]]
     # Much better -- the condition tests are grouped in logical sections.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <opprecedence.html#AEN4290>`__
 
 *Precedence* , in this context, has approximately the same meaning as
 *priority*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif

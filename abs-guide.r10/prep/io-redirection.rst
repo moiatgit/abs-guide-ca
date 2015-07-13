@@ -1,65 +1,26 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 20. I/O Redirection
 ============================
 
-.. raw:: html
 
-   <div class="TOC">
 
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 20.1. `Using *exec* <x17974.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 20.2. `Redirecting Code Blocks <redircb.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 20.3. `Applications <redirapps.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
 
 There are always three default *files* ` [1]
  <io-redirection.html#FTN.AEN17884>`__ open, ``      stdin     `` (the
@@ -82,9 +43,6 @@ duplicate link. ` [3]  <io-redirection.html#FTN.AEN17906>`__ This
 simplifies restoration to normal after complex redirection and
 reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -156,17 +114,8 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
           # These redirection commands also automatically "reset" after each line.
           #=======================================================================
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -189,17 +138,8 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
           # Redirects, by default, file descriptor 1 (stdout) to j.
           # All stdout gets sent to file pointed to by j.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -237,20 +177,11 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
           # Sorts the output of all the .txt files and deletes duplicate lines,
           # finally saves results to "result-file".
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Multiple instances of input and output redirection and/or pipes can be
 combined in a single command line.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -260,21 +191,12 @@ combined in a single command line.
 
     command1 | command2 | command3 > output-file
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 See `Example 16-31 <filearchiv.html#DERPM>`__ and `Example
 A-14 <contributed-scripts.html#FIFO>`__ .
 Multiple output streams may be redirected to one file.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -292,17 +214,8 @@ Multiple output streams may be redirected to one file.
     #  If redirecting both stdout and stderr,
     #+ the order of the commands makes a difference.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Closing File Descriptors**
 
@@ -320,16 +233,10 @@ Multiple output streams may be redirected to one file.
  1>&- , >&-
     Close ``         stdout        `` .
 
-.. raw:: html
-
-   </div>
 
 Child processes inherit open file descriptors. This is why pipes work.
 To prevent an fd from being inherited, close it.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -342,27 +249,15 @@ To prevent an fd from being inherited, close it.
 
     # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 For a more detailed introduction to I/O redirection see `Appendix
 F <ioredirintro.html>`__ .
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <io-redirection.html#AEN17884>`__
 
@@ -370,9 +265,6 @@ By convention in UNIX and Linux, data streams and peripherals ( `device
 files <devref1.html#DEVFILEREF>`__ ) are treated as files, in a fashion
 analogous to ordinary files.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <io-redirection.html#AEN17894>`__
 
@@ -380,9 +272,6 @@ analogous to ordinary files.
 assigns to an open file to keep track of it. Consider it a simplified
 type of file pointer. It is analogous to a *file handle* in **C** .
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <io-redirection.html#AEN17906>`__
 
@@ -393,11 +282,5 @@ Ramey's archived e-mail, `SUBJECT: RE: File descriptor 5 is held
 open <http://groups.google.com/group/gnu.bash.bug/browse_thread/thread/13955daafded3b5c/18c17050087f9f37>`__
 ). Best leave this particular fd alone.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

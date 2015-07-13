@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 25. Aliases
 ====================
@@ -28,15 +25,9 @@ added limitation is that an alias will not expand recursively. Almost
 invariably, whatever we would like an alias to do could be accomplished
 much more effectively with a `function <functions.html#FUNCTIONREF>`__ .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 25-1. Aliases within a script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -114,29 +105,14 @@ much more effectively with a `function <functions.html#FUNCTIONREF>`__ .
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The **unalias** command removes a previously set *alias* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 25-2. *unalias* : Setting and unsetting an alias**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -156,21 +132,9 @@ The **unalias** command removes a previously set *alias* .
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -182,43 +146,22 @@ The **unalias** command removes a previously set *alias* .
 
     ./unalias.sh: llm: command not found
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <aliases.html#AEN18669>`__
 
 ... as the first word of a command string. Obviously, an alias is only
 meaningful at the *beginning* of a command.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <aliases.html#AEN18676>`__
 
 However, aliases do seem to expand positional parameters.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

@@ -1,17 +1,8 @@
-.. raw:: html
 
-   <div class="PART">
-
-.. raw:: html
-
-   <div class="TITLEPAGE">
 
 Part 4. Commands
 ================
 
-.. raw:: html
-
-   <div class="PARTINTRO">
 
 Mastering the commands on your Linux machine is an indispensable prelude
 to writing effective shell scripts.
@@ -788,229 +779,82 @@ This section covers the following commands:
 
 -  `zip <filearchiv.html#ZIPREF>`__
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   <div class="TOC">
-
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 15. `Internal Commands and Builtins <internal.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
 
-   <dd>
-
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 15.1. `Job Control Commands <x9644.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
 
-   </dl>
-
-.. raw:: html
-
-   </dd>
-
-.. raw:: html
-
-   <dt>
 
 16. `External Filters, Programs and Commands <external.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
 
-   <dd>
-
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 16.1. `Basic Commands <basic.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.2. `Complex Commands <moreadv.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.3. `Time / Date Commands <timedate.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.4. `Text Processing Commands <textproc.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.5. `File and Archiving Commands <filearchiv.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.6. `Communications Commands <communications.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.7. `Terminal Control Commands <terminalccmds.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.8. `Math Commands <mathc.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 16.9. `Miscellaneous Commands <extmisc.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
 
-   </dl>
-
-.. raw:: html
-
-   </dd>
-
-.. raw:: html
-
-   <dt>
 
 17. `System and Administrative Commands <system.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
 
-   <dd>
-
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 17.1. `Analyzing a System Script <sysscripts.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
 
-   </dl>
 
-.. raw:: html
 
-   </dd>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

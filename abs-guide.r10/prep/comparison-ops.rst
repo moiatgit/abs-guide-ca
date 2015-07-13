@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   7.3. Other Comparison Operators
 ================================
@@ -9,9 +6,6 @@ A *binary* comparison operator compares two variables or quantities.
 *Note that integer and string comparison use a different set of
 operators.*
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** integer comparison**
 
@@ -65,13 +59,7 @@ operators.*
 
     ``                   (("$a" >= "$b"))                 ``
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** string comparison**
 
@@ -81,13 +69,7 @@ operators.*
 
     ``                   if [ "$a" = "$b" ]                 ``
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -97,17 +79,8 @@ operators.*
     ``                         if [ "$a"="$b" ]                       ``
     is *not* equivalent to the above.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ==
     is equal to
@@ -116,13 +89,7 @@ operators.*
 
     This is a synonym for = .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -152,9 +119,6 @@ operators.*
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -166,9 +130,6 @@ operators.*
 
         # Thanks, StÃ©phane Chazelas
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -180,17 +141,8 @@ operators.*
 
         # Thanks, StÃ©phane Chazelas
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  !=
     is not equal to
@@ -228,9 +180,6 @@ operators.*
  -z
     string is *null* , that is, has zero length
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -243,24 +192,12 @@ operators.*
           echo "\$String is NOT null."
         fi     # $String is null.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  -n
     string is not *null.*
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -272,31 +209,13 @@ operators.*
     is an unsafe practice. *Always* quote a tested string. ` [1]
      <comparison-ops.html#FTN.AEN3669>`__
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-5. Arithmetic and string comparisons**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -337,27 +256,12 @@ operators.*
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-6. Testing whether a string is *null***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -430,27 +334,12 @@ operators.*
 
     exit 0   # Thank you, also, Florian Wisser, for the "heads-up".
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-7. *zmore***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -496,21 +385,9 @@ operators.*
     #  Actually "exit $?" is unnecessary, as the script will, in any case,
     #+ return the exit status of the last command executed.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** compound comparison**
 
@@ -526,36 +403,21 @@ operators.*
     ``                   exp1 -o exp2                 `` returns true if
     either exp1 *or* exp2 is true.
 
-.. raw:: html
-
-   </div>
 
 These are similar to the Bash comparison operators **&&** and **\|\|** ,
 used within `double brackets <testconstructs.html#DBLBRACKETS>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     [[ condition1 && condition2 ]]
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The **-o** and **-a** operators work with the
 `test <testconstructs.html#TTESTREF>`__ command or occur within single
 test brackets.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -566,21 +428,9 @@ test brackets.
       echo "Either expr1 or expr2 is false."
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -621,9 +471,6 @@ But, as *rihad* points out:
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -641,9 +488,6 @@ But, as *rihad* points out:
 
     # Apparently && and || "short-circuit" while -a and -o do not.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -661,33 +505,18 @@ But, as *rihad* points out:
 
     # Apparently && and || "short-circuit" while -a and -o do not.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Refer to `Example 8-3 <ops.html#ANDOR>`__ , `Example
 27-17 <arrays.html#TWODIM>`__ , and `Example
 A-29 <contributed-scripts.html#WHX>`__ to see compound comparison
 operators in action.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <comparison-ops.html#AEN3669>`__
 
@@ -700,13 +529,7 @@ variables,
 ``               [ "x$string" != x -o "x$a" = "x$b" ]             ``
 (the "x's" cancel out).
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

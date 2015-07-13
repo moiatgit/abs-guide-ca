@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 27. Arrays
 ===================
@@ -12,15 +9,9 @@ explicit ``             declare -a variable           `` statement. To
 dereference (retrieve the contents of) an array element, use *curly
 bracket* notation, that is, ``             ${element[xx]}           `` .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-1. Simple array usage**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -101,24 +92,12 @@ bracket* notation, that is, ``             ${element[xx]}           `` .
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 As we have seen, a convenient way of initializing an entire array is the
 ``      array=( element1 element2 ... elementN )     `` notation.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -128,28 +107,13 @@ As we have seen, a convenient way of initializing an entire array is the
                    #  Excerpted from vladz's "base64.sh" script
                    #+ in the "Contributed Scripts" appendix.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Bash permits array operations on variables, even if the variables are
 not explicitly declared as arrays.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -165,24 +129,12 @@ not explicitly declared as arrays.
 
     # Thank you, Michael Zick, for pointing this out.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Once again this demonstrates that `Bash variables are
 untyped <untyped.html#BVUNTYPED>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -198,9 +150,6 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
     # Thank you, Michael Zick, for pointing this out.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -216,23 +165,11 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
     # Thank you, Michael Zick, for pointing this out.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-2. Formatting a poem**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -277,30 +214,15 @@ untyped <untyped.html#BVUNTYPED>`__ .
     # --------
     # Modify this script to pretty-print a poem from a text data file.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Array variables have a syntax all their own, and even standard Bash
 commands and operators have special options adapted for array use.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-3. Various array operations**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -352,30 +274,15 @@ commands and operators have special options adapted for array use.
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Many of the standard `string
 operations <string-manipulation.html#STRINGMANIP>`__ work on arrays.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-4. String operations on arrays**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -498,30 +405,15 @@ operations <string-manipulation.html#STRINGMANIP>`__ work on arrays.
     #+   operation.
     #  Bash is more powerful than you think!
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 `Command substitution <commandsub.html#COMMANDSUBREF>`__ can construct
 the individual elements of an array.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-5. Loading the contents of a script into an array**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -555,32 +447,17 @@ the individual elements of an array.
     #+ in its original format,
     #+ complete with whitespace, line breaks, etc.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 In an array context, some Bash `builtins <internal.html#BUILTINREF>`__
 have a slightly altered meaning. For example,
 `unset <internal.html#UNSETREF>`__ deletes array elements, or even an
 entire array.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-6. Some special properties of arrays**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -648,17 +525,8 @@ entire array.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 As seen in the previous example, either **${array\_name[@]}** or
 **${array\_name[\*]}** refers to *all* the elements of the array.
@@ -667,15 +535,9 @@ either **${#array\_name[@]}** or **${#array\_name[\*]}** .
 **${#array\_name}** is the length (number of characters) of
 **${array\_name[0]}** , the first element of the array.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-7. Of empty arrays and empty elements**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -837,25 +699,13 @@ either **${#array\_name[@]}** or **${#array\_name[\*]}** .
      
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The relationship of **${array\_name[@]}** and **${array\_name[\*]}** is
 analogous to that between `$@ and $\* <internalvariables.html#APPREF>`__
 . This powerful array notation has a number of uses.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -886,21 +736,9 @@ analogous to that between `$@ and $\* <internalvariables.html#APPREF>`__
 
     # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
@@ -966,9 +804,6 @@ load the contents of a text file into an array.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1001,9 +836,6 @@ load the contents of a text file into an array.
     element_count=${#array1[*]}
     echo $element_count          # 8
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1036,29 +868,14 @@ load the contents of a text file into an array.
     element_count=${#array1[*]}
     echo $element_count          # 8
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Clever scripting makes it possible to add array operations.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-8. Initializing arrays**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1151,52 +968,22 @@ Clever scripting makes it possible to add array operations.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
 Adding a superfluous **declare -a** statement to an array declaration
 may speed up execution of subsequent operations on the array.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-9. Copying and concatenating arrays**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1266,27 +1053,12 @@ may speed up execution of subsequent operations on the array.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-10. More on concatenating arrays**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1403,17 +1175,8 @@ may speed up execution of subsequent operations on the array.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 --
 
@@ -1421,15 +1184,9 @@ Arrays permit deploying old familiar algorithms as shell scripts.
 Whether this is necessarily a good idea is left for the reader to
 decide.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-11. The Bubble Sort**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1531,25 +1288,13 @@ decide.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 --
 
 Is it possible to nest arrays within arrays?
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1580,13 +1325,7 @@ Is it possible to nest arrays within arrays?
 
     exit 0
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 --
 
@@ -1594,15 +1333,9 @@ Embedded arrays in combination with `indirect
 references <bashver2.html#VARREFNEW>`__ create some fascinating
 possibilities
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-12. Embedded arrays and indirect references**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1674,17 +1407,8 @@ possibilities
     #+ "you can easily expand it to create named-hashes in bash."
     #   (Difficult) exercise for the reader: implement this.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 --
 
@@ -1693,15 +1417,9 @@ Eratosthenes* . Of course, a resource-intensive application of this
 nature should really be written in a compiled language, such as C. It
 runs excruciatingly slowly as a script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-13. The Sieve of Eratosthenes**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1840,27 +1558,12 @@ runs excruciatingly slowly as a script.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-14. The Sieve of Eratosthenes, Optimized**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1901,17 +1604,8 @@ runs excruciatingly slowly as a script.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Compare these array-based prime number generators with alternatives that
 do not use arrays, `Example A-15 <contributed-scripts.html#PRIMES>`__ ,
@@ -1922,15 +1616,9 @@ and `Example 16-46 <mathc.html#PRIMES2>`__ .
 Arrays lend themselves, to some extent, to emulating data structures for
 which Bash has no native support.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-15. Emulating a push-down stack**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -2054,17 +1742,8 @@ which Bash has no native support.
     # 4)  Using this script as a starting point,
     #   + write a stack-based 4-function calculator.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 --
 
@@ -2072,16 +1751,10 @@ Fancy manipulation of array "subscripts" may require intermediate
 variables. For projects involving this, again consider using a more
 powerful programming language, such as Perl or C.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-16. Complex array application: *Exploring a weird
 mathematical series***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -2145,32 +1818,17 @@ mathematical series***
     #  Warning: calculating this series recursively takes a VERY long time
     #+ via a script. C/C++ would be orders of magnitude faster.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 --
 
 Bash supports only one-dimensional arrays, though a little trickery
 permits simulating multi-dimensional ones.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 27-17. Simulating a two-dimensional array, then tilting it**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -2317,17 +1975,8 @@ permits simulating multi-dimensional ones.
     #     such as a 6 X 4 one.
     #     Try to minimize "distortion" when the array is rotated.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 A two-dimensional array is essentially equivalent to a one-dimensional
 one, but with additional addressing modes for referencing and
@@ -2352,9 +2001,6 @@ For more interesting scripts using arrays, see:
 
 -  `Example A-42 <contributed-scripts.html#NIM>`__
 
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif
 .. |Note| image:: ../images/note.gif

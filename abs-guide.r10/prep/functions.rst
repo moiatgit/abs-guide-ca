@@ -1,66 +1,27 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 24. Functions
 ======================
 
-.. raw:: html
 
-   <div class="TOC">
 
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 24.1. `Complex Functions and Function
 Complexities <complexfunct.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 24.2. `Local Variables <localvar.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 24.3. `Recursion Without Local Variables <recurnolocvar.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
 
 Like "real" programming languages, Bash has functions, though in a
 somewhat limited implementation. A function is a subroutine, a `code
@@ -89,13 +50,7 @@ second line.
 |  ``             command           `` ...
 |  }
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -132,18 +87,12 @@ the function.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     fun () { echo "This is a function"; echo; }
     #                                 ^     ^
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -153,18 +102,12 @@ the function.
     fun2 () { echo "Even a single-command function? Yes!"; }
     #                                                    ^
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     fun () { echo "This is a function"; echo; }
     #                                 ^     ^
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -174,30 +117,15 @@ the function.
     fun2 () { echo "Even a single-command function? Yes!"; }
     #                                                    ^
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Functions are called, *triggered* , simply by invoking their names. *A
 function call is equivalent to a command.*
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-1. Simple functions**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -240,24 +168,12 @@ function call is equivalent to a command.*
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The function definition must precede the first call to it. There is no
 method of "declaring" the function, as, for example, in C.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -287,21 +203,9 @@ method of "declaring" the function, as, for example, in C.
         
         # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -375,9 +279,6 @@ method of "declaring" the function, as, for example, in C.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -426,9 +327,6 @@ method of "declaring" the function, as, for example, in C.
 
     # Thank you, Dominick Geyer and Thiemo Kellner.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -477,24 +375,12 @@ method of "declaring" the function, as, for example, in C.
 
     # Thank you, Dominick Geyer and Thiemo Kellner.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 It is even possible to nest a function within another function, although
 this is not very useful.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -519,20 +405,11 @@ this is not very useful.
 
         # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Function declarations can appear in unlikely places, even where a
 command would otherwise go.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -574,19 +451,10 @@ command would otherwise go.
 
     # Thanks, S.C. and Christopher Head
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  Function names can take strange forms.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -607,23 +475,11 @@ command would otherwise go.
     # Of what use is this?
     # It's a devious way to obfuscate the code in a script.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 See also `Example A-56 <contributed-scripts.html#GRONSFELD>`__
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -671,9 +527,6 @@ script?
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -700,9 +553,6 @@ script?
     #+ or preempt system commands.
     #  Of course, this is *not* advisable.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -729,20 +579,8 @@ script?
     #+ or preempt system commands.
     #  Of course, this is *not* advisable.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

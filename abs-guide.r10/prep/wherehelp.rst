@@ -6,13 +6,7 @@ XXX  38.3. Where to Go For Help
 or updating this document. He will not answer questions about this book
 or about general scripting topics.
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 If you need assistance with a schoolwork assignment, read the pertinent
 sections of this and other reference works. Do your best to solve the
@@ -32,21 +26,9 @@ Open Source Community. Any Solaris or Apple users needing scripting help
 will therefore kindly direct their concerns to corporate customer
 service.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 **
 
@@ -55,35 +37,17 @@ noises being extremely suppressed ...*
 
 *-- *CI-300 printer manual**
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <wherehelp.html#AEN21329>`__
 
 Well, if you *absolutely* insist, you can try modifying `Example
 A-44 <contributed-scripts.html#HOMEWORK>`__ to suit your purposes.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

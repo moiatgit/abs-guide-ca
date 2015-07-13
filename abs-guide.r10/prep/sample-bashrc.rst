@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix M. Sample ``      .bashrc     `` and ``      .bash_profile     `` Files
 =================================================================================
@@ -17,15 +14,9 @@ Study the file carefully, and feel free to reuse code snippets and
 functions from it in your own ``      .bashrc     `` file or even in
 your scripts.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example M-1. Sample ``        .bashrc       `` file**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -953,30 +944,15 @@ your scripts.
     # sh-shell:bash
     # End:
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 And, here is a snippet from Andrzej Szelachowski's instructive
 ``      .bash_profile     `` file.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example M-2. ``        .bash_profile       `` file**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1032,19 +1008,7 @@ And, here is a snippet from Andrzej Szelachowski's instructive
 
     # The trick is to use strong quoting for parts of old PS1 variable.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

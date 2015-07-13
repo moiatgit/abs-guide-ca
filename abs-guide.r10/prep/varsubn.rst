@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   4.1. Variable Substitution
 ===========================
@@ -9,9 +6,6 @@ The *name* of a variable is a placeholder for its *value* , the data it
 holds. Referencing (retrieving) its value is called *variable
 substitution* .
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
  $
 
@@ -22,9 +16,6 @@ substitution* .
     its *value* , the data item it contains. ` [1]
      <varsubn.html#FTN.AEN2258>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -37,13 +28,7 @@ substitution* .
         bash$ echo $variable1
         23
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The only times a variable appears "naked" -- without the $ prefix --
     is when declared or assigned, when *unset* , when
@@ -73,15 +58,9 @@ substitution* .
     causes an error, the longer form may work (see `Section
     10.2 <parameter-substitution.html>`__ , below).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 4-1. Variable assignment and substitution**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -195,25 +174,10 @@ substitution* .
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -261,9 +225,6 @@ substitution* .
 
     See also `Example 15-23 <internal.html#SELFSOURCE>`__ .
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -272,9 +233,6 @@ substitution* .
           echo "\$unassigned is NULL."
         fi     # $unassigned is NULL.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -286,9 +244,6 @@ substitution* .
         #  An uninitialized variable has no value,
         #+ however it evaluates as 0 in an arithmetic operation.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -297,9 +252,6 @@ substitution* .
           echo "\$unassigned is NULL."
         fi     # $unassigned is NULL.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -311,32 +263,14 @@ substitution* .
         #  An uninitialized variable has no value,
         #+ however it evaluates as 0 in an arithmetic operation.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <varsubn.html#AEN2258>`__
 
@@ -350,12 +284,6 @@ statement, as in ``               VAR2=$VARIABLE             `` .
 memory location(s) where the actual data associated with that variable
 is kept.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

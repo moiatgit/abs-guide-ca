@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix N. Converting DOS Batch Files to Shell Scripts
 ========================================================
@@ -13,16 +10,10 @@ an old DOS batch file to a UNIX shell script. This is generally not
 difficult, as DOS batch file operators are only a limited subset of the
 equivalent shell scripting ones.
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table N-1. Batch file keywords / variables / operators, and their
 shell equivalents**
 
-.. raw:: html
-
-   <div>
 
 Batch File Operator
 
@@ -246,27 +237,15 @@ first printer device
 
 first serial port
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Batch files usually contain DOS commands. These must be translated into
 their UNIX equivalents in order to convert a batch file into a shell
 script.
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table N-2. DOS commands and their UNIX equivalents**
 
-.. raw:: html
-
-   <div>
 
 DOS Command
 
@@ -448,21 +427,9 @@ cp
 
 (extended) file copy
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -475,30 +442,15 @@ DOS supports only a very limited and incompatible subset of filename
 `wild-card expansion <globbingref.html>`__ , recognizing just the \* and
 ? characters.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Converting a DOS batch file into a shell script is generally
 straightforward, and the result ofttimes reads better than the original.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example N-1. VIEWDATA.BAT: DOS Batch File**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -522,30 +474,15 @@ straightforward, and the result ofttimes reads better than the original.
 
     :EXIT0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The script conversion is somewhat of an improvement. ` [1]
  <dosbatch.html#FTN.AEN24713>`__
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example N-2. *viewdata.sh* : Shell Script Conversion of VIEWDATA.BAT**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -571,33 +508,18 @@ The script conversion is somewhat of an improvement. ` [1]
     #  The converted script is short, sweet, and clean,
     #+ which is more than can be said for the original.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Ted Davis' `Shell Scripts on the PC <http://www.maem.umr.edu/batch/>`__
 site had a set of comprehensive tutorials on the old-fashioned art of
 batch file programming. Unfortunately the page has vanished without a
 trace.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <dosbatch.html#AEN24713>`__
 
@@ -608,12 +530,6 @@ a DOS filesystem, or even an NTFS partition (with the help of
 `ntfs-3g <http://www.ntfs-3g.org>`__ ) to do batch or scripted
 operations.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix K. Localization
 =========================
@@ -15,9 +12,6 @@ get output from the same script in English.
 To create a localized script, use the following template to write all
 messages to the user (error messages, prompts, etc.).
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -108,17 +102,8 @@ messages to the user (error messages, prompts, etc.).
     #+ of the 'echo' command.
     #  ------------------------------------------------------------------
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -126,20 +111,11 @@ messages to the user (error messages, prompts, etc.).
     "Can't cd to %s."
      "Enter the value: "
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 This lists all the localized text. (The ``     -D    `` option lists
 double-quoted strings prefixed by a $ , without executing the script.)
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -151,25 +127,13 @@ double-quoted strings prefixed by a $ , without executing the script.)
      msgid "Enter the value: "
      msgstr ""
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The ``     --dump-po-strings    `` option to Bash resembles the
 ``     -D    `` option, but uses `gettext <textproc.html#GETTEXTREF>`__
 "po" format.
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -188,17 +152,8 @@ the translator.
 This shell code is then not specific to Bash any more; it works the same
 way with Bash 1.x and other /bin/sh implementations.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Now, build a ``      language.po     `` file for each language that the
 script will be translated into, specifying the
@@ -207,9 +162,6 @@ example:
 
 fr.po:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -225,13 +177,7 @@ fr.po:
     #+ This is a very cool feature if the programmer uses
     #+ variable names that make sense!
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Then, run `msgfmt <textproc.html#MSGFMTREF>`__ .
 
@@ -241,33 +187,18 @@ Place the resulting ``      localized.sh.mo     `` file in the
 ``      /usr/local/share/locale/fr/LC_MESSAGES     `` directory, and at
 the beginning of the script, insert the lines:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     TEXTDOMAINDIR=/usr/local/share/locale
     TEXTDOMAIN=localized.sh
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 If a user on a French system runs the script, she will get French
 messages.
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -299,9 +230,6 @@ With older versions of Bash or other shells, localization requires
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -320,9 +248,6 @@ With older versions of Bash or other shells, localization requires
     read -p "$(gettext -s "Enter the value: ")" var
     # ...
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -341,17 +266,8 @@ With older versions of Bash or other shells, localization requires
     read -p "$(gettext -s "Enter the value: ")" var
     # ...
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The ``      TEXTDOMAIN     `` and ``      TEXTDOMAINDIR     `` variables
 need to be set and exported to the environment. This should be done
@@ -363,8 +279,5 @@ This appendix written by Stéphane Chazelas, with modifications suggested
 by Alfredo Pironti, and by Bruno Haible, maintainer of GNU
 `gettext <textproc.html#GETTEXTREF>`__ .
 
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

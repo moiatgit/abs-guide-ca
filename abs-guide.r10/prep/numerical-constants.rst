@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   8.2. Numerical Constants
 =========================
@@ -14,15 +11,9 @@ embedded ``             #           `` evaluates as
 ``             BASE#NUMBER           `` (with range and notational
 restrictions).
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 8-4. Representation of numerical constants**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -89,19 +80,7 @@ restrictions).
 
     # Thanks, Rich Bartell and Stephane Chazelas, for clarification.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

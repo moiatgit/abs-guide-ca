@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   C.2. Awk
 =========
@@ -23,9 +20,6 @@ and columns.
 brackets <special-chars.html#CODEBLOCKREF>`__ enclose blocks of awk code
 within a shell script.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -53,54 +47,30 @@ within a shell script.
     # Prints the entire file!
     # Same effect as:   cat $filename . . . or . . . sed '' $filename
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 We have just seen the awk *print* command in action. The only other
 feature of awk we need to deal with here is variables. Awk handles
 variables similarly to shell scripts, though a bit more flexibly.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     { total += ${column_number} }
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 This adds the value of ``           column_number         `` to the
 running total of ``           total         `` >. Finally, to print
 "total" , there is an **END** command block, executed after the script
 has processed all its input.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     END { print total }
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Corresponding to the **END** , there is a **BEGIN** , for a code block
 to be performed before awk starts processing its input.
@@ -108,15 +78,9 @@ to be performed before awk starts processing its input.
 The following example illustrates how **awk** can add text-parsing tools
 to a shell script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example C-1. Counting Letter Occurrences**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -190,17 +154,8 @@ to a shell script.
 
     # Compare this script to letter-count.sh.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 For simpler examples of awk within shell scripts, see:
 
@@ -244,27 +199,15 @@ That's all the awk we'll cover here, folks, but there's lots more to
 learn. See the appropriate references in the
 `*Bibliography* <biblio.html>`__ .
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <awk.html#AEN23443>`__
 
 Its name derives from the initials of its authors, **A** ho, **W**
 einberg, and **K** ernighan.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

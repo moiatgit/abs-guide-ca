@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.2. Shell Wrappers
 =====================
@@ -23,15 +20,9 @@ commands to *awk* . As a saved executable file, you can then repeatedly
 invoke it in its original form or modified, without the inconvenience of
 retyping it on the command-line.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-1. *shell wrapper***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -70,27 +61,12 @@ retyping it on the command-line.
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-2. A slightly more complex *shell wrapper***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -135,27 +111,12 @@ retyping it on the command-line.
 
     exit $?  # Redirect the output of this script to write to a file.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-3. A generic *shell wrapper* that writes to a logfile**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -189,27 +150,12 @@ retyping it on the command-line.
     # It's necessary to do the logging before the operation.
     # Why?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-4. A *shell wrapper* around an awk script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -250,27 +196,12 @@ retyping it on the command-line.
     #  Redirect the output of this script to a file
     #+ or pipe it to "more":  sh pr-asc.sh | more
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-5. A *shell wrapper* around another awk script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -336,17 +267,8 @@ retyping it on the command-line.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  For those scripts needing a single do-it-all tool, a Swiss army knife,
 there is *Perl* . Perl combines the capabilities of
@@ -358,15 +280,9 @@ embedding within shell scripts, and there may be some substance to the
 claim that Perl can totally replace shell scripting (though the author
 of the *ABS Guide* remains skeptical).
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-6. Perl embedded in a *Bash* script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -384,31 +300,16 @@ of the *ABS Guide* remains skeptical).
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 It is even possible to combine a Bash script and Perl script within the
 same file. Depending on how the script is invoked, either the Bash part
 or the Perl part will execute.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-7. Bash and Perl scripts combined**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -433,21 +334,9 @@ or the Perl part will execute.
 
     # End of Perl part of the script.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -459,26 +348,14 @@ or the Perl part will execute.
     Greetings from the Perl part of the script.
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 It is, of course, possible to embed even more exotic scripting languages
 within shell wrappers. *Python* , for example ...
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-8. Python embedded in a *Bash* script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -498,30 +375,15 @@ within shell wrappers. *Python* , for example ...
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Wrapping a script around *mplayer* and the Google's translation server,
 you can create something that talks back to you.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-9. A script that speaks**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -549,17 +411,8 @@ you can create something that talks back to you.
     exit
     # Browns. Nice talking to you.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 One interesting example of a complex shell wrapper is Martin Matusiak's
 `*undvd* script <http://sourceforge.net/projects/undvd/>`__ , which
@@ -569,16 +422,10 @@ utility. Another example is Itzchak Rehberg's
 `Ext3Undel <http://projects.izzysoft.de/trac/ext3undel>`__ , a set of
 scripts to recover deleted file on an *ext3* filesystem.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <wrapper.html#AEN20130>`__
 
@@ -586,11 +433,5 @@ Quite a number of Linux utilities are, in fact, shell wrappers. Some
 examples are ``       /usr/bin/pdf2ps      `` ,
 ``       /usr/bin/batch      `` , and ``       /usr/bin/xmkmf      `` .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

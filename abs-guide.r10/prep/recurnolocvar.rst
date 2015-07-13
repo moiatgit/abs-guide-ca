@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   24.3. Recursion Without Local Variables
 ========================================
@@ -8,15 +5,9 @@
 A function may recursively call itself even without use of local
 variables.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-16. *The Fibonacci Sequence***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -67,27 +58,12 @@ variables.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-17. *The Towers of Hanoi***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -194,19 +170,7 @@ variables.
     # 2) Explain the workings of the workings of the "dohanoi" function.
     #    (Difficult -- see the Dewdney reference, above.)
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

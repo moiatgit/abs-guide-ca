@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.10. Shell Scripting Under Windows
 =====================================
@@ -19,7 +16,4 @@ Shell <biblio.html#KORNSHELLREF>`__ fame.
 In 2006, Microsoft released the Windows Powershell ®, which contains
 limited Bash-like command-line scripting capabilities.
 
-.. raw:: html
-
-   </div>
 

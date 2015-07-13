@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 32. Debugging
 ======================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -17,28 +11,16 @@ definition, not smart enough to debug it.*
 
 *--Brian Kernighan*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The Bash shell contains no built-in debugger, and only bare-bones
 debugging-specific commands and constructs. Syntax errors or outright
 typos in the script generate cryptic error messages that are often of no
 help in debugging a non-functional script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-1. A buggy script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -57,47 +39,23 @@ help in debugging a non-functional script.
 
     exit $?   # 0! Why?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Output from script:
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     ./ex74.sh: [37: command not found
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 What's wrong with the above script? Hint: after the *if* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-2. Missing `keyword <internal.html#KEYWORDREF>`__**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -117,36 +75,18 @@ What's wrong with the above script? Hint: after the *if* .
     # From command line, after script terminates:
       echo $?    # 2
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Output from script:
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     missing-keyword.sh: line 10: syntax error: unexpected end of file
         
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Note that the error message does *not* necessarily reference the line in
 which the error occurs, but the line where the Bash interpreter finally
@@ -157,15 +97,9 @@ the line number of a syntax error.
 What if the script executes, but does not work as expected? This is the
 all too familiar logic error.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-3. *test24* : another buggy script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -186,17 +120,8 @@ all too familiar logic error.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Try to find out what's wrong with `Example 32-3 <debugging.html#EX75>`__
 by uncommenting the ``             echo "$badname"           `` line.
@@ -211,9 +136,6 @@ to quotes from ``      $badname     `` and to reset ``      $IFS     ``
 to contain only a newline, ``             IFS=$'\n'           `` .
 However, there are simpler ways of going about it.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -223,13 +145,7 @@ However, there are simpler ways of going about it.
     rm *' '*
     # Thank you. S.C.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Summarizing the symptoms of a buggy script,
 
@@ -246,13 +162,7 @@ Tools for debugging non-working scripts include
    points in the script to trace the variables, and otherwise give a
    snapshot of what is going on.
 
-   .. raw:: html
 
-      <div class="TIP">
-
-   .. raw:: html
-
-      <div>
 
    |Tip|
 
@@ -288,9 +198,6 @@ Tools for debugging non-working scripts include
                              
    +--------------------------+--------------------------+--------------------------+
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -311,9 +218,6 @@ Tools for debugging non-working scripts include
        Whatever=notwhat
        debecho $Whatever   # (Will not echo.)
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -334,17 +238,8 @@ Tools for debugging non-working scripts include
        Whatever=notwhat
        debecho $Whatever   # (Will not echo.)
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 #. Using the `tee <extmisc.html#TEEREF>`__ filter to check processes or
    data flows at critical points.
@@ -378,9 +273,6 @@ Tools for debugging non-working scripts include
    it, but gives an unbound variable error message and aborts the
    script.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -396,26 +288,14 @@ Tools for debugging non-working scripts include
        # sh t2.sh
        # t2.sh: line 6: unset_var: unbound variable
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 #. Using an "assert" function to test a variable or condition at
    critical points in a script. (This is an idea borrowed from C.)
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 32-4. Testing a condition with an *assert***
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -468,17 +348,8 @@ Tools for debugging non-working scripts include
 
        exit $?
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 #. Using the `$LINENO <internalvariables.html#LINENOREF>`__ variable and
    the `caller <internal.html#CALLERREF>`__ builtin.
@@ -491,9 +362,6 @@ Tools for debugging non-working scripts include
    *exit* , forcing a "printout" of variables, for example. The *trap*
    must be the first command in the script.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Trapping signals**
 
@@ -501,13 +369,7 @@ Tools for debugging non-working scripts include
     Specifies an action on receipt of a signal; also useful for
     debugging.
 
-    .. raw:: html
 
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     A *signal* is a message sent to a process, either by the kernel or
     another process, telling it to take some specified action (usually
@@ -515,23 +377,11 @@ Tools for debugging non-working scripts include
     `Control-C <special-chars.html#CTLCREF>`__ sends a user interrupt,
     an INT signal, to a running program.
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     *A simple instance:*
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -541,27 +391,12 @@ Tools for debugging non-working scripts include
         trap 'echo "Control-C disabled."' 2
         # Message when Control-C pressed.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-5. Trapping at exit**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -586,27 +421,12 @@ Tools for debugging non-working scripts include
     #  Note that commenting out the 'exit' command makes no difference,
     #+ since the script exits in any case after running out of commands.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-6. Cleaning up after **Control-C****
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -698,27 +518,12 @@ Tools for debugging non-working scripts include
     # Exercise: Discuss the relative strengths and weaknesses
     #           of each of these various approaches.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-7. A Simple Implementation of a Progress Bar**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -754,25 +559,10 @@ Tools for debugging non-working scripts include
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -780,15 +570,9 @@ The ``         DEBUG        `` argument to **trap** causes a specified
 action to execute after every command in a script. This permits tracing
 variables, for example.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-8. Tracing a variable**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -824,21 +608,9 @@ variables, for example.
       Just multiplied $variable by 3.
     VARIABLE-TRACE> $variable = "87"
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -874,9 +646,6 @@ variables, for example.
       Just multiplied $variable by 3.
     VARIABLE-TRACE> $variable = "87"
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -912,31 +681,16 @@ variables, for example.
       Just multiplied $variable by 3.
     VARIABLE-TRACE> $variable = "87"
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Of course, the **trap** command has other uses aside from debugging,
 such as disabling certain keystrokes within a script (see `Example
 A-43 <contributed-scripts.html#STOPWATCH>`__ ).
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 32-9. Running multiple processes (on an SMP box)**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1101,25 +855,10 @@ A-43 <contributed-scripts.html#STOPWATCH>`__ ).
       --Vernia Damiano
     SCRIPT_AUTHOR_COMMENTS
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -1129,21 +868,9 @@ apostrophes) disables SIGNAL for the remainder of the script.
 functioning of SIGNAL once more. This is useful to protect a critical
 portion of a script from an undesirable interrupt.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1154,21 +881,9 @@ portion of a script from an undesirable interrupt.
         trap 2     # Reenables Control-C
         
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 `Version 3 <bashver3.html#BASH3REF>`__ of Bash adds the following
 `internal variables <internalvariables.html#INTERNALVARIABLES1>`__ for
@@ -1213,41 +928,20 @@ use by the debugger.
 
 #. ```            $BASH_SUBSHELL           `` <internalvariables.html#BASHSUBSHELLREF>`__
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <debugging.html#AEN19460>`__
 
 By convention, ``               signal         0             `` is
 assigned to `exit <exit-status.html#EXITCOMMANDREF>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif
 .. |Note| image:: ../images/note.gif

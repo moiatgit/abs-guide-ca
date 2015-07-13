@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   11.3. Loop Control
 ===================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -17,17 +11,8 @@
 
 *--Verlaine, "Chevaux de bois" *
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Commands affecting loop behavior**
 
@@ -40,15 +25,9 @@
     loop, skipping all the remaining commands in that particular loop
     cycle.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-21. Effects of *break* and **continue** in a loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -102,32 +81,17 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **break** command may optionally take a parameter. A plain
     **break** terminates only the innermost loop in which it is
     embedded, but a **break N** breaks out of
     ``                   N                 `` levels of loop.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-22. Breaking out of multiple loop levels**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -160,17 +124,8 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **continue** command, similar to **break** , optionally takes a
     parameter. A plain **continue** cuts short the current iteration
@@ -178,15 +133,9 @@
     remaining iterations at its loop level and continues with the next
     iteration at the loop, ``         N        `` levels above.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-23. Continuing at a higher loop level**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -221,27 +170,12 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-24. Using *continue N* in an actual task**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -302,57 +236,24 @@
         #+ (in which case we terminate or sleep for a long time before checking
         #+ for a new job).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     The **continue N** construct is difficult to understand and tricky
     to use in any meaningful context. It is probably best avoided.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <loopcontrol.html#AEN6981>`__
 
@@ -361,12 +262,6 @@ loop commands, such as `while <loops1.html#WHILELOOPREF>`__ and
 `case <testbranch.html#CASEESAC1>`__ , are
 `keywords <internal.html#KEYWORDREF>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

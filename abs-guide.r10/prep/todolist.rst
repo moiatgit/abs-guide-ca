@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix R. To Do List
 =======================
@@ -11,7 +8,4 @@
 
 -  Same as above, but for the Korn shell ( *ksh* ).
 
-.. raw:: html
-
-   </div>
 

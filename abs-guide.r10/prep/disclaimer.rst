@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   38.6. Disclaimer
 =================
@@ -21,7 +18,4 @@ suffer ill effects, aside from uncontrollable hiccups. In fact, the
 scripts and determine whether they have `unanticipated
 consequences <gotchas.html>`__ .
 
-.. raw:: html
-
-   </div>
 

@@ -121,9 +121,6 @@ characters -- a string or a part of a string.
     "\\<the\\>" matches the word "the," but not the words "them,"
    "there," "other," etc.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -144,27 +141,12 @@ characters -- a string or a part of a string.
        This is the only instance of line 2.
                  
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 The only way to be certain that a particular RE works is to test it.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -182,17 +164,8 @@ The only way to be certain that a particular RE works is to test it.
     This line contains the number 113312312.    # Match.
     This line contains no numbers at all.       # No match.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -204,21 +177,9 @@ The only way to be certain that a particular RE works is to test it.
      This line contains the number 113312312.    # Match.
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -236,9 +197,6 @@ The only way to be certain that a particular RE works is to test it.
     This line contains the number 113312312.    # Match.
     This line contains no numbers at all.       # No match.
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -250,9 +208,6 @@ The only way to be certain that a particular RE works is to test it.
      This line contains the number 113312312.    # Match.
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -270,9 +225,6 @@ The only way to be certain that a particular RE works is to test it.
     This line contains the number 113312312.    # Match.
     This line contains no numbers at all.       # No match.
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -284,27 +236,15 @@ The only way to be certain that a particular RE works is to test it.
      This line contains the number 113312312.    # Match.
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 -  
 
-   .. raw:: html
-
-      <div class="FORMALPARA">
 
    ** Extended REs.** Additional metacharacters added to the basic set.
    Used in `egrep <textproc.html#EGREPREF>`__ ,
    `awk <awk.html#AWKREF>`__ , and `Perl <wrapper.html#PERLREF>`__ .
 
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -316,9 +256,6 @@ The only way to be certain that a particular RE works is to test it.
    The plus -- + -- matches one or more of the previous RE. It serves a
    role similar to the \* , but does *not* match zero occurrences.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -332,13 +269,7 @@ The only way to be certain that a particular RE works is to test it.
 
        # Thanks, S.C.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  `Escaped <escapingsection.html#ESCP>`__ "curly brackets" -- \\{ \\}
    -- indicate the number of occurrences of a preceding RE to match.
@@ -350,13 +281,7 @@ The only way to be certain that a particular RE works is to test it.
     "[0-9]\\{5\\}" matches exactly five digits (characters in the range
    of 0 to 9).
 
-   .. raw:: html
 
-      <div class="NOTE">
-
-   .. raw:: html
-
-      <div>
 
    |Note|
 
@@ -380,9 +305,6 @@ The only way to be certain that a particular RE works is to test it.
    **Perl** and some **egrep** versions do not require escaping the
    curly brackets.
 
-   .. raw:: html
-
-      </p>
 
    .. code:: SCREEN
 
@@ -390,9 +312,6 @@ The only way to be certain that a particular RE works is to test it.
        2222
                  
 
-   .. raw:: html
-
-      </p>
 
    .. code:: SCREEN
 
@@ -400,17 +319,8 @@ The only way to be certain that a particular RE works is to test it.
        2222
                  
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -422,9 +332,6 @@ The only way to be certain that a particular RE works is to test it.
 -  The -- **\|** -- "or" RE operator matches any of a set of alternate
    characters.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -433,21 +340,9 @@ The only way to be certain that a particular RE works is to test it.
         The clarinet produces sound by the vibration of its reed.
                  
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -455,30 +350,15 @@ Some versions of **sed** , **ed** , and **ex** support escaped versions
 of the extended Regular Expressions described above, as do the GNU
 utilities.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 -  
 
-   .. raw:: html
-
-      <div class="FORMALPARA">
 
    ** POSIX Character Classes.**
    ``                   [:class:]                 ``
 
-   .. raw:: html
-
-      </div>
 
    This is an alternate method of specifying a range of characters to
    match.
@@ -527,34 +407,16 @@ utilities.
    digits. This is equivalent to
    ``                 0-9A-Fa-f               `` .
 
-   .. raw:: html
 
-      <div class="IMPORTANT">
-
-   .. raw:: html
-
-      <div>
 
    |Important|
 
    POSIX character classes generally require quoting or `double
    brackets <testconstructs.html#DBLBRACKETS>`__ ([[ ]]).
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -562,17 +424,8 @@ utilities.
        abc=723
                  
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -583,20 +436,11 @@ utilities.
        # ...
        # From ktour.sh example script.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    These character classes may even be used with
    `globbing <globbingref.html>`__ , to a limited extent.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -604,13 +448,7 @@ utilities.
        -rw-rw-r--    1 bozo  bozo         0 Aug 21 14:47 a33b
                  
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    POSIX character classes are used in `Example
    16-21 <textproc.html#EX49>`__ and `Example
@@ -627,16 +465,10 @@ Regular Expressions* . *Sed & Awk* , by Dougherty and Robbins, also
 gives a very lucid treatment of REs. See the
 `*Bibliography* <biblio.html>`__ for more information on these books.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <x17129.html#AEN17134>`__
 
@@ -646,9 +478,6 @@ expression* is an ordinary expression that conforms to accepted usage.
 The *meta-meaning* is drastically different, as discussed at length in
 this chapter.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <x17129.html#AEN17189>`__
 
@@ -693,9 +522,6 @@ newline in a multiple line expression, the dot will match the newline.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -726,9 +552,6 @@ newline in a multiple line expression, the dot will match the newline.
 
     exit 0
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -759,13 +582,7 @@ newline in a multiple line expression, the dot will match the newline.
 
     exit 0
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Important| image:: ../images/important.gif

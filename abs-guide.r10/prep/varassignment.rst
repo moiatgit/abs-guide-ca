@@ -1,24 +1,12 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   4.2. Variable Assignment
 =========================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
  =
     the assignment operator ( *no space before and after* )
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -29,27 +17,12 @@
     Note that = can be either an *assignment* or a *test* operator,
     depending on context.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 4-2. Plain Variable Assignment**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -90,27 +63,12 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 4-3. Variable Assignment, plain and fancy**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -138,26 +96,14 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Variable assignment using the *$(...)* mechanism (a newer method
     than `backquotes <commandsub.html#BACKQUOTESREF>`__ ). This is
     likewise a form of `command
     substitution <commandsub.html#COMMANDSUBREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -165,20 +111,8 @@
         R=$(cat /etc/redhat-release)
         arch=$(uname -m)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

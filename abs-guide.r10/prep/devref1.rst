@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   29.1. ``      /dev     ``
 ==========================
@@ -12,9 +9,6 @@ devices* that may or may not be present in the hardware. ` [1]
 mounted filesystem(s) have entries in ``      /dev     `` , as
 `df <system.html#DFREF>`__ shows.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -27,13 +21,7 @@ mounted filesystem(s) have entries in ``      /dev     `` , as
      /dev/hda5              1714416   1123624    503704  70% /usr
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  Among other things, the ``      /dev     `` directory contains
 *loopback* devices, such as ``      /dev/loop0     `` . A loopback
@@ -59,29 +47,17 @@ the following line to
 ```       /etc/fstab      `` <system.html#FSTABREF>`__ . ` [3]
  <devref1.html#FTN.AEN19093>`__
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     /dev/sda1    /mnt/flashdrive    auto    noauto,user,noatime    0 0
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 (See also `Example A-23 <contributed-scripts.html#USBINST>`__ .)
 Checking whether a disk is in the CD-burner (soft-linked to
 ``      /dev/hdc     `` ):
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -105,25 +81,13 @@ Checking whether a disk is in the CD-burner (soft-linked to
     #  Now, it's just a matter of checking/parsing the output and taking
     #+ appropriate action.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 When executing a command on a ``      /dev/tcp/$host/$port     ``
 pseudo-device file, Bash opens a TCP connection to the associated
 *socket* .
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 A *socket* is a communications node associated with a specific I/O port.
 (This is analogous to a *hardware socket* , or *receptacle* , for a
@@ -132,25 +96,13 @@ the same machine, between machines on the same network, between machines
 across different networks, and, of course, between machines at different
 locations on the Internet.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
 
  The following examples assume an active Internet connection.
 
 Getting the time from ``      nist.gov     `` :
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -158,21 +110,12 @@ Getting the time from ``      nist.gov     `` :
     53082 04-03-18 04:26:54 68 0 0 502.3 UTC(NIST) *
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 [Mark contributed this example.]
 
 Generalizing the above into a script:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -187,19 +130,10 @@ Generalizing the above into a script:
 
     echo "UTC Time = "$UTC""
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  Downloading a URL:
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -208,25 +142,13 @@ Generalizing the above into a script:
     bash$ cat <&5
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 [Thanks, Mark and Mihai Maties.]
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 29-1. Using ``        /dev/tcp       `` for troubleshooting**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -267,27 +189,12 @@ Generalizing the above into a script:
 
     exit $MYEXIT
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 29-2. Playing music**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -332,28 +239,13 @@ Generalizing the above into a script:
 
     exit      # A "bonny" example of an elegant shell script!
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <devref1.html#AEN19045>`__
 
@@ -365,9 +257,6 @@ Some devices, such as ``       /dev/null      `` ,
 virtual. They are not actual physical devices and exist only in
 software.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <devref1.html#AEN19065>`__
 
@@ -377,9 +266,6 @@ units. Examples of block devices are hard drives, CDROM drives, and
 flash drives. Examples of character devices are keyboards, modems, sound
 cards.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <devref1.html#AEN19093>`__
 
@@ -392,11 +278,5 @@ To actually mount the drive, use the following command: **mount
 Newer Linux distros automount flash drives in the
 ``       /media      `` directory without user intervention.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

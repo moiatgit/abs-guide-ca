@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   2.1. Invoking the script
 =========================
@@ -15,9 +12,6 @@ disables reading from
 script.) Much more convenient is to make the script itself directly
 executable with a `chmod <basic.html#CHMODREF>`__ .
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
  Either:
     ``                   chmod 555 scriptname                 `` (gives
@@ -31,9 +25,6 @@ executable with a `chmod <basic.html#CHMODREF>`__ .
     ``                   chmod           u+rx scriptname                 ``
     (gives only the script owner read/execute permission)
 
-.. raw:: html
-
-   </div>
 
 Having made the script executable, you may now test it by
 ``             ./scriptname           `` . ` [3]
@@ -46,16 +37,10 @@ make the script available to yourself and all other users as a
 systemwide executable. The script could then be invoked by simply typing
 **scriptname** **[ENTER]** from the command-line.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <invoking.html#AEN300>`__
 
@@ -63,18 +48,12 @@ Caution: invoking a *Bash* script by
 ``               sh scriptname             `` turns off Bash-specific
 extensions, and the script may therefore fail to execute.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <invoking.html#AEN315>`__
 
 A script needs *read* , as well as execute permission for it to run,
 since the shell needs to be able to read it.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <invoking.html#AEN327>`__
 
@@ -88,11 +67,5 @@ fails because, for security reasons, the current directory (
 to explicitly invoke the script in the current directory with a
 ``               ./scriptname             `` .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

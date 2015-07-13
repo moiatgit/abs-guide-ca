@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   7.5. Testing Your Knowledge of Tests
 =====================================
@@ -10,9 +7,6 @@ server. This file contains quite a number of *if/then* tests. The
 following is excerpted from an "ancient" version of
 ``      xinitrc     `` ( *Red Hat 7.1* , or thereabouts).
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -30,13 +24,7 @@ following is excerpted from an "ancient" version of
          fi
     fi
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Explain the *test* constructs in the above snippet, then examine an
 updated version of the file, ``      /etc/X11/xinit/xinitrc     `` , and
@@ -45,7 +33,4 @@ to the discussions of `grep <textproc.html#GREPREF>`__ ,
 `sed <sedawk.html#SEDREF>`__ , and `regular
 expressions <regexp.html#REGEXREF>`__ .
 
-.. raw:: html
-
-   </div>
 

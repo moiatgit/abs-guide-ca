@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   10.1. Manipulating Strings
 ===========================
@@ -12,9 +9,6 @@ and others fall under the functionality of the UNIX
 `expr <moreadv.html#EXPRREF>`__ command. This results in inconsistent
 command syntax and overlap of functionality, not to mention confusion.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **String Length**
 
@@ -24,9 +18,6 @@ command syntax and overlap of functionality, not to mention confusion.
 
  expr "$string" : '.\*'
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -36,28 +27,13 @@ command syntax and overlap of functionality, not to mention confusion.
         echo `expr length $stringZ`      # 15
         echo `expr "$stringZ" : '.*'`    # 15
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 10-1. Inserting a blank line between paragraphs in a text
 file**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -95,21 +71,9 @@ file**
     #     Modify this to include other common end-of-sentence characters,
     #+    such as ?, !, and ".
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Length of Matching Substring at Beginning of String**
 
@@ -121,9 +85,6 @@ file**
     ``                   $substring                 `` is a regular
     expression.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -134,21 +95,9 @@ file**
         echo `expr match "$stringZ" 'abc[A-Z]*.2'`   # 8
         echo `expr "$stringZ" : 'abc[A-Z]*.2'`       # 8
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Index**
 
@@ -156,9 +105,6 @@ file**
     Numerical position in $string of first character in $substring that
     matches.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -170,23 +116,11 @@ file**
         echo `expr index "$stringZ" 1c`              # 3
         # 'c' (in #3 position) matches before '1'.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This is the near equivalent of *strchr()* in *C* .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Substring Extraction**
 
@@ -206,9 +140,6 @@ file**
     of substring from ``                   $string                 `` at
     ``                   $position                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -238,26 +169,14 @@ file**
 
         # Thank you, Dan Jacobson, for pointing this out.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The *position* and *length* arguments can be "parameterized," that
     is, represented as a variable, rather than as a numerical constant.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-2. Generating an 8-character "random" string**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -292,25 +211,13 @@ file**
         #  No, this is is not recommended
         #+ as a method of generating hack-proof passwords.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     If the ``         $string        `` parameter is " \* " or " @ " ,
     then this extracts a maximum of ``         $length        ``
     positional parameters, starting at ``         $position        `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -319,22 +226,13 @@ file**
 
         echo ${*:2:3}        # Echoes three positional parameters, starting at second.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  expr substr $string $position $length
     Extracts ``                   $length                 `` characters
     from ``                   $string                 `` starting at
     ``                   $position                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -345,13 +243,7 @@ file**
         echo `expr substr $stringZ 1 2`              # ab
         echo `expr substr $stringZ 4 3`              # ABC
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  expr match "$string" '\\($substring\\)'
     Extracts ``                   $substring                 `` at
@@ -365,9 +257,6 @@ file**
     ``                   $substring                 `` is a regular
     expression.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -379,13 +268,7 @@ file**
         echo `expr "$stringZ" : '\(.......\)'`                   # abcABC1
         # All of the above forms give an identical result.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  expr match "$string" '.\*\\($substring\\)'
     Extracts ``                   $substring                 `` at *end*
@@ -399,9 +282,6 @@ file**
     ``                   $substring                 `` is a regular
     expression.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -411,21 +291,9 @@ file**
         echo `expr match "$stringZ" '.*\([A-C][A-C][A-C][a-c]*\)'`    # ABCabc
         echo `expr "$stringZ" : '.*\(......\)'`                       # ABCabc
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Substring Removal**
 
@@ -439,9 +307,6 @@ file**
     ``                   $substring                 `` from *front* of
     ``                   $string                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -465,13 +330,7 @@ file**
         echo ${stringZ##$X}     # abc
                                 # As above.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ${string%substring}
     Deletes shortest match of
@@ -480,9 +339,6 @@ file**
 
     For example:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -501,22 +357,13 @@ file**
 
         # Thank you, Rory Winston.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ${string%%substring}
     Deletes longest match of
     ``                   $substring                 `` from *back* of
     ``                   $string                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -530,26 +377,14 @@ file**
         echo ${stringZ%%b*c}     # a
         # Strip out longest match between 'b' and 'c', from back of $stringZ.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This operator is useful for generating filenames.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-3. Converting graphic file formats, with filename
     change**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -613,27 +448,12 @@ file**
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-4. Converting streaming audio files to *ogg***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -689,30 +509,15 @@ file**
         #  Given a URL, batch download streaming audio files (using "wget")
         #+ and convert them on the fly.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A simple emulation of `getopt <extmisc.html#GETOPTY>`__ using
     substring-extraction constructs.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-5. Emulating *getopt***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -761,25 +566,10 @@ file**
         test is 'value1'
         test2 is 'value2'
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Substring Replacement**
 
@@ -794,9 +584,6 @@ file**
     ``                   $substring                 `` with
     ``                   $replacement                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -828,13 +615,7 @@ file**
         echo ${stringZ//abc}          # ABC123ABC
         # A simple deletion takes place.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ${string/#substring/replacement}
     If ``                   $substring                 `` matches
@@ -848,9 +629,6 @@ file**
     ``                   $replacement                 `` for
     ``                   $substring                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -862,21 +640,9 @@ file**
         echo ${stringZ/%abc/XYZ}          # abcABC123ABCXYZ
                                           # Replaces back-end match of 'abc' with 'XYZ'.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   10.1.1. Manipulating strings using awk
 ---------------------------------------
@@ -885,15 +651,9 @@ A Bash script may invoke the string manipulation facilities of
 `awk <awk.html#AWKREF>`__ as an alternative to using its built-in
 operations.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 10-6. Alternate ways of extracting and locating substrings**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -929,25 +689,10 @@ operations.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   10.1.2. Further Reference
 --------------------------
@@ -973,29 +718,17 @@ Script examples:
 
 #. `Example A-41 <contributed-scripts.html#QKY>`__
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <string-manipulation.html#AEN5987>`__
 
 This applies to either command-line arguments or parameters passed to a
 `function <functions.html#FUNCTIONREF>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <string-manipulation.html#AEN6164>`__
 
@@ -1004,11 +737,5 @@ Note that ``               $substring             `` and
 *literal strings* or *variables* , depending on context. See the first
 usage example.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

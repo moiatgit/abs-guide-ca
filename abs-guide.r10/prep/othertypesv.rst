@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   4.4. Special Variable Types
 ============================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
  ``                 Local variables               ``
     Variables `visible <subshells.html#SCOPEREF>`__ only within a `code
@@ -18,13 +12,7 @@
  ``                 Environmental variables               ``
     Variables that affect the behavior of the shell and user interface
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -39,25 +27,10 @@
     environment, and all the shell's *child processes* (the commands it
     executes) inherit this environment.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -84,9 +57,6 @@
     (Thank you, StÃ©phane Chazelas for the clarification, and for
     providing the above example.)
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -96,9 +66,6 @@
         bash: /usr/bin/du: Argument list too long
                       
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -108,30 +75,15 @@
         bash: /usr/bin/du: Argument list too long
                       
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     If a script sets environmental variables, they need to be
     "exported," that is, reported to the *environment* local to the
     script. This is the function of the
     `export <internal.html#EXPORTREF>`__ command.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -148,17 +100,8 @@
     *child process* is a subprocess launched by another process, its
     `parent <internal.html#PARENTREF>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``                 Positional parameters               ``
     Arguments passed to the script from the command line ` [1]
@@ -177,15 +120,9 @@
     The special variables `$\* and $@ <internalvariables.html#APPREF>`__
     denote *all* the positional parameters.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 4-5. Positional Parameters**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -240,26 +177,14 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     *Bracket notation* for positional parameters leads to a fairly
     simple way of referencing the *last* argument passed to a script on
     the command-line. This also requires `indirect
     referencing <bashver2.html#VARREFNEW>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -272,13 +197,7 @@
         # This is an *indirect reference* to the $# variable.
         # Note that lastarg=${!$#} doesn't work.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Some scripts can perform different operations, depending on which
     name they are invoked with. For this to work, the script needs to
@@ -287,13 +206,7 @@
     links to all the alternate names of the script. See `Example
     16-2 <basic.html#HELLOL>`__ .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -303,21 +216,9 @@
     character to both sides of the assignment statement using the
     expected positional parameter.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -347,25 +248,13 @@
         #  See the "Parameter Substition" section
         #+ in the "Variables Revisited" chapter.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     ---
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 4-6. *wh* , *whois* domain name lookup**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -402,17 +291,8 @@
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     ---
 
@@ -430,15 +310,9 @@
     although `{bracket} notation <othertypesv.html#BRACKETNOTATION>`__
     also permits this.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 4-7. Using *shift***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -470,24 +344,12 @@
         #  See also the echo-params.sh script for a "shiftless"
         #+ alternative method of stepping through the positional params.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **shift** command can take a numerical parameter indicating how
     many positions to shift.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -524,21 +386,9 @@
         #           shift 20 || break
         #                    ^^^^^^^^
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -546,41 +396,20 @@
     passed to a `function <functions.html#FUNCTIONREF>`__ . See `Example
     36-18 <assortedtips.html#MULTIPLICATION>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <othertypesv.html#AEN2450>`__
 
 Note that `*functions* also take positional
 parameters <complexfunct.html#PASSEDARGS>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <othertypesv.html#AEN2464>`__
 
@@ -602,9 +431,6 @@ the shell.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -614,9 +440,6 @@ the shell.
     tcsh% echo $0
     tcsh
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -626,9 +449,6 @@ the shell.
     tcsh% echo $0
     tcsh
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <othertypesv.html#AEN2501>`__
 
@@ -636,13 +456,7 @@ If the the script is `sourced <internal.html#SOURCEREF>`__ or
 `symlinked <basic.html#SYMLINKREF>`__ , then this will not work. It is
 safer to check `$BASH\_Source <debugging.html#BASHSOURCEREF>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

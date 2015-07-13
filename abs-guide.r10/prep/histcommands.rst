@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix L. History Commands
 =============================
@@ -15,9 +12,6 @@ Bash history commands:
 
 #. **fc**
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -28,13 +22,7 @@ Bash history commands:
          ...
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Internal variables associated with Bash history commands:
 
@@ -70,9 +58,6 @@ Internal variables associated with Bash history commands:
 
 Unfortunately, the Bash history tools find no use in scripting.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -92,17 +77,8 @@ Unfortunately, the Bash history tools find no use in scripting.
     set -o history
     var=$(history); echo "$var"   # 1  var=$(history)
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -110,19 +86,10 @@ Unfortunately, the Bash history tools find no use in scripting.
     (no output)       
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The `Advancing in the Bash
 Shell <http://samrowe.com/wordpress/advancing-in-the-bash-shell/>`__
 site gives a good introduction to the use of history commands in Bash.
 
-.. raw:: html
-
-   </div>
 

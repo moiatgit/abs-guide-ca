@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 15. Internal Commands and Builtins
 ===========================================
@@ -12,13 +9,7 @@ builtins execute faster than external commands, which usually require
 -- or because a particular builtin needs direct access to the shell
 internals.
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
  When a command or the shell itself initiates (or *spawns* ) a new
 subprocess to carry out a task, this is called *forking* . This new
@@ -31,15 +22,9 @@ process* , and can thus pass arguments to it, *the reverse is not true*
 . `This can create problems that are subtle and hard to track
 down. <gotchas.html#PARCHILDPROBREF>`__
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 15-1. A script that spawns multiple instances of itself**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -75,29 +60,14 @@ down. <gotchas.html#PARCHILDPROBREF>`__
     #+ an advisable scripting technique.
     #  Why or why not?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Generally, a Bash *builtin* does not fork a subprocess when it executes
 within a script. An external system command or filter in a script
 usually *will* fork a subprocess.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -133,9 +103,6 @@ usually *will* fork a subprocess.
     #+ an advisable scripting technique.
     #  Why or why not?
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -171,22 +138,13 @@ usually *will* fork a subprocess.
     #+ an advisable scripting technique.
     #  Why or why not?
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A builtin may be a synonym to a system command of the same name, but
 Bash reimplements it internally. For example, the Bash **echo** command
 is not the same as ``      /bin/echo     `` , although their behavior is
 almost identical.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -195,13 +153,7 @@ almost identical.
     echo "This line uses the \"echo\" builtin."
     /bin/echo "This line uses the /bin/echo system command."
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  A *keyword* is a *reserved* word, token or operator. Keywords have a
 special meaning to the shell, and indeed are the building blocks of the
@@ -211,9 +163,6 @@ keyword is hard-coded into Bash, but unlike a *builtin* , a keyword is
 not in itself a command, but *a subunit of a command construct* . ` [2]
  <internal.html#FTN.AEN8650>`__
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** I/O**
 
@@ -221,22 +170,13 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     prints (to ``         stdout        `` ) an expression or variable
     (see `Example 4-1 <varsubn.html#EX9>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         echo Hello
         echo $a
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     An **echo** requires the ``         -e        `` option to print
     escaped characters. See `Example
@@ -245,13 +185,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     Normally, each **echo** command prints a terminal newline, but the
     ``         -n        `` option suppresses this.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -271,9 +205,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -282,9 +213,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
           echo "$VAR contains the substring sequence \"txt\""
         fi
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -293,25 +221,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
           echo "$VAR contains the substring sequence \"txt\""
         fi
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -325,17 +238,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     16-47 <mathc.html#MONTHLYPMT>`__ , and `Example
     16-48 <mathc.html#BASE>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Be aware that **echo \`command\`** deletes any linefeeds that the
     output of ``                   command                 `` generates.
@@ -348,9 +252,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     arguments to **echo** . Then **echo** outputs these arguments,
     separated by spaces.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -365,20 +266,11 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         total 40 -rw-r--r-- 1 root root 716 Nov 7 2000 reflect.au -rw-r--r-- 1 root root ...
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     So, how can we embed a linefeed within an
     `echoed <internal.html#ECHOREF>`__ character string?
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -428,21 +320,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # Thanks, Steve Parker, for pointing this out.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -461,9 +341,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -472,9 +349,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
          echo is /bin/echo
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -483,17 +357,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
          echo is /bin/echo
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **printf**
     The **printf** , formatted print, command is an enhanced **echo** .
@@ -510,39 +375,18 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `manpage <basic.html#MANREF>`__ (of the system command) for in-depth
     coverage.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     Older versions of Bash may not support **printf** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-2. *printf* in action**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -588,23 +432,11 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Formatting error messages is a useful application of **printf**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -624,13 +456,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 36-17 <assortedtips.html#PROGRESSBAR>`__ .
 
@@ -640,15 +466,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``         -a        `` option lets **read** get array variables
     (see `Example 27-6 <arrays.html#EX67>`__ ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-3. Variable assignment, using *read***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -676,30 +496,15 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A **read** without an associated variable assigns its input to the
     dedicated variable `$REPLY <internalvariables.html#REPLYREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-4. What happens when *read* has no variable**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -753,17 +558,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Normally, inputting a ``                   \                 ``
     suppresses a newline during input to a **read** . The
@@ -771,15 +567,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``                   \                 `` to be interpreted
     literally.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-5. Multi-line input to *read***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -815,25 +605,13 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **read** command has some interesting options that permit
     echoing a prompt and even reading keystrokes without hitting
     **ENTER** .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -848,26 +626,14 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # Using these options is tricky, since they need to be in the correct order.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -n        `` option to **read** also allows detection
     of the **arrow keys** and certain of the other unusual keys.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-6. Detecting the arrow keys**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -998,42 +764,18 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         #  --------
         #  1) Add detection of the "Home," "End," "PgUp," and "PgDn" keys.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The ``            -n           `` option to **read** will not detect
     the **ENTER** (newline) key.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -t        `` option to **read** permits timed input
     (see `Example 9-4 <internalvariables.html#TOUT>`__ and `Example
@@ -1051,16 +793,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `whitespace-delineated <special-chars.html#WHITESPACEREF>`__ string.
     Caution!
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-7. Using *read* with `file
     redirection <io-redirection.html#IOREDIRREF>`__**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1122,25 +858,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1164,15 +885,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
     However, as Bjรถn Eriksson shows:
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-8. Problems reading from a pipe**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1220,17 +935,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         The variable (last) is set within the loop/subshell
         but its value does not persist outside the loop.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The *gendiff* script, usually found in
     ``            /usr/bin           `` on many Linux distros, pipes the
@@ -1248,9 +954,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1260,9 +963,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         echo $line
         done
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1310,9 +1010,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         The variable (last) is set within the loop/subshell
         but its value does not persist outside the loop.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1320,9 +1017,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         while read f; do
         . . .
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1332,9 +1026,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         echo $line
         done
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1382,9 +1073,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         The variable (last) is set within the loop/subshell
         but its value does not persist outside the loop.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1392,25 +1080,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         while read f; do
         . . .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -1418,25 +1091,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     *not* multiple lines!). See `Example
     A-38 <contributed-scripts.html#PADSW>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Filesystem**
 
@@ -1445,21 +1103,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     where execution of a command requires being in a specified
     directory.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     [from the `previously cited <special-chars.html#COXEX>`__ example by
     Alan Cox]
@@ -1470,13 +1119,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **cd -** changes to `$OLDPWD <internalvariables.html#OLDPWD>`__ ,
     the previous working directory.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -1496,9 +1139,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     The output should, of course, be ``           /          `` . This
     is a problem both from the command-line and in a script.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -1507,9 +1147,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         //
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -1518,17 +1155,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         //
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **pwd**
     Print Working Directory. This gives the user's (or script's) current
@@ -1564,15 +1192,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``         $DIRSTACK        `` array variable, accessible from
     within a script, holds the contents of the directory stack.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-9. Changing the current working directory**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1603,25 +1225,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # What happens if you don't 'popd' -- then exit the script?
         # Which directory do you end up in? Why?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Variables**
 
@@ -1631,15 +1238,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     functions as a less complex version of
     `expr <moreadv.html#EXPRREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-10. Letting *let* do arithmetic.**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1693,25 +1294,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -1764,9 +1350,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1797,9 +1380,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # "If the last ARG evaluates to 0, let returns 1;
         #  let returns 0 otherwise." ['help let']
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1830,17 +1410,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # "If the last ARG evaluates to 0, let returns 1;
         #  let returns 0 otherwise." ['help let']
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **eval**
     ``                   eval arg1 [arg2] ... [argN]                 ``
@@ -1850,34 +1421,16 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     variables within the expression are expanded. The net result is to
     **convert a string into a command** .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     The **eval** command can be used for code generation from the
     command-line or within a script.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -1888,20 +1441,11 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
          26974 pts/3    R+     0:00 ps ax
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Each invocation of *eval* forces a re- *evaluation* of its
     arguments.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1918,23 +1462,11 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # Thank you, E. Choroba.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-11. Showing the effect of *eval***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1979,27 +1511,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                                             #+ so eval does minor=4, major=3
         echo Major: $major, minor: $minor   #  Major: 3, minor: 4
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-12. Using *eval* to select among variables**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2039,27 +1556,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # Thank you, Antonio Macchi, for pointing this out.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-13. *Echoing* the *command-line parameters***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2103,27 +1605,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         Command-line parameter $4 = fourth
         Command-line parameter $5 = fifth
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-14. Forcing a log-off**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2163,27 +1650,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # 3) Write an alternate version of this script based on 'fuser':
         #+      if [ fuser -s /dev/modem ]; then . . .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-15. A version of *rot13***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2210,17 +1682,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Here is another example of using *eval* to *evaluate* a complex
     expression, this one from an earlier version of YongYe's `Tetris
@@ -2228,21 +1691,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     script <https://github.com/yongye/shell/blob/master/Tetris_Game.sh>`__
     .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         eval ${1}+=\"${x} ${y} \"
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     `Example A-53 <contributed-scripts.html#SAMORSE>`__ uses *eval* to
     convert `array <arrays.html#ARRAYREF>`__ elements into a command
@@ -2251,54 +1705,24 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     The *eval* command occurs in the older version of `indirect
     referencing <ivr.html#IVRREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         eval var=\$$var
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     The *eval* command can be used to `parameterize *brace
     expansion* <bashver3.html#BRACEEXPREF3>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2311,17 +1735,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **eval** on unfamiliar code written by persons unknown is living
     dangerously.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **set**
     The **set** command changes the value of internal script
@@ -2334,15 +1749,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     The script can then parse the
     `fields <special-chars.html#FIELDREF>`__ of the command output.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-16. Using *set* with positional parameters**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2382,29 +1791,14 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     More fun with positional parameters.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-17. Reversing the positional parameters**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2474,25 +1868,13 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         c
         a b
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Invoking **set** without any options or arguments simply lists all
     the `environmental <othertypesv.html#ENVREF>`__ and other variables
     that have been initialized.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2507,28 +1889,16 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
          variable23=xzy
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using **set** with the ``         --        `` option explicitly
     assigns the contents of a variable to the positional parameters. If
     no variable follows the ``         --        `` it *unsets* the
     positional parameters.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-18. Reassigning the positional parameters**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2571,17 +1941,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 11-2 <loops1.html#EX22A>`__ and `Example
     16-56 <extmisc.html#EX33A>`__ .
@@ -2591,9 +1952,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     it to *null* . Note that this command does not affect positional
     parameters.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2603,23 +1961,11 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         bash$ 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-19. "Unsetting" a variable**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2641,25 +1987,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -2668,17 +1999,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `${parameter:-default} <parameter-substitution.html#UNDDR>`__
     parameter substitution construct can distinguish between the two.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **export**
 
@@ -2689,13 +2011,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     `environmental variables <othertypesv.html#ENVREF>`__ to subsequent
     user processes.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2703,28 +2019,13 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     parent process <gotchas.html#PARCHILDPROBREF>`__ , to the process
     that called or invoked the script or shell.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-20. Using *export* to pass a variable to an embedded
     *awk* script**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2767,25 +2068,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -2811,9 +2097,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -2826,9 +2109,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         a
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -2841,42 +2121,18 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         a
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     A variable to be exported may require special treatment. See
     `Example M-2 <sample-bashrc.html#BASHPROF>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **declare** , **typeset**
     The `declare <declareref.html>`__ and `typeset <declareref.html>`__
@@ -2910,13 +2166,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     arguments one at a time, then increments the implicit
     ``         $OPTIND        `` variable to point to the next.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -2936,21 +2186,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
        the traditional `getopt <extmisc.html#GETOPTY>`__ external
        command.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2974,24 +2212,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         # All this is not nearly as complicated as it looks <grin>.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-21. Using *getopts* to read the options/arguments
     passed to a script**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3058,25 +2284,10 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         #+ from where by using OPTIND."
         #  There are, however, workarounds.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Script Behavior**
 
@@ -3093,15 +2304,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     useful in situations when multiple scripts use a common data file or
     function library.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-22. "Including" a data file**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3131,21 +2336,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         exit $?
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     File ``          data-file         `` for `Example
     15-22 <internal.html#EX38>`__ , above. Must be present in same
     directory.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3185,17 +2381,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
           return 0
         }
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     If the *sourced* file is itself an executable script, then it will
     run, then return control to the script that called it. A *sourced*
@@ -3205,34 +2392,19 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     Arguments may be (optionally) passed to the *sourced* file as
     `positional parameters <othertypesv.html#POSPARAMREF1>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         source $filename $arg1 arg2
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     It is even possible for a script to *source* itself, though this
     does not seem to have any practical applications.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-23. A (useless) script that sources itself**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3277,17 +2449,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         # --------
         # Write a script that uses this trick to actually do something useful.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **exit**
     Unconditionally terminates a script. ` [6]
@@ -3298,13 +2461,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``                   exit 0                 `` , indicating a
     successful run.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -3313,42 +2470,18 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     executed in the script, not counting the **exit** . This is
     equivalent to an **exit $?** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     An **exit** command may also be used to terminate a
     `subshell <subshells.html#SUBSHELLSREF>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **exec**
     This shell builtin replaces the current process with a specified
@@ -3360,15 +2493,9 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     **exec** 'ed command terminates. ` [7]
      <internal.html#FTN.AEN9425>`__
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-24. Effects of *exec***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3387,27 +2514,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
                                       #+ with an 'echo $?'.
                                       #  It will *not* be 99.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 15-25. A script that *exec's* itself**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3435,17 +2547,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         exit 99                            # Will not exit here!
                                            # Exit code will not be 99!
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     An **exec** also serves to `reassign file
     descriptors <x17974.html#USINGEXECREF>`__ . For example,
@@ -3453,13 +2556,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     replaces ``         stdin        `` with the file
     ``         zzz-file        `` .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -3468,17 +2565,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``                         not                       `` the same as
     the **exec** shell builtin.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **shopt**
     This command permits changing *shell options* on the fly (see
@@ -3487,9 +2575,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     files <files.html#FILESREF1>`__ , but also has its uses in scripts.
     Needs `version 2 <bashver2.html#BASH2REF>`__ or later of Bash.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3501,13 +2586,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         pwd       # /home
                   # The shell corrected the misspelling.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **caller**
     Putting a **caller** command inside a
@@ -3515,9 +2594,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     ``         stdout        `` information about the *caller* of that
     function.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3538,13 +2614,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
         caller 0     # Has no effect because it's not inside a function.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A **caller** command can also return *caller* information from a
     script `sourced <internal.html#SOURCEREF>`__ within another script.
@@ -3552,13 +2622,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
     You may find this command useful in debugging.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Commands**
 
@@ -3566,9 +2630,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     A command that returns a successful ( zero ) `exit
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -3577,17 +2638,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         0
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3601,21 +2653,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
            # Need a way to break out of loop or script will hang.
         done
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **false**
     A command that returns an unsuccessful `exit
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -3624,17 +2667,8 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         1
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -3659,13 +2693,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
            # Nothing happens!
         done   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **type [cmd]**
     Similar to the `which <filearchiv.html#WHICHREF>`__ external
@@ -3675,9 +2703,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     and ``                   builtins                 `` , and also
     locates system commands with identical names.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -3692,13 +2717,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
         type is a shell builtin
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **type** command can be useful for `testing whether a certain
     command exists <special-chars.html#DEVNULLREDIRECT>`__ .
@@ -3722,9 +2741,6 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
     builtins. The display of *help* information got a much-needed update
     in the `version 4 release <bashver4.html#BASH4REF>`__ of Bash.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -3734,28 +2750,13 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
             is that of the last command executed.
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <internal.html#AEN8607>`__
 
@@ -3763,9 +2764,6 @@ As Nathan Coulter points out, "while forking a process is a low-cost
 operation, executing a new program in the newly-forked child process
 adds more overhead."
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <internal.html#AEN8650>`__
 
@@ -3773,27 +2771,18 @@ An exception to this is the `time <timedate.html#TIMREF>`__ command,
 listed in the official Bash documentation as a keyword ( "reserved word"
 ).
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <internal.html#AEN9009>`__
 
 Note that *let* `cannot be used for setting *string*
 variables. <gotchas.html#LETBAD>`__
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <internal.html#AEN9199>`__
 
 To *Export* information is to make it available in a more general
 context. See also `scope <subshells.html#SCOPEREF>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <internal.html#AEN9289>`__
 
@@ -3801,27 +2790,18 @@ An *option* is an argument that acts as a flag, switching script
 behaviors on or off. The argument associated with a particular option
 indicates the behavior that the option (flag) switches on or off.
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <internal.html#AEN9393>`__
 
 Technically, an **exit** only terminates the process (or shell) in which
 it is running, *not* the *parent process* .
 
-.. raw:: html
-
-   </p>
 
 ` [7]  <internal.html#AEN9425>`__
 
 Unless the **exec** is used to `reassign file
 descriptors <x17974.html#USINGEXECREF>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [8]  <internal.html#AEN9591>`__
 
@@ -3838,22 +2818,13 @@ For examples of hashing see `Example
 A-20 <contributed-scripts.html#HASHLIB>`__ and `Example
 A-21 <contributed-scripts.html#HASHEXAMPLE>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [9]  <internal.html#AEN9621>`__
 
  The *readline* library is what Bash uses for reading input in an
 interactive shell.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   20.2. Redirecting Code Blocks
 ==============================
@@ -13,15 +10,9 @@ redirection of ``      stdin     `` . Even a function may use this form
 of redirection (see `Example 24-11 <complexfunct.html#REALNAME>`__ ).
 The < operator at the end of the code block accomplishes this.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-5. Redirected *while* loop**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -75,27 +66,12 @@ The < operator at the end of the code block accomplishes this.
     #+ with the above snippet of code.
     #  And, thanks, Brian Onn, for correcting an annotation error.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-6. Alternate form of redirected *while* loop**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -145,27 +121,12 @@ The < operator at the end of the code block accomplishes this.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-7. Redirected *until* loop**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -191,27 +152,12 @@ The < operator at the end of the code block accomplishes this.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-8. Redirected *for* loop**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -248,31 +194,16 @@ The < operator at the end of the code block accomplishes this.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 We can modify the previous example to also redirect the output of the
 loop.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-9. Redirected *for* loop (both ``        stdin       `` and
 ``        stdout       `` redirected)**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -304,27 +235,12 @@ loop.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-10. Redirected *if/then* test**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -351,27 +267,12 @@ loop.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-11. Data file *names.data* for above examples**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -401,17 +302,8 @@ loop.
     #  This is a data file for
     #+ "redir2.sh", "redir3.sh", "redir4.sh", "redir4a.sh", "redir5.sh".
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Redirecting the ``      stdout     `` of a code block has the effect of
 saving its output to a file. See `Example
@@ -422,9 +314,6 @@ redirected code blocks. That being the case, it should be possible to
 feed the output of a *here document* into the ``      stdin     `` for a
 *while loop* .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -452,15 +341,6 @@ feed the output of a *here document* into the ``      stdin     `` for a
 
     echo "$nr files totaling $totalSize bytes"
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

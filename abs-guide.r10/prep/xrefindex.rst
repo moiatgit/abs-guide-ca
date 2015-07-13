@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="INDEX">
 
   Index
 ======
@@ -534,30 +531,15 @@ download <mirrorsites.html#WHERE_TARBALL>`__
 
    **+=** **-=** **\*=** **/=** **%=**
 
-   .. raw:: html
 
-      <div class="NOTE">
-
-   .. raw:: html
-
-      <div>
 
    |Note|
 
    `In certain contexts <bashver3.html#PLUSEQSTR>`__ , **+=** can also
    function as a *string concatenation* operator.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 `Arrays <arrays.html#ARRAYREF>`__
 
@@ -2879,8 +2861,5 @@ Word splitting
 not yet been `killed <x9644.html#KILLREF>`__ by its
 `parent <internal.html#PARENTREF>`__
 
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

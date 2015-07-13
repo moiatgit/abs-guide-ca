@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix Q. Download and Mirror Sites
 ======================================
@@ -29,7 +26,4 @@ Guides and HOWTOs as well.
 Many thanks to Ronny Bangsund for donating `server
 space <http://bash.deta.in/>`__ to host this project.
 
-.. raw:: html
-
-   </div>
 

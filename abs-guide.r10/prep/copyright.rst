@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix S. Copyright
 ======================
@@ -8,9 +5,6 @@
 The *Advanced Bash Scripting Guide* is herewith granted to the PUBLIC
 DOMAIN. This has the following implications and consequences.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -34,13 +28,7 @@ DOMAIN. This has the following implications and consequences.
         then only additional original material may be copyrighted. The core
         work will remain in the Public Domain.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 By law, distributors and publishers (including on-line publishers) are
 prohibited from imposing any conditions, strictures, or provisions on
@@ -56,9 +44,6 @@ any copyright notice. Any copyright notice is void.
 
 *Additionally, the author wishes to state his intention that:*
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -72,13 +57,7 @@ any copyright notice. Any copyright notice is void.
     any lawsuit against the Open Source community, any of its developers, its
     distributors, or any of its associated software or documentation.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A Public Domain license essentially does not restrict ANY legitimate
 distribution or use of this book. The author especially encourages its
@@ -88,13 +67,7 @@ To date, limited print rights (Lulu edition) have been granted to one
 individual and to *no one else* . Neither that individual nor Lulu holds
 or ever has held a valid copyright.
 
-.. raw:: html
 
-   <div class="WARNING">
-
-.. raw:: html
-
-   <div>
 
 |Warning|
 
@@ -106,28 +79,13 @@ book are strongly urged not to purchase them. In fact, these pirated
 editions are now legal, but necessarily fall into the Public Domain, and
 any copyright notices contained within them are invalid and void.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The author produced this book in a manner consistent with the spirit of
 the `LDP Manifesto <http://www.tldp.org/manifesto.html>`__ .
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Linux is a trademark registered to Linus Torvalds.
 
@@ -154,17 +112,8 @@ Librie, PRS-500, and PRS-505 are trademarks registered to Sony, Inc.
 All other commercial trademarks mentioned in the body of this work are
 registered to their respective owners.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Hyun Jin Cha has done a `Korean
 translation <http://kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/index.html>`__
@@ -179,13 +128,7 @@ also available or in progress. If you wish to translate this document
 into another language, please feel free to do so, subject to the terms
 stated above. The author wishes to be notified of such efforts.
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Those generous readers desiring to make a donation to the author may
 contribute a small amount via Paypal to my e-mail address,
@@ -198,20 +141,8 @@ and enjoyment of the Linux community. However, in these difficult times,
 showing support for voluntary projects and especially to authors of
 limited means is more critically important than ever.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Warning| image:: ../images/warning.gif

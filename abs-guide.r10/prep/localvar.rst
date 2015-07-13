@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   24.2. Local Variables
 ======================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** What makes a variable *local* ?**
 
@@ -18,15 +12,9 @@
     function, a *local variable* has meaning only within that function
     block. ` [1]  <localvar.html#FTN.AEN18568>`__
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 24-12. Local variable visibility**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -60,25 +48,10 @@
         #  In contrast to C, a Bash variable declared inside a function
         #+ is local ONLY if declared as such.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -124,9 +97,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -146,9 +116,6 @@
         echo "global_var = $global_var"  # global_var = 37
                                          # Has been set by function call.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -168,25 +135,10 @@
         echo "global_var = $global_var"  # global_var = 37
                                          # Has been set by function call.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -252,9 +204,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -295,9 +244,6 @@
 
         function0
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -338,36 +284,15 @@
 
         function0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   24.2.1. Local variables and recursion.
 ---------------------------------------
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 *Recursion* is an interesting and sometimes useful form of
 *self-reference* . `Herbert Mayer <biblio.html#MAYERREF>`__ defines it
@@ -380,15 +305,9 @@ expression, ` [3]  <localvar.html#FTN.AEN18610>`__ *a snake swallowing
 its own tail* , ` [4]  <localvar.html#FTN.AEN18614>`__ or . . . a
 function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-13. Demonstration of a simple recursive function**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -415,27 +334,12 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-14. Another simple demonstration**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -467,25 +371,10 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -512,9 +401,6 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
     exit $?
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -546,9 +432,6 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
     exit $?
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -575,9 +458,6 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
     exit $?
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -609,28 +489,16 @@ function that calls itself. ` [5]  <localvar.html#FTN.AEN18617>`__
 
     exit $?
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Local variables are a useful tool for writing recursive code, but this
 practice generally involves a great deal of computational overhead and
 is definitely *not* recommended in a shell script. ` [6]
  <localvar.html#FTN.AEN18632>`__
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-15. Recursion, using a local variable**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -687,37 +555,19 @@ is definitely *not* recommended in a shell script. ` [6]
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Also see `Example A-15 <contributed-scripts.html#PRIMES>`__ for an
 example of recursion in a script. Be aware that recursion is
 resource-intensive and executes slowly, and is therefore generally not
 appropriate in a script.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <localvar.html#AEN18568>`__
 
@@ -769,9 +619,6 @@ have a visible scope restricted to that function *and its children* ."
 [emphasis added] *The ABS Guide author considers this behavior to be a
 bug.*
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -801,9 +648,6 @@ bug.*
     # Within function1, $func1var = 20.
     # Within function2, $func1var = 20.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -833,41 +677,26 @@ bug.*
     # Within function1, $func1var = 20.
     # Within function2, $func1var = 20.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <localvar.html#AEN18607>`__
 
 Otherwise known as *redundancy* .
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <localvar.html#AEN18610>`__
 
 Otherwise known as *tautology* .
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <localvar.html#AEN18614>`__
 
 Otherwise known as a *metaphor* .
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <localvar.html#AEN18617>`__
 
 Otherwise known as a *recursive function* .
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <localvar.html#AEN18632>`__
 
@@ -930,9 +759,6 @@ Too many levels of recursion may crash a script with a segfault.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -961,9 +787,6 @@ Too many levels of recursion may crash a script with a segfault.
 
     #  Thanks, StÃ©phane Chazelas.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -992,13 +815,7 @@ Too many levels of recursion may crash a script with a segfault.
 
     #  Thanks, StÃ©phane Chazelas.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

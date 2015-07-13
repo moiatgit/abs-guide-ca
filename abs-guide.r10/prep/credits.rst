@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   38.5. Credits
 ==============
@@ -144,7 +141,4 @@ loss.
 Thanks most of all to my wife, Anita, for her encouragement,
 inspiration, and emotional support.
 
-.. raw:: html
-
-   </div>
 

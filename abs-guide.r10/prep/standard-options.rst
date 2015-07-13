@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   G.1. Standard Command-Line Options
 ===================================
@@ -91,13 +88,7 @@ However:
 
    *Force* : force overwrite of target file(s).
 
-.. raw:: html
 
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -105,24 +96,12 @@ Many UNIX and Linux utilities deviate from this "standard," so it is
 dangerous to *assume* that a given option will behave in a standard way.
 Always check the man page for the command in question when in doubt.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 A complete table of recommended options for the GNU utilities is
 available at `the GNU standards
 page <http://www.gnu.org/prep/standards/>`__ .
 
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

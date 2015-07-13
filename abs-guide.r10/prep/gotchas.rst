@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 34. Gotchas
 ====================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -17,13 +11,7 @@
 
 *--Puccini*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Here are some (non-recommended!) scripting practices that will bring
 excitement into an otherwise dull life.
@@ -32,9 +20,6 @@ excitement into an otherwise dull life.
 
    Assigning reserved words or characters to variable names.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -51,20 +36,11 @@ excitement into an otherwise dull life.
        xyz((!*=value2    # Causes severe problems.
        # As of version 3 of Bash, periods are not allowed within variable names.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  Using a hyphen or other reserved characters in a variable name (or
    function name).
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -79,20 +55,11 @@ excitement into an otherwise dull life.
        function.whatever ()   # Error
        # Use 'functionWhatever ()' instead.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  Using the same name for a variable and a function. This can make a
    script difficult to understand.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -107,21 +74,12 @@ excitement into an otherwise dull life.
 
        # All this is legal, but highly confusing.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -   Using `whitespace <special-chars.html#WHITESPACEREF>`__
    inappropriately. In contrast to other programming languages, Bash can
    be quite finicky about whitespace.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -135,13 +93,7 @@ excitement into an otherwise dull life.
        #           ^^      if [ "$a" -le 5 ]   is even better.
                          # [[ $a -le 5 ]] also works.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -150,9 +102,6 @@ excitement into an otherwise dull life.
    a `code block within curly
    brackets <special-chars.html#CODEBLOCKREF>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -162,13 +111,7 @@ excitement into an otherwise dull life.
        { ls -l; df; echo "Done."; }
        #                        ^     ### Final command needs semicolon.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -176,9 +119,6 @@ excitement into an otherwise dull life.
    assigned to them) are "zeroed out" . An uninitialized variable has a
    value of *null* , *not* zero.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -195,22 +135,13 @@ excitement into an otherwise dull life.
          uninitialized_var=0   # Initialize it to zero!
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
    Mixing up *=* and *-eq* in a test. Remember, *=* is for comparing
    literal variables and *-eq* for integers.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -241,28 +172,16 @@ excitement into an otherwise dull life.
        fi  # Aborts with an error message.  
        # test.sh: [: 273.0: integer expression expected
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
    Misusing `string comparison <comparison-ops.html#SCOMPARISON1>`__
    operators.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 34-1. Numerical and string comparison are not equivalent**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -311,39 +230,21 @@ excitement into an otherwise dull life.
 
        exit 0
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
    Attempting to use `let <internal.html#LETREF>`__ to set string
    variables.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
        let "a = hello, you"
        echo "$a"   # 0
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -372,9 +273,6 @@ excitement into an otherwise dull life.
    Attempting to use **-** as a redirection operator (which it is not)
    will usually result in an unpleasant surprise.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -386,13 +284,7 @@ excitement into an otherwise dull life.
 
        Thanks, S.C.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -400,9 +292,6 @@ excitement into an otherwise dull life.
    cause a bailout with error messages. Older Linux machines may have
    version 1.XX of Bash as the default installation.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -422,13 +311,7 @@ excitement into an otherwise dull life.
 
        ...
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  Using Bash-specific functionality in a `Bourne
    shell <why-shell.html#BASHDEF>`__ script (
@@ -460,9 +343,6 @@ excitement into an otherwise dull life.
    expression <testconstructs.html#ARXS>`__ is *not* equivalent to an
    *error code* .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -471,13 +351,7 @@ excitement into an otherwise dull life.
        #                     $var doesn't echo!
        echo $?   # 1
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -488,9 +362,6 @@ excitement into an otherwise dull life.
    ``                 #!/bin/bash\n               `` . The fix is to
    convert the script to UNIX-style newlines.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -509,13 +380,7 @@ excitement into an otherwise dull life.
 
        exit 0
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -534,9 +399,6 @@ excitement into an otherwise dull life.
 -   Putting more than one *echo* statement in a function `whose output
    is captured <assortedtips.html#RVT>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -556,13 +418,7 @@ excitement into an otherwise dull life.
 
        #        The "echoes" concatenate.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    This `will not work <assortedtips.html#RVTCAUTION>`__ .
 
@@ -573,9 +429,6 @@ excitement into an otherwise dull life.
    environment. Just as we learned in biology, a child process can
    inherit from a parent, but not vice versa.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -583,17 +436,8 @@ excitement into an otherwise dull life.
        export WHATEVER
        exit 0
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -601,13 +445,7 @@ excitement into an otherwise dull life.
 
        bash$ 
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    Sure enough, back at the command prompt, $WHATEVER remains unset.
 
@@ -618,15 +456,9 @@ excitement into an otherwise dull life.
    those same variables outside the scope of the subshell will result an
    unpleasant surprise.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 34-2. Subshell Pitfalls**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -665,17 +497,8 @@ excitement into an otherwise dull life.
        # What happens if you uncomment lines 19 and 20?
        # Does it make a difference?
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -685,15 +508,9 @@ excitement into an otherwise dull life.
    Instead, use the `set <internal.html#SETREF>`__ command (as in
    `Example 15-18 <internal.html#SETPOS>`__ ).
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 34-3. Piping the output of *echo* to a *read***
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -761,24 +578,12 @@ excitement into an otherwise dull life.
 
        exit 0
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
    In fact, as Anthony Richardson points out, piping to *any* loop can
    cause a similar problem.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -845,21 +650,12 @@ excitement into an otherwise dull life.
             fi
        }
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    A lookalike problem occurs when trying to write the
    ``        stdout       `` of a **tail -f** piped to
    `grep <textproc.html#GREPREF>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -869,13 +665,7 @@ excitement into an otherwise dull life.
        #+ buffering its output.
        #  The fix is to add the "--line-buffered" parameter to grep.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -907,9 +697,6 @@ excitement into an otherwise dull life.
    Let us recall `how risky it is to use undocumented Bash
    features <gotchas.html#UNDOCF>`__ .
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -925,35 +712,17 @@ excitement into an otherwise dull life.
 
 *--A.J. Lamb and H.W. Petrie*
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <gotchas.html#AEN19993>`__
 
 Setting the `suid <fto.html#SUIDREF>`__ permission on the script itself
 has no effect in Linux and most other UNIX flavors.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

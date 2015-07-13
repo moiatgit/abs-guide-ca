@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix B. Reference Cards
 ============================
@@ -9,15 +6,9 @@ The following reference cards provide a useful *summary* of certain
 scripting concepts. The foregoing text treats these matters in more
 depth, as well as giving usage examples.
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table B-1. Special Shell Variables**
 
-.. raw:: html
-
-   <div>
 
 Variable
 
@@ -79,25 +70,13 @@ Last argument of previous command
 
 Process ID (PID) of last job run in background
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 **\*** *Must be quoted* , otherwise it defaults to ``      $@     `` .
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table B-2. TEST Operators: Binary Comparison**
 
-.. raw:: html
-
-   <div>
 
 Operator
 
@@ -185,26 +164,14 @@ Less than
 
 Less than or equal to
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 **\*** *If within a double-bracket* [[ ... ]] *test construct, then no
 escape* \\ *is needed.*
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table B-3. TEST Operators: Files**
 
-.. raw:: html
-
-   <div>
 
 Operator
 
@@ -312,25 +279,13 @@ Files F1 and F2 are *hard links* to the same file \*
 
 NOT (inverts sense of above tests)
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 **\*** *Binary* operator (requires two operands).
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table B-4. Parameter Substitution and Expansion**
 
-.. raw:: html
-
-   <div>
 
 Expression
 
@@ -394,13 +349,7 @@ Matches all previously declared variables beginning with
 Matches all previously declared variables beginning with
 ``                 varprefix               ``
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 **\*** If ``             var           `` *is* set, evaluate the
 expression as ``             $var           `` with no side-effects.
@@ -408,15 +357,9 @@ expression as ``             $var           `` with no side-effects.
 **# Note** that some of the above behavior of operators has changed from
 earlier versions of Bash.
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table B-5. String Operations**
 
-.. raw:: html
-
-   <div>
 
 Expression
 
@@ -525,26 +468,14 @@ from end of ``                 $string               ``
 Extract ``                 $substring               `` \*, searching
 from end of ``                 $string               ``
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 **\*** Where ``             $substring           `` is a `Regular
 Expression <regexp.html#REGEXREF>`__ .
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table B-6. Miscellaneous Constructs**
 
-.. raw:: html
-
-   <div>
 
 Expression
 
@@ -657,15 +588,6 @@ Integer arithmetic, with variable assignment
 
 `Command substitution <commandsub.html#COMMANDSUBREF>`__ , classic style
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

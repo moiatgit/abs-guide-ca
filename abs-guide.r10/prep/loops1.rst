@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   11.1. Loops
 ============
@@ -9,9 +6,6 @@ A *loop* is a block of code that *iterates* ` [1]
  <loops1.html#FTN.AEN6560>`__ a list of commands as long as the *loop
 control condition* is true.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** for loops**
 
@@ -26,13 +20,7 @@ control condition* is true.
     |  ``                   command(s)                 `` ...
     |  done
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -41,21 +29,9 @@ control condition* is true.
     value of each successive variable in the
     ``                         list                       `` .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -68,13 +44,7 @@ control condition* is true.
 
         # Arguments in [list] quoted to prevent possible word splitting.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The argument ``                   list                 `` may
     contain `wild cards <special-chars.html#ASTERISKREF>`__ .
@@ -85,15 +55,9 @@ control condition* is true.
     | **for** ``                   arg                 `` in [
     ``                   list                 `` ] ; do
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-1. Simple *for* loops**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -119,17 +83,8 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Each ``                   [list]                 `` element may
     contain multiple parameters. This is useful when processing
@@ -139,16 +94,10 @@ control condition* is true.
     ``                   [list]                 `` element and
     assignment of each component to the positional parameters.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-2. *for* loop with two parameters in each [list]
     element**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -177,31 +126,16 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A variable may supply the
     ``                   [list]                 `` in a *for loop* .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-3. *Fileinfo:* operating on a file list contained in a
     variable**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -236,30 +170,15 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The ``                   [list]                 `` in a *for loop*
     may be parameterized.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-4. Operating on a parameterized file list**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -275,31 +194,16 @@ control condition* is true.
          echo
         done
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     If the ``                   [list]                 `` in a *for
     loop* contains wild cards ( \* and ? ) used in filename expansion,
     then `globbing <globbingref.html>`__ takes place.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-5. Operating on files with a *for* loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -335,17 +239,8 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Omitting the ``                   in [list]                 `` part
     of a *for loop* causes the loop to operate on $@ -- the `positional
@@ -354,17 +249,11 @@ control condition* is true.
     A-15 <contributed-scripts.html#PRIMES>`__ . See also `Example
     15-17 <internal.html#REVPOSPARAMS>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-6. Missing
     ``                       in [list]                     `` in a *for*
     loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -385,17 +274,8 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     It is possible to use `command
     substitution <commandsub.html#COMMANDSUBREF>`__ to generate the
@@ -404,17 +284,11 @@ control condition* is true.
     11-11 <loops1.html#SYMLINKS>`__ and `Example
     16-48 <mathc.html#BASE>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-7. Generating the
     ``                       [list]                     `` in a *for*
     loop with command substitution**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -432,31 +306,16 @@ control condition* is true.
         echo 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Here is a somewhat more complex example of using command
     substitution to create the
     ``                   [list]                 `` .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-8. A *grep* replacement for binary files**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -500,29 +359,14 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     More of the same.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-9. Listing all users on the system**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -556,32 +400,17 @@ control condition* is true.
         #+ can read /etc/passwd? (Hint: Check the /etc/passwd file permissions.)
         #  Is this a security hole? Why or why not?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Yet another example of the
     ``                   [list]                 `` resulting from
     command substitution.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-10. Checking all the binaries in a directory for
     authorship**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -608,25 +437,13 @@ control condition* is true.
         #  Convert this script to take command-line parameters
         #+ for $directory and $fstring.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A final example of ``                   [list]                 `` /
     command substitution, but this time the "command" is a
     `function <functions.html#FUNCTIONREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -644,25 +461,13 @@ control condition* is true.
         # two
         # three
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The output of a *for loop* may be piped to a command or commands.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-11. Listing the *symbolic links* in a directory**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -730,31 +535,16 @@ control condition* is true.
         #  "This also fixes the pathological case of the directory name having
         #+  a colon (or space in earlier example) as well."
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The ``         stdout        `` of a loop may be
     `redirected <io-redirection.html#IOREDIRREF>`__ to a file, as this
     slight modification to the previous example shows.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-12. Symbolic links in a directory, saved to a file**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -781,31 +571,16 @@ control condition* is true.
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     There is an alternative syntax to a *for loop* that will look very
     familiar to C programmers. This requires `double
     parentheses <dblparens.html#DBLPARENSREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-13. A C-style *for* loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -869,17 +644,8 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 27-16 <arrays.html#QFUNCTION>`__ , `Example
     27-17 <arrays.html#TWODIM>`__ , and `Example
@@ -889,15 +655,9 @@ control condition* is true.
 
     Now, a *for loop* used in a "real-life" context.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-14. Using *efax* in batch mode**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -944,25 +704,10 @@ control condition* is true.
 
         exit $?   # Also, efax sends diagnostic messages to stdout.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1011,9 +756,6 @@ control condition* is true.
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1043,9 +785,6 @@ control condition* is true.
 
         # Thank you, YongYe, for pointing this out.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1075,17 +814,8 @@ control condition* is true.
 
         # Thank you, YongYe, for pointing this out.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **while**
     This construct tests for a condition at the top of a loop, and keeps
@@ -1117,15 +847,9 @@ control condition* is true.
     mandatory <loops1.html#WHILENOBRACKETS>`__ in a *while* loop. See,
     for example, the `getopts construct <internal.html#GETOPTSX>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-15. Simple *while* loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1150,27 +874,12 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-16. Another *while* loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1190,31 +899,16 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A *while loop* may have multiple conditions. Only the final
     condition determines when the loop terminates. This necessitates a
     slightly different loop syntax, however.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-17. *while* loop with multiple conditions**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1240,31 +934,16 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     As with a *for loop* , a *while loop* may employ C-style syntax by
     using the double-parentheses construct (see also `Example
     8-5 <dblparens.html#CVARS>`__ ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-18. C-style syntax in a *while* loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1303,24 +982,12 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Inside its test brackets, a *while loop* can call a
     `function <functions.html#FUNCTIONREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1350,28 +1017,13 @@ control condition* is true.
         # Still going: t = 3
         # Still going: t = 4
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     Similar to the `if-test <testconstructs.html#IFGREPREF>`__
     construct, a *while* loop can omit the test brackets.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1380,21 +1032,9 @@ control condition* is true.
            command(s) ...
         done
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1403,9 +1043,6 @@ control condition* is true.
            command(s) ...
         done
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1414,22 +1051,13 @@ control condition* is true.
            command(s) ...
         done
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     By coupling the power of the `read <internal.html#READREF>`__
     command with a *while loop* , we get the handy `while
     read <internal.html#WHILEREADREF>`__ construct, useful for reading
     and parsing files.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1455,21 +1083,9 @@ control condition* is true.
           #+ simply comment out the "return $ct" above.
         } <"$datafile"   # Feed in data file.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1479,17 +1095,8 @@ control condition* is true.
     A *while loop* may have its ``            stdin           ``
     `supplied by a pipe <internal.html#READPIPEREF>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **until**
     This construct tests for a condition at the top of a loop, and keeps
@@ -1512,15 +1119,9 @@ control condition* is true.
     **until** [
     ``                   condition-is-true                 `` ] ; do
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-19. *until* loop**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1555,21 +1156,9 @@ control condition* is true.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
 
 How to choose between a *for* loop or a *while* loop or *until* loop? In
 **C** , you would typically use a *for* loop when the number of loop
@@ -1578,16 +1167,10 @@ fuzzier. The Bash *for* loop is more loosely structured and more
 flexible than its equivalent in other languages. Therefore, feel free to
 use whatever type of loop gets the job done in the simplest way.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <loops1.html#AEN6560>`__
 
@@ -1595,12 +1178,6 @@ Notes
 usually -- but not always, *while* a given condition holds, or *until* a
 given condition is met.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   7.1. Test Constructs
 =====================
@@ -37,9 +34,6 @@
    constructs may therefore be used to perform `arithmetic
    comparisons <comparison-ops.html#ICOMPARISON1>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -73,21 +67,9 @@
        # The "let" construct returns the same exit status
        #+ as the double-parentheses arithmetic expansion.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-   .. raw:: html
-
-      <div class="CAUTION">
-
-   .. raw:: html
-
-      <div>
 
    |Caution|
 
@@ -110,9 +92,6 @@
                              
    +--------------------------+--------------------------+--------------------------+
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -122,9 +101,6 @@
        var=-2 && (( var+=2 )) && echo $var
                                  # Will not echo $var!
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -134,26 +110,14 @@
        var=-2 && (( var+=2 )) && echo $var
                                  # Will not echo $var!
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
    An **if** can test any command, not just conditions enclosed within
    brackets.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -184,25 +148,13 @@
          else echo "Command failed."
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  *These last two examples courtesy of StÃ©phane Chazelas.*
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-1. What is truth?**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -327,32 +279,14 @@
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="FORMALPARA">
 
 **Exercise.** Explain the behavior of `Example
 7-1 <testconstructs.html#EX10>`__ , above.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -368,21 +302,9 @@
        ...
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -400,37 +322,19 @@ one must terminate.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     if [ -x "$filename" ]; then
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
     if [ -x "$filename" ]; then
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Else if and elif**
 
@@ -439,9 +343,6 @@ one must terminate.
     *else if* . The effect is to nest an inner if/then construct within
     an outer one.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -459,17 +360,8 @@ one must terminate.
            default-command
         fi
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
 
  The ``             if test condition-true           `` construct is the
 exact equivalent of ``             if [ condition-true ]           `` .
@@ -479,13 +371,7 @@ command. The closing right bracket, **]** , in an if/test should not
 therefore be strictly necessary, however newer versions of Bash require
 it.
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -521,9 +407,6 @@ script, **test** does *not* call the external
 If, for some reason, you wish to use ``         /usr/bin/test        ``
 in a Bash script, then specify it by full pathname.
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -539,9 +422,6 @@ in a Bash script, then specify it by full pathname.
     bash: type: ]: not found
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -557,28 +437,13 @@ in a Bash script, then specify it by full pathname.
     bash: type: ]: not found
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-2. Equivalence of *test* , ``        /usr/bin/test       ``
 , [ ] , and ``        /usr/bin/[       ``**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -631,25 +496,10 @@ in a Bash script, then specify it by full pathname.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
  The [[ ]] construct is the more versatile Bash version of [ ] . This is
 the *extended test command* , adopted from *ksh88* .
@@ -659,9 +509,6 @@ the *extended test command* , adopted from *ksh88* .
 No filename expansion or word splitting takes place between [[ and ]] ,
 but there is parameter expansion and command substitution.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -672,13 +519,7 @@ but there is parameter expansion and command substitution.
       echo "Password file exists."
     fi
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Using the **[[ ... ]]** test construct, rather than **[ ... ]** can
 prevent many logic errors in scripts. For example, the && , \|\| , < ,
@@ -688,9 +529,6 @@ a [ ] construct.
 *Arithmetic evaluation* of octal / hexadecimal constants takes place
 automatically within a [[ ... ]] construct.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -724,21 +562,9 @@ automatically within a [[ ... ]] construct.
       echo "$decimal is not equal to $hex"
     fi      # [[ $hexadecimal ]] also evaluates!
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -749,9 +575,6 @@ automatically within a [[ ... ]] construct.
       echo "Password file exists."
     fi
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -785,9 +608,6 @@ automatically within a [[ ... ]] construct.
       echo "$decimal is not equal to $hex"
     fi      # [[ $hexadecimal ]] also evaluates!
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -798,9 +618,6 @@ automatically within a [[ ... ]] construct.
       echo "Password file exists."
     fi
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -834,21 +651,9 @@ automatically within a [[ ... ]] construct.
       echo "$decimal is not equal to $hex"
     fi      # [[ $hexadecimal ]] also evaluates!
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -894,9 +699,6 @@ construct <list-cons.html#LISTCONSREF>`__ .
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -908,9 +710,6 @@ construct <list-cons.html#LISTCONSREF>`__ .
       echo "Can't change to $dir."
     fi
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -921,9 +720,6 @@ construct <list-cons.html#LISTCONSREF>`__ .
     home=/home/bozo
     [ -d "$home" ] || echo "$home directory does not exist."
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -935,9 +731,6 @@ construct <list-cons.html#LISTCONSREF>`__ .
       echo "Can't change to $dir."
     fi
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -948,17 +741,8 @@ construct <list-cons.html#LISTCONSREF>`__ .
     home=/home/bozo
     [ -d "$home" ] || echo "$home directory does not exist."
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  The `(( )) construct <dblparens.html>`__ expands and evaluates an
 arithmetic expression. If the expression evaluates as zero, it returns
@@ -967,15 +751,9 @@ A non-zero expression returns an exit status of 0 , or "true" . This is
 in marked contrast to using the **test** and [ ] constructs previously
 discussed.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-3. Arithmetic Tests using (( )) **
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1034,28 +812,13 @@ discussed.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <testconstructs.html#AEN3140>`__
 
@@ -1065,13 +828,7 @@ certain tokens, such as **[** and `.
 (dot-command) <special-chars.html#DOTREF>`__ , may expand to *keywords*
 and commands.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

@@ -1,55 +1,22 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix C. A Sed and Awk Micro-Primer
 =======================================
 
-.. raw:: html
 
-   <div class="TOC">
 
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 C.1. `Sed <x23170.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 C.2. `Awk <awk.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
 
 This is a very brief introduction to the **sed** and **awk** text
 processing utilities. We will deal with only a few basic commands here,
@@ -69,13 +36,7 @@ together well. The output from one can be piped to the other, and their
 combined capabilities give shell scripts some of the power of
 `Perl <wrapper.html#PERLREF>`__ .
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -84,20 +45,8 @@ scripts can easily pass arguments to sed, it is more cumbersome for awk
 (see `Example 36-5 <wrapper.html#COLTOTALER>`__ and `Example
 28-2 <ivr.html#COLTOTALER2>`__ ).
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

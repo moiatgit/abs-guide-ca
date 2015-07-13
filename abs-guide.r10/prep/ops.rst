@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   8.1. Operators
 ===============
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** assignment**
 
@@ -18,30 +12,15 @@
     All-purpose assignment operator, which works for both arithmetic and
     string assignments.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         var=27
         category=minerals  # No spaces allowed after the "=".
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -72,9 +51,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -89,9 +65,6 @@
         #+ to prevent an error message should one of the variables be empty.
         #  (The prepended "X" characters cancel out.)
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -106,25 +79,10 @@
         #+ to prevent an error message should one of the variables be empty.
         #  (The prepended "X" characters cancel out.)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** arithmetic operators**
 
@@ -143,9 +101,6 @@
  \*\*
     exponentiation
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -154,21 +109,12 @@
         let "z=5**3"    # 5 * 5 * 5
         echo "z = $z"   # z = 125
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  %
     modulo, or mod (returns the *remainder* of an integer division
     operation)
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -176,13 +122,7 @@
         2
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     *5/3 = 1, with remainder 2*
 
@@ -195,15 +135,9 @@
     A-15 <contributed-scripts.html#PRIMES>`__ ). Modulo turns up
     surprisingly often in numerical recipes.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 8-1. Greatest common divisor**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -271,17 +205,8 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  +=
     *plus-equal* (increment variable by a constant) ` [1]
@@ -311,15 +236,9 @@
     `expr <moreadv.html#EXPRREF>`__ or `let <internal.html#LETREF>`__
     expression.*
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 8-2. Using Arithmetic Operations**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -376,29 +295,11 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -439,9 +340,6 @@ took a variable outside these limits gave an erroneous result.
 
 As of version >= 2.05b, Bash supports 64-bit integers.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -457,9 +355,6 @@ As of version >= 2.05b, Bash supports 64-bit integers.
                          # +    and the leftmost bit, the sign bit,
                          # +    has been set, making the result negative.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -475,25 +370,10 @@ As of version >= 2.05b, Bash supports 64-bit integers.
                          # +    and the leftmost bit, the sign bit,
                          # +    has been set, making the result negative.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -522,9 +402,6 @@ containing a decimal point as strings.
 Use `bc <mathc.html#BCREF>`__ in scripts that that need floating point
 calculations or math library functions.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -536,9 +413,6 @@ calculations or math library functions.
 
     echo "b = $b"       # b=1
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -550,21 +424,9 @@ calculations or math library functions.
 
     echo "b = $b"       # b=1
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="FORMALPARA">
 
 **bitwise operators.** The bitwise operators seldom make an appearance
 in shell scripts. Their chief use seems to be manipulating and testing
@@ -574,13 +436,7 @@ which provide direct access to system hardware. However, see *vladz's*
 ingenious use of bitwise operators in his *base64.sh* ( `Example
 A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** bitwise operators**
 
@@ -623,22 +479,13 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
  ^=
     bitwise *XOR-equal*
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** logical (boolean) operators**
 
  !
     NOT
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -646,20 +493,11 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
         then
           ...
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  &&
     AND
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -671,45 +509,21 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
         #  Note that && operator not permitted inside brackets
         #+ of [ ... ] construct.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
      && may also be used, depending on context, in an `and
     list <list-cons.html#LISTCONSREF>`__ to concatenate commands.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  \|\|
     OR
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -721,48 +535,21 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
         #  Note that || operator not permitted inside brackets
         #+ of a [ ... ] construct.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Bash tests the `exit status <exit-status.html#EXITSTATUSREF>`__ of
     each statement linked with a logical operator.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 8-3. Compound Condition Tests Using && and \|\|**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -829,23 +616,11 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The && and \|\| operators also find use in an arithmetic context.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -853,21 +628,9 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
         1 0 1 0
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** miscellaneous operators**
 
@@ -878,9 +641,6 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
     operations. All the operations are evaluated (with possible *side
     effects* . ` [2]  <ops.html#FTN.AEN4242>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -891,32 +651,17 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
         let "t2 = ((a = 9, 15 / 3))"      # Set "a" and calculate "t2".
         echo "t2 = $t2    a = $a"         # t2 = 5    a = 9
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The comma operator finds use mainly in `for
     loops <loops1.html#FORLOOPREF1>`__ . See `Example
     11-13 <loops1.html#FORLOOPC>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <ops.html#AEN3907>`__
 
@@ -924,22 +669,13 @@ In a different context, **+=** can serve as a *string concatenation*
 operator. This can be useful for `modifying *environmental
 variables* <bashver3.html#PATHAPPEND>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <ops.html#AEN4242>`__
 
 *Side effects* are, of course, unintended -- and usually undesirable --
 consequences.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

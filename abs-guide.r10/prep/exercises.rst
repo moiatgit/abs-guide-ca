@@ -1,55 +1,22 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix O. Exercises
 ======================
 
-.. raw:: html
 
-   <div class="TOC">
 
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 O.1. `Analyzing Scripts <scriptanalysis.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 O.2. `Writing Scripts <writingscripts.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
 
 The exercises that follow test and extend your knowledge of scripting.
 Think of them as a challenge, as an entertaining way to take you further
@@ -72,7 +39,4 @@ is not represented among the exhibits.
 credentials <aboutauthor.html#NOCREDS>`__ and
 |  `deficient scripting skills <contributed-scripts.html#KTOUR0>`__ .)
 
-.. raw:: html
-
-   </div>
 

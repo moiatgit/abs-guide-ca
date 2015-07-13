@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix J. An Introduction to Programmable Completion
 =======================================================
@@ -11,9 +8,6 @@ sequence. ` [1]  <tabexpansion.html#FTN.AEN24082>`__ If multiple
 completions are possible, then **[Tab]** lists them all. Let's see how
 it works.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -31,19 +25,10 @@ it works.
     xtraceroute.real
           
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Tab completion also works for variables and path names.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -59,13 +44,7 @@ Tab completion also works for variables and path names.
      doc/     games/   lib/     man/     share/
           
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The Bash **complete** and **compgen**
 `builtins <internal.html#BUILTINREF>`__ make it possible for *tab
@@ -73,9 +52,6 @@ completion* to recognize partial *parameters* and *options* to commands.
 In a very simple case, we can use **complete** from the command-line to
 specify a short list of acceptable parameters.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -90,13 +66,7 @@ specify a short list of acceptable parameters.
     file1.txt   file2.txt   file30.txt
       
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The ``      -f     `` option to *complete* specifies filenames, and
 ``      -X     `` the filter pattern.
@@ -111,15 +81,9 @@ a number of command-line parameters, preceded by either a single or
 double dash. And here is the corresponding *completion script* , by
 convention given a filename corresponding to its associated command.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example J-1. Completion script for *UseGetOpt.sh***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -151,23 +115,11 @@ convention given a filename corresponding to its associated command.
     complete -F _UseGetOpt-2 -o filenames ./UseGetOpt-2.sh
     #        ^^ ^^^^^^^^^^^^  Invokes the function _UseGetOpt-2.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Now, let's try it.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -182,13 +134,7 @@ Now, let's try it.
     --         --aoption  --debug    --file     --help     --log     --test
       
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 We begin by `sourcing <internal.html#SOURCEREF>`__ the "completion
 script." This sets the command-line parameters. ` [2]
@@ -220,25 +166,16 @@ Steve's excellent two-part article, "An Introduction to Bash Completion"
 and `Part
 2 <http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_2>`__
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <tabexpansion.html#AEN24082>`__
 
 This works only from the *command line* , of course, and not within a
 script.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <tabexpansion.html#AEN24160>`__
 
@@ -248,9 +185,6 @@ Normally the default parameter completion files reside in either the
 startup. So, after writing a useful completion script, you might wish to
 move it (as *root* , of course) to one of these directories.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <tabexpansion.html#AEN24173>`__
 
@@ -258,11 +192,5 @@ It has been extensively documented that programmers are willing to put
 in long hours of effort in order to save ten minutes of "unnecessary"
 labor. This is known as *optimization* .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

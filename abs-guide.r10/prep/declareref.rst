@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   9.2. Typing variables: **declare** or **typeset**
 ==================================================
@@ -12,9 +9,6 @@ This is a very weak form of the *typing* ` [1]
 languages. The *declare* command is specific to version 2 or later of
 Bash. The *typeset* command also works in ksh scripts.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** declare/typeset options**
 
@@ -26,9 +20,6 @@ Bash. The *typeset* command also works in ksh scripts.
     attempt to change the value of a *readonly* variable fails with an
     error message.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -37,19 +28,10 @@ Bash. The *typeset* command also works in ksh scripts.
 
         (( var1++ ))          # x.sh: line 4: var1: readonly variable
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  -i ``                 integer               ``
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -63,21 +45,12 @@ Bash. The *typeset* command also works in ksh scripts.
         echo "Number = $number"     # Number = 0
         # Tries to evaluate the string "three" as an integer.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Certain arithmetic operations are permitted for declared integer
     variables without the need for `expr <moreadv.html#EXPRREF>`__ or
     `let <internal.html#LETREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -88,132 +61,72 @@ Bash. The *typeset* command also works in ksh scripts.
         n=6/3
         echo "n = $n"       # n = 2
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  -a ``                 array               ``
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         declare -a indices
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The variable ``                   indices                 `` will be
     treated as an `array <arrays.html#ARRAYREF>`__ .
 
  -f ``                 function(s)               ``
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         declare -f
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A ``                   declare -f                 `` line with no
     arguments in a script causes a listing of all the
     `functions <functions.html#FUNCTIONREF>`__ previously defined in
     that script.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         declare -f function_name
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A ``                   declare -f function_name                 ``
     in a script lists just the function named.
 
  -x `export <internal.html#EXPORTREF>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         declare -x var3
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This declares a variable as available for exporting outside the
     environment of the script itself.
 
  -x var=$value
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         declare -x var3=373
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **declare** command permits assigning a value to a variable in
     the same statement as setting its properties.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 9-10. Using *declare* to type variables**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -249,25 +162,10 @@ Bash. The *typeset* command also works in ksh scripts.
 
     exit 0                        # Script will not exit here.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -317,9 +215,6 @@ However . . .
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -336,9 +231,6 @@ However . . .
 
     bar   # Prints bar.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -357,9 +249,6 @@ However . . .
 
     # Thank you, Michael Iatrou, for pointing this out.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -376,9 +265,6 @@ However . . .
 
     bar   # Prints bar.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -397,21 +283,9 @@ However . . .
 
     # Thank you, Michael Iatrou, for pointing this out.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   9.2.1. Another use for *declare*
 ---------------------------------
@@ -420,9 +294,6 @@ The *declare* command can be helpful in identifying variables,
 `environmental <othertypesv.html#ENVREF>`__ or otherwise. This can be
 especially useful with `arrays <arrays.html#ARRAYREF>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -442,28 +313,13 @@ especially useful with `arrays <arrays.html#ARRAYREF>`__ .
     Colors=([0]="purple" [1]="reddish-orange" [2]="light green")
              
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <declareref.html#AEN5685>`__
 
@@ -485,9 +341,6 @@ operations <refcards.html#STRINGOPSTAB>`__ .
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -498,9 +351,6 @@ operations <refcards.html#STRINGOPSTAB>`__ .
     intvar=stringval
     echo "$intvar"   # 0
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -511,12 +361,6 @@ operations <refcards.html#STRINGOPSTAB>`__ .
     intvar=stringval
     echo "$intvar"   # 0
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

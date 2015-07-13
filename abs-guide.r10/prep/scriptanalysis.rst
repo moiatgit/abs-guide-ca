@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   O.1. Analyzing Scripts
 =======================
@@ -8,9 +5,6 @@
 Examine the following script. Run it, then explain what it does.
 Annotate the script and rewrite it in a more compact and elegant manner.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -49,22 +43,13 @@ Annotate the script and rewrite it in a more compact and elegant manner.
 
     exit 0
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 ---
 
 Explain what the following script does. It is really just a
 parameterized command-line pipe.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -78,13 +63,7 @@ parameterized command-line pipe.
 
     exit 0
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 ---
 
@@ -92,9 +71,6 @@ Examine and explain the following script. For hints, you might refer to
 the listings for `find <moreadv.html#FINDREF>`__ and
 `stat <system.html#STATREF>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -114,21 +90,12 @@ the listings for `find <moreadv.html#FINDREF>`__ and
     # Warning: Test-drive this script in a "scratch" directory.
     # It will somehow affect all the files there.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 ---
 
 A reader sent in the following code snippet.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -137,13 +104,7 @@ A reader sent in the following code snippet.
       echo $LINE
     done < `tail -f /var/log/messages`
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 He wished to write a script tracking changes to the system log file,
 ``      /var/log/messages     `` . Unfortunately, the above code block
@@ -157,22 +118,13 @@ loop <redircb.html#REDIRREF>`__ , try a
 Analyze the following "one-liner" (here split into two lines for
 clarity) contributed by Rory Winston:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     export SUM=0; for f in $(find src -name "*.java");
     do export SUM=$(($SUM + $(wc -l $f | awk '{ print $1 }'))); done; echo $SUM
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Hint: First, break the script up into bite-sized sections. Then,
 carefully examine its use of `double-parentheses <dblparens.html>`__
@@ -193,7 +145,4 @@ input for its initial "generation" . The script will read the first
 occurrences of vowels as "living" cells. Hint: be sure to translate the
 spaces in the input file to underscore characters.
 
-.. raw:: html
-
-   </div>
 

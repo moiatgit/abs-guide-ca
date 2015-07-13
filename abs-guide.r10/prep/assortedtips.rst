@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.7. Assorted Tips
 ====================
 
-.. raw:: html
-
-   <div class="SECT2">
 
   36.7.1. Ideas for more powerful scripts
 ----------------------------------------
@@ -19,9 +13,6 @@
    plunge right in and code those parts of the script that come easily,
    and write the hard parts as *pseudo-code* .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -54,13 +45,7 @@
        # Line 12 becomes:
          echo "Usage: `basename $0` name"
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    For an example of using pseudo-code, see the `Square
    Root <writingscripts.html#NEWTONSQRT>`__ exercise.
@@ -72,9 +57,6 @@
    script you want to keep track of. This will keep a continuing file
    record of the script names and invocation times.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -88,13 +70,7 @@
        #  Of course, SAVE_FILE defined and exported as environmental variable in ~/.bashrc
        #+ (something like ~/.scripts-run)
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -102,9 +78,6 @@
    *prepend* a line to an existing file, that is, to paste it in at the
    beginning?
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -116,13 +89,7 @@
        #  End result is
        #+ to write a new file with $title appended at *beginning*.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    This is a simplified variant of the `Example
    19-13 <x17837.html#PREPENDEX>`__ script given earlier. And, of
@@ -153,9 +120,6 @@
    `dot <special-chars.html#DOTREF>`__ ( **.** ) or
    `source <internal.html#SOURCEREF>`__ command.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -265,22 +229,13 @@
        #           to uppercase ... toupper()  [easy].
        }
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
    Use special-purpose comment headers to increase clarity and
    legibility in scripts.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -300,28 +255,16 @@
        #> Another point of view.
        while [ "$var1" != "end" ]    #> while test "$var1" != "end"
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
    Dotan Barak contributes template code for a *progress bar* in a
    script.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 36-17. A Progress Bar**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -378,17 +321,8 @@
 
        exit
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -396,9 +330,6 @@
    `if-test <testconstructs.html#TESTCONSTRUCTS1>`__ constructs is for
    comment blocks.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -427,13 +358,7 @@
 
        exit 0
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    Compare this with `using here documents to comment out code
    blocks <here-docs.html#CBLOCK1>`__ .
@@ -445,9 +370,6 @@
    if a parameter contains only digits, so it can be treated as an
    integer.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -473,13 +395,7 @@
 
        exit 0
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -   The 0 - 255 range for function return values is a severe limitation.
    Global variables and other workarounds are often problematic. An
@@ -490,15 +406,9 @@
    this to a variable. This is actually a variant of `command
    substitution. <commandsub.html#COMMANDSUBREF>`__
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 36-18. Return value trickery**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -534,24 +444,12 @@
 
        exit 0
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
    The same technique also works for alphanumeric strings. This means
    that a function can "return" a non-numeric value.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -573,26 +471,14 @@
        newstring=`capitalize_ichar "every sentence should start with a capital letter."`
        echo "$newstring"          # Every sentence should start with a capital letter.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    It is even possible for a function to "return" multiple values with
    this method.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 36-19. Even more return value trickery**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -625,25 +511,10 @@
 
        exit 0
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div class="CAUTION">
-
-   .. raw:: html
-
-      <div>
 
    |Caution|
 
@@ -672,9 +543,6 @@
                              
    +--------------------------+--------------------------+--------------------------+
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -687,9 +555,6 @@
        retval=`sum_and_product $first $second`      # Assigns output of function.
        # Now, this will not work correctly.
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -702,17 +567,8 @@
        retval=`sum_and_product $first $second`      # Assigns output of function.
        # Now, this will not work correctly.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -729,15 +585,9 @@
    in the function, then invoking command substitution and the **( ...
    )** operator to assign it to an array.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 36-20. Passing and returning arrays**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -820,17 +670,8 @@
        #  Nathan Coulter points out that passing arrays with elements containing
        #+ whitespace breaks this example.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
    For a more elaborate example of passing arrays to functions, see
    `Example A-10 <contributed-scripts.html#LIFESLOW>`__ .
@@ -853,9 +694,6 @@
    on a "foreign" machine whose user may have bollixed up the
    ``         $PATH        `` and **umask** .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -865,13 +703,7 @@
 
        # Thanks to Ian D. Allen, for this tip.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -880,9 +712,6 @@
    set of arguments and/or options. Especially suitable for this are
    `tr <textproc.html#TRREF>`__ and `grep <textproc.html#GREPREF>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -891,23 +720,11 @@
        wlist=`strings "$1" | tr A-Z a-z | tr '[:space:]' Z | \
        tr -cs '[:alpha:]' Z | tr -s '\173-\377' Z | tr Z ' '`
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 36-21. Fun with anagrams**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -951,17 +768,8 @@
        #  For a slightly different approach to anagramming,
        #+ see the agram2.sh script.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
    See also `Example 29-4 <procref1.html#CONSTAT>`__ , `Example
    16-25 <textproc.html#CRYPTOQUOTE>`__ , and `Example
@@ -980,9 +788,6 @@
    be installed is dangerous. Use `whatis <filearchiv.html#WHATISREF>`__
    to avoid potential problems with this.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1008,13 +813,7 @@
          $PlanB                     #+ run command2. 
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -1023,9 +822,6 @@
    ``         stderr        `` , rather that ``         stdout        ``
    .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1033,21 +829,12 @@
          then echo "File \"nonexistent_filename\" does not exist."
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    `Redirecting <io-redirection.html#IOREDIRREF>`__
    ``         stderr        `` to ``         stdout        `` fixes
    this.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1058,20 +845,11 @@
 
        # Thanks, Chris Martin, for pointing this out.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -   If you absolutely must access a subshell variable outside the
    subshell, here's a way to do it.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1094,13 +872,7 @@
        rm -f "$TMPFILE"                 # Get rid of temp file.
        echo "$inner_variable"           # It's an ugly kludge, but it works.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -1120,29 +892,14 @@
    ``                   # $Id$                 `` in a script with
    something like:
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
        # $Id: hello-world.sh,v 1.1 2004/10/16 02:43:05 bozo Exp $
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   36.7.2. Widgets
 ----------------
@@ -1155,13 +912,7 @@ obtain *widtools*
 `here <http://www.batse.msfc.nasa.gov/~mallozzi/home/software/xforms/src/widtools-2.0.tgz>`__
 .
 
-.. raw:: html
 
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -1171,32 +922,17 @@ be installed. Additionally, the
 before the package will build on a typical Linux system. Finally, three
 of the six widgets offered do not work (and, in fact, segfault).
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The *dialog* family of tools offers a method of calling "dialog" widgets
 from a shell script. The original *dialog* utility works in a text
 console, but its successors, *gdialog* , *Xdialog* , and *kdialog* use
 X-Windows-based widget sets.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-22. Widgets invoked from a shell script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1258,44 +994,23 @@ X-Windows-based widget sets.
 
     # Exercise: Rewrite this script using the 'zenity' widget set.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  The `xmessage <extmisc.html#XMESSAGEREF>`__ command is a simple method
 of popping up a message/query window. For example:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     xmessage Fatal error in script! -button exit
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  The latest entry in the widget sweepstakes is
 `zenity <extmisc.html#ZENITYREF>`__ . This utility pops up *GTK+* dialog
 widgets-and-windows, and it works very nicely within a script.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1311,13 +1026,7 @@ widgets-and-windows, and it works very nicely within a script.
 
     echo "User entered: "$answer""
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 For other methods of scripting with widgets, try *Tk* or *wish* ( *Tcl*
 derivatives), *PerlTk* ( *Perl* with *Tk* extensions), *tksh* ( *ksh*
@@ -1325,12 +1034,6 @@ with *Tk* extensions), *XForms4Perl* ( *Perl* with *XForms* extensions),
 *Gtk-Perl* ( *Perl* with *Gtk* extensions), or *PyQt* ( *Python* with
 *Qt* extensions).
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

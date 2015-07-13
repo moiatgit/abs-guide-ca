@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 30. Network Programming
 ================================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -16,13 +10,7 @@ never forgets, and it's always crap.*
 
 *--Nemo*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A Linux system has quite a number of tools for accessing, manipulating,
 and troubleshooting network connections. We can incorporate some of
@@ -33,15 +21,9 @@ network.
  Here is a simple CGI script that demonstrates connecting to a remote
 server.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 30-1. Print the server environment**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -111,30 +93,15 @@ server.
 
     _test_CGI_
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 For security purposes, it may be helpful to identify the IP addresses a
 computer is accessing.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 30-2. IP addresses**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -177,17 +144,8 @@ computer is accessing.
     #  Use the 'iptables' command to extend this script
     #+ to reject connection attempts from well-known spammer IP domains.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 More examples of network programming:
 
@@ -212,7 +170,4 @@ See also the `networking commands <system.html#NETWORKSYS1>`__ in the
 `communications commands <communications.html>`__ in the `External
 Filters, Programs and Commands <external.html>`__ chapter.
 
-.. raw:: html
-
-   </div>
 

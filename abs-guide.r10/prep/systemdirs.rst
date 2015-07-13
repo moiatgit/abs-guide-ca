@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix I. Important System Directories
 =========================================
@@ -110,40 +107,19 @@ intimately familiar with the following system directories.
    System *boot* directory. The kernel, module links, system map, and
    boot manager reside here.
 
-   .. raw:: html
 
-      <div class="WARNING">
-
-   .. raw:: html
-
-      <div>
 
    |Warning|
 
    Altering files in this directory may result in an unbootable system.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-   .. raw:: html
-
-      </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <systemdirs.html#AEN23969>`__
 
@@ -158,12 +134,6 @@ This likewise accounts for the split between ``       /sbin      `` and
 ``       /usr/sbin      `` , ``       /lib      `` and
 ``       /usr/lib      `` , etc.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Warning| image:: ../images/warning.gif

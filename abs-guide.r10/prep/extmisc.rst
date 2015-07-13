@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   16.9. Miscellaneous Commands
 =============================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Command that fit in no special category**
 
@@ -18,9 +12,6 @@
     The default separator character between each integer is a newline,
     but this can be changed with the ``         -s        `` option.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -37,26 +28,14 @@
         1:2:3:4:5
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Both **jot** and **seq** come in handy in a `for
     loop <loops1.html#FORLOOPREF1>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-54. Using *seq* to generate loop arguments**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -114,23 +93,11 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A simpler example:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -146,23 +113,11 @@
           #+ such as rm, grep, etc.
         done
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-55. Letter Count"**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -222,25 +177,10 @@
         #+ but executes faster.
         #  Why?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -263,9 +203,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -274,9 +211,6 @@
          1272
          1428
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -285,17 +219,8 @@
          1272
          1428
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **getopt**
     The **getopt** command parses command-line options preceded by a
@@ -305,15 +230,9 @@
     the ``         -l        `` flag, and this also allows parameter
     reshuffling.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-56. Using *getopt* to parse command-line options**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -363,25 +282,10 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -400,35 +304,20 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
         args=$(getopt -o a:bc:d -- "$@")
         eval set -- "$args"
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
         args=$(getopt -o a:bc:d -- "$@")
         eval set -- "$args"
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See `Example 10-5 <string-manipulation.html#GETOPTSIMPLE>`__ for a
     simplified emulation of **getopt** .
@@ -466,13 +355,7 @@
     effect as ``                   rm -rf dirname                 ``
     (careful!).
 
-    .. raw:: html
 
-       <div class="WARNING">
-
-    .. raw:: html
-
-       <div>
 
     |Warning|
 
@@ -481,25 +364,10 @@
     `fdisk <system.html#FDISKREF>`__ . It might have unintended
     consequences.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -537,9 +405,6 @@
     Hit ``                       Ctl-C                     `` *very
     quickly* , or you just might get more than you bargained for. . . .
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -552,9 +417,6 @@
          . . .
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -562,9 +424,6 @@
         Ctl-C       
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -577,9 +436,6 @@
          . . .
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -587,24 +443,12 @@
         Ctl-C       
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
      The *yes* command may be emulated in a very simple script
     `function <functions.html#FUNCTIONREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -622,13 +466,7 @@
           done             #  The only things missing are the
         }                  #+ --help and --version options.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **banner**
     Prints arguments as a large vertical banner to
@@ -643,9 +481,6 @@
     Show all the `environmental variables <othertypesv.html#ENVREF>`__
     set for a particular user.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -653,13 +488,7 @@
         HOME=/home/bozo
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **lp**
     The **lp** and **lpr** commands send file(s) to the print queue, to
@@ -699,9 +528,6 @@
     result. This is useful for printing an ongoing process to a file or
     paper, perhaps to keep track of it for debugging purposes.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -713,17 +539,8 @@
           ===============================================
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -733,13 +550,7 @@
         #  The file "check.file" contains the concatenated sorted "listfiles,"
         #+ before the duplicate lines are removed by 'uniq.'
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **mkfifo**
      This obscure command creates a *named pipe* , a temporary
@@ -748,9 +559,6 @@
     to the FIFO, and the other reads from it. See `Example
     A-14 <contributed-scripts.html#FIFO>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -781,13 +589,7 @@
         mkfifo-example.sh    BOZO
         Mixed.msg BOZO
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **pathchk**
     This command checks the validity of a filename. If the filename
@@ -810,9 +612,6 @@
     pairs between input and output, and skipping and/or truncating the
     head or tail of the input file.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -821,13 +620,7 @@
         dd if=$filename conv=ucase > $filename.uppercase
         #                    lcase   # For lower case conversion
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Some basic options to **dd** are:
 
@@ -870,15 +663,9 @@
     A ``                   dd --help                 `` lists all the
     options this powerful utility takes.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-57. A script that copies itself**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -898,27 +685,12 @@
         #+ is called a "quine" per Willard Quine.
         #  Does this script qualify as a quine?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-58. Exercising *dd***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -944,30 +716,15 @@
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     To demonstrate just how versatile **dd** is, let's use it to capture
     keystrokes.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-59. Capturing Keystrokes**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -993,23 +750,11 @@
         # Thanks, Stephane Chazelas, for showing the way.
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **dd** command can do random access on a data stream.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1019,13 +764,7 @@
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **dd** command can copy raw data and disk images to and from
     devices, such as floppies and tape drives ( `Example
@@ -1043,16 +782,10 @@
 
     ``                   dd if=image.iso of=/dev/sdb                 ``
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-60. Preparing a bootable SD card for the *Raspberry
     Pi***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1113,17 +846,8 @@
         # 2) Have script autodetect device file for SD card (difficult!).
         # 3) Have script sutodetect image file (*img) in $PWD.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Other applications of **dd** include initializing temporary swap
     files ( `Example 31-2 <zeros.html#EX73>`__ ) and ramdisks ( `Example
@@ -1134,15 +858,9 @@
     People (with presumably nothing better to do with their time) are
     constantly thinking of interesting applications of **dd** .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-61. Securely deleting a file**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1241,17 +959,8 @@
         #+     "Secure Deletion of Data From Magnetic and Solid-State Memory".
         #       http://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also the `dd thread <biblio.html#DDLINK>`__ entry in the
     `bibliography <biblio.html#BIBLIOREF>`__ .
@@ -1263,9 +972,6 @@
     files <devref1.html#DEVFILEREF>`__ , such as
     ``         /dev/urandom        `` , and as a filter for binary data.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1274,13 +980,7 @@
 
         # From rnd.sh example script, by StÃ©phane Chazelas
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 9-16 <randomvar.html#SEEDINGRANDOM>`__ and
     `Example A-36 <contributed-scripts.html#INSERTIONSORT>`__ .
@@ -1292,31 +992,19 @@
     file, in combination with `dd <extmisc.html#DDREF>`__ and
     `less <filearchiv.html#LESSREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         dd if=/bin/ls | hexdump -C | less
         # The -C option nicely formats the output in tabular form.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **objdump**
     Displays information about an object file or binary executable in
     either hexadecimal form or as a disassembled listing (with the
     ``         -d        `` option).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -1331,13 +1019,7 @@
           . . .
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **mcookie**
     This command generates a "magic cookie," a 128-bit (32-character)
@@ -1345,28 +1027,16 @@
     "signature" by the X server. This also available for use in a script
     as a "quick 'n dirty" random number.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         random000=$(mcookie)
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Of course, a script could use `md5sum <filearchiv.html#MD5SUMREF>`__
     for the same purpose.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1374,26 +1044,14 @@
         random001=`md5sum $0 | awk '{print $1}'`
         # Uses 'awk' to strip off the filename.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **mcookie** command gives yet another way to generate a "unique"
     filename.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-62. Filename generator**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1426,32 +1084,17 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **units**
     This utility converts between different *units of measure* . While
     normally invoked in interactive mode, **units** may find use in a
     script.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-63. Converting meters to miles**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1484,17 +1127,8 @@
         # Exercise: Edit this script to accept command-line parameters,
         #           with appropriate error checking, of course.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **m4**
     A hidden treasure, **m4** is a powerful macro ` [6]
@@ -1510,15 +1144,9 @@
     Journal* <http://www.linuxjournal.com>`__ has a very nice article on
     **m4** and its uses.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-64. Using *m4***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1538,37 +1166,19 @@
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **xmessage**
     This X-based variant of `echo <internal.html#ECHOREF>`__ pops up a
     message/query window on the desktop.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         xmessage Left click to continue -button okay
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **zenity**
     The `zenity <http://freshmeat.net/projects/zenity>`__ utility is
@@ -1592,13 +1202,7 @@
     beginning with an "a" , while invoking (the same executable with)
     **doexec /usr/local/bin/aaa delete** would *delete* those files.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1622,9 +1226,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1635,9 +1236,6 @@
         *       ) bail_out;;
         esac
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1648,17 +1246,8 @@
         *       ) bail_out;;
         esac
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **dialog**
     The `dialog <assortedtips.html#DIALOGREF>`__ family of tools provide
@@ -1681,36 +1270,21 @@
     Timeshift HOWTO <http://osl.iu.edu/~tveldhui/radio/>`__ and the
     `MP3do Project <http://savannah.nongnu.org/projects/audiodo>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <extmisc.html#AEN14105>`__
 
 This is actually a script adapted from the Debian Linux distribution.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <extmisc.html#AEN14214>`__
 
 The *print queue* is the group of jobs "waiting in line" to be printed.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <extmisc.html#AEN14218>`__
 
@@ -1719,9 +1293,6 @@ onto joined sheets of *greenbar* paper, to the accompaniment of `a great
 deal of noise <http://www.columbia.edu/cu/computinghistory/1403.html>`__
 . The hardcopy thusly printed was referred to as a *printout* .
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <extmisc.html#AEN14280>`__
 
@@ -1731,9 +1302,6 @@ Pipes <http://www2.linuxjournal.com/lj-issues/issue41/2156.html>`__ , in
 the September, 1997 issue of `*Linux
 Journal* <http://www.linuxjournal.com>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <extmisc.html#AEN14318>`__
 
@@ -1762,9 +1330,6 @@ quick 'n easy, but not very secure text file encoder.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1775,9 +1340,6 @@ quick 'n easy, but not very secure text file encoder.
     cat $file_encrypted | dd conv=swab,ascii > $file_plaintext
     # Decode.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1788,9 +1350,6 @@ quick 'n easy, but not very secure text file encoder.
     cat $file_encrypted | dd conv=swab,ascii > $file_plaintext
     # Decode.
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <extmisc.html#AEN14523>`__
 
@@ -1798,13 +1357,7 @@ A *macro* is a symbolic constant that expands into a command string or a
 set of operations on parameters. Simply put, it's a shortcut or
 abbreviation.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Warning| image:: ../images/warning.gif

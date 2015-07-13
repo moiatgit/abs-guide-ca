@@ -1,15 +1,9 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   O.2. Writing Scripts
 =====================
 
 Write a script to carry out each of the following tasks.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** EASY**
 
@@ -107,13 +101,7 @@ Write a script to carry out each of the following tasks.
     *winning* lottery numbers, then you can retire on the proceeds and
     leave shell scripting to those of us who have to work for a living.)
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** INTERMEDIATE**
 
@@ -264,9 +252,6 @@ Write a script to carry out each of the following tasks.
     therefore never lose. To simplify matters, you may use ASCII
     graphics:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -278,13 +263,7 @@ Write a script to carry out each of the following tasks.
              
            Your move, human (row, column)?
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **Alphabetizing a String**
     Alphabetize (in ASCII order) an arbitrary string read from the
@@ -308,9 +287,6 @@ Write a script to carry out each of the following tasks.
     Given a data file with comma-separated
     `fields <special-chars.html#FIELDREF>`__ , of the form:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -318,13 +294,7 @@ Write a script to carry out each of the following tasks.
         Smith,Tom,404 Polk Ave.,Los Angeles,CA,90003,(213) 879-5612
         ...
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Reformat the data and print it out to ``        stdout       `` in
     labeled, evenly-spaced columns.
@@ -364,13 +334,7 @@ Write a script to carry out each of the following tasks.
     ``         -traversal        `` option, write a script that checks a
     Web site for broken links.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** DIFFICULT**
 
@@ -421,9 +385,6 @@ Write a script to carry out each of the following tasks.
     The algorithm for this, expressed as a snippet of Bash
     `pseudo-code <assortedtips.html#PSEUDOCODEREF>`__ is:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -474,13 +435,7 @@ Write a script to carry out each of the following tasks.
            (( loopcnt++ ))     # Update loop counter.
         done
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     It's a simple enough recipe, and *seems* at first glance easy enough
     to convert into a working Bash script. The problem, though, is that
@@ -601,22 +556,13 @@ Write a script to carry out each of the following tasks.
 
     For example, to "ladder" from *mark* to *vase* :
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         mark --> park --> part --> past --> vast --> vase
                  ^           ^       ^      ^           ^
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Write a script that solves word ladder puzzles. Given a starting and
     an ending word, the script will list all intermediate steps in the
@@ -689,9 +635,6 @@ Write a script to carry out each of the following tasks.
     (2-letter groupings). It is traditional to use a 5 x 5 letter
     scrambled-alphabet *key square* for the encryption and decryption.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -762,13 +705,7 @@ Write a script to carry out each of the following tasks.
         Helen Fouche Gaines' classic work, ELEMENTARY CRYPTANALYSIS (1939), gives a
         fairly detailed description of the Playfair Cipher and its solution methods.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This script will have three main sections
 
@@ -783,9 +720,6 @@ Write a script to carry out each of the following tasks.
     `functions <functions.html#FUNCTIONREF>`__ . You may use `Example
     A-56 <contributed-scripts.html#GRONSFELD>`__ as an inspiration.
 
-.. raw:: html
-
-   </div>
 
 --
 
@@ -793,16 +727,10 @@ Please do not send the author your solutions to these exercises. There
 are more appropriate ways to impress him with your cleverness, such as
 submitting bugfixes and suggestions for improving the book.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <writingscripts.html#AEN25254>`__
 
@@ -825,9 +753,6 @@ For all you clever types who failed intermediate algebra, a
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -838,9 +763,6 @@ For all you clever types who failed intermediate algebra, a
 
     The solution is a*a - b*b, where "a" and "b" represent numbers.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -851,11 +773,5 @@ For all you clever types who failed intermediate algebra, a
 
     The solution is a*a - b*b, where "a" and "b" represent numbers.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

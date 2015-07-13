@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   24.1. Complex Functions and Function Complexities
 ==================================================
@@ -9,35 +6,20 @@ Functions may process arguments passed to them and return an `exit
 status <exit-status.html#EXITSTATUSREF>`__ to the script for further
 processing.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     function_name $arg1 $arg2
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The function refers to the passed arguments by position (as if they were
 `positional parameters <internalvariables.html#POSPARAMREF>`__ ), that
 is, ``      $1     `` , ``      $2     `` , and so forth.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-2. Function Taking Parameters**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -97,25 +79,10 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="IMPORTANT">
-
-.. raw:: html
-
-   <div>
 
 |Important|
 
@@ -123,30 +90,15 @@ The `shift <othertypesv.html#SHIFTREF>`__ command works on arguments
 passed to functions (see `Example
 36-18 <assortedtips.html#MULTIPLICATION>`__ ).
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 But, what about command-line arguments passed to the script? Does a
 function see them? Well, let's clear up the confusion.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-3. Functions and command-line args passed to the script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -175,17 +127,8 @@ function see them? Well, let's clear up the confusion.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 In contrast to certain other programming languages, shell scripts
 normally pass only value parameters to functions. Variable names (which
@@ -197,15 +140,9 @@ literally.*
 37-2 <bashver2.html#EX78>`__ ) provide a clumsy sort of mechanism for
 passing variable pointers to functions.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-4. Passing an indirect reference to a function**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -233,30 +170,15 @@ passing variable pointers to functions.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The next logical question is whether parameters can be dereferenced
 *after* being passed to a function.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-5. Dereferencing a parameter passed to a function**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -283,27 +205,12 @@ The next logical question is whether parameters can be dereferenced
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 24-6. Again, dereferencing a parameter passed to a function**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -346,21 +253,9 @@ The next logical question is whether parameters can be dereferenced
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Exit and Return**
 
@@ -384,15 +279,9 @@ The next logical question is whether parameters can be dereferenced
     status" of the function, and this exit status is assigned to the
     variable `$? <internalvariables.html#XSTATVARREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 24-7. Maximum of two numbers**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -445,25 +334,10 @@ The next logical question is whether parameters can be dereferenced
         #  Convert this to an interactive script,
         #+ that is, have the script ask for input (two numbers).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -507,9 +381,6 @@ The next logical question is whether parameters can be dereferenced
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -531,9 +402,6 @@ The next logical question is whether parameters can be dereferenced
 
         # Thanks, S.C.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -555,27 +423,12 @@ The next logical question is whether parameters can be dereferenced
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 24-8. Converting numbers to Roman numerals**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -653,27 +506,12 @@ The next logical question is whether parameters can be dereferenced
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 11-29 <testbranch.html#ISALPHA>`__ .
 
-    .. raw:: html
 
-       <div class="IMPORTANT">
-
-    .. raw:: html
-
-       <div>
 
     |Important|
 
@@ -684,15 +522,9 @@ The next logical question is whether parameters can be dereferenced
     `workarounds <assortedtips.html#RVT>`__ for those situations
     requiring a large integer return value from a function.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 24-9. Testing large return values in a function**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -729,17 +561,8 @@ The next logical question is whether parameters can be dereferenced
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A workaround for obtaining large integer "return values" is to
     simply assign the "return value" to a global variable.
@@ -787,15 +610,9 @@ The next logical question is whether parameters can be dereferenced
     the `discussion of this <assortedtips.html#RVT>`__ in `Section
     36.7 <assortedtips.html>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 24-10. Comparing two large integers**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -864,17 +681,8 @@ The next logical question is whether parameters can be dereferenced
         #  2) Simplify the if/then structure at "OUTPUT."
         #  3) Rewrite the script to take input from command-line parameters.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Here is another example of capturing a function "return value."
     Understanding it requires some knowledge of
@@ -957,9 +765,6 @@ The next logical question is whether parameters can be dereferenced
     example <complexfunct.html#EX61>`__ to accept arbitrarily large
     input.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -996,9 +801,6 @@ The next logical question is whether parameters can be dereferenced
 
         exit 0
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1024,9 +826,6 @@ The next logical question is whether parameters can be dereferenced
         alt_return_test 25701
         echo "return value = $Return_Val"    #25701
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1095,9 +894,6 @@ The next logical question is whether parameters can be dereferenced
         #  2) Simplify the if/then structure at "OUTPUT."
         #  3) Rewrite the script to take input from command-line parameters.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1128,9 +924,6 @@ The next logical question is whether parameters can be dereferenced
         echo $days_in  # 30
         # ----------------------------------------------
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1167,9 +960,6 @@ The next logical question is whether parameters can be dereferenced
 
         exit 0
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1195,9 +985,6 @@ The next logical question is whether parameters can be dereferenced
         alt_return_test 25701
         echo "return value = $Return_Val"    #25701
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1266,9 +1053,6 @@ The next logical question is whether parameters can be dereferenced
         #  2) Simplify the if/then structure at "OUTPUT."
         #  3) Rewrite the script to take input from command-line parameters.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1299,25 +1083,10 @@ The next logical question is whether parameters can be dereferenced
         echo $days_in  # 30
         # ----------------------------------------------
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Redirection**
 
@@ -1328,15 +1097,9 @@ The next logical question is whether parameters can be dereferenced
     ``         stdin        `` can be redirected (as in `Example
     3-1 <special-chars.html#EX8>`__ ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 24-11. Real name from username**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1379,26 +1142,14 @@ The next logical question is whether parameters can be dereferenced
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     There is an alternate, and perhaps less confusing method of
     redirecting a function's ``         stdin        `` . This involves
     redirecting the ``         stdin        `` to an embedded bracketed
     code block within the function.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1433,21 +1184,9 @@ The next logical question is whether parameters can be dereferenced
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1455,45 +1194,21 @@ The next logical question is whether parameters can be dereferenced
     file <sample-bashrc.html>`__ contains some instructive examples of
     functions.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <complexfunct.html#AEN18474>`__
 
 The **return** command is a Bash `builtin <internal.html#BUILTINREF>`__
 .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Important| image:: ../images/important.gif
 .. |Tip| image:: ../images/tip.gif

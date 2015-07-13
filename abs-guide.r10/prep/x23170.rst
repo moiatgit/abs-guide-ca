@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   C.1. Sed
 =========
@@ -24,15 +21,9 @@ Of all the operations in the *sed* toolkit, we will focus primarily on
 the three most commonly used ones. These are **p** rinting (to
 ``      stdout     `` ), **d** eletion, and **s** ubstitution.
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table C-1. Basic sed operators**
 
-.. raw:: html
-
-   <div>
 
 Operator
 
@@ -87,21 +78,9 @@ global
 
 Operate on *every* pattern match within each matched line of input
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -109,24 +88,12 @@ Unless the ``         g        `` ( *global* ) operator is appended to a
 *substitute* command, the substitution operates only on the *first*
 instance of a pattern match within each line.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 From the command-line and in a shell script, a sed operation may require
 quoting and certain options.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -139,20 +106,11 @@ quoting and certain options.
     #
     # Operates on the text contained in file $filename.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 In certain cases, a *sed* editing command will not work with single
 quotes.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -164,21 +122,9 @@ quotes.
     #        In this instance, with strong quoting (' ... '),
     #+      "$pattern" will not expand to "BEGIN".
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -187,21 +133,9 @@ following string is an instruction or set of instructions. If there is
 only a single instruction contained in the string, then this may be
 omitted.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -210,23 +144,11 @@ omitted.
     # Otherwise all input lines would print.
     # The -e option not necessary here since there is only a single editing instruction.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table C-2. Examples of sed operators**
 
-.. raw:: html
-
-   <div>
 
 Notation
 
@@ -284,72 +206,39 @@ Delete all lines containing "GUI" .
 Delete all instances of "GUI" , leaving the remainder of each line
 intact.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Substituting a zero-length string for another is equivalent to deleting
 that string within a line of input. This leaves the remainder of the
 line intact. Applying ``             s/GUI//           `` to the line
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     The most important parts of any application are its GUI and sound effects
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 results in
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
     The most important parts of any application are its  and sound effects
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A backslash forces the **sed** replacement command to continue on to the
 next line. This has the effect of using the *newline* at the end of the
 first line as the *replacement string* .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     s/^  */\
     /g
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 This substitution replaces line-beginning spaces with a newline. The net
 result is to replace paragraph indents with a blank line between
@@ -357,9 +246,6 @@ paragraphs.
 An address range followed by one or more operations may require open and
 closed curly brackets, with appropriate newlines.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -367,25 +253,13 @@ closed curly brackets, with appropriate newlines.
     /^$/d
     }
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 This deletes only the first of each set of consecutive blank lines. That
 might be useful for single-spacing a text file, but retaining the blank
 line(s) between paragraphs.
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -395,42 +269,18 @@ string, as in a file pathname. See `Example
 11-10 <loops1.html#FINDSTRING>`__ and `Example
 16-32 <filearchiv.html#STRIPC>`__ .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
 A quick way to double-space a text file is
 ``                   sed G        filename                 `` .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 For illustrative examples of sed within shell scripts, see:
 
@@ -484,36 +334,21 @@ For a more extensive treatment of *sed* , refer to the `pertinent
 references <biblio.html#DGSEDREF>`__ in the
 `*Bibliography* <biblio.html>`__ .
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <x23170.html#AEN23174>`__
 
 *Sed* executes without user intervention.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <x23170.html#AEN23185>`__
 
 If no address range is specified, the default is *all* lines.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Tip| image:: ../images/tip.gif

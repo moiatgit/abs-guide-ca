@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   29.2. ``      /proc     ``
 ===========================
@@ -10,9 +7,6 @@ files in ``      /proc     `` mirror currently running system and kernel
 `processes <special-chars.html#PROCESSREF>`__ and contain information
 and statistics about them.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -97,20 +91,11 @@ and statistics about them.
      MemFree:        266248 kB
              
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Shell scripts may extract data from certain of the files in
 ``      /proc     `` . ` [1]  <procref1.html#FTN.AEN19180>`__
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -118,33 +103,15 @@ Shell scripts may extract data from certain of the files in
 
     grep $FS /proc/filesystems   # iso9660
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     kernel_version=$( awk '{ print $3 }' /proc/version )
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -166,17 +133,8 @@ Shell scripts may extract data from certain of the files in
     #  On a laptop this may vary, depending on use of battery
     #+ or AC power.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -203,19 +161,10 @@ Shell scripts may extract data from certain of the files in
     # For example:
     # sh get-commandline.sh xterm
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 +
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -234,21 +183,9 @@ Shell scripts may extract data from certain of the files in
       # Do something appropriate for USB 1.1.
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -269,35 +206,20 @@ Thinkpads. (May not work on all Linux distros.)
 Of course, caution is advised when writing to ``         /proc        ``
 .
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
        root# echo on > /proc/acpi/ibm/light
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
        root# echo on > /proc/acpi/ibm/light
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The ``      /proc     `` directory contains subdirectories with unusual
 numerical names. Every one of these names maps to the `process
@@ -311,15 +233,9 @@ command-line arguments the process was invoked with, and the
 the invoking process. There are a few more such files, but these seem to
 be the most interesting from a scripting standpoint.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 29-3. Finding the process associated with a PID**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -409,27 +325,12 @@ be the most interesting from a scripting standpoint.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 29-4. On-line connect status**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -494,25 +395,10 @@ be the most interesting from a scripting standpoint.
     #    Make the script more user-friendly in other ways.
     #    Fix the script to work with wireless/DSL connections.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="WARNING">
-
-.. raw:: html
-
-   <div>
 
 |Warning|
 
@@ -520,28 +406,13 @@ In general, it is dangerous to *write* to the files in
 ``         /proc        `` , as this can corrupt the filesystem or crash
 the machine.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <procref1.html#AEN19180>`__
 
@@ -550,13 +421,7 @@ Certain system commands, such as `procinfo <system.html#PROCINFOREF>`__
 `lsdev <system.html#LSDEVREF>`__ , and
 `uptime <system.html#UPTIMEREF>`__ do this as well.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Warning| image:: ../images/warning.gif

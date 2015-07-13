@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   18.2. Globbing
 ===============
@@ -25,9 +22,6 @@ dot, as, for example, ```       .bashrc      `` <sample-bashrc.html>`__
 ``             ?           `` has a different meaning in globbing than
 as part of an RE.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -62,20 +56,11 @@ as part of an RE.
      -rw-rw-r--    1 bozo  bozo       758 Jul 30 09:02 test1.txt
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Bash performs filename expansion on unquoted command-line arguments. The
 `echo <internal.html#ECHOREF>`__ command demonstrates this.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -89,21 +74,9 @@ Bash performs filename expansion on unquoted command-line arguments. The
     t2.sh
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -112,27 +85,12 @@ globbing. A **set -f** command disables globbing, and the
 ``         nocaseglob        `` and ``         nullglob        ``
 options to `shopt <internal.html#SHOPTREF>`__ change globbing behavior.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 See also `Example 11-5 <loops1.html#LISTGLOB>`__ .
 
-.. raw:: html
 
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -169,9 +127,6 @@ shows how to avoid many such pitfalls.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -187,9 +142,6 @@ shows how to avoid many such pitfalls.
 
     # This example taken from David Wheeler's site, with permission.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -205,28 +157,13 @@ shows how to avoid many such pitfalls.
 
     # This example taken from David Wheeler's site, with permission.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <globbingref.html#AEN17572>`__
 
@@ -235,18 +172,12 @@ containing special characters. For example, ``       example.???      ``
 might expand to ``       example.001      `` and/or
 ``       example.txt      `` .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <globbingref.html#AEN17581>`__
 
  A *wild card* character, analogous to a wild card in poker, can
 represent (almost) any other character.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <globbingref.html#AEN17592>`__
 
@@ -283,9 +214,6 @@ explicitly includes the dot as a literal character.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -302,9 +230,6 @@ explicitly includes the dot as a literal character.
 
     # Thanks, S.C.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -321,13 +246,7 @@ explicitly includes the dot as a literal character.
 
     # Thanks, S.C.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Caution| image:: ../images/caution.gif

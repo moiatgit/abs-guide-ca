@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix H. Important Files
 ============================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** startup files**
 
@@ -36,13 +30,7 @@
     M <sample-bashrc.html>`__ for a sample ``         .bashrc        ``
     file.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** logout file**
 
@@ -51,13 +39,7 @@
     Upon exit from a login (Bash) shell, the commands in this file
     execute.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** data files**
 
@@ -68,13 +50,7 @@
     [2]  <files.html#FTN.AEN23937>`__ but in
     ``         /etc/shadow        `` in encrypted form.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** system configuration files**
 
@@ -82,9 +58,6 @@
     Listing and description of attached hardware devices. This
     information is in text form and can be extracted and parsed.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -97,74 +70,35 @@
          vendorId: 8086
          
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     This file is present on Red Hat and Fedora Core installations, but
     may be missing from other distros.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <files.html#AEN23892>`__
 
 This does not apply to **csh** , **tcsh** , and other shells not related
 to or descended from the classic Bourne shell ( **sh** ).
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <files.html#AEN23937>`__
 
 In older versions of UNIX, passwords *were* stored in
 ``       /etc/passwd      `` , and that explains the name of the file.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

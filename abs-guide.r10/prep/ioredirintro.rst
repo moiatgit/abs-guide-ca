@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix F. A Detailed Introduction to I/O and I/O Redirection
 ===============================================================
@@ -24,9 +21,6 @@ By convention, a command reads its input from fd 0 (
 ``      stdout     `` ), and error ouput to fd 2 ( ``      stderr     ``
 ). If one of those three fd's is not open, you may encounter problems:
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -34,13 +28,7 @@ By convention, a command reads its input from fd 0 (
     cat: standard output: Bad file descriptor
           
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 For example, when **xterm** runs, it first initializes itself. Before
 running the user's shell, **xterm** opens the terminal device
@@ -60,9 +48,6 @@ for the remainder of the shell (using `exec <internal.html#EXECREF>`__
 ``             ls > /dev/null           `` means running **ls** with its
 fd 1 connected to ``      /dev/null     `` .
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -94,21 +79,12 @@ fd 1 connected to ``      /dev/null     `` .
      lsof    426 root    1w  FIFO    0,0      7520 pipe
      lsof    426 root    2w  FIFO    0,0      7520 pipe
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 This works for different types of redirection.
 
 ``             Exercise:           `` Analyze the following script.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -155,15 +131,6 @@ This works for different types of redirection.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

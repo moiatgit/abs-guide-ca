@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   8.3. The Double-Parentheses Construct
 ======================================
@@ -13,15 +10,9 @@ form, ``             a=$(( 5 + 3 ))           `` would set
 construct is also a mechanism for allowing C-style manipulation of
 variables in Bash, for example, ``      (( var++ ))     `` .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 8-5. C-style manipulation of variables**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -86,22 +77,10 @@ variables in Bash, for example, ``      (( var++ ))     `` .
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 See also `Example 11-13 <loops1.html#FORLOOPC>`__ and `Example
 8-4 <numerical-constants.html#NUMBERS>`__ .
 
-.. raw:: html
-
-   </div>
 

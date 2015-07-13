@@ -1,32 +1,17 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 22. Restricted Shells
 ==============================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Disabled commands in restricted shells**
 
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **.** Running a script or portion of a script in *restricted mode*
     disables certain commands that would otherwise be available. This is
     a security measure intended to limit the privileges of the script
     user and to minimize possible damage from running the script.
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
 
 The following commands and actions are disabled:
 
@@ -55,15 +40,9 @@ The following commands and actions are disabled:
 
 -  Getting out of restricted mode within the script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 22-1. Running a script in restricted mode**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -115,19 +94,7 @@ The following commands and actions are disabled:
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

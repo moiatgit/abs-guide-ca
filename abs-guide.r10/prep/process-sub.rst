@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 23. Process Substitution
 =================================
@@ -15,9 +12,6 @@ technique. But, what if you need to pipe the ``      stdout     `` of
 `process <special-chars.html#PROCESSREF>`__ (or processes) into the
 ``      stdin     `` of another process.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Template**
 
@@ -30,38 +24,17 @@ technique. But, what if you need to pipe the ``      stdout     `` of
     send the results of the process(es) within parentheses to another
     process. ` [1]  <process-sub.html#FTN.AEN18244>`__
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     There is *no* space between the the "<" or ">" and the parentheses.
     Space there would give an error message.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -86,21 +59,9 @@ technique. But, what if you need to pipe the ``      stdout     `` of
         262     262    3601 /dev/fd/63
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -113,24 +74,12 @@ argument to **echo** . On systems lacking
 ``         /dev/fd/<n>        `` files, Bash may use temporary files.
 (Thanks, S.C.)
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Process substitution can compare the output of two different commands,
 or even the output of different options to the same command.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -146,38 +95,20 @@ or even the output of different options to the same command.
             -rw-rw-r--    1 bozo bozo       42 Mar 10 12:58 File2
             -rw-rw-r--    1 bozo bozo      103 Mar 10 12:58 t2.sh
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Process substitution can compare the contents of two directories -- to
 see which filenames are in one, but not the other.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
     diff <(ls $first_directory) <(ls $second_directory)
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Some other usages and uses of process substitution:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -189,17 +120,8 @@ Some other usages and uses of process substitution:
     #  From "insertion-sort.bash" example script.
     #  Courtesy of JuanJo Ciarlante.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -216,17 +138,8 @@ Some other usages and uses of process substitution:
     #  Bill Davidsen contributed this example
     #+ (with light edits by the ABS Guide author).
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -259,26 +172,14 @@ Some other usages and uses of process substitution:
 
     # Thanks, Stéphane Chazelas
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  Here is a method of circumventing the problem of an `*echo* piped to a
 *while-read loop* <gotchas.html#BADREAD0>`__ running in a subshell.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 23-1. Code block redirection without forking**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -348,30 +249,15 @@ Some other usages and uses of process substitution:
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  This is a similar example.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 23-2. Redirecting the output of *process substitution* into a
 loop.**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -398,24 +284,12 @@ loop.**
 
     #!/bin/CRASH-BANG! done #!/bin/CRASH-BANG!
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 A reader sent in the following interesting example of process
 substitution.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -474,24 +348,12 @@ substitution.
     # This is useful, when parsing csv and the like.
     # That is, in effect, what the original SuSE code fragment does.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <process-sub.html#AEN18244>`__
 
@@ -499,13 +361,7 @@ This has the same effect as a `named pipe <extmisc.html#NAMEDPIPEREF>`__
 (temp file), and, in fact, named pipes were at one time used in process
 substitution.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

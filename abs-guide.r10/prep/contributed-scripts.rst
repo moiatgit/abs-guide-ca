@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix A. Contributed Scripts
 ================================
@@ -9,15 +6,9 @@ These scripts, while not fitting into the text of this document, do
 illustrate some interesting shell programming techniques. Some are
 useful, too. Have fun analyzing and running them.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-1. *mailformat* : Formatting an e-mail message**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -74,30 +65,15 @@ useful, too. Have fun analyzing and running them.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-2. *rn* : A simple-minded file renaming utility**
 
 This script is a modification of `Example
 16-22 <textproc.html#LOWERCASE>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -150,29 +126,14 @@ This script is a modification of `Example
     # What types of files will this not work on?
     # How can this be fixed?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-3. *blank-rename* : Renames filenames containing blanks**
 
 This is an even simpler-minded version of previous script.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -206,28 +167,13 @@ This is an even simpler-minded version of previous script.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-4. *encryptedpw* : Uploading to an ftp site, using a locally
 encrypted password**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -278,27 +224,12 @@ encrypted password**
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-5. *copy-cd* : Copying a data CD**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -356,27 +287,12 @@ encrypted password**
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-6. Collatz series**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -450,27 +366,12 @@ encrypted password**
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-7. *days-between* : Days between two dates**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -630,27 +531,12 @@ encrypted password**
     #+ the implementation of Gauss' Formula in a C program at
     #+    http://buschencrew.hypermart.net/software/datedif
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-8. Making a *dictionary***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -697,27 +583,12 @@ encrypted password**
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-9. Soundex conversion**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -879,27 +750,12 @@ encrypted password**
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-10. *Game of Life***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1292,27 +1148,12 @@ encrypted password**
     # Exercise: Optimize this script.
     #           It has redundant code.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-11. Data file for *Game of Life***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1337,17 +1178,8 @@ encrypted password**
     __.._..___
     _..___..__
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 +++
 
@@ -1356,15 +1188,9 @@ the file ``      Moraes-COPYRIGHT     `` for permissions and
 restrictions. This file is included in the combined `HTML/source
 tarball <mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-12. *behead* : Removing mail and news message headers**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1419,17 +1245,8 @@ tarball <mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* .
      * 4. This notice may not be removed or altered.
      */
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 +
 
@@ -1437,15 +1254,9 @@ Antek Sawicki contributed the following script, which makes very clever
 use of the parameter substitution operators discussed in `Section
 10.2 <parameter-substitution.html>`__ .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-13. *password* : Generating random 8-character passwords**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1498,32 +1309,17 @@ use of the parameter substitution operators discussed in `Section
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 +
 
  James R. Van Zandt contributed this script which uses named pipes and,
 in his words, "really exercises quoting and escaping."
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-14. *fifo* : Making daily backups, using named pipes**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1562,32 +1358,17 @@ in his words, "really exercises quoting and escaping."
 
       exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 +
 
 Stéphane Chazelas used the following script to demonstrate generating
 prime numbers without arrays.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-15. Generating prime numbers using the modulo operator**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1641,31 +1422,16 @@ prime numbers without arrays.
 
     #  Exercise: Rewrite this script without recursion.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 +
 
 Rick Boivie's revision of Jordi Sanfeliu's *tree* script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-16. *tree* : Displaying a directory tree**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1732,29 +1498,14 @@ Rick Boivie's revision of Jordi Sanfeliu's *tree* script.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Patsie's version of a directory *tree* script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-17. *tree2* : Alternate directory tree script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1864,31 +1615,16 @@ Patsie's version of a directory *tree* script.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Noah Friedman permitted use of his *string function* script. It
 essentially reproduces some of the *C* -library string manipulation
 functions.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-18. *string functions* : C-style string functions**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -2164,31 +1900,16 @@ functions.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Michael Zick's complex array example uses the
 `md5sum <filearchiv.html#MD5SUMREF>`__ check sum command to encode
 directory information.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-19. Directory information**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -2741,17 +2462,8 @@ directory information.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Stéphane Chazelas demonstrates object-oriented programming in a Bash
 script.
@@ -2759,15 +2471,9 @@ script.
 Mariusz Gniazdowski contributed a `hash <internal.html#HASHREF>`__
 library for use in scripts.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-20. Library of hash functions**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -2954,29 +2660,14 @@ library for use in scripts.
     #  NOTE: In lines 103 and 116, ampersand changed.
     #  But, it doesn't matter, because these are comment lines anyhow.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Here is an example script using the foregoing hash library.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-21. Colorizing text using hash functions**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3040,30 +2731,15 @@ Here is an example script using the foregoing hash library.
     #  and end up looking darker than the normal ones.
     #  Why is this?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  An example illustrating the mechanics of hashing, but from a different
 point of view.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-22. More on hash functions**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3212,30 +2888,15 @@ point of view.
 
     # Add error checks to the functions.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Now for a script that installs and mounts those cute USB keychain
 solid-state "hard drives."
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-23. Mounting USB keychain storage devices**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3382,29 +3043,14 @@ solid-state "hard drives."
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Converting a text file to HTML format.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-24. Converting to HTML**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3550,30 +3196,15 @@ Converting a text file to HTML format.
     #  2) Add a test for the presence of a closing underscore
     #+    in phrases to be italicized.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Here is something to warm the hearts of webmasters and mistresses: a
 script that saves weblogs.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-25. Preserving weblogs**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3644,29 +3275,14 @@ script that saves weblogs.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  How to keep the shell from expanding and reinterpreting text strings.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-26. Protecting literal strings**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3819,29 +3435,14 @@ script that saves weblogs.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  But, what if you *want* the shell to expand and reinterpret strings?
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-27. Unprotecting literal strings**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -3969,29 +3570,14 @@ script that saves weblogs.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 This interesting script helps hunt down spammers.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-28. Spammer Identification**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -6170,29 +5756,14 @@ This interesting script helps hunt down spammers.
     Web site at rediris.es. Can't give the full URL, since this is not
     a publically accessible site.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Another anti-spam script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-29. Spammer Hunt**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -6477,30 +6048,15 @@ Another anti-spam script.
     #@+ by Walter Dnes.
     #@  Thank you!
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  "Little Monster's" front end to `wget <communications.html#WGETREF>`__
 .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-30. Making *wget* easier to use**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -6990,27 +6546,12 @@ Another anti-spam script.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-31. A *podcasting* script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -7095,27 +6636,12 @@ Another anti-spam script.
     http://www.linuxjournal.com/article/8171
     #################################################
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-32. Nightly backup to a firewire HD**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -7484,27 +7010,12 @@ Another anti-spam script.
     echo 'BACKUP FAILED! Is this just a dry run? Is the disk full?) '
     exit $E_BACKUP
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-33. An expanded *cd* command**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -8276,27 +7787,12 @@ Another anti-spam script.
 
     DOCUMENTATION
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-34. A soundcard setup script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -8407,27 +7903,12 @@ Another anti-spam script.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-35. Locating split paragraphs in a text file**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -8498,27 +7979,12 @@ Another anti-spam script.
     There will be additional output for all the other split paragraphs
     in the target file.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-36. Insertion sort**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -8588,27 +8054,12 @@ Another anti-spam script.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-37. Standard Deviation**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -8730,27 +8181,12 @@ Another anti-spam script.
     # Standard Deviation = .235338054
     # ++++++++++++++++++++++++++++++++++++++++ #
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-38. A *pad* file generator for shareware authors**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -8998,27 +8434,12 @@ Another anti-spam script.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-39. A *man page* editor**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -9171,27 +8592,12 @@ Another anti-spam script.
     #+ http://freshmeat.net/projects/manedit/
     #+ but it's much easier to use.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-40. Petals Around the Rose**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -9390,27 +8796,12 @@ Another anti-spam script.
     # 2) http://www.borrett.id.au/computing/petals-bg.htm
     #    (How Bill Gates coped with the Petals Around the Rose challenge.)
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-41. Quacky: a Perquackey-type word game**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -9881,27 +9272,12 @@ Another anti-spam script.
     # For more info, reference:
     # http://bash.deta.in/qky.README.html
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-42. Nim**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -10181,27 +9557,12 @@ Another anti-spam script.
     #  In 1978, Leo Christopherson wrote an animated version of Nim,
     #+ Android Nim, for the TRS-80 Model I.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-43. A command-line stopwatch**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -10336,28 +9697,13 @@ Another anti-spam script.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-44. An all-purpose shell scripting homework assignment
 solution**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -10458,27 +9804,12 @@ solution**
     #  In your career as a sysadmin, you'll run into these critters
     #+ all too often.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-45. The Knight's Tour**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -11093,27 +10424,12 @@ solution**
     #    Possibly, when calculating possible moves, counts the move back
     #+   to the originating square. If so, it might be a relatively easy fix.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-46. Magic Squares**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -11230,27 +10546,12 @@ solution**
     #    This is non-trivial(!).
     #    See the URL for Kwon Young Shin, above, for help.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-47. Fifteen Puzzle**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -11428,27 +10729,12 @@ solution**
     #  Rewrite the script to display the letters A - O,
     #+ rather than the numbers 1 - 15.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-48. *The Towers of Hanoi, graphic version***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -11661,27 +10947,12 @@ solution**
     # Note:
     # Redirect script output to a file, otherwise it scrolls off display.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-49. *The Towers of Hanoi, alternate graphic version***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -11902,28 +11173,13 @@ solution**
     #+ the next-to-last move to be skipped.
     #+ Fix this.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-50. An alternate version of the
 `getopt-simple.sh <string-manipulation.html#GETOPTSIMPLE>`__ script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12051,28 +11307,13 @@ solution**
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-51. The version of the *UseGetOpt.sh* example used in the
 `Tab Expansion appendix <tabexpansion.html>`__**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12171,27 +11412,12 @@ solution**
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-52. Cycling through all the possible color backgrounds**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12247,27 +11473,12 @@ solution**
 
     echo
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-53. Morse Code Practice**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12429,27 +11640,12 @@ solution**
     #+    as arguments. Hint: Use 'tr' . . .
     #  2) Have the script optionally accept input from a text file.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-54. Base64 encoding/decoding**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12580,27 +11776,12 @@ solution**
 
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-55. Inserting text in a file using *sed***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12642,27 +11823,12 @@ solution**
     # Add error checking to this script.
     # It needs it badly.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-56. The Gronsfeld Cipher**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12814,27 +11980,12 @@ solution**
     #   For example, Bozo Bozeman encrypts to hfnbttdppkt29379.
     #   **************************************************************   #
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-57. Bingo Number Generator**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -12965,29 +12116,14 @@ solution**
     #See also the author's Instructable:
     #www.instructables.com/id/Binguino-An-Arduino-based-Bingo-Number-Generato/
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
  To end this section, a review of the basics . . . and more.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-58. Basics Reviewed**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -14032,27 +13168,12 @@ solution**
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-59. Testing execution times of various commands**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -14126,28 +13247,13 @@ solution**
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example A-60. Associative arrays vs. conventional arrays (execution
 times)**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -14252,19 +13358,7 @@ times)**
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   16.2. Complex Commands
 =======================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Commands for more advanced users**
 
@@ -21,9 +15,6 @@
     the shell passes it to **find** literally, without interpreting it
     as a special character).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -33,38 +24,20 @@
          /home/bozo/test-scripts/1.txt
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     If ``                   COMMAND                 `` contains {} ,
     then **find** substitutes the full path name of the selected file
     for "{}" .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         find ~/ -name 'core*' -exec rm {} \;
         # Removes all core dump files from user's home directory.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -95,17 +68,8 @@
         #
         #  (The 'find' manpage and info page have complete option listings.)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -124,50 +88,23 @@
 
         # Thanks, StÃ©phane Chazelas. 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The ``            -exec           `` option to **find** should not
     be confused with the `exec <internal.html#EXECREF>`__ shell builtin.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-3. *Badname* , eliminate file names in current
     directory containing bad characters and
     `whitespace <special-chars.html#WHITESPACEREF>`__ .**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -203,27 +140,12 @@
 
         # (Thanks, S.C.)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-4. Deleting a file by its *inode* number**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -274,24 +196,12 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **find** command also works without the
     ``         -exec        `` option.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -310,13 +220,7 @@
           ls -ltF --author "$file"
         done
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See `Example 16-30 <filearchiv.html#EX48>`__ , `Example
     3-4 <special-chars.html#EX58>`__ , and `Example
@@ -341,9 +245,6 @@
     **xargs** may have linefeeds and other whitespace characters
     stripped out.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -368,25 +269,13 @@
          . . .
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     ``                   ls | xargs -p -l gzip                 ``
     `gzips <filearchiv.html#GZIPREF>`__ every file in current directory,
     one at a time, prompting before each operation.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -408,9 +297,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -420,9 +306,6 @@
          . . .
                   
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -432,25 +315,10 @@
          . . .
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -464,25 +332,10 @@
     lists the files in the current directory in
     ``            8           `` columns.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -516,9 +369,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -527,9 +377,6 @@
         #  From Han Holl's fixup of "get-commandline.sh"
         #+ script in "/dev and /proc" chapter.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -538,25 +385,10 @@
         #  From Han Holl's fixup of "get-commandline.sh"
         #+ script in "/dev and /proc" chapter.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -591,9 +423,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -610,9 +439,6 @@
 
         # Thank you, Roberto Polli, for the inspiration.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -629,27 +455,12 @@
 
         # Thank you, Roberto Polli, for the inspiration.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-5. Logfile: Using *xargs* to monitor system log**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -690,30 +501,15 @@
         #+ of 20 minutes.
         #  Hint: Use the "watch" command. 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     `As in **find** <moreadv.html#CURLYBRACKETSREF>`__ , a curly bracket
     pair serves as a placeholder for replacement text.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-6. Copying files in current directory to another**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -748,27 +544,12 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-7. Killing processes by name**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -813,27 +594,12 @@
         #  The "killall" command has the same effect as this script,
         #+ but using it is not quite as educational.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-8. Word frequency analysis using *xargs***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -883,17 +649,8 @@
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``                 expr               ``
     All-purpose expression evaluator: Concatenates and evaluates the
@@ -901,9 +658,6 @@
     separated by spaces). Operations may be arithmetic, comparison,
     string, or logical.
 
-    .. raw:: html
-
-       <div class="VARIABLELIST">
 
      ``                       expr 3 + 5                     ``
         returns ``            8           ``
@@ -934,19 +688,10 @@
     ``                       z=`expr substr         $string $position $length`                     ``
         Extract substring of $length characters, starting at $position.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-9. Using *expr***
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1055,25 +800,10 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="IMPORTANT">
-
-    .. raw:: html
-
-       <div>
 
     |Important|
 
@@ -1179,9 +909,6 @@
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1229,9 +956,6 @@
 
         exit 0
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1279,30 +1003,15 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
 
 The above script illustrates how **expr** uses the *escaped parentheses
 -- \\( ... \\) --* grouping operator in tandem with `regular
 expression <regexp.html#REGEXREF>`__ parsing to match a substring. Here
 is a another example, this time from "real life."
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -1313,13 +1022,7 @@ is a another example, this time from "real life."
     #+ for converting files to Sony Librie/PRS-50X format.
     #  (http://booklistgensh.peterknowles.com)
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 `Perl <wrapper.html#PERLREF>`__ , `sed <sedawk.html#SEDREF>`__ , and
 `awk <awk.html#AWKREF>`__ have far superior string parsing facilities. A
@@ -1329,16 +1032,10 @@ short **sed** or **awk** "subroutine" within a script (see `Section
 See `Section 10.1 <string-manipulation.html>`__ for more on using
 **expr** in string operations.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <moreadv.html#AEN10465>`__
 
@@ -1346,13 +1043,7 @@ And even when *xargs* is not strictly necessary, it can speed up
 execution of a command involving
 `batch-processing <timedate.html#BATCHPROCREF>`__ of multiple files.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Tip| image:: ../images/tip.gif

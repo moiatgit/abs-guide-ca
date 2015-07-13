@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.4. Recursion: a script calling itself
 =========================================
@@ -8,15 +5,9 @@
 Can a script `recursively <localvar.html#RECURSIONREF>`__ call itself?
 Indeed.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-10. A (useless) script that recursively calls itself**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -51,27 +42,12 @@ Indeed.
     # This is the case even if it is invoked by an "sh" command.
     # Explain why.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-11. A (useful) script that recursively calls itself**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -126,27 +102,12 @@ Indeed.
     #  When more than one argument is passed to this script,
     #+ it prints *only* the line(s) containing all the arguments.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 36-12. Another (useful) script that recursively calls itself**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -205,45 +166,18 @@ Indeed.
     #    by using this same technique in separate mntfloppy, mntcdrom,
     #    and mntsamba scripts.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
 Too many levels of recursion can exhaust the script's stack space,
 causing a segfault.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

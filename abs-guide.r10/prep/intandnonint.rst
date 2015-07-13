@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.1. Interactive and non-interactive shells and scripts
 =========================================================
@@ -14,9 +11,6 @@ A shell running a script is always a non-interactive shell. All the
 same, the script can still access its ``      tty     `` . It is even
 possible to emulate an interactive shell in a script.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -34,13 +28,7 @@ possible to emulate an interactive shell in a script.
     # This example script, and much of the above explanation supplied by
     # StÃ©phane Chazelas (thanks again).
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Let us consider an *interactive* script to be one that requires input
 from the user, usually with `read <internal.html#READREF>`__ statements
@@ -67,9 +55,6 @@ it is simply a matter of finding whether the *prompt* variable,
 `$PS1 <internalvariables.html#PS1REF>`__ is set. (If the user is being
 prompted for input, then the script needs to display a prompt.)
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -83,20 +68,11 @@ prompted for input, then the script needs to display a prompt.)
       ...
     fi
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  Alternatively, the script can test for the presence of option "i" in
 the `$- <internalvariables.html#FLPREF>`__ flag.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -107,20 +83,11 @@ the `$- <internalvariables.html#FLPREF>`__ flag.
     ;;
     # (Courtesy of "UNIX F.A.Q.," 1993)
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  However, John Lange describes an alternative method, using the ` -t
 *test* operator <fto.html#TERMTEST>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -150,21 +117,9 @@ the `$- <internalvariables.html#FLPREF>`__ flag.
       echo non-interactive
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -173,20 +128,8 @@ with a ``                   #!/bin/bash -i                 `` header. Be
 aware that this can cause erratic script behavior or show error messages
 even when no error is present.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix T. ASCII Table
 ========================
@@ -10,15 +7,9 @@ Traditionally, a book of this sort has an
 not. Instead, here are several short scripts, each of which generates a
 complete ASCII table.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example T-1. A script that generates an ASCII table**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -69,27 +60,12 @@ complete ASCII table.
     # Exercise:
     # Rewrite this script to use decimal numbers, rather than octal.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example T-2. Another ASCII table script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -136,27 +112,12 @@ complete ASCII table.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example T-3. A third ASCII table script, using *awk***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -199,19 +160,7 @@ complete ASCII table.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

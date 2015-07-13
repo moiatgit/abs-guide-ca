@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   37.3. Bash, version 4
 ======================
@@ -13,39 +10,18 @@ Among the new goodies:
 
 -   Associative arrays. ` [1]  <bashver4.html#FTN.AEN21025>`__
 
-   .. raw:: html
 
-      <div>
-
-   .. raw:: html
-
-      <div class="SIDEBAR">
 
    An *associative* array can be thought of as a set of two linked
    arrays -- one holding the *data* , and the other the *keys* that
    index the individual elements of the *data* array.
 
-   .. raw:: html
 
-      </div>
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-5. A simple address database**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -72,27 +48,12 @@ Among the new goodies:
        echo "${!address[*]}"   # The array indices ...
        # Charles John Wilma
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-6. A somewhat more elaborate address database**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -147,28 +108,13 @@ Among the new goodies:
 
        exit $?   # In this case, exit code = 99, since that is function return.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
    See `Example A-53 <contributed-scripts.html#SAMORSE>`__ for an
    interesting usage of an *associative array* .
 
-   .. raw:: html
 
-      <div class="CAUTION">
-
-   .. raw:: html
-
-      <div>
 
    |Caution|
 
@@ -185,47 +131,26 @@ Among the new goodies:
                              
    +--------------------------+--------------------------+--------------------------+
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
        address[   ]="Blank"   # Error!
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
        address[   ]="Blank"   # Error!
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -   Enhancements to the `case <testbranch.html#CASEESAC1>`__ construct:
    the ``                 ;;&               `` and
    ``                 ;&               `` terminators.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-7. Testing characters**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -270,17 +195,8 @@ Among the new goodies:
        # The ;;& terminator can save complex if/then conditions.
        # The ;& is somewhat less useful.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -   The new **coproc** builtin enables two parallel
    `processes <special-chars.html#PROCESSREF>`__ to communicate and
@@ -307,9 +223,6 @@ Among the new goodies:
    Coprocesses use *file descriptors* . `File descriptors enable
    processes and pipes to communicate <io-redirection.html#FDREF2>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -329,19 +242,10 @@ Among the new goodies:
        kill $COPROC_PID                   #  No longer need the coprocess,
                                           #+ so kill its PID.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    But, be careful!
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -378,21 +282,9 @@ Among the new goodies:
 
        #  Compare this to the "badread.sh" script.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-   .. raw:: html
-
-      <div class="CAUTION">
-
-   .. raw:: html
-
-      <div>
 
    |Caution|
 
@@ -461,9 +353,6 @@ Among the new goodies:
                              
    +--------------------------+--------------------------+--------------------------+
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -499,9 +388,6 @@ Among the new goodies:
        #+ apparent that each process, the executing shell and the coprocess,
        #+ waits for the other to finish writing in its own write-enabled pipe.
 
-   .. raw:: html
-
-      </p>
 
    .. code:: PROGRAMLISTING
 
@@ -537,25 +423,13 @@ Among the new goodies:
        #+ apparent that each process, the executing shell and the coprocess,
        #+ waits for the other to finish writing in its own write-enabled pipe.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -   The new **mapfile** builtin makes it possible to load an array with
    the contents of a text file without using a loop or `command
    substitution <arrays.html#ARRAYINITCS>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -573,13 +447,7 @@ Among the new goodies:
 
        exit
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  The `read <internal.html#READREF>`__ builtin got a minor facelift.
    The ``        -t       `` `timeout <internal.html#READTIMED>`__
@@ -592,9 +460,6 @@ Among the new goodies:
 -   `Parameter substitution <parameter-substitution.html#PARAMSUBREF>`__
    gets *case-modification* operators.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -611,13 +476,7 @@ Among the new goodies:
        echo ${var,,}          # verymixedupvariable
        #         **             All chars  --> lowercase.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -625,9 +484,6 @@ Among the new goodies:
    ``        -l       `` *lowercase* and ``        -c       ``
    *capitalize* options.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -643,22 +499,13 @@ Among the new goodies:
        echo "$var2"               # Originally_lowercase
        # NOT the same effect as     echo $var2 | tr a-z A-Z
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -   `Brace expansion <special-chars.html#BRACEEXPREF>`__ has more
    options.
 
    *Increment/decrement* , specified in the final term within braces.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -680,20 +527,11 @@ Among the new goodies:
        # X Y Z [  ] ^ _ ` a b c d
        # Does not echo the \ which escapes a space.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    *Zero-padding* , specified in the first term within braces, prefixes
    each term in the output with the *same number* of zeroes.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -705,13 +543,7 @@ Among the new goodies:
        000 001 002 003 004 005 006 007 008 009 010
              
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -720,9 +552,6 @@ Among the new goodies:
    `$0 <othertypesv.html#SCRNAMEPARAM>`__ as the *zero-index* . (This
    corrects an inconsistency in the treatment of positional parameters.)
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -750,21 +579,12 @@ Among the new goodies:
 
        # $0                $1  $2  $3
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -   The new \*\* `globbing <globbingref.html>`__ operator matches
    filenames and directories
    `recursively <localvar.html#RECURSIONREF0>`__ .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -810,13 +630,7 @@ Among the new goodies:
        allmyfiles/my_pictures/picnic-with-Melissa.png
        filelist.bash4
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  The new `$BASHPID <internalvariables.html#BASHPIDREF>`__ internal
    variable.
@@ -826,9 +640,6 @@ Among the new goodies:
    There is a new `builtin <internal.html#BUILTINREF>`__ error-handling
    function named **command\_not\_found\_handle** .
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -845,21 +656,9 @@ Among the new goodies:
        # The following command is not valid: "bad_command"
        # With the following argument(s): "arg1" "arg2"
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 *Editorial comment*
 
@@ -874,21 +673,9 @@ Bash users won't need, won't use, and likely won't greatly appreciate
 complex "features" like built-in debuggers, Perl interfaces, and bolt-on
 rocket boosters.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   37.3.1. Bash, version 4.1
 --------------------------
@@ -910,15 +697,9 @@ update.
    ``         -N        `` option ( *read -N chars* ), which causes the
    *read* to terminate after *chars* characters.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-8. Reading N characters**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -938,32 +719,17 @@ update.
 
        num_chars=61
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  `Here documents <here-docs.html#HEREDOCREF>`__ embedded in
    ```                     $( ... )                   `` command
    substitution <varassignment.html#COMMANDSUBREF0>`__ constructs may
    terminate with a simple **)** .
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-9. Using a *here document* to set a variable**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -993,25 +759,10 @@ update.
        #  warning: here-document at line 10 delimited
        #+ by end-of-file (wanted `ENDxxx')
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
 
-   .. raw:: html
-
-      </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   37.3.2. Bash, version 4.2
 --------------------------
@@ -1022,33 +773,15 @@ new features and enhancements, in addition to bugfixes.
 -  Bash now supports the the ``                   \u                 ``
    and ``                   \U                 `` *Unicode* escape.
 
-   .. raw:: html
 
-      <div>
-
-   .. raw:: html
-
-      <div class="SIDEBAR">
 
    Unicode is a cross-platform standard for encoding into numerical
    values letters and graphic symbols. This permits representing and
    displaying characters in foreign alphabets and unusual fonts.
 
-   .. raw:: html
 
-      </div>
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1103,38 +836,17 @@ new features and enhancements, in addition to bugfixes.
        echo -ne "${symbol[trademark]}   "
        echo
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
-
-   .. raw:: html
-
-      <div class="NOTE">
-
-   .. raw:: html
-
-      <div>
 
    |Note|
 
    The above example uses the `**$' ...
    '** <escapingsection.html#STRQ>`__ *string-expansion* construct.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  
 
@@ -1142,15 +854,9 @@ new features and enhancements, in addition to bugfixes.
    option is set, the last command in a
    `pipe <special-chars.html#PIPEREF>`__ *doesn't run in a subshell* .
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-10. Piping input to a `read <internal.html#READREF>`__**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1175,17 +881,8 @@ new features and enhancements, in addition to bugfixes.
        # Older Bash releases       $line =
        # Bash version 4.2          $line = #!/bin/bash
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
    This option offers possible "fixups" for these example scripts:
    `Example 34-3 <gotchas.html#BADREAD>`__ and `Example
@@ -1194,15 +891,9 @@ new features and enhancements, in addition to bugfixes.
 -  Negative `array <arrays.html#ARRAYREF>`__ indices permit counting
    backwards from the end of an array.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-11. Negative array indices**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1247,31 +938,16 @@ new features and enhancements, in addition to bugfixes.
 
        # See also neg-offset.sh.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-   .. raw:: html
-
-      </div>
 
 -  `Substring extraction <string-manipulation.html#SUBSTREXTR01>`__ uses
    a negative *length* parameter to specify an offset from the *end* of
    the target string.
 
-   .. raw:: html
-
-      <div class="EXAMPLE">
 
    **Example 37-12. Negative parameter in string-extraction construct**
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -1302,32 +978,14 @@ new features and enhancements, in addition to bugfixes.
 
        #  See also neg-array.sh.
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
 
-      </div>
 
-   .. raw:: html
-
-      </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <bashver4.html#AEN21025>`__
 
@@ -1338,48 +996,30 @@ however, that `associative arrays in Bash seem to execute faster and
 more efficiently than numerically-indexed
 arrays <optimizations.html#ASSOCARRTST>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <bashver4.html#AEN21068>`__
 
 Copyright 1995-2009 by Chester Ramey.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <bashver4.html#AEN21096>`__
 
 This only works with `pipes <special-chars.html#PIPEREF>`__ and certain
 other *special* files.
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <bashver4.html#AEN21101>`__
 
 But only in conjunction with `readline <internal.html#READLINEREF>`__ ,
 i.e., from the command-line.
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <bashver4.html#AEN21179>`__
 
 And while you're at it, consider fixing the notorious `piped
 read <internal.html#PIPEREADREF0>`__ problem.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

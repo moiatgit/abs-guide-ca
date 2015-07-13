@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix P. Revision History
 =============================
 
-.. raw:: html
-
-   <div>
 
 .. code:: SYNOPSIS
 
@@ -18,20 +12,11 @@
           of the Linux Documentation Project.
         
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Here is the e-mail to the LDP requesting permission to submit version
 0.1.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -80,23 +65,11 @@ Here is the e-mail to the LDP requesting permission to submit version
     Mendel Cooper
     thegrendel@theriver.com
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table P-1. Revision History**
 
-.. raw:: html
-
-   <div>
 
 Release
 
@@ -422,15 +395,6 @@ YTTERBIUMBERRY release: Minor update.
 
 YTTERBIUMBERRY release: License change.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   4.3. Bash Variables Are Untyped
 ================================
@@ -11,15 +8,9 @@ variables by "type." Essentially, *Bash variables are character strings*
 comparisons on variables. The determining factor is whether the value of
 a variable contains only digits.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 4-4. Integer or string?**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -87,17 +78,8 @@ a variable contains only digits.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Untyped variables are both a blessing and a curse. They permit more
 flexibility in scripting and make it easier to grind out lines of code
@@ -108,7 +90,4 @@ habits.
 To lighten the burden of keeping track of variable types in a script,
 Bash *does* permit `declaring <declareref.html>`__ variables.
 
-.. raw:: html
-
-   </div>
 

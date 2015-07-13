@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   G.2. Bash Command-Line Options
 ===============================
@@ -13,9 +10,6 @@ more useful ones.
    *Read commands from the following string and assign any arguments to
    the `positional parameters <internalvariables.html#POSPARAMREF>`__ .*
 
-   .. raw:: html
-
-      <div>
 
    .. code:: SCREEN
 
@@ -23,13 +17,7 @@ more useful ones.
        a+b+c+d
                  
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  ``        -r       ``
 
@@ -51,7 +39,4 @@ more useful ones.
    *End of options. Anything further on the command line is an argument,
    not an option.*
 
-.. raw:: html
-
-   </div>
 

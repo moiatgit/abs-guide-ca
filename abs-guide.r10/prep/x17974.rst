@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   20.1. Using *exec*
 ===================
@@ -12,15 +9,9 @@ method of reading a file line by line and possibly parsing each line of
 input using `sed <sedawk.html#SEDREF>`__ and/or
 `awk <awk.html#AWKREF>`__ .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-1. Redirecting ``        stdin       `` using *exec***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -60,29 +51,14 @@ input using `sed <sedawk.html#SEDREF>`__ and/or
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Similarly, an **exec >filename** command redirects ``      stdout     ``
 to a designated file. This sends all command output that would normally
 go to ``      stdout     `` to that file.
 
-.. raw:: html
 
-   <div class="IMPORTANT">
-
-.. raw:: html
-
-   <div>
 
 |Important|
 
@@ -95,27 +71,12 @@ script or shell.
 
 Thank you, Ahmed Darwish, for pointing this out.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-2. Redirecting ``        stdout       `` using *exec***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -157,28 +118,13 @@ Thank you, Ahmed Darwish, for pointing this out.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-3. Redirecting both ``        stdin       `` and
 ``        stdout       `` in the same script with *exec***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -228,30 +174,15 @@ Thank you, Ahmed Darwish, for pointing this out.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 I/O redirection is a clever way of avoiding the dreaded `inaccessible
 variables within a subshell <subshells.html#PARVIS>`__ problem.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-4. Avoiding a subshell**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -308,20 +239,8 @@ variables within a subshell <subshells.html#PARVIS>`__ problem.
     Line 7.
     Line 8.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Important| image:: ../images/important.gif

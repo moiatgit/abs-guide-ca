@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   20.3. Applications
 ===================
@@ -10,15 +7,9 @@ snippets of command output (see `Example
 15-7 <internal.html#READREDIR>`__ ). This permits generating report and
 log files.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 20-12. Logging events**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -94,19 +85,7 @@ log files.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

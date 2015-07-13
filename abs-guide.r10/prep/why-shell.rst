@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 1. Shell Programming!
 ==============================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -17,13 +11,7 @@ for particular purposes.*
 
 *--Herbert Mayer*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A working knowledge of shell scripting is essential to anyone wishing to
 become reasonably proficient at system administration, even if they do
@@ -76,13 +64,7 @@ language needs arrays, pointers, and a generic mechanism for building
 data structures." By these criteria, shell scripting falls somewhat
 short of being "useful." Or, perhaps not. . . .
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 When not to use shell scripts
 
@@ -132,17 +114,8 @@ If any of the above applies, consider a more powerful scripting language
 language such as *C* , *C++* , or *Java* . Even then, prototyping the
 application as a shell script might still be a useful development step.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
 
 We will be using Bash , an acronym ` [3]  <why-shell.html#FTN.AEN139>`__
 for "Bourne-Again shell" and a pun on Stephen Bourne's now classic
@@ -176,9 +149,6 @@ for enlightenment.
 Unless otherwise noted, `the author <mailto:thegrendel.abs@gmail.com>`__
 of this book wrote the example scripts that follow.
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -186,33 +156,18 @@ of this book wrote the example scripts that follow.
 
 *--Edmund Spenser*
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <why-shell.html#AEN62>`__
 
 These are referred to as `builtins <internal.html#BUILTINREF>`__ ,
 features internal to the shell.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <why-shell.html#AEN87>`__
 
@@ -221,9 +176,6 @@ script <localvar.html#RECURSIONREF0>`__ , it tends to be slow and its
 implementation is often an `ugly kludge <recurnolocvar.html#FIBOREF>`__
 .
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <why-shell.html#AEN139>`__
 
@@ -232,18 +184,12 @@ letters of the words into a tongue-tripping phrase. This morally corrupt
 and pernicious practice deserves appropriately severe punishment. Public
 flogging suggests itself.
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <why-shell.html#AEN147>`__
 
 Many of the features of *ksh88* , and even a few from the updated
 *ksh93* have been merged into Bash.
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <why-shell.html#AEN157>`__
 
@@ -252,11 +198,5 @@ compliant generally take a name with a ``       .sh      `` extension.
 System scripts, such as those found in ``       /etc/rc.d      `` , do
 not necessarily conform to this nomenclature.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

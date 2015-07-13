@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   38.2. About the Author
 =======================
@@ -56,16 +53,10 @@ Living in an out-of-the-way community with wife and orange tabby, he
 cherishes human frailty, especially his own. ` [3]
  <aboutauthor.html#FTN.AEN21318>`__
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <aboutauthor.html#AEN21292>`__
 
@@ -75,17 +66,11 @@ whatsoever. None. Zero. Nada. Aside from the *ABS Guide* , his major
 claim to fame is a First Place in the sack race at the Colfax Elementary
 School Field Day in June, 1958.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <aboutauthor.html#AEN21295>`__
 
 Those who can, do. Those who can't . . . get an MCSE.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <aboutauthor.html#AEN21318>`__
 
@@ -93,11 +78,5 @@ Sometimes it seems as if he has spent his entire life flouting
 conventional wisdom and defying the sonorous Voice of Authority: " *Hey,
 you can't do that!* "
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

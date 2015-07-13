@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   17.1. Analyzing a System Script
 ================================
@@ -10,15 +7,9 @@ script. One of the shortest and simplest to understand scripts is
 "killall," ` [1]  <sysscripts.html#FTN.AEN17079>`__ used to suspend
 running processes at system shutdown.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 17-12. *killall* , from ``        /etc/rc.d/init.d       ``**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -65,24 +56,12 @@ running processes at system shutdown.
             fi
     done
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 That wasn't so bad. Aside from a little fancy footwork with variable
 matching, there is no new material there.
 
-.. raw:: html
-
-   <div class="FORMALPARA">
 
 **Exercise 1.** In ``       /etc/rc.d/init.d      `` , analyze the
 **halt** script. It is a bit longer than **killall** , but similar in
@@ -92,13 +71,7 @@ the ``       -vn      `` flags (
 ``               sh       -vn scriptname             `` ). Add extensive
 comments. Change the commands to `echos <internal.html#ECHOREF>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="FORMALPARA">
 
 **Exercise 2.** Look at some of the more complex scripts in
 ``       /etc/rc.d/init.d      `` . Try to understand at least portions
@@ -107,20 +80,11 @@ insight, you might also examine the file ``       sysvinitfiles      ``
 in ``       /usr/share/doc/initscripts-?.??      `` , which is part of
 the "initscripts" documentation.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <sysscripts.html#AEN17079>`__
 
@@ -128,11 +92,5 @@ The *killall* system script should not be confused with the
 `killall <x9644.html#KILLALLREF>`__ command in ``       /usr/bin      ``
 .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

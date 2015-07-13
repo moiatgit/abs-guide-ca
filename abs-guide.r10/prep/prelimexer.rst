@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   2.2. Preliminary Exercises
 ===========================
@@ -14,7 +11,4 @@
    `uptime <system.html#UPTIMEREF>`__ . The script then `saves this
    information <io-redirection.html#IOREDIRREF>`__ to a logfile.
 
-.. raw:: html
-
-   </div>
 

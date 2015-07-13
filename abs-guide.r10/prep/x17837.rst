@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   19.1. Here Strings
 ===================
@@ -14,9 +11,6 @@
 As a simple example, consider this alternative to the
 `echo-grep <internal.html#ECHOGREPREF>`__ construction.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -31,19 +25,10 @@ As a simple example, consider this alternative to the
     fi
     # Thank you, Sebastian Kaminski, for the suggestion.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Or, in combination with `read <internal.html#READREF>`__ :
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -64,20 +49,11 @@ Or, in combination with `read <internal.html#READREF>`__ :
 
     # Thank you, Francisco Lobo, for the suggestion.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
  It is, of course, possible to feed the output of a *here string* into
 the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -91,23 +67,11 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 
     # element0 element1 element2 A B C D
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-13. Prepending a line to a file**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -147,27 +111,12 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
        sed -e '1i\
        Title: ' $file
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-14. Parsing a mailbox**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -257,22 +206,10 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
       MESSAGE of Thu, 5 Jan 2006 08:00:56 -0500 (EST) 
       IP address of sender: 196.3.62.4
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Exercise: Find other uses for *here strings* , such as, for example,
 `feeding input to *dc* <mathc.html#GOLDENRATIO>`__ .
 
-.. raw:: html
-
-   </div>
 

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.3. Tests and Comparisons: Alternatives
 ==========================================
@@ -10,9 +7,6 @@ be more appropriate than ``             [       ]           `` .
 Likewise, `arithmetic comparisons <comparison-ops.html#ICOMPARISON1>`__
 might benefit from the `(( )) <dblparens.html>`__ construct.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -36,15 +30,6 @@ might benefit from the `(( )) <dblparens.html>`__ construct.
 
     # Thank you, S.C.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

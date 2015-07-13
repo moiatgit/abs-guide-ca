@@ -1,35 +1,17 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 21. Subshells
 ======================
 
 Running a shell script launches a new process, a *subshell* .
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 ``                   Definition:                 `` A *subshell* is a
 `child process <othertypesv.html#CHILDREF2>`__ launched by a shell (or
 *shell script* ).
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A subshell is a separate instance of the command processor -- the
 *shell* that gives you the prompt at the console or in an *xterm*
@@ -43,9 +25,6 @@ A shell script can itself launch subprocesses. These *subshells* let the
 script do parallel processing, in effect executing multiple subtasks
 simultaneously.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -85,13 +64,7 @@ simultaneously.
     Note: The "UID ..." line would be filtered out by the "grep" command,
     but is shown here for illustrative purposes.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 In general, an `external command <external.html#EXTERNALREF>`__ in a
 script `forks off <internal.html#FORKREF>`__ a subprocess, ` [1]
@@ -100,9 +73,6 @@ script `forks off <internal.html#FORKREF>`__ a subprocess, ` [1]
 builtins execute more quickly and use fewer system resources than their
 external command equivalents.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Command List within Parentheses**
 
@@ -111,9 +81,6 @@ external command equivalents.
     ``                   parentheses                 `` runs as a
     subshell.
 
-.. raw:: html
-
-   </div>
 
  Variables in a subshell are *not* visible outside the block of code in
 the subshell. They are not accessible to the `parent
@@ -121,15 +88,9 @@ process <internal.html#FORKREF>`__ , to the shell that launched the
 subshell. These are, in effect, variables
 `local <localvar.html#LOCALREF>`__ to the *child process* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 21-1. Variable scope in a subshell**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -203,28 +164,13 @@ subshell. These are, in effect, variables
     #+ is there any way to reenter that very same subshell
     #+ to modify or access the subshell variables?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 See also `$BASHPID <internalvariables.html#BASHPIDREF>`__ and `Example
 34-2 <gotchas.html#SUBPIT>`__ .
 
-.. raw:: html
 
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 ``                   Definition:                 `` The *scope* of a
 variable is the context in which it has meaning, in which it has a
@@ -233,25 +179,10 @@ variable <localvar.html#LOCALREF1>`__ lies only within the function,
 block of code, or subshell within which it is defined, while the scope
 of a *global* variable is the entire script in which it appears.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -291,9 +222,6 @@ within a subshell.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -307,9 +235,6 @@ within a subshell.
     echo " \$SHLVL outside subshell = $SHLVL"       # 3
     ( echo " \$SHLVL inside subshell  = $SHLVL" )   # 3 (No change!)
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -323,30 +248,15 @@ within a subshell.
     echo " \$SHLVL outside subshell = $SHLVL"       # 3
     ( echo " \$SHLVL inside subshell  = $SHLVL" )   # 3 (No change!)
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Directory changes made in a subshell do not carry over to the parent
 shell.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 21-2. List User Profiles**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -370,24 +280,12 @@ shell.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 A subshell may be used to set up a "dedicated environment" for a command
 group.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -408,13 +306,7 @@ group.
     COMMAND6
     COMMAND7
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 As seen here, the `exit <internal.html#EXITREF>`__ command only
 terminates the subshell in which it is running, *not* the parent shell
@@ -422,9 +314,6 @@ or script.
 One application of such a "dedicated environment" is testing whether a
 variable is defined.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -440,19 +329,10 @@ variable is defined.
     # or                    [[ ${variable+x} = x ]]
     # or                    [[ ${variable-x} != x ]]
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Another application is checking for a lock file:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -467,13 +347,7 @@ Another application is checking for a lock file:
     #  Code snippet by StÃ©phane Chazelas,
     #+ with modifications by Paulo Marcel Coelho Aragao.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 +
 
@@ -481,15 +355,9 @@ Processes may execute in parallel within different subshells. This
 permits breaking a complex task into subcomponents processed
 concurrently.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 21-3. Running parallel processes in subshells**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -506,28 +374,13 @@ concurrently.
         
         diff list123 list456
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Redirecting I/O to a subshell uses the "\|" pipe operator, as in
 ``             ls -al | (command)           `` .
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -548,9 +401,6 @@ subshell.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -560,9 +410,6 @@ subshell.
     { var1=76; }
     echo "$var1"   # 76
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -572,40 +419,19 @@ subshell.
     { var1=76; }
     echo "$var1"   # 76
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <subshells.html#AEN18102>`__
 
 An external command invoked with an `exec <internal.html#EXECREF>`__
 does *not* (usually) fork off a subprocess / subshell.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

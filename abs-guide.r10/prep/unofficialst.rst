@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   35.1. Unofficial Shell Scripting Stylesheet
 ============================================
@@ -8,9 +5,6 @@
 -  Comment your code. This makes it easier for others to understand (and
    appreciate), and easier for you to maintain.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -19,19 +13,10 @@
        #+ but now it's a complete mystery.
        #  (From Antek Sawicki's "pw.sh" script.)
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    Add descriptive headers to your scripts and functions.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -70,13 +55,7 @@
 
        exit $?
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  Avoid using "magic numbers," ` [1]
     <unofficialst.html#FTN.AEN20041>`__ that is, "hard-wired" literal
@@ -84,9 +63,6 @@
    script easier to understand and permits making changes and updates
    without breaking the application.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -105,19 +81,10 @@
          ...
        fi
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  Choose descriptive names for variables and functions.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -160,20 +127,11 @@
        # It's better for user-defined variables not to start with an underscore.
        # Leave that for system variables.
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
 -  Use `exit codes <exit-status.html#EXITCOMMANDREF>`__ in a systematic
    and meaningful way.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -182,13 +140,7 @@
        ...
        exit $E_WRONG_ARGS
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    See also `Appendix E <exitcodes.html>`__ .
 
@@ -200,9 +152,6 @@
 -  Use standardized parameter flags for script invocation. *Ender*
    proposes the following set of flags.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -223,13 +172,7 @@
        -v      Verbose: Human readable output, more or less formatted.
        -V      Version / License / Copy(right|left) / Contribs (email too).
 
-   .. raw:: html
 
-      </p>
-
-   .. raw:: html
-
-      </div>
 
    See also `Section G.1 <standard-options.html>`__ .
 
@@ -238,9 +181,6 @@
 
 -  Don't use a complex construct where a simpler one will do.
 
-   .. raw:: html
-
-      <div>
 
    .. code:: PROGRAMLISTING
 
@@ -253,17 +193,8 @@
        ...
        # More concise (if perhaps not quite as legible).
 
-   .. raw:: html
 
-      </p>
 
-   .. raw:: html
-
-      </div>
-
-.. raw:: html
-
-   <div>
 
 **
 
@@ -274,24 +205,12 @@ therefore useless, by a poor choice of code style. I asked myself,
 
 *--Landon Noll*
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <unofficialst.html#AEN20041>`__
 
@@ -299,11 +218,5 @@ In this context, "magic numbers" have an entirely different meaning than
 the `magic numbers <sha-bang.html#MAGNUMREF>`__ used to designate file
 types.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

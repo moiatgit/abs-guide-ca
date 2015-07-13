@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 19. Here Documents
 ===========================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -15,13 +9,7 @@
 
 *--Aldous Huxley, *Island**
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A *here document* is a special-purpose code block. It uses a form of
 `I/O redirection <io-redirection.html#IOREDIRREF>`__ to feed a command
@@ -29,9 +17,6 @@ list to an interactive program or a command, such as
 `ftp <communications.html#FTPREF>`__ , `cat <basic.html#CATREF>`__ , or
 the *ex* text editor.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -41,13 +26,7 @@ the *ex* text editor.
     ...
     InputComesFromHERE
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A *limit string* delineates (frames) the command list. The special
 symbol << precedes the limit string. This has the effect of redirecting
@@ -56,9 +35,6 @@ program or command. It is similar to
 ``             interactive-program <     command-file           `` ,
 where ``      command-file     `` contains
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -66,19 +42,10 @@ where ``      command-file     `` contains
     command #2
     ...
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The *here document* equivalent looks like this:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -88,13 +55,7 @@ The *here document* equivalent looks like this:
     ...
     LimitString
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Choose a *limit string* sufficiently unusual that it will not occur
 anywhere in the command list and confuse matters.
@@ -103,15 +64,9 @@ Note that *here documents* may sometimes be used to good effect with
 non-interactive utilities and commands, such as, for example,
 `wall <system.html#WALLREF>`__ .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-1. *broadcast* : Sends message to everyone logged in**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -131,30 +86,15 @@ non-interactive utilities and commands, such as, for example,
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Even such unlikely candidates as the *vi* text editor lend themselves to
 *here documents* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-2. *dummyfile* : Creates a 2-line dummy file**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -192,26 +132,14 @@ Even such unlikely candidates as the *vi* text editor lend themselves to
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The above script could just as effectively have been implemented with
 **ex** , rather than **vi** . *Here documents* containing a list of
 **ex** commands are common enough to form their own category, known as
 *ex scripts* .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -234,25 +162,13 @@ The above script could just as effectively have been implemented with
       # -------------------------------------
     done
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Analogous to "ex scripts" are *cat scripts* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-3. Multi-line message using *cat***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -293,32 +209,17 @@ Analogous to "ex scripts" are *cat scripts* .
     -------------------------------------"
     # However, text may not include double quotes unless they are escaped.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 The ``      -     `` option to mark a here document limit string (
 ``             <<-LimitString           `` ) suppresses leading tabs
 (but not spaces) in the output. This may be useful in making a script
 more readable.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-4. Multi-line message, with tabs suppressed**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -346,31 +247,16 @@ more readable.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 A *here document* supports parameter and command substitution. It is
 therefore possible to pass different parameters to the body of the here
 document, changing its output accordingly.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-5. Here document with replaceable parameters**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -409,30 +295,15 @@ document, changing its output accordingly.
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 This is a useful script containing a *here document* with parameter
 substitution.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-6. Upload a file pair to *Sunsite* incoming directory**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -479,17 +350,8 @@ substitution.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Quoting or escaping the "limit string" at the head of a here document
 disables parameter substitution within its body. The reason for this is
@@ -498,15 +360,9 @@ that *quoting/escaping the limit string* effectively
 characters <special-chars.html#SCHARLIST>`__ , and causes them to be
 interpreted literally. (Thank you, Allen Halsey, for pointing this out.)
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-7. Parameter substitution turned off**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -552,30 +408,15 @@ interpreted literally. (Thank you, Allen Halsey, for pointing this out.)
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Disabling parameter substitution permits outputting literal text.
 Generating scripts or even program code is one use for this.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-8. A script that generates another script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -630,25 +471,13 @@ Generating scripts or even program code is one use for this.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 It is possible to set a variable from the output of a here document.
 This is actually a devious form of `command
 substitution <commandsub.html#COMMANDSUBREF>`__ .
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -660,25 +489,13 @@ substitution <commandsub.html#COMMANDSUBREF>`__ .
 
     echo "$variable"
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A here document can supply input to a function in the same script.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-9. Here documents and functions**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -715,30 +532,15 @@ A here document can supply input to a function in the same script.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 It is possible to use : as a dummy command accepting output from a here
 document. This, in effect, creates an "anonymous" here document.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-10. "Anonymous" Here Document**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -750,52 +552,22 @@ document. This, in effect, creates an "anonymous" here document.
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
 A variation of the above technique permits "commenting out" blocks of
 code.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-11. Commenting out a block of code**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -866,52 +638,22 @@ code.
 
     # Thank you, Kurt Pfeifle, for pointing this out.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
 Yet another twist of this nifty trick makes "self-documenting" scripts
 possible.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 19-12. A self-documenting script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -950,24 +692,12 @@ possible.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Using a `cat script <here-docs.html#CATSCRIPTREF>`__ is an alternate way
 of accomplishing this.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -986,13 +716,7 @@ of accomplishing this.
     exit $DOC_REQUEST
     fi
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 See also `Example A-28 <contributed-scripts.html#ISSPAMMER2>`__ ,
 `Example A-40 <contributed-scripts.html#PETALS>`__ , `Example
@@ -1000,13 +724,7 @@ A-41 <contributed-scripts.html#QKY>`__ , and `Example
 A-42 <contributed-scripts.html#NIM>`__ for more examples of
 self-documenting scripts.
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -1027,9 +745,6 @@ opening and are not accessible to any other process.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -1038,9 +753,6 @@ opening and are not accessible to any other process.
     lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -1049,49 +761,19 @@ opening and are not accessible to any other process.
     lsof    1213 bozo    0r   REG    3,5    0 30386 /tmp/t1213-0-sh (deleted)
               
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
 Some utilities will not work inside a *here document* .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="WARNING">
-
-.. raw:: html
-
-   <div>
 
 |Warning|
 
@@ -1150,9 +832,6 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1178,9 +857,6 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 
     echo "This line had better not echo."  # Follows an 'exit' command.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1206,25 +882,10 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 
     echo "This line had better not echo."  # Follows an 'exit' command.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -1267,9 +928,6 @@ not necessarily a good idea.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1297,9 +955,6 @@ not necessarily a good idea.
     EOF
     # It's safer to use a multi-character limit string.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -1327,45 +982,24 @@ not necessarily a good idea.
     EOF
     # It's safer to use a multi-character limit string.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 For those tasks too complex for a *here document* , consider using the
 ``             expect           `` scripting language, which was
 specifically designed for feeding input into interactive programs.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <here-docs.html#AEN17822>`__
 
 Except, as Dennis Benzinger points out, if `using **<<-** to suppress
 tabs <here-docs.html#LIMITSTRDASH>`__ .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif
 .. |Note| image:: ../images/note.gif

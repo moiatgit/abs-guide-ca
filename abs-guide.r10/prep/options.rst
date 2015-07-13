@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 33. Options
 ====================
@@ -12,9 +9,6 @@ script. At the point in the script where you want the options to take
 effect, use **set -o option-name** or, in short form, **set
 -option-abbrev** . These two forms are equivalent.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -24,17 +18,8 @@ effect, use **set -o option-name** or, in short form, **set
           # Echoes all commands before executing.
           
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -44,42 +29,18 @@ effect, use **set -o option-name** or, in short form, **set
           # Exact same effect as above.
           
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
 To *disable* an option within a script, use **set +o option-name** or
 **set +option-abbrev** .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -110,20 +71,11 @@ To *disable* an option within a script, use **set +o option-name** or
           exit 0
           
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 An alternate method of enabling options in a script is to specify them
 immediately following the ``             #!           `` script header.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -132,13 +84,7 @@ immediately following the ``             #!           `` script header.
           # Body of script follows.
           
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 It is also possible to enable script options from the command line. Some
 options that will not work with **set** are available this way. Among
@@ -153,15 +99,9 @@ The following is a listing of some useful options. They may be specified
 in either abbreviated form (preceded by a single dash) or by complete
 name (preceded by a *double* dash or by ``      -o     `` ).
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table 33-1. Bash options**
 
-.. raw:: html
-
-   <div>
 
 Abbreviation
 
@@ -335,16 +275,7 @@ Unset positional parameters. If arguments given (
 ``                 -- arg1 arg2               `` ), positional
 parameters set to arguments.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

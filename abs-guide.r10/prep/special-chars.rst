@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 3. Special Characters
 ==============================
@@ -11,86 +8,47 @@ then we refer to it as a *special character* . Along with commands and
 `keywords <internal.html#KEYWORDREF>`__ , *special characters* are
 building blocks of Bash scripts.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Special Characters Found In Scripts and Elsewhere**
 
  #
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Comments.** Lines beginning with a # (with the exception of ` #!
      <sha-bang.html#MAGNUMREF>`__ ) are comments and will *not* be
     executed.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         # This line is a comment.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Comments may also occur following the end of a command.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         echo "A comment will follow." # Comment here.
         #                            ^ Note whitespace before #
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      Comments may also follow
     `whitespace <special-chars.html#WHITESPACEREF>`__ at the beginning
     of a line.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
              # A tab precedes this comment.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      Comments may even be embedded within a
     `pipe <special-chars.html#PIPEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -99,21 +57,9 @@ building blocks of Bash scripts.
                    sed -e 's/\./\. /g' -e 's/_/_ /g'` )
         # Excerpted from life.sh script
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -121,25 +67,10 @@ building blocks of Bash scripts.
     method of terminating the comment, in order for "live code" to begin
     on the same line. Use a new line for the next command.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -176,9 +107,6 @@ building blocks of Bash scripts.
     The standard `quoting and escape <quoting.html#QUOTINGREF>`__
     characters (" ' \\) escape the #.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -192,9 +120,6 @@ building blocks of Bash scripts.
 
         # Thanks, S.C.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -208,36 +133,18 @@ building blocks of Bash scripts.
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Certain `pattern matching
     operations <parameter-substitution.html#PSOREX1>`__ also use the # .
 
  ;
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Command separator [semicolon].** Permits putting two or more
     commands on the same line.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -251,32 +158,17 @@ building blocks of Bash scripts.
           echo "File $filename not found."; touch $filename
         fi; echo "File test complete."
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Note that the " ; " `sometimes needs to be
     *escaped* <moreadv.html#FINDREF0>`__ .
 
  ;;
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Terminator in a `case <testbranch.html#CASEESAC1>`__ option
     [double semicolon].**
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -285,53 +177,29 @@ building blocks of Bash scripts.
           xyz)  echo "\$variable = xyz" ;;
         esac
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ;;& , ;&
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`Terminators <bashver4.html#NCTERM>`__ in a *case* option (
     `version 4+ <bashver4.html#BASH4REF>`__ of Bash).**
 
-    .. raw:: html
-
-       </div>
 
  .
 
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     ** "dot" command [period].** Equivalent to
     `source <internal.html#SOURCEREF>`__ (see `Example
     15-22 <internal.html#EX38>`__ ). This is a bash
     `builtin <internal.html#BUILTINREF>`__ .
 
-    .. raw:: html
-
-       </div>
 
  .
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     ** "dot" , as a component of a filename.** When working with
     filenames, a leading dot is the prefix of a "hidden" file, a file
     that an `ls <basic.html#LSREF>`__ will not normally show.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -353,25 +221,13 @@ building blocks of Bash scripts.
          -rw-rw-r--    1 bozo  bozo         0 Aug 29 20:54 .hidden-file
                     
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     When considering directory names, *a single dot* represents the
     current working directory, and *two dots* denote the parent
     directory.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -387,114 +243,63 @@ building blocks of Bash scripts.
         /home/bozo/
                     
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The *dot* often appears as the destination (directory) of a file
     movement command, in this context meaning *current directory* .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
         bash$ cp /home/bozo/current_work/junk/* .
                     
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Copy all the "junk" files to
     `$PWD <internalvariables.html#PWDREF>`__ .
 
  .
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     ** "dot" character match.** When `matching
     characters <x17129.html#REGEXDOT>`__ , as part of a `regular
     expression <regexp.html#REGEXREF>`__ , a "dot" `matches a single
     character <x17129.html#REGEXDOT>`__ .
 
-    .. raw:: html
-
-       </div>
 
  "
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`partial quoting <varsubn.html#DBLQUO>`__ [double quote].**
     *"STRING"* preserves (from interpretation) most of the special
     characters within *STRING* . See `Chapter 5 <quoting.html>`__ .
 
-    .. raw:: html
-
-       </div>
 
  '
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`full quoting <varsubn.html#SNGLQUO>`__ [single quote].**
     *'STRING'* preserves all special characters within *STRING* . This
     is a stronger form of quoting than *"STRING"* . See `Chapter
     5 <quoting.html>`__ .
 
-    .. raw:: html
-
-       </div>
 
  ,
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`comma operator <ops.html#COMMAOP>`__ .** The *comma operator* `
     [1]  <special-chars.html#FTN.AEN612>`__ links together a series of
     arithmetic operations. All are evaluated, but only the last one is
     returned.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         let "t2 = ((a = 9, 15 / 3))"
         # Set "a = 9" and "t2 = 15 / 3"
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
      The *comma* operator can also concatenate strings.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -516,38 +321,20 @@ building blocks of Bash scripts.
 
         # Thank you, Rory Winston, for pointing this out.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  , , ,
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`Lowercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in
     *parameter substitution* (added in `version
     4 <bashver4.html#BASH4REF>`__ of Bash).**
 
-    .. raw:: html
-
-       </div>
 
  \\
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`escape <escapingsection.html#ESCP>`__ [backslash].** A quoting
     mechanism for single characters.
 
-    .. raw:: html
-
-       </div>
 
     ``                   \X                 `` *escapes* the character
     *X* . This has the effect of "quoting" *X* , equivalent to *'X'* .
@@ -558,40 +345,25 @@ building blocks of Bash scripts.
     escaped characters.
 
  /
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Filename path separator [forward slash].** Separates the
     components of a filename (as in
     ``          /home/bozo/projects/Makefile         `` ).
 
-    .. raw:: html
-
-       </div>
 
     This is also the division `arithmetic operator <ops.html#AROPS1>`__
     .
 
  \`
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`command substitution <commandsub.html#COMMANDSUBREF>`__ .** The
     **\`command\`** construct makes available the output of **command**
     for assignment to a variable. This is also known as
     `backquotes <commandsub.html#BACKQUOTESREF>`__ or backticks.
 
-    .. raw:: html
-
-       </div>
 
  :
 
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **null command [colon].** This is the shell equivalent of a "NOP" (
     ``                     no op                   `` , a do-nothing
@@ -600,32 +372,17 @@ building blocks of Bash scripts.
     *Bash* `builtin <internal.html#BUILTINREF>`__ , and its `exit
     status <exit-status.html#EXITSTATUSREF>`__ is *true* ( 0 ).
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         :
         echo $?   # 0
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Endless loop:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -643,19 +400,10 @@ building blocks of Bash scripts.
         #      ...
         #    done
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Placeholder in if/then test:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -665,21 +413,12 @@ building blocks of Bash scripts.
            take-some-action
         fi
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Provide a placeholder where a binary operation is expected, see
     `Example 8-2 <ops.html#ARITHOPS>`__ and `default
     parameters <parameter-substitution.html#DEFPARAM>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -689,13 +428,7 @@ building blocks of Bash scripts.
 
         : ${1?"Usage: $0 ARGUMENT"}     # From "usage-message.sh example script.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Provide a placeholder where a command is expected in a `here
     document <here-docs.html#HEREDOCREF>`__ . See `Example
@@ -705,9 +438,6 @@ building blocks of Bash scripts.
     substitution <parameter-substitution.html#PARAMSUBREF>`__ (as in
     `Example 10-7 <parameter-substitution.html#EX6>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -715,13 +445,7 @@ building blocks of Bash scripts.
         #  Prints error message
         #+ if one or more of essential environmental variables not set.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     **`Variable expansion / substring
     replacement <parameter-substitution.html#EXPREPL1>`__** .
@@ -731,9 +455,6 @@ building blocks of Bash scripts.
     zero length, without changing its permissions. If the file did not
     previously exist, creates it.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -742,13 +463,7 @@ building blocks of Bash scripts.
         # Same effect as   cat /dev/null >data.xxx
         # However, this does not fork a new process, since ":" is a builtin.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 16-15 <textproc.html#EX12>`__ .
 
@@ -757,80 +472,44 @@ building blocks of Bash scripts.
     ``                   : >> target_file                 `` ). If the
     file did not previously exist, creates it.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
      This applies to regular files, not pipes, symlinks, and certain
     special files.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     May be used to begin a comment line, although this is not
     recommended. Using # for a comment turns off error checking for the
     remainder of that line, so almost anything may appear in a comment.
     However, this is not the case with : .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         : This is a comment that generates an error, ( if [ $x -eq 3] ).
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The " : " serves as a `field <special-chars.html#FIELDREF>`__
     separator, in
     ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
     and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
         bash$ echo $PATH
         /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A *colon* is `acceptable as a function
     name <functions.html#FSTRANGEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -845,13 +524,7 @@ building blocks of Bash scripts.
 
         # The name of this function is :
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This is not `portable <portabilityissues.html>`__ behavior, and
     therefore not a recommended practice. In fact, more recent releases
@@ -860,9 +533,6 @@ building blocks of Bash scripts.
 
     A *colon* can serve as a placeholder in an otherwise empty function.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -871,18 +541,9 @@ building blocks of Bash scripts.
           :
         } # Contains a : (null command), and so is not empty.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  !
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **reverse (or negate) the sense of a test or exit status [bang].**
     The ! operator inverts the `exit
@@ -893,9 +554,6 @@ building blocks of Bash scripts.
     `= <comparison-ops.html#EQUALSIGNREF>`__ ) to *not-equal* ( != ).
     The ! operator is a Bash `keyword <internal.html#KEYWORDREF>`__ .
 
-    .. raw:: html
-
-       </div>
 
     In a different context, the ! also appears in `indirect variable
     references <ivr.html#IVRREF>`__ .
@@ -905,21 +563,12 @@ building blocks of Bash scripts.
     Note that within a script, the history mechanism is disabled.
 
  \*
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **wild card [asterisk].** The \* character serves as a "wild card"
     for filename expansion in `globbing <globbingref.html>`__ . By
     itself, it matches every filename in a given directory.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -927,45 +576,27 @@ building blocks of Bash scripts.
         abs-book.sgml add-drive.sh agram.sh alias.sh
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The \* also represents `any number (or zero)
     characters <x17129.html#ASTERISKREG>`__ in a `regular
     expression <regexp.html#REGEXREF>`__ .
 
  \*
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`arithmetic operator <ops.html#AROPS1>`__ .** In the context of
     arithmetic operations, the \* denotes multiplication.
 
-    .. raw:: html
-
-       </div>
 
      \*\* A double asterisk can represent the
     `exponentiation <ops.html#EXPONENTIATIONREF>`__ operator or
     `extended file-match <bashver4.html#GLOBSTARREF>`__ *globbing* .
 
  ?
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **test operator.** Within certain expressions, the ? indicates a
     test for a condition.
 
-    .. raw:: html
-
-       </div>
 
     In a `double-parentheses construct <dblparens.html>`__ , the ? can
     serve as an element of a C-style *trinary* operator. ` [2]
@@ -975,9 +606,6 @@ building blocks of Bash scripts.
     ``         result-if-true        `` **:**
     ``         result-if-false        ``
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -991,13 +619,7 @@ building blocks of Bash scripts.
         #   var0=21
         # fi
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     In a `parameter
     substitution <parameter-substitution.html#PARAMSUBREF>`__
@@ -1005,30 +627,18 @@ building blocks of Bash scripts.
     set <parameter-substitution.html#QERRMSG>`__ .
 
  ?
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **wild card.** The ? character serves as a single-character "wild
     card" for filename expansion in `globbing <globbingref.html>`__ , as
     well as `representing one character <x17129.html#QUEXREGEX>`__ in an
     `extended regular expression <x17129.html#EXTREGEX>`__ .
 
-    .. raw:: html
-
-       </div>
 
  $
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`Variable substitution <varsubn.html>`__ (contents of a
     variable).**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1038,133 +648,67 @@ building blocks of Bash scripts.
         echo $var1     # 5
         echo $var2     # 23skidoo
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A $ prefixing a variable name indicates the *value* the variable
     holds.
 
  $
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **end-of-line.** In a `regular expression <regexp.html#REGEXREF>`__
     , a "$" addresses the `end of a line <x17129.html#DOLLARSIGNREF>`__
     of text.
 
-    .. raw:: html
-
-       </div>
 
  ${}
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`Parameter
     substitution <parameter-substitution.html#PARAMSUBREF>`__ .**
 
-    .. raw:: html
-
-       </div>
 
  $' ... '
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`Quoted string expansion <escapingsection.html#STRQ>`__ .** This
     construct expands single or multiple escaped octal or hex values
     into ASCII ` [3]  <special-chars.html#FTN.AEN1001>`__ or
     `Unicode <bashver4.html#UNICODEREF>`__ characters.
 
-    .. raw:: html
-
-       </div>
 
  $\* , $@
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`positional parameters <internalvariables.html#APPREF>`__ .**
 
-    .. raw:: html
-
-       </div>
 
  $?
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **exit status variable.** The `$?
     variable <exit-status.html#EXSREF>`__ holds the `exit
     status <exit-status.html#EXITSTATUSREF>`__ of a command, a
     `function <functions.html#FUNCTIONREF>`__ , or of the script itself.
 
-    .. raw:: html
-
-       </div>
 
  $$
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **process ID variable.** The `$$
     variable <internalvariables.html#PROCCID>`__ holds the *process ID*
     ` [4]  <special-chars.html#FTN.AEN1071>`__ of the script in which it
     appears.
 
-    .. raw:: html
-
-       </div>
 
  ()
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **command group.**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         (a=hello; echo $a)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="IMPORTANT">
-
-    .. raw:: html
-
-       <div>
 
     |Important|
 
@@ -1191,9 +735,6 @@ building blocks of Bash scripts.
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1203,9 +744,6 @@ building blocks of Bash scripts.
         echo "a = $a"   # a = 123
         # "a" within parentheses acts like a local variable.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1215,54 +753,24 @@ building blocks of Bash scripts.
         echo "a = $a"   # a = 123
         # "a" within parentheses acts like a local variable.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **array initialization.**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         Array=(element1 element2 element3)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  {xxx,yyy,zzz,...}
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Brace expansion.**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1276,17 +784,8 @@ building blocks of Bash scripts.
         cp file22.{txt,backup}
         # Copies "file22.txt" to "file22.backup"
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A command may act upon a comma-separated list of file specs within
     ``                   braces                 `` . ` [5]
@@ -1294,13 +793,7 @@ building blocks of Bash scripts.
     `globbing <globbingref.html>`__ ) applies to the file specs between
     the braces.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -1311,28 +804,13 @@ building blocks of Bash scripts.
 
     ``            file1 : A file1 : B file1 : C file2 : A file2 : B file2 : C           ``
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  {a..z}
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Extended Brace expansion.**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1347,26 +825,14 @@ building blocks of Bash scripts.
         # Initializing an array, using extended brace expansion.
         # From vladz's "base64.sh" example script.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The *{a..z}* `extended brace
     expansion <bashver3.html#BRACEEXPREF3>`__ construction is a feature
     introduced in `version 3 <bashver3.html#BASH3REF>`__ of *Bash* .
 
  {}
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Block of code [curly brackets].** Also referred to as an *inline
     group* , this construct, in effect, creates an *anonymous function*
@@ -1374,13 +840,7 @@ building blocks of Bash scripts.
     `function <functions.html#FUNCTIONREF>`__ , the variables inside a
     code block remain visible to the remainder of the script.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -1390,17 +850,8 @@ building blocks of Bash scripts.
         function
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1410,26 +861,14 @@ building blocks of Bash scripts.
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The code block enclosed in braces may have `I/O
     redirected <io-redirection.html#IOREDIRREF>`__ to and from it.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 3-1. Code blocks and I/O redirection**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1455,27 +894,12 @@ building blocks of Bash scripts.
         # Hint: use awk, or . . .
         # . . . Hans-Joerg Diers suggests using the "set" Bash builtin.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 3-2. Saving the output of a code block to a file**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1521,25 +945,10 @@ building blocks of Bash scripts.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1551,35 +960,17 @@ building blocks of Bash scripts.
     It is possible to `iterate <loops1.html#ITERATIONREF>`__ a code
     block using a `non-standard *for-loop* <loops1.html#NODODONE>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  {}
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **placeholder for text.** Used after `xargs
     ``           -i          `` <moreadv.html#XARGSCURLYREF>`__ (
     *replace strings* option). The {} double curly brackets are a
     placeholder for output text.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1588,59 +979,26 @@ building blocks of Bash scripts.
 
         # From "ex42.sh" (copydir.sh) example.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  {} \\;
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **pathname.** Mostly used in `find <moreadv.html#FINDREF>`__
     constructs. This is *not* a shell
     `builtin <internal.html#BUILTINREF>`__ .
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     Definition: A *pathname* is a *filename* that includes the complete
     `path <internalvariables.html#PATHREF>`__ . As an example,
     ``            /home/bozo/Notes/Thursday/schedule.txt           `` .
     This is sometimes referred to as the *absolute path* .
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1648,28 +1006,13 @@ building blocks of Bash scripts.
     **find** command sequence. It needs to be escaped to protect it from
     interpretation by the shell.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  [ ]
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **test.**
 
-    .. raw:: html
-
-       </div>
 
     `Test <tests.html#IFTHEN>`__ expression between **[ ]** . Note that
     **[** is part of the shell *builtin*
@@ -1678,15 +1021,9 @@ building blocks of Bash scripts.
     ``         /usr/bin/test        `` .
 
  [[ ]]
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **test.**
 
-    .. raw:: html
-
-       </div>
 
     Test expression between [[ ]] . More flexible than the
     single-bracket [ ] test, this is a shell
@@ -1696,67 +1033,37 @@ building blocks of Bash scripts.
     construct <testconstructs.html#DBLBRACKETS>`__ .
 
  [ ]
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **array element.**
 
-    .. raw:: html
-
-       </div>
 
     In the context of an `array <arrays.html#ARRAYREF>`__ , brackets set
     off the numbering of each element of that array.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         Array[1]=slot_1
         echo ${Array[1]}
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  [ ]
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **range of characters.**
 
-    .. raw:: html
-
-       </div>
 
     As part of a `regular expression <regexp.html#REGEXREF>`__ ,
     brackets delineate a `range of
     characters <x17129.html#BRACKETSREF>`__ to match.
 
  $[ ... ]
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **integer expansion.**
 
-    .. raw:: html
-
-       </div>
 
     Evaluate integer expression between $[ ] .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -1766,42 +1073,24 @@ building blocks of Bash scripts.
         echo $[$a+$b]   # 10
         echo $[$a*$b]   # 21
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Note that this usage is *deprecated* , and has been replaced by the
     `(( ... )) <dblparens.html>`__ construct.
 
  (( ))
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **integer expansion.**
 
-    .. raw:: html
-
-       </div>
 
     Expand and evaluate integer expression between (( )) .
 
     See the discussion on the `(( ... )) construct <dblparens.html>`__ .
 
  > &> >& >> < <>
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`redirection <io-redirection.html#IOREDIRREF>`__ .**
 
-    .. raw:: html
-
-       </div>
 
     ``                   scriptname >filename                 ``
     redirects the output of ``         scriptname        `` to file
@@ -1814,13 +1103,7 @@ building blocks of Bash scripts.
     and the ``         stderr        `` of ``         command        ``
     to ``         filename        `` .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1864,9 +1147,6 @@ building blocks of Bash scripts.
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -1878,9 +1158,6 @@ building blocks of Bash scripts.
         1
                             
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1894,9 +1171,6 @@ building blocks of Bash scripts.
         cmd=bogus_command    # Illegitimate command
         command_test $cmd; echo $?   # 1
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -1908,9 +1182,6 @@ building blocks of Bash scripts.
         1
                             
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -1924,17 +1195,8 @@ building blocks of Bash scripts.
         cmd=bogus_command    # Illegitimate command
         command_test $cmd; echo $?   # 1
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     ``                   command >&2                 `` redirects
     ``         stdout        `` of ``         command        `` to
@@ -1950,15 +1212,9 @@ building blocks of Bash scripts.
     `file descriptor <io-redirection.html#FDREF>`__ i to it. If
     ``         filename        `` does not exist, it is created.
 
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`process substitution <process-sub.html#PROCESSSUBREF>`__ .**
 
-    .. raw:: html
-
-       </div>
 
     ``                   (command)>                 ``
 
@@ -1974,39 +1230,21 @@ building blocks of Bash scripts.
     16-9 <moreadv.html#EX45>`__ .
 
  <<
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **redirection used in a `here
     document <here-docs.html#HEREDOCREF>`__ .**
 
-    .. raw:: html
-
-       </div>
 
  <<<
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **redirection used in a `here string <x17837.html#HERESTRINGSREF>`__
     .**
 
-    .. raw:: html
-
-       </div>
 
  < , >
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`ASCII comparison <comparison-ops.html#LTREF>`__ .**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2022,51 +1260,27 @@ building blocks of Bash scripts.
           echo "What kind of dictionary are you using, anyhow?"
         fi
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  \\< , \\>
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`word boundary <x17129.html#ANGLEBRAC>`__ in a `regular
     expression <regexp.html#REGEXREF>`__ .**
 
-    .. raw:: html
-
-       </div>
 
     ``         bash$        ``
     ``                   grep '\<the\>' textfile                 ``
 
  \|
 
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **pipe.** Passes the output ( ``          stdout         `` ) of a
     previous command to the input ( ``          stdin         `` ) of
     the next one, or to the shell. This is a method of chaining commands
     together.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2078,21 +1292,9 @@ building blocks of Bash scripts.
         cat *.lst | sort | uniq
         # Merges and sorts all ".lst" files, then deletes duplicate lines.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     A pipe, as a classic method of interprocess communication, sends the
     ``            stdout           `` of one
@@ -2109,23 +1311,11 @@ building blocks of Bash scripts.
     `the UNIX FAQ, Part
     3 <http://www.faqs.org/faqs/unix-faq/faq/part3/>`__ .
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      The output of a command or commands may be piped to a script.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2138,19 +1328,10 @@ building blocks of Bash scripts.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Now, let us pipe the output of **ls -l** to this script.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2160,21 +1341,9 @@ building blocks of Bash scripts.
          -RW-R--R--    1 BOZO  BOZO       725 APR 20 20:56 DATA-FILE
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -2216,18 +1385,12 @@ building blocks of Bash scripts.
     ``                         SIGPIPE                       ``
     `signal <debugging.html#SIGNALD>`__ .
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -2235,18 +1398,12 @@ building blocks of Bash scripts.
         echo "new_value" | read variable
         echo "variable = $variable"     # variable = initial_value
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
         cat file1 file2 | ls -l | sort
         # The output from "cat file1 file2" disappears.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -2254,60 +1411,30 @@ building blocks of Bash scripts.
         echo "new_value" | read variable
         echo "variable = $variable"     # variable = initial_value
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  >\|
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **force redirection (even if the `noclobber
     option <options.html#NOCLOBBERREF>`__ is set).** This will forcibly
     overwrite an existing file.
 
-    .. raw:: html
-
-       </div>
 
  \|\|
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`OR logical operator <ops.html#ORREF>`__ .** In a `test
     construct <testconstructs.html#TESTCONSTRUCTS1>`__ , the \|\|
     operator causes a return of 0 (success) if *either* of the linked
     test conditions is true.
 
-    .. raw:: html
-
-       </div>
 
  &
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Run job in background.** A command followed by an & will run in
     the background.
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2316,26 +1443,14 @@ building blocks of Bash scripts.
         [1]+  Done                    sleep 10
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Within a script, commands and even
     `loops <loops1.html#FORLOOPREF1>`__ may run in the background.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 3-3. Running a loop in the background**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2382,25 +1497,10 @@ building blocks of Bash scripts.
         #+ after the   echo -n "$i"   in lines 6 and 14,
         #+ for some real fun.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2408,45 +1508,24 @@ building blocks of Bash scripts.
     to hang, waiting for a keystroke. Fortunately, there is a
     `remedy <x9644.html#WAITHANG>`__ for this.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  &&
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`AND logical operator <ops.html#LOGOPS1>`__ .** In a `test
     construct <testconstructs.html#TESTCONSTRUCTS1>`__ , the && operator
     causes a return of 0 (success) only if *both* the linked test
     conditions are true.
 
-    .. raw:: html
-
-       </div>
 
  -
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **option, prefix.** Option flag for a command or filter. Prefix for
     an operator. Prefix for a `default
     parameter <parameter-substitution.html#DEFPARAM1>`__ in `parameter
     substitution <parameter-substitution.html#PARAMSUBREF>`__ .
 
-    .. raw:: html
-
-       </div>
 
     ``                   COMMAND -[Option1][Option2][...]                 ``
 
@@ -2454,9 +1533,6 @@ building blocks of Bash scripts.
 
     ``                   sort -dfu $filename                 ``
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2479,13 +1555,7 @@ building blocks of Bash scripts.
         param2=${param1:-$DEFAULTVAL}
         #               ^
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     **--**
 
@@ -2497,13 +1567,7 @@ building blocks of Bash scripts.
     Used with a `Bash builtin <internal.html#BUILTINREF>`__ , it means
     the *end of options* to that particular command.
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -2526,9 +1590,6 @@ building blocks of Bash scripts.
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -2541,9 +1602,6 @@ building blocks of Bash scripts.
         bash$ ls -l
         total 0
 
-    .. raw:: html
-
-       </p>
 
     .. code:: SCREEN
 
@@ -2556,17 +1614,8 @@ building blocks of Bash scripts.
         bash$ ls -l
         total 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The *double-dash* is also used in conjunction with
     `set <internal.html#SETREF>`__ .
@@ -2575,20 +1624,11 @@ building blocks of Bash scripts.
     `Example 15-18 <internal.html#SETPOS>`__ )
 
  -
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **redirection from/to ``           stdin          `` or
     ``           stdout          `` [dash].**
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2600,22 +1640,13 @@ building blocks of Bash scripts.
 
         Ctl-D
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     As expected, ``                   cat -                 `` echoes
     ``         stdin        `` , in this case keyboarded user input, to
     ``         stdout        `` . But, does I/O redirection using **-**
     have real-world applications?
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2661,17 +1692,8 @@ building blocks of Bash scripts.
         # cp -a /source/directory/* /source/directory/.[^.]* /dest/directory
         #     If there are hidden files in /source/directory.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2681,34 +1703,19 @@ building blocks of Bash scripts.
         #+ this needs to be done in two discrete steps, using a pipe.
         #  The purpose of the exercise is to unarchive "bzipped" kernel source.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Note that in this context the "-" is not itself a Bash operator, but
     rather an option recognized by certain UNIX utilities that write to
     ``         stdout        `` , such as **tar** , **cat** , etc.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
         bash$ echo "whatever" | cat -
         whatever 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Where a filename is expected,
     ``                   -                 `` redirects output to
@@ -2717,9 +1724,6 @@ building blocks of Bash scripts.
     from ``         stdin        `` , rather than from a file. This is a
     method of using a file-oriented utility as a filter in a pipe.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2727,13 +1731,7 @@ building blocks of Bash scripts.
         Usage: file [-bciknvzL] [-f namefile] [-m magicfiles] file...
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     By itself on the command-line, `file <filearchiv.html#FILEREF>`__
     fails with an error message.
@@ -2741,9 +1739,6 @@ building blocks of Bash scripts.
     Add a "-" for a more useful result. This causes the shell to await
     user input.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -2758,13 +1753,7 @@ building blocks of Bash scripts.
         standard input:              Bourne-Again shell script text executable
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Now the command accepts input from ``        stdin       `` and
     analyzes it.
@@ -2782,15 +1771,9 @@ building blocks of Bash scripts.
     ``                   -                 `` with
     `tar <filearchiv.html#TARREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 3-4. Backup of all files changed in last day**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -2828,25 +1811,10 @@ building blocks of Bash scripts.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2872,9 +1840,6 @@ building blocks of Bash scripts.
                               
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -2882,9 +1847,6 @@ building blocks of Bash scripts.
         echo $var       
         # Has the effect of "echo -n", and outputs nothing.
 
-    .. raw:: html
-
-       </p>
 
     .. code:: PROGRAMLISTING
 
@@ -2892,39 +1854,18 @@ building blocks of Bash scripts.
         echo $var       
         # Has the effect of "echo -n", and outputs nothing.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  -
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **previous working directory.** A **cd -** command changes to the
     previous working directory. This uses the
     `$OLDPWD <internalvariables.html#OLDPWD>`__ `environmental
     variable <othertypesv.html#ENVREF>`__ .
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2932,86 +1873,44 @@ building blocks of Bash scripts.
     operator just discussed. The interpretation of the "-" depends on
     the context in which it appears.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  -
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Minus.** Minus sign in an `arithmetic
     operation <ops.html#AROPS1>`__ .
 
-    .. raw:: html
-
-       </div>
 
  =
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Equals.** `Assignment operator <varassignment.html#EQREF>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         a=28
         echo $a   # 28
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     In a `different context <comparison-ops.html#EQUALSIGNREF>`__ , the
     " = " is a `string comparison <comparison-ops.html#SCOMPARISON1>`__
     operator.
 
  +
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Plus.** Addition `arithmetic operator <ops.html#AROPS1>`__ .
 
-    .. raw:: html
-
-       </div>
 
     In a `different context <x17129.html#PLUSREF>`__ , the + is a
     `Regular Expression <regexp.html>`__ operator.
 
  +
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Option.** Option flag for a command or filter.
 
-    .. raw:: html
-
-       </div>
 
     Certain commands and `builtins <internal.html#BUILTINREF>`__ use the
     ``         +        `` to enable certain options and the
@@ -3022,42 +1921,24 @@ building blocks of Bash scripts.
     expands to.
 
  %
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`modulo <ops.html#MODULOREF>`__ .** Modulo (remainder of a
     division) `arithmetic operation <ops.html#AROPS1>`__ .
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         let "z = 5 % 3"
         echo $z  # 2
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     In a `different context <parameter-substitution.html#PCTPATREF>`__ ,
     the % is a `pattern matching <parameter-substitution.html#PSUB2>`__
     operator.
 
  ~
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **home directory [tilde].** This corresponds to the
     `$HOME <internalvariables.html#HOMEDIRREF>`__ internal variable.
@@ -3065,9 +1946,6 @@ building blocks of Bash scripts.
     ~bozo** lists the contents of it. ~/ is the current user's home
     directory, and **ls ~/** lists the contents of it.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -3087,94 +1965,49 @@ building blocks of Bash scripts.
         ~nonexistent-user
                   
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ~+
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **current working directory.** This corresponds to the
     `$PWD <internalvariables.html#PWDREF>`__ internal variable.
 
-    .. raw:: html
-
-       </div>
 
  ~-
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **previous working directory.** This corresponds to the
     `$OLDPWD <internalvariables.html#OLDPWD>`__ internal variable.
 
-    .. raw:: html
-
-       </div>
 
  =~
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`regular expression match <bashver3.html#REGEXMATCHREF>`__ .**
     This operator was introduced with `version
     3 <bashver3.html#BASH3REF>`__ of Bash.
 
-    .. raw:: html
-
-       </div>
 
  ^
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **beginning-of-line.** In a `regular
     expression <regexp.html#REGEXREF>`__ , a "^" addresses the
     `beginning of a line <x17129.html#CARETREF>`__ of text.
 
-    .. raw:: html
-
-       </div>
 
  ^ , ^^
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **`Uppercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in
     *parameter substitution* (added in `version
     4 <bashver4.html#BASH4REF>`__ of Bash).**
 
-    .. raw:: html
-
-       </div>
 
  Control Characters
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **change the behavior of the terminal or text display.** A control
     character is a **CONTROL** + **key** combination (pressed
     simultaneously). A control character may also be written in *octal*
     or *hexadecimal* notation, following an *escape* .
 
-    .. raw:: html
-
-       </div>
 
     Control characters are not normally useful inside a script.
 
@@ -3237,9 +2070,6 @@ building blocks of Bash scripts.
        (destructive backspace). Erases characters the cursor backs over
        while backspacing.
 
-       .. raw:: html
-
-          <div>
 
        .. code:: PROGRAMLISTING
 
@@ -3275,13 +2105,7 @@ building blocks of Bash scripts.
            echo -n "$rubout"
            sleep 2
 
-       .. raw:: html
 
-          </p>
-
-       .. raw:: html
-
-          </div>
 
     -  ``                       Ctl-I                     ``
 
@@ -3320,9 +2144,6 @@ building blocks of Bash scripts.
 
        ``                       Carriage return                     `` .
 
-       .. raw:: html
-
-          <div>
 
        .. code:: PROGRAMLISTING
 
@@ -3366,13 +2187,7 @@ building blocks of Bash scripts.
 
            exit 0
 
-       .. raw:: html
 
-          </p>
-
-       .. raw:: html
-
-          </div>
 
     -  ``                       Ctl-N                     ``
 
@@ -3424,22 +2239,13 @@ building blocks of Bash scripts.
        inserting control characters. For example, the following two are
        equivalent:
 
-       .. raw:: html
-
-          <div>
 
        .. code:: PROGRAMLISTING
 
            echo -e '\x0a'
            echo <Ctl-V><Ctl-J>
 
-       .. raw:: html
 
-          </p>
-
-       .. raw:: html
-
-          </div>
 
        ``                       Ctl-V                     `` is
        primarily useful from within a text editor.
@@ -3474,9 +2280,6 @@ building blocks of Bash scripts.
        character in the MSDOS filesystem.
 
  Whitespace
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **functions as a separator between commands and/or variables.**
     Whitespace consists of either *spaces* , *tabs* , *blank lines* , or
@@ -3485,9 +2288,6 @@ building blocks of Bash scripts.
     assignment <gotchas.html#WSBAD>`__ , whitespace is not permitted,
     and results in a syntax error.
 
-    .. raw:: html
-
-       </div>
 
     Blank lines have no effect on the action of a script, and are
     therefore useful for visually separating functional sections.
@@ -3496,13 +2296,7 @@ building blocks of Bash scripts.
     separating *fields* of input to certain commands. It defaults to
     whitespace.
 
-    .. raw:: html
 
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
      ``                         Definition:                       `` A
     *field* is a discrete chunk of data expressed as a string of
@@ -3511,17 +2305,8 @@ building blocks of Bash scripts.
     determined by the $IFS ). In some contexts, a field may be called a
     *record* .
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     To preserve *whitespace* within a string or in a variable, use
     `quoting <quoting.html#QUOTINGREF>`__ .
@@ -3530,20 +2315,11 @@ building blocks of Bash scripts.
     operate on *whitespace* using the `POSIX <x17129.html#POSIXREF>`__
     character class `[:space:] <x17129.html#WSPOSIX>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <special-chars.html#AEN612>`__
 
@@ -3552,9 +2328,6 @@ examples are the common `arithmetic operators <ops.html#AROPS1>`__ , **+
 - \* /** . In Bash, there is some overlap between the concepts of
 *operator* and `keyword <internal.html#KEYWORDREF>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <special-chars.html#AEN888>`__
 
@@ -3563,9 +2336,6 @@ This is more commonly known as the *ternary* operator. Unfortunately,
 doesn't elucidate. It obfuscates. *Trinary* is by far the more elegant
 usage.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <special-chars.html#AEN1001>`__
 
@@ -3575,9 +2345,6 @@ numeric, and a limited set of symbols) as 7-bit numbers that can be
 stored and manipulated by computers. Many of the ASCII characters are
 represented on a standard keyboard.
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <special-chars.html#AEN1071>`__
 
@@ -3588,18 +2355,12 @@ The *PID* s of running processes may be viewed with a
 ``               Definition:             `` A *process* is a currently
 executing command (or program), sometimes referred to as a *job* .
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <special-chars.html#AEN1124>`__
 
 The shell does the *brace expansion* . The command itself acts upon the
 *result* of the expansion.
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <special-chars.html#AEN1199>`__
 
@@ -3627,9 +2388,6 @@ Exception: a code block in braces as part of a pipe *may* run as a
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -3640,9 +2398,6 @@ Exception: a code block in braces as part of a pipe *may* run as a
 
     # Thanks, S.C.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -3653,9 +2408,6 @@ Exception: a code block in braces as part of a pipe *may* run as a
 
     # Thanks, S.C.
 
-.. raw:: html
-
-   </p>
 
 ` [7]  <special-chars.html#AEN1564>`__
 
@@ -3665,9 +2417,6 @@ target in (roughly) analogous fashion. (The coder who comes up with a
 "love philtre" that runs on a Linux machine will likely win accolades
 and honors.)
 
-.. raw:: html
-
-   </p>
 
 ` [8]  <special-chars.html#AEN2107>`__
 
@@ -3675,9 +2424,6 @@ Bash stores a list of commands previously issued from the command-line
 in a *buffer* , or memory space, for recall with the
 `builtin <internal.html#BUILTINREF>`__ *history* commands.
 
-.. raw:: html
-
-   </p>
 
 ` [9]  <special-chars.html#AEN2198>`__
 
@@ -3685,13 +2431,7 @@ A linefeed ( *newline* ) is also a whitespace character. This explains
 why a *blank line* , consisting only of a linefeed, is considered
 whitespace.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

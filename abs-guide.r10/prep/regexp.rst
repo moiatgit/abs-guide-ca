@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 18. Regular Expressions
 ================================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -16,59 +10,23 @@ largely one of gaining insight.*
 
 *--Stowe Boyd*
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   <div class="TOC">
-
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 18.1. `A Brief Introduction to Regular Expressions <x17129.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 18.2. `Globbing <globbingref.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
 
 To fully utilize the power of shell scripting, you need to master
 Regular Expressions. Certain commands and utilities commonly used in
@@ -78,7 +36,4 @@ scripts, such as `grep <textproc.html#GREPREF>`__ ,
 3 <bashver3.html#BASH3REF>`__ , Bash has acquired its own `RE-match
 operator <bashver3.html#REGEXMATCHREF>`__ : **=~** .
 
-.. raw:: html
-
-   </div>
 

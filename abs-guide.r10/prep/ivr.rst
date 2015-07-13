@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 28. Indirect References
 ================================
@@ -14,15 +11,9 @@ preceded by an `eval <internal.html#EVALREF>`__ (and sometimes an
 `echo <internal.html#ECHOREF>`__ ). This is called an *indirect
 reference* .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 28-1. Indirect Variable References**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -106,25 +97,10 @@ reference* .
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Indirect referencing in Bash is a multi-step process. First, take the
 name of a variable: ``         varname        `` . Then, reference it:
@@ -133,17 +109,8 @@ name of a variable: ``         varname        `` . Then, reference it:
 ``         \$$varname        `` . Finally, force a reevaluation of the
 expression and assign it: **eval newvar=\\$$varname** .
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Of what practical use is indirect referencing of variables? It gives
 Bash a little of the functionality of
@@ -155,9 +122,6 @@ Nils Radtke shows how to build "dynamic" variable names and evaluate
 their contents. This can be useful when
 `sourcing <internal.html#SOURCEREF>`__ configuration files.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -214,23 +178,11 @@ their contents. This can be useful when
     # The parameters to the chkMirrorArchs calls are all lower case.
     # The variable name is composed of two parts: "get" and "Sparc" . . .
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 28-2. Passing an indirect reference to *awk***
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -285,25 +237,10 @@ their contents. This can be useful when
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -316,44 +253,17 @@ with `version 2 <bashver2.html#BASH2REF>`__ of Bash (see `Example
 A-22 <contributed-scripts.html#HASHEX2>`__ ) makes indirect referencing
 more intuitive.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
-
-.. raw:: html
-
-   <div class="SIDEBAR">
 
 Bash does not support pointer arithmetic, and this severely limits the
 usefulness of indirect referencing. In fact, indirect referencing in a
 scripting language is, at best, something of an afterthought.
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif

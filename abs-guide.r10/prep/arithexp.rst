@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 13. Arithmetic Expansion
 =================================
@@ -10,30 +7,18 @@ arithmetic operations in scripts. Translating a string into a numerical
 expression is relatively straightforward using *backticks* , *double
 parentheses* , or *let* .
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Variations**
 
  Arithmetic expansion with `backticks <commandsub.html#BACKQUOTESREF>`__
 (often used in conjunction with `expr <moreadv.html#EXPRREF>`__ )
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         z=`expr $z + 3`          # The 'expr' command performs the expansion.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  Arithmetic expansion with `double parentheses <dblparens.html>`__ , and
 using `let <internal.html#LETREF>`__
@@ -43,9 +28,6 @@ using `let <internal.html#LETREF>`__
     ``                   $((...))                 `` -- and also by the
     very convenient `let <internal.html#LETREF>`__ construction.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -75,13 +57,7 @@ using `let <internal.html#LETREF>`__
                       #  The 'let' operator actually performs arithmetic evaluation,
                       #+ rather than expansion.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Examples of arithmetic expansion in scripts:
 
@@ -95,11 +71,5 @@ using `let <internal.html#LETREF>`__
 
     #. `Example A-16 <contributed-scripts.html#TREE>`__
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 

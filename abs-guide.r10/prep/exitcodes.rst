@@ -1,19 +1,10 @@
-.. raw:: html
-
-   <div class="APPENDIX">
 
   Appendix E. Exit Codes With Special Meanings
 =============================================
 
-.. raw:: html
-
-   <div class="TABLE">
 
 **Table E-1. *Reserved* Exit Codes**
 
-.. raw:: html
-
-   <div>
 
 Exit Code Number
 
@@ -91,13 +82,7 @@ exit -1
 
 **exit** takes only integer args in the range 0 - 255
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 According to the above table, exit codes 1 - 2, 126 - 165, and 255 ` [1]
  <exitcodes.html#FTN.AEN23629>`__ have special meanings, and should
@@ -120,13 +105,7 @@ accompanying examples to this document conform to this standard, except
 where overriding circumstances exist, as in `Example
 9-2 <internalvariables.html#TMDIN>`__ .
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -135,28 +114,13 @@ command-line after a shell script exits gives results consistent with
 the table above only from the Bash or *sh* prompt. Running the *C-shell*
 or *tcsh* may give different values in some cases.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <exitcodes.html#AEN23629>`__
 
@@ -165,9 +129,6 @@ value greater than 255 returns an exit code
 `modulo <ops.html#MODULOREF>`__ 256 . For example, *exit 3809* gives an
 exit code of 225 (3809 % 256 = 225).
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <exitcodes.html#AEN23647>`__
 
@@ -179,12 +140,6 @@ scripting examples to conform to the changing standard. This should not
 cause any problems, since there is no overlap or conflict in usage of
 exit codes between compiled C/C++ binaries and shell scripts.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   10.2. Parameter Substitution
 =============================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Manipulating and/or expanding variables**
 
@@ -20,9 +14,6 @@
 
     May be used for concatenating variables with strings.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -33,21 +24,12 @@
         PATH=${PATH}:/opt/bin  # Add /opt/bin to $PATH for duration of script.
         echo "New \$PATH = $PATH"
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${parameter-default}               `` ,
 ``                 ${parameter:-default}               ``
     If parameter not set, use default.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -64,21 +46,9 @@
         echo ${username-`whoami`}
         # Echoes the result of `whoami`, if variable $username is still unset.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -90,21 +60,9 @@
     ``                         parameter                       `` has
     been declared, but is null.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -152,20 +110,11 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The *default parameter* construct finds use in providing "missing"
     command-line arguments in scripts.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -186,13 +135,7 @@
         #  Set $DISKS to $1 command-line-parameter,
         #+ or to $E_NOPARAM if that is unset.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 3-4 <special-chars.html#EX58>`__ , `Example
     31-2 <zeros.html#EX73>`__ , and `Example
@@ -210,9 +153,6 @@
     ``         $parameter        `` has been declared and is null, ` [1]
      <parameter-substitution.html#FTN.AEN6310>`__ as above.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -220,13 +160,7 @@
         echo ${var=xyz}   # abc
         # $var had already been set to abc, so it did not change.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${parameter+alt_value}               `` ,
 ``                 ${parameter:+alt_value}               ``
@@ -238,9 +172,6 @@
     ``                   parameter                 `` has been declared
     and is null, see below.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -274,13 +205,7 @@
         a=${param6:+xyz}
         echo "a = $a"      # a = xyz
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${parameter?err_msg}               `` ,
 ``                 ${parameter:?err_msg}               ``
@@ -292,19 +217,10 @@
     ``                   parameter                 `` has been declared
     and is null, as above.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 10-7. Using parameter substitution and error messages**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -366,27 +282,12 @@
 
     # In fact, this script will return an exit status (echo $?) of 1.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 10-8. Parameter substitution and "usage" messages**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -407,34 +308,16 @@
     # If command-line parameter present, then "$?" is 0.
     # If not, then "$?" is 1.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="FORMALPARA">
 
 **Parameter substitution and/or expansion.** The following expressions
 are the complement to the **match** ``               in             ``
 **expr** string operations (see `Example 16-9 <moreadv.html#EX45>`__ ).
 These particular ones are used mostly in parsing file path names.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Variable length / Substring removal**
 
@@ -444,13 +327,7 @@ These particular ones are used mostly in parsing file path names.
     `array <arrays.html#ARRAYREF>`__ , **${#array}** is the length of
     the first element in the array.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -464,27 +341,12 @@ These particular ones are used mostly in parsing file path names.
     -  For an array, **${#array[\*]}** and **${#array[@]}** give the
        number of elements in the array.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-9. Length of a variable**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -512,17 +374,8 @@ These particular ones are used mostly in parsing file path names.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${var#Pattern}               `` ,
 ``                 ${var##Pattern}               ``
@@ -540,9 +393,6 @@ These particular ones are used mostly in parsing file path names.
     A usage illustration from `Example
     A-7 <contributed-scripts.html#DAYSBETWEEN>`__ :
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -554,19 +404,10 @@ These particular ones are used mostly in parsing file path names.
           return=${1#0}       #  The "1" refers to "$1" -- passed arg.
         }                     #  The "0" is what to remove from "$1" -- strips zeros.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Manfred Schwarb's more elaborate variation of the above:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -579,19 +420,10 @@ These particular ones are used mostly in parsing file path names.
                                # If input was 0, return 0 instead of "".
         }
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Another usage illustration:
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -606,13 +438,7 @@ These particular ones are used mostly in parsing file path names.
         echo "${filename##*.}"      # data
                                     # Extension of filename.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${var%Pattern}               `` ,
 ``                 ${var%%Pattern}               ``
@@ -627,21 +453,12 @@ These particular ones are used mostly in parsing file path names.
     ``                   back end                 `` of
     ``         $var        `` .
 
-.. raw:: html
-
-   </div>
 
 `Version 2 <bashver2.html#BASH2REF>`__ of Bash added additional options.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 10-10. Pattern matching in parameter substitution**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -690,27 +507,12 @@ These particular ones are used mostly in parsing file path names.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 10-11. Renaming file extensions : **
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -744,21 +546,9 @@ These particular ones are used mostly in parsing file path names.
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Variable expansion / Substring replacement**
 
@@ -786,33 +576,21 @@ These particular ones are used mostly in parsing file path names.
     *nothing* , that is, deleted.
 
  ``                 ${var//Pattern/Replacement}               ``
-    .. raw:: html
-
-       <div class="FORMALPARA">
 
     **Global replacement.** All matches of
     ``                     Pattern                   `` , within
     ``                     var                   `` replaced with
     ``                     Replacement                   `` .
 
-    .. raw:: html
-
-       </div>
 
     As above, if ``                   Replacement                 `` is
     omitted, then all occurrences of
     ``                   Pattern                 `` are replaced by
     *nothing* , that is, deleted.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-12. Using pattern matching to parse arbitrary strings**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -878,17 +656,8 @@ These particular ones are used mostly in parsing file path names.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${var/#Pattern/Replacement}               ``
     If *prefix* of ``                   var                 `` matches
@@ -902,15 +671,9 @@ These particular ones are used mostly in parsing file path names.
     ``                   Replacement                 `` for
     ``                   Pattern                 `` .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 10-13. Matching patterns at prefix or suffix of string**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -949,26 +712,14 @@ These particular ones are used mostly in parsing file path names.
 
         exit 0          
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``                 ${!varprefix*}               `` ,
 ``                 ${!varprefix@}               ``
     Matches *names* of all previously declared variables beginning with
     ``                   varprefix                 `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -992,28 +743,13 @@ These particular ones are used mostly in parsing file path names.
         c=${!b}            #  Now, the more familiar type of indirect reference.
         echo $c            #  something_else
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <parameter-substitution.html#AEN6310>`__
 
@@ -1021,12 +757,6 @@ If $parameter is null in a non-interactive script, it will terminate
 with a ` 127 exit status <exitcodes.html#EXITCODESREF>`__ (the Bash
 error code for "command not found" ).
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

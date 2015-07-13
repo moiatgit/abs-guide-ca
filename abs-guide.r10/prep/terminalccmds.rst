@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   16.7. Terminal Control Commands
 ================================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Command affecting the console or terminal**
 
@@ -18,9 +12,6 @@
     ; **tput reset** is the equivalent of
     `reset <terminalccmds.html#RESETREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -28,13 +19,7 @@
         xterm terminal emulator (X Window System)
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Issuing a **tput cup X Y** moves the cursor to the (X,Y) coordinates
     in the current terminal. A **clear** to erase the terminal screen
@@ -70,9 +55,6 @@
     This command prints out extensive information about the current
     terminal. It references the *terminfo* database.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -89,13 +71,7 @@
                  ...
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **reset**
     Reset terminal parameters and clear text screen. As with **clear** ,
@@ -114,9 +90,6 @@
     ``         $TERMCAP        `` to duplicate the *size* (dimensions)
     of the current terminal.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
@@ -127,24 +100,12 @@
          unset noglob;
                     
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **script**
     This utility records (saves to a file) all the user keystrokes at
     the command-line in a console or an xterm window. This, in effect,
     creates a record of a session.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 

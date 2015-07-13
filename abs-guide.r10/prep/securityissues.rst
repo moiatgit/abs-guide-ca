@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   36.8. Security Issues
 ======================
 
-.. raw:: html
-
-   <div class="SECT2">
 
   36.8.1. Infected Shell Scripts
 -------------------------------
@@ -29,13 +23,7 @@ Here is yet another reason to learn scripting. Being able to look at and
 understand scripts may protect your system from being compromised by a
 rogue script.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   36.8.2. Hiding Shell Script Source
 -----------------------------------
@@ -53,13 +41,7 @@ decrypted to recover the original script source. Still, this could be a
 useful method of keeping scripts secure from all but the most skilled
 hackers.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   36.8.3. Writing Secure Shell Scripts
 -------------------------------------
@@ -82,20 +64,11 @@ hackers.
    caller set `$HOME <internalvariables.html#HOMEDIRREF>`__ to
    ``         /etc        `` .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <securityissues.html#AEN20748>`__
 
@@ -104,11 +77,5 @@ Malware <http://www.virusbtn.com/magazine/archives/200204/malshell.xml>`__
 , and also the `*Denning* reference <biblio.html#DENNINGREF>`__ in the
 *bibliography* .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

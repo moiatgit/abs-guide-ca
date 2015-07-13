@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   7.2. File test operators
 =========================
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Returns true if...**
 
@@ -36,9 +30,6 @@
  -c
      file is a `character device <devref1.html#CHARDEVREF>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -60,20 +51,11 @@
 
         # /dev/ttyS1 is a character device.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  -p
     file is a `pipe <special-chars.html#PIPEREF>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -87,13 +69,7 @@
 
         # This example courtesy of Carl Anderson.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  -h
     file is a `symbolic link <basic.html#SYMLINKREF>`__
@@ -146,22 +122,13 @@
     Lacking the *suid* flag, these binaries could not be invoked by a
     *non-root* user.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
                  -rwsr-xr-t    1 root       178236 Oct  2  2000 /usr/sbin/pppd
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A file with the ``                   suid                 `` flag
     set shows an *s* in its permissions.
@@ -177,22 +144,13 @@
     the file or directory listing. This restricts altering or deleting
     specific files in that directory to the owner of those files.
 
-    .. raw:: html
-
-       <div>
 
     .. code:: SCREEN
 
                  drwxrwxrwt    7 root         1024 May 19 21:26 tmp/
                   
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     If a user does not own a directory that has the sticky bit set, but
     has write permission in that directory, she can only delete those
@@ -227,19 +185,10 @@
      "not" -- reverses the sense of the tests above (returns true if
     condition absent).
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 7-4. Testing for broken links**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -301,17 +250,8 @@
 
     exit $?
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 `Example 31-1 <zeros.html#COOKIES>`__ , `Example
 11-8 <loops1.html#BINGREP>`__ , `Example 11-3 <loops1.html#FILEINFO>`__
@@ -319,16 +259,10 @@
 A-1 <contributed-scripts.html#MAILFORMAT>`__ also illustrate uses of the
 file test operators.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <fto.html#AEN3289>`__
 
@@ -355,9 +289,6 @@ Per the 1913 edition of *Webster's Dictionary* :
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -371,9 +302,6 @@ Per the 1913 edition of *Webster's Dictionary* :
     to express deep regret for;
     to disapprove of strongly.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -387,29 +315,17 @@ Per the 1913 edition of *Webster's Dictionary* :
     to express deep regret for;
     to disapprove of strongly.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <fto.html#AEN3400>`__
 
 Be aware that *suid* binaries may open security holes. The *suid* flag
 has no effect on shell scripts.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <fto.html#AEN3423>`__
 
 On Linux systems, the sticky bit is no longer used for files, only on
 directories.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

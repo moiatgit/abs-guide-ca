@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   38.1. Author's Note
 ====================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -15,13 +9,7 @@
 
 *(Teach, that you yourself may learn.)*
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 How did I come to write a scripting book? It's a strange tale. It seems
 that a few years back I needed to learn shell scripting -- and what
@@ -46,27 +34,15 @@ been any good, who knows, but does that really matter? Here's a fellow
 who lived his dream, even if he was obsessed by it, driven by it . . .
 and somehow I can't help admiring the old coot.
 
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <authorsnote.html#AEN21281>`__
 
 This is the notorious *flog it to death* technique that works so well
 with slow learners, eccentrics, odd ducks, fools and geniuses.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 

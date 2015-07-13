@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   5.1. Quoting Variables
 =======================
@@ -19,9 +16,6 @@ Use double quotes to prevent word splitting. ` [2]
 presents itself as a single word, even if it contains
 `whitespace <special-chars.html#WHITESPACEREF>`__ separators.
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -43,19 +37,10 @@ presents itself as a single word, even if it contains
     done
     # one two three
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 A more elaborate example:
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -78,21 +63,9 @@ A more elaborate example:
 
     # Thanks, Stéphane Chazelas.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
@@ -100,27 +73,12 @@ Enclosing the arguments to an **echo** statement in double quotes is
 necessary only when word splitting or preservation of
 `whitespace <special-chars.html#WHITESPACEREF>`__ is an issue.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 5-1. Echoing Weird Variables**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -175,17 +133,8 @@ necessary only when word splitting or preservation of
     fi
     # ************************************************************ #
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Single quotes ( ' ' ) operate similarly to double quotes, but do not
 permit referencing variables, since the special meaning of $ is turned
@@ -193,13 +142,7 @@ off. Within single quotes, *every* special character except ' gets
 interpreted literally. Consider single quotes ( "full quoting" ) to be a
 stricter method of quoting than double quotes ( "partial quoting" ).
 
-.. raw:: html
 
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -235,9 +178,6 @@ quotes will not yield the expected result.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -252,9 +192,6 @@ quotes will not yield the expected result.
 
     # This example courtesy of Stéphane Chazelas.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -269,28 +206,13 @@ quotes will not yield the expected result.
 
     # This example courtesy of Stéphane Chazelas.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <quotingvar.html#AEN2630>`__
 
@@ -342,9 +264,6 @@ option to *echo* causes the "\\t" to be interpreted as a *tab* .
 (Thank you, Wayne Pollock, for pointing this out, and Geoff Lee and
 Daniel Barclay for explaining it.)
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -375,9 +294,6 @@ Daniel Barclay for explaining it.)
     x       y
               
 
-.. raw:: html
-
-   </p>
 
 .. code:: SCREEN
 
@@ -408,22 +324,13 @@ Daniel Barclay for explaining it.)
     x       y
               
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <quotingvar.html#AEN2688>`__
 
  "Word splitting," in this context, means dividing a character string
 into separate and discrete arguments.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif
 .. |Note| image:: ../images/note.gif

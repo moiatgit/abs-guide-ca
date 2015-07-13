@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   38.4. Tools Used to Produce This Book
 ======================================
 
-.. raw:: html
-
-   <div class="SECT2">
 
   38.4.1. Hardware
 -----------------
@@ -22,13 +16,7 @@ Anyone feel like donating a later-model laptop to a starving writer <g>?
 *Update:* upgraded to a T61 Thinkpad running Mandriva 2011. No longer
 starving <g>, but not too proud to accept donations.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="SECT2">
 
   38.4.2. Software and Printware
 -------------------------------
@@ -47,11 +35,5 @@ starving <g>, but not too proud to accept donations.
    reference for anyone attempting to write a document in Docbook SGML
    format.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 

@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="SECT1">
 
   37.1. Bash, version 2
 ======================
@@ -8,9 +5,6 @@
 The current version of *Bash* , the one you have running on your
 machine, is most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy.
 
-.. raw:: html
-
-   <div>
 
 .. code:: SCREEN
 
@@ -18,27 +12,15 @@ machine, is most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy.
     3.2.25(1)-release
               
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The version 2 update of the classic Bash scripting language added array
 variables, string and parameter expansion, and a better method of
 indirect variable references, among other features.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 37-1. String expansion**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -62,27 +44,12 @@ indirect variable references, among other features.
 
     exit
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 37-2. Indirect variable references - the new way**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -119,28 +86,13 @@ indirect variable references, among other features.
 
     # See also, ind-ref.sh example.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 37-3. Simple database application, using indirect variable
 referencing**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -218,28 +170,13 @@ referencing**
 
     exit 0
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 37-4. Using arrays and other miscellaneous trickery to deal
 four random hands from a deck of cards**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -381,19 +318,7 @@ four random hands from a deck of cards**
     # Exercise 3:
     # Simplify and streamline the logic of the script.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 2. Starting Off With a Sha-Bang
 ========================================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -15,73 +9,31 @@
 
 *--Larry Wall*
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
 
-.. raw:: html
-
-   <div class="TOC">
-
-.. raw:: html
-
-   <dl>
-
-.. raw:: html
-
-   <dt>
 
 **Table of Contents**
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 2.1. `Invoking the script <invoking.html>`__
 
-.. raw:: html
 
-   </dt>
-
-.. raw:: html
-
-   <dt>
 
 2.2. `Preliminary Exercises <prelimexer.html>`__
 
-.. raw:: html
 
-   </dt>
 
-.. raw:: html
-
-   </dl>
-
-.. raw:: html
-
-   </div>
 
 In the simplest case, a script is nothing more than a list of system
 commands stored in a file. At the very least, this saves the effort of
 retyping that particular sequence of commands each time it is invoked.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 2-1. *cleanup* : A script to clean up log files in /var/log**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -93,17 +45,8 @@ retyping that particular sequence of commands each time it is invoked.
     cat /dev/null > wtmp
     echo "Log files cleaned up."
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 There is nothing unusual here, only a set of commands that could just as
 easily have been invoked one by one from the command-line on the console
@@ -112,15 +55,9 @@ script go far beyond not having to retype them time and again. The
 script becomes a *program* -- a *tool* -- and it can easily be modified
 or customized for a particular application.
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 2-2. *cleanup* : An improved clean-up script**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -146,31 +83,16 @@ or customized for a particular application.
          #  A bare "exit" (no parameter) returns the exit status
          #+ of the preceding command. 
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Now *that's* beginning to look like a real script. But we can go even
 farther . . .
 
-.. raw:: html
-
-   <div class="EXAMPLE">
 
 **Example 2-3. *cleanup* : An enhanced and generalized version of above
 scripts.**
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -260,17 +182,8 @@ scripts.**
     #  A zero return value from the script upon exit indicates success
     #+ to the shell.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Since you may not wish to wipe out the entire system log, this version
 of the script keeps the last section of the message log intact. You will
@@ -292,9 +205,6 @@ This command interpreter then executes the commands in the script,
 starting at the top (the line following the *sha-bang* line), and
 ignoring comments. ` [3]  <sha-bang.html#FTN.AEN226>`__
 
-.. raw:: html
-
-   <div>
 
 .. code:: PROGRAMLISTING
 
@@ -305,13 +215,7 @@ ignoring comments. ` [3]  <sha-bang.html#FTN.AEN226>`__
     #!/bin/sed -f
     #!/bin/awk -f
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 Each of the above script header lines calls a different command
 interpreter, be it ``      /bin/sh     `` , the default shell ( **bash**
@@ -336,13 +240,7 @@ above, requires the initial #! , since the variable assignment line,
 interpreter, which defaults to ``      /bin/bash     `` on a Linux
 machine.
 
-.. raw:: html
 
-   <div class="TIP">
-
-.. raw:: html
-
-   <div>
 
 |Tip|
 
@@ -382,9 +280,6 @@ Replacing the literal ( "hard-wired" ) constants by variables is a step
 in that direction, as is replacing repetitive code blocks by
 `functions <functions.html#FUNCTIONREF>`__ .
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -399,9 +294,6 @@ in that direction, as is replacing repetitive code blocks by
       exit $E_WRONG_ARGS
     fi
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -416,28 +308,13 @@ in that direction, as is replacing repetitive code blocks by
       exit $E_WRONG_ARGS
     fi
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <sha-bang.html#AEN205>`__
 
@@ -445,9 +322,6 @@ More commonly seen in the literature as *she-bang* or *sh-bang* . This
 derives from the concatenation of the tokens *sharp* ( # ) and *bang* (
 ! ).
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <sha-bang.html#AEN214>`__
 
@@ -457,9 +331,6 @@ magic number, requiring a blank after the ! --
 Mascheck <http://www.in-ulm.de/~mascheck/various/shebang/#details>`__
 this is probably a myth.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <sha-bang.html#AEN226>`__
 
@@ -492,9 +363,6 @@ interpret it as a comment.
                           
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -509,9 +377,6 @@ interpret it as a comment.
     echo "Part 2 of script."
     echo $a  # Value of $a stays at 1.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -526,9 +391,6 @@ interpret it as a comment.
     echo "Part 2 of script."
     echo $a  # Value of $a stays at 1.
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <sha-bang.html#AEN242>`__
 
@@ -569,9 +431,6 @@ document <here-docs.html#HEREDOCREF>`__ using
 `cat <basic.html#CATREF>`__ is possibly a better alternative -- see
 `Example 19-3 <here-docs.html#EX71>`__ ).
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -588,9 +447,6 @@ document <here-docs.html#HEREDOCREF>`__ using
                     # Try an echo $? after script termination.
                     # You'll get a 0, not a 85.
 
-.. raw:: html
-
-   </p>
 
 .. code:: PROGRAMLISTING
 
@@ -607,9 +463,6 @@ document <here-docs.html#HEREDOCREF>`__ using
                     # Try an echo $? after script termination.
                     # You'll get a 0, not a 85.
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <sha-bang.html#AEN256>`__
 
@@ -618,9 +471,6 @@ standardize UNI **X** -like OSes. The POSIX specifications are listed on
 the `Open Group
 site <http://www.opengroup.org/onlinepubs/007904975/toc.htm>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <sha-bang.html#AEN269>`__
 
@@ -628,9 +478,6 @@ To avoid this possibility, a script may begin with a `#!/bin/env
 bash <system.html#ENVV2REF>`__ *sha-bang* line. This may be useful on
 UNIX machines where *bash* is not located in ``       /bin      ``
 
-.. raw:: html
-
-   </p>
 
 ` [7]  <sha-bang.html#AEN279>`__
 
@@ -638,12 +485,6 @@ If *Bash* is your default shell, then the #! isn't necessary at the
 beginning of a script. However, if launching a script from a different
 shell, such as *tcsh* , then you *will* need the #! .
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif

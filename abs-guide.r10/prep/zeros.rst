@@ -1,13 +1,7 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 31. Of Zeros and Nulls
 ===============================
 
-.. raw:: html
-
-   <div>
 
 **
 
@@ -17,17 +11,8 @@
 
 *--Alfred Lord Tennyson*
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** ``        /dev/zero       `` ... ``        /dev/null       ``**
 
@@ -40,49 +25,28 @@
 
     Suppressing ``         stdout        `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         cat $filename >/dev/null
         # Contents of the file will not list to stdout.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Suppressing ``         stderr        `` (from `Example
     16-3 <moreadv.html#EX57>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
         rm $badname 2>/dev/null
         #           So error messages [stderr] deep-sixed.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Suppressing output from *both* ``         stdout        `` and
     ``         stderr        `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -97,21 +61,12 @@
         # cat $filename &>/dev/null
         #     also works, as Baris Cicek points out.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Deleting contents of a file, but preserving the file itself, with
     all attendant permissions (from `Example 2-1 <sha-bang.html#EX1>`__
     and `Example 2-3 <sha-bang.html#EX2>`__ ):
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -120,27 +75,15 @@
 
         cat /dev/null > /var/log/wtmp
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Automatically emptying the contents of a logfile (especially good
     for dealing with those nasty "cookies" sent by commercial Web
     sites):
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 31-1. Hiding the cookie jar**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -155,17 +98,8 @@
         ln -s /dev/null ~/.netscape/cookies
         # All cookies now get sent to a black hole, rather than saved to disk.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  Uses of ``        /dev/zero       ``
     Like ``         /dev/null        `` , ``         /dev/zero        ``
@@ -178,16 +112,10 @@
     an initialized dummy file of predetermined length intended as a
     temporary swap file.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 31-2. Setting up a swapfile using
     ``           /dev/zero          ``**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -255,17 +183,8 @@
 
         exit $retcode
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Another application of ``         /dev/zero        `` is to "zero
     out" a file of a designated size for a special purpose, such as
@@ -274,15 +193,9 @@
     17-8 <system.html#CREATEFS>`__ ) or "securely" deleting a file (see
     `Example 16-61 <extmisc.html#BLOTOUT>`__ ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 31-3. Creating a ramdisk**
 
-    .. raw:: html
-
-       <div>
 
     .. code:: PROGRAMLISTING
 
@@ -347,27 +260,12 @@
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     In addition to all the above, ``         /dev/zero        `` is
     needed by ELF ( *Executable and Linking Format* ) UNIX/Linux
     binaries.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 

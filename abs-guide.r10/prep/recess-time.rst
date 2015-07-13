@@ -1,6 +1,3 @@
-.. raw:: html
-
-   <div class="CHAPTER">
 
   Chapter 14. Recess Time
 ========================
@@ -30,7 +27,4 @@ maybe laugh a bit.*
 *Courtesy 'NIX "fortune cookies", with some alterations and many
 apologies*
 
-.. raw:: html
-
-   </div>
 
