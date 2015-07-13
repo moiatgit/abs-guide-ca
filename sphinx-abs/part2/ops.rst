@@ -236,6 +236,7 @@ XXX  8.1. Operators
     `expr <moreadv.html#EXPRREF>`__ or `let <internal.html#LETREF>`__
     expression.*
 
+.. _ops_exemple_operadorsaritmetics:
 
     **Example 8-2. Using Arithmetic Operations**
 

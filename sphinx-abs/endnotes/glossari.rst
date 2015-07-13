@@ -45,3 +45,7 @@ llibre, amb la versió en anglès entre parèntesis.
         Temps durant el qual, l'equip o sistema està operatiu. En
         contra de *downtime* que indica el temps en que no és
         operatiu.
+
+   Tilde oberta (Back quotes o backticks)
+
+        El caràter ``\```

@@ -227,64 +227,60 @@ També es fa servir per indicar l'operador aritmètic de divisió.  Mira :doc:`o
 Tilde oberta: \`
 ================
 
-XXX TODO Per aquí
+Anomenat substitució de comanda (*command substitution*), envoltar un text entre tildes obertes
+fa què:
 
-    **`command substitution <commandsub.html#COMMANDSUBREF>`__ .** The
-    **\`command\`** construct makes available the output of **command**
-    for assignment to a variable. This is also known as
-    `backquotes <commandsub.html#BACKQUOTESREF>`__ or backticks.
+#. s'executi el text que apareix entre tildes com si fos una comanda Bash
+
+#. es retorni com a string el resultat que la comanda escrigui en la sortida estàndard, per exemple,
+   per a ser assignat a una variable.
+
+Mira :doc:`/part3/commandsub` per més detalls.
+
 
 
 Dos punts: :
 ============
 
-    **null command [colon].** This is the shell equivalent of a "NOP" (
-    ``                     no op                   `` , a do-nothing
-    operation). It may be considered a synonym for the shell builtin
-    `true <internal.html#TRUEREF>`__ . The " : " command is itself a
-    *Bash* `builtin <internal.html#BUILTINREF>`__ , and its `exit
-    status <exit-status.html#EXITSTATUSREF>`__ is *true* ( 0 ).
+La comanda nulla: és l'equivalent en Bash del "NOP" (No Operation). Es tracta d'una :doc:`comanda
+interna </part4/internal>` de Bash, que no fa res i sempre té com a :doc:`valor de sortida
+<exit-status>` ``0``. Es pot considerar sinònim de la comanda ``true``.
+
+.. code-block:: sh
+
+    :
+    echo $?   # 0
 
 
+Amb : podem fer un bucle infinit:
 
-    .. code-block:: sh
+.. literalinclude:: /_scripts/bucleinfinit.sh
+    :language: bash
 
-        :
-        echo $?   # 0
+En algunes ocasions, cal començar una operació aritmètica o una substitució de paràmetres amb els :.
+Considera l'exemple: :ref:`ops_exemple_operadorsaritmetics` i :doc:`/part3/parameter-substitution`.
 
+.. code-block:: sh
 
+    : ${username=`whoami`}
+    # ${username=`whoami`}   Genera un error quan no està precedit del :
+    #                        a menys que "username" sigui una comanda.
 
-    Bucle infinit
-
-    .. literalinclude:: /_scripts/bucleinfinit.sh
-        :language: bash
-
-
-    Placeholder in if/then test:
-
-
-    .. code-block:: sh
-
-        if condition
-        then :   # Do nothing and branch ahead
-        else     # Or else ...
-           take-some-action
-        fi
+    : ${1?"Ús: $0 ARGUMENT"}
 
 
+Ofereix un marcador de posició allà on s'espera que hi hagi una comanda però que, per alguna raó,
+encara no la tenim. Per exemple, permet mantenir l'estructura d'un condicional, quan no es disposa
+de quelcom a fer per un determinat cas:
 
-    Provide a placeholder where a binary operation is expected, see
-    `Example 8-2 <ops.html#ARITHOPS>`__ and `default
-    parameters <parameter-substitution.html#DEFPARAM>`__ .
+.. code-block:: sh
 
+    if condicio
+    then :   # No fa res i passa a continuació del fi
+    else 
+       fes-alguna-cosa
+    fi
 
-    .. code-block:: sh
-
-        : ${username=`whoami`}
-        # ${username=`whoami`}   Gives an error without the leading :
-        #                        unless "username" is a command or builtin...
-
-        : ${1?"Usage: $0 ARGUMENT"}     # From "usage-message.sh example script.
 
 
 
