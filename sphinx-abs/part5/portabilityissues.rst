@@ -86,7 +86,7 @@ script, first using Bash, then the classic *sh* .
 **Example 36-23. Test Suite**
 
 
-.. code:: PROGRAMLISTING
+.. code-block:: sh
 
     #!/bin/bash
     # test-suite.sh

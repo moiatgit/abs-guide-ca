@@ -7,7 +7,7 @@ variables.
 
 **Example 24-16. *The Fibonacci Sequence***
 
-| .. code:: PROGRAMLISTING                                                 |
+| .. code-block:: sh
 |                                                                          |
 |     #!/bin/bash                                                          |
 |     # fibo.sh : Fibonacci sequence (recursive)                           |
@@ -60,7 +60,7 @@ variables.
 
 **Example 24-17. *The Towers of Hanoi***
 
-| .. code:: PROGRAMLISTING                                                 |
+| .. code-block:: sh
 |                                                                          |
 |     #! /bin/bash                                                         |
 |     #                                                                    |

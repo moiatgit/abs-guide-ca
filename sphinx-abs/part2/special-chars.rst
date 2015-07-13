@@ -179,17 +179,21 @@ Amb l'operador coma també podem concatenar Strings, com al següent exemple:
 .. literalinclude:: _scripts/mostraexecutablesctl.sh
    :language: bash
 
-XXX TODO per aquí
+En una substitució de paràmetres, s'interpreta com a passar a minúscules.
 
- , , ,
+.. code-block:: sh
 
-    **`Lowercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in
-    *parameter substitution* (added in `version
-    4 <bashver4.html#BASH4REF>`__ of Bash).**
+    var=ElMeuText
+    echo ${var,}    # elMeuText
+    echo ${var,,}   # elmeutext
+
+Mira :ref:`bash4_modificacas`
 
 
 Contrabarra: \\
 ===============
+
+XXX TODO per aquí
 
     **`escape <escapingsection.html#ESCP>`__ [backslash].** A quoting
     mechanism for single characters.

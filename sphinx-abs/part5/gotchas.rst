@@ -21,7 +21,7 @@ excitement into an otherwise dull life.
    Assigning reserved words or characters to variable names.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        case=value0       # Causes problems.
        23skidoo=value1   # Also problems.
@@ -42,7 +42,7 @@ excitement into an otherwise dull life.
    function name).
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        var-1=23
        # Use 'var_1' instead.
@@ -61,7 +61,7 @@ excitement into an otherwise dull life.
    script difficult to understand.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        do_something ()
        {
@@ -81,7 +81,7 @@ excitement into an otherwise dull life.
    be quite finicky about whitespace.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        var1 = 23   # 'var1=23' is correct.
        # On line above, Bash attempts to execute command "var1"
@@ -103,7 +103,7 @@ excitement into an otherwise dull life.
    brackets <special-chars.html#CODEBLOCKREF>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        { ls -l; df; echo "Done." }
        # bash: syntax error: unexpected end of file
@@ -120,7 +120,7 @@ excitement into an otherwise dull life.
    value of *null* , *not* zero.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -143,7 +143,7 @@ excitement into an otherwise dull life.
    literal variables and *-eq* for integers.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        if [ "$a" = 273 ]      # Is $a an integer or string?
        if [ "$a" -eq 273 ]    # If $a is an integer.
@@ -183,7 +183,7 @@ excitement into an otherwise dull life.
    **Example 34-1. Numerical and string comparison are not equivalent**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # bad-op.sh: Trying to use a string comparison on integers.
@@ -239,7 +239,7 @@ excitement into an otherwise dull life.
    variables.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        let "a = hello, you"
        echo "$a"   # 0
@@ -274,7 +274,7 @@ excitement into an otherwise dull life.
    will usually result in an unpleasant surprise.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        command1 2> - | command2
        # Trying to redirect error output of command1 into a pipe . . .
@@ -293,7 +293,7 @@ excitement into an otherwise dull life.
    version 1.XX of Bash as the default installation.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -344,7 +344,7 @@ excitement into an otherwise dull life.
    *error code* .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        var=1 && ((--var)) && echo $var
        #        ^^^^^^^^^ Here the and-list terminates with exit status 1.
@@ -363,7 +363,7 @@ excitement into an otherwise dull life.
    convert the script to UNIX-style newlines.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
 
@@ -400,7 +400,7 @@ excitement into an otherwise dull life.
    is captured <assortedtips.html#RVT>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        add2 ()
        {
@@ -430,7 +430,7 @@ excitement into an otherwise dull life.
    inherit from a parent, but not vice versa.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        WHATEVER=/home/bozo
        export WHATEVER
@@ -439,7 +439,7 @@ excitement into an otherwise dull life.
 
 
 
-   .. code:: SCREEN
+   .. code-block:: sh
 
        bash$ echo $WHATEVER
 
@@ -460,7 +460,7 @@ excitement into an otherwise dull life.
    **Example 34-2. Subshell Pitfalls**
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        # Pitfalls of variables in a subshell.
@@ -512,7 +512,7 @@ excitement into an otherwise dull life.
    **Example 34-3. Piping the output of *echo* to a *read***
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        #!/bin/bash
        #  badread.sh:
@@ -585,7 +585,7 @@ excitement into an otherwise dull life.
    cause a similar problem.
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        # Loop piping troubles.
        #  This example by Anthony Richardson,
@@ -657,7 +657,7 @@ excitement into an otherwise dull life.
    `grep <textproc.html#GREPREF>`__ .
 
 
-   .. code:: PROGRAMLISTING
+   .. code-block:: sh
 
        tail -f /var/log/messages | grep "$ERROR_MSG" >> error.log
        #  The "error.log" file will not have anything written to it.

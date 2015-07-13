@@ -13,7 +13,7 @@ local variables
 
     **Example 24-12. Local variable visibility**
 
-     .. code::
+     .. code-block:: sh
 
          #!/bin/bash
          # ex62.sh: Global and local variables inside a function.
@@ -56,7 +56,7 @@ local variables
      explicitly declared as
      *local*.
 
-     .. code::
+     .. code-block:: sh
 
 
 
@@ -128,7 +128,7 @@ local variables
 
      As Evgeniy Ivanov points out, when declaring and setting a local variable in a single command, apparently the order of operations is to *first set the variable, and only afterwards restrict it to local scope*.  This is reflected in the `return value <exit-st atus.html#EXIT STATUSREF>`__.
 
-      .. code::
+      .. code-block:: sh
 
 
 
@@ -318,7 +318,7 @@ local variables
 
  **Exam ple 24-13.  Demons tratio n of a simple recurs ive functi on**
 
-.. code::
+.. code-block:: sh
 
 
 
@@ -1073,7 +1073,7 @@ is definitely *not* recommended in a shell script.
 
 **Example 24-15. Recursion, using a local variable**
 
- .. code::
+ .. code-block:: sh
 
      #!/bin/bash
 
@@ -1142,7 +1142,7 @@ Notes
 However, as Thomas Braunberger points out, a local variable declared in
 a function *is also visible to functions called by the parent function.*
 
- .. code::
+ .. code-block:: sh
 
      #!/bin/bash
 
@@ -1198,7 +1198,7 @@ Otherwise known as a *recursive function*.
 
 Too many levels of recursion may crash a script with a segfault.
 
- .. code::
+ .. code-block:: sh
 
      #!/bin/bash
 
