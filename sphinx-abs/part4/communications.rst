@@ -6,9 +6,6 @@ Certain of the following commands find use in network data transfer and
 analysis, as well as in `chasing
 spammers <writingscripts.html#CSPAMMERS>`__ .
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Information and Statistics**
 
@@ -16,9 +13,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     Searches for information about an Internet host by name or IP
     address, using DNS.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -26,22 +20,13 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         surfacemail.com. has address 202.92.42.236
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **ipcalc**
     Displays IP information for a host. With the ``         -h        ``
     option, **ipcalc** does a reverse DNS lookup, finding the name of
     the host (server) from the IP address.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -49,13 +34,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         HOSTNAME=surfacemail.com
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **nslookup**
     Do an Internet "name server lookup" on a host by IP address. This is
@@ -66,9 +45,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     The **nslookup** command has allegedly been "deprecated," but it is
     still useful.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -81,13 +57,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          Name:   kuhleersparnis.ch
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **dig**
     **D** omain **I** nformation **G** roper. Similar to **nslookup** ,
@@ -104,9 +74,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     Compare the output of **dig -x** with **ipcalc -h** and **nslookup**
     .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -128,23 +95,11 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          ;; MSG SIZE  rcvd: 91
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-40. Finding out where to report a spammer**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -194,27 +149,12 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         #  For a more elaborate version of this script,
         #+ see the SpamViz home page, http://www.spamviz.net/index.html.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-41. Analyzing a spam domain**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -365,17 +305,8 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         # 4) Set a time-out for the script using the "+time=" option
              to the 'dig' command.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     For a much more elaborate version of the above script, see `Example
     A-28 <contributed-scripts.html#ISSPAMMER2>`__ .
@@ -387,9 +318,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     filtered by `grep <textproc.html#GREPREF>`__ or
     `sed <sedawk.html#SEDREF>`__ in a pipe.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -401,13 +329,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **ping**
     Broadcast an
@@ -416,9 +338,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     is a diagnostic tool for testing network connections, and it should
     be used with caution.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -432,21 +351,12 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          round-trip min/avg/max/mdev = 0.286/0.497/0.709/0.212 ms
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A successful *ping* returns an `exit
     status <exit-status.html#EXITSTATUSREF>`__ of 0 . This can be tested
     for in a script.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -461,13 +371,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
           echo ""$HNAME" seems to be down. Pity."
         fi
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **whois**
     Perform a DNS (Domain Name System) lookup. The
@@ -481,9 +385,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     ``         ~/.project        `` , and
     ``         ~/.forward        `` files, if present.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -507,13 +408,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          No Plan.
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Out of security considerations, many networks disable **finger** and
     its associated daemon. ` [1]  <communications.html#FTN.AEN13320>`__
@@ -526,13 +421,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
     This command seems to be missing from newer Linux distros.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Remote Host Access**
 
@@ -582,13 +471,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
  **telnet**
     Utility and protocol for connecting to a remote host.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -596,25 +479,13 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     probably be avoided. Its use within a shell script is *not*
     recommended.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **wget**
     The **wget** utility *noninteractively* retrieves or downloads files
     from a Web or ftp site. It works well in a script.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -630,23 +501,11 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         #  The -c option lets wget resume an interrupted download.
         #  This works with ftp servers and many HTTP sites.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-42. Getting a stock quote**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -691,17 +550,8 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         # 2) Modify this script to fetch the local weather report,
         #+   taking the user's zip code as an argument.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example A-30 <contributed-scripts.html#WGETTER2>`__ and
     `Example A-31 <contributed-scripts.html#BASHPODDER>`__ .
@@ -711,21 +561,12 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     the ``         -dump        `` option) to retrieve a file from a Web
     or ftp site noninteractively.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         lynx -dump http://www.xyz23.com/file01.html >$SAVEFILE
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     With the ``         -traversal        `` option, **lynx** starts at
     the HTTP URL specified as an argument, then "crawls" through all
@@ -750,32 +591,17 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     ``                   Remote synchronize                 `` , updates
     (synchronizes) files between two different networked machines.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ rsync -a ~/sourcedir/*txt /node1/subdirectory/
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-43. Updating FC4**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -997,27 +823,12 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
         exit $RET
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example A-32 <contributed-scripts.html#NIGHTLYBACKUP>`__ .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1027,17 +838,8 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     Consider, instead, using **ssh** ,
     `scp <communications.html#SCPREF>`__ , or an **expect** script.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **ssh**
     ``                   Secure shell                 `` , logs onto a
@@ -1046,15 +848,9 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     authentication and encryption. See its
     `manpage <basic.html#MANREF>`__ for details.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-44. Using *ssh***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1128,25 +924,10 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -1160,17 +941,8 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
     Thanks, Jason Bechtel, for pointing this out.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **scp**
     ``                   Secure copy                 `` , similar in
@@ -1178,13 +950,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     machines, but does so using authentication, and with a security
     level similar to **ssh** .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Local Network**
 
@@ -1201,13 +967,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     A command-line utility for configuring a network adapter (using
     *DHCP* ). This command is native to Red Hat centric Linux distros.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Mail**
 
@@ -1217,15 +977,9 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     This stripped-down command-line mail client works fine as a command
     embedded in a script.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-45. A script that mails itself**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1261,17 +1015,8 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         #  Note that the "mailx" command (in "send" mode) may be substituted
         #+ for "mail" ... but with somewhat different options.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **mailto**
     Similar to the **mail** command, **mailto** sends e-mail messages
@@ -1282,9 +1027,6 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     Show *mail statistics* . This command may be invoked only by *root*
     .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1298,13 +1040,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
           C      414                    0
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **vacation**
     This utility automatically replies to e-mails that the intended
@@ -1312,20 +1048,11 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     network, in conjunction with **sendmail** , and is not applicable to
     a dial-up POPmail account.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <communications.html#AEN13320>`__
 
@@ -1337,13 +1064,7 @@ The word "daemon" means ghost in Greek, and there is certainly something
 mysterious, almost supernatural, about the way UNIX daemons wander about
 behind the scenes, silently carrying out their appointed tasks.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

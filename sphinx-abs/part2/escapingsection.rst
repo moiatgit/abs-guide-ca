@@ -6,13 +6,7 @@ XXX  5.2. Escaping
 preceding a character tells the shell to interpret that character
 literally.
 
-.. raw:: html
 
-   <div class="CAUTION">
-
-.. raw:: html
-
-   <div>
 
 |Caution|
 
@@ -21,21 +15,9 @@ With certain commands and utilities, such as
 escaping a character may have the opposite effect - it can toggle on a
 special meaning for that character.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Special meanings of certain escaped characters**
 
@@ -63,13 +45,7 @@ special meaning for that character.
     equivalent of ``                   0nn                 `` , where
     ``                   nn                 `` is a string of digits
 
-    .. raw:: html
 
-       <div class="IMPORTANT">
-
-    .. raw:: html
-
-       <div>
 
     |Important|
 
@@ -78,27 +54,12 @@ special meaning for that character.
     mechanism that uses escaped octal or hex values to assign ASCII
     characters to variables, e.g., **quote=$'\\042'** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 5-2. Escaped Characters**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -194,29 +155,14 @@ special meaning for that character.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A more elaborate example:
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 5-3. Detecting key-presses**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -323,67 +269,37 @@ special meaning for that character.
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 37-1 <bashver2.html#EX77>`__ .
 
  \\"
     gives the quote its literal meaning
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         echo "Hello"                     # Hello
         echo "\"Hello\" ... he said."    # "Hello" ... he said.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  \\$
     gives the dollar sign its literal meaning (variable name following
     \\$ will not be referenced)
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         echo "\$variable01"           # $variable01
         echo "The book cost \$7.98."  # The book cost $7.98.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  \\\\
     gives the backslash its literal meaning
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -398,25 +314,10 @@ special meaning for that character.
 
         echo '\'   # Results in \
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -561,9 +462,6 @@ escape character alone may not be assigned to a variable.
 
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
@@ -596,9 +494,6 @@ escape character alone may not be assigned to a variable.
 
     # These examples supplied by Stéphane Chazelas.
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
@@ -638,9 +533,6 @@ escape character alone may not be assigned to a variable.
                             # Second and fourth escapes escaped.
                             # This is o.k.
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
@@ -673,9 +565,6 @@ escape character alone may not be assigned to a variable.
 
     # These examples supplied by Stéphane Chazelas.
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
@@ -715,24 +604,12 @@ escape character alone may not be assigned to a variable.
                             # Second and fourth escapes escaped.
                             # This is o.k.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Escaping a space can prevent word splitting in a command's argument
 list.
 
-.. raw:: html
-
-   <div>
 
 .. code-block:: sh
 
@@ -749,22 +626,13 @@ list.
     # Error: the first three files concatenated into a single argument to 'ls -l'
     #        because the two escaped spaces prevent argument (word) splitting.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 The escape also provides a means of writing a multi-line command.
 Normally, each separate line constitutes a different command, but an
 escape at the end of a line *escapes the newline character* , and the
 command sequence continues on to the next line.
 
-.. raw:: html
-
-   <div>
 
 .. code-block:: sh
 
@@ -779,21 +647,9 @@ command sequence continues on to the next line.
     # See note below.
     # (Thanks, Stéphane Chazelas.)
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="NOTE">
-
-.. raw:: html
-
-   <div>
 
 |Note|
 
@@ -802,21 +658,9 @@ escape, is not strictly necessary. It is, however, good programming
 practice to always escape the end of a line of code that continues to
 the following line.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div>
 
 .. code-block:: sh
 
@@ -853,17 +697,8 @@ the following line.
 
     # Examples suggested by Stéphane Chazelas.
 
-.. raw:: html
 
-   </p>
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Important| image:: ../images/important.gif

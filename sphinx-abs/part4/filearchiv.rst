@@ -29,29 +29,14 @@ XXX  16.5. File and Archiving Commands
     #. ``           --delete          `` delete (files from existing
        archive)
 
-       .. raw:: html
 
-          <div class="CAUTION">
-
-       .. raw:: html
-
-          <div>
 
        |Caution|
 
        This option will not work on magnetic tape devices.
 
-       .. raw:: html
 
-          </p>
 
-       .. raw:: html
-
-          </div>
-
-       .. raw:: html
-
-          </div>
 
     #. ``           -r          `` append (files to existing archive)
 
@@ -78,30 +63,15 @@ XXX  16.5. File and Archiving Commands
     #. ``           -j          `` `bzip2 <filearchiv.html#BZIPREF>`__
        the archive
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     It may be difficult to recover data from a corrupted *gzipped* tar
     archive. When archiving important files, make multiple backups.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **shar**
     *Shell archiving* utility. The text and/or binary files in a shell
@@ -132,13 +102,7 @@ XXX  16.5. File and Archiving Commands
     A simple **rpm -i package\_name.rpm** usually suffices to install a
     package, though there are many more options available.
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -153,9 +117,6 @@ XXX  16.5. File and Archiving Commands
     |                          |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -163,9 +124,6 @@ XXX  16.5. File and Archiving Commands
         coreutils-5.2.1-31
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -173,25 +131,10 @@ XXX  16.5. File and Archiving Commands
         coreutils-5.2.1-31
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -242,9 +185,6 @@ XXX  16.5. File and Archiving Commands
     |                          |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -275,9 +215,6 @@ XXX  16.5. File and Archiving Commands
          docbook-utils-0.6.9-2
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -308,17 +245,8 @@ XXX  16.5. File and Archiving Commands
          docbook-utils-0.6.9-2
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **cpio**
     This specialized archiving copy command ( **c** o **p** y **i** nput
@@ -327,15 +255,9 @@ XXX  16.5. File and Archiving Commands
     directory tree. With an appropriate block size (for copying)
     specified, it can be appreciably faster than **tar** .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-30. Using *cpio* to move a directory tree**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -377,31 +299,16 @@ XXX  16.5. File and Archiving Commands
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **rpm2cpio**
     This command extracts a **cpio** archive from an
     `rpm <filearchiv.html#RPMREF>`__ one.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-31. Unpacking an *rpm* archive**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -427,17 +334,8 @@ XXX  16.5. File and Archiving Commands
         #+                       2) it is an rpm archive.
         #  Hint:                    Parse output of 'file' command.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **pax**
     The *pax* **p** ortable **a** rchive e **x** change toolkit
@@ -446,9 +344,6 @@ XXX  16.5. File and Archiving Commands
     replace `tar <filearchiv.html#TARREF>`__ and
     `cpio <filearchiv.html#CPIOREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -464,24 +359,12 @@ XXX  16.5. File and Archiving Commands
         #  Restores the backed-up files from the Linux machine
         #+ onto a BSD one.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Note that *pax* handles many of the standard archiving and
     compression commands.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Compression**
 
@@ -490,13 +373,7 @@ XXX  16.5. File and Archiving Commands
     and proprietary **compress** . The corresponding decompression
     command is **gunzip** , which is the equivalent of **gzip -d** .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -504,17 +381,8 @@ XXX  16.5. File and Archiving Commands
     **gzip** to ``            stdout           `` . This is useful when
     `piping <special-chars.html#PIPEREF>`__ to other commands.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **zcat** filter decompresses a *gzipped* file to
     ``         stdout        `` , as possible input to a pipe or
@@ -523,30 +391,15 @@ XXX  16.5. File and Archiving Commands
     `compress <filearchiv.html#COMPRESSREF>`__ utility). The **zcat**
     command is equivalent to **gzip -dc** .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     On some commercial UNIX systems, **zcat** is a synonym for
     **uncompress -c** , and will not work on *gzipped* files.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 7-7 <comparison-ops.html#EX14>`__ .
 
@@ -558,30 +411,15 @@ XXX  16.5. File and Archiving Commands
     Similar to the **zcat** command, **bzcat** decompresses a
     *bzipped2-ed* file to ``         stdout        `` .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Newer versions of `tar <filearchiv.html#TARREF>`__ have been patched
     with **bzip2** support.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **compress** , **uncompress**
     This is an older, proprietary compression utility found in
@@ -590,30 +428,15 @@ XXX  16.5. File and Archiving Commands
     **compress** workalike for compatibility, although **gunzip** can
     unarchive files treated with **compress** .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     The **znew** command transforms *compressed* files into *gzipped*
     ones.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **sq**
     Yet another compression ( **sq** ueeze) utility, a filter that works
@@ -623,30 +446,15 @@ XXX  16.5. File and Archiving Commands
     `gzip <filearchiv.html#GZIPREF>`__ . The corresponding uncompression
     filter is **unsq** , invoked like **sq** .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     The output of **sq** may be piped to **gzip** for further
     compression.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **zip** , **unzip**
     Cross-platform file archiving and compression utility compatible
@@ -668,13 +476,7 @@ XXX  16.5. File and Archiving Commands
     information, see the `Wikipedia
     entry <http://en.wikipedia.org/wiki/Xz>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** File Information**
 
@@ -695,9 +497,6 @@ XXX  16.5. File and Archiving Commands
     ``         -z        `` option, when used on a compressed target
     file, forces an attempt to analyze the uncompressed file type.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -710,17 +509,8 @@ XXX  16.5. File and Archiving Commands
          last modified: Sun Sep 16 13:34:51 2001, os: Unix)
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -740,23 +530,11 @@ XXX  16.5. File and Archiving Commands
         # /usr/local/bin/copy-cd:          Bourne-Again shell script text executable
         # . . .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-32. Stripping comments from C program files**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -840,17 +618,8 @@ XXX  16.5. File and Archiving Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **which**
     **which command** gives the full path to "command." This is useful
@@ -859,21 +628,12 @@ XXX  16.5. File and Archiving Commands
 
     ``                   $bash which rm                 ``
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         /usr/bin/rm
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     For an interesting use of this command, see `Example
     36-16 <colorizing.html#HORSERACE>`__ .
@@ -884,21 +644,12 @@ XXX  16.5. File and Archiving Commands
 
     ``                   $bash whereis rm                 ``
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         rm: /bin/rm /usr/share/man/man1/rm.1.bz2
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **whatis**
     **whatis command** looks up "command" in the
@@ -908,31 +659,16 @@ XXX  16.5. File and Archiving Commands
 
     ``                   $bash whatis whatis                 ``
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         whatis               (1)  - search the whatis database for complete words
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-33. Exploring ``           /usr/X11R6/bin          ``**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -957,17 +693,8 @@ XXX  16.5. File and Archiving Commands
         #  or view it a page at a time on stdout,
         #    ./what.sh | less
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 11-3 <loops1.html#FILEINFO>`__ .
 
@@ -977,9 +704,6 @@ XXX  16.5. File and Archiving Commands
 
     This is one of the GNU *fileutils* .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -996,13 +720,7 @@ XXX  16.5. File and Archiving Commands
          -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **locate** , **slocate**
     The **locate** command searches for files using a database stored
@@ -1011,29 +729,17 @@ XXX  16.5. File and Archiving Commands
 
     ``                   $bash locate hickson                 ``
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         /usr/lib/xephem/catalogs/hickson.edb
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **getfacl** , **setfacl**
     These commands *retrieve* or *set* the **f** ile **a** ccess **c**
     ontrol **l** ist -- the *owner* , *group* , and file permissions.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1067,20 +773,11 @@ XXX  16.5. File and Archiving Commands
          other::r--
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **readlink**
     Disclose the file that a symbolic link points to.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1088,13 +785,7 @@ XXX  16.5. File and Archiving Commands
         ../../bin/gawk
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **strings**
     Use the **strings** command to find printable strings in a binary or
@@ -1110,15 +801,9 @@ XXX  16.5. File and Archiving Commands
     11-8 <loops1.html#BINGREP>`__ and `Example
     11-10 <loops1.html#FINDSTRING>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-34. An "improved" *strings* command**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1197,25 +882,10 @@ XXX  16.5. File and Archiving Commands
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Comparison**
 
@@ -1238,13 +908,7 @@ XXX  16.5. File and Archiving Commands
     There are available various fancy frontends for **diff** , such as
     **sdiff** , **wdiff** , **xdiff** , and **mgdiff** .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -1253,17 +917,8 @@ XXX  16.5. File and Archiving Commands
     are being compared). This permits use of **diff** in a test
     construct within a shell script (see below).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A common use for **diff** is generating difference files to be used
     with **patch** The ``         -e        `` option outputs files
@@ -1276,9 +931,6 @@ XXX  16.5. File and Archiving Commands
     newly revised package. Kernel "patches" have become the preferred
     method of distributing the frequent releases of the Linux kernel.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1287,19 +939,10 @@ XXX  16.5. File and Archiving Commands
         # and applies them to the files referenced therein.
         # This upgrades to a newer version of the package.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Patching the kernel:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1309,21 +952,9 @@ XXX  16.5. File and Archiving Commands
         # From the Linux kernel docs "README",
         # by anonymous author (Alan Cox?).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1343,9 +974,6 @@ XXX  16.5. File and Archiving Commands
     |                          |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1355,9 +983,6 @@ XXX  16.5. File and Archiving Commands
          Only in /home/bozo/notes2: file04
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1367,66 +992,27 @@ XXX  16.5. File and Archiving Commands
          Only in /home/bozo/notes2: file04
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     Use **zdiff** to compare *gzipped* files.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     Use **diffstat** to create a histogram (point-distribution graph) of
     output from **diff** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **diff3** , **merge**
     An extended version of **diff** that compares three files at a time.
@@ -1434,9 +1020,6 @@ XXX  16.5. File and Archiving Commands
     but unfortunately this gives no information about the results of the
     comparison.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1450,13 +1033,7 @@ XXX  16.5. File and Archiving Commands
            This is line 1 of "file-3"
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      The **merge** (3-way file merge) command is an interesting adjunct
     to *diff3* . Its syntax is
@@ -1476,13 +1053,7 @@ XXX  16.5. File and Archiving Commands
     Whereas **diff** reports the differences between two files, **cmp**
     merely shows at what point they differ.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1490,27 +1061,12 @@ XXX  16.5. File and Archiving Commands
     files are identical, and 1 if they differ. This permits use in a
     test construct within a shell script.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-35. Using *cmp* to compare two files within a script.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1550,41 +1106,17 @@ XXX  16.5. File and Archiving Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     Use **zcmp** on *gzipped* files.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **comm**
     Versatile file comparison utility. The files must be sorted for this
@@ -1620,13 +1152,7 @@ XXX  16.5. File and Archiving Commands
     This command is useful for comparing "dictionaries" or *word lists*
     -- sorted text files with one word per line.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Utilities**
 
@@ -1638,33 +1164,18 @@ XXX  16.5. File and Archiving Commands
     be used for "usage" messages if, for example a script is called with
     missing arguments:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         echo "Usage: `basename $0` arg1 arg2 ... argn"
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **dirname**
     Strips the **basename** from a filename, printing only the path
     information.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1673,27 +1184,12 @@ XXX  16.5. File and Archiving Commands
     a filename for that matter (see `Example
     A-7 <contributed-scripts.html#DAYSBETWEEN>`__ ).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-36. *basename* and *dirname***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1709,17 +1205,8 @@ XXX  16.5. File and Archiving Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **split** , **csplit**
     These are utilities for splitting a file into smaller chunks. Their
@@ -1729,15 +1216,9 @@ XXX  16.5. File and Archiving Commands
     The **csplit** command splits a file according to *context* , the
     split occuring where patterns are matched.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-37. A script that copies itself in sections**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1767,25 +1248,10 @@ XXX  16.5. File and Archiving Commands
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Encoding and Encryption**
 
@@ -1800,9 +1266,6 @@ XXX  16.5. File and Archiving Commands
     command, or better yet, the newer **sha1sum** (Secure Hash
     Algorithm). ` [4]  <filearchiv.html#FTN.AEN12849>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1821,21 +1284,9 @@ XXX  16.5. File and Archiving Commands
         8babc97a6f62a4649716f4df8d61728f  -
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1846,27 +1297,12 @@ XXX  16.5. File and Archiving Commands
     `dash <special-chars.html#DASHREF2>`__ when they receive their input
     from ``            stdout           `` .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-38. Checking file integrity**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1986,30 +1422,15 @@ XXX  16.5. File and Archiving Commands
         #+ consider the "Tripwire" package,
         #+ http://sourceforge.net/projects/tripwire/.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Also see `Example A-19 <contributed-scripts.html#DIRECTORYINFO>`__ ,
     `Example 36-16 <colorizing.html#HORSERACE>`__ , and `Example
     10-2 <string-manipulation.html#RANDSTRING>`__ for creative uses of
     the **md5sum** command.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -2033,9 +1454,6 @@ XXX  16.5. File and Archiving Commands
     |                          |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -2047,9 +1465,6 @@ XXX  16.5. File and Archiving Commands
         5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -2061,17 +1476,8 @@ XXX  16.5. File and Archiving Commands
         5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Security consultants have demonstrated that even **sha1sum** can be
     compromised. Fortunately, newer Linux distros include longer
@@ -2089,15 +1495,9 @@ XXX  16.5. File and Archiving Commands
     This reverses the encoding, decoding *uuencoded* files back into the
     original binaries.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-39. Uudecoding encoded files**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2133,25 +1533,10 @@ XXX  16.5. File and Archiving Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -2159,17 +1544,8 @@ XXX  16.5. File and Archiving Commands
     (possibly in a pipe) to process long uudecoded text messages
     downloaded from Usenet newsgroups.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **mimencode** , **mmencode**
     The **mimencode** and **mmencode** commands process
@@ -2194,9 +1570,6 @@ XXX  16.5. File and Archiving Commands
     This is an Open Source implementation of *Secure Sockets Layer*
     encryption.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2211,21 +1584,12 @@ XXX  16.5. File and Archiving Commands
         -pass pass:my_password
         #          ^^^^^^^^^^^   User-selected password.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     `Piping <special-chars.html#PIPEREF>`__ *openssl* to/from
     `tar <filearchiv.html#TARREF>`__ makes it possible to encrypt an
     entire directory tree.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2245,13 +1609,7 @@ XXX  16.5. File and Archiving Commands
         tar -xzv
         # Decrypts and unpacks into current working directory.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Of course, *openssl* has many other uses, such as obtaining signed
     *certificates* for Web sites. See the `info <basic.html#INFOREF>`__
@@ -2265,38 +1623,17 @@ XXX  16.5. File and Archiving Commands
 
     This is one of the GNU *fileutils* .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     Advanced forensic technology may still be able to recover the
     contents of a file, even after application of **shred** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Miscellaneous**
 
@@ -2306,9 +1643,6 @@ XXX  16.5. File and Archiving Commands
     additional arguments, it creates a zero-length file in the
     ``         /tmp        `` directory.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2316,17 +1650,8 @@ XXX  16.5. File and Archiving Commands
         /tmp/tmp.zzsvql3154
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2346,13 +1671,7 @@ XXX  16.5. File and Archiving Commands
         #  A "umask 177" is therefore unnecessary,
         #+ but it's good programming practice nevertheless.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **make**
 
@@ -2398,9 +1717,6 @@ XXX  16.5. File and Archiving Commands
     An interesting application of *more* is to "test drive" a command
     sequence, to forestall potentially unpleasant consequences.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2411,41 +1727,23 @@ XXX  16.5. File and Archiving Commands
         #      ls /home/bozo | awk '{print "rm -rf " $1}' | sh
         #      Hand off to the shell to execute . . .       ^^
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The *less* pager has the interesting property of doing a formatted
     display of *man page* source. See `Example
     A-39 <contributed-scripts.html#MANED>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <filearchiv.html#AEN11885>`__
 
 An *archive* , in the sense discussed here, is simply a set of related
 files stored in a single location.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <filearchiv.html#AEN11896>`__
 
@@ -2453,27 +1751,18 @@ A ``               tar czvf ArchiveName.tar.gz *             `` *will*
 include dotfiles in subdirectories *below* the current working
 directory. This is an undocumented GNU **tar** "feature."
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <filearchiv.html#AEN12840>`__
 
 The checksum may be expressed as a *hexadecimal* number, or to some
 other base.
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <filearchiv.html#AEN12849>`__
 
 For even *better* security, use the *sha256sum* , *sha512* , and
 *sha1pass* commands.
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <filearchiv.html#AEN12969>`__
 
@@ -2481,22 +1770,13 @@ This is a symmetric block cipher, used to encrypt files on a single
 system or local network, as opposed to the *public key* cipher class, of
 which *pgp* is a well-known example.
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <filearchiv.html#AEN13030>`__
 
 Creates a temporary *directory* when invoked with the
 ``       -d      `` option.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Tip| image:: ../images/tip.gif

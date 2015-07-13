@@ -8,9 +8,6 @@ invoked by *root* and used for system maintenance or emergency
 filesystem repairs. Use with caution, as some of these commands may
 damage your system if misused.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Users and Groups**
 
@@ -24,9 +21,6 @@ damage your system if misused.
     internal variable, but gives the group names, rather than the
     numbers.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -36,13 +30,7 @@ damage your system if misused.
         bash$ echo $GROUPS
         501
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **chown** , **chgrp**
     The **chown** command changes the ownership of a file or files. This
@@ -51,9 +39,6 @@ damage your system if misused.
     the ownership of files, not even her own files. ` [1]
      <system.html#FTN.AEN14695>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -61,22 +46,13 @@ damage your system if misused.
 
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **chgrp** command changes the
     ``                   group                 `` ownership of a file or
     files. You must be owner of the file(s) as well as a member of the
     destination group (or *root* ) to use this operation.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -84,13 +60,7 @@ damage your system if misused.
         #  The "dunderheads" group will now own all the "*.data" files
         #+ all the way down the $PWD directory tree (that's what "recursive" means).
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **useradd** , **userdel**
     The **useradd** administrative command adds a user account to the
@@ -99,30 +69,15 @@ damage your system if misused.
     account from the system ` [2]  <system.html#FTN.AEN14727>`__ and
     deletes associated files.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The **adduser** command is a synonym for **useradd** and is usually
     a symbolic link to it.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **usermod**
     Modify a user account. Changes may be made to the password, group
@@ -142,9 +97,6 @@ damage your system if misused.
     `$GROUPS <internalvariables.html#GROUPSREF>`__ internal Bash
     variables.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -154,38 +106,17 @@ damage your system if misused.
         bash$ echo $UID
         501
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The **id** command shows the *effective* IDs only when they differ
     from the *real* ones.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Also see `Example 9-5 <internalvariables.html#AMIROOT>`__ .
 
@@ -194,9 +125,6 @@ damage your system if misused.
     belongs to, or alternately, the users belonging to a given group.
     May be invoked only by root.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -211,20 +139,11 @@ damage your system if misused.
           lp(gid=7)
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **who**
     Show all users logged on to the system.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -235,21 +154,12 @@ damage your system if misused.
          bozo  pts/2    Apr 27 17:49
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -m        `` gives detailed information about only
     the current user. Passing any two arguments to **who** is the
     equivalent of **who -m** , as in **who am i** or **who The Man** .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -257,19 +167,10 @@ damage your system if misused.
         localhost.localdomain!bozo  pts/2    Apr 27 17:49
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      **whoami** is similar to **who -m** , but only lists the user name.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -277,13 +178,7 @@ damage your system if misused.
         bozo
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **w**
     Show all logged on users and the processes belonging to them. This
@@ -291,31 +186,19 @@ damage your system if misused.
     to `grep <textproc.html#GREPREF>`__ to find a specific user and/or
     process.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ w | grep startx
         bozo  tty1     -                 4:22pm  6:41   4.47s  0.45s  startx
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **logname**
     Show current user's login name (as found in
     ``         /var/run/utmp        `` ). This is a near-equivalent to
     `whoami <system.html#WHOAMIREF>`__ , above.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -325,19 +208,10 @@ damage your system if misused.
         bash$ whoami
         bozo
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     However . . .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -349,21 +223,9 @@ damage your system if misused.
         bash# logname
         bozo
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -371,17 +233,8 @@ damage your system if misused.
     gives the name of the user attached to the current process. As we
     have just seen, sometimes these are not the same.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **su**
     Runs a program or script as a **s** ubstitute **u** ser. **su
@@ -392,9 +245,6 @@ damage your system if misused.
     Runs a command as *root* (or another user). This may be used in a
     script, thus permitting a *regular user* to run the script.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -404,13 +254,7 @@ damage your system if misused.
         sudo cp /root/secretfile /home/bozo/secret
         # Some more commands.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The file ``         /etc/sudoers        `` holds the names of users
     permitted to invoke **sudo** .
@@ -421,15 +265,9 @@ damage your system if misused.
     The **passwd** command can be used in a script, but probably *should
     not* be.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-1. Setting a new password**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -479,17 +317,8 @@ damage your system if misused.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     The **passwd** command's ``         -l        `` ,
     ``         -u        `` , and ``         -d        `` options permit
@@ -501,22 +330,13 @@ damage your system if misused.
     ``         /var/log/wtmp        `` . This is one of the GNU
     accounting utilities.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ ac
                 total       68.08
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **last**
     List *last* logged in users, as read from
@@ -525,9 +345,6 @@ damage your system if misused.
 
     For example, to show the last few times the system rebooted:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -540,26 +357,14 @@ damage your system if misused.
 
          wtmp begins Tue Feb  1 12:50:09 2005
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **newgrp**
     Change user's *group ID* without logging out. This permits access to
     the new group's files. Since users may be members of multiple groups
     simultaneously, this command finds only limited use.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -568,25 +373,10 @@ damage your system if misused.
     writes. However, the `chgrp <system.html#CHGRPREF>`__ command might
     be more convenient for this purpose.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Terminals**
 
@@ -594,37 +384,22 @@ damage your system if misused.
     Echoes the name (filename) of the current user's terminal. Note that
     each separate *xterm* window counts as a different terminal.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ tty
         /dev/pts/1
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **stty**
     Shows and/or changes terminal settings. This complex command, used
     in a script, can control terminal behavior and the way output
     displays. See the info page, and study it carefully.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-2. Setting an *erase* character**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -647,27 +422,12 @@ damage your system if misused.
         # Even after the script exits, the new key value remains set.
         # Exercise: How would you reset the erase character to the default value?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-3. *secret password* : Turning off terminal echoing**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -701,30 +461,15 @@ damage your system if misused.
 
         # Do an 'info stty' for more on this useful-but-tricky command.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A creative use of **stty** is detecting a user keypress (without
     hitting **ENTER** ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-4. Keypress detection**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -748,28 +493,13 @@ damage your system if misused.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Also see `Example 9-3 <internalvariables.html#TIMEOUT>`__ and
     `Example A-43 <contributed-scripts.html#STOPWATCH>`__ .
 
-    .. raw:: html
 
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     **terminals and modes**
 
@@ -780,9 +510,6 @@ damage your system if misused.
     this sends all the stored keystrokes to the program running. There
     is even a basic line editor inside the terminal.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -794,20 +521,11 @@ damage your system if misused.
          isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using canonical mode, it is possible to redefine the special keys
     for the local terminal line editor.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -820,13 +538,7 @@ damage your system if misused.
         12
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The process controlling the terminal receives only 12 characters (11
     alphabetic ones, plus a newline), although the user hit 26 keys.
@@ -843,13 +555,7 @@ damage your system if misused.
 
     *Stéphane Chazelas*
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -861,9 +567,6 @@ damage your system if misused.
          isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -876,9 +579,6 @@ damage your system if misused.
         12
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -890,9 +590,6 @@ damage your system if misused.
          isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -905,22 +602,13 @@ damage your system if misused.
         12
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **setterm**
     Set certain terminal attributes. This command writes to its
     terminal's ``         stdout        `` a string that changes the
     behavior of that terminal.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -928,22 +616,13 @@ damage your system if misused.
         bash$
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **setterm** command can be used within a script to change the
     appearance of text written to ``         stdout        `` , although
     there are certainly `better tools <colorizing.html#COLORIZINGREF>`__
     available for this purpose.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -953,21 +632,12 @@ damage your system if misused.
         setterm -bold off
         echo normal hello
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **tset**
     Show or initialize terminal settings. This is a less capable version
     of **stty** .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -977,21 +647,12 @@ damage your system if misused.
          Interrupt is control-C (^C).
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **setserial**
     Set or display serial port parameters. This command must be run by
     *root* and is usually found in a system setup script.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1000,13 +661,7 @@ damage your system if misused.
         IRQ=`setserial /dev/$DEVICE | sed -e 's/.*IRQ: //'`
         setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **getty** , **agetty**
     The initialization process for a terminal uses **getty** or
@@ -1019,13 +674,7 @@ damage your system if misused.
     Disabling access would prevent another user on the network to
     `write <communications.html#WRITEREF>`__ to the terminal.
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -1034,17 +683,8 @@ damage your system if misused.
     multi-user network, you might therefore wish to disable write access
     to your terminal when you need to avoid interruptions.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **wall**
     This is an acronym for " `write <communications.html#WRITEREF>`__
@@ -1054,9 +694,6 @@ damage your system if misused.
     shortly go down due to a problem (see `Example
     19-1 <here-docs.html#EX70>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1066,46 +703,19 @@ damage your system if misused.
          System going down for maintenance in 5 minutes!
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     If write access to a particular terminal has been disabled with
     **mesg** , then **wall** cannot send a message to that terminal.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Information and Statistics**
 
@@ -1116,9 +726,6 @@ damage your system if misused.
     `Example 16-5 <moreadv.html#EX41>`__ ). The ``         -s        ``
     option shows only the OS type.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1133,21 +740,12 @@ damage your system if misused.
         Linux iron.bozo 2.6.15-1.2054_FC5 #1 Tue Mar 14 15:48:33 EST 2006
          i686 i686 i386 GNU/Linux
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **arch**
     Show system architecture. Equivalent to **uname -m** . See `Example
     11-27 <testbranch.html#CASECMD>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1157,13 +755,7 @@ damage your system if misused.
         bash$ uname -m
         i686
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **lastcomm**
     Gives information about previous commands, as stored in the
@@ -1175,9 +767,6 @@ damage your system if misused.
     List the last login time of all system users. This references the
     ``         /var/log/lastlog        `` file.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1194,38 +783,17 @@ damage your system if misused.
         root          tty1                      Fri Dec  7 18:43:21 -0700 2001
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     This command will fail if the user invoking it does not have read
     permission for the ``            /var/log/lastlog           `` file.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **lsof**
     List open files. This command outputs a detailed table of all
@@ -1234,9 +802,6 @@ damage your system if misused.
     may be piped to `grep <textproc.html#GREPREF>`__ and/or
     `awk <awk.html#AWKREF>`__ to parse and analyze its results.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1249,13 +814,7 @@ damage your system if misused.
          ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **lsof** command is a useful, if complex administrative tool. If
     you are unable to dismount a filesystem and get an error message
@@ -1264,9 +823,6 @@ damage your system if misused.
     option lists open network socket files, and this can help trace
     intrusion or hack attempts.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1276,13 +832,7 @@ damage your system if misused.
          firefox 2330 bozo  38u IPv4  10535       TCP 66.0.118.137:57708->216.79.48.24:http ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See `Example 30-2 <networkprogramming.html#IPADDRESSES>`__ for an
     effective use of **lsof** .
@@ -1293,9 +843,6 @@ damage your system if misused.
     are useful for diagnosing why a given program or package fails to
     run . . . perhaps due to missing libraries or related causes.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1307,13 +854,7 @@ damage your system if misused.
          ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     This is the Linux equivalent of the Solaris **truss** command.
 
@@ -1321,9 +862,6 @@ damage your system if misused.
     **L** ibrary **trace** : diagnostic and debugging tool that traces
     *library calls* invoked by a given command.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1338,13 +876,7 @@ damage your system if misused.
          ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **nc**
     The **nc** ( *netcat* ) utility is a complete toolkit for connecting
@@ -1352,9 +884,6 @@ damage your system if misused.
     and testing tool and as a component in simple script-based HTTP
     clients and servers.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1362,25 +891,13 @@ damage your system if misused.
         220 localhost.localdomain ESMTP Sendmail 8.13.1/8.13.1;
          Thu, 31 Mar 2005 15:41:35 -0700
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     A real-life `usage example <process-sub.html#NETCATEXAMPLE>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-5. Checking a remote server for *identd***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1452,36 +969,18 @@ damage your system if misused.
         #+ look in the documentation:
         #+ the /usr/share/doc/nc-X.XX/scripts directory.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     And, of course, there's Dr. Andrew Tridgell's notorious one-line
     script in the BitKeeper Affair:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         echo clone | nc thunk.org 5000 > e2fsprogs.dat
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **free**
     Shows memory and cache usage in tabular form. The output of this
@@ -1490,9 +989,6 @@ damage your system if misused.
     **Perl** . The **procinfo** command shows all the information that
     **free** does, and much more.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1502,32 +998,17 @@ damage your system if misused.
            -/+ buffers/cache:      10640      19864
            Swap:        68540       3128      65412
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     To show unused RAM memory:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ free | grep Mem | awk '{ print $4 }'
         1880
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **procinfo**
     Extract and list information and statistics from the
@@ -1535,29 +1016,17 @@ damage your system if misused.
     pseudo-filesystem <devproc.html#DEVPROCREF>`__ . This gives a very
     extensive and detailed listing.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ procinfo | grep Bootup
         Bootup: Wed Mar 21 15:15:50 2001    Load average: 0.04 0.21 0.34 3/47 6829
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **lsdev**
     List devices, that is, show installed hardware.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1573,21 +1042,12 @@ damage your system if misused.
          ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **du**
     Show (disk) file usage, recursively. Defaults to current working
     directory, unless otherwise specified.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1598,20 +1058,11 @@ damage your system if misused.
          6.0k    .
          6.0k    total
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **df**
     Shows filesystem usage in tabular form.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1621,13 +1072,7 @@ damage your system if misused.
          /dev/hda8               222525    123951     87085  59% /home
          /dev/hda7              1408796   1075744    261488  80% /usr
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **dmesg**
     Lists all system bootup messages to ``         stdout        `` .
@@ -1637,9 +1082,6 @@ damage your system if misused.
     `grep <textproc.html#GREPREF>`__ , `sed <sedawk.html#SEDREF>`__ , or
     `awk <awk.html#AWKREF>`__ from within a script.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1650,21 +1092,12 @@ damage your system if misused.
          hda: hda1 hda2 hda3 < hda5 hda6 hda7 > hda4
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **stat**
     Gives detailed and verbose *stat* istics on a given file (even a
     directory or device file) or set of files.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1678,20 +1111,11 @@ damage your system if misused.
          Change: Sat Jun  2 16:40:24 2001
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     If the target file does not exist, **stat** returns an error
     message.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1699,20 +1123,11 @@ damage your system if misused.
         nonexistent-file: No such file or directory
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     In a script, you can use **stat** to extract information about files
     (and filesystems) and set variables accordingly.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1751,20 +1166,11 @@ damage your system if misused.
         File type:          regular file
         File access rights: -rw-rw-r--
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **vmstat**
     Display virtual memory statistics.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1774,42 +1180,21 @@ damage your system if misused.
          0  0  0      0  11040   2636  38952   0   0    33     7  271    88   8   3 89
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **uptime**
     Shows how long the system has been running, along with associated
     statistics.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ uptime
         10:28pm  up  1:57,  3 users,  load average: 0.17, 0.34, 0.27
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1819,17 +1204,8 @@ damage your system if misused.
     single-core processor), then system performance is significantly
     degraded.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **hostname**
     Lists the system's host name. This command sets the host name in an
@@ -1839,9 +1215,6 @@ damage your system if misused.
     `$HOSTNAME <internalvariables.html#HOSTNAMEREF>`__ internal
     variable.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1851,13 +1224,7 @@ damage your system if misused.
         bash$ echo $HOSTNAME
         localhost.localdomain
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Similar to the **hostname** command are the **domainname** ,
     **dnsdomainname** , **nisdomainname** , and **ypdomainname**
@@ -1868,30 +1235,15 @@ damage your system if misused.
  **hostid**
     Echo a 32-bit hexadecimal numerical identifier for the host machine.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ hostid
         7f0100
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1920,35 +1272,20 @@ damage your system if misused.
     exact equivalent of what **hostid** returns, above. There exist only
     a few million other Linux machines with this identical *hostid* .
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
         bash$ cat /etc/hosts
         127.0.0.1               localhost.localdomain localhost
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
         bash$ cat /etc/hosts
         127.0.0.1               localhost.localdomain localhost
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **sar**
     Invoking **sar** (System Activity Reporter) gives a very detailed
@@ -1961,9 +1298,6 @@ damage your system if misused.
     written by `Sebastien Godard <mailto:sebastien.godard@wanadoo.fr>`__
     .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1985,21 +1319,12 @@ damage your system if misused.
         Average:          all      6.33      1.70     14.71      0.00     77.26
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **readelf**
     Show information and statistics about a designated *elf* binary.
     This is part of the *binutils* package.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2014,22 +1339,13 @@ damage your system if misused.
            Type:                              EXEC (Executable file)
            . . .
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **size**
     The **size [/path/to/binary]** command gives the segment sizes of a
     binary executable or archive file. This is mainly of use to
     programmers.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2038,21 +1354,9 @@ damage your system if misused.
           495971   22496   17392  535859   82d33 /bin/bash
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** System Logs**
 
@@ -2061,30 +1365,18 @@ damage your system if misused.
     ``         /var/log/messages        `` ). You do not have to be
     *root* to invoke **logger** .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         logger Experiencing instability in network connection at 23:10, 05/21.
         # Now, do a 'tail /var/log/messages'.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     By embedding a **logger** command in a script, it is possible to
     write debugging information to
     ``         /var/log/messages        `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2096,13 +1388,7 @@ damage your system if misused.
         # ...
         # Jul  7 20:48:58 localhost ./test.sh[1712]: Logging at line 3.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **logrotate**
     This utility manages the system log files, rotating, compressing,
@@ -2115,13 +1401,7 @@ damage your system if misused.
     ``         /etc/logrotate.conf        `` makes it possible to manage
     personal log files, as well as system-wide ones.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -2129,25 +1409,10 @@ damage your system if misused.
     `rottlog <http://www.gnu.org/software/rottlog/>`__ , which he
     considers to be an improved version of **logrotate** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Job Control**
 
@@ -2161,22 +1426,13 @@ damage your system if misused.
     `Example 15-14 <internal.html#EX44>`__ and `Example
     29-3 <procref1.html#PIDID>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$  ps ax | grep sendmail
         295 ?       S      0:00 sendmail: accepting connections on port 25
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     To display system processes in graphical "tree" format: **ps afjx**
     or **ps ax --forest** .
@@ -2185,9 +1441,6 @@ damage your system if misused.
     Combining the **ps** command with `grep <textproc.html#GREPREF>`__
     or `kill <x9644.html#KILLREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2208,13 +1461,7 @@ damage your system if misused.
          2216 mingetty
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Compare the action of **pkill** with
     `killall <x9644.html#KILLALLREF>`__ .
@@ -2229,9 +1476,6 @@ damage your system if misused.
     ``         -b        `` option displays in text mode, so that the
     output may be parsed or accessed from a script.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2249,13 +1493,7 @@ damage your system if misused.
            ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **nice**
 
@@ -2281,9 +1519,6 @@ damage your system if misused.
     **pidof** command is the approximate counterpart to the
     `$PPID <internalvariables.html#PPIDREF>`__ internal variable.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2291,23 +1526,11 @@ damage your system if misused.
         880
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-6. *pidof* helps kill a process**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2347,17 +1570,8 @@ damage your system if misused.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **fuser**
     Identifies the processes (by PID) that are accessing a given file,
@@ -2367,9 +1581,6 @@ damage your system if misused.
     scripts preventing unauthorized users from accessing system
     services.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2382,13 +1593,7 @@ damage your system if misused.
         /dev/null:            3009(bozo)  3010(bozo)  3197(bozo)  3199(bozo)
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     One important application for **fuser** is when physically inserting
     or removing storage media, such as CD ROM disks or USB flash drives.
@@ -2398,9 +1603,6 @@ damage your system if misused.
     /dev/device\_name** will clear up the mystery, so you can kill any
     relevant processes.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2416,22 +1618,13 @@ damage your system if misused.
         bash$ umount /mnt/usbdrive
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **fuser** command, invoked with the ``         -n        ``
     option identifies the processes accessing a *port* . This is
     especially useful in combination with `nmap <system.html#NMAPREF>`__
     .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2448,13 +1641,7 @@ damage your system if misused.
         2095 ?        Ss     0:00 sendmail: accepting connections
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **cron**
     Administrative program scheduler, performing such duties as cleaning
@@ -2465,38 +1652,17 @@ damage your system if misused.
     a `daemon <communications.html#DAEMONREF>`__ and executes scheduled
     entries from ``         /etc/crontab        `` .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Some flavors of Linux run **crond** , Matthew Dillon's version of
     **cron** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Process Control and Booting**
 
@@ -2526,13 +1692,7 @@ damage your system if misused.
     Command set to shut the system down, usually just prior to a power
     down.
 
-    .. raw:: html
 
-       <div class="WARNING">
-
-    .. raw:: html
-
-       <div>
 
     |Warning|
 
@@ -2540,26 +1700,14 @@ damage your system if misused.
     it can be invoked by a non-root user. A careless *halt* in a
     terminal or a script may shut down the system!
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **service**
     Starts or stops a system *service* . The startup scripts in
     ``         /etc/init.d        `` and ``         /etc/rc.d        ``
     use this command to start services at bootup.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2569,21 +1717,9 @@ damage your system if misused.
          Unloading iptables modules:                                [  OK  ]
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Network**
 
@@ -2594,9 +1730,6 @@ damage your system if misused.
     firewalls. This is an important security tool for locking down a
     network against hacking attempts.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2613,20 +1746,11 @@ damage your system if misused.
 
         # 25/tcp     open        smtp
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **ifconfig**
     Network *interface configuration* and tuning utility.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2639,20 +1763,11 @@ damage your system if misused.
                    collisions:0 txqueuelen:0
                    RX bytes:700 (700.0 b)  TX bytes:700 (700.0 b)
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The **ifconfig** command is most often used at bootup to set up the
     interfaces, or to shut them down when rebooting.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2685,13 +1800,7 @@ damage your system if misused.
         #    echo $(/sbin/ifconfig | sed -e 's/ .*//')
         #  Thanks, S.C., for additional comments.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 32-6 <debugging.html#ONLINE>`__ .
 
@@ -2703,9 +1812,6 @@ damage your system if misused.
 
     **netstat -r** is equivalent to `route <system.html#ROUTEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2719,21 +1825,9 @@ damage your system if misused.
          unix  3      [ ]         STREAM     CONNECTED     4513
          . . .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -2742,17 +1836,8 @@ damage your system if misused.
     useful for determining whether a computer has been hacked or
     compromised.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **iwconfig**
     This is the command set for configuring a wireless network. It is
@@ -2763,9 +1848,6 @@ damage your system if misused.
     (Internet Protocol) networks and attached devices. This command is
     part of the *iproute2* package.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2782,19 +1864,10 @@ damage your system if misused.
         169.254.0.0/16 dev lo  scope link
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Or, in a script:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2830,20 +1903,11 @@ damage your system if misused.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **route**
     Show info about or make changes to the kernel routing table.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2854,13 +1918,7 @@ damage your system if misused.
          default         pm3-67.bozosisp 0.0.0.0         UG       40 0          0 ppp0
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **iptables**
     The **iptables** command set is a packet filtering tool used mainly
@@ -2881,9 +1939,6 @@ damage your system if misused.
     Originally a port from IRIX to Red Hat Linux, **chkconfig** may not
     be part of the core installation of some Linux flavors.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2893,13 +1948,7 @@ damage your system if misused.
          ...
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **tcpdump**
     Network packet "sniffer." This is a tool for analyzing and
@@ -2908,34 +1957,19 @@ damage your system if misused.
 
     Dump ip packet traffic between hosts *bozoville* and *caduceus* :
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ tcpdump ip host bozoville and caduceus
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Of course, the output of **tcpdump** can be parsed with certain of
     the previously discussed `text processing
     utilities <textproc.html#TPCOMMANDLISTING1>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Filesystem**
 
@@ -2954,9 +1988,6 @@ damage your system if misused.
     ``         /etc/rc.d        `` ( ``         rc.sysinit        `` or
     something similar) invokes this to get everything mounted.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2965,13 +1996,7 @@ damage your system if misused.
         mount /mnt/cdrom
         # Shortcut, if /mnt/cdrom listed in /etc/fstab
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The versatile *mount* command can even mount an ordinary file on a
     block device, and the file will act as if it were a filesystem.
@@ -2980,15 +2005,9 @@ damage your system if misused.
     mount and examine an ISO9660 filesystem image before burning it onto
     a CDR. ` [3]  <system.html#FTN.AEN16255>`__
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-7. Checking a CD image**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3002,47 +2021,23 @@ damage your system if misused.
         ls -alR            # List the files in the directory tree there.
                            # And so forth.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **umount**
     Unmount a currently mounted filesystem. Before physically removing a
     previously mounted floppy or CDROM disk, the device must be
     **umount** ed, else filesystem corruption may result.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         umount /mnt/cdrom
         # You may now press the eject button and safely remove the disk.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -3051,17 +2046,8 @@ damage your system if misused.
     "multispindle" laptops with swappable floppy and optical drives,
     this can cause problems, however.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **gnome-mount**
     The newer Linux distros have deprecated **mount** and **umount** .
@@ -3073,9 +2059,6 @@ damage your system if misused.
 
     For example, to mount a USB flash drive:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3088,13 +2071,7 @@ damage your system if misused.
          /dev/sda1                63584     12034     51550  19% /media/disk
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **sync**
     Forces an immediate write of all updated data from buffers to hard
@@ -3114,15 +2091,9 @@ damage your system if misused.
     Sets up and configures `loopback
     devices <devref1.html#LOOPBACKREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-8. Creating a filesystem in a file**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3135,17 +2106,8 @@ damage your system if misused.
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **mkswap**
     Creates a swap partition or file. The swap area must subsequently be
@@ -3159,15 +2121,9 @@ damage your system if misused.
     Create a Linux *ext2* filesystem. This command must be invoked as
     *root* .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-9. Adding a new hard drive**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3213,17 +2169,8 @@ damage your system if misused.
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 17-8 <system.html#CREATEFS>`__ and `Example
     31-3 <zeros.html#RAMDISK>`__ .
@@ -3235,38 +2182,20 @@ damage your system if misused.
     Tune *ext2* filesystem. May be used to change filesystem parameters,
     such as maximum mount count. This must be invoked as *root* .
 
-    .. raw:: html
 
-       <div class="WARNING">
-
-    .. raw:: html
-
-       <div>
 
     |Warning|
 
     This is an extremely dangerous command. Use it at your own risk, as
     you may inadvertently destroy your filesystem.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **dumpe2fs**
     Dump (list to ``         stdout        `` ) very verbose filesystem
     info. This must be invoked as *root* .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3275,13 +2204,7 @@ damage your system if misused.
          Mount count:              6
          Maximum mount count:      20
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **hdparm**
     List or change hard disk parameters. This command must be invoked as
@@ -3291,30 +2214,15 @@ damage your system if misused.
     Create or change a partition table on a storage device, usually a
     hard drive. This command must be invoked as *root* .
 
-    .. raw:: html
 
-       <div class="WARNING">
-
-    .. raw:: html
-
-       <div>
 
     |Warning|
 
     Use this command with extreme caution. If something goes wrong, you
     may destroy an existing filesystem.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **fsck** , **e2fsck** , **debugfs**
     Filesystem check, repair, and debug command set.
@@ -3329,30 +2237,15 @@ damage your system if misused.
     versatile, but dangerous command is to (attempt to) recover deleted
     files. For advanced users only!
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     All of these should be invoked as *root* , and they can damage or
     destroy a filesystem if misused.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **badblocks**
     Checks for bad blocks (physical media flaws) on a storage device.
@@ -3373,9 +2266,6 @@ damage your system if misused.
     The **usbmodules** command outputs information about the driver
     modules for connected USB devices.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3395,20 +2285,11 @@ damage your system if misused.
            . . .
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **lspci**
     Lists *pci* busses present.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3425,13 +2306,7 @@ damage your system if misused.
            . . .
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **mkbootdisk**
     Creates a boot floppy which can be used to bring up the system if,
@@ -3479,13 +2354,7 @@ damage your system if misused.
     `rpm <filearchiv.html#RPMREF>`__ option) or running a readonly
     filesystem from a CD ROM. Invoke only as *root* , and use with care.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -3493,17 +2362,8 @@ damage your system if misused.
     directory, since the normal ``            $PATH           `` can no
     longer be relied upon.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **lockfile**
     This utility is part of the **procmail** package (
@@ -3511,13 +2371,7 @@ damage your system if misused.
     file* , a *semaphore* that controls access to a file, device, or
     resource.
 
-    .. raw:: html
 
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
      ``                         Definition:                       `` A
     *semaphore* is a flag or signal. (The usage originated in
@@ -3527,26 +2381,14 @@ damage your system if misused.
     the appropriate semaphore to determine whether a particular resource
     is available/accessible.
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The lock file serves as a flag that this particular file, device, or
     resource is in use by a process (and is therefore "busy" ). The
     presence of a lock file permits only restricted access (or no
     access) to other processes.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3556,13 +2398,7 @@ damage your system if misused.
         lockfile /home/bozo/lockfiles/${0##*/}.lock
         # A safer version of the above, as pointed out by E. Choroba.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Lock files are used in such applications as protecting system mail
     folders from simultaneously being changed by multiple users,
@@ -3577,9 +2413,6 @@ damage your system if misused.
      <system.html#FTN.AEN16659>`__ A script can test for the presence of
     a lock file by something like the following.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3591,13 +2424,7 @@ damage your system if misused.
                #  from accessing files/resources used by xyzip.
           ...
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **flock**
     Much less useful than the **lockfile** command is **flock** . It
@@ -3605,9 +2432,6 @@ damage your system if misused.
     the lock is on. This is to prevent any other process from setting a
     lock on that file until completion of the specified command.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3615,38 +2439,17 @@ damage your system if misused.
         #  Set a lock on the script the above line appears in,
         #+ while listing the script to stdout.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Unlike **lockfile** , **flock** does *not* automatically create a
     lock file.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **mknod**
     Creates block or character `device
@@ -3664,13 +2467,7 @@ damage your system if misused.
     specified period of time. Usually invoked by
     `cron <system.html#CRONREF>`__ to remove stale log files.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Backup**
 
@@ -3687,13 +2484,7 @@ damage your system if misused.
     Perform a low-level format on a floppy disk (
     ``         /dev/fd0*        `` ).
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** System Resources**
 
@@ -3708,13 +2499,7 @@ damage your system if misused.
     ``         ~/.bash_profile        `` (see `Appendix
     H <files.html>`__ ).
 
-    .. raw:: html
 
-       <div class="IMPORTANT">
-
-    .. raw:: html
-
-       <div>
 
     |Important|
 
@@ -3759,9 +2544,6 @@ damage your system if misused.
     ``            /etc/profile           `` would abort this script when
     it exceeded the preset limit.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -3778,9 +2560,6 @@ damage your system if misused.
 
         exit 0      #  Will not exit here, because this script will never terminate.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -3797,17 +2576,8 @@ damage your system if misused.
 
         exit 0      #  Will not exit here, because this script will never terminate.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **quota**
     Display user or group disk quotas.
@@ -3828,16 +2598,10 @@ damage your system if misused.
     ``         ~/.bash_profile        `` (see `Appendix
     H <files.html>`__ ).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-10. Using *umask* to hide an output file from prying
     eyes**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3861,17 +2625,8 @@ damage your system if misused.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **rdev**
     Get info about or make changes to root device, swap space, or video
@@ -3879,22 +2634,13 @@ damage your system if misused.
     **lilo** , but **rdev** remains useful for setting up a ram disk.
     This is a dangerous command, if misused.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Modules**
 
  **lsmod**
     List installed kernel modules.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3913,37 +2659,16 @@ damage your system if misused.
          pcmcia_core            45984   0 [serial_cs ds i82365]
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Doing a **cat /proc/modules** gives the same information.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **insmod**
     Force installation of a kernel module (use **modprobe** instead,
@@ -3963,9 +2688,6 @@ damage your system if misused.
  **modinfo**
     Output information about a loadable module.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -3976,21 +2698,9 @@ damage your system if misused.
          license:     "GPL"
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Miscellaneous**
 
@@ -4004,13 +2714,7 @@ damage your system if misused.
     environmental variable settings. ` [9]
      <system.html#FTN.AEN16975>`__
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -4051,9 +2755,6 @@ damage your system if misused.
     |     ...                  |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -4066,9 +2767,6 @@ damage your system if misused.
         # where the Perl binaries may not be in the expected place.
         # Thanks, S.C.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -4078,9 +2776,6 @@ damage your system if misused.
         # This script will run where Bash is not in its usual place, in /bin.
         ...
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -4093,9 +2788,6 @@ damage your system if misused.
         # where the Perl binaries may not be in the expected place.
         # Thanks, S.C.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -4105,24 +2797,12 @@ damage your system if misused.
         # This script will run where Bash is not in its usual place, in /bin.
         ...
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **ldd**
     Show shared lib dependencies for an executable file.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -4130,13 +2810,7 @@ damage your system if misused.
         libc.so.6 => /lib/libc.so.6 (0x4000c000)
         /lib/ld-linux.so.2 => /lib/ld-linux.so.2 (0x80000000)
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **watch**
     Run a command repeatedly, at specified time intervals.
@@ -4144,47 +2818,23 @@ damage your system if misused.
     The default is two-second intervals, but this may be changed with
     the ``         -n        `` option.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         watch -n 5 tail /var/log/messages
         # Shows tail end of system log, /var/log/messages, every five seconds.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Unfortunately, `piping <special-chars.html#PIPEREF>`__ the output of
     **watch command** to `grep <textproc.html#GREPREF>`__ does not work.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **strip**
     Remove the debugging symbolic references from an executable binary.
@@ -4200,16 +2850,10 @@ damage your system if misused.
  **xrandr**
     Command-line tool for manipulating the root window of the screen.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 17-11. *Backlight* : changes the brightness of the
     (laptop) screen backlight**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -4343,53 +2987,29 @@ damage your system if misused.
 
         exit $E_CHANGE1
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **rdist**
     Remote distribution client: synchronizes, clones, or backs up a file
     system on a remote server.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <system.html#AEN14695>`__
 
 This is the case on a Linux machine or a UNIX system with disk quotas.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <system.html#AEN14727>`__
 
 The **userdel** command will fail if the particular user being deleted
 is still logged on.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <system.html#AEN16255>`__
 
@@ -4398,36 +3018,24 @@ CDs <http://www2.linuxjournal.com/lj-issues/issue66/3335.html>`__ , in
 the October, 1999 issue of `*Linux
 Journal* <http://www.linuxjournal.com>`__ .
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <system.html#AEN16504>`__
 
 The ``       -c      `` option to `mke2fs <system.html#MKE2FSREF>`__
 also invokes a check for bad blocks.
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <system.html#AEN16659>`__
 
 Since only *root* has write permission in the ``       /var/lock      ``
 directory, a user script cannot set a lock file there.
 
-.. raw:: html
-
-   </p>
 
 ` [6]  <system.html#AEN16748>`__
 
 Operators of single-user Linux systems generally prefer something
 simpler for backups, such as **tar** .
 
-.. raw:: html
-
-   </p>
 
 ` [7]  <system.html#AEN16782>`__
 
@@ -4438,18 +3046,12 @@ there are two new options: ``       -b      `` for
 `socket <devref1.html#SOCKETREF>`__ buffer size, and ``       -T      ``
 for the limit on the number of *threads* .
 
-.. raw:: html
-
-   </p>
 
 ` [8]  <system.html#AEN16847>`__
 
 NAND is the logical *not-and* operator. Its effect is somewhat similar
 to subtraction.
 
-.. raw:: html
-
-   </p>
 
 ` [9]  <system.html#AEN16975>`__
 
@@ -4465,31 +3067,19 @@ variables in a single command's environment.
 | 'commandXXX' only.       |
 
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
     var1=value1 var2=value2 commandXXX
     # $var1 and $var2 set in the environment of 'commandXXX' only.
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
     var1=value1 var2=value2 commandXXX
     # $var1 and $var2 set in the environment of 'commandXXX' only.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Tip| image:: ../images/tip.gif

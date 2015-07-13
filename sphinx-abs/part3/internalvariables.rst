@@ -2,9 +2,6 @@
 XXX  9.1. Internal Variables
 ############################
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 
 ``                           Builtin                  variables:               ``
@@ -13,22 +10,13 @@ XXX  9.1. Internal Variables
  ``        $BASH       ``
     The path to the *Bash* binary itself
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo $BASH
         /bin/bash
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $BASH_ENV       ``
     An `environmental variable <othertypesv.html#ENVREF>`__ pointing to
@@ -46,9 +34,6 @@ XXX  9.1. Internal Variables
     as the `$$ <internalvariables.html#PROCCID>`__ variable, but it
     often gives the same result.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -64,19 +49,10 @@ XXX  9.1. Internal Variables
         11015 pts/2    R      0:00 bash4
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      But ...
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -93,22 +69,13 @@ XXX  9.1. Internal Variables
           echo "\$BASHPID inside of subshell = $BASHPID" )                # 9603
           # Note that $$ returns PID of parent process.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $BASH_VERSINFO[n]       ``
     A 6-element `array <arrays.html#ARRAYREF>`__ containing version
     information about the installed release of Bash. This is similar to
     ``         $BASH_VERSION        `` , below, but a bit more detailed.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -127,20 +94,11 @@ XXX  9.1. Internal Variables
         # BASH_VERSINFO[5] = i386-redhat-linux-gnu  # Architecture
                                                     # (same as $MACHTYPE).
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $BASH_VERSION       ``
     The version of Bash installed on the system
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -148,17 +106,8 @@ XXX  9.1. Internal Variables
         3.2.25(1)-release
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -166,13 +115,7 @@ XXX  9.1. Internal Variables
         BASH_VERSION: Undefined variable.
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Checking $BASH\_VERSION is a good method of determining which shell
     is running. `$SHELL <internalvariables.html#SHELLVARREF>`__ does not
@@ -186,9 +129,6 @@ XXX  9.1. Internal Variables
     ```          ~/.bashrc         `` <sample-bashrc.html#BASHRC>`__
     file.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -205,13 +145,7 @@ XXX  9.1. Internal Variables
         /usr/share/doc/bash-doc
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $DIRSTACK       ``
     The top value in the directory stack ` [1]
@@ -233,37 +167,19 @@ XXX  9.1. Internal Variables
     Identification number of whatever identity the current user has
     assumed, perhaps by means of `su <system.html#SUREF>`__ .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     The ``            $EUID           `` is not necessarily the same as
     the `$UID <internalvariables.html#UIDREF>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $FUNCNAME       ``
     Name of the current function
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -277,13 +193,7 @@ XXX  9.1. Internal Variables
         echo "FUNCNAME = $FUNCNAME"        # FUNCNAME =
                                            # Null value outside a function.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example A-50 <contributed-scripts.html#USEGETOPT>`__ .
 
@@ -299,9 +209,6 @@ XXX  9.1. Internal Variables
     ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__
     and ``         /etc/group        `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -317,13 +224,7 @@ XXX  9.1. Internal Variables
         6
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $HOME       ``
     Home directory of the user, usually
@@ -343,22 +244,13 @@ XXX  9.1. Internal Variables
     Like `$MACHTYPE <internalvariables.html#MACHTYPEREF>`__ , identifies
     the system hardware.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo $HOSTTYPE
         i686
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $IFS       ``
     internal field separator
@@ -374,9 +266,6 @@ XXX  9.1. Internal Variables
     held in ``         $IFS        `` . See `Example
     5-1 <quotingvar.html#WEIRDVARS>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -399,55 +288,28 @@ XXX  9.1. Internal Variables
         (Read commands from string and assign any arguments to pos params.)
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Set ``         $IFS        `` to eliminate whitespace in
     `pathnames <special-chars.html#PATHNAMEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         IFS="$(printf '\n\t')"   # Per David Wheeler.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     ``            $IFS           `` does not handle whitespace the same
     as it does other characters.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-1. $IFS and whitespace**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -540,21 +402,9 @@ XXX  9.1. Internal Variables
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -647,9 +497,6 @@ XXX  9.1. Internal Variables
 
         exit
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -742,17 +589,8 @@ XXX  9.1. Internal Variables
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     (Many thanks, StÃ©phane Chazelas, for clarification and above
     examples.)
@@ -774,13 +612,7 @@ XXX  9.1. Internal Variables
     mishandled, ``         LC_COLLATE        `` can cause unexpected
     results in `filename globbing <globbingref.html>`__ .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -796,17 +628,8 @@ XXX  9.1. Internal Variables
     in ``            /etc/profile           `` and/or
     ``            ~/.bashrc           `` .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $LC_CTYPE       ``
     This internal variable controls character interpretation in
@@ -817,9 +640,6 @@ XXX  9.1. Internal Variables
     variable appears. It has significance only within the script in
     which it appears, and is chiefly useful for debugging purposes.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -830,35 +650,20 @@ XXX  9.1. Internal Variables
         echo "Last command argument processed = $last_cmd_arg"
         # *** END DEBUG BLOCK ***
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $MACHTYPE       ``
     machine type
 
     Identifies the system hardware.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo $MACHTYPE
         i686
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $OLDPWD       ``
     Old working directory ( "OLD-Print-Working-Directory" , previous
@@ -867,22 +672,13 @@ XXX  9.1. Internal Variables
  ``        $OSTYPE       ``
     operating system type
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo $OSTYPE
         linux
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $PATH       ``
     Path to binaries, usually ``         /usr/bin/        `` ,
@@ -899,22 +695,13 @@ XXX  9.1. Internal Variables
     ```          ~/.bashrc         `` <sample-bashrc.html>`__ (see
     `Appendix H <files.html>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo $PATH
         /bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin:/sbin:/usr/sbin
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     ``                   PATH=${PATH}:/opt/bin                 ``
     appends the ``         /opt/bin        `` directory to the current
@@ -924,13 +711,7 @@ XXX  9.1. Internal Variables
     such as a script, may not change the environment of the parent
     process, the shell).
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -938,26 +719,14 @@ XXX  9.1. Internal Variables
     usually omitted from the ``            $PATH           `` as a
     security measure.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $PIPESTATUS       ``
     `Array <arrays.html#ARRAYREF>`__ variable holding `exit
     status <exit-status.html#EXITSTATUSREF>`__ (es) of last executed
     *foreground* `pipe <special-chars.html#PIPEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -975,13 +744,7 @@ XXX  9.1. Internal Variables
         127
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The members of the ``         $PIPESTATUS        `` array hold the
     exit status of each respective command executed in a pipe.
@@ -989,13 +752,7 @@ XXX  9.1. Internal Variables
     first command in the pipe, ``         $PIPESTATUS[1]        `` the
     exit status of the second command, and so on.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -1023,9 +780,6 @@ XXX  9.1. Internal Variables
     Thank you, Wayne Pollock for pointing this out and supplying the
     above example.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1036,9 +790,6 @@ XXX  9.1. Internal Variables
         0
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1049,25 +800,10 @@ XXX  9.1. Internal Variables
         0
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1102,9 +838,6 @@ XXX  9.1. Internal Variables
     . Otherwise its exit status is 0 , as expected. This likewise is the
     case for `tr <textproc.html#TRREF>`__ .
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1119,9 +852,6 @@ XXX  9.1. Internal Variables
         141 127 0
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1136,25 +866,10 @@ XXX  9.1. Internal Variables
         141 127 0
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1182,9 +897,6 @@ XXX  9.1. Internal Variables
 
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1199,9 +911,6 @@ XXX  9.1. Internal Variables
         0
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1216,25 +925,10 @@ XXX  9.1. Internal Variables
         0
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1242,17 +936,8 @@ XXX  9.1. Internal Variables
     cases where ``            $PIPESTATUS           `` does not give the
     desired information.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $PPID       ``
     The ``         $PPID        `` of a process is the process ID (
@@ -1285,9 +970,6 @@ XXX  9.1. Internal Variables
     As a debugging aid, it may be useful to embed diagnostic information
     in ``         $PS4        `` .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1296,13 +978,7 @@ XXX  9.1. Internal Variables
         set -x
         # Various commands follow ...
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
 .. _internalvars_pwd:
 
@@ -1314,9 +990,6 @@ $PWD
     This is the analog to the `pwd <internal.html#PWD2REF>`__ builtin
     command.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1361,13 +1034,7 @@ $PWD
 
         exit $result
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $REPLY       ``
     The default value when a variable is not supplied to
@@ -1376,9 +1043,6 @@ $PWD
     item number of the variable chosen, not the value of the variable
     itself.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1408,20 +1072,11 @@ $PWD
 
         exit 0
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $SECONDS       ``
     The number of seconds the script has been running.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1453,21 +1108,12 @@ $PWD
 
         exit 0
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $SHELLOPTS       ``
     The list of enabled shell `options <options.html#OPTIONSREF>`__ , a
     readonly variable.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1475,26 +1121,14 @@ $PWD
         braceexpand:hashall:histexpand:monitor:history:interactive-comments:emacs
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $SHLVL       ``
     Shell level, how deeply Bash is nested. ` [3]
      <internalvariables.html#FTN.AEN5320>`__ If, at the command-line,
     $SHLVL is 1, then in a script it will increment to 2.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1503,17 +1137,8 @@ $PWD
     `$BASH\_SUBSHELL <internalvariables.html#BASHSUBSHELLREF>`__ when
     you need an indication of subshell nesting.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $TMOUT       ``
     If the ``                   $TMOUT                 `` environmental
@@ -1525,9 +1150,6 @@ $PWD
     ``                   $TMOUT                 `` in a script in
     combination with `read <internal.html#READREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1547,13 +1169,7 @@ $PWD
 
         echo "Your favorite song is $song."
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     There are other, more complex, ways of implementing timed input in a
     script. One alternative is to set up a timing loop to signal the
@@ -1562,15 +1178,9 @@ $PWD
     32-5 <debugging.html#EX76>`__ ) the interrupt generated by the
     timing loop (whew!).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-2. Timed Input**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1633,29 +1243,14 @@ $PWD
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     An alternative is using `stty <system.html#STTYREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-3. Once more, timed input**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1700,30 +1295,15 @@ $PWD
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Perhaps the simplest method is using the ``         -t        ``
     option to `read <internal.html#READREF>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-4. Timed *read***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1750,17 +1330,8 @@ $PWD
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $UID       ``
     User ID number
@@ -1774,15 +1345,9 @@ $PWD
     change from the command line or within a script, and is the
     counterpart to the `id <system.html#IDREF>`__ builtin.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-5. Am I root?**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1816,27 +1381,12 @@ $PWD
           echo "You are just a regular fella."
         fi
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 2-3 <sha-bang.html#EX2>`__ .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1872,9 +1422,6 @@ $PWD
 
     +--------------------------+--------------------------+--------------------------+
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1893,9 +1440,6 @@ $PWD
         rxvt
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1914,25 +1458,10 @@ $PWD
         rxvt
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Positional Parameters**
 
@@ -1951,29 +1480,14 @@ etc.
  ``        $*       ``
     All of the positional parameters, seen as a single word
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
      " ``             $*            `` " must be quoted.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $@       ``
     Same as $\* , but each parameter is a quoted string, that is, the
@@ -1981,39 +1495,18 @@ etc.
     expansion. This means, among other things, that each parameter in
     the argument list is seen as a separate word.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     Of course, " ``             $@            `` " should be quoted.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-6. *arglist* : Listing arguments with $\* and $@**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2068,25 +1561,13 @@ etc.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Following a **shift** , the ``         $@        `` holds the
     remaining command-line parameters, lacking the previous
     ``         $1        `` , which was lost.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2102,13 +1583,7 @@ etc.
         # Each "shift" loses parameter $1.
         # "$@" then contains the remaining parameters.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         $@        `` special parameter finds use as a tool
     for filtering input into shell scripts. The **cat "$@"**
@@ -2117,13 +1592,7 @@ etc.
     script. See `Example 16-24 <textproc.html#ROT13>`__ and `Example
     16-25 <textproc.html#CRYPTOQUOTE>`__ .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2132,28 +1601,13 @@ etc.
     depending on the setting of `$IFS <internalvariables.html#IFSREF>`__
     .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-7. Inconsistent ``           $*          `` and
     ``           $@          `` behavior**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2295,54 +1749,24 @@ etc.
         #  This example script written by Stephane Chazelas,
         #+ and slightly modified by the document author.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The **$@** and **$\*** parameters differ only when between double
     quotes.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-8. ``           $*          `` and
     ``           $@          `` when ``           $IFS          `` is
     empty**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2376,25 +1800,10 @@ etc.
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 **Other Special Parameters**
 
@@ -2402,13 +1811,7 @@ etc.
     Flags passed to script (using `set <internal.html#SETREF>`__ ). See
     `Example 15-16 <internal.html#EX34>`__ .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2417,25 +1820,13 @@ etc.
     possible use for it is to have a script `self-test whether it is
     interactive <intandnonint.html#IITEST>`__ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $!       ``
     `PID <special-chars.html#PROCESSIDDEF>`__ (process ID) of last job
     run in background
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2456,19 +1847,10 @@ etc.
 
         # Thank you, Jacques Lederer, for suggesting this.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using ``         $!        `` for job control:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2478,19 +1860,10 @@ etc.
 
         # Thank you, Sylvain Fourmanoit, for this creative use of the "!" variable.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Or, alternately:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2537,26 +1910,14 @@ etc.
 
         exit
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  ``        $_       ``
     Special variable set to final argument of previous command executed.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 9-9. Underscore variable**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2576,17 +1937,8 @@ etc.
         :
         echo $_              #  :
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  ``        $?       ``
     `Exit status <exit-status.html#EXITSTATUSREF>`__ of a command,
@@ -2602,20 +1954,11 @@ etc.
     15-27 <x9644.html#SELFDESTRUCT>`__ ). This is usually simpler than
     invoking `mktemp <filearchiv.html#MKTEMPREF>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <internalvariables.html#AEN4671>`__
 
@@ -2625,18 +1968,12 @@ order. The last value stored is the first retrieved. This is sometimes
 called a ``               LIFO             `` ( *last-in-first-out* ) or
 *pushdown* stack.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <internalvariables.html#AEN5154>`__
 
 The PID of the currently running script is ``       $$      `` , of
 course.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <internalvariables.html#AEN5320>`__
 
@@ -2647,9 +1984,6 @@ edition of *Webster's Dictionary* , illustrates this beautifully: " *A
 collection of boxes, cases, or the like, of graduated size, each put
 within the one next larger.* "
 
-.. raw:: html
-
-   </p>
 
 ` [4]  <internalvariables.html#AEN5479>`__
 
@@ -2657,22 +1991,13 @@ The words "argument" and "parameter" are often used interchangeably. In
 the context of this document, they have the same precise meaning: *a
 variable passed to a script or function.*
 
-.. raw:: html
-
-   </p>
 
 ` [5]  <internalvariables.html#AEN5654>`__
 
 Within a script, inside a subshell, ``       $$      `` `returns the PID
 of the script <internalvariables.html#BASHPIDREF>`__ , not the subshell.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Caution| image:: ../images/caution.gif
 .. |Note| image:: ../images/note.gif

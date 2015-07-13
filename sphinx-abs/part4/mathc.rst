@@ -2,18 +2,12 @@
 XXX 16.8. Math Commands
 #######################
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** "Doing the numbers" **
 
  **factor**
     Decompose an integer into prime factors.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -21,23 +15,11 @@ XXX 16.8. Math Commands
         27417: 3 13 19 37
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-46. Generating prime numbers**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -81,17 +63,8 @@ XXX 16.8. Math Commands
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **bc**
     Bash can't handle floating point calculations, and it lacks
@@ -110,32 +83,17 @@ XXX 16.8. Math Commands
     variable. This uses `command
     substitution <commandsub.html#COMMANDSUBREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
                  variable=$(echo "OPTIONS; OPERATIONS" | bc)
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-47. Monthly Payment on a Mortgage**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -240,27 +198,12 @@ XXX 16.8. Math Commands
          #   3) If you are really ambitious,
          #+     expand this script to print complete amortization tables.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-48. Base Conversion**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -373,17 +316,8 @@ XXX 16.8. Math Commands
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     An alternate method of invoking **bc** involves using a `here
     document <here-docs.html#HEREDOCREF>`__ embedded within a `command
@@ -391,9 +325,6 @@ XXX 16.8. Math Commands
     especially appropriate when a script needs to pass a list of options
     and commands to **bc** .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -414,23 +345,11 @@ XXX 16.8. Math Commands
         LIMIT_STRING
         )
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-49. Invoking *bc* using a *here document***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -491,27 +410,12 @@ XXX 16.8. Math Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-50. Calculating PI**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -659,17 +563,8 @@ XXX 16.8. Math Commands
         #  2) To prototype and test the algorithms before rewriting
         #+    it in a compiled high-level language.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example A-37 <contributed-scripts.html#STDDEV>`__ .
 
@@ -682,9 +577,6 @@ XXX 16.8. Math Commands
     Similar to the procedure with **bc** ,
     `echo <internal.html#ECHOREF>`__ a command-string to **dc** .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -696,26 +588,14 @@ XXX 16.8. Math Commands
         #  Pushes 7, then 8 onto the stack,
         #+ multiplies ("*" operator), then prints the result ("p" operator).
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Most persons avoid **dc** , because of its non-intuitive input and
     rather cryptic operators. Yet, it has its uses.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-51. Converting a decimal number to hexadecimal**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -751,26 +631,14 @@ XXX 16.8. Math Commands
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Studying the `info <basic.html#INFOREF>`__ page for **dc** is a
     painful path to understanding its intricacies. There seems to be a
     small, select group of *dc wizards* who delight in showing off their
     mastery of this powerful, but arcane utility.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -778,17 +646,8 @@ XXX 16.8. Math Commands
         Bash
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -803,23 +662,11 @@ XXX 16.8. Math Commands
         #  The result is  1.6180339887 ...
         #  ... which happens to be the Pythagorean Golden Ratio, to 10 places.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-52. Factoring**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -861,32 +708,17 @@ XXX 16.8. Math Commands
          # 11
          # 4093
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **awk**
     Yet another way of doing floating point math in a script is using
     `awk's <awk.html#AWKREF>`__ built-in math functions in a `shell
     wrapper <wrapper.html#SHWRAPPER>`__ .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-53. Calculating the hypotenuse of a triangle**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -919,23 +751,8 @@ XXX 16.8. Math Commands
         # Exercise: Rewrite this script using 'bc' rather than awk.
         #           Which method is more intuitive?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 

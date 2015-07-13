@@ -18,7 +18,4 @@ Standard UNIX commands make shell scripts more versatile. The power of
 scripts comes from coupling system commands and shell directives with
 simple programming constructs.
 
-.. raw:: html
-
-   </div>
 

@@ -2,9 +2,6 @@
 XXX  16.1. Basic Commands
 #########################
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** The first commands a novice learns**
 
@@ -21,9 +18,6 @@ XXX  16.1. Basic Commands
     ``         -i        `` , show file inodes (see `Example
     16-4 <moreadv.html#IDELETE>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -49,21 +43,9 @@ XXX  16.1. Basic Commands
          -rw-rw-r-- 1 bozo bozo 0 Sep 14 18:44 chapter11.txt
          -rw-rw-r-- 1 bozo bozo 0 Sep 14 18:44 chapter12.txt
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -84,9 +66,6 @@ XXX  16.1. Basic Commands
 
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -97,9 +76,6 @@ XXX  16.1. Basic Commands
         bash$ echo $?
         2
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -110,28 +86,13 @@ XXX  16.1. Basic Commands
         bash$ echo $?
         2
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-1. Using *ls* to create a table of contents for burning
     a CDR disk**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -186,26 +147,14 @@ XXX  16.1. Basic Commands
 
         exit $exitcode
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **cat** , **tac**
     **cat** , an acronym for *concatenate* , lists a file to
     ``         stdout        `` . When combined with redirection ( > or
     >> ), it is commonly used to concatenate files.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -214,13 +163,7 @@ XXX  16.1. Basic Commands
 
         cat file.1 file.2 file.3 > file.123   # Combines three files into one.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``        -n       `` option to **cat** inserts consecutive
     numbers before all lines of the target file(s). The
@@ -232,13 +175,7 @@ XXX  16.1. Basic Commands
     See also `Example 16-28 <textproc.html#LNUM>`__ and `Example
     16-24 <textproc.html#ROT13>`__ .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -262,9 +199,6 @@ XXX  16.1. Basic Commands
 
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -273,9 +207,6 @@ XXX  16.1. Basic Commands
         tr a-z A-Z < filename   #  Same effect, but starts one less process,
                                 #+ and also dispenses with the pipe.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -284,17 +215,8 @@ XXX  16.1. Basic Commands
         tr a-z A-Z < filename   #  Same effect, but starts one less process,
                                 #+ and also dispenses with the pipe.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     **tac** , is the inverse of *cat* , listing a file backwards from
     its end.
@@ -305,9 +227,6 @@ XXX  16.1. Basic Commands
     **tac** , as it preserves the order of the lines, but flips each one
     around (mirror image).
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -326,13 +245,7 @@ XXX  16.1. Basic Commands
          .2 enil si sihT
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **cp**
     This is the file copy command.
@@ -341,13 +254,7 @@ XXX  16.1. Basic Commands
     overwriting ``         file2        `` if it already exists (see
     `Example 16-6 <moreadv.html#EX42>`__ ).
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -371,9 +278,6 @@ XXX  16.1. Basic Commands
 
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -381,9 +285,6 @@ XXX  16.1. Basic Commands
         #  "Synchronize" dest_dir to source_dir
         #+  by copying over all newer and not previously existing files.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -391,17 +292,8 @@ XXX  16.1. Basic Commands
         #  "Synchronize" dest_dir to source_dir
         #+  by copying over all newer and not previously existing files.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **mv**
     This is the file *move* command. It is equivalent to a combination
@@ -411,13 +303,7 @@ XXX  16.1. Basic Commands
     10-11 <parameter-substitution.html#RFE>`__ and `Example
     A-2 <contributed-scripts.html#RN>`__ .
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -444,9 +330,6 @@ XXX  16.1. Basic Commands
 
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -457,9 +340,6 @@ XXX  16.1. Basic Commands
          drwxrwxr-x    2 bozo  bozo      1024 May 28 19:20 source_directory/
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -470,30 +350,15 @@ XXX  16.1. Basic Commands
          drwxrwxr-x    2 bozo  bozo      1024 May 28 19:20 source_directory/
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **rm**
     Delete (remove) a file or files. The ``         -f        `` option
     forces removal of even readonly files, and is useful for bypassing
     user input in a script.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -532,9 +397,6 @@ XXX  16.1. Basic Commands
 
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -542,25 +404,16 @@ XXX  16.1. Basic Commands
         rm: invalid option -- b
          Try `rm --help' for more information.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
         bash$ rm -- -badname
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
         bash$ rm ./-badname
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -568,41 +421,20 @@ XXX  16.1. Basic Commands
         rm: invalid option -- b
          Try `rm --help' for more information.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
         bash$ rm -- -badname
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
         bash$ rm ./-badname
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="WARNING">
-
-    .. raw:: html
-
-       <div>
 
     |Warning|
 
@@ -611,17 +443,8 @@ XXX  16.1. Basic Commands
     the current directory. A careless **rm -rf \*** can wipe out a big
     chunk of a directory structure.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **rmdir**
     Remove directory. The directory must be empty of all files --
@@ -639,9 +462,6 @@ XXX  16.1. Basic Commands
     Changes the attributes of an existing file or directory (see
     `Example 15-14 <internal.html#EX44>`__ ).
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -653,17 +473,8 @@ XXX  16.1. Basic Commands
         # An ordinary user may execute "filename" with same privileges as the file's owner.
         # (This does not apply to shell scripts.)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -679,17 +490,8 @@ XXX  16.1. Basic Commands
         #+ if she modifies the file.
         #  Same restrictions apply for deleting the file.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -718,13 +520,7 @@ XXX  16.1. Basic Commands
         #+ but you can't read, write, or execute the symlinks.
         #  These restrictions do not apply to root.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **chattr**
     **Ch** ange file **attr** ibutes. This is analogous to **chmod**
@@ -739,9 +535,6 @@ XXX  16.1. Basic Commands
     similar fashion, the ``         a        `` option marks the file as
     append only.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -754,13 +547,7 @@ XXX  16.1. Basic Commands
          rm: cannot remove `file1.txt': Operation not permitted
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     If a file has the ``         s        `` (secure) attribute set,
     then when it is deleted its block is overwritten with binary zeroes.
@@ -774,30 +561,15 @@ XXX  16.1. Basic Commands
     then it will automatically be compressed on writes to disk, and
     uncompressed on reads.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The file attributes set with **chattr** do not show in a file
     listing ( **ls -l** ).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **ln**
     Creates links to pre-existings files. A "link" is a reference to a
@@ -819,38 +591,17 @@ XXX  16.1. Basic Commands
     the previously existing ``         oldfile        `` to the newly
     created link, ``         newfile        `` .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
     If a file named ``            newfile           `` has previously
     existed, an error message will result.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     **Which type of link to use?**
 
@@ -869,31 +620,16 @@ XXX  16.1. Basic Commands
     just a reference to a file name, not to actual data). And, unlike a
     hard link, a symbolic link can refer to a directory.
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Links give the ability to invoke a script (or any other type of
     executable) with multiple names, and having that script behave
     according to how it was invoked.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-2. Hello or Good-bye**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -922,17 +658,8 @@ XXX  16.1. Basic Commands
         # Some other hello-type commands, as appropriate.
         exit $HELLO_CALL
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **man** , **info**
     These commands access the manual and information pages on system
@@ -943,29 +670,17 @@ XXX  16.1. Basic Commands
     pages* . For a script that makes a tentative first step in that
     direction, see `Example A-39 <contributed-scripts.html#MANED>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <basic.html#AEN10025>`__
 
 The ``       -v      `` option also orders the sort by *upper- and
 lowercase prefixed* filenames.
 
-.. raw:: html
-
-   </p>
 
 ` [2]  <basic.html#AEN10228>`__
 
@@ -975,9 +690,6 @@ lowercase prefixed* filenames.
 be deleted by an accidental **rm -rf \*** . Dotfiles are generally used
 as setup and configuration files in a user's home directory.
 
-.. raw:: html
-
-   </p>
 
 ` [3]  <basic.html#AEN10301>`__
 
@@ -985,13 +697,7 @@ This particular feature may not yet be implemented in the version of the
 ext2/ext3 filesystem installed on your system. Check the documentation
 for your Linux distro.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Tip| image:: ../images/tip.gif
 .. |Note| image:: ../images/note.gif

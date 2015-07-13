@@ -7,9 +7,6 @@ they do not iterate the execution of a code block. Like loops, however,
 they direct program flow according to conditions at the top or bottom of
 the block.
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Controlling program flow in a code block**
 
@@ -30,13 +27,7 @@ the block.
     |  ;;
     |  **esac**
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -54,27 +45,12 @@ the block.
     -  The entire **case** block ends with an **esac** ( *case* spelled
        backwards).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-25. Using *case***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -108,27 +84,12 @@ the block.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-26. Creating menus using *case***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -198,24 +159,12 @@ the block.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     An exceptionally clever use of **case** involves testing for
     command-line parameters.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -237,20 +186,11 @@ the block.
           * ) FILENAME=$1;;     # Otherwise, $1.
         esac
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Here is a more straightforward example of command-line parameter
     handling:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -279,24 +219,12 @@ the block.
         #+ part of his "rottlog" package.
         #  Used with permission.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-27. Using *command substitution* to generate the *case*
     variable**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -314,30 +242,15 @@ the block.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     A **case** construct can filter strings for
     `globbing <globbingref.html>`__ patterns.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-28. Simple string matching**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -380,27 +293,12 @@ the block.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-29. Checking for alphabetic input**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -511,17 +409,8 @@ the block.
         #  Hint: The function duplicates 'isdigit ()',
         #+ but adds a test for a mandatory decimal point.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **select**
     The **select** construct, adopted from the Korn Shell, is yet
@@ -539,15 +428,9 @@ the block.
     ``         $PS3        `` prompt ( ``         #?        `` ) by
     default, but this may be changed.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-30. Creating menus using *select***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -576,17 +459,8 @@ the block.
         #  For example, if the user inputs "peas,"
         #+ the script would respond "Sorry. That is not on the menu."
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     If
     ``                   in                                 list                     ``
@@ -603,15 +477,9 @@ the block.
     ``                 in                              list                   ``
     omitted.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 11-31. Creating menus using *select* in a function**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -640,34 +508,16 @@ the block.
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 37-3 <bashver2.html#RESISTOR>`__ .
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <testbranch.html#AEN7087>`__
 
@@ -695,9 +545,6 @@ layout a more structured appearance.
 
 +--------------------------+--------------------------+--------------------------+
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
@@ -710,9 +557,6 @@ layout a more structured appearance.
       (    * ) echo "Other type of machine";;
     esac
 
-.. raw:: html
-
-   </p>
 
 .. code-block:: sh
 
@@ -725,12 +569,6 @@ layout a more structured appearance.
       (    * ) echo "Other type of machine";;
     esac
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif

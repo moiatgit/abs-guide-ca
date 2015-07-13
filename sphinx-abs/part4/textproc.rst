@@ -2,9 +2,6 @@
 XXX  16.4. Text Processing Commands
 ###################################
 
-.. raw:: html
-
-   <div class="VARIABLELIST">
 
 ** Commands affecting text and text files**
 
@@ -31,9 +28,6 @@ XXX  16.4. Text Processing Commands
     This filter removes duplicate lines from a sorted file. It is often
     seen in a pipe coupled with `sort <textproc.html#SORTREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -43,20 +37,11 @@ XXX  16.4. Text Processing Commands
         # removes duplicate lines,
         # and finally writes the result to an output file.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The useful ``         -c        `` option prefixes each line of the
     input file with its number of occurrences.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -81,13 +66,7 @@ XXX  16.4. Text Processing Commands
                1 This line occurs only once.
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The
     ``                   sort INPUTFILE | uniq -c | sort -nr                 ``
@@ -97,15 +76,9 @@ XXX  16.4. Text Processing Commands
     finds use in analysis of log files and dictionary lists, and
     wherever the lexical structure of a document needs to be examined.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-12. Word Frequency Analysis**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -170,21 +143,9 @@ XXX  16.4. Text Processing Commands
         # 2) Modify the script to also filter out multiple spaces and
         #+   other whitespace.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -208,13 +169,7 @@ XXX  16.4. Text Processing Commands
                1 once
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **expand** , **unexpand**
     The **expand** filter converts tabs to spaces. It is often used in a
@@ -234,45 +189,24 @@ XXX  16.4. Text Processing Commands
 
     Using **cut** to obtain a listing of the mounted filesystems:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         cut -d ' ' -f1,2 /etc/mtab
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using **cut** to list the OS and kernel version:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         uname -a | cut -d" " -f1,3,11,12
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using **cut** to extract message headers from an e-mail folder:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -282,19 +216,10 @@ XXX  16.4. Text Processing Commands
          Spam complaint
          Re: Spam complaint
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using **cut** to parse a file:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -309,25 +234,13 @@ XXX  16.4. Text Processing Commands
 
         # Thanks, Oleg Philon for suggesting this.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     ``                   cut -d ' ' -f2,3 filename                 `` is
     equivalent to
     ``                   awk -F'[ ]' '{ print $2, $3 }' filename                 ``
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -350,9 +263,6 @@ XXX  16.4. Text Processing Commands
 
     Thank you, Jaka Kranjc, for pointing this out.
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -363,9 +273,6 @@ XXX  16.4. Text Processing Commands
          This is line 19 of testfile.
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -376,17 +283,8 @@ XXX  16.4. Text Processing Commands
          This is line 19 of testfile.
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 16-48 <mathc.html#BASE>`__ .
 
@@ -396,9 +294,6 @@ XXX  16.4. Text Processing Commands
     `cut <textproc.html#CUTREF>`__ , useful for creating system log
     files.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -417,13 +312,7 @@ XXX  16.4. Text Processing Commands
          building blocks $2.50 ea.
          cables  $3.75
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **join**
     Consider this a special-purpose cousin of **paste** . This powerful
@@ -437,9 +326,6 @@ XXX  16.4. Text Processing Commands
     be joined should be sorted according to the tagged field for the
     matchups to work properly.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -449,17 +335,8 @@ XXX  16.4. Text Processing Commands
         200 Laces
         300 Socks
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -469,17 +346,8 @@ XXX  16.4. Text Processing Commands
         200 $1.00
         300 $2.00
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -491,52 +359,25 @@ XXX  16.4. Text Processing Commands
          300 Socks $2.00
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     The tagged field appears only once in the output.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **head**
     lists the beginning of a file to ``         stdout        `` . The
     default is ``         10        `` lines, but a different number can
     be specified. The command has a number of interesting options.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-13. Which files are scripts?**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -571,27 +412,12 @@ XXX  16.4. Text Processing Commands
         #+    Perl, awk, and other scripting language scripts.
         #     Correct this.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-14. Generating 10-digit random numbers**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -678,17 +504,8 @@ XXX  16.4. Text Processing Commands
 
         exit
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 16-39 <filearchiv.html#EX52>`__ .
 
@@ -699,15 +516,9 @@ XXX  16.4. Text Processing Commands
     of changes to a system logfile, using the ``         -f        ``
     option, which outputs lines appended to the file.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-15. Using *tail* to monitor the system log**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -727,25 +538,10 @@ XXX  16.4. Text Processing Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -773,9 +569,6 @@ XXX  16.4. Text Processing Commands
     | im from end of block)    |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -785,9 +578,6 @@ XXX  16.4. Text Processing Commands
         # m = from beginning of file, number of lines to end of block
         # n = number of lines to set variable to (trim from end of block)
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -797,25 +587,10 @@ XXX  16.4. Text Processing Commands
         # m = from beginning of file, number of lines to end of block
         # n = number of lines to set variable to (trim from end of block)
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -823,17 +598,8 @@ XXX  16.4. Text Processing Commands
     filename** usage. The standard **tail -n $LINES filename** is
     correct.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 16-5 <moreadv.html#EX41>`__ , `Example
     16-39 <filearchiv.html#EX52>`__ and `Example
@@ -854,9 +620,6 @@ XXX  16.4. Text Processing Commands
     ``                 pattern               `` may be literal text or a
     Regular Expression.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -864,21 +627,12 @@ XXX  16.4. Text Processing Commands
         The GPL governs the distribution of the Linux operating system.
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     If no target file(s) specified, **grep** works as a filter on
     ``         stdout        `` , as in a
     `pipe <special-chars.html#PIPEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -887,13 +641,7 @@ XXX  16.4. Text Processing Commands
          901 pts/1    S      0:00 grep clock
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -i        `` option causes a case-insensitive search.
 
@@ -908,9 +656,6 @@ XXX  16.4. Text Processing Commands
     The ``         -n        `` option lists the matching lines,
     together with line numbers.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -919,20 +664,11 @@ XXX  16.4. Text Processing Commands
          6:The GPL governs the distribution of the Linux operating system.
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -v        `` (or ``         --invert-match        ``
     ) option *filters out* matches.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -941,21 +677,12 @@ XXX  16.4. Text Processing Commands
         # Matches all lines in "*.txt" files containing "pattern1",
         # but ***not*** "pattern2".
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -c        `` ( ``         --count        `` ) option
     gives a numerical count of matches, rather than actually listing the
     matches.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -979,13 +706,7 @@ XXX  16.4. Text Processing Commands
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         --color        `` (or ``         --colour        `` )
     option marks the matching string in color (on the console or in an
@@ -994,16 +715,10 @@ XXX  16.4. Text Processing Commands
     matched. See also the ``         -o        `` option, which shows
     only the matching portion of the line(s).
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-16. Printing out the *From* lines in stored e-mail
     messages**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1033,24 +748,12 @@ XXX  16.4. Text Processing Commands
         #  You might wish to pipe the output of this script to 'more'
         #+ or redirect it to a file . . .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     When invoked with more than one target file given, **grep**
     specifies which file contains matches.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1060,21 +763,9 @@ XXX  16.4. Text Processing Commands
          misc.txt:The Linux operating system is steadily gaining in popularity.
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -1096,9 +787,6 @@ XXX  16.4. Text Processing Commands
     |                          |
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1107,9 +795,6 @@ XXX  16.4. Text Processing Commands
          osinfo.txt:The GPL governs the distribution of the Linux operating system.
 
 
-    .. raw:: html
-
-       </p>
 
     .. code-block:: sh
 
@@ -1118,26 +803,14 @@ XXX  16.4. Text Processing Commands
          osinfo.txt:The GPL governs the distribution of the Linux operating system.
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     If there is a successful match, **grep** returns an `exit
     status <exit-status.html#EXITSTATUSREF>`__ of 0, which makes it
     useful in a condition test in a script, especially in combination
     with the ``         -q        `` option to suppress output.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1155,26 +828,14 @@ XXX  16.4. Text Processing Commands
           echo "$word not found in $filename"
         fi
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     `Example 32-6 <debugging.html#ONLINE>`__ demonstrates how to use
     **grep** to search for a word pattern in a system logfile.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-17. Emulating *grep* in a script**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1213,17 +874,8 @@ XXX  16.4. Text Processing Commands
         # 1) Add newlines to output, if more than one match in any given file.
         # 2) Add features.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     How can **grep** search for two (or more) separate patterns? What if
     you want **grep** to display all lines in a file or files that
@@ -1234,9 +886,6 @@ XXX  16.4. Text Processing Commands
 
     For example, given the following file:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1248,20 +897,11 @@ XXX  16.4. Text Processing Commands
         This file is not unusual.
         Here is some text.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Now, let's search this file for lines containing *both* "file" and
     "text" . . .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1276,25 +916,13 @@ XXX  16.4. Text Processing Commands
         This is an ordinary text file.
          This file does not contain any unusual text.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Now, for an interesting recreational use of *grep* . . .
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-18. Crossword puzzle solver**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1365,26 +993,14 @@ XXX  16.4. Text Processing Commands
         workingman
         workingmen
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
      **egrep** -- *extended grep* -- is the same as **grep -E** . This
     uses a somewhat different, extended set of `Regular
     Expressions <regexp.html#REGEXREF>`__ , which can make the search a
     bit more flexible. It also allows the boolean \| ( *or* ) operator.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1394,26 +1010,14 @@ XXX  16.4. Text Processing Commands
          Line 4 contains matches, but also Matches
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
      **fgrep** -- *fast grep* -- is the same as **grep -F** . It does a
     literal string search (no `Regular
     Expressions <regexp.html#REGEXREF>`__ ), which generally speeds
     things up a bit.
 
-    .. raw:: html
 
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
@@ -1422,28 +1026,13 @@ XXX  16.4. Text Processing Commands
     ``            -E           `` and ``            -F           ``
     options, respectively.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-19. Looking up definitions in *Webster's 1913
     Dictionary***
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1533,55 +1122,25 @@ XXX  16.4. Text Processing Commands
         # 3)  Modify the script to parse one of the other available
         #   + Public Domain Dictionaries, such as the U.S. Census Bureau Gazetteer.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="NOTE">
-
-    .. raw:: html
-
-       <div>
 
     |Note|
 
     See also `Example A-41 <contributed-scripts.html#QKY>`__ for an
     example of speedy *fgrep* lookup on a large text file.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     **agrep** ( *approximate grep* ) extends the capabilities of
     **grep** to approximate matching. The search string may differ by a
     specified number of characters from the resulting matches. This
     utility is not part of the core Linux distribution.
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
@@ -1593,17 +1152,8 @@ XXX  16.4. Text Processing Commands
     To search `bzipped <filearchiv.html#BZIPREF>`__ files, use
     **bzgrep** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **look**
     The command **look** works like **grep** , but does a lookup on a
@@ -1611,15 +1161,9 @@ XXX  16.4. Text Processing Commands
     a match in ``         /usr/dict/words        `` , but a different
     dictionary file may be specified.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-20. Checking words in a list for validity**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1668,17 +1212,8 @@ XXX  16.4. Text Processing Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **sed** , **awk**
     Scripting languages especially suited for parsing text files and
@@ -1698,9 +1233,6 @@ XXX  16.4. Text Processing Commands
  **wc**
     *wc* gives a "word count" on a file or I/O stream:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1708,13 +1240,7 @@ XXX  16.4. Text Processing Commands
         13  70  447 README
         [13 lines  70 words  447 characters]
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     ``                   wc -w                 `` gives only the word
     count.
@@ -1734,9 +1260,6 @@ XXX  16.4. Text Processing Commands
     Using **wc** to count how many ``         .txt        `` files are
     in current working directory:
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1750,20 +1273,11 @@ XXX  16.4. Text Processing Commands
 
         #  Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using **wc** to total up the size of all the files whose names begin
     with letters in the range d - h
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1771,20 +1285,11 @@ XXX  16.4. Text Processing Commands
         71832
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Using **wc** to count the instances of the word "Linux" in the main
     source file for this book.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1792,13 +1297,7 @@ XXX  16.4. Text Processing Commands
         138
 
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 16-39 <filearchiv.html#EX52>`__ and `Example
     20-8 <redircb.html#REDIR4>`__ .
@@ -1806,9 +1305,6 @@ XXX  16.4. Text Processing Commands
     Certain commands include some of the functionality of **wc** as
     options.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1820,24 +1316,12 @@ XXX  16.4. Text Processing Commands
 
         # Thanks, S.C.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **tr**
     character translation filter.
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -1846,17 +1330,8 @@ XXX  16.4. Text Processing Commands
     special characters in **tr** command sequences. Brackets should be
     quoted to prevent expansion by the shell.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     Either
     ``                   tr "A-Z" "*" <filename                 `` or
@@ -1869,9 +1344,6 @@ XXX  16.4. Text Processing Commands
 
     The ``         -d        `` option deletes a range of characters.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1882,64 +1354,37 @@ XXX  16.4. Text Processing Commands
         tr -d 0-9 <filename
         # Deletes all digits from the file "filename".
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         --squeeze-repeats        `` (or
     ``         -s        `` ) option deletes all but the first instance
     of a string of consecutive characters. This option is useful for
     removing excess `whitespace <special-chars.html#WHITESPACEREF>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo "XXXXX" | tr --squeeze-repeats 'X'
         X
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     The ``         -c        `` "complement" option *inverts* the
     character set to match. With this option, **tr** acts only upon
     those characters *not* matching the specified set.
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
         bash$ echo "acfdeb123" | tr -c b-d +
         +c+d+b++++
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
     Note that **tr** recognizes `POSIX character
     classes <x17129.html#POSIXREF>`__ . ` [1]
      <textproc.html#FTN.AEN11502>`__
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1947,23 +1392,11 @@ XXX  16.4. Text Processing Commands
         ----2--1
 
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-21. *toupper* : Transforms a file to all uppercase.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -1995,28 +1428,13 @@ XXX  16.4. Text Processing Commands
         #+ to *either* upper or lowercase.
         #  Hint: Use either the "case" or "select" command.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-22. *lowercase* : Changes all filenames in working
     directory to lowercase.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2064,27 +1482,12 @@ XXX  16.4. Text Processing Commands
 
         exit $?
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-23. *du* : DOS to UNIX text file conversion.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2118,27 +1521,12 @@ XXX  16.4. Text Processing Commands
         # --------
         # Change the above script to convert from UNIX to DOS.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-24. *rot13* : ultra-weak encryption.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2157,27 +1545,12 @@ XXX  16.4. Text Processing Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-25. Generating "Crypto-Quote" Puzzles**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2225,23 +1598,11 @@ XXX  16.4. Text Processing Commands
         #  Modify the script so that it will either encrypt or decrypt,
         #+ depending on command-line argument(s).
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
      Of course, *tr* lends itself to *code obfuscation* .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2253,21 +1614,9 @@ XXX  16.4. Text Processing Commands
 
         # Based on the Wikipedia "Just another Perl hacker" article.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
 
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    .. raw:: html
-
-       <div class="SIDEBAR">
 
     ***tr* variants**
 
@@ -2278,17 +1627,8 @@ XXX  16.4. Text Processing Commands
     ``                         tr '[a-z]' '[A-Z]'                       ``
     ). The GNU version of **tr** resembles the BSD one.
 
-    .. raw:: html
 
-       </div>
 
-    .. raw:: html
-
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **fold**
     A filter that wraps lines of input to a specified width. This is
@@ -2301,15 +1641,9 @@ XXX  16.4. Text Processing Commands
     Simple-minded file formatter, used as a filter in a pipe to "wrap"
     long lines of text output.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-26. Formatted file listing.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2326,44 +1660,20 @@ XXX  16.4. Text Processing Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example 16-5 <moreadv.html#EX41>`__ .
 
-    .. raw:: html
 
-       <div class="TIP">
-
-    .. raw:: html
-
-       <div>
 
     |Tip|
 
     A powerful alternative to **fmt** is Kamil Toman's **par** utility,
     available from http://www.cs.berkeley.edu/~amc/Par/ .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **col**
     This deceptively named filter removes reverse line feeds from an
@@ -2375,15 +1685,9 @@ XXX  16.4. Text Processing Commands
     Column formatter. This filter transforms list-type text output into
     a "pretty-printed" table by inserting tabs at appropriate places.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-27. Using *column* to format a directory listing**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2404,17 +1708,8 @@ XXX  16.4. Text Processing Commands
 
         exit 0
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **colrm**
     Column removal filter. This removes columns (characters) from a file
@@ -2424,13 +1719,7 @@ XXX  16.4. Text Processing Commands
     the second through fourth characters from each line of the text file
     ``         filename        `` .
 
-    .. raw:: html
 
-       <div class="CAUTION">
-
-    .. raw:: html
-
-       <div>
 
     |Caution|
 
@@ -2439,17 +1728,8 @@ XXX  16.4. Text Processing Commands
     `expand <textproc.html#EXPANDREF>`__ and **unexpand** in a pipe
     preceding **colrm** .
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **nl**
     Line numbering filter:
@@ -2463,15 +1743,9 @@ XXX  16.4. Text Processing Commands
     ``                   cat -b                 `` , since, by default
     **nl** does not list blank lines.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-28. *nl* : A self-numbering script.**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2495,17 +1769,8 @@ XXX  16.4. Text Processing Commands
         exit 0
         # -----------------------------------------------------------------
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
  **pr**
     Print formatting filter. This will paginate files (or
@@ -2541,9 +1806,6 @@ XXX  16.4. Text Processing Commands
     A utility for converting file(s) to a different encoding (character
     set). Its chief use is for `localization <localization.html>`__ .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2559,13 +1821,7 @@ XXX  16.4. Text Processing Commands
         #+ for converting files to Sony Librie/PRS-50X format.
         #  (http://booklistgensh.peterknowles.com)
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **recode**
     Consider this a fancier version of **iconv** , above. This very
@@ -2589,9 +1845,6 @@ XXX  16.4. Text Processing Commands
     a `shell wrapper <wrapper.html#SHWRAPPER>`__ that calls
     `Perl <wrapper.html#PERLREF>`__ to invoke *Tex* .
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2602,13 +1855,7 @@ XXX  16.4. Text Processing Commands
         #  (The --pdfarrange option repaginates a pdf file. See also --pdfcombine.)
         #  The above command-line could be parameterized and put into a shell script.
 
-    .. raw:: html
 
-       </p>
-
-    .. raw:: html
-
-       </div>
 
  **enscript**
     Utility for converting plain text file to PostScript
@@ -2630,15 +1877,9 @@ XXX  16.4. Text Processing Commands
     **groff** , and its function is to convert equation markup into
     **groff** commands.
 
-    .. raw:: html
-
-       <div class="EXAMPLE">
 
     **Example 16-29. *manview* : Viewing formatted manpages**
 
-    .. raw:: html
-
-       <div>
 
     .. code-block:: sh
 
@@ -2672,17 +1913,8 @@ XXX  16.4. Text Processing Commands
 
         exit $?   # See also the "maned.sh" script.
 
-    .. raw:: html
 
-       </p>
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
 
     See also `Example A-39 <contributed-scripts.html#MANED>`__ .
 
@@ -2696,33 +1928,18 @@ XXX  16.4. Text Processing Commands
     specifications. This has been replaced by the nonproprietary
     **bison** on Linux systems.
 
-.. raw:: html
 
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Notes
 ~~~~~
 
-.. raw:: html
-
-   <div>
 
 ` [1]  <textproc.html#AEN11502>`__
 
 This is only true of the GNU version of **tr** , not the generic version
 often found on commercial UNIX systems.
 
-.. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   </div>
 
 .. |Note| image:: ../images/note.gif
 .. |Tip| image:: ../images/tip.gif
