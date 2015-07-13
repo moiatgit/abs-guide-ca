@@ -149,7 +149,7 @@ the **exit** .
 
     COMMAND1
 
-    . . . 
+    . . .
 
     COMMAND_LAST
 
@@ -201,7 +201,7 @@ the **exit** .
 
     COMMAND1
 
-    . . . 
+    . . .
 
     COMMAND_LAST
 

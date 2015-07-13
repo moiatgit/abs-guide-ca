@@ -23,7 +23,7 @@ XXX 16.7. Terminal Control Commands
 
         bash$ tput longname
         xterm terminal emulator (X Window System)
-                  
+
 
     .. raw:: html
 
@@ -76,15 +76,15 @@ XXX 16.7. Terminal Control Commands
         bash$ infocmp
         #       Reconstructed via infocmp from file:
          /usr/share/terminfo/r/rxvt
-         rxvt|rxvt terminal emulator (X Window System), 
-                 am, bce, eo, km, mir, msgr, xenl, xon, 
-                 colors#8, cols#80, it#8, lines#24, pairs#64, 
-                 acsc=``aaffggjjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~, 
+         rxvt|rxvt terminal emulator (X Window System),
+                 am, bce, eo, km, mir, msgr, xenl, xon,
+                 colors#8, cols#80, it#8, lines#24, pairs#64,
+                 acsc=``aaffggjjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~,
                  bel=^G, blink=\E[5m, bold=\E[1m,
-                 civis=\E[?25l, 
-                 clear=\E[H\E[2J, cnorm=\E[?25h, cr=^M, 
+                 civis=\E[?25l,
+                 clear=\E[H\E[2J, cnorm=\E[?25h, cr=^M,
                  ...
-                  
+
 
     .. raw:: html
 
@@ -122,7 +122,7 @@ XXX 16.7. Terminal Control Commands
          setenv COLUMNS '80';
          setenv LINES '24';
          unset noglob;
-                    
+
 
     .. raw:: html
 

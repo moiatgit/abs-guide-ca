@@ -224,7 +224,7 @@ d'error**
     #+ si una variable està assignada dins el script.
 
     AquestaVar=Valor-daquesta-var
-    #  Fixat, per cert, que una variable pot ser assignada 
+    #  Fixat, per cert, que una variable pot ser assignada
     #+ a strings amb caràcters que no estan permesos en el seu nom.
     : ${AquestaVar?}
     echo "El valor de AquestaVar és $AquestaVar".
@@ -300,7 +300,7 @@ d'arxius.
        Atenció
     Excepcions:
 
-    -  
+    -
 
        **${#\*}** i **${#@}** retornen el *nombre de paràmetres*.
 
@@ -320,7 +320,7 @@ d'arxius.
         then
           echo "Crideu aquest script amb un o més arguments."
           exit $E_NO_ARGS
-        fi  
+        fi
 
         var01=abcdEFGH28ij
         echo "var01 = ${var01}"
@@ -427,7 +427,7 @@ Bash va afegir noves opcions.
     echo '${var1#$pattern1}  =' "${var1#$pattern1}"    #         d12345abc6789
     # La coincidència més curta possible. Elimina els tres primers caràcters abcd12345abc6789 (NdT. No l'he pogut replicar)
     #                                     ^^^^^               |-|
-    echo '${var1##$pattern1} =' "${var1##$pattern1}"   #                  6789      
+    echo '${var1##$pattern1} =' "${var1##$pattern1}"   #                  6789
     # La coincidència més llarga possible. Elimina els primers 12 caràcters abcd12345abc6789 (NdT. No l'he pogut replicar)
     #                                    ^^^^^                |----------|
 
@@ -557,7 +557,7 @@ Bash va afegir noves opcions.
         # El mateix resultat que t=`dirname $path_name`
         echo "path_name, sense l'extensió= $t"
         # Fallarà en alguns casos, com ara amb "../", "/foo////", # "foo/", "/".
-        #  L'eliminació de sufixos es complica especialment quan el nom base no té extensió 
+        #  L'eliminació de sufixos es complica especialment quan el nom base no té extensió
         #+ però el directori que el conté sí que en té.
         # (Agraïment per S.C.)
 
@@ -627,7 +627,7 @@ Bash va afegir noves opcions.
         echo "v4 = $v4"         # abc1234zip1234abc
                                 # CAP CANVI.
 
-        exit 0          
+        exit 0
 
 ``${!varprefix*}``, ``${!varprefix@}``
     Coincideix amb els *noms* de totes les variables declarades que

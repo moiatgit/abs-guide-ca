@@ -24,7 +24,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
         bash$ host surfacemail.com
         surfacemail.com. has address 202.92.42.236
-                  
+
 
     .. raw:: html
 
@@ -47,7 +47,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
         bash$ ipcalc -h 202.92.42.236
         HOSTNAME=surfacemail.com
-                  
+
 
     .. raw:: html
 
@@ -79,7 +79,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
          Non-authoritative answer:
          Name:   kuhleersparnis.ch
-                  
+
 
     .. raw:: html
 
@@ -126,7 +126,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          ;; SERVER: 135.116.137.2#53(135.116.137.2)
          ;; WHEN: Wed Jun 26 08:35:24 2002
          ;; MSG SIZE  rcvd: 91
-                  
+
 
     .. raw:: html
 
@@ -169,7 +169,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
         # The following also works:
         #     whois -h whois.abuse.net $1
-        #           ^^ ^^^^^^^^^^^^^^^  Specify host.  
+        #           ^^ ^^^^^^^^^^^^^^^  Specify host.
         #     Can even lookup multiple spammers with this, i.e."
         #     whois -h whois.abuse.net $spamdomain1 $spamdomain2 . . .
 
@@ -399,7 +399,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          2  or0.xjbnnbrb.com (136.30.178.1)  179.536 ms  179.534 ms  169.685 ms
          3  192.168.11.101 (192.168.11.101)  189.471 ms  189.556 ms *
          ...
-                  
+
 
     .. raw:: html
 
@@ -430,7 +430,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          --- localhost.localdomain ping statistics ---
          2 packets transmitted, 2 packets received, 0% packet loss
          round-trip min/avg/max/mdev = 0.286/0.497/0.709/0.212 ms
-                  
+
 
     .. raw:: html
 
@@ -503,9 +503,9 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          On since Fri Aug 31 20:13 (MST) on pts/0   12 seconds idle
          On since Fri Aug 31 20:13 (MST) on pts/1
          On since Fri Aug 31 20:31 (MST) on pts/2   1 hour 16 minutes idle
-         Mail last read Tue Jul  3 10:08 2007 (MST) 
+         Mail last read Tue Jul  3 10:08 2007 (MST)
          No Plan.
-                  
+
 
     .. raw:: html
 
@@ -757,7 +757,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     .. code:: SCREEN
 
         bash$ rsync -a ~/sourcedir/*txt /node1/subdirectory/
-                  
+
 
     .. raw:: html
 
@@ -787,7 +787,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         # Used in ABS Guide with permission.
 
 
-        #  Download Fedora Core 4 update from mirror site using rsync. 
+        #  Download Fedora Core 4 update from mirror site using rsync.
         #  Should also work for newer Fedora Cores -- 5, 6, . . .
         #  Only download latest package if multiple versions exist,
         #+ to save space.
@@ -813,10 +813,10 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         # rsync include pattern
         # Leading slash causes absolute path name match.
         INCLUDE=(
-            "/4/i386/kde-i18n-Chinese*" 
+            "/4/i386/kde-i18n-Chinese*"
         #   ^                         ^
         # Quoting is necessary to prevent globbing.
-        ) 
+        )
 
 
         # rsync exclude pattern
@@ -838,8 +838,8 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
            "/4/i386/dlm-*"
            "/4/i386/gnbd-*"
            "/4/i386/kernel-smp*"
-        #  "/4/i386/kernel-xen*" 
-        #  "/4/i386/xen-*" 
+        #  "/4/i386/kernel-xen*"
+        #  "/4/i386/xen-*"
         )
 
 
@@ -940,7 +940,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
                                                         #+ of refined list now.
                     # echo "subshell=$BASH_SUBSHELL"
 
-            }       # Bracket required here to let final "echo $pre_file >> $TMP" 
+            }       # Bracket required here to let final "echo $pre_file >> $TMP"
                     # Remained in the same subshell ( 1 ) with the entire loop.
 
             RET=$?  # Get return code of the pipe command.
@@ -966,10 +966,10 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
             RET=$?
 
-           #  --filter merge,+/ is crucial for the intention. 
+           #  --filter merge,+/ is crucial for the intention.
            #  + modifier means include and / means absolute path.
-           #  Then sorted list in $TMP will contain ascending dir name and 
-           #+ prevent the following --exclude '*' from "shortcutting the circuit." 
+           #  Then sorted list in $TMP will contain ascending dir name and
+           #+ prevent the following --exclude '*' from "shortcutting the circuit."
 
             echo "Done"
 
@@ -1296,7 +1296,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
          =====================================================================
           T     1894      24758K     1894      25131K        0       0       0
           C      414                    0
-                  
+
 
     .. raw:: html
 

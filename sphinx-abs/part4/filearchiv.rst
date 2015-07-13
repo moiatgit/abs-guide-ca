@@ -151,7 +151,7 @@ XXX  16.5. File and Archiving Commands
     | s                        |
     |     coreutils-5.2.1-31   |
     |                          |
-                              
+
 
     .. raw:: html
 
@@ -161,7 +161,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ rpm -qf /bin/ls
         coreutils-5.2.1-31
-                  
+
 
     .. raw:: html
 
@@ -171,7 +171,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ rpm -qf /bin/ls
         coreutils-5.2.1-31
-                  
+
 
     .. raw:: html
 
@@ -240,7 +240,7 @@ XXX  16.5. File and Archiving Commands
     |      docbook-utils-0.6.9 |
     | -2                       |
     |                          |
-                              
+
 
     .. raw:: html
 
@@ -273,7 +273,7 @@ XXX  16.5. File and Archiving Commands
          docbook-utils-pdf-0.6.9-2
          docbook-dtd41-sgml-1.0-10
          docbook-utils-0.6.9-2
-                  
+
 
     .. raw:: html
 
@@ -306,7 +306,7 @@ XXX  16.5. File and Archiving Commands
          docbook-utils-pdf-0.6.9-2
          docbook-dtd41-sgml-1.0-10
          docbook-utils-0.6.9-2
-                  
+
 
     .. raw:: html
 
@@ -355,7 +355,7 @@ XXX  16.5. File and Archiving Commands
         then
           echo "Usage: `basename $0` source destination"
           exit $E_BADARGS
-        fi  
+        fi
 
         source="$1"
         destination="$2"
@@ -452,7 +452,7 @@ XXX  16.5. File and Archiving Commands
 
     .. code:: PROGRAMLISTING
 
-        pax -wf daily_backup.pax ~/linux-server/files 
+        pax -wf daily_backup.pax ~/linux-server/files
         #  Creates a tar archive of all files in the target directory.
         #  Note that the options to pax must be in the correct order --
         #+ pax -fw     has an entirely different effect.
@@ -708,7 +708,7 @@ XXX  16.5. File and Archiving Commands
         bash file -z test.tar.gz
         test.tar.gz: GNU tar archive (gzip compressed data, deflated,
          last modified: Sun Sep 16 13:34:51 2001, os: Unix)
-                  
+
 
     .. raw:: html
 
@@ -771,7 +771,7 @@ XXX  16.5. File and Archiving Commands
         then
           echo "Usage: `basename $0` C-program-file" >&2 # Error message to stderr.
           exit $E_ARGERROR
-        fi  
+        fi
 
         # Test for correct file type.
         type=`file $1 | awk '{ print $2, $3, $4, $5 }'`
@@ -786,7 +786,7 @@ XXX  16.5. File and Archiving Commands
           echo "This script works on C program files only."
           echo
           exit $E_WRONG_FILE_TYPE
-        fi  
+        fi
 
 
         # Rather cryptic sed script:
@@ -994,7 +994,7 @@ XXX  16.5. File and Archiving Commands
          -rw-r--r--    1 bozo  bozo      4034 Jul 18 22:04 data1.xrolo
          -rw-r--r--    1 bozo  bozo      4602 May 25 13:58 data1.xrolo.bak
          -rw-r--r--    1 bozo  bozo       877 Dec 17  2000 employment.xrolo
-                  
+
 
     .. raw:: html
 
@@ -1051,9 +1051,9 @@ XXX  16.5. File and Archiving Commands
          user::rw-
          group::rw-
          other::r--
-         
 
-         
+
+
         bash$ setfacl -m u:bozo:rw yearly_budget.csv
         bash$ getfacl yearly_budget.csv
         # file: yearly_budget.csv
@@ -1065,7 +1065,7 @@ XXX  16.5. File and Archiving Commands
          group::rw-
          mask::rw-
          other::r--
-                  
+
 
     .. raw:: html
 
@@ -1086,7 +1086,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ readlink /usr/bin/awk
         ../../bin/gawk
-                  
+
 
     .. raw:: html
 
@@ -1192,8 +1192,8 @@ XXX  16.5. File and Archiving Commands
 
           grep -Fw $word "$WORDFILE"          #   Match whole words only.
         #      ^^^                            #  "Fixed strings" and
-                                              #+ "whole words" options. 
-        done  
+                                              #+ "whole words" options.
+        done
 
         exit $?
 
@@ -1341,7 +1341,7 @@ XXX  16.5. File and Archiving Commands
     |      Only in /home/bozo/ |
     | notes2: file04           |
     |                          |
-                              
+
 
     .. raw:: html
 
@@ -1353,7 +1353,7 @@ XXX  16.5. File and Archiving Commands
         Only in /home/bozo/notes1: file02
          Only in /home/bozo/notes1: file03
          Only in /home/bozo/notes2: file04
-                  
+
 
     .. raw:: html
 
@@ -1365,7 +1365,7 @@ XXX  16.5. File and Archiving Commands
         Only in /home/bozo/notes1: file02
          Only in /home/bozo/notes1: file03
          Only in /home/bozo/notes2: file04
-                  
+
 
     .. raw:: html
 
@@ -1448,7 +1448,7 @@ XXX  16.5. File and Archiving Commands
            This is line 1 of "file-2".
          3:1c
            This is line 1 of "file-3"
-                  
+
 
     .. raw:: html
 
@@ -1544,7 +1544,7 @@ XXX  16.5. File and Archiving Commands
         if [ $? -eq 0 ]         # Test exit status of "cmp" command.
         then
           echo "File \"$1\" is identical to file \"$2\"."
-        else  
+        else
           echo "File \"$1\" differs from file \"$2\"."
         fi
 
@@ -1819,7 +1819,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ echo -n "Top Secret" | md5sum
         8babc97a6f62a4649716f4df8d61728f  -
-                  
+
 
     .. raw:: html
 
@@ -1947,9 +1947,9 @@ XXX  16.5. File and Archiving Commands
 
 
             let "n+=1"
-          done <"$dbfile"       # Read from checksum database file. 
+          done <"$dbfile"       # Read from checksum database file.
 
-        }  
+        }
 
         # =================================================== #
         # main ()
@@ -1959,7 +1959,7 @@ XXX  16.5. File and Archiving Commands
           directory="$PWD"      #  If not specified,
         else                    #+ use current working directory.
           directory="$1"
-        fi  
+        fi
 
         clear                   # Clear screen.
         echo " Running file integrity check on $directory"
@@ -1970,12 +1970,12 @@ XXX  16.5. File and Archiving Commands
           then
             echo "Setting up database file, \""$directory"/"$dbfile"\"."; echo
             set_up_database
-          fi  
+          fi
         # ------------------------------------------------------------------ #
 
         check_database          # Do the actual work.
 
-        echo 
+        echo
 
         #  You may wish to redirect the stdout of this script to a file,
         #+ especially if the directory checked has many files in it.
@@ -2031,7 +2031,7 @@ XXX  16.5. File and Archiving Commands
     | 1e31286fa40986ffc996  te |
     | stfile                   |
     |                          |
-                              
+
 
     .. raw:: html
 
@@ -2045,7 +2045,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ sha1sum testfile
         5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
-                  
+
 
     .. raw:: html
 
@@ -2059,7 +2059,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ sha1sum testfile
         5d7425a9c08a66c3177f1e31286fa40986ffc996  testfile
-                  
+
 
     .. raw:: html
 
@@ -2118,9 +2118,9 @@ XXX  16.5. File and Archiving Commands
             then
               echo "uudecoding - $File -"
               uudecode $File
-            fi  
+            fi
           fi
-        done  
+        done
 
         #  Note that running this script upon itself fools it
         #+ into thinking it is a uuencoded file,
@@ -2314,7 +2314,7 @@ XXX  16.5. File and Archiving Commands
 
         bash$ mktemp
         /tmp/tmp.zzsvql3154
-                  
+
 
     .. raw:: html
 
@@ -2406,7 +2406,7 @@ XXX  16.5. File and Archiving Commands
 
         ls /home/bozo | awk '{print "rm -rf " $1}' | more
         #                                            ^^^^
-                 
+
         # Testing the effect of the following (disastrous) command-line:
         #      ls /home/bozo | awk '{print "rm -rf " $1}' | sh
         #      Hand off to the shell to execute . . .       ^^

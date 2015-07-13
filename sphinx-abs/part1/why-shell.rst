@@ -155,7 +155,7 @@ momentània del que trobaràs més endavant.
 
 A menys que s'indiqui el contrari, `l'autor <mailto:thegrendel.abs@gmail.com>`_ d'aquest llibre va escriure cada guió que hi apareix.
 
-.. epigraph:: 
+.. epigraph::
  
         *His countenance was bold and bashed not.*
 

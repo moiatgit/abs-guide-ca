@@ -19,7 +19,7 @@ XXX 16.8. Math Commands
 
         bash$ factor 27417
         27417: 3 13 19 37
-                  
+
 
     .. raw:: html
 
@@ -117,7 +117,7 @@ XXX 16.8. Math Commands
     .. code:: SCREEN
 
                  variable=$(echo "OPTIONS; OPERATIONS" | bc)
-                  
+
 
     .. raw:: html
 
@@ -166,11 +166,11 @@ XXX 16.8. Math Commands
 
 
          interest_r=$(echo "scale=9; $interest_r/100.0" | bc) # Convert to decimal.
-                         #           ^^^^^^^^^^^^^^^^^  Divide by 100. 
+                         #           ^^^^^^^^^^^^^^^^^  Divide by 100.
                          # "scale" determines how many decimal places.
 
          interest_rate=$(echo "scale=9; $interest_r/12 + 1.0" | bc)
-         
+
 
          top=$(echo "scale=9; $principal*$interest_rate^$term" | bc)
                   #           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -179,16 +179,16 @@ XXX 16.8. Math Commands
          echo; echo "Please be patient. This may take a while."
 
          let "months = $term - 1"
-        # ==================================================================== 
+        # ====================================================================
          for ((x=$months; x > 0; x--))
          do
            bot=$(echo "scale=9; $interest_rate^$x" | bc)
            bottom=$(echo "scale=9; $bottom+$bot" | bc)
         #  bottom = $(($bottom + $bot"))
          done
-        # ==================================================================== 
+        # ====================================================================
 
-        # -------------------------------------------------------------------- 
+        # --------------------------------------------------------------------
         #  Rick Boivie pointed out a more efficient implementation
         #+ of the above loop, which decreases computation time by 2/3.
 
@@ -225,7 +225,7 @@ XXX 16.8. Math Commands
          # let "payment = $top/$bottom"
          payment=$(echo "scale=2; $top/$bottom" | bc)
          # Use two decimal places for dollars and cents.
-         
+
          echo
          echo "monthly payment = \$$payment"  # Echo a dollar sign in front of amount.
          echo
@@ -296,7 +296,7 @@ XXX 16.8. Math Commands
             octal (base 8)      starting with 0  (i.e. 014)
             hexadecimal (base 16)   starting with 0x (i.e. 0xc)
             decimal         otherwise (i.e. 12)" >&2
-            exit $NOARGS 
+            exit $NOARGS
         }   # ==> Prints usage message.
 
         Msg () {
@@ -776,7 +776,7 @@ XXX 16.8. Math Commands
 
         bash$ echo "16i[q]sa[ln0=aln100%Pln100/snlbx]sbA0D68736142snlbxq" | dc
         Bash
-                  
+
 
     .. raw:: html
 
@@ -840,7 +840,7 @@ XXX 16.8. Math Commands
         then
           echo "Number to factor must be $MIN or greater."
           exit $E_TOOSMALL
-        fi  
+        fi
 
         # Exercise: Add type checking (to reject non-integer arg).
 

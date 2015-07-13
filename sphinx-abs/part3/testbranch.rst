@@ -140,7 +140,7 @@ the block.
 
         echo "          Contact List"
         echo "          ------- ----"
-        echo "Choose one of the following persons:" 
+        echo "Choose one of the following persons:"
         echo
         echo "[E]vans, Roland"
         echo "[J]ones, Mildred"
@@ -181,7 +181,7 @@ the block.
         # Add info for Smith & Zane later.
 
                   * )
-           # Default option.      
+           # Default option.
            # Empty input (hitting RETURN) fits here, too.
            echo
            echo "Not yet in database."
@@ -359,7 +359,7 @@ the block.
           *   ) return $E_NOMATCH;;
           esac
 
-        }  
+        }
 
 
         a=one
@@ -378,7 +378,7 @@ the block.
         echo $?             # 0
 
 
-        exit 0          
+        exit 0
 
     .. raw:: html
 
@@ -457,7 +457,7 @@ the block.
             echo "\"$*\" contains only alpha characters."
           else
             echo "\"$*\" contains at least one non-alpha character."
-          fi  
+          fi
         else
           echo "\"$*\" begins with a non-alpha character."
                       # Also "non-alpha" if no argument passed.
@@ -692,7 +692,7 @@ layout a more structured appearance.
 |       (    * ) echo "Oth |
 | er type of machine";;    |
 |     esac                 |
-                          
+
 +--------------------------+--------------------------+--------------------------+
 
 .. raw:: html

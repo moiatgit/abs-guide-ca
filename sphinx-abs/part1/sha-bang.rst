@@ -9,7 +9,7 @@ Comencem amb el Sha-Bang
 En el cas més simple, un guió no és més que una llista de comandes del
 sistema emmagatzemades a un fitxer de text. I ja això és útil, si més
 no per evitar-nos teclejar una i altra vegada la mateixa seqüència de
-comandes. 
+comandes.
 
 
 **Exemple 1. *cleanup*: Un script per netejar els fitxers de log de
@@ -52,7 +52,7 @@ millorar l'efectivitat.
 
 -----
 
-El *sha-bang* ( #!) [#sha-bang]_ 
+El *sha-bang* ( #!) [#sha-bang]_
 a l'inici d'un fitxer permet al sistema saber que el contingut d'aquest fitxer ha de ser processat per un determinat intèrpret.
 De fet, #! és un *número màgic* de dos bytes [#omesdedos]_, una marca especial que
 designa el tipus de fitxer. En aquest cas indica que és un executable.
@@ -77,7 +77,7 @@ Considera les següents capçaleres:
     #!/bin/awk -f
 
 Cadascuna d'aquestes línies defineixen un intèrpret diferent per
-processar el contingut del fitxer. [#cutetrick]_ 
+processar el contingut del fitxer. [#cutetrick]_
 
 
 ``/bin/sh`` és generalment la shell per defecte en la majoria de les
@@ -95,7 +95,7 @@ la comanda*) com a única resposta d'executar el guió [#envline].
 
 Si el nostre guió consisteix únicament en una llista de comandes i no
 inclou cap directiva interna de la shell (com ara una assignació a una
-variable de l'estil ``linies=50``), podem ometre #!. 
+variable de l'estil ``linies=50``), podem ometre #!.
 De fet, si Bash és la teva shell per defecte, #! no és en realitat
 necessària a l'inici del guió. Amb tot, la necessitaràs si finalment
 et cal executar el guió des d'alguna altra shell com ara *tcsh*.

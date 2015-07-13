@@ -43,7 +43,7 @@ Però, en canvi:
 .. code-block:: sh
     :linenos:
 
-    $ sh < saludam.sh 
+    $ sh < saludam.sh
     Com et dius?
     Hola . Gaudeix de la shell!
 

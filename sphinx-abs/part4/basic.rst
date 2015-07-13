@@ -324,7 +324,7 @@ XXX  16.1. Basic Commands
         bash$ rev file1.txt
         .1 enil si sihT
          .2 enil si sihT
-                  
+
 
     .. raw:: html
 
@@ -368,7 +368,7 @@ XXX  16.1. Basic Commands
     |     #+  by copying over  |
     | all newer and not previo |
     | usly existing files.     |
-                              
+
 
 
     .. raw:: html
@@ -441,7 +441,20 @@ XXX  16.1. Basic Commands
     | o  bozo      1024 May 28 |
     |  19:20 source_directory/ |
     |                          |
-                              
+
+
+
+    .. raw:: html
+
+       </p>
+
+    .. code:: SCREEN
+
+        bash$ mv source_directory target_directory
+
+        bash$ ls -lF target_directory
+        total 1
+         drwxrwxr-x    2 bozo  bozo      1024 May 28 19:20 source_directory/
 
 
     .. raw:: html
@@ -455,20 +468,7 @@ XXX  16.1. Basic Commands
         bash$ ls -lF target_directory
         total 1
          drwxrwxr-x    2 bozo  bozo      1024 May 28 19:20 source_directory/
-                  
 
-    .. raw:: html
-
-       </p>
-
-    .. code:: SCREEN
-
-        bash$ mv source_directory target_directory
-
-        bash$ ls -lF target_directory
-        total 1
-         drwxrwxr-x    2 bozo  bozo      1024 May 28 19:20 source_directory/
-                  
 
     .. raw:: html
 
@@ -509,7 +509,7 @@ XXX  16.1. Basic Commands
     | - b                      |
     |      Try `rm --help' for |
     |  more information.       |
-                              
+
 
 
     One clever workaround is to precede the filename with a " -- " (the
@@ -519,7 +519,7 @@ XXX  16.1. Basic Commands
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rm -- -badname |
-                              
+
 
 
     Another method to is to preface the filename to be removed with a
@@ -529,7 +529,7 @@ XXX  16.1. Basic Commands
     | .. code:: SCREEN         |
     |                          |
     |     bash$ rm ./-badname  |
-                              
+
 
 
     .. raw:: html
@@ -752,7 +752,7 @@ XXX  16.1. Basic Commands
 
         rm: remove write-protected regular file `file1.txt'? y
          rm: cannot remove `file1.txt': Operation not permitted
-                  
+
 
     .. raw:: html
 

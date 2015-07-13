@@ -10,7 +10,7 @@ Part 1. Introducció
     -- http://www.enciclopedia.cat
 
 L'intèrpret de comandes (*shell*) és més que una capa entre el sistema
-operatiu i l'usuari. És tot un llenguatge de programació força potent. 
+operatiu i l'usuari. És tot un llenguatge de programació força potent.
 
 Als programes de la *shell* en diem *guions* o *scripts*. Els guions
 inclouen crides al sistema, eines, utilitats, i executables en

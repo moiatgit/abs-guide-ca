@@ -62,7 +62,7 @@ XXX  9.1. Internal Variables
 
         bash4$ ps ax | grep bash4
         11015 pts/2    R      0:00 bash4
-                  
+
 
     .. raw:: html
 
@@ -117,7 +117,7 @@ XXX  9.1. Internal Variables
         for n in 0 1 2 3 4 5
         do
           echo "BASH_VERSINFO[$n] = ${BASH_VERSINFO[$n]}"
-        done  
+        done
 
         # BASH_VERSINFO[0] = 3                      # Major version no.
         # BASH_VERSINFO[1] = 00                     # Minor version no.
@@ -146,7 +146,7 @@ XXX  9.1. Internal Variables
 
         bash$ echo $BASH_VERSION
         3.2.25(1)-release
-                  
+
 
     .. raw:: html
 
@@ -164,7 +164,7 @@ XXX  9.1. Internal Variables
 
         tcsh% echo $BASH_VERSION
         BASH_VERSION: Undefined variable.
-                  
+
 
     .. raw:: html
 
@@ -203,7 +203,7 @@ XXX  9.1. Internal Variables
 
         bash$ echo $PWD
         /usr/share/doc/bash-doc
-                  
+
 
     .. raw:: html
 
@@ -315,7 +315,7 @@ XXX  9.1. Internal Variables
 
         root# echo ${GROUPS[5]}
         6
-                  
+
 
     .. raw:: html
 
@@ -383,7 +383,7 @@ XXX  9.1. Internal Variables
         bash$ echo "$IFS"
 
         (With $IFS set to default, a blank line displays.)
-                  
+
 
 
         bash$ echo "$IFS" | cat -vte
@@ -397,7 +397,7 @@ XXX  9.1. Internal Variables
         bash$ bash -c 'set w x y z; IFS=":-;"; echo "$*"'
         w:x:y:z
         (Read commands from string and assign any arguments to pos params.)
-                  
+
 
     .. raw:: html
 
@@ -973,7 +973,7 @@ XXX  9.1. Internal Variables
         bash: bogus_command: command not found
         bash$ echo $?
         127
-                  
+
 
     .. raw:: html
 
@@ -1014,7 +1014,7 @@ XXX  9.1. Internal Variables
     | TUS[*]}                  |
     |     0                    |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     The above lines contained in a script would produce the expected
@@ -1034,7 +1034,7 @@ XXX  9.1. Internal Variables
         bash$ who | grep nobody | sort
         bash$ echo ${PIPESTATUS[*]}
         0
-                  
+
 
     .. raw:: html
 
@@ -1047,7 +1047,7 @@ XXX  9.1. Internal Variables
         bash$ who | grep nobody | sort
         bash$ echo ${PIPESTATUS[*]}
         0
-                  
+
 
     .. raw:: html
 
@@ -1091,7 +1091,7 @@ XXX  9.1. Internal Variables
     | TUS[@]}                  |
     |     141 127 0            |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     Chet Ramey attributes the above output to the behavior of
@@ -1117,7 +1117,7 @@ XXX  9.1. Internal Variables
 
         bash$ echo ${PIPESTATUS[@]}
         141 127 0
-                  
+
 
     .. raw:: html
 
@@ -1134,7 +1134,7 @@ XXX  9.1. Internal Variables
 
         bash$ echo ${PIPESTATUS[@]}
         141 127 0
-                  
+
 
     .. raw:: html
 
@@ -1179,7 +1179,7 @@ XXX  9.1. Internal Variables
     | TUS[@]}                  |
     |     0                    |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
@@ -1197,7 +1197,7 @@ XXX  9.1. Internal Variables
 
         bash$ echo ${PIPESTATUS[@]}
         0
-                  
+
 
     .. raw:: html
 
@@ -1214,7 +1214,7 @@ XXX  9.1. Internal Variables
 
         bash$ echo ${PIPESTATUS[@]}
         0
-                  
+
 
     .. raw:: html
 
@@ -1337,7 +1337,7 @@ $PWD
           echo "In $PWD, rather than $TargetDirectory!"
           echo "Bailing out!"
           exit $E_WRONG_DIRECTORY
-        fi  
+        fi
 
         rm -rf *
         rm .[A-Za-z0-9]*    # Delete dotfiles.
@@ -1439,7 +1439,7 @@ $PWD
           if [ "$SECONDS" -eq 1 ]
           then
             units=second
-          else  
+          else
             units=seconds
           fi
 
@@ -1473,7 +1473,7 @@ $PWD
 
         bash$ echo $SHELLOPTS
         braceexpand:hashall:histexpand:monitor:history:interactive-comments:emacs
-                  
+
 
     .. raw:: html
 
@@ -1588,21 +1588,21 @@ $PWD
           if [ "$answer" = TIMEOUT ]
           then
             echo $answer
-          else       # Don't want to mix up the two instances. 
+          else       # Don't want to mix up the two instances.
             echo "Your favorite veggie is $answer"
             kill $!  #  Kills no-longer-needed TimerOn function
                      #+ running in background.
                      #  $! is PID of last job running in background.
           fi
 
-        }  
+        }
 
 
         TimerOn()
         {
           sleep $TIMELIMIT && kill -s 14 $$ &
           # Waits 3 seconds, then sends sigalarm to script.
-        }  
+        }
 
 
         Int14Vector()
@@ -1610,7 +1610,7 @@ $PWD
           answer="TIMEOUT"
           PrintAnswer
           exit $TIMER_INTERRUPT
-        }  
+        }
 
         trap Int14Vector $TIMER_INTERRUPT
         # Timer interrupt (14) subverted for our purposes.
@@ -1744,9 +1744,9 @@ $PWD
         if [ -z "$variable" ]  # Is null?
         then
           echo "Timed out, variable still unset."
-        else  
+        else
           echo "variable = $variable"
-        fi  
+        fi
 
         exit 0
 
@@ -1869,7 +1869,7 @@ $PWD
     |     bash$ echo $TERM     |
     |     rxvt                 |
     |                          |
-                              
+
     +--------------------------+--------------------------+--------------------------+
 
     .. raw:: html
@@ -1891,7 +1891,7 @@ $PWD
         /bin/tcsh
         bash$ echo $TERM
         rxvt
-                  
+
 
     .. raw:: html
 
@@ -1912,7 +1912,7 @@ $PWD
         /bin/tcsh
         bash$ echo $TERM
         rxvt
-                  
+
 
     .. raw:: html
 
@@ -2027,7 +2027,7 @@ etc.
         then
           echo "Usage: `basename $0` argument1 argument2 etc."
           exit $E_BADARGS
-        fi  
+        fi
 
         echo
 
@@ -2038,7 +2038,7 @@ etc.
         do
           echo "Arg #$index = $arg"
           let "index+=1"
-        done             # $* sees all arguments as single word. 
+        done             # $* sees all arguments as single word.
         echo "Entire arg list seen as single word."
 
         echo
@@ -2051,7 +2051,7 @@ etc.
         do
           echo "Arg #$index = $arg"
           let "index+=1"
-        done             # $@ sees arguments as separate words. 
+        done             # $@ sees arguments as separate words.
         echo "Arg list seen as separate words."
 
         echo
@@ -2063,7 +2063,7 @@ etc.
         do
           echo "Arg #$index = $arg"
           let "index+=1"
-        done             # Unquoted $* sees arguments as separate words. 
+        done             # Unquoted $* sees arguments as separate words.
         echo "Arg list seen as separate words."
 
         exit 0
