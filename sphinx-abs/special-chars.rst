@@ -1,6 +1,6 @@
-#######################
-XXX Caràcters especials
-#######################
+##################################
+XXX Capítol 3. Caràcters especials
+##################################
 
 Diem que un caràcter és especial quan té un significat més enllà del
 seu *valor literal* [#metameaning]_. Juntament amb les comandes i
@@ -189,7 +189,6 @@ En una substitució de paràmetres, s'interpreta com a passar a minúscules.
 
 Mira :ref:`bash4_modificacas`
 
-
 Contrabarra: \\
 ===============
 
@@ -238,7 +237,6 @@ fa què:
 Mira :doc:`commandsub` per més detalls.
 
 
-
 Dos punts: :
 ============
 
@@ -257,8 +255,8 @@ Amb : podem fer un bucle infinit:
 .. literalinclude:: /_scripts/bucleinfinit.sh
     :language: bash
 
-En algunes ocasions, cal començar una operació aritmètica o una substitució de paràmetres amb els :.
-Considera l'exemple: :ref:`ops_exemple_operadorsaritmetics` i :doc:`parameter-substitution`.
+En algunes ocasions, cal començar una operació aritmètica o una substitució de paràmetres amb els
+``:``.  Considera l'exemple: :ref:`ops_exemple_operadorsaritmetics` i :doc:`parameter-substitution`.
 
 .. code-block:: sh
 
@@ -277,123 +275,117 @@ de quelcom a fer per un determinat cas:
 
     if condicio
     then :   # No fa res i passa a continuació del fi
-    else 
+    else
        fes-alguna-cosa
     fi
 
 
+En :doc:`documents immediats <here-docs>` permet marcar una posició allà on s'esperava una comanda.
+Mira :ref:`heredocs_anonim`.
+
+Avalua variables fent servir :doc:`parameter-substitution` com a
+:ref:`parameter-substitution_missatges_error`.
+
+.. code-block:: sh
+
+    : ${HOSTNAME?} ${USER?} ${MAIL?}
+    #  Mostra un missatge d'error si alguna de les variables 
+    #+ d'entorn no està assignada.
+
+XXX TODO per aquí
+
+**`Variable expansion / substring replacement <parameter-substitution.html#EXPREPL1>`__** .
+
+In combination with the > `redirection
+operator <io-redirection.html#IOREDIRREF>`__ , truncates a file to
+zero length, without changing its permissions. If the file did not
+previously exist, creates it.
 
 
-    Provide a placeholder where a command is expected in a `here
-    document <here-docs.html#HEREDOCREF>`__ . See `Example
-    19-10 <here-docs.html#ANONHEREDOC>`__ .
+.. code-block:: sh
 
-    Evaluate string of variables using `parameter
-    substitution <parameter-substitution.html#PARAMSUBREF>`__ (as in
-    `Example 10-7 <parameter-substitution.html#EX6>`__ ).
+    : > data.xxx   # File "data.xxx" now empty.
 
-
-    .. code-block:: sh
-
-        : ${HOSTNAME?} ${USER?} ${MAIL?}
-        #  Prints error message
-        #+ if one or more of essential environmental variables not set.
-
-
-
-    **`Variable expansion / substring
-    replacement <parameter-substitution.html#EXPREPL1>`__** .
-
-    In combination with the > `redirection
-    operator <io-redirection.html#IOREDIRREF>`__ , truncates a file to
-    zero length, without changing its permissions. If the file did not
-    previously exist, creates it.
-
-
-    .. code-block:: sh
-
-        : > data.xxx   # File "data.xxx" now empty.
-
-        # Same effect as   cat /dev/null >data.xxx
-        # However, this does not fork a new process, since ":" is a builtin.
+    # Same effect as   cat /dev/null >data.xxx
+    # However, this does not fork a new process, since ":" is a builtin.
 
 
 
-    See also `Example 16-15 <textproc.html#EX12>`__ .
+See also `Example 16-15 <textproc.html#EX12>`__ .
 
-    In combination with the >> redirection operator, has no effect on a
-    pre-existing target file (
-    ``                   : >> target_file                 `` ). If the
-    file did not previously exist, creates it.
+In combination with the >> redirection operator, has no effect on a
+pre-existing target file (
+``                   : >> target_file                 `` ). If the
+file did not previously exist, creates it.
 
 
 
-    |Note|
+|Note|
 
-     This applies to regular files, not pipes, symlinks, and certain
-    special files.
+ This applies to regular files, not pipes, symlinks, and certain
+special files.
 
 
 
 
-    May be used to begin a comment line, although this is not
-    recommended. Using # for a comment turns off error checking for the
-    remainder of that line, so almost anything may appear in a comment.
-    However, this is not the case with : .
+May be used to begin a comment line, although this is not
+recommended. Using # for a comment turns off error checking for the
+remainder of that line, so almost anything may appear in a comment.
+However, this is not the case with : .
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
-        : This is a comment that generates an error, ( if [ $x -eq 3] ).
-
-
-
-    The " : " serves as a `field <special-chars.html#FIELDREF>`__
-    separator, in
-    ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
-    and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
-
-
-    .. code-block:: sh
-
-        bash$ echo $PATH
-        /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
+    : This is a comment that generates an error, ( if [ $x -eq 3] ).
 
 
 
-    A *colon* is `acceptable as a function
-    name <functions.html#FSTRANGEREF>`__ .
+The " : " serves as a `field <special-chars.html#FIELDREF>`__
+separator, in
+```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
+and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
-        :()
-        {
-          echo "The name of this function is "$FUNCNAME" "
-          # Why use a colon as a function name?
-          # It's a way of obfuscating your code.
-        }
-
-        :
-
-        # The name of this function is :
+    bash$ echo $PATH
+    /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
 
 
 
-    This is not `portable <portabilityissues.html>`__ behavior, and
-    therefore not a recommended practice. In fact, more recent releases
-    of Bash do not permit this usage. An underscore **\_** works,
-    though.
-
-    A *colon* can serve as a placeholder in an otherwise empty function.
+A *colon* is `acceptable as a function
+name <functions.html#FSTRANGEREF>`__ .
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
-        not_empty ()
-        {
-          :
-        } # Contains a : (null command), and so is not empty.
+    :()
+    {
+      echo "The name of this function is "$FUNCNAME" "
+      # Why use a colon as a function name?
+      # It's a way of obfuscating your code.
+    }
+
+    :
+
+    # The name of this function is :
+
+
+
+This is not `portable <portabilityissues.html>`__ behavior, and
+therefore not a recommended practice. In fact, more recent releases
+of Bash do not permit this usage. An underscore **\_** works,
+though.
+
+A *colon* can serve as a placeholder in an otherwise empty function.
+
+
+.. code-block:: sh
+
+    not_empty ()
+    {
+      :
+    } # Contains a : (null command), and so is not empty.
 
 
 
