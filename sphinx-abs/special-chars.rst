@@ -292,24 +292,21 @@ Avalua variables fent servir :doc:`parameter-substitution` com a
     #  Mostra un missatge d'error si alguna de les variables 
     #+ d'entorn no està assignada.
 
-XXX TODO per aquí
 
-**`Variable expansion / substring replacement <parameter-substitution.html#EXPREPL1>`__** .
-
-In combination with the > `redirection
-operator <io-redirection.html#IOREDIRREF>`__ , truncates a file to
-zero length, without changing its permissions. If the file did not
-previously exist, creates it.
-
+Quan combinem ``:`` amb :doc:`l'operador de redirecció <io-redirection>` ``>``, buida el fitxer
+sense canviar-li els permisos. En cas que el fitxer no existís, el crea.
 
 .. code-block:: sh
 
-    : > data.xxx   # File "data.xxx" now empty.
+    : > fitxer.dat   # "fitxer.dat" passa a ser buit
 
-    # Same effect as   cat /dev/null >data.xxx
-    # However, this does not fork a new process, since ":" is a builtin.
+    # El resultat equival a fer cat /dev/null > fitxer.dat
+    # La diferència és que amb ``:`` no es crea un nou procés, doncs ``:`` és una comanda interna
+    (*builtin*) de la shell.
 
 
+
+XXX TODO per aquí
 
 See also `Example 16-15 <textproc.html#EX12>`__ .
 
