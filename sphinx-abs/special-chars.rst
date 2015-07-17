@@ -1,6 +1,6 @@
-#######################
-XXX Caràcters especials
-#######################
+##########################
+XXX 3. Caràcters especials
+##########################
 
 Diem que un caràcter és especial quan té un significat més enllà del
 seu *valor literal* [#metameaning]_. Juntament amb les comandes i

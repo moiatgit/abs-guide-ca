@@ -1,6 +1,6 @@
-###################
-Invoking the script
-###################
+########################
+2.1. Invoking the script
+########################
 
 Un cop tenim el nostre guió (per exemple, elnostreguio.sh), el podem invocar fent:
 

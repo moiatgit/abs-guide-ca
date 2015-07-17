@@ -31,8 +31,6 @@ En aquesta part veurem:
 
    why-shell
    sha-bang
-   invoking
-   prelimexer
 
 
 

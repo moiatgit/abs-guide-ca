@@ -1,10 +1,17 @@
-########################
-Comencem amb el Sha-Bang
-########################
+###########################
+2. Comencem amb el Sha-Bang
+###########################
 
     *Shell programming is a 1950s juke box . . .*
 
     -- Larry Wall
+
+.. toctree::
+   :titlesonly:
+
+   invoking
+   prelimexer
+
 
 En el cas més simple, un guió no és més que una llista de comandes del
 sistema emmagatzemades a un fitxer de text. I ja això és útil, si més

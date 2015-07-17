@@ -1,6 +1,6 @@
-#####################
-Uns primers exercicis
-#####################
+##########################
+2.1. Uns primers exercicis
+##########################
 
 Troba aquí uns primers exercicis:
 
