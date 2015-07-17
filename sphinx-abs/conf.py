@@ -265,7 +265,7 @@ html_static_path = ['_static']
 html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
@@ -314,7 +314,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [ (master_doc, '%s.tex'%project_code, project, author, 'curs') ]
+latex_documents = [ (master_doc, '%s.tex'%project_code, project, author, u'Traducció') ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -353,7 +353,7 @@ man_pages = [ (master_doc, project_code, project, [author], 1) ]
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [ (master_doc, project_code, project, author,
-                       project_code, project, 'Cursos'), ]
+                       project_code, project, 'Traduccions'), ]
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
@@ -376,16 +376,8 @@ texinfo_show_urls = 'footnote'
 # Remember to compile .po after any change
 locale_dirs=[ "locale/" ]
 
-# PlantUML extension
-# Note: it requires graphviz to work for some diagrams as *component*
-plantuml = 'java -jar %s'%os.path.expanduser("~/lib/plantuml/plantuml.jar")
-
 # Additional information about the project
-highlight_language = 'java'
+highlight_language = 'sh'
 trim_footnote_reference_space = True
 
-html_logo = "javamascot.png"
 html_copy_source = True
-html_show_sourcelink = False
-html_show_copyright = True
-html_show_sphinx = False

@@ -1,6 +1,6 @@
-###############################
-Guia Avançada de Bash-Scripting
-###############################
+####################################
+Guia Avançada de Programació en Bash
+####################################
 
 *************************************************************
 Una exploració en profunditat de l'art de la programació Bash

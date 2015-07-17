@@ -7,10 +7,6 @@ XXX Part 2. Basics
 
    special-chars
    variables
-   varsubn
-   varassignment
-   untyped
-   othertypesv
    quoting
    quotingvar
    escapingsection
