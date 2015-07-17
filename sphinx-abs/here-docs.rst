@@ -91,7 +91,8 @@ Even such unlikely candidates as the *vi* text editor lend themselves to
 *here documents* .
 
 
-**Example 19-2. *dummyfile* : Creates a 2-line dummy file**
+Exemple 2. *dummyfile* : Creates a 2-line dummy file
+----------------------------------------------------
 
 
 .. code-block:: sh
@@ -165,7 +166,8 @@ The above script could just as effectively have been implemented with
 Analogous to "ex scripts" are *cat scripts* .
 
 
-**Example 19-3. Multi-line message using *cat***
+Exemple 3. Multi-line message using *cat*
+-----------------------------------------
 
 
 .. code-block:: sh
@@ -216,7 +218,8 @@ The ``      -     `` option to mark a here document limit string (
 more readable.
 
 
-**Example 19-4. Multi-line message, with tabs suppressed**
+Exemple 4. Multi-line message, with tabs suppressed
+---------------------------------------------------
 
 
 .. code-block:: sh
@@ -253,7 +256,8 @@ therefore possible to pass different parameters to the body of the here
 document, changing its output accordingly.
 
 
-**Example 19-5. Here document with replaceable parameters**
+Exemple 5. Here document with replaceable parameters
+----------------------------------------------------
 
 
 .. code-block:: sh
@@ -300,7 +304,8 @@ This is a useful script containing a *here document* with parameter
 substitution.
 
 
-**Example 19-6. Upload a file pair to *Sunsite* incoming directory**
+Exemple 6. Upload a file pair to *Sunsite* incoming directory
+-------------------------------------------------------------
 
 
 .. code-block:: sh
@@ -359,7 +364,8 @@ characters <special-chars.html#SCHARLIST>`__ , and causes them to be
 interpreted literally. (Thank you, Allen Halsey, for pointing this out.)
 
 
-**Example 19-7. Parameter substitution turned off**
+Exemple 7. Parameter substitution turned off
+--------------------------------------------
 
 
 .. code-block:: sh
@@ -413,7 +419,8 @@ Disabling parameter substitution permits outputting literal text.
 Generating scripts or even program code is one use for this.
 
 
-**Example 19-8. A script that generates another script**
+Exemple 8. A script that generates another script
+-------------------------------------------------
 
 
 .. code-block:: sh
@@ -492,7 +499,8 @@ substitution <commandsub.html#COMMANDSUBREF>`__ .
 A here document can supply input to a function in the same script.
 
 
-**Example 19-9. Here documents and functions**
+Exemple 9. Here documents and functions
+---------------------------------------
 
 
 .. code-block:: sh
@@ -539,8 +547,8 @@ document. This, in effect, creates an "anonymous" here document.
 
 .. _heredocs_anonim:
 
-Exemple 1. *Here Document* anònim
----------------------------------
+Exemple 10. *Here Document* anònim
+----------------------------------
 
 
 .. code-block:: sh
@@ -567,7 +575,8 @@ code.
 
 
 
-**Example 19-11. Commenting out a block of code**
+Exemple 11. Commenting out a block of code
+------------------------------------------
 
 
 .. code-block:: sh
@@ -653,7 +662,8 @@ possible.
 
 
 
-**Example 19-12. A self-documenting script**
+Exemple 12. A self-documenting script
+-------------------------------------
 
 
 .. code-block:: sh

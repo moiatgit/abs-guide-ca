@@ -117,11 +117,7 @@ XXX 10.2. Substitució de paràmetres
         #  Assigna $DISKS al paràmetre de línia de comanda $1,
         #+ o bé a $E_NOPARAM en cas que $1 no estigui especificat.
 
-    Mira també `Exemple
-    3-4 <http://tldp.org/LDP/abs/html/special-chars.html#EX58>`_,
-    `Exemple 30-2 <http://tldp.org/LDP/abs/html/zeros.html#EX73>`_, i
-    `Exemple
-    A-6 <http://tldp.org/LDP/abs/html/contributed-scripts.html#COLLATZ>`_.
+    Mira també `Exemple 3-4 <http://tldp.org/LDP/abs/html/special-chars.html#EX58>`_, `Exemple 30-2 <http://tldp.org/LDP/abs/html/zeros.html#EX73>`_, i `Exemple A-6 <http://tldp.org/LDP/abs/html/contributed-scripts.html#COLLATZ>`_.
 
     Compara aquest mètode amb l'`ús d'una*llista "and"* per a suplir un
     argument de línia de comandes per
@@ -194,8 +190,10 @@ XXX 10.2. Substitució de paràmetres
     els : només es diferencia quan ``$parametre`` està declarat i
     assignat a nul com passava més amunt.
 
-**Exemple 10-7. Ús de la substitució de paràmetres i els missatges
-d'error**
+.. _parameter-substitution_missatges_error:
+
+Exemple 1. Ús de la substitució de paràmetres i els missatges d'error
+---------------------------------------------------------------------
 
 ::
 
@@ -257,8 +255,8 @@ d'error**
 
     # De fet, el script retornarà 1 com a resultat d'execució (echo $?).
 
-**Exemple 10-8. Ús de la substitució de paràmetres i els missatges
-d'"informació"**
+Exemple 2. Ús de la substitució de paràmetres i els missatges d'"informació"
+----------------------------------------------------------------------------
 
 ::
 
@@ -281,10 +279,7 @@ d'"informació"**
 
 **Ús de la substitució de paràmetres i/o l'expansió.**Les expressions
 següents complementen les operacions de strings que consideren la
-**coincidència** ``amb`` **expressió** (mira l'`Exemple
-16-9 <http://tldp.org/LDP/abs/html/moreadv.html#EX45>`_). Aquestes en
-concret es fan servir majoritàriament en l'anàlisi de camins (path)
-d'arxius.
+**coincidència** ``amb`` **expressió** (mira l'`Exemple 16-9 <http://tldp.org/LDP/abs/html/moreadv.html#EX45>`_). Aquestes en concret es fan servir majoritàriament en l'anàlisi de camins (path) d'arxius.
 
 **Longitud de variables / Eliminació de substrings**
 
@@ -307,7 +302,8 @@ d'arxius.
     -  En cas d'array, **${#array[\*]}** i **${#array[@]}** retornen el
        nombre d'elements que conté l'array.
 
-    **Exemple 10-9. Durada d'una variable**
+Exemple 3. Durada d'una variable
+--------------------------------
 
     ::
 
@@ -403,7 +399,10 @@ d'arxius.
 La `versió 2 <http://tldp.org/LDP/abs/html/bashver2.html#BASH2REF>`_ de
 Bash va afegir noves opcions.
 
-**Exemple 10-10. Patrons a la substitució de paràmetres**
+.. _parameter-substitution_patrons:
+
+Exemple 4. Patrons a la substitució de paràmetres
+-------------------------------------------------
 
 ::
 
@@ -452,7 +451,8 @@ Bash va afegir noves opcions.
 
     exit 0
 
-**Exemple 10-11. Canvi d'extensió d'un fitxer:**
+Exemple 5. Canvi d'extensió d'un fitxer:
+----------------------------------------
 
 ::
 
@@ -495,9 +495,7 @@ Bash va afegir noves opcions.
 
 ``${var:pos:len}``
     Expansió de ``len`` caràcters de la variable ``var`` començant des
-    de la posició ``pos``. A l'`Exemple
-    A-13 <http://tldp.org/LDP/abs/html/contributed-scripts.html#PW>`_ es
-    troba un exemple (creatiu) d'ús d'aquest operador.
+    de la posició ``pos``. A l'`Exemple A-13 <http://tldp.org/LDP/abs/html/contributed-scripts.html#PW>`_ es troba un exemple (creatiu) d'ús d'aquest operador.
 
 ``${var/Patró/Substitució}``
     Substitueix la primera aparició del ``Patró``, a la variable ``var``
@@ -514,7 +512,8 @@ Bash va afegir noves opcions.
     Com abans, si no s'especifica ``Substitució`` es substitueixen totes
     les ocurrències de ``Patró`` per *no res*. És a dir, són eliminades.
 
-    **Exemple 10-12. Anàlisi de strings arbitraris**
+Exemple 6. Anàlisi de strings arbitraris
+----------------------------------------
 
     ::
 
@@ -589,8 +588,8 @@ Bash va afegir noves opcions.
     Quan el *final* de ``var`` coincideix amb ``Patró``, llavors
     ``Substitució`` apareix en comptes de ``Patró``.
 
-    **Exemple 10-13. Coincidència de patrons a l'inici o al final d'un
-    string**
+Exemple 7. Coincidència de patrons a l'inici o al final d'un string
+-------------------------------------------------------------------
 
     ::
 
