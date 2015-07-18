@@ -77,7 +77,8 @@ XXX  16.4. Text Processing Commands
     wherever the lexical structure of a document needs to be examined.
 
 
-    **Example 16-12. Word Frequency Analysis**
+Exemple 12. Word Frequency Analysis
+===================================
 
 
     .. code-block:: sh
@@ -376,7 +377,8 @@ XXX  16.4. Text Processing Commands
     be specified. The command has a number of interesting options.
 
 
-    **Example 16-13. Which files are scripts?**
+Exemple 13. Which files are scripts?
+====================================
 
 
     .. code-block:: sh
@@ -416,7 +418,8 @@ XXX  16.4. Text Processing Commands
 
 
 
-    **Example 16-14. Generating 10-digit random numbers**
+Exemple 14. Generating 10-digit random numbers
+==============================================
 
 
     .. code-block:: sh
@@ -517,7 +520,10 @@ XXX  16.4. Text Processing Commands
     option, which outputs lines appended to the file.
 
 
-    **Example 16-15. Using *tail* to monitor the system log**
+.. _textproc_exemple_tail:
+
+Exemple 15. Using *tail* to monitor the system log
+==================================================
 
 
     .. code-block:: sh
@@ -834,7 +840,8 @@ XXX  16.4. Text Processing Commands
     **grep** to search for a word pattern in a system logfile.
 
 
-    **Example 16-17. Emulating *grep* in a script**
+Exemple 16. Emulating *grep* in a script
+========================================
 
 
     .. code-block:: sh
@@ -921,7 +928,8 @@ XXX  16.4. Text Processing Commands
     Now, for an interesting recreational use of *grep* . . .
 
 
-    **Example 16-18. Crossword puzzle solver**
+Exemple 17. Crossword puzzle solver
+===================================
 
 
     .. code-block:: sh
@@ -1162,7 +1170,8 @@ XXX  16.4. Text Processing Commands
     dictionary file may be specified.
 
 
-    **Example 16-20. Checking words in a list for validity**
+Exemple 18. Checking words in a list for validity
+=================================================
 
 
     .. code-block:: sh
@@ -1395,7 +1404,8 @@ XXX  16.4. Text Processing Commands
 
 
 
-    **Example 16-21. *toupper* : Transforms a file to all uppercase.**
+Exemple 19. *toupper* : Transforms a file to all uppercase.
+===========================================================
 
 
     .. code-block:: sh
@@ -1486,7 +1496,8 @@ XXX  16.4. Text Processing Commands
 
 
 
-    **Example 16-23. *du* : DOS to UNIX text file conversion.**
+Exemple 20. *du* : DOS to UNIX text file conversion.
+====================================================
 
 
     .. code-block:: sh
@@ -1525,7 +1536,8 @@ XXX  16.4. Text Processing Commands
 
 
 
-    **Example 16-24. *rot13* : ultra-weak encryption.**
+Exemple 21. *rot13* : ultra-weak encryption.
+============================================
 
 
     .. code-block:: sh
@@ -1549,7 +1561,8 @@ XXX  16.4. Text Processing Commands
 
 
 
-    **Example 16-25. Generating "Crypto-Quote" Puzzles**
+Exemple 22. Generating "Crypto-Quote" Puzzles
+=============================================
 
 
     .. code-block:: sh
@@ -1642,7 +1655,8 @@ XXX  16.4. Text Processing Commands
     long lines of text output.
 
 
-    **Example 16-26. Formatted file listing.**
+Exemple 23. Formatted file listing.
+===================================
 
 
     .. code-block:: sh
@@ -1686,7 +1700,8 @@ XXX  16.4. Text Processing Commands
     a "pretty-printed" table by inserting tabs at appropriate places.
 
 
-    **Example 16-27. Using *column* to format a directory listing**
+Exemple 24. Using *column* to format a directory listing
+========================================================
 
 
     .. code-block:: sh
@@ -1744,7 +1759,8 @@ XXX  16.4. Text Processing Commands
     **nl** does not list blank lines.
 
 
-    **Example 16-28. *nl* : A self-numbering script.**
+Exemple 25. *nl* : A self-numbering script.
+===========================================
 
 
     .. code-block:: sh
@@ -1878,7 +1894,8 @@ XXX  16.4. Text Processing Commands
     **groff** commands.
 
 
-    **Example 16-29. *manview* : Viewing formatted manpages**
+Exemple 26. *manview* : Viewing formatted manpages
+==================================================
 
 
     .. code-block:: sh

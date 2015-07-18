@@ -300,96 +300,85 @@ sense canviar-li els permisos. En cas que el fitxer no existís, el crea.
 
     : > fitxer.dat   # "fitxer.dat" passa a ser buit
 
-    # El resultat equival a fer cat /dev/null > fitxer.dat
-    # La diferència és que amb ``:`` no es crea un nou procés, doncs ``:`` és una comanda interna
-    (*builtin*) de la shell.
+El resultat equival a fer ``cat /dev/null > fitxer.dat`` La diferència és que amb ``:`` no es crea
+un nou procés, doncs ``:`` és una comanda interna (*builtin*) de la shell.
 
+Considera també :ref:`textproc_exemple_tail`.
+
+En combinació amb el operador de redirecció ``>>``, no té efecte sobre un fitxer ja existent:
+
+.. code-block:: sh
+
+    : >> fitxer_existent.dat      # cap efecte quan el fitxer ja existeix
+
+Com amb ``>``, en cas que el fitxer no existís, el crea.
+
+.. note::
+
+    Funciona només amb fitxers regulars, no amb *pipes*, enllaços simbòlics ni altres fitxers especials.
 
 
 XXX TODO per aquí
 
-See also `Example 16-15 <textproc.html#EX12>`__ .
-
-In combination with the >> redirection operator, has no effect on a
-pre-existing target file (
-``                   : >> target_file                 `` ). If the
-file did not previously exist, creates it.
-
-
-
-|Note|
-
- This applies to regular files, not pipes, symlinks, and certain
-special files.
-
-
-
-
-May be used to begin a comment line, although this is not
-recommended. Using # for a comment turns off error checking for the
-remainder of that line, so almost anything may appear in a comment.
-However, this is not the case with : .
+Pot ser utilitzat per començar una línia de comentaris, malgrat no es recomanat. Amb el sostingut
+queda desactivat el control d'errors sobre la resta de la línia, el que permet que hi pugui
+aparèixer pràcticament qualsevol cosa. En canvi, amb ``:`` el control d'errors continua actiu.
 
 
 .. code-block:: sh
 
-    : This is a comment that generates an error, ( if [ $x -eq 3] ).
+    : Aquest comentari genera un error, ( if [ $x -eq 3] ).
 
-
-
-The " : " serves as a `field <special-chars.html#FIELDREF>`__
-separator, in
-```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
-and in the `$PATH <internalvariables.html#PATHREF>`__ variable.
-
+Els dos punts també serveixen com a separador de camps al fitxer ``/etc/passwd`` i en variables
+internes com ``$PATH``.
 
 .. code-block:: sh
 
-    bash$ echo $PATH
+    $ echo $PATH
     /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
 
+Mira :doc:`files` i :doc:`internalvariables` per més detalls.
 
-
-A *colon* is `acceptable as a function
-name <functions.html#FSTRANGEREF>`__ .
-
+És acceptable anomenar una :doc:`funció<functions>` amb ``:``, com per exemple:
 
 .. code-block:: sh
 
     :()
     {
-      echo "The name of this function is "$FUNCNAME" "
-      # Why use a colon as a function name?
-      # It's a way of obfuscating your code.
+      echo "El nom d'aquesta funció és "$FUNCNAME" "
+      # Perquè voldria algú fer servir dos punts com a nom d'una funció?
+      # És una manera d'emmascarar el teu codi!
     }
 
     :
 
-    # The name of this function is :
+    # El nom d'aquesta funció és :
 
+No és un comportament :doc:`portable <portabilityissues>` i, per tant, no és recomanable
+utilitzar-ho. De fet, les versions més recents de Bash ja no permeten aquest ús (tot i que sí
+funciona el guió baix ``_``).
 
-
-This is not `portable <portabilityissues.html>`__ behavior, and
-therefore not a recommended practice. In fact, more recent releases
-of Bash do not permit this usage. An underscore **\_** works,
-though.
-
-A *colon* can serve as a placeholder in an otherwise empty function.
-
+En una funció buida, podem posar ``:`` com a marcador de posició.
 
 .. code-block:: sh
 
-    not_empty ()
+    no_buida ()
     {
       :
-    } # Contains a : (null command), and so is not empty.
+    } # Conté un : (comanda nul·la) i, per tant, la funció no està buida.
 
 
 
 Exclamació: !
 =============
 
-    **reverse (or negate) the sense of a test or exit status [bang].**
+El seu ús més habitual és per negar (o invertir) el resultat d'un test o un :doc:`estat de
+sortida<exit-status>`. Sovint se li anomena *bang* en aquest context.
+
+.. literalinclude:: /_scripts/negatingconditionusingbang.sh
+    :language: bash
+
+**reverse (or negate) the sense of a test or exit status [bang].**
     The ! operator inverts the `exit
     status <exit-status.html#EXITSTATUSREF>`__ of the command to which
     it is applied (see `Example 6-2 <exit-status.html#NEGCOND>`__ ). It
