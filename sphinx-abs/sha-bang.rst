@@ -120,7 +120,7 @@ et cal executar el guió des d'alguna altra shell com ara *tcsh*.
        :language: bash
        :linenos:
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 .. [#sha-bang] En la literatura es sol trobar com *she-bang* o
    *sh-bang*.  El nom està format per les inicials dels mots amb els

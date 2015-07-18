@@ -51,7 +51,7 @@ Living in an out-of-the-way community with wife and orange tabby, he
 cherishes human frailty, especially his own.
 `[3] <aboutauthor.html#FTN.AEN21318>`__
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 
 `[1] <aboutauthor.html#AEN21292>`__  

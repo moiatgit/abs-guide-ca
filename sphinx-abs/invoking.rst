@@ -103,7 +103,7 @@ de comandes:
     $ elnostreguio.sh
 
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 .. [#resaltadaentrada] L'entrada de l'usuari apareix resaltada a la
    línia 3.

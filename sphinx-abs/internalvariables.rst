@@ -2,12 +2,12 @@
 XXX  9.1. Internal Variables
 ############################
 
+Les *variables internes* són variables que afecten el comportament dels guions Bash.
 
 
-``                           Builtin                  variables:               ``
-    variables affecting bash script behavior
+``$BASH``
+=========
 
- ``        $BASH       ``
     The path to the *Bash* binary itself
 
 
@@ -18,18 +18,24 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $BASH_ENV       ``
+``$BASH_ENV``
+=============
+
     An `environmental variable <othertypesv.html#ENVREF>`__ pointing to
     a Bash startup file to be read when a script is invoked
 
- ``        $BASH_SUBSHELL       ``
+``$BASH_SUBSHELL``
+==================
+
     A variable indicating the `subshell <subshells.html#SUBSHELLSREF>`__
     level. This is a new addition to Bash, `version
     3 <bashver3.html#BASH3REF>`__ .
 
     See `Example 21-1 <subshells.html#SUBSHELL>`__ for usage.
 
- ``        $BASHPID       ``
+``$BASHPID``
+============
+
     *Process ID* of the current instance of Bash. This is not the same
     as the `$$ <internalvariables.html#PROCCID>`__ variable, but it
     often gives the same result.
@@ -71,7 +77,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $BASH_VERSINFO[n]       ``
+``$BASH_VERSINFO[n]``
+=====================
+
     A 6-element `array <arrays.html#ARRAYREF>`__ containing version
     information about the installed release of Bash. This is similar to
     ``         $BASH_VERSION        `` , below, but a bit more detailed.
@@ -96,7 +104,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $BASH_VERSION       ``
+``$BASH_VERSION``
+=================
+
     The version of Bash installed on the system
 
 
@@ -121,7 +131,9 @@ XXX  9.1. Internal Variables
     is running. `$SHELL <internalvariables.html#SHELLVARREF>`__ does not
     necessarily give the correct answer.
 
- ``        $CDPATH       ``
+``$CDPATH``
+===========
+
     A colon-separated list of search paths available to the
     `cd <internal.html#CDREF>`__ command, similar in function to the
     `$PATH <internalvariables.html#PATHREF>`__ variable for binaries.
@@ -147,7 +159,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $DIRSTACK       ``
+``$DIRSTACK``
+=============
+
     The top value in the directory stack ` [1]
      <internalvariables.html#FTN.AEN4671>`__ (affected by
     `pushd <internal.html#PUSHDREF>`__ and
@@ -157,11 +171,15 @@ XXX  9.1. Internal Variables
     `dirs <internal.html#DIRSD>`__ command, however **dirs** shows the
     entire contents of the directory stack.
 
- ``        $EDITOR       ``
+``$EDITOR``
+===========
+
     The default editor invoked by a script, usually **vi** or **emacs**
     .
 
- ``        $EUID       ``
+``$EUID``
+=========
+
      "effective" user ID number
 
     Identification number of whatever identity the current user has
@@ -177,7 +195,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $FUNCNAME       ``
+``$FUNCNAME``
+=============
+
     Name of the current function
 
 
@@ -197,11 +217,15 @@ XXX  9.1. Internal Variables
 
     See also `Example A-50 <contributed-scripts.html#USEGETOPT>`__ .
 
- ``        $GLOBIGNORE       ``
+``$GLOBIGNORE``
+===============
+
     A list of filename patterns to be excluded from matching in
     `globbing <globbingref.html>`__ .
 
- ``        $GROUPS       ``
+``$GROUPS``
+===========
+
     Groups current user belongs to
 
     This is a listing (array) of the group id numbers for current user,
@@ -226,19 +250,25 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $HOME       ``
+``$HOME``
+=========
+
     Home directory of the user, usually
     ``         /home/username        `` (see `Example
     10-7 <parameter-substitution.html#EX6>`__ )
 
- ``        $HOSTNAME       ``
+``$HOSTNAME``
+=============
+
     The `hostname <system.html#HNAMEREF>`__ command assigns the system
     host name at bootup in an init script. However, the
     ``         gethostname()        `` function sets the Bash internal
     variable ``         $HOSTNAME        `` . See also `Example
     10-7 <parameter-substitution.html#EX6>`__ .
 
- ``        $HOSTTYPE       ``
+``$HOSTTYPE``
+=============
+
     host type
 
     Like `$MACHTYPE <internalvariables.html#MACHTYPEREF>`__ , identifies
@@ -252,7 +282,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $IFS       ``
+``$IFS``
+========
+
     internal field separator
 
     This variable determines how Bash recognizes
@@ -308,7 +340,8 @@ XXX  9.1. Internal Variables
     as it does other characters.
 
 
-    **Example 9-1. $IFS and whitespace**
+Exemple 1. $IFS and whitespace
+==============================
 
 
     .. code-block:: sh
@@ -600,11 +633,15 @@ XXX  9.1. Internal Variables
     19-14 <x17837.html#MAILBOXGREP>`__ for instructive examples of using
     ``         $IFS        `` .
 
- ``        $IGNOREEOF       ``
+``$IGNOREEOF``
+==============
+
     Ignore EOF: how many end-of-files (control-D) the shell will ignore
     before logging out.
 
- ``        $LC_COLLATE       ``
+``$LC_COLLATE``
+===============
+
     Often set in the
     ```          .bashrc         `` <sample-bashrc.html>`__ or
     ``         /etc/profile        `` files, this variable controls
@@ -631,11 +668,15 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $LC_CTYPE       ``
+``$LC_CTYPE``
+=============
+
     This internal variable controls character interpretation in
     `globbing <globbingref.html>`__ and pattern matching.
 
- ``        $LINENO       ``
+``$LINENO``
+===========
+
     This variable is the line number of the shell script in which this
     variable appears. It has significance only within the script in
     which it appears, and is chiefly useful for debugging purposes.
@@ -652,7 +693,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $MACHTYPE       ``
+``$MACHTYPE``
+=============
+
     machine type
 
     Identifies the system hardware.
@@ -665,11 +708,15 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $OLDPWD       ``
+``$OLDPWD``
+===========
+
     Old working directory ( "OLD-Print-Working-Directory" , previous
     directory you were in).
 
- ``        $OSTYPE       ``
+``$OSTYPE``
+===========
+
     operating system type
 
 
@@ -678,9 +725,11 @@ XXX  9.1. Internal Variables
         bash$ echo $OSTYPE
         linux
 
+.. _internalvariables_path:
 
+``$PATH``
+=========
 
- ``        $PATH       ``
     Path to binaries, usually ``         /usr/bin/        `` ,
     ``         /usr/X11R6/bin/        `` ,
     ``         /usr/local/bin        `` , etc.
@@ -722,7 +771,9 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $PIPESTATUS       ``
+``$PIPESTATUS``
+===============
+
     `Array <arrays.html#ARRAYREF>`__ variable holding `exit
     status <exit-status.html#EXITSTATUSREF>`__ (es) of last executed
     *foreground* `pipe <special-chars.html#PIPEREF>`__ .
@@ -939,30 +990,42 @@ XXX  9.1. Internal Variables
 
 
 
- ``        $PPID       ``
+``$PPID``
+=========
+
     The ``         $PPID        `` of a process is the process ID (
     ``         pid        `` ) of its parent process. ` [2]
      <internalvariables.html#FTN.AEN5154>`__
 
     Compare this with the `pidof <system.html#PIDOFREF>`__ command.
 
- ``        $PROMPT_COMMAND       ``
+``$PROMPT_COMMAND``
+===================
+
     A variable holding a command to be executed just before the primary
     prompt, ``         $PS1        `` is to be displayed.
 
- ``        $PS1       ``
+``$PS1``
+========
+
     This is the main prompt, seen at the command-line.
 
- ``        $PS2       ``
+``$PS2``
+========
+
     The secondary prompt, seen when additional input is expected. It
     displays as ">" .
 
- ``        $PS3       ``
+``$PS3``
+========
+
     The tertiary prompt, displayed in a
     `select <testbranch.html#SELECTREF>`__ loop (see `Example
     11-30 <testbranch.html#EX31>`__ ).
 
- ``        $PS4       ``
+``$PS4``
+========
+
     The quartenary prompt, shown at the beginning of each line of output
     when invoking a script with the -x *[verbose trace]*
     `option <options.html#OPTIONSREF>`__ . It displays as "+" .
@@ -982,8 +1045,8 @@ XXX  9.1. Internal Variables
 
 .. _internalvars_pwd:
 
-$PWD
-----
+``$PWD``
+========
 
     Working directory (directory you are in at the time)
 
@@ -1036,7 +1099,9 @@ $PWD
 
 
 
- ``        $REPLY       ``
+``$REPLY``
+==========
+
     The default value when a variable is not supplied to
     `read <internal.html#READREF>`__ . Also applicable to
     `select <testbranch.html#SELECTREF>`__ menus, but only supplies the
@@ -1074,7 +1139,9 @@ $PWD
 
 
 
- ``        $SECONDS       ``
+``$SECONDS``
+============
+
     The number of seconds the script has been running.
 
 
@@ -1110,7 +1177,9 @@ $PWD
 
 
 
- ``        $SHELLOPTS       ``
+``$SHELLOPTS``
+==============
+
     The list of enabled shell `options <options.html#OPTIONSREF>`__ , a
     readonly variable.
 
@@ -1123,7 +1192,9 @@ $PWD
 
 
 
- ``        $SHLVL       ``
+``$SHLVL``
+==========
+
     Shell level, how deeply Bash is nested. ` [3]
      <internalvariables.html#FTN.AEN5320>`__ If, at the command-line,
     $SHLVL is 1, then in a script it will increment to 2.
@@ -1140,10 +1211,12 @@ $PWD
 
 
 
- ``        $TMOUT       ``
+``$TMOUT``
+==========
+
     If the ``                   $TMOUT                 `` environmental
     variable is set to a non-zero value ``         time        `` , then
-    the shell prompt will time out after ``         $time        ``
+    the shell prompt will time out after``$time``
     seconds. This will cause a logout.
 
     As of version 2.05b of Bash, it is now possible to use
@@ -1179,7 +1252,8 @@ $PWD
     timing loop (whew!).
 
 
-    **Example 9-2. Timed Input**
+Exemple 2. Timed Input
+======================
 
 
     .. code-block:: sh
@@ -1249,7 +1323,8 @@ $PWD
     An alternative is using `stty <system.html#STTYREF>`__ .
 
 
-    **Example 9-3. Once more, timed input**
+Exemple 3. Once more, timed input
+=================================
 
 
     .. code-block:: sh
@@ -1302,7 +1377,8 @@ $PWD
     option to `read <internal.html#READREF>`__ .
 
 
-    **Example 9-4. Timed *read***
+Exemple 4. Timed *read*
+=======================
 
 
     .. code-block:: sh
@@ -1333,7 +1409,9 @@ $PWD
 
 
 
- ``        $UID       ``
+``$UID``
+========
+
     User ID number
 
     Current user's user identification number, as recorded in
@@ -1346,7 +1424,8 @@ $PWD
     counterpart to the `id <system.html#IDREF>`__ builtin.
 
 
-    **Example 9-5. Am I root?**
+Exemple 5. Am I root?
+=====================
 
 
     .. code-block:: sh
@@ -1392,7 +1471,7 @@ $PWD
 
     The variables ``            $ENV           `` ,
     ``            $LOGNAME           `` ,
-    ``            $MAIL           `` , ``            $TERM           ``
+    ``            $MAIL           `` ,``$TERM``
     , ``            $USER           `` , and
     ``            $USERNAME           `` are *not* Bash
     `builtins <internal.html#BUILTINREF>`__ . These are, however, often
@@ -1402,7 +1481,7 @@ $PWD
     shell, may be set from ``            /etc/passwd           `` or in
     an "init" script, and it is likewise not a Bash builtin.
 
-    +--------------------------+--------------------------+--------------------------+
+
     | .. code-block:: sh
     |                          |
     |     tcsh% echo $LOGNAME  |
@@ -1419,8 +1498,6 @@ $PWD
     |     bash$ echo $TERM     |
     |     rxvt                 |
     |                          |
-
-    +--------------------------+--------------------------+--------------------------+
 
 
     .. code-block:: sh
@@ -1505,7 +1582,8 @@ etc.
 
 
 
-    **Example 9-6. *arglist* : Listing arguments with $\* and $@**
+Exemple 6. *arglist* : Listing arguments with $\* and $@
+========================================================
 
 
     .. code-block:: sh
@@ -1605,8 +1683,8 @@ etc.
 
 
 
-    **Example 9-7. Inconsistent ``           $*          `` and
-    ``           $@          `` behavior**
+Exemple 7. Inconsistent ``$*`` and ``$@`` behavior
+==================================================
 
 
     .. code-block:: sh
@@ -1763,9 +1841,8 @@ etc.
 
 
 
-    **Example 9-8. ``           $*          `` and
-    ``           $@          `` when ``           $IFS          `` is
-    empty**
+Exemple 8. ``$*`` and ``$@`` when ``$IFS`` is empty
+===================================================
 
 
     .. code-block:: sh
@@ -1807,7 +1884,9 @@ etc.
 
 **Other Special Parameters**
 
- ``        $-       ``
+ ``$-``
+=======
+
     Flags passed to script (using `set <internal.html#SETREF>`__ ). See
     `Example 15-16 <internal.html#EX34>`__ .
 
@@ -1823,7 +1902,9 @@ etc.
 
 
 
- ``        $!       ``
+``$!``
+======
+
     `PID <special-chars.html#PROCESSIDDEF>`__ (process ID) of last job
     run in background
 
@@ -1912,11 +1993,14 @@ etc.
 
 
 
- ``        $_       ``
+``$_``
+======
+
     Special variable set to final argument of previous command executed.
 
 
-    **Example 9-9. Underscore variable**
+Exemple 9. Underscore variable
+==============================
 
 
     .. code-block:: sh
@@ -1940,12 +2024,16 @@ etc.
 
 
 
- ``        $?       ``
+``$?``
+======
+
     `Exit status <exit-status.html#EXITSTATUSREF>`__ of a command,
     `function <functions.html#FUNCTIONREF>`__ , or the script itself
     (see `Example 24-7 <complexfunct.html#MAX>`__ )
 
- ``        $$       ``
+``$$``
+======
+
     Process ID ( *PID* ) of the script itself. ` [5]
      <internalvariables.html#FTN.AEN5654>`__ The ``         $$        ``
     variable often finds use in scripts to construct "unique" temp file
@@ -1955,9 +2043,7 @@ etc.
     invoking `mktemp <filearchiv.html#MKTEMPREF>`__ .
 
 
-
-Notes
-~~~~~
+.. rubric:: Anotacions
 
 
 ` [1]  <internalvariables.html#AEN4671>`__

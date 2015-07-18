@@ -1,8 +1,6 @@
-# Exemples d'ús del punt i coma per concatenar comandes en la mateixa
-# línia
+# Exemples d'ús del punt i coma per concatenar comandes en la mateixa línia
 
 echo hola; echo gent
-
 if [ -x "$nomfitxer" ]; then
 #+                   ^^ Fixat en l'espai després del punt i coma
   echo "El fitxer $nomfitxer existeix"; cp $nomfitxer $nomfitxer

@@ -9,4 +9,4 @@ XXX  Appendix R. To Do List
 
 -  Same as above, but for the Korn shell ( *ksh* ).
 
-
+-  Merge-like revision of official https://www.gnu.org/software/bash/manual/bash.html

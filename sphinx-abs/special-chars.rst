@@ -13,33 +13,20 @@ guions de shell:
 Sostingut: #
 ============
 
-El símbol de *sostingut* (#) en Bash normalment indica l'inici d'un
-comentari.
+El principal ús del símbol de sostingut ``#`` en Bash és el de marcar l'inici d'un comentari.
 
-Les línies que comencen amb un # (excepte
-:doc:`sha-bang<sha-bang>`) es consideren comentaris i *no*
-seran processades.
+Per ser un comentari, ``#`` apareixerà com el primer caràcter de la línia, o a continuació
+d'un:ref:`caràcter en blanc <specialchars_whitespaces>` (espai, tabulador).
+
+El que apareix després de ``#`` no serà interpretat. De fet, el control d'errors queda desactivat, pel
+que hi podrem posar pràcticament qualsevol cosa.
 
 .. code-block:: sh
 
     # Aquesta línia és un comentari. El sostingut és el primer caràcter de la línia.
-
-També es considera un comentari, quan el símbol de *sostingut* apareix
-després d'un o més :ref:`caràcters en blanc <specialchars_whitespaces>` (espai,
-tabulador) a l'inici de la línia.
-
-.. code-block:: sh
-
-    # Aquesta línia és un comentari com la de l'exemple anterior
         # aquest comentari està precedit per un tabulador
-
-Els comentaris poden aparèixer també després d'una comanda. Per
-exemple:
-
-.. code-block:: sh
-
-      echo "A continuació bé un comentari" # El comentari
-      #                                   ^ Atenció a l'espai abans de #
+    echo "A continuació bé un comentari" # Un comentari després d'una comanda
+    #                                   ^ Atenció a l'espai abans de #
 
 Podem trobar comentaris, fins i tot, en una :ref:`pipe <specialchars-pipe>`.
 
@@ -47,27 +34,30 @@ Podem trobar comentaris, fins i tot, en una :ref:`pipe <specialchars-pipe>`.
    :language: bash
    :emphasize-lines: 11
 
-Un cop començat el comentari, tot el que vingui després en la mateixa
-línia serà considerat com a comentari. No hi ha manera d'indicar que
-el comentari ha finalitzat, a banda del salt de línia.
+Cal tenir present què, el final del comentari queda marcar pel salt de línia. És a dir, un cop
+començat el comentari, tot el que vingui després en la mateixa línia serà considerat com a
+comentari. No hi ha manera d'indicar que el comentari ha finalitzat, a banda del salt de línia.
 
-Quan el sostingut apareix, però, :doc:`entre cometes <quoting>` o
-:doc:`escapat <escapingsection>` com a argument d'una comanda *echo*,
-no es considera com a marca de comentari.
+El sostingut no serà considerat inici de comentari en els següents casos:
 
-Per altra banda, # tampoc no es considera inici de comentari quan
-apareix en una :doc:`substitució de paràmetres
-<parameter-substitution>` ni en :doc:`expressions amb constants
-numèriques <numerical-constants>`.
+* :doc:`sha-bang<sha-bang>`. (``#!``) que, quan apareix en la primera línia d'un fitxer, indica quin
+  programa ha d'interpretar el contingut del fitxer.
 
-.. literalinclude:: /_scripts/nocomments.sh
-   :language: bash
+* Quan el sostingut apareix, però, :doc:`entre cometes <quoting>` o :doc:`escapat <escapingsection>`
+  com a argument d'una comanda *echo*, no es considera com a marca de comentari.
+
+* Per altra banda, ``#`` tampoc no es considera inici de comentari quan apareix en una
+  :doc:`substitució de paràmetres <parameter-substitution>` ni en :doc:`expressions amb constants
+  numèriques <numerical-constants>`.
+
+  .. literalinclude:: /_scripts/nocomments.sh
+     :language: bash
 
 Punt i coma: ;
 ==============
 
-Per Bash, el punt i coma és interpretat com a separador entre comandes
-que apareixen seqüencialment a una mateixa línia.
+El punt i coma ``;`` serveix com a separador entre comandes que apareixen seqüencialment a una
+mateixa línia.
 
 .. literalinclude:: /_scripts/semicolons.sh
    :language: bash
@@ -77,8 +67,8 @@ que apareixen seqüencialment a una mateixa línia.
     De vegades el ; ha de ser escapat. Considera l'opció :ref:`-exec de la comanda find <moreadv-find-exec>`.
 
 
-Quan el punt i coma apareix duplicat (;;), el seu significat passa a
-ser de terminador en una opció *case*.  Mira :doc:`testbranch`.
+Quan el punt i coma apareix duplicat (``;;``), el seu significat passa a ser de terminador en una
+opció *case*.  Mira :doc:`testbranch`.
 
 .. code-block:: sh
 
@@ -87,9 +77,8 @@ ser de terminador en una opció *case*.  Mira :doc:`testbranch`.
       xyz)  echo "\$variable = xyz" ;;
     esac
 
-Hi ha altres versions del punt i coma doble (;;& i ;&).  Són també
-terminadors d'opció *case*, en aquest cas, per versions de Bash a
-partir de la 4. Mira :doc:`bashver4`.
+Hi ha altres versions del punt i coma doble (``;;&`` i ``;&``).  Són també terminadors d'opció *case*, en
+aquest cas, per versions de Bash a partir de la 4. Mira :doc:`bashver4`.
 
 Punt: .
 =======
@@ -141,8 +130,8 @@ aquest cas, s'indica que la destinació és la carpeta actual:
 
     bash$ cp /home/usuari/feina/brossa/* .
 
-La comanda anterior copiarà tots els fitxers de la carpeta brossa/ a la carpeta actual o $PWD (mira
-:ref:`internalvars_pwd`)
+La comanda anterior copiarà tots els fitxers de la carpeta brossa/ a la carpeta actual o
+:ref:`internalvars_pwd`.
 
 Finalment, el caràcter punt serveix per indicar *qualsevol caràcter* quan forma part d'una
 :doc:`expressió regular <regexp>`.
@@ -250,7 +239,7 @@ interna <internal>` de Bash, que no fa res i sempre té com a :doc:`valor de sor
     echo $?   # 0
 
 
-Amb : podem fer un bucle infinit:
+Amb ``:`` podem fer un bucle infinit:
 
 .. literalinclude:: /_scripts/bucleinfinit.sh
     :language: bash
@@ -267,9 +256,9 @@ En algunes ocasions, cal començar una operació aritmètica o una substitució 
     : ${1?"Ús: $0 ARGUMENT"}
 
 
-Ofereix un marcador de posició allà on s'espera que hi hagi una comanda però que, per alguna raó,
-encara no la tenim. Per exemple, permet mantenir l'estructura d'un condicional, quan no es disposa
-de quelcom a fer per un determinat cas:
+Un ús típic és com a *marcador de posició* allà on s'espera que hi hagi una comanda però que, per
+alguna raó, no la tenim o no la volem especificar. Per exemple, permet mantenir l'estructura d'un
+condicional, quan no es disposa de quelcom a fer per un determinat cas:
 
 .. code-block:: sh
 
@@ -279,6 +268,15 @@ de quelcom a fer per un determinat cas:
        fes-alguna-cosa
     fi
 
+
+Un altre exemple d'ús per marcar posició el trobem en funcions buides:
+
+.. code-block:: sh
+
+    no_buida ()
+    {
+      :
+    } # Conté un : (comanda nul·la) i, per tant, la funció no està buida.
 
 En :doc:`documents immediats <here-docs>` permet marcar una posició allà on s'esperava una comanda.
 Mira :ref:`heredocs_anonim`.
@@ -292,9 +290,9 @@ Avalua variables fent servir :doc:`parameter-substitution` com a
     #  Mostra un missatge d'error si alguna de les variables 
     #+ d'entorn no està assignada.
 
-
-Quan combinem ``:`` amb :doc:`l'operador de redirecció <io-redirection>` ``>``, buida el fitxer
-sense canviar-li els permisos. En cas que el fitxer no existís, el crea.
+Trobem un altre ús de la comanda nul·la, combinant-la amb :doc:`l'operador de redirecció <io-redirection>` ``>``.
+Donat que no genera cap resultat per sortida estàndard, quan redireccionem la seva sortida cap a un
+fitxer, elimina el seu contingut. Per exemple:
 
 .. code-block:: sh
 
@@ -303,7 +301,8 @@ sense canviar-li els permisos. En cas que el fitxer no existís, el crea.
 El resultat equival a fer ``cat /dev/null > fitxer.dat`` La diferència és que amb ``:`` no es crea
 un nou procés, doncs ``:`` és una comanda interna (*builtin*) de la shell.
 
-Considera també :ref:`textproc_exemple_tail`.
+Pot ser interessant quan no ens interessi canviar els permisos del fitxer a buidar. En cas que el
+fitxer no existís, el crea.
 
 En combinació amb el operador de redirecció ``>>``, no té efecte sobre un fitxer ja existent:
 
@@ -311,92 +310,82 @@ En combinació amb el operador de redirecció ``>>``, no té efecte sobre un fit
 
     : >> fitxer_existent.dat      # cap efecte quan el fitxer ja existeix
 
-Com amb ``>``, en cas que el fitxer no existís, el crea.
+Tant amb ``>`` com amb ``>>``, en cas que el fitxer no existís, el crea.
 
 .. note::
 
     Funciona només amb fitxers regulars, no amb *pipes*, enllaços simbòlics ni altres fitxers especials.
 
-
-XXX TODO per aquí
-
-Pot ser utilitzat per començar una línia de comentaris, malgrat no es recomanat. Amb el sostingut
-queda desactivat el control d'errors sobre la resta de la línia, el que permet que hi pugui
-aparèixer pràcticament qualsevol cosa. En canvi, amb ``:`` el control d'errors continua actiu.
-
+De vegades trobarem ``:`` utilitzat per començar una línia de comentaris. No és una pràctica
+recomanada doncs, a diferència de ``#``, no queda desactivat el control d'errors.
 
 .. code-block:: sh
 
     : Aquest comentari genera un error, ( if [ $x -eq 3] ).
 
-Els dos punts també serveixen com a separador de camps al fitxer ``/etc/passwd`` i en variables
-internes com ``$PATH``.
+Els dos punts també serveixen com a separador de camps al :doc:`fitxer<files>` ``/etc/passwd`` i en
+variables del sistema com ara :ref:`internalvariables_path`.
 
 .. code-block:: sh
 
     $ echo $PATH
     /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/games
 
-Mira :doc:`files` i :doc:`internalvariables` per més detalls.
+.. note::
 
-És acceptable anomenar una :doc:`funció<functions>` amb ``:``, com per exemple:
+    Bash accepta anomenar una :doc:`funció<functions>` amb ``:``, com per exemple:
 
-.. code-block:: sh
+    .. code-block:: sh
 
-    :()
-    {
-      echo "El nom d'aquesta funció és "$FUNCNAME" "
-      # Perquè voldria algú fer servir dos punts com a nom d'una funció?
-      # És una manera d'emmascarar el teu codi!
-    }
+        :()
+        {
+          echo "El nom d'aquesta funció és "$FUNCNAME" "
+          # Perquè voldria algú fer servir dos punts com a nom d'una funció?
+          # És una manera d'emmascarar el teu codi!
+        }
 
-    :
+        :
 
-    # El nom d'aquesta funció és :
+        # El nom d'aquesta funció és :
 
-No és un comportament :doc:`portable <portabilityissues>` i, per tant, no és recomanable
-utilitzar-ho. De fet, les versions més recents de Bash ja no permeten aquest ús (tot i que sí
-funciona el guió baix ``_``).
-
-En una funció buida, podem posar ``:`` com a marcador de posició.
-
-.. code-block:: sh
-
-    no_buida ()
-    {
-      :
-    } # Conté un : (comanda nul·la) i, per tant, la funció no està buida.
-
-
+    Cal tenir present que és un comportament :doc:`portable <portabilityissues>` i, per tant, es
+    desaconsella el seu ús.
 
 Exclamació: !
 =============
 
-El seu ús més habitual és per negar (o invertir) el resultat d'un test o un :doc:`estat de
-sortida<exit-status>`. Sovint se li anomena *bang* en aquest context.
+L'exclamació és una :doc:`paraula reservada<internal>` de Bash.
 
-.. literalinclude:: /_scripts/negatingconditionusingbang.sh
-    :language: bash
+En el seu ús més habitual, l'exclamació ``!`` (o *bang*) :ref:`nega o
+inverteix<exit-status_negatingconditionwithbang:` el resultat d'un test o un :doc:`estat de
+sortida<exit-status>`.
 
-**reverse (or negate) the sense of a test or exit status [bang].**
-    The ! operator inverts the `exit
-    status <exit-status.html#EXITSTATUSREF>`__ of the command to which
-    it is applied (see `Example 6-2 <exit-status.html#NEGCOND>`__ ). It
-    also inverts the meaning of a test operator. This can, for example,
-    change the sense of *equal* (
-    `= <comparison-ops.html#EQUALSIGNREF>`__ ) to *not-equal* ( != ).
-    The ! operator is a Bash `keyword <internal.html#KEYWORDREF>`__ .
+.. code-block:: sh
 
+    true    # la funció "builtin"
+    echo "El valor de sortida de \"true\" = $?"     # 0
 
-    In a different context, the ! also appears in `indirect variable
-    references <ivr.html#IVRREF>`__ .
+    ! true
+    echo "El valor de sortida de \"! true\" = $?"   # 1
 
-    In yet another context, from the *command line* , the ! invokes the
-    Bash *history mechanism* (see `Appendix L <histcommands.html>`__ ).
-    Note that within a script, the history mechanism is disabled.
+També indica *desigualtat* quan es fa servir en conjunt amb l':ref:`operador de comparació
+<comparison-ops_notequalto>` ``=``.
+
+Altres funcions de ``!`` són:
+
+* Com a referència indirecta a variable: mira :doc:`ivr`.
+
+* Des de la línia de comandes permet invocar el mecanisme :doc:`d'històric de comandes de Bash
+  <histcommands>`.
+
+  .. note::
+
+      Dins d'un guió, el mecanisme d'històric de comandes està desabilitat.
 
 Asterisc: \*
 ============
+
+XXX TODO per aquí
 
     **wild card [asterisk].** The \* character serves as a "wild card"
     for filename expansion in `globbing <globbingref.html>`__ . By
@@ -2171,7 +2160,7 @@ Caràcters en blanc
     character class `[:space:] <x17129.html#WSPOSIX>`__ .
 
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 
 .. [#metameaning] Consulta :doc:`x17129` per més informació

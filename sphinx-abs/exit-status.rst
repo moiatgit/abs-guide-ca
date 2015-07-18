@@ -191,7 +191,7 @@ in the script, which is, by convention, ``             0           `` on
 success or an integer in the range 1 - 255 on error.
 
 
-**Example 6-1. exit / exit status**
+Exemple 1. exit / exit status
 
 
 .. code-block:: sh
@@ -230,7 +230,9 @@ reverses the outcome of a test or command, and this affects its `exit
 status <exit-status.html#EXITSTATUSREF>`__ .
 
 
-**Example 6-2. Negating a condition using ! **
+.. _exit-status_negatingconditionwithbang:
+
+Exemple 2. Negating a condition using ! 
 
 
 .. literalinclude:: /_scripts/negatingconditionusingbang.sh

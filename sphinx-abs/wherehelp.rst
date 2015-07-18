@@ -31,7 +31,7 @@ les seves preocupacions al servei al client de la seva companyia.
 
     -- *CI-300 printer manual**
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 .. [#insiste] Be, si insisteixes de debó, pots intentar modificar
    l'exemple A-44 de :doc:`contributed-scripts` per adaptar-ho a les

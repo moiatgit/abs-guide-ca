@@ -162,7 +162,7 @@ A menys que s'indiqui el contrari, `l'autor <mailto:thegrendel.abs@gmail.com>`_ 
         -- Edmund Spenser
 
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 .. [#builtins] A aquests operadors i funcions que incorpora la *shell*, els coneixem com :doc:`builtins <internal>`.
 

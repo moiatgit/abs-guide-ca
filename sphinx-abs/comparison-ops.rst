@@ -1,14 +1,14 @@
-
 ####################################
 XXX  7.3. Other Comparison Operators
 ####################################
 
-A *binary* comparison operator compares two variables or quantities.
-*Note that integer and string comparison use a different set of
-operators.*
+Un operador de comparació binari, permet comparar dos valors.
+
+Hi ha operadors de comparació diferents pels dos tipus de valors: strings i enters.
 
 
-** integer comparison**
+Comparació d'enters
+===================
 
  -eq
     is equal to
@@ -61,8 +61,8 @@ operators.*
     ``                   (("$a" >= "$b"))                 ``
 
 
-
-** string comparison**
+Comparació de strings
+=====================
 
  =
 
@@ -98,7 +98,7 @@ operators.*
     `double-brackets <testconstructs.html#DBLBRACKETS>`__ test than
     within single brackets.
 
-    +--------------------------+--------------------------+--------------------------+
+ 
     | .. code-block:: sh
     |                          |
     |     [[ $a == z* ]]   # T |
@@ -118,8 +118,6 @@ operators.*
     |     # Thanks, StÃ©phane  |
     | Chazelas                 |
 
-    +--------------------------+--------------------------+--------------------------+
-
 
     .. code-block:: sh
 
@@ -144,6 +142,7 @@ operators.*
 
 
 
+.. _comparison-ops_notequalto:
 
  !=
     is not equal to
@@ -215,7 +214,8 @@ operators.*
 
 
 
-**Example 7-5. Arithmetic and string comparisons**
+Exemple 5. Arithmetic and string comparisons
+--------------------------------------------
 
 
 .. code-block:: sh
@@ -261,7 +261,8 @@ operators.*
 
 
 
-**Example 7-6. Testing whether a string is *null***
+Exemple 6. Testing whether a string is *null*
+---------------------------------------------
 
 
 .. code-block:: sh
@@ -339,7 +340,8 @@ operators.*
 
 
 
-**Example 7-7. *zmore***
+Exemple 7. *zmore*
+------------------
 
 
 .. code-block:: sh

@@ -147,7 +147,7 @@ La comanda ``unalias`` elimina els àlies prèviament definits amb
 
     ./unalias.sh: line 12: llm: no s'ha trobat l'ordre
 
-.. rubric:: Notes
+.. rubric:: Anotacions
 
 .. [#primeraparaula] Com a primera paraula d'una comanda. Evidentment,
    un àlies només té sentit a l'inici d'una comanda.

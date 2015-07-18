@@ -136,7 +136,8 @@ XXX  8.1. Operators
     surprisingly often in numerical recipes.
 
 
-    **Example 8-1. Greatest common divisor**
+Exemple 1. Greatest common divisor
+==================================
 
 
     .. code-block:: sh
@@ -238,7 +239,8 @@ XXX  8.1. Operators
 
 .. _ops_exemple_operadorsaritmetics:
 
-    **Example 8-2. Using Arithmetic Operations**
+Exemple 2. Ús dels operadors aritmètics
+=======================================
 
 
     .. code-block:: sh
@@ -549,7 +551,8 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 
-    **Example 8-3. Compound Condition Tests Using && and \|\|**
+Exemple 3. Compound Condition Tests Using && and \|\|
+=====================================================
 
 
     .. code-block:: sh
