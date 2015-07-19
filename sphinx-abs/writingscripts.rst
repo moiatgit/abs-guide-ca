@@ -739,7 +739,8 @@ For all you clever types who failed intermediate algebra, a
 *determinant* is a numerical value associated with a multidimensional
 *matrix* ( `array <arrays.html#ARRAYREF>`__ of numbers).
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     For the simple case  |
@@ -752,7 +753,8 @@ For all you clever types who failed intermediate algebra, a
 | - b*b, where "a" and "b" |
 |  represent numbers.      |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

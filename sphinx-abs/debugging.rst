@@ -169,7 +169,8 @@ Tools for debugging non-working scripts include
 
    Even better is an **echo** that echoes only when *debug* is on.
 
-   +--------------------------+--------------------------+--------------------------+
+-------------------------------------------------------------------------------------
+
    | .. code-block:: sh
    |                          |
    |     ### debecho (debug-e |
@@ -197,7 +198,8 @@ Tools for debugging non-working scripts include
    |     debecho $Whatever    |
    | # (Will not echo.)       |
 
-   +--------------------------+--------------------------+--------------------------+
+-------------------------------------------------------------------------------------
+
 
 
    .. code-block:: sh

@@ -193,14 +193,16 @@ Shell scripts may extract data from certain of the files in
 It is even possible to control certain peripherals with commands sent to
 the ``         /proc        `` directory.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |         root# echo on >  |
 | /proc/acpi/ibm/light     |
 |                          |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 This turns on the *Thinklight* in certain models of IBM/Lenovo
 Thinkpads. (May not work on all Linux distros.)

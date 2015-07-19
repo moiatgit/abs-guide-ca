@@ -185,7 +185,8 @@ substitution* .
     An uninitialized variable has a "null" value -- no assigned value at
     all ( *not* zero!).
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     if [ -z "$unassigned |
@@ -196,13 +197,15 @@ substitution* .
     |     fi     # $unassigned |
     |  is NULL.                |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
     Using a variable before assigning a value to it may cause problems.
     It is nevertheless possible to perform arithmetic operations on an
     uninitialized variable.
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     echo "$uninitialized |
@@ -222,7 +225,8 @@ substitution* .
     | tes as 0 in an arithmeti |
     | c operation.             |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
     See also `Example 15-23 <internal.html#SELFSOURCE>`__ .
 

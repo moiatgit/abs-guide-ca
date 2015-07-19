@@ -77,7 +77,8 @@ XXX  7.1. Test Constructs
     Again, note that the *exit status* of an arithmetic expression is
    *not* an error value.
 
-   +--------------------------+--------------------------+--------------------------+
+-------------------------------------------------------------------------------------
+
    | .. code-block:: sh
    |                          |
    |     var=-2 && (( var+=2  |
@@ -91,7 +92,8 @@ XXX  7.1. Test Constructs
    |       # Will not echo $v |
    | ar!                      |
 
-   +--------------------------+--------------------------+--------------------------+
+-------------------------------------------------------------------------------------
+
 
 
    .. code-block:: sh
@@ -315,13 +317,15 @@ must terminate the *if* statement. Both *if* and *then* are
 statements, and before a new statement on the same line begins, the old
 one must terminate.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     if [ -x "$filename"  |
 | ]; then                  |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh
@@ -384,7 +388,8 @@ script, **test** does *not* call the external
 ``         /usr/bin/[        `` , which is linked to
 ``         /usr/bin/test        `` .
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     bash$ type test      |
@@ -403,7 +408,8 @@ script, **test** does *not* call the external
 | ound                     |
 |                          |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 If, for some reason, you wish to use ``         /usr/bin/test        ``
 in a Bash script, then specify it by full pathname.
@@ -661,7 +667,8 @@ automatically within a [[ ... ]] construct.
 Following an **if** , neither the **test** command nor the test brackets
 ( [ ] or [[ ]] ) are strictly necessary.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     dir=/home/bozo       |
@@ -677,14 +684,16 @@ Following an **if** , neither the **test** command nor the test brackets
 |  to $dir."               |
 |     fi                   |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 The "if COMMAND" construct returns the exit status of COMMAND.
 Similarly, a condition within test brackets may stand alone without an
 **if** , when used in combination with a `list
 construct <list-cons.html#LISTCONSREF>`__ .
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     var1=20              |
@@ -698,7 +707,8 @@ construct <list-cons.html#LISTCONSREF>`__ .
 | ho "$home directory does |
 |  not exist."             |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

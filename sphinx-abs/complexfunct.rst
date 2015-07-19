@@ -345,7 +345,8 @@ The next logical question is whether parameters can be dereferenced
     For a function to return a string or array, use a dedicated
     variable.
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     count_lines_in_etc_p |
@@ -380,7 +381,8 @@ The next logical question is whether parameters can be dereferenced
     |                          |
     |     # Thanks, S.C.       |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
 
     .. code-block:: sh
@@ -568,7 +570,8 @@ The next logical question is whether parameters can be dereferenced
     A workaround for obtaining large integer "return values" is to
     simply assign the "return value" to a global variable.
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     Return_Val=   # Glob |
@@ -603,7 +606,8 @@ The next logical question is whether parameters can be dereferenced
     |     echo "return value = |
     |  $Return_Val"    #25701  |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
     A more elegant method is to have the function **echo** its "return
     value to ``             stdout            `` ," and then capture it
@@ -689,7 +693,8 @@ The next logical question is whether parameters can be dereferenced
     Understanding it requires some knowledge of
     `awk <awk.html#AWKREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     month_length ()  # T |
@@ -756,7 +761,8 @@ The next logical question is whether parameters can be dereferenced
     | ------------------------ |
     | ----                     |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
     See also `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and
     `Example A-37 <contributed-scripts.html#STDDEV>`__ .

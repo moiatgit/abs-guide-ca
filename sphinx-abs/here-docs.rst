@@ -742,7 +742,8 @@ self-documenting scripts.
 Here documents create temporary files, but these files are deleted after
 opening and are not accessible to any other process.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     bash$ bash -c 'lsof  |
@@ -754,7 +755,8 @@ opening and are not accessible to any other process.
 | eted)                    |
 |                          |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh
@@ -794,7 +796,8 @@ whitespace* . Trailing whitespace after the limit string likewise causes
 unexpected behavior. The whitespace prevents the limit string from being
 recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
@@ -841,7 +844,8 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 | better not echo."  # Fol |
 | lows an 'exit' command.  |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh
@@ -903,7 +907,8 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
  Some people very cleverly use a single ! as a limit string. But, that's
 not necessarily a good idea.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     # This works.        |
@@ -937,7 +942,8 @@ not necessarily a good idea.
 | a multi-character limit  |
 | string.                  |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

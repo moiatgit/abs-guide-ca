@@ -150,7 +150,8 @@ Since even the escape character ( \\ ) gets a literal interpretation
 within single quotes, trying to enclose a single quote within single
 quotes will not yield the expected result.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     echo "Why can't I wr |
@@ -176,7 +177,8 @@ quotes will not yield the expected result.
 | esy of Stéphane Chazelas |
 | .                        |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh
@@ -225,7 +227,8 @@ Of more concern is the *apparently* inconsistent behavior of
 ``               \             `` within double quotes, and especially
 following an **echo -e** command.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     bash$ echo hello\!   |
@@ -255,7 +258,8 @@ following an **echo -e** command.
 |     x       y            |
 |                          |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 Double quotes following an *echo* *sometimes* escape
 ``               \             `` . Moreover, the ``       -e      ``

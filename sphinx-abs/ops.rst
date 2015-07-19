@@ -27,7 +27,8 @@ XXX  8.1. Operators
     Do not confuse the "=" assignment operator with the `= test
     operator <comparison-ops.html#EQUALSIGNREF>`__ .
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     #   =  as a test ope |
@@ -49,7 +50,8 @@ XXX  8.1. Operators
     | " characters cancel out. |
     | )                        |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
 
     .. code-block:: sh
@@ -310,7 +312,8 @@ Integer variables in older versions of Bash were signed *long* (32-bit)
 integers, in the range of -2147483648 to 2147483647. An operation that
 took a variable outside these limits gave an erroneous result.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     echo $BASH_VERSION   |
@@ -339,7 +342,8 @@ took a variable outside these limits gave an erroneous result.
 | king the result negative |
 | .                        |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 As of version >= 2.05b, Bash supports 64-bit integers.
 
@@ -383,7 +387,8 @@ As of version >= 2.05b, Bash supports 64-bit integers.
 Bash does not understand floating point arithmetic. It treats numbers
 containing a decimal point as strings.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     a=1.5                |
@@ -400,7 +405,8 @@ containing a decimal point as strings.
 |     echo "b = $b"        |
 | # b=1                    |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 Use `bc <mathc.html#BCREF>`__ in scripts that that need floating point
 calculations or math library functions.

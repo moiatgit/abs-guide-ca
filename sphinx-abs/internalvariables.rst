@@ -811,7 +811,8 @@ Exemple 1. $IFS and whitespace
     erroneous 0 value in a login shell (in releases prior to 3.0 of
     Bash).
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     tcsh% bash           |
@@ -823,7 +824,8 @@ Exemple 1. $IFS and whitespace
     |     0                    |
     |                          |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
     The above lines contained in a script would produce the expected
     ``            0 1 0           `` output.
@@ -861,7 +863,8 @@ Exemple 1. $IFS and whitespace
     The ``            $PIPESTATUS           `` variable gives unexpected
     results in some contexts.
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     bash$ echo $BASH_VER |
@@ -879,7 +882,8 @@ Exemple 1. $IFS and whitespace
     |     141 127 0            |
     |                          |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
     Chet Ramey attributes the above output to the behavior of
     `ls <basic.html#LSREF>`__ . If *ls* writes to a *pipe* whose output
@@ -928,7 +932,8 @@ Exemple 1. $IFS and whitespace
     needs to be captured immediately after the pipe in question, before
     any other command intervenes.
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     bash$ $ ls | bogus_c |
@@ -946,7 +951,8 @@ Exemple 1. $IFS and whitespace
     |     0                    |
     |                          |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
 
     .. code-block:: sh

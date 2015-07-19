@@ -100,7 +100,8 @@ to choke. `David
 Wheeler <http://www.dwheeler.com/essays/filenames-in-shell.html>`__
 shows how to avoid many such pitfalls.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
  .. code-block:: sh
 
      IFS="$(printf '\n\t'
@@ -125,7 +126,8 @@ shows how to avoid many such pitfalls.
   from David Wheeler's si
  te, with permission.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

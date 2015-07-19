@@ -717,7 +717,8 @@ control condition* is true.
     certain contexts, be omitted by framing the command block within
     `curly brackets <special-chars.html#CODEBLOCKREF>`__
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
     | .. code-block:: sh
     |                          |
     |     for((n=1; n<=10; n++ |
@@ -755,7 +756,8 @@ control condition* is true.
     |     # Thank you, YongYe, |
     |  for pointing this out.  |
 
-    +--------------------------+--------------------------+--------------------------+
+--------------------------------------------------------------------------------------
+
 
 
     .. code-block:: sh

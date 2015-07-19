@@ -207,7 +207,8 @@ With older versions of Bash or other shells, localization requires
 `gettext <textproc.html#GETTEXTREF>`__ , using the
 ``         -s        `` option. In this case, the script becomes:
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
@@ -229,7 +230,8 @@ With older versions of Bash or other shells, localization requires
 | var                      |
 |     # ...                |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

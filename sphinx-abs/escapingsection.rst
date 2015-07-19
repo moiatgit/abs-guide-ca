@@ -327,7 +327,8 @@ The behavior of \\ depends on whether it is escaped,
 substitution <commandsub.html#COMMANDSUBREF>`__ or a `here
 document <here-docs.html#HEREDOCREF>`__ .
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |                          |
@@ -386,12 +387,14 @@ document <here-docs.html#HEREDOCREF>`__ .
 | plied by Stéphane Chazel |
 | as.                      |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 Elements of a string assigned to a variable may be escaped, but the
 escape character alone may not be assigned to a variable.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     variable=\           |
@@ -460,7 +463,8 @@ escape character alone may not be assigned to a variable.
 |                          |
 |     # This is o.k.       |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

@@ -748,7 +748,8 @@ operation, with the help of `command
 substitution <commandsub.html#COMMANDSUBREF>`__ , makes it possible to
 load the contents of a text file into an array.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     #!/bin/bash          |
@@ -803,7 +804,8 @@ load the contents of a text file into an array.
 |     echo $element_count  |
 |          # 8             |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

@@ -225,7 +225,8 @@ found in the *Fedora Core* Linux distro.
 To avoid confusion or error in a complex sequence of test operators,
 break up the sequence into bracketed sections.
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     if [ "$v1" -gt "$v2" |
@@ -243,7 +244,8 @@ break up the sequence into bracketed sections.
 | uped in logical sections |
 | .                        |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

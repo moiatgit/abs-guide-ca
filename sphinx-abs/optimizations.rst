@@ -160,7 +160,8 @@ inefficient and might be replaced by `double
 parentheses <dblparens.html>`__ arithmetic expansion. See `Example
 A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     Math tests           |
@@ -189,7 +190,8 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 |     sys           0m0.00 |
 | 0s                       |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 `Condition testing <tests.html#IFTHEN>`__ constructs in scripts deserve
 close scrutiny. Substitute `case <testbranch.html#CASEESAC1>`__ for
@@ -197,7 +199,8 @@ close scrutiny. Substitute `case <testbranch.html#CASEESAC1>`__ for
 possible, to minimize script execution time. Again, refer to `Example
 A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     Test using "case" co |
@@ -239,7 +242,8 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 |     sys           0m0.00 |
 | 0s                       |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh
@@ -347,7 +351,8 @@ numeric array, there is a significant performance penalty vs.
 associative arrays. Running a test script confirms this. See `Example
 A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 | .. code-block:: sh
 |                          |
 |     Assignment tests     |
@@ -463,7 +468,8 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
 |     sys           0m0.00 |
 | 0s                       |
 
-+--------------------------+--------------------------+--------------------------+
+----------------------------------------------------------------------------------
+
 
 
 .. code-block:: sh

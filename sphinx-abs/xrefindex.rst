@@ -25,8 +25,7 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__ .
 
 **~** *Tilde*
 
--  **~** `home directory <special-chars.html#TILDEREF>`__ , corresponds
-   to ```         $HOME        `` <internalvariables.html#HOMEDIRREF>`__
+-  **~** `home directory <special-chars.html#TILDEREF>`__ , corresponds to ```         $HOME        `` <internalvariables.html#HOMEDIRREF>`__
 
 -  **~/** `*Current user's* home
    directory <special-chars.html#TILDEREF>`__
