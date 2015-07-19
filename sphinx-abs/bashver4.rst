@@ -471,7 +471,7 @@ Substitució de paràmetre: modificació majúscules-minúscules
 
 Amb la substitució de paràmetre, podem aconseguir canviar majúscules i minúscules:
 
-.. literalinclude:: /_scripts.modicicaciocas.sh
+.. literalinclude:: /_scripts/modicicaciocas.sh
    :language: bash
 
 

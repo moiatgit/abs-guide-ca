@@ -49,3 +49,8 @@ llibre, amb la versió en anglès entre parèntesis.
    Tilde oberta (Back quotes o backticks)
 
         El caràter ``\``
+
+   Globbing
+
+        Mecanisme similar a les expressions regulars que permet definir un patró que han d'acomplir
+        els noms dels fitxers, fent servir alguns caràctes especials, sovint ``\*`` i ``?``.

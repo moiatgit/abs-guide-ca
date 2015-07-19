@@ -748,7 +748,7 @@ analogous to that between `$@ and $\* <internalvariables.html#APPREF>`__
 
 
 
-|Tip
+Tip
 
 The **array=( element1 element2 ... elementN )** initialization
 operation, with the help of `command

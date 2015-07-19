@@ -350,8 +350,8 @@ variables del sistema com ara :ref:`internalvariables_path`.
     Cal tenir present que és un comportament :doc:`portable <portabilityissues>` i, per tant, es
     desaconsella el seu ús.
 
-Exclamació: !
-=============
+Exclamació: \!
+==============
 
 L'exclamació és una :doc:`paraula reservada<internal>` de Bash.
 
@@ -384,35 +384,26 @@ Altres funcions de ``!`` són:
 Asterisc: \*
 ============
 
-XXX TODO per aquí
+El asterisc serveix de comodí per l'expansió de noms de fitxer. Aquest mecanisme d'expansió de noms
+de fitxer a partir de caràcters comodí, es coneix com a :doc:`globbing`. Quan apareix sol, implica
+**tots** els fitxers dins d'un directori. Per exemple:
 
-    **wild card [asterisk].** The \* character serves as a "wild card"
-    for filename expansion in `globbing <globbingref.html>`__ . By
-    itself, it matches every filename in a given directory.
+.. code-block:: sh
 
+    $ # contingut de l'arrel del sistema de fitxers
+    $ echo /*
+    /bin /boot /dev /etc /home /initrd.img /lib /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /srv /sys /tmp /usr /var /vmlinuz
 
-
-    .. code-block:: sh
-
-        bash$ echo *
-        abs-book.sgml add-drive.sh agram.sh alias.sh
-
+En :doc:`expressions regulars<regexp>`, l'asterisc especifica que l'element anterior pot aparèixer zero o més cops.
 
 
+L'asterisc també és un :doc:`operador aritmètic<ops>`: quan apareix en una operació aritmètica
+``\*`` denota *multiplicació*.
 
-    The \* also represents `any number (or zero)
-    characters <x17129.html#ASTERISKREG>`__ in a `regular
-    expression <regexp.html#REGEXREF>`__ .
+En un context d'expressió aritmètica, ``\*\*`` (doble asterisc) representaria l'operador
+exponencial, mentre que en altres contexts funcionaria com un comodí estès (que accepta fitxers i
+directoris) a partir de la :doc:`versió 4 de Bash<bashver4>.
 
- \*
-
-    **`arithmetic operator <ops.html#AROPS1>`__ .** In the context of
-    arithmetic operations, the \* denotes multiplication.
-
-
-     \*\* A double asterisk can represent the
-    `exponentiation <ops.html#EXPONENTIATIONREF>`__ operator or
-    `extended file-match <bashver4.html#GLOBSTARREF>`__ *globbing* .
 
 Interrogant: ?
 ==============

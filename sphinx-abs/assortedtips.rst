@@ -529,22 +529,22 @@ Exemple 19. Even more return value trickery
 
 .. code-block:: sh
 
-    sum_and_product ()
-    {
-      echo "This is the
-sum_and_product function
-." # This messes things
-up!
-      echo $(( $1 + $2 )
-) $(( $1 * $2 ))
-    }
-    ...
-    retval=`sum_and_prod
-uct $first $second`
- # Assigns output of fun
-ction.
-    # Now, this will not
- work correctly.
+        sum_and_product ()
+        {
+          echo "This is the
+    sum_and_product function
+    ." # This messes things
+    up!
+          echo $(( $1 + $2 )
+    ) $(( $1 * $2 ))
+        }
+        ...
+        retval=`sum_and_prod
+    uct $first $second`
+     # Assigns output of fun
+    ction.
+        # Now, this will not
+     work correctly.
 
 -------------------------------------------------------------------------------------
 
