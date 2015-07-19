@@ -80,7 +80,8 @@ The following example illustrates how **awk** can add text-parsing tools
 to a shell script.
 
 
-**Example C-1. Counting Letter Occurrences**
+Exemple 1. Counting Letter Occurrences
+======================================
 
 
 .. code-block:: sh

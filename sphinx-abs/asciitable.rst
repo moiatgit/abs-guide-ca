@@ -9,7 +9,8 @@ not. Instead, here are several short scripts, each of which generates a
 complete ASCII table.
 
 
-**Example T-1. A script that generates an ASCII table**
+Exemple 1. A script that generates an ASCII table
+=================================================
 
 
 .. code-block:: sh
@@ -65,7 +66,8 @@ complete ASCII table.
 
 
 
-**Example T-2. Another ASCII table script**
+Exemple 2. Another ASCII table script
+=====================================
 
 
 .. code-block:: sh
@@ -117,7 +119,8 @@ complete ASCII table.
 
 
 
-**Example T-3. A third ASCII table script, using *awk***
+Exemple 3. A third ASCII table script, using *awk*
+==================================================
 
 
 .. code-block:: sh

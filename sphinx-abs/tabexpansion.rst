@@ -83,7 +83,8 @@ double dash. And here is the corresponding *completion script* , by
 convention given a filename corresponding to its associated command.
 
 
-**Example J-1. Completion script for *UseGetOpt.sh***
+Exemple 1. Completion script for *UseGetOpt.sh*
+===============================================
 
 
 .. code-block:: sh

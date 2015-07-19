@@ -8,7 +8,8 @@ illustrate some interesting shell programming techniques. Some are
 useful, too. Have fun analyzing and running them.
 
 
-**Example A-1. *mailformat* : Formatting an e-mail message**
+Exemple 1. *mailformat* : Formatting an e-mail message
+======================================================
 
 
 .. code-block:: sh
@@ -70,7 +71,8 @@ useful, too. Have fun analyzing and running them.
 
 
 
-**Example A-2. *rn* : A simple-minded file renaming utility**
+Exemple 2. *rn* : A simple-minded file renaming utility
+=======================================================
 
 This script is a modification of `Example
 16-22 <textproc.html#LOWERCASE>`__ .
@@ -131,7 +133,8 @@ This script is a modification of `Example
 
 
 
-**Example A-3. *blank-rename* : Renames filenames containing blanks**
+Exemple 3. *blank-rename* : Renames filenames containing blanks
+===============================================================
 
 This is an even simpler-minded version of previous script.
 
@@ -229,7 +232,8 @@ encrypted password**
 
 
 
-**Example A-5. *copy-cd* : Copying a data CD**
+Exemple 5. *copy-cd* : Copying a data CD
+========================================
 
 
 .. code-block:: sh
@@ -292,7 +296,8 @@ encrypted password**
 
 
 
-**Example A-6. Collatz series**
+Exemple 6. Collatz series
+=========================
 
 
 .. code-block:: sh
@@ -371,7 +376,8 @@ encrypted password**
 
 
 
-**Example A-7. *days-between* : Days between two dates**
+Exemple 7. *days-between* : Days between two dates
+==================================================
 
 
 .. code-block:: sh
@@ -536,7 +542,8 @@ encrypted password**
 
 
 
-**Example A-8. Making a *dictionary***
+Exemple 8. Making a *dictionary*
+================================
 
 
 .. code-block:: sh
@@ -588,7 +595,8 @@ encrypted password**
 
 
 
-**Example A-9. Soundex conversion**
+Exemple 9. Soundex conversion
+=============================
 
 
 .. code-block:: sh
@@ -755,7 +763,8 @@ tr -d aeiouy )
 
 
 
-**Example A-10. *Game of Life***
+Exemple 10. *Game of Life*
+==========================
 
 
 .. code-block:: sh
@@ -1153,7 +1162,8 @@ tr -d aeiouy )
 
 
 
-**Example A-11. Data file for *Game of Life***
+Exemple 11. Data file for *Game of Life*
+========================================
 
 
 .. code-block:: sh
@@ -1190,7 +1200,8 @@ restrictions. This file is included in the combined `HTML/source
 tarball <mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* .
 
 
-**Example A-12. *behead* : Removing mail and news message headers**
+Exemple 12. *behead* : Removing mail and news message headers
+=============================================================
 
 
 .. code-block:: sh
@@ -1256,7 +1267,8 @@ use of the parameter substitution operators discussed in `Section
 10.2 <parameter-substitution.html>`__ .
 
 
-**Example A-13. *password* : Generating random 8-character passwords**
+Exemple 13. *password* : Generating random 8-character passwords
+================================================================
 
 
 .. code-block:: sh
@@ -1319,7 +1331,8 @@ use of the parameter substitution operators discussed in `Section
 in his words, "really exercises quoting and escaping."
 
 
-**Example A-14. *fifo* : Making daily backups, using named pipes**
+Exemple 14. *fifo* : Making daily backups, using named pipes
+============================================================
 
 
 .. code-block:: sh
@@ -1368,7 +1381,8 @@ Stéphane Chazelas used the following script to demonstrate generating
 prime numbers without arrays.
 
 
-**Example A-15. Generating prime numbers using the modulo operator**
+Exemple 15. Generating prime numbers using the modulo operator
+==============================================================
 
 
 .. code-block:: sh
@@ -1431,7 +1445,8 @@ prime numbers without arrays.
 Rick Boivie's revision of Jordi Sanfeliu's *tree* script.
 
 
-**Example A-16. *tree* : Displaying a directory tree**
+Exemple 16. *tree* : Displaying a directory tree
+================================================
 
 
 .. code-block:: sh
@@ -1505,7 +1520,8 @@ Rick Boivie's revision of Jordi Sanfeliu's *tree* script.
 Patsie's version of a directory *tree* script.
 
 
-**Example A-17. *tree2* : Alternate directory tree script**
+Exemple 17. *tree2* : Alternate directory tree script
+=====================================================
 
 
 .. code-block:: sh
@@ -1624,7 +1640,8 @@ essentially reproduces some of the *C* -library string manipulation
 functions.
 
 
-**Example A-18. *string functions* : C-style string functions**
+Exemple 18. *string functions* : C-style string functions
+=========================================================
 
 
 .. code-block:: sh
@@ -1909,7 +1926,8 @@ Michael Zick's complex array example uses the
 directory information.
 
 
-**Example A-19. Directory information**
+Exemple 19. Directory information
+=================================
 
 
 .. code-block:: sh
@@ -2473,7 +2491,8 @@ Mariusz Gniazdowski contributed a `hash <internal.html#HASHREF>`__
 library for use in scripts.
 
 
-**Example A-20. Library of hash functions**
+Exemple 20. Library of hash functions
+=====================================
 
 
 .. code-block:: sh
@@ -2667,7 +2686,8 @@ library for use in scripts.
 Here is an example script using the foregoing hash library.
 
 
-**Example A-21. Colorizing text using hash functions**
+Exemple 21. Colorizing text using hash functions
+================================================
 
 
 .. code-block:: sh
@@ -2739,7 +2759,8 @@ Here is an example script using the foregoing hash library.
 point of view.
 
 
-**Example A-22. More on hash functions**
+Exemple 22. More on hash functions
+==================================
 
 
 .. code-block:: sh
@@ -2896,7 +2917,8 @@ Now for a script that installs and mounts those cute USB keychain
 solid-state "hard drives."
 
 
-**Example A-23. Mounting USB keychain storage devices**
+Exemple 23. Mounting USB keychain storage devices
+=================================================
 
 
 .. code-block:: sh
@@ -3050,7 +3072,8 @@ solid-state "hard drives."
 Converting a text file to HTML format.
 
 
-**Example A-24. Converting to HTML**
+Exemple 24. Converting to HTML
+==============================
 
 
 .. code-block:: sh
@@ -3204,7 +3227,8 @@ Here is something to warm the hearts of webmasters and mistresses: a
 script that saves weblogs.
 
 
-**Example A-25. Preserving weblogs**
+Exemple 25. Preserving weblogs
+==============================
 
 
 .. code-block:: sh
@@ -3282,7 +3306,8 @@ script that saves weblogs.
  How to keep the shell from expanding and reinterpreting text strings.
 
 
-**Example A-26. Protecting literal strings**
+Exemple 26. Protecting literal strings
+======================================
 
 
 .. code-block:: sh
@@ -3442,7 +3467,8 @@ script that saves weblogs.
  But, what if you *want* the shell to expand and reinterpret strings?
 
 
-**Example A-27. Unprotecting literal strings**
+Exemple 27. Unprotecting literal strings
+========================================
 
 
 .. code-block:: sh
@@ -3577,7 +3603,8 @@ script that saves weblogs.
 This interesting script helps hunt down spammers.
 
 
-**Example A-28. Spammer Identification**
+Exemple 28. Spammer Identification
+==================================
 
 
 .. code-block:: sh
@@ -5763,7 +5790,8 @@ This interesting script helps hunt down spammers.
 Another anti-spam script.
 
 
-**Example A-29. Spammer Hunt**
+Exemple 29. Spammer Hunt
+========================
 
 
 .. code-block:: sh
@@ -6056,7 +6084,8 @@ Another anti-spam script.
 .
 
 
-**Example A-30. Making *wget* easier to use**
+Exemple 30. Making *wget* easier to use
+=======================================
 
 
 .. code-block:: sh
@@ -6551,7 +6580,8 @@ Another anti-spam script.
 
 
 
-**Example A-31. A *podcasting* script**
+Exemple 31. A *podcasting* script
+=================================
 
 
 .. code-block:: sh
@@ -6641,7 +6671,8 @@ Another anti-spam script.
 
 
 
-**Example A-32. Nightly backup to a firewire HD**
+Exemple 32. Nightly backup to a firewire HD
+===========================================
 
 
 .. code-block:: sh
@@ -7015,7 +7046,8 @@ Another anti-spam script.
 
 
 
-**Example A-33. An expanded *cd* command**
+Exemple 33. An expanded *cd* command
+====================================
 
 
 .. code-block:: sh
@@ -7792,7 +7824,8 @@ Another anti-spam script.
 
 
 
-**Example A-34. A soundcard setup script**
+Exemple 34. A soundcard setup script
+====================================
 
 
 .. code-block:: sh
@@ -7908,7 +7941,8 @@ Another anti-spam script.
 
 
 
-**Example A-35. Locating split paragraphs in a text file**
+Exemple 35. Locating split paragraphs in a text file
+====================================================
 
 
 .. code-block:: sh
@@ -7984,7 +8018,8 @@ Another anti-spam script.
 
 
 
-**Example A-36. Insertion sort**
+Exemple 36. Insertion sort
+==========================
 
 
 .. code-block:: sh
@@ -8059,7 +8094,8 @@ Another anti-spam script.
 
 
 
-**Example A-37. Standard Deviation**
+Exemple 37. Standard Deviation
+==============================
 
 
 .. code-block:: sh
@@ -8186,7 +8222,8 @@ Another anti-spam script.
 
 
 
-**Example A-38. A *pad* file generator for shareware authors**
+Exemple 38. A *pad* file generator for shareware authors
+========================================================
 
 
 .. code-block:: sh
@@ -8439,7 +8476,8 @@ Another anti-spam script.
 
 
 
-**Example A-39. A *man page* editor**
+Exemple 39. A *man page* editor
+===============================
 
 
 .. code-block:: sh
@@ -8597,7 +8635,8 @@ Another anti-spam script.
 
 
 
-**Example A-40. Petals Around the Rose**
+Exemple 40. Petals Around the Rose
+==================================
 
 
 .. code-block:: sh
@@ -8801,7 +8840,8 @@ Another anti-spam script.
 
 
 
-**Example A-41. Quacky: a Perquackey-type word game**
+Exemple 41. Quacky: a Perquackey-type word game
+===============================================
 
 
 .. code-block:: sh
@@ -9277,7 +9317,8 @@ Another anti-spam script.
 
 
 
-**Example A-42. Nim**
+Exemple 42. Nim
+===============
 
 
 .. code-block:: sh
@@ -9562,7 +9603,8 @@ Another anti-spam script.
 
 
 
-**Example A-43. A command-line stopwatch**
+Exemple 43. A command-line stopwatch
+====================================
 
 
 .. code-block:: sh
@@ -9809,7 +9851,8 @@ solution**
 
 
 
-**Example A-45. The Knight's Tour**
+Exemple 45. The Knight's Tour
+=============================
 
 
 .. code-block:: sh
@@ -10429,7 +10472,8 @@ solution**
 
 
 
-**Example A-46. Magic Squares**
+Exemple 46. Magic Squares
+=========================
 
 
 .. code-block:: sh
@@ -10551,7 +10595,8 @@ solution**
 
 
 
-**Example A-47. Fifteen Puzzle**
+Exemple 47. Fifteen Puzzle
+==========================
 
 
 .. code-block:: sh
@@ -10734,7 +10779,8 @@ solution**
 
 
 
-**Example A-48. *The Towers of Hanoi, graphic version***
+Exemple 48. *The Towers of Hanoi, graphic version*
+==================================================
 
 
 .. code-block:: sh
@@ -10952,7 +10998,8 @@ solution**
 
 
 
-**Example A-49. *The Towers of Hanoi, alternate graphic version***
+Exemple 49. *The Towers of Hanoi, alternate graphic version*
+============================================================
 
 
 .. code-block:: sh
@@ -11417,7 +11464,8 @@ solution**
 
 
 
-**Example A-52. Cycling through all the possible color backgrounds**
+Exemple 52. Cycling through all the possible color backgrounds
+==============================================================
 
 
 .. code-block:: sh
@@ -11478,7 +11526,8 @@ solution**
 
 
 
-**Example A-53. Morse Code Practice**
+Exemple 53. Morse Code Practice
+===============================
 
 
 .. code-block:: sh
@@ -11645,7 +11694,8 @@ solution**
 
 
 
-**Example A-54. Base64 encoding/decoding**
+Exemple 54. Base64 encoding/decoding
+====================================
 
 
 .. code-block:: sh
@@ -11781,7 +11831,8 @@ solution**
 
 
 
-**Example A-55. Inserting text in a file using *sed***
+Exemple 55. Inserting text in a file using *sed*
+================================================
 
 
 .. code-block:: sh
@@ -11828,7 +11879,8 @@ solution**
 
 
 
-**Example A-56. The Gronsfeld Cipher**
+Exemple 56. The Gronsfeld Cipher
+================================
 
 
 .. code-block:: sh
@@ -11985,7 +12037,8 @@ solution**
 
 
 
-**Example A-57. Bingo Number Generator**
+Exemple 57. Bingo Number Generator
+==================================
 
 
 .. code-block:: sh
@@ -12123,7 +12176,8 @@ solution**
  To end this section, a review of the basics . . . and more.
 
 
-**Example A-58. Basics Reviewed**
+Exemple 58. Basics Reviewed
+===========================
 
 
 .. code-block:: sh
@@ -13173,7 +13227,8 @@ solution**
 
 
 
-**Example A-59. Testing execution times of various commands**
+Exemple 59. Testing execution times of various commands
+=======================================================
 
 
 .. code-block:: sh

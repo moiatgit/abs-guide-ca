@@ -450,7 +450,8 @@ Converting a DOS batch file into a shell script is generally
 straightforward, and the result ofttimes reads better than the original.
 
 
-**Example N-1. VIEWDATA.BAT: DOS Batch File**
+Exemple 1. VIEWDATA.BAT: DOS Batch File
+=======================================
 
 
 .. code-block:: sh
@@ -482,7 +483,8 @@ The script conversion is somewhat of an improvement. ` [1]
  <dosbatch.html#FTN.AEN24713>`__
 
 
-**Example N-2. *viewdata.sh* : Shell Script Conversion of VIEWDATA.BAT**
+Exemple 2. *viewdata.sh* : Shell Script Conversion of VIEWDATA.BAT
+==================================================================
 
 
 .. code-block:: sh

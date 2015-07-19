@@ -16,7 +16,8 @@ functions from it in your own ``      .bashrc     `` file or even in
 your scripts.
 
 
-**Example M-1. Sample ``        .bashrc       `` file**
+Exemple 1. Sample ``        .bashrc       `` file
+=================================================
 
 
 .. code-block:: sh
@@ -952,7 +953,8 @@ And, here is a snippet from Andrzej Szelachowski's instructive
 ``      .bash_profile     `` file.
 
 
-**Example M-2. ``        .bash_profile       `` file**
+Exemple 2. ``        .bash_profile       `` file
+================================================
 
 
 .. code-block:: sh
