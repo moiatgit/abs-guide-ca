@@ -540,7 +540,7 @@ Parèntesis: ()
 
 
 
-    |Important
+Important
 
     A listing of commands within
     ``                         parentheses                       ``
@@ -554,19 +554,19 @@ Parèntesis: ()
 
 .. code-block:: sh
 
-    a=123
-    ( a=321; )
+        a=123
+        ( a=321; )
 
-    echo "a = $a"   # a
-= 123
-    # "a" within parenth
-eses acts like a local v
-ariable.
-
-
+        echo "a = $a"   # a
+    = 123
+        # "a" within parenth
+    eses acts like a local v
+    ariable.
 
 
-    .. code-block:: sh
+
+
+.. code-block:: sh
 
         a=123
         ( a=321; )
@@ -575,7 +575,7 @@ ariable.
         # "a" within parentheses acts like a local variable.
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         a=123
         ( a=321; )
@@ -626,7 +626,7 @@ Claus: {}
 
 
 
-    |Caution
+Caution
 
     No spaces allowed within the braces *unless* the spaces are quoted
     or escaped.
@@ -643,7 +643,7 @@ Claus: {}
     **Extended Brace expansion.**
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
         # Echoes characters between a and z.
@@ -673,7 +673,7 @@ Claus: {}
 
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         bash$ { local a;
                   a=123; }
@@ -684,7 +684,7 @@ Claus: {}
 
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         a=123
         { a=321; }
@@ -702,7 +702,7 @@ Exemple 1. Code blocks and I/O redirection
 ==========================================
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         #!/bin/bash
         # Reading lines in /etc/fstab.
@@ -783,7 +783,7 @@ Exemple 2. Saving the output of a code block to a file
 
 
 
-    |Note
+Note
 
     Unlike a command group within (parentheses), as above, a code block
     enclosed by {braces} will *not* normally launch a
@@ -833,7 +833,7 @@ Exemple 2. Saving the output of a code block to a file
 
 
 
-    |Note
+Note
 
     The " ; " ends the ``            -exec           `` option of a
     **find** command sequence. It needs to be escaped to protect it from
@@ -938,7 +938,7 @@ Claudàtors: [ ]
 
 
 
-    |Note
+Note
 
      This is useful for suppressing output when testing for a condition.
     For example, let us test whether a certain command exists.
@@ -1184,7 +1184,7 @@ Barra vertical o *pipe*: \
 
 
 
-    |Note
+Note
 
     The ``            stdout           `` of each process in a pipe must
     be read as the ``            stdin           `` of the next. If this
@@ -1343,7 +1343,7 @@ Exemple 3. Running a loop in the background
 
 
 
-    |Caution
+Caution
 
     A command run in the background within a script may cause the script
     to hang, waiting for a keystroke. Fortunately, there is a
@@ -1411,7 +1411,7 @@ Guió: -
 
 
 
-    |Tip
+Tip
 
     This provides a handy means of removing files whose *names begin
     with a dash* .
@@ -1659,7 +1659,7 @@ Exemple 4. Backup of all files changed in last day
 
 
 
-    |Caution
+Caution
 
     Filenames beginning with "-" may cause problems when coupled with
     the "-" redirection operator. A script should check for this and add
@@ -1675,23 +1675,23 @@ Exemple 4. Backup of all files changed in last day
 
 .. code-block:: sh
 
-    var="-n"
-    echo $var
-    # Has the effect of
-"echo -n", and outputs n
-othing.
+        var="-n"
+        echo $var
+        # Has the effect of
+    "echo -n", and outputs n
+    othing.
 
 
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         var="-n"
         echo $var
         # Has the effect of "echo -n", and outputs nothing.
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         var="-n"
         echo $var
@@ -1710,7 +1710,7 @@ othing.
 
 
 
-    |Caution
+Caution
 
     Do not confuse the "-" used in this sense with the "-" redirection
     operator just discussed. The interpretation of the "-" depends on
@@ -2179,13 +2179,6 @@ Caràcters en blanc
 
    En Bash els conceptes d'*operador* i de *paraula clau* apareixen una mica superposats. Mira
    :ref:`internal_keyword`.
-
-` [2]  <special-chars.html#AEN888>`__
-
-This is more commonly known as the *ternary* operator. Unfortunately,
-*ternary* is an ugly word. It doesn't roll off the tongue, and it
-doesn't elucidate. It obfuscates. *Trinary* is by far the more elegant
-usage.
 
 
 ` [3]  <special-chars.html#AEN1001>`__
