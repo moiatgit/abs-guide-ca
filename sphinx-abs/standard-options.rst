@@ -105,4 +105,3 @@ available at `the GNU standards
 page <http://www.gnu.org/prep/standards/>`__ .
 
 
-.. |Caution| image:: ../images/caution.gif

@@ -291,4 +291,3 @@ is kept.
 
 
 
-.. |Caution| image:: ../images/caution.gif

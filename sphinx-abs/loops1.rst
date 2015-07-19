@@ -1183,4 +1183,3 @@ given condition is met.
 
 
 
-.. |Note| image:: ../images/note.gif

@@ -533,4 +533,3 @@ operations.
 
 
 
-.. |Note| image:: ../images/note.gif

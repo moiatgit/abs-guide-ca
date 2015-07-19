@@ -50,4 +50,3 @@ scripts can easily pass arguments to sed, it is more cumbersome for awk
 
 
 
-.. |Note| image:: ../images/note.gif

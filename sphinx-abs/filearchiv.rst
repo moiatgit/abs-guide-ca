@@ -1778,6 +1778,3 @@ Creates a temporary *directory* when invoked with the
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif

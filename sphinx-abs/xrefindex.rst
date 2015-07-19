@@ -25,7 +25,7 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__ .
 
 **~** *Tilde*
 
--  **~** `home directory <special-chars.html#TILDEREF>`__ , corresponds to ```         $HOME        `` <internalvariables.html#HOMEDIRREF>`__
+-  **~** `home directory <special-chars.html#TILDEREF>`__ , corresponds to ``         $HOME        `` <internalvariables.html#HOMEDIRREF>`__
 
 -  **~/** `*Current user's* home
    directory <special-chars.html#TILDEREF>`__
@@ -63,7 +63,7 @@ Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__ .
 -  Redirection
 
    **<**
-   ```         stdin        `` <io-redirection.html#IOREDIRECTIONREF2>`__
+   ``         stdin        `` <io-redirection.html#IOREDIRECTIONREF2>`__
 
    **<<** `*Here document* <special-chars.html#HEREDOCRRREF>`__
 
@@ -610,7 +610,7 @@ ASCII
 
 `awk <awk.html>`__ field-oriented text processing language
 
--  ```         rand()        `` <randomvar.html#AWKRANDOMREF>`__ ,
+-  ``         rand()        `` <randomvar.html#AWKRANDOMREF>`__ ,
    random function
 
 -  `String manipulation <string-manipulation.html#AWKSTRINGMANIP2>`__
@@ -655,7 +655,7 @@ substitution <commandsub.html#BACKQUOTESREF>`__
 
 `.bashrc <sample-bashrc.html>`__
 
-```       $BASH_SUBSHELL      `` <internalvariables.html#BASHSUBSHELLREF>`__
+``       $BASH_SUBSHELL      `` <internalvariables.html#BASHSUBSHELLREF>`__
 
 `Basic commands <basic.html#BASICCOMMANDS1>`__ , external
 
@@ -910,15 +910,15 @@ interprets numbers as
 
 `Default parameters <parameter-substitution.html#DEFPARAM>`__
 
-```       /dev      `` <devproc.html#DEVPROCREF>`__ directory
+``       /dev      `` <devproc.html#DEVPROCREF>`__ directory
 
--  ```         /dev/null        `` <zeros.html#DEVNULLREF>`__
+-  ``         /dev/null        `` <zeros.html#DEVNULLREF>`__
    pseudo-device file
 
--  ```         /dev/urandom        `` <randomvar.html#URANDOMREF>`__
+-  ``         /dev/urandom        `` <randomvar.html#URANDOMREF>`__
    pseudo-device file, generating pseudorandom numbers with
 
--  ```         /dev/zero        `` <zeros.html#ZEROSREF1>`__ ,
+-  ``         /dev/zero        `` <zeros.html#ZEROSREF1>`__ ,
    pseudo-device file
 
 `Device file <devref1.html#DEVFILEREF>`__
@@ -926,7 +926,7 @@ interprets numbers as
 `*dialog* <assortedtips.html#DIALOGREF>`__ , utility for generating
 *dialog* boxes in a script
 
-```       $DIRSTACK      `` <internalvariables.html#DIRSTACKREF>`__
+``       $DIRSTACK      `` <internalvariables.html#DIRSTACKREF>`__
 *directory stack*
 
 `Disabled commands <restricted-sh.html#DISABLEDCOMMREF>`__ , in
@@ -974,7 +974,7 @@ arithmetic expansion/evaluation construct
 -  `Setting a variable <internal.html#ECHOCS>`__ using `command
    substitution <commandsub.html#COMMANDSUBREF>`__
 
--  ```         /bin/echo        `` <internal.html#BINECHO>`__ , external
+-  ``         /bin/echo        `` <internal.html#BINECHO>`__ , external
    *echo* command
 
 `elif <testconstructs.html#ELIFREF1>`__ , Contraction of *else* and
@@ -1001,13 +1001,13 @@ generating prime numbers
 
 -  `Used with *Unicode* characters <bashver4.html#UNICODEREF2>`__
 
-```       /etc/fstab      `` <system.html#FSTABREF>`__ (filesystem
+``       /etc/fstab      `` <system.html#FSTABREF>`__ (filesystem
 mount) file
 
-```       /etc/passwd      `` <files.html#DATAFILESREF1>`__ (user
+``       /etc/passwd      `` <files.html#DATAFILESREF1>`__ (user
 account) file
 
-```       $EUID      `` <internalvariables.html#EUIDREF>`__ , *Effective
+``       $EUID      `` <internalvariables.html#EUIDREF>`__ , *Effective
 user ID*
 
 `eval <internal.html#EVALREF>`__ , Combine and *evaluate* expression(s),
@@ -1054,7 +1054,7 @@ Exit and Exit status
 
    `*Successful* <exit-status.html#EXITSUCCESS>`__ , **0**
 
-   ```         /usr/include/sysexits.h        `` <exitcodes.html#SYSEXITSREF>`__
+   ``         /usr/include/sysexits.h        `` <exitcodes.html#SYSEXITSREF>`__
    , system file listing C/C++ standard exit codes
 
 `Export <internal.html#EXPORTREF2>`__ , to make available variables to
@@ -1239,7 +1239,7 @@ script *command-line* arguments
 `getopts <internal.html#GETOPTSX>`__ , Bash *builtin* for parsing script
 *command-line* arguments
 
--  ```         $OPTIND        `` /
+-  ``         $OPTIND        `` /
    ``         $OPTARG        `` <internal.html#GETOPTSOPT>`__
 
 `Global <subshells.html#SCOPEREF>`__ variable
@@ -1266,7 +1266,7 @@ language
 
 `Gronsfeld cipher <contributed-scripts.html#GRONSFELD>`__
 
-```       $GROUPS      `` <internalvariables.html#GROUPSREF>`__ ,
+``       $GROUPS      `` <internalvariables.html#GROUPSREF>`__ ,
 *Groups* user belongs to
 
 `gzip <filearchiv.html#GZIPREF>`__ , compression utility
@@ -1338,17 +1338,17 @@ at the beginning of a text file
 
 `History commands <histcommands.html>`__
 
-```       $HOME      `` <internalvariables.html#HOMEDIRREF>`__ , *user's
+``       $HOME      `` <internalvariables.html#HOMEDIRREF>`__ , *user's
 home directory*
 
 `Homework assignment solver <contributed-scripts.html#HOMEWORK>`__
 
-```       $HOSTNAME      `` <internalvariables.html#HOSTNAMEREF>`__ ,
+``       $HOSTNAME      `` <internalvariables.html#HOSTNAMEREF>`__ ,
 system *host name*
 
 \* \* \*
 
-```       $Id      `` parameter <assortedtips.html#RCSREF>`__ , in *rcs*
+``       $Id      `` parameter <assortedtips.html#RCSREF>`__ , in *rcs*
 (Revision Control System)
 
 `if [ condition ]; then ... <tests.html#IFTHEN>`__ *test* construct
@@ -1358,7 +1358,7 @@ system *host name*
 
    `Fixup <assortedtips.html#IFGREPFIX>`__ for *if-grep* test
 
-```       $IFS      `` <internalvariables.html#IFSREF>`__ , *Internal
+``       $IFS      `` <internalvariables.html#IFSREF>`__ , *Internal
 field separator* variable
 
 -  `Defaults to *whitespace* <internalvariables.html#IFSWS>`__
@@ -1435,7 +1435,7 @@ operations on variables
 `Limit string <here-docs.html#LIMITSTRINGREF>`__ , in a `here
 document <here-docs.html#HEREDOCREF>`__
 
-```       $LINENO      `` <internalvariables.html#LINENOREF>`__ ,
+``       $LINENO      `` <internalvariables.html#LINENOREF>`__ ,
 variable indicating the *line number* where it appears in a script
 
 `Link <basic.html#LINKREF>`__ , file (using *ln* command)
@@ -1554,13 +1554,13 @@ comparison <comparison-ops.html#ICOMPARISON1>`__ test
 
 `m4 <extmisc.html#M4REF>`__ , macro processing language
 
-```       $MACHTYPE      `` <internalvariables.html#MACHTYPEREF>`__ ,
+``       $MACHTYPE      `` <internalvariables.html#MACHTYPEREF>`__ ,
 *Machine type*
 
 `Magic number <sha-bang.html#MAGNUMREF>`__ , marker at the head of a
 file indicating the file type
 
-```       Makefile      `` <filearchiv.html#MAKEFILEREF>`__ , file
+``       Makefile      `` <filearchiv.html#MAKEFILEREF>`__ , file
 containing the list of dependencies used by
 `make <filearchiv.html#MAKEREF>`__ command
 
@@ -1631,7 +1631,7 @@ Obfuscation
 
 `od <extmisc.html#ODREF>`__ , *octal dump*
 
-```       $OLDPWD      `` <internalvariables.html#OLDPWD>`__ Previous
+``       $OLDPWD      `` <internalvariables.html#OLDPWD>`__ Previous
 working directory
 
 `openssl <filearchiv.html#OPENSSLREF>`__ encryption utility
@@ -1705,7 +1705,7 @@ Parentheses
 -  `Double parentheses <dblparens.html#DBLPARENSREF>`__ , in arithmetic
    expansion
 
-```       $PATH      `` <internalvariables.html#PATHREF>`__ , the *path*
+``       $PATH      `` <internalvariables.html#PATHREF>`__ , the *path*
 (location of system binaries)
 
 -  Appending directories to ``        $PATH       `` `using the
@@ -1746,7 +1746,7 @@ the output of a command to another command or to the shell
    to indicate `exit status <exit-status.html#EXITSTATUSREF>`__ within a
    *pipe*
 
--  ```         $PIPESTATUS        `` <internalvariables.html#PIPESTATUSREF>`__
+-  ``         $PIPESTATUS        `` <internalvariables.html#PIPESTATUSREF>`__
    , *exit status* of last executed pipe
 
 -  `Piping output of a command <special-chars.html#UCREF>`__ to a script
@@ -1866,10 +1866,10 @@ Pointers
 
 `Positional parameters <othertypesv.html#POSPARAMREF1>`__
 
--  ```         $@        `` <internalvariables.html#APPREF2>`__ , as
+-  ``         $@        `` <internalvariables.html#APPREF2>`__ , as
    *separate* words
 
--  ```         $*        `` <internalvariables.html#APPREF>`__ , as a
+-  ``         $*        `` <internalvariables.html#APPREF>`__ , as a
    *single* word
 
 -  `in functions <complexfunct.html#PASSEDARGS>`__
@@ -1877,14 +1877,14 @@ Pointers
 ` POSIX  <sha-bang.html#POSIX2REF>`__ , *Portable Operating System
 Interface / UNIX*
 
--  ```         --posix        ``
+-  ``         --posix        ``
    option <portabilityissues.html#POSIX3REF>`__
 
 -  `1003.2 standard <portabilityissues.html#POSIX3REF>`__
 
 -  `Character classes <x17129.html#POSIXREF>`__
 
-```       $PPID      `` <internalvariables.html#PPIDREF>`__ , *process
+``       $PPID      `` <internalvariables.html#PPIDREF>`__ , *process
 ID* of parent process
 
 `Precedence <opprecedence.html#OPPRECEDENCE1>`__ , operator
@@ -1903,7 +1903,7 @@ Prime numbers
 
 `printf <internal.html#PRINTFREF>`__ , *formatted print* command
 
-```       /proc      `` <procref1.html#PROCREF2>`__ directory
+``       /proc      `` <procref1.html#PROCREF2>`__ directory
 
 -  `Running processes <procref1.html#PROCRUNNING>`__ , files describing
 
@@ -1934,16 +1934,16 @@ Prime numbers
 
 Prompt
 
--  ```         $PS1        `` <internalvariables.html#PS1REF>`__ , *Main
+-  ``         $PS1        `` <internalvariables.html#PS1REF>`__ , *Main
    prompt* , seen at command line
 
--  ```         $PS2        `` <internalvariables.html#SECPROMPTREF>`__ ,
+-  ``         $PS2        `` <internalvariables.html#SECPROMPTREF>`__ ,
    Secondary prompt
 
 `Pseudo-code <assortedtips.html#PSEUDOCODEREF>`__ , as problem-solving
 method
 
-```       $PWD      `` <internalvariables.html#PWDREF>`__ , Current
+``       $PWD      `` <internalvariables.html#PWDREF>`__ , Current
 working directory
 
 \* \* \*
@@ -1977,12 +1977,12 @@ Question mark, **?**
 
 Random numbers
 
--  ```         /dev/urandom        `` <randomvar.html#URANDOMREF>`__
+-  ``         /dev/urandom        `` <randomvar.html#URANDOMREF>`__
 
--  ```         rand()        `` <randomvar.html#AWKRANDOMREF>`__ ,
+-  ``         rand()        `` <randomvar.html#AWKRANDOMREF>`__ ,
    random function in `awk <awk.html#AWKREF>`__
 
--  ```         $RANDOM        `` <randomvar.html#RANDOMVAR01>`__ , Bash
+-  ``         $RANDOM        `` <randomvar.html#RANDOMVAR01>`__ , Bash
    function that returns a pseudorandom integer
 
 -  `Random sequence generation <timedate.html#DATERANDREF>`__ , using
@@ -2000,7 +2000,7 @@ Raspberry Pi (single-board computer)
 `rcs <assortedtips.html#RCSREF>`__
 
 `read <internal.html#READREF>`__ , set value of a variable from
-```       stdin      `` <ioredirintro.html#STDINOUTDEF>`__
+``       stdin      `` <ioredirintro.html#STDINOUTDEF>`__
 
 -  `Detecting *arrow* keys <internal.html#READARROW>`__
 
@@ -2014,7 +2014,7 @@ Raspberry Pi (single-board computer)
 
 -  `Redirection from a file <internal.html#READREDIR0>`__ to *read*
 
--  ```         $REPLY        `` <internalvariables.html#REPLYREF>`__ ,
+-  ``         $REPLY        `` <internalvariables.html#REPLYREF>`__ ,
    default *read* variable
 
 -  `Timed input <internal.html#READTIMED>`__
@@ -2056,25 +2056,25 @@ Redirection
 
 -  `*read* input redirected <internal.html#READREDIR0>`__ from a file
 
--  ```         stderr        `` to
+-  ``         stderr        `` to
    ``         stdout        `` <io-redirection.html#IOREDIRECTIONREF1>`__
 
    ``        2>&1       ``
 
--  ```         stdin        `` /
+-  ``         stdin        `` /
    ``         stdout        `` <special-chars.html#COXEX>`__ , using
    **-**
 
--  ```         stdin        `` of a
+-  ``         stdin        `` of a
    *function* <complexfunct.html#REDSTDINFUNC1>`__
 
--  ```         stdout        `` to a
+-  ``         stdout        `` to a
    file <io-redirection.html#IOREDIRECTIONREF>`__
 
    ``                 >               `` ...
    ``                 >>               ``
 
--  ```         stdout        `` to *file
+-  ``         stdout        `` to *file
    descriptor* <io-redirection.html#IOREDIRECTIONREF1>`__ *j*
 
    ``        >&j       ``
@@ -2084,13 +2084,13 @@ Redirection
 
    ``        i>&j       ``
 
--  ```         stdout        `` of a
+-  ``         stdout        `` of a
    command <special-chars.html#REDIROUTERROR2>`__ to
    ``        stderr       ``
 
    ``        >&2       ``
 
--  ```         stdout        `` *and* ``         stderr        `` of a
+-  ``         stdout        `` *and* ``         stderr        `` of a
    command <special-chars.html#REDIROUTERROR>`__ to a file
 
    ``        &>       ``
@@ -2142,7 +2142,7 @@ Redirection
 
    **[: :]** `POSIX character classes <x17129.html#POSIXREF>`__
 
-```       $REPLY      `` <internalvariables.html#REPLYREF>`__ , Default
+``       $REPLY      `` <internalvariables.html#REPLYREF>`__ , Default
 value associated with `read <internal.html#READREF>`__ command
 
 `Restricted shell <restricted-sh.html#RESTRICTEDSHREF>`__ , shell (or
@@ -2190,7 +2190,7 @@ useful definitions and `functions <functions.html#FUNCTIONREF>`__
 
 `select <testbranch.html#SELECTREF>`__ , construct for menu building
 
--  ```                   in                                 list                     ``
+-  ``                   in                                 list                     ``
    omitted <testbranch.html#INLISTOMIT>`__
 
 `Semaphore <system.html#SEMAPHOREREF>`__
@@ -2219,7 +2219,7 @@ or utility
 `shift <othertypesv.html#SHIFTREF>`__ , reassigning *positional
 parameters*
 
-```       $SHLVL      `` <internalvariables.html#SHLVLREF>`__ , *shell
+``       $SHLVL      `` <internalvariables.html#SHLVLREF>`__ , *shell
 level* , depth to which the shell (or script) is nested
 
 `shopt <internal.html#SHOPTREF>`__ , change *shell options*
@@ -2280,7 +2280,7 @@ Standard Deviation, `example script <contributed-scripts.html#STDDEV>`__
 
 `Startup files <files.html#FILESREF1>`__ , Bash
 
-```       stdin      `` and
+``       stdin      `` and
 ``       stdout      `` <ioredirintro.html#STDINOUTDEF>`__
 
 `Stopwatch <contributed-scripts.html#STOPWATCH>`__ , example script
@@ -2609,7 +2609,7 @@ Timed input
 
 -  `Widgets <assortedtips.html#WIDGETREF>`__ , invoking from a script
 
-```       $TMOUT      `` <internalvariables.html#TMOUTREF>`__ , Timeout
+``       $TMOUT      `` <internalvariables.html#TMOUTREF>`__ , Timeout
 interval
 
 `Token <testconstructs.html#TOKENREF>`__ , a symbol that may expand to a
@@ -2646,7 +2646,7 @@ status <exit-status.html#EXITSTATUSREF>`__
 
 \* \* \*
 
-```       $UID      `` <internalvariables.html#UIDREF>`__ , User ID
+``       $UID      `` <internalvariables.html#UIDREF>`__ , User ID
 number
 
 `unalias <aliases.html#UNALIASREF>`__ , to remove an
@@ -2788,7 +2788,7 @@ a sorted file
 `Whitespace <special-chars.html#WHITESPACEREF>`__ , spaces, tabs, and
 newline characters
 
--  ```         $IFS        `` defaults
+-  ``         $IFS        `` defaults
    to <internalvariables.html#IFSWS>`__
 
 -  `Inappropriate use of <gotchas.html#WSBAD>`__
@@ -2817,7 +2817,7 @@ newline characters
 
 -  `Asterisk \* <special-chars.html#ASTERISKREF>`__
 
--  In ```                   [list]                 ``
+-  In ``                   [list]                 ``
    constructs <loops1.html#LIGLOB>`__
 
 -  `Question mark ? <special-chars.html#WILDCARDQU>`__
@@ -2862,4 +2862,3 @@ not yet been `killed <x9644.html#KILLREF>`__ by its
 `parent <internal.html#PARENTREF>`__
 
 
-.. |Note| image:: ../images/note.gif

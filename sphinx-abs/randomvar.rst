@@ -883,4 +883,3 @@ produce series with very long cycles.
 
 
 
-.. |Note| image:: ../images/note.gif

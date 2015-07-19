@@ -133,4 +133,3 @@ even when no error is present.
 
 
 
-.. |Note| image:: ../images/note.gif

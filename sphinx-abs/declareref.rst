@@ -370,4 +370,3 @@ operations <refcards.html#STRINGOPSTAB>`__ .
 
 
 
-.. |Caution| image:: ../images/caution.gif

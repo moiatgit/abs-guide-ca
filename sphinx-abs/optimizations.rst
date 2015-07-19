@@ -637,4 +637,3 @@ This usually means liberal use of
 
 
 
-.. |Note| image:: ../images/note.gif

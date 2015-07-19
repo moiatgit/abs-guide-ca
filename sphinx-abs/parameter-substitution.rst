@@ -39,7 +39,6 @@ XXX 10.2. Substitució de paràmetres
         echo ${username-`whoami`}
         # Mostra el resultat de `whoami` si la variable $username no està assignada.
 
-    .. figure:: ../images/note.gif
        :align: center
        :alt: Atenció
 
@@ -288,7 +287,6 @@ següents complementen les operacions de strings que consideren la
     `array <http://tldp.org/LDP/abs/html/arrays.html#ARRAYREF>`_,
     **${#array}** correspon a la longitud del primer element de l'array.
 
-    .. figure:: ../images/note.gif
        :align: center
        :alt: Atenció
 

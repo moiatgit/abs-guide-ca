@@ -926,7 +926,7 @@ Claudàtors: [ ]
 
     ``                   command &>filename                 `` redirects
     both the
-    ```          stdout         `` <ioredirintro.html#STDINOUTDEF>`__
+    ``          stdout         `` <ioredirintro.html#STDINOUTDEF>`__
     and the ``         stderr        `` of ``         command        ``
     to ``         filename        `` .
 
@@ -2271,7 +2271,3 @@ why a *blank line* , consisting only of a linefeed, is considered
 whitespace.
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif
-.. |Important| image:: ../images/important.gif
-.. |Tip| image:: ../images/tip.gif

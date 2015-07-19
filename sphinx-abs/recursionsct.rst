@@ -181,4 +181,3 @@ causing a segfault.
 
 
 
-.. |Caution| image:: ../images/caution.gif

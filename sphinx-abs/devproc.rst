@@ -10,11 +10,11 @@ XXX  Chapter 29. ``      /dev     `` and ``      /proc     ``
 
 
 
-29.1. ```         /dev        `` <devref1.html>`__
+29.1. ``         /dev        `` <devref1.html>`__
 
 
 
-29.2. ```         /proc        `` <procref1.html>`__
+29.2. ``         /proc        `` <procref1.html>`__
 
 
 

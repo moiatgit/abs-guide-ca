@@ -22,10 +22,10 @@ XXX  8.1. Operators
 
 
 
-    |Caution|
+    .. caution::
 
-    Do not confuse the "=" assignment operator with the `= test
-    operator <comparison-ops.html#EQUALSIGNREF>`__ .
+        Do not confuse the "=" assignment operator with the `= test
+        operator <comparison-ops.html#EQUALSIGNREF>`__ .
 
 --------------------------------------------------------------------------------------
 
@@ -382,10 +382,10 @@ As of version >= 2.05b, Bash supports 64-bit integers.
 
 
 
-|Caution|
+.. caution::
 
-Bash does not understand floating point arithmetic. It treats numbers
-containing a decimal point as strings.
+    Bash does not understand floating point arithmetic. It treats numbers
+    containing a decimal point as strings.
 
 ----------------------------------------------------------------------------------
 
@@ -687,5 +687,3 @@ consequences.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif

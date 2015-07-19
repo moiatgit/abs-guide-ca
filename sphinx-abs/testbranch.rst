@@ -573,4 +573,3 @@ layout a more structured appearance.
 
 
 
-.. |Note| image:: ../images/note.gif

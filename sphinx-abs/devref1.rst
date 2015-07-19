@@ -30,16 +30,16 @@ filesystem within a single large file. See `Example
 17-7 <system.html#ISOMOUNTREF>`__.
 
 A few of the pseudo-devices in ``/dev`` have other specialized uses,
-such as ```/dev/null`` <zeros.html#ZEROSREF>`__,
-```/dev/zero`` <zeros.html#ZEROSREF1>`__,
-```/dev/urandom`` <randomvar.html#URANDOMREF>`__, ``/dev/sda1`` (hard
+such as ``/dev/null`` <zeros.html#ZEROSREF>`__,
+``/dev/zero`` <zeros.html#ZEROSREF1>`__,
+``/dev/urandom`` <randomvar.html#URANDOMREF>`__, ``/dev/sda1`` (hard
 drive partition), ``/dev/udp`` (*User Datagram Packet* port), and
-```/dev/tcp`` <devref1.html#DEVTCP>`__.
+``/dev/tcp`` <devref1.html#DEVTCP>`__.
 
 For instance:
 
 To manually `mount <system.html#MOUNTREF>`__ a USB flash drive, append
-the following line to ```/etc/fstab`` <system.html#FSTABREF>`__.
+the following line to ``/etc/fstab`` <system.html#FSTABREF>`__.
 `[3] <devref1.html#FTN.AEN19093>`__
 
 | .. code-block:: sh

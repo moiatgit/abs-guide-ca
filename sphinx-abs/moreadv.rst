@@ -1039,6 +1039,3 @@ execution of a command involving
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Tip| image:: ../images/tip.gif
-.. |Important| image:: ../images/important.gif

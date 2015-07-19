@@ -704,6 +704,3 @@ the following line.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Important| image:: ../images/important.gif
-.. |Note| image:: ../images/note.gif

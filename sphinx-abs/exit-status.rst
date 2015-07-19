@@ -329,5 +329,3 @@ In those instances when there is no
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif

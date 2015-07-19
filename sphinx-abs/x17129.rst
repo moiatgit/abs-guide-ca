@@ -581,5 +581,3 @@ newline in a multiple line expression, the dot will match the newline.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Important| image:: ../images/important.gif

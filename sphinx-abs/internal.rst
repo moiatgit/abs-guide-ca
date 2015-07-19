@@ -2841,6 +2841,3 @@ interactive shell.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif
-.. |Tip| image:: ../images/tip.gif

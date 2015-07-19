@@ -138,7 +138,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
     `cd <internal.html#CDREF>`__ command, similar in function to the
     `$PATH <internalvariables.html#PATHREF>`__ variable for binaries.
     The ``         $CDPATH        `` variable may be set in the local
-    ```          ~/.bashrc         `` <sample-bashrc.html#BASHRC>`__
+    ``          ~/.bashrc         `` <sample-bashrc.html#BASHRC>`__
     file.
 
 
@@ -230,7 +230,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
 
     This is a listing (array) of the group id numbers for current user,
     as recorded in
-    ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__
+    ``          /etc/passwd         `` <files.html#DATAFILESREF1>`__
     and ``         /etc/group        `` .
 
 
@@ -643,7 +643,7 @@ Exemple 1. $IFS and whitespace
 ===============
 
     Often set in the
-    ```          .bashrc         `` <sample-bashrc.html>`__ or
+    ``          .bashrc         `` <sample-bashrc.html>`__ or
     ``         /etc/profile        `` files, this variable controls
     collation order in filename expansion and pattern matching. If
     mishandled, ``         LC_COLLATE        `` can cause unexpected
@@ -741,7 +741,7 @@ Exemple 1. $IFS and whitespace
     a list of directories, separated by colons. Normally, the system
     stores the ``         $PATH        `` definition in
     ``         /etc/profile        `` and/or
-    ```          ~/.bashrc         `` <sample-bashrc.html>`__ (see
+    ``          ~/.bashrc         `` <sample-bashrc.html>`__ (see
     `Appendix H <files.html>`__ ).
 
 
@@ -1421,7 +1421,7 @@ Exemple 4. Timed *read*
     User ID number
 
     Current user's user identification number, as recorded in
-    ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__
+    ``          /etc/passwd         `` <files.html#DATAFILESREF1>`__
 
     This is the current user's real id, even if she has temporarily
     assumed another identity through `su <system.html#SUREF>`__ .
@@ -2091,5 +2091,3 @@ of the script <internalvariables.html#BASHPIDREF>`__ , not the subshell.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif

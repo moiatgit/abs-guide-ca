@@ -279,4 +279,3 @@ parameters set to arguments.
 
 
 
-.. |Note| image:: ../images/note.gif

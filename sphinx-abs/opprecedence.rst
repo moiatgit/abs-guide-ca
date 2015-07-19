@@ -280,4 +280,3 @@ Notes
 
 
 
-.. |Tip| image:: ../images/tip.gif

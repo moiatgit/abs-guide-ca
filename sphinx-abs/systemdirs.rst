@@ -33,10 +33,10 @@ intimately familiar with the following system directories.
    *Et cetera* . Systemwide configuration scripts.
 
    Of particular interest are the
-   ```         /etc/fstab        `` <system.html#FSTABREF>`__
+   ``         /etc/fstab        `` <system.html#FSTABREF>`__
    (filesystem table), ``        /etc/mtab       `` (mounted filesystem
    table), and the
-   ```         /etc/inittab        `` <system.html#INITTABREF>`__ files.
+   ``         /etc/inittab        `` <system.html#INITTABREF>`__ files.
 
 -  ``        /etc/rc.d       ``
 
@@ -137,4 +137,3 @@ This likewise accounts for the split between ``       /sbin      `` and
 
 
 
-.. |Warning| image:: ../images/warning.gif

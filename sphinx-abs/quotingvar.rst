@@ -336,5 +336,3 @@ into separate and discrete arguments.
 
 
 
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif

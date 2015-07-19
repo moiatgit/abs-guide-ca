@@ -351,5 +351,3 @@ If no address range is specified, the default is *all* lines.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Tip| image:: ../images/tip.gif

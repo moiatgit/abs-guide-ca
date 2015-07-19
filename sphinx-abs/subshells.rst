@@ -439,4 +439,3 @@ does *not* (usually) fork off a subprocess / subshell.
 
 
 
-.. |Note| image:: ../images/note.gif

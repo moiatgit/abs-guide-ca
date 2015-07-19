@@ -69,7 +69,7 @@ Write a script to carry out each of the following tasks.
     Generate a "unique" 6-digit hexadecimal identifier for your
     computer. Do *not* use the flawed `hostid <system.html#HOSTIDREF>`__
     command. Hint: **`md5sum <filearchiv.html#MD5SUMREF>`__
-    ```           /etc/passwd          `` <files.html#DATAFILESREF1>`__**
+    ``           /etc/passwd          `` <files.html#DATAFILESREF1>`__**
     , then select the first 6 digits of output.
 
  **Backup**
@@ -160,7 +160,7 @@ Write a script to carry out each of the following tasks.
 
     Hint: use `who <system.html#WHOREF>`__ ,
     `lastlog <system.html#LASTLOGREF>`__ , and parse
-    ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ .
+    ``          /etc/passwd         `` <files.html#DATAFILESREF1>`__ .
 
  **Safe Delete**
     Implement, as a script, a "safe" delete command,
@@ -272,7 +272,7 @@ Write a script to carry out each of the following tasks.
 
  **Parsing**
     Parse
-    ```          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
+    ``          /etc/passwd         `` <files.html#DATAFILESREF1>`__ ,
     and output its contents in nice, easy-to-read tabular form.
 
  **Logging Logins**
@@ -363,7 +363,7 @@ Write a script to carry out each of the following tasks.
 
     -  Enable the script to check all the passwords on your system.
        These do not reside in
-       ```            /etc/passwd           `` <files.html#DATAFILESREF1>`__
+       ``            /etc/passwd           `` <files.html#DATAFILESREF1>`__
        .
 
     This exercise tests mastery of `Regular

@@ -1229,5 +1229,3 @@ Too many levels of recursion may crash a script with a segfault.
 --------------
 
 
-.. Caution image:: ../images/caution.gif
-.. Note image:: ../images/note.gif

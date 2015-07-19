@@ -1039,4 +1039,3 @@ with *Tk* extensions), *XForms4Perl* ( *Perl* with *XForms* extensions),
 
 
 
-.. |Caution| image:: ../images/caution.gif

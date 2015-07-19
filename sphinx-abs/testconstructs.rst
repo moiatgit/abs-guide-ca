@@ -841,5 +841,3 @@ and commands.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif

@@ -895,13 +895,13 @@ use by the debugger.
 #. ``           $BASH_ARGC          ``
 
    Number of command-line arguments passed to script, similar to
-   ```            $#           `` <internalvariables.html#CLACOUNTREF>`__
+   ``            $#           `` <internalvariables.html#CLACOUNTREF>`__
    .
 
 #. ``           $BASH_ARGV          ``
 
    Final command-line parameter passed to script, equivalent
-   ```            ${!#}           `` <othertypesv.html#LASTARGREF>`__ .
+   ``            ${!#}           `` <othertypesv.html#LASTARGREF>`__ .
 
 #. ``           $BASH_COMMAND          ``
 
@@ -929,7 +929,7 @@ use by the debugger.
    This is the name of the script, usually the same as
    `$0 <othertypesv.html#ARG0>`__ .
 
-#. ```            $BASH_SUBSHELL           `` <internalvariables.html#BASHSUBSHELLREF>`__
+#. ``            $BASH_SUBSHELL           `` <internalvariables.html#BASHSUBSHELLREF>`__
 
 
 
@@ -946,5 +946,3 @@ assigned to `exit <exit-status.html#EXITCOMMANDREF>`__ .
 
 
 
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif

@@ -515,5 +515,3 @@ The same effect as **autoload** can be achieved with `typeset
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Tip| image:: ../images/tip.gif

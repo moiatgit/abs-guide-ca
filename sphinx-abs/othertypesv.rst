@@ -463,6 +463,3 @@ safer to check `$BASH\_Source <debugging.html#BASHSOURCEREF>`__ .
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif
-.. |Tip| image:: ../images/tip.gif

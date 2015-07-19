@@ -1347,5 +1347,3 @@ abbreviation.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Warning| image:: ../images/warning.gif

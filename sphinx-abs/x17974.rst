@@ -244,4 +244,3 @@ variables within a subshell <subshells.html#PARVIS>`__ problem.
 
 
 
-.. |Important| image:: ../images/important.gif

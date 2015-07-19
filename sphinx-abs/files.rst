@@ -102,4 +102,3 @@ In older versions of UNIX, passwords *were* stored in
 
 
 
-.. |Note| image:: ../images/note.gif

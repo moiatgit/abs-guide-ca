@@ -926,5 +926,3 @@ and industrial standards.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif

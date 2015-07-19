@@ -1958,6 +1958,3 @@ often found on commercial UNIX systems.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Tip| image:: ../images/tip.gif
-.. |Caution| image:: ../images/caution.gif

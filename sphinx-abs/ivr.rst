@@ -266,4 +266,3 @@ scripting language is, at best, something of an afterthought.
 
 
 
-.. |Caution| image:: ../images/caution.gif

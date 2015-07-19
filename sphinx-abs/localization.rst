@@ -283,4 +283,3 @@ by Alfredo Pironti, and by Bruno Haible, maintainer of GNU
 `gettext <textproc.html#GETTEXTREF>`__ .
 
 
-.. |Note| image:: ../images/note.gif

@@ -1012,7 +1012,7 @@ damage your system if misused.
 
  **procinfo**
     Extract and list information and statistics from the
-    ```          /proc         ``
+    ``          /proc         ``
     pseudo-filesystem <devproc.html#DEVPROCREF>`__ . This gives a very
     extensive and detailed listing.
 
@@ -2343,7 +2343,7 @@ damage your system if misused.
     ``         /aaa/bbb        `` as the base directory, rather than
     ``         /        `` as is normally the case. An **alias XX
     'chroot /aaa/bbb ls'** in a user's
-    ```          ~/.bashrc         `` <sample-bashrc.html>`__
+    ``          ~/.bashrc         `` <sample-bashrc.html>`__
     effectively restricts which portion of the filesystem she may run
     command "XX" on.
 
@@ -3081,8 +3081,3 @@ variables in a single command's environment.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Tip| image:: ../images/tip.gif
-.. |Caution| image:: ../images/caution.gif
-.. |Warning| image:: ../images/warning.gif
-.. |Important| image:: ../images/important.gif

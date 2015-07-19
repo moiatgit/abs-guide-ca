@@ -265,4 +265,3 @@ loop commands, such as `while <loops1.html#WHILELOOPREF>`__ and
 
 
 
-.. |Caution| image:: ../images/caution.gif

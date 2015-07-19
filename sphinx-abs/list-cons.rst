@@ -272,5 +272,3 @@ See `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and `Example
 variables.
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Important| image:: ../images/important.gif

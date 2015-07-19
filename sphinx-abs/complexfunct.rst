@@ -1217,6 +1217,3 @@ The **return** command is a Bash `builtin <internal.html#BUILTINREF>`__
 
 
 
-.. |Important| image:: ../images/important.gif
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif

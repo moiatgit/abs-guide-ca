@@ -592,4 +592,3 @@ script?
 
 
 
-.. |Note| image:: ../images/note.gif

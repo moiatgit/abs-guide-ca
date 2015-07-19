@@ -146,4 +146,3 @@ limited means is more critically important than ever.
 
 
 
-.. |Warning| image:: ../images/warning.gif

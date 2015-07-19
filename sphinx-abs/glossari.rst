@@ -48,4 +48,4 @@ llibre, amb la versió en anglès entre parèntesis.
 
    Tilde oberta (Back quotes o backticks)
 
-        El caràter ``\```
+        El caràter ``\``

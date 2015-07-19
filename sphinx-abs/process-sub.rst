@@ -364,5 +364,3 @@ substitution.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif

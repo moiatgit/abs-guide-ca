@@ -1018,7 +1018,3 @@ tabs <here-docs.html#LIMITSTRDASH>`__ .
 
 
 
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif
-.. |Warning| image:: ../images/warning.gif

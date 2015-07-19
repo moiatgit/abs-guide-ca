@@ -17,7 +17,7 @@ brackets, and certain other special characters (such as ^ for negating
 the sense of a match). There are important limitations on wild card
 characters in globbing, however. Strings containing
 ``             *           `` will not match filenames that start with a
-dot, as, for example, ```       .bashrc      `` <sample-bashrc.html>`__
+dot, as, for example, ``       .bashrc      `` <sample-bashrc.html>`__
 . ` [3]  <globbingref.html#FTN.AEN17592>`__ Likewise, the
 ``             ?           `` has a different meaning in globbing than
 as part of an RE.
@@ -248,5 +248,3 @@ explicitly includes the dot as a literal character.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif

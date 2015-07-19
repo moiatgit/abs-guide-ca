@@ -116,4 +116,3 @@ XXX  4.2. Variable Assignment
 
 
 
-.. |Caution| image:: ../images/caution.gif

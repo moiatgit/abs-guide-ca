@@ -716,7 +716,7 @@ update.
 
 
 -  `Here documents <here-docs.html#HEREDOCREF>`__ embedded in
-   ```                     $( ... )                   `` command
+   ``                     $( ... )                   `` command
    substitution <varassignment.html#COMMANDSUBREF0>`__ constructs may
    terminate with a simple **)** .
 
@@ -1014,5 +1014,3 @@ read <internal.html#PIPEREADREF0>`__ problem.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif

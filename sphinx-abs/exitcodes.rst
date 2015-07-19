@@ -143,4 +143,3 @@ exit codes between compiled C/C++ binaries and shell scripts.
 
 
 
-.. |Note| image:: ../images/note.gif

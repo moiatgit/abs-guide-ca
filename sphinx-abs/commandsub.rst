@@ -1016,5 +1016,3 @@ the inner backticks, as John Default points out.
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Caution| image:: ../images/caution.gif

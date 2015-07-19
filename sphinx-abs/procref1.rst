@@ -426,5 +426,3 @@ Certain system commands, such as `procinfo <system.html#PROCINFOREF>`__
 
 
 
-.. |Note| image:: ../images/note.gif
-.. |Warning| image:: ../images/warning.gif

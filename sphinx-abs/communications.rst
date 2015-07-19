@@ -1066,5 +1066,3 @@ behind the scenes, silently carrying out their appointed tasks.
 
 
 
-.. |Caution| image:: ../images/caution.gif
-.. |Note| image:: ../images/note.gif

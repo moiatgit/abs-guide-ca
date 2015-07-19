@@ -292,4 +292,3 @@ This is pretty much a bugfix update.
 
 
 
-.. |Caution| image:: ../images/caution.gif

@@ -699,7 +699,3 @@ for your Linux distro.
 
 
 
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif
-.. |Warning| image:: ../images/warning.gif
-.. |Caution| image:: ../images/caution.gif

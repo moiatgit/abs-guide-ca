@@ -2005,5 +2005,3 @@ For more interesting scripts using arrays, see:
 -  `Example A-42 <contributed-scripts.html#NIM>`__
 
 
-.. |Tip| image:: ../images/tip.gif
-.. |Note| image:: ../images/note.gif
