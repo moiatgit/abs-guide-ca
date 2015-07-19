@@ -125,8 +125,8 @@ Exemple 2. Redirecting ``        stdout       `` using *exec*
 
 
 
-**Example 20-3. Redirecting both ``        stdin       `` and
-``        stdout       `` in the same script with *exec***
+Exemple 3. Redirecting both ``        stdin       `` and ``        stdout       `` in the same script with *exec*
+=================================================================================================================
 
 
 .. code-block:: sh

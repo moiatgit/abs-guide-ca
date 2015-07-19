@@ -93,8 +93,8 @@ Exemple 2. Indirect variable references - the new way
 
 
 
-**Example 37-3. Simple database application, using indirect variable
-referencing**
+Exemple 3. Simple database application, using indirect variable referencing
+===========================================================================
 
 
 .. code-block:: sh
@@ -177,8 +177,8 @@ referencing**
 
 
 
-**Example 37-4. Using arrays and other miscellaneous trickery to deal
-four random hands from a deck of cards**
+Exemple 4. Using arrays and other miscellaneous trickery to deal four random hands from a deck of cards
+=======================================================================================================
 
 
 .. code-block:: sh

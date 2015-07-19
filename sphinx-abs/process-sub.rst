@@ -257,8 +257,8 @@ Exemple 1. Code block redirection without forking
  This is a similar example.
 
 
-**Example 23-2. Redirecting the output of *process substitution* into a
-loop.**
+Exemple 2. Redirecting the output of *process substitution* into a loop.
+========================================================================
 
 
 .. code-block:: sh

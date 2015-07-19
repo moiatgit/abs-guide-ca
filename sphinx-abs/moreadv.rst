@@ -103,9 +103,8 @@ grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
 
 
 
-    **Example 16-3. *Badname* , eliminate file names in current
-    directory containing bad characters and
-    `whitespace <special-chars.html#WHITESPACEREF>`__ .**
+Exemple 3. *Badname* , eliminate file names in current directory containing bad characters and `whitespace <special-chars.html#WHITESPACEREF>`__ .
+==================================================================================================================================================
 
 
     .. code-block:: sh

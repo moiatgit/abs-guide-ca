@@ -206,8 +206,8 @@ We can modify the previous example to also redirect the output of the
 loop.
 
 
-**Example 20-9. Redirected *for* loop (both ``        stdin       `` and
-``        stdout       `` redirected)**
+Exemple 9. Redirected *for* loop (both ``        stdin       `` and ``        stdout       `` redirected)
+=========================================================================================================
 
 
 .. code-block:: sh

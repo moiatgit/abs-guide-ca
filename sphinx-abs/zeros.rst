@@ -115,8 +115,8 @@ Exemple 1. Hiding the cookie jar
     temporary swap file.
 
 
-    **Example 31-2. Setting up a swapfile using
-    ``           /dev/zero          ``**
+Exemple 2. Setting up a swapfile using ``           /dev/zero          ``
+=========================================================================
 
 
     .. code-block:: sh

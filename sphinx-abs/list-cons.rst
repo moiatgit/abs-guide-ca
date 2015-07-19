@@ -44,8 +44,8 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
 
 
-    **Example 26-1. Using an *and list* to test for command-line
-    arguments**
+Exemple 1. Using an *and list* to test for command-line arguments
+=================================================================
 
 
     .. code-block:: sh

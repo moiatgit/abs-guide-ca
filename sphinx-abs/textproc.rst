@@ -722,8 +722,8 @@ im from end of block)
     only the matching portion of the line(s).
 
 
-    **Example 16-16. Printing out the *From* lines in stored e-mail
-    messages**
+Exemple 16. Printing out the *From* lines in stored e-mail messages
+===================================================================
 
 
     .. code-block:: sh
@@ -1038,8 +1038,8 @@ Exemple 17. Crossword puzzle solver
 
 
 
-    **Example 16-19. Looking up definitions in *Webster's 1913
-    Dictionary***
+Exemple 19. Looking up definitions in *Webster's 1913 Dictionary*
+=================================================================
 
 
     .. code-block:: sh
@@ -1442,8 +1442,8 @@ Exemple 19. *toupper* : Transforms a file to all uppercase.
 
 
 
-    **Example 16-22. *lowercase* : Changes all filenames in working
-    directory to lowercase.**
+Exemple 22. *lowercase* : Changes all filenames in working directory to lowercase.
+==================================================================================
 
 
     .. code-block:: sh

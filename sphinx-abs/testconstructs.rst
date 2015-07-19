@@ -449,8 +449,8 @@ in a Bash script, then specify it by full pathname.
 
 
 
-**Example 7-2. Equivalence of *test* , ``        /usr/bin/test       ``
-, [ ] , and ``        /usr/bin/[       ``**
+Exemple 2. Equivalence of *test* , ``        /usr/bin/test       `` , [ ] , and ``        /usr/bin/[       ``
+=============================================================================================================
 
 
 .. code-block:: sh

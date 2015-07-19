@@ -1770,8 +1770,8 @@ variables. For projects involving this, again consider using a more
 powerful programming language, such as Perl or C.
 
 
-**Example 27-16. Complex array application: *Exploring a weird
-mathematical series***
+Exemple 16. Complex array application: *Exploring a weird mathematical series*
+==============================================================================
 
 
 .. code-block:: sh

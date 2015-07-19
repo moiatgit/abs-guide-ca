@@ -781,8 +781,8 @@ Exemple 59. Capturing Keystrokes
     ``                   dd if=image.iso of=/dev/sdb                 ``
 
 
-    **Example 16-60. Preparing a bootable SD card for the *Raspberry
-    Pi***
+Exemple 60. Preparing a bootable SD card for the *Raspberry Pi*
+===============================================================
 
 
     .. code-block:: sh

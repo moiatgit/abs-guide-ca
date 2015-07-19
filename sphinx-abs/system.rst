@@ -2608,8 +2608,8 @@ rminate.
     H <files.html>`__ ).
 
 
-    **Example 17-10. Using *umask* to hide an output file from prying
-    eyes**
+Exemple 10. Using *umask* to hide an output file from prying eyes
+=================================================================
 
 
     .. code-block:: sh
@@ -2860,8 +2860,8 @@ its usual place, in /bin
     Command-line tool for manipulating the root window of the screen.
 
 
-    **Example 17-11. *Backlight* : changes the brightness of the
-    (laptop) screen backlight**
+Exemple 11. *Backlight* : changes the brightness of the (laptop) screen backlight
+=================================================================================
 
 
     .. code-block:: sh

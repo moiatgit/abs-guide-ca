@@ -224,8 +224,8 @@ Exemple 26. Creating menus using *case*
 
 
 
-    **Example 11-27. Using *command substitution* to generate the *case*
-    variable**
+Exemple 27. Using *command substitution* to generate the *case* variable
+========================================================================
 
 
     .. code-block:: sh

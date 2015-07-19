@@ -97,8 +97,8 @@ Exemple 1. Simple *for* loops
     assignment of each component to the positional parameters.
 
 
-    **Example 11-2. *for* loop with two parameters in each [list]
-    element**
+Exemple 2. *for* loop with two parameters in each [list] element
+================================================================
 
 
     .. code-block:: sh
@@ -135,8 +135,8 @@ Exemple 1. Simple *for* loops
     ``                   [list]                 `` in a *for loop* .
 
 
-    **Example 11-3. *Fileinfo:* operating on a file list contained in a
-    variable**
+Exemple 3. *Fileinfo:* operating on a file list contained in a variable
+=======================================================================
 
 
     .. code-block:: sh
@@ -254,9 +254,8 @@ Exemple 5. Operating on files with a *for* loop
     15-17 <internal.html#REVPOSPARAMS>`__ .
 
 
-    **Example 11-6. Missing
-    ``                       in [list]                     `` in a *for*
-    loop**
+Exemple 6. Missing ``                       in [list]                     `` in a *for* loop
+============================================================================================
 
 
     .. code-block:: sh
@@ -289,10 +288,8 @@ Exemple 5. Operating on files with a *for* loop
     16-48 <mathc.html#BASE>`__ .
 
 
-    **Example 11-7. Generating the
-    ``                       [list]                     `` in a *for*
-    loop with command substitution**
-
+Exemple 7. Generating the ``[list]`` in a *for* loop with command substitution
+==============================================================================
 
     .. code-block:: sh
 
@@ -414,8 +411,8 @@ Exemple 9. Listing all users on the system
     command substitution.
 
 
-    **Example 11-10. Checking all the binaries in a directory for
-    authorship**
+Exemple 10. Checking all the binaries in a directory for authorship
+===================================================================
 
 
     .. code-block:: sh

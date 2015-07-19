@@ -175,8 +175,8 @@ This is an even simpler-minded version of previous script.
 
 
 
-**Example A-4. *encryptedpw* : Uploading to an ftp site, using a locally
-encrypted password**
+Exemple 4. *encryptedpw* : Uploading to an ftp site, using a locally encrypted password
+=======================================================================================
 
 
 .. code-block:: sh
@@ -9744,8 +9744,8 @@ Exemple 43. A command-line stopwatch
 
 
 
-**Example A-44. An all-purpose shell scripting homework assignment
-solution**
+Exemple 44. An all-purpose shell scripting homework assignment solution
+=======================================================================
 
 
 .. code-block:: sh
@@ -11225,8 +11225,8 @@ Exemple 49. *The Towers of Hanoi, alternate graphic version*
 
 
 
-**Example A-50. An alternate version of the
-`getopt-simple.sh <string-manipulation.html#GETOPTSIMPLE>`__ script**
+Exemple 50. An alternate version of the `getopt-simple.sh <string-manipulation.html#GETOPTSIMPLE>`__ script
+===========================================================================================================
 
 
 .. code-block:: sh
@@ -11359,8 +11359,8 @@ Exemple 49. *The Towers of Hanoi, alternate graphic version*
 
 
 
-**Example A-51. The version of the *UseGetOpt.sh* example used in the
-`Tab Expansion appendix <tabexpansion.html>`__**
+Exemple 51. The version of the *UseGetOpt.sh* example used in the `Tab Expansion appendix <tabexpansion.html>`__
+================================================================================================================
 
 
 .. code-block:: sh
@@ -13307,8 +13307,8 @@ Exemple 59. Testing execution times of various commands
 
 
 
-**Example A-60. Associative arrays vs. conventional arrays (execution
-times)**
+Exemple 60. Associative arrays vs. conventional arrays (execution times)
+========================================================================
 
 
 .. code-block:: sh

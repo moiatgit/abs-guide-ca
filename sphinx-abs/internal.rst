@@ -799,8 +799,8 @@ Exemple 6. Detecting the arrow keys
     Caution!
 
 
-    **Example 15-7. Using *read* with `file
-    redirection <io-redirection.html#IOREDIRREF>`__**
+Exemple 7. Using *read* with `file redirection <io-redirection.html#IOREDIRREF>`__
+==================================================================================
 
 
     .. code-block:: sh
@@ -2032,8 +2032,8 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    **Example 15-20. Using *export* to pass a variable to an embedded
-    *awk* script**
+Exemple 20. Using *export* to pass a variable to an embedded *awk* script
+=========================================================================
 
 
     .. code-block:: sh
@@ -2222,8 +2222,8 @@ ort var; echo ${var[0]}
 
 
 
-    **Example 15-21. Using *getopts* to read the options/arguments
-    passed to a script**
+Exemple 21. Using *getopts* to read the options/arguments passed to a script
+============================================================================
 
 
     .. code-block:: sh

@@ -90,8 +90,8 @@ e or directory
 
 
 
-    **Example 16-1. Using *ls* to create a table of contents for burning
-    a CDR disk**
+Exemple 1. Using *ls* to create a table of contents for burning a CDR disk
+==========================================================================
 
 
     .. code-block:: sh

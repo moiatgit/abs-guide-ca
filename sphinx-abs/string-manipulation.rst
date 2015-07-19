@@ -32,8 +32,8 @@ command syntax and overlap of functionality, not to mention confusion.
 
 
 
-**Example 10-1. Inserting a blank line between paragraphs in a text
-file**
+Exemple 1. Inserting a blank line between paragraphs in a text file
+===================================================================
 
 
 .. code-block:: sh
@@ -384,8 +384,8 @@ Exemple 2. Generating an 8-character "random" string
     This operator is useful for generating filenames.
 
 
-    **Example 10-3. Converting graphic file formats, with filename
-    change**
+Exemple 3. Converting graphic file formats, with filename change
+================================================================
 
 
     .. code-block:: sh
