@@ -41,6 +41,11 @@ Voldria indicar algunes decisions que he pres respecte a aquesta traducció:
    (imagino) deu ser un lector estàndard d'un llibre de programació en Bash en català (una població
    probablement no massa nombrosa, en tot cas).
 
+#. A l'hora de realitzar una traducció, la revisió del text original és molt profunda. Això permet
+   adonar-se de duplicacions de temes i de *petits* detalls que falten. Per exemple, en
+   :doc:`special-chars` he considerat que es podria afegir a ``?`` l'accepció de variable quan
+   apareix amb ``$?``.
+
 Tant de bo aquesta traducció et sigui profitosa! Estaré encantat de saber les teves impressions.
 
 Moisès : moiatgit (a) gmail (.) com

@@ -50,7 +50,7 @@ llibre, amb la versió en anglès entre parèntesis.
 
         El caràter ``\``
 
-   Globbing
+   Expansió de noms de fitxer (*Globbing*)
 
         Mecanisme similar a les expressions regulars que permet definir un patró que han d'acomplir
         els noms dels fitxers, fent servir alguns caràctes especials, sovint ``\*`` i ``?``.

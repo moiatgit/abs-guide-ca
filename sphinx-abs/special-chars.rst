@@ -384,72 +384,86 @@ Altres funcions de ``!`` són:
 Asterisc: \*
 ============
 
-El asterisc serveix de comodí per l'expansió de noms de fitxer. Aquest mecanisme d'expansió de noms
-de fitxer a partir de caràcters comodí, es coneix com a :doc:`globbing`. Quan apareix sol, implica
-**tots** els fitxers dins d'un directori. Per exemple:
+Depenent del context, l'asterisc pot representar: 
 
-.. code-block:: sh
+* Un mecanisme d'expansió de noms de fitxer
 
-    $ # contingut de l'arrel del sistema de fitxers
-    $ echo /*
-    /bin /boot /dev /etc /home /initrd.img /lib /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /srv /sys /tmp /usr /var /vmlinuz
+  El asterisc serveix de comodí per :doc:`l'expansió de noms de fitxer<globbingref>`. 
 
-En :doc:`expressions regulars<regexp>`, l'asterisc especifica que l'element anterior pot aparèixer zero o més cops.
+  Quan apareix sol, implica **tots** els fitxers dins d'un directori. Per exemple:
+
+  .. code-block:: sh
+
+        $ # contingut de l'arrel del sistema de fitxers
+        $ echo /*
+        /bin /boot /dev /etc /home /initrd.img /lib /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /srv /sys /tmp /usr /var /vmlinuz
+
+  En cas de ser doble asterisc, ``**``, funcionaria com un comodí estès (que accepta fitxers i
+  directoris) incorporat en la :doc:`versió 4 de Bash<bashver4>.
 
 
-L'asterisc també és un :doc:`operador aritmètic<ops>`: quan apareix en una operació aritmètica
-``\*`` denota *multiplicació*.
+* *Qualsevol nombre de cops*: en :doc:`expressions regulars<regexp>`, l'asterisc especifica que
+  l'element anterior pot aparèixer zero o més cops.
 
-En un context d'expressió aritmètica, ``\*\*`` (doble asterisc) representaria l'operador
-exponencial, mentre que en altres contexts funcionaria com un comodí estès (que accepta fitxers i
-directoris) a partir de la :doc:`versió 4 de Bash<bashver4>.
+
+* Un operador aritmètic
+
+  L'asterisc també és un :doc:`operador aritmètic<ops>`: quan apareix en una operació aritmètica
+  ``\*`` denota *multiplicació*.
+
+  En aquest mateix context, ``**`` (doble asterisc) representaria l'operador exponencial.
 
 
 Interrogant: ?
 ==============
 
-    **test operator.** Within certain expressions, the ? indicates a
-    test for a condition.
+L'interrogant representa els següents papers, segons context:
 
+* En determinades expressions, ``?`` indica la comprovació d'una condició.
 
-    In a `double-parentheses construct <dblparens.html>`__ , the ? can
-    serve as an element of a C-style *trinary* operator. ` [2]
-     <special-chars.html#FTN.AEN888>`__
+  Per exemple, en una expressió de :doc:`doble parèntesis<dblparens>`, l'interrogant pot servir com
+  l'operador ternari: `` (( condició ? resultat-si-cert : resultat-si-fals``. Per exemple:
 
-    ``         condition        `` **?**
-    ``         result-if-true        `` **:**
-    ``         result-if-false        ``
+  .. code-block:: sh
 
-
-    .. code-block:: sh
-
-        (( var0 = var1<98?9:21 ))
+        (( resultat = valor<98?9:21 ))
         #                ^ ^
 
-        # if [ "$var1" -lt 98 ]
-        # then
-        #   var0=9
-        # else
-        #   var0=21
-        # fi
+  El codi anterior tindria el mateix efecte que el següent:
 
+  .. code-block:: sh
 
+        if [ "$valor" -lt 98 ]
+        then
+          resultat=9
+        else
+          resultat=21
+        fi
 
-    In a `parameter
-    substitution <parameter-substitution.html#PARAMSUBREF>`__
-    expression, the ? `tests whether a variable has been
-    set <parameter-substitution.html#QERRMSG>`__ .
+* En una :doc:`substitució de paràmetre <parameter-substitution>`, comprova si la variable ha estat
+  assignada.
 
- ?
+* En un patró per :doc:`l'expansió de noms de fitxer<globbingref>`, ``?`` indica que s'admet un caràcter qualsevol.
 
-    **wild card.** The ? character serves as a single-character "wild
-    card" for filename expansion in `globbing <globbingref.html>`__ , as
-    well as `representing one character <x17129.html#QUEXREGEX>`__ in an
-    `extended regular expression <x17129.html#EXTREGEX>`__ .
+* En una :doc:`expressió regular<x17129>` indica que l'element anterior és opcional. És a dir, que
+  pot donar-se zero o un cop.
+
+* A continuació de ``$`` representa el valor de sortida de la comanda anterior:
+
+  .. code-block:: sh
+
+        $ rm fitxerinexistent
+        rm: no s’ha pogut eliminar «fitxerinexistent»: El fitxer o directori no existeix
+        $ echo $?
+        1
+
+  En aquest cas, la comanda 'rm' ha sortit amb un valor d'error ``1``.
 
 
 Dollar: $
 =========
+
+XXX TODO: per aquí
 
     **`Variable substitution <varsubn.html>`__ (contents of a
     variable).**

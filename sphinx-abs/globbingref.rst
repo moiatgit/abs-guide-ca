@@ -1,6 +1,6 @@
-##################
-XXX 18.2. Globbing
-##################
+##############################################
+XXX 18.2. Globbing: expansió de noms de fitxer
+##############################################
 
 Bash itself cannot recognize Regular Expressions. Inside scripts, it is
 commands and utilities -- such as `sed <sedawk.html#SEDREF>`__ and
