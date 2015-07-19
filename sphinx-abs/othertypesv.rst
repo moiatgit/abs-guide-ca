@@ -124,7 +124,7 @@ rgument list too long
     denote *all* the positional parameters.
 
 
-    **Example 4-5. Positional Parameters**
+Exemple 5. Positional Parameters
 
 
     .. code-block:: sh
@@ -256,7 +256,7 @@ rgument list too long
     ---
 
 
-    **Example 4-6. *wh* , *whois* domain name lookup**
+Exemple 6. *wh* , *whois* domain name lookup
 
 
     .. code-block:: sh
@@ -314,7 +314,7 @@ rgument list too long
     also permits this.
 
 
-    **Example 4-7. Using *shift***
+Exemple 7. Using *shift*
 
 
     .. code-block:: sh

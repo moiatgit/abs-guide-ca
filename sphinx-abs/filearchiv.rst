@@ -256,7 +256,7 @@ k | grep docbook
     specified, it can be appreciably faster than **tar** .
 
 
-    **Example 16-30. Using *cpio* to move a directory tree**
+Exemple 30. Using *cpio* to move a directory tree
 
 
     .. code-block:: sh
@@ -307,7 +307,7 @@ k | grep docbook
     `rpm <filearchiv.html#RPMREF>`__ one.
 
 
-    **Example 16-31. Unpacking an *rpm* archive**
+Exemple 31. Unpacking an *rpm* archive
 
 
     .. code-block:: sh
@@ -533,7 +533,7 @@ k | grep docbook
 
 
 
-    **Example 16-32. Stripping comments from C program files**
+Exemple 32. Stripping comments from C program files
 
 
     .. code-block:: sh
@@ -667,7 +667,7 @@ tr -d '\n' | tr '\377' '\n';;
 
 
 
-    **Example 16-33. Exploring ``           /usr/X11R6/bin          ``**
+Exemple 33. Exploring ``           /usr/X11R6/bin          ``
 
 
     .. code-block:: sh
@@ -802,7 +802,7 @@ tr -d '\n' | tr '\377' '\n';;
     11-10 <loops1.html#FINDSTRING>`__ .
 
 
-    **Example 16-34. An "improved" *strings* command**
+Exemple 34. An "improved" *strings* command
 
 
     .. code-block:: sh
@@ -1065,7 +1065,7 @@ notes2: file04
 
 
 
-    **Example 16-35. Using *cmp* to compare two files within a script.**
+Exemple 35. Using *cmp* to compare two files within a script.
 
 
     .. code-block:: sh
@@ -1188,7 +1188,7 @@ notes2: file04
 
 
 
-    **Example 16-36. *basename* and *dirname***
+Exemple 36. *basename* and *dirname*
 
 
     .. code-block:: sh
@@ -1217,7 +1217,7 @@ notes2: file04
     split occuring where patterns are matched.
 
 
-    **Example 16-37. A script that copies itself in sections**
+Exemple 37. A script that copies itself in sections
 
 
     .. code-block:: sh
@@ -1301,7 +1301,7 @@ notes2: file04
 
 
 
-    **Example 16-38. Checking file integrity**
+Exemple 38. Checking file integrity
 
 
     .. code-block:: sh
@@ -1496,7 +1496,7 @@ stfile
     original binaries.
 
 
-    **Example 16-39. Uudecoding encoded files**
+Exemple 39. Uudecoding encoded files
 
 
     .. code-block:: sh

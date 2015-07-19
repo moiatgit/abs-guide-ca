@@ -5,7 +5,7 @@ XXX Recursion Without Local Variables
 A function may recursively call itself even without use of local
 variables.
 
-**Example 24-16. *The Fibonacci Sequence***
+Exemple 16. *The Fibonacci Sequence*
 
 .. code-block:: sh
 
@@ -58,7 +58,7 @@ variables.
     exit 0
                                                                           
 
-**Example 24-17. *The Towers of Hanoi***
+Exemple 17. *The Towers of Hanoi*
 
 .. code-block:: sh
 

@@ -12,7 +12,7 @@ preceded by an `eval <internal.html#EVALREF>`__ (and sometimes an
 reference* .
 
 
-**Example 28-1. Indirect Variable References**
+Exemple 1. Indirect Variable References
 
 
 .. code-block:: sh
@@ -181,7 +181,7 @@ their contents. This can be useful when
 
 
 
-**Example 28-2. Passing an indirect reference to *awk***
+Exemple 2. Passing an indirect reference to *awk*
 
 
 .. code-block:: sh

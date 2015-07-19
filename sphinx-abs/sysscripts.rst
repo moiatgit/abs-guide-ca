@@ -9,7 +9,7 @@ script. One of the shortest and simplest to understand scripts is
 running processes at system shutdown.
 
 
-**Example 17-12. *killall* , from ``        /etc/rc.d/init.d       ``**
+Exemple 12. *killall* , from ``        /etc/rc.d/init.d       ``
 
 
 .. code-block:: sh

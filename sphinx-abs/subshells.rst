@@ -90,7 +90,7 @@ subshell. These are, in effect, variables
 `local <localvar.html#LOCALREF>`__ to the *child process* .
 
 
-**Example 21-1. Variable scope in a subshell**
+Exemple 1. Variable scope in a subshell
 
 
 .. code-block:: sh
@@ -258,7 +258,7 @@ Directory changes made in a subshell do not carry over to the parent
 shell.
 
 
-**Example 21-2. List User Profiles**
+Exemple 2. List User Profiles
 
 
 .. code-block:: sh
@@ -359,7 +359,7 @@ permits breaking a complex task into subcomponents processed
 concurrently.
 
 
-**Example 21-3. Running parallel processes in subshells**
+Exemple 3. Running parallel processes in subshells
 
 
 .. code-block:: sh

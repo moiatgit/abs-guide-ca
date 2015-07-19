@@ -18,7 +18,7 @@ XXX 16.8. Math Commands
 
 
 
-    **Example 16-46. Generating prime numbers**
+Exemple 46. Generating prime numbers
 
 
     .. code-block:: sh
@@ -92,7 +92,7 @@ XXX 16.8. Math Commands
 
 
 
-    **Example 16-47. Monthly Payment on a Mortgage**
+Exemple 47. Monthly Payment on a Mortgage
 
 
     .. code-block:: sh
@@ -202,7 +202,7 @@ XXX 16.8. Math Commands
 
 
 
-    **Example 16-48. Base Conversion**
+Exemple 48. Base Conversion
 
 
     .. code-block:: sh
@@ -348,7 +348,7 @@ XXX 16.8. Math Commands
 
 
 
-    **Example 16-49. Invoking *bc* using a *here document***
+Exemple 49. Invoking *bc* using a *here document*
 
 
     .. code-block:: sh
@@ -414,7 +414,7 @@ XXX 16.8. Math Commands
 
 
 
-    **Example 16-50. Calculating PI**
+Exemple 50. Calculating PI
 
 
     .. code-block:: sh
@@ -594,7 +594,7 @@ XXX 16.8. Math Commands
     rather cryptic operators. Yet, it has its uses.
 
 
-    **Example 16-51. Converting a decimal number to hexadecimal**
+Exemple 51. Converting a decimal number to hexadecimal
 
 
     .. code-block:: sh
@@ -665,7 +665,7 @@ XXX 16.8. Math Commands
 
 
 
-    **Example 16-52. Factoring**
+Exemple 52. Factoring
 
 
     .. code-block:: sh
@@ -717,7 +717,7 @@ XXX 16.8. Math Commands
     wrapper <wrapper.html#SHWRAPPER>`__ .
 
 
-    **Example 16-53. Calculating the hypotenuse of a triangle**
+Exemple 53. Calculating the hypotenuse of a triangle
 
 
     .. code-block:: sh

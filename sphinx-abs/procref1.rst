@@ -237,7 +237,7 @@ the invoking process. There are a few more such files, but these seem to
 be the most interesting from a scripting standpoint.
 
 
-**Example 29-3. Finding the process associated with a PID**
+Exemple 3. Finding the process associated with a PID
 
 
 .. code-block:: sh
@@ -332,7 +332,7 @@ be the most interesting from a scripting standpoint.
 
 
 
-**Example 29-4. On-line connect status**
+Exemple 4. On-line connect status
 
 
 .. code-block:: sh

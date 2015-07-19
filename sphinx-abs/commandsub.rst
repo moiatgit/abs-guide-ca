@@ -419,7 +419,7 @@ have a very good reason for doing so. Do not set a variable to the
 contents of a *binary* file, even as a joke.
 
 
-**Example 12-1. Stupid script tricks**
+Exemple 1. Stupid script tricks
 
 
 .. code-block:: sh
@@ -511,7 +511,7 @@ Command substitution permits setting a variable to the output of a
 output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 
 
-**Example 12-2. Generating a variable from a loop**
+Exemple 2. Generating a variable from a loop
 
 
 .. code-block:: sh
@@ -728,7 +728,7 @@ $(echo * | awk '{print $
 Or, for something a bit more elaborate . . .
 
 
-**Example 12-3. Finding anagrams**
+Exemple 3. Finding anagrams
 
 
 .. code-block:: sh

@@ -58,7 +58,7 @@ special meaning for that character.
 
 
 
-    **Example 5-2. Escaped Characters**
+Exemple 2. Escaped Characters
 
 
     .. code-block:: sh
@@ -161,7 +161,7 @@ special meaning for that character.
     A more elaborate example:
 
 
-    **Example 5-3. Detecting key-presses**
+Exemple 3. Detecting key-presses
 
 
     .. code-block:: sh

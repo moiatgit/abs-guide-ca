@@ -20,7 +20,7 @@ Among the new goodies:
 
 
 
-   **Example 37-5. A simple address database**
+Exemple 5. A simple address database
 
 
    .. code-block:: sh
@@ -52,7 +52,7 @@ Among the new goodies:
 
 
 
-   **Example 37-6. A somewhat more elaborate address database**
+Exemple 6. A somewhat more elaborate address database
 
 
    .. code-block:: sh
@@ -151,7 +151,7 @@ Among the new goodies:
    ``                 ;&               `` terminators.
 
 
-   **Example 37-7. Testing characters**
+Exemple 7. Testing characters
 
 
    .. code-block:: sh
@@ -691,7 +691,7 @@ update.
    *read* to terminate after *chars* characters.
 
 
-   **Example 37-8. Reading N characters**
+Exemple 8. Reading N characters
 
 
    .. code-block:: sh
@@ -721,7 +721,7 @@ update.
    terminate with a simple **)** .
 
 
-   **Example 37-9. Using a *here document* to set a variable**
+Exemple 9. Using a *here document* to set a variable
 
 
    .. code-block:: sh
@@ -848,7 +848,7 @@ new features and enhancements, in addition to bugfixes.
    `pipe <special-chars.html#PIPEREF>`__ *doesn't run in a subshell* .
 
 
-   **Example 37-10. Piping input to a `read <internal.html#READREF>`__**
+Exemple 10. Piping input to a `read <internal.html#READREF>`__
 
 
    .. code-block:: sh
@@ -885,7 +885,7 @@ new features and enhancements, in addition to bugfixes.
    backwards from the end of an array.
 
 
-   **Example 37-11. Negative array indices**
+Exemple 11. Negative array indices
 
 
    .. code-block:: sh
@@ -939,7 +939,7 @@ new features and enhancements, in addition to bugfixes.
    the target string.
 
 
-   **Example 37-12. Negative parameter in string-extraction construct**
+Exemple 12. Negative parameter in string-extraction construct
 
 
    .. code-block:: sh

@@ -19,7 +19,7 @@ The function refers to the passed arguments by position (as if they were
 is, ``      $1     `` , ``      $2     `` , and so forth.
 
 
-**Example 24-2. Function Taking Parameters**
+Exemple 2. Function Taking Parameters
 
 
 .. code-block:: sh
@@ -98,7 +98,7 @@ But, what about command-line arguments passed to the script? Does a
 function see them? Well, let's clear up the confusion.
 
 
-**Example 24-3. Functions and command-line args passed to the script**
+Exemple 3. Functions and command-line args passed to the script
 
 
 .. code-block:: sh
@@ -142,7 +142,7 @@ literally.*
 passing variable pointers to functions.
 
 
-**Example 24-4. Passing an indirect reference to a function**
+Exemple 4. Passing an indirect reference to a function
 
 
 .. code-block:: sh
@@ -178,7 +178,7 @@ The next logical question is whether parameters can be dereferenced
 *after* being passed to a function.
 
 
-**Example 24-5. Dereferencing a parameter passed to a function**
+Exemple 5. Dereferencing a parameter passed to a function
 
 
 .. code-block:: sh
@@ -210,7 +210,7 @@ The next logical question is whether parameters can be dereferenced
 
 
 
-**Example 24-6. Again, dereferencing a parameter passed to a function**
+Exemple 6. Again, dereferencing a parameter passed to a function
 
 
 .. code-block:: sh
@@ -281,7 +281,7 @@ The next logical question is whether parameters can be dereferenced
     variable `$? <internalvariables.html#XSTATVARREF>`__ .
 
 
-    **Example 24-7. Maximum of two numbers**
+Exemple 7. Maximum of two numbers
 
 
     .. code-block:: sh
@@ -430,7 +430,7 @@ d."
 
 
 
-    **Example 24-8. Converting numbers to Roman numerals**
+Exemple 8. Converting numbers to Roman numerals
 
 
     .. code-block:: sh
@@ -526,7 +526,7 @@ d."
     requiring a large integer return value from a function.
 
 
-    **Example 24-9. Testing large return values in a function**
+Exemple 9. Testing large return values in a function
 
 
     .. code-block:: sh
@@ -616,7 +616,7 @@ ction.
     36.7 <assortedtips.html>`__ .
 
 
-    **Example 24-10. Comparing two large integers**
+Exemple 10. Comparing two large integers
 
 
     .. code-block:: sh
@@ -1105,7 +1105,7 @@ th $month)
     3-1 <special-chars.html#EX8>`__ ).
 
 
-    **Example 24-11. Real name from username**
+Exemple 11. Real name from username
 
 
     .. code-block:: sh

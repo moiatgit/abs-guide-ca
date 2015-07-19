@@ -98,7 +98,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    **Example 16-40. Finding out where to report a spammer**
+Exemple 40. Finding out where to report a spammer
 
 
     .. code-block:: sh
@@ -153,7 +153,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    **Example 16-41. Analyzing a spam domain**
+Exemple 41. Analyzing a spam domain
 
 
     .. code-block:: sh
@@ -504,7 +504,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    **Example 16-42. Getting a stock quote**
+Exemple 42. Getting a stock quote
 
 
     .. code-block:: sh
@@ -600,7 +600,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    **Example 16-43. Updating FC4**
+Exemple 43. Updating FC4
 
 
     .. code-block:: sh
@@ -849,7 +849,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     `manpage <basic.html#MANREF>`__ for details.
 
 
-    **Example 16-44. Using *ssh***
+Exemple 44. Using *ssh*
 
 
     .. code-block:: sh
@@ -978,7 +978,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
     embedded in a script.
 
 
-    **Example 16-45. A script that mails itself**
+Exemple 45. A script that mails itself
 
 
     .. code-block:: sh

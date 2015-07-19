@@ -12,7 +12,7 @@ of redirection (see `Example 24-11 <complexfunct.html#REALNAME>`__ ).
 The < operator at the end of the code block accomplishes this.
 
 
-**Example 20-5. Redirected *while* loop**
+Exemple 5. Redirected *while* loop
 
 
 .. code-block:: sh
@@ -71,7 +71,7 @@ The < operator at the end of the code block accomplishes this.
 
 
 
-**Example 20-6. Alternate form of redirected *while* loop**
+Exemple 6. Alternate form of redirected *while* loop
 
 
 .. code-block:: sh
@@ -126,7 +126,7 @@ The < operator at the end of the code block accomplishes this.
 
 
 
-**Example 20-7. Redirected *until* loop**
+Exemple 7. Redirected *until* loop
 
 
 .. code-block:: sh
@@ -157,7 +157,7 @@ The < operator at the end of the code block accomplishes this.
 
 
 
-**Example 20-8. Redirected *for* loop**
+Exemple 8. Redirected *for* loop
 
 
 .. code-block:: sh
@@ -240,7 +240,7 @@ loop.
 
 
 
-**Example 20-10. Redirected *if/then* test**
+Exemple 10. Redirected *if/then* test
 
 
 .. code-block:: sh
@@ -272,7 +272,7 @@ loop.
 
 
 
-**Example 20-11. Data file *names.data* for above examples**
+Exemple 11. Data file *names.data* for above examples
 
 
 .. code-block:: sh

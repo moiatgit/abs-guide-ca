@@ -20,7 +20,7 @@ variables, string and parameter expansion, and a better method of
 indirect variable references, among other features.
 
 
-**Example 37-1. String expansion**
+Exemple 1. String expansion
 
 
 .. code-block:: sh
@@ -49,7 +49,7 @@ indirect variable references, among other features.
 
 
 
-**Example 37-2. Indirect variable references - the new way**
+Exemple 2. Indirect variable references - the new way
 
 
 .. code-block:: sh

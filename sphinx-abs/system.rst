@@ -266,7 +266,7 @@ damage your system if misused.
     not* be.
 
 
-    **Example 17-1. Setting a new password**
+Exemple 1. Setting a new password
 
 
     .. code-block:: sh
@@ -398,7 +398,7 @@ damage your system if misused.
     displays. See the info page, and study it carefully.
 
 
-    **Example 17-2. Setting an *erase* character**
+Exemple 2. Setting an *erase* character
 
 
     .. code-block:: sh
@@ -426,7 +426,7 @@ damage your system if misused.
 
 
 
-    **Example 17-3. *secret password* : Turning off terminal echoing**
+Exemple 3. *secret password* : Turning off terminal echoing
 
 
     .. code-block:: sh
@@ -468,7 +468,7 @@ damage your system if misused.
     hitting **ENTER** ).
 
 
-    **Example 17-4. Keypress detection**
+Exemple 4. Keypress detection
 
 
     .. code-block:: sh
@@ -896,7 +896,7 @@ damage your system if misused.
     A real-life `usage example <process-sub.html#NETCATEXAMPLE>`__ .
 
 
-    **Example 17-5. Checking a remote server for *identd***
+Exemple 5. Checking a remote server for *identd*
 
 
     .. code-block:: sh
@@ -1529,7 +1529,7 @@ n localhost
 
 
 
-    **Example 17-6. *pidof* helps kill a process**
+Exemple 6. *pidof* helps kill a process
 
 
     .. code-block:: sh
@@ -2006,7 +2006,7 @@ n localhost
     a CDR. ` [3]  <system.html#FTN.AEN16255>`__
 
 
-    **Example 17-7. Checking a CD image**
+Exemple 7. Checking a CD image
 
 
     .. code-block:: sh
@@ -2092,7 +2092,7 @@ n localhost
     devices <devref1.html#LOOPBACKREF>`__ .
 
 
-    **Example 17-8. Creating a filesystem in a file**
+Exemple 8. Creating a filesystem in a file
 
 
     .. code-block:: sh
@@ -2122,7 +2122,7 @@ n localhost
     *root* .
 
 
-    **Example 17-9. Adding a new hard drive**
+Exemple 9. Adding a new hard drive
 
 
     .. code-block:: sh

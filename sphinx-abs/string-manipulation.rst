@@ -176,7 +176,7 @@ file**
     is, represented as a variable, rather than as a numerical constant.
 
 
-    **Example 10-2. Generating an 8-character "random" string**
+Exemple 2. Generating an 8-character "random" string
 
 
     .. code-block:: sh
@@ -453,7 +453,7 @@ file**
 
 
 
-    **Example 10-4. Converting streaming audio files to *ogg***
+Exemple 4. Converting streaming audio files to *ogg*
 
 
     .. code-block:: sh
@@ -517,7 +517,7 @@ file**
     substring-extraction constructs.
 
 
-    **Example 10-5. Emulating *getopt***
+Exemple 5. Emulating *getopt*
 
 
     .. code-block:: sh
@@ -653,7 +653,7 @@ A Bash script may invoke the string manipulation facilities of
 operations.
 
 
-**Example 10-6. Alternate ways of extracting and locating substrings**
+Exemple 6. Alternate ways of extracting and locating substrings
 
 
 .. code-block:: sh

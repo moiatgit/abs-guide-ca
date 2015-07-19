@@ -57,7 +57,7 @@ control condition* is true.
     ``                   list                 `` ] ; do
 
 
-    **Example 11-1. Simple *for* loops**
+Exemple 1. Simple *for* loops
 
 
     .. code-block:: sh
@@ -178,7 +178,7 @@ control condition* is true.
     may be parameterized.
 
 
-    **Example 11-4. Operating on a parameterized file list**
+Exemple 4. Operating on a parameterized file list
 
 
     .. code-block:: sh
@@ -203,7 +203,7 @@ control condition* is true.
     then `globbing <globbingref.html>`__ takes place.
 
 
-    **Example 11-5. Operating on files with a *for* loop**
+Exemple 5. Operating on files with a *for* loop
 
 
     .. code-block:: sh
@@ -315,7 +315,7 @@ control condition* is true.
     ``                   [list]                 `` .
 
 
-    **Example 11-8. A *grep* replacement for binary files**
+Exemple 8. A *grep* replacement for binary files
 
 
     .. code-block:: sh
@@ -366,7 +366,7 @@ control condition* is true.
     More of the same.
 
 
-    **Example 11-9. Listing all users on the system**
+Exemple 9. Listing all users on the system
 
 
     .. code-block:: sh
@@ -467,7 +467,7 @@ control condition* is true.
     The output of a *for loop* may be piped to a command or commands.
 
 
-    **Example 11-11. Listing the *symbolic links* in a directory**
+Exemple 11. Listing the *symbolic links* in a directory
 
 
     .. code-block:: sh
@@ -544,7 +544,7 @@ control condition* is true.
     slight modification to the previous example shows.
 
 
-    **Example 11-12. Symbolic links in a directory, saved to a file**
+Exemple 12. Symbolic links in a directory, saved to a file
 
 
     .. code-block:: sh
@@ -580,7 +580,7 @@ control condition* is true.
     parentheses <dblparens.html#DBLPARENSREF>`__ .
 
 
-    **Example 11-13. A C-style *for* loop**
+Exemple 13. A C-style *for* loop
 
 
     .. code-block:: sh
@@ -657,7 +657,7 @@ control condition* is true.
     Now, a *for loop* used in a "real-life" context.
 
 
-    **Example 11-14. Using *efax* in batch mode**
+Exemple 14. Using *efax* in batch mode
 
 
     .. code-block:: sh
@@ -851,7 +851,7 @@ lon is required.
     for example, the `getopts construct <internal.html#GETOPTSX>`__ .
 
 
-    **Example 11-15. Simple *while* loop**
+Exemple 15. Simple *while* loop
 
 
     .. code-block:: sh
@@ -881,7 +881,7 @@ lon is required.
 
 
 
-    **Example 11-16. Another *while* loop**
+Exemple 16. Another *while* loop
 
 
     .. code-block:: sh
@@ -910,7 +910,7 @@ lon is required.
     slightly different loop syntax, however.
 
 
-    **Example 11-17. *while* loop with multiple conditions**
+Exemple 17. *while* loop with multiple conditions
 
 
     .. code-block:: sh
@@ -945,7 +945,7 @@ lon is required.
     8-5 <dblparens.html#CVARS>`__ ).
 
 
-    **Example 11-18. C-style syntax in a *while* loop**
+Exemple 18. C-style syntax in a *while* loop
 
 
     .. code-block:: sh
@@ -1123,7 +1123,7 @@ lon is required.
     ``                   condition-is-true                 `` ] ; do
 
 
-    **Example 11-19. *until* loop**
+Exemple 19. *until* loop
 
 
     .. code-block:: sh

@@ -197,7 +197,6 @@ Per exemple:
 Mira :doc:`escapingsection` per més detalls sobre escapament de caràcters. Considera :doc:`quoting`
 per una explicació global d'aquest tema.
 
-
 Barra: /
 ========
 
@@ -694,7 +693,7 @@ Claus: {}
     redirected <io-redirection.html#IOREDIRREF>`__ to and from it.
 
 
-    **Example 3-1. Code blocks and I/O redirection**
+Exemple 1. Code blocks and I/O redirection
 
 
     .. code-block:: sh
@@ -725,7 +724,7 @@ Claus: {}
 
 
 
-    **Example 3-2. Saving the output of a code block to a file**
+Exemple 2. Saving the output of a code block to a file
 
 
     .. code-block:: sh
@@ -1283,7 +1282,7 @@ Símbol d'unió o *ampersand*: &
     `loops <loops1.html#FORLOOPREF1>`__ may run in the background.
 
 
-    **Example 3-3. Running a loop in the background**
+Exemple 3. Running a loop in the background
 
 
     .. code-block:: sh
@@ -1607,7 +1606,7 @@ me
     `tar <filearchiv.html#TARREF>`__ .
 
 
-    **Example 3-4. Backup of all files changed in last day**
+Exemple 4. Backup of all files changed in last day
 
 
     .. code-block:: sh

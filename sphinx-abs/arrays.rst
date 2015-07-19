@@ -11,7 +11,7 @@ dereference (retrieve the contents of) an array element, use *curly
 bracket* notation, that is, ``             ${element[xx]}           `` .
 
 
-**Example 27-1. Simple array usage**
+Exemple 1. Simple array usage
 
 
 .. code-block:: sh
@@ -169,7 +169,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
 
 
-**Example 27-2. Formatting a poem**
+Exemple 2. Formatting a poem
 
 
 .. code-block:: sh
@@ -222,7 +222,7 @@ Array variables have a syntax all their own, and even standard Bash
 commands and operators have special options adapted for array use.
 
 
-**Example 27-3. Various array operations**
+Exemple 3. Various array operations
 
 
 .. code-block:: sh
@@ -282,7 +282,7 @@ Many of the standard `string
 operations <string-manipulation.html#STRINGMANIP>`__ work on arrays.
 
 
-**Example 27-4. String operations on arrays**
+Exemple 4. String operations on arrays
 
 
 .. code-block:: sh
@@ -413,7 +413,7 @@ operations <string-manipulation.html#STRINGMANIP>`__ work on arrays.
 the individual elements of an array.
 
 
-**Example 27-5. Loading the contents of a script into an array**
+Exemple 5. Loading the contents of a script into an array
 
 
 .. code-block:: sh
@@ -457,7 +457,7 @@ have a slightly altered meaning. For example,
 entire array.
 
 
-**Example 27-6. Some special properties of arrays**
+Exemple 6. Some special properties of arrays
 
 
 .. code-block:: sh
@@ -537,7 +537,7 @@ either **${#array\_name[@]}** or **${#array\_name[\*]}** .
 **${array\_name[0]}** , the first element of the array.
 
 
-**Example 27-7. Of empty arrays and empty elements**
+Exemple 7. Of empty arrays and empty elements
 
 
 .. code-block:: sh
@@ -877,7 +877,7 @@ ay1[*]}
 Clever scripting makes it possible to add array operations.
 
 
-**Example 27-8. Initializing arrays**
+Exemple 8. Initializing arrays
 
 
 .. code-block:: sh
@@ -985,7 +985,7 @@ may speed up execution of subsequent operations on the array.
 
 
 
-**Example 27-9. Copying and concatenating arrays**
+Exemple 9. Copying and concatenating arrays
 
 
 .. code-block:: sh
@@ -1060,7 +1060,7 @@ may speed up execution of subsequent operations on the array.
 
 
 
-**Example 27-10. More on concatenating arrays**
+Exemple 10. More on concatenating arrays
 
 
 .. code-block:: sh
@@ -1188,7 +1188,7 @@ Whether this is necessarily a good idea is left for the reader to
 decide.
 
 
-**Example 27-11. The Bubble Sort**
+Exemple 11. The Bubble Sort
 
 
 .. code-block:: sh
@@ -1337,7 +1337,7 @@ references <bashver2.html#VARREFNEW>`__ create some fascinating
 possibilities
 
 
-**Example 27-12. Embedded arrays and indirect references**
+Exemple 12. Embedded arrays and indirect references
 
 
 .. code-block:: sh
@@ -1421,7 +1421,7 @@ nature should really be written in a compiled language, such as C. It
 runs excruciatingly slowly as a script.
 
 
-**Example 27-13. The Sieve of Eratosthenes**
+Exemple 13. The Sieve of Eratosthenes
 
 
 .. code-block:: sh
@@ -1565,7 +1565,7 @@ runs excruciatingly slowly as a script.
 
 
 
-**Example 27-14. The Sieve of Eratosthenes, Optimized**
+Exemple 14. The Sieve of Eratosthenes, Optimized
 
 
 .. code-block:: sh
@@ -1620,7 +1620,7 @@ Arrays lend themselves, to some extent, to emulating data structures for
 which Bash has no native support.
 
 
-**Example 27-15. Emulating a push-down stack**
+Exemple 15. Emulating a push-down stack
 
 
 .. code-block:: sh
@@ -1830,7 +1830,7 @@ Bash supports only one-dimensional arrays, though a little trickery
 permits simulating multi-dimensional ones.
 
 
-**Example 27-17. Simulating a two-dimensional array, then tilting it**
+Exemple 17. Simulating a two-dimensional array, then tilting it
 
 
 .. code-block:: sh

@@ -10,7 +10,7 @@ temps.
     sortida estàndard (``stdout``). Aquesta comanda es torna més
     interessant quan es fan servir les opcions de formatat i anàlisi.
 
-    **Exemple 16-10. Ús de *date***
+Exemple 10. Ús de *date*
 
     ::
 
@@ -52,7 +52,7 @@ temps.
 
     Aquesta opció facilita el càlcul del temps entre diferents dates.
 
-    **Exemple 16-11. Càlculs amb *Date***
+Exemple 11. Càlculs amb *Date*
 
     ::
 

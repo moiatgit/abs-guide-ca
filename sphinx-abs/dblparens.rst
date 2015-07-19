@@ -12,7 +12,7 @@ construct is also a mechanism for allowing C-style manipulation of
 variables in Bash, for example, ``      (( var++ ))     `` .
 
 
-**Example 8-5. C-style manipulation of variables**
+Exemple 5. C-style manipulation of variables
 
 
 .. code-block:: sh

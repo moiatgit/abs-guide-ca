@@ -22,7 +22,7 @@ XXX  4.2. Variable Assignment
 
 
 
-    **Example 4-2. Plain Variable Assignment**
+Exemple 2. Plain Variable Assignment
 
 
     .. code-block:: sh
@@ -68,7 +68,7 @@ XXX  4.2. Variable Assignment
 
 
 
-    **Example 4-3. Variable Assignment, plain and fancy**
+Exemple 3. Variable Assignment, plain and fancy
 
 
     .. code-block:: sh

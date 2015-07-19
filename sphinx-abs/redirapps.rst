@@ -9,7 +9,7 @@ snippets of command output (see `Example
 log files.
 
 
-**Example 20-12. Logging events**
+Exemple 12. Logging events
 
 
 .. code-block:: sh

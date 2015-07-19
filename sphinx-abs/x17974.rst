@@ -11,7 +11,7 @@ input using `sed <sedawk.html#SEDREF>`__ and/or
 `awk <awk.html#AWKREF>`__ .
 
 
-**Example 20-1. Redirecting ``        stdin       `` using *exec***
+Exemple 1. Redirecting ``        stdin       `` using *exec*
 
 
 .. code-block:: sh
@@ -76,7 +76,7 @@ Thank you, Ahmed Darwish, for pointing this out.
 
 
 
-**Example 20-2. Redirecting ``        stdout       `` using *exec***
+Exemple 2. Redirecting ``        stdout       `` using *exec*
 
 
 .. code-block:: sh
@@ -182,7 +182,7 @@ I/O redirection is a clever way of avoiding the dreaded `inaccessible
 variables within a subshell <subshells.html#PARVIS>`__ problem.
 
 
-**Example 20-4. Avoiding a subshell**
+Exemple 4. Avoiding a subshell
 
 
 .. code-block:: sh

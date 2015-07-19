@@ -146,7 +146,7 @@ grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
 
 
 
-    **Example 16-4. Deleting a file by its *inode* number**
+Exemple 4. Deleting a file by its *inode* number
 
 
     .. code-block:: sh
@@ -455,7 +455,7 @@ ion.
 
 
 
-    **Example 16-5. Logfile: Using *xargs* to monitor system log**
+Exemple 5. Logfile: Using *xargs* to monitor system log
 
 
     .. code-block:: sh
@@ -504,7 +504,7 @@ ion.
     pair serves as a placeholder for replacement text.
 
 
-    **Example 16-6. Copying files in current directory to another**
+Exemple 6. Copying files in current directory to another
 
 
     .. code-block:: sh
@@ -544,7 +544,7 @@ ion.
 
 
 
-    **Example 16-7. Killing processes by name**
+Exemple 7. Killing processes by name
 
 
     .. code-block:: sh
@@ -594,7 +594,7 @@ ion.
 
 
 
-    **Example 16-8. Word frequency analysis using *xargs***
+Exemple 8. Word frequency analysis using *xargs*
 
 
     .. code-block:: sh
@@ -686,7 +686,7 @@ ion.
 
 
 
-    **Example 16-9. Using *expr***
+Exemple 9. Using *expr*
 
 
     .. code-block:: sh

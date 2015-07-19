@@ -85,7 +85,7 @@ chapter.
     dreaded `orphan process <x9644.html#ZOMBIEREF>`__ ).
 
 
-    **Example 15-26. Waiting for a process to finish before proceeding**
+Exemple 26. Waiting for a process to finish before proceeding
 
 
     .. code-block:: sh
@@ -329,7 +329,7 @@ Oct 11 15:09 test.sh
     ).
 
 
-    **Example 15-27. A script that kills itself**
+Exemple 27. A script that kills itself
 
 
     .. code-block:: sh

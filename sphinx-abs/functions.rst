@@ -129,7 +129,7 @@ Functions are called, *triggered* , simply by invoking their names. *A
 function call is equivalent to a command.*
 
 
-**Example 24-1. Simple functions**
+Exemple 1. Simple functions
 
 
 .. code-block:: sh

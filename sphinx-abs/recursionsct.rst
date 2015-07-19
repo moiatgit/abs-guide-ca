@@ -7,7 +7,7 @@ Can a script `recursively <localvar.html#RECURSIONREF>`__ call itself?
 Indeed.
 
 
-**Example 36-10. A (useless) script that recursively calls itself**
+Exemple 10. A (useless) script that recursively calls itself
 
 
 .. code-block:: sh
@@ -47,7 +47,7 @@ Indeed.
 
 
 
-**Example 36-11. A (useful) script that recursively calls itself**
+Exemple 11. A (useful) script that recursively calls itself
 
 
 .. code-block:: sh
@@ -107,7 +107,7 @@ Indeed.
 
 
 
-**Example 36-12. Another (useful) script that recursively calls itself**
+Exemple 12. Another (useful) script that recursively calls itself
 
 
 .. code-block:: sh

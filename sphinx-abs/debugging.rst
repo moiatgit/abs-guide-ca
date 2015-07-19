@@ -20,7 +20,7 @@ typos in the script generate cryptic error messages that are often of no
 help in debugging a non-functional script.
 
 
-**Example 32-1. A buggy script**
+Exemple 1. A buggy script
 
 
 .. code-block:: sh
@@ -55,7 +55,7 @@ Output from script:
 What's wrong with the above script? Hint: after the *if* .
 
 
-**Example 32-2. Missing `keyword <internal.html#KEYWORDREF>`__**
+Exemple 2. Missing `keyword <internal.html#KEYWORDREF>`__
 
 
 .. code-block:: sh
@@ -99,7 +99,7 @@ What if the script executes, but does not work as expected? This is the
 all too familiar logic error.
 
 
-**Example 32-3. *test24* : another buggy script**
+Exemple 3. *test24* : another buggy script
 
 
 .. code-block:: sh
@@ -297,7 +297,7 @@ o stderr
    critical points in a script. (This is an idea borrowed from C.)
 
 
-   **Example 32-4. Testing a condition with an *assert***
+Exemple 4. Testing a condition with an *assert*
 
 
    .. code-block:: sh
@@ -398,7 +398,7 @@ o stderr
 
 
 
-**Example 32-5. Trapping at exit**
+Exemple 5. Trapping at exit
 
 
 .. code-block:: sh
@@ -428,7 +428,7 @@ o stderr
 
 
 
-**Example 32-6. Cleaning up after **Control-C****
+Exemple 6. Cleaning up after **Control-C**
 
 
 .. code-block:: sh
@@ -525,7 +525,7 @@ o stderr
 
 
 
-**Example 32-7. A Simple Implementation of a Progress Bar**
+Exemple 7. A Simple Implementation of a Progress Bar
 
 
 .. code-block:: sh
@@ -574,7 +574,7 @@ action to execute after every command in a script. This permits tracing
 variables, for example.
 
 
-**Example 32-8. Tracing a variable**
+Exemple 8. Tracing a variable
 
 
 .. code-block:: sh
@@ -692,7 +692,7 @@ such as disabling certain keystrokes within a script (see `Example
 A-43 <contributed-scripts.html#STOPWATCH>`__ ).
 
 
-**Example 32-9. Running multiple processes (on an SMP box)**
+Exemple 9. Running multiple processes (on an SMP box)
 
 
 .. code-block:: sh

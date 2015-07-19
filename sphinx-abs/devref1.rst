@@ -143,7 +143,7 @@ Downloading a URL:
 
 [Thanks, Mark and Mihai Maties.]
 
-**Example 29-1. Using ``/dev/tcp`` for troubleshooting**
+Exemple 1. Using ``/dev/tcp`` for troubleshooting
 
 .. code-block:: sh
 
@@ -190,7 +190,7 @@ to the
     exit $MYEXIT
                                                                           
 
-**Example 29-2. Playing music**
+Exemple 2. Playing music
 
 .. code-block:: sh
 

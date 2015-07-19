@@ -83,7 +83,7 @@ classic Bourne shell. Download and install the ` "Heirloom Bourne Shell"
 script, first using Bash, then the classic *sh* .
 
 
-**Example 36-23. Test Suite**
+Exemple 23. Test Suite
 
 
 .. code-block:: sh

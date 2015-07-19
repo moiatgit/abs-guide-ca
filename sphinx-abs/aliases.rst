@@ -32,7 +32,8 @@ Una altra limitació és que els àlies no s'expandeixen recursivament.
 Quasi sempre, tot el que es pugui aconseguir amb un àlies, ho podrem
 realitzar molt més efectivament amb una :doc:`funció <functions>`.
 
-**Exemple 25-1. Àlies dins d'un guió**
+Exemple 1. Àlies dins d'un guió
+===============================
 
 ::
 
@@ -116,7 +117,8 @@ realitzar molt més efectivament amb una :doc:`funció <functions>`.
 La comanda ``unalias`` elimina els àlies prèviament definits amb
 ``alias``.
 
-**Exemple 25-2. unalias: assignant i desassignant un àlies**
+Exemple 2. unalias: assignant i desassignant un àlies
+=====================================================
 
 ::
 

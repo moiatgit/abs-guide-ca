@@ -34,7 +34,7 @@ XXX 16.9. Miscellaneous Commands
     loop <loops1.html#FORLOOPREF1>`__ .
 
 
-    **Example 16-54. Using *seq* to generate loop arguments**
+Exemple 54. Using *seq* to generate loop arguments
 
 
     .. code-block:: sh
@@ -116,7 +116,7 @@ XXX 16.9. Miscellaneous Commands
 
 
 
-    **Example 16-55. Letter Count"**
+Exemple 55. Letter Count"
 
 
     .. code-block:: sh
@@ -229,7 +229,7 @@ XXX 16.9. Miscellaneous Commands
     reshuffling.
 
 
-    **Example 16-56. Using *getopt* to parse command-line options**
+Exemple 56. Using *getopt* to parse command-line options
 
 
     .. code-block:: sh
@@ -656,7 +656,7 @@ ge_file.txt
     options this powerful utility takes.
 
 
-    **Example 16-57. A script that copies itself**
+Exemple 57. A script that copies itself
 
 
     .. code-block:: sh
@@ -681,7 +681,7 @@ ge_file.txt
 
 
 
-    **Example 16-58. Exercising *dd***
+Exemple 58. Exercising *dd*
 
 
     .. code-block:: sh
@@ -715,7 +715,7 @@ ge_file.txt
     keystrokes.
 
 
-    **Example 16-59. Capturing Keystrokes**
+Exemple 59. Capturing Keystrokes
 
 
     .. code-block:: sh
@@ -851,7 +851,7 @@ ge_file.txt
     constantly thinking of interesting applications of **dd** .
 
 
-    **Example 16-61. Securely deleting a file**
+Exemple 61. Securely deleting a file
 
 
     .. code-block:: sh
@@ -1042,7 +1042,7 @@ ge_file.txt
     filename.
 
 
-    **Example 16-62. Filename generator**
+Exemple 62. Filename generator
 
 
     .. code-block:: sh
@@ -1085,7 +1085,7 @@ ge_file.txt
     script.
 
 
-    **Example 16-63. Converting meters to miles**
+Exemple 63. Converting meters to miles
 
 
     .. code-block:: sh
@@ -1137,7 +1137,7 @@ ge_file.txt
     **m4** and its uses.
 
 
-    **Example 16-64. Using *m4***
+Exemple 64. Using *m4*
 
 
     .. code-block:: sh

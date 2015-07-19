@@ -11,7 +11,7 @@ the outer loop finishes. Of course, a *break* within either the inner or
 outer loop would interrupt this process.
 
 
-**Example 11-20. Nested Loop**
+Exemple 20. Nested Loop
 
 
 .. code-block:: sh

@@ -77,7 +77,7 @@ necessary only when word splitting or preservation of
 
 
 
-**Example 5-1. Echoing Weird Variables**
+Exemple 1. Echoing Weird Variables
 
 
 .. code-block:: sh

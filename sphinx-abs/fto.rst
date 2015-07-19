@@ -188,7 +188,7 @@ XXX  7.2. File test operators
 
 
 
-**Example 7-4. Testing for broken links**
+Exemple 4. Testing for broken links
 
 
 .. code-block:: sh

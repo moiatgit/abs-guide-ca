@@ -179,7 +179,7 @@ Some other usages and uses of process substitution:
 *while-read loop* <gotchas.html#BADREAD0>`__ running in a subshell.
 
 
-**Example 23-1. Code block redirection without forking**
+Exemple 1. Code block redirection without forking
 
 
 .. code-block:: sh

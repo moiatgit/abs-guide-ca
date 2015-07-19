@@ -180,7 +180,7 @@ excitement into an otherwise dull life.
    operators.
 
 
-   **Example 34-1. Numerical and string comparison are not equivalent**
+Exemple 1. Numerical and string comparison are not equivalent
 
 
    .. code-block:: sh
@@ -457,7 +457,7 @@ excitement into an otherwise dull life.
    unpleasant surprise.
 
 
-   **Example 34-2. Subshell Pitfalls**
+Exemple 2. Subshell Pitfalls
 
 
    .. code-block:: sh
@@ -509,7 +509,7 @@ excitement into an otherwise dull life.
    `Example 15-18 <internal.html#SETPOS>`__ ).
 
 
-   **Example 34-3. Piping the output of *echo* to a *read***
+Exemple 3. Piping the output of *echo* to a *read*
 
 
    .. code-block:: sh

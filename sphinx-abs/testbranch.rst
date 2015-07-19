@@ -49,7 +49,7 @@ the block.
 
 
 
-    **Example 11-25. Using *case***
+Exemple 25. Using *case*
 
 
     .. code-block:: sh
@@ -88,7 +88,7 @@ the block.
 
 
 
-    **Example 11-26. Creating menus using *case***
+Exemple 26. Creating menus using *case*
 
 
     .. code-block:: sh
@@ -249,7 +249,7 @@ the block.
     `globbing <globbingref.html>`__ patterns.
 
 
-    **Example 11-28. Simple string matching**
+Exemple 28. Simple string matching
 
 
     .. code-block:: sh
@@ -297,7 +297,7 @@ the block.
 
 
 
-    **Example 11-29. Checking for alphabetic input**
+Exemple 29. Checking for alphabetic input
 
 
     .. code-block:: sh
@@ -429,7 +429,7 @@ the block.
     default, but this may be changed.
 
 
-    **Example 11-30. Creating menus using *select***
+Exemple 30. Creating menus using *select*
 
 
     .. code-block:: sh
@@ -478,7 +478,7 @@ the block.
     omitted.
 
 
-    **Example 11-31. Creating menus using *select* in a function**
+Exemple 31. Creating menus using *select* in a function
 
 
     .. code-block:: sh

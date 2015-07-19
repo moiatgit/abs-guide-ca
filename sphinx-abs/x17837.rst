@@ -71,7 +71,7 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 
 
 
-**Example 19-13. Prepending a line to a file**
+Exemple 13. Prepending a line to a file
 
 
 .. code-block:: sh
@@ -116,7 +116,7 @@ the ``      stdin     `` of a `loop <loops.html#LOOPREF00>`__ .
 
 
 
-**Example 19-14. Parsing a mailbox**
+Exemple 14. Parsing a mailbox
 
 
 .. code-block:: sh

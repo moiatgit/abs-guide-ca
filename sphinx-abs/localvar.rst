@@ -11,7 +11,7 @@ local variables
     function, a *local variable* has meaning only within that function
     block. `[1] <localvar.html#FTN.AEN18568>`__
 
-    **Example 24-12. Local variable visibility**
+Exemple 12. Local variable visibility
 
      .. code-block:: sh
 
@@ -1071,7 +1071,7 @@ practice generally involves a great deal of computational overhead and
 is definitely *not* recommended in a shell script.
 `[6] <localvar.html#FTN.AEN18632>`__
 
-**Example 24-15. Recursion, using a local variable**
+Exemple 15. Recursion, using a local variable
 
  .. code-block:: sh
 

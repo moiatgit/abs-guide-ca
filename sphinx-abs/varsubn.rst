@@ -60,7 +60,7 @@ substitution* .
     10.2 <parameter-substitution.html>`__ , below).
 
 
-    **Example 4-1. Variable assignment and substitution**
+Exemple 1. Variable assignment and substitution
 
 
     .. code-block:: sh

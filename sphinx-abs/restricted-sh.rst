@@ -42,7 +42,7 @@ The following commands and actions are disabled:
 -  Getting out of restricted mode within the script.
 
 
-**Example 22-1. Running a script in restricted mode**
+Exemple 1. Running a script in restricted mode
 
 
 .. code-block:: sh

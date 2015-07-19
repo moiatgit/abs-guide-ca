@@ -9,7 +9,7 @@ background. `DOS batch files <dosbatch.html#DOSBATCH1>`__ commonly used
 ANSI escape codes for *color* output, and so can Bash scripts.
 
 
-**Example 36-13. A "colorized" address database**
+Exemple 13. A "colorized" address database
 
 
 .. code-block:: sh
@@ -94,7 +94,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
 
 
 
-**Example 36-14. Drawing a box**
+Exemple 14. Drawing a box
 
 
 .. code-block:: sh
@@ -409,7 +409,7 @@ Background
 
 
 
-**Example 36-15. Echoing colored text**
+Exemple 15. Echoing colored text
 
 
 .. code-block:: sh
@@ -482,7 +482,7 @@ Background
 
 
 
-**Example 36-16. A "horserace" game**
+Exemple 16. A "horserace" game
 
 
 .. code-block:: sh

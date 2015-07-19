@@ -27,7 +27,7 @@ XXX  11.3. Loop Control
     cycle.
 
 
-    **Example 11-21. Effects of *break* and **continue** in a loop**
+Exemple 21. Effects of *break* and **continue** in a loop
 
 
     .. code-block:: sh
@@ -91,7 +91,7 @@ XXX  11.3. Loop Control
     ``                   N                 `` levels of loop.
 
 
-    **Example 11-22. Breaking out of multiple loop levels**
+Exemple 22. Breaking out of multiple loop levels
 
 
     .. code-block:: sh
@@ -135,7 +135,7 @@ XXX  11.3. Loop Control
     iteration at the loop, ``         N        `` levels above.
 
 
-    **Example 11-23. Continuing at a higher loop level**
+Exemple 23. Continuing at a higher loop level
 
 
     .. code-block:: sh
@@ -175,7 +175,7 @@ XXX  11.3. Loop Control
 
 
 
-    **Example 11-24. Using *continue N* in an actual task**
+Exemple 24. Using *continue N* in an actual task
 
 
     .. code-block:: sh

@@ -23,7 +23,7 @@ network.
 server.
 
 
-**Example 30-1. Print the server environment**
+Exemple 1. Print the server environment
 
 
 .. code-block:: sh
@@ -101,7 +101,7 @@ For security purposes, it may be helpful to identify the IP addresses a
 computer is accessing.
 
 
-**Example 30-2. IP addresses**
+Exemple 2. IP addresses
 
 
 .. code-block:: sh

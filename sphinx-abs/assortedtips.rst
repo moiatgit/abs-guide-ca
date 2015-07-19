@@ -264,7 +264,7 @@ XXX  36.7. Assorted Tips
    script.
 
 
-   **Example 36-17. A Progress Bar**
+Exemple 17. A Progress Bar
 
 
    .. code-block:: sh
@@ -408,7 +408,7 @@ XXX  36.7. Assorted Tips
    substitution. <commandsub.html#COMMANDSUBREF>`__
 
 
-   **Example 36-18. Return value trickery**
+Exemple 18. Return value trickery
 
 
    .. code-block:: sh
@@ -478,7 +478,7 @@ XXX  36.7. Assorted Tips
    this method.
 
 
-   **Example 36-19. Even more return value trickery**
+Exemple 19. Even more return value trickery
 
 
    .. code-block:: sh
@@ -589,7 +589,7 @@ ction.
    )** operator to assign it to an array.
 
 
-   **Example 36-20. Passing and returning arrays**
+Exemple 20. Passing and returning arrays
 
 
    .. code-block:: sh
@@ -726,7 +726,7 @@ ction.
 
 
 
-   **Example 36-21. Fun with anagrams**
+Exemple 21. Fun with anagrams
 
 
    .. code-block:: sh
@@ -934,7 +934,7 @@ console, but its successors, *gdialog* , *Xdialog* , and *kdialog* use
 X-Windows-based widget sets.
 
 
-**Example 36-22. Widgets invoked from a shell script**
+Exemple 22. Widgets invoked from a shell script
 
 
 .. code-block:: sh

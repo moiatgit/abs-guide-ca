@@ -12,7 +12,7 @@ embedded ``             #           `` evaluates as
 restrictions).
 
 
-**Example 8-4. Representation of numerical constants**
+Exemple 4. Representation of numerical constants
 
 
 .. code-block:: sh

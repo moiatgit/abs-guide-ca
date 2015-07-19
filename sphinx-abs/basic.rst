@@ -628,7 +628,7 @@ o  bozo      1024 May 28
     according to how it was invoked.
 
 
-    **Example 16-2. Hello or Good-bye**
+Exemple 2. Hello or Good-bye
 
 
     .. code-block:: sh

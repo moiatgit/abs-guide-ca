@@ -83,7 +83,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     sites):
 
 
-    **Example 31-1. Hiding the cookie jar**
+Exemple 1. Hiding the cookie jar
 
 
     .. code-block:: sh
@@ -195,7 +195,7 @@ XXX  Chapter 31. Of Zeros and Nulls
     `Example 16-61 <extmisc.html#BLOTOUT>`__ ).
 
 
-    **Example 31-3. Creating a ramdisk**
+Exemple 3. Creating a ramdisk
 
 
     .. code-block:: sh

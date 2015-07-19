@@ -10,7 +10,7 @@ comparisons on variables. The determining factor is whether the value of
 a variable contains only digits.
 
 
-**Example 4-4. Integer or string?**
+Exemple 4. Integer or string?
 
 
 .. code-block:: sh
