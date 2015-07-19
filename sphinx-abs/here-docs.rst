@@ -63,7 +63,7 @@ non-interactive utilities and commands, such as, for example,
 
 
 Exemple 1. *broadcast*: envia un missatge a tothom que estigui connectat
-------------------------------------------------------------------------
+========================================================================
 
 
 .. code-block:: sh
@@ -92,7 +92,7 @@ Even such unlikely candidates as the *vi* text editor lend themselves to
 
 
 Exemple 2. *dummyfile* : Creates a 2-line dummy file
-----------------------------------------------------
+====================================================
 
 
 .. code-block:: sh
@@ -167,7 +167,7 @@ Analogous to "ex scripts" are *cat scripts* .
 
 
 Exemple 3. Multi-line message using *cat*
------------------------------------------
+=========================================
 
 
 .. code-block:: sh
@@ -219,7 +219,7 @@ more readable.
 
 
 Exemple 4. Multi-line message, with tabs suppressed
----------------------------------------------------
+===================================================
 
 
 .. code-block:: sh
@@ -257,7 +257,7 @@ document, changing its output accordingly.
 
 
 Exemple 5. Here document with replaceable parameters
-----------------------------------------------------
+====================================================
 
 
 .. code-block:: sh
@@ -305,7 +305,7 @@ substitution.
 
 
 Exemple 6. Upload a file pair to *Sunsite* incoming directory
--------------------------------------------------------------
+=============================================================
 
 
 .. code-block:: sh
@@ -365,7 +365,7 @@ interpreted literally. (Thank you, Allen Halsey, for pointing this out.)
 
 
 Exemple 7. Parameter substitution turned off
---------------------------------------------
+============================================
 
 
 .. code-block:: sh
@@ -420,7 +420,7 @@ Generating scripts or even program code is one use for this.
 
 
 Exemple 8. A script that generates another script
--------------------------------------------------
+=================================================
 
 
 .. code-block:: sh
@@ -500,7 +500,7 @@ A here document can supply input to a function in the same script.
 
 
 Exemple 9. Here documents and functions
----------------------------------------
+=======================================
 
 
 .. code-block:: sh
@@ -548,7 +548,7 @@ document. This, in effect, creates an "anonymous" here document.
 .. _heredocs_anonim:
 
 Exemple 10. *Here Document* anònim
-----------------------------------
+==================================
 
 
 .. code-block:: sh
@@ -576,7 +576,7 @@ code.
 
 
 Exemple 11. Commenting out a block of code
-------------------------------------------
+==========================================
 
 
 .. code-block:: sh
@@ -663,7 +663,7 @@ possible.
 
 
 Exemple 12. A self-documenting script
--------------------------------------
+=====================================
 
 
 .. code-block:: sh

@@ -84,6 +84,7 @@ script, first using Bash, then the classic *sh* .
 
 
 Exemple 23. Test Suite
+======================
 
 
 .. code-block:: sh

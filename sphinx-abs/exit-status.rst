@@ -192,6 +192,7 @@ success or an integer in the range 1 - 255 on error.
 
 
 Exemple 1. exit / exit status
+=============================
 
 
 .. code-block:: sh
@@ -232,7 +233,8 @@ status <exit-status.html#EXITSTATUSREF>`__ .
 
 .. _exit-status_negatingconditionwithbang:
 
-Exemple 2. Negating a condition using ! 
+Exemple 2. Negating a condition using !
+=======================================
 
 
 .. literalinclude:: /_scripts/negatingconditionusingbang.sh

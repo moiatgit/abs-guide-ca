@@ -20,6 +20,7 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
 
 
 Exemple 2. Function Taking Parameters
+=====================================
 
 
 .. code-block:: sh
@@ -99,6 +100,7 @@ function see them? Well, let's clear up the confusion.
 
 
 Exemple 3. Functions and command-line args passed to the script
+===============================================================
 
 
 .. code-block:: sh
@@ -143,6 +145,7 @@ passing variable pointers to functions.
 
 
 Exemple 4. Passing an indirect reference to a function
+======================================================
 
 
 .. code-block:: sh
@@ -179,6 +182,7 @@ The next logical question is whether parameters can be dereferenced
 
 
 Exemple 5. Dereferencing a parameter passed to a function
+=========================================================
 
 
 .. code-block:: sh
@@ -211,6 +215,7 @@ Exemple 5. Dereferencing a parameter passed to a function
 
 
 Exemple 6. Again, dereferencing a parameter passed to a function
+================================================================
 
 
 .. code-block:: sh
@@ -282,6 +287,7 @@ Exemple 6. Again, dereferencing a parameter passed to a function
 
 
 Exemple 7. Maximum of two numbers
+=================================
 
 
     .. code-block:: sh
@@ -431,6 +437,7 @@ d."
 
 
 Exemple 8. Converting numbers to Roman numerals
+===============================================
 
 
     .. code-block:: sh
@@ -527,6 +534,7 @@ Exemple 8. Converting numbers to Roman numerals
 
 
 Exemple 9. Testing large return values in a function
+====================================================
 
 
     .. code-block:: sh
@@ -617,6 +625,7 @@ ction.
 
 
 Exemple 10. Comparing two large integers
+========================================
 
 
     .. code-block:: sh
@@ -1106,6 +1115,7 @@ th $month)
 
 
 Exemple 11. Real name from username
+===================================
 
 
     .. code-block:: sh

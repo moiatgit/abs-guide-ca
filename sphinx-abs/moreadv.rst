@@ -147,6 +147,7 @@ grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
 
 
 Exemple 4. Deleting a file by its *inode* number
+================================================
 
 
     .. code-block:: sh
@@ -456,6 +457,7 @@ ion.
 
 
 Exemple 5. Logfile: Using *xargs* to monitor system log
+=======================================================
 
 
     .. code-block:: sh
@@ -505,6 +507,7 @@ Exemple 5. Logfile: Using *xargs* to monitor system log
 
 
 Exemple 6. Copying files in current directory to another
+========================================================
 
 
     .. code-block:: sh
@@ -545,6 +548,7 @@ Exemple 6. Copying files in current directory to another
 
 
 Exemple 7. Killing processes by name
+====================================
 
 
     .. code-block:: sh
@@ -595,6 +599,7 @@ Exemple 7. Killing processes by name
 
 
 Exemple 8. Word frequency analysis using *xargs*
+================================================
 
 
     .. code-block:: sh
@@ -687,6 +692,7 @@ Exemple 8. Word frequency analysis using *xargs*
 
 
 Exemple 9. Using *expr*
+=======================
 
 
     .. code-block:: sh

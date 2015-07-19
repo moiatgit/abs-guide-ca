@@ -181,6 +181,7 @@ excitement into an otherwise dull life.
 
 
 Exemple 1. Numerical and string comparison are not equivalent
+=============================================================
 
 
    .. code-block:: sh
@@ -458,6 +459,7 @@ Exemple 1. Numerical and string comparison are not equivalent
 
 
 Exemple 2. Subshell Pitfalls
+============================
 
 
    .. code-block:: sh
@@ -510,6 +512,7 @@ Exemple 2. Subshell Pitfalls
 
 
 Exemple 3. Piping the output of *echo* to a *read*
+==================================================
 
 
    .. code-block:: sh

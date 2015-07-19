@@ -558,7 +558,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 Exemple 3. Compound Condition Tests Using && and \|\
-=====================================================
+====================================================
 
 
     .. code-block:: sh

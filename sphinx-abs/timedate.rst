@@ -11,6 +11,7 @@ temps.
     interessant quan es fan servir les opcions de formatat i anàlisi.
 
 Exemple 10. Ús de *date*
+========================
 
     ::
 
@@ -53,6 +54,7 @@ Exemple 10. Ús de *date*
     Aquesta opció facilita el càlcul del temps entre diferents dates.
 
 Exemple 11. Càlculs amb *Date*
+==============================
 
     ::
 

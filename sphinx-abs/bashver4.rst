@@ -21,6 +21,7 @@ Among the new goodies:
 
 
 Exemple 5. A simple address database
+====================================
 
 
    .. code-block:: sh
@@ -53,6 +54,7 @@ Exemple 5. A simple address database
 
 
 Exemple 6. A somewhat more elaborate address database
+=====================================================
 
 
    .. code-block:: sh
@@ -152,6 +154,7 @@ Exemple 6. A somewhat more elaborate address database
 
 
 Exemple 7. Testing characters
+=============================
 
 
    .. code-block:: sh
@@ -692,6 +695,7 @@ update.
 
 
 Exemple 8. Reading N characters
+===============================
 
 
    .. code-block:: sh
@@ -722,6 +726,7 @@ Exemple 8. Reading N characters
 
 
 Exemple 9. Using a *here document* to set a variable
+====================================================
 
 
    .. code-block:: sh
@@ -849,6 +854,7 @@ new features and enhancements, in addition to bugfixes.
 
 
 Exemple 10. Piping input to a `read <internal.html#READREF>`__
+==============================================================
 
 
    .. code-block:: sh
@@ -886,6 +892,7 @@ Exemple 10. Piping input to a `read <internal.html#READREF>`__
 
 
 Exemple 11. Negative array indices
+==================================
 
 
    .. code-block:: sh
@@ -940,6 +947,7 @@ Exemple 11. Negative array indices
 
 
 Exemple 12. Negative parameter in string-extraction construct
+=============================================================
 
 
    .. code-block:: sh

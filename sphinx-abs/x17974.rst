@@ -12,6 +12,7 @@ input using `sed <sedawk.html#SEDREF>`__ and/or
 
 
 Exemple 1. Redirecting ``        stdin       `` using *exec*
+============================================================
 
 
 .. code-block:: sh
@@ -77,6 +78,7 @@ Thank you, Ahmed Darwish, for pointing this out.
 
 
 Exemple 2. Redirecting ``        stdout       `` using *exec*
+=============================================================
 
 
 .. code-block:: sh
@@ -183,6 +185,7 @@ variables within a subshell <subshells.html#PARVIS>`__ problem.
 
 
 Exemple 4. Avoiding a subshell
+==============================
 
 
 .. code-block:: sh

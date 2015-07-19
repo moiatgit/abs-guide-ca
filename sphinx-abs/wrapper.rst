@@ -19,6 +19,7 @@ invoke it in its original form or modified, without the inconvenience of
 retyping it on the command-line.
 
 Exemple 1. *shell wrapper*
+==========================
 
 .. code-block:: sh
 
@@ -60,6 +61,7 @@ Exemple 1. *shell wrapper*
                                                                           
 
 Exemple 2. A slightly more complex *shell wrapper*
+==================================================
 
 .. code-block:: sh
 
@@ -106,6 +108,7 @@ Exemple 2. A slightly more complex *shell wrapper*
                                                                           
 
 Exemple 3. A generic *shell wrapper* that writes to a logfile
+=============================================================
 
 .. code-block:: sh
 
@@ -141,6 +144,7 @@ Exemple 3. A generic *shell wrapper* that writes to a logfile
                                                                           
 
 Exemple 4. A *shell wrapper* around an awk script
+=================================================
 
 .. code-block:: sh
 
@@ -184,6 +188,7 @@ Exemple 4. A *shell wrapper* around an awk script
                                                                           
 
 Exemple 5. A *shell wrapper* around another awk script
+======================================================
 
 .. code-block:: sh
 
@@ -265,6 +270,7 @@ claim that Perl can totally replace shell scripting (though the author
 of the *ABS Guide* remains skeptical).
 
 Exemple 6. Perl embedded in a *Bash* script
+===========================================
 
 .. code-block:: sh
 
@@ -291,6 +297,7 @@ same file. Depending on how the script is invoked, either the Bash part
 or the Perl part will execute.
 
 Exemple 7. Bash and Perl scripts combined
+=========================================
 
 .. code-block:: sh
 
@@ -331,6 +338,7 @@ It is, of course, possible to embed even more exotic scripting languages
 within shell wrappers. *Python*, for example ...
 
 Exemple 8. Python embedded in a *Bash* script
+=============================================
 
 .. code-block:: sh
 
@@ -359,6 +367,7 @@ Wrapping a script around *mplayer* and the Google's translation server,
 you can create something that talks back to you.
 
 Exemple 9. A script that speaks
+===============================
 
 .. code-block:: sh
 

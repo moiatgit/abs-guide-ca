@@ -35,6 +35,7 @@ XXX 16.9. Miscellaneous Commands
 
 
 Exemple 54. Using *seq* to generate loop arguments
+==================================================
 
 
     .. code-block:: sh
@@ -117,6 +118,7 @@ Exemple 54. Using *seq* to generate loop arguments
 
 
 Exemple 55. Letter Count"
+=========================
 
 
     .. code-block:: sh
@@ -230,6 +232,7 @@ Exemple 55. Letter Count"
 
 
 Exemple 56. Using *getopt* to parse command-line options
+========================================================
 
 
     .. code-block:: sh
@@ -657,6 +660,7 @@ ge_file.txt
 
 
 Exemple 57. A script that copies itself
+=======================================
 
 
     .. code-block:: sh
@@ -682,6 +686,7 @@ Exemple 57. A script that copies itself
 
 
 Exemple 58. Exercising *dd*
+===========================
 
 
     .. code-block:: sh
@@ -716,6 +721,7 @@ Exemple 58. Exercising *dd*
 
 
 Exemple 59. Capturing Keystrokes
+================================
 
 
     .. code-block:: sh
@@ -852,6 +858,7 @@ Exemple 59. Capturing Keystrokes
 
 
 Exemple 61. Securely deleting a file
+====================================
 
 
     .. code-block:: sh
@@ -1043,6 +1050,7 @@ Exemple 61. Securely deleting a file
 
 
 Exemple 62. Filename generator
+==============================
 
 
     .. code-block:: sh
@@ -1086,6 +1094,7 @@ Exemple 62. Filename generator
 
 
 Exemple 63. Converting meters to miles
+======================================
 
 
     .. code-block:: sh
@@ -1138,6 +1147,7 @@ Exemple 63. Converting meters to miles
 
 
 Exemple 64. Using *m4*
+======================
 
 
     .. code-block:: sh

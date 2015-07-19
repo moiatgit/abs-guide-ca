@@ -21,6 +21,7 @@ help in debugging a non-functional script.
 
 
 Exemple 1. A buggy script
+=========================
 
 
 .. code-block:: sh
@@ -56,6 +57,7 @@ What's wrong with the above script? Hint: after the *if* .
 
 
 Exemple 2. Missing `keyword <internal.html#KEYWORDREF>`__
+=========================================================
 
 
 .. code-block:: sh
@@ -100,6 +102,7 @@ all too familiar logic error.
 
 
 Exemple 3. *test24* : another buggy script
+==========================================
 
 
 .. code-block:: sh
@@ -298,6 +301,7 @@ o stderr
 
 
 Exemple 4. Testing a condition with an *assert*
+===============================================
 
 
    .. code-block:: sh
@@ -399,6 +403,7 @@ Exemple 4. Testing a condition with an *assert*
 
 
 Exemple 5. Trapping at exit
+===========================
 
 
 .. code-block:: sh
@@ -429,6 +434,7 @@ Exemple 5. Trapping at exit
 
 
 Exemple 6. Cleaning up after **Control-C**
+==========================================
 
 
 .. code-block:: sh
@@ -526,6 +532,7 @@ Exemple 6. Cleaning up after **Control-C**
 
 
 Exemple 7. A Simple Implementation of a Progress Bar
+====================================================
 
 
 .. code-block:: sh
@@ -575,6 +582,7 @@ variables, for example.
 
 
 Exemple 8. Tracing a variable
+=============================
 
 
 .. code-block:: sh
@@ -693,6 +701,7 @@ A-43 <contributed-scripts.html#STOPWATCH>`__ ).
 
 
 Exemple 9. Running multiple processes (on an SMP box)
+=====================================================
 
 
 .. code-block:: sh

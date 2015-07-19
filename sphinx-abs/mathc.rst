@@ -19,6 +19,7 @@ XXX 16.8. Math Commands
 
 
 Exemple 46. Generating prime numbers
+====================================
 
 
     .. code-block:: sh
@@ -93,6 +94,7 @@ Exemple 46. Generating prime numbers
 
 
 Exemple 47. Monthly Payment on a Mortgage
+=========================================
 
 
     .. code-block:: sh
@@ -203,6 +205,7 @@ Exemple 47. Monthly Payment on a Mortgage
 
 
 Exemple 48. Base Conversion
+===========================
 
 
     .. code-block:: sh
@@ -349,6 +352,7 @@ Exemple 48. Base Conversion
 
 
 Exemple 49. Invoking *bc* using a *here document*
+=================================================
 
 
     .. code-block:: sh
@@ -415,6 +419,7 @@ Exemple 49. Invoking *bc* using a *here document*
 
 
 Exemple 50. Calculating PI
+==========================
 
 
     .. code-block:: sh
@@ -595,6 +600,7 @@ Exemple 50. Calculating PI
 
 
 Exemple 51. Converting a decimal number to hexadecimal
+======================================================
 
 
     .. code-block:: sh
@@ -666,6 +672,7 @@ Exemple 51. Converting a decimal number to hexadecimal
 
 
 Exemple 52. Factoring
+=====================
 
 
     .. code-block:: sh
@@ -718,6 +725,7 @@ Exemple 52. Factoring
 
 
 Exemple 53. Calculating the hypotenuse of a triangle
+====================================================
 
 
     .. code-block:: sh

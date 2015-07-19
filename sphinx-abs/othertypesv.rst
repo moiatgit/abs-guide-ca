@@ -125,6 +125,7 @@ rgument list too long
 
 
 Exemple 5. Positional Parameters
+================================
 
 
     .. code-block:: sh
@@ -257,6 +258,7 @@ Exemple 5. Positional Parameters
 
 
 Exemple 6. *wh* , *whois* domain name lookup
+============================================
 
 
     .. code-block:: sh
@@ -315,6 +317,7 @@ Exemple 6. *wh* , *whois* domain name lookup
 
 
 Exemple 7. Using *shift*
+========================
 
 
     .. code-block:: sh

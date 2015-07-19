@@ -13,6 +13,7 @@ restrictions).
 
 
 Exemple 4. Representation of numerical constants
+================================================
 
 
 .. code-block:: sh

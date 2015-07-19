@@ -58,6 +58,7 @@ control condition* is true.
 
 
 Exemple 1. Simple *for* loops
+=============================
 
 
     .. code-block:: sh
@@ -179,6 +180,7 @@ Exemple 1. Simple *for* loops
 
 
 Exemple 4. Operating on a parameterized file list
+=================================================
 
 
     .. code-block:: sh
@@ -204,6 +206,7 @@ Exemple 4. Operating on a parameterized file list
 
 
 Exemple 5. Operating on files with a *for* loop
+===============================================
 
 
     .. code-block:: sh
@@ -316,6 +319,7 @@ Exemple 5. Operating on files with a *for* loop
 
 
 Exemple 8. A *grep* replacement for binary files
+================================================
 
 
     .. code-block:: sh
@@ -367,6 +371,7 @@ Exemple 8. A *grep* replacement for binary files
 
 
 Exemple 9. Listing all users on the system
+==========================================
 
 
     .. code-block:: sh
@@ -468,6 +473,7 @@ Exemple 9. Listing all users on the system
 
 
 Exemple 11. Listing the *symbolic links* in a directory
+=======================================================
 
 
     .. code-block:: sh
@@ -545,6 +551,7 @@ Exemple 11. Listing the *symbolic links* in a directory
 
 
 Exemple 12. Symbolic links in a directory, saved to a file
+==========================================================
 
 
     .. code-block:: sh
@@ -581,6 +588,7 @@ Exemple 12. Symbolic links in a directory, saved to a file
 
 
 Exemple 13. A C-style *for* loop
+================================
 
 
     .. code-block:: sh
@@ -658,6 +666,7 @@ Exemple 13. A C-style *for* loop
 
 
 Exemple 14. Using *efax* in batch mode
+======================================
 
 
     .. code-block:: sh
@@ -852,6 +861,7 @@ lon is required.
 
 
 Exemple 15. Simple *while* loop
+===============================
 
 
     .. code-block:: sh
@@ -882,6 +892,7 @@ Exemple 15. Simple *while* loop
 
 
 Exemple 16. Another *while* loop
+================================
 
 
     .. code-block:: sh
@@ -911,6 +922,7 @@ Exemple 16. Another *while* loop
 
 
 Exemple 17. *while* loop with multiple conditions
+=================================================
 
 
     .. code-block:: sh
@@ -946,6 +958,7 @@ Exemple 17. *while* loop with multiple conditions
 
 
 Exemple 18. C-style syntax in a *while* loop
+============================================
 
 
     .. code-block:: sh
@@ -1124,6 +1137,7 @@ Exemple 18. C-style syntax in a *while* loop
 
 
 Exemple 19. *until* loop
+========================
 
 
     .. code-block:: sh

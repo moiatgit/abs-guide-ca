@@ -420,6 +420,7 @@ contents of a *binary* file, even as a joke.
 
 
 Exemple 1. Stupid script tricks
+===============================
 
 
 .. code-block:: sh
@@ -512,6 +513,7 @@ output of an `echo <internal.html#ECHOREF>`__ command within the loop.
 
 
 Exemple 2. Generating a variable from a loop
+============================================
 
 
 .. code-block:: sh
@@ -729,6 +731,7 @@ Or, for something a bit more elaborate . . .
 
 
 Exemple 3. Finding anagrams
+===========================
 
 
 .. code-block:: sh

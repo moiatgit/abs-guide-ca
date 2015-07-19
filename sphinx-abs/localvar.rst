@@ -12,6 +12,7 @@ local variables
     block. `[1] <localvar.html#FTN.AEN18568>`__
 
 Exemple 12. Local variable visibility
+=====================================
 
      .. code-block:: sh
 
@@ -1072,6 +1073,7 @@ is definitely *not* recommended in a shell script.
 `[6] <localvar.html#FTN.AEN18632>`__
 
 Exemple 15. Recursion, using a local variable
+=============================================
 
  .. code-block:: sh
 

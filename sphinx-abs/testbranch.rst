@@ -50,6 +50,7 @@ the block.
 
 
 Exemple 25. Using *case*
+========================
 
 
     .. code-block:: sh
@@ -89,6 +90,7 @@ Exemple 25. Using *case*
 
 
 Exemple 26. Creating menus using *case*
+=======================================
 
 
     .. code-block:: sh
@@ -250,6 +252,7 @@ Exemple 26. Creating menus using *case*
 
 
 Exemple 28. Simple string matching
+==================================
 
 
     .. code-block:: sh
@@ -298,6 +301,7 @@ Exemple 28. Simple string matching
 
 
 Exemple 29. Checking for alphabetic input
+=========================================
 
 
     .. code-block:: sh
@@ -430,6 +434,7 @@ Exemple 29. Checking for alphabetic input
 
 
 Exemple 30. Creating menus using *select*
+=========================================
 
 
     .. code-block:: sh
@@ -479,6 +484,7 @@ Exemple 30. Creating menus using *select*
 
 
 Exemple 31. Creating menus using *select* in a function
+=======================================================
 
 
     .. code-block:: sh

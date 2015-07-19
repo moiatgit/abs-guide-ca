@@ -86,6 +86,7 @@ chapter.
 
 
 Exemple 26. Waiting for a process to finish before proceeding
+=============================================================
 
 
     .. code-block:: sh
@@ -330,6 +331,7 @@ Oct 11 15:09 test.sh
 
 
 Exemple 27. A script that kills itself
+======================================
 
 
     .. code-block:: sh

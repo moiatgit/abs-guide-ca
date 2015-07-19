@@ -11,6 +11,7 @@ a variable contains only digits.
 
 
 Exemple 4. Integer or string?
+=============================
 
 
 .. code-block:: sh

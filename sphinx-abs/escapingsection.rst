@@ -59,6 +59,7 @@ special meaning for that character.
 
 
 Exemple 2. Escaped Characters
+=============================
 
 
     .. code-block:: sh
@@ -162,6 +163,7 @@ Exemple 2. Escaped Characters
 
 
 Exemple 3. Detecting key-presses
+================================
 
 
     .. code-block:: sh

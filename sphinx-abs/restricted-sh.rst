@@ -43,6 +43,7 @@ The following commands and actions are disabled:
 
 
 Exemple 1. Running a script in restricted mode
+==============================================
 
 
 .. code-block:: sh

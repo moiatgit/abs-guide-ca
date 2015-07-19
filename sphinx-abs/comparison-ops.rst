@@ -215,7 +215,7 @@ Chazelas
 
 
 Exemple 5. Arithmetic and string comparisons
---------------------------------------------
+============================================
 
 
 .. code-block:: sh
@@ -262,7 +262,7 @@ Exemple 5. Arithmetic and string comparisons
 
 
 Exemple 6. Testing whether a string is *null*
----------------------------------------------
+=============================================
 
 
 .. code-block:: sh
@@ -341,7 +341,7 @@ Exemple 6. Testing whether a string is *null*
 
 
 Exemple 7. *zmore*
-------------------
+==================
 
 
 .. code-block:: sh

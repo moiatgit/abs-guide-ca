@@ -238,6 +238,7 @@ be the most interesting from a scripting standpoint.
 
 
 Exemple 3. Finding the process associated with a PID
+====================================================
 
 
 .. code-block:: sh
@@ -333,6 +334,7 @@ Exemple 3. Finding the process associated with a PID
 
 
 Exemple 4. On-line connect status
+=================================
 
 
 .. code-block:: sh

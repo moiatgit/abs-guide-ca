@@ -91,6 +91,7 @@ subshell. These are, in effect, variables
 
 
 Exemple 1. Variable scope in a subshell
+=======================================
 
 
 .. code-block:: sh
@@ -259,6 +260,7 @@ shell.
 
 
 Exemple 2. List User Profiles
+=============================
 
 
 .. code-block:: sh
@@ -360,6 +362,7 @@ concurrently.
 
 
 Exemple 3. Running parallel processes in subshells
+==================================================
 
 
 .. code-block:: sh

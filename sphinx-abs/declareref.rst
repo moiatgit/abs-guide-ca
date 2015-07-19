@@ -127,6 +127,7 @@ Bash. The *typeset* command also works in ksh scripts.
 
 
 Exemple 10. Using *declare* to type variables
+=============================================
 
 
 .. code-block:: sh

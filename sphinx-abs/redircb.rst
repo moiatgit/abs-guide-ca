@@ -13,6 +13,7 @@ The < operator at the end of the code block accomplishes this.
 
 
 Exemple 5. Redirected *while* loop
+==================================
 
 
 .. code-block:: sh
@@ -72,6 +73,7 @@ Exemple 5. Redirected *while* loop
 
 
 Exemple 6. Alternate form of redirected *while* loop
+====================================================
 
 
 .. code-block:: sh
@@ -127,6 +129,7 @@ Exemple 6. Alternate form of redirected *while* loop
 
 
 Exemple 7. Redirected *until* loop
+==================================
 
 
 .. code-block:: sh
@@ -158,6 +161,7 @@ Exemple 7. Redirected *until* loop
 
 
 Exemple 8. Redirected *for* loop
+================================
 
 
 .. code-block:: sh
@@ -241,6 +245,7 @@ loop.
 
 
 Exemple 10. Redirected *if/then* test
+=====================================
 
 
 .. code-block:: sh
@@ -273,6 +278,7 @@ Exemple 10. Redirected *if/then* test
 
 
 Exemple 11. Data file *names.data* for above examples
+=====================================================
 
 
 .. code-block:: sh

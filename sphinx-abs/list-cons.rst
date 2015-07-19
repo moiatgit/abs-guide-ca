@@ -93,6 +93,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
 
 Exemple 2. Another command-line arg test using an *and list*
+============================================================
 
 
     .. code-block:: sh
@@ -148,6 +149,7 @@ Exemple 2. Another command-line arg test using an *and list*
 
 
 Exemple 3. Using *or lists* in combination with an *and list*
+=============================================================
 
 
     .. code-block:: sh

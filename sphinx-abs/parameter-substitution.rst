@@ -192,7 +192,7 @@ XXX 10.2. Substitució de paràmetres
 .. _parameter-substitution_missatges_error:
 
 Exemple 1. Ús de la substitució de paràmetres i els missatges d'error
----------------------------------------------------------------------
+=====================================================================
 
 ::
 
@@ -255,7 +255,7 @@ Exemple 1. Ús de la substitució de paràmetres i els missatges d'error
     # De fet, el script retornarà 1 com a resultat d'execució (echo $?).
 
 Exemple 2. Ús de la substitució de paràmetres i els missatges d'"informació"
-----------------------------------------------------------------------------
+============================================================================
 
 ::
 
@@ -301,7 +301,7 @@ següents complementen les operacions de strings que consideren la
        nombre d'elements que conté l'array.
 
 Exemple 3. Durada d'una variable
---------------------------------
+================================
 
     ::
 
@@ -400,7 +400,7 @@ Bash va afegir noves opcions.
 .. _parameter-substitution_patrons:
 
 Exemple 4. Patrons a la substitució de paràmetres
--------------------------------------------------
+=================================================
 
 ::
 
@@ -450,7 +450,7 @@ Exemple 4. Patrons a la substitució de paràmetres
     exit 0
 
 Exemple 5. Canvi d'extensió d'un fitxer:
-----------------------------------------
+========================================
 
 ::
 
@@ -511,7 +511,7 @@ Exemple 5. Canvi d'extensió d'un fitxer:
     les ocurrències de ``Patró`` per *no res*. És a dir, són eliminades.
 
 Exemple 6. Anàlisi de strings arbitraris
-----------------------------------------
+========================================
 
     ::
 
@@ -587,7 +587,7 @@ Exemple 6. Anàlisi de strings arbitraris
     ``Substitució`` apareix en comptes de ``Patró``.
 
 Exemple 7. Coincidència de patrons a l'inici o al final d'un string
--------------------------------------------------------------------
+===================================================================
 
     ::
 

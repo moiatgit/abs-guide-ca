@@ -257,6 +257,7 @@ k | grep docbook
 
 
 Exemple 30. Using *cpio* to move a directory tree
+=================================================
 
 
     .. code-block:: sh
@@ -308,6 +309,7 @@ Exemple 30. Using *cpio* to move a directory tree
 
 
 Exemple 31. Unpacking an *rpm* archive
+======================================
 
 
     .. code-block:: sh
@@ -534,6 +536,7 @@ Exemple 31. Unpacking an *rpm* archive
 
 
 Exemple 32. Stripping comments from C program files
+===================================================
 
 
     .. code-block:: sh
@@ -668,6 +671,7 @@ tr -d '\n' | tr '\377' '\n';;
 
 
 Exemple 33. Exploring ``           /usr/X11R6/bin          ``
+=============================================================
 
 
     .. code-block:: sh
@@ -803,6 +807,7 @@ Exemple 33. Exploring ``           /usr/X11R6/bin          ``
 
 
 Exemple 34. An "improved" *strings* command
+===========================================
 
 
     .. code-block:: sh
@@ -1066,6 +1071,7 @@ notes2: file04
 
 
 Exemple 35. Using *cmp* to compare two files within a script.
+=============================================================
 
 
     .. code-block:: sh
@@ -1189,6 +1195,7 @@ Exemple 35. Using *cmp* to compare two files within a script.
 
 
 Exemple 36. *basename* and *dirname*
+====================================
 
 
     .. code-block:: sh
@@ -1218,6 +1225,7 @@ Exemple 36. *basename* and *dirname*
 
 
 Exemple 37. A script that copies itself in sections
+===================================================
 
 
     .. code-block:: sh
@@ -1302,6 +1310,7 @@ Exemple 37. A script that copies itself in sections
 
 
 Exemple 38. Checking file integrity
+===================================
 
 
     .. code-block:: sh
@@ -1497,6 +1506,7 @@ stfile
 
 
 Exemple 39. Uudecoding encoded files
+====================================
 
 
     .. code-block:: sh

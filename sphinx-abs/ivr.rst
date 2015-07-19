@@ -13,6 +13,7 @@ reference* .
 
 
 Exemple 1. Indirect Variable References
+=======================================
 
 
 .. code-block:: sh
@@ -182,6 +183,7 @@ their contents. This can be useful when
 
 
 Exemple 2. Passing an indirect reference to *awk*
+=================================================
 
 
 .. code-block:: sh

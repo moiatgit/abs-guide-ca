@@ -61,6 +61,7 @@ substitution* .
 
 
 Exemple 1. Variable assignment and substitution
+===============================================
 
 
     .. code-block:: sh

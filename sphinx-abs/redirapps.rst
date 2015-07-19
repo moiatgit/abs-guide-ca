@@ -10,6 +10,7 @@ log files.
 
 
 Exemple 12. Logging events
+==========================
 
 
 .. code-block:: sh

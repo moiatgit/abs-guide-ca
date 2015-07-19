@@ -157,6 +157,7 @@ ar!
 
 
 Exemple 1. What is truth?
+=========================
 
 
 .. code-block:: sh
@@ -763,7 +764,8 @@ in marked contrast to using the **test** and [ ] constructs previously
 discussed.
 
 
-Exemple 3. Arithmetic Tests using (( )) 
+Exemple 3. Arithmetic Tests using (( ))
+=======================================
 
 
 .. code-block:: sh

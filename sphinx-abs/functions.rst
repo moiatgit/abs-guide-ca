@@ -130,6 +130,7 @@ function call is equivalent to a command.*
 
 
 Exemple 1. Simple functions
+===========================
 
 
 .. code-block:: sh

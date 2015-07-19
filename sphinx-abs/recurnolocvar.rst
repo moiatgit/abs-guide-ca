@@ -6,6 +6,7 @@ A function may recursively call itself even without use of local
 variables.
 
 Exemple 16. *The Fibonacci Sequence*
+====================================
 
 .. code-block:: sh
 
@@ -59,6 +60,7 @@ Exemple 16. *The Fibonacci Sequence*
                                                                           
 
 Exemple 17. *The Towers of Hanoi*
+=================================
 
 .. code-block:: sh
 

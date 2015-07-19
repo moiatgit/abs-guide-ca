@@ -694,6 +694,7 @@ Claus: {}
 
 
 Exemple 1. Code blocks and I/O redirection
+==========================================
 
 
     .. code-block:: sh
@@ -725,6 +726,7 @@ Exemple 1. Code blocks and I/O redirection
 
 
 Exemple 2. Saving the output of a code block to a file
+======================================================
 
 
     .. code-block:: sh
@@ -1283,6 +1285,7 @@ Símbol d'unió o *ampersand*: &
 
 
 Exemple 3. Running a loop in the background
+===========================================
 
 
     .. code-block:: sh
@@ -1607,6 +1610,7 @@ me
 
 
 Exemple 4. Backup of all files changed in last day
+==================================================
 
 
     .. code-block:: sh

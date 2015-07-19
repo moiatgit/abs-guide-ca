@@ -24,7 +24,7 @@ down. <gotchas.html#PARCHILDPROBREF>`__
 
 
 Exemple 1. A script that spawns multiple instances of itself
-------------------------------------------------------------
+============================================================
 
 
 .. code-block:: sh
@@ -386,7 +386,7 @@ tin
 
 
 Exemple 2. *printf* in action
------------------------------
+=============================
 
 
     .. code-block:: sh
@@ -469,7 +469,7 @@ Exemple 2. *printf* in action
 
 
 Exemple 3. Variable assignment, using *read*
---------------------------------------------
+============================================
 
 
     .. code-block:: sh
@@ -506,7 +506,7 @@ Exemple 3. Variable assignment, using *read*
 
 
 Exemple 4. What happens when *read* has no variable
----------------------------------------------------
+===================================================
 
 
     .. code-block:: sh
@@ -572,7 +572,7 @@ Exemple 4. What happens when *read* has no variable
 
 
 Exemple 5. Multi-line input to *read*
--------------------------------------
+=====================================
 
 
     .. code-block:: sh
@@ -637,7 +637,7 @@ Exemple 5. Multi-line input to *read*
 
 
 Exemple 6. Detecting the arrow keys
------------------------------------
+===================================
 
 
     .. code-block:: sh
@@ -890,7 +890,7 @@ Exemple 6. Detecting the arrow keys
 
 
 Exemple 7. Problems reading from a pipe
----------------------------------------
+=======================================
 
 
     .. code-block:: sh
@@ -1194,7 +1194,7 @@ rint |
 
 
 Exemple 8. Changing the current working directory
--------------------------------------------------
+=================================================
 
 
     .. code-block:: sh
@@ -1241,7 +1241,7 @@ Exemple 8. Changing the current working directory
 
 
 Exemple 9. Letting *let* do arithmetic.
----------------------------------------
+=======================================
 
 
     .. code-block:: sh
@@ -1466,7 +1466,7 @@ erwise." ['help let']
 
 
 Exemple 10. Showing the effect of *eval*
-----------------------------------------
+========================================
 
 
     .. code-block:: sh
@@ -1517,7 +1517,7 @@ Exemple 10. Showing the effect of *eval*
 
 
 Exemple 11. Using *eval* to select among variables
---------------------------------------------------
+==================================================
 
 
     .. code-block:: sh
@@ -1563,7 +1563,7 @@ Exemple 11. Using *eval* to select among variables
 
 
 Exemple 12. *Echoing* the *command-line parameters*
----------------------------------------------------
+===================================================
 
 
     .. code-block:: sh
@@ -1613,7 +1613,7 @@ Exemple 12. *Echoing* the *command-line parameters*
 
 
 Exemple 13. Forcing a log-off
------------------------------
+=============================
 
 
     .. code-block:: sh
@@ -1659,7 +1659,7 @@ Exemple 13. Forcing a log-off
 
 
 Exemple 14. A version of *rot13*
---------------------------------
+================================
 
 
     .. code-block:: sh
@@ -1756,7 +1756,7 @@ Exemple 14. A version of *rot13*
 
 
 Exemple 15. Using *set* with positional parameters
---------------------------------------------------
+==================================================
 
 
     .. code-block:: sh
@@ -1804,7 +1804,7 @@ Exemple 15. Using *set* with positional parameters
 
 
 Exemple 16. Reversing the positional parameters
------------------------------------------------
+===============================================
 
 
     .. code-block:: sh
@@ -1905,7 +1905,7 @@ Exemple 16. Reversing the positional parameters
 
 
 Exemple 17. Reassigning the positional parameters
--------------------------------------------------
+=================================================
 
 
     .. code-block:: sh
@@ -1973,7 +1973,7 @@ Exemple 17. Reassigning the positional parameters
 
 
 Exemple 18. "Unsetting" a variable
-----------------------------------
+==================================
 
 
     .. code-block:: sh
@@ -2321,7 +2321,7 @@ fitxer de dades o una mateixa biblioteca de funcions.
 
 
 Exemple 19. "Including" a data file
------------------------------------
+===================================
 
     .. code-block:: sh
 
@@ -2419,7 +2419,7 @@ Exemple 19. "Including" a data file
 
 
 Exemple 20. A (useless) script that sources itself
---------------------------------------------------
+==================================================
 
 
     .. code-block:: sh
@@ -2511,7 +2511,7 @@ Exemple 20. A (useless) script that sources itself
 
 
 Exemple 21. Effects of *exec*
------------------------------
+=============================
 
 
     .. code-block:: sh
@@ -2536,7 +2536,7 @@ Exemple 21. Effects of *exec*
 
 
 Exemple 22. A script that *exec's* itself
------------------------------------------
+=========================================
 
 
     .. code-block:: sh

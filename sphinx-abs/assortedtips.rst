@@ -265,6 +265,7 @@ XXX  36.7. Assorted Tips
 
 
 Exemple 17. A Progress Bar
+==========================
 
 
    .. code-block:: sh
@@ -409,6 +410,7 @@ Exemple 17. A Progress Bar
 
 
 Exemple 18. Return value trickery
+=================================
 
 
    .. code-block:: sh
@@ -479,6 +481,7 @@ Exemple 18. Return value trickery
 
 
 Exemple 19. Even more return value trickery
+===========================================
 
 
    .. code-block:: sh
@@ -590,6 +593,7 @@ ction.
 
 
 Exemple 20. Passing and returning arrays
+========================================
 
 
    .. code-block:: sh
@@ -727,6 +731,7 @@ Exemple 20. Passing and returning arrays
 
 
 Exemple 21. Fun with anagrams
+=============================
 
 
    .. code-block:: sh
@@ -935,6 +940,7 @@ X-Windows-based widget sets.
 
 
 Exemple 22. Widgets invoked from a shell script
+===============================================
 
 
 .. code-block:: sh

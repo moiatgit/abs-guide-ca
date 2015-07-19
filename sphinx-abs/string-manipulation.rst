@@ -177,6 +177,7 @@ file**
 
 
 Exemple 2. Generating an 8-character "random" string
+====================================================
 
 
     .. code-block:: sh
@@ -454,6 +455,7 @@ Exemple 2. Generating an 8-character "random" string
 
 
 Exemple 4. Converting streaming audio files to *ogg*
+====================================================
 
 
     .. code-block:: sh
@@ -518,6 +520,7 @@ Exemple 4. Converting streaming audio files to *ogg*
 
 
 Exemple 5. Emulating *getopt*
+=============================
 
 
     .. code-block:: sh
@@ -654,6 +657,7 @@ operations.
 
 
 Exemple 6. Alternate ways of extracting and locating substrings
+===============================================================
 
 
 .. code-block:: sh

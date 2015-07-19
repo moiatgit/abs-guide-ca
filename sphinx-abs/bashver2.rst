@@ -21,6 +21,7 @@ indirect variable references, among other features.
 
 
 Exemple 1. String expansion
+===========================
 
 
 .. code-block:: sh
@@ -50,6 +51,7 @@ Exemple 1. String expansion
 
 
 Exemple 2. Indirect variable references - the new way
+=====================================================
 
 
 .. code-block:: sh

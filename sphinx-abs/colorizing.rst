@@ -10,6 +10,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
 
 
 Exemple 13. A "colorized" address database
+==========================================
 
 
 .. code-block:: sh
@@ -95,6 +96,7 @@ Exemple 13. A "colorized" address database
 
 
 Exemple 14. Drawing a box
+=========================
 
 
 .. code-block:: sh
@@ -410,6 +412,7 @@ Background
 
 
 Exemple 15. Echoing colored text
+================================
 
 
 .. code-block:: sh
@@ -483,6 +486,7 @@ Exemple 15. Echoing colored text
 
 
 Exemple 16. A "horserace" game
+==============================
 
 
 .. code-block:: sh

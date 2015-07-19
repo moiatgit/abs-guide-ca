@@ -24,6 +24,7 @@ server.
 
 
 Exemple 1. Print the server environment
+=======================================
 
 
 .. code-block:: sh
@@ -102,6 +103,7 @@ computer is accessing.
 
 
 Exemple 2. IP addresses
+=======================
 
 
 .. code-block:: sh

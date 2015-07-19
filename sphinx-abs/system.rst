@@ -267,6 +267,7 @@ damage your system if misused.
 
 
 Exemple 1. Setting a new password
+=================================
 
 
     .. code-block:: sh
@@ -399,6 +400,7 @@ Exemple 1. Setting a new password
 
 
 Exemple 2. Setting an *erase* character
+=======================================
 
 
     .. code-block:: sh
@@ -427,6 +429,7 @@ Exemple 2. Setting an *erase* character
 
 
 Exemple 3. *secret password* : Turning off terminal echoing
+===========================================================
 
 
     .. code-block:: sh
@@ -469,6 +472,7 @@ Exemple 3. *secret password* : Turning off terminal echoing
 
 
 Exemple 4. Keypress detection
+=============================
 
 
     .. code-block:: sh
@@ -897,6 +901,7 @@ Exemple 4. Keypress detection
 
 
 Exemple 5. Checking a remote server for *identd*
+================================================
 
 
     .. code-block:: sh
@@ -1530,6 +1535,7 @@ n localhost
 
 
 Exemple 6. *pidof* helps kill a process
+=======================================
 
 
     .. code-block:: sh
@@ -2007,6 +2013,7 @@ Exemple 6. *pidof* helps kill a process
 
 
 Exemple 7. Checking a CD image
+==============================
 
 
     .. code-block:: sh
@@ -2093,6 +2100,7 @@ Exemple 7. Checking a CD image
 
 
 Exemple 8. Creating a filesystem in a file
+==========================================
 
 
     .. code-block:: sh
@@ -2123,6 +2131,7 @@ Exemple 8. Creating a filesystem in a file
 
 
 Exemple 9. Adding a new hard drive
+==================================
 
 
     .. code-block:: sh

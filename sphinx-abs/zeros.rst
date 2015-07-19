@@ -84,6 +84,7 @@ XXX  Chapter 31. Of Zeros and Nulls
 
 
 Exemple 1. Hiding the cookie jar
+================================
 
 
     .. code-block:: sh
@@ -196,6 +197,7 @@ Exemple 1. Hiding the cookie jar
 
 
 Exemple 3. Creating a ramdisk
+=============================
 
 
     .. code-block:: sh

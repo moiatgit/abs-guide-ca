@@ -8,6 +8,7 @@ Indeed.
 
 
 Exemple 10. A (useless) script that recursively calls itself
+============================================================
 
 
 .. code-block:: sh
@@ -48,6 +49,7 @@ Exemple 10. A (useless) script that recursively calls itself
 
 
 Exemple 11. A (useful) script that recursively calls itself
+===========================================================
 
 
 .. code-block:: sh
@@ -108,6 +110,7 @@ Exemple 11. A (useful) script that recursively calls itself
 
 
 Exemple 12. Another (useful) script that recursively calls itself
+=================================================================
 
 
 .. code-block:: sh

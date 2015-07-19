@@ -99,6 +99,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 Exemple 40. Finding out where to report a spammer
+=================================================
 
 
     .. code-block:: sh
@@ -154,6 +155,7 @@ Exemple 40. Finding out where to report a spammer
 
 
 Exemple 41. Analyzing a spam domain
+===================================
 
 
     .. code-block:: sh
@@ -505,6 +507,7 @@ Exemple 41. Analyzing a spam domain
 
 
 Exemple 42. Getting a stock quote
+=================================
 
 
     .. code-block:: sh
@@ -601,6 +604,7 @@ Exemple 42. Getting a stock quote
 
 
 Exemple 43. Updating FC4
+========================
 
 
     .. code-block:: sh
@@ -850,6 +854,7 @@ Exemple 43. Updating FC4
 
 
 Exemple 44. Using *ssh*
+=======================
 
 
     .. code-block:: sh
@@ -979,6 +984,7 @@ Exemple 44. Using *ssh*
 
 
 Exemple 45. A script that mails itself
+======================================
 
 
     .. code-block:: sh

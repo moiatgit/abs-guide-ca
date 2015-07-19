@@ -12,6 +12,7 @@ bracket* notation, that is, ``             ${element[xx]}           `` .
 
 
 Exemple 1. Simple array usage
+=============================
 
 
 .. code-block:: sh
@@ -170,6 +171,7 @@ untyped <untyped.html#BVUNTYPED>`__ .
 
 
 Exemple 2. Formatting a poem
+============================
 
 
 .. code-block:: sh
@@ -223,6 +225,7 @@ commands and operators have special options adapted for array use.
 
 
 Exemple 3. Various array operations
+===================================
 
 
 .. code-block:: sh
@@ -283,6 +286,7 @@ operations <string-manipulation.html#STRINGMANIP>`__ work on arrays.
 
 
 Exemple 4. String operations on arrays
+======================================
 
 
 .. code-block:: sh
@@ -414,6 +418,7 @@ the individual elements of an array.
 
 
 Exemple 5. Loading the contents of a script into an array
+=========================================================
 
 
 .. code-block:: sh
@@ -458,6 +463,7 @@ entire array.
 
 
 Exemple 6. Some special properties of arrays
+============================================
 
 
 .. code-block:: sh
@@ -538,6 +544,7 @@ either **${#array\_name[@]}** or **${#array\_name[\*]}** .
 
 
 Exemple 7. Of empty arrays and empty elements
+=============================================
 
 
 .. code-block:: sh
@@ -878,6 +885,7 @@ Clever scripting makes it possible to add array operations.
 
 
 Exemple 8. Initializing arrays
+==============================
 
 
 .. code-block:: sh
@@ -986,6 +994,7 @@ may speed up execution of subsequent operations on the array.
 
 
 Exemple 9. Copying and concatenating arrays
+===========================================
 
 
 .. code-block:: sh
@@ -1061,6 +1070,7 @@ Exemple 9. Copying and concatenating arrays
 
 
 Exemple 10. More on concatenating arrays
+========================================
 
 
 .. code-block:: sh
@@ -1189,6 +1199,7 @@ decide.
 
 
 Exemple 11. The Bubble Sort
+===========================
 
 
 .. code-block:: sh
@@ -1338,6 +1349,7 @@ possibilities
 
 
 Exemple 12. Embedded arrays and indirect references
+===================================================
 
 
 .. code-block:: sh
@@ -1422,6 +1434,7 @@ runs excruciatingly slowly as a script.
 
 
 Exemple 13. The Sieve of Eratosthenes
+=====================================
 
 
 .. code-block:: sh
@@ -1566,6 +1579,7 @@ Exemple 13. The Sieve of Eratosthenes
 
 
 Exemple 14. The Sieve of Eratosthenes, Optimized
+================================================
 
 
 .. code-block:: sh
@@ -1621,6 +1635,7 @@ which Bash has no native support.
 
 
 Exemple 15. Emulating a push-down stack
+=======================================
 
 
 .. code-block:: sh
@@ -1831,6 +1846,7 @@ permits simulating multi-dimensional ones.
 
 
 Exemple 17. Simulating a two-dimensional array, then tilting it
+===============================================================
 
 
 .. code-block:: sh

@@ -144,6 +144,7 @@ Downloading a URL:
 [Thanks, Mark and Mihai Maties.]
 
 Exemple 1. Using ``/dev/tcp`` for troubleshooting
+=================================================
 
 .. code-block:: sh
 
@@ -191,6 +192,7 @@ to the
                                                                           
 
 Exemple 2. Playing music
+========================
 
 .. code-block:: sh
 
