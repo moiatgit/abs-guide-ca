@@ -126,8 +126,8 @@ computer is accessing.
     router="[0-9][0-9][0-9][0-9][0-9]->"
     #       Delete the router info.
 
-    lsof "$lsof_args" | grep $connection_type | grep -v "$no_match" |
-          awk '{print $9}' | cut -d : -f $field | sort | uniq |
+    lsof "$lsof_args"grep $connection_type | grep -v "$no_match"
+          awk '{print $9}'cut -d : -f $field | sort | uniq
           sed s/"^$router"//
 
     #  Bledsoe's script assigns the output of a filtered IP list,

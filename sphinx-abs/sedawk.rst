@@ -39,7 +39,7 @@ combined capabilities give shell scripts some of the power of
 
 
 
-|Note|
+|Note
 
 One important difference between the utilities is that while shell
 scripts can easily pass arguments to sed, it is more cumbersome for awk

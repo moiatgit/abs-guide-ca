@@ -152,8 +152,8 @@ their contents. This can be useful when
 
     chkMirrorArchs () {
       arch="$1";
-      if [ "$(eval "echo \${$(echo get$(echo -ne $arch |
-           sed 's/^\(.\).*/\1/g' | tr 'a-z' 'A-Z'; echo $arch |
+      if [ "$(eval "echo \${$(echo get$(echo -ne $arch
+           sed 's/^\(.\).*/\1/g'tr 'a-z' 'A-Z'; echo $arch
            sed 's/^.\(.*\)/\1/g')):-false}")" = true ]
       then
          return 0;
@@ -242,7 +242,7 @@ their contents. This can be useful when
 
 
 
-|Caution|
+|Caution
 
 This method of indirect referencing is a bit tricky. If the second order
 variable changes its value, then the first order variable must be

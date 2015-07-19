@@ -31,7 +31,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-       |Caution|
+       |Caution
 
        This option will not work on magnetic tape devices.
 
@@ -65,7 +65,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Caution|
+    |Caution
 
     It may be difficult to recover data from a corrupted *gzipped* tar
     archive. When archiving important files, make multiple backups.
@@ -104,17 +104,17 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     ``                         rpm -qf                       ``
     identifies which package a file originates from.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ rpm -qf /bin/l |
-    | s                        |
-    |     coreutils-5.2.1-31   |
-    |                          |
+.. code-block:: sh
+
+    bash$ rpm -qf /bin/l
+s
+    coreutils-5.2.1-31
+
 
 
 
@@ -136,7 +136,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     ``                         rpm -qa                       `` gives a
     complete list of all installed *rpm* packages on a given system. An
@@ -144,45 +144,45 @@ XXX  16.5. File and Archiving Commands
     lists only the package(s) corresponding to
     ``            package_name           `` .
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ rpm -qa        |
-    |     redhat-logos-1.1.3-1 |
-    |      glibc-2.2.4-13      |
-    |      cracklib-2.7-12     |
-    |      dosfstools-2.7-1    |
-    |      gdbm-1.8.0-10       |
-    |      ksymoops-2.4.1-1    |
-    |      mktemp-1.5-11       |
-    |      perl-5.6.0-17       |
-    |      reiserfs-utils-3.x. |
-    | 0j-2                     |
-    |      ...                 |
-    |                          |
-    |                          |
-    |     bash$ rpm -qa docboo |
-    | k-utils                  |
-    |     docbook-utils-0.6.9- |
-    | 2                        |
-    |                          |
-    |                          |
-    |     bash$ rpm -qa docboo |
-    | k | grep docbook         |
-    |     docbook-dtd31-sgml-1 |
-    | .0-10                    |
-    |      docbook-style-dsssl |
-    | -1.64-3                  |
-    |      docbook-dtd30-sgml- |
-    | 1.0-10                   |
-    |      docbook-dtd40-sgml- |
-    | 1.0-11                   |
-    |      docbook-utils-pdf-0 |
-    | .6.9-2                   |
-    |      docbook-dtd41-sgml- |
-    | 1.0-10                   |
-    |      docbook-utils-0.6.9 |
-    | -2                       |
-    |                          |
+.. code-block:: sh
+
+    bash$ rpm -qa
+    redhat-logos-1.1.3-1
+     glibc-2.2.4-13
+     cracklib-2.7-12
+     dosfstools-2.7-1
+     gdbm-1.8.0-10
+     ksymoops-2.4.1-1
+     mktemp-1.5-11
+     perl-5.6.0-17
+     reiserfs-utils-3.x.
+0j-2
+     ...
+
+
+    bash$ rpm -qa docboo
+k-utils
+    docbook-utils-0.6.9-
+2
+
+
+    bash$ rpm -qa docboo
+k | grep docbook
+    docbook-dtd31-sgml-1
+.0-10
+     docbook-style-dsssl
+-1.64-3
+     docbook-dtd30-sgml-
+1.0-10
+     docbook-dtd40-sgml-
+1.0-11
+     docbook-utils-pdf-0
+.6.9-2
+     docbook-dtd41-sgml-
+1.0-10
+     docbook-utils-0.6.9
+-2
+
 
 
 
@@ -205,7 +205,7 @@ XXX  16.5. File and Archiving Commands
         docbook-utils-0.6.9-2
 
 
-        bash$ rpm -qa docbook | grep docbook
+        bash$ rpm -qa docbookgrep docbook
         docbook-dtd31-sgml-1.0-10
          docbook-style-dsssl-1.64-3
          docbook-dtd30-sgml-1.0-10
@@ -235,7 +235,7 @@ XXX  16.5. File and Archiving Commands
         docbook-utils-0.6.9-2
 
 
-        bash$ rpm -qa docbook | grep docbook
+        bash$ rpm -qa docbookgrep docbook
         docbook-dtd31-sgml-1.0-10
          docbook-style-dsssl-1.64-3
          docbook-dtd30-sgml-1.0-10
@@ -283,7 +283,7 @@ XXX  16.5. File and Archiving Commands
         destination="$2"
 
         ###################################################################
-        find "$source" -depth | cpio -admvp "$destination"
+        find "$source" -depthcpio -admvp "$destination"
         #               ^^^^^         ^^^^^
         #  Read the 'find' and 'cpio' info pages to decipher these options.
         #  The above works only relative to $PWD (current directory) . . .
@@ -294,7 +294,7 @@ XXX  16.5. File and Archiving Commands
         # Exercise:
         # --------
 
-        #  Add code to check the exit status ($?) of the 'find | cpio' pipe
+        #  Add code to check the exit status ($?) of the 'findcpio' pipe
         #+ and output appropriate error messages if anything went wrong.
 
         exit $?
@@ -375,7 +375,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     The ``            -c           `` option sends the output of
     **gzip** to ``            stdout           `` . This is useful when
@@ -393,7 +393,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Caution|
+    |Caution
 
     On some commercial UNIX systems, **zcat** is a synonym for
     **uncompress -c** , and will not work on *gzipped* files.
@@ -413,7 +413,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     Newer versions of `tar <filearchiv.html#TARREF>`__ have been patched
     with **bzip2** support.
@@ -430,7 +430,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     The **znew** command transforms *compressed* files into *gzipped*
     ones.
@@ -448,7 +448,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     The output of **sq** may be piped to **gzip** for further
     compression.
@@ -520,7 +520,7 @@ XXX  16.5. File and Archiving Commands
         KEYWORD=Bourne
         # Bourne and Bourne-Again shell scripts
 
-        file $DIRECTORY/* | fgrep $KEYWORD
+        file $DIRECTORY/*fgrep $KEYWORD
 
         # Output:
 
@@ -552,7 +552,7 @@ XXX  16.5. File and Archiving Commands
         fi
 
         # Test for correct file type.
-        type=`file $1 | awk '{ print $2, $3, $4, $5 }'`
+        type=`file $1awk '{ print $2, $3, $4, $5 }'`
         # "file $1" echoes file type . . .
         # Then awk removes the first field, the filename . . .
         # Then the result is fed into the variable "type."
@@ -598,12 +598,12 @@ XXX  16.5. File and Archiving Commands
         }
 
         WEIRD=`echo -n -e '\377'`   # or WEIRD=$'\377'
-        [[ $# -eq 1 ]] || usage
+        [[ $# -eq 1 ]] |usage
         case `file "$1"` in
           *"C program text"*) sed -e "s%/\*%${WEIRD}%g;s%\*/%${WEIRD}%g" "$1" \
-             | tr '\377\n' '\n\377' \
-             | sed -ne 'p;n' \
-             | tr -d '\n' | tr '\377' '\n';;
+tr '\377\n' '\n\377' \
+sed -ne 'p;n' \
+tr -d '\n' | tr '\377' '\n';;
           *) usage;;
         esac
 
@@ -691,7 +691,7 @@ XXX  16.5. File and Archiving Commands
         #  You may wish to redirect output of this script, like so:
         #    ./what.sh >>whatis.db
         #  or view it a page at a time on stdout,
-        #    ./what.sh | less
+        #    ./what.shless
 
 
 
@@ -793,7 +793,7 @@ XXX  16.5. File and Archiving Commands
     the target file. This might be handy for a quick 'n dirty
     examination of a core dump or for looking at an unknown graphic
     image file (
-    ``                   strings image-file | more                 ``
+    ``                   strings image-filemore                 ``
     might show something like *JFIF* , which would identify the file as
     a *jpeg* graphic). In a script, you would probably parse the output
     of **strings** with `grep <textproc.html#GREPREF>`__ or
@@ -843,8 +843,8 @@ XXX  16.5. File and Archiving Commands
         #  http://bash.deta.in/yawl-0.3.2.tar.gz
 
 
-        wlist=`strings "$1" | tr A-Z a-z | tr '[:space:]' Z | \
-               tr -cs '[:alpha:]' Z | tr -s '\173-\377' Z | tr Z ' '`
+        wlist=`strings "$1"tr A-Z a-z | tr '[:space:]' Z | \
+               tr -cs '[:alpha:]' Ztr -s '\173-\377' Z | tr Z ' '`
 
         # Translate output of 'strings' command with multiple passes of 'tr'.
         #  "tr A-Z a-z"  converts to lowercase.
@@ -910,7 +910,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
      The **diff** command returns an exit status of 0 if the compared
     files are identical, and 1 if they differ (or 2 when *binary* files
@@ -947,7 +947,7 @@ XXX  16.5. File and Archiving Commands
     .. code-block:: sh
 
         cd /usr/src
-        gzip -cd patchXX.gz | patch -p0
+        gzip -cd patchXX.gzpatch -p0
         # Upgrading kernel source using 'patch'.
         # From the Linux kernel docs "README",
         # by anonymous author (Alan Cox?).
@@ -956,22 +956,22 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     The **diff** command can also recursively compare directories (for
     the filenames present).
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ diff -r ~/note |
-    | s1 ~/notes2              |
-    |     Only in /home/bozo/n |
-    | otes1: file02            |
-    |      Only in /home/bozo/ |
-    | notes1: file03           |
-    |      Only in /home/bozo/ |
-    | notes2: file04           |
-    |                          |
+.. code-block:: sh
+
+    bash$ diff -r ~/note
+s1 ~/notes2
+    Only in /home/bozo/n
+otes1: file02
+     Only in /home/bozo/
+notes1: file03
+     Only in /home/bozo/
+notes2: file04
+
 
 
 
@@ -997,7 +997,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     Use **zdiff** to compare *gzipped* files.
 
@@ -1006,7 +1006,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     Use **diffstat** to create a histogram (point-distribution graph) of
     output from **diff** .
@@ -1055,7 +1055,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     Like **diff** , **cmp** returns an exit status of 0 if the compared
     files are identical, and 1 if they differ. This permits use in a
@@ -1083,7 +1083,7 @@ XXX  16.5. File and Archiving Commands
           exit $E_BADARGS
         fi
 
-        if [[ ! -r "$1" || ! -r "$2" ]]
+        if [[ ! -r "$1" |! -r "$2" ]]
         then
           echo "Both files to be compared must exist and be readable."
           exit $E_UNREADABLE
@@ -1111,7 +1111,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     Use **zcmp** on *gzipped* files.
 
@@ -1177,7 +1177,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     **basename** and **dirname** can operate on any arbitrary string.
     The argument does not need to refer to an existing file, or even be
@@ -1272,7 +1272,7 @@ XXX  16.5. File and Archiving Commands
         bash$ cksum /boot/vmlinuz
         1670054224 804083 /boot/vmlinuz
 
-        bash$ echo -n "Top Secret" | cksum
+        bash$ echo -n "Top Secret"cksum
         3391003827 10
 
 
@@ -1280,7 +1280,7 @@ XXX  16.5. File and Archiving Commands
         bash$ md5sum /boot/vmlinuz
         0f43eccea8f09e0a0b2b5cf1dcf333ba  /boot/vmlinuz
 
-        bash$ echo -n "Top Secret" | md5sum
+        bash$ echo -n "Top Secret"md5sum
         8babc97a6f62a4649716f4df8d61728f  -
 
 
@@ -1288,7 +1288,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     The **cksum** command shows the size, in bytes, of its target,
     whether file or ``            stdout           `` .
@@ -1355,7 +1355,7 @@ XXX  16.5. File and Archiving Commands
 
             if [ "$n" -gt 0 ]   # Not directory name.
             then
-              filename[n]=$( echo ${record[$n]} | awk '{ print $2 }' )
+              filename[n]=$( echo ${record[$n]}awk '{ print $2 }' )
               #  md5sum writes records backwards,
               #+ checksum first, then filename.
               checksum[n]=$( md5sum "${filename[n]}" )
@@ -1432,26 +1432,26 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Note|
+    |Note
 
     There have been reports that the 128-bit **md5sum** can be cracked,
     so the more secure 160-bit **sha1sum** is a welcome new addition to
     the checksum toolkit.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ md5sum testfil |
-    | e                        |
-    |     e181e2c8720c60522c4c |
-    | 4c981108e367  testfile   |
-    |                          |
-    |                          |
-    |     bash$ sha1sum testfi |
-    | le                       |
-    |     5d7425a9c08a66c3177f |
-    | 1e31286fa40986ffc996  te |
-    | stfile                   |
-    |                          |
+.. code-block:: sh
+
+    bash$ md5sum testfil
+e
+    e181e2c8720c60522c4c
+4c981108e367  testfile
+
+
+    bash$ sha1sum testfi
+le
+    5d7425a9c08a66c3177f
+1e31286fa40986ffc996  te
+stfile
+
 
 
 
@@ -1508,8 +1508,8 @@ XXX  16.5. File and Archiving Commands
 
         for File in *   # Test all the files in $PWD.
         do
-          search1=`head -n $lines $File | grep begin | wc -w`
-          search2=`tail -n $lines $File | grep end | wc -w`
+          search1=`head -n $lines $Filegrep begin | wc -w`
+          search2=`tail -n $lines $Filegrep end | wc -w`
           #  Uuencoded files have a "begin" near the beginning,
           #+ and an "end" near the end.
           if [ "$search1" -gt 0 ]
@@ -1538,7 +1538,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip|
+    |Tip
 
     The `fold -s <textproc.html#FOLDREF>`__ command may be useful
     (possibly in a pipe) to process long uudecoded text messages
@@ -1599,13 +1599,13 @@ XXX  16.5. File and Archiving Commands
         encrfile="encr-dir.tar.gz"
         password=my_secret_password
 
-        tar czvf - "$sourcedir" |
+        tar czvf - "$sourcedir"
         openssl des3 -salt -out "$encrfile" -pass pass:"$password"
         #       ^^^^   Uses des3 encryption.
         # Writes encrypted file "encr-dir.tar.gz" in current working directory.
 
         # To decrypt the resulting tarball:
-        openssl des3 -d -salt -in "$encrfile" -pass pass:"$password" |
+        openssl des3 -d -salt -in "$encrfile" -pass pass:"$password"
         tar -xzv
         # Decrypts and unpacks into current working directory.
 
@@ -1625,7 +1625,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Caution|
+    |Caution
 
     Advanced forensic technology may still be able to recover the
     contents of a file, even after application of **shred** .
@@ -1720,11 +1720,11 @@ XXX  16.5. File and Archiving Commands
 
     .. code-block:: sh
 
-        ls /home/bozo | awk '{print "rm -rf " $1}' | more
+        ls /home/bozoawk '{print "rm -rf " $1}' | more
         #                                            ^^^^
 
         # Testing the effect of the following (disastrous) command-line:
-        #      ls /home/bozo | awk '{print "rm -rf " $1}' | sh
+        #      ls /home/bozoawk '{print "rm -rf " $1}' | sh
         #      Hand off to the shell to execute . . .       ^^
 
 

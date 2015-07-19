@@ -105,7 +105,7 @@ temps.
 
     ::
 
-        date +%N | sed -e 's/000$//' -e 's/^0//'
+        date +%Nsed -e 's/000$//' -e 's/^0//'
                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         #  Elimina els zeros que hi puguin haver a l'inici i al final.
         #  La longitud de l'enter generat depèn de

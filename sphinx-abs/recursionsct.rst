@@ -75,7 +75,7 @@ Indeed.
           grep $1 "$DATAFILE"
           # 'grep' prints an error message if $DATAFILE not present.
     else
-          ( shift; "$PROGNAME" $* ) | grep $1
+          ( shift; "$PROGNAME" $* )grep $1
           # Script recursively calls itself.
     fi
 
@@ -172,7 +172,7 @@ Indeed.
 
 
 
-|Caution|
+|Caution
 
 Too many levels of recursion can exhaust the script's stack space,
 causing a segfault.

@@ -9,7 +9,7 @@ XXX  4.2. Variable Assignment
 
 
 
-    |Caution|
+    |Caution
 
     Do not confuse this with `= <comparison-ops.html#EQUALSIGNREF>`__
     and `-eq <comparison-ops.html#EQUALREF>`__ , which

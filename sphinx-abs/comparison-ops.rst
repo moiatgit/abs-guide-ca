@@ -72,7 +72,7 @@ Comparació de strings
 
 
 
-    |Caution|
+    |Caution
 
     Note the `whitespace <special-chars.html#WHITESPACEREF>`__ framing
     the **=** .
@@ -92,31 +92,31 @@ Comparació de strings
 
 
 
-    |Note|
+    |Note
 
     The == comparison operator behaves differently within a
     `double-brackets <testconstructs.html#DBLBRACKETS>`__ test than
     within single brackets.
 
  
-    | .. code-block:: sh
-    |                          |
-    |     [[ $a == z* ]]   # T |
-    | rue if $a starts with an |
-    |  "z" (pattern matching). |
-    |     [[ $a == "z*" ]] # T |
-    | rue if $a is equal to z* |
-    |  (literal matching).     |
-    |                          |
-    |     [ $a == z* ]     # F |
-    | ile globbing and word sp |
-    | litting take place.      |
-    |     [ "$a" == "z*" ] # T |
-    | rue if $a is equal to z* |
-    |  (literal matching).     |
-    |                          |
-    |     # Thanks, StÃ©phane  |
-    | Chazelas                 |
+.. code-block:: sh
+
+    [[ $a == z* ]]   # T
+rue if $a starts with an
+ "z" (pattern matching).
+    [[ $a == "z*" ]] # T
+rue if $a is equal to z*
+ (literal matching).
+
+    [ $a == z* ]     # F
+ile globbing and word sp
+litting take place.
+    [ "$a" == "z*" ] # T
+rue if $a is equal to z*
+ (literal matching).
+
+    # Thanks, StÃ©phane
+Chazelas
 
 
     .. code-block:: sh
@@ -199,7 +199,7 @@ Comparació de strings
 
 
 
-    |Caution|
+    |Caution
 
     The ``                         -n                       `` test
     requires that the string be quoted within the test brackets. Using
@@ -379,7 +379,7 @@ Exemple 7. *zmore*
       exit $E_NOTGZIP
     fi
 
-    zcat $1 | more
+    zcat $1more
 
     # Uses the 'more' filter.
     # May substitute 'less' if desired.
@@ -435,43 +435,43 @@ test brackets.
 
 
 
-|Caution|
+|Caution
 
 But, as *rihad* points out:
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     [ 1 -eq 1 ] && [ -n  |
-| "`echo true 1>&2`" ]   # |
-|  true                    |
-|     [ 1 -eq 2 ] && [ -n  |
-| "`echo true 1>&2`" ]   # |
-|  (no output)             |
-|     # ^^^^^^^ False cond |
-| ition. So far, everythin |
-| g as expected.           |
-|                          |
-|     # However ...        |
-|     [ 1 -eq 2 -a -n "`ec |
-| ho true 1>&2`" ]       # |
-|  true                    |
-|     # ^^^^^^^ False cond |
-| ition. So, why "true" ou |
-| tput?                    |
-|                          |
-|     # Is it because both |
-|  condition clauses withi |
-| n brackets evaluate?     |
-|     [[ 1 -eq 2 && -n "`e |
-| cho true 1>&2`" ]]     # |
-|  (no output)             |
-|     # No, that's not it. |
-|                          |
-|     # Apparently && and  |
-| || "short-circuit" while |
-|  -a and -o do not.       |
+.. code-block:: sh
+
+    [ 1 -eq 1 ] && [ -n
+"`echo true 1>&2`" ]   #
+ true
+    [ 1 -eq 2 ] && [ -n
+"`echo true 1>&2`" ]   #
+ (no output)
+    # ^^^^^^^ False cond
+ition. So far, everythin
+g as expected.
+
+    # However ...
+    [ 1 -eq 2 -a -n "`ec
+ho true 1>&2`" ]       #
+ true
+    # ^^^^^^^ False cond
+ition. So, why "true" ou
+tput?
+
+    # Is it because both
+ condition clauses withi
+n brackets evaluate?
+    [[ 1 -eq 2 && -n "`e
+cho true 1>&2`" ]]     #
+ (no output)
+    # No, that's not it.
+
+    # Apparently && and
+|| "short-circuit" while
+ -a and -o do not.
 
 ----------------------------------------------------------------------------------
 
@@ -491,7 +491,7 @@ But, as *rihad* points out:
     [[ 1 -eq 2 && -n "`echo true 1>&2`" ]]     # (no output)
     # No, that's not it.
 
-    # Apparently && and || "short-circuit" while -a and -o do not.
+    # Apparently && and |"short-circuit" while -a and -o do not.
 
 
 .. code-block:: sh
@@ -508,7 +508,7 @@ But, as *rihad* points out:
     [[ 1 -eq 2 && -n "`echo true 1>&2`" ]]     # (no output)
     # No, that's not it.
 
-    # Apparently && and || "short-circuit" while -a and -o do not.
+    # Apparently && and |"short-circuit" while -a and -o do not.
 
 
 

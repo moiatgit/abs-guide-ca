@@ -70,7 +70,7 @@ or ever has held a valid copyright.
 
 
 
-|Warning|
+|Warning
 
 It has come to the attention of the author that *unauthorized*
 electronic and print editions of this book are being sold commercially

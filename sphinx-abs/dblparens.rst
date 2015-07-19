@@ -47,8 +47,8 @@ variables in Bash, for example, ``      (( var++ ))     `` .
     #  Note that, as in C, pre- and post-decrement operators
     #+ have different side-effects.
 
-    n=1; let --n && echo "True" || echo "False"  # False
-    n=1; let n-- && echo "True" || echo "False"  # True
+    n=1; let --n && echo "True" |echo "False"  # False
+    n=1; let n-- && echo "True" |echo "False"  # True
 
     #  Thanks, Jeroen Domburg.
     ########################################################

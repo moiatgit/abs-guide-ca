@@ -137,7 +137,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
     .. code-block:: sh
 
-        command-1 || command-2 || command-3 || ... command-n
+        command-1 |command-2 || command-3 || ... command-n
 
 
 
@@ -173,7 +173,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
         # AND LIST, to give error message if file not present.
         # Note echo message continuing on to a second line after an escape.
 
-        [ ! -f "$file" ] || (rm -f $file; echo "File \"$file\" deleted.")
+        [ ! -f "$file" ] |(rm -f $file; echo "File \"$file\" deleted.")
         # OR LIST, to delete file if present.
 
         # Note logic inversion above.
@@ -186,7 +186,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
 
 
-    |Caution|
+    |Caution
 
     If the first command in an *or list* returns true , it
     ``                         will                       `` execute.
@@ -213,7 +213,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
     # If they want to run something in single user mode, might as well run it...
     for i in /etc/rc1.d/S[0-9][0-9]* ; do
             # Check if the script is there.
-            [ -x "$i" ] || continue
+            [ -x "$i" ] |continue
       # ==> If corresponding file in $PWD *not* found,
       #+==> then "continue" by jumping to the top of the loop.
 
@@ -233,7 +233,7 @@ nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even
 
 
 
-|Important|
+|Important
 
 The `exit status <exit-status.html#EXITSTATUSREF>`__ of an
 ``                   and list                 `` or an
@@ -251,12 +251,12 @@ extensive debugging.
 
 .. code-block:: sh
 
-    false && true || echo false         # false
+    false && true |echo false         # false
 
     # Same result as
-    ( false && true ) || echo false     # false
+    ( false && true ) |echo false     # false
     # But NOT
-    false && ( true || echo false )     # (nothing echoed)
+    false && ( true |echo false )     # (nothing echoed)
 
     #  Note left-to-right grouping and evaluation of statements.
 

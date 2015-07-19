@@ -536,7 +536,7 @@ Parèntesis: ()
 
 
 
-    |Important|
+    |Important
 
     A listing of commands within
     ``                         parentheses                       ``
@@ -548,16 +548,16 @@ Parèntesis: ()
     process <subshells.html#PARVIS>`__ , the subshell.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     a=123                |
-    |     ( a=321; )           |
-    |                          |
-    |     echo "a = $a"   # a  |
-    | = 123                    |
-    |     # "a" within parenth |
-    | eses acts like a local v |
-    | ariable.                 |
+.. code-block:: sh
+
+    a=123
+    ( a=321; )
+
+    echo "a = $a"   # a
+= 123
+    # "a" within parenth
+eses acts like a local v
+ariable.
 
 
 
@@ -622,7 +622,7 @@ Claus: {}
 
 
 
-    |Caution|
+    |Caution
 
     No spaces allowed within the braces *unless* the spaces are quoted
     or escaped.
@@ -777,7 +777,7 @@ Claus: {}
 
 
 
-    |Note|
+    |Note
 
     Unlike a command group within (parentheses), as above, a code block
     enclosed by {braces} will *not* normally launch a
@@ -801,7 +801,7 @@ Claus: {}
 
     .. code-block:: sh
 
-        ls . | xargs -i -t cp ./{} $1
+        ls .xargs -i -t cp ./{} $1
         #            ^^         ^^
 
         # From "ex42.sh" (copydir.sh) example.
@@ -827,7 +827,7 @@ Claus: {}
 
 
 
-    |Note|
+    |Note
 
     The " ; " ends the ``            -exec           `` option of a
     **find** command sequence. It needs to be escaped to protect it from
@@ -932,45 +932,45 @@ Claudàtors: [ ]
 
 
 
-    |Note|
+    |Note
 
      This is useful for suppressing output when testing for a condition.
     For example, let us test whether a certain command exists.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ type bogus_com |
-    | mand &>/dev/null         |
-    |                          |
-    |                          |
-    |                          |
-    |     bash$ echo $?        |
-    |     1                    |
-    |                          |
+.. code-block:: sh
+
+    bash$ type bogus_com
+mand &>/dev/null
+
+
+
+    bash$ echo $?
+    1
+
 
 
 
     Or in a script:
 
 
-    | .. code-block:: sh
-    |                          |
-    |     command_test () { ty |
-    | pe "$1" &>/dev/null; }   |
-    |     #                    |
-    |                    ^     |
-    |                          |
-    |     cmd=rmdir            |
-    |  # Legitimate command.   |
-    |     command_test $cmd; e |
-    | cho $?   # 0             |
-    |                          |
-    |                          |
-    |     cmd=bogus_command    |
-    |  # Illegitimate command  |
-    |     command_test $cmd; e |
-    | cho $?   # 1             |
+.. code-block:: sh
+
+    command_test () { ty
+pe "$1" &>/dev/null; }
+    #
+                   ^
+
+    cmd=rmdir
+ # Legitimate command.
+    command_test $cmd; e
+cho $?   # 0
+
+
+    cmd=bogus_command
+ # Illegitimate command
+    command_test $cmd; e
+cho $?   # 1
 
 
 
@@ -1104,7 +1104,7 @@ Signes de menor i major: < >
 
 .. _specialchars-pipe:
 
-Barra vertical o *pipe*: \|
+Barra vertical o *pipe*: \
 ===========================
 
 
@@ -1117,12 +1117,12 @@ Barra vertical o *pipe*: \|
 
     .. code-block:: sh
 
-        echo ls -l | sh
+        echo ls -lsh
         #  Passes the output of "echo ls -l" to the shell,
         #+ with the same result as a simple "ls -l".
 
 
-        cat *.lst | sort | uniq
+        cat *.lstsort | uniq
         # Merges and sorts all ".lst" files, then deletes duplicate lines.
 
 
@@ -1138,7 +1138,7 @@ Barra vertical o *pipe*: \|
     *filter* , a command that transforms its input for processing. ` [7]
      <special-chars.html#FTN.AEN1564>`__
 
-    ``                         cat $filename1 $filename2 | grep $search_word                       ``
+    ``                         cat $filename1 $filename2grep $search_word                       ``
 
     For an interesting note on the complexity of using UNIX pipes, see
     `the UNIX FAQ, Part
@@ -1168,7 +1168,7 @@ Barra vertical o *pipe*: \|
 
     .. code-block:: sh
 
-        bash$ ls -l | ./uppercase.sh
+        bash$ ls -l./uppercase.sh
         -RW-RW-R--    1 BOZO  BOZO       109 APR  7 19:49 1.TXT
          -RW-RW-R--    1 BOZO  BOZO       109 APR 14 16:48 2.TXT
          -RW-R--R--    1 BOZO  BOZO       725 APR 20 20:56 DATA-FILE
@@ -1178,7 +1178,7 @@ Barra vertical o *pipe*: \|
 
 
 
-    |Note|
+    |Note
 
     The ``            stdout           `` of each process in a pipe must
     be read as the ``            stdin           `` of the next. If this
@@ -1186,13 +1186,13 @@ Barra vertical o *pipe*: \|
     not behave as expected.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     cat file1 file2 | ls |
-    |  -l | sort               |
-    |     # The output from "c |
-    | at file1 file2" disappea |
-    | rs.                      |
+.. code-block:: sh
+
+    cat file1 file2 | ls
+ -l | sort
+    # The output from "c
+at file1 file2" disappea
+rs.
 
 
 
@@ -1200,15 +1200,15 @@ Barra vertical o *pipe*: \|
     therefore cannot alter script variables.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     variable="initial_va |
-    | lue"                     |
-    |     echo "new_value" | r |
-    | ead variable             |
-    |     echo "variable = $va |
-    | riable"     # variable = |
-    |  initial_value           |
+.. code-block:: sh
+
+    variable="initial_va
+lue"
+    echo "new_value" | r
+ead variable
+    echo "variable = $va
+riable"     # variable =
+ initial_value
 
 
 
@@ -1221,43 +1221,43 @@ Barra vertical o *pipe*: \|
 
     .. code-block:: sh
 
-        cat file1 file2 | ls -l | sort
+        cat file1 file2ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
     .. code-block:: sh
 
         variable="initial_value"
-        echo "new_value" | read variable
+        echo "new_value"read variable
         echo "variable = $variable"     # variable = initial_value
 
 
     .. code-block:: sh
 
-        cat file1 file2 | ls -l | sort
+        cat file1 file2ls -l | sort
         # The output from "cat file1 file2" disappears.
 
 
     .. code-block:: sh
 
         variable="initial_value"
-        echo "new_value" | read variable
+        echo "new_value"read variable
         echo "variable = $variable"     # variable = initial_value
 
 
 
 
- >\|
+ >\
 
     **force redirection (even if the `noclobber
     option <options.html#NOCLOBBERREF>`__ is set).** This will forcibly
     overwrite an existing file.
 
 
- \|\|
+ \|\
 
     **`OR logical operator <ops.html#ORREF>`__ .** In a `test
-    construct <testconstructs.html#TESTCONSTRUCTS1>`__ , the \|\|
+    construct <testconstructs.html#TESTCONSTRUCTS1>`__ , the \|\
     operator causes a return of 0 (success) if *either* of the linked
     test conditions is true.
 
@@ -1336,7 +1336,7 @@ Símbol d'unió o *ampersand*: &
 
 
 
-    |Caution|
+    |Caution
 
     A command run in the background within a script may cause the script
     to hang, waiting for a keystroke. Fortunately, there is a
@@ -1404,24 +1404,24 @@ Guió: -
 
 
 
-    |Tip|
+    |Tip
 
     This provides a handy means of removing files whose *names begin
     with a dash* .
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ ls -l          |
-    |     -rw-r--r-- 1 bozo bo |
-    | zo 0 Nov 25 12:29 -badna |
-    | me                       |
-    |                          |
-    |                          |
-    |     bash$ rm -- -badname |
-    |                          |
-    |     bash$ ls -l          |
-    |     total 0              |
+.. code-block:: sh
+
+    bash$ ls -l
+    -rw-r--r-- 1 bozo bo
+zo 0 Nov 25 12:29 -badna
+me
+
+
+    bash$ rm -- -badname
+
+    bash$ ls -l
+    total 0
 
 
 
@@ -1485,7 +1485,7 @@ Guió: -
 
     .. code-block:: sh
 
-        (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
+        (cd /source/directory && tar cf - . )(cd /dest/directory && tar xpvf -)
         # Move entire file tree from one directory to another
         # [courtesy Alan Cox <a.cox@swansea.ac.uk>, with a minor change]
 
@@ -1498,7 +1498,7 @@ Guió: -
         #    The 'c' option 'tar' archiving command creates a new archive,
         #    the 'f' (file) option, followed by '-' designates the target file
         #    as stdout, and do it in current directory tree ('.').
-        # 4) |
+        # 4)
         #    Piped to ...
         # 5) ( ... )
         #    a subshell
@@ -1519,7 +1519,7 @@ Guió: -
 
         # More elegant than, but equivalent to:
         #   cd source/directory
-        #   tar cf - . | (cd ../dest/directory; tar xpvf -)
+        #   tar cf - .(cd ../dest/directory; tar xpvf -)
         #
         #     Also having same effect:
         # cp -a /source/directory/* /dest/directory
@@ -1532,8 +1532,8 @@ Guió: -
 
     .. code-block:: sh
 
-        bunzip2 -c linux-2.6.16.tar.bz2 | tar xvf -
-        #  --uncompress tar file--      | --then pass it to "tar"--
+        bunzip2 -c linux-2.6.16.tar.bz2tar xvf -
+        #  --uncompress tar file----then pass it to "tar"--
         #  If "tar" has not been patched to handle "bunzip2",
         #+ this needs to be done in two discrete steps, using a pipe.
         #  The purpose of the exercise is to unarchive "bzipped" kernel source.
@@ -1547,7 +1547,7 @@ Guió: -
 
     .. code-block:: sh
 
-        bash$ echo "whatever" | cat -
+        bash$ echo "whatever"cat -
         whatever
 
 
@@ -1600,7 +1600,7 @@ Guió: -
     Using `diff <filearchiv.html#DIFFREF>`__ to compare a file with a
     *section* of another:
 
-    ``                   grep Linux file1 | diff file2 -                 ``
+    ``                   grep Linux file1diff file2 -                 ``
 
     Finally, a real-world example using
     ``                   -                 `` with
@@ -1635,7 +1635,7 @@ Guió: -
 
         # He suggests the following alternatives:
         # -------------------------------------------------------------------
-        #   find . -mtime -1 -type f -print0 | xargs -0 tar rvf "$archive.tar"
+        #   find . -mtime -1 -type f -print0xargs -0 tar rvf "$archive.tar"
         #      using the GNU version of "find".
 
 
@@ -1651,7 +1651,7 @@ Guió: -
 
 
 
-    |Caution|
+    |Caution
 
     Filenames beginning with "-" may cause problems when coupled with
     the "-" redirection operator. A script should check for this and add
@@ -1665,13 +1665,13 @@ Guió: -
     likewise create problems.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     var="-n"             |
-    |     echo $var            |
-    |     # Has the effect of  |
-    | "echo -n", and outputs n |
-    | othing.                  |
+.. code-block:: sh
+
+    var="-n"
+    echo $var
+    # Has the effect of
+"echo -n", and outputs n
+othing.
 
 
 
@@ -1702,7 +1702,7 @@ Guió: -
 
 
 
-    |Caution|
+    |Caution
 
     Do not confuse the "-" used in this sense with the "-" redirection
     operator just discussed. The interpretation of the "-" depends on
@@ -2010,7 +2010,7 @@ Caràcters de control
            var=$'\x0aThis is the bottom line\x0bThis is the top line\x0a'
            echo "$var"
            #  This works the same way as the above example. However:
-           echo "$var" | col
+           echo "$var"col
            #  This causes the right end of the line to be higher than the left end.
            #  It also explains why we started and ended with a line feed --
            #+ to avoid a garbled screen.
@@ -2212,7 +2212,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
 
  .. code-block:: sh
 
-     ls | { read firstlin
+     ls{ read firstlin
  e; read secondline; }
      #  Error. The code b
  lock in braces runs as a
@@ -2231,7 +2231,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
 
 .. code-block:: sh
 
-    ls | { read firstline; read secondline; }
+    ls{ read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,
     #+ so the output of "ls" cannot be passed to variables within the block.
     echo "First line is $firstline; second line is $secondline"  # Won't work.
@@ -2241,7 +2241,7 @@ Exception: a code block in braces as part of a pipe *may* run as a
 
 .. code-block:: sh
 
-    ls | { read firstline; read secondline; }
+    ls{ read firstline; read secondline; }
     #  Error. The code block in braces runs as a subshell,
     #+ so the output of "ls" cannot be passed to variables within the block.
     echo "First line is $firstline; second line is $secondline"  # Won't work.

@@ -15,7 +15,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    |Note|
+    |Note
 
     In a more general context, each
     `process <special-chars.html#PROCESSREF>`__ has an "environment" ,
@@ -33,7 +33,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    |Caution|
+    |Caution
 
     The space allotted to the environment is limited. Creating too many
     environmental variables or ones that use up excessive space may
@@ -41,16 +41,16 @@ XXX  4.4. Special Variable Types
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ eval "`seq 100 |
-    | 00 | sed -e 's/.*/export |
-    |  var&=ZZZZZZZZZZZZZZ/'`" |
-    |                          |
-    |     bash$ du             |
-    |     bash: /usr/bin/du: A |
-    | rgument list too long    |
-    |                          |
+.. code-block:: sh
+
+    bash$ eval "`seq 100
+00 | sed -e 's/.*/export
+ var&=ZZZZZZZZZZZZZZ/'`"
+
+    bash$ du
+    bash: /usr/bin/du: A
+rgument list too long
+
 
 --------------------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ XXX  4.4. Special Variable Types
 
     .. code-block:: sh
 
-        bash$ eval "`seq 10000 | sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
+        bash$ eval "`seq 10000sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
 
         bash$ du
         bash: /usr/bin/du: Argument list too long
@@ -72,7 +72,7 @@ XXX  4.4. Special Variable Types
 
     .. code-block:: sh
 
-        bash$ eval "`seq 10000 | sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
+        bash$ eval "`seq 10000sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
 
         bash$ du
         bash: /usr/bin/du: Argument list too long
@@ -88,7 +88,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    |Note|
+    |Note
 
     A script can **export** variables only to child
     `processes <special-chars.html#PROCESSREF>`__ , that is, only to
@@ -211,7 +211,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    |Tip|
+    |Tip
 
     If a script expects a command-line parameter but is invoked without
     one, this may cause a *null variable assignment* , generally an
@@ -386,14 +386,14 @@ XXX  4.4. Special Variable Types
         #      done           #+ then loop never ends!
         #
         # When in doubt, add a sanity check. . . .
-        #           shift 20 || break
+        #           shift 20 |break
         #                    ^^^^^^^^
 
 
 
 
 
-    |Note|
+    |Note
 
     The **shift** command works in a similar fashion on parameters
     passed to a `function <functions.html#FUNCTIONREF>`__ . See `Example
@@ -425,13 +425,13 @@ the shell.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     bash$ echo $0        |
-|     bash                 |
-|                          |
-|     tcsh% echo $0        |
-|     tcsh                 |
+.. code-block:: sh
+
+    bash$ echo $0
+    bash
+
+    tcsh% echo $0
+    tcsh
 
 ----------------------------------------------------------------------------------
 

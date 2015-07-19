@@ -57,7 +57,7 @@ The < operator at the end of the code block accomplishes this.
     #+ as distinct from a REDIRECTED "while" loop.
 
     abc=hi
-    echo -e "1\n2\n3" | while read l
+    echo -e "1\n2\n3"while read l
          do abc="$l"
             echo $abc
          done
@@ -171,7 +171,7 @@ The < operator at the end of the code block accomplishes this.
       Filename=$1
     fi
 
-    line_count=`wc $Filename | awk '{ print $1 }'`
+    line_count=`wc $Filenameawk '{ print $1 }'`
     #           Number of lines in target file.
     #
     #  Very contrived and kludgy, nevertheless shows that
@@ -220,7 +220,7 @@ loop.
     Savefile=$Filename.new         # Filename to save results in.
     FinalName=Jonah                # Name to terminate "read" on.
 
-    line_count=`wc $Filename | awk '{ print $1 }'`  # Number of lines in target file.
+    line_count=`wc $Filenameawk '{ print $1 }'`  # Number of lines in target file.
 
 
     for name in `seq $line_count`
@@ -325,7 +325,7 @@ feed the output of a *here document* into the ``      stdin     `` for a
      # Could be an external command too, of course.
      # Here we show you can use a function as well.
     {
-      ls -al *.jpg | awk '{print $5,$9}'
+      ls -al *.jpgawk '{print $5,$9}'
     }
 
 

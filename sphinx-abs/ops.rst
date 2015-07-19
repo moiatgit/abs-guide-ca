@@ -29,26 +29,26 @@ XXX  8.1. Operators
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     #   =  as a test ope |
-    | rator                    |
-    |                          |
-    |     if [ "$string1" = "$ |
-    | string2" ]               |
-    |     then                 |
-    |        command           |
-    |     fi                   |
-    |                          |
-    |     #  if [ "X$string1"  |
-    | = "X$string2" ] is safer |
-    | ,                        |
-    |     #+ to prevent an err |
-    | or message should one of |
-    |  the variables be empty. |
-    |     #  (The prepended "X |
-    | " characters cancel out. |
-    | )                        |
+.. code-block:: sh
+
+    #   =  as a test ope
+rator
+
+    if [ "$string1" = "$
+string2" ]
+    then
+       command
+    fi
+
+    #  if [ "X$string1"
+= "X$string2" ] is safer
+,
+    #+ to prevent an err
+or message should one of
+ the variables be empty.
+    #  (The prepended "X
+" characters cancel out.
+)
 
 --------------------------------------------------------------------------------------
 
@@ -306,7 +306,7 @@ Exemple 2. Ús dels operadors aritmètics
 
 
 
-|Note|
+|Note
 
 Integer variables in older versions of Bash were signed *long* (32-bit)
 integers, in the range of -2147483648 to 2147483647. An operation that
@@ -314,33 +314,33 @@ took a variable outside these limits gave an erroneous result.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     echo $BASH_VERSION   |
-|  # 1.14                  |
-|                          |
-|     a=2147483646         |
-|     echo "a = $a"        |
-|  # a = 2147483646        |
-|     let "a+=1"           |
-|  # Increment "a".        |
-|     echo "a = $a"        |
-|  # a = 2147483647        |
-|     let "a+=1"           |
-|  # increment "a" again,  |
-| past the limit.          |
-|     echo "a = $a"        |
-|  # a = -2147483648       |
-|                          |
-|  #      ERROR: out of ra |
-| nge,                     |
-|                          |
-|  # +    and the leftmost |
-|  bit, the sign bit,      |
-|                          |
-|  # +    has been set, ma |
-| king the result negative |
-| .                        |
+.. code-block:: sh
+
+    echo $BASH_VERSION
+ # 1.14
+
+    a=2147483646
+    echo "a = $a"
+ # a = 2147483646
+    let "a+=1"
+ # Increment "a".
+    echo "a = $a"
+ # a = 2147483647
+    let "a+=1"
+ # increment "a" again,
+past the limit.
+    echo "a = $a"
+ # a = -2147483648
+
+ #      ERROR: out of ra
+nge,
+
+ # +    and the leftmost
+ bit, the sign bit,
+
+ # +    has been set, ma
+king the result negative
+.
 
 ----------------------------------------------------------------------------------
 
@@ -389,21 +389,21 @@ As of version >= 2.05b, Bash supports 64-bit integers.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     a=1.5                |
-|                          |
-|     let "b = $a + 1.3"   |
-| # Error.                 |
-|     # t2.sh: let: b = 1. |
-| 5 + 1.3: syntax error in |
-|  expression              |
-|     #                    |
-|          (error token is |
-|  ".5 + 1.3")             |
-|                          |
-|     echo "b = $b"        |
-| # b=1                    |
+.. code-block:: sh
+
+    a=1.5
+
+    let "b = $a + 1.3"
+# Error.
+    # t2.sh: let: b = 1.
+5 + 1.3: syntax error in
+ expression
+    #
+         (error token is
+ ".5 + 1.3")
+
+    echo "b = $b"
+# b=1
 
 ----------------------------------------------------------------------------------
 
@@ -473,7 +473,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
  &=
     bitwise *AND-equal*
 
- \|
+ \
     bitwise OR
 
  \|=
@@ -522,7 +522,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 
-    |Note|
+    |Note
 
      && may also be used, depending on context, in an `and
     list <list-cons.html#LISTCONSREF>`__ to concatenate commands.
@@ -530,25 +530,25 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 
- \|\|
+ \|\
     OR
 
 
     .. code-block:: sh
 
-        if [ $condition1 ] || [ $condition2 ]
+        if [ $condition1 ] |[ $condition2 ]
         # Same as:  if [ $condition1 -o $condition2 ]
         # Returns true if either condition1 or condition2 holds true...
 
-        if [[ $condition1 || $condition2 ]]    # Also works.
-        #  Note that || operator not permitted inside brackets
+        if [[ $condition1 |$condition2 ]]    # Also works.
+        #  Note that |operator not permitted inside brackets
         #+ of a [ ... ] construct.
 
 
 
 
 
-    |Note|
+    |Note
 
     Bash tests the `exit status <exit-status.html#EXITSTATUSREF>`__ of
     each statement linked with a logical operator.
@@ -557,7 +557,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 
-Exemple 3. Compound Condition Tests Using && and \|\|
+Exemple 3. Compound Condition Tests Using && and \|\
 =====================================================
 
 
@@ -586,7 +586,7 @@ Exemple 3. Compound Condition Tests Using && and \|\|
         #    Thanks, Stephane Chazelas, for pointing this out.
 
 
-        if [ "$a" -eq 98 ] || [ "$b" -eq 47 ]
+        if [ "$a" -eq 98 ] |[ "$b" -eq 47 ]
         then
           echo "Test #2 succeeds."
         else
@@ -629,12 +629,12 @@ Exemple 3. Compound Condition Tests Using && and \|\|
 
 
 
-    The && and \|\| operators also find use in an arithmetic context.
+    The && and \|\operators also find use in an arithmetic context.
 
 
     .. code-block:: sh
 
-        bash$ echo $(( 1 && 2 )) $((3 && 0)) $((4 || 0)) $((0 || 0))
+        bash$ echo $(( 1 && 2 )) $((3 && 0)) $((4 |0)) $((0 || 0))
         1 0 1 0
 
 

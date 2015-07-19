@@ -90,7 +90,7 @@ file**
     .. code-block:: sh
 
         stringZ=abcABC123ABCabc
-        #       |------|
+        #       |------
         #       12345678
 
         echo `expr match "$stringZ" 'abc[A-Z]*.2'`   # 8
@@ -195,7 +195,7 @@ file**
         POS=2  # Starting from position 2 in the string.
         LEN=8  # Extract eight characters.
 
-        str1=$( echo "$str0" | md5sum | md5sum )
+        str1=$( echo "$str0"md5sum | md5sum )
         #  Doubly scramble     ^^^^^^   ^^^^^^
         #+ by piping and repiping to md5sum.
 
@@ -312,8 +312,8 @@ file**
     .. code-block:: sh
 
         stringZ=abcABC123ABCabc
-        #       |----|          shortest
-        #       |----------|    longest
+        #       |----         shortest
+        #       |----------   longest
 
         echo ${stringZ#a*C}      # 123ABCabc
         # Strip out shortest match between 'a' and 'C'.
@@ -369,8 +369,8 @@ file**
     .. code-block:: sh
 
         stringZ=abcABC123ABCabc
-        #                    ||     shortest
-        #        |------------|     longest
+        #                    |    shortest
+        #        |------------    longest
 
         echo ${stringZ%b*c}      # abcABC123ABCa
         # Strip out shortest match between 'b' and 'c', from back of $stringZ.
@@ -442,7 +442,7 @@ file**
 
         for pic in *"$INFMT"
         do
-          p2=$(ls "$pic" | sed -e s/\.$INFMT//)
+          p2=$(ls "$pic"sed -e s/\.$INFMT//)
           # echo $p2
             convert "$pic" $p2.$OUTFMT
             done
@@ -672,7 +672,7 @@ operations.
                                              # skid
 
     # The awk equivalent of ${string:pos:length} is substr(string,pos,length).
-    echo | awk '
+    echoawk '
     { print substr("'"${String}"'",3,4)      # skid
     }
     '
@@ -683,7 +683,7 @@ operations.
 
     # And likewise:
 
-    echo | awk '
+    echoawk '
     { print index("'"${String}"'", "skid")      # 3
     }                                           # (skid starts at position 3)
     '   # The awk equivalent of "expr index" ...

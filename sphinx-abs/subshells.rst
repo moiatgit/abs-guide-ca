@@ -51,7 +51,7 @@ simultaneously.
     sh subshell-test.sh
 
     And, while the script is running, from a different xterm:
-    ps -ef | grep subshell-test.sh
+    ps -efgrep subshell-test.sh
 
     UID       PID   PPID  C STIME TTY      TIME     CMD
     500       2698  2502  0 14:26 pts/4    00:00:00 sh subshell-test.sh
@@ -185,7 +185,7 @@ of a *global* variable is the entire script in which it appears.
 
 
 
-|Note|
+|Note
 
 While the `$BASH\_SUBSHELL <internalvariables.html#BASHSUBSHELLREF>`__
 internal variable indicates the nesting level of a subshell, the
@@ -194,33 +194,33 @@ within a subshell.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     echo " \$BASH_SUBSHE |
-| LL outside subshell      |
-|   = $BASH_SUBSHELL"      |
-|       # 0                |
-|       ( echo " \$BASH_SU |
-| BSHELL inside subshell   |
-|       = $BASH_SUBSHELL"  |
-| )     # 1                |
-|       ( ( echo " \$BASH_ |
-| SUBSHELL inside nested s |
-| ubshell = $BASH_SUBSHELL |
-| " ) ) # 2                |
-|     # ^ ^                |
-|             *** nested * |
-| **                       |
-|   ^ ^                    |
-|                          |
-|     echo                 |
-|                          |
-|     echo " \$SHLVL outsi |
-| de subshell = $SHLVL"    |
-|     # 3                  |
-|     ( echo " \$SHLVL ins |
-| ide subshell  = $SHLVL"  |
-| )   # 3 (No change!)     |
+.. code-block:: sh
+
+    echo " \$BASH_SUBSHE
+LL outside subshell
+  = $BASH_SUBSHELL"
+      # 0
+      ( echo " \$BASH_SU
+BSHELL inside subshell
+      = $BASH_SUBSHELL"
+)     # 1
+      ( ( echo " \$BASH_
+SUBSHELL inside nested s
+ubshell = $BASH_SUBSHELL
+" ) ) # 2
+    # ^ ^
+            *** nested *
+**
+  ^ ^
+
+    echo
+
+    echo " \$SHLVL outsi
+de subshell = $SHLVL"
+    # 3
+    ( echo " \$SHLVL ins
+ide subshell  = $SHLVL"
+)   # 3 (No change!)
 
 ----------------------------------------------------------------------------------
 
@@ -273,8 +273,8 @@ shell.
 
     for home in `awk -F: '{print $6}' /etc/passwd`
     do
-      [ -d "$home" ] || continue    # If no home directory, go to next.
-      [ -r "$home" ] || continue    # If not readable, go to next.
+      [ -d "$home" ] |continue    # If no home directory, go to next.
+      [ -r "$home" ] |continue    # If not readable, go to next.
       (cd $home; [ -e $FILE ] && less $FILE)
     done
 
@@ -327,7 +327,7 @@ variable is defined.
            #+ or is an an internal Bash variable,
            #+ or is present in environment (has been exported).
 
-    # Could also be written [[ ${variable-x} != x || ${variable-y} != y ]]
+    # Could also be written [[ ${variable-x} != x |${variable-y} != y ]]
     # or                    [[ ${variable-x} != x$variable ]]
     # or                    [[ ${variable+x} = x ]]
     # or                    [[ ${variable-x} != x ]]
@@ -364,14 +364,14 @@ concurrently.
 
 .. code-block:: sh
 
-     (cat list1 list2 list3 | sort | uniq > list123) &
-        (cat list4 list5 list6 | sort | uniq > list456) &
+     (cat list1 list2 list3sort | uniq > list123) &
+        (cat list4 list5 list6sort | uniq > list456) &
         # Merges and sorts both sets of lists simultaneously.
         # Running in background ensures parallel execution.
         #
         # Same effect as
-        #   cat list1 list2 list3 | sort | uniq > list123 &
-        #   cat list4 list5 list6 | sort | uniq > list456 &
+        #   cat list1 list2 list3sort | uniq > list123 &
+        #   cat list4 list5 list6sort | uniq > list456 &
 
         wait   # Don't execute the next command until subshells finish.
 
@@ -381,11 +381,11 @@ concurrently.
 
 
 Redirecting I/O to a subshell uses the "\|" pipe operator, as in
-``             ls -al | (command)           `` .
+``             ls -al(command)           `` .
 
 
 
-|Note|
+|Note
 
 A code block between `curly
 brackets <special-chars.html#CODEBLOCKREF>`__ does *not* launch a
@@ -395,13 +395,13 @@ subshell.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     var1=23              |
-|     echo "$var1"   # 23  |
-|                          |
-|     { var1=76; }         |
-|     echo "$var1"   # 76  |
+.. code-block:: sh
+
+    var1=23
+    echo "$var1"   # 23
+
+    { var1=76; }
+    echo "$var1"   # 76
 
 ----------------------------------------------------------------------------------
 

@@ -18,18 +18,18 @@ the block.
     if/then/else statements and is an appropriate tool for creating
     menus.
 
-    | **case** "$ ``                   variable                 `` " in
-    |  "$ ``                   condition1                 `` " )
-    |  ``                   command                 `` ...
-    |  ;;
-    |  "$ ``                   condition2                 `` " )
-    |  ``                   command                 `` ...
-    |  ;;
-    |  **esac**
+**case** "$ ``                   variable                 `` " in
+ "$ ``                   condition1                 `` " )
+ ``                   command                 `` ...
+ ;;
+ "$ ``                   condition2                 `` " )
+ ``                   command                 `` ...
+ ;;
+ **esac**
 
 
 
-    |Note|
+    |Note
 
     -  Quoting the variables is not mandatory, since word splitting does
        not take place.
@@ -114,7 +114,7 @@ the block.
         case "$person" in
         # Note variable is quoted.
 
-          "E" | "e" )
+          "E""e" )
           # Accept upper or lowercase input.
           echo
           echo "Roland Evans"
@@ -127,7 +127,7 @@ the block.
           ;;
         # Note double semicolon to terminate each option.
 
-          "J" | "j" )
+          "J""j" )
           echo
           echo "Mildred Jones"
           echo "249 E. 7th St., Apt. 19"
@@ -265,7 +265,7 @@ the block.
           PARAMS=2     # Function requires 2 arguments.
           E_BAD_PARAMS=91
 
-          [ $# -eq $PARAMS ] || return $E_BAD_PARAMS
+          [ $# -eq $PARAMS ] |return $E_BAD_PARAMS
 
           case "$1" in
           "$2") return $MATCH;;
@@ -325,7 +325,7 @@ the block.
 
         isalpha2 ()   # Tests whether *entire string* is alphabetic.
         {
-          [ $# -eq 1 ] || return $FAILURE
+          [ $# -eq 1 ] |return $FAILURE
 
           case $1 in
           *[!a-zA-Z]*|"") return $FAILURE;;
@@ -335,7 +335,7 @@ the block.
 
         isdigit ()    # Tests whether *entire string* is numerical.
         {             # In other words, tests for integer variable.
-          [ $# -eq 1 ] || return $FAILURE
+          [ $# -eq 1 ] |return $FAILURE
 
           case $1 in
             *[!0-9]*|"") return $FAILURE;;
@@ -416,12 +416,12 @@ the block.
     The **select** construct, adopted from the Korn Shell, is yet
     another tool for building menus.
 
-    | **select** ``                   variable                 `` [in
+**select** ``                   variable                 `` [in
     ``                   list                 `` ]
-    |  do
-    |  ``                   command                 `` ...
-    |  break
-    |  done
+ do
+ ``                   command                 `` ...
+ break
+ done
 
     This prompts the user to enter one of the choices presented in the
     variable list. Note that **select** uses the
@@ -526,23 +526,23 @@ layout a more structured appearance.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     case $( arch ) in    |
-| # $( arch ) returns mach |
-| ine architecture.        |
-|       ( i386 ) echo "803 |
-| 86-based machine";;      |
-|     # ^      ^           |
-|       ( i486 ) echo "804 |
-| 86-based machine";;      |
-|       ( i586 ) echo "Pen |
-| tium-based machine";;    |
-|       ( i686 ) echo "Pen |
-| tium2+-based machine";;  |
-|       (    * ) echo "Oth |
-| er type of machine";;    |
-|     esac                 |
+.. code-block:: sh
+
+    case $( arch ) in
+# $( arch ) returns mach
+ine architecture.
+      ( i386 ) echo "803
+86-based machine";;
+    # ^      ^
+      ( i486 ) echo "804
+86-based machine";;
+      ( i586 ) echo "Pen
+tium-based machine";;
+      ( i686 ) echo "Pen
+tium2+-based machine";;
+      (    * ) echo "Oth
+er type of machine";;
+    esac
 
 ----------------------------------------------------------------------------------
 

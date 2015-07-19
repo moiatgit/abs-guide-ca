@@ -45,7 +45,7 @@ XXX  11.3. Loop Control
         do
          a=$(($a+1))
 
-         if [ "$a" -eq 3 ] || [ "$a" -eq 11 ]  # Excludes 3 and 11.
+         if [ "$a" -eq 3 ] |[ "$a" -eq 11 ]  # Excludes 3 and 11.
          then
            continue      # Skip rest of this particular loop iteration.
          fi
@@ -198,7 +198,7 @@ XXX  11.3. Loop Control
             beta=${n#.iso.}
             [ -r .Iso.$beta ] && continue
             [ -r .lock.$beta ] && sleep 10 && continue
-            lockfile -r0 .lock.$beta || continue
+            lockfile -r0 .lock.$beta |continue
             echo -n "$beta: " `date`
             run-isotherm $beta
             date
@@ -242,7 +242,7 @@ XXX  11.3. Loop Control
 
 
 
-    |Caution|
+    |Caution
 
     The **continue N** construct is difficult to understand and tricky
     to use in any meaningful context. It is probably best avoided.

@@ -423,10 +423,10 @@ Exemple 4. Patrons a la substitució de paràmetres
     echo "--------------"
     echo '${var1#$pattern1}  =' "${var1#$pattern1}"    #         d12345abc6789
     # La coincidència més curta possible. Elimina els tres primers caràcters abcd12345abc6789 (NdT. No l'he pogut replicar)
-    #                                     ^^^^^               |-|
+    #                                     ^^^^^               |-
     echo '${var1##$pattern1} =' "${var1##$pattern1}"   #                  6789
     # La coincidència més llarga possible. Elimina els primers 12 caràcters abcd12345abc6789 (NdT. No l'he pogut replicar)
-    #                                    ^^^^^                |----------|
+    #                                    ^^^^^                |----------
 
     echo; echo; echo
 
@@ -437,10 +437,10 @@ Exemple 4. Patrons a la substitució de paràmetres
     echo "--------------"
     echo '${var1%pattern2}  =' "${var1%$pattern2}"     #     abcd12345a
     # La coincidència més curta possible. Elimina els darrers 6 caràcters  abcd12345abc6789
-    #                                     ^^^^                         |----|
+    #                                     ^^^^                         |----
     echo '${var1%%pattern2} =' "${var1%%$pattern2}"    #     a
     # La coincidència més llarga possible. Elimina els darrers 12 caràcters  abcd12345abc6789
-    #                                    ^^^^                 |-------------|
+    #                                    ^^^^                 |-------------
 
     # Recordem, # i ## actuen d'esquerra a dreta (des de l'inici) de la cadena,
     #           % i %% actuen de dreta a esquerra (des del final) de la cadena.
@@ -601,15 +601,15 @@ Exemple 7. Coincidència de patrons a l'inici o al final d'un string
 
         # Coincideix amb l'inici del string.
         v1=${v0/#abc/ABCDEF}    # abc1234zip1234abc
-                                # |-|
+                                # |-
         echo "v1 = $v1"         # ABCDEF1234zip1234abc
-                                # |----|
+                                # |----
 
         # Coincideix amb el final del string.
         v2=${v0/%abc/ABCDEF}    # abc1234zip123abc
-                                #              |-|
+                                #              |-
         echo "v2 = $v2"         # abc1234zip1234ABCDEF
-                                #               |----|
+                                #               |----
 
         echo
 

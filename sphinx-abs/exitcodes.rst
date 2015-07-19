@@ -108,7 +108,7 @@ where overriding circumstances exist, as in `Example
 
 
 
-|Note|
+|Note
 
 Issuing a `$? <internalvariables.html#XSTATVARREF>`__ from the
 command-line after a shell script exits gives results consistent with

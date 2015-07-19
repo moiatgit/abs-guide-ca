@@ -168,27 +168,27 @@ Bash. The *typeset* command also works in ksh scripts.
 
 
 
-|Caution|
+|Caution
 
 Using the *declare* builtin restricts the
 `scope <subshells.html#SCOPEREF>`__ of a variable.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     foo ()               |
-|     {                    |
-|     FOO="bar"            |
-|     }                    |
-|                          |
-|     bar ()               |
-|     {                    |
-|     foo                  |
-|     echo $FOO            |
-|     }                    |
-|                          |
-|     bar   # Prints bar.  |
+.. code-block:: sh
+
+    foo ()
+    {
+    FOO="bar"
+    }
+
+    bar ()
+    {
+    foo
+    echo $FOO
+    }
+
+    bar   # Prints bar.
 
 ----------------------------------------------------------------------------------
 
@@ -197,25 +197,25 @@ However . . .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     foo (){              |
-|     declare FOO="bar"    |
-|     }                    |
-|                          |
-|     bar ()               |
-|     {                    |
-|     foo                  |
-|     echo $FOO            |
-|     }                    |
-|                          |
-|     bar  # Prints nothin |
-| g.                       |
-|                          |
-|                          |
-|     # Thank you, Michael |
-|  Iatrou, for pointing th |
-| is out.                  |
+.. code-block:: sh
+
+    foo (){
+    declare FOO="bar"
+    }
+
+    bar ()
+    {
+    foo
+    echo $FOO
+    }
+
+    bar  # Prints nothin
+g.
+
+
+    # Thank you, Michael
+ Iatrou, for pointing th
+is out.
 
 ----------------------------------------------------------------------------------
 
@@ -302,19 +302,19 @@ especially useful with `arrays <arrays.html#ARRAYREF>`__ .
 
 .. code-block:: sh
 
-    bash$ declare | grep HOME
+    bash$ declaregrep HOME
     HOME=/home/bozo
 
 
     bash$ zzy=68
-    bash$ declare | grep zzy
+    bash$ declaregrep zzy
     zzy=68
 
 
     bash$ Colors=([0]="purple" [1]="reddish-orange" [2]="light green")
     bash$ echo ${Colors[@]}
     purple reddish-orange light green
-    bash$ declare | grep Colors
+    bash$ declaregrep Colors
     Colors=([0]="purple" [1]="reddish-orange" [2]="light green")
 
 
@@ -335,15 +335,15 @@ operations <refcards.html#STRINGOPSTAB>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     declare -i intvar    |
-|                          |
-|     intvar=23            |
-|     echo "$intvar"   # 2 |
-| 3                        |
-|     intvar=stringval     |
-|     echo "$intvar"   # 0 |
+.. code-block:: sh
+
+    declare -i intvar
+
+    intvar=23
+    echo "$intvar"   # 2
+3
+    intvar=stringval
+    echo "$intvar"   # 0
 
 ----------------------------------------------------------------------------------
 

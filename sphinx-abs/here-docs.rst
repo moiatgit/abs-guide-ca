@@ -566,7 +566,7 @@ Exemple 10. *Here Document* anònim
 
 
 
-|Tip|
+|Tip
 
 A variation of the above technique permits "commenting out" blocks of
 code.
@@ -653,7 +653,7 @@ Exemple 11. Commenting out a block of code
 
 
 
-|Tip|
+|Tip
 
 Yet another twist of this nifty trick makes "self-documenting" scripts
 possible.
@@ -677,7 +677,7 @@ Exemple 12. A self-documenting script
     if [ "$1" = "-h"  -o "$1" = "--help" ]     # Request help.
     then
       echo; echo "Usage: $0 [directory-name]"; echo
-      sed --silent -e '/DOCUMENTATIONXX$/,/^DOCUMENTATIONXX$/p' "$0" |
+      sed --silent -e '/DOCUMENTATIONXX$/,/^DOCUMENTATIONXX$/p' "$0"
       sed -e '/DOCUMENTATIONXX$/d'; exit $DOC_REQUEST; fi
 
 
@@ -699,7 +699,7 @@ Exemple 12. A self-documenting script
 
     echo "Listing of "$directory":"; echo
     (printf "PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\n" \
-    ; ls -l "$directory" | sed 1d) | column -t
+    ; ls -l "$directory"sed 1d) | column -t
 
     exit 0
 
@@ -737,23 +737,23 @@ self-documenting scripts.
 
 
 
-|Note|
+|Note
 
 Here documents create temporary files, but these files are deleted after
 opening and are not accessible to any other process.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     bash$ bash -c 'lsof  |
-| -a -p $$ -d0' << EOF     |
-|     > EOF                |
-|     lsof    1213 bozo    |
-|  0r   REG    3,5    0 30 |
-| 386 /tmp/t1213-0-sh (del |
-| eted)                    |
-|                          |
+.. code-block:: sh
+
+    bash$ bash -c 'lsof
+-a -p $$ -d0' << EOF
+    > EOF
+    lsof    1213 bozo
+ 0r   REG    3,5    0 30
+386 /tmp/t1213-0-sh (del
+eted)
+
 
 ----------------------------------------------------------------------------------
 
@@ -779,7 +779,7 @@ opening and are not accessible to any other process.
 
 
 
-|Caution|
+|Caution
 
 Some utilities will not work inside a *here document* .
 
@@ -788,7 +788,7 @@ Some utilities will not work inside a *here document* .
 
 
 
-|Warning|
+|Warning
 
 The closing *limit string* , on the final line of a here document, must
 start in the *first* character position. There can be *no leading
@@ -798,51 +798,51 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     echo "-------------- |
-| ------------------------ |
-| ------------------------ |
-| --------"                |
-|                          |
-|     cat <<LimitString    |
-|     echo "This is line 1 |
-|  of the message inside t |
-| he here document."       |
-|     echo "This is line 2 |
-|  of the message inside t |
-| he here document."       |
-|     echo "This is the fi |
-| nal line of the message  |
-| inside the here document |
-| ."                       |
-|          LimitString     |
-|     #^^^^Indented limit  |
-| string. Error! This scri |
-| pt will not behave as ex |
-| pected.                  |
-|                          |
-|     echo "-------------- |
-| ------------------------ |
-| ------------------------ |
-| --------"                |
-|                          |
-|     #  These comments ar |
-| e outside the 'here docu |
-| ment',                   |
-|     #+ and should not ec |
-| ho.                      |
-|                          |
-|     echo "Outside the he |
-| re document."            |
-|                          |
-|     exit 0               |
-|                          |
-|     echo "This line had  |
-| better not echo."  # Fol |
-| lows an 'exit' command.  |
+.. code-block:: sh
+
+    #!/bin/bash
+
+    echo "--------------
+------------------------
+------------------------
+--------"
+
+    cat <<LimitString
+    echo "This is line 1
+ of the message inside t
+he here document."
+    echo "This is line 2
+ of the message inside t
+he here document."
+    echo "This is the fi
+nal line of the message
+inside the here document
+."
+         LimitString
+    #^^^^Indented limit
+string. Error! This scri
+pt will not behave as ex
+pected.
+
+    echo "--------------
+------------------------
+------------------------
+--------"
+
+    #  These comments ar
+e outside the 'here docu
+ment',
+    #+ and should not ec
+ho.
+
+    echo "Outside the he
+re document."
+
+    exit 0
+
+    echo "This line had
+better not echo."  # Fol
+lows an 'exit' command.
 
 ----------------------------------------------------------------------------------
 
@@ -902,45 +902,45 @@ recognized. ` [1]  <here-docs.html#FTN.AEN17822>`__
 
 
 
-|Caution|
+|Caution
 
  Some people very cleverly use a single ! as a limit string. But, that's
 not necessarily a good idea.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     # This works.        |
-|     cat <<!              |
-|     Hello!               |
-|     ! Three more exclama |
-| tions !!!                |
-|     !                    |
-|                          |
-|                          |
-|     # But . . .          |
-|     cat <<!              |
-|     Hello!               |
-|     Single exclamation p |
-| oint follows!            |
-|     !                    |
-|     !                    |
-|     # Crashes with an er |
-| ror message.             |
-|                          |
-|                          |
-|     # However, the follo |
-| wing will work.          |
-|     cat <<EOF            |
-|     Hello!               |
-|     Single exclamation p |
-| oint follows!            |
-|     !                    |
-|     EOF                  |
-|     # It's safer to use  |
-| a multi-character limit  |
-| string.                  |
+.. code-block:: sh
+
+    # This works.
+    cat <<!
+    Hello!
+    ! Three more exclama
+tions !!!
+    !
+
+
+    # But . . .
+    cat <<!
+    Hello!
+    Single exclamation p
+oint follows!
+    !
+    !
+    # Crashes with an er
+ror message.
+
+
+    # However, the follo
+wing will work.
+    cat <<EOF
+    Hello!
+    Single exclamation p
+oint follows!
+    !
+    EOF
+    # It's safer to use
+a multi-character limit
+string.
 
 ----------------------------------------------------------------------------------
 

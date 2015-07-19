@@ -31,7 +31,7 @@ XXX  16.4. Text Processing Commands
 
     .. code-block:: sh
 
-        cat list-1 list-2 list-3 | sort | uniq > final.list
+        cat list-1 list-2 list-3sort | uniq > final.list
         # Concatenates the list files,
         # sorts them,
         # removes duplicate lines,
@@ -60,7 +60,7 @@ XXX  16.4. Text Processing Commands
                3 This line occurs three times.
 
 
-        bash$ sort testfile | uniq -c | sort -nr
+        bash$ sort testfileuniq -c | sort -nr
               3 This line occurs three times.
                2 This line occurs twice.
                1 This line occurs only once.
@@ -69,7 +69,7 @@ XXX  16.4. Text Processing Commands
 
 
     The
-    ``                   sort INPUTFILE | uniq -c | sort -nr                 ``
+    ``                   sort INPUTFILEuniq -c | sort -nr                 ``
     command string produces a *frequency of occurrence* listing on the
     ``         INPUTFILE        `` file (the ``         -nr        ``
     options to **sort** cause a reverse numerical sort). This template
@@ -110,7 +110,7 @@ Exemple 12. Word Frequency Analysis
         ########################################################
         # main ()
         sed -e 's/\.//g'  -e 's/\,//g' -e 's/ /\
-        /g' "$1" | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr
+        /g' "$1"tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr
         #                           =========================
         #                            Frequency of occurrence
 
@@ -120,7 +120,7 @@ Exemple 12. Word Frequency Analysis
         #+ finally prefix occurrence count and sort numerically.
 
         #  Arun Giridhar suggests modifying the above to:
-        #  . . . | sort | uniq -c | sort +1 [-f] | sort +0 -nr
+        #  . . .sort | uniq -c | sort +1 [-f] | sort +0 -nr
         #  This adds a secondary sort key, so instances of
         #+ equal occurrence are sorted alphabetically.
         #  As he explains it:
@@ -130,9 +130,9 @@ Exemple 12. Word Frequency Analysis
         #+ and last on the most significant column (frequency)."
         #
         #  As Frank Wang explains, the above is equivalent to
-        #+       . . . | sort | uniq -c | sort +0 -nr
+        #+       . . .sort | uniq -c | sort +0 -nr
         #+ and the following also works:
-        #+       . . . | sort | uniq -c | sort -k1nr -k
+        #+       . . .sort | uniq -c | sort -k1nr -k
         ########################################################
 
         exit 0
@@ -202,7 +202,7 @@ Exemple 12. Word Frequency Analysis
 
     .. code-block:: sh
 
-        uname -a | cut -d" " -f1,3,11,12
+        uname -acut -d" " -f1,3,11,12
 
 
 
@@ -211,7 +211,7 @@ Exemple 12. Word Frequency Analysis
 
     .. code-block:: sh
 
-        bash$ grep '^Subject:' read-messages | cut -c10-80
+        bash$ grep '^Subject:' read-messagescut -c10-80
         Re: Linux suitable for mission-critical apps?
          MAKE MILLIONS WORKING AT HOME!!!
          Spam complaint
@@ -243,23 +243,23 @@ Exemple 12. Word Frequency Analysis
 
 
 
-    |Note|
+    |Note
 
     It is even possible to specify a linefeed as a delimiter. The trick
     is to actually embed a linefeed ( **RETURN** ) in the command
     sequence.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ cut -d'        |
-    |      ' -f3,7,19 testfile |
-    |     This is line 3 of te |
-    | stfile.                  |
-    |      This is line 7 of t |
-    | estfile.                 |
-    |      This is line 19 of  |
-    | testfile.                |
-    |                          |
+.. code-block:: sh
+
+    bash$ cut -d'
+     ' -f3,7,19 testfile
+    This is line 3 of te
+stfile.
+     This is line 7 of t
+estfile.
+     This is line 19 of
+testfile.
+
 
 
     Thank you, Jaka Kranjc, for pointing this out.
@@ -364,7 +364,7 @@ Exemple 12. Word Frequency Analysis
 
 
 
-    |Note|
+    |Note
 
     The tagged field appears only once in the output.
 
@@ -429,7 +429,7 @@ Exemple 14. Generating 10-digit random numbers
 
         # Script by Stephane Chazelas.
 
-        head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
+        head -c4 /dev/urandomod -N4 -tu4 | sed -ne '1s/.* //p'
 
 
         # =================================================================== #
@@ -452,10 +452,10 @@ Exemple 14. Generating 10-digit random numbers
 
         # The author of this script explains the action of 'sed', as follows.
 
-        # head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
-        # ----------------------------------> |
+        # head -c4 /dev/urandomod -N4 -tu4 | sed -ne '1s/.* //p'
+        # ---------------------------------->
 
-        # Assume output up to "sed" --------> |
+        # Assume output up to "sed" -------->
         # is 0000000 1198195154\n
 
         #  sed begins reading characters: 0000000 1198195154\n.
@@ -503,7 +503,7 @@ Exemple 14. Generating 10-digit random numbers
         # =================================================================== #
 
         # An even simpler altenative to the above one-line script would be:
-        #           head -c4 /dev/urandom| od -An -tu4
+        #           head -c4 /dev/urandomod -An -tu4
 
         exit
 
@@ -549,36 +549,36 @@ Exemple 15. Using *tail* to monitor the system log
 
 
 
-    |Tip|
+    |Tip
 
     To list a specific line of a text file,
     `pipe <special-chars.html#PIPEREF>`__ the output of **head** to
     **tail -n 1** . For example
-    ``                         head -n 8 database.txt | tail         -n 1                       ``
+    ``                         head -n 8 database.txttail         -n 1                       ``
     lists the 8th line of the file
     ``            database.txt           `` .
 
     To set a variable to a given block of a text file:
 
-    | .. code-block:: sh
-    |                          |
-    |     var=$(head -n $m $fi |
-    | lename | tail -n $n)     |
-    |                          |
-    |     # filename = name of |
-    |  file                    |
-    |     # m = from beginning |
-    |  of file, number of line |
-    | s to end of block        |
-    |     # n = number of line |
-    | s to set variable to (tr |
-    | im from end of block)    |
+.. code-block:: sh
+
+    var=$(head -n $m $fi
+lename | tail -n $n)
+
+    # filename = name of
+ file
+    # m = from beginning
+ of file, number of line
+s to end of block
+    # n = number of line
+s to set variable to (tr
+im from end of block)
 
 
 
     .. code-block:: sh
 
-        var=$(head -n $m $filename | tail -n $n)
+        var=$(head -n $m $filenametail -n $n)
 
         # filename = name of file
         # m = from beginning of file, number of lines to end of block
@@ -587,7 +587,7 @@ Exemple 15. Using *tail* to monitor the system log
 
     .. code-block:: sh
 
-        var=$(head -n $m $filename | tail -n $n)
+        var=$(head -n $m $filenametail -n $n)
 
         # filename = name of file
         # m = from beginning of file, number of lines to end of block
@@ -598,7 +598,7 @@ Exemple 15. Using *tail* to monitor the system log
 
 
 
-    |Note|
+    |Note
 
     Newer implementations of **tail** deprecate the older **tail -$LINES
     filename** usage. The standard **tail -n $LINES filename** is
@@ -642,7 +642,7 @@ Exemple 15. Using *tail* to monitor the system log
 
     .. code-block:: sh
 
-        bash$ ps ax | grep clock
+        bash$ ps axgrep clock
         765 tty1     S      0:00 xclock
          901 pts/1    S      0:00 grep clock
 
@@ -678,7 +678,7 @@ Exemple 15. Using *tail* to monitor the system log
 
     .. code-block:: sh
 
-        grep pattern1 *.txt | grep -v pattern2
+        grep pattern1 *.txtgrep -v pattern2
 
         # Matches all lines in "*.txt" files containing "pattern1",
         # but ***not*** "pattern2".
@@ -700,11 +700,11 @@ Exemple 15. Using *tail* to monitor the system log
         # means count (-c) zero-separated (-z) items matching "."
         # that is, non-empty ones (containing at least 1 character).
         #
-        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz .     # 3
-        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz '$'   # 5
-        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -cz '^'   # 5
+        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf'grep -cz .     # 3
+        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf'grep -cz '$'   # 5
+        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf'grep -cz '^'   # 5
         #
-        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf' | grep -c '$'    # 9
+        printf 'a b\nc  d\n\n\n\n\n\000\n\000e\000\000\nf'grep -c '$'    # 9
         # By default, newline chars (\n) separate items to match.
 
         # Note that the -z option is GNU "grep" specific.
@@ -773,24 +773,24 @@ Exemple 15. Using *tail* to monitor the system log
 
 
 
-    |Tip|
+    |Tip
 
     To force **grep** to show the filename when searching only one
     target file, simply give ``            /dev/null           `` as the
     second file.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ grep Linux osi |
-    | nfo.txt /dev/null        |
-    |     osinfo.txt:This is a |
-    |  file containing informa |
-    | tion about Linux.        |
-    |      osinfo.txt:The GPL  |
-    | governs the distribution |
-    |  of the Linux operating  |
-    | system.                  |
-    |                          |
+.. code-block:: sh
+
+    bash$ grep Linux osi
+nfo.txt /dev/null
+    osinfo.txt:This is a
+ file containing informa
+tion about Linux.
+     osinfo.txt:The GPL
+governs the distribution
+ of the Linux operating
+system.
+
 
 
 
@@ -919,7 +919,7 @@ Exemple 16. Emulating *grep* in a script
          This file does not contain any unusual text.
          This file is not unusual.
 
-        bash$ grep file tstfile | grep text
+        bash$ grep file tstfilegrep text
         This is an ordinary text file.
          This file does not contain any unusual text.
 
@@ -980,7 +980,7 @@ Exemple 17. Crossword puzzle solver
         # ===============================================
         # This is where all the work gets done.
         grep ^"$1"$ "$DICT"   # Yes, only one line!
-        #    |    |
+        #
         # ^ is start-of-word regex anchor.
         # $ is end-of-word regex anchor.
 
@@ -1007,7 +1007,7 @@ Exemple 17. Crossword puzzle solver
      **egrep** -- *extended grep* -- is the same as **grep -E** . This
     uses a somewhat different, extended set of `Regular
     Expressions <regexp.html#REGEXREF>`__ , which can make the search a
-    bit more flexible. It also allows the boolean \| ( *or* ) operator.
+    bit more flexible. It also allows the boolean \( *or* ) operator.
 
 
     .. code-block:: sh
@@ -1027,7 +1027,7 @@ Exemple 17. Crossword puzzle solver
 
 
 
-    |Note|
+    |Note
 
     On some Linux distros, **egrep** and **fgrep** are symbolic links
     to, or aliases for **grep** , but invoked with the
@@ -1073,7 +1073,7 @@ Exemple 17. Crossword puzzle solver
 
 
 
-        if [[ -z $(echo "$1" | sed -n '/^[A-Z]/p') ]]
+        if [[ -z $(echo "$1"sed -n '/^[A-Z]/p') ]]
         #  Must at least specify word to look up, and
         #+ it must start with an uppercase letter.
         then
@@ -1105,11 +1105,11 @@ Exemple 17. Crossword puzzle solver
 
         # Now, snip out just the definition block.
 
-        echo "$Definition" |
-        sed -n '1,/^[A-Z]/p' |
+        echo "$Definition"
+        sed -n '1,/^[A-Z]/p'
         #  Print from first line of output
         #+ to the first line of the next entry.
-        sed '$d' | sed '$d'
+        sed '$d'sed '$d'
         #  Delete last two lines of output
         #+ (blank line and first line of next entry).
         # ---------------------------------------------------------
@@ -1135,7 +1135,7 @@ Exemple 17. Crossword puzzle solver
 
 
 
-    |Note|
+    |Note
 
     See also `Example A-41 <contributed-scripts.html#QKY>`__ for an
     example of speedy *fgrep* lookup on a large text file.
@@ -1150,7 +1150,7 @@ Exemple 17. Crossword puzzle solver
 
 
 
-    |Tip|
+    |Tip
 
     To search compressed files, use **zgrep** , **zegrep** , or
     **zfgrep** . These also work on non-compressed files, though slower
@@ -1272,12 +1272,12 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        $ ls *.txt | wc -l
+        $ ls *.txtwc -l
         #  Will work as long as none of the "*.txt" files
         #+ have a linefeed embedded in their name.
 
         #  Alternative ways of doing this are:
-        #      find . -maxdepth 1 -name \*.txt -print0 | grep -cz .
+        #      find . -maxdepth 1 -name \*.txt -print0grep -cz .
         #      (shopt -s nullglob; set -- *.txt; echo $#)
 
         #  Thanks, S.C.
@@ -1290,7 +1290,7 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        bash$ wc [d-h]* | grep total | awk '{print $3}'
+        bash$ wc [d-h]*grep total | awk '{print $3}'
         71832
 
 
@@ -1302,7 +1302,7 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        bash$ grep Linux abs-book.sgml | wc -l
+        bash$ grep Linux abs-book.sgmlwc -l
         138
 
 
@@ -1317,10 +1317,10 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        ... | grep foo | wc -l
+        ...grep foo | wc -l
         # This frequently used construct can be more concisely rendered.
 
-        ... | grep -c foo
+        ...grep -c foo
         # Just use the "-c" (or "--count") option of grep.
 
         # Thanks, S.C.
@@ -1332,7 +1332,7 @@ Exemple 18. Checking words in a list for validity
 
 
 
-    |Caution|
+    |Caution
 
     `Must use quoting and/or brackets <special-chars.html#UCREF>`__ , as
     appropriate. Quotes prevent the shell from reinterpreting the
@@ -1357,7 +1357,7 @@ Exemple 18. Checking words in a list for validity
     .. code-block:: sh
 
         echo "abcdef"                 # abcdef
-        echo "abcdef" | tr -d b-d     # aef
+        echo "abcdef"tr -d b-d     # aef
 
 
         tr -d 0-9 <filename
@@ -1373,7 +1373,7 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        bash$ echo "XXXXX" | tr --squeeze-repeats 'X'
+        bash$ echo "XXXXX"tr --squeeze-repeats 'X'
         X
 
 
@@ -1385,7 +1385,7 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        bash$ echo "acfdeb123" | tr -c b-d +
+        bash$ echo "acfdeb123"tr -c b-d +
         +c+d+b++++
 
 
@@ -1397,7 +1397,7 @@ Exemple 18. Checking words in a list for validity
 
     .. code-block:: sh
 
-        bash$ echo "abcd2ef1" | tr '[:alpha:]' -
+        bash$ echo "abcd2ef1"tr '[:alpha:]' -
         ----2--1
 
 
@@ -1428,7 +1428,7 @@ Exemple 19. *toupper* : Transforms a file to all uppercase.
         # Thanks, S.C.
 
         #     Or even . . .
-        #     cat "$1" | tr a-z A-Z
+        #     cat "$1"tr a-z A-Z
         #     Or dozens of other ways . . .
 
         exit 0
@@ -1460,7 +1460,7 @@ Exemple 19. *toupper* : Transforms a file to all uppercase.
         for filename in *                # Traverse all files in directory.
         do
            fname=`basename $filename`
-           n=`echo $fname | tr A-Z a-z`  # Change name to lowercase.
+           n=`echo $fnametr A-Z a-z`  # Change name to lowercase.
            if [ "$fname" != "$n" ]       # Rename only files not already lowercase.
            then
              mv $fname $n
@@ -1480,13 +1480,13 @@ Exemple 19. *toupper* : Transforms a file to all uppercase.
 
         for filename in *    # Not necessary to use basename,
                              # since "*" won't return any file containing "/".
-        do n=`echo "$filename/" | tr '[:upper:]' '[:lower:]'`
+        do n=`echo "$filename/"tr '[:upper:]' '[:lower:]'`
         #                             POSIX char set notation.
         #                    Slash added so that trailing newlines are not
         #                    removed by command substitution.
            # Variable substitution:
            n=${n%/}          # Removes trailing slash, added above, from filename.
-           [[ $filename == $n ]] || mv "$filename" "$n"
+           [[ $filename == $n ]] |mv "$filename" "$n"
                              # Checks if filename already lowercase.
         done
 
@@ -1551,7 +1551,7 @@ Exemple 21. *rot13* : ultra-weak encryption.
         # or     ./rot13.sh <filename
         # or     ./rot13.sh and supply keyboard input (stdin)
 
-        cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M'   # "a" goes to "n", "b" to "o" ...
+        cat "$@"tr 'a-zA-Z' 'n-za-mN-ZA-M'   # "a" goes to "n", "b" to "o" ...
         #  The   cat "$@"   construct
         #+ permits input either from stdin or from files.
 
@@ -1583,8 +1583,8 @@ Exemple 22. Generating "Crypto-Quote" Puzzles
         # If using stdin, terminate input with a Control-D.
         # Otherwise, specify filename as command-line parameter.
 
-        cat "$@" | tr "a-z" "A-Z" | tr "A-Z" "$key"
-        #        |  to uppercase  |     encrypt
+        cat "$@"tr "a-z" "A-Z" | tr "A-Z" "$key"
+        # to uppercase  |     encrypt
         # Will work on lowercase, uppercase, or mixed-case quotes.
         # Passes non-alphabetic characters through unchanged.
 
@@ -1598,7 +1598,7 @@ Exemple 22. Generating "Crypto-Quote" Puzzles
         # --BEML PZERC
 
         # To reverse the encryption:
-        # cat "$@" | tr "$key" "A-Z"
+        # cat "$@"tr "$key" "A-Z"
 
 
         #  This simple-minded cipher can be broken by an average 12-year old
@@ -1623,7 +1623,7 @@ Exemple 22. Generating "Crypto-Quote" Puzzles
         # jabh.sh
 
         x="wftedskaebjgdBstbdbsmnjgz"
-        echo $x | tr "a-z" 'oh, turtleneck Phrase Jar!'
+        echo $xtr "a-z" 'oh, turtleneck Phrase Jar!'
 
         # Based on the Wikipedia "Just another Perl hacker" article.
 
@@ -1667,10 +1667,10 @@ Exemple 23. Formatted file listing.
 
         b=`ls /usr/local/bin`       # Get a file listing...
 
-        echo $b | fmt -w $WIDTH
+        echo $bfmt -w $WIDTH
 
         # Could also have been done by
-        #    echo $b | fold - -s -w $WIDTH
+        #    echo $bfold - -s -w $WIDTH
 
         exit 0
 
@@ -1681,7 +1681,7 @@ Exemple 23. Formatted file listing.
 
 
 
-    |Tip|
+    |Tip
 
     A powerful alternative to **fmt** is Kamil Toman's **par** utility,
     available from http://www.cs.berkeley.edu/~amc/Par/ .
@@ -1712,7 +1712,7 @@ Exemple 24. Using *column* to format a directory listing
 
 
         (printf "PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\n" \
-        ; ls -l | sed 1d) | column -t
+        ; ls -lsed 1d) | column -t
         #         ^^^^^^           ^^
 
         #  The "sed 1d" in the pipe deletes the first line of output,
@@ -1736,7 +1736,7 @@ Exemple 24. Using *column* to format a directory listing
 
 
 
-    |Caution|
+    |Caution
 
     If the file contains tabs or nonprintable characters, this may cause
     unpredictable behavior. In such cases, consider using
@@ -1797,7 +1797,7 @@ Exemple 25. *nl* : A self-numbering script.
     **pr** command combines much of the functionality of **nl** ,
     **paste** , **fold** , **column** , and **expand** .
 
-    ``                   pr -o 5 --width=65 fileZZZ | more                 ``
+    ``                   pr -o 5 --width=65 fileZZZmore                 ``
     gives a nice paginated listing to screen of
     ``         fileZZZ        `` with margins set at 5 and 65.
 
@@ -1829,8 +1829,8 @@ Exemple 25. *nl* : A self-numbering script.
         function write_utf8_string {
             STRING=$1
             BOOKLIST=$2
-            echo -n "$STRING" | iconv -f UTF8 -t UTF16 | \
-            cut -b 3- | tr -d \\n >> "$BOOKLIST"
+            echo -n "$STRING"iconv -f UTF8 -t UTF16 | \
+            cut -b 3-tr -d \\n >> "$BOOKLIST"
         }
 
         #  From Peter Knowles' "booklistgen.sh" script
@@ -1916,7 +1916,7 @@ Exemple 26. *manview* : Viewing formatted manpages
         fi
 
         # ---------------------------
-        groff -Tascii -man $1 | less
+        groff -Tascii -man $1less
         # From the man page for groff.
         # ---------------------------
 
@@ -1924,7 +1924,7 @@ Exemple 26. *manview* : Viewing formatted manpages
         #+ then the above code will barf.
         #  The following line can handle such cases.
         #
-        #   gtbl < "$1" | geqn -Tlatin1 | groff -Tlatin1 -mtty-char -man
+        #   gtbl < "$1"geqn -Tlatin1 | groff -Tlatin1 -mtty-char -man
         #
         #   Thanks, S.C.
 

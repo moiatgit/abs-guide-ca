@@ -25,7 +25,7 @@ Avoid unnecessary commands, particularly in a
 
 .. code-block:: sh
 
-    cat "$file" | grep "$word"
+    cat "$file"grep "$word"
 
     grep "$word" "$file"
 
@@ -153,7 +153,7 @@ the ``                   LC_ALL                 `` variable.
 
 
 
-|Note|
+|Note
 
 Certain operators, notably `expr <moreadv.html#EXPRREF>`__ , are very
 inefficient and might be replaced by `double
@@ -162,33 +162,33 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     Math tests           |
-|                          |
-|     math via $(( ))      |
-|     real          0m0.29 |
-| 4s                       |
-|     user          0m0.28 |
-| 8s                       |
-|     sys           0m0.00 |
-| 8s                       |
-|                          |
-|     math via expr:       |
-|     real          1m17.8 |
-| 79s   # Much slower!     |
-|     user          0m3.60 |
-| 0s                       |
-|     sys           0m8.76 |
-| 5s                       |
-|                          |
-|     math via let:        |
-|     real          0m0.36 |
-| 4s                       |
-|     user          0m0.37 |
-| 2s                       |
-|     sys           0m0.00 |
-| 0s                       |
+.. code-block:: sh
+
+    Math tests
+
+    math via $(( ))
+    real          0m0.29
+4s
+    user          0m0.28
+8s
+    sys           0m0.00
+8s
+
+    math via expr:
+    real          1m17.8
+79s   # Much slower!
+    user          0m3.60
+0s
+    sys           0m8.76
+5s
+
+    math via let:
+    real          0m0.36
+4s
+    user          0m0.37
+2s
+    sys           0m0.00
+0s
 
 ----------------------------------------------------------------------------------
 
@@ -201,46 +201,46 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     Test using "case" co |
-| nstruct:                 |
-|     real          0m0.32 |
-| 9s                       |
-|     user          0m0.32 |
-| 0s                       |
-|     sys           0m0.00 |
-| 0s                       |
-|                          |
-|                          |
-|     Test with if [], no  |
-| quotes:                  |
-|     real          0m0.43 |
-| 8s                       |
-|     user          0m0.43 |
-| 2s                       |
-|     sys           0m0.00 |
-| 8s                       |
-|                          |
-|                          |
-|     Test with if [], quo |
-| tes:                     |
-|     real          0m0.47 |
-| 6s                       |
-|     user          0m0.45 |
-| 2s                       |
-|     sys           0m0.02 |
-| 4s                       |
-|                          |
-|                          |
-|     Test with if [], usi |
-| ng -eq:                  |
-|     real          0m0.45 |
-| 7s                       |
-|     user          0m0.45 |
-| 6s                       |
-|     sys           0m0.00 |
-| 0s                       |
+.. code-block:: sh
+
+    Test using "case" co
+nstruct:
+    real          0m0.32
+9s
+    user          0m0.32
+0s
+    sys           0m0.00
+0s
+
+
+    Test with if [], no
+quotes:
+    real          0m0.43
+8s
+    user          0m0.43
+2s
+    sys           0m0.00
+8s
+
+
+    Test with if [], quo
+tes:
+    real          0m0.47
+6s
+    user          0m0.45
+2s
+    sys           0m0.02
+4s
+
+
+    Test with if [], usi
+ng -eq:
+    real          0m0.45
+7s
+    user          0m0.45
+6s
+    sys           0m0.00
+0s
 
 ----------------------------------------------------------------------------------
 
@@ -342,7 +342,7 @@ A-59 <contributed-scripts.html#TESTEXECTIME>`__ .
 
 
 
-|Note|
+|Note
 
 Erik Brandsberg recommends using `associative
 arrays <bashver4.html#ASSOCARR>`__ in preference to conventional
@@ -353,120 +353,120 @@ A-60 <contributed-scripts.html#ASSOCARRTEST>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     Assignment tests     |
-|                          |
-|     Assigning a simple v |
-| ariable                  |
-|     real          0m0.41 |
-| 8s                       |
-|     user          0m0.41 |
-| 6s                       |
-|     sys           0m0.00 |
-| 4s                       |
-|                          |
-|     Assigning a numeric  |
-| index array entry        |
-|     real          0m0.58 |
-| 2s                       |
-|     user          0m0.56 |
-| 4s                       |
-|     sys           0m0.01 |
-| 6s                       |
-|                          |
-|     Overwriting a numeri |
-| c index array entry      |
-|     real          0m21.9 |
-| 31s                      |
-|     user          0m21.9 |
-| 13s                      |
-|     sys           0m0.01 |
-| 6s                       |
-|                          |
-|     Linear reading of nu |
-| meric index array        |
-|     real          0m0.42 |
-| 2s                       |
-|     user          0m0.41 |
-| 6s                       |
-|     sys           0m0.00 |
-| 4s                       |
-|                          |
-|     Assigning an associa |
-| tive array entry         |
-|     real          0m1.80 |
-| 0s                       |
-|     user          0m1.79 |
-| 6s                       |
-|     sys           0m0.00 |
-| 4s                       |
-|                          |
-|     Overwriting an assoc |
-| iative array entry       |
-|     real          0m1.79 |
-| 8s                       |
-|     user          0m1.78 |
-| 4s                       |
-|     sys           0m0.01 |
-| 2s                       |
-|                          |
-|     Linear reading an as |
-| sociative array entry    |
-|     real          0m0.42 |
-| 0s                       |
-|     user          0m0.42 |
-| 0s                       |
-|     sys           0m0.00 |
-| 0s                       |
-|                          |
-|     Assigning a random n |
-| umber to a simple variab |
-| le                       |
-|     real          0m0.40 |
-| 2s                       |
-|     user          0m0.38 |
-| 8s                       |
-|     sys           0m0.01 |
-| 6s                       |
-|                          |
-|     Assigning a sparse n |
-| umeric index array entry |
-|  randomly into 64k cells |
-|     real          0m12.6 |
-| 78s                      |
-|     user          0m12.6 |
-| 49s                      |
-|     sys           0m0.02 |
-| 8s                       |
-|                          |
-|     Reading sparse numer |
-| ic index array entry     |
-|     real          0m0.08 |
-| 7s                       |
-|     user          0m0.08 |
-| 4s                       |
-|     sys           0m0.00 |
-| 0s                       |
-|                          |
-|     Assigning a sparse a |
-| ssociative array entry r |
-| andomly into 64k cells   |
-|     real          0m0.69 |
-| 8s                       |
-|     user          0m0.69 |
-| 6s                       |
-|     sys           0m0.00 |
-| 4s                       |
-|                          |
-|     Reading sparse assoc |
-| iative index array entry |
-|     real          0m0.08 |
-| 3s                       |
-|     user          0m0.08 |
-| 4s                       |
-|     sys           0m0.00 |
-| 0s                       |
+.. code-block:: sh
+
+    Assignment tests
+
+    Assigning a simple v
+ariable
+    real          0m0.41
+8s
+    user          0m0.41
+6s
+    sys           0m0.00
+4s
+
+    Assigning a numeric
+index array entry
+    real          0m0.58
+2s
+    user          0m0.56
+4s
+    sys           0m0.01
+6s
+
+    Overwriting a numeri
+c index array entry
+    real          0m21.9
+31s
+    user          0m21.9
+13s
+    sys           0m0.01
+6s
+
+    Linear reading of nu
+meric index array
+    real          0m0.42
+2s
+    user          0m0.41
+6s
+    sys           0m0.00
+4s
+
+    Assigning an associa
+tive array entry
+    real          0m1.80
+0s
+    user          0m1.79
+6s
+    sys           0m0.00
+4s
+
+    Overwriting an assoc
+iative array entry
+    real          0m1.79
+8s
+    user          0m1.78
+4s
+    sys           0m0.01
+2s
+
+    Linear reading an as
+sociative array entry
+    real          0m0.42
+0s
+    user          0m0.42
+0s
+    sys           0m0.00
+0s
+
+    Assigning a random n
+umber to a simple variab
+le
+    real          0m0.40
+2s
+    user          0m0.38
+8s
+    sys           0m0.01
+6s
+
+    Assigning a sparse n
+umeric index array entry
+ randomly into 64k cells
+    real          0m12.6
+78s
+    user          0m12.6
+49s
+    sys           0m0.02
+8s
+
+    Reading sparse numer
+ic index array entry
+    real          0m0.08
+7s
+    user          0m0.08
+4s
+    sys           0m0.00
+0s
+
+    Assigning a sparse a
+ssociative array entry r
+andomly into 64k cells
+    real          0m0.69
+8s
+    user          0m0.69
+6s
+    sys           0m0.00
+4s
+
+    Reading sparse assoc
+iative index array entry
+    real          0m0.08
+3s
+    user          0m0.08
+4s
+    sys           0m0.00
+0s
 
 ----------------------------------------------------------------------------------
 

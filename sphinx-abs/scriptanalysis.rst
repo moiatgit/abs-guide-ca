@@ -60,7 +60,7 @@ parameterized command-line pipe.
     FILETYPE="shell script"
     LOGFILE=logfile
 
-    file "$DIRNAME"/* | fgrep "$FILETYPE" | tee $LOGFILE | wc -l
+    file "$DIRNAME"/*fgrep "$FILETYPE" | tee $LOGFILE | wc -l
 
     exit 0
 
@@ -81,7 +81,7 @@ the listings for `find <moreadv.html#FINDREF>`__ and
     # This code is released to the public domain.
     # The author gave permission to use this code snippet in the ABS Guide.
 
-    find -maxdepth 1 -type f -printf '%f\000'  | {
+    find -maxdepth 1 -type f -printf '%f\000'{
        while read -d $'\000'; do
           mv "$REPLY" "$(date -d "$(stat -c '%y' "$REPLY") " '+%Y%m%d%H%M%S'
           )-$REPLY"
@@ -123,7 +123,7 @@ clarity) contributed by Rory Winston:
 .. code-block:: sh
 
     export SUM=0; for f in $(find src -name "*.java");
-    do export SUM=$(($SUM + $(wc -l $f | awk '{ print $1 }'))); done; echo $SUM
+    do export SUM=$(($SUM + $(wc -l $fawk '{ print $1 }'))); done; echo $SUM
 
 
 

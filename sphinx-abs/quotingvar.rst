@@ -67,7 +67,7 @@ A more elaborate example:
 
 
 
-|Tip|
+|Tip
 
 Enclosing the arguments to an **echo** statement in double quotes is
 necessary only when word splitting or preservation of
@@ -144,7 +144,7 @@ stricter method of quoting than double quotes ( "partial quoting" ).
 
 
 
-|Note|
+|Note
 
 Since even the escape character ( \\ ) gets a literal interpretation
 within single quotes, trying to enclose a single quote within single
@@ -152,30 +152,30 @@ quotes will not yield the expected result.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     echo "Why can't I wr |
-| ite 's between single qu |
-| otes"                    |
-|                          |
-|     echo                 |
-|                          |
-|     # The roundabout met |
-| hod.                     |
-|     echo 'Why can'\''t I |
-|  write '"'"'s between si |
-| ngle quotes'             |
-|     #    |-------|  |--- |
-| -------|   |------------ |
-| -----------|             |
-|     # Three single-quote |
-| d strings, with escaped  |
-| and quoted single quotes |
-|  between.                |
-|                          |
-|     # This example court |
-| esy of Stéphane Chazelas |
-| .                        |
+.. code-block:: sh
+
+    echo "Why can't I wr
+ite 's between single qu
+otes"
+
+    echo
+
+    # The roundabout met
+hod.
+    echo 'Why can'\''t I
+ write '"'"'s between si
+ngle quotes'
+    #    |-------|  |---
+-------|   |------------
+-----------|
+    # Three single-quote
+d strings, with escaped
+and quoted single quotes
+ between.
+
+    # This example court
+esy of Stéphane Chazelas
+.
 
 ----------------------------------------------------------------------------------
 
@@ -189,7 +189,7 @@ quotes will not yield the expected result.
 
     # The roundabout method.
     echo 'Why can'\''t I write '"'"'s between single quotes'
-    #    |-------|  |----------|   |-----------------------|
+    #    |------- |----------|   |-----------------------
     # Three single-quoted strings, with escaped and quoted single quotes between.
 
     # This example courtesy of Stéphane Chazelas.
@@ -203,7 +203,7 @@ quotes will not yield the expected result.
 
     # The roundabout method.
     echo 'Why can'\''t I write '"'"'s between single quotes'
-    #    |-------|  |----------|   |-----------------------|
+    #    |------- |----------|   |-----------------------
     # Three single-quoted strings, with escaped and quoted single quotes between.
 
     # This example courtesy of Stéphane Chazelas.
@@ -229,34 +229,34 @@ following an **echo -e** command.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     bash$ echo hello\!   |
-|     hello!               |
-|     bash$ echo "hello\!" |
-|     hello\!              |
-|                          |
-|                          |
-|     bash$ echo \         |
-|     >                    |
-|     bash$ echo "\"       |
-|     >                    |
-|     bash$ echo \a        |
-|     a                    |
-|     bash$ echo "\a"      |
-|     \a                   |
-|                          |
-|                          |
-|     bash$ echo x\ty      |
-|     xty                  |
-|     bash$ echo "x\ty"    |
-|     x\ty                 |
-|                          |
-|     bash$ echo -e x\ty   |
-|     xty                  |
-|     bash$ echo -e "x\ty" |
-|     x       y            |
-|                          |
+.. code-block:: sh
+
+    bash$ echo hello\!
+    hello!
+    bash$ echo "hello\!"
+    hello\!
+
+
+    bash$ echo \
+    >
+    bash$ echo "\"
+    >
+    bash$ echo \a
+    a
+    bash$ echo "\a"
+    \a
+
+
+    bash$ echo x\ty
+    xty
+    bash$ echo "x\ty"
+    x\ty
+
+    bash$ echo -e x\ty
+    xty
+    bash$ echo -e "x\ty"
+    x       y
+
 
 ----------------------------------------------------------------------------------
 

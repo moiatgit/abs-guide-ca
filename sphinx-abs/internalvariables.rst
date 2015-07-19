@@ -51,7 +51,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
         11015
 
 
-        bash4$ ps ax | grep bash4
+        bash4$ ps axgrep bash4
         11015 pts/2    R      0:00 bash4
 
 
@@ -187,7 +187,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
 
 
 
-    |Caution|
+    |Caution
 
     The ``            $EUID           `` is not necessarily the same as
     the `$UID <internalvariables.html#UIDREF>`__ .
@@ -307,7 +307,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
 
 
 
-        bash$ echo "$IFS" | cat -vte
+        bash$ echo "$IFS"cat -vte
          ^I$
          $
         (Show whitespace: here a single space, ^I [horizontal tab],
@@ -334,7 +334,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
 
 
 
-    |Caution|
+    |Caution
 
     ``            $IFS           `` does not handle whitespace the same
     as it does other characters.
@@ -651,7 +651,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note|
+    |Note
 
     As of version 2.05 of Bash, filename globbing no longer
     distinguishes between lowercase and uppercase letters in a character
@@ -762,7 +762,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note|
+    |Note
 
     The current "working directory" , ``            ./           `` , is
     usually omitted from the ``            $PATH           `` as a
@@ -784,12 +784,12 @@ Exemple 1. $IFS and whitespace
         bash$ echo $PIPESTATUS
         0
 
-        bash$ ls -al | bogus_command
+        bash$ ls -albogus_command
         bash: bogus_command: command not found
         bash$ echo ${PIPESTATUS[1]}
         127
 
-        bash$ ls -al | bogus_command
+        bash$ ls -albogus_command
         bash: bogus_command: command not found
         bash$ echo $?
         127
@@ -805,7 +805,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Caution|
+    |Caution
 
     The ``            $PIPESTATUS           `` variable may contain an
     erroneous 0 value in a login shell (in releases prior to 3.0 of
@@ -813,16 +813,16 @@ Exemple 1. $IFS and whitespace
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     tcsh% bash           |
-    |                          |
-    |     bash$ who | grep nob |
-    | ody | sort               |
-    |     bash$ echo ${PIPESTA |
-    | TUS[*]}                  |
-    |     0                    |
-    |                          |
+.. code-block:: sh
+
+    tcsh% bash
+
+    bash$ who | grep nob
+ody | sort
+    bash$ echo ${PIPESTA
+TUS[*]}
+    0
+
 
 --------------------------------------------------------------------------------------
 
@@ -838,7 +838,7 @@ Exemple 1. $IFS and whitespace
 
         tcsh% bash
 
-        bash$ who | grep nobody | sort
+        bash$ whogrep nobody | sort
         bash$ echo ${PIPESTATUS[*]}
         0
 
@@ -848,7 +848,7 @@ Exemple 1. $IFS and whitespace
 
         tcsh% bash
 
-        bash$ who | grep nobody | sort
+        bash$ whogrep nobody | sort
         bash$ echo ${PIPESTATUS[*]}
         0
 
@@ -858,29 +858,29 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note|
+    |Note
 
     The ``            $PIPESTATUS           `` variable gives unexpected
     results in some contexts.
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ echo $BASH_VER |
-    | SION                     |
-    |     3.00.14(1)-release   |
-    |                          |
-    |     bash$ $ ls | bogus_c |
-    | ommand | wc              |
-    |     bash: bogus_command: |
-    |  command not found       |
-    |      0       0       0   |
-    |                          |
-    |     bash$ echo ${PIPESTA |
-    | TUS[@]}                  |
-    |     141 127 0            |
-    |                          |
+.. code-block:: sh
+
+    bash$ echo $BASH_VER
+SION
+    3.00.14(1)-release
+
+    bash$ $ ls | bogus_c
+ommand | wc
+    bash: bogus_command:
+ command not found
+     0       0       0
+
+    bash$ echo ${PIPESTA
+TUS[@]}
+    141 127 0
+
 
 --------------------------------------------------------------------------------------
 
@@ -899,7 +899,7 @@ Exemple 1. $IFS and whitespace
         bash$ echo $BASH_VERSION
         3.00.14(1)-release
 
-        bash$ $ ls | bogus_command | wc
+        bash$ $ lsbogus_command | wc
         bash: bogus_command: command not found
          0       0       0
 
@@ -913,7 +913,7 @@ Exemple 1. $IFS and whitespace
         bash$ echo $BASH_VERSION
         3.00.14(1)-release
 
-        bash$ $ ls | bogus_command | wc
+        bash$ $ lsbogus_command | wc
         bash: bogus_command: command not found
          0       0       0
 
@@ -926,7 +926,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note|
+    |Note
 
     ``            $PIPESTATUS           `` is a "volatile" variable. It
     needs to be captured immediately after the pipe in question, before
@@ -934,22 +934,22 @@ Exemple 1. $IFS and whitespace
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ $ ls | bogus_c |
-    | ommand | wc              |
-    |     bash: bogus_command: |
-    |  command not found       |
-    |      0       0       0   |
-    |                          |
-    |     bash$ echo ${PIPESTA |
-    | TUS[@]}                  |
-    |     0 127 0              |
-    |                          |
-    |     bash$ echo ${PIPESTA |
-    | TUS[@]}                  |
-    |     0                    |
-    |                          |
+.. code-block:: sh
+
+    bash$ $ ls | bogus_c
+ommand | wc
+    bash: bogus_command:
+ command not found
+     0       0       0
+
+    bash$ echo ${PIPESTA
+TUS[@]}
+    0 127 0
+
+    bash$ echo ${PIPESTA
+TUS[@]}
+    0
+
 
 --------------------------------------------------------------------------------------
 
@@ -957,7 +957,7 @@ Exemple 1. $IFS and whitespace
 
     .. code-block:: sh
 
-        bash$ $ ls | bogus_command | wc
+        bash$ $ lsbogus_command | wc
         bash: bogus_command: command not found
          0       0       0
 
@@ -971,7 +971,7 @@ Exemple 1. $IFS and whitespace
 
     .. code-block:: sh
 
-        bash$ $ ls | bogus_command | wc
+        bash$ $ lsbogus_command | wc
         bash: bogus_command: command not found
          0       0       0
 
@@ -987,7 +987,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note|
+    |Note
 
     The `pipefail option <bashver3.html#PIPEFAILREF>`__ may be useful in
     cases where ``            $PIPESTATUS           `` does not give the
@@ -1207,7 +1207,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note|
+    |Note
 
     This variable is `*not* affected by
     subshells <subshells.html#SUBSHNLEVREF>`__ . Use
@@ -1473,7 +1473,7 @@ Exemple 5. Am I root?
 
 
 
-    |Note|
+    |Note
 
     The variables ``            $ENV           `` ,
     ``            $LOGNAME           `` ,
@@ -1488,22 +1488,22 @@ Exemple 5. Am I root?
     an "init" script, and it is likewise not a Bash builtin.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     tcsh% echo $LOGNAME  |
-    |     bozo                 |
-    |     tcsh% echo $SHELL    |
-    |     /bin/tcsh            |
-    |     tcsh% echo $TERM     |
-    |     rxvt                 |
-    |                          |
-    |     bash$ echo $LOGNAME  |
-    |     bozo                 |
-    |     bash$ echo $SHELL    |
-    |     /bin/tcsh            |
-    |     bash$ echo $TERM     |
-    |     rxvt                 |
-    |                          |
+.. code-block:: sh
+
+    tcsh% echo $LOGNAME
+    bozo
+    tcsh% echo $SHELL
+    /bin/tcsh
+    tcsh% echo $TERM
+    rxvt
+
+    bash$ echo $LOGNAME
+    bozo
+    bash$ echo $SHELL
+    /bin/tcsh
+    bash$ echo $TERM
+    rxvt
+
 
 
     .. code-block:: sh
@@ -1565,7 +1565,7 @@ etc.
 
 
 
-    |Note|
+    |Note
 
      " ``             $*            `` " must be quoted.
 
@@ -1580,7 +1580,7 @@ etc.
 
 
 
-    |Note|
+    |Note
 
     Of course, " ``             $@            `` " should be quoted.
 
@@ -1678,7 +1678,7 @@ Exemple 6. *arglist* : Listing arguments with $\* and $@
 
 
 
-    |Caution|
+    |Caution
 
     The ``            $*           `` and ``            $@           ``
     parameters sometimes display inconsistent and puzzling behavior,
@@ -1838,7 +1838,7 @@ Exemple 7. Inconsistent ``$*`` and ``$@`` behavior
 
 
 
-    |Note|
+    |Note
 
     The **$@** and **$\*** parameters differ only when between double
     quotes.
@@ -1898,7 +1898,7 @@ Exemple 8. ``$*`` and ``$@`` when ``$IFS`` is empty
 
 
 
-    |Caution|
+    |Caution
 
     This was originally a *ksh* construct adopted into Bash, and
     unfortunately it does not seem to work reliably in Bash scripts. One

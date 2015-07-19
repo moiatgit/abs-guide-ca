@@ -71,7 +71,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     The **adduser** command is a synonym for **useradd** and is usually
     a symbolic link to it.
@@ -110,7 +110,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     The **id** command shows the *effective* IDs only when they differ
     from the *real* ones.
@@ -189,7 +189,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        bash$ w | grep startx
+        bash$ wgrep startx
         bozo  tty1     -                 4:22pm  6:41   4.47s  0.45s  startx
 
 
@@ -227,7 +227,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     While **logname** prints the name of the logged in user, **whoami**
     gives the name of the user attached to the current process. As we
@@ -307,7 +307,7 @@ damage your system if misused.
           exit $E_NOSUCHUSER
         fi
 
-        echo "$NEWPASSWORD" | passwd --stdin "$username"
+        echo "$NEWPASSWORD"passwd --stdin "$username"
         #  The '--stdin' option to 'passwd' permits
         #+ getting a new password from stdin (or a pipe).
 
@@ -366,7 +366,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     Kurt Glaesemann points out that the *newgrp* command could prove
     helpful in setting the default group permissions for files a user
@@ -658,7 +658,7 @@ damage your system if misused.
 
         # From /etc/pcmcia/serial script:
 
-        IRQ=`setserial /dev/$DEVICE | sed -e 's/.*IRQ: //'`
+        IRQ=`setserial /dev/$DEVICEsed -e 's/.*IRQ: //'`
         setserial /dev/$DEVICE irq 0 ; setserial /dev/$DEVICE irq $IRQ
 
 
@@ -676,7 +676,7 @@ damage your system if misused.
 
 
 
-    |Tip|
+    |Tip
 
     It can be quite annoying to have a message about ordering pizza
     suddenly appear in the middle of the text file you are editing. On a
@@ -707,7 +707,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     If write access to a particular terminal has been disabled with
     **mesg** , then **wall** cannot send a message to that terminal.
@@ -779,7 +779,7 @@ damage your system if misused.
 
 
 
-        bash$ lastlog | grep root
+        bash$ lastloggrep root
         root          tty1                      Fri Dec  7 18:43:21 -0700 2001
 
 
@@ -787,7 +787,7 @@ damage your system if misused.
 
 
 
-    |Caution|
+    |Caution
 
     This command will fail if the user invoking it does not have read
     permission for the ``            /var/log/lastlog           `` file.
@@ -930,7 +930,7 @@ damage your system if misused.
         esac
 
         # Ping 'em once and see if they *are* running identd.
-        nc -z -w $TIMEOUT0 "$1" $IDPORT || \
+        nc -z -w $TIMEOUT0 "$1" $IDPORT |\
         { echo "Oops, $1 isn't running identd." ; exit 0 ; }
         #  -z scans for listening daemons.
         #     -w $TIMEOUT = How long to try to connect.
@@ -945,7 +945,7 @@ damage your system if misused.
           nc -v -w $TIMEOUT1 -p ${RP} "$TRG" ${1} < /dev/null > /dev/null &
           PROC=$!
           sleep $THREE_WINKS
-          echo "${1},${RP}" | nc -w $TIMEOUT2 -r "$TRG" $IDPORT 2>&1
+          echo "${1},${RP}"nc -w $TIMEOUT2 -r "$TRG" $IDPORT 2>&1
           sleep $TWO_WINKS
 
         # Does this look like a lamer script or what . . . ?
@@ -978,7 +978,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        echo clone | nc thunk.org 5000 > e2fsprogs.dat
+        echo clonenc thunk.org 5000 > e2fsprogs.dat
 
 
 
@@ -1005,7 +1005,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        bash$ free | grep Mem | awk '{ print $4 }'
+        bash$ freegrep Mem | awk '{ print $4 }'
         1880
 
 
@@ -1019,7 +1019,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        bash$ procinfo | grep Bootup
+        bash$ procinfogrep Bootup
         Bootup: Wed Mar 21 15:15:50 2001    Load average: 0.04 0.21 0.34 3/47 6829
 
 
@@ -1085,7 +1085,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        bash$ dmesg | grep hda
+        bash$ dmesggrep hda
         Kernel command line: ro root=/dev/hda2
          hda: IBM-DLGA-23080, ATA DISK drive
          hda: 6015744 sectors (3080 MB) w/96KiB Cache, CHS=746/128/63
@@ -1196,7 +1196,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     A *load average* of 1 or less indicates that the system handles
     processes immediately. A load average greater than 1 means that
@@ -1245,7 +1245,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     This command allegedly fetches a "unique" serial number for a
     particular system. Certain product registration procedures use this
@@ -1256,12 +1256,12 @@ damage your system if misused.
     The network address of a typical non-networked Linux machine, is
     found in ``            /etc/hosts           `` .
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ cat /etc/hosts |
-    |     127.0.0.1            |
-    |     localhost.localdomai |
-    | n localhost              |
+.. code-block:: sh
+
+    bash$ cat /etc/hosts
+    127.0.0.1
+    localhost.localdomai
+n localhost
 
 
     As it happens, transposing the bytes of
@@ -1403,7 +1403,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     Stefano Falsetto has created
     `rottlog <http://www.gnu.org/software/rottlog/>`__ , which he
@@ -1429,7 +1429,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        bash$  ps ax | grep sendmail
+        bash$  ps axgrep sendmail
         295 ?       S      0:00 sendmail: accepting connections on port 25
 
 
@@ -1444,7 +1444,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        bash$ ps a | grep mingetty
+        bash$ ps agrep mingetty
         2212 tty2     Ss+    0:00 /sbin/mingetty tty2
          2213 tty3     Ss+    0:00 /sbin/mingetty tty3
          2214 tty4     Ss+    0:00 /sbin/mingetty tty4
@@ -1637,7 +1637,7 @@ damage your system if misused.
         root# fuser -un tcp 25
         25/tcp:               2095(root)
 
-        root# ps ax | grep 2095 | grep -v grep
+        root# ps axgrep 2095 | grep -v grep
         2095 ?        Ss     0:00 sendmail: accepting connections
 
 
@@ -1654,7 +1654,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     Some flavors of Linux run **crond** , Matthew Dillon's version of
     **cron** .
@@ -1694,7 +1694,7 @@ damage your system if misused.
 
 
 
-    |Warning|
+    |Warning
 
     On some Linux distros, the **halt** command has 755 permissions, so
     it can be invoked by a non-root user. A careless *halt* in a
@@ -1738,7 +1738,7 @@ damage your system if misused.
         SERVER=$HOST                           # localhost.localdomain (127.0.0.1).
         PORT_NUMBER=25                         # SMTP port.
 
-        nmap $SERVER | grep -w "$PORT_NUMBER"  # Is that particular port open?
+        nmap $SERVERgrep -w "$PORT_NUMBER"  # Is that particular port open?
         #              grep -w matches whole words only,
         #+             so this wouldn't match port 1025, for example.
 
@@ -1778,12 +1778,12 @@ damage your system if misused.
         # Check that networking is up.
         [ ${NETWORKING} = "no" ] && exit 0
 
-        [ -x /sbin/ifconfig ] || exit 0
+        [ -x /sbin/ifconfig ] |exit 0
 
         # ...
 
         for i in $interfaces ; do
-          if ifconfig $i 2>/dev/null | grep -q "UP" >/dev/null 2>&1 ; then
+          if ifconfig $i 2>/dev/nullgrep -q "UP" >/dev/null 2>&1 ; then
             action "Shutting down interface $i: " ./ifdown $i boot
           fi
         #  The GNU-specific "-q" option to "grep" means "quiet", i.e.,
@@ -1793,11 +1793,11 @@ damage your system if misused.
         # ...
 
         echo "Currently active devices:"
-        echo `/sbin/ifconfig | grep ^[a-z] | awk '{print $1}'`
+        echo `/sbin/ifconfiggrep ^[a-z] | awk '{print $1}'`
         #                            ^^^^^  should be quoted to prevent globbing.
         #  The following also work.
-        #    echo $(/sbin/ifconfig | awk '/^[a-z]/ { print $1 })'
-        #    echo $(/sbin/ifconfig | sed -e 's/ .*//')
+        #    echo $(/sbin/ifconfigawk '/^[a-z]/ { print $1 })'
+        #    echo $(/sbin/ifconfigsed -e 's/ .*//')
         #  Thanks, S.C., for additional comments.
 
 
@@ -1829,7 +1829,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     A **netstat -lptu** shows `sockets <devref1.html#SOCKETREF>`__ that
     are listening to ports, and the associated processes. This can be
@@ -2039,7 +2039,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     The **automount** utility, if properly installed, can mount and
     unmount floppies or CDROM disks as they are accessed or removed. On
@@ -2184,7 +2184,7 @@ damage your system if misused.
 
 
 
-    |Warning|
+    |Warning
 
     This is an extremely dangerous command. Use it at your own risk, as
     you may inadvertently destroy your filesystem.
@@ -2199,7 +2199,7 @@ damage your system if misused.
 
     .. code-block:: sh
 
-        root# dumpe2fs /dev/hda7 | grep 'ount count'
+        root# dumpe2fs /dev/hda7grep 'ount count'
         dumpe2fs 1.19, 13-Jul-2000 for EXT2 FS 0.5b, 95/08/09
          Mount count:              6
          Maximum mount count:      20
@@ -2216,7 +2216,7 @@ damage your system if misused.
 
 
 
-    |Warning|
+    |Warning
 
     Use this command with extreme caution. If something goes wrong, you
     may destroy an existing filesystem.
@@ -2239,7 +2239,7 @@ damage your system if misused.
 
 
 
-    |Caution|
+    |Caution
 
     All of these should be invoked as *root* , and they can damage or
     destroy a filesystem if misused.
@@ -2356,7 +2356,7 @@ damage your system if misused.
 
 
 
-    |Caution|
+    |Caution
 
     It might be necessary to copy certain system files to a *chrooted*
     directory, since the normal ``            $PATH           `` can no
@@ -2443,7 +2443,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     Unlike **lockfile** , **flock** does *not* automatically create a
     lock file.
@@ -2501,43 +2501,43 @@ damage your system if misused.
 
 
 
-    |Important|
+    |Important
 
     Judicious use of **ulimit** can protect a system against the dreaded
     *fork bomb* .
 
-    | .. code-block:: sh
-    |                          |
-    |     #!/bin/bash          |
-    |     # This script is for |
-    |  illustrative purposes o |
-    | nly.                     |
-    |     # Run it at your own |
-    |  peril -- it WILL freeze |
-    |  your system.            |
-    |                          |
-    |     while true  #  Endle |
-    | ss loop.                 |
-    |     do                   |
-    |       $0 &      #  This  |
-    | script invokes itself .  |
-    | . .                      |
-    |                 #+ forks |
-    |  an infinite number of t |
-    | imes . . .               |
-    |                 #+ until |
-    |  the system freezes up b |
-    | ecause all resources exh |
-    | austed.                  |
-    |     done        #  This  |
-    | is the notorious "sorcer |
-    | er's appentice" scenario |
-    | .                        |
-    |                          |
-    |     exit 0      #  Will  |
-    | not exit here, because t |
-    | his script will never te |
-    | rminate.                 |
+.. code-block:: sh
+
+    #!/bin/bash
+    # This script is for
+ illustrative purposes o
+nly.
+    # Run it at your own
+ peril -- it WILL freeze
+ your system.
+
+    while true  #  Endle
+ss loop.
+    do
+      $0 &      #  This
+script invokes itself .
+. .
+                #+ forks
+ an infinite number of t
+imes . . .
+                #+ until
+ the system freezes up b
+ecause all resources exh
+austed.
+    done        #  This
+is the notorious "sorcer
+er's appentice" scenario
+.
+
+    exit 0      #  Will
+not exit here, because t
+his script will never te
+rminate.
 
 
     A **ulimit -Hu XX** (where *XX* is the user process limit) in
@@ -2620,7 +2620,7 @@ damage your system if misused.
                                 #+ which can only be read/written
                                 #  by invoker of script (or root).
 
-        cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M' > $OUTFILE
+        cat "$@"tr 'a-zA-Z' 'n-za-mN-ZA-M' > $OUTFILE
         #    ^^ Input from stdin or a file.   ^^^^^^^^^^ Output redirected to file.
 
         exit 0
@@ -2663,7 +2663,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     Doing a **cat /proc/modules** gives the same information.
 
@@ -2716,43 +2716,43 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
      The first line of a script (the "sha-bang" line) may use **env**
     when the path to the shell or interpreter is unknown.
 
-    | .. code-block:: sh
-    |                          |
-    |     #! /usr/bin/env perl |
-    |                          |
-    |     print "This Perl scr |
-    | ipt will run,\n";        |
-    |     print "even when I d |
-    | on't know where to find  |
-    | Perl.\n";                |
-    |                          |
-    |     # Good for portable  |
-    | cross-platform scripts,  |
-    |     # where the Perl bin |
-    | aries may not be in the  |
-    | expected place.          |
-    |     # Thanks, S.C.       |
+.. code-block:: sh
+
+    #! /usr/bin/env perl
+
+    print "This Perl scr
+ipt will run,\n";
+    print "even when I d
+on't know where to find
+Perl.\n";
+
+    # Good for portable
+cross-platform scripts,
+    # where the Perl bin
+aries may not be in the
+expected place.
+    # Thanks, S.C.
 
 
     Or even ...
 
-    | .. code-block:: sh
-    |                          |
-    |     #!/bin/env bash      |
-    |     # Queries the $PATH  |
-    | enviromental variable fo |
-    | r the location of bash.  |
-    |     # Therefore ...      |
-    |     # This script will r |
-    | un where Bash is not in  |
-    | its usual place, in /bin |
-    | .                        |
-    |     ...                  |
+.. code-block:: sh
+
+    #!/bin/env bash
+    # Queries the $PATH
+enviromental variable fo
+r the location of bash.
+    # Therefore ...
+    # This script will r
+un where Bash is not in
+its usual place, in /bin
+.
+    ...
 
 
 
@@ -2828,7 +2828,7 @@ damage your system if misused.
 
 
 
-    |Note|
+    |Note
 
     Unfortunately, `piping <special-chars.html#PIPEREF>`__ the output of
     **watch command** to `grep <textproc.html#GREPREF>`__ does not work.
@@ -2865,10 +2865,10 @@ damage your system if misused.
         #  This script is a quick-n-dirty workaround, essentially a shell wrapper
         #+ for xrandr. It gives more control than on-screen sliders and widgets.
 
-        OUTPUT=$(xrandr | grep LV | awk '{print $1}')   # Get display name!
+        OUTPUT=$(xrandrgrep LV | awk '{print $1}')   # Get display name!
         INCR=.05      # For finer-grained control, set INCR to .03 or .02.
 
-        old_brightness=$(xrandr --verbose | grep rightness | awk '{ print $2 }')
+        old_brightness=$(xrandr --verbosegrep rightness | awk '{ print $2 }')
 
 
         if [ -z "$1" ]
@@ -2878,12 +2878,12 @@ damage your system if misused.
           else
             if [ "$1" = "+" ]
             then
-              bright=$(echo "scale=2; $old_brightness + $INCR" | bc)   # +.05
+              bright=$(echo "scale=2; $old_brightness + $INCR"bc)   # +.05
 
           else
             if [ "$1" = "-" ]
             then
-              bright=$(echo "scale=2; $old_brightness - $INCR" | bc)   # -.05
+              bright=$(echo "scale=2; $old_brightness - $INCR"bc)   # -.05
 
           else
             if [ "$1" = "#" ]   # Echoes current brightness; does not change it.
@@ -2891,7 +2891,7 @@ damage your system if misused.
               bright=$old_brightness
 
           else
-            if [[ "$1" = "h" || "$1" = "H" ]]
+            if [[ "$1" = "h" |"$1" = "H" ]]
             then
               echo
               echo "Usage:"
@@ -2982,7 +2982,7 @@ damage your system if misused.
 
         scale0=2
         sf=100 # Scale factor.
-        pct=$(echo "scale=$scale0; $act_brightness / $max_brightness * $sf" | bc)
+        pct=$(echo "scale=$scale0; $act_brightness / $max_brightness * $sf"bc)
         echo "Percentage brightness = $pct%"
 
         exit $E_CHANGE1
@@ -3058,13 +3058,13 @@ to subtraction.
 In Bash and other Bourne shell derivatives, it is possible to set
 variables in a single command's environment.
 
-| .. code-block:: sh
-|                          |
-|     var1=value1 var2=val |
-| ue2 commandXXX           |
-|     # $var1 and $var2 se |
-| t in the environment of  |
-| 'commandXXX' only.       |
+.. code-block:: sh
+
+    var1=value1 var2=val
+ue2 commandXXX
+    # $var1 and $var2 se
+t in the environment of
+'commandXXX' only.
 
 
 

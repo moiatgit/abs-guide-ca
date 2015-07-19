@@ -54,7 +54,7 @@ set a variable, and even for generating the argument list in a
 
 
 
-|Note|
+|Note
 
  Command substitution invokes a
 `subshell <subshells.html#SUBSHELLSREF>`__ .
@@ -64,29 +64,29 @@ set a variable, and even for generating the argument list in a
 
 
 
-|Caution|
+|Caution
 
  Command substitution may result in `word
 splitting <quotingvar.html#WSPLITREF>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     COMMAND `echo a b`   |
-|    # 2 args: a and b     |
-|                          |
-|     COMMAND "`echo a b`" |
-|    # 1 arg: "a b"        |
-|                          |
-|     COMMAND `echo`       |
-|    # no arg              |
-|                          |
-|     COMMAND "`echo`"     |
-|    # one empty arg       |
-|                          |
-|                          |
-|     # Thanks, S.C.       |
+.. code-block:: sh
+
+    COMMAND `echo a b`
+   # 2 args: a and b
+
+    COMMAND "`echo a b`"
+   # 1 arg: "a b"
+
+    COMMAND `echo`
+   # no arg
+
+    COMMAND "`echo`"
+   # one empty arg
+
+
+    # Thanks, S.C.
 
 ----------------------------------------------------------------------------------
 
@@ -96,68 +96,68 @@ trailing newlines.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     # cd "`pwd`"  # This |
-|  should always work.     |
-|     # However...         |
-|                          |
-|     mkdir 'dir with trai |
-| ling newline             |
-|     '                    |
-|                          |
-|     cd 'dir with trailin |
-| g newline                |
-|     '                    |
-|                          |
-|     cd "`pwd`"  # Error  |
-| message:                 |
-|     # bash: cd: /tmp/fil |
-| e with trailing newline: |
-|  No such file or directo |
-| ry                       |
-|                          |
-|     cd "$PWD"   # Works  |
-| fine.                    |
-|                          |
-|                          |
-|                          |
-|                          |
-|                          |
-|     old_tty_setting=$(st |
-| ty -g)   # Save old term |
-| inal setting.            |
-|     echo "Hit a key "    |
-|     stty -icanon -echo   |
-|          # Disable "cano |
-| nical" mode for terminal |
-| .                        |
-|                          |
-|          # Also, disable |
-|  *local* echo.           |
-|     key=$(dd bs=1 count= |
-| 1 2> /dev/null)   # Usin |
-| g 'dd' to get a keypress |
-| .                        |
-|     stty "$old_tty_setti |
-| ng"      # Restore old s |
-| etting.                  |
-|     echo "You hit ${#key |
-| } key."  # ${#variable}  |
-| = number of characters i |
-| n $variable              |
-|     #                    |
-|     # Hit any key except |
-|  RETURN, and the output  |
-| is "You hit 1 key."      |
-|     # Hit RETURN, and it |
-| 's "You hit 0 key."      |
-|     # The newline gets e |
-| aten in the command subs |
-| titution.                |
-|                          |
-|     #Code snippet by StÃ |
-| ©phane Chazelas.         |
+.. code-block:: sh
+
+    # cd "`pwd`"  # This
+ should always work.
+    # However...
+
+    mkdir 'dir with trai
+ling newline
+    '
+
+    cd 'dir with trailin
+g newline
+    '
+
+    cd "`pwd`"  # Error
+message:
+    # bash: cd: /tmp/fil
+e with trailing newline:
+ No such file or directo
+ry
+
+    cd "$PWD"   # Works
+fine.
+
+
+
+
+
+    old_tty_setting=$(st
+ty -g)   # Save old term
+inal setting.
+    echo "Hit a key "
+    stty -icanon -echo
+         # Disable "cano
+nical" mode for terminal
+.
+
+         # Also, disable
+ *local* echo.
+    key=$(dd bs=1 count=
+1 2> /dev/null)   # Usin
+g 'dd' to get a keypress
+.
+    stty "$old_tty_setti
+ng"      # Restore old s
+etting.
+    echo "You hit ${#key
+} key."  # ${#variable}
+= number of characters i
+n $variable
+    #
+    # Hit any key except
+ RETURN, and the output
+is "You hit 1 key."
+    # Hit RETURN, and it
+'s "You hit 0 key."
+    # The newline gets e
+aten in the command subs
+titution.
+
+    #Code snippet by StÃ
+©phane Chazelas.
 
 ----------------------------------------------------------------------------------
 
@@ -265,7 +265,7 @@ trailing newlines.
 
 
 
-|Caution|
+|Caution
 
 Using **echo** to output an *unquoted* variable set with command
 substitution removes trailing newlines characters from the output of the
@@ -273,42 +273,42 @@ reassigned command(s). This can cause unpleasant surprises.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     dir_listing=`ls -l`  |
-|     echo $dir_listing    |
-|   # unquoted             |
-|                          |
-|     # Expecting a nicely |
-|  ordered directory listi |
-| ng.                      |
-|                          |
-|     # However, what you  |
-| get is:                  |
-|     # total 3 -rw-rw-r-- |
-|  1 bozo bozo 30 May 13 1 |
-| 7:15 1.txt -rw-rw-r-- 1  |
-| bozo                     |
-|     # bozo 51 May 15 20: |
-| 57 t2.sh -rwxr-xr-x 1 bo |
-| zo bozo 217 Mar 5 21:13  |
-| wi.sh                    |
-|                          |
-|     # The newlines disap |
-| peared.                  |
-|                          |
-|                          |
-|     echo "$dir_listing"  |
-|   # quoted               |
-|     # -rw-rw-r--    1 bo |
-| zo       30 May 13 17:15 |
-|  1.txt                   |
-|     # -rw-rw-r--    1 bo |
-| zo       51 May 15 20:57 |
-|  t2.sh                   |
-|     # -rwxr-xr-x    1 bo |
-| zo      217 Mar  5 21:13 |
-|  wi.sh                   |
+.. code-block:: sh
+
+    dir_listing=`ls -l`
+    echo $dir_listing
+  # unquoted
+
+    # Expecting a nicely
+ ordered directory listi
+ng.
+
+    # However, what you
+get is:
+    # total 3 -rw-rw-r--
+ 1 bozo bozo 30 May 13 1
+7:15 1.txt -rw-rw-r-- 1
+bozo
+    # bozo 51 May 15 20:
+57 t2.sh -rwxr-xr-x 1 bo
+zo bozo 217 Mar 5 21:13
+wi.sh
+
+    # The newlines disap
+peared.
+
+
+    echo "$dir_listing"
+  # quoted
+    # -rw-rw-r--    1 bo
+zo       30 May 13 17:15
+ 1.txt
+    # -rw-rw-r--    1 bo
+zo       51 May 15 20:57
+ t2.sh
+    # -rwxr-xr-x    1 bo
+zo      217 Mar  5 21:13
+ wi.sh
 
 ----------------------------------------------------------------------------------
 
@@ -395,7 +395,7 @@ the `cat <basic.html#CATREF>`__ command.
     fi
     #
     #
-    if [ ! -n "`uname -r | grep -- "-"`" ]; then
+    if [ ! -n "`uname -rgrep -- "-"`" ]; then
            ktag="`cat /proc/version`"
     ...
     fi
@@ -412,7 +412,7 @@ the `cat <basic.html#CATREF>`__ command.
 
 
 
-|Caution|
+|Caution
 
 Do not set a variable to the contents of a *long* text file unless you
 have a very good reason for doing so. Do not set a variable to the
@@ -669,26 +669,26 @@ should) and assigning that output to a variable.
 
 
 
-|Note|
+|Note
 
  The **$(...)** form has superseded backticks for command substitution.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     output=$(sed -n /"$1 |
-| "/p $file)   # From "grp |
-| .sh"  example.           |
-|                          |
-|     # Setting a variable |
-|  to the contents of a te |
-| xt file.                 |
-|     File_contents1=$(cat |
-|  $file1)                 |
-|     File_contents2=$(<$f |
-| ile2)        # Bash perm |
-| its this also.           |
+.. code-block:: sh
+
+    output=$(sed -n /"$1
+"/p $file)   # From "grp
+.sh"  example.
+
+    # Setting a variable
+ to the contents of a te
+xt file.
+    File_contents1=$(cat
+ $file1)
+    File_contents2=$(<$f
+ile2)        # Bash perm
+its this also.
 
 ----------------------------------------------------------------------------------
 
@@ -698,15 +698,15 @@ a different way than **\`...\`** .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     bash$ echo `echo \\` |
-|                          |
-|                          |
-|     bash$ echo $(echo \\ |
-| )                        |
-|     \                    |
-|                          |
+.. code-block:: sh
+
+    bash$ echo `echo \\`
+
+
+    bash$ echo $(echo \\
+)
+    \
+
 
 ----------------------------------------------------------------------------------
 
@@ -716,11 +716,11 @@ The **$(...)** form of command substitution permits nesting. ` [3]
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     word_count=$( wc -w  |
-| $(echo * | awk '{print $ |
-| 8}') )                   |
+.. code-block:: sh
+
+    word_count=$( wc -w
+$(echo * | awk '{print $
+8}') )
 
 ----------------------------------------------------------------------------------
 
@@ -760,7 +760,7 @@ Or, for something a bit more elaborate . . .
 
     FILTER='.......'         # Must have at least 7 letters.
     #       1234567
-    Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
+    Anagrams=( $(echo $(anagram $1grep $FILTER) ) )
     #          $(     $(  nested command sub.    ) )
     #        (              array assignment         )
 
@@ -805,7 +805,7 @@ Or, for something a bit more elaborate . . .
 
 .. code-block:: sh
 
-    word_count=$( wc -w $(echo * | awk '{print $8}') )
+    word_count=$( wc -w $(echo *awk '{print $8}') )
 
 
 .. code-block:: sh
@@ -837,7 +837,7 @@ Or, for something a bit more elaborate . . .
 
     FILTER='.......'         # Must have at least 7 letters.
     #       1234567
-    Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
+    Anagrams=( $(echo $(anagram $1grep $FILTER) ) )
     #          $(     $(  nested command sub.    ) )
     #        (              array assignment         )
 
@@ -879,7 +879,7 @@ Or, for something a bit more elaborate . . .
 
 .. code-block:: sh
 
-    word_count=$( wc -w $(echo * | awk '{print $8}') )
+    word_count=$( wc -w $(echo *awk '{print $8}') )
 
 
 .. code-block:: sh
@@ -911,7 +911,7 @@ Or, for something a bit more elaborate . . .
 
     FILTER='.......'         # Must have at least 7 letters.
     #       1234567
-    Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
+    Anagrams=( $(echo $(anagram $1grep $FILTER) ) )
     #          $(     $(  nested command sub.    ) )
     #        (              array assignment         )
 
@@ -995,11 +995,11 @@ the inner backticks, as John Default points out.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     word_count=` wc -w \ |
-| `echo * | awk '{print $8 |
-| }'\` `                   |
+.. code-block:: sh
+
+    word_count=` wc -w \
+`echo * | awk '{print $8
+}'\` `
 
 ----------------------------------------------------------------------------------
 
@@ -1007,12 +1007,12 @@ the inner backticks, as John Default points out.
 
 .. code-block:: sh
 
-    word_count=` wc -w \`echo * | awk '{print $8}'\` `
+    word_count=` wc -w \`echo *awk '{print $8}'\` `
 
 
 .. code-block:: sh
 
-    word_count=` wc -w \`echo * | awk '{print $8}'\` `
+    word_count=` wc -w \`echo *awk '{print $8}'\` `
 
 
 

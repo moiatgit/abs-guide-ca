@@ -180,22 +180,22 @@ substitution* .
 
 
 
-    |Caution|
+    |Caution
 
     An uninitialized variable has a "null" value -- no assigned value at
     all ( *not* zero!).
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     if [ -z "$unassigned |
-    | " ]                      |
-    |     then                 |
-    |       echo "\$unassigned |
-    |  is NULL."               |
-    |     fi     # $unassigned |
-    |  is NULL.                |
+.. code-block:: sh
+
+    if [ -z "$unassigned
+" ]
+    then
+      echo "\$unassigned
+ is NULL."
+    fi     # $unassigned
+ is NULL.
 
 --------------------------------------------------------------------------------------
 
@@ -206,24 +206,24 @@ substitution* .
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     echo "$uninitialized |
-    | "                        |
-    |          # (blank line)  |
-    |     let "uninitialized + |
-    | = 5"                     |
-    |          # Add 5 to it.  |
-    |     echo "$uninitialized |
-    | "                        |
-    |          # 5             |
-    |                          |
-    |     #  Conclusion:       |
-    |     #  An uninitialized  |
-    | variable has no value,   |
-    |     #+ however it evalua |
-    | tes as 0 in an arithmeti |
-    | c operation.             |
+.. code-block:: sh
+
+    echo "$uninitialized
+"
+         # (blank line)
+    let "uninitialized +
+= 5"
+         # Add 5 to it.
+    echo "$uninitialized
+"
+         # 5
+
+    #  Conclusion:
+    #  An uninitialized
+variable has no value,
+    #+ however it evalua
+tes as 0 in an arithmeti
+c operation.
 
 --------------------------------------------------------------------------------------
 

@@ -62,11 +62,11 @@ XXX  7.2. File test operators
 
         function show_input_type()
         {
-           [ -p /dev/fd/0 ] && echo PIPE || echo STDIN
+           [ -p /dev/fd/0 ] && echo PIPE |echo STDIN
         }
 
         show_input_type "Input"                           # STDIN
-        echo "Input" | show_input_type                    # PIPE
+        echo "Input"show_input_type                    # PIPE
 
         # This example courtesy of Carl Anderson.
 
@@ -206,7 +206,7 @@ XXX  7.2. File test operators
     #
     #  find "somedir" -type l -print0|\
     #  xargs -r0 file|\
-    #  grep "broken symbolic"|
+    #  grep "broken symbolic"
     #  sed -e 's/^\|: *broken symbolic.*$/"/g'
     #
     #+ but that wouldn't be pure Bash, now would it.
@@ -219,7 +219,7 @@ XXX  7.2. File test operators
     #+ to the args passed.
     ######################
 
-    [ $# -eq 0 ] && directorys=`pwd` || directorys=$@
+    [ $# -eq 0 ] && directorys=`pwd` |directorys=$@
 
 
     #  Setup the function linkchk to check the directory it is passed
@@ -271,23 +271,23 @@ Per the 1913 edition of *Webster's Dictionary* :
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     Deprecate            |
-|     ...                  |
-|                          |
-|     To pray against, as  |
-| an evil;                 |
-|     to seek to avert by  |
-| prayer;                  |
-|     to desire the remova |
-| l of;                    |
-|     to seek deliverance  |
-| from;                    |
-|     to express deep regr |
-| et for;                  |
-|     to disapprove of str |
-| ongly.                   |
+.. code-block:: sh
+
+    Deprecate
+    ...
+
+    To pray against, as
+an evil;
+    to seek to avert by
+prayer;
+    to desire the remova
+l of;
+    to seek deliverance
+from;
+    to express deep regr
+et for;
+    to disapprove of str
+ongly.
 
 ----------------------------------------------------------------------------------
 

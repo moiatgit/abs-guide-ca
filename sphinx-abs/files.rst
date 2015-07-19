@@ -75,7 +75,7 @@ XXX  Appendix H. Important Files
 
 
 
-    |Note|
+    |Note
 
     This file is present on Red Hat and Fedora Core installations, but
     may be missing from other distros.

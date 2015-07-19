@@ -48,21 +48,21 @@ XXX  7.1. Test Constructs
        echo $?     # 1     ***
 
 
-       (( 200 || 11 ))              # Logical OR
+       (( 200 |11 ))              # Logical OR
        echo $?     # 0     ***
        # ...
-       let "num = (( 200 || 11 ))"
+       let "num = (( 200 |11 ))"
        echo $num   # 1
-       let "num = (( 200 || 11 ))"
+       let "num = (( 200 |11 ))"
        echo $?     # 0     ***
 
 
-       (( 200 | 11 ))               # Bitwise OR
+       (( 20011 ))               # Bitwise OR
        echo $?                      # 0     ***
        # ...
-       let "num = (( 200 | 11 ))"
+       let "num = (( 20011 ))"
        echo $num                    # 203
-       let "num = (( 200 | 11 ))"
+       let "num = (( 20011 ))"
        echo $?                      # 0     ***
 
        # The "let" construct returns the same exit status
@@ -72,25 +72,25 @@ XXX  7.1. Test Constructs
 
 
 
-   |Caution|
+   |Caution
 
     Again, note that the *exit status* of an arithmetic expression is
    *not* an error value.
 
 -------------------------------------------------------------------------------------
 
-   | .. code-block:: sh
-   |                          |
-   |     var=-2 && (( var+=2  |
-   | ))                       |
-   |     echo $?              |
-   |       # 1                |
-   |                          |
-   |     var=-2 && (( var+=2  |
-   | )) && echo $var          |
-   |                          |
-   |       # Will not echo $v |
-   | ar!                      |
+.. code-block:: sh
+
+    var=-2 && (( var+=2
+))
+    echo $?
+      # 1
+
+    var=-2 && (( var+=2
+)) && echo $var
+
+      # Will not echo $v
+ar!
 
 -------------------------------------------------------------------------------------
 
@@ -137,7 +137,7 @@ XXX  7.1. Test Constructs
 
        word=Linux
        letter_sequence=inu
-       if echo "$word" | grep -q "$letter_sequence"
+       if echo "$word"grep -q "$letter_sequence"
        # The "-q" option to grep suppresses output.
        then
          echo "$letter_sequence found in $word"
@@ -309,7 +309,7 @@ XXX  7.1. Test Constructs
 
 
 
-|Note|
+|Note
 
 When *if* and *then* are on same line in a condition test, a semicolon
 must terminate the *if* statement. Both *if* and *then* are
@@ -319,10 +319,10 @@ one must terminate.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     if [ -x "$filename"  |
-| ]; then                  |
+.. code-block:: sh
+
+    if [ -x "$filename"
+]; then
 
 ----------------------------------------------------------------------------------
 
@@ -378,7 +378,7 @@ it.
 
 
 
-|Note|
+|Note
 
 The **test** command is a Bash `builtin <internal.html#BUILTINREF>`__
 which tests file types and compares strings. Therefore, in a Bash
@@ -390,23 +390,23 @@ script, **test** does *not* call the external
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     bash$ type test      |
-|     test is a shell buil |
-| tin                      |
-|     bash$ type '['       |
-|     [ is a shell builtin |
-|     bash$ type '[['      |
-|     [[ is a shell keywor |
-| d                        |
-|     bash$ type ']]'      |
-|     ]] is a shell keywor |
-| d                        |
-|     bash$ type ']'       |
-|     bash: type: ]: not f |
-| ound                     |
-|                          |
+.. code-block:: sh
+
+    bash$ type test
+    test is a shell buil
+tin
+    bash$ type '['
+    [ is a shell builtin
+    bash$ type '[['
+    [[ is a shell keywor
+d
+    bash$ type ']]'
+    ]] is a shell keywor
+d
+    bash$ type ']'
+    bash: type: ]: not f
+ound
+
 
 ----------------------------------------------------------------------------------
 
@@ -529,7 +529,7 @@ but there is parameter expansion and command substitution.
 
 
 Using the **[[ ... ]]** test construct, rather than **[ ... ]** can
-prevent many logic errors in scripts. For example, the && , \|\| , < ,
+prevent many logic errors in scripts. For example, the && , \|\, < ,
 and > operators work within a [[ ]] test, despite giving an error within
 a [ ] construct.
 
@@ -662,27 +662,27 @@ automatically within a [[ ... ]] construct.
 
 
 
-|Note|
+|Note
 
 Following an **if** , neither the **test** command nor the test brackets
 ( [ ] or [[ ]] ) are strictly necessary.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     dir=/home/bozo       |
-|                          |
-|     if cd "$dir" 2>/dev/ |
-| null; then   # "2>/dev/n |
-| ull" hides error message |
-| .                        |
-|       echo "Now in $dir. |
-| "                        |
-|     else                 |
-|       echo "Can't change |
-|  to $dir."               |
-|     fi                   |
+.. code-block:: sh
+
+    dir=/home/bozo
+
+    if cd "$dir" 2>/dev/
+null; then   # "2>/dev/n
+ull" hides error message
+.
+      echo "Now in $dir.
+"
+    else
+      echo "Can't change
+ to $dir."
+    fi
 
 ----------------------------------------------------------------------------------
 
@@ -694,18 +694,18 @@ construct <list-cons.html#LISTCONSREF>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     var1=20              |
-|     var2=22              |
-|     [ "$var1" -ne "$var2 |
-| " ] && echo "$var1 is no |
-| t equal to $var2"        |
-|                          |
-|     home=/home/bozo      |
-|     [ -d "$home" ] || ec |
-| ho "$home directory does |
-|  not exist."             |
+.. code-block:: sh
+
+    var1=20
+    var2=22
+    [ "$var1" -ne "$var2
+" ] && echo "$var1 is no
+t equal to $var2"
+
+    home=/home/bozo
+    [ -d "$home" ] || ec
+ho "$home directory does
+ not exist."
 
 ----------------------------------------------------------------------------------
 
@@ -729,7 +729,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
     [ "$var1" -ne "$var2" ] && echo "$var1 is not equal to $var2"
 
     home=/home/bozo
-    [ -d "$home" ] || echo "$home directory does not exist."
+    [ -d "$home" ] |echo "$home directory does not exist."
 
 
 .. code-block:: sh
@@ -750,7 +750,7 @@ construct <list-cons.html#LISTCONSREF>`__ .
     [ "$var1" -ne "$var2" ] && echo "$var1 is not equal to $var2"
 
     home=/home/bozo
-    [ -d "$home" ] || echo "$home directory does not exist."
+    [ -d "$home" ] |echo "$home directory does not exist."
 
 
 

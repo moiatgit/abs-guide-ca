@@ -554,7 +554,7 @@ between two specified values.
     for ((i=${minimum}; i<=${maximum}; i+=divisibleBy)); do
        [ ${answer[i+disp]} -eq 0 ] \
        && echo "We never got an answer of $i." \
-       || echo "${i} occurred ${answer[i+disp]} times."
+       |echo "${i} occurred ${answer[i+disp]} times."
     done
 
 
@@ -708,7 +708,7 @@ function in *C* .)
     # It is also possible to seed RANDOM from 'time' or 'date' commands.
 
     # Getting fancy...
-    SEED=$(head -1 /dev/urandom | od -N 1 | awk '{ print $2 }'| sed s/^0*//)
+    SEED=$(head -1 /dev/urandomod -N 1 | awk '{ print $2 }'| sed s/^0*//)
     #  Pseudo-random output fetched
     #+ from /dev/urandom (system pseudo-random device-file),
     #+ then converted to line of printable (octal) numbers by "od",
@@ -727,7 +727,7 @@ function in *C* .)
 
 
 
-|Note|
+|Note
 
 The ``         /dev/urandom        `` pseudo-device file provides a
 method of generating much more "random" pseudorandom numbers than the
@@ -762,7 +762,7 @@ There are also other ways to generate pseudorandom numbers in a script.
 
     echo -n "Random number between 0 and 1 = "
 
-    echo | awk "$AWKSCRIPT"
+    echoawk "$AWKSCRIPT"
     # What happens if you leave out the 'echo'?
 
     exit 0
@@ -802,7 +802,7 @@ sequences <timedate.html#DATERANDREF>`__ .
 
     echo -n "Random number between 0 and 1 = "
 
-    echo | awk "$AWKSCRIPT"
+    echoawk "$AWKSCRIPT"
     # What happens if you leave out the 'echo'?
 
     exit 0
@@ -835,7 +835,7 @@ sequences <timedate.html#DATERANDREF>`__ .
 
     echo -n "Random number between 0 and 1 = "
 
-    echo | awk "$AWKSCRIPT"
+    echoawk "$AWKSCRIPT"
     # What happens if you leave out the 'echo'?
 
     exit 0

@@ -83,7 +83,7 @@ Operate on *every* pattern match within each matched line of input
 
 
 
-|Note|
+|Note
 
 Unless the ``         g        `` ( *global* ) operator is appended to a
 *substitute* command, the substitution operates only on the *first*
@@ -127,7 +127,7 @@ quotes.
 
 
 
-|Note|
+|Note
 
 *Sed* uses the ``         -e        `` option to specify that the
 following string is an instruction or set of instructions. If there is
@@ -189,7 +189,7 @@ Delete all spaces at the end of every line.
 
 Compress all consecutive sequences of zeroes into a single zero.
 
-``        echo "Working on it." | sed -e '1i How far are you along?'       ``
+``        echo "Working on it."sed -e '1i How far are you along?'       ``
 
 Prints "How far are you along?" as first line, "Working on it" as
 second.
@@ -262,7 +262,7 @@ line(s) between paragraphs.
 
 
 
-|Note|
+|Note
 
 The usual delimiter that *sed* uses is / . However, *sed* allows other
 delimiters, such as % . This is useful when / is part of a replacement
@@ -275,7 +275,7 @@ string, as in a file pathname. See `Example
 
 
 
-|Tip|
+|Tip
 
 A quick way to double-space a text file is
 ``                   sed G        filename                 `` .

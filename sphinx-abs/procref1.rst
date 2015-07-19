@@ -129,7 +129,7 @@ Shell scripts may extract data from certain of the files in
 
 
 
-    cpu_speed=$( fgrep "cpu MHz" /proc/cpuinfo | awk '{print $4}' )
+    cpu_speed=$( fgrep "cpu MHz" /proc/cpuinfoawk '{print $4}' )
     #  Current operating speed (in MHz) of the cpu on your machine.
     #  On a laptop this may vary, depending on use of battery
     #+ or AC power.
@@ -146,13 +146,13 @@ Shell scripts may extract data from certain of the files in
     OPTION=cmdline
 
     # Identify PID.
-    pid=$( echo $(pidof "$1") | awk '{ print $1 }' )
+    pid=$( echo $(pidof "$1")awk '{ print $1 }' )
     # Get only first            ^^^^^^^^^^^^^^^^^^ of multiple instances.
 
     echo
     echo "Process ID of (first instance of) "$1" = $pid"
     echo -n "Command-line arguments: "
-    cat /proc/"$pid"/"$OPTION" | xargs -0 echo
+    cat /proc/"$pid"/"$OPTION"xargs -0 echo
     #   Formats output:        ^^^^^^^^^^^^^^^
     #   (Thanks, Han Holl, for the fixup!)
 
@@ -175,7 +175,7 @@ Shell scripts may extract data from certain of the files in
     USB2="Spd=480"
 
 
-    bus_speed=$(fgrep -m 1 "$text" $devfile | awk '{print $9}')
+    bus_speed=$(fgrep -m 1 "$text" $devfileawk '{print $9}')
     #                 ^^^^ Stop after first match.
 
     if [ "$bus_speed" = "$USB1" ]
@@ -188,18 +188,18 @@ Shell scripts may extract data from certain of the files in
 
 
 
-|Note|
+|Note
 
 It is even possible to control certain peripherals with commands sent to
 the ``         /proc        `` directory.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|         root# echo on >  |
-| /proc/acpi/ibm/light     |
-|                          |
+.. code-block:: sh
+
+        root# echo on >
+/proc/acpi/ibm/light
+
 
 ----------------------------------------------------------------------------------
 
@@ -259,12 +259,12 @@ be the most interesting from a scripting standpoint.
       exit $E_WRONGARGS
     fi
 
-    pidno=$( ps ax | grep $1 | awk '{ print $1 }' | grep $1 )
+    pidno=$( ps axgrep $1 | awk '{ print $1 }' | grep $1 )
     # Checks for pid in "ps" listing, field #1.
     # Then makes sure it is the actual process, not the process invoked by this script.
     # The last "grep $1" filters out this possibility.
     #
-    #    pidno=$( ps ax | awk '{ print $1 }' | grep $1 )
+    #    pidno=$( ps axawk '{ print $1 }' | grep $1 )
     #    also works, as Teemu Huovila, points out.
 
     if [ -z "$pidno" ]  #  If, after all the filtering, the result is a zero-length string,
@@ -300,8 +300,8 @@ be the most interesting from a scripting standpoint.
 
 
 
-    exe_file=$( ls -l /proc/$1 | grep "exe" | awk '{ print $11 }' )
-    # Or       exe_file=$( ls -l /proc/$1/exe | awk '{print $11}' )
+    exe_file=$( ls -l /proc/$1grep "exe" | awk '{ print $11 }' )
+    # Or       exe_file=$( ls -l /proc/$1/exeawk '{print $11}' )
     #
     #  /proc/pid-number/exe is a symbolic link
     #+ to the complete path name of the invoking process.
@@ -315,14 +315,14 @@ be the most interesting from a scripting standpoint.
 
 
     #  This elaborate script can *almost* be replaced by
-    #       ps ax | grep $1 | awk '{ print $5 }'
+    #       ps axgrep $1 | awk '{ print $5 }'
     #  However, this will not work...
     #+ because the fifth field of 'ps' is argv[0] of the process,
     #+ not the executable file path.
     #
     # However, either of the following would work.
     #       find /proc/$1/exe -printf '%l\n'
-    #       lsof -aFn -p $1 -d txt | sed -ne 's/^n//p'
+    #       lsof -aFn -p $1 -d txtsed -ne 's/^n//p'
 
     # Additional commentary by Stephane Chazelas.
 
@@ -347,7 +347,7 @@ be the most interesting from a scripting standpoint.
     NOTCONNECTED=85
     INTERVAL=2           # Update every 2 seconds.
 
-    pidno=$( ps ax | grep -v "ps ax" | grep -v grep | grep $PROCNAME |
+    pidno=$( ps axgrep -v "ps ax" | grep -v grep | grep $PROCNAME
     awk '{ print $1 }' )
 
     # Finding the process number of 'pppd', the 'ppp daemon'.
@@ -379,8 +379,8 @@ be the most interesting from a scripting standpoint.
     #   exit $NOTCONNECTED
       fi
 
-    netstat -s | grep "packets received"  # Get some connect statistics.
-    netstat -s | grep "packets delivered"
+    netstat -sgrep "packets received"  # Get some connect statistics.
+    netstat -sgrep "packets delivered"
 
 
       sleep $INTERVAL
@@ -403,7 +403,7 @@ be the most interesting from a scripting standpoint.
 
 
 
-|Warning|
+|Warning
 
 In general, it is dangerous to *write* to the files in
 ``         /proc        `` , as this can corrupt the filesystem or crash

@@ -191,26 +191,26 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    |Note|
+    |Note
 
     An **echo** can be used to feed a sequence of commands down a pipe.
 
-    | .. code-block:: sh
-    |                          |
-    |     if echo "$VAR" | gre |
-    | p -q txt   # if [[ $VAR  |
-    | = *txt* ]]               |
-    |     then                 |
-    |       echo "$VAR contain |
-    | s the substring sequence |
-    |  \"txt\""                |
-    |     fi                   |
+.. code-block:: sh
+
+    if echo "$VAR" | gre
+p -q txt   # if [[ $VAR
+= *txt* ]]
+    then
+      echo "$VAR contain
+s the substring sequence
+ \"txt\""
+    fi
 
 
 
     .. code-block:: sh
 
-        if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
+        if echo "$VAR"grep -q txt   # if [[ $VAR = *txt* ]]
         then
           echo "$VAR contains the substring sequence \"txt\""
         fi
@@ -218,7 +218,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
     .. code-block:: sh
 
-        if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
+        if echo "$VAR"grep -q txt   # if [[ $VAR = *txt* ]]
         then
           echo "$VAR contains the substring sequence \"txt\""
         fi
@@ -228,12 +228,12 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    |Note|
+    |Note
 
     An **echo** , in combination with `command
     substitution <commandsub.html#COMMANDSUBREF>`__ can set a variable.
 
-    ``                         a=`echo           "HELLO" | tr A-Z a-z`                       ``
+    ``                         a=`echo           "HELLO"tr A-Z a-z`                       ``
 
     See also `Example 16-22 <textproc.html#LOWERCASE>`__ , `Example
     16-3 <moreadv.html#EX57>`__ , `Example
@@ -326,19 +326,19 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    |Note|
+    |Note
 
     This command is a shell builtin, and not the same as
     ``            /bin/echo           `` , although its behavior is
     similar.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ type -a echo   |
-    |     echo is a shell buil |
-    | tin                      |
-    |      echo is /bin/echo   |
-    |                          |
+.. code-block:: sh
+
+    bash$ type -a echo
+    echo is a shell buil
+tin
+     echo is /bin/echo
+
 
 
 
@@ -377,7 +377,7 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    |Caution|
+    |Caution
 
     Older versions of Bash may not support **printf** .
 
@@ -453,7 +453,7 @@ Exemple 2. *printf* in action
           exit $E_BADDIR
         }
 
-        cd $var || error $"Can't cd to %s." "$var"
+        cd $var |error $"Can't cd to %s." "$var"
 
         # Thanks, S.C.
 
@@ -663,42 +663,42 @@ Exemple 6. Detecting the arrow keys
         # May need to also press ENTER if a key not listed above pressed.
         read -n3 key                      # Read 3 characters.
 
-        echo -n "$key" | grep "$arrowup"  #Check if character code detected.
+        echo -n "$key"grep "$arrowup"  #Check if character code detected.
         if [ "$?" -eq $SUCCESS ]
         then
           echo "Up-arrow key pressed."
           exit $SUCCESS
         fi
 
-        echo -n "$key" | grep "$arrowdown"
+        echo -n "$key"grep "$arrowdown"
         if [ "$?" -eq $SUCCESS ]
         then
           echo "Down-arrow key pressed."
           exit $SUCCESS
         fi
 
-        echo -n "$key" | grep "$arrowrt"
+        echo -n "$key"grep "$arrowrt"
         if [ "$?" -eq $SUCCESS ]
         then
           echo "Right-arrow key pressed."
           exit $SUCCESS
         fi
 
-        echo -n "$key" | grep "$arrowleft"
+        echo -n "$key"grep "$arrowleft"
         if [ "$?" -eq $SUCCESS ]
         then
           echo "Left-arrow key pressed."
           exit $SUCCESS
         fi
 
-        echo -n "$key" | grep "$insert"
+        echo -n "$key"grep "$insert"
         if [ "$?" -eq $SUCCESS ]
         then
           echo "\"Insert\" key pressed."
           exit $SUCCESS
         fi
 
-        echo -n "$key" | grep "$delete"
+        echo -n "$key"grep "$delete"
         if [ "$?" -eq $SUCCESS ]
         then
           echo "\"Delete\" key pressed."
@@ -751,9 +751,9 @@ Exemple 6. Detecting the arrow keys
         while true
         do
           read -sn1 a
-          test "$a" == `echo -en "\e"` || continue
+          test "$a" == `echo -en "\e"` |continue
           read -sn1 a
-          test "$a" == "[" || continue
+          test "$a" == "[" |continue
           read -sn1 a
           case "$a" in
             A)  echo "up";;
@@ -774,7 +774,7 @@ Exemple 6. Detecting the arrow keys
 
 
 
-    |Note|
+    |Note
 
     The ``            -n           `` option to **read** will not detect
     the **ENTER** (newline) key.
@@ -868,7 +868,7 @@ Exemple 6. Detecting the arrow keys
 
 
 
-    |Note|
+    |Note
 
     `Piping <special-chars.html#PIPEREF>`__ output to a *read* , using
     `echo <internal.html#ECHOREF>`__ to set variables `will
@@ -877,13 +877,13 @@ Exemple 6. Detecting the arrow keys
      Yet, piping the output of `cat <basic.html#CATREF>`__ *seems* to
     work.
 
-    | .. code-block:: sh
-    |                          |
-    |     cat file1 file2 |    |
-    |     while read line      |
-    |     do                   |
-    |     echo $line           |
-    |     done                 |
+.. code-block:: sh
+
+    cat file1 file2 |
+    while read line
+    do
+    echo $line
+    done
 
 
     However, as Bjรถn Eriksson shows:
@@ -902,7 +902,7 @@ Exemple 7. Problems reading from a pipe
         ### shopt -s lastpipe
 
         last="(null)"
-        cat $0 |
+        cat $0
         while read line
         do
             echo "{$line}"
@@ -947,19 +947,19 @@ Exemple 7. Problems reading from a pipe
     output of `find <moreadv.html#FINDREF>`__ to a *while read*
     construct.
 
-    | .. code-block:: sh
-    |                          |
-    |     find $1 \( -name "*$ |
-    | 2" -o -name ".*$2" \) -p |
-    | rint |                   |
-    |     while read f; do     |
-    |     . . .                |
+.. code-block:: sh
+
+    find $1 \( -name "*$
+2" -o -name ".*$2" \) -p
+rint |
+    while read f; do
+    . . .
 
 
 
     .. code-block:: sh
 
-        cat file1 file2 |
+        cat file1 file2
         while read line
         do
         echo $line
@@ -975,7 +975,7 @@ Exemple 7. Problems reading from a pipe
         ### shopt -s lastpipe
 
         last="(null)"
-        cat $0 |
+        cat $0
         while read line
         do
             echo "{$line}"
@@ -1015,14 +1015,14 @@ Exemple 7. Problems reading from a pipe
 
     .. code-block:: sh
 
-        find $1 \( -name "*$2" -o -name ".*$2" \) -print |
+        find $1 \( -name "*$2" -o -name ".*$2" \) -print
         while read f; do
         . . .
 
 
     .. code-block:: sh
 
-        cat file1 file2 |
+        cat file1 file2
         while read line
         do
         echo $line
@@ -1038,7 +1038,7 @@ Exemple 7. Problems reading from a pipe
         ### shopt -s lastpipe
 
         last="(null)"
-        cat $0 |
+        cat $0
         while read line
         do
             echo "{$line}"
@@ -1078,7 +1078,7 @@ Exemple 7. Problems reading from a pipe
 
     .. code-block:: sh
 
-        find $1 \( -name "*$2" -o -name ".*$2" \) -print |
+        find $1 \( -name "*$2" -o -name ".*$2" \) -print
         while read f; do
         . . .
 
@@ -1087,7 +1087,7 @@ Exemple 7. Problems reading from a pipe
 
 
 
-    |Tip|
+    |Tip
 
     It is possible to *paste* text into the input field of a *read* (but
     *not* multiple lines!). See `Example
@@ -1108,7 +1108,7 @@ Exemple 7. Problems reading from a pipe
 
     .. code-block:: sh
 
-        (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
+        (cd /source/directory && tar cf - . )(cd /dest/directory && tar xpvf -)
 
 
 
@@ -1123,17 +1123,17 @@ Exemple 7. Problems reading from a pipe
 
 
 
-    |Caution|
+    |Caution
 
     The **cd** command does not function as expected when presented with
     two forward slashes.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ cd //          |
-    |     bash$ pwd            |
-    |     //                   |
-    |                          |
+.. code-block:: sh
+
+    bash$ cd //
+    bash$ pwd
+    //
+
 
 
     The output should, of course, be ``           /          `` . This
@@ -1301,53 +1301,53 @@ Exemple 9. Letting *let* do arithmetic.
 
 
 
-    |Caution|
+    |Caution
 
     The *let* command can, in certain contexts, return a surprising
     `exit status <exit-status.html#EXITSTATUSREF>`__ .
 
-    | .. code-block:: sh
-    |                          |
-    |     # Evgeniy Ivanov poi |
-    | nts out:                 |
-    |                          |
-    |     var=0                |
-    |     echo $?     # 0      |
-    |                 # As exp |
-    | ected.                   |
-    |                          |
-    |     let var++            |
-    |     echo $?     # 1      |
-    |                 # The co |
-    | mmand was successful, so |
-    |  why isn't $?=0 ???      |
-    |                 # Anomal |
-    | y!                       |
-    |                          |
-    |     let var++            |
-    |     echo $?     # 0      |
-    |                 # As exp |
-    | ected.                   |
-    |                          |
-    |                          |
-    |     # Likewise . . .     |
-    |                          |
-    |     let var=0            |
-    |     echo $?     # 1      |
-    |                 # The co |
-    | mmand was successful, so |
-    |  why isn't $?=0 ???      |
-    |                          |
-    |     #  However, as Jeff  |
-    | Gorak points out,        |
-    |     #+ this is part of t |
-    | he design spec for 'let' |
-    |  . . .                   |
-    |     # "If the last ARG e |
-    | valuates to 0, let retur |
-    | ns 1;                    |
-    |     #  let returns 0 oth |
-    | erwise." ['help let']    |
+.. code-block:: sh
+
+    # Evgeniy Ivanov poi
+nts out:
+
+    var=0
+    echo $?     # 0
+                # As exp
+ected.
+
+    let var++
+    echo $?     # 1
+                # The co
+mmand was successful, so
+ why isn't $?=0 ???
+                # Anomal
+y!
+
+    let var++
+    echo $?     # 0
+                # As exp
+ected.
+
+
+    # Likewise . . .
+
+    let var=0
+    echo $?     # 1
+                # The co
+mmand was successful, so
+ why isn't $?=0 ???
+
+    #  However, as Jeff
+Gorak points out,
+    #+ this is part of t
+he design spec for 'let'
+ . . .
+    # "If the last ARG e
+valuates to 0, let retur
+ns 1;
+    #  let returns 0 oth
+erwise." ['help let']
 
 
 
@@ -1423,7 +1423,7 @@ Exemple 9. Letting *let* do arithmetic.
 
 
 
-    |Tip|
+    |Tip
 
     The **eval** command can be used for code generation from the
     command-line or within a script.
@@ -1436,7 +1436,7 @@ Exemple 9. Letting *let* do arithmetic.
 
         bash$ command_string="ps ax"
         bash$ process="ps ax"
-        bash$ eval "$command_string" | grep "$process"
+        bash$ eval "$command_string"grep "$process"
         26973 pts/3    R+     0:00 grep --color ps ax
          26974 pts/3    R+     0:00 ps ax
 
@@ -1491,7 +1491,7 @@ Exemple 10. Showing the effect of *eval*
         echo "==========================================================="
         echo
 
-        eval "`seq 3 | sed -e 's/.*/echo var&=ABCDEFGHIJ/'`"
+        eval "`seq 3sed -e 's/.*/echo var&=ABCDEFGHIJ/'`"
         # var1=ABCDEFGHIJ
         # var2=ABCDEFGHIJ
         # var3=ABCDEFGHIJ
@@ -1630,7 +1630,7 @@ Exemple 13. Forcing a log-off
         #+ /dev/ttyS1 or /dev/ttyS2.
 
 
-        killppp="eval kill -9 `ps ax | awk '/ppp/ { print $1 }'`"
+        killppp="eval kill -9 `ps axawk '/ppp/ { print $1 }'`"
         #                     -------- process ID of ppp -------
 
         $killppp                     # This variable is now a command.
@@ -1671,7 +1671,7 @@ Exemple 14. A version of *rot13*
         setvar_rot_13()              # "rot13" scrambling
         {
           local varname=$1 varvalue=$2
-          eval $varname='$(echo "$varvalue" | tr a-z n-za-m)'
+          eval $varname='$(echo "$varvalue"tr a-z n-za-m)'
         }
 
 
@@ -1719,7 +1719,7 @@ Exemple 14. A version of *rot13*
 
 
 
-    |Tip|
+    |Tip
 
     The *eval* command can be used to `parameterize *brace
     expansion* <bashver3.html#BRACEEXPREF3>`__ .
@@ -1729,7 +1729,7 @@ Exemple 14. A version of *rot13*
 
 
 
-    |Caution|
+    |Caution
 
     The **eval** command can be risky, and normally should be avoided
     when there exists a reasonable alternative. An
@@ -2001,7 +2001,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Note|
+    |Note
 
     In most contexts, an *undeclared* variable and one that has been
     *unset* are equivalent. However, the
@@ -2022,7 +2022,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Caution|
+    |Caution
 
     Unfortunately, `there is no way to export variables back to the
     parent process <gotchas.html#PARCHILDPROBREF>`__ , to the process
@@ -2082,7 +2082,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Tip|
+    |Tip
 
     It is possible to initialize and export variables in the same
     operation, as in **export var1=xxx** .
@@ -2090,18 +2090,18 @@ Exemple 18. "Unsetting" a variable
     However, as Greg Keraunen points out, in certain situations this may
     have a different effect than setting a variable, then exporting it.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ export var=(a  |
-    | b); echo ${var[0]}       |
-    |     (a b)                |
-    |                          |
-    |                          |
-    |                          |
-    |     bash$ var=(a b); exp |
-    | ort var; echo ${var[0]}  |
-    |     a                    |
-    |                          |
+.. code-block:: sh
+
+    bash$ export var=(a
+b); echo ${var[0]}
+    (a b)
+
+
+
+    bash$ var=(a b); exp
+ort var; echo ${var[0]}
+    a
+
 
 
 
@@ -2133,7 +2133,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Note|
+    |Note
 
     A variable to be exported may require special treatment. See
     `Example M-2 <sample-bashrc.html#BASHPROF>`__ .
@@ -2175,7 +2175,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Note|
+    |Note
 
     #. The arguments passed from the command-line to the script must be
        preceded by a dash ( ``              -             `` ). It is
@@ -2267,13 +2267,13 @@ Exemple 18. "Unsetting" a variable
         do
           case $Option in
             m     ) echo "Scenario #1: option -m-   [OPTIND=${OPTIND}]";;
-            n | o ) echo "Scenario #2: option -$Option-   [OPTIND=${OPTIND}]";;
+            no ) echo "Scenario #2: option -$Option-   [OPTIND=${OPTIND}]";;
             p     ) echo "Scenario #3: option -p-   [OPTIND=${OPTIND}]";;
             q     ) echo "Scenario #4: option -q-\
                           with argument \"$OPTARG\"   [OPTIND=${OPTIND}]";;
             #  Note that option 'q' must have an associated argument,
             #+ otherwise it falls through to the default.
-            r | s ) echo "Scenario #5: option -$Option-";;
+            rs ) echo "Scenario #5: option -$Option-";;
             *     ) echo "Unimplemented option chosen.";;   # Default.
           esac
         done
@@ -2479,7 +2479,7 @@ Exemple 20. A (useless) script that sources itself
 
 
 
-    |Note|
+    |Note
 
     If a script terminates with an **exit** lacking an argument, the
     exit status of the script is the exit status of the last command
@@ -2491,7 +2491,7 @@ Exemple 20. A (useless) script that sources itself
 
 
 
-    |Note|
+    |Note
 
     An **exit** command may also be used to terminate a
     `subshell <subshells.html#SUBSHELLSREF>`__ .
@@ -2576,7 +2576,7 @@ Exemple 22. A script that *exec's* itself
 
 
 
-    |Note|
+    |Note
 
     The ``            -exec           `` option to
     `find <moreadv.html#FINDREF>`__ is

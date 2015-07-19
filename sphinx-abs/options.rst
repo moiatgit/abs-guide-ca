@@ -34,7 +34,7 @@ effect, use **set -o option-name** or, in short form, **set
 
 
 
-|Note|
+|Note
 
 To *disable* an option within a script, use **set +o option-name** or
 **set +option-abbrev** .
@@ -127,7 +127,7 @@ brace expansion
 
 noclobber
 
-Prevent overwriting of files by redirection (may be overridden by >\| )
+Prevent overwriting of files by redirection (may be overridden by >\)
 
 ``        -D       ``
 

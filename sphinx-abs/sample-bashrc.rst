@@ -82,14 +82,14 @@ your scripts.
     {
         case $TERM in
             xterm )
-                XSERVER=$(who am i | awk '{print $NF}' | tr -d ')''(' )
+                XSERVER=$(who am iawk '{print $NF}' | tr -d ')''(' )
                 # Ane-Pieter Wieringa suggests the following alternative:
                 #  I_AM=$(who am i)
                 #  SERVER=${I_AM#*(}
                 #  SERVER=${SERVER%*)}
                 XSERVER=${XSERVER%%:*}
                 ;;
-                aterm | rxvt)
+                atermrxvt)
                 # Find some code that works here. ...
                 ;;
         esac
@@ -97,7 +97,7 @@ your scripts.
 
     if [ -z ${DISPLAY:=""} ]; then
         get_xserver
-        if [[ -z ${XSERVER}  || ${XSERVER} == $(hostname) ||
+        if [[ -z ${XSERVER}  |${XSERVER} == $(hostname) |
            ${XSERVER} == "unix" ]]; then
               DISPLAY=":0.0"          # Display on local host.
         else
@@ -261,7 +261,7 @@ your scripts.
     # Returns system load as percentage, i.e., '40' rather than '0.40)'.
     function load()
     {
-        local SYSLOAD=$(cut -d " " -f1 /proc/loadavg | tr -d '.')
+        local SYSLOAD=$(cut -d " " -f1 /proc/loadavgtr -d '.')
         # System load of the current host.
         echo $((10#$SYSLOAD))       # Convert to decimal.
     }
@@ -288,7 +288,7 @@ your scripts.
             echo -en ${Red}
             # No 'write' privilege in the current directory.
         elif [ -s "${PWD}" ] ; then
-            local used=$(command df -P "$PWD" |
+            local used=$(command df -P "$PWD"
                        awk 'END {print $5} {sub(/%/,"")}')
             if [ ${used} -gt 95 ]; then
                 echo -en ${ALERT}           # Disk almost full (>95%).
@@ -306,9 +306,9 @@ your scripts.
     # Returns a color according to running/suspended jobs.
     function job_color()
     {
-        if [ $(jobs -s | wc -l) -gt "0" ]; then
+        if [ $(jobs -swc -l) -gt "0" ]; then
             echo -en ${BRed}
-        elif [ $(jobs -r | wc -l) -gt "0" ] ; then
+        elif [ $(jobs -rwc -l) -gt "0" ] ; then
             echo -en ${BCyan}
         fi
     }
@@ -319,7 +319,7 @@ your scripts.
     # Now we construct the prompt.
     PROMPT_COMMAND="history -a"
     case ${TERM} in
-      *term | rxvt | linux)
+      *termrxvt | linux)
             PS1="\[\$(load_color)\][\A\[${NC}\] "
             # Time of day (with load info):
             PS1="\[\$(load_color)\][\A\[${NC}\] "
@@ -441,7 +441,7 @@ your scripts.
     function xtitle()
     {
         case "$TERM" in
-        *term* | rxvt)
+        *term*rxvt)
             echo -en  "\e]0;$*\a" ;;
         *)  ;;
         esac
@@ -512,8 +512,8 @@ your scripts.
             echo "$usage"
             return;
         fi
-        find . -type f -name "${2:-*}" -print0 | \
-    xargs -0 egrep --color=always -sn ${case} "$1" 2>&- | more
+        find . -type f -name "${2:-*}" -print0\
+    xargs -0 egrep --color=always -sn ${case} "$1" 2>&-more
 
     }
 
@@ -569,20 +569,20 @@ your scripts.
 
 
     function my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ; }
-    function pp() { my_ps f | awk '!/awk/ && $0~var' var=${1:-".*"} ; }
+    function pp() { my_ps fawk '!/awk/ && $0~var' var=${1:-".*"} ; }
 
 
     function killps()   # kill by process name
     {
         local pid pname sig="-TERM"   # default signal
-        if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
+        if [ "$#" -lt 1 ] |[ "$#" -gt 2 ]; then
             echo "Usage: killps [-SIGNAL] pattern"
             return;
         fi
         if [ $# = 2 ]; then sig=$1 ; fi
-        for pid in $(my_ps| awk '!/awk/ && $0~pat { print $1 }' pat=${!#} )
+        for pid in $(my_psawk '!/awk/ && $0~pat { print $1 }' pat=${!#} )
         do
-            pname=$(my_ps | awk '$1~var { print $5 }' var=$pid )
+            pname=$(my_psawk '$1~var { print $5 }' var=$pid )
             if ask "Kill process $pid <$pname> with signal $sig?"
                 then kill $sig $pid
             fi
@@ -598,8 +598,8 @@ your scripts.
               echo -e $fs" :No such file or directory" ; continue
             fi
 
-            local info=( $(command df -P $fs | awk 'END{ print $2,$3,$5 }') )
-            local free=( $(command df -Pkh $fs | awk 'END{ print $4 }') )
+            local info=( $(command df -P $fsawk 'END{ print $2,$3,$5 }') )
+            local free=( $(command df -Pkh $fsawk 'END{ print $4 }') )
             local nbstars=$(( 20 * ${info[1]} / ${info[0]} ))
             local out="["
             for ((j=0;j<20;j++)); do
@@ -617,7 +617,7 @@ your scripts.
 
     function my_ip() # Get IP adress on ethernet.
     {
-        MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' |
+        MY_IP=$(/sbin/ifconfig eth0awk '/inet/ { print $2 } '
           sed -e s/addr://)
         echo ${MY_IP:-"Not connected"}
     }
@@ -626,8 +626,8 @@ your scripts.
     {
         echo -e "\nYou are logged on ${BRed}$HOST"
         echo -e "\n${BRed}Additionnal information:$NC " ; uname -a
-        echo -e "\n${BRed}Users logged on:$NC " ; w -hs |
-                 cut -d " " -f1 | sort | uniq
+        echo -e "\n${BRed}Users logged on:$NC " ; w -hs
+                 cut -d " " -f1sort | uniq
         echo -e "\n${BRed}Current date :$NC " ; date
         echo -e "\n${BRed}Machine stats :$NC " ; uptime
         echo -e "\n${BRed}Memory stats :$NC " ; free
@@ -663,7 +663,7 @@ your scripts.
     function corename()   # Get name of app that created a corefile.
     {
         for file ; do
-            echo -n $file : ; gdb --core=$file --batch | head -1
+            echo -n $file : ; gdb --core=$file --batchhead -1
         done
     }
 
@@ -761,9 +761,9 @@ your scripts.
 
     _get_longopts()
     {
-      #$1 --help | sed  -e '/--/!d' -e 's/.*--\([^[:space:].,]*\).*/--\1/'| \
+      #$1 --helpsed  -e '/--/!d' -e 's/.*--\([^[:space:].,]*\).*/--\1/'| \
       #grep ^"$2" |sort -u ;
-        $1 --help | grep -o -e "--[^[:space:].,]*" | grep -e "$2" |sort -u
+        $1 --helpgrep -o -e "--[^[:space:].,]*" | grep -e "$2" |sort -u
     }
 
     _longopts()
@@ -830,7 +830,7 @@ your scripts.
             # Complete on files in tar file.
             #
             # Get name of tar file from command line.
-            tar=$( echo "$COMP_LINE" | \
+            tar=$( echo "$COMP_LINE"\
                             sed -e 's|^.* \([^ ]*'$regex'\) .*$|\1|' )
             # Devise how to untar and list it.
             untar=t${COMP_WORDS[1]//[^Izjyf]/}
@@ -897,7 +897,7 @@ your scripts.
         [ ! -f $makef ] && return 0
 
         # Deal with included Makefiles.
-        makef_inc=$( grep -E '^-?include' $makef |
+        makef_inc=$( grep -E '^-?include' $makef
                      sed -e "s,^.* ,"$makef_dir"/," )
         for file in $makef_inc; do
             [ -f $file ] && makef="$makef $file"
@@ -910,7 +910,7 @@ your scripts.
 
         COMPREPLY=( $( awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ \
                                    {split($1,A,/ /);for(i in A)print A[i]}' \
-                                    $makef 2>/dev/null | eval $gcmd  ))
+                                    $makef 2>/dev/nulleval $gcmd  ))
 
     }
 
@@ -929,8 +929,8 @@ your scripts.
         #+ (the first sed evaluation
         #+ takes care of swapped out processes, the second
         #+ takes care of getting the basename of the process).
-        COMPREPLY=( $( ps -u $USER -o comm  | \
-            sed -e '1,1d' -e 's#[]\[]##g' -e 's#^.*/##'| \
+        COMPREPLY=( $( ps -u $USER -o comm\
+            sed -e '1,1d' -e 's#[]\[]##g' -e 's#^.*/##'\
             awk '{if ($0 ~ /^'$cur'/) print $0}' ))
 
         return 0

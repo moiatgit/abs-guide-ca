@@ -126,8 +126,8 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
             >>filename 2>&1
                 bad_command >>filename 2>&1
                 # Appends both stdout and stderr to the file "filename" ...
-            2>&1 | [command(s)]
-                bad_command 2>&1 | awk '{print $5}'   # found
+            2>&1[command(s)]
+                bad_command 2>&1awk '{print $5}'   # found
                 # Sends stderr through a pipe.
                 # |& was added to Bash 4 as an abbreviation for 2>&1 |.
 
@@ -169,12 +169,12 @@ reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ ).
 
 
 
-       |
+
           # Pipe.
           # General purpose process and command chaining tool.
           # Similar to ">", but more general in effect.
           # Useful for chaining commands, scripts, files, and programs together.
-          cat *.txt | sort | uniq > result-file
+          cat *.txtsort | uniq > result-file
           # Sorts the output of all the .txt files and deletes duplicate lines,
           # finally saves results to "result-file".
 
@@ -190,7 +190,7 @@ combined in a single command line.
     # Or the equivalent:
     < input-file command > output-file   # Although this is non-standard.
 
-    command1 | command2 | command3 > output-file
+    command1command2 | command3 > output-file
 
 
 
@@ -244,7 +244,7 @@ To prevent an fd from being inherited, close it.
     # Redirecting only stderr to a pipe.
 
     exec 3>&1                              # Save current "value" of stdout.
-    ls -l 2>&1 >&3 3>&- | grep bad 3>&-    # Close fd 3 for 'grep' (but not 'ls').
+    ls -l 2>&1 >&3 3>&-grep bad 3>&-    # Close fd 3 for 'grep' (but not 'ls').
     #              ^^^^   ^^^^
     exec 3>&-                              # Now close it for the remainder of the script.
 

@@ -103,7 +103,7 @@ XOR
 
 *exclusive* OR, bitwise
 
-``        |       ``
+``      ``
 
 OR
 
@@ -115,7 +115,7 @@ AND
 
 `logical <ops.html#LOGOPS1>`__ , *compound* comparison
 
-``        || -o       ``
+``        |-o       ``
 
 OR
 
@@ -220,29 +220,29 @@ found in the *Fedora Core* Linux distro.
 
 
 
-|Tip|
+|Tip
 
 To avoid confusion or error in a complex sequence of test operators,
 break up the sequence into bracketed sections.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     if [ "$v1" -gt "$v2" |
-|   -o  "$v1" -lt "$v2"  - |
-| a  -e "$filename" ]      |
-|     # Unclear what's goi |
-| ng on here...            |
-|                          |
-|     if [[ "$v1" -gt "$v2 |
-| " ]] || [[ "$v1" -lt "$v |
-| 2" ]] && [[ -e "$filenam |
-| e" ]]                    |
-|     # Much better -- the |
-|  condition tests are gro |
-| uped in logical sections |
-| .                        |
+.. code-block:: sh
+
+    if [ "$v1" -gt "$v2"
+  -o  "$v1" -lt "$v2"  -
+a  -e "$filename" ]
+    # Unclear what's goi
+ng on here...
+
+    if [[ "$v1" -gt "$v2
+" ]] || [[ "$v1" -lt "$v
+2" ]] && [[ -e "$filenam
+e" ]]
+    # Much better -- the
+ condition tests are gro
+uped in logical sections
+.
 
 ----------------------------------------------------------------------------------
 
@@ -253,7 +253,7 @@ break up the sequence into bracketed sections.
     if [ "$v1" -gt "$v2"  -o  "$v1" -lt "$v2"  -a  -e "$filename" ]
     # Unclear what's going on here...
 
-    if [[ "$v1" -gt "$v2" ]] || [[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]]
+    if [[ "$v1" -gt "$v2" ]] |[[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]]
     # Much better -- the condition tests are grouped in logical sections.
 
 
@@ -262,7 +262,7 @@ break up the sequence into bracketed sections.
     if [ "$v1" -gt "$v2"  -o  "$v1" -lt "$v2"  -a  -e "$filename" ]
     # Unclear what's going on here...
 
-    if [[ "$v1" -gt "$v2" ]] || [[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]]
+    if [[ "$v1" -gt "$v2" ]] |[[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]]
     # Much better -- the condition tests are grouped in logical sections.
 
 

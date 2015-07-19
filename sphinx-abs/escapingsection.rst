@@ -8,7 +8,7 @@ literally.
 
 
 
-|Caution|
+|Caution
 
 With certain commands and utilities, such as
 `echo <internal.html#ECHOREF>`__ and `sed <sedawk.html#SEDREF>`__ ,
@@ -47,7 +47,7 @@ special meaning for that character.
 
 
 
-    |Important|
+    |Important
 
     The ``                         $' ... '                       ``
     `quoted <quoting.html#QUOTINGREF>`__ string-expansion construct is a
@@ -319,7 +319,7 @@ special meaning for that character.
 
 
 
-|Note|
+|Note
 
 The behavior of \\ depends on whether it is escaped,
 `strong-quoted <varsubn.html#SNGLQUO>`__ ,
@@ -329,63 +329,63 @@ document <here-docs.html#HEREDOCREF>`__ .
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|                          |
-|   #  Simple escaping and |
-|  quoting                 |
-|     echo \z              |
-|   #  z                   |
-|     echo \\z             |
-|   # \z                   |
-|     echo '\z'            |
-|   # \z                   |
-|     echo '\\z'           |
-|   # \\z                  |
-|     echo "\z"            |
-|   # \z                   |
-|     echo "\\z"           |
-|   # \z                   |
-|                          |
-|                          |
-|   #  Command substitutio |
-| n                        |
-|     echo `echo \z`       |
-|   #  z                   |
-|     echo `echo \\z`      |
-|   #  z                   |
-|     echo `echo \\\z`     |
-|   # \z                   |
-|     echo `echo \\\\z`    |
-|   # \z                   |
-|     echo `echo \\\\\\z`  |
-|   # \z                   |
-|     echo `echo \\\\\\\z` |
-|   # \\z                  |
-|     echo `echo "\z"`     |
-|   # \z                   |
-|     echo `echo "\\z"`    |
-|   # \z                   |
-|                          |
-|                          |
-|   # Here document        |
-|     cat <<EOF            |
-|                          |
-|     \z                   |
-|                          |
-|     EOF                  |
-|   # \z                   |
-|                          |
-|     cat <<EOF            |
-|                          |
-|     \\z                  |
-|                          |
-|     EOF                  |
-|   # \z                   |
-|                          |
-|     # These examples sup |
-| plied by Stéphane Chazel |
-| as.                      |
+.. code-block:: sh
+
+
+  #  Simple escaping and
+ quoting
+    echo \z
+  #  z
+    echo \\z
+  # \z
+    echo '\z'
+  # \z
+    echo '\\z'
+  # \\z
+    echo "\z"
+  # \z
+    echo "\\z"
+  # \z
+
+
+  #  Command substitutio
+n
+    echo `echo \z`
+  #  z
+    echo `echo \\z`
+  #  z
+    echo `echo \\\z`
+  # \z
+    echo `echo \\\\z`
+  # \z
+    echo `echo \\\\\\z`
+  # \z
+    echo `echo \\\\\\\z`
+  # \\z
+    echo `echo "\z"`
+  # \z
+    echo `echo "\\z"`
+  # \z
+
+
+  # Here document
+    cat <<EOF
+
+    \z
+
+    EOF
+  # \z
+
+    cat <<EOF
+
+    \\z
+
+    EOF
+  # \z
+
+    # These examples sup
+plied by Stéphane Chazel
+as.
 
 ----------------------------------------------------------------------------------
 
@@ -395,73 +395,73 @@ escape character alone may not be assigned to a variable.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     variable=\           |
-|     echo "$variable"     |
-|     # Will not work - gi |
-| ves an error message:    |
-|     # test.sh: : command |
-|  not found               |
-|     # A "naked" escape c |
-| annot safely be assigned |
-|  to a variable.          |
-|     #                    |
-|     #  What actually hap |
-| pens here is that the "\ |
-| " escapes the newline an |
-| d                        |
-|     #+ the effect is     |
-|     variable=echo "$vari |
-| able"                    |
-|     #+                   |
-|     invalid variable ass |
-| ignment                  |
-|                          |
-|     variable=\           |
-|     23skidoo             |
-|     echo "$variable"     |
-|     #  23skidoo          |
-|                          |
-|     #  This works, since |
-|  the second line         |
-|                          |
-|     #+ is a valid variab |
-| le assignment.           |
-|                          |
-|     variable=\           |
-|     #        \^    escap |
-| e followed by space      |
-|     echo "$variable"     |
-|     # space              |
-|                          |
-|     variable=\\          |
-|     echo "$variable"     |
-|     # \                  |
-|                          |
-|     variable=\\\         |
-|     echo "$variable"     |
-|     # Will not work - gi |
-| ves an error message:    |
-|     # test.sh: \: comman |
-| d not found              |
-|     #                    |
-|     #  First escape esca |
-| pes second one, but the  |
-| third one is left "naked |
-| ",                       |
-|     #+ with same result  |
-| as first instance, above |
-| .                        |
-|                          |
-|     variable=\\\\        |
-|     echo "$variable"     |
-|     # \\                 |
-|                          |
-|     # Second and fourth  |
-| escapes escaped.         |
-|                          |
-|     # This is o.k.       |
+.. code-block:: sh
+
+    variable=\
+    echo "$variable"
+    # Will not work - gi
+ves an error message:
+    # test.sh: : command
+ not found
+    # A "naked" escape c
+annot safely be assigned
+ to a variable.
+    #
+    #  What actually hap
+pens here is that the "\
+" escapes the newline an
+d
+    #+ the effect is
+    variable=echo "$vari
+able"
+    #+
+    invalid variable ass
+ignment
+
+    variable=\
+    23skidoo
+    echo "$variable"
+    #  23skidoo
+
+    #  This works, since
+ the second line
+
+    #+ is a valid variab
+le assignment.
+
+    variable=\
+    #        \^    escap
+e followed by space
+    echo "$variable"
+    # space
+
+    variable=\\
+    echo "$variable"
+    # \
+
+    variable=\\\
+    echo "$variable"
+    # Will not work - gi
+ves an error message:
+    # test.sh: \: comman
+d not found
+    #
+    #  First escape esca
+pes second one, but the
+third one is left "naked
+",
+    #+ with same result
+as first instance, above
+.
+
+    variable=\\\\
+    echo "$variable"
+    # \\
+
+    # Second and fourth
+escapes escaped.
+
+    # This is o.k.
 
 ----------------------------------------------------------------------------------
 
@@ -640,13 +640,13 @@ command sequence continues on to the next line.
 
 .. code-block:: sh
 
-    (cd /source/directory && tar cf - . ) | \
+    (cd /source/directory && tar cf - . )\
     (cd /dest/directory && tar xpvf -)
     # Repeating Alan Cox's directory tree copy command,
     # but split into two lines for increased legibility.
 
     # As an alternative:
-    tar cf - -C /source/directory . |
+    tar cf - -C /source/directory .
     tar xpvf - -C /dest/directory
     # See note below.
     # (Thanks, Stéphane Chazelas.)
@@ -655,9 +655,9 @@ command sequence continues on to the next line.
 
 
 
-|Note|
+|Note
 
-If a script line ends with a \| , a pipe character, then a \\ , an
+If a script line ends with a \, a pipe character, then a \\ , an
 escape, is not strictly necessary. It is, however, good programming
 practice to always escape the end of a line of code that continues to
 the following line.

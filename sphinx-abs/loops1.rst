@@ -15,15 +15,15 @@ control condition* is true.
     This is the basic looping construct. It differs significantly from
     its *C* counterpart.
 
-    | **for** ``                   arg                 `` in [
+**for** ``                   arg                 `` in [
     ``                   list                 `` ]
-    |  do
-    |  ``                   command(s)                 `` ...
-    |  done
+ do
+ ``                   command(s)                 `` ...
+ done
 
 
 
-    |Note|
+    |Note
 
     During each pass through the loop,
     ``                         arg                       `` takes on the
@@ -53,7 +53,7 @@ control condition* is true.
     If *do* is on same line as *for* , there needs to be a semicolon
     after list.
 
-    | **for** ``                   arg                 `` in [
+**for** ``                   arg                 `` in [
     ``                   list                 `` ] ; do
 
 
@@ -162,7 +162,7 @@ control condition* is true.
             continue                # On to next.
            fi
 
-          ls -l $file | awk '{ print $8 "         file size: " $5 }'  # Print 2 fields.
+          ls -l $fileawk '{ print $8 "         file size: " $5 }'  # Print 2 fields.
           whatis `basename $file`   # File info.
           # Note that the whatis database needs to have been set up for this to work.
           # To do this, as root run /usr/bin/makewhatis.
@@ -344,7 +344,7 @@ control condition* is true.
 
         IFS=$'\012'       # Per suggestion of Anton Filippov.
                           # was:  IFS="\n"
-        for word in $( strings "$2" | grep "$1" )
+        for word in $( strings "$2"grep "$1" )
         # The "strings" command lists strings in binary files.
         # Output then piped to "grep", which tests for desired string.
         do
@@ -352,7 +352,7 @@ control condition* is true.
         done
 
         # As S.C. points out, lines 23 - 30 could be replaced with the simpler
-        #    strings "$2" | grep "$1" | tr -s "$IFS" '[\n*]'
+        #    strings "$2"grep "$1" | tr -s "$IFS" '[\n*]'
 
 
         #  Try something like  "./bin-grep.sh mem /bin/ls"
@@ -422,9 +422,9 @@ control condition* is true.
         directory=/usr/bin/
         fstring="Free Software Foundation"  # See which files come from the FSF.
 
-        for file in $( find $directory -type f -name '*' | sort )
+        for file in $( find $directory -type f -name '*'sort )
         do
-          strings -f $file | grep "$fstring" | sed -e "s%$directory%%"
+          strings -f $filegrep "$fstring" | sed -e "s%$directory%%"
           #  In the "sed" expression,
           #+ it is necessary to substitute for the normal "/" delimiter
           #+ because "/" happens to be one of the characters filtered out.
@@ -496,7 +496,7 @@ control condition* is true.
         for file in "$( find $directory -type l )"   # -type l = symbolic links
         do
           echo "$file"
-        done | sort                                  # Otherwise file list is unsorted.
+        donesort                                  # Otherwise file list is unsorted.
         #  Strictly speaking, a loop isn't really necessary here,
         #+ since the output of the "find" command is expanded into a single word.
         #  However, it's easy to understand and illustrative this way.
@@ -529,7 +529,7 @@ control condition* is true.
         for file in $( find $directory -type l )
         do
           echo $file
-          done | sort
+          donesort
 
         #  This works in the "pathological" case of a directory name having
         #+ an embedded colon.
@@ -565,7 +565,7 @@ control condition* is true.
         for file in "$( find $directory -type l )"    # -type l = symbolic links
         do
           echo "$file"
-        done | sort >> "$OUTFILE"                     # stdout of loop
+        donesort >> "$OUTFILE"                     # stdout of loop
         #           ^^^^^^^^^^^^^                       redirected to save file.
 
         # echo "Output file = $OUTFILE"
@@ -710,7 +710,7 @@ control condition* is true.
 
 
 
-    |Note|
+    |Note
 
      The `keywords <internal.html#KEYWORDREF>`__ **do** and **done**
     delineate the *for-loop* command block. However, these may, in
@@ -719,42 +719,42 @@ control condition* is true.
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     for((n=1; n<=10; n++ |
-    | ))                       |
-    |     # No do!             |
-    |     {                    |
-    |       echo -n "* $n *"   |
-    |     }                    |
-    |     # No done!           |
-    |                          |
-    |                          |
-    |     # Outputs:           |
-    |     # * 1 ** 2 ** 3 ** 4 |
-    |  ** 5 ** 6 ** 7 ** 8 **  |
-    | 9 ** 10 *                |
-    |     # And, echo $? retur |
-    | ns 0, so Bash does not r |
-    | egister an error.        |
-    |                          |
-    |                          |
-    |     echo                 |
-    |                          |
-    |                          |
-    |     #  But, note that in |
-    |  a classic for-loop:     |
-    | for n in [list] ...      |
-    |     #+ a terminal semico |
-    | lon is required.         |
-    |                          |
-    |     for n in 1 2 3       |
-    |     {  echo -n "$n "; }  |
-    |     #               ^    |
-    |                          |
-    |                          |
-    |     # Thank you, YongYe, |
-    |  for pointing this out.  |
+.. code-block:: sh
+
+    for((n=1; n<=10; n++
+))
+    # No do!
+    {
+      echo -n "* $n *"
+    }
+    # No done!
+
+
+    # Outputs:
+    # * 1 ** 2 ** 3 ** 4
+ ** 5 ** 6 ** 7 ** 8 **
+9 ** 10 *
+    # And, echo $? retur
+ns 0, so Bash does not r
+egister an error.
+
+
+    echo
+
+
+    #  But, note that in
+ a classic for-loop:
+for n in [list] ...
+    #+ a terminal semico
+lon is required.
+
+    for n in 1 2 3
+    {  echo -n "$n "; }
+    #               ^
+
+
+    # Thank you, YongYe,
+ for pointing this out.
 
 --------------------------------------------------------------------------------------
 
@@ -828,10 +828,10 @@ control condition* is true.
     situations where the number of loop repetitions is not known
     beforehand.
 
-    | **while** [ ``                   condition                 `` ]
-    |  do
-    |  ``                   command(s)                 `` ...
-    |  done
+**while** [ ``                   condition                 `` ]
+ do
+ ``                   command(s)                 `` ...
+ done
 
     The bracket construct in a *while loop* is nothing more than our old
     friend, the `test brackets <testconstructs.html#TESTCONSTRUCTS1>`__
@@ -1064,7 +1064,7 @@ control condition* is true.
 
     .. code-block:: sh
 
-        cat $filename |   # Supply input from a file.
+        cat $filename  # Supply input from a file.
         while read line   # As long as there is another line to read ...
         do
           ...
@@ -1074,11 +1074,11 @@ control condition* is true.
 
           while read value   # Read one data point at a time.
           do
-            rt=$(echo "scale=$SC; $rt + $value" | bc)
+            rt=$(echo "scale=$SC; $rt + $value"bc)
             (( ct++ ))
           done
 
-          am=$(echo "scale=$SC; $rt / $ct" | bc)
+          am=$(echo "scale=$SC; $rt / $ct"bc)
 
           echo $am; return $ct   # This function "returns" TWO values!
           #  Caution: This little trick will not work if $ct > 255!
@@ -1090,7 +1090,7 @@ control condition* is true.
 
 
 
-    |Note|
+    |Note
 
     A *while loop* may have its ``            stdin           ``
     `redirected to a file <redircb.html#REDIRREF>`__ by a < at its end.
@@ -1106,11 +1106,11 @@ control condition* is true.
     looping as long as that condition is *false* (opposite of *while
     loop* ).
 
-    | **until** [
+**until** [
     ``                   condition-is-true                 `` ]
-    |  do
-    |  ``                   command(s)                 `` ...
-    |  done
+ do
+ ``                   command(s)                 `` ...
+ done
 
     Note that an *until loop* tests for the terminating condition at the
     *top* of the loop, differing from a similar construct in some

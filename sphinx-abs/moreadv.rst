@@ -82,8 +82,8 @@ XXX  16.2. Complex Commands
 
         # Possibly by:
 
-        find /etc -type f -exec cat '{}' \; | tr -c '.[:digit:]' '\n' \
-        | grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
+        find /etc -type f -exec cat '{}' \;tr -c '.[:digit:]' '\n' \
+grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
         #
         #  [:digit:] is one of the character classes
         #+ introduced with the POSIX 1003.2 standard.
@@ -94,7 +94,7 @@ XXX  16.2. Complex Commands
 
 
 
-    |Note|
+    |Note
 
     The ``            -exec           `` option to **find** should not
     be confused with the `exec <internal.html#EXECREF>`__ shell builtin.
@@ -116,9 +116,9 @@ XXX  16.2. Complex Commands
 
         for filename in *
         do
-          badname=`echo "$filename" | sed -n /[\+\{\;\"\\\=\?~\(\)\<\>\&\*\|\$]/p`
-        # badname=`echo "$filename" | sed -n '/[+{;"\=?~()<>&*|$]/p'`  also works.
-        # Deletes files containing these nasties:     + { ; " \ = ? ~ ( ) < > & * | $
+          badname=`echo "$filename"sed -n /[\+\{\;\"\\\=\?~\(\)\<\>\&\*\|\$]/p`
+        # badname=`echo "$filename"sed -n '/[+{;"\=?~()<>&*|$]/p'`  also works.
+        # Deletes files containing these nasties:     + { ; " \ = ? ~ ( ) < > & *$
         #
           rm $badname 2>/dev/null
         #             ^^^^^^^^^^^ Error messages deep-sixed.
@@ -174,7 +174,7 @@ XXX  16.2. Complex Commands
           exit $E_FILE_NOT_EXIST
         fi
 
-        inum=`ls -i | grep "$1" | awk '{print $1}'`
+        inum=`ls -igrep "$1" | awk '{print $1}'`
         # inum = inode (index node) number of file
         # -----------------------------------------------------------------------
         # Every file has an inode, a record that holds its physical address info.
@@ -257,12 +257,12 @@ XXX  16.2. Complex Commands
 
 
 
-        bash$ ls -l | xargs
+        bash$ ls -lxargs
         total 0 -rw-rw-r-- 1 bozo bozo 0 Jan 29 23:58 file1 -rw-rw-r-- 1 bozo bozo 0 Jan...
 
 
 
-        bash$ find ~/mail -type f | xargs grep "Linux"
+        bash$ find ~/mail -type fxargs grep "Linux"
         ./misc:User-Agent: slrn/0.9.8.1 (Linux)
          ./sent-mail-jul-2005: hosted by the Linux Documentation Project.
          ./sent-mail-jul-2005: (Linux Documentation Project Site, rtf version)
@@ -273,34 +273,34 @@ XXX  16.2. Complex Commands
 
 
 
-    ``                   ls | xargs -p -l gzip                 ``
+    ``                   lsxargs -p -l gzip                 ``
     `gzips <filearchiv.html#GZIPREF>`__ every file in current directory,
     one at a time, prompting before each operation.
 
 
 
-    |Note|
+    |Note
 
     Note that *xargs* processes the arguments passed to it sequentially,
     *one at a time* .
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ find /usr/bin  |
-    | | xargs file             |
-    |     /usr/bin:          d |
-    | irectory                 |
-    |      /usr/bin/foomatic-p |
-    | pd-options:          per |
-    | l script text executable |
-    |      . . .               |
-    |                          |
+.. code-block:: sh
+
+    bash$ find /usr/bin
+| xargs file
+    /usr/bin:          d
+irectory
+     /usr/bin/foomatic-p
+pd-options:          per
+l script text executable
+     . . .
+
 
 
 
     .. code-block:: sh
 
-        bash$ find /usr/bin | xargs file
+        bash$ find /usr/binxargs file
         /usr/bin:          directory
          /usr/bin/foomatic-ppd-options:          perl script text executable
          . . .
@@ -309,7 +309,7 @@ XXX  16.2. Complex Commands
 
     .. code-block:: sh
 
-        bash$ find /usr/bin | xargs file
+        bash$ find /usr/binxargs file
         /usr/bin:          directory
          /usr/bin/foomatic-ppd-options:          perl script text executable
          . . .
@@ -320,7 +320,7 @@ XXX  16.2. Complex Commands
 
 
 
-    |Tip|
+    |Tip
 
     An interesting *xargs* option is
     ``            -n                                       NN                         ``
@@ -328,7 +328,7 @@ XXX  16.2. Complex Commands
     ``                         NN                       `` the number of
     arguments passed.
 
-    ``                         ls | xargs -n 8 echo                       ``
+    ``                         lsxargs -n 8 echo                       ``
     lists the files in the current directory in
     ``            8           `` columns.
 
@@ -337,7 +337,7 @@ XXX  16.2. Complex Commands
 
 
 
-    |Tip|
+    |Tip
 
     Another useful option is ``            -0           `` , in
     combination with
@@ -345,32 +345,32 @@ XXX  16.2. Complex Commands
     or ``                         grep -lZ                       `` .
     This allows handling arguments containing whitespace or quotes.
 
-    ``                         find / -type f -print0 | xargs -0 grep -liwZ GUI | xargs -0 rm -f                       ``
+    ``                         find / -type f -print0xargs -0 grep -liwZ GUI | xargs -0 rm -f                       ``
 
-    ``                         grep -rliwZ GUI / | xargs -0 rm -f                       ``
+    ``                         grep -rliwZ GUI /xargs -0 rm -f                       ``
 
     Either of the above will remove any file containing "GUI" .
     *(Thanks, S.C.)*
 
     Or:
 
-    | .. code-block:: sh
-    |                          |
-    |     cat /proc/"$pid"/"$O |
-    | PTION" | xargs -0 echo   |
-    |     #  Formats output:   |
-    |        ^^^^^^^^^^^^^^^   |
-    |     #  From Han Holl's f |
-    | ixup of "get-commandline |
-    | .sh"                     |
-    |     #+ script in "/dev a |
-    | nd /proc" chapter.       |
+.. code-block:: sh
+
+    cat /proc/"$pid"/"$O
+PTION" | xargs -0 echo
+    #  Formats output:
+       ^^^^^^^^^^^^^^^
+    #  From Han Holl's f
+ixup of "get-commandline
+.sh"
+    #+ script in "/dev a
+nd /proc" chapter.
 
 
 
     .. code-block:: sh
 
-        cat /proc/"$pid"/"$OPTION" | xargs -0 echo
+        cat /proc/"$pid"/"$OPTION"xargs -0 echo
         #  Formats output:         ^^^^^^^^^^^^^^^
         #  From Han Holl's fixup of "get-commandline.sh"
         #+ script in "/dev and /proc" chapter.
@@ -378,7 +378,7 @@ XXX  16.2. Complex Commands
 
     .. code-block:: sh
 
-        cat /proc/"$pid"/"$OPTION" | xargs -0 echo
+        cat /proc/"$pid"/"$OPTION"xargs -0 echo
         #  Formats output:         ^^^^^^^^^^^^^^^
         #  From Han Holl's fixup of "get-commandline.sh"
         #+ script in "/dev and /proc" chapter.
@@ -388,35 +388,35 @@ XXX  16.2. Complex Commands
 
 
 
-    |Tip|
+    |Tip
 
     The ``            -P           `` option to *xargs* permits running
     processes in parallel. This speeds up execution in a machine with a
     multicore CPU.
 
-    | .. code-block:: sh
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     ls *gif | xargs -t - |
-    | n1 -P2 gif2png           |
-    |     # Converts all the g |
-    | if images in current dir |
-    | ectory to png.           |
-    |                          |
-    |     # Options:           |
-    |     # =======            |
-    |     # -t    Print comman |
-    | d to stderr.             |
-    |     # -n1   At most 1 ar |
-    | gument per command line. |
-    |     # -P2   Run up to 2  |
-    | processes simultaneously |
-    | .                        |
-    |                          |
-    |     # Thank you, Roberto |
-    |  Polli, for the inspirat |
-    | ion.                     |
+.. code-block:: sh
+
+    #!/bin/bash
+
+    ls *gif | xargs -t -
+n1 -P2 gif2png
+    # Converts all the g
+if images in current dir
+ectory to png.
+
+    # Options:
+    # =======
+    # -t    Print comman
+d to stderr.
+    # -n1   At most 1 ar
+gument per command line.
+    # -P2   Run up to 2
+processes simultaneously
+.
+
+    # Thank you, Roberto
+ Polli, for the inspirat
+ion.
 
 
 
@@ -424,7 +424,7 @@ XXX  16.2. Complex Commands
 
         #!/bin/bash
 
-        ls *gif | xargs -t -n1 -P2 gif2png
+        ls *gifxargs -t -n1 -P2 gif2png
         # Converts all the gif images in current directory to png.
 
         # Options:
@@ -440,7 +440,7 @@ XXX  16.2. Complex Commands
 
         #!/bin/bash
 
-        ls *gif | xargs -t -n1 -P2 gif2png
+        ls *gifxargs -t -n1 -P2 gif2png
         # Converts all the gif images in current directory to png.
 
         # Options:
@@ -474,7 +474,7 @@ XXX  16.2. Complex Commands
         ( date; uname -a ) >>logfile
         # Time and machine name
         echo ---------------------------------------------------------- >>logfile
-        tail -n $LINES /var/log/messages | xargs | fmt -s >>logfile
+        tail -n $LINES /var/log/messagesxargs | fmt -s >>logfile
         echo >>logfile
         echo >>logfile
 
@@ -487,7 +487,7 @@ XXX  16.2. Complex Commands
         #+ may give xargs indigestion.
         #
         #  He suggests the following substitution for line 15:
-        #  tail -n $LINES /var/log/messages | tr -d "\"'" | xargs | fmt -s >>logfile
+        #  tail -n $LINES /var/log/messagestr -d "\"'" | xargs | fmt -s >>logfile
 
 
 
@@ -523,7 +523,7 @@ XXX  16.2. Complex Commands
           exit $E_NOARGS
         fi
 
-        ls . | xargs -i -t cp ./{} $1
+        ls .xargs -i -t cp ./{} $1
         #            ^^ ^^      ^^
         #  -t is "verbose" (output command-line to stderr) option.
         #  -i is "replace strings" option.
@@ -573,7 +573,7 @@ XXX  16.2. Complex Commands
 
 
         PROCESS_NAME="$1"
-        ps ax | grep "$PROCESS_NAME" | awk '{print $1}' | xargs -i kill {} 2&>/dev/null
+        ps axgrep "$PROCESS_NAME" | awk '{print $1}' | xargs -i kill {} 2&>/dev/null
         #                                                       ^^      ^^
 
         # ---------------------------------------------------------------
@@ -627,15 +627,15 @@ XXX  16.2. Complex Commands
 
 
         #####################################################
-        cat "$1" | xargs -n1 | \
+        cat "$1"xargs -n1 | \
         #  List the file, one word per line.
-        tr A-Z a-z | \
+        tr A-Z a-z\
         #  Shift characters to lowercase.
         sed -e 's/\.//g'  -e 's/\,//g' -e 's/ /\
-        /g' | \
+        /g'\
         #  Filter out periods and commas, and
         #+ change space between words to linefeed,
-        sort | uniq -c | sort -nr
+        sortuniq -c | sort -nr
         #  Finally remove duplicates, prefix occurrence count
         #+ and sort numerically.
         #####################################################
@@ -801,7 +801,7 @@ XXX  16.2. Complex Commands
 
 
 
-    |Important|
+    |Important
 
     The `: ( *null* ) <special-chars.html#NULLREF>`__ operator can
     substitute for **match** . For example,
@@ -810,97 +810,97 @@ XXX  16.2. Complex Commands
     ``                         b=`expr match $a           [0-9]*`                       ``
     in the above listing.
 
-    | .. code-block:: sh
-    |                          |
-    |     #!/bin/bash          |
-    |                          |
-    |     echo                 |
-    |     echo "String operati |
-    | ons using \"expr \$strin |
-    | g : \" construct"        |
-    |     echo "============== |
-    | ======================== |
-    | ============="           |
-    |     echo                 |
-    |                          |
-    |     a=1234zipper5FLIPPER |
-    | 43231                    |
-    |                          |
-    |     echo "The string bei |
-    | ng operated upon is \"`e |
-    | xpr "$a" : '\(.*\)'`\"." |
-    |     #     Escaped parent |
-    | heses grouping operator. |
-    |             ==  ==       |
-    |                          |
-    |     #       ************ |
-    | ***************          |
-    |     #+          Escaped  |
-    | parentheses              |
-    |     #+           match a |
-    |  substring               |
-    |     #       ************ |
-    | ***************          |
-    |                          |
-    |                          |
-    |     #  If no escaped par |
-    | entheses ...             |
-    |     #+ then 'expr' conve |
-    | rts the string operand t |
-    | o an integer.            |
-    |                          |
-    |     echo "Length of \"$a |
-    | \" is `expr "$a" : '.*'` |
-    | ."   # Length of string  |
-    |                          |
-    |     echo "Number of digi |
-    | ts at the beginning of \ |
-    | "$a\" is `expr "$a" : '[ |
-    | 0-9]*'`."                |
-    |                          |
-    |     # ------------------ |
-    | ------------------------ |
-    | ------------------------ |
-    | ------- #                |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     echo "The digits at  |
-    | the beginning of \"$a\"  |
-    | are `expr "$a" : '\([0-9 |
-    | ]*\)'`."                 |
-    |     #                    |
-    |                          |
-    |                   ==     |
-    |   ==                     |
-    |     echo "The first 7 ch |
-    | aracters of \"$a\" are ` |
-    | expr "$a" : '\(.......\) |
-    | '`."                     |
-    |     #         =====      |
-    |                          |
-    |              ==       == |
-    |     # Again, escaped par |
-    | entheses force a substri |
-    | ng match.                |
-    |     #                    |
-    |     echo "The last 7 cha |
-    | racters of \"$a\" are `e |
-    | xpr "$a" : '.*\(.......\ |
-    | )'`."                    |
-    |     #         ====       |
-    |             end of strin |
-    | g operator  ^^           |
-    |     #  (In fact, means s |
-    | kip over one or more of  |
-    | any characters until spe |
-    | cified                   |
-    |     #+  substring found. |
-    | )                        |
-    |                          |
-    |     echo                 |
-    |                          |
-    |     exit 0               |
+.. code-block:: sh
+
+    #!/bin/bash
+
+    echo
+    echo "String operati
+ons using \"expr \$strin
+g : \" construct"
+    echo "==============
+========================
+============="
+    echo
+
+    a=1234zipper5FLIPPER
+43231
+
+    echo "The string bei
+ng operated upon is \"`e
+xpr "$a" : '\(.*\)'`\"."
+    #     Escaped parent
+heses grouping operator.
+            ==  ==
+
+    #       ************
+***************
+    #+          Escaped
+parentheses
+    #+           match a
+ substring
+    #       ************
+***************
+
+
+    #  If no escaped par
+entheses ...
+    #+ then 'expr' conve
+rts the string operand t
+o an integer.
+
+    echo "Length of \"$a
+\" is `expr "$a" : '.*'`
+."   # Length of string
+
+    echo "Number of digi
+ts at the beginning of \
+"$a\" is `expr "$a" : '[
+0-9]*'`."
+
+    # ------------------
+------------------------
+------------------------
+------- #
+
+    echo
+
+    echo "The digits at
+the beginning of \"$a\"
+are `expr "$a" : '\([0-9
+]*\)'`."
+    #
+
+                  ==
+  ==
+    echo "The first 7 ch
+aracters of \"$a\" are `
+expr "$a" : '\(.......\)
+'`."
+    #         =====
+
+             ==       ==
+    # Again, escaped par
+entheses force a substri
+ng match.
+    #
+    echo "The last 7 cha
+racters of \"$a\" are `e
+xpr "$a" : '.*\(.......\
+)'`."
+    #         ====
+            end of strin
+g operator  ^^
+    #  (In fact, means s
+kip over one or more of
+any characters until spe
+cified
+    #+  substring found.
+)
+
+    echo
+
+    exit 0
 
 
 

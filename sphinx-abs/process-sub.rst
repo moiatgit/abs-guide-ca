@@ -27,7 +27,7 @@ technique. But, what if you need to pipe the ``      stdout     `` of
 
 
 
-    |Caution|
+    |Caution
 
     There is *no* space between the the "<" or ">" and the parentheses.
     Space there would give an error message.
@@ -53,7 +53,7 @@ technique. But, what if you need to pipe the ``      stdout     `` of
     bash$ wc <(cat /usr/share/dict/linux.words)
      483523  483523 4992010 /dev/fd/63
 
-    bash$ grep script /usr/share/dict/linux.words | wc
+    bash$ grep script /usr/share/dict/linux.wordswc
         262     262    3601
 
     bash$ wc <(grep script /usr/share/dict/linux.words)
@@ -64,7 +64,7 @@ technique. But, what if you need to pipe the ``      stdout     `` of
 
 
 
-|Note|
+|Note
 
 Bash creates a pipe with two `file
 descriptors <io-redirection.html#FDREF>`__ , ``         --fIn        ``
@@ -129,11 +129,11 @@ Some other usages and uses of process substitution:
     PORT=6881   # bittorrent
 
     # Scan the port to make sure nothing nefarious is going on.
-    netcat -l $PORT | tee>(md5sum ->mydata-orig.md5) |
-    gzip | tee>(md5sum - | sed 's/-$/mydata.lz2/'>mydata-gz.md5)>mydata.gz
+    netcat -l $PORTtee>(md5sum ->mydata-orig.md5)
+    gziptee>(md5sum - | sed 's/-$/mydata.lz2/'>mydata-gz.md5)>mydata.gz
 
     # Check the decompression:
-      gzip -d<mydata.gz | md5sum -c mydata-orig.md5)
+      gzip -d<mydata.gzmd5sum -c mydata-orig.md5)
     # The MD5sum of the original checks stdin and detects compression issues.
 
     #  Bill Davidsen contributed this example
@@ -145,7 +145,7 @@ Some other usages and uses of process substitution:
 .. code-block:: sh
 
     cat <(ls -l)
-    # Same as     ls -l | cat
+    # Same as     ls -lcat
 
     sort -k 9 <(ls -l /bin) <(ls -l /usr/bin) <(ls -l /usr/X11R6/bin)
     # Lists all the files in the 3 main 'bin' directories, and sorts by filename.
@@ -167,7 +167,7 @@ Some other usages and uses of process substitution:
     rm pipe
     #        or
     exec 3>&1
-    tar cf /dev/fd/4 $directory_name 4>&1 >&3 3>&- | bzip2 -c > file.tar.bz2 3>&-
+    tar cf /dev/fd/4 $directory_name 4>&1 >&3 3>&-bzip2 -c > file.tar.bz2 3>&-
     exec 3>&-
 
 
@@ -192,7 +192,7 @@ Some other usages and uses of process substitution:
 
     echo
 
-    echo "random input" | while read i
+    echo "random input"while read i
     do
       global=3D": Not available outside the loop."
       # ... because it runs in a subshell.
@@ -224,7 +224,7 @@ Some other usages and uses of process substitution:
 
     declare -a inloop
     index=0
-    cat $0 | while read line
+    cat $0while read line
     do
       inloop[$index]="$line"
       ((index++))
@@ -271,7 +271,7 @@ loop.**
     while read
     do
       array0[${#array0[@]}]="$REPLY"
-    done < <( sed -e 's/bash/CRASH-BANG!/' $0 | grep bin | awk '{print $1}' )
+    done < <( sed -e 's/bash/CRASH-BANG!/' $0grep bin | awk '{print $1}' )
     #  Sets the default 'read' variable, $REPLY, by process substitution,
     #+ then copies it into an array.
 
@@ -315,7 +315,7 @@ substitution.
 
     #  As Stéphane Chazelas points out,
     #+ an easier-to-understand equivalent is:
-    route -n |
+    route -n
       while read des what mask iface; do   # Variables set from output of pipe.
         echo $des $what $mask $iface
       done  #  This yields the same output as above.
@@ -329,7 +329,7 @@ substitution.
     #+ between the above two examples, as the following shows.
 
     (
-    route -n | while read x; do ((y++)); done
+    route -nwhile read x; do ((y++)); done
     echo $y # $y is still unset
 
     while read x; do ((y++)); done < <(route -n)
@@ -338,9 +338,9 @@ substitution.
 
     More generally spoken
     (
-    : | x=x
+    :x=x
     # seems to start a subshell like
-    : | ( x=x )
+    :( x=x )
     # while
     x=x < <(:)
     # does not

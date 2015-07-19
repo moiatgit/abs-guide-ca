@@ -256,11 +256,11 @@ Write a script to carry out each of the following tasks.
 
     .. code-block:: sh
 
-           o | x |
+           ox
            ----------
-             | x |
+x
            ----------
-             | o |
+o
 
            Your move, human (row, column)?
 
@@ -741,17 +741,17 @@ For all you clever types who failed intermediate algebra, a
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     For the simple case  |
-| of a 2 x 2 determinant:  |
-|                          |
-|       |a  b|             |
-|       |b  a|             |
-|                          |
-|     The solution is a*a  |
-| - b*b, where "a" and "b" |
-|  represent numbers.      |
+.. code-block:: sh
+
+    For the simple case
+of a 2 x 2 determinant:
+
+      |a  b|
+      |b  a|
+
+    The solution is a*a
+- b*b, where "a" and "b"
+ represent numbers.
 
 ----------------------------------------------------------------------------------
 
@@ -761,8 +761,8 @@ For all you clever types who failed intermediate algebra, a
 
     For the simple case of a 2 x 2 determinant:
 
-      |a  b|
-      |b  a|
+      |a  b
+      |b  a
 
     The solution is a*a - b*b, where "a" and "b" represent numbers.
 
@@ -771,8 +771,8 @@ For all you clever types who failed intermediate algebra, a
 
     For the simple case of a 2 x 2 determinant:
 
-      |a  b|
-      |b  a|
+      |a  b
+      |b  a
 
     The solution is a*a - b*b, where "a" and "b" represent numbers.
 

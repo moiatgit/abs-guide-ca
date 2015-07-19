@@ -741,7 +741,7 @@ analogous to that between `$@ and $\* <internalvariables.html#APPREF>`__
 
 
 
-|Tip|
+|Tip
 
 The **array=( element1 element2 ... elementN )** initialization
 operation, with the help of `command
@@ -750,59 +750,59 @@ load the contents of a text file into an array.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     filename=sample_file |
-|                          |
-|     #            cat sam |
-| ple_file                 |
-|     #                    |
-|     #            1 a b c |
-|     #            2 d e f |
-| g                        |
-|                          |
-|                          |
-|     declare -a array1    |
-|                          |
-|     array1=( `cat "$file |
-| name"`)                # |
-|   Loads contents         |
-|     #         List file  |
-| to stdout              # |
-| + of $filename into arra |
-| y1.                      |
-|     #                    |
-|     #  array1=( `cat "$f |
-| ilename" | tr '\n' ' '`) |
-|     #                    |
-|          change linefeed |
-| s in file to spaces.     |
-|     #  Not necessary bec |
-| ause Bash does word spli |
-| tting,                   |
-|     #+ changing linefeed |
-| s to spaces.             |
-|                          |
-|     echo ${array1[@]}    |
-|          # List the arra |
-| y.                       |
-|     #                    |
-|            1 a b c 2 d e |
-|  fg                      |
-|     #                    |
-|     #  Each whitespace-s |
-| eparated "word" in the f |
-| ile                      |
-|     #+ has been assigned |
-|  to an element of the ar |
-| ray.                     |
-|                          |
-|     element_count=${#arr |
-| ay1[*]}                  |
-|     echo $element_count  |
-|          # 8             |
+.. code-block:: sh
+
+    #!/bin/bash
+
+    filename=sample_file
+
+    #            cat sam
+ple_file
+    #
+    #            1 a b c
+    #            2 d e f
+g
+
+
+    declare -a array1
+
+    array1=( `cat "$file
+name"`)                #
+  Loads contents
+    #         List file
+to stdout              #
++ of $filename into arra
+y1.
+    #
+    #  array1=( `cat "$f
+ilename" | tr '\n' ' '`)
+    #
+         change linefeed
+s in file to spaces.
+    #  Not necessary bec
+ause Bash does word spli
+tting,
+    #+ changing linefeed
+s to spaces.
+
+    echo ${array1[@]}
+         # List the arra
+y.
+    #
+           1 a b c 2 d e
+ fg
+    #
+    #  Each whitespace-s
+eparated "word" in the f
+ile
+    #+ has been assigned
+ to an element of the ar
+ray.
+
+    element_count=${#arr
+ay1[*]}
+    echo $element_count
+         # 8
 
 ----------------------------------------------------------------------------------
 
@@ -825,7 +825,7 @@ load the contents of a text file into an array.
     array1=( `cat "$filename"`)                #  Loads contents
     #         List file to stdout              #+ of $filename into array1.
     #
-    #  array1=( `cat "$filename" | tr '\n' ' '`)
+    #  array1=( `cat "$filename"tr '\n' ' '`)
     #                            change linefeeds in file to spaces.
     #  Not necessary because Bash does word splitting,
     #+ changing linefeeds to spaces.
@@ -857,7 +857,7 @@ load the contents of a text file into an array.
     array1=( `cat "$filename"`)                #  Loads contents
     #         List file to stdout              #+ of $filename into array1.
     #
-    #  array1=( `cat "$filename" | tr '\n' ' '`)
+    #  array1=( `cat "$filename"tr '\n' ' '`)
     #                            change linefeeds in file to spaces.
     #  Not necessary because Bash does word splitting,
     #+ changing linefeeds to spaces.
@@ -976,7 +976,7 @@ Clever scripting makes it possible to add array operations.
 
 
 
-|Note|
+|Note
 
 Adding a superfluous **declare -a** statement to an array declaration
 may speed up execution of subsequent operations on the array.
@@ -1582,7 +1582,7 @@ runs excruciatingly slowly as a script.
     # Check results against http://primes.utm.edu/lists/small/1000.txt
 
     # Necessary but not sufficient would be, e.g.,
-    #     (($(sieve 7919 | wc -w) == 1000)) && echo "7919 is the 1000th prime"
+    #     (($(sieve 7919wc -w) == 1000)) && echo "7919 is the 1000th prime"
 
     UPPER_LIMIT=${1:?"Need an upper limit of primes to search."}
 
@@ -1895,7 +1895,7 @@ permits simulating multi-dimensional ones.
     done
 
     # The simpler equivalent is
-    #     echo ${alpha[*]} | xargs -n $Columns
+    #     echo ${alpha[*]}xargs -n $Columns
 
     echo
     }

@@ -116,7 +116,7 @@ Among the new goodies:
 
 
 
-   |Caution|
+   |Caution
 
    Elements of the *index* array may include embedded `space
    characters <special-chars.html#WHITESPACEREF>`__ , or even leading
@@ -125,10 +125,10 @@ Among the new goodies:
 
 -------------------------------------------------------------------------------------
 
-   | .. code-block:: sh
-   |                          |
-   |     address[   ]="Blank" |
-   |    # Error!              |
+.. code-block:: sh
+
+    address[   ]="Blank"
+   # Error!
                              
 -------------------------------------------------------------------------------------
 
@@ -161,13 +161,13 @@ Among the new goodies:
        test_char ()
        {
          case "$1" in
-           [[:print:]] )  echo "$1 is a printable character.";;&       # |
-           # The ;;& terminator continues to the next pattern test.      |
+           [[:print:]] )  echo "$1 is a printable character.";;&       #
+           # The ;;& terminator continues to the next pattern test.
            [[:alnum:]] )  echo "$1 is an alpha/numeric character.";;&  # v
            [[:alpha:]] )  echo "$1 is an alphabetic character.";;&     # v
            [[:lower:]] )  echo "$1 is a lowercase alphabetic character.";;&
-           [[:digit:]] )  echo "$1 is an numeric character.";&         # |
-           # The ;& terminator executes the next statement ...         # |
+           [[:digit:]] )  echo "$1 is an numeric character.";&         #
+           # The ;& terminator executes the next statement ...         #
            %%%@@@@@    )  echo "********************************";;    # v
        #   ^^^^^^^^  ... even with a dummy pattern.
          esac
@@ -206,21 +206,21 @@ Among the new goodies:
    FAQ <biblio.html#BASHFAQ>`__ ` [2]  <bashver4.html#FTN.AEN21068>`__ ,
    ver. 4.01:
 
-       | There is a new 'coproc' reserved word that specifies a coprocess:
-       | 
+There is a new 'coproc' reserved word that specifies a coprocess:
+
        an asynchronous command run with two pipes connected to the creating
-       | 
+
        shell. Coprocs can be named. The input and output file descriptors
-       | 
+
        and the PID of the coprocess are available to the calling shell in
-       |  variables with coproc-specific names.
-       |  George Dimitriu explains,
-       | 
+ variables with coproc-specific names.
+ George Dimitriu explains,
+
        "... coproc ... is a feature used in Bash process substitution,
-       |  which now is made publicly available."
-       | 
+ which now is made publicly available."
+
        This means it can be explicitly invoked in a script, rather than
-       |  just being a behind-the-scenes mechanism used by Bash.
+ just being a behind-the-scenes mechanism used by Bash.
 
    Coprocesses use *file descriptors* . `File descriptors enable
    processes and pipes to communicate <io-redirection.html#FDREF2>`__ .
@@ -238,7 +238,7 @@ Among the new goodies:
 
        while read -u ${COPROC[0]} line    #  ${COPROC[0]} is the
        do                                 #+ file descriptor of the coprocess.
-         echo "$line" | sed -e 's/line/NOT-ORIGINAL-TEXT/'
+         echo "$line"sed -e 's/line/NOT-ORIGINAL-TEXT/'
        done
 
        kill $COPROC_PID                   #  No longer need the coprocess,
@@ -288,7 +288,7 @@ Among the new goodies:
 
 
 
-   |Caution|
+   |Caution
 
    The coprocess is *asynchronous* , and this might cause a problem. It
    may terminate before another process has finished communicating with
@@ -296,63 +296,63 @@ Among the new goodies:
 
 -------------------------------------------------------------------------------------
 
-   | .. code-block:: sh
-   |                          |
-   |     #!/bin/bash4         |
-   |                          |
-   |     coproc cpname { for  |
-   | i in {0..10}; do echo "i |
-   | ndex = $i"; done; }      |
-   |     #      ^^^^^^ This i |
-   | s a *named* coprocess.   |
-   |     read -u ${cpname[0]} |
-   |     echo $REPLY          |
-   | #  index = 0             |
-   |     echo ${COPROC[0]}    |
-   | #+ No output ... the cop |
-   | rocess timed out         |
-   |     #  after the first l |
-   | oop iteration.           |
-   |                          |
-   |                          |
-   |                          |
-   |     # However, George Di |
-   | mitriu has a partial fix |
-   | .                        |
-   |                          |
-   |     coproc cpname { for  |
-   | i in {0..10}; do echo "i |
-   | ndex = $i"; done; sleep  |
-   | 1;                       |
-   |     echo hi > myo; cat - |
-   |  >> myo; }               |
-   |     #       ^^^^^ This i |
-   | s a *named* coprocess.   |
-   |                          |
-   |     echo "I am main"$'\0 |
-   | 4' >&${cpname[1]}        |
-   |     myfd=${cpname[0]}    |
-   |     echo myfd=$myfd      |
-   |                          |
-   |     ### while read -u $m |
-   | yfd                      |
-   |     ### do               |
-   |     ###   echo $REPLY;   |
-   |     ### done             |
-   |                          |
-   |     echo $cpname_PID     |
-   |                          |
-   |     #  Run this with and |
-   |  without the commented-o |
-   | ut while-loop, and it is |
-   |     #+ apparent that eac |
-   | h process, the executing |
-   |  shell and the coprocess |
-   | ,                        |
-   |     #+ waits for the oth |
-   | er to finish writing in  |
-   | its own write-enabled pi |
-   | pe.                      |
+.. code-block:: sh
+
+    #!/bin/bash4
+
+    coproc cpname { for
+i in {0..10}; do echo "i
+ndex = $i"; done; }
+    #      ^^^^^^ This i
+s a *named* coprocess.
+    read -u ${cpname[0]}
+    echo $REPLY
+#  index = 0
+    echo ${COPROC[0]}
+#+ No output ... the cop
+rocess timed out
+    #  after the first l
+oop iteration.
+
+
+
+    # However, George Di
+mitriu has a partial fix
+.
+
+    coproc cpname { for
+i in {0..10}; do echo "i
+ndex = $i"; done; sleep
+1;
+    echo hi > myo; cat -
+ >> myo; }
+    #       ^^^^^ This i
+s a *named* coprocess.
+
+    echo "I am main"$'\0
+4' >&${cpname[1]}
+    myfd=${cpname[0]}
+    echo myfd=$myfd
+
+    ### while read -u $m
+yfd
+    ### do
+    ###   echo $REPLY;
+    ### done
+
+    echo $cpname_PID
+
+    #  Run this with and
+ without the commented-o
+ut while-loop, and it is
+    #+ apparent that eac
+h process, the executing
+ shell and the coprocess
+,
+    #+ waits for the oth
+er to finish writing in
+its own write-enabled pi
+pe.
                              
 -------------------------------------------------------------------------------------
 
@@ -485,12 +485,12 @@ Amb la substitució de paràmetre, podem aconseguir canviar majúscules i minús
        declare -l var1            # Will change to lowercase
        var1=MixedCaseVARIABLE
        echo "$var1"               # mixedcasevariable
-       # Same effect as             echo $var1 | tr A-Z a-z
+       # Same effect as             echo $var1tr A-Z a-z
 
        declare -c var2            # Changes only initial char to uppercase.
        var2=originally_lowercase
        echo "$var2"               # Originally_lowercase
-       # NOT the same effect as     echo $var2 | tr a-z A-Z
+       # NOT the same effect as     echo $var2tr a-z A-Z
 
 
 
@@ -833,7 +833,7 @@ new features and enhancements, in addition to bugfixes.
 
 
 
-   |Note|
+   |Note
 
    The above example uses the `**$' ...
    '** <escapingsection.html#STRQ>`__ *string-expansion* construct.
@@ -867,7 +867,7 @@ new features and enhancements, in addition to bugfixes.
 
        echo
 
-       head -1 $0 | read line    # Pipe the first line of the script to read.
+       head -1 $0read line    # Pipe the first line of the script to read.
        #            ^^^^^^^^^      Not in a subshell!!!
 
        echo "\$line = "$line""

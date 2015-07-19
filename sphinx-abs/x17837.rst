@@ -3,10 +3,10 @@
 XXX  19.1. Here Strings
 #######################
 
-    | A *here string* can be considered as a stripped-down form of a
+A *here string* can be considered as a stripped-down form of a
     *here document* .
-    |  It consists of nothing more than **COMMAND <<< $WORD** ,
-    |  where ``       $WORD      `` is expanded and fed to the
+ It consists of nothing more than **COMMAND <<< $WORD** ,
+ where ``       $WORD      `` is expanded and fed to the
     ``       stdin      `` of **COMMAND** .
 
 As a simple example, consider this alternative to the
@@ -16,7 +16,7 @@ As a simple example, consider this alternative to the
 .. code-block:: sh
 
     # Instead of:
-    if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
+    if echo "$VAR"grep -q txt   # if [[ $VAR = *txt* ]]
     # etc.
 
     # Try:

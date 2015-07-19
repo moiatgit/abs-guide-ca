@@ -164,8 +164,8 @@ XXX 16.9. Miscellaneous Commands
         # Counts letter occurrences .
         for n in `seq $LETTERS`; do
               shift
-              if [[ `echo -n "$1" | wc -c` -eq 1 ]]; then             #  Checks arg.
-                     echo "$1" -\> `cat $FILE | tr -cd  "$1" | wc -c` #  Counting.
+              if [[ `echo -n "$1"wc -c` -eq 1 ]]; then             #  Checks arg.
+                     echo "$1" -\> `cat $FILEtr -cd  "$1" | wc -c` #  Counting.
               else
                      echo "$1 is not a  single char."
               fi
@@ -182,7 +182,7 @@ XXX 16.9. Miscellaneous Commands
 
 
 
-    |Note|
+    |Note
 
     Somewhat more capable than *seq* , **jot** is a classic UNIX utility
     that is not normally included in a standard Linux distro. However,
@@ -193,12 +193,12 @@ XXX 16.9. Miscellaneous Commands
     Unlike *seq* , **jot** can generate a sequence of random numbers,
     using the ``            -r           `` option.
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ jot -r 3 999   |
-    |     1069                 |
-    |      1272                |
-    |      1428                |
+.. code-block:: sh
+
+    bash$ jot -r 3 999
+    1069
+     1272
+     1428
 
 
 
@@ -285,7 +285,7 @@ XXX 16.9. Miscellaneous Commands
 
 
 
-    |Note|
+    |Note
 
     As *Peggy Russell* points out:
 
@@ -293,11 +293,11 @@ XXX 16.9. Miscellaneous Commands
     to correctly process
     `whitespace <special-chars.html#WHITESPACEREF>`__ and *quotes* .
 
-    | .. code-block:: sh
-    |                          |
-    |     args=$(getopt -o a:b |
-    | c:d -- "$@")             |
-    |     eval set -- "$args"  |
+.. code-block:: sh
+
+    args=$(getopt -o a:b
+c:d -- "$@")
+    eval set -- "$args"
 
 
 
@@ -344,16 +344,16 @@ XXX 16.9. Miscellaneous Commands
     program expecting user input. In effect, this becomes a sort of poor
     man's version of *expect* .
 
-    ``                   yes | fsck /dev/hda1                 `` runs
+    ``                   yesfsck /dev/hda1                 `` runs
     **fsck** non-interactively (careful!).
 
-    ``                   yes | rm -r dirname                 `` has same
+    ``                   yesrm -r dirname                 `` has same
     effect as ``                   rm -rf dirname                 ``
     (careful!).
 
 
 
-    |Warning|
+    |Warning
 
     Caution advised when piping *yes* to a potentially dangerous system
     command, such as `fsck <system.html#FSCKREF>`__ or
@@ -365,33 +365,33 @@ XXX 16.9. Miscellaneous Commands
 
 
 
-    |Note|
+    |Note
 
     The *yes* command parses variables, or more accurately, it echoes
     parsed variables. For example:
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ yes $BASH_VERS |
-    | ION                      |
-    |     3.1.17(1)-release    |
-    |      3.1.17(1)-release   |
-    |      3.1.17(1)-release   |
-    |      3.1.17(1)-release   |
-    |      3.1.17(1)-release   |
-    |      . . .               |
-    |                          |
+.. code-block:: sh
+
+    bash$ yes $BASH_VERS
+ION
+    3.1.17(1)-release
+     3.1.17(1)-release
+     3.1.17(1)-release
+     3.1.17(1)-release
+     3.1.17(1)-release
+     . . .
+
 
 
     This particular "feature" may be used to create a *very large* ASCII
     file on the fly:
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ yes $PATH > hu |
-    | ge_file.txt              |
-    |     Ctl-C                |
-    |                          |
+.. code-block:: sh
+
+    bash$ yes $PATH > hu
+ge_file.txt
+    Ctl-C
+
 
 
     Hit ``                       Ctl-C                     `` *very
@@ -476,7 +476,7 @@ XXX 16.9. Miscellaneous Commands
 
     .. code-block:: sh
 
-        bash$ printenv | grep HOME
+        bash$ printenvgrep HOME
         HOME=/home/bozo
 
 
@@ -497,16 +497,16 @@ XXX 16.9. Miscellaneous Commands
     **lp** .
 
     ``         bash$        ``
-    ``                   pr -options file1.txt | lp                 ``
+    ``                   pr -options file1.txtlp                 ``
 
     Formatting packages, such as `groff <textproc.html#GROFFREF>`__ and
     *Ghostscript* may send their output directly to **lp** .
 
     ``         bash$        ``
-    ``                   groff -Tascii file.tr | lp                 ``
+    ``                   groff -Tascii file.trlp                 ``
 
     ``         bash$        ``
-    ``                   gs -options | lp file.ps                 ``
+    ``                   gs -optionslp file.ps                 ``
 
     Related commands are **lpq** , for viewing the print queue, and
     **lprm** , for removing jobs from the print queue.
@@ -525,7 +525,7 @@ XXX 16.9. Miscellaneous Commands
 
                                      (redirection)
                                     |----> to file
-                                    |
+
           ==========================|====================
           command ---> command ---> |tee ---> command ---> ---> output of pipe
           ===============================================
@@ -536,7 +536,7 @@ XXX 16.9. Miscellaneous Commands
 
     .. code-block:: sh
 
-        cat listfile* | sort | tee check.file | uniq > result.file
+        cat listfile*sort | tee check.file | uniq > result.file
         #                      ^^^^^^^^^^^^^^   ^^^^
 
         #  The file "check.file" contains the concatenated sorted "listfiles,"
@@ -561,9 +561,9 @@ XXX 16.9. Miscellaneous Commands
         mkfifo pipe1   # Yes, pipes can be given names.
         mkfifo pipe2   # Hence the designation "named pipe."
 
-        (cut -d' ' -f1 | tr "a-z" "A-Z") >pipe2 <pipe1 &
-        ls -l | tr -s ' ' | cut -d' ' -f3,9- | tee pipe1 |
-        cut -d' ' -f2 | paste - pipe2
+        (cut -d' ' -f1tr "a-z" "A-Z") >pipe2 <pipe1 &
+        ls -ltr -s ' ' | cut -d' ' -f3,9- | tee pipe1
+        cut -d' ' -f2paste - pipe2
 
         rm -f pipe1
         rm -f pipe2
@@ -702,7 +702,7 @@ XXX 16.9. Miscellaneous Commands
 
         # ----------------------------------------------------------------
 
-        echo -n "hello vertical world" | dd cbs=1 conv=unblock 2> /dev/null
+        echo -n "hello vertical world"dd cbs=1 conv=unblock 2> /dev/null
         # Echoes "hello vertical world" vertically downward.
         # Why? A newline follows each character dd emits.
 
@@ -750,7 +750,7 @@ XXX 16.9. Miscellaneous Commands
 
     .. code-block:: sh
 
-        echo -n . | dd bs=1 seek=4 of=file conv=notrunc
+        echo -n .dd bs=1 seek=4 of=file conv=notrunc
         #  The "conv=notrunc" option means that the output file
         #+ will not be truncated.
 
@@ -897,7 +897,7 @@ XXX 16.9. Miscellaneous Commands
         esac
 
 
-        flength=$(ls -l "$file" | awk '{print $5}')  # Field 5 is file length.
+        flength=$(ls -l "$file"awk '{print $5}')  # Field 5 is file length.
         pass_count=1
 
         chmod u+w "$file"   # Allow overwriting/deleting the file.
@@ -967,7 +967,7 @@ XXX 16.9. Miscellaneous Commands
 
     .. code-block:: sh
 
-        head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'
+        head -c4 /dev/urandomod -N4 -tu4 | sed -ne '1s/.* //p'
         # Sample output: 1324725719, 3918166450, 2989231420, etc.
 
         # From rnd.sh example script, by StÃ©phane Chazelas
@@ -987,7 +987,7 @@ XXX 16.9. Miscellaneous Commands
 
     .. code-block:: sh
 
-        dd if=/bin/ls | hexdump -C | less
+        dd if=/bin/lshexdump -C | less
         # The -C option nicely formats the output in tabular form.
 
 
@@ -1033,7 +1033,7 @@ XXX 16.9. Miscellaneous Commands
     .. code-block:: sh
 
         # Generate md5 checksum on the script itself.
-        random001=`md5sum $0 | awk '{print $1}'`
+        random001=`md5sum $0awk '{print $1}'`
         # Uses 'awk' to strip off the filename.
 
 
@@ -1097,7 +1097,7 @@ XXX 16.9. Miscellaneous Commands
 
         convert_units ()  # Takes as arguments the units to convert.
         {
-          cf=$(units "$1" "$2" | sed --silent -e '1p' | awk '{print $2}')
+          cf=$(units "$1" "$2"sed --silent -e '1p' | awk '{print $2}')
           # Strip off everything except the actual conversion factor.
           echo "$cf"
         }
@@ -1107,7 +1107,7 @@ XXX 16.9. Miscellaneous Commands
         cfactor=`convert_units $Unit1 $Unit2`
         quantity=3.73
 
-        result=$(echo $quantity*$cfactor | bc)
+        result=$(echo $quantity*$cfactorbc)
 
         echo "There are $result $Unit2 in $quantity $Unit1."
 
@@ -1147,14 +1147,14 @@ XXX 16.9. Miscellaneous Commands
 
         # Strings
         string=abcdA01
-        echo "len($string)" | m4                            #   7
-        echo "substr($string,4)" | m4                       # A01
-        echo "regexp($string,[0-1][0-1],\&Z)" | m4      # 01Z
+        echo "len($string)"m4                            #   7
+        echo "substr($string,4)"m4                       # A01
+        echo "regexp($string,[0-1][0-1],\&Z)"m4      # 01Z
 
         # Arithmetic
         var=99
-        echo "incr($var)" | m4                              #  100
-        echo "eval($var / 3)" | m4                          #   33
+        echo "incr($var)"m4                              #  100
+        echo "eval($var / 3)"m4                          #   33
 
         exit
 
@@ -1196,24 +1196,24 @@ XXX 16.9. Miscellaneous Commands
 
 
 
-    |Note|
+    |Note
 
     The various behaviors of the executable must be defined within the
     code of the executable itself, analogous to something like the
     following in a shell script:
 
-    | .. code-block:: sh
-    |                          |
-    |     case `basename $0` i |
-    | n                        |
-    |     "name1" ) do_somethi |
-    | ng;;                     |
-    |     "name2" ) do_somethi |
-    | ng_else;;                |
-    |     "name3" ) do_yet_ano |
-    | ther_thing;;             |
-    |     *       ) bail_out;; |
-    |     esac                 |
+.. code-block:: sh
+
+    case `basename $0` i
+n
+    "name1" ) do_somethi
+ng;;
+    "name2" ) do_somethi
+ng_else;;
+    "name3" ) do_yet_ano
+ther_thing;;
+    *       ) bail_out;;
+    esac
 
 
 
@@ -1300,42 +1300,42 @@ Coded Decimal Interchange Code, an obsolete IBM data format. A bizarre
 application of the ``       conv=ebcdic      `` option of **dd** is as a
 quick 'n easy, but not very secure text file encoder.
 
-| .. code-block:: sh
-|                          |
-|     cat $file | dd conv= |
-| swab,ebcdic > $file_encr |
-| ypted                    |
-|     # Encode (looks like |
-|  gibberish).             |
-|     # Might as well swit |
-| ch bytes (swab), too, fo |
-| r a little extra obscuri |
-| ty.                      |
-|                          |
-|     cat $file_encrypted  |
-| | dd conv=swab,ascii > $ |
-| file_plaintext           |
-|     # Decode.            |
+.. code-block:: sh
+
+    cat $file | dd conv=
+swab,ebcdic > $file_encr
+ypted
+    # Encode (looks like
+ gibberish).
+    # Might as well swit
+ch bytes (swab), too, fo
+r a little extra obscuri
+ty.
+
+    cat $file_encrypted
+| dd conv=swab,ascii > $
+file_plaintext
+    # Decode.
 
 
 
 .. code-block:: sh
 
-    cat $file | dd conv=swab,ebcdic > $file_encrypted
+    cat $filedd conv=swab,ebcdic > $file_encrypted
     # Encode (looks like gibberish).
     # Might as well switch bytes (swab), too, for a little extra obscurity.
 
-    cat $file_encrypted | dd conv=swab,ascii > $file_plaintext
+    cat $file_encrypteddd conv=swab,ascii > $file_plaintext
     # Decode.
 
 
 .. code-block:: sh
 
-    cat $file | dd conv=swab,ebcdic > $file_encrypted
+    cat $filedd conv=swab,ebcdic > $file_encrypted
     # Encode (looks like gibberish).
     # Might as well switch bytes (swab), too, for a little extra obscurity.
 
-    cat $file_encrypted | dd conv=swab,ascii > $file_plaintext
+    cat $file_encrypteddd conv=swab,ascii > $file_plaintext
     # Decode.
 
 

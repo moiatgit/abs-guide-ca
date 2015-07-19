@@ -85,7 +85,7 @@ is, ``      $1     `` , ``      $2     `` , and so forth.
 
 
 
-|Important|
+|Important
 
 The `shift <othertypesv.html#SHIFTREF>`__ command works on arguments
 passed to functions (see `Example
@@ -340,46 +340,46 @@ The next logical question is whether parameters can be dereferenced
 
 
 
-    |Tip|
+    |Tip
 
     For a function to return a string or array, use a dedicated
     variable.
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     count_lines_in_etc_p |
-    | asswd()                  |
-    |     {                    |
-    |       [[ -r /etc/passwd  |
-    | ]] && REPLY=$(echo $(wc  |
-    | -l < /etc/passwd))       |
-    |       #  If /etc/passwd  |
-    | is readable, set REPLY t |
-    | o line count.            |
-    |       #  Returns both a  |
-    | parameter value and stat |
-    | us information.          |
-    |       #  The 'echo' seem |
-    | s unnecessary, but . . . |
-    |       #+ it removes exce |
-    | ss whitespace from the o |
-    | utput.                   |
-    |     }                    |
-    |                          |
-    |     if count_lines_in_et |
-    | c_passwd                 |
-    |     then                 |
-    |       echo "There are $R |
-    | EPLY lines in /etc/passw |
-    | d."                      |
-    |     else                 |
-    |       echo "Cannot count |
-    |  lines in /etc/passwd."  |
-    |     fi                   |
-    |                          |
-    |     # Thanks, S.C.       |
+.. code-block:: sh
+
+    count_lines_in_etc_p
+asswd()
+    {
+      [[ -r /etc/passwd
+]] && REPLY=$(echo $(wc
+-l < /etc/passwd))
+      #  If /etc/passwd
+is readable, set REPLY t
+o line count.
+      #  Returns both a
+parameter value and stat
+us information.
+      #  The 'echo' seem
+s unnecessary, but . . .
+      #+ it removes exce
+ss whitespace from the o
+utput.
+    }
+
+    if count_lines_in_et
+c_passwd
+    then
+      echo "There are $R
+EPLY lines in /etc/passw
+d."
+    else
+      echo "Cannot count
+ lines in /etc/passwd."
+    fi
+
+    # Thanks, S.C.
 
 --------------------------------------------------------------------------------------
 
@@ -516,7 +516,7 @@ The next logical question is whether parameters can be dereferenced
 
 
 
-    |Important|
+    |Important
 
     The largest positive integer a function can return is 255. The
     **return** command is closely tied to the concept of `exit
@@ -572,39 +572,39 @@ The next logical question is whether parameters can be dereferenced
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     Return_Val=   # Glob |
-    | al variable to hold over |
-    | size return value of fun |
-    | ction.                   |
-    |                          |
-    |     alt_return_test ()   |
-    |     {                    |
-    |       fvar=$1            |
-    |       Return_Val=$fvar   |
-    |       return   # Returns |
-    |  0 (success).            |
-    |     }                    |
-    |                          |
-    |     alt_return_test 1    |
-    |     echo $?              |
-    |                  # 0     |
-    |     echo "return value = |
-    |  $Return_Val"    # 1     |
-    |                          |
-    |     alt_return_test 256  |
-    |     echo "return value = |
-    |  $Return_Val"    # 256   |
-    |                          |
-    |     alt_return_test 257  |
-    |     echo "return value = |
-    |  $Return_Val"    # 257   |
-    |                          |
-    |     alt_return_test 2570 |
-    | 1                        |
-    |     echo "return value = |
-    |  $Return_Val"    #25701  |
+.. code-block:: sh
+
+    Return_Val=   # Glob
+al variable to hold over
+size return value of fun
+ction.
+
+    alt_return_test ()
+    {
+      fvar=$1
+      Return_Val=$fvar
+      return   # Returns
+ 0 (success).
+    }
+
+    alt_return_test 1
+    echo $?
+                 # 0
+    echo "return value =
+ $Return_Val"    # 1
+
+    alt_return_test 256
+    echo "return value =
+ $Return_Val"    # 256
+
+    alt_return_test 257
+    echo "return value =
+ $Return_Val"    # 257
+
+    alt_return_test 2570
+1
+    echo "return value =
+ $Return_Val"    #25701
 
 --------------------------------------------------------------------------------------
 
@@ -695,71 +695,71 @@ The next logical question is whether parameters can be dereferenced
 
 --------------------------------------------------------------------------------------
 
-    | .. code-block:: sh
-    |                          |
-    |     month_length ()  # T |
-    | akes month number as an  |
-    | argument.                |
-    |     {                # R |
-    | eturns number of days in |
-    |  month.                  |
-    |     monthD="31 28 31 30  |
-    | 31 30 31 31 30 31 30 31" |
-    |   # Declare as local?    |
-    |     echo "$monthD" | awk |
-    |  '{ print $'"${1}"' }'   |
-    |   # Tricky.              |
-    |     #                    |
-    |           ^^^^^^^^^      |
-    |     # Parameter passed t |
-    | o function  ($1 -- month |
-    |  number), then to awk.   |
-    |     # Awk sees this as " |
-    | print $1 . . . print $12 |
-    | " (depending on month nu |
-    | mber)                    |
-    |     # Template for passi |
-    | ng a parameter to embedd |
-    | ed awk script:           |
-    |     #                    |
-    |               $'"${scrip |
-    | t_parameter}"'           |
-    |                          |
-    |     #    Here's a slight |
-    | ly simpler awk construct |
-    | :                        |
-    |     #    echo $monthD |  |
-    | awk -v month=$1 '{print  |
-    | $(month)}'               |
-    |     #    Uses the -v awk |
-    |  option, which assigns a |
-    |  variable value          |
-    |     #+   prior to execut |
-    | ion of the awk program b |
-    | lock.                    |
-    |     #    Thank you, Rich |
-    | .                        |
-    |                          |
-    |     #  Needs error check |
-    | ing for correct paramete |
-    | r range (1-12)           |
-    |     #+ and for February  |
-    | in leap year.            |
-    |     }                    |
-    |                          |
-    |     # ------------------ |
-    | ------------------------ |
-    | ----                     |
-    |     # Usage example:     |
-    |     month=4        # Apr |
-    | il, for example (4th mon |
-    | th).                     |
-    |     days_in=$(month_leng |
-    | th $month)               |
-    |     echo $days_in  # 30  |
-    |     # ------------------ |
-    | ------------------------ |
-    | ----                     |
+.. code-block:: sh
+
+    month_length ()  # T
+akes month number as an
+argument.
+    {                # R
+eturns number of days in
+ month.
+    monthD="31 28 31 30
+31 30 31 31 30 31 30 31"
+  # Declare as local?
+    echo "$monthD" | awk
+ '{ print $'"${1}"' }'
+  # Tricky.
+    #
+          ^^^^^^^^^
+    # Parameter passed t
+o function  ($1 -- month
+ number), then to awk.
+    # Awk sees this as "
+print $1 . . . print $12
+" (depending on month nu
+mber)
+    # Template for passi
+ng a parameter to embedd
+ed awk script:
+    #
+              $'"${scrip
+t_parameter}"'
+
+    #    Here's a slight
+ly simpler awk construct
+:
+    #    echo $monthD |
+awk -v month=$1 '{print
+$(month)}'
+    #    Uses the -v awk
+ option, which assigns a
+ variable value
+    #+   prior to execut
+ion of the awk program b
+lock.
+    #    Thank you, Rich
+.
+
+    #  Needs error check
+ing for correct paramete
+r range (1-12)
+    #+ and for February
+in leap year.
+    }
+
+    # ------------------
+------------------------
+----
+    # Usage example:
+    month=4        # Apr
+il, for example (4th mon
+th).
+    days_in=$(month_leng
+th $month)
+    echo $days_in  # 30
+    # ------------------
+------------------------
+----
 
 --------------------------------------------------------------------------------------
 
@@ -907,7 +907,7 @@ The next logical question is whether parameters can be dereferenced
         month_length ()  # Takes month number as an argument.
         {                # Returns number of days in month.
         monthD="31 28 31 30 31 30 31 31 30 31 30 31"  # Declare as local?
-        echo "$monthD" | awk '{ print $'"${1}"' }'    # Tricky.
+        echo "$monthD"awk '{ print $'"${1}"' }'    # Tricky.
         #                             ^^^^^^^^^
         # Parameter passed to function  ($1 -- month number), then to awk.
         # Awk sees this as "print $1 . . . print $12" (depending on month number)
@@ -915,7 +915,7 @@ The next logical question is whether parameters can be dereferenced
         #                                 $'"${script_parameter}"'
 
         #    Here's a slightly simpler awk construct:
-        #    echo $monthD | awk -v month=$1 '{print $(month)}'
+        #    echo $monthDawk -v month=$1 '{print $(month)}'
         #    Uses the -v awk option, which assigns a variable value
         #+   prior to execution of the awk program block.
         #    Thank you, Rich.
@@ -1066,7 +1066,7 @@ The next logical question is whether parameters can be dereferenced
         month_length ()  # Takes month number as an argument.
         {                # Returns number of days in month.
         monthD="31 28 31 30 31 30 31 31 30 31 30 31"  # Declare as local?
-        echo "$monthD" | awk '{ print $'"${1}"' }'    # Tricky.
+        echo "$monthD"awk '{ print $'"${1}"' }'    # Tricky.
         #                             ^^^^^^^^^
         # Parameter passed to function  ($1 -- month number), then to awk.
         # Awk sees this as "print $1 . . . print $12" (depending on month number)
@@ -1074,7 +1074,7 @@ The next logical question is whether parameters can be dereferenced
         #                                 $'"${script_parameter}"'
 
         #    Here's a slightly simpler awk construct:
-        #    echo $monthD | awk -v month=$1 '{print $(month)}'
+        #    echo $monthDawk -v month=$1 '{print $(month)}'
         #    Uses the -v awk option, which assigns a variable value
         #+   prior to execution of the awk program block.
         #    Thank you, Rich.
@@ -1132,7 +1132,7 @@ The next logical question is whether parameters can be dereferenced
         {                  #+ then print relevant portion of line.
           while read line  # "while" does not necessarily need [ condition ]
           do
-            echo "$line" | grep $1 | awk -F":" '{ print $5 }'
+            echo "$line"grep $1 | awk -F":" '{ print $5 }'
             # Have awk use ":" delimiter.
           done
         } <$file  # Redirect into function's stdin.
@@ -1140,7 +1140,7 @@ The next logical question is whether parameters can be dereferenced
         file_excerpt $pattern
 
         # Yes, this entire script could be reduced to
-        #       grep PATTERN /etc/passwd | awk -F":" '{ print $5 }'
+        #       grep PATTERN /etc/passwdawk -F":" '{ print $5 }'
         # or
         #       awk -F: '/PATTERN/ {print $5}'
         # or
@@ -1180,13 +1180,13 @@ The next logical question is whether parameters can be dereferenced
         {
           {
            echo $*
-          } | tr a b
+          }tr a b
         }
 
         Function ()  # This doesn't work.
         {
           echo $*
-        } | tr a b   # A nested code block is mandatory here.
+        }tr a b   # A nested code block is mandatory here.
 
 
         # Thanks, S.C.
@@ -1195,7 +1195,7 @@ The next logical question is whether parameters can be dereferenced
 
 
 
-    |Note|
+    |Note
 
     Emmanuel Rouat's `sample ``             bashrc            ``
     file <sample-bashrc.html>`__ contains some instructive examples of

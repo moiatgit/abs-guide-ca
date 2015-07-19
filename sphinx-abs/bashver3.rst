@@ -178,7 +178,7 @@ Some of the more important added features:
 
 
 
-|Caution|
+|Caution
 
 The update to version 3 of Bash breaks a few scripts that worked under
 earlier versions. *Test critical legacy scripts to make sure they still
@@ -273,7 +273,7 @@ This is pretty much a bugfix update.
 
 
 
-   |Caution|
+   |Caution
 
    In fact, quoting in this context is *not* advisable as it may cause
    *regex* evaluation to fail. Chet Ramey states in the `Bash

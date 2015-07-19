@@ -264,9 +264,9 @@ The only way to be certain that a particular RE works is to test it.
        # GNU versions of sed and awk can use "+",
        # but it needs to be escaped.
 
-       echo a111b | sed -ne '/a1\+b/p'
-       echo a111b | grep 'a1\+b'
-       echo a111b | gawk '/a1+b/'
+       echo a111bsed -ne '/a1\+b/p'
+       echo a111bgrep 'a1\+b'
+       echo a111bgawk '/a1+b/'
        # All of above are equivalent.
 
        # Thanks, S.C.
@@ -295,7 +295,7 @@ Note
 
  .. code-block:: sh
                           
-     bash$ echo 2222 | ga 
+     bash$ echo 2222ga 
  wk --re-interval '/2{3}/ 
  '                        
      2222                 
@@ -308,14 +308,14 @@ Note
 
    .. code-block:: sh
 
-       bash$ echo 2222 | gawk --re-interval '/2{3}/'
+       bash$ echo 2222gawk --re-interval '/2{3}/'
        2222
                  
 
 
    .. code-block:: sh
 
-       bash$ echo 2222 | gawk --re-interval '/2{3}/'
+       bash$ echo 2222gawk --re-interval '/2{3}/'
        2222
                  
 
@@ -325,7 +325,7 @@ Note
 -  
 
    Parentheses -- **( )** -- enclose a group of REs. They are useful
-   with the following " \| " operator and in `substring
+   with the following " \" operator and in `substring
    extraction <string-manipulation.html#EXPRPAREN>`__ using
    `expr <moreadv.html#EXPRREF>`__ .
 

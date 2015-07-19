@@ -276,11 +276,11 @@ excitement into an otherwise dull life.
 
    .. code-block:: sh
 
-       command1 2> - | command2
+       command1 2> -command2
        # Trying to redirect error output of command1 into a pipe . . .
        # . . . will not work.  
 
-       command1 2>& - | command2  # Also futile.
+       command1 2>& -command2  # Also futile.
 
        Thanks, S.C.
 
@@ -525,7 +525,7 @@ excitement into an otherwise dull life.
        b=bbb
        c=ccc
 
-       echo "one two three" | read a b c
+       echo "one two three"read a b c
        # Try to reassign a, b, and c.
 
        echo
@@ -564,7 +564,7 @@ excitement into an otherwise dull life.
        c=ccc
 
        echo; echo
-       echo "one two three" | ( read a b c;
+       echo "one two three"( read a b c;
        echo "Inside subshell: "; echo "a = $a"; echo "b = $b"; echo "c = $c" )
        # a = one
        # b = two
@@ -593,7 +593,7 @@ excitement into an otherwise dull life.
 
 
        foundone=false
-       find $HOME -type f -atime +30 -size 100k |
+       find $HOME -type f -atime +30 -size 100k
        while true
        do
           read f
@@ -635,7 +635,7 @@ excitement into an otherwise dull life.
        #+ within a code block, so they share the same subshell.
        #  Thank you, W.B.
 
-       find $HOME -type f -atime +30 -size 100k | {
+       find $HOME -type f -atime +30 -size 100k{
             foundone=false
             while read f
             do
@@ -659,7 +659,7 @@ excitement into an otherwise dull life.
 
    .. code-block:: sh
 
-       tail -f /var/log/messages | grep "$ERROR_MSG" >> error.log
+       tail -f /var/log/messagesgrep "$ERROR_MSG" >> error.log
        #  The "error.log" file will not have anything written to it.
        #  As Samuli Kaipiainen points out, this results from grep
        #+ buffering its output.

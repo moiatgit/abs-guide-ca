@@ -110,7 +110,7 @@ intimately familiar with the following system directories.
 
 
 
-   |Warning|
+   |Warning
 
    Altering files in this directory may result in an unbootable system.
 

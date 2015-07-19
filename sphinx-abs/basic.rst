@@ -47,22 +47,22 @@ XXX  16.1. Basic Commands
 
 
 
-    |Tip|
+    |Tip
 
     The *ls* command returns a non-zero `exit
     status <exit-status.html#EXITSTATUSREF>`__ when attempting to list a
     non-existent file.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ ls abc         |
-    |     ls: abc: No such fil |
-    | e or directory           |
-    |                          |
-    |                          |
-    |     bash$ echo $?        |
-    |     2                    |
+.. code-block:: sh
+
+    bash$ ls abc
+    ls: abc: No such fil
+e or directory
+
+
+    bash$ echo $?
+    2
 
 
 
@@ -177,7 +177,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Note|
+    |Note
 
      In a `pipe <special-chars.html#PIPEREF>`__ , it may be more
     efficient to `redirect <io-redirection.html#IOREDIRREF>`__ the
@@ -185,24 +185,24 @@ XXX  16.1. Basic Commands
     the file.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     cat filename | tr a- |
-    | z A-Z                    |
-    |                          |
-    |     tr a-z A-Z < filenam |
-    | e   #  Same effect, but  |
-    | starts one less process, |
-    |                          |
-    |     #+ and also dispense |
-    | s with the pipe.         |
+.. code-block:: sh
+
+    cat filename | tr a-
+z A-Z
+
+    tr a-z A-Z < filenam
+e   #  Same effect, but
+starts one less process,
+
+    #+ and also dispense
+s with the pipe.
 
 
 
 
     .. code-block:: sh
 
-        cat filename | tr a-z A-Z
+        cat filenametr a-z A-Z
 
         tr a-z A-Z < filename   #  Same effect, but starts one less process,
                                 #+ and also dispenses with the pipe.
@@ -210,7 +210,7 @@ XXX  16.1. Basic Commands
 
     .. code-block:: sh
 
-        cat filename | tr a-z A-Z
+        cat filenametr a-z A-Z
 
         tr a-z A-Z < filename   #  Same effect, but starts one less process,
                                 #+ and also dispenses with the pipe.
@@ -256,7 +256,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Tip|
+    |Tip
 
     Particularly useful are the ``            -a           `` archive
     flag (for copying an entire directory tree), the
@@ -266,15 +266,15 @@ XXX  16.1. Basic Commands
     recursive flags.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     cp -u source_dir/* d |
-    | est_dir                  |
-    |     #  "Synchronize" des |
-    | t_dir to source_dir      |
-    |     #+  by copying over  |
-    | all newer and not previo |
-    | usly existing files.     |
+.. code-block:: sh
+
+    cp -u source_dir/* d
+est_dir
+    #  "Synchronize" des
+t_dir to source_dir
+    #+  by copying over
+all newer and not previo
+usly existing files.
 
 
 
@@ -305,7 +305,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Note|
+    |Note
 
     When used in a non-interactive script, **mv** takes the
     ``            -f           `` ( *force* ) option to bypass user
@@ -315,18 +315,18 @@ XXX  16.1. Basic Commands
     subdirectory of the destination directory.
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ mv source_dire |
-    | ctory target_directory   |
-    |                          |
-    |     bash$ ls -lF target_ |
-    | directory                |
-    |     total 1              |
-    |      drwxrwxr-x    2 boz |
-    | o  bozo      1024 May 28 |
-    |  19:20 source_directory/ |
-    |                          |
+.. code-block:: sh
+
+    bash$ mv source_dire
+ctory target_directory
+
+    bash$ ls -lF target_
+directory
+    total 1
+     drwxrwxr-x    2 boz
+o  bozo      1024 May 28
+ 19:20 source_directory/
+
 
 
 
@@ -360,20 +360,20 @@ XXX  16.1. Basic Commands
 
 
 
-    |Note|
+    |Note
 
     The *rm* command will, by itself, fail to remove filenames beginning
     with a dash. Why? Because *rm* sees a dash-prefixed filename as an
     *option* .
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ rm -badname    |
-    |     rm: invalid option - |
-    | - b                      |
-    |      Try `rm --help' for |
-    |  more information.       |
+.. code-block:: sh
+
+    bash$ rm -badname
+    rm: invalid option -
+- b
+     Try `rm --help' for
+ more information.
 
 
 
@@ -381,9 +381,9 @@ XXX  16.1. Basic Commands
     *end-of-options* flag).
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ rm -- -badname |
+.. code-block:: sh
+
+    bash$ rm -- -badname
 
 
 
@@ -391,9 +391,9 @@ XXX  16.1. Basic Commands
     ``            dot-slash           `` .
 
 
-    | .. code-block:: sh
-    |                          |
-    |     bash$ rm ./-badname  |
+.. code-block:: sh
+
+    bash$ rm ./-badname
 
 
 
@@ -436,7 +436,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Warning|
+    |Warning
 
      When used with the recursive flag ``            -r           `` ,
     this command removes files all the way down the directory tree from
@@ -563,7 +563,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Note|
+    |Note
 
     The file attributes set with **chattr** do not show in a file
     listing ( **ls -l** ).
@@ -593,7 +593,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Caution|
+    |Caution
 
     If a file named ``            newfile           `` has previously
     existed, an error message will result.

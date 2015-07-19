@@ -107,7 +107,7 @@ complete ASCII table.
 
     IDX=0
     while [ $IDX -le 127 ] && CHR="${ABR[$IDX]}"
-       do ((${#CHR}))&& FM2='%-3s'|| FM2=`printf '\\\\%o  ' $IDX`
+       do ((${#CHR}))&& FM2='%-3s'|FM2=`printf '\\\\%o  ' $IDX`
           printf "$FM1 $FM2" "$IDX" $CHR; (( (IDX+=1)%8))||echo '|'
        done
 

@@ -52,9 +52,9 @@ directory path separator
 
 (not equal-to) string comparison test
 
-``        |       ``
+``      ``
 
-\|
+\
 
 pipe
 
@@ -432,7 +432,7 @@ cp
 
 
 
-|Note|
+|Note
 
 Virtually all UNIX and shell operators and commands have many more
 options and enhancements than their DOS and batch file counterparts.
@@ -470,7 +470,7 @@ straightforward, and the result ofttimes reads better than the original.
     REM  PRINT LINE WITH STRING MATCH, THEN EXIT.
 
     :VIEWDATA
-    TYPE C:\BOZO\BOOKLIST.TXT | MORE
+    TYPE C:\BOZO\BOOKLIST.TXTMORE
     REM  SHOW ENTIRE FILE, 1 PAGE AT A TIME.
 
     :EXIT0
@@ -498,7 +498,7 @@ The script conversion is somewhat of an improvement. ` [1]
 
     if [ $# -lt "$ARGNO" ]    # IF !%1==! GOTO VIEWDATA
     then
-      less $DATAFILE          # TYPE C:\MYDIR\BOOKLIST.TXT | MORE
+      less $DATAFILE          # TYPE C:\MYDIR\BOOKLIST.TXTMORE
     else
       grep "$1" $DATAFILE     # FIND "%1" C:\MYDIR\BOOKLIST.TXT
     fi

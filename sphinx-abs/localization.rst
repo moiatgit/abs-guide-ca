@@ -31,7 +31,7 @@ messages to the user (error messages, prompts, etc.).
       exit $E_CDERROR
     }
 
-    cd $var || error "`eval_gettext \"Can\'t cd to \\\$var.\"`"
+    cd $var |error "`eval_gettext \"Can\'t cd to \\\$var.\"`"
     #  The triple backslashes (escapes) in front of $var needed
     #+ "because eval_gettext expects a string
     #+ where the variable values have not yet been substituted."
@@ -136,7 +136,7 @@ The ``     --dump-po-strings    `` option to Bash resembles the
 
 
 
-|Note|
+|Note
 
 Bruno Haible points out:
 
@@ -201,7 +201,7 @@ messages.
 
 
 
-|Note|
+|Note
 
 With older versions of Bash or other shells, localization requires
 `gettext <textproc.html#GETTEXTREF>`__ , using the
@@ -209,26 +209,26 @@ With older versions of Bash or other shells, localization requires
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|     # localized.sh       |
-|                          |
-|     E_CDERROR=65         |
-|                          |
-|     error() {            |
-|       local format=$1    |
-|       shift              |
-|       printf "$(gettext  |
-| -s "$format")" "$@" >&2  |
-|       exit $E_CDERROR    |
-|     }                    |
-|     cd $var || error "Ca |
-| n't cd to %s." "$var"    |
-|     read -p "$(gettext - |
-| s "Enter the value: ")"  |
-| var                      |
-|     # ...                |
+.. code-block:: sh
+
+    #!/bin/bash
+    # localized.sh
+
+    E_CDERROR=65
+
+    error() {
+      local format=$1
+      shift
+      printf "$(gettext
+-s "$format")" "$@" >&2
+      exit $E_CDERROR
+    }
+    cd $var || error "Ca
+n't cd to %s." "$var"
+    read -p "$(gettext -
+s "Enter the value: ")"
+var
+    # ...
 
 ----------------------------------------------------------------------------------
 
@@ -247,7 +247,7 @@ With older versions of Bash or other shells, localization requires
       printf "$(gettext -s "$format")" "$@" >&2
       exit $E_CDERROR
     }
-    cd $var || error "Can't cd to %s." "$var"
+    cd $var |error "Can't cd to %s." "$var"
     read -p "$(gettext -s "Enter the value: ")" var
     # ...
 
@@ -265,7 +265,7 @@ With older versions of Bash or other shells, localization requires
       printf "$(gettext -s "$format")" "$@" >&2
       exit $E_CDERROR
     }
-    cd $var || error "Can't cd to %s." "$var"
+    cd $var |error "Can't cd to %s." "$var"
     read -p "$(gettext -s "Enter the value: ")" var
     # ...
 

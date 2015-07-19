@@ -91,7 +91,7 @@ However:
 
 
 
-|Caution|
+|Caution
 
 Many UNIX and Linux utilities deviate from this "standard," so it is
 dangerous to *assume* that a given option will behave in a standard way.

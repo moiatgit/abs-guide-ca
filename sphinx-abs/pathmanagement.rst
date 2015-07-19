@@ -47,28 +47,28 @@ functionality of *sed* .
 
     # Clean $1 (typically PATH) and rebuild it
     function p_clean()
-    { local p=${1} && eval ${p}='$(p_show ${p} | p_filter | p_build)' ;}
+    { local p=${1} && eval ${p}='$(p_show ${p}p_filter | p_build)' ;}
 
     # Remove $1 from $2 (found on stackoverflow, with modifications).
     function p_rm()
-    { local d=$(echo $1 | p_filter) p=${2} &&
-      eval ${p}='$(p_show ${p} | p_filter | grep -xv "${d}" | p_build)' ;}
+    { local d=$(echo $1p_filter) p=${2} &&
+      eval ${p}='$(p_show ${p}p_filter | grep -xv "${d}" | p_build)' ;}
 
     #  Same as previous, but filters on a pattern (dangerous...
     #+ don't use 'bin' or '/' as pattern!).
     function p_rmpat()
-    { local d=$(echo $1 | p_filter) p=${2} && eval ${p}='$(p_show ${p} |
-      p_filter | grep -v "${d}" | p_build)' ;}
+    { local d=$(echo $1p_filter) p=${2} && eval ${p}='$(p_show ${p}
+      p_filtergrep -v "${d}" | p_build)' ;}
 
     # Delete $1 from $2 and append it cleanly.
     function p_append()
-    { local d=$(echo $1 | p_filter) p=${2} && p_rm "${d}" ${p} &&
-      eval ${p}='$(p_show ${p} d | p_build)' ;}
+    { local d=$(echo $1p_filter) p=${2} && p_rm "${d}" ${p} &&
+      eval ${p}='$(p_show ${p} dp_build)' ;}
 
     # Delete $1 from $2 and prepend it cleanly.
     function p_prepend()
-    { local d=$(echo $1 | p_filter) p=${2} && p_rm "${d}" ${p} &&
-      eval ${p}='$(p_show d ${p} | p_build)' ;}
+    { local d=$(echo $1p_filter) p=${2} && p_rm "${d}" ${p} &&
+      eval ${p}='$(p_show d ${p}p_build)' ;}
 
     # Some tests:
     echo
@@ -169,11 +169,11 @@ David Wheeler kindly permitted me to use his instructive examples.
 
 
      # Requires nonstandard but common extensions in find and xargs:
-     find . -print0 | xargs -0 COMMAND
+     find . -print0xargs -0 COMMAND
 
      # Requires nonstandard extensions to find and to shell (bash works).
      # variables might not stay set once the loop ends:
-     find . -print0 | while IFS="" read -r -d "" file ; do ...
+     find . -print0while IFS="" read -r -d "" file ; do ...
        COMMAND "$file" # Use quoted "$file", not $file, everywhere.
      done
 

@@ -61,7 +61,7 @@ go to ``      stdout     `` to that file.
 
 
 
-|Important|
+|Important
 
 **exec N > filename** affects the entire script or *current shell* .
 Redirection in the `PID <special-chars.html#PROCESSIDREF>`__ of the
@@ -160,7 +160,7 @@ Thank you, Ahmed Darwish, for pointing this out.
                          # Assumes output file writable (add check?).
 
     # -----------------------------------------------
-        cat - | tr a-z A-Z   # Uppercase conversion.
+        cat -tr a-z A-Z   # Uppercase conversion.
     #   ^^^^^                # Reads from stdin.
     #           ^^^^^^^^^^   # Writes to stdout.
     # However, both stdin and stdout were redirected.
@@ -195,7 +195,7 @@ variables within a subshell <subshells.html#PARVIS>`__ problem.
 
     echo
 
-    cat myfile.txt | while read line;
+    cat myfile.txtwhile read line;
                      do {
                        echo $line
                        (( Lines++ ));  #  Incremented values of this variable

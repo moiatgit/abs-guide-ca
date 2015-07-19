@@ -67,7 +67,7 @@ fd 1 connected to ``      /dev/null     `` .
      bash    371 bozo        2w   CHR    1,3       120 /dev/null
 
 
-    bash$ bash -c 'lsof -a -p $$ -d0,1,2' | cat
+    bash$ bash -c 'lsof -a -p $$ -d0,1,2'cat
     COMMAND PID USER   FD   TYPE DEVICE SIZE NODE NAME
      lsof    379 root    0u   CHR  136,1         3 /dev/pts/1
      lsof    379 root    1w  FIFO    0,0      7118 pipe
@@ -99,8 +99,8 @@ This works for different types of redirection.
     (
      (
       (
-       while read a; do echo "FIFO2: $a"; done < /tmp/fifo2 | tee /dev/stderr \
-       | tee /dev/fd/4 | tee /dev/fd/5 | tee /dev/fd/6 >&7 & exec 3> /tmp/fifo2
+       while read a; do echo "FIFO2: $a"; done < /tmp/fifo2tee /dev/stderr \
+tee /dev/fd/4 | tee /dev/fd/5 | tee /dev/fd/6 >&7 & exec 3> /tmp/fifo2
 
        echo 1st, to stdout
        sleep 1
@@ -112,7 +112,7 @@ This works for different types of redirection.
        sleep 1
        echo 5th, to fd 5 >&5
        sleep 1
-       echo 6th, through a pipe | sed 's/.*/PIPE: &, to fd 5/' >&5
+       echo 6th, through a pipesed 's/.*/PIPE: &, to fd 5/' >&5
        sleep 1
        echo 7th, to fd 6 >&6
        sleep 1
@@ -120,9 +120,9 @@ This works for different types of redirection.
        sleep 1
        echo 9th, to fd 8 >&8
 
-      ) 4>&1 >&3 3>&- | while read a; do echo "FD4: $a"; done 1>&3 5>&- 6>&-
-     ) 5>&1 >&3 | while read a; do echo "FD5: $a"; done 1>&3 6>&-
-    ) 6>&1 >&3 | while read a; do echo "FD6: $a"; done 3>&-
+      ) 4>&1 >&3 3>&-while read a; do echo "FD4: $a"; done 1>&3 5>&- 6>&-
+     ) 5>&1 >&3while read a; do echo "FD5: $a"; done 1>&3 6>&-
+    ) 6>&1 >&3while read a; do echo "FD6: $a"; done 3>&-
 
     rm -f /tmp/fifo1 /tmp/fifo2
 

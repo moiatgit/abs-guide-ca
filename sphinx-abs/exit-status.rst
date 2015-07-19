@@ -33,60 +33,60 @@ integer in the 0 - 255 range).
 
 
 
-|Note|
+|Note
 
 When a script ends with an **exit** that has no parameter, the exit
 status of the script is the exit status of the last command executed in
 the script (previous to the **exit** ).
 
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     COMMAND_1            |
-|                          |
-|     . . .                |
-|                          |
-|     COMMAND_LAST         |
-|                          |
-|     # Will exit with sta |
-| tus of last command.     |
-|                          |
-|     exit                 |
+.. code-block:: sh
+
+    #!/bin/bash
+
+    COMMAND_1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with sta
+tus of last command.
+
+    exit
 
 
 The equivalent of a bare **exit** is **exit $?** or even just omitting
 the **exit** .
 
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     COMMAND_1            |
-|                          |
-|     . . .                |
-|                          |
-|     COMMAND_LAST         |
-|                          |
-|     # Will exit with sta |
-| tus of last command.     |
-|                          |
-|     exit $?              |
+.. code-block:: sh
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|                          |
-|     COMMAND1             |
-|                          |
-|     . . .                |
-|                          |
-|     COMMAND_LAST         |
-|                          |
-|     # Will exit with sta |
-| tus of last command.     |
+    #!/bin/bash
+
+    COMMAND_1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with sta
+tus of last command.
+
+    exit $?
+
+.. code-block:: sh
+
+    #!/bin/bash
+
+    COMMAND1
+
+    . . .
+
+    COMMAND_LAST
+
+    # Will exit with sta
+tus of last command.
 
 
 .. code-block:: sh
@@ -223,7 +223,7 @@ testing the result of a command in a script (see `Example
 
 
 
-|Note|
+|Note
 
 The `! <special-chars.html#NOTREF>`__ , the *logical not* qualifier,
 reverses the outcome of a test or command, and this affects its `exit
@@ -260,10 +260,10 @@ Exemple 2. Negating a condition using !
 
     # =========================================================== #
     # Preceding a _pipe_ with ! inverts the exit status returned.
-    ls | bogus_command     # bash: bogus_command: command not found
+    lsbogus_command     # bash: bogus_command: command not found
     echo $?                # 127
 
-    ! ls | bogus_command   # bash: bogus_command: command not found
+    ! lsbogus_command   # bash: bogus_command: command not found
     echo $?                # 0
     # Note that the ! does not change the execution of the pipe.
     # Only the exit status changes.
@@ -292,10 +292,10 @@ Exemple 2. Negating a condition using !
 
     # =========================================================== #
     # Preceding a _pipe_ with ! inverts the exit status returned.
-    ls | bogus_command     # bash: bogus_command: command not found
+    lsbogus_command     # bash: bogus_command: command not found
     echo $?                # 127
 
-    ! ls | bogus_command   # bash: bogus_command: command not found
+    ! lsbogus_command   # bash: bogus_command: command not found
     echo $?                # 0
     # Note that the ! does not change the execution of the pipe.
     # Only the exit status changes.
@@ -308,7 +308,7 @@ Exemple 2. Negating a condition using !
 
 
 
-|Caution|
+|Caution
 
 Certain exit status codes have `reserved
 meanings <exitcodes.html#EXITCODESREF>`__ and should not be

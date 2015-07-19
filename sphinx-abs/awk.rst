@@ -26,14 +26,14 @@ within a shell script.
 
     # $1 is field #1, $2 is field #2, etc.
 
-    echo one two | awk '{print $1}'
+    echo one twoawk '{print $1}'
     # one
 
-    echo one two | awk '{print $2}'
+    echo one twoawk '{print $2}'
     # two
 
     # But what is field #0 ($0)?
-    echo one two | awk '{print $0}'
+    echo one twoawk '{print $0}'
     # one two
     # All the fields!
 
@@ -131,7 +131,7 @@ to a shell script.
     # DEBUG:
     # echo $INIT_TAB_AWK;
 
-    cat $FILE_PARSE |
+    cat $FILE_PARSE
     # Pipe the target file to the following awk script.
 
     # ---------------------------------------------------------------------

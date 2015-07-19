@@ -49,7 +49,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
     case "$person" in
     # Note variable is quoted.
 
-      "E" | "e" )
+      "E""e" )
       # Accept upper or lowercase input.
       echo
       echo "Roland Evans"
@@ -61,7 +61,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
       echo "Business partner & old friend"
       ;;
 
-      "J" | "j" )
+      "J""j" )
       echo
       echo "Mildred Jambalaya"
       echo "249 E. 7th St., Apt. 19"
@@ -160,7 +160,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
 
     # Looking for non digit chars in arguments.
     # Probably it could be done better (exercise for the reader?).
-    if echo $@ | tr -d [:blank:] | tr -d [:digit:] | grep . &> /dev/null; then
+    if echo $@tr -d [:blank:] | tr -d [:digit:] | grep . &> /dev/null; then
        exit $E_BADARGS
     fi
 
@@ -169,10 +169,10 @@ ANSI escape codes for *color* output, and so can Bash scripts.
     T_ROWS=`tput lines`        #  Define current terminal dimension
     T_COLS=`tput cols`         #+ in rows and columns.
 
-    if [ $1 -lt 1 ] || [ $1 -gt $T_ROWS ]; then    #  Start checking if arguments
+    if [ $1 -lt 1 ] |[ $1 -gt $T_ROWS ]; then    #  Start checking if arguments
        exit $E_BADARGS                             #+ are correct.
     fi
-    if [ $2 -lt 1 ] || [ $2 -gt $T_COLS ]; then
+    if [ $2 -lt 1 ] |[ $2 -gt $T_COLS ]; then
        exit $E_BADARGS
     fi
     if [ `expr $1 + $BOX_HEIGHT + 1` -gt $T_ROWS ]; then
@@ -181,7 +181,7 @@ ANSI escape codes for *color* output, and so can Bash scripts.
     if [ `expr $2 + $BOX_WIDTH + 1` -gt $T_COLS ]; then
        exit $E_BADARGS
     fi
-    if [ $3 -lt 1 ] || [ $4 -lt 1 ]; then
+    if [ $3 -lt 1 ] |[ $4 -lt 1 ]; then
        exit $E_BADARGS
     fi                                 # End checking arguments.
 
@@ -277,7 +277,7 @@ A similar escape sequence switches on the underline attribute (on an
 
 
 
-|Note|
+|Note
 
 With an **echo** , the ``         -e        `` option enables the escape
 sequences.
@@ -303,7 +303,7 @@ Other escape sequences change the text and/or background color.
 
 
 
-|Note|
+|Note
 
 It's usually advisable to set the *bold* attribute for light-colored
 foreground text.
@@ -317,7 +317,7 @@ blue.
 
 
 
-|Note|
+|Note
 
 Since **tput sgr0** fails to restore terminal settings under certain
 circumstances, **echo -ne \\E[0m** may be a better choice.
@@ -544,7 +544,7 @@ Background
 
     # Set a unique (paranoid) name for the temp directory the script needs.
     HORSE_RACE_TMP_DIR=$HOME/.horserace-`date +%s`-`head -c10 /dev/urandom \
-    | md5sum | head -c30`
+md5sum | head -c30`
 
     # Create the temp directory and move right in.
     mkdir $HORSE_RACE_TMP_DIR
@@ -563,7 +563,7 @@ Background
     # Function to generate a pseudo-random number between 1 and 9.
     random_1_9 ()
     {
-        head -c10 /dev/urandom | md5sum | tr -d [a-z] | tr -d 0 | cut -c1
+        head -c10 /dev/urandommd5sum | tr -d [a-z] | tr -d 0 | cut -c1
     }
 
     #  Two functions that simulate "movement," when drawing the horses.
@@ -580,7 +580,7 @@ Background
     N_LINES=`tput lines`
 
     # Need at least a 20-LINES X 80-COLUMNS terminal. Check it.
-    if [ $N_COLS -lt 80 ] || [ $N_LINES -lt 20 ]; then
+    if [ $N_COLS -lt 80 ] |[ $N_LINES -lt 20 ]; then
        echo "`basename $0` needs a 80-cols X 20-lines terminal."
        echo "Your terminal is ${N_COLS}-cols X ${N_LINES}-lines."
        exit $E_RUNERR
@@ -590,7 +590,7 @@ Background
     # Start drawing the race field.
 
     # Need a string of 80 chars. See below.
-    BLANK80=`seq -s "" 100 | head -c80`
+    BLANK80=`seq -s "" 100head -c80`
 
     clear
 
@@ -614,7 +614,7 @@ Background
     move_and_echo 1 80 "|"
     move_and_echo 2 5 "|"
     move_and_echo 2 80 "|"
-    move_and_echo 4 5 "|  2"
+    move_and_echo 4 5 " 2"
     move_and_echo 4 80 "|"
     move_and_echo 5 5 "V  3"
     move_and_echo 5 80 "V"
@@ -686,7 +686,7 @@ Background
           # Define a random handicap for horse.
            HANDICAP=`random_1_9`
           # Check if the random_1_9 function returned a good value.
-          while ! echo $HANDICAP | grep [1-9] &> /dev/null; do
+          while ! echo $HANDICAPgrep [1-9] &> /dev/null; do
                     HANDICAP=`random_1_9`
           done
           # Define last handicap position for horse.
@@ -697,19 +697,19 @@ Background
 
           # Calculate odds.
           case $HANDICAP in
-                  1) ODDS=`echo $HANDICAP \* 0.25 + 1.25 | bc`
+                  1) ODDS=`echo $HANDICAP \* 0.25 + 1.25bc`
                                      echo $ODDS > odds_${HN}
                   ;;
-                  2 | 3) ODDS=`echo $HANDICAP \* 0.40 + 1.25 | bc`
+                  23) ODDS=`echo $HANDICAP \* 0.40 + 1.25 | bc`
                                            echo $ODDS > odds_${HN}
                   ;;
-                  4 | 5 | 6) ODDS=`echo $HANDICAP \* 0.55 + 1.25 | bc`
+                  45 | 6) ODDS=`echo $HANDICAP \* 0.55 + 1.25 | bc`
                                                  echo $ODDS > odds_${HN}
                   ;;
-                  7 | 8) ODDS=`echo $HANDICAP \* 0.75 + 1.25 | bc`
+                  78) ODDS=`echo $HANDICAP \* 0.75 + 1.25 | bc`
                                            echo $ODDS > odds_${HN}
                   ;;
-                  9) ODDS=`echo $HANDICAP \* 0.90 + 1.25 | bc`
+                  9) ODDS=`echo $HANDICAP \* 0.90 + 1.25bc`
                                       echo $ODDS > odds_${HN}
           esac
 
@@ -773,17 +773,17 @@ Background
               MOVE_HORSE=0
 
               # Check if the random_1_9 function has returned a good value.
-              while ! echo $MOVE_HORSE | grep [1-9] &> /dev/null; do
+              while ! echo $MOVE_HORSEgrep [1-9] &> /dev/null; do
                     MOVE_HORSE=`random_1_9`
               done
 
               # Define old type and position of the "randomized horse".
-              HORSE_TYPE=`cat  horse_${MOVE_HORSE}_position | tail -n 1`
-              COL=$(expr `cat  horse_${MOVE_HORSE}_position | head -n 1`)
+              HORSE_TYPE=`cat  horse_${MOVE_HORSE}_positiontail -n 1`
+              COL=$(expr `cat  horse_${MOVE_HORSE}_positionhead -n 1`)
 
               ADD_POS=1
               # Check if the current position is an handicap position.
-              if seq 10 7 68 | grep -w $COL &> /dev/null; then
+              if seq 10 7 68grep -w $COL &> /dev/null; then
                     if grep -w $MOVE_HORSE $COL &> /dev/null; then
                           ADD_POS=0
                           grep -v -w  $MOVE_HORSE $COL > ${COL}_new
@@ -810,7 +810,7 @@ Background
 
               # Move the cursor to new horse position.
               tput cup `expr $MOVE_HORSE + 5` \
-          `cat  horse_${MOVE_HORSE}_position | head -n 1`
+          `cat  horse_${MOVE_HORSE}_positionhead -n 1`
 
               # Draw the horse.
               $DRAW_HORSE
@@ -821,18 +821,18 @@ Background
                if [ $COL = 15 ]; then
                  echo $MOVE_HORSE >> fieldline15
                fi
-               if [ `wc -l fieldline15 | cut -f1 -d " "` = 9 ]; then
+               if [ `wc -l fieldline15cut -f1 -d " "` = 9 ]; then
                    print_odds
                    : > fieldline15
                fi
 
               # Define the leading horse.
-              HIGHEST_POS=`cat *position | sort -n | tail -1`
+              HIGHEST_POS=`cat *positionsort -n | tail -1`
 
               # Set background color to white.
               echo -ne '\E[47m'
               tput cup 17 0
-              echo -n Current leader: `grep -w $HIGHEST_POS *position | cut -c7`\
+              echo -n Current leader: `grep -w $HIGHEST_POS *positioncut -c7`\
           "                              "
 
     done
@@ -846,7 +846,7 @@ Background
 
     # Make the winning horse blink.
     tput cup `expr $MOVE_HORSE + 5` \
-    `cat  horse_${MOVE_HORSE}_position | head -n 1`
+    `cat  horse_${MOVE_HORSE}_positionhead -n 1`
     $DRAW_HORSE
 
     # Disable blinking text.
@@ -888,7 +888,7 @@ A-40 <contributed-scripts.html#PETALS>`__ .
 
 
 
-|Caution|
+|Caution
 
 There is, however, a major problem with all this. *ANSI escape sequences
 are emphatically `non-portable <portabilityissues.html>`__ .* What works

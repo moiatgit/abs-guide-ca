@@ -111,7 +111,7 @@ the `$- <internalvariables.html#FLPREF>`__ flag.
     #    but fails when you invoke the command remotely via ssh.
     #    So for a true test you also have to test for a socket.
 
-    if [[ -t "$fd" || -p /dev/stdin ]]
+    if [[ -t "$fd" |-p /dev/stdin ]]
     then
       echo interactive
     else
@@ -122,7 +122,7 @@ the `$- <internalvariables.html#FLPREF>`__ flag.
 
 
 
-|Note|
+|Note
 
 Scripts may be forced to run in interactive mode with the -i option or
 with a ``                   #!/bin/bash -i                 `` header. Be

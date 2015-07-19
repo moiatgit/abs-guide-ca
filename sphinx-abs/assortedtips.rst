@@ -85,7 +85,7 @@ XXX  36.7. Assorted Tips
        file=data.txt
        title="***This is the title line of data text file***"
 
-       echo $title | cat - $file >$file.new
+       echo $titlecat - $file >$file.new
        # "cat -" concatenates stdout to $file.
        #  End result is
        #+ to write a new file with $title appended at *beginning*.
@@ -177,7 +177,7 @@ XXX  36.7. Assorted Tips
 
        isalpha2 ()            # Tests whether *entire string* is alphabetic.
        {                      # From "isalpha.sh" example.
-         [ $# -eq 1 ] || return $FAILURE
+         [ $# -eq 1 ] |return $FAILURE
 
          case $1 in
          *[!a-zA-Z]*|"") return $FAILURE;;
@@ -215,7 +215,7 @@ XXX  36.7. Assorted Tips
            return             #+ and return from function.
          fi
 
-         echo "$@" | tr A-Z a-z
+         echo "$@"tr A-Z a-z
          # Translate all passed arguments ($@).
 
          return
@@ -462,7 +462,7 @@ XXX  36.7. Assorted Tips
          firstchar=${string0:0:1}   # First character.
          string1=${string0:1}       # Rest of string(s).
 
-         FirstChar=`echo "$firstchar" | tr a-z A-Z`
+         FirstChar=`echo "$firstchar"tr a-z A-Z`
                                     # Capitalize first character.
 
          echo "$FirstChar$string1"  # Output to stdout.
@@ -503,8 +503,8 @@ XXX  36.7. Assorted Tips
        echo
 
        retval=`sum_and_product $first $second`      # Assigns output of function.
-       sum=`echo "$retval" | awk '{print $1}'`      # Assigns first field.
-       product=`echo "$retval" | awk '{print $2}'`  # Assigns second field.
+       sum=`echo "$retval"awk '{print $1}'`      # Assigns first field.
+       product=`echo "$retval"awk '{print $2}'`  # Assigns second field.
 
        echo "$first + $second = $sum"
        echo "$first * $second = $product"
@@ -517,31 +517,31 @@ XXX  36.7. Assorted Tips
 
 
 
-   |Caution|
+   |Caution
 
     There can be only **one** *echo* statement in the function for this
    to work. If you alter the previous example:
 
 -------------------------------------------------------------------------------------
 
-   | .. code-block:: sh
-   |                          |
-   |     sum_and_product ()   |
-   |     {                    |
-   |       echo "This is the  |
-   | sum_and_product function |
-   | ." # This messes things  |
-   | up!                      |
-   |       echo $(( $1 + $2 ) |
-   | ) $(( $1 * $2 ))         |
-   |     }                    |
-   |     ...                  |
-   |     retval=`sum_and_prod |
-   | uct $first $second`      |
-   |  # Assigns output of fun |
-   | ction.                   |
-   |     # Now, this will not |
-   |  work correctly.         |
+.. code-block:: sh
+
+    sum_and_product ()
+    {
+      echo "This is the
+sum_and_product function
+." # This messes things
+up!
+      echo $(( $1 + $2 )
+) $(( $1 * $2 ))
+    }
+    ...
+    retval=`sum_and_prod
+uct $first $second`
+ # Assigns output of fun
+ction.
+    # Now, this will not
+ work correctly.
 
 -------------------------------------------------------------------------------------
 
@@ -720,8 +720,8 @@ XXX  36.7. Assorted Tips
 
        # From "wstrings.sh" example.
 
-       wlist=`strings "$1" | tr A-Z a-z | tr '[:space:]' Z | \
-       tr -cs '[:alpha:]' Z | tr -s '\173-\377' Z | tr Z ' '`
+       wlist=`strings "$1"tr A-Z a-z | tr '[:space:]' Z | \
+       tr -cs '[:alpha:]' Ztr -s '\173-\377' Z | tr Z ' '`
 
 
 
@@ -739,10 +739,10 @@ XXX  36.7. Assorted Tips
        FILTER='.......'       # How many letters minimum?
        #       1234567
 
-       anagram "$LETTERSET" | # Find all anagrams of the letterset...
-       grep "$FILTER" |       # With at least 7 letters,
-       grep '^is' |           # starting with 'is'
-       grep -v 's$' |         # no plurals
+       anagram "$LETTERSET"# Find all anagrams of the letterset...
+       grep "$FILTER"      # With at least 7 letters,
+       grep '^is'          # starting with 'is'
+       grep -v 's$'        # no plurals
        grep -v 'ed$'          # no past tense verbs
        # Possible to add many combinations of conditions and filters.
 
@@ -797,12 +797,12 @@ XXX  36.7. Assorted Tips
        CMD=command1                 # First choice.
        PlanB=command2               # Fallback option.
 
-       command_test=$(whatis "$CMD" | grep 'nothing appropriate')
+       command_test=$(whatis "$CMD"grep 'nothing appropriate')
        #  If 'command1' not found on system , 'whatis' will return
        #+ "command1: nothing appropriate."
        #
        #  A safer alternative is:
-       #     command_test=$(whereis "$CMD" | grep \/)
+       #     command_test=$(whereis "$CMD"grep \/)
        #  But then the sense of the following test would have to be reversed,
        #+ since the $command_test variable holds content only if
        #+ the $CMD exists on the system.
@@ -828,7 +828,7 @@ XXX  36.7. Assorted Tips
 
    .. code-block:: sh
 
-       if ls -l nonexistent_filename | grep -q 'No such file or directory'
+       if ls -l nonexistent_filenamegrep -q 'No such file or directory'
          then echo "File \"nonexistent_filename\" does not exist."
        fi
 
@@ -841,7 +841,7 @@ XXX  36.7. Assorted Tips
 
    .. code-block:: sh
 
-       if ls -l nonexistent_filename 2>&1 | grep -q 'No such file or directory'
+       if ls -l nonexistent_filename 2>&1grep -q 'No such file or directory'
        #                             ^^^^
          then echo "File \"nonexistent_filename\" does not exist."
        fi
@@ -917,7 +917,7 @@ obtain *widtools*
 
 
 
-|Caution|
+|Caution
 
 The *widtools* (widget tools) package requires the *XForms* library to
 be installed. Additionally, the

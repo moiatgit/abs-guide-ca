@@ -533,7 +533,7 @@ download <mirrorsites.html#WHERE_TARBALL>`__
 
 
 
-   |Note|
+   |Note
 
    `In certain contexts <bashver3.html#PLUSEQSTR>`__ , **+=** can also
    function as a *string concatenation* operator.
@@ -1458,7 +1458,7 @@ variable indicating the *line number* where it appears in a script
 `Localization <localization.html>`__
 
 `Logical operators <ops.html#LOGOPS1>`__ ( ``      &&     `` ,
-``      ||     `` , etc.)
+``      |    `` , etc.)
 
 `Logout file <files.html#LOGOUTFILEREF1>`__ , the
 ``      ~/.bash_logout     `` file

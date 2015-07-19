@@ -31,14 +31,14 @@ operations, a "black box" that performs a specified task. Wherever there
 is repetitive code, when a task repeats with only slight variations in
 procedure, then consider using a function.
 
-| **function** ``             function_name           `` {
-|  ``             command           `` ...
-|  }
+**function** ``             function_name           `` {
+ ``             command           `` ...
+ }
 
 or
-| ``             function_name           `` () {
-|  ``             command           `` ...
-|  }
+``             function_name           `` () {
+ ``             command           `` ...
+ }
 
 This second form will cheer the hearts of C programmers (and is more
 `portable <portabilityissues.html>`__ ).
@@ -46,25 +46,25 @@ This second form will cheer the hearts of C programmers (and is more
 As in C, the function's opening bracket may optionally appear on the
 second line.
 
-| ``             function_name           `` ()
-|  {
-|  ``             command           `` ...
-|  }
+``             function_name           `` ()
+ {
+ ``             command           `` ...
+ }
 
 
 
-|Note|
+|Note
 
 A function may be "compacted" into a single line.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     fun () { echo "This  |
-| is a function"; echo; }  |
-|     #                    |
-|               ^     ^    |
+.. code-block:: sh
+
+    fun () { echo "This
+is a function"; echo; }
+    #
+              ^     ^
 
 ----------------------------------------------------------------------------------
 
@@ -74,20 +74,20 @@ the function.
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     fun () { echo "This  |
-| is a function"; echo } # |
-|  Error!                  |
-|     #                    |
-|                     ^    |
-|                          |
-|     fun2 () { echo "Even |
-|  a single-command functi |
-| on? Yes!"; }             |
-|     #                    |
-|                          |
-|          ^               |
+.. code-block:: sh
+
+    fun () { echo "This
+is a function"; echo } #
+ Error!
+    #
+                    ^
+
+    fun2 () { echo "Even
+ a single-command functi
+on? Yes!"; }
+    #
+
+         ^
 
 ----------------------------------------------------------------------------------
 
@@ -212,76 +212,76 @@ method of "declaring" the function, as, for example, in C.
 
 
 
-|Note|
+|Note
 
  Functions may not be empty!
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     #!/bin/bash          |
-|     # empty-function.sh  |
-|                          |
-|     empty ()             |
-|     {                    |
-|     }                    |
-|                          |
-|     exit 0  # Will not e |
-| xit here!                |
-|                          |
-|     # $ sh empty-functio |
-| n.sh                     |
-|     # empty-function.sh: |
-|  line 6: syntax error ne |
-| ar unexpected token `}'  |
-|     # empty-function.sh: |
-|  line 6: `}'             |
-|                          |
-|     # $ echo $?          |
-|     # 2                  |
-|                          |
-|                          |
-|     # Note that a functi |
-| on containing only comme |
-| nts is empty.            |
-|                          |
-|     func ()              |
-|     {                    |
-|       # Comment 1.       |
-|       # Comment 2.       |
-|       # This is still an |
-|  empty function.         |
-|       # Thank you, Mark  |
-| Bova, for pointing this  |
-| out.                     |
-|     }                    |
-|     # Results in same er |
-| ror message as above.    |
-|                          |
-|                          |
-|     # However ...        |
-|                          |
-|     not_quite_empty ()   |
-|     {                    |
-|       illegal_command    |
-|     } #  A script contai |
-| ning this function will  |
-| *not* bomb               |
-|       #+ as long as the  |
-| function is not called.  |
-|                          |
-|     not_empty ()         |
-|     {                    |
-|       :                  |
-|     } # Contains a : (nu |
-| ll command), and this is |
-|  okay.                   |
-|                          |
-|                          |
-|     # Thank you, Dominic |
-| k Geyer and Thiemo Kelln |
-| er.                      |
+.. code-block:: sh
+
+    #!/bin/bash
+    # empty-function.sh
+
+    empty ()
+    {
+    }
+
+    exit 0  # Will not e
+xit here!
+
+    # $ sh empty-functio
+n.sh
+    # empty-function.sh:
+ line 6: syntax error ne
+ar unexpected token `}'
+    # empty-function.sh:
+ line 6: `}'
+
+    # $ echo $?
+    # 2
+
+
+    # Note that a functi
+on containing only comme
+nts is empty.
+
+    func ()
+    {
+      # Comment 1.
+      # Comment 2.
+      # This is still an
+ empty function.
+      # Thank you, Mark
+Bova, for pointing this
+out.
+    }
+    # Results in same er
+ror message as above.
+
+
+    # However ...
+
+    not_quite_empty ()
+    {
+      illegal_command
+    } #  A script contai
+ning this function will
+*not* bomb
+      #+ as long as the
+function is not called.
+
+    not_empty ()
+    {
+      :
+    } # Contains a : (nu
+ll command), and this is
+ okay.
+
+
+    # Thank you, Dominic
+k Geyer and Thiemo Kelln
+er.
 
 ----------------------------------------------------------------------------------
 
@@ -420,7 +420,7 @@ command would otherwise go.
 
 .. code-block:: sh
 
-    ls -l | foo() { echo "foo"; }  # Permissible, but useless.
+    ls -lfoo() { echo "foo"; }  # Permissible, but useless.
 
 
 
@@ -451,7 +451,7 @@ command would otherwise go.
     filename=file1
 
     [ -f "$filename" ] &&
-    foo () { rm -f "$filename"; echo "File "$filename" deleted."; } ||
+    foo () { rm -f "$filename"; echo "File "$filename" deleted."; } |
     foo () { echo "File "$filename" not found."; touch bar; }
 
     foo
@@ -488,50 +488,50 @@ See also `Example A-56 <contributed-scripts.html#GRONSFELD>`__
 
 
 
-|Note|
+|Note
 
 What happens when different versions of the same function appear in a
 script?
 
 ----------------------------------------------------------------------------------
 
-| .. code-block:: sh
-|                          |
-|     #  As Yan Chen point |
-| s out,                   |
-|     #  when a function i |
-| s defined multiple times |
-| ,                        |
-|     #  the final version |
-|  is what is invoked.     |
-|     #  This is not, howe |
-| ver, particularly useful |
-| .                        |
-|                          |
-|     func ()              |
-|     {                    |
-|       echo "First versio |
-| n of func ()."           |
-|     }                    |
-|                          |
-|     func ()              |
-|     {                    |
-|       echo "Second versi |
-| on of func ()."          |
-|     }                    |
-|                          |
-|     func   # Second vers |
-| ion of func ().          |
-|                          |
-|     exit $?              |
-|                          |
-|     #  It is even possib |
-| le to use functions to o |
-| verride                  |
-|     #+ or preempt system |
-|  commands.               |
-|     #  Of course, this i |
-| s *not* advisable.       |
+.. code-block:: sh
+
+    #  As Yan Chen point
+s out,
+    #  when a function i
+s defined multiple times
+,
+    #  the final version
+ is what is invoked.
+    #  This is not, howe
+ver, particularly useful
+.
+
+    func ()
+    {
+      echo "First versio
+n of func ()."
+    }
+
+    func ()
+    {
+      echo "Second versi
+on of func ()."
+    }
+
+    func   # Second vers
+ion of func ().
+
+    exit $?
+
+    #  It is even possib
+le to use functions to o
+verride
+    #+ or preempt system
+ commands.
+    #  Of course, this i
+s *not* advisable.
 
 ----------------------------------------------------------------------------------
 

@@ -112,7 +112,7 @@ all too familiar logic error.
     #  Why not?
 
 
-    badname=`ls | grep ' '`
+    badname=`lsgrep ' '`
 
     # Try this:
     # echo "$badname"
@@ -165,38 +165,38 @@ Tools for debugging non-working scripts include
 
 
 
-   |Tip|
+   |Tip
 
    Even better is an **echo** that echoes only when *debug* is on.
 
 -------------------------------------------------------------------------------------
 
-   | .. code-block:: sh
-   |                          |
-   |     ### debecho (debug-e |
-   | cho), by Stefano Falsett |
-   | o ###                    |
-   |     ### Will echo passed |
-   |  parameters only if DEBU |
-   | G is set to a value. ### |
-   |     debecho () {         |
-   |       if [ ! -z "$DEBUG" |
-   |  ]; then                 |
-   |          echo "$1" >&2   |
-   |          #         ^^^ t |
-   | o stderr                 |
-   |       fi                 |
-   |     }                    |
-   |                          |
-   |     DEBUG=on             |
-   |     Whatever=whatnot     |
-   |     debecho $Whatever    |
-   | # whatnot                |
-   |                          |
-   |     DEBUG=               |
-   |     Whatever=notwhat     |
-   |     debecho $Whatever    |
-   | # (Will not echo.)       |
+.. code-block:: sh
+
+    ### debecho (debug-e
+cho), by Stefano Falsett
+o ###
+    ### Will echo passed
+ parameters only if DEBU
+G is set to a value. ###
+    debecho () {
+      if [ ! -z "$DEBUG"
+ ]; then
+         echo "$1" >&2
+         #         ^^^ t
+o stderr
+      fi
+    }
+
+    DEBUG=on
+    Whatever=whatnot
+    debecho $Whatever
+# whatnot
+
+    DEBUG=
+    Whatever=notwhat
+    debecho $Whatever
+# (Will not echo.)
 
 -------------------------------------------------------------------------------------
 
@@ -497,7 +497,7 @@ Tools for debugging non-working scripts include
     # Nick Drage suggests an alternate method:
 
     while true
-      do ifconfig ppp0 | grep UP 1> /dev/null && echo "connected" && exit 0
+      do ifconfig ppp0grep UP 1> /dev/null && echo "connected" && exit 0
       echo -n "."   # Prints dots (.....) until connected.
       sleep 2
     done
@@ -512,7 +512,7 @@ Tools for debugging non-working scripts include
 
     CHECK_INTERVAL=1
 
-    while ! tail -n 1 "$LOGFILE" | grep -q "$KEYWORD"
+    while ! tail -n 1 "$LOGFILE"grep -q "$KEYWORD"
     do echo -n .
        sleep $CHECK_INTERVAL
     done
@@ -567,7 +567,7 @@ Tools for debugging non-working scripts include
 
 
 
-|Note|
+|Note
 
 The ``         DEBUG        `` argument to **trap** causes a specified
 action to execute after every command in a script. This permits tracing
@@ -863,7 +863,7 @@ A-43 <contributed-scripts.html#STOPWATCH>`__ ).
 
 
 
-|Note|
+|Note
 
 ``                   trap '' SIGNAL                 `` (two adjacent
 apostrophes) disables SIGNAL for the remainder of the script.

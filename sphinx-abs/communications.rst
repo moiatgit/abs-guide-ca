@@ -473,7 +473,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    |Caution|
+    |Caution
 
     The *telnet* protocol contains security holes and should therefore
     probably be avoided. Its use within a shell script is *not*
@@ -713,7 +713,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
         # Retrieve and refine rsync update list.
         get_list () {
-            echo $$ > $PID_FILE || {
+            echo $$ > $PID_FILE |{
                 echo "Can't write to pid file $PID_FILE"
                 exit $E_RETURN
             }
@@ -727,22 +727,22 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
             pre_file=
             pre_date=0
             eval /bin/nice /usr/bin/rsync \
-                -r $include $exclude $URL | \
-                egrep '^dr.x|^-r' | \
-                awk '{print $3, $4, $5}' | \
-                sort -k3 | \
+                -r $include $exclude $URL\
+                egrep '^dr.x|^-r'\
+                awk '{print $3, $4, $5}'\
+                sort -k3\
                 { while read line; do
                     # Get seconds since epoch, to filter out obsolete pkgs.
-                    cur_date=$(date -d "$(echo $line | awk '{print $1, $2}')" +%s)
+                    cur_date=$(date -d "$(echo $lineawk '{print $1, $2}')" +%s)
                     #  echo $cur_date
 
                     # Get file name.
-                    cur_file=$(echo $line | awk '{print $3}')
+                    cur_file=$(echo $lineawk '{print $3}')
                     #  echo $cur_file
 
                     # Get rpm pkg name from file name, if possible.
                     if [[ $cur_file == *rpm ]]; then
-                        pkg_name=$(echo $cur_file | sed -r -e \
+                        pkg_name=$(echo $cur_filesed -r -e \
                             's/(^([^_-]+[_-])+)[[:digit:]]+\..*[_-].*$/\1/')
                     else
                         pkg_name=
@@ -788,7 +788,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
                 --filter "merge,+/ $TMP" \
                 --exclude '*'  \
                 $URL $DEST     \
-                | /usr/bin/tee $LOG
+/usr/bin/tee $LOG
 
             RET=$?
 
@@ -830,7 +830,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    |Note|
+    |Note
 
     Using `rcp <communications.html#RCPREF>`__ ,
     `rsync <communications.html#RSYNCREF>`__ , and similar utilities
@@ -929,7 +929,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
 
 
 
-    |Caution|
+    |Caution
 
     Within a loop, **ssh** may cause unexpected behavior. According to a
     `Usenet
@@ -997,7 +997,7 @@ spammers <writingscripts.html#CSPAMMERS>`__ .
         #+ of the "Variables Revisited" chapter.
 
         # ============================================================================
-          cat $0 | mail -s "Script \"`basename $0`\" has mailed itself to you." "$adr"
+          cat $0mail -s "Script \"`basename $0`\" has mailed itself to you." "$adr"
         # ============================================================================
 
         # --------------------------------------------

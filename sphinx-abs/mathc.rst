@@ -86,7 +86,7 @@ XXX 16.8. Math Commands
 
     .. code-block:: sh
 
-                 variable=$(echo "OPTIONS; OPERATIONS" | bc)
+                 variable=$(echo "OPTIONS; OPERATIONS"bc)
 
 
 
@@ -123,14 +123,14 @@ XXX 16.8. Math Commands
         read term
 
 
-         interest_r=$(echo "scale=9; $interest_r/100.0" | bc) # Convert to decimal.
+         interest_r=$(echo "scale=9; $interest_r/100.0"bc) # Convert to decimal.
                          #           ^^^^^^^^^^^^^^^^^  Divide by 100.
                          # "scale" determines how many decimal places.
 
-         interest_rate=$(echo "scale=9; $interest_r/12 + 1.0" | bc)
+         interest_rate=$(echo "scale=9; $interest_r/12 + 1.0"bc)
 
 
-         top=$(echo "scale=9; $principal*$interest_rate^$term" | bc)
+         top=$(echo "scale=9; $principal*$interest_rate^$term"bc)
                   #           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                   #           Standard formula for figuring interest.
 
@@ -140,8 +140,8 @@ XXX 16.8. Math Commands
         # ====================================================================
          for ((x=$months; x > 0; x--))
          do
-           bot=$(echo "scale=9; $interest_rate^$x" | bc)
-           bottom=$(echo "scale=9; $bottom+$bot" | bc)
+           bot=$(echo "scale=9; $interest_rate^$x"bc)
+           bottom=$(echo "scale=9; $bottom+$bot"bc)
         #  bottom = $(($bottom + $bot"))
          done
         # ====================================================================
@@ -152,7 +152,7 @@ XXX 16.8. Math Commands
 
         # for ((x=1; x <= $months; x++))
         # do
-        #   bottom=$(echo "scale=9; $bottom * $interest_rate + 1" | bc)
+        #   bottom=$(echo "scale=9; $bottom * $interest_rate + 1"bc)
         # done
 
 
@@ -166,10 +166,10 @@ XXX 16.8. Math Commands
         #          echo 'bottom = bottom * interest_rate + 1'
         #     done
         #     echo 'bottom'
-        #     } | bc`       # Embeds a 'for loop' within command substitution.
+        #     }bc`       # Embeds a 'for loop' within command substitution.
         # --------------------------------------------------------------------------
         #  On the other hand, Frank Wang suggests:
-        #  bottom=$(echo "scale=9; ($interest_rate^$term-1)/($interest_rate-1)" | bc)
+        #  bottom=$(echo "scale=9; ($interest_rate^$term-1)/($interest_rate-1)"bc)
 
         #  Because . . .
         #  The algorithm behind the loop
@@ -181,7 +181,7 @@ XXX 16.8. Math Commands
 
 
          # let "payment = $top/$bottom"
-         payment=$(echo "scale=2; $top/$bottom" | bc)
+         payment=$(echo "scale=2; $top/$bottom"bc)
          # Use two decimal places for dollars and cents.
 
          echo
@@ -227,7 +227,7 @@ XXX 16.8. Math Commands
 
         NOARGS=85
         PN=`basename "$0"`                 # Program name
-        VER=`echo '$Revision: 1.2 $' | cut -d' ' -f2`  # ==> VER=1.2
+        VER=`echo '$Revision: 1.2 $'cut -d' ' -f2`  # ==> VER=1.2
 
         Usage () {
             echo "$PN - print number to different bases, $VER (stv '95)
@@ -265,11 +265,11 @@ XXX 16.8. Math Commands
             esac
 
             # Remove prefix, convert hex digits to uppercase (bc needs this).
-            number=`echo "$i" | sed -e 's:^0[bBxX]::' | tr '[a-f]' '[A-F]'`
+            number=`echo "$i"sed -e 's:^0[bBxX]::' | tr '[a-f]' '[A-F]'`
             # ==> Uses ":" as sed separator, rather than "/".
 
             # Convert number to decimal
-            dec=`echo "ibase=$ibase; $number" | bc`  # ==> 'bc' is calculator utility.
+            dec=`echo "ibase=$ibase; $number"bc`  # ==> 'bc' is calculator utility.
             case "$dec" in
                 [0-9]*) ;;           # number ok
                 *)      continue;;       # error: ignore
@@ -283,7 +283,7 @@ XXX 16.8. Math Commands
                 obase=8;  "oct="; $dec
                 obase=2;  "bin="; $dec
         !
-            ` | sed -e 's: :    :g'
+            `sed -e 's: :    :g'
 
             done
         }
@@ -472,7 +472,7 @@ XXX 16.8. Math Commands
 
         get_random ()
         {
-        SEED=$(head -n 1 /dev/urandom | od -N 1 | awk '{ print $2 }')
+        SEED=$(head -n 1 /dev/urandomod -N 1 | awk '{ print $2 }')
         RANDOM=$SEED                                  #  From "seeding-random.sh"
                                                       #+ example script.
         let "rnum = $RANDOM % $DIMENSION"             #  Range less than 10000.
@@ -530,7 +530,7 @@ XXX 16.8. Math Commands
             ((thuds++))
           fi
 
-          Pi=$(echo "scale=9; $PMULTIPLIER*$splashes/$shots" | bc)
+          Pi=$(echo "scale=9; $PMULTIPLIER*$splashes/$shots"bc)
           # Multiply ratio by 4.0.
           echo -n "PI ~ $Pi"
           echo
@@ -543,8 +543,8 @@ XXX 16.8. Math Commands
         #+ possibly due to round-off error and imperfect randomness of $RANDOM.
         #  But still usually within plus-or-minus 5% . . .
         #+ a pretty fair rough approximation.
-        error=$(echo "scale=9; $Pi - $M_PI" | bc)
-        pct_error=$(echo "scale=2; 100.0 * $error / $M_PI" | bc)
+        error=$(echo "scale=9; $Pi - $M_PI"bc)
+        pct_error=$(echo "scale=2; 100.0 * $error / $M_PI"bc)
         echo -n "Deviation from mathematical value of PI =        $error"
         echo " ($pct_error% error)"
         echo
@@ -580,11 +580,11 @@ XXX 16.8. Math Commands
 
     .. code-block:: sh
 
-        echo "[Printing a string ... ]P" | dc
+        echo "[Printing a string ... ]P"dc
         # The P command prints the string between the preceding brackets.
 
         # And now for some simple arithmetic.
-        echo "7 8 * p" | dc     # 56
+        echo "7 8 * p"dc     # 56
         #  Pushes 7, then 8 onto the stack,
         #+ multiplies ("*" operator), then prints the result ("p" operator).
 
@@ -620,7 +620,7 @@ XXX 16.8. Math Commands
           return    # "Return" 0 if no arg passed to function.
         fi
 
-        echo ""$1" "$BASE" o p" | dc
+        echo ""$1" "$BASE" o p"dc
         #                  o    sets radix (numerical base) of output.
         #                    p  prints the top of stack.
         # For other options: 'man dc' ...
@@ -642,7 +642,7 @@ XXX 16.8. Math Commands
 
     .. code-block:: sh
 
-        bash$ echo "16i[q]sa[ln0=aln100%Pln100/snlbx]sbA0D68736142snlbxq" | dc
+        bash$ echo "16i[q]sa[ln0=aln100%Pln100/snlbx]sbA0D68736142snlbxq"dc
         Bash
 
 
@@ -694,7 +694,7 @@ XXX 16.8. Math Commands
         echo "Factors of $1:"
         # -------------------------------------------------------
         echo  "$1[p]s2[lip/dli%0=1dvsr]s12sid2%0=13sidvsr[dli%0=\
-        1lrli2+dsi!>.]ds.xd1<2" | dc
+        1lrli2+dsi!>.]ds.xd1<2"dc
         # -------------------------------------------------------
         #  Above code written by Michel Charpentier <charpov@cs.unh.edu>
         #  (as a one-liner, here broken into two lines for display purposes).
@@ -742,7 +742,7 @@ XXX 16.8. Math Commands
 
         # Now, pipe the parameters to awk.
             echo -n "Hypotenuse of $1 and $2 = "
-            echo $1 $2 | awk "$AWKSCRIPT"
+            echo $1 $2awk "$AWKSCRIPT"
         #   ^^^^^^^^^^^^
         # An echo-and-pipe is an easy way of passing shell parameters to awk.
 
