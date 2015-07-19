@@ -257,9 +257,7 @@ Write a script to carry out each of the following tasks.
     .. code-block:: sh
 
            ox
-           ----------
 x
-           ----------
 o
 
            Your move, human (row, column)?

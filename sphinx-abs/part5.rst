@@ -14,7 +14,7 @@ happens when we move into uncharted territory?).
    here-docs
    io-redirection
    subshells
-   restricted
+   restricted-sh
    process-sub
    functions
    aliases
