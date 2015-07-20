@@ -1,6 +1,6 @@
-##################################
-XXX  4.1. Substitució de variables
-##################################
+#############################
+4.1. Substitució de variables
+#############################
 
 El nom d'una variable és un marcador o referència al seu valor. El valor de la variable és la dada
 que conté la posició de memòria a què fa referència. En diem *substitució de variable* a l'obtenció
@@ -60,12 +60,7 @@ Cal tenir present què ``$variable`` és, en realitat, una forma simplificada de
 En alguns contexts en que la forma simplificada ``$variable`` pot donar problemes, la forma completa
 ``${variable}`` podria funcionar. Mira :doc:`parameter-substitution` per més detalls.
 
-Exemple 1. Assignació i substitució de variable
-===============================================
-
 Veiem un exemple:
-
-XXX TODO Per aquí
 
 .. literalinclude:: /_scripts/varasignandsubst.sh
     :language: bash
@@ -125,7 +120,7 @@ A tenir present:
 
         if [ -z "$variable_no_inicialitzada" ]
         then
-          echo "\$variable_no_inicialitzada val null."
+            echo "\$variable_no_inicialitzada val null."
         fi     # sortida: $variable_no_inicialitzada val null.
 
   Pot provocar problemes l'ús d'una variable abans de ser inicialitzada. Amb tot, és possible
@@ -145,45 +140,6 @@ A tenir present:
   aritmètica amb ella, es considera que té com a valor el 0.
 
   Considera també :ref:`internal_uselessthatsourcesitself`.
-
-  .. code-block:: sh
-
-        if [ -z "$variable_no_inicialitzada" ]
-        then
-            echo "\$variable_no_inicialitzada val NULL."
-        fi
-        # sortida: $variable_no_inicialitzada val NULL.
-
-
-    .. code-block:: sh
-
-        echo "$variable_no_inicialitzada"                                # (blank line)
-        let "variable_no_inicialitzada += 5"                             # Add 5 to it.
-        echo "$variable_no_inicialitzada"                                # 5
-
-        #  Conclusion:
-        #  An variable_no_inicialitzada variable has no value,
-        #+ however it evaluates as 0 in an arithmetic operation.
-
-
-    .. code-block:: sh
-
-        if [ -z "$variable_no_inicialitzada" ]
-        then
-          echo "\$variable_no_inicialitzada is NULL."
-        fi     # $variable_no_inicialitzada is NULL.
-
-
-    .. code-block:: sh
-
-        echo "$variable_no_inicialitzada"                                # (blank line)
-        let "variable_no_inicialitzada += 5"                             # Add 5 to it.
-        echo "$variable_no_inicialitzada"                                # 5
-
-        #  Conclusion:
-        #  An variable_no_inicialitzada variable has no value,
-        #+ however it evaluates as 0 in an arithmetic operation.
-
 
 
 .. rubric:: Anotacions
