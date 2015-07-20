@@ -1,5 +1,5 @@
 #################
-XXX  Bibliography
+XXX  Bibliografia
 #################
 
 .. raw:: html

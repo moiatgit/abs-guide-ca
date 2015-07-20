@@ -92,94 +92,96 @@ A tenir present:
         variable= 42
         #        ^
 
+* Les cometes febles conserven blancs
 
+  Quan posem una variable entre cometes, es preserven els espais en blanc del seu valor
 
-Caution
+  .. code-block:: sh
 
-    An uninitialized variable has a "null" value -- no assigned value at
-    all ( *not* zero!).
+        variable="A B  C   D"
+        #          ^ ^^ ^^^   diferents espais
+        echo $variable   # sortida: A B C D
+        echo "$variable" # sortida: A B  C   D
 
---------------------------------------------------------------------------------------
+* Més d'una assignació per línia
 
-.. code-block:: sh
+  És possible assignar més d'una variable en una mateixa línia si les separem amb espais blancs.
 
-    if [ -z "$unassigned
-" ]
-    then
-      echo "\$unassigned
- is NULL."
-    fi     # $unassigned
- is NULL.
+  .. code-block:: sh
 
---------------------------------------------------------------------------------------
+        var1=21  var2=22  var3=$V3
 
+  .. caution::
 
-    Using a variable before assigning a value to it may cause problems.
-    It is nevertheless possible to perform arithmetic operations on an
-    uninitialized variable.
+     Aquesta pràctica pot fer més difícil de llegir el nostre codi i podria no ser portable.
+     Podria donar problemes amb versions antigues de ``sh``.
 
---------------------------------------------------------------------------------------
+* Les variables sense inicialitzar tenen valor ``null``
 
-.. code-block:: sh
+  Una variable sense inicialitzar té el valor ``null`` que indica que no té cap valor assignat.
+  Compte que ``null`` no és zero.
 
-    echo "$uninitialized
-"
-         # (blank line)
-    let "uninitialized +
-= 5"
-         # Add 5 to it.
-    echo "$uninitialized
-"
-         # 5
+  .. code-block:: sh
 
-    #  Conclusion:
-    #  An uninitialized
-variable has no value,
-    #+ however it evalua
-tes as 0 in an arithmeti
-c operation.
-
---------------------------------------------------------------------------------------
-
-
-    See also `Example 15-23 <internal.html#SELFSOURCE>`__ .
-
-
-    .. code-block:: sh
-
-        if [ -z "$unassigned" ]
+        if [ -z "$variable_no_inicialitzada" ]
         then
-          echo "\$unassigned is NULL."
-        fi     # $unassigned is NULL.
+          echo "\$variable_no_inicialitzada val null."
+        fi     # sortida: $variable_no_inicialitzada val null.
+
+  Pot provocar problemes l'ús d'una variable abans de ser inicialitzada. Amb tot, és possible
+  realitzar operacions aritmètiques amb variables no inicialitzades.
+
+
+  .. code-block:: sh
+
+        echo "$variable_no_inicialitzada"
+        # (una línia en blanc)
+        let "variable_no_inicialitzada += 5"
+        # Suma 5 al seu valor
+        echo "$variable_no_inicialitzada"
+        # sortida: 5
+
+  Això implica que, malgrat una variable no inicialitzada val null, en cas de realitzar una operació
+  aritmètica amb ella, es considera que té com a valor el 0.
+
+  Considera també :ref:`internal_uselessthatsourcesitself`.
+
+  .. code-block:: sh
+
+        if [ -z "$variable_no_inicialitzada" ]
+        then
+            echo "\$variable_no_inicialitzada val NULL."
+        fi
+        # sortida: $variable_no_inicialitzada val NULL.
 
 
     .. code-block:: sh
 
-        echo "$uninitialized"                                # (blank line)
-        let "uninitialized += 5"                             # Add 5 to it.
-        echo "$uninitialized"                                # 5
+        echo "$variable_no_inicialitzada"                                # (blank line)
+        let "variable_no_inicialitzada += 5"                             # Add 5 to it.
+        echo "$variable_no_inicialitzada"                                # 5
 
         #  Conclusion:
-        #  An uninitialized variable has no value,
+        #  An variable_no_inicialitzada variable has no value,
         #+ however it evaluates as 0 in an arithmetic operation.
 
 
     .. code-block:: sh
 
-        if [ -z "$unassigned" ]
+        if [ -z "$variable_no_inicialitzada" ]
         then
-          echo "\$unassigned is NULL."
-        fi     # $unassigned is NULL.
+          echo "\$variable_no_inicialitzada is NULL."
+        fi     # $variable_no_inicialitzada is NULL.
 
 
     .. code-block:: sh
 
-        echo "$uninitialized"                                # (blank line)
-        let "uninitialized += 5"                             # Add 5 to it.
-        echo "$uninitialized"                                # 5
+        echo "$variable_no_inicialitzada"                                # (blank line)
+        let "variable_no_inicialitzada += 5"                             # Add 5 to it.
+        echo "$variable_no_inicialitzada"                                # 5
 
         #  Conclusion:
-        #  An uninitialized variable has no value,
+        #  An variable_no_inicialitzada variable has no value,
         #+ however it evaluates as 0 in an arithmetic operation.
 
 

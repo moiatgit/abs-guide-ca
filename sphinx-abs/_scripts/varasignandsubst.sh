@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# XXX Exemple d'inicialització i substitució de variable
+# Exemple d'inicialització i substitució de variable
 
 a=375
 variable=$a
@@ -23,74 +23,65 @@ echo "${variable}"  # sortida: 375
 
 echo
 
+
+# Provem amb Strings
 variable="A B  C   D"
-echo $variable   # A B C D
-echo "$variable" # A B  C   D
-# As we see, echo $variable   and   echo "$variable"   give different results.
-# =======================================
-# Quoting a variable preserves whitespace.
-# =======================================
+#          ^ ^^ ^^^   diferents espais
+echo $variable   # sortida: A B C D
+echo "$variable" # sortida: A B  C   D
+# Fixa't que echo $variable i echo "$variable" donen resultats diferents.
 
 echo
 
-echo '$variable'  # $variable
-#    ^      ^
-#  Variable referencing disabled (escaped) by single quotes,
-#+ which causes the "$" to be interpreted literally.
-
-# Notice the effect of different types of quoting.
+echo '$variable'  # Sortida: $variable
+#    ^         ^
+#  Amb cometes simples, no es fa la substitució donat que $ s'interpreta literalment
 
 
-variable=    # Setting it to a null value.
-echo "\$variable (null value) = $variable"      # $variable (null value) =
-#  Note that setting a variable to a null value is not the same as
-#+ unsetting it, although the end result is the same (see below).
+# Comprovem els efectes de les diferents cometes
 
-# --------------------------------------------------------------
+variable=    # assignem el valor null
+echo "\$variable (valor null) = $variable"      # sortida: $variable (valor null) =
+#  Assignar-li el valor null equivaldria a desassignar la variable.
 
-#  It is permissible to set multiple variables on the same line,
-#+ if separated by white space.
-#  Caution, this may reduce legibility, and may not be portable.
 
+#  Assignació múltiple en una mateixa línia
 var1=21  var2=22  var3=$V3
 echo
 echo "var1=$var1   var2=$var2   var3=$var3"
 
-# May cause problems with legacy versions of "sh" . . .
 
-# --------------------------------------------------------------
 
 echo; echo
 
-numbers="one two three"
+nombres="un dos tres"
 #           ^   ^
-other_numbers="1 2 3"
-#               ^ ^
-#  If there is whitespace embedded within a variable,
-#+ then quotes are necessary.
-#  other_numbers=1 2 3                  # Gives an error message.
-echo "numbers = $numbers"
-echo "other_numbers = $other_numbers"   # other_numbers = 1 2 3
-#  Escaping the whitespace also works.
-mixed_bag=2\ ---\ Whatever
-#           ^    ^ Space after escape (\).
+altres_nombres="1 2 3"
+#                ^ ^
+#  Quan el valor d'una variable conté espais, és obligatori posar-lo entre cometes.
+#  altres_nombres=1 2 3                   # Generaria un missatge d'error.
+echo "nombres = $nombres"
+echo "altres_nombres = $altres_nombres"   # sortida: altres_nombres = 1 2 3
+#  També funciona si escapem els espais
+una_cosa=1\ ---\ cosa
+#          ^    ^ un espai després de l'escape (\).
 
-echo "$mixed_bag"         # 2 --- Whatever
+echo "$una_cosa"         # 1 --- cosa
 
 echo; echo
 
-echo "uninitialized_variable = $uninitialized_variable"
-# Uninitialized variable has null value (no value at all!).
-uninitialized_variable=   #  Declaring, but not initializing it --
-                          #+ same as setting it to a null value, as above.
-echo "uninitialized_variable = $uninitialized_variable"
-                          # It still has a null value.
+echo "variable_no_inicialitzada = $variable_no_inicialitzada"
+# Una variable sense inicialitzar no té cap valor.
+variable_no_inicialitzada=   #  Així la declarem però no la inicialitzem, el que
+                             #+ equival a assignar-li el valor null, com abans.
+echo "variable_no_inicialitzada = $variable_no_inicialitzada"
+                             # Encara amb valor null.
 
-uninitialized_variable=23       # Set it.
-unset uninitialized_variable    # Unset it.
-echo "uninitialized_variable = $uninitialized_variable"
-                                # uninitialized_variable =
-                                # It still has a null value.
+variable_no_inicialitzada=23       # Ara queda inicialitzada.
+unset variable_no_inicialitzada    # Ara la desassignem.
+echo "variable_no_inicialitzada = $variable_no_inicialitzada"
+                                # sortida: variable_no_inicialitzada =
+                                # Continua mostrant un valor null
 echo
 
 exit 0

@@ -11,7 +11,7 @@ internals.
 
 
 
- When a command or the shell itself initiates (or *spawns* ) a new
+When a command or the shell itself initiates (or *spawns* ) a new
 subprocess to carry out a task, this is called *forking* . This new
 process is the *child* , and the process that *forked* it off is the
 *parent* . While the *child process* is doing its work, the *parent
@@ -165,12 +165,15 @@ shell's syntax. As examples, *for* , *while* , *do* , and *!* are
 keywords. Similar to a `builtin <internal.html#BUILTINREF>`__ , a
 keyword is hard-coded into Bash, but unlike a *builtin* , a keyword is
 not in itself a command, but *a subunit of a command construct* . ` [2]
- <internal.html#FTN.AEN8650>`__
+<internal.html#FTN.AEN8650>`__
 
 
-** I/O**
+I/O
+===
 
- **echo**
+echo
+----
+
     prints (to ``         stdout        `` ) an expression or variable
     (see `Example 4-1 <varsubn.html#EX9>`__ ).
 
@@ -191,20 +194,20 @@ not in itself a command, but *a subunit of a command construct* . ` [2]
 
 
 
-    |Note
+Note
 
     An **echo** can be used to feed a sequence of commands down a pipe.
 
 .. code-block:: sh
 
-    if echo "$VAR" | gre
-p -q txt   # if [[ $VAR
-= *txt* ]]
-    then
-      echo "$VAR contain
-s the substring sequence
- \"txt\""
-    fi
+        if echo "$VAR" | gre
+    p -q txt   # if [[ $VAR
+    = *txt* ]]
+        then
+          echo "$VAR contain
+    s the substring sequence
+     \"txt\""
+        fi
 
 
 
@@ -228,7 +231,7 @@ s the substring sequence
 
 
 
-    |Note
+Note
 
     An **echo** , in combination with `command
     substitution <commandsub.html#COMMANDSUBREF>`__ can set a variable.
@@ -326,7 +329,7 @@ s the substring sequence
 
 
 
-    |Note
+Note
 
     This command is a shell builtin, and not the same as
     ``            /bin/echo           `` , although its behavior is
@@ -334,10 +337,9 @@ s the substring sequence
 
 .. code-block:: sh
 
-    bash$ type -a echo
-    echo is a shell buil
-tin
-     echo is /bin/echo
+        bash$ type -a echo
+        echo is a shell builtin
+        echo is /bin/echo
 
 
 
@@ -360,7 +362,9 @@ tin
 
 
 
- **printf**
+printf
+------
+
     The **printf** , formatted print, command is an enhanced **echo** .
     It is a limited variant of the *C* language
     ``         printf()        `` library function, and its syntax is
@@ -377,7 +381,7 @@ tin
 
 
 
-    |Caution
+Caution
 
     Older versions of Bash may not support **printf** .
 
@@ -461,8 +465,10 @@ Exemple 2. *printf* in action
 
     See also `Example 36-17 <assortedtips.html#PROGRESSBAR>`__ .
 
- **read**
-     "Reads" the value of a variable from ``         stdin        `` ,
+read
+----
+
+    "Reads" the value of a variable from ``         stdin        `` ,
     that is, interactively fetches input from the keyboard. The
     ``         -a        `` option lets **read** get array variables
     (see `Example 27-6 <arrays.html#EX67>`__ ).
@@ -776,7 +782,7 @@ Exemple 6. Detecting the arrow keys
 
 
 
-    |Note
+Note
 
     The ``            -n           `` option to **read** will not detect
     the **ENTER** (newline) key.
@@ -788,7 +794,7 @@ Exemple 6. Detecting the arrow keys
     (see `Example 9-4 <internalvariables.html#TOUT>`__ and `Example
     A-41 <contributed-scripts.html#QKY>`__ ).
 
-     The ``         -u        `` option takes the `file
+    The ``         -u        `` option takes the `file
     descriptor <io-redirection.html#FDREF>`__ of the target file.
 
     The **read** command may also "read" its variable value from a file
@@ -870,13 +876,13 @@ Exemple 7. Using *read* with `file redirection <io-redirection.html#IOREDIRREF>`
 
 
 
-    |Note
+Note
 
     `Piping <special-chars.html#PIPEREF>`__ output to a *read* , using
     `echo <internal.html#ECHOREF>`__ to set variables `will
     fail <gotchas.html#BADREAD0>`__ .
 
-     Yet, piping the output of `cat <basic.html#CATREF>`__ *seems* to
+    Yet, piping the output of `cat <basic.html#CATREF>`__ *seems* to
     work.
 
 .. code-block:: sh
@@ -951,9 +957,7 @@ Exemple 7. Problems reading from a pipe
 
 .. code-block:: sh
 
-    find $1 \( -name "*$
-2" -o -name ".*$2" \) -p
-rint |
+    find $1 \( -name "*$ 2" -o -name ".*$2" \) -print |
     while read f; do
     . . .
 
@@ -1089,7 +1093,7 @@ rint |
 
 
 
-    |Tip
+Tip
 
     It is possible to *paste* text into the input field of a *read* (but
     *not* multiple lines!). See `Example
@@ -1100,9 +1104,12 @@ rint |
 
 
 
-** Filesystem**
+Filesystem
+==========
 
- **cd**
+cd
+--
+
     The familiar **cd** change directory command finds use in scripts
     where execution of a command requires being in a specified
     directory.
@@ -1125,7 +1132,7 @@ rint |
 
 
 
-    |Caution
+Caution
 
     The **cd** command does not function as expected when presented with
     two forward slashes.
@@ -1160,30 +1167,34 @@ rint |
 
 
 
- **pwd**
+pwd
+---
+
     Print Working Directory. This gives the user's (or script's) current
     directory (see `Example 15-9 <internal.html#EX37>`__ ). The effect
     is identical to reading the value of the builtin variable
     `$PWD <internalvariables.html#PWDREF>`__ .
 
- **pushd** , **popd** , **dirs**
+pushd , **popd** , **dirs**
+---------------------------
+
     This command set is a mechanism for bookmarking working directories,
     a means of moving back and forth through directories in an orderly
     manner. A pushdown `stack <internalvariables.html#STACKDEFREF>`__ is
     used to keep track of directory names. Options allow various
     manipulations of the directory stack.
 
-     ``                   pushd           dir-name                 ``
+    ``                   pushd           dir-name                 ``
     pushes the path ``                   dir-name                 ``
     onto the directory stack (to the *top* of the stack) and
     simultaneously changes the current working directory to
     ``                   dir-name                 ``
 
-     **popd** removes (pops) the top directory path name off the
+    **popd** removes (pops) the top directory path name off the
     directory stack and simultaneously changes the current working
     directory to the directory now at the *top* of the stack.
 
-     **dirs** lists the contents of the directory stack (compare this
+    **dirs** lists the contents of the directory stack (compare this
     with the `$DIRSTACK <internalvariables.html#DIRSTACKREF>`__
     variable). A successful **pushd** or **popd** will automatically
     invoke **dirs** .
@@ -1233,9 +1244,12 @@ Exemple 8. Changing the current working directory
 
 
 
-** Variables**
+Variables
+=========
 
- **let**
+let
+---
+
     The **let** command carries out *arithmetic* operations on
     variables. ` [3]  <internal.html#FTN.AEN9009>`__ In many cases, it
     functions as a less complex version of
@@ -1303,53 +1317,38 @@ Exemple 9. Letting *let* do arithmetic.
 
 
 
-    |Caution
+Caution
 
     The *let* command can, in certain contexts, return a surprising
     `exit status <exit-status.html#EXITSTATUSREF>`__ .
 
 .. code-block:: sh
 
-    # Evgeniy Ivanov poi
-nts out:
+    # Evgeniy Ivanov poi nts out:
 
     var=0
     echo $?     # 0
-                # As exp
-ected.
+                # As exp ected.
 
     let var++
     echo $?     # 1
-                # The co
-mmand was successful, so
- why isn't $?=0 ???
-                # Anomal
-y!
+                # The co mmand was successful, so why isn't $?=0 ???
+                # Anomal y!
 
     let var++
     echo $?     # 0
-                # As exp
-ected.
+                # As exp ected.
 
 
     # Likewise . . .
 
     let var=0
     echo $?     # 1
-                # The co
-mmand was successful, so
- why isn't $?=0 ???
+                # The co mmand was successful, so why isn't $?=0 ???
 
-    #  However, as Jeff
-Gorak points out,
-    #+ this is part of t
-he design spec for 'let'
- . . .
-    # "If the last ARG e
-valuates to 0, let retur
-ns 1;
-    #  let returns 0 oth
-erwise." ['help let']
+    #  However, as Jeff Gorak points out, #+ this is part of t he design spec for 'let' . . .
+    # "If the last ARG e valuates to 0, let retur ns 1;
+    #  let returns 0 oth erwise." ['help let']
 
 
 
@@ -1415,7 +1414,9 @@ erwise." ['help let']
 
 
 
- **eval**
+eval
+----
+
     ``                   eval arg1 [arg2] ... [argN]                 ``
 
     Combines the arguments in an expression or list of expressions and
@@ -1425,7 +1426,7 @@ erwise." ['help let']
 
 
 
-    |Tip
+Tip
 
     The **eval** command can be used for code generation from the
     command-line or within a script.
@@ -1721,7 +1722,7 @@ Exemple 14. A version of *rot13*
 
 
 
-    |Tip
+Tip
 
     The *eval* command can be used to `parameterize *brace
     expansion* <bashver3.html#BRACEEXPREF3>`__ .
@@ -1731,7 +1732,7 @@ Exemple 14. A version of *rot13*
 
 
 
-    |Caution
+Caution
 
     The **eval** command can be risky, and normally should be avoided
     when there exists a reasonable alternative. An
@@ -1745,7 +1746,9 @@ Exemple 14. A version of *rot13*
 
 
 
- **set**
+set
+---
+
     The **set** command changes the value of internal script
     variables/options. One use for this is to toggle `option
     flags <options.html#OPTIONSREF>`__ which help determine the behavior
@@ -1957,7 +1960,9 @@ Exemple 17. Reassigning the positional parameters
     See also `Example 11-2 <loops1.html#EX22A>`__ and `Example
     16-56 <extmisc.html#EX33A>`__ .
 
- **unset**
+unset
+-----
+
     The **unset** command deletes a shell variable, effectively setting
     it to *null* . Note that this command does not affect positional
     parameters.
@@ -2003,7 +2008,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Note
+Note
 
     In most contexts, an *undeclared* variable and one that has been
     *unset* are equivalent. However, the
@@ -2013,7 +2018,9 @@ Exemple 18. "Unsetting" a variable
 
 
 
- **export**
+export
+------
+
 
     The **export** ` [4]  <internal.html#FTN.AEN9199>`__ command makes
     available variables to all child processes of the running script or
@@ -2024,7 +2031,7 @@ Exemple 18. "Unsetting" a variable
 
 
 
-    |Caution
+Caution
 
     Unfortunately, `there is no way to export variables back to the
     parent process <gotchas.html#PARCHILDPROBREF>`__ , to the process
@@ -2084,7 +2091,7 @@ Exemple 20. Using *export* to pass a variable to an embedded *awk* script
 
 
 
-    |Tip
+Tip
 
     It is possible to initialize and export variables in the same
     operation, as in **export var1=xxx** .
@@ -2094,14 +2101,12 @@ Exemple 20. Using *export* to pass a variable to an embedded *awk* script
 
 .. code-block:: sh
 
-    bash$ export var=(a
-b); echo ${var[0]}
+    bash$ export var=(a b); echo ${var[0]}
     (a b)
 
 
 
-    bash$ var=(a b); exp
-ort var; echo ${var[0]}
+    bash$ var=(a b); exp ort var; echo ${var[0]}
     a
 
 
@@ -2135,7 +2140,7 @@ ort var; echo ${var[0]}
 
 
 
-    |Note
+Note
 
     A variable to be exported may require special treatment. See
     `Example M-2 <sample-bashrc.html#BASHPROF>`__ .
@@ -2143,17 +2148,23 @@ ort var; echo ${var[0]}
 
 
 
- **declare** , **typeset**
+declare , **typeset**
+---------------------
+
     The `declare <declareref.html>`__ and `typeset <declareref.html>`__
     commands specify and/or restrict properties of variables.
 
- **readonly**
+readonly
+--------
+
     Same as `declare -r <declareref.html>`__ , sets a variable as
     read-only, or, in effect, as a constant. Attempts to change the
     variable fail with an error message. This is the shell analog of the
     *C* language **const** type qualifier.
 
- **getopts**
+getopts
+-------
+
     This powerful tool parses command-line arguments passed to the
     script. This is the Bash analog of the
     `getopt <extmisc.html#GETOPTY>`__ external command and the *getopt*
@@ -2177,7 +2188,7 @@ ort var; echo ${var[0]}
 
 
 
-    |Note
+Note
 
     #. The arguments passed from the command-line to the script must be
        preceded by a dash ( ``              -             `` ). It is
@@ -2298,7 +2309,8 @@ Exemple 21. Using *getopts* to read the options/arguments passed to a script
 
 
 
-** Script Behavior**
+Script Behavior
+===============
 
 .. _internal_dotcommand:
 
@@ -2420,59 +2432,21 @@ Exemple 19. "Including" a data file
     does not seem to have any practical applications.
 
 
-Exemple 20. A (useless) script that sources itself
-==================================================
+.. _internal_uselessthatsourcesitself:
 
+Exemple 20. Un guió (inutil) que s'autocarrega
+==============================================
 
-    .. code-block:: sh
-
-        #!/bin/bash
-        # self-source.sh: a script sourcing itself "recursively."
-        # From "Stupid Script Tricks," Volume II.
-
-        MAXPASSCNT=100    # Maximum number of execution passes.
-
-        echo -n  "$pass_count  "
-        #  At first execution pass, this just echoes two blank spaces,
-        #+ since $pass_count still uninitialized.
-
-        let "pass_count += 1"
-        #  Assumes the uninitialized variable $pass_count
-        #+ can be incremented the first time around.
-        #  This works with Bash and pdksh, but
-        #+ it relies on non-portable (and possibly dangerous) behavior.
-        #  Better would be to initialize $pass_count to 0 before incrementing.
-
-        while [ "$pass_count" -le $MAXPASSCNT ]
-        do
-          . $0   # Script "sources" itself, rather than calling itself.
-                 # ./$0 (which would be true recursion) doesn't work here. Why?
-        done
-
-        #  What occurs here is not actually recursion,
-        #+ since the script effectively "expands" itself, i.e.,
-        #+ generates a new section of code
-        #+ with each pass through the 'while' loop',
-        #  with each 'source' in line 20.
-        #
-        #  Of course, the script interprets each newly 'sourced' "#!" line
-        #+ as a comment, and not as the start of a new script.
-
-        echo
-
-        exit 0   # The net effect is counting from 1 to 100.
-                 # Very impressive.
-
-        # Exercise:
-        # --------
-        # Write a script that uses this trick to actually do something useful.
+.. literalinclude:: /_scripts/self-source.sh
+    :language: bash
 
 
 
+exit
+----
 
- **exit**
     Unconditionally terminates a script. ` [6]
-     <internal.html#FTN.AEN9393>`__ The **exit** command may optionally
+    <internal.html#FTN.AEN9393>`__ The **exit** command may optionally
     take an integer argument, which is returned to the shell as the
     `exit status <exit-status.html#EXITSTATUSREF>`__ of the script. It
     is good practice to end all but the simplest scripts with an
@@ -2481,7 +2455,7 @@ Exemple 20. A (useless) script that sources itself
 
 
 
-    |Note
+Note
 
     If a script terminates with an **exit** lacking an argument, the
     exit status of the script is the exit status of the last command
@@ -2493,7 +2467,7 @@ Exemple 20. A (useless) script that sources itself
 
 
 
-    |Note
+Note
 
     An **exit** command may also be used to terminate a
     `subshell <subshells.html#SUBSHELLSREF>`__ .
@@ -2501,7 +2475,9 @@ Exemple 20. A (useless) script that sources itself
 
 
 
- **exec**
+exec
+----
+
     This shell builtin replaces the current process with a specified
     command. Normally, when the shell encounters a command, it `forks
     off <internal.html#FORKREF>`__ a child process to actually execute
@@ -2509,7 +2485,7 @@ Exemple 20. A (useless) script that sources itself
     and the command *exec* 'ed replaces the shell. When used in a
     script, therefore, it forces an exit from the script when the
     **exec** 'ed command terminates. ` [7]
-     <internal.html#FTN.AEN9425>`__
+    <internal.html#FTN.AEN9425>`__
 
 
 Exemple 21. Effects of *exec*
@@ -2578,7 +2554,7 @@ Exemple 22. A script that *exec's* itself
 
 
 
-    |Note
+Note
 
     The ``            -exec           `` option to
     `find <moreadv.html#FINDREF>`__ is
@@ -2588,7 +2564,9 @@ Exemple 22. A script that *exec's* itself
 
 
 
- **shopt**
+shopt
+-----
+
     This command permits changing *shell options* on the fly (see
     `Example 25-1 <aliases.html#AL>`__ and `Example
     25-2 <aliases.html#UNAL>`__ ). It often appears in the Bash `startup
@@ -2608,7 +2586,9 @@ Exemple 22. A script that *exec's* itself
 
 
 
- **caller**
+caller
+------
+
     Putting a **caller** command inside a
     `function <functions.html#FUNCTIONREF>`__ echoes to
     ``         stdout        `` information about the *caller* of that
@@ -2644,9 +2624,12 @@ Exemple 22. A script that *exec's* itself
 
 
 
-** Commands**
+Commands
+========
 
- **true**
+true
+----
+
     A command that returns a successful ( zero ) `exit
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
@@ -2675,7 +2658,9 @@ Exemple 22. A script that *exec's* itself
 
 
 
- **false**
+false
+-----
+
     A command that returns an unsuccessful `exit
     status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else.
 
@@ -2715,7 +2700,9 @@ Exemple 22. A script that *exec's* itself
 
 
 
- **type [cmd]**
+type [cmd]
+----------
+
     Similar to the `which <filearchiv.html#WHICHREF>`__ external
     command, **type cmd** identifies "cmd." Unlike **which** , **type**
     is a Bash builtin. The useful ``         -a        `` option to
@@ -2742,7 +2729,9 @@ Exemple 22. A script that *exec's* itself
     The **type** command can be useful for `testing whether a certain
     command exists <special-chars.html#DEVNULLREDIRECT>`__ .
 
- **hash [cmds]**
+hash [cmds]
+-----------
+
     Records the *path* name of specified commands -- in the shell *hash
     table* ` [8]  <internal.html#FTN.AEN9591>`__ -- so the shell or
     script will not need to search the
@@ -2751,11 +2740,15 @@ Exemple 22. A script that *exec's* itself
     lists the commands that have been hashed. The
     ``         -r        `` option resets the hash table.
 
- **bind**
+bind
+----
+
     The **bind** builtin displays or modifies *readline* ` [9]
      <internal.html#FTN.AEN9621>`__ key bindings.
 
- **help**
+help
+----
+
     Gets a short usage summary of a shell builtin. This is the
     counterpart to `whatis <filearchiv.html#WHATISREF>`__ , but for
     builtins. The display of *help* information got a much-needed update
@@ -2838,7 +2831,7 @@ A-21 <contributed-scripts.html#HASHEXAMPLE>`__ .
 
 ` [9]  <internal.html#AEN9621>`__
 
- The *readline* library is what Bash uses for reading input in an
+The *readline* library is what Bash uses for reading input in an
 interactive shell.
 
 
