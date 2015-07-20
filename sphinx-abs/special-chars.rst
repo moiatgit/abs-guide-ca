@@ -140,13 +140,13 @@ Cometes dobles: \"
 ==================
 
 Envoltar un text entre cometes dobles, evita que la majoria dels caràcters especials que conté el
-text, siguin interpretats. Es coneix com *partial quoting*. Mira
+text, siguin interpretats. Es coneix com *cometes parcials*. Mira
 :doc:`quoting`.
 
 Cometes simples: '
 ==================
 
-Quan envoltem un text entre cometes simples (*full quoting*), tots els caràcters especials deixen de
+Quan envoltem un text entre cometes simples (*cometes totals*), tots els caràcters especials deixen de
 ser interpretats.
 És, per tant, una forma més forta de posar entre cometes un text que amb les cometes dobles.
 Mira :doc:`quoting`.

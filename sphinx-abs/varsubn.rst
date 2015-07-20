@@ -46,146 +46,55 @@ L'assignació pot realitzar-se:
         echo $var; 
     done
 
-XXX TODO Per aquí
+Encara que tanquem un valor entre cometes dobles, no s'evita la substitució. Per això se li diu
+*cometes parcials* o també *cometes febles*. Amb les cometes simples, en canvi, sí s'anul·la la
+substitució i el nom de la variable (juntament amb ``$``) s'interpreten literalment. És el que es
+coneix com a *cometes completes* o *cometes fortes*. Mira :doc:`quoting` per una discussió completa
+d'aquest tema.
 
-     Enclosing a referenced value in *double quotes* ( " ... " ) does
-    not interfere with variable substitution. This is called *partial
-    quoting* , sometimes referred to as "weak quoting." Using single
-    quotes ( ' ... ' ) causes the variable name to be used literally,
-    and no substitution will take place. This is *full quoting* ,
-    sometimes referred to as 'strong quoting.' See `Chapter
-    5 <quoting.html>`__ for a detailed discussion.
+Cal tenir present què ``$variable`` és, en realitat, una forma simplificada de l'expressió
+``${variable}``.
 
-    Note that ``                   $variable                 `` is
-    actually a simplified form of
-    ``                   ${variable}                 `` . In contexts
-    where the ``                   $variable                 `` syntax
-    causes an error, the longer form may work (see `Section
-    10.2 <parameter-substitution.html>`__ , below).
+.. note::
 
+En alguns contexts en que la forma simplificada ``$variable`` pot donar problemes, la forma completa
+``${variable}`` podria funcionar. Mira :doc:`parameter-substitution` per més detalls.
 
-Exemple 1. Variable assignment and substitution
+Exemple 1. Assignació i substitució de variable
 ===============================================
 
+Veiem un exemple:
 
-    .. code-block:: sh
+XXX TODO Per aquí
 
-        #!/bin/bash
-        # ex9.sh
+.. literalinclude:: /_scripts/varasignandsubst.sh
+    :language: bash
 
-        # Variables: assignment and substitution
+A tenir present:
 
-        a=375
-        hello=$a
-        #   ^ ^
+* En assignacions, ``=`` sense espais
 
-        #-------------------------------------------------------------------------
-        # No space permitted on either side of = sign when initializing variables.
-        # What happens if there is a space?
+  A l'hora d'assignar un valor a una variable **no** es pot posar espais en blanc ni abans ni
+  després del ``=``.
 
-        #  "VARIABLE =value"
-        #           ^
-        #% Script tries to run "VARIABLE" command with one argument, "=value".
+  Si el posem abans, s'intentaria executar la variable com si fos una comanda amb un argument:
 
-        #  "VARIABLE= value"
-        #            ^
-        #% Script tries to run "value" command with
-        #+ the environmental variable "VARIABLE" set to "".
-        #-------------------------------------------------------------------------
+  .. code-block:: sh
 
+        variable =42
+        #       ^
 
-        echo hello    # hello
-        # Not a variable reference, just the string "hello" ...
+  En el cas que l'espai estigui després, s'intentarà executar el valor com una comanda amb la
+  variable assignada a "" com a variable d'entorn.
 
-        echo $hello   # 375
-        #    ^          This *is* a variable reference.
-        echo ${hello} # 375
-        #               Likewise a variable reference, as above.
+  .. code-block:: sh
 
-        # Quoting . . .
-        echo "$hello"    # 375
-        echo "${hello}"  # 375
-
-        echo
-
-        hello="A B  C   D"
-        echo $hello   # A B C D
-        echo "$hello" # A B  C   D
-        # As we see, echo $hello   and   echo "$hello"   give different results.
-        # =======================================
-        # Quoting a variable preserves whitespace.
-        # =======================================
-
-        echo
-
-        echo '$hello'  # $hello
-        #    ^      ^
-        #  Variable referencing disabled (escaped) by single quotes,
-        #+ which causes the "$" to be interpreted literally.
-
-        # Notice the effect of different types of quoting.
-
-
-        hello=    # Setting it to a null value.
-        echo "\$hello (null value) = $hello"      # $hello (null value) =
-        #  Note that setting a variable to a null value is not the same as
-        #+ unsetting it, although the end result is the same (see below).
-
-        # --------------------------------------------------------------
-
-        #  It is permissible to set multiple variables on the same line,
-        #+ if separated by white space.
-        #  Caution, this may reduce legibility, and may not be portable.
-
-        var1=21  var2=22  var3=$V3
-        echo
-        echo "var1=$var1   var2=$var2   var3=$var3"
-
-        # May cause problems with legacy versions of "sh" . . .
-
-        # --------------------------------------------------------------
-
-        echo; echo
-
-        numbers="one two three"
-        #           ^   ^
-        other_numbers="1 2 3"
-        #               ^ ^
-        #  If there is whitespace embedded within a variable,
-        #+ then quotes are necessary.
-        #  other_numbers=1 2 3                  # Gives an error message.
-        echo "numbers = $numbers"
-        echo "other_numbers = $other_numbers"   # other_numbers = 1 2 3
-        #  Escaping the whitespace also works.
-        mixed_bag=2\ ---\ Whatever
-        #           ^    ^ Space after escape (\).
-
-        echo "$mixed_bag"         # 2 --- Whatever
-
-        echo; echo
-
-        echo "uninitialized_variable = $uninitialized_variable"
-        # Uninitialized variable has null value (no value at all!).
-        uninitialized_variable=   #  Declaring, but not initializing it --
-                                  #+ same as setting it to a null value, as above.
-        echo "uninitialized_variable = $uninitialized_variable"
-                                  # It still has a null value.
-
-        uninitialized_variable=23       # Set it.
-        unset uninitialized_variable    # Unset it.
-        echo "uninitialized_variable = $uninitialized_variable"
-                                        # uninitialized_variable =
-                                        # It still has a null value.
-        echo
-
-        exit 0
+        variable= 42
+        #        ^
 
 
 
-
-
-
-    |Caution
+Caution
 
     An uninitialized variable has a "null" value -- no assigned value at
     all ( *not* zero!).
