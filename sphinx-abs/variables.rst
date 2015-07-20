@@ -1,6 +1,13 @@
-#######################################################
-XXX Chapter 4. Introduction to Variables and Parameters
-#######################################################
+############
+4. Variables
+############
+
+Les *variables* són la manera en que els llenguatges de programació representen les dades. Una
+variable és simplement una *etiqueta*, un nom assignat a una posició de memòria de l'ordinador on es
+guarda una dada.
+
+Les variables apareixen en operacions aritmètiques, manipulació de quantitats i en processament de
+Strings (cadenes de text).
 
 
 .. toctree::
@@ -10,12 +17,4 @@ XXX Chapter 4. Introduction to Variables and Parameters
    varassignment
    untyped
    othertypesv
-
-*Variables* are how programming and scripting languages represent data.
-A variable is nothing more than a *label* , a name assigned to a
-location or set of locations in computer memory holding an item of data.
-
-Variables appear in arithmetic operations and manipulation of
-quantities, and in string parsing.
-
 

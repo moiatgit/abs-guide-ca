@@ -54,3 +54,8 @@ llibre, amb la versió en anglès entre parèntesis.
 
         Mecanisme similar a les expressions regulars que permet definir un patró que han d'acomplir
         els noms dels fitxers, fent servir alguns caràctes especials, sovint ``\*`` i ``?``.
+
+   Substitució de variable (*variable substitution*)
+
+        Mecanisme mitjançant el qual es reemplaça el nom d'una variable pel valor que conté la
+        posició de memòria a la que la variable fa referència.

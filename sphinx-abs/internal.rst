@@ -468,6 +468,8 @@ Exemple 2. *printf* in action
     (see `Example 27-6 <arrays.html#EX67>`__ ).
 
 
+.. _internal_variableassignwithread:
+
 Exemple 3. Variable assignment, using *read*
 ============================================
 

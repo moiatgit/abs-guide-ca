@@ -1,48 +1,52 @@
+##################################
+XXX  4.1. Substitució de variables
+##################################
 
-###############################
-XXX  4.1. Variable Substitution
-###############################
+El nom d'una variable és un marcador o referència al seu valor. El valor de la variable és la dada
+que conté la posició de memòria a què fa referència. En diem *substitució de variable* a l'obtenció
+del valor associat a la variable.
 
-The *name* of a variable is a placeholder for its *value* , the data it
-holds. Referencing (retrieving) its value is called *variable
-substitution* .
+Comencem diferenciant cuidadosament entre el *nom* d'una variable i el seu *valor*. 
 
+Si ``variable1`` és el nom d'una variable, llavors ``$variable1`` fa referència al seu valor, és a
+dir, la dada guardada en la posició de memòria a la que fa referència ``variable1`` [#mestecnicament]_.
 
- $
+Per exemple, considera el següent codi:
 
-    Let us carefully distinguish between the *name* of a variable and
-    its *value* . If ``                   variable1                 ``
-    is the name of a variable, then
-    ``                   $variable1                 `` is a reference to
-    its *value* , the data item it contains. ` [1]
-     <varsubn.html#FTN.AEN2258>`__
+.. code-block:: sh
 
+    $ variable1=23
+    $ echo variable1
+    variable1
+    $ echo $variable1
+    23
 
-    .. code-block:: sh
+Trobarem el nom de les variables sense ``$``:
 
-        bash$ variable1=23
+#. quan és declada, assignada o desassignada (*unset*)
 
+#. quan s'exporta
 
-        bash$ echo variable1
-        variable1
+#. en expressions aritmètiques amb :doc:`doble parèntesis <dblparens>'
 
-        bash$ echo $variable1
-        23
+#. en variables que representen :ref:`senyals <debugging_example_trappingandexit>`.
 
+L'assignació pot realitzar-se:
 
+* amb ``=`` com en ``var1=27``
 
-    The only times a variable appears "naked" -- without the $ prefix --
-    is when declared or assigned, when *unset* , when
-    `exported <internal.html#EXPORTREF>`__ , in an arithmetic expression
-    within `double parentheses (( ... )) <dblparens.html>`__ , or in the
-    special case of a variable representing a
-    `signal <debugging.html#SIGNALD>`__ (see `Example
-    32-5 <debugging.html#EX76>`__ ). Assignment may be with an = (as in
-    ``                   var1=27                 `` ), in a
-    `read <internal.html#READREF>`__ statement, and at the head of a
-    loop (
-    ``                   for var2 in 1                 2 3                 ``
-    ).
+* amb una instrucció de lectura ``read`` com a :ref:`internal_variableassignwithread`.
+
+* a la capçalera d'un bucle:
+
+  .. code-block:: sh
+
+    for var in 1 2 3;
+    do
+        echo $var; 
+    done
+
+XXX TODO Per aquí
 
      Enclosing a referenced value in *double quotes* ( " ... " ) does
     not interfere with variable substitution. This is called *partial
@@ -271,24 +275,9 @@ c operation.
 
 
 
+.. rubric:: Anotacions
 
-
-
-Notes
-~~~~~
-
-
-` [1]  <varsubn.html#AEN2258>`__
-
- Technically, the *name* of a variable is called an *lvalue* , meaning
-that it appears on the *left* side of an assignment statment, as in
-``               VARIABLE=23             `` . A variable's *value* is an
-*rvalue* , meaning that it appears on the *right* side of an assignment
-statement, as in ``               VAR2=$VARIABLE             `` .
-
- A variable's *name* is, in fact, a *reference* , a *pointer* to the
-memory location(s) where the actual data associated with that variable
-is kept.
-
-
+.. [#mestecnicament] Tècnicament, el *nom* d'una variable es coneix com a *lvalue* o valor esquerre,
+   perquè apareix a la part esquerra d'una assignació. En canvi, el *valor* d'una variable és coneix
+   com a *rvalue* doncs sol apareixer a la part dreta de l'assignació: ``variable2=$variable1``.
 

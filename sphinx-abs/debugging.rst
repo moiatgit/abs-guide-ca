@@ -401,6 +401,7 @@ Exemple 4. Testing a condition with an *assert*
 
 
 
+.. _debugging_example_trappingandexit:
 
 Exemple 5. Trapping at exit
 ===========================
