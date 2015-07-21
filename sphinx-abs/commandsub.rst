@@ -1,6 +1,6 @@
-#####################################
-XXX  Chapter 12. Command Substitution
-#####################################
+#######################################
+XXX  Chapter 12. Substitució de comanda
+#######################################
 
  **Command substitution** reassigns the output of a command ` [1]
  <commandsub.html#FTN.AEN7205>`__ or even multiple commands; it

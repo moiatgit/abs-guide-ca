@@ -95,8 +95,8 @@ A tenir present:
 
         variable="A B  C   D"
         #          ^ ^^ ^^^   diferents espais
-        echo $variable   # sortida: A B C D
-        echo "$variable" # sortida: A B  C   D
+        echo $variable   # Sortida: A B C D
+        echo "$variable" # Sortida: A B  C   D
 
 * Més d'una assignació per línia
 
@@ -121,7 +121,7 @@ A tenir present:
         if [ -z "$variable_no_inicialitzada" ]
         then
             echo "\$variable_no_inicialitzada val null."
-        fi     # sortida: $variable_no_inicialitzada val null.
+        fi     # Sortida: $variable_no_inicialitzada val null.
 
   Pot provocar problemes l'ús d'una variable abans de ser inicialitzada. Amb tot, és possible
   realitzar operacions aritmètiques amb variables no inicialitzades.
@@ -134,7 +134,7 @@ A tenir present:
         let "variable_no_inicialitzada += 5"
         # Suma 5 al seu valor
         echo "$variable_no_inicialitzada"
-        # sortida: 5
+        # Sortida: 5
 
   Això implica que, malgrat una variable no inicialitzada val null, en cas de realitzar una operació
   aritmètica amb ella, es considera que té com a valor el 0.
