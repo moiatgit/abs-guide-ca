@@ -1,0 +1,72 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../bash-options.rst:3
+msgid "XXX  G.2. Bash Command-Line Options"
+msgstr ""
+
+#: ../../bash-options.rst:5
+msgid ""
+"*Bash* itself has a number of command-line options. Here are some of the "
+"more useful ones."
+msgstr ""
+
+#: ../../bash-options.rst:8
+msgid "``        -c       ``"
+msgstr ""
+
+#: ../../bash-options.rst:10
+msgid ""
+"*Read commands from the following string and assign any arguments to the "
+"`positional parameters <internalvariables.html#POSPARAMREF>`__ .*"
+msgstr ""
+
+#: ../../bash-options.rst:22
+msgid "``        -r       ``"
+msgstr ""
+
+#: ../../bash-options.rst:24
+msgid "``        --restricted       ``"
+msgstr ""
+
+#: ../../bash-options.rst:26
+msgid ""
+"*Runs the shell, or a script, in `restricted mode <restricted-"
+"sh.html#RESTRICTEDSHREF>`__ .*"
+msgstr ""
+
+#: ../../bash-options.rst:29
+msgid "``        --posix       ``"
+msgstr ""
+
+#: ../../bash-options.rst:31
+msgid "*Forces Bash to conform to `POSIX <sha-bang.html#POSIX2REF>`__ mode.*"
+msgstr ""
+
+#: ../../bash-options.rst:33
+msgid "``        --version       ``"
+msgstr ""
+
+#: ../../bash-options.rst:35
+msgid "*Display Bash version information and exit.*"
+msgstr ""
+
+#: ../../bash-options.rst:37
+msgid "``        --       ``"
+msgstr ""
+
+#: ../../bash-options.rst:39
+msgid ""
+"*End of options. Anything further on the command line is an argument, not an"
+" option.*"
+msgstr ""

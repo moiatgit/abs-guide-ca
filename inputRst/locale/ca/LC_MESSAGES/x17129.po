@@ -1,0 +1,486 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../x17129.rst:3
+msgid "XXX 18.1. A Brief Introduction to Regular Expressions"
+msgstr ""
+
+#: ../../x17129.rst:7
+msgid ""
+"An expression is a string of characters. Those characters having an "
+"interpretation above and beyond their literal meaning are called "
+"*metacharacters* . A quote symbol, for example, may denote speech by a "
+"person, *ditto* , or a meta-meaning ` [1]  <x17129.html#FTN.AEN17134>`__ for"
+" the symbols that follow. Regular Expressions are sets of characters and/or "
+"metacharacters that match (or specify) patterns."
+msgstr ""
+
+#: ../../x17129.rst:14
+msgid "A Regular Expression contains one or more of the following:"
+msgstr ""
+
+#: ../../x17129.rst:16
+msgid ""
+"*A character set* . These are the characters retaining their literal "
+"meaning. The simplest type of Regular Expression consists *only* of a "
+"character set, with no metacharacters."
+msgstr ""
+
+#: ../../x17129.rst:22
+msgid ""
+"*An anchor* . These designate ( *anchor* ) the position in the line of text "
+"that the RE is to match. For example, ^ , and $ are anchors."
+msgstr ""
+
+#: ../../x17129.rst:25
+msgid ""
+"*Modifiers* . These expand or narrow ( *modify* ) the range of text the RE "
+"is to match. Modifiers include the asterisk, brackets, and the backslash."
+msgstr ""
+
+#: ../../x17129.rst:29
+msgid ""
+"The main uses for Regular Expressions ( *RE* s) are text searches and string"
+" manipulation. An RE *matches* a single character or a set of characters -- "
+"a string or a part of a string."
+msgstr ""
+
+#: ../../x17129.rst:33
+msgid "The asterisk -- \\* -- matches any number of repeats of the character"
+msgstr ""
+
+#: ../../x17129.rst:34
+msgid "string or RE preceding it, including *zero* instances."
+msgstr ""
+
+#: ../../x17129.rst:36
+msgid "\"1133\\*\" matches"
+msgstr ""
+
+#: ../../x17129.rst:37
+msgid ""
+"``                 11 +           one or more 3's               `` : ``"
+"                 113               `` , ``                 1133"
+"               `` , ``                 1133333               `` , and so "
+"forth."
+msgstr ""
+
+#: ../../x17129.rst:42
+msgid ""
+"The *dot* -- . -- matches any one character, except a newline. ` [2] "
+"<x17129.html#FTN.AEN17189>`__"
+msgstr ""
+
+#: ../../x17129.rst:45
+msgid "\"13.\" matches"
+msgstr ""
+
+#: ../../x17129.rst:46
+msgid ""
+"``                 13 + at          least one of any character (including a"
+"          space)               `` : ``                 1133               ``"
+" , ``                 11333               `` , but not ``                 13"
+"               `` (additional character missing)."
+msgstr ""
+
+#: ../../x17129.rst:52
+msgid ""
+"See `Example 16-18 <textproc.html#CWSOLVER>`__ for a demonstration of *dot "
+"single-character* matching."
+msgstr ""
+
+#: ../../x17129.rst:55
+msgid "The caret -- ^ -- matches the beginning of a line, but sometimes,"
+msgstr ""
+
+#: ../../x17129.rst:56
+msgid ""
+"depending on context, negates the meaning of a set of characters in an RE."
+msgstr ""
+
+#: ../../x17129.rst:61
+msgid "The dollar sign -- $ -- at the end of an RE matches the end of a line."
+msgstr ""
+
+#: ../../x17129.rst:64
+msgid "\"XXX$\" matches XXX at the end of a line."
+msgstr ""
+
+#: ../../x17129.rst:66
+msgid "\"^$\" matches blank lines."
+msgstr ""
+
+#: ../../x17129.rst:70
+msgid ""
+"Brackets -- [...] -- enclose a set of characters to match in a single RE."
+msgstr ""
+
+#: ../../x17129.rst:73
+msgid "\"[xyz]\" matches any one of the characters"
+msgstr ""
+
+#: ../../x17129.rst:74
+msgid ""
+"``                 x               `` , ``                 y               "
+"`` , or ``                 z               `` ."
+msgstr ""
+
+#: ../../x17129.rst:78
+msgid "\"[c-n]\" matches any one of the characters in the range"
+msgstr ""
+
+#: ../../x17129.rst:79
+msgid ""
+"``                 c               `` to ``                 n               "
+"`` ."
+msgstr ""
+
+#: ../../x17129.rst:82
+msgid "\"[B-Pk-y]\" matches any one of the characters in the ranges"
+msgstr ""
+
+#: ../../x17129.rst:83
+msgid ""
+"``                 B               `` to ``                 P               "
+"`` and ``                 k               `` to ``                 y"
+"               `` ."
+msgstr ""
+
+#: ../../x17129.rst:88
+msgid "\"[a-z0-9]\" matches any single lowercase letter or any digit."
+msgstr ""
+
+#: ../../x17129.rst:90
+msgid "\"[^b-d]\" matches any character *except* those in the range"
+msgstr ""
+
+#: ../../x17129.rst:91
+msgid ""
+"``                 b               `` to ``                 d               "
+"`` . This is an instance of ^ negating or inverting the meaning of the "
+"following RE (taking on a role similar to ! in a different context)."
+msgstr ""
+
+#: ../../x17129.rst:96
+msgid ""
+"Combined sequences of bracketed characters match common word patterns. "
+"\"[Yy][Ee][Ss]\" matches ``                 yes               `` , ``"
+"                 Yes               `` , ``                 YES"
+"               `` , ``                 yEs               `` , and so forth. "
+"\"[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]\" matches any Social "
+"Security number."
+msgstr ""
+
+#: ../../x17129.rst:107
+msgid ""
+"The backslash -- \\\\ -- `escapes <escapingsection.html#ESCP>`__ a special "
+"character, which means that character gets interpreted literally (and is "
+"therefore no longer *special* )."
+msgstr ""
+
+#: ../../x17129.rst:111
+msgid ""
+"A \"\\\\$\" reverts back to its literal meaning of \"$\" , rather than its "
+"RE meaning of end-of-line. Likewise a \"\\\\\\\\\" has the literal meaning "
+"of \"\\\\\" ."
+msgstr ""
+
+#: ../../x17129.rst:117
+msgid ""
+"`Escaped <escapingsection.html#ESCP>`__ \"angle brackets\" -- \\\\<...\\\\> "
+"-- mark word boundaries."
+msgstr ""
+
+#: ../../x17129.rst:120
+msgid ""
+"The angle brackets must be escaped, since otherwise they have only their "
+"literal character meaning."
+msgstr ""
+
+#: ../../x17129.rst:123
+msgid "\"\\\\<the\\\\>\" matches the word \"the,\" but not the words \"them,\""
+msgstr ""
+
+#: ../../x17129.rst:124
+msgid "\"there,\" \"other,\" etc."
+msgstr ""
+
+#: ../../x17129.rst:150
+msgid "The only way to be certain that a particular RE works is to test it."
+msgstr ""
+
+#: ../../x17129.rst:246
+msgid ""
+"** Extended REs.** Additional metacharacters added to the basic set. Used in"
+" `egrep <textproc.html#EGREPREF>`__ , `awk <awk.html#AWKREF>`__ , and `Perl "
+"<wrapper.html#PERLREF>`__ ."
+msgstr ""
+
+#: ../../x17129.rst:253
+msgid ""
+"The question mark -- ? -- matches zero or one of the previous RE. It is "
+"generally used for matching single characters."
+msgstr ""
+
+#: ../../x17129.rst:258
+msgid ""
+"The plus -- + -- matches one or more of the previous RE. It serves a role "
+"similar to the \\* , but does *not* match zero occurrences."
+msgstr ""
+
+#: ../../x17129.rst:276
+msgid ""
+"`Escaped <escapingsection.html#ESCP>`__ \"curly brackets\" -- \\\\{ \\\\} --"
+" indicate the number of occurrences of a preceding RE to match."
+msgstr ""
+
+#: ../../x17129.rst:279
+msgid ""
+"It is necessary to escape the curly brackets since they have only their "
+"literal character meaning otherwise. This usage is technically not part of "
+"the basic RE set."
+msgstr ""
+
+#: ../../x17129.rst:283
+msgid "\"[0-9]\\\\{5\\\\}\" matches exactly five digits (characters in the range"
+msgstr ""
+
+#: ../../x17129.rst:284
+msgid "of 0 to 9)."
+msgstr ""
+
+#: ../../x17129.rst:288 ../../x17129.rst:347
+msgid "Note"
+msgstr ""
+
+#: ../../x17129.rst:290
+msgid ""
+"Curly brackets are not available as an RE in the \"classic\" (non-POSIX "
+"compliant) version of `awk <awk.html#AWKREF>`__ . However, the GNU extended "
+"version of *awk* , **gawk** , has the ``           --re-interval          ``"
+" option that permits them (without being escaped)."
+msgstr ""
+
+#: ../../x17129.rst:299
+msgid "wk --re-interval '/2{3}/ '"
+msgstr ""
+
+#: ../../x17129.rst:301
+msgid "2222"
+msgstr ""
+
+#: ../../x17129.rst:305
+msgid ""
+"**Perl** and some **egrep** versions do not require escaping the curly "
+"brackets."
+msgstr ""
+
+#: ../../x17129.rst:327
+msgid ""
+"Parentheses -- **( )** -- enclose a group of REs. They are useful with the "
+"following \" \\\" operator and in `substring extraction <string-"
+"manipulation.html#EXPRPAREN>`__ using `expr <moreadv.html#EXPRREF>`__ ."
+msgstr ""
+
+#: ../../x17129.rst:332
+msgid ""
+"The -- **\\|** -- \"or\" RE operator matches any of a set of alternate "
+"characters."
+msgstr ""
+
+#: ../../x17129.rst:349
+msgid ""
+"Some versions of **sed** , **ed** , and **ex** support escaped versions of "
+"the extended Regular Expressions described above, as do the GNU utilities."
+msgstr ""
+
+#: ../../x17129.rst:359
+msgid ""
+"** POSIX Character Classes.** ``                   [:class:]"
+"                 ``"
+msgstr ""
+
+#: ../../x17129.rst:363
+msgid ""
+"This is an alternate method of specifying a range of characters to match."
+msgstr ""
+
+#: ../../x17129.rst:366
+msgid ""
+"``                 [:alnum:]               `` matches alphabetic or numeric "
+"characters. This is equivalent to ``                 A-Za-z0-9"
+"               `` ."
+msgstr ""
+
+#: ../../x17129.rst:370
+msgid ""
+"``                 [:alpha:]               `` matches alphabetic characters."
+" This is equivalent to ``                 A-Za-z               `` ."
+msgstr ""
+
+#: ../../x17129.rst:374
+msgid ""
+"``                 [:blank:]               `` matches a space or a tab."
+msgstr ""
+
+#: ../../x17129.rst:377
+msgid ""
+"``                 [:cntrl:]               `` matches control characters."
+msgstr ""
+
+#: ../../x17129.rst:380
+msgid ""
+"``                 [:digit:]               `` matches (decimal) digits. This"
+" is equivalent to ``                 0-9               `` ."
+msgstr ""
+
+#: ../../x17129.rst:384
+msgid ""
+"``                 [:graph:]               `` (graphic printable "
+"characters). Matches characters in the range of `ASCII <special-"
+"chars.html#ASCIIDEF>`__ 33 - 126. This is the same as ``                 "
+"[:print:]               `` , below, but excluding the space character."
+msgstr ""
+
+#: ../../x17129.rst:390
+msgid ""
+"``                 [:lower:]               `` matches lowercase alphabetic "
+"characters. This is equivalent to ``                 a-z               `` ."
+msgstr ""
+
+#: ../../x17129.rst:394
+msgid ""
+"``                 [:print:]               `` (printable characters). "
+"Matches characters in the range of ASCII 32 - 126. This is the same as ``"
+"                 [:graph:]               `` , above, but adding the space "
+"character."
+msgstr ""
+
+#: ../../x17129.rst:399
+msgid "``                 [:space:]               `` matches whitespace"
+msgstr ""
+
+#: ../../x17129.rst:400
+msgid "characters (space and horizontal tab)."
+msgstr ""
+
+#: ../../x17129.rst:402
+msgid ""
+"``                 [:upper:]               `` matches uppercase alphabetic "
+"characters. This is equivalent to ``                 A-Z               `` ."
+msgstr ""
+
+#: ../../x17129.rst:406
+msgid ""
+"``                 [:xdigit:]               `` matches hexadecimal digits. "
+"This is equivalent to ``                 0-9A-Fa-f               `` ."
+msgstr ""
+
+#: ../../x17129.rst:412
+msgid "Important"
+msgstr ""
+
+#: ../../x17129.rst:414
+msgid ""
+"POSIX character classes generally require quoting or `double brackets "
+"<testconstructs.html#DBLBRACKETS>`__ ([[ ]])."
+msgstr ""
+
+#: ../../x17129.rst:441
+msgid ""
+"These character classes may even be used with `globbing "
+"<globbingref.html>`__ , to a limited extent."
+msgstr ""
+
+#: ../../x17129.rst:453
+msgid ""
+"POSIX character classes are used in `Example 16-21 <textproc.html#EX49>`__ "
+"and `Example 16-22 <textproc.html#LOWERCASE>`__ ."
+msgstr ""
+
+#: ../../x17129.rst:457
+msgid ""
+"`Sed <sedawk.html#SEDREF>`__ , `awk <awk.html#AWKREF>`__ , and `Perl "
+"<wrapper.html#PERLREF>`__ , used as filters in scripts, take REs as "
+"arguments when \"sifting\" or transforming files or I/O streams. See "
+"`Example A-12 <contributed-scripts.html#BEHEAD>`__ and `Example A-16 "
+"<contributed-scripts.html#TREE>`__ for illustrations of this."
+msgstr ""
+
+#: ../../x17129.rst:463
+msgid ""
+"The standard reference on this complex topic is Friedl's *Mastering Regular "
+"Expressions* . *Sed & Awk* , by Dougherty and Robbins, also gives a very "
+"lucid treatment of REs. See the `*Bibliography* <biblio.html>`__ for more "
+"information on these books."
+msgstr ""
+
+#: ../../x17129.rst:470
+msgid "Notes"
+msgstr ""
+
+#: ../../x17129.rst:473
+msgid "` [1]  <x17129.html#AEN17134>`__"
+msgstr ""
+
+#: ../../x17129.rst:475
+msgid "A *meta-meaning* is the meaning of a term or expression on a higher"
+msgstr ""
+
+#: ../../x17129.rst:476
+msgid ""
+"level of abstraction. For example, the *literal* meaning of *regular "
+"expression* is an ordinary expression that conforms to accepted usage. The "
+"*meta-meaning* is drastically different, as discussed at length in this "
+"chapter."
+msgstr ""
+
+#: ../../x17129.rst:482
+msgid "` [2]  <x17129.html#AEN17189>`__"
+msgstr ""
+
+#: ../../x17129.rst:484
+msgid ""
+"Since `sed <sedawk.html#SEDREF>`__ , `awk <awk.html#AWKREF>`__ , and `grep "
+"<textproc.html#GREPREF>`__ process single lines, there will usually not be a"
+" newline to match. In those cases where there is a newline in a multiple "
+"line expression, the dot will match the newline."
+msgstr ""
+
+#: ../../x17129.rst:496
+msgid "line1 line2 EOF # OUTPUT: # [line1 # line2]"
+msgstr ""
+
+#: ../../x17129.rst:505
+msgid "echo"
+msgstr ""
+
+#: ../../x17129.rst:507
+msgid "awk '{ $0=$1 \"\\n\" $2"
+msgstr ""
+
+#: ../../x17129.rst:508
+msgid "; if (/line.1/) {print}} ' << EOF"
+msgstr ""
+
+#: ../../x17129.rst:510
+msgid "line 1 line 2 EOF # OUTPUT: # line # 1"
+msgstr ""
+
+#: ../../x17129.rst:518
+msgid "# Thanks, S.C."
+msgstr ""
+
+#: ../../x17129.rst:520
+msgid "exit 0"
+msgstr ""

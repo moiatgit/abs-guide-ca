@@ -1,0 +1,44 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untyped.rst:3
+msgid "4.3. Variables i Tipus"
+msgstr ""
+
+#: ../../untyped.rst:5
+msgid ""
+"A diferència d'altres llenguatges de programació, Bash no classifica les "
+"seves variables per tipus. En general, les variables en Bash són cadenes de "
+"caràcters què, depenent del context en que apareixen, són interpretades com "
+"nombres a l'hora de realitzar operacions o comparacions aritmètiques. El "
+"punt determinant és que el valor només contingui dígits."
+msgstr ""
+
+#: ../../untyped.rst:11
+msgid "Considera el següent exemple:"
+msgstr ""
+
+#: ../../untyped.rst:15
+msgid ""
+"Que les variables no tinguin tipus és a l'hora una benedicció i una "
+"maledicció. Permeten més flexibilitat durant la programació i fan més fàcil "
+"generar línies de codi (donant-te prou corda per penjar-te a tu mateix!). No"
+" obstant, també permeten incorporar errors subtils que fomenten hàbits de "
+"programació descuidats."
+msgstr ""
+
+#: ../../untyped.rst:21
+msgid ""
+"Per alleugerir la càrrega de fer el seguiment del tipus de les variables en "
+"un guió, Bash permet :doc:`declarar variables <declareref>`."
+msgstr ""
