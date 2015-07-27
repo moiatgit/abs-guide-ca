@@ -1,0 +1,273 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../basic.rst:3
+msgid "XXX  16.1. Basic Commands"
+msgstr ""
+
+#: ../../basic.rst:6
+msgid "** The first commands a novice learns**"
+msgstr ""
+
+#: ../../basic.rst:9
+msgid ""
+"The basic file \"list\" command. It is all too easy to underestimate the "
+"power of this humble command. For example, using the ``         -R        ``"
+" , recursive option, **ls** provides a tree-like listing of a directory "
+"structure. Other useful options are ``         -S        `` , sort listing "
+"by file size, ``         -t        `` , sort by file modification time, ``"
+"         -v        `` , sort by (numerical) version numbers embedded in the "
+"filenames, ` [1]  <basic.html#FTN.AEN10025>`__ ``         -b        `` , "
+"show escape characters, and ``         -i        `` , show file inodes (see "
+"`Example 16-4 <moreadv.html#IDELETE>`__ )."
+msgstr ""
+
+#: ../../basic.rst:50 ../../basic.rst:259
+msgid "|Tip"
+msgstr ""
+
+#: ../../basic.rst:52
+msgid ""
+"The *ls* command returns a non-zero `exit status <exit-"
+"status.html#EXITSTATUSREF>`__ when attempting to list a non-existent file."
+msgstr ""
+
+#: ../../basic.rst:61
+msgid "e or directory"
+msgstr ""
+
+#: ../../basic.rst:64
+msgid "bash$ echo $? 2"
+msgstr ""
+
+#: ../../basic.rst:94
+msgid ""
+"Exemple 1. Using *ls* to create a table of contents for burning a CDR disk"
+msgstr ""
+
+#: ../../basic.rst:154
+msgid ""
+"**cat** , an acronym for *concatenate* , lists a file to ``         stdout"
+"        `` . When combined with redirection ( > or >> ), it is commonly used"
+" to concatenate files."
+msgstr ""
+
+#: ../../basic.rst:168
+msgid ""
+"The ``        -n       `` option to **cat** inserts consecutive numbers "
+"before all lines of the target file(s). The ``        -b       `` option "
+"numbers only the non-blank lines. The ``        -v       `` option echoes "
+"nonprintable characters, using ^ notation. The ``        -s       `` option "
+"squeezes multiple consecutive blank lines into a single blank line."
+msgstr ""
+
+#: ../../basic.rst:175
+msgid ""
+"See also `Example 16-28 <textproc.html#LNUM>`__ and `Example 16-24 "
+"<textproc.html#ROT13>`__ ."
+msgstr ""
+
+#: ../../basic.rst:180 ../../basic.rst:308 ../../basic.rst:363
+msgid "|Note"
+msgstr ""
+
+#: ../../basic.rst:182
+msgid "In a `pipe <special-chars.html#PIPEREF>`__ , it may be more"
+msgstr ""
+
+#: ../../basic.rst:183
+msgid ""
+"efficient to `redirect <io-redirection.html#IOREDIRREF>`__ the ``"
+"            stdin           `` to a file, rather than to **cat** the file."
+msgstr ""
+
+#: ../../basic.rst:191
+msgid "z A-Z"
+msgstr ""
+
+#: ../../basic.rst:193
+msgid "tr a-z A-Z < filenam"
+msgstr ""
+
+#: ../../basic.rst:194
+msgid "e   #  Same effect, but starts one less process,"
+msgstr ""
+
+#: ../../basic.rst:197
+msgid "#+ and also dispense"
+msgstr ""
+
+#: ../../basic.rst:198
+msgid "s with the pipe."
+msgstr ""
+
+#: ../../basic.rst:221
+msgid ""
+"**tac** , is the inverse of *cat* , listing a file backwards from its end."
+msgstr ""
+
+#: ../../basic.rst:225
+msgid ""
+"reverses each line of a file, and outputs to ``         stdout        `` . "
+"This does not have the same effect as **tac** , as it preserves the order of"
+" the lines, but flips each one around (mirror image)."
+msgstr ""
+
+#: ../../basic.rst:251
+msgid ""
+"This is the file copy command. ``                   cp file1           file2"
+"                 `` copies ``         file1        `` to ``         file2"
+"        `` , overwriting ``         file2        `` if it already exists "
+"(see `Example 16-6 <moreadv.html#EX42>`__ )."
+msgstr ""
+
+#: ../../basic.rst:261
+msgid ""
+"Particularly useful are the ``            -a           `` archive flag (for "
+"copying an entire directory tree), the ``            -u           `` update "
+"flag (which prevents overwriting identically-named newer files), and the ``"
+"            -r           `` and ``            -R           `` recursive "
+"flags."
+msgstr ""
+
+#: ../../basic.rst:273
+msgid "#  \"Synchronize\" des"
+msgstr ""
+
+#: ../../basic.rst:275
+msgid "#+  by copying over"
+msgstr ""
+
+#: ../../basic.rst:276
+msgid "all newer and not previo usly existing files."
+msgstr ""
+
+#: ../../basic.rst:299
+msgid ""
+"This is the file *move* command. It is equivalent to a combination of **cp**"
+" and **rm** . It may be used to move multiple files to a directory, or even "
+"to rename a directory. For some examples of using **mv** in a script, see "
+"`Example 10-11 <parameter-substitution.html#RFE>`__ and `Example A-2 "
+"<contributed-scripts.html#RN>`__ ."
+msgstr ""
+
+#: ../../basic.rst:310
+msgid ""
+"When used in a non-interactive script, **mv** takes the ``            -f"
+"           `` ( *force* ) option to bypass user input."
+msgstr ""
+
+#: ../../basic.rst:314
+msgid ""
+"When a directory is moved to a preexisting directory, it becomes a "
+"subdirectory of the destination directory."
+msgstr ""
+
+#: ../../basic.rst:321
+msgid "ctory target_directory"
+msgstr ""
+
+#: ../../basic.rst:323
+msgid "bash$ ls -lF target_"
+msgstr ""
+
+#: ../../basic.rst:326
+msgid "drwxrwxr-x    2 boz"
+msgstr ""
+
+#: ../../basic.rst:328
+msgid "19:20 source_directory/"
+msgstr ""
+
+#: ../../basic.rst:357
+msgid ""
+"Delete (remove) a file or files. The ``         -f        `` option forces "
+"removal of even readonly files, and is useful for bypassing user input in a "
+"script."
+msgstr ""
+
+#: ../../basic.rst:365
+msgid ""
+"The *rm* command will, by itself, fail to remove filenames beginning with a "
+"dash. Why? Because *rm* sees a dash-prefixed filename as an *option* ."
+msgstr ""
+
+#: ../../basic.rst:375
+msgid "Try `rm --help' for"
+msgstr ""
+
+#: ../../basic.rst:376
+msgid "more information."
+msgstr ""
+
+#: ../../basic.rst:380
+msgid ""
+"One clever workaround is to precede the filename with a \" -- \" (the *end-"
+"of-options* flag)."
+msgstr ""
+
+#: ../../basic.rst:632
+msgid "Exemple 2. Hello or Good-bye"
+msgstr ""
+
+#: ../../basic.rst:666
+msgid ""
+"These commands access the manual and information pages on system commands "
+"and installed utilities. When available, the *info* pages usually contain "
+"more detailed descriptions than do the *man* pages."
+msgstr ""
+
+#: ../../basic.rst:670
+msgid ""
+"There have been various attempts at \"automating\" the writing of *man "
+"pages* . For a script that makes a tentative first step in that direction, "
+"see `Example A-39 <contributed-scripts.html#MANED>`__ ."
+msgstr ""
+
+#: ../../basic.rst:677
+msgid "Notes"
+msgstr ""
+
+#: ../../basic.rst:680
+msgid "` [1]  <basic.html#AEN10025>`__"
+msgstr ""
+
+#: ../../basic.rst:682
+msgid ""
+"The ``       -v      `` option also orders the sort by *upper- and lowercase"
+" prefixed* filenames."
+msgstr ""
+
+#: ../../basic.rst:686
+msgid "` [2]  <basic.html#AEN10228>`__"
+msgstr ""
+
+#: ../../basic.rst:688
+msgid ""
+"*Dotfiles* are files whose names begin with a *dot* , such as ``       "
+"~/.Xdefaults      `` . Such filenames do not appear in a normal **ls** "
+"listing (although an **ls -a** will show them), and they cannot be deleted "
+"by an accidental **rm -rf \\*** . Dotfiles are generally used as setup and "
+"configuration files in a user's home directory."
+msgstr ""
+
+#: ../../basic.rst:695
+msgid "` [3]  <basic.html#AEN10301>`__"
+msgstr ""
+
+#: ../../basic.rst:697
+msgid ""
+"This particular feature may not yet be implemented in the version of the "
+"ext2/ext3 filesystem installed on your system. Check the documentation for "
+"your Linux distro."
+msgstr ""

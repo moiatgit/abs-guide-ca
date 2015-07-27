@@ -1,0 +1,80 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../aliases.rst:3
+msgid "XXX Capítol 25. Àlies"
+msgstr ""
+
+#: ../../aliases.rst:7
+msgid ""
+"En Bash, un *àlies* no és més que una drecera de teclat, una abreviació, una"
+" manera d'evitar escriure una seqüència llarga de comandes. Si, per exemple,"
+" incloem ``alias lm=\"ls -lmore\"`` en el fitxer :doc:`~/.bashrc <sample-"
+"bashrc>`, cada cop que escrivim ``lm`` a la línia de comandes "
+"[#primeraparaula]_, automàticament serà reemplaçat per la comanda ``ls "
+"-lmore``."
+msgstr ""
+
+#: ../../aliases.rst:14
+msgid ""
+"Tot plegat, podem estalviar-nos escriure un munt a la línia de comandes i "
+"evitar-nos haver de recordar combinacions complexes de comandes i opcions."
+msgstr ""
+
+#: ../../aliases.rst:18
+msgid ""
+"Un altre exemple, si definim l'àlies ``alias rm=\"rm -i\"``, podem evitar-"
+"nos molts problemes esborrant accidentalment fitxers importants, donat que "
+"sempre que fem servir ``rm`` (comanda per eliminar fitxers), ens demanarà "
+"confirmació en comptes d'eliminar els fitxers directament."
+msgstr ""
+
+#: ../../aliases.rst:24
+msgid ""
+"Dins d'un guió, els àlies no tenen gaire utilitat. Fora bo que els àlies "
+"disposessin de part de la funcionalitat del preprocessador de C, com ara "
+"l'expansió de macros. Malauradament Bash no és capaç d'expandir arguments "
+"dins del cos d'un àlies [#posicionals]_. És més, dins d'un guió no es pot ni"
+" expandir un àlies dins d'una \"sentència composta\" com ara les sentències "
+":doc:`if/then <tests>`, els bucles, i les funcions. Una altra limitació és "
+"que els àlies no s'expandeixen recursivament. Quasi sempre, tot el que es "
+"pugui aconseguir amb un àlies, ho podrem realitzar molt més efectivament amb"
+" una :doc:`funció <functions>`."
+msgstr ""
+
+#: ../../aliases.rst:36
+msgid "Exemple 1. Àlies dins d'un guió"
+msgstr ""
+
+#: ../../aliases.rst:117
+msgid ""
+"La comanda ``unalias`` elimina els àlies prèviament definits amb ``alias``."
+msgstr ""
+
+#: ../../aliases.rst:121
+msgid "Exemple 2. unalias: assignant i desassignant un àlies"
+msgstr ""
+
+#: ../../aliases.rst:153
+msgid "Anotacions"
+msgstr ""
+
+#: ../../aliases.rst:154
+msgid ""
+"Com a primera paraula d'una comanda. Evidentment, un àlies només té sentit a"
+" l'inici d'una comanda."
+msgstr ""
+
+#: ../../aliases.rst:157
+msgid "No obstant, els àlies semblen expandir paràmetres posicionals."
+msgstr ""

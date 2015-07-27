@@ -1,0 +1,114 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../zeros.rst:4
+msgid "XXX  Chapter 31. Of Zeros and Nulls"
+msgstr ""
+
+#: ../../zeros.rst:7
+msgid "**"
+msgstr ""
+
+#: ../../zeros.rst:9
+msgid "*Faultily faultless, icily regular, splendidly null*"
+msgstr ""
+
+#: ../../zeros.rst:11
+msgid "*Dead perfection; no more.*"
+msgstr ""
+
+#: ../../zeros.rst:13
+msgid "*--Alfred Lord Tennyson*"
+msgstr ""
+
+#: ../../zeros.rst:18
+msgid "** ``        /dev/zero       `` ... ``        /dev/null       ``**"
+msgstr ""
+
+#: ../../zeros.rst:21
+msgid ""
+"Think of ``         /dev/null        `` as a *black hole* . It is "
+"essentially the equivalent of a write-only file. Everything written to it "
+"disappears. Attempts to read or output from it result in nothing. All the "
+"same, ``         /dev/null        `` can be quite useful from both the "
+"command-line and in scripts."
+msgstr ""
+
+#: ../../zeros.rst:27
+msgid "Suppressing ``         stdout        `` ."
+msgstr ""
+
+#: ../../zeros.rst:37
+msgid ""
+"Suppressing ``         stderr        `` (from `Example 16-3 "
+"<moreadv.html#EX57>`__ )."
+msgstr ""
+
+#: ../../zeros.rst:48
+msgid ""
+"Suppressing output from *both* ``         stdout        `` and ``         "
+"stderr        `` ."
+msgstr ""
+
+#: ../../zeros.rst:67
+msgid ""
+"Deleting contents of a file, but preserving the file itself, with all "
+"attendant permissions (from `Example 2-1 <sha-bang.html#EX1>`__ and `Example"
+" 2-3 <sha-bang.html#EX2>`__ ):"
+msgstr ""
+
+#: ../../zeros.rst:81
+msgid ""
+"Automatically emptying the contents of a logfile (especially good for "
+"dealing with those nasty \"cookies\" sent by commercial Web sites):"
+msgstr ""
+
+#: ../../zeros.rst:87
+msgid "Exemple 1. Hiding the cookie jar"
+msgstr ""
+
+#: ../../zeros.rst:107
+msgid ""
+"Like ``         /dev/null        `` , ``         /dev/zero        `` is a "
+"pseudo-device file, but it actually produces a stream of nulls ( *binary* "
+"zeros, not the `ASCII <special-chars.html#ASCIIDEF>`__ kind). Output written"
+" to ``         /dev/zero        `` disappears, and it is fairly difficult to"
+" actually read the nulls emitted there, though it can be done with `od "
+"<extmisc.html#ODREF>`__ or a hex editor. The chief use of ``         "
+"/dev/zero        `` is creating an initialized dummy file of predetermined "
+"length intended as a temporary swap file."
+msgstr ""
+
+#: ../../zeros.rst:119
+msgid ""
+"Exemple 2. Setting up a swapfile using ``           /dev/zero          ``"
+msgstr ""
+
+#: ../../zeros.rst:191
+msgid ""
+"Another application of ``         /dev/zero        `` is to \"zero out\" a "
+"file of a designated size for a special purpose, such as mounting a "
+"filesystem on a `loopback device <devref1.html#LOOPBACKREF>`__ (see `Example"
+" 17-8 <system.html#CREATEFS>`__ ) or \"securely\" deleting a file (see "
+"`Example 16-61 <extmisc.html#BLOTOUT>`__ )."
+msgstr ""
+
+#: ../../zeros.rst:200
+msgid "Exemple 3. Creating a ramdisk"
+msgstr ""
+
+#: ../../zeros.rst:269
+msgid ""
+"In addition to all the above, ``         /dev/zero        `` is needed by "
+"ELF ( *Executable and Linking Format* ) UNIX/Linux binaries."
+msgstr ""

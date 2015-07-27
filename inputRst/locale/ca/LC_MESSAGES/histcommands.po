@@ -1,0 +1,110 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../histcommands.rst:3
+msgid "XXX  Appendix L. History Commands"
+msgstr ""
+
+#: ../../histcommands.rst:5
+msgid ""
+"The Bash shell provides command-line tools for editing and manipulating a "
+"user's *command history* . This is primarily a convenience, a means of "
+"saving keystrokes."
+msgstr ""
+
+#: ../../histcommands.rst:9
+msgid "Bash history commands:"
+msgstr ""
+
+#: ../../histcommands.rst:11
+msgid "**history**"
+msgstr ""
+
+#: ../../histcommands.rst:13
+msgid "**fc**"
+msgstr ""
+
+#: ../../histcommands.rst:27
+msgid "Internal variables associated with Bash history commands:"
+msgstr ""
+
+#: ../../histcommands.rst:29
+msgid "$HISTCMD"
+msgstr ""
+
+#: ../../histcommands.rst:31
+msgid "$HISTCONTROL"
+msgstr ""
+
+#: ../../histcommands.rst:33
+msgid "$HISTIGNORE"
+msgstr ""
+
+#: ../../histcommands.rst:35
+msgid "$HISTFILE"
+msgstr ""
+
+#: ../../histcommands.rst:37
+msgid "$HISTFILESIZE"
+msgstr ""
+
+#: ../../histcommands.rst:39
+msgid "$HISTSIZE"
+msgstr ""
+
+#: ../../histcommands.rst:41
+msgid "$HISTTIMEFORMAT (Bash, ver. 3.0 or later)"
+msgstr ""
+
+#: ../../histcommands.rst:43
+msgid "!!"
+msgstr ""
+
+#: ../../histcommands.rst:45
+msgid "!$"
+msgstr ""
+
+#: ../../histcommands.rst:47
+msgid "!#"
+msgstr ""
+
+#: ../../histcommands.rst:49
+msgid "!N"
+msgstr ""
+
+#: ../../histcommands.rst:51
+msgid "!-N"
+msgstr ""
+
+#: ../../histcommands.rst:53
+msgid "!STRING"
+msgstr ""
+
+#: ../../histcommands.rst:55
+msgid "!?STRING?"
+msgstr ""
+
+#: ../../histcommands.rst:57
+msgid "^STRING^string^"
+msgstr ""
+
+#: ../../histcommands.rst:59
+msgid "Unfortunately, the Bash history tools find no use in scripting."
+msgstr ""
+
+#: ../../histcommands.rst:91
+msgid ""
+"The `Advancing in the Bash Shell <http://samrowe.com/wordpress/advancing-in-"
+"the-bash-shell/>`__ site gives a good introduction to the use of history "
+"commands in Bash."
+msgstr ""

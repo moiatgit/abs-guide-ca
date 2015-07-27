@@ -1,0 +1,121 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../terminalccmds.rst:3
+msgid "XXX 16.7. Terminal Control Commands"
+msgstr ""
+
+#: ../../terminalccmds.rst:6
+msgid "** Command affecting the console or terminal**"
+msgstr ""
+
+#: ../../terminalccmds.rst:9
+msgid ""
+"Initialize terminal and/or fetch information about it from terminfo data. "
+"Various options permit certain terminal operations: **tput clear** is the "
+"equivalent of `clear <terminalccmds.html#CLEARREF>`__ ; **tput reset** is "
+"the equivalent of `reset <terminalccmds.html#RESETREF>`__ ."
+msgstr ""
+
+#: ../../terminalccmds.rst:24
+msgid ""
+"Issuing a **tput cup X Y** moves the cursor to the (X,Y) coordinates in the "
+"current terminal. A **clear** to erase the terminal screen would normally "
+"precede this."
+msgstr ""
+
+#: ../../terminalccmds.rst:28
+msgid "Some interesting options to *tput* are:"
+msgstr ""
+
+#: ../../terminalccmds.rst:30
+msgid "``           bold          `` , for high-intensity text"
+msgstr ""
+
+#: ../../terminalccmds.rst:32
+msgid "``           smul          `` , to underline text in the terminal"
+msgstr ""
+
+#: ../../terminalccmds.rst:34
+msgid "``           smso          `` , to render text in reverse"
+msgstr ""
+
+#: ../../terminalccmds.rst:36
+msgid ""
+"``           sgr0          `` , to reset the terminal parameters (to "
+"normal), without clearing the screen"
+msgstr ""
+
+#: ../../terminalccmds.rst:39
+msgid "Example scripts using *tput* :"
+msgstr ""
+
+#: ../../terminalccmds.rst:41
+msgid "`Example 36-15 <colorizing.html#COLORECHO>`__"
+msgstr ""
+
+#: ../../terminalccmds.rst:43
+msgid "`Example 36-13 <colorizing.html#EX30A>`__"
+msgstr ""
+
+#: ../../terminalccmds.rst:45
+msgid "`Example A-44 <contributed-scripts.html#HOMEWORK>`__"
+msgstr ""
+
+#: ../../terminalccmds.rst:47
+msgid "`Example A-42 <contributed-scripts.html#NIM>`__"
+msgstr ""
+
+#: ../../terminalccmds.rst:49
+msgid "`Example 27-2 <arrays.html#POEM>`__"
+msgstr ""
+
+#: ../../terminalccmds.rst:51
+msgid ""
+"Note that `stty <system.html#STTYREF>`__ offers a more powerful command set "
+"for controlling a terminal."
+msgstr ""
+
+#: ../../terminalccmds.rst:55
+msgid ""
+"This command prints out extensive information about the current terminal. It"
+" references the *terminfo* database."
+msgstr ""
+
+#: ../../terminalccmds.rst:77
+msgid ""
+"Reset terminal parameters and clear text screen. As with **clear** , the "
+"cursor and prompt reappear in the upper lefthand corner of the terminal."
+msgstr ""
+
+#: ../../terminalccmds.rst:82
+msgid ""
+"The **clear** command simply clears the text screen at the console or in an "
+"*xterm* . The prompt and cursor reappear at the upper lefthand corner of the"
+" screen or xterm window. This command may be used either at the command line"
+" or in a script. See `Example 11-26 <testbranch.html#EX30>`__ ."
+msgstr ""
+
+#: ../../terminalccmds.rst:89
+msgid ""
+"Echoes commands necessary to set ``         $TERM        `` and ``         "
+"$TERMCAP        `` to duplicate the *size* (dimensions) of the current "
+"terminal."
+msgstr ""
+
+#: ../../terminalccmds.rst:106
+msgid ""
+"This utility records (saves to a file) all the user keystrokes at the "
+"command-line in a console or an xterm window. This, in effect, creates a "
+"record of a session."
+msgstr ""

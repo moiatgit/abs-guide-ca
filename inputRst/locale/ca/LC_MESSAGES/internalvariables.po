@@ -1,0 +1,973 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internalvariables.rst:3
+msgid "XXX  9.1. Internal Variables"
+msgstr ""
+
+#: ../../internalvariables.rst:5
+msgid ""
+"Les *variables internes* són variables que afecten el comportament dels "
+"guions Bash."
+msgstr ""
+
+#: ../../internalvariables.rst:9
+msgid "``$BASH``"
+msgstr ""
+
+#: ../../internalvariables.rst:11
+msgid "The path to the *Bash* binary itself"
+msgstr ""
+
+#: ../../internalvariables.rst:22
+msgid "``$BASH_ENV``"
+msgstr ""
+
+#: ../../internalvariables.rst:24
+msgid ""
+"An `environmental variable <othertypesv.html#ENVREF>`__ pointing to a Bash "
+"startup file to be read when a script is invoked"
+msgstr ""
+
+#: ../../internalvariables.rst:28
+msgid "``$BASH_SUBSHELL``"
+msgstr ""
+
+#: ../../internalvariables.rst:30
+msgid ""
+"A variable indicating the `subshell <subshells.html#SUBSHELLSREF>`__ level. "
+"This is a new addition to Bash, `version 3 <bashver3.html#BASH3REF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:34
+msgid "See `Example 21-1 <subshells.html#SUBSHELL>`__ for usage."
+msgstr ""
+
+#: ../../internalvariables.rst:37
+msgid "``$BASHPID``"
+msgstr ""
+
+#: ../../internalvariables.rst:39
+msgid ""
+"*Process ID* of the current instance of Bash. This is not the same as the "
+"`$$ <internalvariables.html#PROCCID>`__ variable, but it often gives the "
+"same result."
+msgstr ""
+
+#: ../../internalvariables.rst:81
+msgid "``$BASH_VERSINFO[n]``"
+msgstr ""
+
+#: ../../internalvariables.rst:83
+msgid ""
+"A 6-element `array <arrays.html#ARRAYREF>`__ containing version information "
+"about the installed release of Bash. This is similar to ``         "
+"$BASH_VERSION        `` , below, but a bit more detailed."
+msgstr ""
+
+#: ../../internalvariables.rst:108
+msgid "``$BASH_VERSION``"
+msgstr ""
+
+#: ../../internalvariables.rst:110
+msgid "The version of Bash installed on the system"
+msgstr ""
+
+#: ../../internalvariables.rst:130
+msgid ""
+"Checking $BASH\\_VERSION is a good method of determining which shell is "
+"running. `$SHELL <internalvariables.html#SHELLVARREF>`__ does not "
+"necessarily give the correct answer."
+msgstr ""
+
+#: ../../internalvariables.rst:135
+msgid "``$CDPATH``"
+msgstr ""
+
+#: ../../internalvariables.rst:137
+msgid ""
+"A colon-separated list of search paths available to the `cd "
+"<internal.html#CDREF>`__ command, similar in function to the `$PATH "
+"<internalvariables.html#PATHREF>`__ variable for binaries. The ``         "
+"$CDPATH        `` variable may be set in the local ``          ~/.bashrc"
+"         `` <sample-bashrc.html#BASHRC>`__ file."
+msgstr ""
+
+#: ../../internalvariables.rst:163
+msgid "``$DIRSTACK``"
+msgstr ""
+
+#: ../../internalvariables.rst:166
+msgid "<internalvariables.html#FTN.AEN4671>`__ (affected by"
+msgstr ""
+
+#: ../../internalvariables.rst:167
+msgid ""
+"`pushd <internal.html#PUSHDREF>`__ and `popd <internal.html#POPDREF>`__ )"
+msgstr ""
+
+#: ../../internalvariables.rst:170
+msgid ""
+"This builtin variable corresponds to the `dirs <internal.html#DIRSD>`__ "
+"command, however **dirs** shows the entire contents of the directory stack."
+msgstr ""
+
+#: ../../internalvariables.rst:175
+msgid "``$EDITOR``"
+msgstr ""
+
+#: ../../internalvariables.rst:177
+msgid "The default editor invoked by a script, usually **vi** or **emacs** ."
+msgstr ""
+
+#: ../../internalvariables.rst:181
+msgid "``$EUID``"
+msgstr ""
+
+#: ../../internalvariables.rst:183
+msgid "\"effective\" user ID number"
+msgstr ""
+
+#: ../../internalvariables.rst:185
+msgid ""
+"Identification number of whatever identity the current user has assumed, "
+"perhaps by means of `su <system.html#SUREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:190 ../../internalvariables.rst:337
+#: ../../internalvariables.rst:808 ../../internalvariables.rst:1681
+#: ../../internalvariables.rst:1901
+msgid "|Caution"
+msgstr ""
+
+#: ../../internalvariables.rst:192
+msgid ""
+"The ``            $EUID           `` is not necessarily the same as the "
+"`$UID <internalvariables.html#UIDREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:199
+msgid "``$FUNCNAME``"
+msgstr ""
+
+#: ../../internalvariables.rst:201
+msgid "Name of the current function"
+msgstr ""
+
+#: ../../internalvariables.rst:218
+msgid "See also `Example A-50 <contributed-scripts.html#USEGETOPT>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:221
+msgid "``$GLOBIGNORE``"
+msgstr ""
+
+#: ../../internalvariables.rst:223
+msgid ""
+"A list of filename patterns to be excluded from matching in `globbing "
+"<globbingref.html>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:227
+msgid "``$GROUPS``"
+msgstr ""
+
+#: ../../internalvariables.rst:229
+msgid "Groups current user belongs to"
+msgstr ""
+
+#: ../../internalvariables.rst:231
+msgid ""
+"This is a listing (array) of the group id numbers for current user, as "
+"recorded in ``          /etc/passwd         `` <files.html#DATAFILESREF1>`__"
+" and ``         /etc/group        `` ."
+msgstr ""
+
+#: ../../internalvariables.rst:254
+msgid "``$HOME``"
+msgstr ""
+
+#: ../../internalvariables.rst:256
+msgid ""
+"Home directory of the user, usually ``         /home/username        `` (see"
+" `Example 10-7 <parameter-substitution.html#EX6>`__ )"
+msgstr ""
+
+#: ../../internalvariables.rst:261
+msgid "``$HOSTNAME``"
+msgstr ""
+
+#: ../../internalvariables.rst:263
+msgid ""
+"The `hostname <system.html#HNAMEREF>`__ command assigns the system host name"
+" at bootup in an init script. However, the ``         gethostname()        "
+"`` function sets the Bash internal variable ``         $HOSTNAME        `` ."
+" See also `Example 10-7 <parameter-substitution.html#EX6>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:270
+msgid "``$HOSTTYPE``"
+msgstr ""
+
+#: ../../internalvariables.rst:272
+msgid "host type"
+msgstr ""
+
+#: ../../internalvariables.rst:274
+msgid ""
+"Like `$MACHTYPE <internalvariables.html#MACHTYPEREF>`__ , identifies the "
+"system hardware."
+msgstr ""
+
+#: ../../internalvariables.rst:286
+msgid "``$IFS``"
+msgstr ""
+
+#: ../../internalvariables.rst:288
+msgid "internal field separator"
+msgstr ""
+
+#: ../../internalvariables.rst:290
+msgid ""
+"This variable determines how Bash recognizes `fields <special-"
+"chars.html#FIELDREF>`__ , or word boundaries, when it interprets character "
+"strings."
+msgstr ""
+
+#: ../../internalvariables.rst:294
+msgid ""
+"$IFS defaults to `whitespace <special-chars.html#WHITESPACEREF>`__ (space, "
+"tab, and newline), but may be changed, for example, to parse a comma-"
+"separated data file. Note that `$\\* <internalvariables.html#APPREF>`__ uses"
+" the first character held in ``         $IFS        `` . See `Example 5-1 "
+"<quotingvar.html#WEIRDVARS>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:325
+msgid ""
+"Set ``         $IFS        `` to eliminate whitespace in `pathnames "
+"<special-chars.html#PATHNAMEREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:339
+msgid ""
+"``            $IFS           `` does not handle whitespace the same as it "
+"does other characters."
+msgstr ""
+
+#: ../../internalvariables.rst:344
+msgid "Exemple 1. $IFS and whitespace"
+msgstr ""
+
+#: ../../internalvariables.rst:628
+msgid ""
+"(Many thanks, StÃ©phane Chazelas, for clarification and above examples.)"
+msgstr ""
+
+#: ../../internalvariables.rst:631
+msgid ""
+"See also `Example 16-41 <communications.html#ISSPAMMER>`__ , `Example 11-8 "
+"<loops1.html#BINGREP>`__ , and `Example 19-14 <x17837.html#MAILBOXGREP>`__ "
+"for instructive examples of using ``         $IFS        `` ."
+msgstr ""
+
+#: ../../internalvariables.rst:637
+msgid "``$IGNOREEOF``"
+msgstr ""
+
+#: ../../internalvariables.rst:639
+msgid ""
+"Ignore EOF: how many end-of-files (control-D) the shell will ignore before "
+"logging out."
+msgstr ""
+
+#: ../../internalvariables.rst:643
+msgid "``$LC_COLLATE``"
+msgstr ""
+
+#: ../../internalvariables.rst:645
+msgid ""
+"Often set in the ``          .bashrc         `` <sample-bashrc.html>`__ or "
+"``         /etc/profile        `` files, this variable controls collation "
+"order in filename expansion and pattern matching. If mishandled, ``         "
+"LC_COLLATE        `` can cause unexpected results in `filename globbing "
+"<globbingref.html>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:654 ../../internalvariables.rst:765
+#: ../../internalvariables.rst:861 ../../internalvariables.rst:929
+#: ../../internalvariables.rst:990 ../../internalvariables.rst:1210
+#: ../../internalvariables.rst:1476 ../../internalvariables.rst:1568
+#: ../../internalvariables.rst:1583 ../../internalvariables.rst:1841
+msgid "|Note"
+msgstr ""
+
+#: ../../internalvariables.rst:656
+msgid ""
+"As of version 2.05 of Bash, filename globbing no longer distinguishes "
+"between lowercase and uppercase letters in a character range between "
+"brackets. For example, **ls [A-M]\\*** would match both ``            "
+"File1.txt           `` and ``            file1.txt           `` . To revert "
+"to the customary behavior of bracket matching, set ``            LC_COLLATE"
+"           `` to ``            C           `` by an ``"
+"                         export LC_COLLATE=C                       `` in ``"
+"            /etc/profile           `` and/or ``            ~/.bashrc"
+"           `` ."
+msgstr ""
+
+#: ../../internalvariables.rst:672
+msgid "``$LC_CTYPE``"
+msgstr ""
+
+#: ../../internalvariables.rst:674
+msgid ""
+"This internal variable controls character interpretation in `globbing "
+"<globbingref.html>`__ and pattern matching."
+msgstr ""
+
+#: ../../internalvariables.rst:678
+msgid "``$LINENO``"
+msgstr ""
+
+#: ../../internalvariables.rst:680
+msgid ""
+"This variable is the line number of the shell script in which this variable "
+"appears. It has significance only within the script in which it appears, and"
+" is chiefly useful for debugging purposes."
+msgstr ""
+
+#: ../../internalvariables.rst:697
+msgid "``$MACHTYPE``"
+msgstr ""
+
+#: ../../internalvariables.rst:699
+msgid "machine type"
+msgstr ""
+
+#: ../../internalvariables.rst:701
+msgid "Identifies the system hardware."
+msgstr ""
+
+#: ../../internalvariables.rst:712
+msgid "``$OLDPWD``"
+msgstr ""
+
+#: ../../internalvariables.rst:714
+msgid ""
+"Old working directory ( \"OLD-Print-Working-Directory\" , previous directory"
+" you were in)."
+msgstr ""
+
+#: ../../internalvariables.rst:718
+msgid "``$OSTYPE``"
+msgstr ""
+
+#: ../../internalvariables.rst:720
+msgid "operating system type"
+msgstr ""
+
+#: ../../internalvariables.rst:731
+msgid "``$PATH``"
+msgstr ""
+
+#: ../../internalvariables.rst:733
+msgid ""
+"Path to binaries, usually ``         /usr/bin/        `` , ``         "
+"/usr/X11R6/bin/        `` , ``         /usr/local/bin        `` , etc."
+msgstr ""
+
+#: ../../internalvariables.rst:737
+msgid ""
+"When given a command, the shell automatically does a hash table search on "
+"the directories listed in the *path* for the executable. The path is stored "
+"in the `environmental variable <othertypesv.html#ENVREF>`__ , ``         "
+"$PATH        `` , a list of directories, separated by colons. Normally, the "
+"system stores the ``         $PATH        `` definition in ``         "
+"/etc/profile        `` and/or ``          ~/.bashrc         `` <sample-"
+"bashrc.html>`__ (see `Appendix H <files.html>`__ )."
+msgstr ""
+
+#: ../../internalvariables.rst:755
+msgid ""
+"``                   PATH=${PATH}:/opt/bin                 `` appends the ``"
+"         /opt/bin        `` directory to the current path. In a script, it "
+"may be expedient to temporarily add a directory to the path in this way. "
+"When the script exits, this restores the original ``         $PATH        ``"
+" (a child process, such as a script, may not change the environment of the "
+"parent process, the shell)."
+msgstr ""
+
+#: ../../internalvariables.rst:767
+msgid ""
+"The current \"working directory\" , ``            ./           `` , is "
+"usually omitted from the ``            $PATH           `` as a security "
+"measure."
+msgstr ""
+
+#: ../../internalvariables.rst:775
+msgid "``$PIPESTATUS``"
+msgstr ""
+
+#: ../../internalvariables.rst:777
+msgid ""
+"`Array <arrays.html#ARRAYREF>`__ variable holding `exit status <exit-"
+"status.html#EXITSTATUSREF>`__ (es) of last executed *foreground* `pipe "
+"<special-chars.html#PIPEREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:800
+msgid ""
+"The members of the ``         $PIPESTATUS        `` array hold the exit "
+"status of each respective command executed in a pipe. ``         "
+"$PIPESTATUS[0]        `` holds the exit status of the first command in the "
+"pipe, ``         $PIPESTATUS[1]        `` the exit status of the second "
+"command, and so on."
+msgstr ""
+
+#: ../../internalvariables.rst:810
+msgid ""
+"The ``            $PIPESTATUS           `` variable may contain an erroneous"
+" 0 value in a login shell (in releases prior to 3.0 of Bash)."
+msgstr ""
+
+#: ../../internalvariables.rst:822 ../../internalvariables.rst:880
+#: ../../internalvariables.rst:945 ../../internalvariables.rst:949
+msgid "bash$ echo ${PIPESTA"
+msgstr ""
+
+#: ../../internalvariables.rst:824 ../../internalvariables.rst:951
+msgid "0"
+msgstr ""
+
+#: ../../internalvariables.rst:830
+msgid ""
+"The above lines contained in a script would produce the expected ``"
+"            0 1 0           `` output."
+msgstr ""
+
+#: ../../internalvariables.rst:833
+msgid ""
+"Thank you, Wayne Pollock for pointing this out and supplying the above "
+"example."
+msgstr ""
+
+#: ../../internalvariables.rst:863
+msgid ""
+"The ``            $PIPESTATUS           `` variable gives unexpected results"
+" in some contexts."
+msgstr ""
+
+#: ../../internalvariables.rst:872
+msgid "3.00.14(1)-release"
+msgstr ""
+
+#: ../../internalvariables.rst:874
+msgid "bash$ $ ls | bogus_c"
+msgstr ""
+
+#: ../../internalvariables.rst:876 ../../internalvariables.rst:941
+msgid "bash: bogus_command:"
+msgstr ""
+
+#: ../../internalvariables.rst:878 ../../internalvariables.rst:943
+msgid "0       0       0"
+msgstr ""
+
+#: ../../internalvariables.rst:882
+msgid "141 127 0"
+msgstr ""
+
+#: ../../internalvariables.rst:888
+msgid ""
+"Chet Ramey attributes the above output to the behavior of `ls "
+"<basic.html#LSREF>`__ . If *ls* writes to a *pipe* whose output is not read,"
+" then ``                         SIGPIPE                       `` kills it, "
+"and its `exit status <exit-status.html#EXITSTATUSREF>`__ is 141 . Otherwise "
+"its exit status is 0 , as expected. This likewise is the case for `tr "
+"<textproc.html#TRREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:931
+msgid ""
+"``            $PIPESTATUS           `` is a \"volatile\" variable. It needs "
+"to be captured immediately after the pipe in question, before any other "
+"command intervenes."
+msgstr ""
+
+#: ../../internalvariables.rst:947
+msgid "0 127 0"
+msgstr ""
+
+#: ../../internalvariables.rst:992
+msgid ""
+"The `pipefail option <bashver3.html#PIPEFAILREF>`__ may be useful in cases "
+"where ``            $PIPESTATUS           `` does not give the desired "
+"information."
+msgstr ""
+
+#: ../../internalvariables.rst:1000
+msgid "``$PPID``"
+msgstr ""
+
+#: ../../internalvariables.rst:1002
+msgid ""
+"The ``         $PPID        `` of a process is the process ID ( ``         "
+"pid        `` ) of its parent process. ` [2]"
+msgstr ""
+
+#: ../../internalvariables.rst:1004
+msgid "<internalvariables.html#FTN.AEN5154>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:1006
+msgid "Compare this with the `pidof <system.html#PIDOFREF>`__ command."
+msgstr ""
+
+#: ../../internalvariables.rst:1009
+msgid "``$PROMPT_COMMAND``"
+msgstr ""
+
+#: ../../internalvariables.rst:1011
+msgid ""
+"A variable holding a command to be executed just before the primary prompt, "
+"``         $PS1        `` is to be displayed."
+msgstr ""
+
+#: ../../internalvariables.rst:1015
+msgid "``$PS1``"
+msgstr ""
+
+#: ../../internalvariables.rst:1017
+msgid "This is the main prompt, seen at the command-line."
+msgstr ""
+
+#: ../../internalvariables.rst:1020
+msgid "``$PS2``"
+msgstr ""
+
+#: ../../internalvariables.rst:1022
+msgid ""
+"The secondary prompt, seen when additional input is expected. It displays as"
+" \">\" ."
+msgstr ""
+
+#: ../../internalvariables.rst:1026
+msgid "``$PS3``"
+msgstr ""
+
+#: ../../internalvariables.rst:1028
+msgid ""
+"The tertiary prompt, displayed in a `select <testbranch.html#SELECTREF>`__ "
+"loop (see `Example 11-30 <testbranch.html#EX31>`__ )."
+msgstr ""
+
+#: ../../internalvariables.rst:1033
+msgid "``$PS4``"
+msgstr ""
+
+#: ../../internalvariables.rst:1035
+msgid ""
+"The quartenary prompt, shown at the beginning of each line of output when "
+"invoking a script with the -x *[verbose trace]* `option "
+"<options.html#OPTIONSREF>`__ . It displays as \"+\" ."
+msgstr ""
+
+#: ../../internalvariables.rst:1039
+msgid ""
+"As a debugging aid, it may be useful to embed diagnostic information in ``"
+"         $PS4        `` ."
+msgstr ""
+
+#: ../../internalvariables.rst:1055
+msgid "``$PWD``"
+msgstr ""
+
+#: ../../internalvariables.rst:1057
+msgid "Working directory (directory you are in at the time)"
+msgstr ""
+
+#: ../../internalvariables.rst:1059
+msgid ""
+"This is the analog to the `pwd <internal.html#PWD2REF>`__ builtin command."
+msgstr ""
+
+#: ../../internalvariables.rst:1109
+msgid "``$REPLY``"
+msgstr ""
+
+#: ../../internalvariables.rst:1111
+msgid ""
+"The default value when a variable is not supplied to `read "
+"<internal.html#READREF>`__ . Also applicable to `select "
+"<testbranch.html#SELECTREF>`__ menus, but only supplies the item number of "
+"the variable chosen, not the value of the variable itself."
+msgstr ""
+
+#: ../../internalvariables.rst:1149
+msgid "``$SECONDS``"
+msgstr ""
+
+#: ../../internalvariables.rst:1151
+msgid "The number of seconds the script has been running."
+msgstr ""
+
+#: ../../internalvariables.rst:1187
+msgid "``$SHELLOPTS``"
+msgstr ""
+
+#: ../../internalvariables.rst:1189
+msgid ""
+"The list of enabled shell `options <options.html#OPTIONSREF>`__ , a readonly"
+" variable."
+msgstr ""
+
+#: ../../internalvariables.rst:1202
+msgid "``$SHLVL``"
+msgstr ""
+
+#: ../../internalvariables.rst:1205
+msgid "<internalvariables.html#FTN.AEN5320>`__ If, at the command-line,"
+msgstr ""
+
+#: ../../internalvariables.rst:1206
+msgid "$SHLVL is 1, then in a script it will increment to 2."
+msgstr ""
+
+#: ../../internalvariables.rst:1212
+msgid ""
+"This variable is `*not* affected by subshells "
+"<subshells.html#SUBSHNLEVREF>`__ . Use `$BASH\\_SUBSHELL "
+"<internalvariables.html#BASHSUBSHELLREF>`__ when you need an indication of "
+"subshell nesting."
+msgstr ""
+
+#: ../../internalvariables.rst:1221
+msgid "``$TMOUT``"
+msgstr ""
+
+#: ../../internalvariables.rst:1223
+msgid ""
+"If the ``                   $TMOUT                 `` environmental variable"
+" is set to a non-zero value ``         time        `` , then the shell "
+"prompt will time out after``$time`` seconds. This will cause a logout."
+msgstr ""
+
+#: ../../internalvariables.rst:1228
+msgid ""
+"As of version 2.05b of Bash, it is now possible to use ``                   "
+"$TMOUT                 `` in a script in combination with `read "
+"<internal.html#READREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1253
+msgid ""
+"There are other, more complex, ways of implementing timed input in a script."
+" One alternative is to set up a timing loop to signal the script when it "
+"times out. This also requires a signal handling routine to `trap "
+"<debugging.html#TRAPREF1>`__ (see `Example 32-5 <debugging.html#EX76>`__ ) "
+"the interrupt generated by the timing loop (whew!)."
+msgstr ""
+
+#: ../../internalvariables.rst:1262
+msgid "Exemple 2. Timed Input"
+msgstr ""
+
+#: ../../internalvariables.rst:1329
+msgid "An alternative is using `stty <system.html#STTYREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1333
+msgid "Exemple 3. Once more, timed input"
+msgstr ""
+
+#: ../../internalvariables.rst:1382
+msgid ""
+"Perhaps the simplest method is using the ``         -t        `` option to "
+"`read <internal.html#READREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1387
+msgid "Exemple 4. Timed *read*"
+msgstr ""
+
+#: ../../internalvariables.rst:1419
+msgid "``$UID``"
+msgstr ""
+
+#: ../../internalvariables.rst:1421
+msgid "User ID number"
+msgstr ""
+
+#: ../../internalvariables.rst:1423
+msgid ""
+"Current user's user identification number, as recorded in ``          "
+"/etc/passwd         `` <files.html#DATAFILESREF1>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:1426
+msgid ""
+"This is the current user's real id, even if she has temporarily assumed "
+"another identity through `su <system.html#SUREF>`__ . ``         $UID"
+"        `` is a readonly variable, not subject to change from the command "
+"line or within a script, and is the counterpart to the `id "
+"<system.html#IDREF>`__ builtin."
+msgstr ""
+
+#: ../../internalvariables.rst:1434
+msgid "Exemple 5. Am I root?"
+msgstr ""
+
+#: ../../internalvariables.rst:1472
+msgid "See also `Example 2-3 <sha-bang.html#EX2>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1478
+msgid ""
+"The variables ``            $ENV           `` , ``            $LOGNAME"
+"           `` , ``            $MAIL           `` ,``$TERM`` , ``            "
+"$USER           `` , and ``            $USERNAME           `` are *not* Bash"
+" `builtins <internal.html#BUILTINREF>`__ . These are, however, often set as "
+"`environmental variables <othertypesv.html#ENVREF>`__ in one of the `Bash "
+"<files.html#FILESREF1>`__ or *login* startup files. ``            $SHELL"
+"           `` , the name of the user's login shell, may be set from ``"
+"            /etc/passwd           `` or in an \"init\" script, and it is "
+"likewise not a Bash builtin."
+msgstr ""
+
+#: ../../internalvariables.rst:1549
+msgid "**Positional Parameters**"
+msgstr ""
+
+#: ../../internalvariables.rst:1551
+msgid ""
+"``        $0       `` , ``        $1       `` , ``        $2       `` ,"
+msgstr ""
+
+#: ../../internalvariables.rst:1553
+msgid ""
+"Positional parameters, passed from command line to script, passed to a "
+"function, or `set <internal.html#SETREF>`__ to a variable (see `Example 4-5 "
+"<othertypesv.html#EX17>`__ and `Example 15-16 <internal.html#EX34>`__ )"
+msgstr ""
+
+#: ../../internalvariables.rst:1560
+msgid "<internalvariables.html#FTN.AEN5479>`__ or positional parameters"
+msgstr ""
+
+#: ../../internalvariables.rst:1561
+msgid "(see `Example 36-2 <wrapper.html#EX4>`__ )"
+msgstr ""
+
+#: ../../internalvariables.rst:1564
+msgid "All of the positional parameters, seen as a single word"
+msgstr ""
+
+#: ../../internalvariables.rst:1570
+msgid "\" ``             $*            `` \" must be quoted."
+msgstr ""
+
+#: ../../internalvariables.rst:1576
+msgid ""
+"Same as $\\* , but each parameter is a quoted string, that is, the "
+"parameters are passed on intact, without interpretation or expansion. This "
+"means, among other things, that each parameter in the argument list is seen "
+"as a separate word."
+msgstr ""
+
+#: ../../internalvariables.rst:1585
+msgid "Of course, \" ``             $@            `` \" should be quoted."
+msgstr ""
+
+#: ../../internalvariables.rst:1592
+msgid "Exemple 6. *arglist* : Listing arguments with $\\* and $@"
+msgstr ""
+
+#: ../../internalvariables.rst:1651
+msgid ""
+"Following a **shift** , the ``         $@        `` holds the remaining "
+"command-line parameters, lacking the previous ``         $1        `` , "
+"which was lost."
+msgstr ""
+
+#: ../../internalvariables.rst:1672
+msgid ""
+"The ``         $@        `` special parameter finds use as a tool for "
+"filtering input into shell scripts. The **cat \"$@\"** construction accepts "
+"input to a script either from ``         stdin        `` or from files given"
+" as parameters to the script. See `Example 16-24 <textproc.html#ROT13>`__ "
+"and `Example 16-25 <textproc.html#CRYPTOQUOTE>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1683
+msgid ""
+"The ``            $*           `` and ``            $@           `` "
+"parameters sometimes display inconsistent and puzzling behavior, depending "
+"on the setting of `$IFS <internalvariables.html#IFSREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1693
+msgid "Exemple 7. Inconsistent ``$*`` and ``$@`` behavior"
+msgstr ""
+
+#: ../../internalvariables.rst:1843
+msgid ""
+"The **$@** and **$\\*** parameters differ only when between double quotes."
+msgstr ""
+
+#: ../../internalvariables.rst:1851
+msgid "Exemple 8. ``$*`` and ``$@`` when ``$IFS`` is empty"
+msgstr ""
+
+#: ../../internalvariables.rst:1891
+msgid "**Other Special Parameters**"
+msgstr ""
+
+#: ../../internalvariables.rst:1893
+msgid "``$-``"
+msgstr ""
+
+#: ../../internalvariables.rst:1896
+msgid ""
+"Flags passed to script (using `set <internal.html#SETREF>`__ ). See `Example"
+" 15-16 <internal.html#EX34>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1903
+msgid ""
+"This was originally a *ksh* construct adopted into Bash, and unfortunately "
+"it does not seem to work reliably in Bash scripts. One possible use for it "
+"is to have a script `self-test whether it is interactive "
+"<intandnonint.html#IITEST>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:1912
+msgid "``$!``"
+msgstr ""
+
+#: ../../internalvariables.rst:1914
+msgid ""
+"`PID <special-chars.html#PROCESSIDDEF>`__ (process ID) of last job run in "
+"background"
+msgstr ""
+
+#: ../../internalvariables.rst:1939
+msgid "Using ``         $!        `` for job control:"
+msgstr ""
+
+#: ../../internalvariables.rst:1952
+msgid "Or, alternately:"
+msgstr ""
+
+#: ../../internalvariables.rst:2003
+msgid "``$_``"
+msgstr ""
+
+#: ../../internalvariables.rst:2005
+msgid "Special variable set to final argument of previous command executed."
+msgstr ""
+
+#: ../../internalvariables.rst:2009
+msgid "Exemple 9. Underscore variable"
+msgstr ""
+
+#: ../../internalvariables.rst:2034
+msgid "``$?``"
+msgstr ""
+
+#: ../../internalvariables.rst:2036
+msgid ""
+"`Exit status <exit-status.html#EXITSTATUSREF>`__ of a command, `function "
+"<functions.html#FUNCTIONREF>`__ , or the script itself (see `Example 24-7 "
+"<complexfunct.html#MAX>`__ )"
+msgstr ""
+
+#: ../../internalvariables.rst:2041
+msgid "``$$``"
+msgstr ""
+
+#: ../../internalvariables.rst:2044
+msgid "<internalvariables.html#FTN.AEN5654>`__ The ``         $$        ``"
+msgstr ""
+
+#: ../../internalvariables.rst:2045
+msgid ""
+"variable often finds use in scripts to construct \"unique\" temp file names "
+"(see `Example 32-6 <debugging.html#ONLINE>`__ , `Example 16-31 "
+"<filearchiv.html#DERPM>`__ , and `Example 15-27 <x9644.html#SELFDESTRUCT>`__"
+" ). This is usually simpler than invoking `mktemp "
+"<filearchiv.html#MKTEMPREF>`__ ."
+msgstr ""
+
+#: ../../internalvariables.rst:2054
+msgid "Anotacions"
+msgstr ""
+
+#: ../../internalvariables.rst:2055
+msgid "` [1]  <internalvariables.html#AEN4671>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:2057
+msgid "A *stack register* is a set of consecutive memory locations, such that"
+msgstr ""
+
+#: ../../internalvariables.rst:2058
+msgid ""
+"the values stored ( *pushed* ) are retrieved ( *popped* ) in *reverse* "
+"order. The last value stored is the first retrieved. This is sometimes "
+"called a ``               LIFO             `` ( *last-in-first-out* ) or "
+"*pushdown* stack."
+msgstr ""
+
+#: ../../internalvariables.rst:2064
+msgid "` [2]  <internalvariables.html#AEN5154>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:2066
+msgid ""
+"The PID of the currently running script is ``       $$      `` , of course."
+msgstr ""
+
+#: ../../internalvariables.rst:2070
+msgid "` [3]  <internalvariables.html#AEN5320>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:2072
+msgid ""
+"Somewhat analogous to `recursion <localvar.html#RECURSIONREF>`__ , in this "
+"context *nesting* refers to a pattern embedded within a larger pattern. One "
+"of the definitions of *nest* , according to the 1913 edition of *Webster's "
+"Dictionary* , illustrates this beautifully: \" *A collection of boxes, "
+"cases, or the like, of graduated size, each put within the one next larger.*"
+" \""
+msgstr ""
+
+#: ../../internalvariables.rst:2080
+msgid "` [4]  <internalvariables.html#AEN5479>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:2082
+msgid ""
+"The words \"argument\" and \"parameter\" are often used interchangeably. In "
+"the context of this document, they have the same precise meaning: *a "
+"variable passed to a script or function.*"
+msgstr ""
+
+#: ../../internalvariables.rst:2087
+msgid "` [5]  <internalvariables.html#AEN5654>`__"
+msgstr ""
+
+#: ../../internalvariables.rst:2089
+msgid ""
+"Within a script, inside a subshell, ``       $$      `` `returns the PID of "
+"the script <internalvariables.html#BASHPIDREF>`__ , not the subshell."
+msgstr ""

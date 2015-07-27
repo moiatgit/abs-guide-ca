@@ -1,0 +1,540 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributed-scripts.rst:4
+msgid "XXX  Appendix A. Contributed Scripts"
+msgstr ""
+
+#: ../../contributed-scripts.rst:6
+msgid ""
+"These scripts, while not fitting into the text of this document, do "
+"illustrate some interesting shell programming techniques. Some are useful, "
+"too. Have fun analyzing and running them."
+msgstr ""
+
+#: ../../contributed-scripts.rst:12
+msgid "Exemple 1. *mailformat* : Formatting an e-mail message"
+msgstr ""
+
+#: ../../contributed-scripts.rst:75
+msgid "Exemple 2. *rn* : A simple-minded file renaming utility"
+msgstr ""
+
+#: ../../contributed-scripts.rst:77
+msgid ""
+"This script is a modification of `Example 16-22 <textproc.html#LOWERCASE>`__"
+" ."
+msgstr ""
+
+#: ../../contributed-scripts.rst:137
+msgid "Exemple 3. *blank-rename* : Renames filenames containing blanks"
+msgstr ""
+
+#: ../../contributed-scripts.rst:139
+msgid "This is an even simpler-minded version of previous script."
+msgstr ""
+
+#: ../../contributed-scripts.rst:179
+msgid ""
+"Exemple 4. *encryptedpw* : Uploading to an ftp site, using a locally "
+"encrypted password"
+msgstr ""
+
+#: ../../contributed-scripts.rst:236
+msgid "Exemple 5. *copy-cd* : Copying a data CD"
+msgstr ""
+
+#: ../../contributed-scripts.rst:300
+msgid "Exemple 6. Collatz series"
+msgstr ""
+
+#: ../../contributed-scripts.rst:380
+msgid "Exemple 7. *days-between* : Days between two dates"
+msgstr ""
+
+#: ../../contributed-scripts.rst:546
+msgid "Exemple 8. Making a *dictionary*"
+msgstr ""
+
+#: ../../contributed-scripts.rst:599
+msgid "Exemple 9. Soundex conversion"
+msgstr ""
+
+#: ../../contributed-scripts.rst:647
+msgid ""
+"tr -d wh \\ tr $val1 1 | tr $val2 2 | tr $val3 3 \\ tr $val4 4 | tr $val5 5 "
+"| tr $val6 6 \\ tr -s 123456 \\ tr -d aeiouy )"
+msgstr ""
+
+#: ../../contributed-scripts.rst:653
+msgid ""
+"# Assign letter values. # Remove duplicate numbers, except when separated by"
+" vowels. # Ignore vowels, except as separators, so delete them last. # "
+"Ignore 'w' and 'h', even as separators, so delete them first. # # The above "
+"command substitution lays more pipe than a plumber <g>."
+msgstr ""
+
+#: ../../contributed-scripts.rst:660
+msgid "}"
+msgstr ""
+
+#: ../../contributed-scripts.rst:663
+msgid "input_name=\"$1\" echo echo \"Name = $input_name\""
+msgstr ""
+
+#: ../../contributed-scripts.rst:668
+msgid ""
+"# Change all characters of name input to lowercase. # "
+"------------------------------------------------ name=$( echo $input_nametr "
+"A-Z a-z ) # ------------------------------------------------ # Just in case "
+"argument to script is mixed case."
+msgstr ""
+
+#: ../../contributed-scripts.rst:675
+msgid ""
+"# Prefix of soundex code: first letter of name. # "
+"--------------------------------------------"
+msgstr ""
+
+#: ../../contributed-scripts.rst:679
+msgid ""
+"char_pos=0                     # Initialize character position. "
+"prefix0=${name:$char_pos:1} prefix=`echo $prefix0tr a-z A-Z`"
+msgstr ""
+
+#: ../../contributed-scripts.rst:682
+msgid "# Uppercase 1st letter of soundex."
+msgstr ""
+
+#: ../../contributed-scripts.rst:684
+msgid ""
+"let \"char_pos += 1\"            # Bump character position to 2nd letter of "
+"name. name1=${name:$char_pos}"
+msgstr ""
+
+#: ../../contributed-scripts.rst:688
+msgid ""
+"# ++++++++++++++++++++++++++ Exception Patch ++++++++++++++++++++++++++++++ "
+"#  Now, we run both the input name and the name shifted one char #+ to the "
+"right through the value-assigning function. #  If we get the same value out,"
+" that means that the first two characters #+ of the name have the same value"
+" assigned, and that one should cancel. #  However, we also need to test "
+"whether the first letter of the name #+ is a vowel or 'w' or 'h', because "
+"otherwise this would bollix things up."
+msgstr ""
+
+#: ../../contributed-scripts.rst:696
+msgid "char1=`echo $prefixtr A-Z a-z`    # First letter of name, lowercased."
+msgstr ""
+
+#: ../../contributed-scripts.rst:698
+msgid ""
+"assign_value $name s1=$value assign_value $name1 s2=$value assign_value "
+"$char1 s3=$value s3=9$s3                              #  If first letter of "
+"name is a vowel"
+msgstr ""
+
+#: ../../contributed-scripts.rst:705
+msgid "#+ or 'w' or 'h', #+ then its \"value\" will be null (unset)."
+msgstr ""
+
+#: ../../contributed-scripts.rst:707
+msgid ""
+"#+ Therefore, set it to 9, an otherwise #+ unused value, which can be tested"
+" for."
+msgstr ""
+
+#: ../../contributed-scripts.rst:711
+msgid "if [[ \"$s1\" -ne \"$s2\" |\"$s3\" -eq 9 ]] then"
+msgstr ""
+
+#: ../../contributed-scripts.rst:713
+msgid "suffix=$s2"
+msgstr ""
+
+#: ../../contributed-scripts.rst:715
+msgid "suffix=${s2:$char_pos}"
+msgstr ""
+
+#: ../../contributed-scripts.rst:716
+msgid ""
+"fi # ++++++++++++++++++++++ end Exception Patch "
+"++++++++++++++++++++++++++++++"
+msgstr ""
+
+#: ../../contributed-scripts.rst:720
+msgid "padding=000                    # Use at most 3 zeroes to pad."
+msgstr ""
+
+#: ../../contributed-scripts.rst:723
+msgid "soun=$prefix$suffix$padding    # Pad with zeroes."
+msgstr ""
+
+#: ../../contributed-scripts.rst:725
+msgid ""
+"MAXLEN=4                       # Truncate to maximum of 4 chars. "
+"soundex=${soun:0:$MAXLEN}"
+msgstr ""
+
+#: ../../contributed-scripts.rst:728
+msgid "echo \"Soundex = $soundex\""
+msgstr ""
+
+#: ../../contributed-scripts.rst:730
+msgid "echo"
+msgstr ""
+
+#: ../../contributed-scripts.rst:732
+msgid ""
+"#  The soundex code is a method of indexing and classifying names #+ by "
+"grouping together the ones that sound alike. #  The soundex code for a given"
+" name is the first letter of the name, #+ followed by a calculated three-"
+"number code. #  Similar sounding names should have almost the same soundex "
+"codes."
+msgstr ""
+
+#: ../../contributed-scripts.rst:738
+msgid ""
+"#   Examples: #   Smith and Smythe both have a \"S-530\" soundex. #   "
+"Harrison = H-625 #   Hargison = H-622 #   Harriman = H-655"
+msgstr ""
+
+#: ../../contributed-scripts.rst:744
+msgid ""
+"#  This works out fairly well in practice, but there are numerous anomalies."
+" # # #  The U.S. Census and certain other governmental agencies use soundex,"
+" #  as do genealogical researchers. # #  For more information, #+ see the "
+"\"National Archives and Records Administration home page\", #+ "
+"http://www.nara.gov/genealogy/soundex/soundex.html"
+msgstr ""
+
+#: ../../contributed-scripts.rst:756
+msgid ""
+"# Exercise: # -------- # Simplify the \"Exception Patch\" section of this "
+"script."
+msgstr ""
+
+#: ../../contributed-scripts.rst:760
+msgid "exit 0"
+msgstr ""
+
+#: ../../contributed-scripts.rst:767
+msgid "Exemple 10. *Game of Life*"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1166
+msgid "Exemple 11. Data file for *Game of Life*"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1195
+msgid "+++"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1197
+msgid ""
+"The following script is by Mark Moraes of the University of Toronto. See the"
+" file ``      Moraes-COPYRIGHT     `` for permissions and restrictions. This"
+" file is included in the combined `HTML/source tarball "
+"<mirrorsites.html#WHERE_TARBALL>`__ of the *ABS Guide* ."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1204
+msgid "Exemple 12. *behead* : Removing mail and news message headers"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1265
+msgid ""
+"Antek Sawicki contributed the following script, which makes very clever use "
+"of the parameter substitution operators discussed in `Section 10.2 "
+"<parameter-substitution.html>`__ ."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1271
+msgid "Exemple 13. *password* : Generating random 8-character passwords"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1330
+msgid "James R. Van Zandt contributed this script which uses named pipes and,"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1331
+msgid "in his words, \"really exercises quoting and escaping.\""
+msgstr ""
+
+#: ../../contributed-scripts.rst:1335
+msgid "Exemple 14. *fifo* : Making daily backups, using named pipes"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1380
+msgid ""
+"Stéphane Chazelas used the following script to demonstrate generating prime "
+"numbers without arrays."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1385
+msgid "Exemple 15. Generating prime numbers using the modulo operator"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1445
+msgid "Rick Boivie's revision of Jordi Sanfeliu's *tree* script."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1449
+msgid "Exemple 16. *tree* : Displaying a directory tree"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1520
+msgid "Patsie's version of a directory *tree* script."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1524
+msgid "Exemple 17. *tree2* : Alternate directory tree script"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1638
+msgid ""
+"Noah Friedman permitted use of his *string function* script. It essentially "
+"reproduces some of the *C* -library string manipulation functions."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1644
+msgid "Exemple 18. *string functions* : C-style string functions"
+msgstr ""
+
+#: ../../contributed-scripts.rst:1924
+msgid ""
+"Michael Zick's complex array example uses the `md5sum "
+"<filearchiv.html#MD5SUMREF>`__ check sum command to encode directory "
+"information."
+msgstr ""
+
+#: ../../contributed-scripts.rst:1930
+msgid "Exemple 19. Directory information"
+msgstr ""
+
+#: ../../contributed-scripts.rst:2487
+msgid ""
+"Stéphane Chazelas demonstrates object-oriented programming in a Bash script."
+msgstr ""
+
+#: ../../contributed-scripts.rst:2490
+msgid ""
+"Mariusz Gniazdowski contributed a `hash <internal.html#HASHREF>`__ library "
+"for use in scripts."
+msgstr ""
+
+#: ../../contributed-scripts.rst:2495
+msgid "Exemple 20. Library of hash functions"
+msgstr ""
+
+#: ../../contributed-scripts.rst:2686
+msgid "Here is an example script using the foregoing hash library."
+msgstr ""
+
+#: ../../contributed-scripts.rst:2690
+msgid "Exemple 21. Colorizing text using hash functions"
+msgstr ""
+
+#: ../../contributed-scripts.rst:2759
+msgid "point of view."
+msgstr ""
+
+#: ../../contributed-scripts.rst:2763
+msgid "Exemple 22. More on hash functions"
+msgstr ""
+
+#: ../../contributed-scripts.rst:2916
+msgid ""
+"Now for a script that installs and mounts those cute USB keychain solid-"
+"state \"hard drives.\""
+msgstr ""
+
+#: ../../contributed-scripts.rst:2921
+msgid "Exemple 23. Mounting USB keychain storage devices"
+msgstr ""
+
+#: ../../contributed-scripts.rst:3072
+msgid "Converting a text file to HTML format."
+msgstr ""
+
+#: ../../contributed-scripts.rst:3076
+msgid "Exemple 24. Converting to HTML"
+msgstr ""
+
+#: ../../contributed-scripts.rst:3226
+msgid ""
+"Here is something to warm the hearts of webmasters and mistresses: a script "
+"that saves weblogs."
+msgstr ""
+
+#: ../../contributed-scripts.rst:3231
+msgid "Exemple 25. Preserving weblogs"
+msgstr ""
+
+#: ../../contributed-scripts.rst:3310
+msgid "Exemple 26. Protecting literal strings"
+msgstr ""
+
+#: ../../contributed-scripts.rst:3471
+msgid "Exemple 27. Unprotecting literal strings"
+msgstr ""
+
+#: ../../contributed-scripts.rst:3603
+msgid "This interesting script helps hunt down spammers."
+msgstr ""
+
+#: ../../contributed-scripts.rst:3607
+msgid "Exemple 28. Spammer Identification"
+msgstr ""
+
+#: ../../contributed-scripts.rst:5790
+msgid "Another anti-spam script."
+msgstr ""
+
+#: ../../contributed-scripts.rst:5794
+msgid "Exemple 29. Spammer Hunt"
+msgstr ""
+
+#: ../../contributed-scripts.rst:6084
+msgid "."
+msgstr ""
+
+#: ../../contributed-scripts.rst:6088
+msgid "Exemple 30. Making *wget* easier to use"
+msgstr ""
+
+#: ../../contributed-scripts.rst:6584
+msgid "Exemple 31. A *podcasting* script"
+msgstr ""
+
+#: ../../contributed-scripts.rst:6675
+msgid "Exemple 32. Nightly backup to a firewire HD"
+msgstr ""
+
+#: ../../contributed-scripts.rst:7050
+msgid "Exemple 33. An expanded *cd* command"
+msgstr ""
+
+#: ../../contributed-scripts.rst:7828
+msgid "Exemple 34. A soundcard setup script"
+msgstr ""
+
+#: ../../contributed-scripts.rst:7945
+msgid "Exemple 35. Locating split paragraphs in a text file"
+msgstr ""
+
+#: ../../contributed-scripts.rst:8022
+msgid "Exemple 36. Insertion sort"
+msgstr ""
+
+#: ../../contributed-scripts.rst:8098
+msgid "Exemple 37. Standard Deviation"
+msgstr ""
+
+#: ../../contributed-scripts.rst:8226
+msgid "Exemple 38. A *pad* file generator for shareware authors"
+msgstr ""
+
+#: ../../contributed-scripts.rst:8480
+msgid "Exemple 39. A *man page* editor"
+msgstr ""
+
+#: ../../contributed-scripts.rst:8639
+msgid "Exemple 40. Petals Around the Rose"
+msgstr ""
+
+#: ../../contributed-scripts.rst:8844
+msgid "Exemple 41. Quacky: a Perquackey-type word game"
+msgstr ""
+
+#: ../../contributed-scripts.rst:9321
+msgid "Exemple 42. Nim"
+msgstr ""
+
+#: ../../contributed-scripts.rst:9607
+msgid "Exemple 43. A command-line stopwatch"
+msgstr ""
+
+#: ../../contributed-scripts.rst:9748
+msgid ""
+"Exemple 44. An all-purpose shell scripting homework assignment solution"
+msgstr ""
+
+#: ../../contributed-scripts.rst:9855
+msgid "Exemple 45. The Knight's Tour"
+msgstr ""
+
+#: ../../contributed-scripts.rst:10476
+msgid "Exemple 46. Magic Squares"
+msgstr ""
+
+#: ../../contributed-scripts.rst:10599
+msgid "Exemple 47. Fifteen Puzzle"
+msgstr ""
+
+#: ../../contributed-scripts.rst:10783
+msgid "Exemple 48. *The Towers of Hanoi, graphic version*"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11002
+msgid "Exemple 49. *The Towers of Hanoi, alternate graphic version*"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11229
+msgid ""
+"Exemple 50. An alternate version of the `getopt-simple.sh <string-"
+"manipulation.html#GETOPTSIMPLE>`__ script"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11363
+msgid ""
+"Exemple 51. The version of the *UseGetOpt.sh* example used in the `Tab "
+"Expansion appendix <tabexpansion.html>`__"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11468
+msgid "Exemple 52. Cycling through all the possible color backgrounds"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11530
+msgid "Exemple 53. Morse Code Practice"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11698
+msgid "Exemple 54. Base64 encoding/decoding"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11835
+msgid "Exemple 55. Inserting text in a file using *sed*"
+msgstr ""
+
+#: ../../contributed-scripts.rst:11883
+msgid "Exemple 56. The Gronsfeld Cipher"
+msgstr ""
+
+#: ../../contributed-scripts.rst:12041
+msgid "Exemple 57. Bingo Number Generator"
+msgstr ""
+
+#: ../../contributed-scripts.rst:12180
+msgid "Exemple 58. Basics Reviewed"
+msgstr ""
+
+#: ../../contributed-scripts.rst:13231
+msgid "Exemple 59. Testing execution times of various commands"
+msgstr ""
+
+#: ../../contributed-scripts.rst:13311
+msgid ""
+"Exemple 60. Associative arrays vs. conventional arrays (execution times)"
+msgstr ""

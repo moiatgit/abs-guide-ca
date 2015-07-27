@@ -1,0 +1,48 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../bashver2.rst:4
+msgid "XXX  37.1. Bash, version 2"
+msgstr ""
+
+#: ../../bashver2.rst:6
+msgid ""
+"The current version of *Bash* , the one you have running on your machine, is"
+" most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy."
+msgstr ""
+
+#: ../../bashver2.rst:18
+msgid ""
+"The version 2 update of the classic Bash scripting language added array "
+"variables, string and parameter expansion, and a better method of indirect "
+"variable references, among other features."
+msgstr ""
+
+#: ../../bashver2.rst:24
+msgid "Exemple 1. String expansion"
+msgstr ""
+
+#: ../../bashver2.rst:54
+msgid "Exemple 2. Indirect variable references - the new way"
+msgstr ""
+
+#: ../../bashver2.rst:97
+msgid ""
+"Exemple 3. Simple database application, using indirect variable referencing"
+msgstr ""
+
+#: ../../bashver2.rst:181
+msgid ""
+"Exemple 4. Using arrays and other miscellaneous trickery to deal four random"
+" hands from a deck of cards"
+msgstr ""

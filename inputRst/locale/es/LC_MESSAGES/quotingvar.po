@@ -1,0 +1,172 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../quotingvar.rst:3
+msgid "XXX  5.1. Variables entre cometes"
+msgstr ""
+
+#: ../../quotingvar.rst:5
+msgid ""
+"When referencing a variable, it is generally advisable to enclose its name "
+"in double quotes. This prevents reinterpretation of all special characters "
+"within the quoted string -- except $ , \\` (backquote), and \\\\ (escape). `"
+" [1]  <quotingvar.html#FTN.AEN2630>`__ Keeping $ as a special character "
+"within double quotes permits referencing a quoted variable ( ``             "
+"\"$variable\"           `` ), that is, replacing the variable with its value"
+" (see `Example 4-1 <varsubn.html#EX9>`__ , above)."
+msgstr ""
+
+#: ../../quotingvar.rst:15
+msgid "<quotingvar.html#FTN.AEN2688>`__ An argument enclosed in double quotes"
+msgstr ""
+
+#: ../../quotingvar.rst:16
+msgid ""
+"presents itself as a single word, even if it contains `whitespace <special-"
+"chars.html#WHITESPACEREF>`__ separators."
+msgstr ""
+
+#: ../../quotingvar.rst:42
+msgid "A more elaborate example:"
+msgstr ""
+
+#: ../../quotingvar.rst:70
+msgid "|Tip"
+msgstr ""
+
+#: ../../quotingvar.rst:72
+msgid ""
+"Enclosing the arguments to an **echo** statement in double quotes is "
+"necessary only when word splitting or preservation of `whitespace <special-"
+"chars.html#WHITESPACEREF>`__ is an issue."
+msgstr ""
+
+#: ../../quotingvar.rst:81
+msgid "Exemple 1. Echoing Weird Variables"
+msgstr ""
+
+#: ../../quotingvar.rst:140
+msgid ""
+"Single quotes ( ' ' ) operate similarly to double quotes, but do not permit "
+"referencing variables, since the special meaning of $ is turned off. Within "
+"single quotes, *every* special character except ' gets interpreted "
+"literally. Consider single quotes ( \"full quoting\" ) to be a stricter "
+"method of quoting than double quotes ( \"partial quoting\" )."
+msgstr ""
+
+#: ../../quotingvar.rst:148
+msgid "|Note"
+msgstr ""
+
+#: ../../quotingvar.rst:150
+msgid ""
+"Since even the escape character ( \\\\ ) gets a literal interpretation "
+"within single quotes, trying to enclose a single quote within single quotes "
+"will not yield the expected result."
+msgstr ""
+
+#: ../../quotingvar.rst:159
+msgid "ite 's between single qu otes\""
+msgstr ""
+
+#: ../../quotingvar.rst:162
+msgid "echo"
+msgstr ""
+
+#: ../../quotingvar.rst:164
+msgid "# The roundabout met"
+msgstr ""
+
+#: ../../quotingvar.rst:166
+msgid "echo 'Why can'\\''t I"
+msgstr ""
+
+#: ../../quotingvar.rst:167
+msgid "write '\"'\"'s between si"
+msgstr ""
+
+#: ../../quotingvar.rst:169
+msgid "#    |-------|  |---"
+msgstr ""
+
+#: ../../quotingvar.rst:170
+msgid "-------|   |------------ -----------|"
+msgstr ""
+
+#: ../../quotingvar.rst:172
+msgid "# Three single-quote"
+msgstr ""
+
+#: ../../quotingvar.rst:173
+msgid "d strings, with escaped and quoted single quotes"
+msgstr ""
+
+#: ../../quotingvar.rst:175
+msgid "between."
+msgstr ""
+
+#: ../../quotingvar.rst:177
+msgid "# This example court"
+msgstr ""
+
+#: ../../quotingvar.rst:178
+msgid "esy of Stéphane Chazelas ."
+msgstr ""
+
+#: ../../quotingvar.rst:217
+msgid "Notes"
+msgstr ""
+
+#: ../../quotingvar.rst:220
+msgid "` [1]  <quotingvar.html#AEN2630>`__"
+msgstr ""
+
+#: ../../quotingvar.rst:222
+msgid ""
+"Encapsulating \"!\" within double quotes gives an error when used *from the "
+"command line* . This is interpreted as a `history command "
+"<histcommands.html>`__ . Within a script, though, this problem does not "
+"occur, since the Bash history mechanism is disabled then."
+msgstr ""
+
+#: ../../quotingvar.rst:227
+msgid ""
+"Of more concern is the *apparently* inconsistent behavior of ``"
+"               \\             `` within double quotes, and especially "
+"following an **echo -e** command."
+msgstr ""
+
+#: ../../quotingvar.rst:265
+msgid ""
+"Double quotes following an *echo* *sometimes* escape ``               \\"
+"             `` . Moreover, the ``       -e      `` option to *echo* causes "
+"the \"\\\\t\" to be interpreted as a *tab* ."
+msgstr ""
+
+#: ../../quotingvar.rst:269
+msgid ""
+"(Thank you, Wayne Pollock, for pointing this out, and Geoff Lee and Daniel "
+"Barclay for explaining it.)"
+msgstr ""
+
+#: ../../quotingvar.rst:333
+msgid "` [2]  <quotingvar.html#AEN2688>`__"
+msgstr ""
+
+#: ../../quotingvar.rst:335
+msgid "\"Word splitting,\" in this context, means dividing a character string"
+msgstr ""
+
+#: ../../quotingvar.rst:336
+msgid "into separate and discrete arguments."
+msgstr ""
