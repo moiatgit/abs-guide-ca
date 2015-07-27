@@ -1,0 +1,155 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../io-redirection.rst:4
+msgid "XXX  Chapter 20. I/O Redirection"
+msgstr ""
+
+#: ../../io-redirection.rst:9
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../io-redirection.rst:13
+msgid "20.1. `Using *exec* <x17974.html>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:17
+msgid "20.2. `Redirecting Code Blocks <redircb.html>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:21
+msgid "20.3. `Applications <redirapps.html>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:27
+msgid "<io-redirection.html#FTN.AEN17884>`__ open, ``      stdin     `` (the"
+msgstr ""
+
+#: ../../io-redirection.rst:28
+msgid ""
+"keyboard), ``      stdout     `` (the screen), and ``      stderr     `` "
+"(error messages output to the screen). These, and any other open files, can "
+"be redirected. Redirection simply means capturing output from a file, "
+"command, program, script, or even code block within a script (see `Example "
+"3-1 <special-chars.html#EX8>`__ and `Example 3-2 <special-"
+"chars.html#RPMCHECK>`__ ) and sending it as input to another file, command, "
+"program, or script."
+msgstr ""
+
+#: ../../io-redirection.rst:36
+msgid ""
+"Each open file gets assigned a file descriptor. ` [2] <io-"
+"redirection.html#FTN.AEN17894>`__ The file descriptors for"
+msgstr ""
+
+#: ../../io-redirection.rst:38
+msgid ""
+"``      stdin     `` , ``      stdout     `` , and ``      stderr     `` are"
+" 0, 1, and 2, respectively. For opening additional files, there remain "
+"descriptors 3 to 9. It is sometimes useful to assign one of these additional"
+" file descriptors to ``      stdin     `` , ``      stdout     `` , or ``"
+"      stderr     `` as a temporary duplicate link. ` [3]  <io-"
+"redirection.html#FTN.AEN17906>`__ This simplifies restoration to normal "
+"after complex redirection and reshuffling (see `Example 20-1 "
+"<x17974.html#REDIR1>`__ )."
+msgstr ""
+
+#: ../../io-redirection.rst:183
+msgid ""
+"Multiple instances of input and output redirection and/or pipes can be "
+"combined in a single command line."
+msgstr ""
+
+#: ../../io-redirection.rst:197
+msgid ""
+"See `Example 16-31 <filearchiv.html#DERPM>`__ and `Example A-14 "
+"<contributed-scripts.html#FIFO>`__ . Multiple output streams may be "
+"redirected to one file."
+msgstr ""
+
+#: ../../io-redirection.rst:221
+msgid "** Closing File Descriptors**"
+msgstr ""
+
+#: ../../io-redirection.rst:224
+msgid ""
+"Close input file descriptor ``                   n                 `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:228
+msgid "Close ``         stdin        `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:231
+msgid ""
+"Close output file descriptor ``                   n                 `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:235
+msgid "Close ``         stdout        `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:238
+msgid ""
+"Child processes inherit open file descriptors. This is why pipes work. To "
+"prevent an fd from being inherited, close it."
+msgstr ""
+
+#: ../../io-redirection.rst:255
+msgid ""
+"For a more detailed introduction to I/O redirection see `Appendix F "
+"<ioredirintro.html>`__ ."
+msgstr ""
+
+#: ../../io-redirection.rst:260
+msgid "Notes"
+msgstr ""
+
+#: ../../io-redirection.rst:263
+msgid "` [1]  <io-redirection.html#AEN17884>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:265
+msgid ""
+"By convention in UNIX and Linux, data streams and peripherals ( `device "
+"files <devref1.html#DEVFILEREF>`__ ) are treated as files, in a fashion "
+"analogous to ordinary files."
+msgstr ""
+
+#: ../../io-redirection.rst:270
+msgid "` [2]  <io-redirection.html#AEN17894>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:272
+msgid "A *file descriptor* is simply a number that the operating system"
+msgstr ""
+
+#: ../../io-redirection.rst:273
+msgid ""
+"assigns to an open file to keep track of it. Consider it a simplified type "
+"of file pointer. It is analogous to a *file handle* in **C** ."
+msgstr ""
+
+#: ../../io-redirection.rst:277
+msgid "` [3]  <io-redirection.html#AEN17906>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:279
+msgid ""
+"Using ``               file            descriptor 5             `` might "
+"cause problems. When Bash creates a child process, as with `exec "
+"<internal.html#EXECREF>`__ , the child inherits fd 5 (see Chet Ramey's "
+"archived e-mail, `SUBJECT: RE: File descriptor 5 is held open "
+"<http://groups.google.com/group/gnu.bash.bug/browse_thread/thread/13955daafded3b5c/18c17050087f9f37>`__"
+" ). Best leave this particular fd alone."
+msgstr ""

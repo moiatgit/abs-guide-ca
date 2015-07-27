@@ -1,0 +1,1017 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../refcards.rst:4
+msgid "XXX  Appendix B. Reference Cards"
+msgstr ""
+
+#: ../../refcards.rst:6
+msgid ""
+"The following reference cards provide a useful *summary* of certain "
+"scripting concepts. The foregoing text treats these matters in more depth, "
+"as well as giving usage examples."
+msgstr ""
+
+#: ../../refcards.rst:11
+msgid "**Table B-1. Special Shell Variables**"
+msgstr ""
+
+#: ../../refcards.rst:14
+msgid "Variable"
+msgstr ""
+
+#: ../../refcards.rst:16 ../../refcards.rst:84 ../../refcards.rst:90
+#: ../../refcards.rst:293 ../../refcards.rst:367
+msgid "Meaning"
+msgstr ""
+
+#: ../../refcards.rst:18
+msgid "``        $0       ``"
+msgstr ""
+
+#: ../../refcards.rst:20
+msgid "Filename of script"
+msgstr ""
+
+#: ../../refcards.rst:22
+msgid "``        $1       ``"
+msgstr ""
+
+#: ../../refcards.rst:24
+msgid "Positional parameter #1"
+msgstr ""
+
+#: ../../refcards.rst:26
+msgid "``        $2 - $9       ``"
+msgstr ""
+
+#: ../../refcards.rst:28
+msgid "Positional parameters #2 - #9"
+msgstr ""
+
+#: ../../refcards.rst:30
+msgid "``        ${10}       ``"
+msgstr ""
+
+#: ../../refcards.rst:32
+msgid "Positional parameter #10"
+msgstr ""
+
+#: ../../refcards.rst:34
+msgid "``        $#       ``"
+msgstr ""
+
+#: ../../refcards.rst:36 ../../refcards.rst:48 ../../refcards.rst:52
+msgid "Number of positional parameters"
+msgstr ""
+
+#: ../../refcards.rst:38
+msgid "``        \"$*\"       ``"
+msgstr ""
+
+#: ../../refcards.rst:40
+msgid "All the positional parameters (as a single word) \\*"
+msgstr ""
+
+#: ../../refcards.rst:42
+msgid "``        \"$@\"       ``"
+msgstr ""
+
+#: ../../refcards.rst:44
+msgid "All the positional parameters (as separate strings)"
+msgstr ""
+
+#: ../../refcards.rst:46
+msgid "``        ${#*}       ``"
+msgstr ""
+
+#: ../../refcards.rst:50
+msgid "``        ${#@}       ``"
+msgstr ""
+
+#: ../../refcards.rst:54
+msgid "``        $?       ``"
+msgstr ""
+
+#: ../../refcards.rst:56
+msgid "Return value"
+msgstr ""
+
+#: ../../refcards.rst:58
+msgid "``        $$       ``"
+msgstr ""
+
+#: ../../refcards.rst:60
+msgid "Process ID (PID) of script"
+msgstr ""
+
+#: ../../refcards.rst:62
+msgid "``        $-       ``"
+msgstr ""
+
+#: ../../refcards.rst:64
+msgid "Flags passed to script (using *set* )"
+msgstr ""
+
+#: ../../refcards.rst:66
+msgid "``        $_       ``"
+msgstr ""
+
+#: ../../refcards.rst:68
+msgid "Last argument of previous command"
+msgstr ""
+
+#: ../../refcards.rst:70
+msgid "``        $!       ``"
+msgstr ""
+
+#: ../../refcards.rst:72
+msgid "Process ID (PID) of last job run in background"
+msgstr ""
+
+#: ../../refcards.rst:76
+msgid "**\\*** *Must be quoted* , otherwise it defaults to ``      $@     `` ."
+msgstr ""
+
+#: ../../refcards.rst:79
+msgid "**Table B-2. TEST Operators: Binary Comparison**"
+msgstr ""
+
+#: ../../refcards.rst:82 ../../refcards.rst:88 ../../refcards.rst:177
+#: ../../refcards.rst:183
+msgid "Operator"
+msgstr ""
+
+#: ../../refcards.rst:92
+msgid "`Arithmetic Comparison <comparison-ops.html#ICOMPARISON1>`__"
+msgstr ""
+
+#: ../../refcards.rst:94
+msgid "`String Comparison <comparison-ops.html#SCOMPARISON1>`__"
+msgstr ""
+
+#: ../../refcards.rst:96
+msgid "``        -eq       ``"
+msgstr ""
+
+#: ../../refcards.rst:98 ../../refcards.rst:102 ../../refcards.rst:106
+msgid "Equal to"
+msgstr ""
+
+#: ../../refcards.rst:100
+msgid "``        =       ``"
+msgstr ""
+
+#: ../../refcards.rst:104
+msgid "``        ==       ``"
+msgstr ""
+
+#: ../../refcards.rst:108
+msgid "``        -ne       ``"
+msgstr ""
+
+#: ../../refcards.rst:110 ../../refcards.rst:114
+msgid "Not equal to"
+msgstr ""
+
+#: ../../refcards.rst:112
+msgid "``        !=       ``"
+msgstr ""
+
+#: ../../refcards.rst:116
+msgid "``        -lt       ``"
+msgstr ""
+
+#: ../../refcards.rst:118 ../../refcards.rst:162
+msgid "Less than"
+msgstr ""
+
+#: ../../refcards.rst:120
+msgid "``        \\<       ``"
+msgstr ""
+
+#: ../../refcards.rst:122
+msgid "Less than ( `ASCII <special-chars.html#ASCIIDEF>`__ ) \\*"
+msgstr ""
+
+#: ../../refcards.rst:124
+msgid "``        -le       ``"
+msgstr ""
+
+#: ../../refcards.rst:126 ../../refcards.rst:166
+msgid "Less than or equal to"
+msgstr ""
+
+#: ../../refcards.rst:128
+msgid "``        -gt       ``"
+msgstr ""
+
+#: ../../refcards.rst:130 ../../refcards.rst:154
+msgid "Greater than"
+msgstr ""
+
+#: ../../refcards.rst:132
+msgid "``        \\>       ``"
+msgstr ""
+
+#: ../../refcards.rst:134
+msgid "Greater than (ASCII) \\*"
+msgstr ""
+
+#: ../../refcards.rst:136
+msgid "``        -ge       ``"
+msgstr ""
+
+#: ../../refcards.rst:138 ../../refcards.rst:158
+msgid "Greater than or equal to"
+msgstr ""
+
+#: ../../refcards.rst:140
+msgid "``        -z       ``"
+msgstr ""
+
+#: ../../refcards.rst:142
+msgid "String is empty"
+msgstr ""
+
+#: ../../refcards.rst:144
+msgid "``        -n       ``"
+msgstr ""
+
+#: ../../refcards.rst:146
+msgid "String is not empty"
+msgstr ""
+
+#: ../../refcards.rst:148
+msgid "Arithmetic Comparison"
+msgstr ""
+
+#: ../../refcards.rst:150
+msgid "`within double parentheses <testconstructs.html#DBLPRX>`__ (( ... ))"
+msgstr ""
+
+#: ../../refcards.rst:152
+msgid "``        >       ``"
+msgstr ""
+
+#: ../../refcards.rst:156
+msgid "``        >=       ``"
+msgstr ""
+
+#: ../../refcards.rst:160
+msgid "``        <       ``"
+msgstr ""
+
+#: ../../refcards.rst:164
+msgid "``        <=       ``"
+msgstr ""
+
+#: ../../refcards.rst:170
+msgid ""
+"**\\*** *If within a double-bracket* [[ ... ]] *test construct, then no "
+"escape* \\\\ *is needed.*"
+msgstr ""
+
+#: ../../refcards.rst:174
+msgid "**Table B-3. TEST Operators: Files**"
+msgstr ""
+
+#: ../../refcards.rst:179 ../../refcards.rst:185
+msgid "Tests Whether"
+msgstr ""
+
+#: ../../refcards.rst:187
+msgid "``        -e       ``"
+msgstr ""
+
+#: ../../refcards.rst:189
+msgid "File exists"
+msgstr ""
+
+#: ../../refcards.rst:191
+msgid "``        -s       ``"
+msgstr ""
+
+#: ../../refcards.rst:193
+msgid "File is not zero size"
+msgstr ""
+
+#: ../../refcards.rst:195
+msgid "``        -f       ``"
+msgstr ""
+
+#: ../../refcards.rst:197
+msgid "File is a *regular* file"
+msgstr ""
+
+#: ../../refcards.rst:199
+msgid "``        -d       ``"
+msgstr ""
+
+#: ../../refcards.rst:201
+msgid "File is a *directory*"
+msgstr ""
+
+#: ../../refcards.rst:203
+msgid "``        -r       ``"
+msgstr ""
+
+#: ../../refcards.rst:205
+msgid "File has *read* permission"
+msgstr ""
+
+#: ../../refcards.rst:207
+msgid "``        -h       ``"
+msgstr ""
+
+#: ../../refcards.rst:209
+msgid "File is a `symbolic link <basic.html#SYMLINKREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:211
+msgid "``        -w       ``"
+msgstr ""
+
+#: ../../refcards.rst:213
+msgid "File has *write* permission"
+msgstr ""
+
+#: ../../refcards.rst:215
+msgid "``        -L       ``"
+msgstr ""
+
+#: ../../refcards.rst:217
+msgid "File is a *symbolic link*"
+msgstr ""
+
+#: ../../refcards.rst:219
+msgid "``        -x       ``"
+msgstr ""
+
+#: ../../refcards.rst:221
+msgid "File has *execute* permission"
+msgstr ""
+
+#: ../../refcards.rst:223
+msgid "``        -b       ``"
+msgstr ""
+
+#: ../../refcards.rst:225
+msgid "File is a `block device <devref1.html#BLOCKDEVREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:227
+msgid "``        -c       ``"
+msgstr ""
+
+#: ../../refcards.rst:229
+msgid "File is a `character device <devref1.html#CHARDEVREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:231
+msgid "``        -g       ``"
+msgstr ""
+
+#: ../../refcards.rst:233
+msgid "*sgid* flag set"
+msgstr ""
+
+#: ../../refcards.rst:235
+msgid "``        -p       ``"
+msgstr ""
+
+#: ../../refcards.rst:237
+msgid "File is a `pipe <special-chars.html#PIPEREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:239
+msgid "``        -u       ``"
+msgstr ""
+
+#: ../../refcards.rst:241
+msgid "*suid* flag set"
+msgstr ""
+
+#: ../../refcards.rst:243
+msgid "``        -S       ``"
+msgstr ""
+
+#: ../../refcards.rst:245
+msgid "File is a `socket <devref1.html#SOCKETREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:247
+msgid "``        -k       ``"
+msgstr ""
+
+#: ../../refcards.rst:249
+msgid "\"sticky bit\" set"
+msgstr ""
+
+#: ../../refcards.rst:251
+msgid "``        -t       ``"
+msgstr ""
+
+#: ../../refcards.rst:253
+msgid "File is associated with a *terminal*"
+msgstr ""
+
+#: ../../refcards.rst:255
+msgid "``        -N       ``"
+msgstr ""
+
+#: ../../refcards.rst:257
+msgid "File modified since it was last read"
+msgstr ""
+
+#: ../../refcards.rst:259
+msgid "``        F1 -nt F2       ``"
+msgstr ""
+
+#: ../../refcards.rst:261
+msgid "File F1 is *newer* than F2 \\*"
+msgstr ""
+
+#: ../../refcards.rst:263
+msgid "``        -O       ``"
+msgstr ""
+
+#: ../../refcards.rst:265
+msgid "You own the file"
+msgstr ""
+
+#: ../../refcards.rst:267
+msgid "``        F1 -ot F2       ``"
+msgstr ""
+
+#: ../../refcards.rst:269
+msgid "File F1 is *older* than F2 \\*"
+msgstr ""
+
+#: ../../refcards.rst:271
+msgid "``        -G       ``"
+msgstr ""
+
+#: ../../refcards.rst:273
+msgid "*Group id* of file same as yours"
+msgstr ""
+
+#: ../../refcards.rst:275
+msgid "``        F1 -ef F2       ``"
+msgstr ""
+
+#: ../../refcards.rst:277
+msgid "Files F1 and F2 are *hard links* to the same file \\*"
+msgstr ""
+
+#: ../../refcards.rst:279
+msgid "``        !       ``"
+msgstr ""
+
+#: ../../refcards.rst:281
+msgid "NOT (inverts sense of above tests)"
+msgstr ""
+
+#: ../../refcards.rst:285
+msgid "**\\*** *Binary* operator (requires two operands)."
+msgstr ""
+
+#: ../../refcards.rst:288
+msgid "**Table B-4. Parameter Substitution and Expansion**"
+msgstr ""
+
+#: ../../refcards.rst:291 ../../refcards.rst:365 ../../refcards.rst:481
+msgid "Expression"
+msgstr ""
+
+#: ../../refcards.rst:295
+msgid "``        ${var}       ``"
+msgstr ""
+
+#: ../../refcards.rst:297
+msgid ""
+"Value of ``                 var               `` (same as ``"
+"                 $var               `` )"
+msgstr ""
+
+#: ../../refcards.rst:300
+msgid "``        ${var-$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:302
+msgid ""
+"If ``                 var               `` not set, `evaluate "
+"<internal.html#EVALREF>`__ expression as ``                 $DEFAULT"
+"               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:306
+msgid "``        ${var:-$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:308
+msgid ""
+"If ``                 var               `` not set or is empty, *evaluate* "
+"expression as ``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:311
+msgid "``        ${var=$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:313
+msgid ""
+"If ``                 var               `` not set, evaluate expression as "
+"``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:316
+msgid "``        ${var:=$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:318
+msgid ""
+"If ``                 var               `` not set or is empty, evaluate "
+"expression as ``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:321
+msgid "``        ${var+$OTHER}       ``"
+msgstr ""
+
+#: ../../refcards.rst:323 ../../refcards.rst:328
+msgid ""
+"If ``                 var               `` set, evaluate expression as ``"
+"                 $OTHER               `` , otherwise as null string"
+msgstr ""
+
+#: ../../refcards.rst:326
+msgid "``        ${var:+$OTHER}       ``"
+msgstr ""
+
+#: ../../refcards.rst:331
+msgid "``        ${var?$ERR_MSG}       ``"
+msgstr ""
+
+#: ../../refcards.rst:333 ../../refcards.rst:339
+msgid ""
+"If ``                 var               `` not set, print ``"
+"                 $ERR_MSG               `` and abort script with an exit "
+"status of 1 .\\*"
+msgstr ""
+
+#: ../../refcards.rst:337
+msgid "``        ${var:?$ERR_MSG}       ``"
+msgstr ""
+
+#: ../../refcards.rst:343
+msgid "``        ${!varprefix*}       ``"
+msgstr ""
+
+#: ../../refcards.rst:345 ../../refcards.rst:350
+msgid ""
+"Matches all previously declared variables beginning with ``                 "
+"varprefix               ``"
+msgstr ""
+
+#: ../../refcards.rst:348
+msgid "``        ${!varprefix@}       ``"
+msgstr ""
+
+#: ../../refcards.rst:355
+msgid ""
+"**\\*** If ``             var           `` *is* set, evaluate the expression"
+" as ``             $var           `` with no side-effects."
+msgstr ""
+
+#: ../../refcards.rst:358
+msgid ""
+"**# Note** that some of the above behavior of operators has changed from "
+"earlier versions of Bash."
+msgstr ""
+
+#: ../../refcards.rst:362
+msgid "**Table B-5. String Operations**"
+msgstr ""
+
+#: ../../refcards.rst:369
+msgid "``        ${#string}       ``"
+msgstr ""
+
+#: ../../refcards.rst:371
+msgid "Length of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:373
+msgid "``        ${string:position}       ``"
+msgstr ""
+
+#: ../../refcards.rst:375
+msgid ""
+"Extract substring from ``                 $string               `` at ``"
+"                 $position               ``"
+msgstr ""
+
+#: ../../refcards.rst:378
+msgid "``        ${string:position:length}       ``"
+msgstr ""
+
+#: ../../refcards.rst:380
+msgid ""
+"Extract ``                 $length               `` characters substring "
+"from ``                 $string               `` at ``                 "
+"$position               `` [zero-indexed, first character is at position 0]"
+msgstr ""
+
+#: ../../refcards.rst:385
+msgid "``        ${string#substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:387
+msgid ""
+"Strip shortest match of ``                 $substring               `` from "
+"front of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:390
+msgid "``        ${string##substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:392
+msgid ""
+"Strip longest match of ``                 $substring               `` from "
+"front of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:395
+msgid "``        ${string%substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:397
+msgid ""
+"Strip shortest match of ``                 $substring               `` from "
+"back of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:400
+msgid "``        ${string%%substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:402
+msgid ""
+"Strip longest match of ``                 $substring               `` from "
+"back of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:405
+msgid "``        ${string/substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:407
+msgid ""
+"Replace first match of ``                 $substring               `` with "
+"``                 $replacement               ``"
+msgstr ""
+
+#: ../../refcards.rst:410
+msgid "``        ${string//substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:412
+msgid ""
+"Replace *all* matches of ``                 $substring               `` with"
+" ``                 $replacement               ``"
+msgstr ""
+
+#: ../../refcards.rst:415
+msgid "``        ${string/#substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:417
+msgid ""
+"If ``                 $substring               `` matches *front* end of ``"
+"                 $string               `` , substitute ``                 "
+"$replacement               `` for ``                 $substring"
+"               ``"
+msgstr ""
+
+#: ../../refcards.rst:422
+msgid "``        ${string/%substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:424
+msgid ""
+"If ``                 $substring               `` matches *back* end of ``"
+"                 $string               `` , substitute ``                 "
+"$replacement               `` for ``                 $substring"
+"               ``"
+msgstr ""
+
+#: ../../refcards.rst:429
+msgid "``        expr match \"$string\" '$substring'       ``"
+msgstr ""
+
+#: ../../refcards.rst:431 ../../refcards.rst:436
+msgid ""
+"Length of matching ``                 $substring               `` \\* at "
+"beginning of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:434
+msgid "``        expr \"$string\" : '$substring'       ``"
+msgstr ""
+
+#: ../../refcards.rst:439
+msgid "``        expr index \"$string\" $substring       ``"
+msgstr ""
+
+#: ../../refcards.rst:441
+msgid ""
+"Numerical position in ``                 $string               `` of first "
+"character in ``                 $substring               `` \\* that matches"
+" [0 if no match, first character counts as position 1]"
+msgstr ""
+
+#: ../../refcards.rst:445
+msgid "``        expr substr $string $position             $length       ``"
+msgstr ""
+
+#: ../../refcards.rst:447
+msgid ""
+"Extract ``                 $length               `` characters from ``"
+"                 $string               `` starting at ``                 "
+"$position               `` [0 if no match, first character counts as "
+"position 1]"
+msgstr ""
+
+#: ../../refcards.rst:452
+msgid "``        expr match \"$string\"             '\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:454
+msgid ""
+"Extract ``                 $substring               `` \\*, searching from "
+"beginning of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:457
+msgid "``        expr \"$string\" :             '\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:459
+msgid ""
+"Extract ``                 $substring               `` \\* , searching from "
+"beginning of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:462
+msgid "``        expr match \"$string\"             '.*\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:464 ../../refcards.rst:469
+msgid ""
+"Extract ``                 $substring               `` \\*, searching from "
+"end of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:467
+msgid "``        expr \"$string\" :             '.*\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:474
+msgid ""
+"**\\*** Where ``             $substring           `` is a `Regular "
+"Expression <regexp.html#REGEXREF>`__ ."
+msgstr ""
+
+#: ../../refcards.rst:478
+msgid "**Table B-6. Miscellaneous Constructs**"
+msgstr ""
+
+#: ../../refcards.rst:483
+msgid "Interpretation"
+msgstr ""
+
+#: ../../refcards.rst:485
+msgid "`Brackets <x17129.html#BRACKETSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:487
+msgid "``        if [ CONDITION ]       ``"
+msgstr ""
+
+#: ../../refcards.rst:489
+msgid "`Test construct <special-chars.html#LEFTBRACKET>`__"
+msgstr ""
+
+#: ../../refcards.rst:491
+msgid "``        if [[ CONDITION ]]       ``"
+msgstr ""
+
+#: ../../refcards.rst:493
+msgid "`Extended test construct <testconstructs.html#DBLBRACKETS>`__"
+msgstr ""
+
+#: ../../refcards.rst:495
+msgid "``        Array[1]=element1       ``"
+msgstr ""
+
+#: ../../refcards.rst:497
+msgid "`Array initialization <arrays.html#ARRAYREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:499
+msgid "``        [a-z]       ``"
+msgstr ""
+
+#: ../../refcards.rst:501
+msgid ""
+"`Range of characters <x17129.html#BRACKETSREF>`__ within a `Regular "
+"Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:504
+msgid "Curly Brackets"
+msgstr ""
+
+#: ../../refcards.rst:506
+msgid "``        ${variable}       ``"
+msgstr ""
+
+#: ../../refcards.rst:508
+msgid "`Parameter substitution <parameter-substitution.html#PARAMSUBREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:510
+msgid "``        ${!variable}       ``"
+msgstr ""
+
+#: ../../refcards.rst:512
+msgid "`Indirect variable reference <ivr.html#IVRREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:514
+msgid "``        { command1; command2; . . . commandN; }       ``"
+msgstr ""
+
+#: ../../refcards.rst:516
+msgid "`Block of code <special-chars.html#CODEBLOCKREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:518
+msgid "``        {string1,string2,string3,...}       ``"
+msgstr ""
+
+#: ../../refcards.rst:520
+msgid "`Brace expansion <special-chars.html#BRACEEXPREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:522
+msgid "``        {a..z}       ``"
+msgstr ""
+
+#: ../../refcards.rst:524
+msgid "`Extended brace expansion <bashver3.html#BRACEEXPREF3>`__"
+msgstr ""
+
+#: ../../refcards.rst:526
+msgid "``        {}       ``"
+msgstr ""
+
+#: ../../refcards.rst:528
+msgid ""
+"Text replacement, after `find <moreadv.html#CURLYBRACKETSREF>`__ and `xargs "
+"<moreadv.html#XARGSCURLYREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:531
+msgid "`Parentheses <special-chars.html#PARENSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:533
+msgid "``        ( command1; command2 )       ``"
+msgstr ""
+
+#: ../../refcards.rst:535
+msgid ""
+"Command group executed within a `subshell <subshells.html#SUBSHELLSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:538
+msgid "``        Array=(element1 element2 element3)       ``"
+msgstr ""
+
+#: ../../refcards.rst:540
+msgid "`Array initialization <arrays.html#ARRAYINIT0>`__"
+msgstr ""
+
+#: ../../refcards.rst:542
+msgid "``        result=$(COMMAND)       ``"
+msgstr ""
+
+#: ../../refcards.rst:544
+msgid "`Command substitution <commandsub.html#CSPARENS>`__ , new style"
+msgstr ""
+
+#: ../../refcards.rst:546
+msgid "``        >(COMMAND)       ``"
+msgstr ""
+
+#: ../../refcards.rst:548
+msgid "`Process substitution <process-sub.html#PROCESSSUBREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:550
+msgid "``        <(COMMAND)       ``"
+msgstr ""
+
+#: ../../refcards.rst:552
+msgid "Process substitution"
+msgstr ""
+
+#: ../../refcards.rst:554
+msgid "`Double Parentheses <dblparens.html>`__"
+msgstr ""
+
+#: ../../refcards.rst:556
+msgid "``        (( var = 78 ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:558
+msgid "`Integer arithmetic <dblparens.html#DBLPARENSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:560
+msgid "``        var=$(( 20 + 5 ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:562
+msgid "Integer arithmetic, with variable assignment"
+msgstr ""
+
+#: ../../refcards.rst:564
+msgid "``        (( var++ ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:566
+msgid "*C-style* `variable increment <dblparens.html#PLUSPLUSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:568
+msgid "``        (( var-- ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:570
+msgid "*C-style* `variable decrement <dblparens.html#PLUSPLUSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:572
+msgid "``        (( var0 = var1<98?9:21 ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:574
+msgid "*C-style* `ternary <special-chars.html#CSTRINARY>`__ operation"
+msgstr ""
+
+#: ../../refcards.rst:576
+msgid "`Quoting <quoting.html#QUOTINGREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:578
+msgid "``        \"$variable\"       ``"
+msgstr ""
+
+#: ../../refcards.rst:580
+msgid "`\"Weak\" quoting <varsubn.html#DBLQUO>`__"
+msgstr ""
+
+#: ../../refcards.rst:582
+msgid "``        'string'       ``"
+msgstr ""
+
+#: ../../refcards.rst:584
+msgid "`'Strong' quoting <varsubn.html#SNGLQUO>`__"
+msgstr ""
+
+#: ../../refcards.rst:586
+msgid "`Back Quotes <commandsub.html#BACKQUOTESREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:588
+msgid "``        result=`COMMAND`       ``"
+msgstr ""
+
+#: ../../refcards.rst:590
+msgid ""
+"`Command substitution <commandsub.html#COMMANDSUBREF>`__ , classic style"
+msgstr ""

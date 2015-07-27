@@ -1,0 +1,77 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../arithexp.rst:4
+msgid "XXX  Chapter 13. Arithmetic Expansion"
+msgstr ""
+
+#: ../../arithexp.rst:6
+msgid "Arithmetic expansion provides a powerful tool for performing (integer)"
+msgstr ""
+
+#: ../../arithexp.rst:7
+msgid ""
+"arithmetic operations in scripts. Translating a string into a numerical "
+"expression is relatively straightforward using *backticks* , *double "
+"parentheses* , or *let* ."
+msgstr ""
+
+#: ../../arithexp.rst:12
+msgid "** Variations**"
+msgstr ""
+
+#: ../../arithexp.rst:14
+msgid ""
+"Arithmetic expansion with `backticks <commandsub.html#BACKQUOTESREF>`__"
+msgstr ""
+
+#: ../../arithexp.rst:15
+msgid "(often used in conjunction with `expr <moreadv.html#EXPRREF>`__ )"
+msgstr ""
+
+#: ../../arithexp.rst:24
+msgid ""
+"Arithmetic expansion with `double parentheses <dblparens.html>`__ , and"
+msgstr ""
+
+#: ../../arithexp.rst:26
+msgid ""
+"The use of *backticks* ( *backquotes* ) in arithmetic expansion has been "
+"superseded by *double parentheses* -- ``                   ((...))"
+"                 `` and ``                   $((...))                 `` -- "
+"and also by the very convenient `let <internal.html#LETREF>`__ construction."
+msgstr ""
+
+#: ../../arithexp.rst:63
+msgid "Examples of arithmetic expansion in scripts:"
+msgstr ""
+
+#: ../../arithexp.rst:65
+msgid "`Example 16-9 <moreadv.html#EX45>`__"
+msgstr ""
+
+#: ../../arithexp.rst:67
+msgid "`Example 11-15 <loops1.html#EX25>`__"
+msgstr ""
+
+#: ../../arithexp.rst:69
+msgid "`Example 27-1 <arrays.html#EX66>`__"
+msgstr ""
+
+#: ../../arithexp.rst:71
+msgid "`Example 27-11 <arrays.html#BUBBLE>`__"
+msgstr ""
+
+#: ../../arithexp.rst:73
+msgid "`Example A-16 <contributed-scripts.html#TREE>`__"
+msgstr ""

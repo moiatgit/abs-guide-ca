@@ -1,0 +1,286 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../devref1.rst:3
+msgid "XX1 ``/dev``"
+msgstr ""
+
+#: ../../devref1.rst:5
+msgid ""
+"The ``/dev`` directory contains entries for the *physical devices* that may "
+"or may not be present in the hardware. `[1] <devref1.html#FTN.AEN19045>`__ "
+"Appropriately enough, these are called *device files*. As an example, the "
+"hard drive partitions containing the mounted filesystem(s) have entries in "
+"``/dev``, as `df <system.html#DFREF>`__ shows."
+msgstr ""
+
+#: ../../devref1.rst:24
+msgid ""
+"Among other things, the ``/dev`` directory contains *loopback* devices, such"
+" as ``/dev/loop0``. A loopback device is a gimmick that allows an ordinary "
+"file to be accessed as if it were a block device. `[2] "
+"<devref1.html#FTN.AEN19065>`__ This permits mounting an entire filesystem "
+"within a single large file. See `Example 17-8 <system.html#CREATEFS>`__ and "
+"`Example 17-7 <system.html#ISOMOUNTREF>`__."
+msgstr ""
+
+#: ../../devref1.rst:32
+msgid ""
+"A few of the pseudo-devices in ``/dev`` have other specialized uses, such as"
+" ``/dev/null`` <zeros.html#ZEROSREF>`__, ``/dev/zero`` "
+"<zeros.html#ZEROSREF1>`__, ``/dev/urandom`` <randomvar.html#URANDOMREF>`__, "
+"``/dev/sda1`` (hard drive partition), ``/dev/udp`` (*User Datagram Packet* "
+"port), and ``/dev/tcp`` <devref1.html#DEVTCP>`__."
+msgstr ""
+
+#: ../../devref1.rst:39
+msgid "For instance:"
+msgstr ""
+
+#: ../../devref1.rst:41
+msgid ""
+"To manually `mount <system.html#MOUNTREF>`__ a USB flash drive, append the "
+"following line to ``/etc/fstab`` <system.html#FSTABREF>`__. `[3] "
+"<devref1.html#FTN.AEN19093>`__"
+msgstr ""
+
+#: ../../devref1.rst:50
+msgid "(See also `Example A-23 <contributed-scripts.html#USBINST>`__.)"
+msgstr ""
+
+#: ../../devref1.rst:52
+msgid ""
+"Checking whether a disk is in the CD-burner (soft-linked to ``/dev/hdc``):"
+msgstr ""
+
+#: ../../devref1.rst:72
+msgid "."
+msgstr ""
+
+#: ../../devref1.rst:75
+msgid ""
+"#  Now, it's just a matter of checking/parsing the output and taking #+ "
+"appropriate action."
+msgstr ""
+
+#: ../../devref1.rst:79
+msgid ""
+"When executing a command on a ``/dev/tcp/$host/$port`` pseudo-device file, "
+"Bash opens a TCP connection to the associated *socket*."
+msgstr ""
+
+#: ../../devref1.rst:82
+msgid ""
+"A *socket* is a communications node associated with a specific I/O port. "
+"(This is analogous to a *hardware socket*, or *receptacle*, for a connecting"
+" cable.) It permits data transfer between hardware devices on the same "
+"machine, between machines on the same network, between machines across "
+"different networks, and, of course, between machines at different locations "
+"on the Internet."
+msgstr ""
+
+#: ../../devref1.rst:104
+msgid "The following examples assume an active Internet connection."
+msgstr ""
+
+#: ../../devref1.rst:106
+msgid "Getting the time from ``nist.gov``:"
+msgstr ""
+
+#: ../../devref1.rst:115
+msgid "[Mark contributed this example.]"
+msgstr ""
+
+#: ../../devref1.rst:117
+msgid "Generalizing the above into a script:"
+msgstr ""
+
+#: ../../devref1.rst:129
+msgid "# Exercise: modify this for different time zones."
+msgstr ""
+
+#: ../../devref1.rst:131
+msgid "echo \"UTC Time = \"$UTC\"\""
+msgstr ""
+
+#: ../../devref1.rst:134
+msgid "Downloading a URL:"
+msgstr ""
+
+#: ../../devref1.rst:144
+msgid "[Thanks, Mark and Mihai Maties.]"
+msgstr ""
+
+#: ../../devref1.rst:147
+msgid "Exemple 1. Using ``/dev/tcp`` for troubleshooting"
+msgstr ""
+
+#: ../../devref1.rst:167
+msgid "using a special character device for both TCP and UDP redirections."
+msgstr ""
+
+#: ../../devref1.rst:169
+msgid "redirections are used identically as STDIN/STDOUT/STDERR. The device"
+msgstr ""
+
+#: ../../devref1.rst:171
+msgid "are 30,36 for /dev/tcp:"
+msgstr ""
+
+#: ../../devref1.rst:173
+msgid "mknod /dev/tcp c 30 36"
+msgstr ""
+
+#: ../../devref1.rst:175
+msgid ">From the bash reference: /dev/tcp/host/port"
+msgstr ""
+
+#: ../../devref1.rst:177
+msgid "If host is a valid hostname or Internet address, and port is an"
+msgstr ""
+
+#: ../../devref1.rst:179
+msgid "port number or service name, Bash attempts to open a TCP connection"
+msgstr ""
+
+#: ../../devref1.rst:181
+msgid "corresponding socket. EXPLANATION"
+msgstr ""
+
+#: ../../devref1.rst:186
+msgid "echo \"Connection successful. Exit code: $MYEXIT\""
+msgstr ""
+
+#: ../../devref1.rst:188
+msgid "echo \"Connection unsuccessful. Exit code: $MYEXIT\""
+msgstr ""
+
+#: ../../devref1.rst:189
+msgid "fi"
+msgstr ""
+
+#: ../../devref1.rst:191
+msgid "exit $MYEXIT"
+msgstr ""
+
+#: ../../devref1.rst:195
+msgid "Exemple 2. Playing music"
+msgstr ""
+
+#: ../../devref1.rst:210
+msgid "#+ 1 channel (mono)"
+msgstr ""
+
+#: ../../devref1.rst:212
+msgid "duration=2000       # If 8000 bytes = 1 second, then 2000 = 1/4 seco"
+msgstr ""
+
+#: ../../devref1.rst:214
+msgid ""
+"volume=$'\\xc0'      # Max volume = \\xff (or \\x00). mute=$'\\x80'        #"
+" No volume = \\x80 (the middle)."
+msgstr ""
+
+#: ../../devref1.rst:217
+msgid ""
+"function mknote ()  # $1=Note Hz in bytes (e.g. A = 440Hz :: {"
+"                   #+ 8000 fps / 440 = 16 :: A = 16 bytes per secon"
+msgstr ""
+
+#: ../../devref1.rst:220
+msgid "for t in `seq 0 $duration` do"
+msgstr ""
+
+#: ../../devref1.rst:222
+msgid "test $(( $t % $1 )) = 0 && echo -n $volume || echo -n $mute"
+msgstr ""
+
+#: ../../devref1.rst:223
+msgid "done"
+msgstr ""
+
+#: ../../devref1.rst:224
+msgid "}"
+msgstr ""
+
+#: ../../devref1.rst:226
+msgid ""
+"e=`mknote 49` g=`mknote 41` a=`mknote 36` b=`mknote 32` c=`mknote 30` "
+"cis=`mknote 29` d=`mknote 27` e2=`mknote 24` n=`mknote 32767` # European "
+"notation."
+msgstr ""
+
+#: ../../devref1.rst:237
+msgid ""
+"echo -n \"$g$e2$d$c$d$c$a$g$n$g$e$n$g$e2$d$c$c$b$c$cis$n$cis$d \\ "
+"$n$g$e2$d$c$d$c$a$g$n$g$e$n$g$a$d$c$b$a$b$c\" > /dev/dsp # dsp = Digital "
+"Signal Processor"
+msgstr ""
+
+#: ../../devref1.rst:241
+msgid "exit      # A \"bonny\" example of an elegant shell script!"
+msgstr ""
+
+#: ../../devref1.rst:245
+msgid "Notes"
+msgstr ""
+
+#: ../../devref1.rst:247
+msgid "`[1] <devref1.html#AEN19045>`__"
+msgstr ""
+
+#: ../../devref1.rst:249
+msgid ""
+"The entries in ``/dev`` provide mount points for physical and virtual "
+"devices. These entries use very little drive space."
+msgstr ""
+
+#: ../../devref1.rst:252
+msgid ""
+"Some devices, such as ``/dev/null``, ``/dev/zero``, and ``/dev/urandom`` are"
+" virtual. They are not actual physical devices and exist only in software."
+msgstr ""
+
+#: ../../devref1.rst:256
+msgid "`[2] <devref1.html#AEN19065>`__"
+msgstr ""
+
+#: ../../devref1.rst:258
+msgid ""
+"A *block device* reads and/or writes data in chunks, or *blocks*, in "
+"contrast to a *character device*, which acesses data in *character* units. "
+"Examples of block devices are hard drives, CDROM drives, and flash drives. "
+"Examples of character devices are keyboards, modems, sound cards."
+msgstr ""
+
+#: ../../devref1.rst:264
+msgid "`[3] <devref1.html#AEN19093>`__"
+msgstr ""
+
+#: ../../devref1.rst:266
+msgid ""
+"Of course, the mount point ``/mnt/flashdrive`` must exist. If not, then, as "
+"*root*, **mkdir /mnt/flashdrive**."
+msgstr ""
+
+#: ../../devref1.rst:269
+msgid ""
+"To actually mount the drive, use the following command: **mount "
+"/mnt/flashdrive**"
+msgstr ""
+
+#: ../../devref1.rst:272
+msgid ""
+"Newer Linux distros automount flash drives in the ``/media`` directory "
+"without user intervention."
+msgstr ""

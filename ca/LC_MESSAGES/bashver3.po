@@ -1,0 +1,162 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../bashver3.rst:4
+msgid "XXX  37.2. Bash, version 3"
+msgstr ""
+
+#: ../../bashver3.rst:6
+msgid ""
+"On July 27, 2004, Chet Ramey released version 3 of Bash. This update fixed "
+"quite a number of bugs and added new features."
+msgstr ""
+
+#: ../../bashver3.rst:9
+msgid "Some of the more important added features:"
+msgstr ""
+
+#: ../../bashver3.rst:13
+msgid ""
+"A new, more generalized **{a..z}** `brace expansion <special-"
+"chars.html#BRACEEXPREF>`__ operator."
+msgstr ""
+
+#: ../../bashver3.rst:85
+msgid ""
+"The **${!array[@]}** operator, which expands to all the indices of a given "
+"`array <arrays.html#ARRAYREF>`__ ."
+msgstr ""
+
+#: ../../bashver3.rst:115
+msgid ""
+"The **=~** `Regular Expression <regexp.html#REGEXREF>`__ matching operator "
+"within a `double brackets <testconstructs.html#DBLBRACKETS>`__ test "
+"expression. (Perl has a similar operator.)"
+msgstr ""
+
+#: ../../bashver3.rst:139
+msgid "Or, more usefully:"
+msgstr ""
+
+#: ../../bashver3.rst:162
+msgid ""
+"For additional examples of using the **=~** operator, see `Example A-29 "
+"<contributed-scripts.html#WHX>`__ , `Example 19-14 "
+"<x17837.html#MAILBOXGREP>`__ , `Example A-35 <contributed-"
+"scripts.html#FINDSPLIT>`__ , and `Example A-24 <contributed-"
+"scripts.html#TOHTML>`__ ."
+msgstr ""
+
+#: ../../bashver3.rst:170
+msgid ""
+"The new ``        set -o pipefail       `` option is useful for debugging "
+"`pipes <special-chars.html#PIPEREF>`__ . If this option is set, then the "
+"`exit status <exit-status.html#EXITSTATUSREF>`__ of a pipe is the exit "
+"status of the last command in the pipe to *fail* (return a non-zero value), "
+"rather than the actual final command in the pipe."
+msgstr ""
+
+#: ../../bashver3.rst:177
+msgid "See `Example 16-43 <communications.html#FC4UPD>`__ ."
+msgstr ""
+
+#: ../../bashver3.rst:181 ../../bashver3.rst:276
+msgid "|Caution"
+msgstr ""
+
+#: ../../bashver3.rst:183
+msgid ""
+"The update to version 3 of Bash breaks a few scripts that worked under "
+"earlier versions. *Test critical legacy scripts to make sure they still "
+"work!*"
+msgstr ""
+
+#: ../../bashver3.rst:187
+msgid ""
+"As it happens, a couple of the scripts in the *Advanced Bash Scripting "
+"Guide* had to be fixed up (see `Example 9-4 <internalvariables.html#TOUT>`__"
+" , for instance)."
+msgstr ""
+
+#: ../../bashver3.rst:195
+msgid "37.2.1. Bash, version 3.1"
+msgstr ""
+
+#: ../../bashver3.rst:198
+msgid ""
+"The version 3.1 update of Bash introduces a number of bugfixes and a few "
+"minor changes."
+msgstr ""
+
+#: ../../bashver3.rst:201
+msgid ""
+"The += operator is now permitted in in places where previously only the = "
+"assignment operator was recognized."
+msgstr ""
+
+#: ../../bashver3.rst:218
+msgid ""
+"Here, += functions as a *string concatenation* operator. Note that its "
+"behavior in this particular context is different than within a `let "
+"<internal.html#LETREF>`__ construct."
+msgstr ""
+
+#: ../../bashver3.rst:237
+msgid ""
+"quite useful. In this instance, we append a directory to the ``         "
+"$PATH        `` ."
+msgstr ""
+
+#: ../../bashver3.rst:257
+msgid "37.2.2. Bash, version 3.2"
+msgstr ""
+
+#: ../../bashver3.rst:260
+msgid "This is pretty much a bugfix update."
+msgstr ""
+
+#: ../../bashver3.rst:262
+msgid ""
+"In `*global* parameter substitutions <parameter-substitution.html#PSGLOB>`__"
+" , the pattern no longer anchors at the start of the string."
+msgstr ""
+
+#: ../../bashver3.rst:266
+msgid ""
+"The ``         --wordexp        `` option disables `process substitution "
+"<process-sub.html#PROCESSSUBREF>`__ ."
+msgstr ""
+
+#: ../../bashver3.rst:269
+msgid ""
+"The **=~** `Regular Expression match operator "
+"<bashver3.html#REGEXMATCHREF>`__ no longer requires `quoting "
+"<quoting.html#QUOTINGREF>`__ of the *pattern* within `[[ ... ]] "
+"<testconstructs.html#DBLBRACKETS>`__ ."
+msgstr ""
+
+#: ../../bashver3.rst:278
+msgid ""
+"In fact, quoting in this context is *not* advisable as it may cause *regex* "
+"evaluation to fail. Chet Ramey states in the `Bash FAQ "
+"<biblio.html#BASHFAQ>`__ that quoting explicitly disables regex evaluation. "
+"See also the `Ubuntu Bug List <https://bugs.launchpad.net/ubuntu-"
+"website/+bug/109931>`__ and `Wikinerds on Bash syntax "
+"<http://en.wikinerds.org/index.php/Bash_syntax_and_semantics>`__ ."
+msgstr ""
+
+#: ../../bashver3.rst:287
+msgid ""
+"Setting *shopt -s compat31* in a script causes reversion to the original "
+"behavior."
+msgstr ""

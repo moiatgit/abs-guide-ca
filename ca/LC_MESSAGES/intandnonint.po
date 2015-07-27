@@ -1,0 +1,88 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intandnonint.rst:4
+msgid "XXX  36.1. Interactive and non-interactive shells and scripts"
+msgstr ""
+
+#: ../../intandnonint.rst:6
+msgid ""
+"An *interactive* shell reads commands from user input on a ``      tty     "
+"`` . Among other things, such a shell reads startup files on activation, "
+"displays a prompt, and enables job control by default. The user can "
+"*interact* with the shell."
+msgstr ""
+
+#: ../../intandnonint.rst:11
+msgid ""
+"A shell running a script is always a non-interactive shell. All the same, "
+"the script can still access its ``      tty     `` . It is even possible to "
+"emulate an interactive shell in a script."
+msgstr ""
+
+#: ../../intandnonint.rst:34
+msgid ""
+"Let us consider an *interactive* script to be one that requires input from "
+"the user, usually with `read <internal.html#READREF>`__ statements (see "
+"`Example 15-3 <internal.html#EX36>`__ ). \"Real life\" is actually a bit "
+"messier than that. For now, assume an interactive script is bound to a tty, "
+"a script that a user has invoked from the console or an *xterm* ."
+msgstr ""
+
+#: ../../intandnonint.rst:40
+msgid ""
+"Init and startup scripts are necessarily non-interactive, since they must "
+"run without human intervention. Many administrative and system maintenance "
+"scripts are likewise non-interactive. Unvarying repetitive tasks cry out for"
+" automation by non-interactive scripts."
+msgstr ""
+
+#: ../../intandnonint.rst:45
+msgid ""
+"Non-interactive scripts can run in the background, but interactive ones "
+"hang, waiting for input that never comes. Handle that difficulty by having "
+"an **expect** script or embedded `here document <here-"
+"docs.html#HEREDOCREF>`__ feed input to an interactive script running as a "
+"background job. In the simplest case, redirect a file to supply input to a "
+"**read** statement ( **read variable <file** ). These particular workarounds"
+" make possible general purpose scripts that run in either interactive or "
+"non-interactive modes."
+msgstr ""
+
+#: ../../intandnonint.rst:54
+msgid ""
+"If a script needs to test whether it is running in an interactive shell, it "
+"is simply a matter of finding whether the *prompt* variable, `$PS1 "
+"<internalvariables.html#PS1REF>`__ is set. (If the user is being prompted "
+"for input, then the script needs to display a prompt.)"
+msgstr ""
+
+#: ../../intandnonint.rst:75
+msgid "the `$- <internalvariables.html#FLPREF>`__ flag."
+msgstr ""
+
+#: ../../intandnonint.rst:90
+msgid "*test* operator <fto.html#TERMTEST>`__ ."
+msgstr ""
+
+#: ../../intandnonint.rst:125
+msgid "|Note"
+msgstr ""
+
+#: ../../intandnonint.rst:127
+msgid ""
+"Scripts may be forced to run in interactive mode with the -i option or with "
+"a ``                   #!/bin/bash -i                 `` header. Be aware "
+"that this can cause erratic script behavior or show error messages even when"
+" no error is present."
+msgstr ""

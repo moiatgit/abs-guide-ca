@@ -1,0 +1,38 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../winscript.rst:4
+msgid "XXX  36.10. Shell Scripting Under Windows"
+msgstr ""
+
+#: ../../winscript.rst:6
+msgid ""
+"Even users running *that other* OS can run UNIX-like shell scripts, and "
+"therefore benefit from many of the lessons of this book. The `Cygwin "
+"<http://sourceware.cygnus.com/cygwin/>`__ package from Cygnus and the `MKS "
+"utilities <http://www.mkssoftware.com/>`__ from Mortice Kern Associates add "
+"shell scripting capabilities to Windows."
+msgstr ""
+
+#: ../../winscript.rst:12
+msgid ""
+"Another alternative is `UWIN "
+"<http://www2.research.att.com/~gsf/download/uwin/uwin.html>`__ , written by "
+"David Korn of AT&T, of `Korn Shell <biblio.html#KORNSHELLREF>`__ fame."
+msgstr ""
+
+#: ../../winscript.rst:17
+msgid ""
+"In 2006, Microsoft released the Windows Powershell ®, which contains limited"
+" Bash-like command-line scripting capabilities."
+msgstr ""
