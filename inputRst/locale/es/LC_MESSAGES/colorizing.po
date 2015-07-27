@@ -1,0 +1,770 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../colorizing.rst:4
+msgid "XXX  36.5.  \"Colorizing\"  Scripts"
+msgstr ""
+
+#: ../../colorizing.rst:6
+msgid ""
+"The ANSI ` [1]  <colorizing.html#FTN.AEN20259>`__ escape sequences set "
+"screen attributes, such as bold text, and color of foreground and "
+"background. `DOS batch files <dosbatch.html#DOSBATCH1>`__ commonly used ANSI"
+" escape codes for *color* output, and so can Bash scripts."
+msgstr ""
+
+#: ../../colorizing.rst:13
+msgid "Exemple 13. A \"colorized\" address database"
+msgstr ""
+
+#: ../../colorizing.rst:99
+msgid "Exemple 14. Drawing a box"
+msgstr ""
+
+#: ../../colorizing.rst:255
+msgid ""
+"The simplest, and perhaps most useful ANSI escape sequence is bold text, "
+"**\\\\033[1m ... \\\\033[0m** . The \\\\033 represents an `escape "
+"<escapingsection.html#ESCP>`__ , the \"[1\" turns on the bold attribute, "
+"while the \"[0\" switches it off. The \"m\" terminates each term of the "
+"escape sequence."
+msgstr ""
+
+#: ../../colorizing.rst:269
+msgid ""
+"A similar escape sequence switches on the underline attribute (on an *rxvt* "
+"and an *aterm* )."
+msgstr ""
+
+#: ../../colorizing.rst:282 ../../colorizing.rst:308 ../../colorizing.rst:322
+msgid "|Note"
+msgstr ""
+
+#: ../../colorizing.rst:284
+msgid ""
+"With an **echo** , the ``         -e        `` option enables the escape "
+"sequences."
+msgstr ""
+
+#: ../../colorizing.rst:290
+msgid "Other escape sequences change the text and/or background color."
+msgstr ""
+
+#: ../../colorizing.rst:310
+msgid ""
+"It's usually advisable to set the *bold* attribute for light-colored "
+"foreground text."
+msgstr ""
+
+#: ../../colorizing.rst:316
+msgid ""
+"The **tput sgr0** restores the terminal settings to normal. Omitting this "
+"lets all subsequent output from that particular terminal remain blue."
+msgstr ""
+
+#: ../../colorizing.rst:324
+msgid ""
+"Since **tput sgr0** fails to restore terminal settings under certain "
+"circumstances, **echo -ne \\\\E[0m** may be a better choice."
+msgstr ""
+
+#: ../../colorizing.rst:332
+msgid ""
+"Use the following template for writing colored text on a colored background."
+msgstr ""
+
+#: ../../colorizing.rst:335
+msgid ""
+"``                   echo -e '\\E[COLOR1;COLOR2mSome text goes here.'"
+"                 ``"
+msgstr ""
+
+#: ../../colorizing.rst:337
+msgid ""
+"The \"\\\\E[\" begins the escape sequence. The semicolon-separated numbers "
+"\"COLOR1\" and \"COLOR2\" specify a foreground and a background color, "
+"according to the table below. (The order of the numbers does not matter, "
+"since the foreground and background numbers fall in non-overlapping ranges.)"
+" The \"m\" terminates the escape sequence, and the text begins immediately "
+"after that."
+msgstr ""
+
+#: ../../colorizing.rst:344
+msgid ""
+"Note also that `single quotes <varsubn.html#SNGLQUO>`__ enclose the "
+"remainder of the command sequence following the **echo -e** ."
+msgstr ""
+
+#: ../../colorizing.rst:350
+msgid ""
+"The numbers in the following table work for an *rxvt* terminal. Results may "
+"vary for other terminal emulators."
+msgstr ""
+
+#: ../../colorizing.rst:354
+msgid "**Table 36-1. Numbers representing colors in Escape Sequences**"
+msgstr ""
+
+#: ../../colorizing.rst:357
+msgid "Color"
+msgstr ""
+
+#: ../../colorizing.rst:359
+msgid "Foreground"
+msgstr ""
+
+#: ../../colorizing.rst:361
+msgid "Background"
+msgstr ""
+
+#: ../../colorizing.rst:363
+msgid "``        black       ``"
+msgstr ""
+
+#: ../../colorizing.rst:365
+msgid "30"
+msgstr ""
+
+#: ../../colorizing.rst:367
+msgid "40"
+msgstr ""
+
+#: ../../colorizing.rst:369
+msgid "``        red       ``"
+msgstr ""
+
+#: ../../colorizing.rst:371
+msgid "31"
+msgstr ""
+
+#: ../../colorizing.rst:373
+msgid "41"
+msgstr ""
+
+#: ../../colorizing.rst:375
+msgid "``        green       ``"
+msgstr ""
+
+#: ../../colorizing.rst:377
+msgid "32"
+msgstr ""
+
+#: ../../colorizing.rst:379
+msgid "42"
+msgstr ""
+
+#: ../../colorizing.rst:381
+msgid "``        yellow       ``"
+msgstr ""
+
+#: ../../colorizing.rst:383
+msgid "33"
+msgstr ""
+
+#: ../../colorizing.rst:385
+msgid "43"
+msgstr ""
+
+#: ../../colorizing.rst:387
+msgid "``        blue       ``"
+msgstr ""
+
+#: ../../colorizing.rst:389
+msgid "34"
+msgstr ""
+
+#: ../../colorizing.rst:391
+msgid "44"
+msgstr ""
+
+#: ../../colorizing.rst:393
+msgid "``        magenta       ``"
+msgstr ""
+
+#: ../../colorizing.rst:395
+msgid "35"
+msgstr ""
+
+#: ../../colorizing.rst:397
+msgid "45"
+msgstr ""
+
+#: ../../colorizing.rst:399
+msgid "``        cyan       ``"
+msgstr ""
+
+#: ../../colorizing.rst:401
+msgid "36"
+msgstr ""
+
+#: ../../colorizing.rst:403
+msgid "46"
+msgstr ""
+
+#: ../../colorizing.rst:405
+msgid "``        white       ``"
+msgstr ""
+
+#: ../../colorizing.rst:407
+msgid "37"
+msgstr ""
+
+#: ../../colorizing.rst:409
+msgid "47"
+msgstr ""
+
+#: ../../colorizing.rst:415
+msgid "Exemple 15. Echoing colored text"
+msgstr ""
+
+#: ../../colorizing.rst:489
+msgid "Exemple 16. A \"horserace\" game"
+msgstr ""
+
+#: ../../colorizing.rst:551
+msgid "md5sum | head -c30`"
+msgstr ""
+
+#: ../../colorizing.rst:553
+msgid ""
+"# Create the temp directory and move right in. mkdir $HORSE_RACE_TMP_DIR cd "
+"$HORSE_RACE_TMP_DIR"
+msgstr ""
+
+#: ../../colorizing.rst:558
+msgid ""
+"#  This function moves the cursor to line $1 column $2 and then prints $3. #"
+"  E.g.: \"move_and_echo 5 10 linux\" is equivalent to #+ \"tput cup 4 9; "
+"echo linux\", but with one command instead of two. #  Note: \"tput cup\" "
+"defines 0 0 the upper left angle of the terminal, #+ echo defines 1 1 the "
+"upper left angle of the terminal. move_and_echo() {"
+msgstr ""
+
+#: ../../colorizing.rst:564
+msgid "echo -ne \"\\E[${1};${2}H\"\"$3\""
+msgstr ""
+
+#: ../../colorizing.rst:565 ../../colorizing.rst:571 ../../colorizing.rst:579
+msgid "}"
+msgstr ""
+
+#: ../../colorizing.rst:567
+msgid ""
+"# Function to generate a pseudo-random number between 1 and 9. random_1_9 ()"
+" {"
+msgstr ""
+
+#: ../../colorizing.rst:570
+msgid "head -c10 /dev/urandommd5sum | tr -d [a-z] | tr -d 0 | cut -c1"
+msgstr ""
+
+#: ../../colorizing.rst:573
+msgid ""
+"#  Two functions that simulate \"movement,\" when drawing the horses. "
+"draw_horse_one() {"
+msgstr ""
+
+#: ../../colorizing.rst:575
+msgid "echo -n \" \"//$MOVE_HORSE//"
+msgstr ""
+
+#: ../../colorizing.rst:576
+msgid "} draw_horse_two(){"
+msgstr ""
+
+#: ../../colorizing.rst:578
+msgid "echo -n \" \"\\\\\\\\$MOVE_HORSE\\\\\\\\"
+msgstr ""
+
+#: ../../colorizing.rst:582
+msgid ""
+"# Define current terminal dimension. N_COLS=`tput cols` N_LINES=`tput lines`"
+msgstr ""
+
+#: ../../colorizing.rst:586
+msgid ""
+"# Need at least a 20-LINES X 80-COLUMNS terminal. Check it. if [ $N_COLS -lt"
+" 80 ] |[ $N_LINES -lt 20 ]; then"
+msgstr ""
+
+#: ../../colorizing.rst:588
+msgid ""
+"echo \"`basename $0` needs a 80-cols X 20-lines terminal.\" echo \"Your "
+"terminal is ${N_COLS}-cols X ${N_LINES}-lines.\" exit $E_RUNERR"
+msgstr ""
+
+#: ../../colorizing.rst:591 ../../colorizing.rst:797 ../../colorizing.rst:831
+msgid "fi"
+msgstr ""
+
+#: ../../colorizing.rst:594
+msgid "# Start drawing the race field."
+msgstr ""
+
+#: ../../colorizing.rst:596
+msgid "# Need a string of 80 chars. See below. BLANK80=`seq -s \"\" 100head -c80`"
+msgstr ""
+
+#: ../../colorizing.rst:599
+msgid "clear"
+msgstr ""
+
+#: ../../colorizing.rst:601 ../../colorizing.rst:663
+msgid "# Set foreground and background colors to white. echo -ne '\\E[37;47m'"
+msgstr ""
+
+#: ../../colorizing.rst:604
+msgid ""
+"# Move the cursor on the upper left angle of the terminal. tput cup 0 0"
+msgstr ""
+
+#: ../../colorizing.rst:607
+msgid "# Draw six white lines. for n in `seq 5`; do"
+msgstr ""
+
+#: ../../colorizing.rst:609
+msgid "echo $BLANK80   # Use the 80 chars string to colorize the terminal."
+msgstr ""
+
+#: ../../colorizing.rst:610 ../../colorizing.rst:649 ../../colorizing.rst:669
+#: ../../colorizing.rst:677 ../../colorizing.rst:700 ../../colorizing.rst:721
+#: ../../colorizing.rst:782 ../../colorizing.rst:842
+msgid "done"
+msgstr ""
+
+#: ../../colorizing.rst:612
+msgid "# Sets foreground color to black. echo -ne '\\E[30m'"
+msgstr ""
+
+#: ../../colorizing.rst:615
+msgid ""
+"move_and_echo 3 1 \"START  1\" move_and_echo 3 75 FINISH move_and_echo 1 5 "
+"\"|\" move_and_echo 1 80 \"|\" move_and_echo 2 5 \"|\" move_and_echo 2 80 "
+"\"|\" move_and_echo 4 5 \" 2\" move_and_echo 4 80 \"|\" move_and_echo 5 5 "
+"\"V  3\" move_and_echo 5 80 \"V\""
+msgstr ""
+
+#: ../../colorizing.rst:626
+msgid "# Set foreground color to red. echo -ne '\\E[31m'"
+msgstr ""
+
+#: ../../colorizing.rst:629
+msgid ""
+"# Some ASCII art. move_and_echo 1 8 \"..@@@..@@@@@...@@@@@.@...@..@@@@...\" "
+"move_and_echo 2 8 \".@...@...@.......@...@...@.@.......\" move_and_echo 3 8 "
+"\".@@@@@...@.......@...@@@@@.@@@@....\" move_and_echo 4 8 "
+"\".@...@...@.......@...@...@.@.......\" move_and_echo 5 8 "
+"\".@...@...@.......@...@...@..@@@@...\" move_and_echo 1 43 "
+"\"@@@@...@@@...@@@@..@@@@..@@@@.\" move_and_echo 2 43 "
+"\"@...@.@...@.@.....@.....@.....\" move_and_echo 3 43 "
+"\"@@@@..@@@@@.@.....@@@@...@@@..\" move_and_echo 4 43 "
+"\"@..@..@...@.@.....@.........@.\" move_and_echo 5 43 "
+"\"@...@.@...@..@@@@..@@@@.@@@@..\""
+msgstr ""
+
+#: ../../colorizing.rst:642
+msgid "# Set foreground and background colors to green. echo -ne '\\E[32;42m'"
+msgstr ""
+
+#: ../../colorizing.rst:645
+msgid "# Draw  eleven green lines. tput cup 5 0 for n in `seq 11`; do"
+msgstr ""
+
+#: ../../colorizing.rst:648 ../../colorizing.rst:668
+msgid "echo $BLANK80"
+msgstr ""
+
+#: ../../colorizing.rst:651
+msgid "# Set foreground color to black. echo -ne '\\E[30m' tput cup 5 0"
+msgstr ""
+
+#: ../../colorizing.rst:655
+msgid ""
+"# Draw the fences. echo \"++++++++++++++++++++++++++++++++++++++\\ "
+"++++++++++++++++++++++++++++++++++++++++++\""
+msgstr ""
+
+#: ../../colorizing.rst:659
+msgid ""
+"tput cup 15 0 echo \"++++++++++++++++++++++++++++++++++++++\\ "
+"++++++++++++++++++++++++++++++++++++++++++\""
+msgstr ""
+
+#: ../../colorizing.rst:666
+msgid "# Draw three white lines. for n in `seq 3`; do"
+msgstr ""
+
+#: ../../colorizing.rst:671 ../../colorizing.rst:863
+msgid "# Set foreground color to black. echo -ne '\\E[30m'"
+msgstr ""
+
+#: ../../colorizing.rst:674
+msgid "# Create 9 files to stores handicaps. for n in `seq 10 7 68`; do"
+msgstr ""
+
+#: ../../colorizing.rst:676
+msgid "touch $n"
+msgstr ""
+
+#: ../../colorizing.rst:679
+msgid "# Set the first type of \"horse\" the script will draw. HORSE_TYPE=2"
+msgstr ""
+
+#: ../../colorizing.rst:682
+msgid ""
+"#  Create position-file and odds-file for every \"horse\". #+ In these "
+"files, store the current position of the horse, #+ the type and the odds. "
+"for HN in `seq 9`; do"
+msgstr ""
+
+#: ../../colorizing.rst:686
+msgid ""
+"touch horse_${HN}_position touch odds_${HN} echo \\-1 > horse_${HN}_position"
+" echo $HORSE_TYPE >>  horse_${HN}_position # Define a random handicap for "
+"horse."
+msgstr ""
+
+#: ../../colorizing.rst:691 ../../colorizing.rst:694
+msgid "HANDICAP=`random_1_9`"
+msgstr ""
+
+#: ../../colorizing.rst:692
+msgid ""
+"# Check if the random_1_9 function returned a good value. while ! echo "
+"$HANDICAPgrep [1-9] &> /dev/null; do"
+msgstr ""
+
+#: ../../colorizing.rst:695
+msgid ""
+"done # Define last handicap position for horse. LHP=`expr $HANDICAP \\* 7 + "
+"3` for FILE in `seq 10 7 $LHP`; do"
+msgstr ""
+
+#: ../../colorizing.rst:699
+msgid "echo $HN >> $FILE"
+msgstr ""
+
+#: ../../colorizing.rst:702
+msgid "# Calculate odds. case $HANDICAP in"
+msgstr ""
+
+#: ../../colorizing.rst:705 ../../colorizing.rst:708 ../../colorizing.rst:711
+#: ../../colorizing.rst:714 ../../colorizing.rst:717
+msgid "echo $ODDS > odds_${HN}"
+msgstr ""
+
+#: ../../colorizing.rst:706
+msgid ";; 23) ODDS=`echo $HANDICAP \\* 0.40 + 1.25 | bc`"
+msgstr ""
+
+#: ../../colorizing.rst:709
+msgid ";; 45 | 6) ODDS=`echo $HANDICAP \\* 0.55 + 1.25 | bc`"
+msgstr ""
+
+#: ../../colorizing.rst:712
+msgid ";; 78) ODDS=`echo $HANDICAP \\* 0.75 + 1.25 | bc`"
+msgstr ""
+
+#: ../../colorizing.rst:715
+msgid ";; 9) ODDS=`echo $HANDICAP \\* 0.90 + 1.25bc`"
+msgstr ""
+
+#: ../../colorizing.rst:718
+msgid "esac"
+msgstr ""
+
+#: ../../colorizing.rst:724
+msgid ""
+"# Print odds. print_odds() { tput cup 6 0 echo -ne '\\E[30;42m' for HN in "
+"`seq 9`; do"
+msgstr ""
+
+#: ../../colorizing.rst:729
+msgid "echo \"#$HN odds->\" `cat odds_${HN}`"
+msgstr ""
+
+#: ../../colorizing.rst:730 ../../colorizing.rst:739
+msgid "done }"
+msgstr ""
+
+#: ../../colorizing.rst:733
+msgid ""
+"# Draw the horses at starting line. draw_horses() { tput cup 6 0 echo -ne "
+"'\\E[30;42m' for HN in `seq 9`; do"
+msgstr ""
+
+#: ../../colorizing.rst:738
+msgid "echo /\\\\$HN/\\\\\"                               \""
+msgstr ""
+
+#: ../../colorizing.rst:742
+msgid "print_odds"
+msgstr ""
+
+#: ../../colorizing.rst:744
+msgid ""
+"echo -ne '\\E[47m' # Wait for a enter key press to start the race. # The "
+"escape sequence '\\E[?25l' disables the cursor. tput cup 17 0 echo -e "
+"'\\E[?25l'Press [enter] key to start the race... read -s"
+msgstr ""
+
+#: ../../colorizing.rst:751
+msgid ""
+"#  Disable normal echoing in the terminal. #  This avoids key presses that "
+"might \"contaminate\" the screen #+ during the race. stty -echo"
+msgstr ""
+
+#: ../../colorizing.rst:756
+msgid ""
+"# -------------------------------------------------------- # Start the race."
+msgstr ""
+
+#: ../../colorizing.rst:759
+msgid ""
+"draw_horses echo -ne '\\E[37;47m' move_and_echo 18 1 $BLANK80 echo -ne "
+"'\\E[30m' move_and_echo 18 1 Starting... sleep 1"
+msgstr ""
+
+#: ../../colorizing.rst:766
+msgid "# Set the column of the finish line. WINNING_POS=74"
+msgstr ""
+
+#: ../../colorizing.rst:769
+msgid "# Define the time the race started. START_TIME=`date +%s`"
+msgstr ""
+
+#: ../../colorizing.rst:772
+msgid "# COL variable needed by following \"while\" construct. COL=0"
+msgstr ""
+
+#: ../../colorizing.rst:775
+msgid "while [ $COL -lt $WINNING_POS ]; do"
+msgstr ""
+
+#: ../../colorizing.rst:777
+msgid "MOVE_HORSE=0"
+msgstr ""
+
+#: ../../colorizing.rst:779
+msgid ""
+"# Check if the random_1_9 function has returned a good value. while ! echo "
+"$MOVE_HORSEgrep [1-9] &> /dev/null; do"
+msgstr ""
+
+#: ../../colorizing.rst:781
+msgid "MOVE_HORSE=`random_1_9`"
+msgstr ""
+
+#: ../../colorizing.rst:784
+msgid ""
+"# Define old type and position of the \"randomized horse\". HORSE_TYPE=`cat"
+"  horse_${MOVE_HORSE}_positiontail -n 1` COL=$(expr `cat  "
+"horse_${MOVE_HORSE}_positionhead -n 1`)"
+msgstr ""
+
+#: ../../colorizing.rst:788
+msgid ""
+"ADD_POS=1 # Check if the current position is an handicap position. if seq 10"
+" 7 68grep -w $COL &> /dev/null; then"
+msgstr ""
+
+#: ../../colorizing.rst:792
+msgid ""
+"ADD_POS=0 grep -v -w  $MOVE_HORSE $COL > ${COL}_new rm -f $COL mv -f "
+"${COL}_new $COL else ADD_POS=1"
+msgstr ""
+
+#: ../../colorizing.rst:798
+msgid ""
+"else ADD_POS=1 fi COL=`expr $COL + $ADD_POS` echo $COL >  "
+"horse_${MOVE_HORSE}_position  # Store new position."
+msgstr ""
+
+#: ../../colorizing.rst:805
+msgid ""
+"1) HORSE_TYPE=2; DRAW_HORSE=draw_horse_two ;; 2) HORSE_TYPE=1; "
+"DRAW_HORSE=draw_horse_one"
+msgstr ""
+
+#: ../../colorizing.rst:808
+msgid ""
+"esac echo $HORSE_TYPE >>  horse_${MOVE_HORSE}_position # Store current type."
+msgstr ""
+
+#: ../../colorizing.rst:812
+msgid ""
+"# Set foreground color to black and background to green. echo -ne "
+"'\\E[30;42m'"
+msgstr ""
+
+#: ../../colorizing.rst:815
+msgid ""
+"# Move the cursor to new horse position. tput cup `expr $MOVE_HORSE + 5` \\"
+msgstr ""
+
+#: ../../colorizing.rst:817
+msgid "`cat  horse_${MOVE_HORSE}_positionhead -n 1`"
+msgstr ""
+
+#: ../../colorizing.rst:819
+msgid "# Draw the horse. $DRAW_HORSE"
+msgstr ""
+
+#: ../../colorizing.rst:821
+msgid "usleep $USLEEP_ARG"
+msgstr ""
+
+#: ../../colorizing.rst:823
+msgid ""
+"# When all horses have gone beyond field line 15, reprint odds. touch "
+"fieldline15 if [ $COL = 15 ]; then"
+msgstr ""
+
+#: ../../colorizing.rst:826
+msgid "echo $MOVE_HORSE >> fieldline15"
+msgstr ""
+
+#: ../../colorizing.rst:827
+msgid "fi if [ `wc -l fieldline15cut -f1 -d \" \"` = 9 ]; then"
+msgstr ""
+
+#: ../../colorizing.rst:829
+msgid "print_odds : > fieldline15"
+msgstr ""
+
+#: ../../colorizing.rst:833
+msgid ""
+"# Define the leading horse. HIGHEST_POS=`cat *positionsort -n | tail -1`"
+msgstr ""
+
+#: ../../colorizing.rst:836
+msgid ""
+"# Set background color to white. echo -ne '\\E[47m' tput cup 17 0 echo -n "
+"Current leader: `grep -w $HIGHEST_POS *positioncut -c7`\\"
+msgstr ""
+
+#: ../../colorizing.rst:840
+msgid "\"                              \""
+msgstr ""
+
+#: ../../colorizing.rst:844
+msgid "# Define the time the race finished. FINISH_TIME=`date +%s`"
+msgstr ""
+
+#: ../../colorizing.rst:847
+msgid ""
+"# Set background color to green and enable blinking text. echo -ne "
+"'\\E[30;42m' echo -en '\\E[5m'"
+msgstr ""
+
+#: ../../colorizing.rst:851
+msgid ""
+"# Make the winning horse blink. tput cup `expr $MOVE_HORSE + 5` \\ `cat  "
+"horse_${MOVE_HORSE}_positionhead -n 1` $DRAW_HORSE"
+msgstr ""
+
+#: ../../colorizing.rst:856
+msgid "# Disable blinking text. echo -en '\\E[25m'"
+msgstr ""
+
+#: ../../colorizing.rst:859
+msgid ""
+"# Set foreground and background color to white. echo -ne '\\E[37;47m' "
+"move_and_echo 18 1 $BLANK80"
+msgstr ""
+
+#: ../../colorizing.rst:866
+msgid ""
+"# Make winner blink. tput cup 17 0 echo -e \"\\E[5mWINNER: "
+"$MOVE_HORSE\\E[25m\"\"  Odds: `cat odds_${MOVE_HORSE}`\"\\ \"  Race time: "
+"`expr $FINISH_TIME - $START_TIME` secs\""
+msgstr ""
+
+#: ../../colorizing.rst:871
+msgid "# Restore cursor and old colors. echo -en \"\\E[?25h\" echo -en \"\\E[0m\""
+msgstr ""
+
+#: ../../colorizing.rst:875
+msgid "# Restore echoing. stty echo"
+msgstr ""
+
+#: ../../colorizing.rst:878
+msgid "# Remove race temp directory. rm -rf $HORSE_RACE_TMP_DIR"
+msgstr ""
+
+#: ../../colorizing.rst:881
+msgid "tput cup 19 0"
+msgstr ""
+
+#: ../../colorizing.rst:883
+msgid "exit 0"
+msgstr ""
+
+#: ../../colorizing.rst:888
+msgid ""
+"See also `Example A-21 <contributed-scripts.html#HASHEXAMPLE>`__ , `Example "
+"A-44 <contributed-scripts.html#HOMEWORK>`__ , `Example A-52 <contributed-"
+"scripts.html#SHOWALLC>`__ , and `Example A-40 <contributed-"
+"scripts.html#PETALS>`__ ."
+msgstr ""
+
+#: ../../colorizing.rst:895
+msgid "|Caution"
+msgstr ""
+
+#: ../../colorizing.rst:897
+msgid ""
+"There is, however, a major problem with all this. *ANSI escape sequences are"
+" emphatically `non-portable <portabilityissues.html>`__ .* What works fine "
+"on some terminal emulators (or the console) may work differently, or not at "
+"all, on others. A \"colorized\" script that looks stunning on the script "
+"author's machine may produce unreadable output on someone else's. This "
+"somewhat compromises the usefulness of colorizing scripts, and possibly "
+"relegates this technique to the status of a gimmick. Colorized scripts are "
+"probably inappropriate in a commercial setting, i.e., your supervisor might "
+"disapprove."
+msgstr ""
+
+#: ../../colorizing.rst:910
+msgid ""
+"Alister's `ansi-color <http://code.google.com/p/ansi-color/>`__ utility "
+"(based on `Moshe Jacobson's color utility "
+"<http://bash.deta.in/color-1.1.tar.gz>`__ considerably simplifies using ANSI"
+" escape sequences. It substitutes a clean and logical syntax for the clumsy "
+"constructs just discussed."
+msgstr ""
+
+#: ../../colorizing.rst:916
+msgid ""
+"Henry/teikedvl has likewise created a utility ( "
+"http://scriptechocolor.sourceforge.net/ ) to simplify creation of colorized "
+"scripts."
+msgstr ""
+
+#: ../../colorizing.rst:922
+msgid "Notes"
+msgstr ""
+
+#: ../../colorizing.rst:925
+msgid "` [1]  <colorizing.html#AEN20259>`__"
+msgstr ""
+
+#: ../../colorizing.rst:927
+msgid "ANSI is, of course, the acronym for the American National Standards"
+msgstr ""
+
+#: ../../colorizing.rst:928
+msgid ""
+"Institute. This august body establishes and maintains various technical and "
+"industrial standards."
+msgstr ""

@@ -1,0 +1,48 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../bash2.rst:4
+msgid "XXX  Chapter 37. Bash, versions 2, 3, and 4"
+msgstr ""
+
+#: ../../bash2.rst:9
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../bash2.rst:13
+msgid "37.1. `Bash, version 2 <bashver2.html>`__"
+msgstr ""
+
+#: ../../bash2.rst:17
+msgid "37.2. `Bash, version 3 <bashver3.html>`__"
+msgstr ""
+
+#: ../../bash2.rst:23
+msgid "37.2.1. `Bash, version 3.1 <bashver3.html#AEN20956>`__"
+msgstr ""
+
+#: ../../bash2.rst:27
+msgid "37.2.2. `Bash, version 3.2 <bashver3.html#AEN20987>`__"
+msgstr ""
+
+#: ../../bash2.rst:33
+msgid "37.3. `Bash, version 4 <bashver4.html>`__"
+msgstr ""
+
+#: ../../bash2.rst:39
+msgid "37.3.1. `Bash, version 4.1 <bashver4.html#AEN21183>`__"
+msgstr ""
+
+#: ../../bash2.rst:43
+msgid "37.3.2. `Bash, version 4.2 <bashver4.html#AEN21220>`__"
+msgstr ""

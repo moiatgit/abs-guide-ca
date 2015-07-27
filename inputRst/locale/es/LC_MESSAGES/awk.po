@@ -1,0 +1,169 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../awk.rst:4
+msgid "XXX  C.2. Awk"
+msgstr ""
+
+#: ../../awk.rst:6
+msgid ""
+"*Awk* ` [1]  <awk.html#FTN.AEN23443>`__ is a full-featured text processing "
+"language with a syntax reminiscent of *C* . While it possesses an extensive "
+"set of operators and capabilities, we will cover only a few of these here - "
+"the ones most useful in shell scripts."
+msgstr ""
+
+#: ../../awk.rst:11
+msgid ""
+"Awk breaks each line of input passed to it into `fields <special-"
+"chars.html#FIELDREF>`__ . By default, a field is a string of consecutive "
+"characters delimited by `whitespace <special-chars.html#WHITESPACEREF>`__ , "
+"though there are options for changing this. Awk parses and operates on each "
+"separate field. This makes it ideal for handling structured text files -- "
+"especially tables -- data organized into consistent chunks, such as rows and"
+" columns."
+msgstr ""
+
+#: ../../awk.rst:20
+msgid ""
+"`Strong quoting <varsubn.html#SNGLQUO>`__ and `curly brackets <special-"
+"chars.html#CODEBLOCKREF>`__ enclose blocks of awk code within a shell "
+"script."
+msgstr ""
+
+#: ../../awk.rst:53
+msgid ""
+"We have just seen the awk *print* command in action. The only other feature "
+"of awk we need to deal with here is variables. Awk handles variables "
+"similarly to shell scripts, though a bit more flexibly."
+msgstr ""
+
+#: ../../awk.rst:64
+msgid ""
+"This adds the value of ``           column_number         `` to the running "
+"total of ``           total         `` >. Finally, to print \"total\" , "
+"there is an **END** command block, executed after the script has processed "
+"all its input."
+msgstr ""
+
+#: ../../awk.rst:76
+msgid ""
+"Corresponding to the **END** , there is a **BEGIN** , for a code block to be"
+" performed before awk starts processing its input."
+msgstr ""
+
+#: ../../awk.rst:79
+msgid ""
+"The following example illustrates how **awk** can add text-parsing tools to "
+"a shell script."
+msgstr ""
+
+#: ../../awk.rst:84
+msgid "Exemple 1. Counting Letter Occurrences"
+msgstr ""
+
+#: ../../awk.rst:162
+msgid "For simpler examples of awk within shell scripts, see:"
+msgstr ""
+
+#: ../../awk.rst:164
+msgid "`Example 15-14 <internal.html#EX44>`__"
+msgstr ""
+
+#: ../../awk.rst:166
+msgid "`Example 20-8 <redircb.html#REDIR4>`__"
+msgstr ""
+
+#: ../../awk.rst:168
+msgid "`Example 16-32 <filearchiv.html#STRIPC>`__"
+msgstr ""
+
+#: ../../awk.rst:170
+msgid "`Example 36-5 <wrapper.html#COLTOTALER>`__"
+msgstr ""
+
+#: ../../awk.rst:172
+msgid "`Example 28-2 <ivr.html#COLTOTALER2>`__"
+msgstr ""
+
+#: ../../awk.rst:174
+msgid "`Example 15-20 <internal.html#COLTOTALER3>`__"
+msgstr ""
+
+#: ../../awk.rst:176
+msgid "`Example 29-3 <procref1.html#PIDID>`__"
+msgstr ""
+
+#: ../../awk.rst:178
+msgid "`Example 29-4 <procref1.html#CONSTAT>`__"
+msgstr ""
+
+#: ../../awk.rst:180
+msgid "`Example 11-3 <loops1.html#FILEINFO>`__"
+msgstr ""
+
+#: ../../awk.rst:182
+msgid "`Example 16-61 <extmisc.html#BLOTOUT>`__"
+msgstr ""
+
+#: ../../awk.rst:184
+msgid "`Example 9-16 <randomvar.html#SEEDINGRANDOM>`__"
+msgstr ""
+
+#: ../../awk.rst:186
+msgid "`Example 16-4 <moreadv.html#IDELETE>`__"
+msgstr ""
+
+#: ../../awk.rst:188
+msgid "`Example 10-6 <string-manipulation.html#SUBSTRINGEX>`__"
+msgstr ""
+
+#: ../../awk.rst:190
+msgid "`Example 36-19 <assortedtips.html#SUMPRODUCT>`__"
+msgstr ""
+
+#: ../../awk.rst:192
+msgid "`Example 11-9 <loops1.html#USERLIST>`__"
+msgstr ""
+
+#: ../../awk.rst:194
+msgid "`Example 36-4 <wrapper.html#PRASC>`__"
+msgstr ""
+
+#: ../../awk.rst:196
+msgid "`Example 16-53 <mathc.html#HYPOT>`__"
+msgstr ""
+
+#: ../../awk.rst:198
+msgid "`Example T-3 <asciitable.html#ASCII3SH>`__"
+msgstr ""
+
+#: ../../awk.rst:200
+msgid ""
+"That's all the awk we'll cover here, folks, but there's lots more to learn. "
+"See the appropriate references in the `*Bibliography* <biblio.html>`__ ."
+msgstr ""
+
+#: ../../awk.rst:206
+msgid "Notes"
+msgstr ""
+
+#: ../../awk.rst:209
+msgid "` [1]  <awk.html#AEN23443>`__"
+msgstr ""
+
+#: ../../awk.rst:211
+msgid ""
+"Its name derives from the initials of its authors, **A** ho, **W** einberg, "
+"and **K** ernighan."
+msgstr ""

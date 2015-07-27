@@ -1,0 +1,157 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../localvar.rst:3
+msgid "XXX Local Variables"
+msgstr ""
+
+#: ../../localvar.rst:5
+msgid "**What makes a variable *local*?**"
+msgstr ""
+
+#: ../../localvar.rst:8
+msgid ""
+"A variable declared as *local* is one that is visible only within the `block"
+" of code <special-chars.html#CODEBLOCKREF>`__ in which it appears. It has "
+"local `scope <subshells.html#SCOPEREF>`__. In a function, a *local variable*"
+" has meaning only within that function block. `[1] "
+"<localvar.html#FTN.AEN18568>`__"
+msgstr ""
+
+#: ../../localvar.rst:15
+msgid "Exemple 12. Local variable visibility"
+msgstr ""
+
+#: ../../localvar.rst:50
+msgid ""
+"Caution Before a function is called, *all* variables declared within the "
+"function are invisible outside the body of the function, not just those "
+"explicitly declared as *local*."
+msgstr ""
+
+#: ../../localvar.rst:128
+msgid "Note"
+msgstr ""
+
+#: ../../localvar.rst:130
+msgid ""
+"As Evgeniy Ivanov points out, when declaring and setting a local variable in"
+" a single command, apparently the order of operations is to *first set the "
+"variable, and only afterwards restrict it to local scope*.  This is "
+"reflected in the `return value <exit-st atus.html#EXIT STATUSREF>`__."
+msgstr ""
+
+#: ../../localvar.rst:314
+msgid "24.2.1. Local variables and recursion."
+msgstr ""
+
+#: ../../localvar.rst:316
+msgid ""
+"*Recur sion* is an intere sting and someti mes useful form of *self- refere "
+"nce*.  `Herbe rt Mayer <bibli o.html #MAYER REF>`_ _ define s it as \". . ."
+"  expres sing an algori thm by using a simple r versio n of that same algori"
+" thm . . .\""
+msgstr ""
+
+#: ../../localvar.rst:318
+msgid ""
+"Consid er a defini tion define d in terms of itself , `[2] < localv ar.htm "
+"l#FTN.  AEN186 07>`__ an expres sion implic it in its own expres sion, `[3] "
+"< localv ar.htm l#FTN.  AEN186 10>`__ *a snake swallo wing its own tail*, "
+"`[4] < localv ar.htm l#FTN.  AEN186 14>`__ or . .  . a functi on that calls "
+"itself .  `[5] < localv ar.htm l#FTN.  AEN186 17>`__"
+msgstr ""
+
+#: ../../localvar.rst:320
+msgid "**Exam ple 24-13.  Demons tratio n of a simple recurs ive functi on**"
+msgstr ""
+
+#: ../../localvar.rst:1070
+msgid ""
+"Local variables are a useful tool for writing recursive code, but this "
+"practice generally involves a great deal of computational overhead and is "
+"definitely *not* recommended in a shell script. `[6] "
+"<localvar.html#FTN.AEN18632>`__"
+msgstr ""
+
+#: ../../localvar.rst:1076
+msgid "Exemple 15. Recursion, using a local variable"
+msgstr ""
+
+#: ../../localvar.rst:1134
+msgid ""
+"Also see `Example A-15 <contributed-scripts.html#PRIMES>`__ for an example "
+"of recursion in a script. Be aware that recursion is resource-intensive and "
+"executes slowly, and is therefore generally not appropriate in a script."
+msgstr ""
+
+#: ../../localvar.rst:1142
+msgid "`[1] <localvar.html#AEN18568>`__"
+msgstr ""
+
+#: ../../localvar.rst:1144
+msgid ""
+"However, as Thomas Braunberger points out, a local variable declared in a "
+"function *is also visible to functions called by the parent function.*"
+msgstr ""
+
+#: ../../localvar.rst:1176
+msgid "This is documented in the Bash manual:"
+msgstr ""
+
+#: ../../localvar.rst:1178
+msgid ""
+"\"Local can only be used within a function; it makes the variable name have "
+"a visible scope restricted to that function *and its children*.\" [emphasis "
+"added] *The ABS Guide author considers this behavior to be a bug.*"
+msgstr ""
+
+#: ../../localvar.rst:1183
+msgid "`[2] <localvar.html#AEN18607>`__"
+msgstr ""
+
+#: ../../localvar.rst:1185
+msgid "Otherwise known as *redundancy*."
+msgstr ""
+
+#: ../../localvar.rst:1187
+msgid "`[3] <localvar.html#AEN18610>`__"
+msgstr ""
+
+#: ../../localvar.rst:1189
+msgid "Otherwise known as *tautology*."
+msgstr ""
+
+#: ../../localvar.rst:1191
+msgid "`[4] <localvar.html#AEN18614>`__"
+msgstr ""
+
+#: ../../localvar.rst:1193
+msgid "Otherwise known as a *metaphor*."
+msgstr ""
+
+#: ../../localvar.rst:1195
+msgid "`[5] <localvar.html#AEN18617>`__"
+msgstr ""
+
+#: ../../localvar.rst:1197
+msgid "Otherwise known as a *recursive function*."
+msgstr ""
+
+#: ../../localvar.rst:1199
+msgid "`[6] <localvar.html#AEN18632>`__"
+msgstr ""
+
+#: ../../localvar.rst:1201
+msgid "Too many levels of recursion may crash a script with a segfault."
+msgstr ""
