@@ -1,0 +1,670 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../revisionhistory.rst:4
+msgid "XXX  Appendix P. Revision History"
+msgstr ""
+
+#: ../../revisionhistory.rst:18
+msgid ""
+"Here is the e-mail to the LDP requesting permission to submit version 0.1."
+msgstr ""
+
+#: ../../revisionhistory.rst:72
+msgid "**Table P-1. Revision History**"
+msgstr ""
+
+#: ../../revisionhistory.rst:75
+msgid "Release"
+msgstr ""
+
+#: ../../revisionhistory.rst:77
+msgid "Date"
+msgstr ""
+
+#: ../../revisionhistory.rst:79
+msgid "Comments"
+msgstr ""
+
+#: ../../revisionhistory.rst:81
+msgid "0.1"
+msgstr ""
+
+#: ../../revisionhistory.rst:83
+msgid "14 Jun 2000"
+msgstr ""
+
+#: ../../revisionhistory.rst:85
+msgid "Initial release."
+msgstr ""
+
+#: ../../revisionhistory.rst:87
+msgid "``        0.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:89
+msgid "30 Oct 2000"
+msgstr ""
+
+#: ../../revisionhistory.rst:91
+msgid "Bugs fixed, plus much additional material and more example scripts."
+msgstr ""
+
+#: ../../revisionhistory.rst:93
+msgid "``        0.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:95
+msgid "12 Feb 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:97
+msgid "Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:99
+msgid "``        0.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:101
+msgid "08 Jul 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:103
+msgid "Complete revision and expansion of the book."
+msgstr ""
+
+#: ../../revisionhistory.rst:105
+msgid "``        0.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:107
+msgid "03 Sep 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:109
+msgid "Major update: Bugfixes, material added, sections reorganized."
+msgstr ""
+
+#: ../../revisionhistory.rst:111
+msgid "``        1.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:113
+msgid "14 Oct 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:115
+msgid "Stable release: Bugfixes, reorganization, material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:117
+msgid "``        1.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:119
+msgid "06 Jan 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:121 ../../revisionhistory.rst:127
+msgid "Bugfixes, material and scripts added."
+msgstr ""
+
+#: ../../revisionhistory.rst:123
+msgid "``        1.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:125
+msgid "31 Mar 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:129
+msgid "``        1.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:131
+msgid "02 Jun 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:133
+msgid ""
+"TANGERINE release: A few bugfixes, much more material and scripts added."
+msgstr ""
+
+#: ../../revisionhistory.rst:135
+msgid "``        1.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:137
+msgid "16 Jun 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:139
+msgid "MANGO release: A number of typos fixed, more material and scripts."
+msgstr ""
+
+#: ../../revisionhistory.rst:141
+msgid "``        1.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:143
+msgid "13 Jul 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:145
+msgid "PAPAYA release: A few bugfixes, much more material and scripts added."
+msgstr ""
+
+#: ../../revisionhistory.rst:147
+msgid "``        1.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:149
+msgid "29 Sep 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:151
+msgid "POMEGRANATE release: Bugfixes, more material, one more script."
+msgstr ""
+
+#: ../../revisionhistory.rst:153
+msgid "``        1.7       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:155
+msgid "05 Jan 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:157
+msgid "COCONUT release: A couple of bugfixes, more material, one more script."
+msgstr ""
+
+#: ../../revisionhistory.rst:159
+msgid "``        1.8       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:161
+msgid "10 May 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:163
+msgid "BREADFRUIT release: A number of bugfixes, more scripts and material."
+msgstr ""
+
+#: ../../revisionhistory.rst:165
+msgid "``        1.9       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:167
+msgid "21 Jun 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:169
+msgid "PERSIMMON release: Bugfixes, and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:171
+msgid "``        2.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:173
+msgid "24 Aug 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:175
+msgid "GOOSEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:177
+msgid "``        2.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:179
+msgid "14 Sep 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:181
+msgid "HUCKLEBERRY release: Bugfixes, and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:183
+msgid "``        2.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:185
+msgid "31 Oct 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:187
+msgid "CRANBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:189
+msgid "``        2.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:191
+msgid "03 Jan 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:193
+msgid "STRAWBERRY release: Bugfixes and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:195
+msgid "``        2.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:197
+msgid "25 Jan 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:199
+msgid "MUSKMELON release: Bugfixes."
+msgstr ""
+
+#: ../../revisionhistory.rst:201
+msgid "``        2.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:203
+msgid "15 Feb 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:205
+msgid "STARFRUIT release: Bugfixes and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:207
+msgid "``        2.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:209
+msgid "15 Mar 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:211
+msgid "SALAL release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:213
+msgid "``        2.7       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:215
+msgid "18 Apr 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:217
+msgid "MULBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:219
+msgid "``        2.8       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:221
+msgid "11 Jul 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:223
+msgid "ELDERBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:225
+msgid "``        3.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:227
+msgid "03 Oct 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:229
+msgid "LOGANBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:231
+msgid "``        3.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:233
+msgid "14 Nov 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:235
+msgid "BAYBERRY release: Bugfix update."
+msgstr ""
+
+#: ../../revisionhistory.rst:237
+msgid "``        3.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:239
+msgid "06 Feb 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:241
+msgid "BLUEBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:243
+msgid "``        3.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:245
+msgid "20 Mar 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:247
+msgid "RASPBERRY release: Bugfixes, much material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:249
+msgid "``        3.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:251
+msgid "08 May 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:253
+msgid "TEABERRY release: Bugfixes, stylistic revisions."
+msgstr ""
+
+#: ../../revisionhistory.rst:255
+msgid "``        3.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:257
+msgid "05 Jun 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:259
+msgid "BOXBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:261
+msgid "``        3.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:263
+msgid "28 Aug 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:265
+msgid "POKEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:267
+msgid "``        3.7       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:269
+msgid "23 Oct 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:271
+msgid "WHORTLEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:273
+msgid "``        3.8       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:275
+msgid "26 Feb 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:277
+msgid "BLAEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:279
+msgid "``        3.9       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:281
+msgid "15 May 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:283
+msgid "SPICEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:285
+msgid "``        4.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:287
+msgid "18 Jun 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:289
+msgid "WINTERBERRY release: Major reorganization."
+msgstr ""
+
+#: ../../revisionhistory.rst:291
+msgid "``        4.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:293
+msgid "08 Oct 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:295
+msgid "WAXBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:297
+msgid "``        4.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:299
+msgid "10 Dec 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:301
+msgid "SPARKLEBERRY release: Important update."
+msgstr ""
+
+#: ../../revisionhistory.rst:303
+msgid "``        4.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:305
+msgid "29 Apr 2007"
+msgstr ""
+
+#: ../../revisionhistory.rst:307
+msgid "INKBERRY release: Bugfixes, material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:309
+msgid "``        5.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:311
+msgid "24 Jun 2007"
+msgstr ""
+
+#: ../../revisionhistory.rst:313
+msgid "SERVICEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:315
+msgid "``        5.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:317
+msgid "10 Nov 2007"
+msgstr ""
+
+#: ../../revisionhistory.rst:319
+msgid "LINGONBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:321
+msgid "``        5.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:323
+msgid "16 Mar 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:325
+msgid "SILVERBERRY release: Important update."
+msgstr ""
+
+#: ../../revisionhistory.rst:327
+msgid "``        5.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:329
+msgid "11 May 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:331
+msgid "GOLDENBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:333
+msgid "``        5.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:335
+msgid "21 Jul 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:337
+msgid "ANGLEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:339
+msgid "``        5.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:341
+msgid "23 Nov 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:343
+msgid "FARKLEBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:345
+msgid "``        5.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:347
+msgid "26 Jan 2009"
+msgstr ""
+
+#: ../../revisionhistory.rst:349
+msgid "WORCESTERBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:351
+msgid "``        6.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:353
+msgid "23 Mar 2009"
+msgstr ""
+
+#: ../../revisionhistory.rst:355
+msgid "THIMBLEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:357
+msgid "``        6.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:359
+msgid "30 Sep 2009"
+msgstr ""
+
+#: ../../revisionhistory.rst:361
+msgid "BUFFALOBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:363
+msgid "``        6.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:365
+msgid "17 Mar 2010"
+msgstr ""
+
+#: ../../revisionhistory.rst:367
+msgid "ROWANBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:369
+msgid "``        6.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:371
+msgid "30 Apr 2011"
+msgstr ""
+
+#: ../../revisionhistory.rst:373
+msgid "SWOZZLEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:375
+msgid "``        6.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:377
+msgid "30 Aug 2011"
+msgstr ""
+
+#: ../../revisionhistory.rst:379
+msgid "VORTEXBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:381
+msgid "``        6.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:383
+msgid "05 Apr 2012"
+msgstr ""
+
+#: ../../revisionhistory.rst:385
+msgid "TUNGSTENBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:387
+msgid "``        6.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:389
+msgid "27 Nov 2012"
+msgstr ""
+
+#: ../../revisionhistory.rst:391
+msgid "YTTERBIUMBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:393
+msgid "``        10       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:395
+msgid "10 Mar 2014"
+msgstr ""
+
+#: ../../revisionhistory.rst:397
+msgid "YTTERBIUMBERRY release: License change."
+msgstr ""

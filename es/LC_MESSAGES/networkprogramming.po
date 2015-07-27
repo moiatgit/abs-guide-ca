@@ -1,0 +1,104 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../networkprogramming.rst:4
+msgid "XXX  Chapter 30. Network Programming"
+msgstr ""
+
+#: ../../networkprogramming.rst:7
+msgid "**"
+msgstr ""
+
+#: ../../networkprogramming.rst:9
+msgid ""
+"*The Net's a cross between an elephant and a white elephant sale: it never "
+"forgets, and it's always crap.*"
+msgstr ""
+
+#: ../../networkprogramming.rst:12
+msgid "*--Nemo*"
+msgstr ""
+
+#: ../../networkprogramming.rst:16
+msgid ""
+"A Linux system has quite a number of tools for accessing, manipulating, and "
+"troubleshooting network connections. We can incorporate some of these tools "
+"into scripts -- scripts that expand our knowledge of networking, useful "
+"scripts that can facilitate the administration of a network."
+msgstr ""
+
+#: ../../networkprogramming.rst:22
+msgid "Here is a simple CGI script that demonstrates connecting to a remote"
+msgstr ""
+
+#: ../../networkprogramming.rst:23
+msgid "server."
+msgstr ""
+
+#: ../../networkprogramming.rst:27
+msgid "Exemple 1. Print the server environment"
+msgstr ""
+
+#: ../../networkprogramming.rst:101
+msgid ""
+"For security purposes, it may be helpful to identify the IP addresses a "
+"computer is accessing."
+msgstr ""
+
+#: ../../networkprogramming.rst:106
+msgid "Exemple 2. IP addresses"
+msgstr ""
+
+#: ../../networkprogramming.rst:153
+msgid "More examples of network programming:"
+msgstr ""
+
+#: ../../networkprogramming.rst:155
+msgid "`Getting the time from *nist.gov* <devref1.html#NPREF>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:157
+msgid "`Downloading a URL <devref1.html#NW001>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:159
+msgid "`A GRE tunnel <system.html#IPSCRIPT0>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:161
+msgid "`Checking if an Internet server is up <communications.html#PING0>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:163
+msgid "`Example 16-41 <communications.html#ISSPAMMER>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:165
+msgid "`Example A-28 <contributed-scripts.html#ISSPAMMER2>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:167
+msgid "`Example A-29 <contributed-scripts.html#WHX>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:169
+msgid "`Example 29-1 <devref1.html#DEVTCP>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:171
+msgid ""
+"See also the `networking commands <system.html#NETWORKSYS1>`__ in the "
+"`System and Administrative Commands <system.html>`__ chapter and the "
+"`communications commands <communications.html>`__ in the `External Filters, "
+"Programs and Commands <external.html>`__ chapter."
+msgstr ""

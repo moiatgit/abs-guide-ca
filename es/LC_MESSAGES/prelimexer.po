@@ -1,0 +1,67 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../prelimexer.rst:3
+msgid "2.1. Uns primers exercicis"
+msgstr ""
+
+#: ../../prelimexer.rst:5
+msgid "Troba aquí uns primers exercicis:"
+msgstr ""
+
+#: ../../prelimexer.rst:7
+msgid ""
+"Els administradors de sistemes sovint escriuen guions per a automatitzar "
+"tarees habituals."
+msgstr ""
+
+#: ../../prelimexer.rst:10
+msgid "Pensa diferents exemples pels que els guions poden ser útils."
+msgstr ""
+
+#: ../../prelimexer.rst:12
+msgid "Escriu un guió que, en ser invocat, mostri:"
+msgstr ""
+
+#: ../../prelimexer.rst:14
+msgid "l'hora i la data"
+msgstr ""
+
+#: ../../prelimexer.rst:16
+msgid "la llista de tots els usuaris logats"
+msgstr ""
+
+#: ../../prelimexer.rst:18
+msgid "el temps durant el qual el sistema és operatiu (*uptime*)"
+msgstr ""
+
+#: ../../prelimexer.rst:20
+msgid ""
+"Finalment, el guió guardarà tota aquesta informació en un fitxer de log."
+msgstr ""
+
+#: ../../prelimexer.rst:25
+msgid "Trobaràs ajuda per a resoldre aquest exercici als següents documents:"
+msgstr ""
+
+#: ../../prelimexer.rst:28
+msgid ":doc:`timedate`"
+msgstr ""
+
+#: ../../prelimexer.rst:30
+msgid ":doc:`system`"
+msgstr ""
+
+#: ../../prelimexer.rst:32
+msgid ":doc:`io-redirection`"
+msgstr ""

@@ -1,0 +1,26 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../part4.rst:3
+msgid "XXX Part 4. Commands"
+msgstr ""
+
+#: ../../part4.rst:5
+msgid ""
+"Mastering the commands on your Linux machine is an indispensable prelude to "
+"writing effective shell scripts."
+msgstr ""
+
+#: ../../part4.rst:8
+msgid "This section covers the following commands:"
+msgstr ""

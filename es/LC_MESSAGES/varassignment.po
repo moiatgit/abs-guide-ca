@@ -1,0 +1,42 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../varassignment.rst:3
+msgid "4.2. Assignació a variable"
+msgstr ""
+
+#: ../../varassignment.rst:5
+msgid ""
+"L'assignació d'un valor a una variable es pot realitzar mitjançant "
+"L'operador ``=`` sense espais ni abans ni després."
+msgstr ""
+
+#: ../../varassignment.rst:16
+msgid ""
+"No confonguis l'operador d'assignació amb l'operador de comparació (mira "
+":doc:`comparison-ops`. La diferència és el context on apareix ``=``."
+msgstr ""
+
+#: ../../varassignment.rst:20
+msgid "Exemple 1. Assignació de valors a una variable"
+msgstr ""
+
+#: ../../varassignment.rst:26
+msgid "Exemple 2. Variable Assignment, plain and fancy"
+msgstr ""
+
+#: ../../varassignment.rst:32
+msgid ""
+"L'assignació amb ``$(...)`` és un mètode més recent que amb ``\\`..\\```, "
+"amb tot, és també una forma de :doc:`substitució de comanda <commandsub>`."
+msgstr ""

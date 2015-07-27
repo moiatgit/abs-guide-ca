@@ -1,0 +1,195 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-27 20:37\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../standard-options.rst:4
+msgid "XXX  G.1. Standard Command-Line Options"
+msgstr ""
+
+#: ../../standard-options.rst:6
+msgid ""
+"Over time, there has evolved a loose standard for the meanings of command-"
+"line option flags. The GNU utilities conform more closely to this "
+"\"standard\" than older UNIX utilities."
+msgstr ""
+
+#: ../../standard-options.rst:10
+msgid ""
+"Traditionally, UNIX command-line options consist of a dash, followed by one "
+"or more lowercase letters. The GNU utilities added a double-dash, followed "
+"by a complete word or compound word."
+msgstr ""
+
+#: ../../standard-options.rst:14
+msgid "The two most widely-accepted options are:"
+msgstr ""
+
+#: ../../standard-options.rst:16
+msgid "``        -h       ``"
+msgstr ""
+
+#: ../../standard-options.rst:18
+msgid "``        --help       ``"
+msgstr ""
+
+#: ../../standard-options.rst:20
+msgid "*Help* : Give usage message and exit."
+msgstr ""
+
+#: ../../standard-options.rst:22 ../../standard-options.rst:60
+msgid "``        -v       ``"
+msgstr ""
+
+#: ../../standard-options.rst:24
+msgid "``        --version       ``"
+msgstr ""
+
+#: ../../standard-options.rst:26
+msgid "*Version* : Show program version and exit."
+msgstr ""
+
+#: ../../standard-options.rst:28
+msgid "Other common options are:"
+msgstr ""
+
+#: ../../standard-options.rst:30
+msgid "``        -a       ``"
+msgstr ""
+
+#: ../../standard-options.rst:32
+msgid "``        --all       ``"
+msgstr ""
+
+#: ../../standard-options.rst:34
+msgid "*All* : show *all* information or operate on *all* arguments."
+msgstr ""
+
+#: ../../standard-options.rst:36
+msgid "``        -l       ``"
+msgstr ""
+
+#: ../../standard-options.rst:38
+msgid "``        --list       ``"
+msgstr ""
+
+#: ../../standard-options.rst:40
+msgid "*List* : list files or arguments without taking other action."
+msgstr ""
+
+#: ../../standard-options.rst:42
+msgid "``        -o       ``"
+msgstr ""
+
+#: ../../standard-options.rst:44
+msgid "*Output* filename"
+msgstr ""
+
+#: ../../standard-options.rst:46
+msgid "``        -q       ``"
+msgstr ""
+
+#: ../../standard-options.rst:48
+msgid "``        --quiet       ``"
+msgstr ""
+
+#: ../../standard-options.rst:50
+msgid "*Quiet* : suppress ``        stdout       `` ."
+msgstr ""
+
+#: ../../standard-options.rst:52
+msgid "``        -r       ``"
+msgstr ""
+
+#: ../../standard-options.rst:54
+msgid "``        -R       ``"
+msgstr ""
+
+#: ../../standard-options.rst:56
+msgid "``        --recursive       ``"
+msgstr ""
+
+#: ../../standard-options.rst:58
+msgid "*Recursive* : Operate recursively (down directory tree)."
+msgstr ""
+
+#: ../../standard-options.rst:62
+msgid "``        --verbose       ``"
+msgstr ""
+
+#: ../../standard-options.rst:64
+msgid ""
+"*Verbose* : output additional information to ``        stdout       `` or ``"
+"        stderr       `` ."
+msgstr ""
+
+#: ../../standard-options.rst:67
+msgid "``        -z       ``"
+msgstr ""
+
+#: ../../standard-options.rst:69
+msgid "``        --compress       ``"
+msgstr ""
+
+#: ../../standard-options.rst:71
+msgid ""
+"*Compress* : apply compression (usually `gzip <filearchiv.html#GZIPREF>`__ "
+")."
+msgstr ""
+
+#: ../../standard-options.rst:74
+msgid "However:"
+msgstr ""
+
+#: ../../standard-options.rst:76
+msgid "In **tar** and **gawk** :"
+msgstr ""
+
+#: ../../standard-options.rst:78 ../../standard-options.rst:86
+msgid "``        -f       ``"
+msgstr ""
+
+#: ../../standard-options.rst:80
+msgid "``        --file       ``"
+msgstr ""
+
+#: ../../standard-options.rst:82
+msgid "*File* : filename follows."
+msgstr ""
+
+#: ../../standard-options.rst:84
+msgid "In **cp** , **mv** , **rm** :"
+msgstr ""
+
+#: ../../standard-options.rst:88
+msgid "``        --force       ``"
+msgstr ""
+
+#: ../../standard-options.rst:90
+msgid "*Force* : force overwrite of target file(s)."
+msgstr ""
+
+#: ../../standard-options.rst:94
+msgid "|Caution"
+msgstr ""
+
+#: ../../standard-options.rst:96
+msgid ""
+"Many UNIX and Linux utilities deviate from this \"standard,\" so it is "
+"dangerous to *assume* that a given option will behave in a standard way. "
+"Always check the man page for the command in question when in doubt."
+msgstr ""
+
+#: ../../standard-options.rst:103
+msgid ""
+"A complete table of recommended options for the GNU utilities is available "
+"at `the GNU standards page <http://www.gnu.org/prep/standards/>`__ ."
+msgstr ""
