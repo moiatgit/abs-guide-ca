@@ -1,0 +1,118 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:3
+msgid "Guia Avançada de Programació en Bash"
+msgstr "Guía Avanzada de Programación Bash"
+
+#: ../../index.rst:7
+msgid "Una exploració en profunditat de l'art de la programació Bash"
+msgstr "Una exploración en profundidad del arte de la programación "
+
+#: ../../index.rst:9
+msgid "Per *Mendel Cooper*: ``<thegrendel.abs (at) gmail (dot) com>``"
+msgstr "Original Inglés *Mendel Cooper*:``<thegrendel.abs (at) gmail (dot) com>``"
+
+#: ../../index.rst:11
+msgid "Revisió 10 del 10 Març de 2014"
+msgstr "Revisión 10 con fecha 10 Marzo del 2014"
+
+#: ../../index.rst:13
+msgid "Traduït per *Moisès Gómez*: ``<moiatgit (a) gmail (punt) com>``"
+msgstr "Traducido por *Germán Alonso*:``<germanengit (a) gmail (punt) com>`` en base a la traducción catalana de *Moisès Gómez*: ``<moiatgit (a) gmail (punt) com>`` "
+
+#: ../../index.rst:16
+msgid "Introducció"
+msgstr "Introducción"
+
+#: ../../index.rst:18
+msgid ""
+"Tens al davant un llibre de programació de guions en *Bash*. Està escrit en "
+"forma de tutorial i no pressuposa cap coneixement previ de programació. Això"
+" sí, avança molt ràpidament cap a un nivell intermedi/avançat, tot jugant "
+"amb les petites meravelles del GNU/Linux."
+msgstr ""
+"Tienes delante un libro de programación de scripts *Bash*. Está escrito en "
+"forma de tutorial y no presupone ningún conocimiento previo de programación. Eso sí, avanza muy rápidamente a un nivel intermedio/avanzado, mientras jugamos con las pequeñas maravillas GNU/LINUX." 
+
+
+#: ../../index.rst:24
+msgid "Ha estat ideat per poder ser usat de diferents maneres:"
+msgstr "Ha sido ideado para poder ser usado de diferentes maneras:"
+
+#: ../../index.rst:26
+msgid "com a llibre de text"
+msgstr "como libro de texto"
+
+#: ../../index.rst:28
+msgid "com a manual d'autoaprenentatge"
+msgstr "como manual de auto-aprendizaje"
+
+#: ../../index.rst:30
+msgid ""
+"com a referència i font de coneixement de les tècniques de programació de "
+"guions."
+msgstr "como referencia y fuente de conocimiento de las técnicas de programación de "
+"scripts."
+
+#: ../../index.rst:33
+msgid ""
+"Hi trobaràs exercicis i exemples comentats amb profusió, que et convidaran a"
+" fer proves pel teu compte, sota la premissa de que *l'única manera "
+"d'aprendre a programar guions és escrivint guions*."
+msgstr ""
+"Encontrarás ejercicios y ejemplos comentados en profundidad que te invitarán a"
+" hacer pruebas por tu cuenta, bajo la premisa de que *la única manera "
+"de aprender a programar scripts es escribiéndolos*."
+
+#: ../../index.rst:37
+msgid ""
+"Aquest llibre és apte per l'ús dins de l'aula i com a introducció general "
+"als conceptes de programació."
+msgstr ""
+"Este libro es apto para el uso dentro del aula y como introducción general "
+"a los conceptos de programación."
+
+# Copyright debería ser derechos de autor, si hay derechos morales las traducciones deben llevar un diclaimer de obra derivada
+
+#: ../../index.rst:40
+msgid ""
+"Aquest document, a l'igual que l'original, està lliurat al *Domini Públic* i"
+" per tant, no hi ha cap *Copyright*."
+msgstr ""
+"Este documento, igual que el original, está bajo *Dominio Público* y"
+" por tanto, no hay *Copyright*."
+
+#: ../../index.rst:44
+msgid "Dedicatòria"
+msgstr "Dedicatoria"
+
+#: ../../index.rst:46
+msgid "A Anita, la font de tota la màgia."
+msgstr "A Anita, la fuente de toda la magia."
+
+#: ../../index.rst:49
+msgid "Taula de continguts"
+msgstr "Tabla de contenidos"
+
+#: ../../index.rst:63
+msgid "Índexs i taules"
+msgstr "Índices y tablas"
+
+#: ../../index.rst:65
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:66
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
