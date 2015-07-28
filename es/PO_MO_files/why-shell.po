@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../why-shell.rst:3
 msgid "1. Perquè programar en Shell"
-msgstr ""
+msgstr "1. Porqué programar en Shell"
 
 #: ../../why-shell.rst:7
 msgid ""
@@ -22,12 +22,16 @@ msgid ""
 "particular purposes."
 msgstr ""
 
+
 #: ../../why-shell.rst:14
 msgid ""
 "Si tens intenció d'administrar sistemes informàtics de manera mínimament "
 "decent, tard o d'hora et caldrà disposar de coneixements de programació de "
 "guions. Fins i tot, si ara ni se t'acut per a què et pot servir."
 msgstr ""
+"Si tienes intención de administrar sistemas informáticos de una forma mínimamente "
+"decente, tarde o temprano necesitarás disponer de conocimientos de programación de "
+"scripts. Incluso, aunque ahora ni se te ocurra para que pueden servir." 
 
 #: ../../why-shell.rst:19
 msgid ""
@@ -37,6 +41,12 @@ msgid ""
 "per a poder analitzar el comportament del sistema i, si es cau, modificar-"
 "lo."
 msgstr ""
+"Por ejemplo, cuando una máquina GNU/Linux arranca, ejecuta los scripts que "
+"encuentra en la carpeta ``/etc/rc.d`` para recuperar la configuración del sistema y"
+" levantar los servicios. Es importante una comprensión detallada de estos scripts "
+"para poder analizar el comportamiento del sistema, y si es necesario, modificarlo"
+""
+
 
 #: ../../why-shell.rst:25
 msgid ""
@@ -45,19 +55,29 @@ msgid ""
 "reduït d'opcions i operadors que siguin específics de la *shell* "
 "[#builtins]_."
 msgstr ""
+"No es muy difícil dominar la programación de scripts, ya que pueden ser "
+"construidos en secciones muy pequeñas y solo hay que aprender un conjunto "
+"reducido de opciones y operadores específicos de la *shell* "
+"[#builtins]_."
 
+# utilerías Cualquier comando que realiza algo más que simplemente una función J.Mohr
 #: ../../why-shell.rst:30
 msgid ""
 "La sintaxi és força simple, hom diria austera, similar a la que fem servir "
 "quan encadenem utilitats en una mateixa línia de la línia de comandes. A "
 "més, hi ha poques \"regles\" que defineixen el seu ús."
 msgstr ""
+"La sintaxis es muy simple, se podría decir que austera, similar a la que utilizamos "
+"cuando invocamos y encadenamos utilerías en la línea de comandos. Además "
+"hay solo unas pocas \"reglas\" que definen su uso. "
 
 #: ../../why-shell.rst:34
 msgid ""
 "La majoria dels guions breus solen funcionar a la primera i, depurar guions,"
 " fins i tot els més llargs, és trivial."
 msgstr ""
+"La mayoría de pequeños scripts suelen funcionar a la primera, e incluso depurar los"
+"más grandes es trivial."  
 
 #: ../../why-shell.rst:39
 msgid ""
@@ -65,6 +85,9 @@ msgid ""
 "programació BASIC permetia que qualsevol amb una mica d'habilitat amb "
 "l'ordinador pogués escriure programes per aquells microcomputadors."
 msgstr ""
+"Cuando aparecieron los primeros ordenadores personales, el lenguaje "
+"BASIC permitía que cualquiera con un poco de habilidad en "
+"computadoras pudiera escribir programas para aquellos microcomputadores." 
 
 #: ../../why-shell.rst:44
 msgid ""
@@ -72,6 +95,9 @@ msgid ""
 "coneixement rudimentari de GNU/Linux (o UNIX), pugui també escriure "
 "programes en les màquines actuals."
 msgstr ""
+"Décadas después, el lenguaje de scripts Bash permite que cualquiera con un "
+"conocimientos rudimentario de GNU/Linux (o UNIX), pueda hacer lo mismo "
+"en las máquinas modernas."
 
 #: ../../why-shell.rst:48
 msgid ""
@@ -79,6 +105,9 @@ msgid ""
 "`Raspberry Pi <http://www.raspberrypi.org/>`_, i Bash està aquí per permetre"
 " explorar les possibilitats que ofereixen."
 msgstr ""
+"Ahora que hemos miniaturizado computadoras de una placa con capacidades increíbles, como la "
+"`Raspberry Pi <http://www.raspberrypi.org/>`_,"
+"La programación Bash proporciona una manera de explorar las capacidades de éstos fascinantes dispositivos."
 
 #: ../../why-shell.rst:52
 msgid ""
@@ -90,6 +119,14 @@ msgid ""
 "realitzar la codificació final en llenguatges com ara *C*, *C++*, *Java*, "
 ":doc:`Perl <wrapper>`, o *Python*."
 msgstr ""
+"Un script de shell es un método ágil para esbozar "
+"aplicaciones complejas. Disponer de incluso un subconjunto "
+"limitado de funcionalidades ejecutándose desde un script, es muy útil en las primeras etapas "
+"de desarrollo de un proyecto. De esta manera es posible probar "
+"la estructura de la aplicación, y arreglar errores que se encuentren, antes de "
+"la codificación final en lenguajes como  *C*, *C++*, *Java*, "
+":doc:`Perl <wrapper>`, o *Python*."
+
 
 #: ../../why-shell.rst:60
 msgid ""
@@ -97,6 +134,10 @@ msgid ""
 "tasques complexes en subtasques més simples, per després encadenar-les "
 "juntes de manera que resolguin la tasca complexa."
 msgstr ""
+"Los scripts de shell se inspiran en la filosofía clásica UNIX de dividir "
+"tareas complejas en subtareas más simples, para después encadenarlas "
+"juntas. "
+
 
 #: ../../why-shell.rst:64
 msgid ""
@@ -105,6 +146,10 @@ msgid ""
 " *Perl*, que intenten servir per a tot i per a tothom, amb el cost de forçar"
 " a tothom a canviar la manera de pensar per a adaptar-te a l'eina."
 msgstr ""
+"Hay quién considera esta manera la mejor, o al menos un enfoque más estético "
+"a la resolución de problemas, que utilizar lenguajes todo-incluido como puede ser"
+" *Perl*, que intentan servir para todo y para todos, a costa de forzarte"
+" a cambiar tu manera de pensar para adaptarse a la herramienta."
 
 #: ../../why-shell.rst:70
 msgid ""
@@ -113,11 +158,15 @@ msgid ""
 "crear estructures de dades*. Amb aquests criteris, la programació en *shell*"
 " quedaria una mica per sota de ser \"útil\". O, potser no..."
 msgstr ""
+"Según :ref:`Herbert Mayer <HERB89>`, *para que un lenguaje sea útil, necesita "
+" matrices, punteros, y un mecanismo genérico para "
+"crear estructuras de datos*. Con estos criterios, la programación *shell*"
+" queda por debajo de ser \"útil\". O, quizás no ... "
 
 #: ../../why-shell.rst:76
 msgid ""
 "Hi ha algunes situacions en les que no voldrem fer servir guions de shell:"
-msgstr ""
+msgstr "Cuando no usar scripts de shell"
 
 #: ../../why-shell.rst:79
 msgid ""
@@ -125,6 +174,9 @@ msgid ""
 " velocitat és important, com ara ordenació, càlcul de funcions de *hash*, "
 "recursivitat [#recursio]_"
 msgstr ""
+"Tareas que requieren uso intensivo de recursos, especialmente cuando la"
+"velocidad es importante (ordenación, calculo de funciones *hash*, "
+"recursividad [#recursio]_"
 
 #: ../../why-shell.rst:83
 msgid ""
@@ -133,24 +185,32 @@ msgid ""
 " o nombres complexos. En aquest cas és millor que facis servir *C* o "
 "*FORTRAN*."
 msgstr ""
+"Procedimientos que requieren operaciones matemáticas pesadas, "
+"especialmente las de punto flotante, cálculos de precisión arbitraria,"
+"o números complejos ( utilizad *C* o *FORTRAN*)
 
 #: ../../why-shell.rst:88
 msgid ""
 "Quan cal aconseguir portabilitat (és a dir, que el programa funcioni en "
 "altres plataformes). En aquest cas, fes servir *C* o *Java*."
 msgstr ""
+"Cuando se requiere portabilidad entre prataformas (usad *C* o *Java*)."
 
 #: ../../why-shell.rst:91
 msgid ""
 "Aplicacions complexes on cal una estructura de programa (comprovació de "
 "tipus de variables, prototipus de funcions, etc.)"
 msgstr ""
+"Aplicaciones complejas donde la programación estructurada es una necesidad (comprobación de "
+"tipos de variables, prototipos de funciones, etc.)"
 
 #: ../../why-shell.rst:94
 msgid ""
 "Aplicacions de missió crítica de les que dependrà el futur de la teva "
 "empresa."
 msgstr ""
+"Aplicacions críticas en las que apuestas el futuro de tu "
+"empresa "
 
 #: ../../why-shell.rst:97
 msgid ""
@@ -158,11 +218,15 @@ msgid ""
 "garantir la integritat del teu sistema i protegir-lo contra intrusos, "
 "*cracking* i vandalisme."
 msgstr ""
+"Situaciones en las que la *seguridad* sea importante, en las que necesites "
+"garantizar la integridad de tu sistema y protegerlo contra intrusos, "
+"*cracking* i vandalismo."
 
 #: ../../why-shell.rst:101
 msgid ""
 "Quan el projecte consisteix en subcomponents amb dependències entrellaçades."
 msgstr ""
+"Cuando el proyecto consiste en subcomponentes con dependencias entrelazadas."
 
 #: ../../why-shell.rst:104
 msgid ""
@@ -170,37 +234,43 @@ msgid ""
 "limita a l'accés en sèrie d'una manera particularment ineficient línia a "
 "línia."
 msgstr ""
+"Aplicaciones que requieren operaciones extensas sobre archivos. (*Bash* se "
+"limita al acceso en série de una manera particularmente ineficiente línea a "
+"línea.)"
 
 #: ../../why-shell.rst:108
 msgid "Si es requereix un suport nadiu a matrius (*arrays* multidimensionals)"
-msgstr ""
+msgstr "Si se necesita soporte nativo para matrices (*arrays* multidimensionales)"
 
 #: ../../why-shell.rst:111
 msgid "Quan calen estructures de dades, com ara llistes enllaçades o arbres."
-msgstr ""
+msgstr "Son necesarias estructura de datos, coomo listas enlazadas o arboles."
 
 #: ../../why-shell.rst:114
 msgid "Si cal generar o manipular gràfics o interfícies gràfiques d'usuari."
-msgstr ""
+msgstr "Es  necesario generar o manipular gráficos o interfaces gráficas."
+
 
 #: ../../why-shell.rst:116
 msgid ""
 "Si cal l'accés directe al maquinari del sistema o a perifèrics externs."
-msgstr ""
+msgstr "Es necesario acceso directo al hardware del sistema o periféricos."
 
 #: ../../why-shell.rst:119
 msgid "Si cal entrada/sortida a través de :doc:`sockets <devref1>`."
-msgstr ""
+msgstr "Es necesario entrada/salida mediante :doc:`sockets <devref1>`."
 
 #: ../../why-shell.rst:121
 msgid "Quan cal fer servir biblioteques o accedir a codi heretat."
-msgstr ""
+msgstr "Es necesario usar bibliotecas o interfaces de código heredado."
 
 #: ../../why-shell.rst:123
 msgid ""
 "Quan l'aplicació ha de ser de codi tancat, donat que els guions de shell "
 "mostren el codi obertament llegible per tothom."
 msgstr ""
+"Aplicaciones privativas de código cerrado (los scripts de shell "
+"hacen visible el código a todo el mundo)"
 
 #: ../../why-shell.rst:126
 msgid ""
@@ -211,7 +281,12 @@ msgid ""
 "resultant útil començant construir prototips de la teva aplicació amb shell "
 "script."
 msgstr ""
-
+"Si da alguna de las situaciones anteriores, considera "
+"utilizar un lenguaje de programación más potente (quizás "
+"*Perl*, *Tcl*, *Python*, *Ruby*) o posiblemente una lenguaje compilado como "
+"*C*, *C*, o *Java*. Incluso entonces, esbozar la aplicación como un script de shell "
+"puede ser útil en el proceso de desarrollo."
+ 
 #: ../../why-shell.rst:131
 msgid ""
 "En aquest llibre farem servir *Bash*, acrònim [#acronim]_ de \"Bourne-Again "
@@ -226,7 +301,18 @@ msgid ""
 "<http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/>`_ del Tom Christiansen"
 " d'octubre de 1993"
 msgstr ""
-
+"En este libro usaremos *Bash*, acrónimo [#acronim]_ de \"Bourne-Again "
+"shell\" y juego de palabras sobre el ya clásico  \"Bourne Shell\" de Stephen"
+" Bourne. Bash se ha convertido en el estándar *de facto* de la programación de "
+"scripts en la mayoría de las distribuciones y variedades de UNIX/Linux. La mayoría de "
+"los principios que cubre este libro funcionan en otras shell, como "
+"*Korn Shell*, de la Bash hereda parte de sus características "
+"[#kornshell]_, de la misma manera que *C Shell* y sus variantes. (Tener "
+"presente que la *C Shell* no se recomienda "
+"debido a ciertos problemas heredados, como se señala en la siguiente `entrada a Usenet "
+"<http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/>`_ de Tom Christiansen"
+"de Octubre de 1993.)"
+ 
 #: ../../why-shell.rst:143
 msgid ""
 "A continuació trobareu un tutorial de programació de guions (o shell "
@@ -243,7 +329,7 @@ msgid ""
 "explicades al llibre, cosa que pot suposar-te una il·luminació momentània "
 "del que trobaràs més endavant."
 msgstr ""
-
+"A conti
 #: ../../why-shell.rst:156
 msgid ""
 "A menys que s'indiqui el contrari, `l'autor "
