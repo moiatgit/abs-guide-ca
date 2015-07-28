@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tests.rst:3
+# e64b94c0d5704d378d84b7718dc97117
+msgid "XXX Chapter 7. Tests"
+msgstr ""
+
+#: ../../tests.rst:8
+# 45f83b2bb69f48f69bebcf2e12bdb430
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../tests.rst:12
+# 968c9d06748740ca9ed8009da00f839d
+msgid "7.1. `Test Constructs <testconstructs.html>`__"
+msgstr ""
+
+#: ../../tests.rst:16
+# e645046710d74af6a6fb217bfabad35a
+msgid "7.2. `File test operators <fto.html>`__"
+msgstr ""
+
+#: ../../tests.rst:20
+# 671bcdb4113c4e18952d868d52780018
+msgid "7.3. `Other Comparison Operators <comparison-ops.html>`__"
+msgstr ""
+
+#: ../../tests.rst:24
+# 5973376d15e1484da8c9be4c911e3383
+msgid "7.4. `Nested ``                   if/then                 `` Condition Tests <nestedifthen.html>`__"
+msgstr ""
+
+#: ../../tests.rst:29
+# 7055931e645a490e8a6108d1ebe2e0a4
+msgid "7.5. `Testing Your Knowledge of Tests <testtest.html>`__"
+msgstr ""
+
+#: ../../tests.rst:34
+# cdb13d70cadf4e7e8af1383f54b1a3b5
+msgid "Every reasonably complete programming language can test for a condition, then act according to the result of the test. Bash has the `test <testconstructs.html#TTESTREF>`__ command, various `bracket <testconstructs.html#DBLBRACKETS>`__ and `parenthesis <testconstructs.html#DBLPARENSTST>`__ operators, and the **if/then** construct."
+msgstr ""
+

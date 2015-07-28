@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../wrapper.rst:3
+# ed6574755f9049c9b7dc1f46ae057448
+msgid "XXX. Shell Wrappers"
+msgstr ""
+
+#: ../../wrapper.rst:5
+# f76be035e6a04b5abe40c5bb88df537f
+msgid "A *wrapper* is a shell script that embeds a system command or utility, that accepts and passes a set of parameters to that command. `[1] <wrapper.html#FTN.AEN20130>`__ Wrapping a script around a complex command-line simplifies invoking it. This is expecially useful with `sed <sedawk.html#SEDREF>`__ and `awk <awk.html#AWKREF>`__."
+msgstr ""
+
+#: ../../wrapper.rst:11
+# 63e7e1169a0d406f8e092ed66e196c51
+msgid "A **sed** or **awk** script would normally be invoked from the command-line by a ``sed -e         'commands'`` or ``awk         'commands'``. Embedding such a script in a Bash script permits calling it more simply, and makes it *reusable*. This also enables combining the functionality of *sed* and *awk*, for example `piping <special-chars.html#PIPEREF>`__ the output of a set of *sed* commands to *awk*. As a saved executable file, you can then repeatedly invoke it in its original form or modified, without the inconvenience of retyping it on the command-line."
+msgstr ""
+
+#: ../../wrapper.rst:22
+# ac85813fe81d485db18680db12ddfc07
+msgid "Exemple 1. *shell wrapper*"
+msgstr ""
+
+#: ../../wrapper.rst:64
+# 4a50cb9de5704134b4c6173f05e568dc
+msgid "Exemple 2. A slightly more complex *shell wrapper*"
+msgstr ""
+
+#: ../../wrapper.rst:111
+# 4d232ac6bf724330bdd0fcb743dc3085
+msgid "Exemple 3. A generic *shell wrapper* that writes to a logfile"
+msgstr ""
+
+#: ../../wrapper.rst:147
+# ba39910df62348c3b24cabe11eac23d0
+msgid "Exemple 4. A *shell wrapper* around an awk script"
+msgstr ""
+
+#: ../../wrapper.rst:164
+# 8e3d500542c64199af42629e62721177
+msgid "# The Bash printf builtin will not work in this context: #     printf \"%c\" \"$i\" done"
+msgstr ""
+
+#: ../../wrapper.rst:168
+#: ../../wrapper.rst:259
+#: ../../wrapper.rst:292
+#: ../../wrapper.rst:363
+# e5b7f8c257d94135847bc5b4c927232d
+# 44e25ebf50564e73b9ba13a0c6891efa
+# 204f48740a874960955ae1dcb3320528
+# df55155ad76a4cbda2b86ccbcfa8f60a
+msgid "exit 0"
+msgstr ""
+
+#: ../../wrapper.rst:171
+# 72678ad2a3be42aeb24f2e850ec4cfb3
+msgid "#  Decimal   Hex     Character #  -------   ---     --------- #    33       21         ! #    34       22         \" #    35       23         # #    36       24         $ # #    . . . # #   122       7a         z #   123       7b         { #   124       7c #   125       7d         }"
+msgstr ""
+
+#: ../../wrapper.rst:186
+# bfbbfb879bc8461faf08f1ea383b3b62
+msgid "#  Redirect the output of this script to a file #+ or pipe it to \"more\":  sh pr-asc.shmore"
+msgstr ""
+
+#: ../../wrapper.rst:191
+# 17195ce9d0f54f8298216aa017f20028
+msgid "Exemple 5. A *shell wrapper* around another awk script"
+msgstr ""
+
+#: ../../wrapper.rst:199
+# 546b9339be9141fbb2344cbb241c9275
+msgid "."
+msgstr ""
+
+#: ../../wrapper.rst:201
+# fcbf4a2e17c84d5b99a5d5cb0f483489
+msgid "ARGS=2 E_WRONGARGS=85"
+msgstr ""
+
+#: ../../wrapper.rst:204
+# 97a0ac9f8bf24e9b84098eca27a68bf4
+msgid "if [ $# -ne \"$ARGS\" ] # Check for proper number of command-line args"
+msgstr ""
+
+#: ../../wrapper.rst:207
+# 6070ec33c23e41b9804c5d3d9cd6417a
+msgid "echo \"Usage: `basename $0` filename column-number\" exit $E_WRONGARGS"
+msgstr ""
+
+#: ../../wrapper.rst:209
+# c954b1d9146349d9baa29a433463cb04
+msgid "fi"
+msgstr ""
+
+#: ../../wrapper.rst:211
+# 1c997b0a3886444ab16de66607add4ee
+msgid "filename=$1 column_number=$2"
+msgstr ""
+
+#: ../../wrapper.rst:214
+# c33196d28e7141888f027e079b036e56
+msgid "#  Passing shell variables to the awk part of the script is a bit tr"
+msgstr ""
+
+#: ../../wrapper.rst:216
+# b4fb9c93343f44f6886860fb1032c138
+msgid "#  One method is to strong-quote the Bash-script variable #+ within the awk script. #     $'$BASH_SCRIPT_VAR' #      ^                ^ #  This is done in the embedded awk script below. #  See the awk documentation for more details."
+msgstr ""
+
+#: ../../wrapper.rst:223
+# 48b06432548444c980ef670709725d03
+msgid "# A multi-line awk script is here invoked by #   awk ' #   ... #   ... #   ... #   '"
+msgstr ""
+
+#: ../../wrapper.rst:231
+# d90246a85f024363bbff3043adcabeda
+msgid "# Begin awk script. # ----------------------------- awk '"
+msgstr ""
+
+#: ../../wrapper.rst:235
+# 99deb216459947ca883522ca27e961ae
+msgid "{ total += $'\"${column_number}\"' } END {"
+msgstr ""
+
+#: ../../wrapper.rst:238
+# 5c6bfe12be464108bf2e474cf8f44827
+msgid "print total"
+msgstr ""
+
+#: ../../wrapper.rst:239
+# b2ae9fd191b940c5a9b8ecda5a9d7a3f
+msgid "}"
+msgstr ""
+
+#: ../../wrapper.rst:241
+# c257f36cb6c940d2980887fe9f5473a9
+msgid "' \"$filename\" # ----------------------------- # End awk script."
+msgstr ""
+
+#: ../../wrapper.rst:246
+# 9ff742f0ecac40eeae47220cc4cf331d
+msgid "#   It may not be safe to pass shell variables to an embedded awk sc"
+msgstr ""
+
+#: ../../wrapper.rst:248
+# e327f9597974448bba8343753d5b9214
+msgid "#+  so Stephane Chazelas proposes the following alternative: #   --------------------------------------- #   awk -v column_number=\"$column_number\" ' #   { total += $column_number #   } #   END { #       print total #   }' \"$filename\" #   ---------------------------------------"
+msgstr ""
+
+#: ../../wrapper.rst:262
+# 3ac7380f4f6e4dbdb180fb05c132d8e7
+msgid "For those scripts needing a single do-it-all tool, a Swiss army knife, there is *Perl*. Perl combines the capabilities of `sed <sedawk.html#SEDREF>`__ and `awk <awk.html#AWKREF>`__, and throws in a large subset of **C**, to boot. It is modular and contains support for everything ranging from object-oriented programming up to and including the kitchen sink. Short Perl scripts lend themselves to embedding within shell scripts, and there may be some substance to the claim that Perl can totally replace shell scripting (though the author of the *ABS Guide* remains skeptical)."
+msgstr ""
+
+#: ../../wrapper.rst:273
+# e81950536c404f0dac2e59ed97170a61
+msgid "Exemple 6. Perl embedded in a *Bash* script"
+msgstr ""
+
+#: ../../wrapper.rst:282
+#: ../../wrapper.rst:351
+# f93afbdff23b4768990920263d45db72
+# 6c91b5d6d40e4dd9bae2831073bcc647
+msgid "=\""
+msgstr ""
+
+#: ../../wrapper.rst:284
+# c8349b1825624e53a9514d0a5fcf4ba9
+msgid "perl -e 'print \"This line prints from an embedded Perl script.\\n\";' # Like sed, Perl also uses the \"-e\" option."
+msgstr ""
+
+#: ../../wrapper.rst:287
+#: ../../wrapper.rst:358
+# e6d148e50ca5491eac5422c3d0feeaf2
+# 9bf5a34adb364aeaaa59aa4ae859091a
+msgid "echo \"=============================================================="
+msgstr ""
+
+#: ../../wrapper.rst:289
+#: ../../wrapper.rst:360
+# fab34fb477b94ac58e28b94f61717767
+# 9731086715644f059a8bf4fac69a01e1
+msgid "echo \"However, the script may also contain shell and system commands"
+msgstr ""
+
+#: ../../wrapper.rst:290
+#: ../../wrapper.rst:361
+# 414de9db4b2742e3b22c64ea2d330a92
+# 4970a4ccc80f4a6f87346103f8353a77
+msgid ".\""
+msgstr ""
+
+#: ../../wrapper.rst:295
+# e5f99366935f4321bfe8e89cbc3fbe9a
+msgid "It is even possible to combine a Bash script and Perl script within the same file. Depending on how the script is invoked, either the Bash part or the Perl part will execute."
+msgstr ""
+
+#: ../../wrapper.rst:300
+# 579620ea83544b259d3d40550784aebb
+msgid "Exemple 7. Bash and Perl scripts combined"
+msgstr ""
+
+#: ../../wrapper.rst:337
+# 2608c8d40b0f4a76a937db747896d045
+msgid "It is, of course, possible to embed even more exotic scripting languages within shell wrappers. *Python*, for example ..."
+msgstr ""
+
+#: ../../wrapper.rst:341
+# b12727624c5c47e48d11ee8338e34227
+msgid "Exemple 8. Python embedded in a *Bash* script"
+msgstr ""
+
+#: ../../wrapper.rst:353
+# 13294214055b49a093d0b431d75ef8cb
+msgid "python -c 'print \"This line prints from an embedded Python script.\\n"
+msgstr ""
+
+#: ../../wrapper.rst:355
+# da660d1cc2654f1b84c57a2fdd2dcfff
+msgid "# Unlike sed and perl, Python uses the \"-c\" option. python -c 'k = raw_input( \"Hit a key to exit to outer script. \" )'"
+msgstr ""
+
+#: ../../wrapper.rst:366
+# d8fa2c686e814e74916ac989c5bbec8b
+msgid "Wrapping a script around *mplayer* and the Google's translation server, you can create something that talks back to you."
+msgstr ""
+
+#: ../../wrapper.rst:370
+# e88e3f8cd1db450e8e3f3ad24a93fc69
+msgid "Exemple 9. A script that speaks"
+msgstr ""
+
+#: ../../wrapper.rst:399
+# b037884fab7643238e9a9e9450bb4ee4
+msgid "One interesting example of a complex shell wrapper is Martin Matusiak's `*undvd* script <http://sourceforge.net/projects/undvd/>`__, which provides an easy-to-use command-line interface to the complex `mencoder <http://www.mplayerhq.hu/DOCS/HTML/en/mencoder.html>`__ utility. Another example is Itzchak Rehberg's `Ext3Undel <http://projects.izzysoft.de/trac/ext3undel>`__, a set of scripts to recover deleted file on an *ext3* filesystem."
+msgstr ""
+
+#: ../../wrapper.rst:408
+# 65ebce115933483dbe0a4b74e1015979
+msgid "Notes"
+msgstr ""
+
+#: ../../wrapper.rst:410
+# 0451ce957c2d47858b867be5b6944ec4
+msgid "`[1] <wrapper.html#AEN20130>`__ Quite a number of Linux utilities are, in fact, shell wrappers. Some examples are ``/usr/bin/pdf2ps``, ``/usr/bin/batch``, and ``/usr/bin/xmkmf``."
+msgstr ""
+

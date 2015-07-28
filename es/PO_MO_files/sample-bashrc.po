@@ -1,0 +1,51 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sample-bashrc.rst:4
+msgid ""
+"XXX  Appendix M. Sample ``      .bashrc     `` and ``      .bash_profile"
+"     `` Files"
+msgstr ""
+
+#: ../../sample-bashrc.rst:6
+msgid ""
+"The ``      ~/.bashrc     `` file determines the behavior of interactive "
+"shells. A good look at this file can lead to a better understanding of Bash."
+msgstr ""
+
+#: ../../sample-bashrc.rst:10
+msgid ""
+"`Emmanuel Rouat <mailto:emmanuel.rouat@wanadoo.fr>`__ contributed the "
+"following very elaborate ``      .bashrc     `` file, written for a Linux "
+"system. He welcomes reader feedback on it."
+msgstr ""
+
+#: ../../sample-bashrc.rst:14
+msgid ""
+"Study the file carefully, and feel free to reuse code snippets and functions"
+" from it in your own ``      .bashrc     `` file or even in your scripts."
+msgstr ""
+
+#: ../../sample-bashrc.rst:20
+msgid "Exemple 1. Sample ``        .bashrc       `` file"
+msgstr ""
+
+#: ../../sample-bashrc.rst:952
+msgid ""
+"And, here is a snippet from Andrzej Szelachowski's instructive ``      "
+".bash_profile     `` file."
+msgstr ""
+
+#: ../../sample-bashrc.rst:957
+msgid "Exemple 2. ``        .bash_profile       `` file"
+msgstr ""

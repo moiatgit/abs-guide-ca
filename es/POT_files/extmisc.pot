@@ -1,0 +1,679 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../extmisc.rst:3
+# 82d8f6d59ee543ec9a26546e1883f9ce
+msgid "XXX 16.9. Miscellaneous Commands"
+msgstr ""
+
+#: ../../extmisc.rst:6
+# 9d1878575ffb4dc4a5c0e1aa2f9982a9
+msgid "** Command that fit in no special category**"
+msgstr ""
+
+#: ../../extmisc.rst:9
+# 7ad7be44911f4cb2bc52a028c2d124fe
+msgid "These utilities emit a sequence of integers, with a user-selectable increment."
+msgstr ""
+
+#: ../../extmisc.rst:12
+# df6cb81063134fb0b4a3eb21bc6c90dc
+msgid "The default separator character between each integer is a newline, but this can be changed with the ``         -s        `` option."
+msgstr ""
+
+#: ../../extmisc.rst:33
+# 54a0d05472fe4920ab61cd01c1cd3e16
+msgid "Both **jot** and **seq** come in handy in a `for loop <loops1.html#FORLOOPREF1>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:38
+# 24a4e5c15f664ffaa286539b70679782
+msgid "Exemple 54. Using *seq* to generate loop arguments"
+msgstr ""
+
+#: ../../extmisc.rst:100
+# 36e847544b0548c09b017b9f99e84b1f
+msgid "A simpler example:"
+msgstr ""
+
+#: ../../extmisc.rst:121
+# c32cb2cc4d2a45d593f450f266ab0231
+msgid "Exemple 55. Letter Count\""
+msgstr ""
+
+#: ../../extmisc.rst:187
+#: ../../extmisc.rst:291
+#: ../../extmisc.rst:371
+#: ../../extmisc.rst:1209
+# 55d45ffc807d487ea9ab24532ec13269
+# 408fd8c0f8cc45af97689b5847067cbb
+# 7047eefd02ec4baa99a0c85ae900ba8c
+# 748f7c24d2cd489ba0868ebccb83e0db
+msgid "|Note"
+msgstr ""
+
+#: ../../extmisc.rst:189
+# 63122fcd94564064928a3171840a9d30
+msgid "Somewhat more capable than *seq* , **jot** is a classic UNIX utility that is not normally included in a standard Linux distro. However, the source *rpm* is available for download from the `MIT repository <http://www.mit.edu/afs/athena/system/rhlinux/athena-9.0/free/SRPMS/athena-jot-9.0-3.src.rpm>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:195
+# ccd95221bc4b40a1a16a97994e63fc32
+msgid "Unlike *seq* , **jot** can generate a sequence of random numbers, using the ``            -r           `` option."
+msgstr ""
+
+#: ../../extmisc.rst:235
+# 84f7c9fbe593454eb5d547ab5a50709a
+msgid "Exemple 56. Using *getopt* to parse command-line options"
+msgstr ""
+
+#: ../../extmisc.rst:293
+# 2ab7bbea09434a82a33d0a6b7a75d5ba
+msgid "As *Peggy Russell* points out:"
+msgstr ""
+
+#: ../../extmisc.rst:295
+# fd98a75811dd496f8798877aa01c80c3
+msgid "It is often necessary to include an `eval <internal.html#EVALREF>`__ to correctly process `whitespace <special-chars.html#WHITESPACEREF>`__ and *quotes* ."
+msgstr ""
+
+#: ../../extmisc.rst:303
+# e213410762774b1eb0dd9034a31fb04b
+msgid "eval set -- \"$args\""
+msgstr ""
+
+#: ../../extmisc.rst:321
+# a09fd34910e2462991efdb81fda2cbbd
+msgid "See `Example 10-5 <string-manipulation.html#GETOPTSIMPLE>`__ for a simplified emulation of **getopt** ."
+msgstr ""
+
+#: ../../extmisc.rst:325
+# bb7a5a298def49a68eac811d9ea965f7
+msgid "The **run-parts** command ` [1]  <extmisc.html#FTN.AEN14105>`__ executes all the scripts in a target directory, sequentially in ASCII-sorted filename order. Of course, the scripts need to have execute permission."
+msgstr ""
+
+#: ../../extmisc.rst:330
+# 62361ff2a685416caae8af3d619ae978
+msgid "The `cron <system.html#CRONREF>`__ `daemon <communications.html#DAEMONREF>`__ invokes **run-parts** to run the scripts in the ``         /etc/cron.*        `` directories."
+msgstr ""
+
+#: ../../extmisc.rst:335
+# ea54143c733847069affe897dd15f046
+msgid "In its default behavior the **yes** command feeds a continuous string of the character ``         y        `` followed by a line feed to ``         stdout        `` . A **control** - **C** terminates the run. A different output string may be specified, as in ``                   yes different           string                 `` , which would continually output ``         different string        `` to ``         stdout        `` ."
+msgstr ""
+
+#: ../../extmisc.rst:345
+# 5499a025ff2f4355bbc6abdf6a07eee1
+msgid "One might well ask the purpose of this. From the command-line or in a script, the output of **yes** can be redirected or piped into a program expecting user input. In effect, this becomes a sort of poor man's version of *expect* ."
+msgstr ""
+
+#: ../../extmisc.rst:350
+# 64ddd7114d684f558a56a1807ce88ba9
+msgid "``                   yesfsck /dev/hda1                 `` runs **fsck** non-interactively (careful!)."
+msgstr ""
+
+#: ../../extmisc.rst:353
+# b1529102f67944bc8dbf6e8e40cc56e5
+msgid "``                   yesrm -r dirname                 `` has same effect as ``                   rm -rf dirname                 `` (careful!)."
+msgstr ""
+
+#: ../../extmisc.rst:359
+# b54ce8e7ddda4f338331c71ddf453c19
+msgid "|Warning"
+msgstr ""
+
+#: ../../extmisc.rst:361
+# c1f53e0c580e462a82fe7ff430bd1a98
+msgid "Caution advised when piping *yes* to a potentially dangerous system command, such as `fsck <system.html#FSCKREF>`__ or `fdisk <system.html#FDISKREF>`__ . It might have unintended consequences."
+msgstr ""
+
+#: ../../extmisc.rst:373
+# c75dad644c5043c8a1fa99dc8acd180b
+msgid "The *yes* command parses variables, or more accurately, it echoes parsed variables. For example:"
+msgstr ""
+
+#: ../../extmisc.rst:381
+# 32c1f14dc1454ecca9fd90cf912e666e
+msgid "3.1.17(1)-release 3.1.17(1)-release 3.1.17(1)-release 3.1.17(1)-release . . ."
+msgstr ""
+
+#: ../../extmisc.rst:389
+# 45faa14e794543d2a3e717f3682e05f6
+msgid "This particular \"feature\" may be used to create a *very large* ASCII file on the fly:"
+msgstr ""
+
+#: ../../extmisc.rst:396
+# 3fc7f8a4d8d44879b75d22d133899a3f
+msgid "Ctl-C"
+msgstr ""
+
+#: ../../extmisc.rst:400
+# 402e3fdc81434e36b13f252c3f5e8fb0
+msgid "Hit ``                       Ctl-C                     `` *very quickly* , or you just might get more than you bargained for. . . ."
+msgstr ""
+
+#: ../../extmisc.rst:445
+# efe28c1a695349008a822ed1559be711
+msgid "`function <functions.html#FUNCTIONREF>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:467
+# 22b4f76368dd437d814bc7c0dd40bb21
+msgid "Prints arguments as a large vertical banner to ``         stdout        `` , using an `ASCII <special-chars.html#ASCIIDEF>`__ character (default '#'). This may be redirected to a printer for hardcopy."
+msgstr ""
+
+#: ../../extmisc.rst:472
+# e3b744c4cc4a47bb8dbb5c9afddcdddb
+msgid "Note that *banner* has been dropped from many Linux distros, presumably because it is no longer considered useful."
+msgstr ""
+
+#: ../../extmisc.rst:476
+# 583bca35b3484e4e842acad1928afeb5
+msgid "Show all the `environmental variables <othertypesv.html#ENVREF>`__ set for a particular user."
+msgstr ""
+
+#: ../../extmisc.rst:489
+# 1bcb60e194a94bfd93ecd8a807c141ed
+msgid "The **lp** and **lpr** commands send file(s) to the print queue, to be printed as hard copy. ` [2]  <extmisc.html#FTN.AEN14214>`__ These commands trace the origin of their names to the line printers of another era. ` [3]  <extmisc.html#FTN.AEN14218>`__"
+msgstr ""
+
+#: ../../extmisc.rst:494
+# 26792fa2f7334e6b85b2500b54c032e0
+msgid "``         bash$        `` ``                   lp file1.txt                 `` or ``         bash        `` ``                   lp         <file1.txt                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:499
+# 82247c0e303946ad9b8faed6be54940b
+msgid "It is often useful to pipe the formatted output from **pr** to **lp** ."
+msgstr ""
+
+#: ../../extmisc.rst:502
+# aaf37be222934a659fce7c5e11c83dad
+msgid "``         bash$        `` ``                   pr -options file1.txtlp                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:505
+# 2cf4e918d2bb4f19ab8c569bdda00b3a
+msgid "Formatting packages, such as `groff <textproc.html#GROFFREF>`__ and *Ghostscript* may send their output directly to **lp** ."
+msgstr ""
+
+#: ../../extmisc.rst:508
+# f1309864e65348dbad023fde8d380272
+msgid "``         bash$        `` ``                   groff -Tascii file.trlp                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:511
+# 38db5e6307864656b61e4d83efa6d479
+msgid "``         bash$        `` ``                   gs -optionslp file.ps                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:514
+# 5cb96022779e40bcbb6afaa970e8b5e3
+msgid "Related commands are **lpq** , for viewing the print queue, and **lprm** , for removing jobs from the print queue."
+msgstr ""
+
+#: ../../extmisc.rst:518
+# 8d77b5314e4f49c89805c1d6245cf705
+msgid "[UNIX borrows an idea from the plumbing trade.]"
+msgstr ""
+
+#: ../../extmisc.rst:520
+# 720c7ba3ded74a23bc7526710d783ea3
+msgid "This is a redirection operator, but with a difference. Like the plumber's *tee,* it permits \"siphoning off\" *to a file* the output of a command or commands within a pipe, but without affecting the result. This is useful for printing an ongoing process to a file or paper, perhaps to keep track of it for debugging purposes."
+msgstr ""
+
+#: ../../extmisc.rst:551
+# 9b7fbd64f4b04398b785b078b7c69e7a
+msgid "This obscure command creates a *named pipe* , a temporary"
+msgstr ""
+
+#: ../../extmisc.rst:552
+# 00b1a72fb1be4d47b6fb0feb8d645e04
+msgid "*first-in-first-out buffer* for transferring data between processes. ` [4]  <extmisc.html#FTN.AEN14280>`__ Typically, one process writes to the FIFO, and the other reads from it. See `Example A-14 <contributed-scripts.html#FIFO>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:590
+# 0cc99322e74d43dbbe86775a28387ef8
+msgid "This command checks the validity of a filename. If the filename exceeds the maximum allowable length (255 characters) or one or more of the directories in its path is not searchable, then an error message results."
+msgstr ""
+
+#: ../../extmisc.rst:595
+# 95a4f0d7c2744811a456ca05ab10eafb
+msgid "Unfortunately, **pathchk** does not return a recognizable error code, and it is therefore pretty much useless in a script. Consider instead the `file test operators <fto.html#RTIF>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:600
+# e0a0d8cda95a454bbfe57d74d22569a3
+msgid "Though this somewhat obscure and much feared **d** ata **d** uplicator command originated as a utility for exchanging data on magnetic tapes between UNIX minicomputers and IBM mainframes, it still has its uses. The **dd** command simply copies a file (or ``         stdin/stdout        `` ), but with conversions. Possible conversions include ASCII/EBCDIC, ` [5]"
+msgstr ""
+
+#: ../../extmisc.rst:606
+# 80500a7d97054ef7ab2ab194aa8327f1
+msgid "<extmisc.html#FTN.AEN14318>`__ upper/lower case, swapping of byte"
+msgstr ""
+
+#: ../../extmisc.rst:607
+# 103799f00dab4bf9af084ee8533415a6
+msgid "pairs between input and output, and skipping and/or truncating the head or tail of the input file."
+msgstr ""
+
+#: ../../extmisc.rst:620
+# c8e1058453ae4a0a9d20d46e012da0ec
+msgid "Some basic options to **dd** are:"
+msgstr ""
+
+#: ../../extmisc.rst:622
+# 421a62d1f9444fe5ad37baf245ee6dd9
+msgid "if=INFILE"
+msgstr ""
+
+#: ../../extmisc.rst:624
+# 688b84fffdd04b34a52afe1730371831
+msgid "INFILE is the *source* file."
+msgstr ""
+
+#: ../../extmisc.rst:626
+# 1c84936675c9427492db5cfe16d6fccb
+msgid "of=OUTFILE"
+msgstr ""
+
+#: ../../extmisc.rst:628
+# 281497c0fa0f48e49af7ed6150d154ff
+msgid "OUTFILE is the *target* file, the file that will have the data written to it."
+msgstr ""
+
+#: ../../extmisc.rst:631
+# 17c2f1934a4442a797737640c38021f5
+msgid "bs=BLOCKSIZE"
+msgstr ""
+
+#: ../../extmisc.rst:633
+# 3629cd6ac8924d4bb9f8d0b810b0b8fa
+msgid "This is the size of each block of data being read and written, usually a power of 2."
+msgstr ""
+
+#: ../../extmisc.rst:636
+# fe40f131335a448f8e7da9464ac6a210
+msgid "skip=BLOCKS"
+msgstr ""
+
+#: ../../extmisc.rst:638
+# 281376a6046b4e77be2c715d5f8085dc
+msgid "How many blocks of data to skip in INFILE before starting to copy. This is useful when the INFILE has \"garbage\" or garbled data in its header or when it is desirable to copy only a portion of the INFILE."
+msgstr ""
+
+#: ../../extmisc.rst:643
+# c840ec04b59344f49433afc5847d0f7b
+msgid "seek=BLOCKS"
+msgstr ""
+
+#: ../../extmisc.rst:645
+# e6814210d45e45988cd1797597c35091
+msgid "How many blocks of data to skip in OUTFILE before starting to copy, leaving blank data at beginning of OUTFILE."
+msgstr ""
+
+#: ../../extmisc.rst:648
+# c4a39a10f42140c19bd03e723a9f0b0b
+msgid "count=BLOCKS"
+msgstr ""
+
+#: ../../extmisc.rst:650
+# 6b0e6cca1ffd49dd81e6f033f6b1f2dd
+msgid "Copy only this many blocks of data, rather than the entire INFILE."
+msgstr ""
+
+#: ../../extmisc.rst:653
+# f77ce94bf3db487ba7d6666a791de55a
+msgid "conv=CONVERSION"
+msgstr ""
+
+#: ../../extmisc.rst:655
+# 8a4ab705ebee4ccda0fbd30d4ced688a
+msgid "Type of conversion to be applied to INFILE data before copying operation."
+msgstr ""
+
+#: ../../extmisc.rst:658
+# 96ae3d81afcf44029e5c17bc73893b01
+msgid "A ``                   dd --help                 `` lists all the options this powerful utility takes."
+msgstr ""
+
+#: ../../extmisc.rst:663
+# 258c318afda34f35b975d7b97ec99dab
+msgid "Exemple 57. A script that copies itself"
+msgstr ""
+
+#: ../../extmisc.rst:689
+# f119d171bde54918b720e8159a67433e
+msgid "Exemple 58. Exercising *dd*"
+msgstr ""
+
+#: ../../extmisc.rst:719
+# b4545a3fae614a4893e6dd415bda58ae
+msgid "To demonstrate just how versatile **dd** is, let's use it to capture keystrokes."
+msgstr ""
+
+#: ../../extmisc.rst:724
+# b9c72a5d5b1443d889bbe9db4646d2a0
+msgid "Exemple 59. Capturing Keystrokes"
+msgstr ""
+
+#: ../../extmisc.rst:754
+# 0394f6998ad74bb4b464ae56c507e9b6
+msgid "The **dd** command can do random access on a data stream."
+msgstr ""
+
+#: ../../extmisc.rst:767
+# fc6382d775974c56bb8f9f9fe0036c49
+msgid "The **dd** command can copy raw data and disk images to and from devices, such as floppies and tape drives ( `Example A-5 <contributed-scripts.html#COPYCD>`__ ). A common use is creating boot floppies."
+msgstr ""
+
+#: ../../extmisc.rst:772
+# 17db03632ac449f2904502ba17da5cb5
+msgid "``                   dd if=kernel-image of=/dev/fd0H1440                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:774
+# 0cb38ff2f2264f49928a181d6edb0311
+msgid "Similarly, **dd** can copy the entire contents of a floppy, even one formatted with a \"foreign\" OS, to the hard drive as an image file."
+msgstr ""
+
+#: ../../extmisc.rst:777
+# 1dfc53d91ad54f45b542b73bd9ff11dc
+msgid "``                   dd if=/dev/fd0 of=/home/bozo/projects/floppy.img                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:779
+# 0a2d6838765142679aa74375b42cc54b
+msgid "Likewise, **dd** can create bootable flash drives and SD cards."
+msgstr ""
+
+#: ../../extmisc.rst:781
+# f5a28f748a0e4d38bf6e7e7fe4bbff0a
+msgid "``                   dd if=image.iso of=/dev/sdb                 ``"
+msgstr ""
+
+#: ../../extmisc.rst:785
+# 1cb496ef3fdc4236be56fc0242529332
+msgid "Exemple 60. Preparing a bootable SD card for the *Raspberry Pi*"
+msgstr ""
+
+#: ../../extmisc.rst:850
+# 8ffebacabfed46fa9ffe192df2bc9c3c
+msgid "Other applications of **dd** include initializing temporary swap files ( `Example 31-2 <zeros.html#EX73>`__ ) and ramdisks ( `Example 31-3 <zeros.html#RAMDISK>`__ ). It can even do a low-level copy of an entire hard drive partition, although this is not necessarily recommended."
+msgstr ""
+
+#: ../../extmisc.rst:856
+# 8cd06b3cb869468b85dd8ca7c6937e23
+msgid "People (with presumably nothing better to do with their time) are constantly thinking of interesting applications of **dd** ."
+msgstr ""
+
+#: ../../extmisc.rst:861
+# 3c5edd4ebde14f6abc95f2a544cb7c94
+msgid "Exemple 61. Securely deleting a file"
+msgstr ""
+
+#: ../../extmisc.rst:964
+# eec579b5aa504dd0a6af671263e081d7
+msgid "See also the `dd thread <biblio.html#DDLINK>`__ entry in the `bibliography <biblio.html#BIBLIOREF>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:968
+# 9a1689ab134d4797a9bb59b8e3626284
+msgid "The **od** , or *octal dump* filter converts input (or files) to octal (base-8) or other bases. This is useful for viewing or processing binary data files or otherwise unreadable system `device files <devref1.html#DEVFILEREF>`__ , such as ``         /dev/urandom        `` , and as a filter for binary data."
+msgstr ""
+
+#: ../../extmisc.rst:984
+# 5d31f426eb6a48c4a32850937d09c1f4
+msgid "See also `Example 9-16 <randomvar.html#SEEDINGRANDOM>`__ and `Example A-36 <contributed-scripts.html#INSERTIONSORT>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:988
+# db6dbccfd102497bb8c5d95f36875103
+msgid "Performs a hexadecimal, octal, decimal, or ASCII dump of a binary file. This command is the rough equivalent of **od** , above, but not nearly as useful. May be used to view the contents of a binary file, in combination with `dd <extmisc.html#DDREF>`__ and `less <filearchiv.html#LESSREF>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:1003
+# 94a8e27de3fd4de58c29ac621e9115ef
+msgid "Displays information about an object file or binary executable in either hexadecimal form or as a disassembled listing (with the ``         -d        `` option)."
+msgstr ""
+
+#: ../../extmisc.rst:1024
+# 39b5e5ec38a44161914bd8883a2a8d3b
+msgid "This command generates a \"magic cookie,\" a 128-bit (32-character) pseudorandom hexadecimal number, normally used as an authorization \"signature\" by the X server. This also available for use in a script as a \"quick 'n dirty\" random number."
+msgstr ""
+
+#: ../../extmisc.rst:1036
+# 60ddbe15b6cc46c293206f111ff37670
+msgid "Of course, a script could use `md5sum <filearchiv.html#MD5SUMREF>`__ for the same purpose."
+msgstr ""
+
+#: ../../extmisc.rst:1048
+# d147f625ce77430b8a7b568b01a42c86
+msgid "The **mcookie** command gives yet another way to generate a \"unique\" filename."
+msgstr ""
+
+#: ../../extmisc.rst:1053
+# 6ce50a92a2594436a4a46b7320c05707
+msgid "Exemple 62. Filename generator"
+msgstr ""
+
+#: ../../extmisc.rst:1091
+# d802021fe9714a658b3fdb31a0beab2b
+msgid "This utility converts between different *units of measure* . While normally invoked in interactive mode, **units** may find use in a script."
+msgstr ""
+
+#: ../../extmisc.rst:1097
+# 9839945344fc4bc3bab205bba52242ca
+msgid "Exemple 63. Converting meters to miles"
+msgstr ""
+
+#: ../../extmisc.rst:1136
+# f97bf2af8709418bb837ae6792b7c32f
+msgid "<extmisc.html#FTN.AEN14523>`__ processing filter, virtually a"
+msgstr ""
+
+#: ../../extmisc.rst:1137
+# db5a6af867014cbaa73f75636cee07ed
+msgid "complete language. Although originally written as a pre-processor for *RatFor* , **m4** turned out to be useful as a stand-alone utility. In fact, **m4** combines some of the functionality of `eval <internal.html#EVALREF>`__ , `tr <textproc.html#TRREF>`__ , and `awk <awk.html#AWKREF>`__ , in addition to its extensive macro expansion facilities."
+msgstr ""
+
+#: ../../extmisc.rst:1144
+# 24498b5ffd71429aa775a809ed35edc6
+msgid "The April, 2002 issue of `*Linux Journal* <http://www.linuxjournal.com>`__ has a very nice article on **m4** and its uses."
+msgstr ""
+
+#: ../../extmisc.rst:1150
+# 0b841fa689864ffd8725f7b867ad7f47
+msgid "Exemple 64. Using *m4*"
+msgstr ""
+
+#: ../../extmisc.rst:1175
+# 690201a8d7064da783a87f721a51c764
+msgid "This X-based variant of `echo <internal.html#ECHOREF>`__ pops up a message/query window on the desktop."
+msgstr ""
+
+#: ../../extmisc.rst:1186
+# b400f6109ae04c3485ca2b1c6d3026d7
+msgid "The `zenity <http://freshmeat.net/projects/zenity>`__ utility is adept at displaying *GTK+* dialog `widgets <assortedtips.html#WIDGETREF>`__ and `very suitable for scripting purposes <assortedtips.html#ZENITYREF2>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:1192
+# 3eaa885a30134d8990f8d047f3d4a830
+msgid "The **doexec** command enables passing an arbitrary list of arguments to a *binary executable* . In particular, passing ``                   argv[0]                 `` (which corresponds to `$0 <othertypesv.html#POSPARAMREF1>`__ in a script) lets the executable be invoked by various names, and it can then carry out different sets of actions, according to the name by which it was called. What this amounts to is roundabout way of passing options to an executable."
+msgstr ""
+
+#: ../../extmisc.rst:1201
+# c4f85735f7aa41d799dd3c9e674e0c9f
+msgid "For example, the ``         /usr/local/bin        `` directory might contain a binary called \"aaa\" . Invoking **doexec /usr/local/bin/aaa list** would *list* all those files in the current working directory beginning with an \"a\" , while invoking (the same executable with) **doexec /usr/local/bin/aaa delete** would *delete* those files."
+msgstr ""
+
+#: ../../extmisc.rst:1211
+# 7ef0809e18454fd9b19e2d6f2bd89181
+msgid "The various behaviors of the executable must be defined within the code of the executable itself, analogous to something like the following in a shell script:"
+msgstr ""
+
+#: ../../extmisc.rst:1219
+# 457a4ab684de4f52a703dd13a878cb94
+msgid "\"name1\" ) do_somethi"
+msgstr ""
+
+#: ../../extmisc.rst:1221
+# b0b909c610324271a28639ff3ee28421
+msgid "\"name2\" ) do_somethi"
+msgstr ""
+
+#: ../../extmisc.rst:1223
+# 957406eb587446c2a263ec7cc30635c2
+msgid "\"name3\" ) do_yet_ano"
+msgstr ""
+
+#: ../../extmisc.rst:1225
+# 817565dcde784e32a5f5a1da173affaa
+msgid ") bail_out;;"
+msgstr ""
+
+#: ../../extmisc.rst:1226
+# 2ac7df55188144118c64249172c833e6
+msgid "esac"
+msgstr ""
+
+#: ../../extmisc.rst:1253
+# 6106867480ae476caa195cbcac42540b
+msgid "The `dialog <assortedtips.html#DIALOGREF>`__ family of tools provide a method of calling interactive \"dialog\" boxes from a script. The more elaborate variations of **dialog** -- **gdialog** , **Xdialog** , and **kdialog** -- actually invoke X-Windows `widgets <assortedtips.html#WIDGETREF>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:1260
+# 726e9ba27f304286a58e6b1b5a0fdc26
+msgid "The **sox** , or \" **so** und e **x** change\" command plays and performs transformations on sound files. In fact, the ``         /usr/bin/play        `` executable (now deprecated) is nothing but a shell wrapper for *sox* ."
+msgstr ""
+
+#: ../../extmisc.rst:1265
+# 4894e3df8c1c4de3b8758b8bfedace57
+msgid "For example, **sox soundfile.wav soundfile.au** changes a WAV sound file into a (Sun audio format) AU sound file."
+msgstr ""
+
+#: ../../extmisc.rst:1268
+# 59f8fb1b3150442dba2b1ee6037f3c26
+msgid "Shell scripts are ideally suited for batch-processing **sox** operations on sound files. For examples, see the `Linux Radio Timeshift HOWTO <http://osl.iu.edu/~tveldhui/radio/>`__ and the `MP3do Project <http://savannah.nongnu.org/projects/audiodo>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:1276
+# 7fffe9af457a4753af4daf79465cf33a
+msgid "Notes"
+msgstr ""
+
+#: ../../extmisc.rst:1279
+# 3c9fe728017842beb759600a0f78c91f
+msgid "` [1]  <extmisc.html#AEN14105>`__"
+msgstr ""
+
+#: ../../extmisc.rst:1281
+# 53ec78ac821f42a593f945c98aa2d740
+msgid "This is actually a script adapted from the Debian Linux distribution."
+msgstr ""
+
+#: ../../extmisc.rst:1284
+# 299d9b3510564674a278bee3052733a7
+msgid "` [2]  <extmisc.html#AEN14214>`__"
+msgstr ""
+
+#: ../../extmisc.rst:1286
+# 6cc37956e2bb4848b28ecb27b2fddfc4
+msgid "The *print queue* is the group of jobs \"waiting in line\" to be printed."
+msgstr ""
+
+#: ../../extmisc.rst:1289
+# e292ea5c5e56475a86fe0869b0dceb1f
+msgid "` [3]  <extmisc.html#AEN14218>`__"
+msgstr ""
+
+#: ../../extmisc.rst:1291
+# a56d312050b44a5b905011a54f5b97e8
+msgid "Large mechanical *line printers* printed a single line of type at a time onto joined sheets of *greenbar* paper, to the accompaniment of `a great deal of noise <http://www.columbia.edu/cu/computinghistory/1403.html>`__ . The hardcopy thusly printed was referred to as a *printout* ."
+msgstr ""
+
+#: ../../extmisc.rst:1297
+# 9a75bb33aeb1493d8fb250cca6e3453b
+msgid "` [4]  <extmisc.html#AEN14280>`__"
+msgstr ""
+
+#: ../../extmisc.rst:1299
+# c17acaa173e54fa5b3c46dd94a692e38
+msgid "For an excellent overview of this topic, see Andy Vaught's article, `Introduction to Named Pipes <http://www2.linuxjournal.com/lj-issues/issue41/2156.html>`__ , in the September, 1997 issue of `*Linux Journal* <http://www.linuxjournal.com>`__ ."
+msgstr ""
+
+#: ../../extmisc.rst:1306
+# faa177cb8a0949059eb3787aaa6c5ab8
+msgid "` [5]  <extmisc.html#AEN14318>`__"
+msgstr ""
+
+#: ../../extmisc.rst:1308
+# 799b32469b804ca08587a3defbe5077f
+msgid "EBCDIC (pronounced \"ebb-sid-ick\" ) is an acronym for Extended Binary"
+msgstr ""
+
+#: ../../extmisc.rst:1309
+# 3726255bd9614ee2a301f4cbc783f3d5
+msgid "Coded Decimal Interchange Code, an obsolete IBM data format. A bizarre application of the ``       conv=ebcdic      `` option of **dd** is as a quick 'n easy, but not very secure text file encoder."
+msgstr ""
+
+#: ../../extmisc.rst:1316
+# d770d2fcecc84dd8adb093157942ba88
+msgid "swab,ebcdic > $file_encr ypted"
+msgstr ""
+
+#: ../../extmisc.rst:1318
+# c6b6d0611acd48d5bf186f8ec8206136
+msgid "# Encode (looks like"
+msgstr ""
+
+#: ../../extmisc.rst:1320
+# 678b1076b19d4f34bf5f380af6255ad8
+msgid "# Might as well swit"
+msgstr ""
+
+#: ../../extmisc.rst:1321
+# 7b4d398b7b0e4ce992e5a2e042715aa3
+msgid "ch bytes (swab), too, fo r a little extra obscuri ty."
+msgstr ""
+
+#: ../../extmisc.rst:1325
+# d2dfad7e3ead480aae64f4142fd26088
+msgid "cat $file_encrypted"
+msgstr ""
+
+#: ../../extmisc.rst:1326
+# 31ad46f6a73b49178fa89abd685624b5
+msgid "dd conv=swab,ascii > $"
+msgstr ""
+
+#: ../../extmisc.rst:1328
+# ae83160c4ac5418a8a27f7a8442a6cdf
+msgid "# Decode."
+msgstr ""
+
+#: ../../extmisc.rst:1352
+# 57ce5e4a45704156a6b9896ffbc5cea2
+msgid "` [6]  <extmisc.html#AEN14523>`__"
+msgstr ""
+
+#: ../../extmisc.rst:1354
+# 72b6e3d9428746aca56f113718f43958
+msgid "A *macro* is a symbolic constant that expands into a command string or a set of operations on parameters. Simply put, it's a shortcut or abbreviation."
+msgstr ""
+

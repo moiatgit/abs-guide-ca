@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../string-manipulation.rst:4
+# 4582c423cddb48a38f7f71313f5c35ae
+msgid "XXX  10.1. Manipulating Strings"
+msgstr ""
+
+#: ../../string-manipulation.rst:6
+# 06c2dd87a2fc432fa9a38f348964676f
+msgid "Bash supports a surprising number of string manipulation operations. Unfortunately, these tools lack a unified focus. Some are a subset of `parameter substitution <parameter-substitution.html#PARAMSUBREF>`__ , and others fall under the functionality of the UNIX `expr <moreadv.html#EXPRREF>`__ command. This results in inconsistent command syntax and overlap of functionality, not to mention confusion."
+msgstr ""
+
+#: ../../string-manipulation.rst:14
+# f1395cf3596d4b5795ab1cf5462bfdc8
+msgid "**String Length**"
+msgstr ""
+
+#: ../../string-manipulation.rst:16
+# 763c708badb3444aac1f2eac92a41210
+msgid "${#string} expr length $string"
+msgstr ""
+
+#: ../../string-manipulation.rst:18
+# fb6cbb0d54564f8e9cc09fdb16f442ee
+msgid "These are the equivalent of *strlen()* in *C* ."
+msgstr ""
+
+#: ../../string-manipulation.rst:20
+# bd831eae86e440aebf8b028d5a14188d
+msgid "expr \"$string\" : '.\\*'"
+msgstr ""
+
+#: ../../string-manipulation.rst:36
+# c786f965717344b0a93dcf2e01a8dacc
+msgid "Exemple 1. Inserting a blank line between paragraphs in a text file"
+msgstr ""
+
+#: ../../string-manipulation.rst:79
+# ee162b102eb14b32a73e25b517fb6491
+msgid "**Length of Matching Substring at Beginning of String**"
+msgstr ""
+
+#: ../../string-manipulation.rst:82
+# 35d02d5f68494fa19e4b6a0cbb59045a
+msgid "``                   $substring                 `` is a `regular expression <regexp.html#REGEXREF>`__ ."
+msgstr ""
+
+#: ../../string-manipulation.rst:86
+# a93a0e60a7404d28ac5fb208ff9b0000
+msgid "``                   $substring                 `` is a regular expression."
+msgstr ""
+
+#: ../../string-manipulation.rst:103
+# b31a495aaa784a9d93b211baf54c5f63
+msgid "**Index**"
+msgstr ""
+
+#: ../../string-manipulation.rst:106
+# 54b94e59d988470c9e5bd45ae8d9295a
+msgid "Numerical position in $string of first character in $substring that matches."
+msgstr ""
+
+#: ../../string-manipulation.rst:122
+# 08c180fc736f44a7a8362df332accbc0
+msgid "This is the near equivalent of *strchr()* in *C* ."
+msgstr ""
+
+#: ../../string-manipulation.rst:126
+# 983e0e9a642c491d9df7655496c8c38a
+msgid "**Substring Extraction**"
+msgstr ""
+
+#: ../../string-manipulation.rst:129
+# bbeeb8c3439f40218ea5b7cd733615bd
+msgid "Extracts substring from ``                   $string                 `` at ``                   $position                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:133
+# 137575377ceb4c4ba8b3524de02b7887
+msgid "If the ``         $string        `` parameter is \" \\* \" or \" @ \" , then this extracts the `positional parameters <internalvariables.html#POSPARAMREF>`__ , ` [1]"
+msgstr ""
+
+#: ../../string-manipulation.rst:136
+# 2bcb9bb0997944c49ba14f912d8700e6
+msgid "<string-manipulation.html#FTN.AEN5987>`__ starting at"
+msgstr ""
+
+#: ../../string-manipulation.rst:137
+# 87b125422dd44859a075a123106de6c6
+msgid "``         $position        `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:140
+# 6f75c74c68994ef39131f2af29fae15c
+msgid "Extracts ``                   $length                 `` characters of substring from ``                   $string                 `` at ``                   $position                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:175
+# 83c814c6ef804471895a017d4b36938e
+msgid "The *position* and *length* arguments can be \"parameterized,\" that is, represented as a variable, rather than as a numerical constant."
+msgstr ""
+
+#: ../../string-manipulation.rst:180
+# 6ae212be2bb74564b69108847c79d436
+msgid "Exemple 2. Generating an 8-character \"random\" string"
+msgstr ""
+
+#: ../../string-manipulation.rst:219
+# a9895846156c415f84a8b6aaed06709c
+msgid "If the ``         $string        `` parameter is \" \\* \" or \" @ \" , then this extracts a maximum of ``         $length        `` positional parameters, starting at ``         $position        `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:234
+# 134755f1cce0434ca9e54f8a049d6d6b
+msgid "Extracts ``                   $length                 `` characters from ``                   $string                 `` starting at ``                   $position                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:251
+# a3af6b4c40024b90b8d6a8f18daa5019
+msgid "Extracts ``                   $substring                 `` at beginning of ``                   $string                 `` , where ``                   $substring                 `` is a `regular expression <regexp.html#REGEXREF>`__ ."
+msgstr ""
+
+#: ../../string-manipulation.rst:257
+# 2ade90d7bbfd4e6fa4d585f3f0500d81
+msgid "Extracts ``                   $substring                 `` at beginning of ``                   $string                 `` , where ``                   $substring                 `` is a regular expression."
+msgstr ""
+
+#: ../../string-manipulation.rst:276
+#: ../../string-manipulation.rst:282
+# 3a252235f6f44ae999d4a2a9aaa0cacd
+# 79acb2e1f97746c8ae6c6f1f1186e82d
+msgid "Extracts ``                   $substring                 `` at *end* of ``                   $string                 `` , where ``                   $substring                 `` is a regular expression."
+msgstr ""
+
+#: ../../string-manipulation.rst:300
+# 15e47acde0be4f428c0d7498109143a6
+msgid "**Substring Removal**"
+msgstr ""
+
+#: ../../string-manipulation.rst:303
+# 4232368b3150404ba6ec59413f59dd90
+msgid "Deletes shortest match of ``                   $substring                 `` from *front* of ``                   $string                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:308
+# f96757e271fc4a45837e0abc15ad1db8
+msgid "Deletes longest match of ``                   $substring                 `` from *front* of ``                   $string                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:338
+# 167a652fb39d461ca2776a1ccf605eda
+msgid "Deletes shortest match of ``                   $substring                 `` from *back* of ``                   $string                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:342
+# cdbdc8c73b4149bcbd814cf2ff0127f4
+msgid "For example:"
+msgstr ""
+
+#: ../../string-manipulation.rst:365
+# b77516194a3b491480ab118c752edb8f
+msgid "Deletes longest match of ``                   $substring                 `` from *back* of ``                   $string                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:384
+# 8d7d270348f6454e8abfdc41f3a48ceb
+msgid "This operator is useful for generating filenames."
+msgstr ""
+
+#: ../../string-manipulation.rst:388
+# 5efcf4b3f8db4f54a09596285a31a738
+msgid "Exemple 3. Converting graphic file formats, with filename change"
+msgstr ""
+
+#: ../../string-manipulation.rst:458
+# 444475bb320d49c391adb7bb80adf997
+msgid "Exemple 4. Converting streaming audio files to *ogg*"
+msgstr ""
+
+#: ../../string-manipulation.rst:518
+# 438425b3e4994e6c88b76f5117cd1226
+msgid "A simple emulation of `getopt <extmisc.html#GETOPTY>`__ using substring-extraction constructs."
+msgstr ""
+
+#: ../../string-manipulation.rst:523
+# 0e7a9d9cb3c84138a89f04be2007a1a3
+msgid "Exemple 5. Emulating *getopt*"
+msgstr ""
+
+#: ../../string-manipulation.rst:578
+# 68e2f514a6be48639d067be1ea5d827f
+msgid "**Substring Replacement**"
+msgstr ""
+
+#: ../../string-manipulation.rst:581
+# 8c1b46dda47b4d28b2ba7e457ead64b2
+msgid "Replace first *match* of ``                   $substring                 `` with ``                   $replacement                 `` . ` [2]"
+msgstr ""
+
+#: ../../string-manipulation.rst:584
+# f7370b8d57214e13a0aa1610abd2adf7
+msgid "<string-manipulation.html#FTN.AEN6164>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:587
+# d8e8409a06f64583bd9f51be2c2d9cd4
+msgid "Replace all matches of ``                   $substring                 `` with ``                   $replacement                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:625
+# d6c65b9208574f9d9e9375d58cadce3a
+msgid "If ``                   $substring                 `` matches *front* end of ``                   $string                 `` , substitute ``                   $replacement                 `` for ``                   $substring                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:631
+# a08f8fae81aa4f98a2a4fd0b7f89521c
+msgid "If ``                   $substring                 `` matches *back* end of ``                   $string                 `` , substitute ``                   $replacement                 `` for ``                   $substring                 `` ."
+msgstr ""
+
+#: ../../string-manipulation.rst:651
+# eaa52ce5b57244f8a8ce16d86fb2b742
+msgid "10.1.1. Manipulating strings using awk"
+msgstr ""
+
+#: ../../string-manipulation.rst:654
+# c63fa96edd0a4b698ff7928a1931bb90
+msgid "A Bash script may invoke the string manipulation facilities of `awk <awk.html#AWKREF>`__ as an alternative to using its built-in operations."
+msgstr ""
+
+#: ../../string-manipulation.rst:660
+# fe5ba9fd9fdf4de0bf5f54c304ea5a70
+msgid "Exemple 6. Alternate ways of extracting and locating substrings"
+msgstr ""
+
+#: ../../string-manipulation.rst:705
+# 1b8bf83014084aed94fc0560910a0699
+msgid "For more on string manipulation in scripts, refer to `Section 10.2 <parameter-substitution.html>`__ and the `relevant section <moreadv.html#EXPEXTRSUB>`__ of the `expr <moreadv.html#EXPRREF>`__ command listing."
+msgstr ""
+
+#: ../../string-manipulation.rst:710
+# 5170c3478a4343cc84a3c2d660d20c76
+msgid "Script examples:"
+msgstr ""
+
+#: ../../string-manipulation.rst:712
+# f6c5f6ddfc4443209ef038b1fe526262
+msgid "`Example 16-9 <moreadv.html#EX45>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:714
+# ed0bf91a22bd4992b1c5c58e21a0f0f7
+msgid "`Example 10-9 <parameter-substitution.html#LENGTH>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:716
+# b1519006e6b04edeacbe58202ab9d9c3
+msgid "`Example 10-10 <parameter-substitution.html#PATTMATCHING>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:718
+# d037ab2a6f7f492e91d1a7cacd855a1c
+msgid "`Example 10-11 <parameter-substitution.html#RFE>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:720
+# 28fd5d9e69984ed1952305850fe2a5cb
+msgid "`Example 10-13 <parameter-substitution.html#VARMATCH>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:722
+# 939141d1418444f49a65587247282cf6
+msgid "`Example A-36 <contributed-scripts.html#INSERTIONSORT>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:724
+# 30780c8d89f14af0bd9c5c206b54851c
+msgid "`Example A-41 <contributed-scripts.html#QKY>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:729
+# b9a5dfc566644f609c5bc87834df491b
+msgid "Notes"
+msgstr ""
+
+#: ../../string-manipulation.rst:732
+# a094f76f274e4dd68b1635bf1fbde88a
+msgid "` [1]  <string-manipulation.html#AEN5987>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:734
+# 628de844929b4d2f93b5b02abf923d42
+msgid "This applies to either command-line arguments or parameters passed to a `function <functions.html#FUNCTIONREF>`__ ."
+msgstr ""
+
+#: ../../string-manipulation.rst:738
+# 8ede2c9441bb4b698478f7f62421a2c8
+msgid "` [2]  <string-manipulation.html#AEN6164>`__"
+msgstr ""
+
+#: ../../string-manipulation.rst:740
+# c64d28f6f5d34c41a097bd0d70bc14c4
+msgid "Note that ``               $substring             `` and ``               $replacement             `` may refer to either *literal strings* or *variables* , depending on context. See the first usage example."
+msgstr ""
+

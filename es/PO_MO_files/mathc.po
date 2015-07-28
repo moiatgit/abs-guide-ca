@@ -1,0 +1,129 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../mathc.rst:3
+msgid "XXX 16.8. Math Commands"
+msgstr ""
+
+#: ../../mathc.rst:6
+msgid "** \"Doing the numbers\" **"
+msgstr ""
+
+#: ../../mathc.rst:9
+msgid "Decompose an integer into prime factors."
+msgstr ""
+
+#: ../../mathc.rst:22
+msgid "Exemple 46. Generating prime numbers"
+msgstr ""
+
+#: ../../mathc.rst:71
+msgid ""
+"Bash can't handle floating point calculations, and it lacks operators for "
+"certain important mathematical functions. Fortunately, **bc** gallops to the"
+" rescue."
+msgstr ""
+
+#: ../../mathc.rst:75
+msgid ""
+"Not just a versatile, arbitrary precision calculation utility, **bc** offers"
+" many of the facilities of a programming language. It has a syntax vaguely "
+"resembling **C** ."
+msgstr ""
+
+#: ../../mathc.rst:79
+msgid ""
+"Since it is a fairly well-behaved UNIX utility, and may therefore be used in"
+" a `pipe <special-chars.html#PIPEREF>`__ , **bc** comes in handy in scripts."
+msgstr ""
+
+#: ../../mathc.rst:83
+msgid ""
+"Here is a simple template for using **bc** to calculate a script variable. "
+"This uses `command substitution <commandsub.html#COMMANDSUBREF>`__ ."
+msgstr ""
+
+#: ../../mathc.rst:97
+msgid "Exemple 47. Monthly Payment on a Mortgage"
+msgstr ""
+
+#: ../../mathc.rst:208
+msgid "Exemple 48. Base Conversion"
+msgstr ""
+
+#: ../../mathc.rst:325
+msgid ""
+"An alternate method of invoking **bc** involves using a `here document "
+"<here-docs.html#HEREDOCREF>`__ embedded within a `command substitution "
+"<commandsub.html#COMMANDSUBREF>`__ block. This is especially appropriate "
+"when a script needs to pass a list of options and commands to **bc** ."
+msgstr ""
+
+#: ../../mathc.rst:355
+msgid "Exemple 49. Invoking *bc* using a *here document*"
+msgstr ""
+
+#: ../../mathc.rst:422
+msgid "Exemple 50. Calculating PI"
+msgstr ""
+
+#: ../../mathc.rst:574
+msgid "See also `Example A-37 <contributed-scripts.html#STDDEV>`__ ."
+msgstr ""
+
+#: ../../mathc.rst:577
+msgid ""
+"The **dc** ( **d** esk **c** alculator) utility is `stack-oriented "
+"<internalvariables.html#STACKDEFREF>`__ and uses RPN ( *Reverse Polish "
+"Notation* ). Like **bc** , it has much of the power of a programming "
+"language."
+msgstr ""
+
+#: ../../mathc.rst:582
+msgid ""
+"Similar to the procedure with **bc** , `echo <internal.html#ECHOREF>`__ a "
+"command-string to **dc** ."
+msgstr ""
+
+#: ../../mathc.rst:598
+msgid ""
+"Most persons avoid **dc** , because of its non-intuitive input and rather "
+"cryptic operators. Yet, it has its uses."
+msgstr ""
+
+#: ../../mathc.rst:603
+msgid "Exemple 51. Converting a decimal number to hexadecimal"
+msgstr ""
+
+#: ../../mathc.rst:643
+msgid ""
+"Studying the `info <basic.html#INFOREF>`__ page for **dc** is a painful path"
+" to understanding its intricacies. There seems to be a small, select group "
+"of *dc wizards* who delight in showing off their mastery of this powerful, "
+"but arcane utility."
+msgstr ""
+
+#: ../../mathc.rst:675
+msgid "Exemple 52. Factoring"
+msgstr ""
+
+#: ../../mathc.rst:722
+msgid ""
+"Yet another way of doing floating point math in a script is using `awk's "
+"<awk.html#AWKREF>`__ built-in math functions in a `shell wrapper "
+"<wrapper.html#SHWRAPPER>`__ ."
+msgstr ""
+
+#: ../../mathc.rst:728
+msgid "Exemple 53. Calculating the hypotenuse of a triangle"
+msgstr ""

@@ -1,0 +1,523 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../commandsub.rst:3
+# d7740bf66b2b48c8ba863f125324b945
+msgid "XXX  Chapter 12. Substitució de comanda"
+msgstr ""
+
+#: ../../commandsub.rst:5
+# 7c733d3577364eeca0071b240f9f25e6
+msgid "**Command substitution** reassigns the output of a command ` [1] <commandsub.html#FTN.AEN7205>`__ or even multiple commands; it"
+msgstr ""
+
+#: ../../commandsub.rst:8
+# 98b0e120a6404233a939693480115e4e
+msgid "<commandsub.html#FTN.AEN7211>`__"
+msgstr ""
+
+#: ../../commandsub.rst:10
+# 526ace4b8aa44da9ab32fa8d59d85dac
+msgid "The classic form of command substitution uses *backquotes* (\\`...\\`)."
+msgstr ""
+
+#: ../../commandsub.rst:11
+# 26fe8c00e1b24768bfa0a9d37055d323
+msgid "Commands within backquotes (backticks) generate command-line text."
+msgstr ""
+
+#: ../../commandsub.rst:22
+# 986dce6ea91b422ebadb69b6abde2f40
+msgid "**The output of commands can be used as arguments to another command, to set a variable, and even for generating the argument list in a `for <loops1.html#FORLOOPREF1>`__ loop.**"
+msgstr ""
+
+#: ../../commandsub.rst:57
+#: ../../commandsub.rst:674
+# 85fc66ec5379493a8cc1a3ce6001fdbf
+# de357af4bea147909e88bc0d811857db
+msgid "|Note"
+msgstr ""
+
+#: ../../commandsub.rst:59
+# 4c01ed493c7f4c14b56fbb84d2b1069f
+msgid "Command substitution invokes a"
+msgstr ""
+
+#: ../../commandsub.rst:60
+# 5d02a280e1434629944927ad1872f841
+msgid "`subshell <subshells.html#SUBSHELLSREF>`__ ."
+msgstr ""
+
+#: ../../commandsub.rst:67
+#: ../../commandsub.rst:268
+#: ../../commandsub.rst:415
+# a5cb9ab8a1f34847b3d30cc4bea84cd3
+# 7cd3280f620240f3afbc36fb8dedf515
+# 3a4225b54a104461b69ae7c9de1d9377
+msgid "|Caution"
+msgstr ""
+
+#: ../../commandsub.rst:69
+# 4f6cda6d437043e0a541706f341af17e
+msgid "Command substitution may result in `word"
+msgstr ""
+
+#: ../../commandsub.rst:70
+# aeaa34abf7c84238a1045d16d10a7017
+msgid "splitting <quotingvar.html#WSPLITREF>`__ ."
+msgstr ""
+
+#: ../../commandsub.rst:94
+# 55b4549dea504a5e898183552b5e2bbc
+msgid "Even when there is no word splitting, command substitution can remove trailing newlines."
+msgstr ""
+
+#: ../../commandsub.rst:107
+#: ../../commandsub.rst:111
+# 7e39e94e924a48db82a20dfb0917a2ba
+# 0fddf45782ee4398b95899d4bf9e59af
+msgid "'"
+msgstr ""
+
+#: ../../commandsub.rst:109
+# a0712d42a7724c55ba722902a8402101
+msgid "cd 'dir with trailin"
+msgstr ""
+
+#: ../../commandsub.rst:113
+# 32b472abd3114f14996e5357148553ca
+msgid "cd \"`pwd`\"  # Error"
+msgstr ""
+
+#: ../../commandsub.rst:115
+# 81ade47199e048618fbe4a04294959f9
+msgid "# bash: cd: /tmp/fil"
+msgstr ""
+
+#: ../../commandsub.rst:117
+# c612bc7f7ec14b08999fe8a75aefeeca
+msgid "No such file or directo"
+msgstr ""
+
+#: ../../commandsub.rst:118
+# 8c1d1f8b5a9146c2855a3334cb2119f8
+msgid "ry"
+msgstr ""
+
+#: ../../commandsub.rst:120
+# 723de84a6ae84226944bb724dfd9ab76
+msgid "cd \"$PWD\"   # Works"
+msgstr ""
+
+#: ../../commandsub.rst:121
+# e545193dbda0421c9046cc7dedc26b62
+msgid "fine."
+msgstr ""
+
+#: ../../commandsub.rst:127
+# a5106ca1cac3413d9f474cc5fb66d3cc
+msgid "old_tty_setting=$(st"
+msgstr ""
+
+#: ../../commandsub.rst:128
+# 076648a7e41f490aa96a573c409e8862
+msgid "ty -g)   # Save old term inal setting."
+msgstr ""
+
+#: ../../commandsub.rst:130
+# 97fcb375eb65429ab9f502024c80bd12
+msgid "echo \"Hit a key \" stty -icanon -echo"
+msgstr ""
+
+#: ../../commandsub.rst:132
+# 2502a3406b4d4f29aba947b6e5e81518
+msgid "# Disable \"cano"
+msgstr ""
+
+#: ../../commandsub.rst:133
+# 76590aa6eca4426da7e8f5681a1773a6
+msgid "nical\" mode for terminal ."
+msgstr ""
+
+#: ../../commandsub.rst:136
+# 3db726419fab4b9282848c1caf762b79
+msgid "# Also, disable"
+msgstr ""
+
+#: ../../commandsub.rst:138
+# 0f66a1ebc3f54a98b6583fd1c99c8c30
+msgid "key=$(dd bs=1 count="
+msgstr ""
+
+#: ../../commandsub.rst:139
+# e770e7b569dc437ea26dae2a41ae9385
+msgid "1 2> /dev/null)   # Usin g 'dd' to get a keypress ."
+msgstr ""
+
+#: ../../commandsub.rst:142
+# 33df4a8adf704f82a5d1738ae0165457
+msgid "stty \"$old_tty_setti"
+msgstr ""
+
+#: ../../commandsub.rst:143
+# 214ecea36d994b67829ee805b3a710b3
+msgid "ng\"      # Restore old s etting."
+msgstr ""
+
+#: ../../commandsub.rst:145
+# f7f9792cc17d45229e3cfea22116bcda
+msgid "echo \"You hit ${#key"
+msgstr ""
+
+#: ../../commandsub.rst:146
+# 9e125fcc2b004b659f089ac10663f09b
+msgid "} key.\"  # ${#variable} = number of characters i n $variable"
+msgstr ""
+
+#: ../../commandsub.rst:149
+# 359ee36fa8364ebda2327ac34a2a4fa8
+msgid "# # Hit any key except"
+msgstr ""
+
+#: ../../commandsub.rst:151
+# b438182cc0e04fc6af7fe33000cd8dda
+msgid "RETURN, and the output"
+msgstr ""
+
+#: ../../commandsub.rst:153
+# b8a301965ead46e98d2240c7bf4561ae
+msgid "# Hit RETURN, and it"
+msgstr ""
+
+#: ../../commandsub.rst:155
+# a9c7a9f9e9bd4e1d9e5edd8ab95d9d2c
+msgid "# The newline gets e"
+msgstr ""
+
+#: ../../commandsub.rst:156
+# cd99840633c24942ac49d7a6f8c9c131
+msgid "aten in the command subs titution."
+msgstr ""
+
+#: ../../commandsub.rst:159
+# a2f3c4b533644b90bbcff132aafffb0d
+msgid "#Code snippet by StÃ"
+msgstr ""
+
+#: ../../commandsub.rst:160
+# 5c6a611b56ad4b0caaba1e47cf7b1e0b
+msgid "©phane Chazelas."
+msgstr ""
+
+#: ../../commandsub.rst:270
+# 0b4c4721923042759f46086a4f2542a5
+msgid "Using **echo** to output an *unquoted* variable set with command substitution removes trailing newlines characters from the output of the reassigned command(s). This can cause unpleasant surprises."
+msgstr ""
+
+#: ../../commandsub.rst:284
+# 5970b74c3a3f4effba74e20d6608a841
+msgid "ng."
+msgstr ""
+
+#: ../../commandsub.rst:286
+# 89c759294cc24c8daaacc4d8662a845f
+msgid "# However, what you"
+msgstr ""
+
+#: ../../commandsub.rst:288
+# 7ab52d989498443eb2c31180405817fc
+msgid "# total 3 -rw-rw-r--"
+msgstr ""
+
+#: ../../commandsub.rst:289
+# 3d11d9a747754062aee378c4b21a9da9
+msgid "1 bozo bozo 30 May 13 1"
+msgstr ""
+
+#: ../../commandsub.rst:290
+# f2a58cc6bfe046f5817f2e5ff10f696f
+msgid "7:15 1.txt -rw-rw-r-- 1 bozo"
+msgstr ""
+
+#: ../../commandsub.rst:292
+# b76227fb3247433e812530bb0bfd5576
+msgid "# bozo 51 May 15 20:"
+msgstr ""
+
+#: ../../commandsub.rst:293
+# 179dcbdf04124646ae8ae1e761beb9b4
+msgid "57 t2.sh -rwxr-xr-x 1 bo zo bozo 217 Mar 5 21:13 wi.sh"
+msgstr ""
+
+#: ../../commandsub.rst:297
+# 08f9f086478f4541978550e6fc6ff404
+msgid "# The newlines disap"
+msgstr ""
+
+#: ../../commandsub.rst:298
+# e289e6d7899942d285f036197d59b705
+msgid "peared."
+msgstr ""
+
+#: ../../commandsub.rst:301
+# cf380c51aaf249f3a9b9200b10aeec71
+msgid "echo \"$dir_listing\""
+msgstr ""
+
+#: ../../commandsub.rst:303
+#: ../../commandsub.rst:306
+# f24e3f9043604545ad839a82a9941b61
+# 4fb72d3b84154397aa9e59415818797e
+msgid "# -rw-rw-r--    1 bo"
+msgstr ""
+
+#: ../../commandsub.rst:309
+# 7833b8e1a7b64717bfd0553242117b36
+msgid "# -rwxr-xr-x    1 bo"
+msgstr ""
+
+#: ../../commandsub.rst:311
+# b766ba46bb6a4250afab7ae22fd20bf4
+msgid "wi.sh"
+msgstr ""
+
+#: ../../commandsub.rst:359
+# 77cd662b55b64ccdbccd2a9515dbcf60
+msgid "Command substitution even permits setting a variable to the contents of a file, using either `redirection <io-redirection.html#IOREDIRREF>`__ or the `cat <basic.html#CATREF>`__ command."
+msgstr ""
+
+#: ../../commandsub.rst:417
+# 1e9f1d577e434df6938f93f34948aa2b
+msgid "Do not set a variable to the contents of a *long* text file unless you have a very good reason for doing so. Do not set a variable to the contents of a *binary* file, even as a joke."
+msgstr ""
+
+#: ../../commandsub.rst:423
+# 7e93a46384b8430b8a3ab0f10f6d35c9
+msgid "Exemple 1. Stupid script tricks"
+msgstr ""
+
+#: ../../commandsub.rst:453
+# 8a67a066da5e457baf236cd329df6103
+msgid "Notice that a *buffer overrun* does not occur. This is one instance where an interpreted language, such as Bash, provides more protection from programmer mistakes than a compiled language."
+msgstr ""
+
+#: ../../commandsub.rst:510
+# 544b785f14334f56a9cc3cbd0d9997a2
+msgid "Command substitution permits setting a variable to the output of a `loop <loops1.html#FORLOOPREF1>`__ . The key to this is grabbing the output of an `echo <internal.html#ECHOREF>`__ command within the loop."
+msgstr ""
+
+#: ../../commandsub.rst:516
+# 35dda82c91284af692b7a62ee75c4f0a
+msgid "Exemple 2. Generating a variable from a loop"
+msgstr ""
+
+#: ../../commandsub.rst:551
+# 1be682757c4b4b479b71c9c2d6505d96
+msgid "Command substitution makes it possible to extend the toolset available to Bash. It is simply a matter of writing a program or script that outputs to ``         stdout        `` (like a well-behaved UNIX tool should) and assigning that output to a variable."
+msgstr ""
+
+#: ../../commandsub.rst:676
+# 7912c049b24d4143ba1df915703f14fa
+msgid "The **$(...)** form has superseded backticks for command substitution."
+msgstr ""
+
+#: ../../commandsub.rst:683
+# 7350b7958a774639ba6d6440a75c87f4
+msgid "\"/p $file)   # From \"grp .sh\"  example."
+msgstr ""
+
+#: ../../commandsub.rst:686
+# c9e4b1839d7844d59d969876d020b82b
+msgid "# Setting a variable"
+msgstr ""
+
+#: ../../commandsub.rst:687
+# 5cd506c06d424ab38f35476456281f19
+msgid "to the contents of a te"
+msgstr ""
+
+#: ../../commandsub.rst:689
+# eacc583328714b2c9b725d0ebf5640fd
+msgid "File_contents1=$(cat"
+msgstr ""
+
+#: ../../commandsub.rst:691
+# 81f9610a0cc64dacbe5e3ff217efa397
+msgid "File_contents2=$(<$f"
+msgstr ""
+
+#: ../../commandsub.rst:692
+# dac863e74a09498aacbee79389ab7732
+msgid "ile2)        # Bash perm its this also."
+msgstr ""
+
+#: ../../commandsub.rst:698
+# b70c638c4d71416a9a4d0ca08ffd186d
+msgid "The **$(...)** form of command substitution treats a double backslash in a different way than **\\`...\\`** ."
+msgstr ""
+
+#: ../../commandsub.rst:710
+# b6d9f9e4169549e1988e32709d1829f6
+msgid "\\"
+msgstr ""
+
+#: ../../commandsub.rst:717
+# 06bb83fa9c9b4709940a855330adb234
+msgid "<commandsub.html#FTN.AEN7308>`__"
+msgstr ""
+
+#: ../../commandsub.rst:724
+# 07e834ddf7214e41a25592abdbfe059c
+msgid "$(echo * | awk '{print $ 8}') )"
+msgstr ""
+
+#: ../../commandsub.rst:730
+# 81ab1fd1d2714ddbb457291d3e677598
+msgid "Or, for something a bit more elaborate . . ."
+msgstr ""
+
+#: ../../commandsub.rst:734
+# 5605bdb163724f4e9c880fe3b00431f2
+msgid "Exemple 3. Finding anagrams"
+msgstr ""
+
+#: ../../commandsub.rst:940
+# 8daae6c385bf424f9013e0fc4e74e633
+msgid "Examples of command substitution in shell scripts:"
+msgstr ""
+
+#: ../../commandsub.rst:942
+# 5068247f5d4648da8d12b4098a3831df
+msgid "`Example 11-8 <loops1.html#BINGREP>`__"
+msgstr ""
+
+#: ../../commandsub.rst:944
+# de62dd3402ca495887047e5fa2932b8d
+msgid "`Example 11-27 <testbranch.html#CASECMD>`__"
+msgstr ""
+
+#: ../../commandsub.rst:946
+# 7f55847964f847c39575c1614ffc1f6c
+msgid "`Example 9-16 <randomvar.html#SEEDINGRANDOM>`__"
+msgstr ""
+
+#: ../../commandsub.rst:948
+# 861ab838d62d45e3a87b14305ae24199
+msgid "`Example 16-3 <moreadv.html#EX57>`__"
+msgstr ""
+
+#: ../../commandsub.rst:950
+# dccbcd2f5ad54a4a8ecfd3ab5823c7e4
+msgid "`Example 16-22 <textproc.html#LOWERCASE>`__"
+msgstr ""
+
+#: ../../commandsub.rst:952
+# e0336d7b02d047588245943de7e5e4a7
+msgid "`Example 16-17 <textproc.html#GRP>`__"
+msgstr ""
+
+#: ../../commandsub.rst:954
+# 92b482959ac94dc7ac8afcfbd1a9553c
+msgid "`Example 16-54 <extmisc.html#EX53>`__"
+msgstr ""
+
+#: ../../commandsub.rst:956
+# 646a038c994441f892687b540456cbd2
+msgid "`Example 11-14 <loops1.html#EX24>`__"
+msgstr ""
+
+#: ../../commandsub.rst:958
+# 18e6f646a1e44fcf8fc671f78fa7cfad
+msgid "`Example 11-11 <loops1.html#SYMLINKS>`__"
+msgstr ""
+
+#: ../../commandsub.rst:960
+# 6cc9ce59ac204254922f2a245e43f1b4
+msgid "`Example 16-32 <filearchiv.html#STRIPC>`__"
+msgstr ""
+
+#: ../../commandsub.rst:962
+# 80157ae570cf4bf9b651ef998daae347
+msgid "`Example 20-8 <redircb.html#REDIR4>`__"
+msgstr ""
+
+#: ../../commandsub.rst:964
+# e99442f13f504295ab85e7873c3e9a48
+msgid "`Example A-16 <contributed-scripts.html#TREE>`__"
+msgstr ""
+
+#: ../../commandsub.rst:966
+# 956565f9327545519afdec3a1b154986
+msgid "`Example 29-3 <procref1.html#PIDID>`__"
+msgstr ""
+
+#: ../../commandsub.rst:968
+# 7bb59a1f559840f188d18006c370e49e
+msgid "`Example 16-47 <mathc.html#MONTHLYPMT>`__"
+msgstr ""
+
+#: ../../commandsub.rst:970
+# 78b10d21c6434ee4adce9bf42378d030
+msgid "`Example 16-48 <mathc.html#BASE>`__"
+msgstr ""
+
+#: ../../commandsub.rst:972
+# c7d7686c7acd44839c6cafd8ef87e787
+msgid "`Example 16-49 <mathc.html#ALTBC>`__"
+msgstr ""
+
+#: ../../commandsub.rst:976
+# e0d21b68cca542cf8cc625928b375886
+msgid "Notes"
+msgstr ""
+
+#: ../../commandsub.rst:979
+# 103252b6d1e84bddb25b5aa8b893730e
+msgid "` [1]  <commandsub.html#AEN7205>`__"
+msgstr ""
+
+#: ../../commandsub.rst:981
+# ccf33dba7f9a48c0866b95f96202f81f
+msgid "For purposes of *command substitution* , a **command** may be an external system command, an internal scripting `builtin <internal.html#BUILTINREF>`__ , or even `a script function <assortedtips.html#RVT>`__ ."
+msgstr ""
+
+#: ../../commandsub.rst:987
+# 071a3411804147f9b325edb81de989de
+msgid "` [2]  <commandsub.html#AEN7211>`__"
+msgstr ""
+
+#: ../../commandsub.rst:989
+# 59c499721d2340a7b3ee47e229dae4dd
+msgid "In a more technically correct sense, *command substitution* extracts the ``       stdout      `` of a command, then assigns it to a variable using the = operator."
+msgstr ""
+
+#: ../../commandsub.rst:994
+# 4626b04017e8401ca7edee2f8be1ab53
+msgid "` [3]  <commandsub.html#AEN7308>`__"
+msgstr ""
+
+#: ../../commandsub.rst:996
+# a8b8d9981d6d48f4bf8541f369f718f9
+msgid "In fact, nesting with backticks is also possible, but only by escaping the inner backticks, as John Default points out."
+msgstr ""
+
+#: ../../commandsub.rst:1004
+# cd7bd4f2fb1b4d819ad2c2ab903b0b80
+msgid "`echo * | awk '{print $8 }'\\` `"
+msgstr ""
+

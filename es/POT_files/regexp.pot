@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../regexp.rst:3
+# 03af00cbd721466082977c5385521e0b
+msgid "XXX Chapter 18. Regular Expressions"
+msgstr ""
+
+#: ../../regexp.rst:6
+# ed16a45ea4b6419d963ed724b5cf1a70
+msgid "**"
+msgstr ""
+
+#: ../../regexp.rst:8
+# 95844c1a486b47ebbf3a9d27129632a4
+msgid "*. . . the intellectual activity associated with software development is largely one of gaining insight.*"
+msgstr ""
+
+#: ../../regexp.rst:11
+# 3fe576e133c54d8c93d6f3138922c17d
+msgid "*--Stowe Boyd*"
+msgstr ""
+
+#: ../../regexp.rst:18
+# add200f7aa644a4eab522ce3e07e3aba
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../regexp.rst:22
+# 9d2b8c3c42b646acb2cb7d299af2b646
+msgid "18.1. `A Brief Introduction to Regular Expressions <x17129.html>`__"
+msgstr ""
+
+#: ../../regexp.rst:26
+# 8d3ed05935b943efae961559923b1e89
+msgid "18.2. `Globbing <globbingref.html>`__"
+msgstr ""
+
+#: ../../regexp.rst:31
+# 53edcff2307c4adf84ef2656019a09d8
+msgid "To fully utilize the power of shell scripting, you need to master Regular Expressions. Certain commands and utilities commonly used in scripts, such as `grep <textproc.html#GREPREF>`__ , `expr <moreadv.html#EXPRREF>`__ , `sed <sedawk.html#SEDREF>`__ and `awk <awk.html#AWKREF>`__ , interpret and use REs. As of `version 3 <bashver3.html#BASH3REF>`__ , Bash has acquired its own `RE-match operator <bashver3.html#REGEXMATCHREF>`__ : **=~** ."
+msgstr ""
+

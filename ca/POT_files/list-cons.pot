@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../list-cons.rst:4
+# a512382530ca4cb7bc7ff3161989f5fd
+msgid "XXX  Chapter 26. List Constructs"
+msgstr ""
+
+#: ../../list-cons.rst:6
+# dfa247e2588c4798b5ccc956b0ccb777
+msgid "The *and list* and *or list* constructs provide a means of processing a number of commands consecutively. These can effectively replace complex nested `if/then <testconstructs.html#TESTCONSTRUCTS1>`__ or even `case <testbranch.html#CASEESAC1>`__ statements."
+msgstr ""
+
+#: ../../list-cons.rst:12
+# d57d58da43a7468da6c295548add3582
+msgid "** Chaining together commands**"
+msgstr ""
+
+#: ../../list-cons.rst:14
+# f62f8e9500174594bbc803fe5c1bf1fc
+msgid "and list"
+msgstr ""
+
+#: ../../list-cons.rst:23
+# 41a4cc860172439a9208225621986cf0
+msgid "Each command executes in turn, provided that the previous command has given a return value of ``                 true               `` (zero). At the first ``                 false               `` (non-zero) return, the command chain terminates (the first command returning ``                 false               `` is the last one to execute)."
+msgstr ""
+
+#: ../../list-cons.rst:30
+# bffc2072c2444809a066c7c710e95873
+msgid "An interesting use of a two-condition *and list* from an early version of YongYe's `Tetris game script <http://bash.deta.in/Tetris_Game.sh>`__ :"
+msgstr ""
+
+#: ../../list-cons.rst:48
+# 9f19604e464e4c72ae69351492cf4651
+msgid "Exemple 1. Using an *and list* to test for command-line arguments"
+msgstr ""
+
+#: ../../list-cons.rst:96
+# d336aebcbdab42c18ad49fb2ab4405e9
+msgid "Exemple 2. Another command-line arg test using an *and list*"
+msgstr ""
+
+#: ../../list-cons.rst:123
+# 7d19f7f8f7fd4c95a563a3cea8bb1830
+msgid "Of course, an *and list* can also *set* variables to a default value."
+msgstr ""
+
+#: ../../list-cons.rst:136
+# 7608d090bb7342a1aec5d24b4f8567d6
+msgid "or list"
+msgstr ""
+
+#: ../../list-cons.rst:145
+# dadad79c4a1d46c7afd7c2d61b89f5cd
+msgid "Each command executes in turn for as long as the previous command returns false . At the first true return, the command chain terminates (the first command returning true is the last one to execute). This is obviously the inverse of the \"and list\" ."
+msgstr ""
+
+#: ../../list-cons.rst:152
+# 565cc1dd8f82427798e695049cf185e3
+msgid "Exemple 3. Using *or lists* in combination with an *and list*"
+msgstr ""
+
+#: ../../list-cons.rst:191
+# 14c19224dfcb464692ccc62b16129464
+msgid "|Caution"
+msgstr ""
+
+#: ../../list-cons.rst:193
+# 311f0b8d70d140b29a3bb4a14c976d6b
+msgid "If the first command in an *or list* returns true , it ``                         will                       `` execute."
+msgstr ""
+
+#: ../../list-cons.rst:238
+# 50ec5f277d9c4c5a8491f27859c48609
+msgid "|Important"
+msgstr ""
+
+#: ../../list-cons.rst:240
+# a7e4b3f36ba646779ca70ba6a07ed0cd
+msgid "The `exit status <exit-status.html#EXITSTATUSREF>`__ of an ``                   and list                 `` or an ``                   or list                 `` is the exit status of the last command executed."
+msgstr ""
+
+#: ../../list-cons.rst:248
+# 985ae252656e40d283a07d7c939f1fab
+msgid "Clever combinations of *and* and *or* lists are possible, but the logic may easily become convoluted and require close attention to `operator precedence rules <opprecedence.html#OPPRECEDENCE1>`__ , and possibly extensive debugging."
+msgstr ""
+
+#: ../../list-cons.rst:271
+# 5cfe0c7e29f5402d99bd7f7b06da94e6
+msgid "See `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and `Example 7-4 <fto.html#BROKENLINK>`__ for illustrations of using ``             and     / or list           `` constructs to test variables."
+msgstr ""
+

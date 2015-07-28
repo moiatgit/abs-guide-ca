@@ -1,0 +1,972 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internal.rst:3
+# 21b3feffa5e548deb092d3951f061050
+msgid "XXX  Chapter 15. Internal Commands and Builtins"
+msgstr ""
+
+#: ../../internal.rst:5
+# 71877e7a9ac7450cab134a3ff3472d81
+msgid "A *builtin* is a **command** contained within the Bash tool set, literally *built in* . This is either for performance reasons -- builtins execute faster than external commands, which usually require *forking off* ` [1]  <internal.html#FTN.AEN8607>`__ a separate process -- or because a particular builtin needs direct access to the shell internals."
+msgstr ""
+
+#: ../../internal.rst:14
+# 991046b3e4f54a3e9638e2c6ae6f38ff
+msgid "When a command or the shell itself initiates (or *spawns* ) a new subprocess to carry out a task, this is called *forking* . This new process is the *child* , and the process that *forked* it off is the *parent* . While the *child process* is doing its work, the *parent process* is still executing."
+msgstr ""
+
+#: ../../internal.rst:20
+# 5f891c68e63d46c488fd5f193c52f16b
+msgid "Note that while a *parent process* gets the *process ID* of the *child process* , and can thus pass arguments to it, *the reverse is not true* . `This can create problems that are subtle and hard to track down. <gotchas.html#PARCHILDPROBREF>`__"
+msgstr ""
+
+#: ../../internal.rst:27
+# 375f37fdc36a4551822580ce21f0ee23
+msgid "Exemple 1. A script that spawns multiple instances of itself"
+msgstr ""
+
+#: ../../internal.rst:67
+# a0f26d052397435ea85cac7bfdc98a4d
+msgid "Generally, a Bash *builtin* does not fork a subprocess when it executes within a script. An external system command or filter in a script usually *will* fork a subprocess."
+msgstr ""
+
+#: ../../internal.rst:144
+# f9758d9263414ac8b34c52d595329b30
+msgid "A builtin may be a synonym to a system command of the same name, but Bash reimplements it internally. For example, the Bash **echo** command is not the same as ``      /bin/echo     `` , although their behavior is almost identical."
+msgstr ""
+
+#: ../../internal.rst:160
+# a145851a15c941d6902a928a16c13984
+msgid "Keyword"
+msgstr ""
+
+#: ../../internal.rst:162
+# 0f9bbe0d661743c0b06b9a3ee921deed
+msgid "A *keyword* is a *reserved* word, token or operator. Keywords have a special meaning to the shell, and indeed are the building blocks of the shell's syntax. As examples, *for* , *while* , *do* , and *!* are keywords. Similar to a `builtin <internal.html#BUILTINREF>`__ , a keyword is hard-coded into Bash, but unlike a *builtin* , a keyword is not in itself a command, but *a subunit of a command construct* . ` [2] <internal.html#FTN.AEN8650>`__"
+msgstr ""
+
+#: ../../internal.rst:172
+# 9750579aaa8b48b5995eb91ec6733959
+msgid "I/O"
+msgstr ""
+
+#: ../../internal.rst:175
+# e7b82c59fa6941af88e4edb27ae2d401
+msgid "echo"
+msgstr ""
+
+#: ../../internal.rst:177
+# 531453edfb93440fbc6a9d1a26ceea76
+msgid "prints (to ``         stdout        `` ) an expression or variable (see `Example 4-1 <varsubn.html#EX9>`__ )."
+msgstr ""
+
+#: ../../internal.rst:188
+# b9b4bcfb299f4c1eb9e3ba63b56b1576
+msgid "An **echo** requires the ``         -e        `` option to print escaped characters. See `Example 5-2 <escapingsection.html#ESCAPED>`__ ."
+msgstr ""
+
+#: ../../internal.rst:192
+# ebd607aa0c004f66a2188be60c4b125b
+msgid "Normally, each **echo** command prints a terminal newline, but the ``         -n        `` option suppresses this."
+msgstr ""
+
+#: ../../internal.rst:197
+#: ../../internal.rst:234
+#: ../../internal.rst:332
+#: ../../internal.rst:785
+#: ../../internal.rst:879
+#: ../../internal.rst:2011
+#: ../../internal.rst:2143
+#: ../../internal.rst:2191
+#: ../../internal.rst:2458
+#: ../../internal.rst:2470
+#: ../../internal.rst:2557
+# ba5d911a7a3144da803be97b8ab16dd4
+# e900089e23bd47ff9020e8aa16bc325a
+# 215999f4e55f4e0392b8684a3a1ca675
+# bbfa61c6c7b947eb97dac43b1fc3d245
+# 3fe925ff55104138a5d04c617e90fd08
+# 76f576231802452baa38e774bb808aef
+# d68721d1024149fb960e488c862a02d9
+# 062e13e584d84437bd4f802505aa88ea
+# 52919002431844c49e0a8ec11697be63
+# a4241c0a7c8f4c0db7205a698be91586
+# a5b6287c0c7746f1af18f6f2f6df89ea
+msgid "Note"
+msgstr ""
+
+#: ../../internal.rst:199
+# 9fcd60d6525c42a2abdcce5a60d1a97e
+msgid "An **echo** can be used to feed a sequence of commands down a pipe."
+msgstr ""
+
+#: ../../internal.rst:236
+# c1be57d2f2244e7da43525fa5a05d4fa
+msgid "An **echo** , in combination with `command substitution <commandsub.html#COMMANDSUBREF>`__ can set a variable."
+msgstr ""
+
+#: ../../internal.rst:239
+# a16e62c8b69149bdab71809a3d232f5f
+msgid "``                         a=`echo           \"HELLO\"tr A-Z a-z`                       ``"
+msgstr ""
+
+#: ../../internal.rst:241
+# 09aea7e2801d477ca5f3e75bee4bcfbf
+msgid "See also `Example 16-22 <textproc.html#LOWERCASE>`__ , `Example 16-3 <moreadv.html#EX57>`__ , `Example 16-47 <mathc.html#MONTHLYPMT>`__ , and `Example 16-48 <mathc.html#BASE>`__ ."
+msgstr ""
+
+#: ../../internal.rst:249
+# 833907db62c14a47b31aa5af09d04733
+msgid "Be aware that **echo \\`command\\`** deletes any linefeeds that the output of ``                   command                 `` generates."
+msgstr ""
+
+#: ../../internal.rst:252
+# 6128bf6b54384f96b6d2af666cb81c7f
+msgid "The `$IFS <internalvariables.html#IFSREF>`__ (internal field separator) variable normally contains \\\\n (linefeed) as one of its set of `whitespace <special-chars.html#WHITESPACEREF>`__ characters. Bash therefore splits the output of ``                   command                 `` at linefeeds into arguments to **echo** . Then **echo** outputs these arguments, separated by spaces."
+msgstr ""
+
+#: ../../internal.rst:276
+# c41498d87db944fd84849e8b45665cbe
+msgid "So, how can we embed a linefeed within an `echoed <internal.html#ECHOREF>`__ character string?"
+msgstr ""
+
+#: ../../internal.rst:334
+# abf3c750a5d74e25a81aa7dddbf65736
+msgid "This command is a shell builtin, and not the same as ``            /bin/echo           `` , although its behavior is similar."
+msgstr ""
+
+#: ../../internal.rst:366
+# 376c60426e864fc0b99e864fa6f50373
+msgid "printf"
+msgstr ""
+
+#: ../../internal.rst:368
+# 176189dca87e4c7ea301459b29224161
+msgid "The **printf** , formatted print, command is an enhanced **echo** . It is a limited variant of the *C* language ``         printf()        `` library function, and its syntax is somewhat different."
+msgstr ""
+
+#: ../../internal.rst:373
+# f584947c54b24bfbbc551dde44835190
+msgid "**printf** ``                   format-string                 `` ... ``                   parameter                 `` ..."
+msgstr ""
+
+#: ../../internal.rst:376
+# 49cfeab2a47b45388985bd8c21658847
+msgid "This is the Bash *builtin* version of the ``         /bin/printf        `` or ``         /usr/bin/printf        `` command. See the **printf** `manpage <basic.html#MANREF>`__ (of the system command) for in-depth coverage."
+msgstr ""
+
+#: ../../internal.rst:384
+#: ../../internal.rst:1135
+#: ../../internal.rst:1320
+#: ../../internal.rst:1735
+#: ../../internal.rst:2034
+# 0afb62f62a31442d89b7d6b69e2b5930
+# 7eba73a2633e4a75a5f28e9eefac77bb
+# ece74eafc0834713a5adf281a755bd3d
+# c1363df98c5042a0a7fc1d4973a04463
+# fe39f2a7519146aabd1fdd9c48fd9b39
+msgid "Caution"
+msgstr ""
+
+#: ../../internal.rst:386
+# e95dc1f87e7c424bb898dbda76dbb9d0
+msgid "Older versions of Bash may not support **printf** ."
+msgstr ""
+
+#: ../../internal.rst:393
+# 3f46cf079afa41689a7cccffe3cadfe0
+msgid "Exemple 2. *printf* in action"
+msgstr ""
+
+#: ../../internal.rst:443
+# 05efa4d881ad413ba6895ff57152434f
+msgid "Formatting error messages is a useful application of **printf**"
+msgstr ""
+
+#: ../../internal.rst:466
+# 9f66ee8dfd764f7fa5265ff833b3b1ca
+msgid "See also `Example 36-17 <assortedtips.html#PROGRESSBAR>`__ ."
+msgstr ""
+
+#: ../../internal.rst:469
+# 69ed3a93e8e143648a663c030865aa1a
+msgid "read"
+msgstr ""
+
+#: ../../internal.rst:471
+# 889e13873ec744a6be33f5d22129da87
+msgid "\"Reads\" the value of a variable from ``         stdin        `` , that is, interactively fetches input from the keyboard. The ``         -a        `` option lets **read** get array variables (see `Example 27-6 <arrays.html#EX67>`__ )."
+msgstr ""
+
+#: ../../internal.rst:480
+# 5a44f752a034459ab5238fa98100ab1b
+msgid "Exemple 3. Variable assignment, using *read*"
+msgstr ""
+
+#: ../../internal.rst:512
+# b4b2df6ef6c8431f9e008106bf779949
+msgid "A **read** without an associated variable assigns its input to the dedicated variable `$REPLY <internalvariables.html#REPLYREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:517
+# 7e5820a8404f46e59f7bf4fc3f1d88e0
+msgid "Exemple 4. What happens when *read* has no variable"
+msgstr ""
+
+#: ../../internal.rst:575
+# b067bda57acb43d8bcc793e5fe298990
+msgid "Normally, inputting a ``                   \\                 `` suppresses a newline during input to a **read** . The ``         -r        `` option causes an inputted ``                   \\                 `` to be interpreted literally."
+msgstr ""
+
+#: ../../internal.rst:583
+# bc60bd2c0da74d869d0c3e1e594c37bb
+msgid "Exemple 5. Multi-line input to *read*"
+msgstr ""
+
+#: ../../internal.rst:623
+# 69b42a370beb4d459694d7a23c601b3a
+msgid "The **read** command has some interesting options that permit echoing a prompt and even reading keystrokes without hitting **ENTER** ."
+msgstr ""
+
+#: ../../internal.rst:643
+# 10b8173b9bc24729bffd514627fd4741
+msgid "The ``         -n        `` option to **read** also allows detection of the **arrow keys** and certain of the other unusual keys."
+msgstr ""
+
+#: ../../internal.rst:648
+# 128d754d92be459ca40f40c3821c630c
+msgid "Exemple 6. Detecting the arrow keys"
+msgstr ""
+
+#: ../../internal.rst:787
+# 86c62ad934d1406cb2bd2367259c68ea
+msgid "The ``            -n           `` option to **read** will not detect the **ENTER** (newline) key."
+msgstr ""
+
+#: ../../internal.rst:793
+# 4e32595f7ae04a3fbe9cd7681a27e46d
+msgid "The ``         -t        `` option to **read** permits timed input (see `Example 9-4 <internalvariables.html#TOUT>`__ and `Example A-41 <contributed-scripts.html#QKY>`__ )."
+msgstr ""
+
+#: ../../internal.rst:797
+# b9305faf4bb64839bef4456b0c14c5fb
+msgid "The ``         -u        `` option takes the `file descriptor <io-redirection.html#FDREF>`__ of the target file."
+msgstr ""
+
+#: ../../internal.rst:800
+# 14d9cbb18def4faeba36afea100d8571
+msgid "The **read** command may also \"read\" its variable value from a file `redirected <io-redirection.html#IOREDIRREF>`__ to ``         stdin        `` . If the file contains more than one line, only the first line is assigned to the variable. If **read** has more than one parameter, then each of these variables gets assigned a successive `whitespace-delineated <special-chars.html#WHITESPACEREF>`__ string. Caution!"
+msgstr ""
+
+#: ../../internal.rst:811
+# f19669db2e6042fd9a4df50b919b4abf
+msgid "Exemple 7. Using *read* with `file redirection <io-redirection.html#IOREDIRREF>`__"
+msgstr ""
+
+#: ../../internal.rst:881
+# 1fcf1311609b4e888d3f3f8a4d7990a9
+msgid "`Piping <special-chars.html#PIPEREF>`__ output to a *read* , using `echo <internal.html#ECHOREF>`__ to set variables `will fail <gotchas.html#BADREAD0>`__ ."
+msgstr ""
+
+#: ../../internal.rst:885
+# 1cdb2f45198d43f89a8fe6edf77100ba
+msgid "Yet, piping the output of `cat <basic.html#CATREF>`__ *seems* to work."
+msgstr ""
+
+#: ../../internal.rst:901
+# 9d42a56372eb438b8a9a575935802715
+msgid "Exemple 7. Problems reading from a pipe"
+msgstr ""
+
+#: ../../internal.rst:953
+# b4cb6991752d4b8ab722a6421ba17dc3
+msgid "The *gendiff* script, usually found in ``            /usr/bin           `` on many Linux distros, pipes the output of `find <moreadv.html#FINDREF>`__ to a *while read* construct."
+msgstr ""
+
+#: ../../internal.rst:1096
+#: ../../internal.rst:1429
+#: ../../internal.rst:1725
+#: ../../internal.rst:2094
+# c957d8ffa73b4b07b8489da19f2ec460
+# 06bd3d95a8374429ad4eae5cc420d7c2
+# 4bb492e9682e48f5b8c042ca74be8a1d
+# 7b6c85b89477401cb4b049b5c0dba604
+msgid "Tip"
+msgstr ""
+
+#: ../../internal.rst:1098
+# 3e79f57342184a219a85b2d8dc29f4e3
+msgid "It is possible to *paste* text into the input field of a *read* (but *not* multiple lines!). See `Example A-38 <contributed-scripts.html#PADSW>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1108
+# e3b4fe15ba704b5ca95ed851c3dd0de2
+msgid "Filesystem"
+msgstr ""
+
+#: ../../internal.rst:1111
+# 0cf10b74b99e45b4bcd1884fb58f92b9
+msgid "cd"
+msgstr ""
+
+#: ../../internal.rst:1113
+# b788290316c846a384bc75b07c3ae3ed
+msgid "The familiar **cd** change directory command finds use in scripts where execution of a command requires being in a specified directory."
+msgstr ""
+
+#: ../../internal.rst:1124
+# d6d9988476464b5da3b0937aa321632e
+msgid "[from the `previously cited <special-chars.html#COXEX>`__ example by Alan Cox]"
+msgstr ""
+
+#: ../../internal.rst:1127
+# 3616c5de0d7844cfba8f5a315a869934
+msgid "The ``         -P        `` (physical) option to **cd** causes it to ignore symbolic links."
+msgstr ""
+
+#: ../../internal.rst:1130
+# 7d737f0da39d4896b844b43f8b90306d
+msgid "**cd -** changes to `$OLDPWD <internalvariables.html#OLDPWD>`__ , the previous working directory."
+msgstr ""
+
+#: ../../internal.rst:1137
+# 6e80abbe4709452b8adcc98b186e9ce6
+msgid "The **cd** command does not function as expected when presented with two forward slashes."
+msgstr ""
+
+#: ../../internal.rst:1171
+# a7272c203f2446e7bbc44ac15f7256f8
+msgid "pwd"
+msgstr ""
+
+#: ../../internal.rst:1173
+# 269715a780334135b3f85805d108dc53
+msgid "Print Working Directory. This gives the user's (or script's) current directory (see `Example 15-9 <internal.html#EX37>`__ ). The effect is identical to reading the value of the builtin variable `$PWD <internalvariables.html#PWDREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1179
+# b56f17c616e84315b1e672487ecda9da
+msgid "pushd , **popd** , **dirs**"
+msgstr ""
+
+#: ../../internal.rst:1181
+# 0c146453377e474bba51b7559de4ba25
+msgid "This command set is a mechanism for bookmarking working directories, a means of moving back and forth through directories in an orderly manner. A pushdown `stack <internalvariables.html#STACKDEFREF>`__ is used to keep track of directory names. Options allow various manipulations of the directory stack."
+msgstr ""
+
+#: ../../internal.rst:1187
+# db1a6597fbc34e6d892ef4cc744f3cbb
+msgid "``                   pushd           dir-name                 `` pushes the path ``                   dir-name                 `` onto the directory stack (to the *top* of the stack) and simultaneously changes the current working directory to ``                   dir-name                 ``"
+msgstr ""
+
+#: ../../internal.rst:1193
+# e7b3cbd039ee45bba1956e54e249285f
+msgid "**popd** removes (pops) the top directory path name off the directory stack and simultaneously changes the current working directory to the directory now at the *top* of the stack."
+msgstr ""
+
+#: ../../internal.rst:1197
+# 3640c136bb474ed487040f5a37ae9636
+msgid "**dirs** lists the contents of the directory stack (compare this with the `$DIRSTACK <internalvariables.html#DIRSTACKREF>`__ variable). A successful **pushd** or **popd** will automatically invoke **dirs** ."
+msgstr ""
+
+#: ../../internal.rst:1202
+# 5d71aca9ad7d4e91b39e65e5b9922398
+msgid "Scripts that require various changes to the current working directory without hard-coding the directory name changes can make good use of these commands. Note that the implicit ``         $DIRSTACK        `` array variable, accessible from within a script, holds the contents of the directory stack."
+msgstr ""
+
+#: ../../internal.rst:1210
+# c259915553744a7dbebd234098edad7b
+msgid "Exemple 8. Changing the current working directory"
+msgstr ""
+
+#: ../../internal.rst:1248
+# fd41a855d9284706b85b09dc8f526670
+msgid "Variables"
+msgstr ""
+
+#: ../../internal.rst:1251
+# 97572ac3a60f4c748068a8d865076836
+msgid "let"
+msgstr ""
+
+#: ../../internal.rst:1253
+# c00d5a9443434012b1d50c71a7d414c3
+msgid "The **let** command carries out *arithmetic* operations on variables. ` [3]  <internal.html#FTN.AEN9009>`__ In many cases, it functions as a less complex version of `expr <moreadv.html#EXPRREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1260
+# 3682afdb65e348599977aea7eb18eb12
+msgid "Exemple 9. Letting *let* do arithmetic."
+msgstr ""
+
+#: ../../internal.rst:1322
+# 3dcb1272cf514587ab1613ca9f677c4e
+msgid "The *let* command can, in certain contexts, return a surprising `exit status <exit-status.html#EXITSTATUSREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1418
+# dd2d68e42efa46ce817c4377820faa98
+msgid "eval"
+msgstr ""
+
+#: ../../internal.rst:1420
+# e30fe028ba32434c9fe210c7b858fa3e
+msgid "``                   eval arg1 [arg2] ... [argN]                 ``"
+msgstr ""
+
+#: ../../internal.rst:1422
+# 7cc03dbe5faa42e99ec1d9bfe5b6bd13
+msgid "Combines the arguments in an expression or list of expressions and ``                   evaluates                 `` them. Any variables within the expression are expanded. The net result is to **convert a string into a command** ."
+msgstr ""
+
+#: ../../internal.rst:1431
+# 2d7545ad539d483db505aeeb296dbda1
+msgid "The **eval** command can be used for code generation from the command-line or within a script."
+msgstr ""
+
+#: ../../internal.rst:1449
+# 850669a3d2654d24a0984c3c9c4d3b77
+msgid "Each invocation of *eval* forces a re- *evaluation* of its arguments."
+msgstr ""
+
+#: ../../internal.rst:1472
+# c8045d0697b743c3ac2154045bdc3d57
+msgid "Exemple 10. Showing the effect of *eval*"
+msgstr ""
+
+#: ../../internal.rst:1523
+# 2774c1ff7b3547d3837caa036ddc5f51
+msgid "Exemple 11. Using *eval* to select among variables"
+msgstr ""
+
+#: ../../internal.rst:1569
+# b84ca638dba44abcab6771d95abe8904
+msgid "Exemple 12. *Echoing* the *command-line parameters*"
+msgstr ""
+
+#: ../../internal.rst:1619
+# 1b0faa546f9e49a9b681f823144ac45a
+msgid "Exemple 13. Forcing a log-off"
+msgstr ""
+
+#: ../../internal.rst:1665
+# 2a43bfc0e02149f287346c7895fda656
+msgid "Exemple 14. A version of *rot13*"
+msgstr ""
+
+#: ../../internal.rst:1696
+# 19ee5266df5b4b67958c31719afd5051
+msgid "Here is another example of using *eval* to *evaluate* a complex expression, this one from an earlier version of YongYe's `Tetris game script <https://github.com/yongye/shell/blob/master/Tetris_Game.sh>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1709
+# 1a5e7cd2bd6c445f98cd0e723e2cc6e0
+msgid "`Example A-53 <contributed-scripts.html#SAMORSE>`__ uses *eval* to convert `array <arrays.html#ARRAYREF>`__ elements into a command list."
+msgstr ""
+
+#: ../../internal.rst:1713
+# 6b54ace56eee4e95839a6b812712e446
+msgid "The *eval* command occurs in the older version of `indirect referencing <ivr.html#IVRREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1727
+# ed05e5cb51394f3ba932f88ff12433a1
+msgid "The *eval* command can be used to `parameterize *brace expansion* <bashver3.html#BRACEEXPREF3>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1737
+# fd54d4c458c34b39b7ffe420b85f5190
+msgid "The **eval** command can be risky, and normally should be avoided when there exists a reasonable alternative. An ``                         eval           $COMMANDS                       `` executes the contents of ``                         COMMANDS                       `` , which may contain such unpleasant surprises as **rm -rf \\*** . Running an **eval** on unfamiliar code written by persons unknown is living dangerously."
+msgstr ""
+
+#: ../../internal.rst:1750
+# 0b92b6ca45ff44ba955fa5a246363ca3
+msgid "set"
+msgstr ""
+
+#: ../../internal.rst:1752
+# 237f6b4c231745829d1c02a301a97fba
+msgid "The **set** command changes the value of internal script variables/options. One use for this is to toggle `option flags <options.html#OPTIONSREF>`__ which help determine the behavior of the script. Another application for it is to reset the `positional parameters <internalvariables.html#POSPARAMREF>`__ that a script sees as the result of a command ( ``                   set           `command`                 `` ). The script can then parse the `fields <special-chars.html#FIELDREF>`__ of the command output."
+msgstr ""
+
+#: ../../internal.rst:1764
+# 75944967056944688e7c84e7c001c424
+msgid "Exemple 15. Using *set* with positional parameters"
+msgstr ""
+
+#: ../../internal.rst:1808
+# e77fdde8b823491e9b7fb57dccd942b8
+msgid "More fun with positional parameters."
+msgstr ""
+
+#: ../../internal.rst:1812
+# 80ec8c4a3f584388bc982de2ad3e5eb1
+msgid "Exemple 16. Reversing the positional parameters"
+msgstr ""
+
+#: ../../internal.rst:1886
+# b52dfc9bbd4f456f9a30ac981fe8bc47
+msgid "Invoking **set** without any options or arguments simply lists all the `environmental <othertypesv.html#ENVREF>`__ and other variables that have been initialized."
+msgstr ""
+
+#: ../../internal.rst:1906
+# 94e6fee9fa214673b3a1b270a23e97fc
+msgid "Using **set** with the ``         --        `` option explicitly assigns the contents of a variable to the positional parameters. If no variable follows the ``         --        `` it *unsets* the positional parameters."
+msgstr ""
+
+#: ../../internal.rst:1913
+# 83d6f2b6ba764ce8bdd5cedc988ba34e
+msgid "Exemple 17. Reassigning the positional parameters"
+msgstr ""
+
+#: ../../internal.rst:1960
+# 2d3388130733428cb28ab76a5ea56258
+msgid "See also `Example 11-2 <loops1.html#EX22A>`__ and `Example 16-56 <extmisc.html#EX33A>`__ ."
+msgstr ""
+
+#: ../../internal.rst:1964
+# 5a5cc5b2b3e04d9e8090d84eddcdf723
+msgid "unset"
+msgstr ""
+
+#: ../../internal.rst:1966
+# ccd3175df00e454c900aca99a2da653c
+msgid "The **unset** command deletes a shell variable, effectively setting it to *null* . Note that this command does not affect positional parameters."
+msgstr ""
+
+#: ../../internal.rst:1983
+# 31cc1302161e4cf995b5a8fb7939c973
+msgid "Exemple 18. \"Unsetting\" a variable"
+msgstr ""
+
+#: ../../internal.rst:2013
+# 8d6326e675c04d6cb01460f5697407cb
+msgid "In most contexts, an *undeclared* variable and one that has been *unset* are equivalent. However, the `${parameter:-default} <parameter-substitution.html#UNDDR>`__ parameter substitution construct can distinguish between the two."
+msgstr ""
+
+#: ../../internal.rst:2022
+# 5002ec6cd8a249babddf2e85ff879d9a
+msgid "export"
+msgstr ""
+
+#: ../../internal.rst:2025
+# 37e1f1d5fff9454b8146373ac469b927
+msgid "The **export** ` [4]  <internal.html#FTN.AEN9199>`__ command makes available variables to all child processes of the running script or shell. One important use of the **export** command is in `startup files <files.html#FILESREF1>`__ , to initialize and make accessible `environmental variables <othertypesv.html#ENVREF>`__ to subsequent user processes."
+msgstr ""
+
+#: ../../internal.rst:2036
+# 2fc5c0fffec041d8a724465552d73507
+msgid "Unfortunately, `there is no way to export variables back to the parent process <gotchas.html#PARCHILDPROBREF>`__ , to the process that called or invoked the script or shell."
+msgstr ""
+
+#: ../../internal.rst:2045
+# 9eb2f556e05f404ab75f2b2036dc61ac
+msgid "Exemple 20. Using *export* to pass a variable to an embedded *awk* script"
+msgstr ""
+
+#: ../../internal.rst:2096
+# 39c5b04269a04098a370aff342c60b58
+msgid "It is possible to initialize and export variables in the same operation, as in **export var1=xxx** ."
+msgstr ""
+
+#: ../../internal.rst:2099
+# 6cee73d09550434ab74057b96d171bb4
+msgid "However, as Greg Keraunen points out, in certain situations this may have a different effect than setting a variable, then exporting it."
+msgstr ""
+
+#: ../../internal.rst:2145
+# b95cf076b09b486183c227cad1de8145
+msgid "A variable to be exported may require special treatment. See `Example M-2 <sample-bashrc.html#BASHPROF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2152
+# 807c5dcbf5e34053a3dfe1e1efd7317e
+msgid "declare , **typeset**"
+msgstr ""
+
+#: ../../internal.rst:2154
+# bdbd19d6291246f9b24ce0e789a00575
+msgid "The `declare <declareref.html>`__ and `typeset <declareref.html>`__ commands specify and/or restrict properties of variables."
+msgstr ""
+
+#: ../../internal.rst:2158
+# 409a4202c0f1487887cdac714b52c0b1
+msgid "readonly"
+msgstr ""
+
+#: ../../internal.rst:2160
+# 22bf9ee47ae14abc91ece20286734e76
+msgid "Same as `declare -r <declareref.html>`__ , sets a variable as read-only, or, in effect, as a constant. Attempts to change the variable fail with an error message. This is the shell analog of the *C* language **const** type qualifier."
+msgstr ""
+
+#: ../../internal.rst:2166
+# fbf03edf62004569997c352209df116e
+msgid "getopts"
+msgstr ""
+
+#: ../../internal.rst:2168
+# 10035a596a4740199aa01765f8d156a3
+msgid "This powerful tool parses command-line arguments passed to the script. This is the Bash analog of the `getopt <extmisc.html#GETOPTY>`__ external command and the *getopt* library function familiar to *C* programmers. It permits passing and concatenating multiple options ` [5]  <internal.html#FTN.AEN9289>`__ and associated arguments to a script (for example ``                   scriptname -abc -e           /usr/local                 `` )."
+msgstr ""
+
+#: ../../internal.rst:2177
+# 98d21ceecd6f434a962b2c1e46e05755
+msgid "The **getopts** construct uses two implicit variables. ``         $OPTIND        `` is the argument pointer ( *OPTion INDex* ) and ``         $OPTARG        `` ( *OPTion ARGument* ) the (optional) argument attached to an option. A colon following the option name in the declaration tags that option as having an associated argument."
+msgstr ""
+
+#: ../../internal.rst:2184
+# 38e97087b10e4b7a8863284bc65747a5
+msgid "A **getopts** construct usually comes packaged in a `while loop <loops1.html#WHILELOOPREF>`__ , which processes the options and arguments one at a time, then increments the implicit ``         $OPTIND        `` variable to point to the next."
+msgstr ""
+
+#: ../../internal.rst:2193
+# edd1f6960c364b5d9d003b18f3fa394e
+msgid "The arguments passed from the command-line to the script must be preceded by a dash ( ``              -             `` ). It is the prefixed ``              -             `` that lets **getopts** recognize command-line arguments as *options* . In fact, **getopts** will not process arguments without the prefixed ``              -             `` , and will terminate option processing at the first argument encountered lacking them."
+msgstr ""
+
+#: ../../internal.rst:2201
+# ee648f45ec784f6b893d54b04206aa62
+msgid "The **getopts** template differs slightly from the standard `while loop <loops1.html#WHILELOOPREF>`__ , in that it lacks condition brackets."
+msgstr ""
+
+#: ../../internal.rst:2205
+# 48a54ff72cb543e5a016a5b7712dee29
+msgid "The **getopts** construct is a highly functional replacement for the traditional `getopt <extmisc.html#GETOPTY>`__ external command."
+msgstr ""
+
+#: ../../internal.rst:2239
+# 2aa063489ba149d5b89633452eea3346
+msgid "Exemple 21. Using *getopts* to read the options/arguments passed to a script"
+msgstr ""
+
+#: ../../internal.rst:2313
+# 96b21b849c2e4dd1ad626c6e190aef36
+msgid "Script Behavior"
+msgstr ""
+
+#: ../../internal.rst:2318
+# ada8f25622664f0bb598d06db8e6e6c3
+msgid "source"
+msgstr ""
+
+#: ../../internal.rst:2320
+# 11961208fa074b5a8495a80a09d64618
+msgid "També anomenat comanda punt o *dot command*."
+msgstr ""
+
+#: ../../internal.rst:2322
+# 05e1742105294389a559bb32f80ceba0
+msgid "Quan invoquem aquesta comanda des de la línia de comandes, s'executa un guió. En canvi, dins d'un guió, ``source nomfitxer`` carrega el fitxer *nomfitxer* de manera que el contingut d'aquest fitxer passa a formar part del guió. Es diu que el guió *importa* el codi guardat a *nomfitxer*."
+msgstr ""
+
+#: ../../internal.rst:2328
+# b70d359fac4340039931296926d4d91a
+msgid "Aquesta importació, en anglés se la coneix com a *sourcing* i implica el mateix resultat que la directiva ``#include`` en un programa C. És a dir, el resultat final equival a si el contingut de *nomfitxer* hagués estat escrit directament en el guió que l'importa."
+msgstr ""
+
+#: ../../internal.rst:2333
+# 134bd9e368cc4b9ea742f9ac790083ca
+msgid "Un possible ús és per permetre que més d'un guió comparteixi un matex fitxer de dades o una mateixa biblioteca de funcions."
+msgstr ""
+
+#: ../../internal.rst:2338
+# 571731522f704e1fbe316e225e6213ea
+msgid "Exemple 19. \"Including\" a data file"
+msgstr ""
+
+#: ../../internal.rst:2370
+# 45157a1797cd412cb82a75231d24f269
+msgid "File ``          data-file         `` for `Example 15-22 <internal.html#EX38>`__ , above. Must be present in same directory."
+msgstr ""
+
+#: ../../internal.rst:2416
+# 7bda69a217934c7a81f3b496938c7305
+msgid "If the *sourced* file is itself an executable script, then it will run, then return control to the script that called it. A *sourced* executable script may use a `return <complexfunct.html#RETURNREF>`__ for this purpose."
+msgstr ""
+
+#: ../../internal.rst:2421
+# 507644094f6c48a492c0daa6148465af
+msgid "Arguments may be (optionally) passed to the *sourced* file as `positional parameters <othertypesv.html#POSPARAMREF1>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2431
+# 491ce582b5be43ebad3535f42607f5e3
+msgid "It is even possible for a script to *source* itself, though this does not seem to have any practical applications."
+msgstr ""
+
+#: ../../internal.rst:2438
+# 1163d28cf6bc4fadacb59b80e4e0e9dd
+msgid "Exemple 20. Un guió (inutil) que s'autocarrega"
+msgstr ""
+
+#: ../../internal.rst:2446
+# 0990dfd4cb954f5197b7d8c794d81470
+msgid "exit"
+msgstr ""
+
+#: ../../internal.rst:2448
+# 36f722ec5b3040c1921cfc6fe3d2185f
+msgid "Unconditionally terminates a script. ` [6] <internal.html#FTN.AEN9393>`__ The **exit** command may optionally take an integer argument, which is returned to the shell as the `exit status <exit-status.html#EXITSTATUSREF>`__ of the script. It is good practice to end all but the simplest scripts with an ``                   exit 0                 `` , indicating a successful run."
+msgstr ""
+
+#: ../../internal.rst:2460
+# ddc18b237a1c4f8ab64823a1b3ffe17e
+msgid "If a script terminates with an **exit** lacking an argument, the exit status of the script is the exit status of the last command executed in the script, not counting the **exit** . This is equivalent to an **exit $?** ."
+msgstr ""
+
+#: ../../internal.rst:2472
+# da5ff815eb474341b6fe9a2a30520ff3
+msgid "An **exit** command may also be used to terminate a `subshell <subshells.html#SUBSHELLSREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2479
+# 701a0b14ac864a2b8119810b2d34bd58
+msgid "exec"
+msgstr ""
+
+#: ../../internal.rst:2481
+# 8c5329f818284027b5b5f390422c08df
+msgid "This shell builtin replaces the current process with a specified command. Normally, when the shell encounters a command, it `forks off <internal.html#FORKREF>`__ a child process to actually execute the command. Using the **exec** builtin, the shell does not fork, and the command *exec* 'ed replaces the shell. When used in a script, therefore, it forces an exit from the script when the **exec** 'ed command terminates. ` [7] <internal.html#FTN.AEN9425>`__"
+msgstr ""
+
+#: ../../internal.rst:2492
+# 3239c43e07c54e768c0a31200d787072
+msgid "Exemple 21. Effects of *exec*"
+msgstr ""
+
+#: ../../internal.rst:2517
+# bb39af24d41c4bac99ca22c4007ee02d
+msgid "Exemple 22. A script that *exec's* itself"
+msgstr ""
+
+#: ../../internal.rst:2549
+# 1e5136b75f394c30aa01ffa09264bdba
+msgid "An **exec** also serves to `reassign file descriptors <x17974.html#USINGEXECREF>`__ . For example, ``                   exec           <zzz-file                 `` replaces ``         stdin        `` with the file ``         zzz-file        `` ."
+msgstr ""
+
+#: ../../internal.rst:2559
+# 0279ebdbfffe4c22af3f3883e9d9bf73
+msgid "The ``            -exec           `` option to `find <moreadv.html#FINDREF>`__ is ``                         not                       `` the same as the **exec** shell builtin."
+msgstr ""
+
+#: ../../internal.rst:2568
+# b9a19531caf84656ba318ea77e8c32ba
+msgid "shopt"
+msgstr ""
+
+#: ../../internal.rst:2570
+# 279445d2dccf4815b925ea284772de8b
+msgid "This command permits changing *shell options* on the fly (see `Example 25-1 <aliases.html#AL>`__ and `Example 25-2 <aliases.html#UNAL>`__ ). It often appears in the Bash `startup files <files.html#FILESREF1>`__ , but also has its uses in scripts. Needs `version 2 <bashver2.html#BASH2REF>`__ or later of Bash."
+msgstr ""
+
+#: ../../internal.rst:2590
+# 279c21472b234e96bfdd2ebbfa3a764e
+msgid "caller"
+msgstr ""
+
+#: ../../internal.rst:2592
+# c0f4031328ec428eb781dbd8ba16954e
+msgid "Putting a **caller** command inside a `function <functions.html#FUNCTIONREF>`__ echoes to ``         stdout        `` information about the *caller* of that function."
+msgstr ""
+
+#: ../../internal.rst:2619
+# d77c57f27524465e8625752dbc48d4e0
+msgid "A **caller** command can also return *caller* information from a script `sourced <internal.html#SOURCEREF>`__ within another script. Analogous to a function, this is a \"subroutine call.\""
+msgstr ""
+
+#: ../../internal.rst:2623
+# 94a39ac48cba47b08c4db3eaa1d9b6b1
+msgid "You may find this command useful in debugging."
+msgstr ""
+
+#: ../../internal.rst:2628
+# afe1323bd5d94177907030b8179ea551
+msgid "Commands"
+msgstr ""
+
+#: ../../internal.rst:2631
+# 1c500cc407f24f1b96336896b817e128
+msgid "true"
+msgstr ""
+
+#: ../../internal.rst:2633
+# 6932a2f54a7c449597b724fee47e5e6a
+msgid "A command that returns a successful ( zero ) `exit status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else."
+msgstr ""
+
+#: ../../internal.rst:2662
+# f4f5fb0c68d34387bd799a135a021d2c
+msgid "false"
+msgstr ""
+
+#: ../../internal.rst:2664
+# 8fc72648417e47f4b6e163bbf58d1b5f
+msgid "A command that returns an unsuccessful `exit status <exit-status.html#EXITSTATUSREF>`__ , but does nothing else."
+msgstr ""
+
+#: ../../internal.rst:2704
+# 3144989955764bcdba613b84e5431ff8
+msgid "type [cmd]"
+msgstr ""
+
+#: ../../internal.rst:2706
+# 91dd68e1208b407ab613447c96be9db2
+msgid "Similar to the `which <filearchiv.html#WHICHREF>`__ external command, **type cmd** identifies \"cmd.\" Unlike **which** , **type** is a Bash builtin. The useful ``         -a        `` option to **type** identifies ``                   keywords                 `` and ``                   builtins                 `` , and also locates system commands with identical names."
+msgstr ""
+
+#: ../../internal.rst:2729
+# 5f5be61c1eb546599507196466807346
+msgid "The **type** command can be useful for `testing whether a certain command exists <special-chars.html#DEVNULLREDIRECT>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2733
+# e3c4d185a98f47d0a7864a79596c79e7
+msgid "hash [cmds]"
+msgstr ""
+
+#: ../../internal.rst:2735
+# 2aeda44b968242298d78d18d7e31ab26
+msgid "Records the *path* name of specified commands -- in the shell *hash table* ` [8]  <internal.html#FTN.AEN9591>`__ -- so the shell or script will not need to search the `$PATH <internalvariables.html#PATHREF>`__ on subsequent calls to those commands. When **hash** is called with no arguments, it simply lists the commands that have been hashed. The ``         -r        `` option resets the hash table."
+msgstr ""
+
+#: ../../internal.rst:2744
+# 4ead73c282bf4fbeb866ed5a3b9484a4
+msgid "bind"
+msgstr ""
+
+#: ../../internal.rst:2747
+# 82abe232bbef42cca5d3d768573a097f
+msgid "<internal.html#FTN.AEN9621>`__ key bindings."
+msgstr ""
+
+#: ../../internal.rst:2750
+# 1934afa204394bccacf9cfb57f2b1ef7
+msgid "help"
+msgstr ""
+
+#: ../../internal.rst:2752
+# 9e3339d3242d4b97801a94b91edda9b2
+msgid "Gets a short usage summary of a shell builtin. This is the counterpart to `whatis <filearchiv.html#WHATISREF>`__ , but for builtins. The display of *help* information got a much-needed update in the `version 4 release <bashver4.html#BASH4REF>`__ of Bash."
+msgstr ""
+
+#: ../../internal.rst:2770
+# e42d0657a4134699ad27afa89a4495fe
+msgid "Anotacions"
+msgstr ""
+
+#: ../../internal.rst:2771
+# 9e14e2ce4c274b778ab95ce9c4d49734
+msgid "` [1]  <internal.html#AEN8607>`__"
+msgstr ""
+
+#: ../../internal.rst:2773
+# 9528e6e53d764a1ea2d72e7b52708e17
+msgid "As Nathan Coulter points out, \"while forking a process is a low-cost operation, executing a new program in the newly-forked child process adds more overhead.\""
+msgstr ""
+
+#: ../../internal.rst:2778
+# 374278ea446a4f36b25c610c3bcf5640
+msgid "` [2]  <internal.html#AEN8650>`__"
+msgstr ""
+
+#: ../../internal.rst:2780
+# 692478421ccd47bc98c11b3ea8c463b5
+msgid "An exception to this is the `time <timedate.html#TIMREF>`__ command, listed in the official Bash documentation as a keyword ( \"reserved word\" )."
+msgstr ""
+
+#: ../../internal.rst:2785
+# 0aa0231d33844acc91d7c3b9eb951960
+msgid "` [3]  <internal.html#AEN9009>`__"
+msgstr ""
+
+#: ../../internal.rst:2787
+# 27c0ee530acd4ca79cd6b74e8684e7ce
+msgid "Note that *let* `cannot be used for setting *string* variables. <gotchas.html#LETBAD>`__"
+msgstr ""
+
+#: ../../internal.rst:2791
+# 6b0bbd17f6cb485d9d8f736c30189ab5
+msgid "` [4]  <internal.html#AEN9199>`__"
+msgstr ""
+
+#: ../../internal.rst:2793
+# a971d1b6833645d2a4073c1dd80d622a
+msgid "To *Export* information is to make it available in a more general context. See also `scope <subshells.html#SCOPEREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2797
+# 7dbef8195a0c40f4ad88b5dd569cadb3
+msgid "` [5]  <internal.html#AEN9289>`__"
+msgstr ""
+
+#: ../../internal.rst:2799
+# c7bf545dfbb248f8a8e709b9798458ab
+msgid "An *option* is an argument that acts as a flag, switching script behaviors on or off. The argument associated with a particular option indicates the behavior that the option (flag) switches on or off."
+msgstr ""
+
+#: ../../internal.rst:2804
+# 79bb9eda651a45a484429ceecbb69fc3
+msgid "` [6]  <internal.html#AEN9393>`__"
+msgstr ""
+
+#: ../../internal.rst:2806
+# d897d09c32454b649ec658b24903ea60
+msgid "Technically, an **exit** only terminates the process (or shell) in which it is running, *not* the *parent process* ."
+msgstr ""
+
+#: ../../internal.rst:2810
+# 4cf6c682b3af478ca815d6db1d5f0d97
+msgid "` [7]  <internal.html#AEN9425>`__"
+msgstr ""
+
+#: ../../internal.rst:2812
+# 01b47970145a4a65a3bcefabb1e7c96f
+msgid "Unless the **exec** is used to `reassign file descriptors <x17974.html#USINGEXECREF>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2816
+# 042f595fd4c548ee8cad304a8c469ac8
+msgid "` [8]  <internal.html#AEN9591>`__"
+msgstr ""
+
+#: ../../internal.rst:2818
+# 4959f58c2adc4c1c9b5b716c8ff2f794
+msgid "*Hashing* is a method of creating lookup keys for data stored in a table. The *data items themselves* are \"scrambled\" to create keys, using one of a number of simple mathematical *algorithms* (methods, or recipes)."
+msgstr ""
+
+#: ../../internal.rst:2823
+# f1e1f6921a7b4f128a01219c4c664bb8
+msgid "An advantage of *hashing* is that it is fast. A disadvantage is that *collisions* -- where a single key maps to more than one data item -- are possible."
+msgstr ""
+
+#: ../../internal.rst:2827
+# 89d0080fda8540628871c4a0f2950b91
+msgid "For examples of hashing see `Example A-20 <contributed-scripts.html#HASHLIB>`__ and `Example A-21 <contributed-scripts.html#HASHEXAMPLE>`__ ."
+msgstr ""
+
+#: ../../internal.rst:2832
+# fb0a65f24ab84409bae9089a1eebf095
+msgid "` [9]  <internal.html#AEN9621>`__"
+msgstr ""
+
+#: ../../internal.rst:2834
+# 8b4ac974579644fdbcbaa0af6c588af9
+msgid "The *readline* library is what Bash uses for reading input in an interactive shell."
+msgstr ""
+

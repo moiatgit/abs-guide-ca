@@ -1,0 +1,589 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../biblio.rst:3
+# 638958f4940b457cad8e013c36ad62ba
+msgid "XXX  Bibliografia"
+msgstr ""
+
+#: ../../biblio.rst:9
+# dd00bd6924ae4b0fadc3b44925d92919
+msgid "**"
+msgstr ""
+
+#: ../../biblio.rst:11
+# b6d744005a9e4e6e94463920225e7bc1
+msgid "*Those who do not understand UNIX are condemned to reinvent it, poorly.*"
+msgstr ""
+
+#: ../../biblio.rst:13
+# 92b6741629fa42ea95fcb55cfba91b5b
+msgid "*--Henry Spencer*"
+msgstr ""
+
+#: ../../biblio.rst:30
+# ef6661db5f54463c98f2111f166e7f20
+msgid "and Viruses* , ACM Press, 1990, 0-201-53067-8."
+msgstr ""
+
+#: ../../biblio.rst:40
+# 3e3949012d314e94bbb0fded1799ffa5
+msgid "This compendium contains a couple of articles on shell script viruses."
+msgstr ""
+
+#: ../../biblio.rst:42
+#: ../../biblio.rst:75
+#: ../../biblio.rst:109
+#: ../../biblio.rst:143
+#: ../../biblio.rst:175
+#: ../../biblio.rst:208
+#: ../../biblio.rst:242
+#: ../../biblio.rst:275
+#: ../../biblio.rst:307
+#: ../../biblio.rst:339
+#: ../../biblio.rst:371
+#: ../../biblio.rst:403
+#: ../../biblio.rst:439
+#: ../../biblio.rst:471
+#: ../../biblio.rst:503
+#: ../../biblio.rst:538
+#: ../../biblio.rst:570
+#: ../../biblio.rst:606
+#: ../../biblio.rst:638
+#: ../../biblio.rst:672
+#: ../../biblio.rst:703
+#: ../../biblio.rst:735
+#: ../../biblio.rst:772
+# bdb5b92710e14a13959aaba3df3d95a2
+# 5be41d5555eb46958754a6a1950c7843
+# 5f054b6b0520438e898129e791533127
+# d2b42a2101c9450b8f46128b4d33c464
+# 8830b897fd204ac39f8d86189d81ff08
+# 0f45af48a8b149cda780662a308b89c2
+# 70f787c74bb4427b8d7db8d5ea587d2d
+# 270a650435464a2bb97ce2883c504cf6
+# 35eb1731f3ce427da1ddb3b2d9fed2a7
+# 55c4840c666f45c9a1039f3d80027ba5
+# 31aaa9c79c8a43bd8f81884a1bde3e45
+# e1c948cf1dba4a5ab6920e7379446748
+# b539c2e8f4d344a786c4d2e351ae128f
+# bbc7cfd185d044c8bf2a5a3f27608118
+# 5cd688468463460ca04454250679728d
+# 768c74bffa274555808d9a5952668d5d
+# c2ce263ad70b4e7f909a90fbf29f767d
+# 06697f5345094d498cfd5ae02e1bb98c
+# 8f291a634ac147268d0f1d1d526d518e
+# b79ebe757f064ada98a68ac0ca456205
+# 8e3ea42190d346bbb73d8112971d46d7
+# 60759a752d2049d99016fb45a05b3536
+# 0ae72d52753141d8ad82fcbbeb9fca88
+msgid "\\*"
+msgstr ""
+
+#: ../../biblio.rst:61
+# 15e9fab7b08347408409a306712d9ce0
+msgid "Bash <http://www.samspublishing.com/title/0672326426>`__* , 1st edition, Sams Publishing (Pearson), 2004, 0672326426."
+msgstr ""
+
+#: ../../biblio.rst:72
+# 47cb00a7955a49039844c894440c4e42
+msgid "Covers much of the same material as the *ABS Guide* , though in a different style."
+msgstr ""
+
+#: ../../biblio.rst:94
+# 719516fb7eaa4576912ef22d797c537f
+msgid "Sed <http://www.sed-book.com/>`__* , 1st edition, 2013."
+msgstr ""
+
+#: ../../biblio.rst:104
+# 1aacdbcb79aa49f089459ac69625b507
+msgid "This ebook is an excellent introduction to *sed* . Rather than being a conversion from a printed volume, it was specifically designed and formatted for viewing on an ebook reader. Well-written, informative, and useful as a reference as well as a tutorial. Highly recommended."
+msgstr ""
+
+#: ../../biblio.rst:128
+# ddefa49aa8a04348bac3df6f44486be7
+msgid "O'Reilly and Associates, 1997, 1-156592-225-5."
+msgstr ""
+
+#: ../../biblio.rst:138
+# d3641e72639f4e8cabdf0703a9ecac11
+msgid "Unfolding the full power of shell scripting requires at least a passing familiarity with `*sed* and *awk* <sedawk.html#SEDREF>`__ . This is the classic tutorial. It includes an excellent introduction to *Regular Expressions* . Recommended."
+msgstr ""
+
+#: ../../biblio.rst:162
+# 25b38d1726aa4617acb0ff68c92838c0
+msgid "Associates, 2002, 0-596-00289-0."
+msgstr ""
+
+#: ../../biblio.rst:172
+# e9ad01c2a0354045bb15b96b62047557
+msgid "Still the best all-around reference on `Regular Expressions <regexp.html#REGEXREF>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:194
+# a4833ca98e2c40eeb313017bd0359e92
+msgid "O'Reilly and Associates, 2002, 0-596-00343-9."
+msgstr ""
+
+#: ../../biblio.rst:204
+# e4d6e10c97054e5cb6ea1a3a1712cb7c
+msgid "This excellent manual provides a decent introduction to shell scripting from a sys admin point of view. It includes comprehensive explanations of the startup and initialization scripts in a UNIX system."
+msgstr ""
+
+#: ../../biblio.rst:227
+# f08f086c25524d6eb59c350503c9938f
+msgid "1990, 067248448X."
+msgstr ""
+
+#: ../../biblio.rst:237
+# 47f18884cbc646e89bc0d78d02bf503d
+msgid "Still considered a standard reference, though somewhat dated, and a bit \"wooden\" stylistically speaking. ` [1]  <biblio.html#FTN.AEN21579>`__ In fact, this book was the *ABS Guide* author's first exposure to UNIX shell scripting, lo these many years ago."
+msgstr ""
+
+#: ../../biblio.rst:261
+# 8e3795228c614901a53b816cb7f0534e
+msgid "Press, 1996, 1874416680."
+msgstr ""
+
+#: ../../biblio.rst:271
+# 025fd019440f4501baead86a288c62ae
+msgid "Surprisingly good in-depth coverage of various programming languages available for Linux, including a fairly strong chapter on shell scripting."
+msgstr ""
+
+#: ../../biblio.rst:294
+# e8cff507d0864831a59a788c68e59588
+msgid "Books, 1989, 0830693637."
+msgstr ""
+
+#: ../../biblio.rst:304
+# 52eff254ccfd4ec4974738082b447b36
+msgid "Excellent coverage of algorithms and general programming practices. Highly recommended, but unfortunately out of print."
+msgstr ""
+
+#: ../../biblio.rst:336
+# 7ae83399a8b146488b536cacab8f007d
+msgid "Pretty good treatment of shell scripting, with examples, and a short intro to Tcl and Perl."
+msgstr ""
+
+#: ../../biblio.rst:358
+# 73a727f963ca4af0b2872c4d7e94f349
+msgid "edition, O'Reilly and Associates, 1998, 1-56592-347-2."
+msgstr ""
+
+#: ../../biblio.rst:368
+# 6f3fe64237604ff7a94c38c3b6f7f338
+msgid "This is a valiant effort at a decent shell primer, but sadly deficient in its coverage of writing scripts and lacking sufficient examples."
+msgstr ""
+
+#: ../../biblio.rst:390
+# 9b8c9b5c91ca4e9e9cb57aa0b5929d9e
+msgid "1991, 093573922X."
+msgstr ""
+
+#: ../../biblio.rst:400
+# 7236673ec4a741feabf7915b34451465
+msgid "A very handy pocket reference, despite lacking coverage of Bash-specific features."
+msgstr ""
+
+#: ../../biblio.rst:422
+# 809abc51a5fe49b9aa0b588edba51845
+msgid "edition, O'Reilly and Associates, Random House, 2002, 0-596-00330-7."
+msgstr ""
+
+#: ../../biblio.rst:432
+# ba25917fc8144ee88a9595c0cff882f3
+msgid "Contains a couple of sections of very informative in-depth articles on shell programming, but falls short of being a self-teaching manual. It reproduces much of the `Regular Expressions <regexp.html#REGEXREF>`__ tutorial from the Dougherty and Robbins book, above. The comprehensive coverage of UNIX commands makes this book worthy of a place on your bookshelf."
+msgstr ""
+
+#: ../../biblio.rst:458
+# 24febe8e4028414bbbf35ed365f90686
+msgid "Martin's Press, 1990, 0-312-04123-3."
+msgstr ""
+
+#: ../../biblio.rst:468
+# 1c371824d39e495aafc3829d5093f901
+msgid "A treasure trove of ideas and recipes for computer-based exploration of mathematical oddities."
+msgstr ""
+
+#: ../../biblio.rst:490
+# ea21f454dd6f4a69b2e420b4de208130
+msgid "0-691-02356-5."
+msgstr ""
+
+#: ../../biblio.rst:500
+# b89939f5a36b4146a0dd72c1e81c6de4
+msgid "The classic tutorial on problem-solving methods (algorithms), with special emphasis on how to teach them."
+msgstr ""
+
+#: ../../biblio.rst:522
+# c7b613154e7a4383ad6295b8e55f0549
+msgid "Manual <http://www.network-theory.co.uk/bash/manual/>`__* , Network Theory Ltd, 2003, 0-9541617-7-7."
+msgstr ""
+
+#: ../../biblio.rst:533
+# 3efff4d160414e4681e63d2a0fd56104
+msgid "This manual is the definitive reference for GNU Bash. The authors of this manual, Chet Ramey and Brian Fox, are the original developers of GNU Bash. For each copy sold, the publisher donates $1 to the Free Software Foundation."
+msgstr ""
+
+#: ../../biblio.rst:566
+# c652a397f41d430eb6c134c940a4bfc6
+msgid "Excellent Bash pocket reference (don't leave home without it, especially if you're a sysadmin). A bargain at $4.95, but unfortunately no longer available for free download."
+msgstr ""
+
+#: ../../biblio.rst:589
+# 168b5b24abaa45d093b4bfd5644a93ea
+msgid "/ O'Reilly and Associates, 2000, 1-882114-26-4."
+msgstr ""
+
+#: ../../biblio.rst:599
+# f2beb73d0ed6402889694278bb9ac12b
+msgid "The absolute best `awk <awk.html#AWKREF>`__ tutorial and reference. The free electronic version of this book is part of the *awk* documentation, and printed copies of the latest version are available from O'Reilly and Associates."
+msgstr ""
+
+#: ../../biblio.rst:604
+# 055588a8c98a4311892641c76c3c360e
+msgid "This book served as an inspiration for the author of the *ABS Guide* ."
+msgstr ""
+
+#: ../../biblio.rst:625
+# 616990d4fb4d4a5b99f66307ca996a6a
+msgid "1993, 1-56592-054-6."
+msgstr ""
+
+#: ../../biblio.rst:636
+# 8637945ec14842db8d83b7a84f6668fa
+msgid "scripting in general."
+msgstr ""
+
+#: ../../biblio.rst:657
+# 16fba33a79f44682aecca234766605e4
+msgid "edition, , 2002, 0-13-033351-4."
+msgstr ""
+
+#: ../../biblio.rst:667
+# 518e98c3416f424e816d7eb13c028b1d
+msgid "Very detailed and readable introduction to Linux system administration."
+msgstr ""
+
+#: ../../biblio.rst:669
+# 1103d5e6964b40e8a12803c0b68f4ab4
+msgid "The book is available in print, or `on-line <http://burks.brighton.ac.uk/burks/linux/rute/rute.htm>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:691
+# da3d326e55ce4370aeb757a6454607d2
+msgid "Nutshell* , 2nd edition, O'Reilly and Associates, 1999, 1-56592-585-8."
+msgstr ""
+
+#: ../../biblio.rst:701
+# 9bead4ba03cd44e292ea67c89664ce3f
+msgid "The all-around best Linux command reference. It even has a Bash section."
+msgstr ""
+
+#: ../../biblio.rst:722
+# b33592d81a614f7a96cb4b645ae9123a
+msgid "X, and Unix Systems* , 1st edition, No Starch Press, 2004, 1-59327-012-7."
+msgstr ""
+
+#: ../../biblio.rst:733
+# 0fd6426dc6b742de87c6f924084404fd
+msgid "Pretty much what the title promises . . ."
+msgstr ""
+
+#: ../../biblio.rst:753
+# b6adc41d70a440a9994a8deacceea4a5
+msgid "*The UNIX CD Bookshelf* , 3rd edition, O'Reilly and Associates, 2003, 0-596-00392-7."
+msgstr ""
+
+#: ../../biblio.rst:764
+# b89bb52c6e2c4d7781c6c29d5a07c953
+msgid "An array of seven UNIX books on CD ROM, including *UNIX Power Tools* , *Sed and Awk* , and *Learning the Korn Shell* . A complete set of all the UNIX references and tutorials you would ever need at about $130. Buy this one, even if it means going into debt and not paying the rent."
+msgstr ""
+
+#: ../../biblio.rst:769
+# 238b059f4e9543eba073ae1450ae6370
+msgid "Update: Seems to have somehow fallen out of print. Ah, well. You can still buy the dead-tree editions of these books."
+msgstr ""
+
+#: ../../biblio.rst:798
+# 04db9c08041d4793a5acaf6d0aa5dd94
+msgid "The O'Reilly books on Perl. (Actually, *any* O'Reilly books.)"
+msgstr ""
+
+#: ../../biblio.rst:824
+# 48f2ded8acde40fd809e6ab475b00637
+msgid "\\* \\* \\*"
+msgstr ""
+
+#: ../../biblio.rst:826
+# 483457d0b81948878f64d7bfe73ec5f5
+msgid "**Other Resources**"
+msgstr ""
+
+#: ../../biblio.rst:852
+# ac33a62c5afb43c48c19002fb7923f9c
+msgid "Fioretti, Marco, \"Scripting for X Productivity,\" `*Linux Journal* <http://www.tldp.org/LDP/abs/html/linuxjournal.com>`__ , Issue 113, September, 2003, pp. 86-9."
+msgstr ""
+
+#: ../../biblio.rst:880
+# dffcba7ec3364ec5b903e198fb6ef216
+msgid "Ben Okopnik's well-written *introductory Bash scripting* articles in issues 53, 54, 55, 57, and 59 of the `*Linux Gazette* <http://www.linuxgazette.net>`__ , and his explanation of \"The Deep, Dark Secrets of Bash\" in issue 56."
+msgstr ""
+
+#: ../../biblio.rst:909
+# b47b2bda3ba4488c8d3f895ae875ff02
+msgid "Chet Ramey's *Bash - The GNU Shell* , a two-part series published in issues 3 and 4 of the `*Linux Journal* <http://www.linuxjournal.com>`__ , July-August 1994."
+msgstr ""
+
+#: ../../biblio.rst:937
+# a08cfc2314f74a8fa437850098eccc40
+msgid "Mike G's `Bash-Programming-Intro HOWTO <http://www.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:964
+# 015c1a7a6a78404395aa74df7768f928
+msgid "Richard's `Unix Scripting Universe <http://www.injunea.demon.co.uk/index.htm>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1017
+# 829486a61f124815976cfbe246effcbe
+msgid "`Greg's WIKI: Bash FAQ <http://wooledge.org:8000/BashFAQ>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1043
+# 8576ce90cc764ba59246f7b134e89467
+msgid "Example shell scripts at `Lucc's Shell Scripts <http://alge.anart.no/linux/scripts/>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1070
+# 6ee5488e672b40ce98571f4ad28fc391
+msgid "Example shell scripts at `SHELLdorado <http://www.shelldorado.com>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1096
+# 2a1fac7ffb834e39880515fc570769e9
+msgid "Example shell scripts at `Noah Friedman's script site <http://www.splode.com/~friedman/software/scripts/src/>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1123
+# 5c5086a7c014401f858852ddb60626fa
+msgid "`Examples <http://bashcookbook.com/bashinfo/>`__ from the *The Bash Scripting Cookbook* , by Albing, Vossen, and Newham."
+msgstr ""
+
+#: ../../biblio.rst:1150
+# fda40a69c827486cb74da2e5f3cfeb7f
+msgid "Example shell scripts at `zazzybob <http://www.zazzybob.com>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1176
+# ebea52e742134796baad425bc9220acd
+msgid "Steve Parker's `Shell Programming Stuff <http://steve-parker.org/sh/sh.shtml>`__ . In fact, all of his shell scripting books are highly recommended. See also Steve's `Arcade Games written in a shell script <http://nixshell.wordpress.com/2011/07/13/arcade-games-written-in-a-shell-script/>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1207
+# 29735956b45a43c0ba1ca4f66e0ab263
+msgid "An excellent collection of Bash scripting tips, tricks, and resources at the `Bash Hackers Wiki <http://www.bash-hackers.org/wiki.doku.php>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1234
+# 993d5c8fe1624e0ab1c07d8ddadc09b4
+msgid "Giles Orr's `Bash-Prompt HOWTO <http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1261
+# 4f972f48757e4bd2ac6293075642bd14
+msgid "The `*Pixelbeat* command-line reference <http://www.pixelbeat.org/cmdline.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1288
+# 193a46cd11f942adbd49978d84976bc1
+msgid "Very nice **sed** , **awk** , and regular expression tutorials at `The UNIX Grymoire <http://www.grymoire.com/Unix/index.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1315
+# 54d3d9d4c6de487389e921892f6edbbe
+msgid "The GNU `sed <http://www.gnu.org/software/sed/manual/>`__ and `gawk <http://www.gnu.org/software/gawk/manual/>`__ manuals. As you recall, `gawk <x17129.html#GNUGAWK>`__ is the enhanced GNU version of **awk** ."
+msgstr ""
+
+#: ../../biblio.rst:1344
+# e94344a9e33b42579439df73bb633492
+msgid "Many interesting sed scripts at the `seder's grab bag <http://sed.sourceforge.net/grabbag/>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1371
+# 9ea766f8f7684028be2d257548f3a90b
+msgid "Tips and tricks at `Linux Reviews <http://linuxreviews.org>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1397
+# 4047095cdebe4cf98a3453d3a9ad518f
+msgid "Trent Fisher's `groff tutorial <http://www.cs.pdx.edu/~trent/gnu/groff/groff.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1424
+# 2d72f92806d0441aadc194e7b88c7086
+msgid "David Wheeler's `Filenames in Shell <http://www.dwheeler.com/essays/filenames-in-shell.html>`__ essay."
+msgstr ""
+
+#: ../../biblio.rst:1452
+# a6b98e74610c4435961e62bffd44158f
+msgid "Games <http://www.shellscriptgames.com>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1478
+# 0a413ad7768144c7a99f0f6ef758c782
+msgid "YongYe's wonderfully complex `Tetris game script <http://bash.deta.in/Tetris_Game.sh>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1505
+# 219b4d2d917348448311c39f909f2ef1
+msgid "Mark Komarinski's `Printing-Usage HOWTO <http://www.tldp.org/HOWTO/Printing-Usage-HOWTO.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1532
+# 296f4b593e1244338a8497307c99e6af
+msgid "`The Linux USB subsystem <http://www.linux-usb.org/USB-guide/book1.html>`__ (helpful in writing scripts affecting USB peripherals)."
+msgstr ""
+
+#: ../../biblio.rst:1560
+# 8c4206647c9e45178b0e61ae9fd5175c
+msgid "There is some nice material on `I/O redirection <io-redirection.html#IOREDIRREF>`__ in `chapter 10 of the textutils documentation <http://sunsite.ualberta.ca/Documentation/Gnu/textutils-2.0/html_chapter/textutils_10.html>`__ at the `University of Alberta site <http://sunsite.ualberta.ca/Documentation>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1591
+# 253ceade81934812b87e1700ccedfb6e
+msgid "`Rick Hohensee <mailto:humbubba@smarty.smart.net>`__ has written the *osimpa* i386 assembler entirely as Bash scripts."
+msgstr ""
+
+#: ../../biblio.rst:1618
+# 7b69ac6190b048a682e280c11caa9731
+msgid "*dgatwood* has a very nice `shell script games <http://www.shellscriptgames.com/>`__ site, featuring a TetrisÂ® clone and solitaire."
+msgstr ""
+
+#: ../../biblio.rst:1646
+# 7d3dd268c9de43b5bef1fd60967574a9
+msgid "Aurelio Marinho Jargas has written a `Regular expression wizard <http://txt2regex.sf.net>`__ . He has also written an informative `book <http://guia-er.sf.net>`__ on Regular Expressions, in Portuguese."
+msgstr ""
+
+#: ../../biblio.rst:1674
+# 8cf733cca1f64ed986d441b4a8139ee5
+msgid "`Ben Tomkins <mailto:brtompkins@comcast.net>`__ has created the `Bash Navigator <http://bashnavigator.sourceforge.net>`__ directory management tool."
+msgstr ""
+
+#: ../../biblio.rst:1702
+# a533d87d3ce64242b8acae4b3fa33f0e
+msgid "`William Park <mailto:opengeometry@yahoo.ca>`__ has been working on a project to incorporate certain *Awk* and *Python* features into Bash. Among these is a *gdbm* interface. He has released *bashdiff* on `Freshmeat.net <http://freshmeat.net>`__ . He has an `article <http://linuxgazette.net/108/park.html>`__ in the November, 2004 issue of the `*Linux Gazette* <http://www.linuxgazette.net>`__ on adding string functions to Bash, with a `followup article <http://linuxgazette.net/109/park.html>`__ in the December issue, and `yet another <http://linuxgazette.net/110/park.htm>`__ in the January, 2005 issue."
+msgstr ""
+
+#: ../../biblio.rst:1737
+# 731ed2f85f6d4170bd1fd0a6c8bd9f9e
+msgid "Peter Knowles has written an `elaborate Bash script <http://booklistgensh.peterknowles.com/>`__ that generates a book list on the `Sony Librie <http://www.dottocomu.com/b/archives/002571.html>`__ e-book reader. This useful tool facilitates loading non-DRM user content on the *Librie* (and the newer *PRS-xxx-series* devices)."
+msgstr ""
+
+#: ../../biblio.rst:1768
+# 1c526b91a62147f39b238d587dc95870
+msgid "Tim Waugh's `xmlto <http://cyberelk.net/tim/xmlto/>`__ is an elaborate Bash script for converting Docbook XML documents to other formats."
+msgstr ""
+
+#: ../../biblio.rst:1795
+# 8c2615cd52ae4642b4728aebf58debae
+msgid "Philip Patterson's `logforbash <http://www.gossiplabs.org>`__ logging/debugging script."
+msgstr ""
+
+#: ../../biblio.rst:1822
+# 3aa6c8d139df4b3d95f04009541dd8f8
+msgid "`AuctionGallery <http://auctiongallery.sourceforge.net>`__ , an application for eBay \"power sellers\" coded in Bash."
+msgstr ""
+
+#: ../../biblio.rst:1849
+# fd6028ecfae74faa87f53f88d627d0d4
+msgid "Of historical interest are Colin Needham's *original International Movie Database (IMDB) reader polling scripts* , which nicely illustrate the use of `awk <awk.html#AWKREF>`__ for string parsing. Unfortunately, the URL link is broken."
+msgstr ""
+
+#: ../../biblio.rst:1854
+#: ../../biblio.rst:1888
+# e040f23318bc422ead7ae1ecd73432b9
+# a4dcd971070046ee8ba164737f34e72f
+msgid "---"
+msgstr ""
+
+#: ../../biblio.rst:1880
+# a605efb5a3524a738993567721c05fb6
+msgid "Fritz Mehner has written a `bash-support plugin <http://vim.sourceforge.net/scripts/script.php?script_id=365>`__ for the *vim* text editor. He has also also come up with his own `stylesheet for Bash <http://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf>`__ . Compare it with the `ABS Guide Unofficial Stylesheet <unofficialst.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1914
+# bf91ac2bd46e476ba45a346f3fc62e85
+msgid "*Penguin Pete* has quite a number of shell scripting tips and hints on `his superb site <http://www.penguinpetes.com>`__ . Highly recommended."
+msgstr ""
+
+#: ../../biblio.rst:1941
+# ecea9255dd324c9083390aa9db572322
+msgid "The excellent *Bash Reference Manual* , by Chet Ramey and Brian Fox, distributed as part of the *bash-2-doc* package (available as an `rpm <filearchiv.html#RPMREF>`__ ). See especially the instructive example scripts in this package."
+msgstr ""
+
+#: ../../biblio.rst:1970
+# 8ba753d34b884dc58904dbcb727294d5
+msgid "John Lion's classic, `*A Commentary on the Sixth Edition UNIX Operating System* <http://www.lemis.com/grog/Documentation/Lions/index.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:1997
+# f285fb543862435c80e0b097c183851b
+msgid "The `comp.os.unix.shell <news:comp.unix.shell>`__ newsgroup."
+msgstr ""
+
+#: ../../biblio.rst:2023
+# 209f5c89390a41a1a961844ec73758fb
+msgid "The `*dd* thread <http://www.linuxquestions.org/questions/showthread.php?t=362506>`__ on `Linux Questions <http://www.linuxquestions.org>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:2051
+# bd64606aafce4a52b4aade451d08e01f
+msgid "The `comp.os.unix.shell FAQ <http://www.newsville.com/cgi-bin/getfaq?file=comp.unix.shell/comp.unix.shell_FAQ_-_Answers_to_Frequently_Asked_Questions>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:2079
+# 57fca379058147aaa1f1c5af7e9248a2
+msgid "Assorted comp.os.unix `FAQs <http://www.faqs.org/faqs/by-newsgroup/comp/comp.unix.shell.html>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:2107
+# 523c49c2d6e44995adbb187e90c50f24
+msgid "The `*Wikipedia* article <http://en.wikipedia.org/wiki/Dc_(Unix)>`__ covering `dc <mathc.html#DCREF>`__ ."
+msgstr ""
+
+#: ../../biblio.rst:2134
+# 1c6502f69809433290762b7a537581fc
+msgid "The `manpages <basic.html#MANREF>`__ for **bash** and **bash2** , **date** , **expect** , **expr** , **find** , **grep** , **gzip** , **ln** , **patch** , **tar** , **tr** , **bc** , **xargs** . The *texinfo* documentation on **bash** , **dd** , **m4** , **gawk** , and **sed** ."
+msgstr ""
+
+#: ../../biblio.rst:2153
+# e8a0160c08014ec8b98a4c97131c3d95
+msgid "Notes"
+msgstr ""
+
+#: ../../biblio.rst:2159
+# d5b04b8e91f841a19e555e34a5afb430
+msgid "` [1]  <biblio.html#AEN21579>`__"
+msgstr ""
+
+#: ../../biblio.rst:2161
+# 9d25b91294944316ad15f5fdfafb08cd
+msgid "It was hard to resist the obvious pun. No slight intended, since the book is a pretty decent introduction to the basic concepts of shell scripting."
+msgstr ""
+

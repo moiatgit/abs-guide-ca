@@ -1,0 +1,321 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../escapingsection.rst:3
+msgid "XXX  5.2. Escaping"
+msgstr ""
+
+#: ../../escapingsection.rst:5
+msgid "*Escaping* is a method of quoting single characters. The escape ( \\\\ )"
+msgstr ""
+
+#: ../../escapingsection.rst:6
+msgid ""
+"preceding a character tells the shell to interpret that character literally."
+msgstr ""
+
+#: ../../escapingsection.rst:11
+msgid "|Caution"
+msgstr ""
+
+#: ../../escapingsection.rst:13
+msgid ""
+"With certain commands and utilities, such as `echo "
+"<internal.html#ECHOREF>`__ and `sed <sedawk.html#SEDREF>`__ , escaping a "
+"character may have the opposite effect - it can toggle on a special meaning "
+"for that character."
+msgstr ""
+
+#: ../../escapingsection.rst:22
+msgid "** Special meanings of certain escaped characters**"
+msgstr ""
+
+#: ../../escapingsection.rst:24
+msgid "used with **echo** and **sed** \\\\n"
+msgstr ""
+
+#: ../../escapingsection.rst:26
+msgid "means newline"
+msgstr ""
+
+#: ../../escapingsection.rst:29
+msgid "means return"
+msgstr ""
+
+#: ../../escapingsection.rst:32
+msgid "means tab"
+msgstr ""
+
+#: ../../escapingsection.rst:35
+msgid "means vertical tab"
+msgstr ""
+
+#: ../../escapingsection.rst:38
+msgid "means backspace"
+msgstr ""
+
+#: ../../escapingsection.rst:41
+msgid "means *alert* (beep or flash)"
+msgstr ""
+
+#: ../../escapingsection.rst:44
+msgid "translates to the octal `ASCII <special-chars.html#ASCIIDEF>`__"
+msgstr ""
+
+#: ../../escapingsection.rst:45
+msgid ""
+"equivalent of ``                   0nn                 `` , where ``"
+"                   nn                 `` is a string of digits"
+msgstr ""
+
+#: ../../escapingsection.rst:50
+msgid "|Important"
+msgstr ""
+
+#: ../../escapingsection.rst:52
+msgid ""
+"The ``                         $' ... '                       `` `quoted "
+"<quoting.html#QUOTINGREF>`__ string-expansion construct is a mechanism that "
+"uses escaped octal or hex values to assign ASCII characters to variables, "
+"e.g., **quote=$'\\\\042'** ."
+msgstr ""
+
+#: ../../escapingsection.rst:62
+msgid "Exemple 2. Escaped Characters"
+msgstr ""
+
+#: ../../escapingsection.rst:162
+msgid "A more elaborate example:"
+msgstr ""
+
+#: ../../escapingsection.rst:166
+msgid "Exemple 3. Detecting key-presses"
+msgstr ""
+
+#: ../../escapingsection.rst:277
+msgid "See also `Example 37-1 <bashver2.html#EX77>`__ ."
+msgstr ""
+
+#: ../../escapingsection.rst:280
+msgid "gives the quote its literal meaning"
+msgstr ""
+
+#: ../../escapingsection.rst:291
+msgid ""
+"gives the dollar sign its literal meaning (variable name following \\\\$ "
+"will not be referenced)"
+msgstr ""
+
+#: ../../escapingsection.rst:303
+msgid "gives the backslash its literal meaning"
+msgstr ""
+
+#: ../../escapingsection.rst:324 ../../escapingsection.rst:660
+msgid "|Note"
+msgstr ""
+
+#: ../../escapingsection.rst:326
+msgid ""
+"The behavior of \\\\ depends on whether it is escaped, `strong-quoted "
+"<varsubn.html#SNGLQUO>`__ , `weak-quoted <varsubn.html#DBLQUO>`__ , or "
+"appearing within `command substitution <commandsub.html#COMMANDSUBREF>`__ or"
+" a `here document <here-docs.html#HEREDOCREF>`__ ."
+msgstr ""
+
+#: ../../escapingsection.rst:355
+msgid "echo `echo \\z`"
+msgstr ""
+
+#: ../../escapingsection.rst:357
+msgid "echo `echo \\\\z`"
+msgstr ""
+
+#: ../../escapingsection.rst:359
+msgid "echo `echo \\\\\\z`"
+msgstr ""
+
+#: ../../escapingsection.rst:361
+msgid "echo `echo \\\\\\\\z`"
+msgstr ""
+
+#: ../../escapingsection.rst:363
+msgid "echo `echo \\\\\\\\\\\\z`"
+msgstr ""
+
+#: ../../escapingsection.rst:365
+msgid "echo `echo \\\\\\\\\\\\\\z`"
+msgstr ""
+
+#: ../../escapingsection.rst:367
+msgid "echo `echo \"\\z\"`"
+msgstr ""
+
+#: ../../escapingsection.rst:369
+msgid "echo `echo \"\\\\z\"`"
+msgstr ""
+
+#: ../../escapingsection.rst:370 ../../escapingsection.rst:379
+#: ../../escapingsection.rst:386
+msgid "# \\z"
+msgstr ""
+
+#: ../../escapingsection.rst:374 ../../escapingsection.rst:381
+msgid "cat <<EOF"
+msgstr ""
+
+#: ../../escapingsection.rst:376
+msgid "\\z"
+msgstr ""
+
+#: ../../escapingsection.rst:378 ../../escapingsection.rst:385
+msgid "EOF"
+msgstr ""
+
+#: ../../escapingsection.rst:383
+msgid "\\\\z"
+msgstr ""
+
+#: ../../escapingsection.rst:388
+msgid "# These examples sup"
+msgstr ""
+
+#: ../../escapingsection.rst:389
+msgid "plied by Stéphane Chazel as."
+msgstr ""
+
+#: ../../escapingsection.rst:395
+msgid ""
+"Elements of a string assigned to a variable may be escaped, but the escape "
+"character alone may not be assigned to a variable."
+msgstr ""
+
+#: ../../escapingsection.rst:406
+msgid "# test.sh: : command"
+msgstr ""
+
+#: ../../escapingsection.rst:408
+msgid "# A \"naked\" escape c"
+msgstr ""
+
+#: ../../escapingsection.rst:411
+msgid "# #  What actually hap"
+msgstr ""
+
+#: ../../escapingsection.rst:413
+msgid "pens here is that the \"\\ \" escapes the newline an d"
+msgstr ""
+
+#: ../../escapingsection.rst:416
+msgid "#+ the effect is variable=echo \"$vari"
+msgstr ""
+
+#: ../../escapingsection.rst:419
+msgid "#+ invalid variable ass"
+msgstr ""
+
+#: ../../escapingsection.rst:421
+msgid "ignment"
+msgstr ""
+
+#: ../../escapingsection.rst:423
+msgid "variable=\\ 23skidoo echo \"$variable\" #  23skidoo"
+msgstr ""
+
+#: ../../escapingsection.rst:428
+msgid "#  This works, since"
+msgstr ""
+
+#: ../../escapingsection.rst:429
+msgid "the second line"
+msgstr ""
+
+#: ../../escapingsection.rst:431
+msgid "#+ is a valid variab"
+msgstr ""
+
+#: ../../escapingsection.rst:432
+msgid "le assignment."
+msgstr ""
+
+#: ../../escapingsection.rst:434
+msgid "variable=\\ #        \\^    escap"
+msgstr ""
+
+#: ../../escapingsection.rst:437
+msgid "echo \"$variable\" # space"
+msgstr ""
+
+#: ../../escapingsection.rst:440
+msgid "variable=\\\\ echo \"$variable\" # \\"
+msgstr ""
+
+#: ../../escapingsection.rst:444
+msgid "variable=\\\\\\ echo \"$variable\" # Will not work - gi"
+msgstr ""
+
+#: ../../escapingsection.rst:448
+msgid "# test.sh: \\: comman"
+msgstr ""
+
+#: ../../escapingsection.rst:450
+msgid "# #  First escape esca"
+msgstr ""
+
+#: ../../escapingsection.rst:452
+msgid "pes second one, but the third one is left \"naked \","
+msgstr ""
+
+#: ../../escapingsection.rst:455
+msgid "#+ with same result"
+msgstr ""
+
+#: ../../escapingsection.rst:456
+msgid "as first instance, above ."
+msgstr ""
+
+#: ../../escapingsection.rst:459
+msgid "variable=\\\\\\\\ echo \"$variable\" # \\\\"
+msgstr ""
+
+#: ../../escapingsection.rst:463
+msgid "# Second and fourth"
+msgstr ""
+
+#: ../../escapingsection.rst:464
+msgid "escapes escaped."
+msgstr ""
+
+#: ../../escapingsection.rst:466
+msgid "# This is o.k."
+msgstr ""
+
+#: ../../escapingsection.rst:616
+msgid ""
+"Escaping a space can prevent word splitting in a command's argument list."
+msgstr ""
+
+#: ../../escapingsection.rst:637
+msgid ""
+"The escape also provides a means of writing a multi-line command. Normally, "
+"each separate line constitutes a different command, but an escape at the end"
+" of a line *escapes the newline character* , and the command sequence "
+"continues on to the next line."
+msgstr ""
+
+#: ../../escapingsection.rst:662
+msgid ""
+"If a script line ends with a \\, a pipe character, then a \\\\ , an escape, "
+"is not strictly necessary. It is, however, good programming practice to "
+"always escape the end of a line of code that continues to the following "
+"line."
+msgstr ""

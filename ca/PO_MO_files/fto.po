@@ -1,0 +1,271 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../fto.rst:4
+msgid "XXX  7.2. File test operators"
+msgstr ""
+
+#: ../../fto.rst:7
+msgid "** Returns true if...**"
+msgstr ""
+
+#: ../../fto.rst:10 ../../fto.rst:13
+msgid "file exists"
+msgstr ""
+
+#: ../../fto.rst:16
+msgid "<fto.html#FTN.AEN3289>`__ and its use is discouraged."
+msgstr ""
+
+#: ../../fto.rst:19
+msgid ""
+"file is a ``                   regular                 `` file (not a "
+"directory or `device file <devref1.html#DEVFILEREF>`__ )"
+msgstr ""
+
+#: ../../fto.rst:23
+msgid "file is not zero size"
+msgstr ""
+
+#: ../../fto.rst:26
+msgid "file is a directory"
+msgstr ""
+
+#: ../../fto.rst:29
+msgid "file is a `block device <devref1.html#BLOCKDEVREF>`__"
+msgstr ""
+
+#: ../../fto.rst:32
+msgid "file is a `character device <devref1.html#CHARDEVREF>`__"
+msgstr ""
+
+#: ../../fto.rst:58
+msgid "file is a `pipe <special-chars.html#PIPEREF>`__"
+msgstr ""
+
+#: ../../fto.rst:76
+msgid "file is a `symbolic link <basic.html#SYMLINKREF>`__"
+msgstr ""
+
+#: ../../fto.rst:79
+msgid "file is a symbolic link"
+msgstr ""
+
+#: ../../fto.rst:82
+msgid "file is a `socket <devref1.html#SOCKETREF>`__"
+msgstr ""
+
+#: ../../fto.rst:85
+msgid "file ( `descriptor <io-redirection.html#FDREF>`__ ) is associated"
+msgstr ""
+
+#: ../../fto.rst:86
+msgid "with a terminal device"
+msgstr ""
+
+#: ../../fto.rst:88
+msgid ""
+"This test option `may be used to check <intandnonint.html#II2TEST>`__ "
+"whether the ``         stdin        `` ``                   [ -t 0 ]"
+"                 `` or ``         stdout        `` ``                   [ -t"
+" 1 ]                 `` in a given script is a terminal."
+msgstr ""
+
+#: ../../fto.rst:97
+msgid "file has read permission ( *for the user running the test* )"
+msgstr ""
+
+#: ../../fto.rst:100
+msgid "file has write permission (for the user running the test)"
+msgstr ""
+
+#: ../../fto.rst:103
+msgid "file has execute permission (for the user running the test)"
+msgstr ""
+
+#: ../../fto.rst:106
+msgid "set-group-id (sgid) flag set on file or directory"
+msgstr ""
+
+#: ../../fto.rst:108
+msgid ""
+"If a directory has the ``                   sgid                 `` flag "
+"set, then a file created within that directory belongs to the group that "
+"owns the directory, not necessarily to the group of the user who created the"
+" file. This may be useful for a directory shared by a workgroup."
+msgstr ""
+
+#: ../../fto.rst:116
+msgid "set-user-id (suid) flag set on file"
+msgstr ""
+
+#: ../../fto.rst:118
+msgid ""
+"A binary owned by *root* with ``                   set-user-id"
+"                 `` flag set runs with *root* privileges, even when an "
+"ordinary user invokes it. ` [2]"
+msgstr ""
+
+#: ../../fto.rst:121
+msgid "<fto.html#FTN.AEN3400>`__ This is useful for executables (such as"
+msgstr ""
+
+#: ../../fto.rst:122
+msgid ""
+"**pppd** and **cdrecord** ) that need to access system hardware. Lacking the"
+" *suid* flag, these binaries could not be invoked by a *non-root* user."
+msgstr ""
+
+#: ../../fto.rst:134
+msgid ""
+"A file with the ``                   suid                 `` flag set shows "
+"an *s* in its permissions."
+msgstr ""
+
+#: ../../fto.rst:138
+msgid "``                   sticky bit                 `` set"
+msgstr ""
+
+#: ../../fto.rst:140
+msgid ""
+"Commonly known as the *sticky bit,* the *save-text-mode* flag is a special "
+"type of file permission. If a file has this flag set, that file will be kept"
+" in cache memory, for quicker access. ` [3]"
+msgstr ""
+
+#: ../../fto.rst:143
+msgid "<fto.html#FTN.AEN3423>`__ If set on a directory, it restricts write"
+msgstr ""
+
+#: ../../fto.rst:144
+msgid ""
+"permission. Setting the sticky bit adds a *t* to the permissions on the file"
+" or directory listing. This restricts altering or deleting specific files in"
+" that directory to the owner of those files."
+msgstr ""
+
+#: ../../fto.rst:156
+msgid ""
+"If a user does not own a directory that has the sticky bit set, but has "
+"write permission in that directory, she can only delete those files that she"
+" owns in it. This keeps users from inadvertently overwriting or deleting "
+"each other's files in a publicly accessible directory, such as ``         "
+"/tmp        `` . (The *owner* of the directory or *root* can, of course, "
+"delete or rename files there.)"
+msgstr ""
+
+#: ../../fto.rst:164
+msgid "you are owner of file"
+msgstr ""
+
+#: ../../fto.rst:167
+msgid "group-id of file same as yours"
+msgstr ""
+
+#: ../../fto.rst:170
+msgid "file modified since it was last read"
+msgstr ""
+
+#: ../../fto.rst:173
+msgid ""
+"file ``                   f1                 `` is newer than ``"
+"                   f2                 ``"
+msgstr ""
+
+#: ../../fto.rst:177
+msgid ""
+"file ``                   f1                 `` is older than ``"
+"                   f2                 ``"
+msgstr ""
+
+#: ../../fto.rst:181
+msgid ""
+"files ``                   f1                 `` and ``                   f2"
+"                 `` are hard links to the same file"
+msgstr ""
+
+#: ../../fto.rst:186
+msgid "\"not\" -- reverses the sense of the tests above (returns true if"
+msgstr ""
+
+#: ../../fto.rst:187
+msgid "condition absent)."
+msgstr ""
+
+#: ../../fto.rst:192
+msgid "Exemple 4. Testing for broken links"
+msgstr ""
+
+#: ../../fto.rst:258
+msgid ""
+"`Example 31-1 <zeros.html#COOKIES>`__ , `Example 11-8 "
+"<loops1.html#BINGREP>`__ , `Example 11-3 <loops1.html#FILEINFO>`__ , "
+"`Example 31-3 <zeros.html#RAMDISK>`__ , and `Example A-1 <contributed-"
+"scripts.html#MAILFORMAT>`__ also illustrate uses of the file test operators."
+msgstr ""
+
+#: ../../fto.rst:266
+msgid "Notes"
+msgstr ""
+
+#: ../../fto.rst:269
+msgid "` [1]  <fto.html#AEN3289>`__"
+msgstr ""
+
+#: ../../fto.rst:271
+msgid "Per the 1913 edition of *Webster's Dictionary* :"
+msgstr ""
+
+#: ../../fto.rst:282
+msgid "to seek to avert by"
+msgstr ""
+
+#: ../../fto.rst:284
+msgid "to desire the remova"
+msgstr ""
+
+#: ../../fto.rst:286
+msgid "to seek deliverance"
+msgstr ""
+
+#: ../../fto.rst:288
+msgid "to express deep regr"
+msgstr ""
+
+#: ../../fto.rst:290
+msgid "to disapprove of str"
+msgstr ""
+
+#: ../../fto.rst:291
+msgid "ongly."
+msgstr ""
+
+#: ../../fto.rst:323
+msgid "` [2]  <fto.html#AEN3400>`__"
+msgstr ""
+
+#: ../../fto.rst:325
+msgid ""
+"Be aware that *suid* binaries may open security holes. The *suid* flag has "
+"no effect on shell scripts."
+msgstr ""
+
+#: ../../fto.rst:329
+msgid "` [3]  <fto.html#AEN3423>`__"
+msgstr ""
+
+#: ../../fto.rst:331
+msgid ""
+"On Linux systems, the sticky bit is no longer used for files, only on "
+"directories."
+msgstr ""

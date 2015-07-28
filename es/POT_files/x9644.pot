@@ -1,0 +1,400 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../x9644.rst:4
+# a305263ed6cb4349839b7524db3382fd
+msgid "XXX  15.1. Job Control Commands"
+msgstr ""
+
+#: ../../x9644.rst:6
+# e5fe240763d5461f9777b6acc0c97b17
+msgid "Certain of the following job control commands take a *job identifier* as an argument. See the `table <x9644.html#JOBIDTABLE>`__ at end of the chapter."
+msgstr ""
+
+#: ../../x9644.rst:12
+# 7073a1ffee2c499b8f751f5ebee7417c
+msgid "Lists the jobs running in the background, giving the *job number* . Not as useful as `ps <system.html#PPSSREF>`__ ."
+msgstr ""
+
+#: ../../x9644.rst:17
+#: ../../x9644.rst:365
+#: ../../x9644.rst:391
+#: ../../x9644.rst:415
+# 3548970bfec14373b5283a203995282b
+# 1d643d914db0414baadad2545d2bd4c7
+# 7e46d96e5826408daec896b85a7dc4e8
+# d8831cbab418439ca69dd4290035e171
+msgid "|Note"
+msgstr ""
+
+#: ../../x9644.rst:19
+# 57c4d600699a4fac85307cfe6ec9a156
+msgid "It is all too easy to confuse *jobs* and *processes* . Certain `builtins <internal.html#BUILTINREF>`__ , such as **kill** , **disown** , and **wait** accept either a job number or a process number as an argument. The `fg <x9644.html#FGREF>`__ , `bg <x9644.html#BGREF>`__ and **jobs** commands accept only a job number."
+msgstr ""
+
+#: ../../x9644.rst:40
+# 6365cfdfdedc4e3da78698eaee8f0004
+msgid "\"1\" is the job number (jobs are maintained by the current shell)."
+msgstr ""
+
+#: ../../x9644.rst:41
+# 8fb1c70da8e244378c1b05d309d0978b
+msgid "\"1384\" is the `PID <internalvariables.html#PPIDREF>`__ or *process ID number* (processes are maintained by the system). To kill this job/process, either a **kill %1** or a **kill 1384** works."
+msgstr ""
+
+#: ../../x9644.rst:45
+# 1e1c9cf8eaf948bd84984c6281ca6583
+msgid "*Thanks, S.C.*"
+msgstr ""
+
+#: ../../x9644.rst:69
+# 060b5d2711794af99050cecf64ac9a4d
+msgid "Remove job(s) from the shell's table of active jobs."
+msgstr ""
+
+#: ../../x9644.rst:72
+# 6f14877ec8314fb48be2dbdc3426ce1e
+msgid "The **fg** command switches a job running in the background into the foreground. The **bg** command restarts a suspended job, and runs it in the background. If no job number is specified, then the **fg** or **bg** command acts upon the currently running job."
+msgstr ""
+
+#: ../../x9644.rst:78
+# faaa2169c8b1489eb6d53fed7286cc63
+msgid "Suspend script execution until all jobs running in background have terminated, or until the job number or process ID specified as an option terminates. Returns the `exit status <exit-status.html#EXITSTATUSREF>`__ of waited-for command."
+msgstr ""
+
+#: ../../x9644.rst:83
+# d23f5590d45148c2aa143faac679a6a7
+msgid "You may use the **wait** command to prevent a script from exiting before a background job finishes executing (this would create a dreaded `orphan process <x9644.html#ZOMBIEREF>`__ )."
+msgstr ""
+
+#: ../../x9644.rst:89
+# b2e600a59f704ded99dbad635f043494
+msgid "Exemple 26. Waiting for a process to finish before proceeding"
+msgstr ""
+
+#: ../../x9644.rst:133
+# 7ab0d7379191452aa226af158f8a75d9
+msgid "Optionally, **wait** can take a *job identifier* as an argument, for example, ``                   wait%1                 `` or ``                   wait                 $PPID                 `` . ` [1]  <x9644.html#FTN.AEN9753>`__ See the `job id table <x9644.html#JOBIDTABLE>`__ ."
+msgstr ""
+
+#: ../../x9644.rst:141
+# f0820d5287614a4f8ee8ebd0dcc9fd11
+msgid "|Tip"
+msgstr ""
+
+#: ../../x9644.rst:143
+# e45afcbba1db458fa2aa925e6730de3e
+msgid "Within a script, running a command in the background with an ampersand (&) may cause the script to hang until **ENTER** is hit. This seems to occur with commands that write to ``            stdout           `` . It can be a major annoyance."
+msgstr ""
+
+#: ../../x9644.rst:169
+#: ../../x9644.rst:216
+# 713b8fdf344b4b13839d8bf67da1046c
+# e21d3207df1f4ea089646e74769fc34e
+msgid "1 boz"
+msgstr ""
+
+#: ../../x9644.rst:170
+#: ../../x9644.rst:217
+# 5996e82d982f4e2e9eff16919a094c67
+# f59c03ca27c64dfa80ea72787e6e5302
+msgid "o     bozo           34 Oct 11 15:09 test.sh"
+msgstr ""
+
+#: ../../x9644.rst:172
+# 01fb161ee162449eb284059db0f11dc1
+msgid "_"
+msgstr ""
+
+#: ../../x9644.rst:178
+# 8c940a6c6213482582413bb86ecac902
+msgid "As Walter Brameld IV explains it:"
+msgstr ""
+
+#: ../../x9644.rst:180
+# 6dce52cc3d954250b39632a2c3cd55f0
+msgid "As far as I can tell, such scripts don't actually hang. It just"
+msgstr ""
+
+#: ../../x9644.rst:182
+# c2a1c64b2dc44f01b24cd24ecd49fc49
+msgid "seems that they do because the background command writes text to"
+msgstr ""
+
+#: ../../x9644.rst:184
+# 2afb188a9eba440dad22d524efcb5a9c
+msgid "the console after the prompt. The user gets the impression that"
+msgstr ""
+
+#: ../../x9644.rst:186
+# c61466ab99744c92a11e4c1ce50c57d1
+msgid "the prompt was never displayed. Here's the sequence of events:"
+msgstr ""
+
+#: ../../x9644.rst:187
+# 19a52634af484d32a2a02c223b2dfd5c
+msgid "1. Script launches background command. 2. Script exits. 3. Shell displays the prompt."
+msgstr ""
+
+#: ../../x9644.rst:191
+# d37c0b37839d49d5a3537300c37abc84
+msgid "4. Background command continues running and writing text to the"
+msgstr ""
+
+#: ../../x9644.rst:192
+# d11fe978c5744875ba2f94b45029d0a5
+msgid "console. 5. Background command finishes."
+msgstr ""
+
+#: ../../x9644.rst:195
+# f140454c29934b6baafab48cdb6c2dbf
+msgid "6. User doesn't see a prompt at the bottom of the output, thinks script"
+msgstr ""
+
+#: ../../x9644.rst:196
+# bf08f2f80eae489f9edab5b7da515787
+msgid "is hanging."
+msgstr ""
+
+#: ../../x9644.rst:198
+# de02685b3cb641a2ba6bf0a163cdebc4
+msgid "Placing a **wait** after the background command seems to remedy this."
+msgstr ""
+
+#: ../../x9644.rst:221
+# 9f17299548354b5fbf02fe2db7fa68f5
+msgid "`Redirecting <io-redirection.html#IOREDIRREF>`__ the output of the command to a file or even to ``           /dev/null          `` also takes care of this problem."
+msgstr ""
+
+#: ../../x9644.rst:305
+# 8f8a7480e34646a286115b36434acaaf
+msgid "This has a similar effect to **Control** - **Z** , but it suspends the shell (the shell's parent process should resume it at an appropriate time)."
+msgstr ""
+
+#: ../../x9644.rst:310
+# ebe21a8a62a84bf7a4e8bfb231b210bf
+msgid "Exit a login shell, optionally specifying an `exit status <exit-status.html#EXITSTATUSREF>`__ ."
+msgstr ""
+
+#: ../../x9644.rst:314
+# 2a2a2ed80c624ba48596c31c17810861
+msgid "Gives statistics on the system time elapsed when executing commands, in the following form:"
+msgstr ""
+
+#: ../../x9644.rst:324
+# f23949b59622424fa1870859a7ae1fa7
+msgid "This capability is of relatively limited value, since it is not common to profile and benchmark shell scripts."
+msgstr ""
+
+#: ../../x9644.rst:328
+# a6b32c13c9314cef9d07746a2aa976a2
+msgid "Forcibly terminate a process by sending it an appropriate *terminate* signal (see `Example 17-6 <system.html#KILLPROCESS>`__ )."
+msgstr ""
+
+#: ../../x9644.rst:334
+# e6d458921f8144c195bbe3431f9efb49
+msgid "Exemple 27. A script that kills itself"
+msgstr ""
+
+#: ../../x9644.rst:367
+# 55e77b1295a04db2823d91ebc5277b63
+msgid "``                         kill -l                       `` lists all the `signals <debugging.html#SIGNALD>`__ (as does the file ``            /usr/include/asm/signal.h           `` ). A ``                         kill -9                       `` is a *sure kill* , which will usually terminate a process that stubbornly refuses to die with a plain **kill** . Sometimes, a ``                         kill         -15                       `` works. A *zombie* process, that is, a child process that has terminated, but that the `parent process <internal.html#FORKREF>`__ has not (yet) killed, cannot be killed by a logged-on user -- you can't kill something that is already dead -- but **init** will generally clean it up sooner or later."
+msgstr ""
+
+#: ../../x9644.rst:384
+# dbd8d285db354254a2dd54dde86e3f93
+msgid "The **killall** command kills a running process by *name* , rather than by `process ID <special-chars.html#PROCESSIDREF>`__ . If there are multiple instances of a particular command running, then doing a *killall* on that command will terminate them *all* ."
+msgstr ""
+
+#: ../../x9644.rst:393
+# b95a8aeeac824dd6943607ad1a4a3e6e
+msgid "This refers to the **killall** command in ``            /usr/bin           `` , *not* the `killall script <sysscripts.html#KILLALL2REF>`__ in ``            /etc/rc.d/init.d           `` ."
+msgstr ""
+
+#: ../../x9644.rst:402
+# 5de2a3af222f4ef5a3e3de8b7e954a8c
+msgid "The **command** directive disables aliases and functions for the command immediately following it."
+msgstr ""
+
+#: ../../x9644.rst:417
+# 1b2c5cfd0ffd42079b69117a8ad95589
+msgid "This is one of three shell directives that effect script command processing. The others are `builtin <x9644.html#BLTREF>`__ and `enable <x9644.html#ENABLEREF>`__ ."
+msgstr ""
+
+#: ../../x9644.rst:425
+# c14193a41d744600a355ef9e3f4fe0ca
+msgid "Invoking **builtin BUILTIN\\_COMMAND** runs the command ``                   BUILTIN_COMMAND                 `` as a shell `builtin <internal.html#BUILTINREF>`__ , temporarily disabling both functions and external system commands with the same name."
+msgstr ""
+
+#: ../../x9644.rst:431
+# ab0f58f42c1c4ba0933451530fec630e
+msgid "This either enables or disables a shell builtin command. As an example, ``                   enable -n           kill                 `` disables the shell builtin `kill <x9644.html#KILLREF>`__ , so that when Bash subsequently encounters *kill* , it invokes the external command ``         /bin/kill        `` ."
+msgstr ""
+
+#: ../../x9644.rst:438
+# 0b45eacbdccb4e93b869c1ae117e9357
+msgid "The ``         -a        `` option to *enable* lists all the shell"
+msgstr ""
+
+#: ../../x9644.rst:439
+# 346fbd2aeb7546d38a447f21fc08819e
+msgid "builtins, indicating whether or not they are enabled. The ``         -f filename        `` option lets *enable* load a `builtin <internal.html#BUILTINREF>`__ as a shared library (DLL) module from a properly compiled object file. ` [2]"
+msgstr ""
+
+#: ../../x9644.rst:443
+# dbfa3485b7e44bb4b23e8d4d46664fa5
+msgid "<x9644.html#FTN.AEN9928>`__ ."
+msgstr ""
+
+#: ../../x9644.rst:446
+# 0f2226926627442ca37fec8777f7197d
+msgid "This is a port to Bash of the *ksh* autoloader. With **autoload** in place, a function with an *autoload* declaration will load from an external file at its first invocation. ` [3]"
+msgstr ""
+
+#: ../../x9644.rst:449
+# 0e4688ade3514c85af270750a3cb0b5f
+msgid "<x9644.html#FTN.AEN9949>`__ This saves system resources."
+msgstr ""
+
+#: ../../x9644.rst:451
+# be5f7f8fde07437baa339c9a54c265e1
+msgid "Note that *autoload* is not a part of the core Bash installation. It needs to be loaded in with ``                   enable -f                 `` (see above)."
+msgstr ""
+
+#: ../../x9644.rst:457
+# cb7cce8152c3450f8dce1a8b8c509380
+msgid "**Table 15-1. Job identifiers**"
+msgstr ""
+
+#: ../../x9644.rst:460
+# 5f9c21dbc9004acd8605daba99c8cb54
+msgid "Notation"
+msgstr ""
+
+#: ../../x9644.rst:462
+# 52d6c188ed7f4797828cd0e9ebef2617
+msgid "Meaning"
+msgstr ""
+
+#: ../../x9644.rst:464
+# 5b49d3f678a8491b9296cb5887437afb
+msgid "``        %N       ``"
+msgstr ""
+
+#: ../../x9644.rst:466
+# f6c54f2bdbc84c2784cc87d0f15c7194
+msgid "Job number [N]"
+msgstr ""
+
+#: ../../x9644.rst:468
+# 31d33c1161cf4191944493139fd54cd8
+msgid "``        %S       ``"
+msgstr ""
+
+#: ../../x9644.rst:470
+# 9793ae55ad70446c9525b16e17e2f559
+msgid "Invocation (command-line) of job begins with string *S*"
+msgstr ""
+
+#: ../../x9644.rst:472
+# e76613c70ae04039bae4d4608309da54
+msgid "``        %?S       ``"
+msgstr ""
+
+#: ../../x9644.rst:474
+# a053f65306844e85be6dd62deca9fe14
+msgid "Invocation (command-line) of job contains within it string *S*"
+msgstr ""
+
+#: ../../x9644.rst:476
+# f8d78725d5964c40b1f55961d44c77e0
+msgid "``        %%       ``"
+msgstr ""
+
+#: ../../x9644.rst:478
+#: ../../x9644.rst:482
+# 49219e7c2a0a4f10b84cacd74676d6e8
+# 4d49dcfdf8d74951bf6c7f662e278249
+msgid "\"current\" job (last job stopped in foreground or started in background)"
+msgstr ""
+
+#: ../../x9644.rst:480
+# caa71c1e698f49548e54fc3dd6c7a3b3
+msgid "``        %+       ``"
+msgstr ""
+
+#: ../../x9644.rst:484
+# 86772ff91ae34755916f460367f62c77
+msgid "``        %-       ``"
+msgstr ""
+
+#: ../../x9644.rst:486
+# 490c1e715a77419fa4ce536141e937b4
+msgid "Last job"
+msgstr ""
+
+#: ../../x9644.rst:488
+# a1575f057d1d4b18adefd08ddd227477
+msgid "``        $!       ``"
+msgstr ""
+
+#: ../../x9644.rst:490
+# ddeb3c27c6db496d8c9e6843e53fc580
+msgid "Last background process"
+msgstr ""
+
+#: ../../x9644.rst:496
+# 21cc5c1c9e134831b33445dffda66fea
+msgid "Notes"
+msgstr ""
+
+#: ../../x9644.rst:499
+# aa1be2675d2542e293f0428dd992a78d
+msgid "` [1]  <x9644.html#AEN9753>`__"
+msgstr ""
+
+#: ../../x9644.rst:501
+# 94203d46722049f2a581aad0df3fb24c
+msgid "This only applies to *child processes* , of course."
+msgstr ""
+
+#: ../../x9644.rst:504
+# ba351dd645c044fba82ec7315981fc32
+msgid "` [2]  <x9644.html#AEN9928>`__"
+msgstr ""
+
+#: ../../x9644.rst:506
+# 5e0cdc3b6a354c2a8c982efdb6f0f740
+msgid "The C source for a number of loadable builtins is typically found in the ``       /usr/share/doc/bash-?.??/functions      `` directory."
+msgstr ""
+
+#: ../../x9644.rst:509
+# 8a7beae6b2f549539972ae031bfc909e
+msgid "Note that the ``       -f      `` option to **enable** is not `portable <portabilityissues.html>`__ to all systems."
+msgstr ""
+
+#: ../../x9644.rst:513
+# dff0f3194f6b418d89a9941227b38055
+msgid "` [3]  <x9644.html#AEN9949>`__"
+msgstr ""
+
+#: ../../x9644.rst:515
+# f4154ef3cb784ea59895760b594ea1f0
+msgid "The same effect as **autoload** can be achieved with `typeset -fu <declareref.html>`__ ."
+msgstr ""
+

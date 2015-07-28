@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../procref1.rst:4
+# 925a9958e49f4a8abb2fcc8c306a605a
+msgid "XXX  29.2. ``      /proc     ``"
+msgstr ""
+
+#: ../../procref1.rst:6
+# 25b2d5ec21394076ad86ec0fcdb9aa68
+msgid "The ``      /proc     `` directory is actually a pseudo-filesystem. The files in ``      /proc     `` mirror currently running system and kernel `processes <special-chars.html#PROCESSREF>`__ and contain information and statistics about them."
+msgstr ""
+
+#: ../../procref1.rst:97
+# e886d83f63fa4fb59d144d049c56f66e
+msgid "Shell scripts may extract data from certain of the files in ``      /proc     `` . ` [1]  <procref1.html#FTN.AEN19180>`__"
+msgstr ""
+
+#: ../../procref1.rst:191
+# 56f8a32ffa8747c6b9ab7ab575400c43
+msgid "|Note"
+msgstr ""
+
+#: ../../procref1.rst:193
+# ab1b1e3be068429f9dbb374f8c94d4e1
+msgid "It is even possible to control certain peripherals with commands sent to the ``         /proc        `` directory."
+msgstr ""
+
+#: ../../procref1.rst:201
+# 2578c34e31c042238715d8c2e6829809
+msgid "/proc/acpi/ibm/light"
+msgstr ""
+
+#: ../../procref1.rst:207
+# b8ffe7ccf8144dc6aeabf62c70ac0607
+msgid "This turns on the *Thinklight* in certain models of IBM/Lenovo Thinkpads. (May not work on all Linux distros.) Of course, caution is advised when writing to ``         /proc        `` ."
+msgstr ""
+
+#: ../../procref1.rst:227
+# 2a54c10804114db7a504132647a4f458
+msgid "The ``      /proc     `` directory contains subdirectories with unusual numerical names. Every one of these names maps to the `process ID <internalvariables.html#PPIDREF>`__ of a currently running process. Within each of these subdirectories, there are a number of files that hold useful information about the corresponding process. The ``      stat     `` and ``      status     `` files keep running statistics on the process, the ``      cmdline     `` file holds the command-line arguments the process was invoked with, and the ``      exe     `` file is a symbolic link to the complete path name of the invoking process. There are a few more such files, but these seem to be the most interesting from a scripting standpoint."
+msgstr ""
+
+#: ../../procref1.rst:241
+# 97b067b31fb74de7874b0bbdcf45a0b8
+msgid "Exemple 3. Finding the process associated with a PID"
+msgstr ""
+
+#: ../../procref1.rst:337
+# 415f2d807fed4207a2fa4ce4cd23bfff
+msgid "Exemple 4. On-line connect status"
+msgstr ""
+
+#: ../../procref1.rst:408
+# 3fe4b1acc2f043a5a951e8b096115a30
+msgid "|Warning"
+msgstr ""
+
+#: ../../procref1.rst:410
+# 9a087cf20b434ec4aeda294d5a409225
+msgid "In general, it is dangerous to *write* to the files in ``         /proc        `` , as this can corrupt the filesystem or crash the machine."
+msgstr ""
+
+#: ../../procref1.rst:419
+# b559cdca7dc344379b966c8a32bf327e
+msgid "Notes"
+msgstr ""
+
+#: ../../procref1.rst:422
+# c6e1ca7716c342bfad1ddef923c5bd12
+msgid "` [1]  <procref1.html#AEN19180>`__"
+msgstr ""
+
+#: ../../procref1.rst:424
+# e58814a64f9e495791455b1cf4598cf7
+msgid "Certain system commands, such as `procinfo <system.html#PROCINFOREF>`__ , `free <system.html#FREEREF>`__ , `vmstat <system.html#VMSTATREF>`__ , `lsdev <system.html#LSDEVREF>`__ , and `uptime <system.html#UPTIMEREF>`__ do this as well."
+msgstr ""
+

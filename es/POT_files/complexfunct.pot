@@ -1,0 +1,521 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../complexfunct.rst:4
+# 8d7cd709108542d6a01c901e6f4d1095
+msgid "XXX  24.1. Complex Functions and Function Complexities"
+msgstr ""
+
+#: ../../complexfunct.rst:6
+# 5af8c780b1264339bf74aabda156677f
+msgid "Functions may process arguments passed to them and return an `exit status <exit-status.html#EXITSTATUSREF>`__ to the script for further processing."
+msgstr ""
+
+#: ../../complexfunct.rst:17
+# 643d70f460c64c0a8b1e51a0af914701
+msgid "The function refers to the passed arguments by position (as if they were `positional parameters <internalvariables.html#POSPARAMREF>`__ ), that is, ``      $1     `` , ``      $2     `` , and so forth."
+msgstr ""
+
+#: ../../complexfunct.rst:23
+# ac2787a9300748589c3648b6c91b23ad
+msgid "Exemple 2. Function Taking Parameters"
+msgstr ""
+
+#: ../../complexfunct.rst:89
+#: ../../complexfunct.rst:526
+# 98ebce43564c431b87dbd2e36c71c380
+# c1c5033e45c3429e90cb2d5dee5bd350
+msgid "|Important"
+msgstr ""
+
+#: ../../complexfunct.rst:91
+# c04f67f1d7104dceb221dd33f5941f59
+msgid "The `shift <othertypesv.html#SHIFTREF>`__ command works on arguments passed to functions (see `Example 36-18 <assortedtips.html#MULTIPLICATION>`__ )."
+msgstr ""
+
+#: ../../complexfunct.rst:98
+# 60b73c0107104fc29d7a8481d2bd7297
+msgid "But, what about command-line arguments passed to the script? Does a function see them? Well, let's clear up the confusion."
+msgstr ""
+
+#: ../../complexfunct.rst:103
+# 81d0982c2b4245e98babc83127f126e4
+msgid "Exemple 3. Functions and command-line args passed to the script"
+msgstr ""
+
+#: ../../complexfunct.rst:136
+# 87f39cd8c1c441d7b42e315ef2c982db
+msgid "In contrast to certain other programming languages, shell scripts normally pass only value parameters to functions. Variable names (which are actually *pointers* ), if passed as parameters to functions, will be treated as string literals. *Functions interpret their arguments literally.*"
+msgstr ""
+
+#: ../../complexfunct.rst:142
+# 4cb7d814811a47fcb97fd0ce28519d12
+msgid "`Indirect variable references <ivr.html#IVRREF>`__ (see `Example 37-2 <bashver2.html#EX78>`__ ) provide a clumsy sort of mechanism for passing variable pointers to functions."
+msgstr ""
+
+#: ../../complexfunct.rst:148
+# f69fd51c5dbe43218ffe96a293546c2d
+msgid "Exemple 4. Passing an indirect reference to a function"
+msgstr ""
+
+#: ../../complexfunct.rst:180
+# 79f1e6fcec7e40d0bd39cc4376be702b
+msgid "The next logical question is whether parameters can be dereferenced *after* being passed to a function."
+msgstr ""
+
+#: ../../complexfunct.rst:185
+# f915094d4b554dd2a1ae3a24d3e20afb
+msgid "Exemple 5. Dereferencing a parameter passed to a function"
+msgstr ""
+
+#: ../../complexfunct.rst:218
+# 3da34ff61cff43a8ba4eaba193b060f5
+msgid "Exemple 6. Again, dereferencing a parameter passed to a function"
+msgstr ""
+
+#: ../../complexfunct.rst:266
+# 27c59b3fa55945e5a3b2b2eefbcbf5d0
+msgid "** Exit and Return**"
+msgstr ""
+
+#: ../../complexfunct.rst:269
+# f6dce111c2774ee1a3dfa79aa2ab595c
+msgid "Functions return a value, called an *exit status* . This is analogous to the `exit status <exit-status.html#EXITSTATUSREF>`__ returned by a command. The exit status may be explicitly specified by a **return** statement, otherwise it is the exit status of the last command in the function ( 0 if successful, and a non-zero error code if not). This `exit status <exit-status.html#EXITSTATUSREF>`__ may be used in the script by referencing it as `$? <internalvariables.html#XSTATVARREF>`__ . This mechanism effectively permits script functions to have a \"return value\" similar to C functions."
+msgstr ""
+
+#: ../../complexfunct.rst:280
+# c6d2361c47d5427eaa3a3a596ddee14f
+msgid "**return**"
+msgstr ""
+
+#: ../../complexfunct.rst:283
+# 3c070cc09dfd46acbb8fbb48e5156242
+msgid "<complexfunct.html#FTN.AEN18474>`__ optionally takes an *integer*"
+msgstr ""
+
+#: ../../complexfunct.rst:284
+# cbb9442637b7477fb34ea21ffd9514be
+msgid "argument, which is returned to the calling script as the \"exit status\" of the function, and this exit status is assigned to the variable `$? <internalvariables.html#XSTATVARREF>`__ ."
+msgstr ""
+
+#: ../../complexfunct.rst:290
+# 89ee11c1b01140ca8fb40fdb1c402d7a
+msgid "Exemple 7. Maximum of two numbers"
+msgstr ""
+
+#: ../../complexfunct.rst:349
+# a6ad369f2929409ea4264881d54cfcd9
+msgid "|Tip"
+msgstr ""
+
+#: ../../complexfunct.rst:351
+# 4f311732396046c9a369ea3a2f45c50d
+msgid "For a function to return a string or array, use a dedicated variable."
+msgstr ""
+
+#: ../../complexfunct.rst:361
+# 189e123f4f0147e0933ea8a9b6b876fa
+msgid "[[ -r /etc/passwd"
+msgstr ""
+
+#: ../../complexfunct.rst:362
+# 7921f77e3aa1450ab3d0fccc13426c2c
+msgid "]] && REPLY=$(echo $(wc -l < /etc/passwd))"
+msgstr ""
+
+#: ../../complexfunct.rst:364
+# 00ea17340cb346fcbcd6304f9a6ef4b5
+msgid "#  If /etc/passwd"
+msgstr ""
+
+#: ../../complexfunct.rst:365
+# bfece90474c14e5f894eaf91326eaf1d
+msgid "is readable, set REPLY t o line count."
+msgstr ""
+
+#: ../../complexfunct.rst:367
+# e03a1c25ff1b4bfeac959b28f5b73078
+msgid "#  Returns both a"
+msgstr ""
+
+#: ../../complexfunct.rst:368
+# df4d206b8f0f44fd98f3b653e14343c3
+msgid "parameter value and stat us information."
+msgstr ""
+
+#: ../../complexfunct.rst:370
+# 9d0825b218684b31b5963d9f5fc5a0ce
+msgid "#  The 'echo' seem"
+msgstr ""
+
+#: ../../complexfunct.rst:372
+# c7068c4332714182812399eb40f3441f
+msgid "#+ it removes exce"
+msgstr ""
+
+#: ../../complexfunct.rst:373
+# 6622e7ca21e5491bbf59fadb11b616b5
+msgid "ss whitespace from the o utput."
+msgstr ""
+
+#: ../../complexfunct.rst:375
+#: ../../complexfunct.rst:596
+#: ../../complexfunct.rst:757
+# 1af2146b192142d6bfa5d99081e78beb
+# 73a0f561c360426a8ea728e67f4c24b9
+# 922af052aa6d49abb78dfc4274814bea
+msgid "}"
+msgstr ""
+
+#: ../../complexfunct.rst:377
+# af84890046fe4d768f4d153cc121362b
+msgid "if count_lines_in_et"
+msgstr ""
+
+#: ../../complexfunct.rst:380
+# 3d8b53ae6eca4e65a5eb5b04f83e6304
+msgid "echo \"There are $R"
+msgstr ""
+
+#: ../../complexfunct.rst:381
+# 637cf80f34a648e4b7bd5d74ded7a89e
+msgid "EPLY lines in /etc/passw d.\""
+msgstr ""
+
+#: ../../complexfunct.rst:384
+# 941002c2214a4b52ab9f14b63afd96dd
+msgid "echo \"Cannot count"
+msgstr ""
+
+#: ../../complexfunct.rst:386
+# b385cfc68f4343c89c07fc63ad54047a
+msgid "fi"
+msgstr ""
+
+#: ../../complexfunct.rst:388
+# 2b4bff67860b450d985c77fbd34bc4c3
+msgid "# Thanks, S.C."
+msgstr ""
+
+#: ../../complexfunct.rst:440
+# 4b1c6e412cfc42dfb20b2905610199be
+msgid "Exemple 8. Converting numbers to Roman numerals"
+msgstr ""
+
+#: ../../complexfunct.rst:522
+# 12b9c8f16f734fea98ac0336cc51edd1
+msgid "See also `Example 11-29 <testbranch.html#ISALPHA>`__ ."
+msgstr ""
+
+#: ../../complexfunct.rst:528
+# 50b79bddc00c4f3f93d6896ea1af7de4
+msgid "The largest positive integer a function can return is 255. The **return** command is closely tied to the concept of `exit status <exit-status.html#EXITSTATUSREF>`__ , which accounts for this particular limitation. Fortunately, there are various `workarounds <assortedtips.html#RVT>`__ for those situations requiring a large integer return value from a function."
+msgstr ""
+
+#: ../../complexfunct.rst:537
+# 7eb5be0a486448fb8a99025f3448a465
+msgid "Exemple 9. Testing large return values in a function"
+msgstr ""
+
+#: ../../complexfunct.rst:578
+# bc6ef2617a754f0298de3b3c264e5fb8
+msgid "A workaround for obtaining large integer \"return values\" is to simply assign the \"return value\" to a global variable."
+msgstr ""
+
+#: ../../complexfunct.rst:586
+# 32e3986d8f6d4945a9bde5b7cb69d9a3
+msgid "al variable to hold over size return value of fun ction."
+msgstr ""
+
+#: ../../complexfunct.rst:590
+# dca5ce32f5f3443aa1cc8d8bd586a1e5
+msgid "alt_return_test () {"
+msgstr ""
+
+#: ../../complexfunct.rst:592
+# bd0bbd7ff3fb451898177717d63a2682
+msgid "fvar=$1 Return_Val=$fvar return   # Returns"
+msgstr ""
+
+#: ../../complexfunct.rst:598
+# d6aa3bf046c6413bbeaa1bdf416308d7
+msgid "alt_return_test 1 echo $?"
+msgstr ""
+
+#: ../../complexfunct.rst:600
+# 92858b6b8ef547c0b24a45b4bc801eb8
+msgid "# 0"
+msgstr ""
+
+#: ../../complexfunct.rst:601
+#: ../../complexfunct.rst:614
+# 33f1a76f0cb84aadb25cc93561373e1a
+# 40965d0b28da4327b631cdfdf3304bb0
+msgid "echo \"return value ="
+msgstr ""
+
+#: ../../complexfunct.rst:602
+# 7a9971ebc17840ccbf5a5dbc4b25446a
+msgid "$Return_Val\"    # 1"
+msgstr ""
+
+#: ../../complexfunct.rst:604
+# dc6c7b64ff2440acabd25a6af5d4ed4e
+msgid "alt_return_test 256 echo \"return value ="
+msgstr ""
+
+#: ../../complexfunct.rst:606
+# 3ecc3607e8124fffa8fb6860c8eb0bc2
+msgid "$Return_Val\"    # 256"
+msgstr ""
+
+#: ../../complexfunct.rst:608
+# 7943121026bf4824be294b46273feac4
+msgid "alt_return_test 257 echo \"return value ="
+msgstr ""
+
+#: ../../complexfunct.rst:610
+# b64a04f4f20c4a5cb22430f6c8ae6245
+msgid "$Return_Val\"    # 257"
+msgstr ""
+
+#: ../../complexfunct.rst:612
+# 073431b8ae584a8baa8e823dc49f211c
+msgid "alt_return_test 2570"
+msgstr ""
+
+#: ../../complexfunct.rst:615
+# d695dd9ad4494f98bd8be15212105e50
+msgid "$Return_Val\"    #25701"
+msgstr ""
+
+#: ../../complexfunct.rst:620
+# ad2340af8f5741d6bf91616d65a06e96
+msgid "A more elegant method is to have the function **echo** its \"return value to ``             stdout            `` ,\" and then capture it by `command substitution <commandsub.html#COMMANDSUBREF>`__ . See the `discussion of this <assortedtips.html#RVT>`__ in `Section 36.7 <assortedtips.html>`__ ."
+msgstr ""
+
+#: ../../complexfunct.rst:628
+# 237fae5ecc83402994bf49fc77962a0c
+msgid "Exemple 10. Comparing two large integers"
+msgstr ""
+
+#: ../../complexfunct.rst:701
+# 3c46b4fe6a754e73a20074f3fd83186a
+msgid "Here is another example of capturing a function \"return value.\" Understanding it requires some knowledge of `awk <awk.html#AWKREF>`__ ."
+msgstr ""
+
+#: ../../complexfunct.rst:710
+# b0956997769b4b10b8617c8b3e59b02f
+msgid "akes month number as an argument."
+msgstr ""
+
+#: ../../complexfunct.rst:712
+# 8790d55318e24682a5e71f990a8d66dd
+msgid "{                # R"
+msgstr ""
+
+#: ../../complexfunct.rst:715
+# 066cd7a98ac746db90ca5168cc6d0a7d
+msgid "monthD=\"31 28 31 30"
+msgstr ""
+
+#: ../../complexfunct.rst:718
+# 259b0a2f9ef94e8a973930f06da981ac
+msgid "echo \"$monthD\" | awk"
+msgstr ""
+
+#: ../../complexfunct.rst:723
+# df8a15c70a5b44f1b2fa0aa44720d491
+msgid "# Parameter passed t"
+msgstr ""
+
+#: ../../complexfunct.rst:726
+# 263bd6a66bd649318dba93376b605c5b
+msgid "# Awk sees this as \""
+msgstr ""
+
+#: ../../complexfunct.rst:727
+# c902e539537f45929d210bdd4ba26610
+msgid "print $1 . . . print $12 \" (depending on month nu mber)"
+msgstr ""
+
+#: ../../complexfunct.rst:730
+# 26758edf93e84b0aadfbadb3c2e67ab5
+msgid "# Template for passi"
+msgstr ""
+
+#: ../../complexfunct.rst:731
+# cbd00f2f789d47d7a3769972cde0e827
+msgid "ng a parameter to embedd ed awk script:"
+msgstr ""
+
+#: ../../complexfunct.rst:734
+# 1370923d8fc741c08a258a9a801206fe
+msgid "$'\"${scrip"
+msgstr ""
+
+#: ../../complexfunct.rst:735
+# 4c75bcb216944aacad3b1d64e850d99f
+msgid "t_parameter}\"'"
+msgstr ""
+
+#: ../../complexfunct.rst:737
+# 3d05a624c4a846838e0e406120b1c586
+msgid "#    Here's a slight"
+msgstr ""
+
+#: ../../complexfunct.rst:738
+# d098bec432d14166aced80ca6f05a0f3
+msgid "ly simpler awk construct :"
+msgstr ""
+
+#: ../../complexfunct.rst:740
+# bab632f2aa314fe7ad8777943bd9b57a
+msgid "#    echo $monthD |"
+msgstr ""
+
+#: ../../complexfunct.rst:741
+# 16b5ea7876fc4f029f23222bb3638a85
+msgid "awk -v month=$1 '{print $(month)}'"
+msgstr ""
+
+#: ../../complexfunct.rst:743
+# cbe0295347254ff1846e59fafd0d95d7
+msgid "#    Uses the -v awk"
+msgstr ""
+
+#: ../../complexfunct.rst:744
+# b6972e20c9a54a99b4767d112eaec177
+msgid "option, which assigns a variable value"
+msgstr ""
+
+#: ../../complexfunct.rst:746
+# 6733aedaf3d34678b914442ed0e25c2d
+msgid "#+   prior to execut"
+msgstr ""
+
+#: ../../complexfunct.rst:747
+# 87b1f6366ca542fbb1f90fdac5b6a130
+msgid "ion of the awk program b lock."
+msgstr ""
+
+#: ../../complexfunct.rst:749
+# 813c6899f46a4ba2b4076db2c9b99cd1
+msgid "#    Thank you, Rich"
+msgstr ""
+
+#: ../../complexfunct.rst:750
+# 411cbf18addd48fb8192b431bcdf874f
+msgid "."
+msgstr ""
+
+#: ../../complexfunct.rst:752
+# 95b43a634632465ba00955771c47c1a7
+msgid "#  Needs error check"
+msgstr ""
+
+#: ../../complexfunct.rst:753
+# 221408e116b84cebb2774be2181a0ec0
+msgid "ing for correct paramete r range (1-12)"
+msgstr ""
+
+#: ../../complexfunct.rst:755
+# 3d8b2dfee6ad4104a6128f85dd1493d7
+msgid "#+ and for February"
+msgstr ""
+
+#: ../../complexfunct.rst:759
+# 166d557b2e694d62a9cde9b14bf70b04
+msgid "# ------------------"
+msgstr ""
+
+#: ../../complexfunct.rst:762
+# 22ec0de9a84240c68b2bd8dfad915831
+msgid "# Usage example: month=4        # Apr"
+msgstr ""
+
+#: ../../complexfunct.rst:764
+# 0eca6ec126d049939890bd586cb700b2
+msgid "il, for example (4th mon th)."
+msgstr ""
+
+#: ../../complexfunct.rst:766
+# 120c21e524ec4b2f9e224cdcdec6e8b9
+msgid "days_in=$(month_leng"
+msgstr ""
+
+#: ../../complexfunct.rst:768
+# 2ae4e82fc9324d838695991614a36fa5
+msgid "echo $days_in  # 30 # ------------------"
+msgstr ""
+
+#: ../../complexfunct.rst:776
+# f065ddbbd5024f5a98abf08e3a8a7a33
+msgid "See also `Example A-7 <contributed-scripts.html#DAYSBETWEEN>`__ and `Example A-37 <contributed-scripts.html#STDDEV>`__ ."
+msgstr ""
+
+#: ../../complexfunct.rst:779
+# 20dca76edc054eb4b06fbe73cb1e5212
+msgid "``                         Exercise:                       `` Using what we have just learned, extend the previous `Roman numerals example <complexfunct.html#EX61>`__ to accept arbitrarily large input."
+msgstr ""
+
+#: ../../complexfunct.rst:1107
+# 451f462004824fa5be59ff8a600e7a07
+msgid "** Redirection**"
+msgstr ""
+
+#: ../../complexfunct.rst:1111
+# 761177d254644e6e8025529e8c0a40a3
+msgid "A function is essentially a `code block <special-chars.html#CODEBLOCKREF>`__ , which means its ``         stdin        `` can be redirected (as in `Example 3-1 <special-chars.html#EX8>`__ )."
+msgstr ""
+
+#: ../../complexfunct.rst:1118
+# 05bca0acc62244bf8772c5d34431a9d8
+msgid "Exemple 11. Real name from username"
+msgstr ""
+
+#: ../../complexfunct.rst:1165
+# 326f12577e9046ebae7705550d589476
+msgid "There is an alternate, and perhaps less confusing method of redirecting a function's ``         stdin        `` . This involves redirecting the ``         stdin        `` to an embedded bracketed code block within the function."
+msgstr ""
+
+#: ../../complexfunct.rst:1208
+# 2dbe23ff026043ac8efc48cfd3d523a8
+msgid "|Note"
+msgstr ""
+
+#: ../../complexfunct.rst:1210
+# 4c06c545cc0449ff9b86ded384821829
+msgid "Emmanuel Rouat's `sample ``             bashrc            `` file <sample-bashrc.html>`__ contains some instructive examples of functions."
+msgstr ""
+
+#: ../../complexfunct.rst:1220
+# c8d7cad34c4042069a56c44d2670e48d
+msgid "Notes"
+msgstr ""
+
+#: ../../complexfunct.rst:1223
+# c8a42e5e7f6e46b2978deea9350e75ce
+msgid "` [1]  <complexfunct.html#AEN18474>`__"
+msgstr ""
+
+#: ../../complexfunct.rst:1225
+# 61c6b78512fe48459fbd47655780198c
+msgid "The **return** command is a Bash `builtin <internal.html#BUILTINREF>`__ ."
+msgstr ""
+

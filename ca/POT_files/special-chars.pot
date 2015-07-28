@@ -1,0 +1,1867 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../special-chars.rst:3
+# 5825598bd84940749a1a493b834a171d
+msgid "XXX 3. Caràcters especials"
+msgstr ""
+
+#: ../../special-chars.rst:5
+# 54cb95410a194c4fbb8d66558ac1c1a9
+msgid "Diem que un caràcter és especial quan té un significat més enllà del seu *valor literal* [#metameaning]_. Juntament amb les comandes i :doc:`paraules claus<internal>`, els caràcters especials formen els fonaments de la programació Bash."
+msgstr ""
+
+#: ../../special-chars.rst:10
+# 75c34b729f0f47468a0df1fbf95723a9
+msgid "Considera la següent llista de caràcters especials que podem trobar en guions de shell:"
+msgstr ""
+
+#: ../../special-chars.rst:14
+# 90717e8a66ab4468b99fbe03872e806b
+msgid "Sostingut: #"
+msgstr ""
+
+#: ../../special-chars.rst:16
+# 0277d3d5af8e4b86b55c5f39df201a13
+msgid "El principal ús del símbol de sostingut ``#`` en Bash és el de marcar l'inici d'un comentari."
+msgstr ""
+
+#: ../../special-chars.rst:18
+# bc862e2681f54f5b81b44110cf620257
+msgid "Per ser un comentari, ``#`` apareixerà com el primer caràcter de la línia, o a continuació d'un:ref:`caràcter en blanc <specialchars_whitespaces>` (espai, tabulador)."
+msgstr ""
+
+#: ../../special-chars.rst:21
+# 6efc8f5819364cc2862af08a3b115506
+msgid "El que apareix després de ``#`` no serà interpretat. De fet, el control d'errors queda desactivat, pel que hi podrem posar pràcticament qualsevol cosa."
+msgstr ""
+
+#: ../../special-chars.rst:31
+# ad5216b64d0d4e3183d27c5883e9a288
+msgid "Podem trobar comentaris, fins i tot, en una :ref:`pipe <specialchars-pipe>`."
+msgstr ""
+
+#: ../../special-chars.rst:37
+# 61b4c25477064593b6790f4b511575f2
+msgid "Cal tenir present què, el final del comentari queda marcar pel salt de línia. És a dir, un cop començat el comentari, tot el que vingui després en la mateixa línia serà considerat com a comentari. No hi ha manera d'indicar que el comentari ha finalitzat, a banda del salt de línia."
+msgstr ""
+
+#: ../../special-chars.rst:41
+# 46c4600ecc6d4dc38493f1e4e414084d
+msgid "El sostingut no serà considerat inici de comentari en els següents casos:"
+msgstr ""
+
+#: ../../special-chars.rst:43
+# 58c71721868b4c40a136ee8b7714a9c0
+msgid ":doc:`sha-bang<sha-bang>`. (``#!``) que, quan apareix en la primera línia d'un fitxer, indica quin programa ha d'interpretar el contingut del fitxer."
+msgstr ""
+
+#: ../../special-chars.rst:46
+# ff8c100ebab94cb89dbb9fd777587c8f
+msgid "Quan el sostingut apareix, però, :doc:`entre cometes <quoting>` o :doc:`escapat <escapingsection>` com a argument d'una comanda *echo*, no es considera com a marca de comentari."
+msgstr ""
+
+#: ../../special-chars.rst:49
+# 7c494fd33a1b4cfdb65050d0f789b594
+msgid "Per altra banda, ``#`` tampoc no es considera inici de comentari quan apareix en una :doc:`substitució de paràmetres <parameter-substitution>` ni en :doc:`expressions amb constants numèriques <numerical-constants>`."
+msgstr ""
+
+#: ../../special-chars.rst:57
+# 0da419a0e8c64c36a6c14eadae2a8366
+msgid "Punt i coma: ;"
+msgstr ""
+
+#: ../../special-chars.rst:59
+# 3063143783004c349d71bb6291450000
+msgid "El punt i coma ``;`` serveix com a separador entre comandes que apareixen seqüencialment a una mateixa línia."
+msgstr ""
+
+#: ../../special-chars.rst:67
+# 1db09fe77125477685ead92c0b6f84d4
+msgid "De vegades el ; ha de ser escapat. Considera l'opció :ref:`-exec de la comanda find <moreadv-find-exec>`."
+msgstr ""
+
+#: ../../special-chars.rst:70
+# 557eb519d40445dc83c37c47504a822c
+msgid "Quan el punt i coma apareix duplicat (``;;``), el seu significat passa a ser de terminador en una opció *case*.  Mira :doc:`testbranch`."
+msgstr ""
+
+#: ../../special-chars.rst:80
+# abaf82ef0e8f4cc0b1f237287d17cdba
+msgid "Hi ha altres versions del punt i coma doble (``;;&`` i ``;&``).  Són també terminadors d'opció *case*, en aquest cas, per versions de Bash a partir de la 4. Mira :doc:`bashver4`."
+msgstr ""
+
+#: ../../special-chars.rst:84
+# 21a62264ffab433eb5365540d2b4383a
+msgid "Punt: ."
+msgstr ""
+
+#: ../../special-chars.rst:86
+# 1de5ec40883f44c2af5c1a36d215f013
+msgid "A l'inici de la línia, el punt equival a la comanda :ref:`internal_dotcommand`."
+msgstr ""
+
+#: ../../special-chars.rst:88
+# b0da2ff7c46e4588b0df8be814992ff4
+msgid "Quan el nom d'un fitxer o carpeta comença amb punt, es interpretat com a fitxer *ocult* i, per exemple, no serà llistat per defecte per la comanda ``ls``."
+msgstr ""
+
+#: ../../special-chars.rst:110
+# 8d0c265866094b719eac847f300f6207
+msgid "En el cas del nom d'una carpeta, un punt sol representa el directori actual, mentre que dos punts denoten la carpeta superior."
+msgstr ""
+
+#: ../../special-chars.rst:126
+# 76cbc6c6bbcf4aa09a075643381edde4
+msgid "El punt apareix sovint com la destinació (carpeta) d'una comanda de moviment o còpia de fitxers. En aquest cas, s'indica que la destinació és la carpeta actual:"
+msgstr ""
+
+#: ../../special-chars.rst:133
+# f4c8315c86a241e9b3361829afd995af
+msgid "La comanda anterior copiarà tots els fitxers de la carpeta brossa/ a la carpeta actual o :ref:`internalvars_pwd`."
+msgstr ""
+
+#: ../../special-chars.rst:136
+# e06b6214e96f4845a07567706afaa006
+msgid "Finalment, el caràcter punt serveix per indicar *qualsevol caràcter* quan forma part d'una :doc:`expressió regular <regexp>`."
+msgstr ""
+
+#: ../../special-chars.rst:140
+# dbe709218ece434b8025b63fb6267c67
+msgid "Cometes dobles: \\\""
+msgstr ""
+
+#: ../../special-chars.rst:142
+# 4db417b5ae5543cf9d23a519dd352dfd
+msgid "Envoltar un text entre cometes dobles, evita que la majoria dels caràcters especials que conté el text, siguin interpretats. Es coneix com *cometes parcials*. Mira :doc:`quoting`."
+msgstr ""
+
+#: ../../special-chars.rst:147
+# becf30ca0d0f4398a8b458e471d2ffcb
+msgid "Cometes simples: '"
+msgstr ""
+
+#: ../../special-chars.rst:149
+# 9e802120079045efaecd57c46c9138f7
+msgid "Quan envoltem un text entre cometes simples (*cometes totals*), tots els caràcters especials deixen de ser interpretats. És, per tant, una forma més forta de posar entre cometes un text que amb les cometes dobles. Mira :doc:`quoting`."
+msgstr ""
+
+#: ../../special-chars.rst:155
+# 65c393ddd50247d7a8d38dbb54b3971c
+msgid "Coma: ,"
+msgstr ""
+
+#: ../../special-chars.rst:157
+# dd14d6d41de74cf39b6c0571ef2570f4
+msgid "L'*operador coma* [#operadors]_ enllaça una sèrie d'operacions aritmètiques. Totes són avaluades, i finalment es retorna el resultat de la darrera."
+msgstr ""
+
+#: ../../special-chars.rst:166
+# 9b4de2970f0049df845199cb82b20af5
+msgid "Amb l'operador coma també podem concatenar Strings, com al següent exemple:"
+msgstr ""
+
+#: ../../special-chars.rst:171
+# f4086b11b1db4f1dabe694130b298ee5
+msgid "En una substitució de paràmetres, s'interpreta com a passar a minúscules."
+msgstr ""
+
+#: ../../special-chars.rst:179
+# f0831b633fcc42b9aeb4c9fcc7786e9a
+msgid "Mira :ref:`bash4_modificacas`"
+msgstr ""
+
+#: ../../special-chars.rst:182
+# 3780627e941d4f688504f59ec352c523
+msgid "Contrabarra: \\\\"
+msgstr ""
+
+#: ../../special-chars.rst:184
+# b7ccef40bd3d4ffe9f641a1d28ff0d1e
+msgid "La contrabarra permet evitar que el caràcter següent sigui interpretat, de manera que s'entengui literalment. Aquest mecanisme es coneix com a *escapar* el caràcter per traducció directa del *escape* anglès."
+msgstr ""
+
+#: ../../special-chars.rst:188
+#: ../../special-chars.rst:206
+# fcf1f4850fb4456a84ad8d037fbb7d93
+# e464c09c9f6a492fa8d74a1165549a22
+msgid "Per exemple:"
+msgstr ""
+
+#: ../../special-chars.rst:197
+# 7ec5fcad2e8c4ad6b3f7f07e7561b37b
+msgid "Mira :doc:`escapingsection` per més detalls sobre escapament de caràcters. Considera :doc:`quoting` per una explicació global d'aquest tema."
+msgstr ""
+
+#: ../../special-chars.rst:201
+# 1fb18858f87a4969b748d1072eac9ed6
+msgid "Barra: /"
+msgstr ""
+
+#: ../../special-chars.rst:203
+# 617b712c4dd3401c915013656997e29a
+msgid "La barra és el separador de carpetes en les especificacions del camí a un fitxer. El que es coneix com a *path*."
+msgstr ""
+
+#: ../../special-chars.rst:212
+# 5a6bc68faf624ff190814f701e4ee374
+msgid "També es fa servir per indicar l'operador aritmètic de divisió.  Mira :doc:`ops` per més detalls."
+msgstr ""
+
+#: ../../special-chars.rst:215
+# 63d1cea91f2840f78f6dcb85077f0a4b
+msgid "Tilde oberta: \\`"
+msgstr ""
+
+#: ../../special-chars.rst:217
+# b5371fe81afa48afaa2a6ee33cbb415f
+msgid "Anomenat substitució de comanda (*command substitution*), envoltar un text entre tildes obertes fa què:"
+msgstr ""
+
+#: ../../special-chars.rst:220
+# a0559a8c94fa454ab01ac5b47f5800e9
+msgid "s'executi el text que apareix entre tildes com si fos una comanda Bash"
+msgstr ""
+
+#: ../../special-chars.rst:222
+# b6c6e3a47089411a880c071db29c4e36
+msgid "es retorni com a string el resultat que la comanda escrigui en la sortida estàndard, per exemple, per a ser assignat a una variable."
+msgstr ""
+
+#: ../../special-chars.rst:225
+# 62bf776557184bea9026845b78389f37
+msgid "Mira :doc:`commandsub` per més detalls."
+msgstr ""
+
+#: ../../special-chars.rst:229
+# e54a68301ad343bf8e3d4178d06c51f5
+msgid "Dos punts: :"
+msgstr ""
+
+#: ../../special-chars.rst:231
+# 76db42dbee9543abbb6744825c667eda
+msgid "La comanda nulla: és l'equivalent en Bash del \"NOP\" (No Operation). Es tracta d'una :doc:`comanda interna <internal>` de Bash, que no fa res i sempre té com a :doc:`valor de sortida <exit-status>` ``0``. Es pot considerar sinònim de la comanda ``true``."
+msgstr ""
+
+#: ../../special-chars.rst:241
+# c7436f794a3e4cfe993911e52d81a9ad
+msgid "Amb ``:`` podem fer un bucle infinit:"
+msgstr ""
+
+#: ../../special-chars.rst:246
+# 2b627ffbc93e46be9b55e1b8f1e80552
+msgid "En algunes ocasions, cal començar una operació aritmètica o una substitució de paràmetres amb els ``:``.  Considera l'exemple: :ref:`ops_exemple_operadorsaritmetics` i :doc:`parameter-substitution`."
+msgstr ""
+
+#: ../../special-chars.rst:258
+# bb58f5db7e3d4390860030bf5787902d
+msgid "Un ús típic és com a *marcador de posició* allà on s'espera que hi hagi una comanda però que, per alguna raó, no la tenim o no la volem especificar. Per exemple, permet mantenir l'estructura d'un condicional, quan no es disposa de quelcom a fer per un determinat cas:"
+msgstr ""
+
+#: ../../special-chars.rst:271
+# 79e3c89968f64272ad663a556c2f9c79
+msgid "Un altre exemple d'ús per marcar posició el trobem en funcions buides:"
+msgstr ""
+
+#: ../../special-chars.rst:280
+# 2c5d001a493d4b41b0be512131da39cf
+msgid "En :doc:`documents immediats <here-docs>` permet marcar una posició allà on s'esperava una comanda. Mira :ref:`heredocs_anonim`."
+msgstr ""
+
+#: ../../special-chars.rst:283
+# 8d3fe2761419422889a51ad7b86cc83c
+msgid "Avalua variables fent servir :doc:`parameter-substitution` com a :ref:`parameter-substitution_missatges_error`."
+msgstr ""
+
+#: ../../special-chars.rst:292
+# 3a2c4ae7cf7a463695b2a8776278b8e3
+msgid "Trobem un altre ús de la comanda nul·la, combinant-la amb :doc:`l'operador de redirecció <io-redirection>` ``>``. Donat que no genera cap resultat per sortida estàndard, quan redireccionem la seva sortida cap a un fitxer, elimina el seu contingut. Per exemple:"
+msgstr ""
+
+#: ../../special-chars.rst:300
+# 51be55a5af4c4dbfa045f0d2556ec3fc
+msgid "El resultat equival a fer ``cat /dev/null > fitxer.dat`` La diferència és que amb ``:`` no es crea un nou procés, doncs ``:`` és una comanda interna (*builtin*) de la shell."
+msgstr ""
+
+#: ../../special-chars.rst:303
+# 4b1baa2c579147f39dab878efe89cc7d
+msgid "Pot ser interessant quan no ens interessi canviar els permisos del fitxer a buidar. En cas que el fitxer no existís, el crea."
+msgstr ""
+
+#: ../../special-chars.rst:306
+# d7b8e0ef1eae4a6c970c60a34f9195f4
+msgid "En combinació amb el operador de redirecció ``>>``, no té efecte sobre un fitxer ja existent:"
+msgstr ""
+
+#: ../../special-chars.rst:312
+# ad830fe49e8c47d5a59aff1496ae28f4
+msgid "Tant amb ``>`` com amb ``>>``, en cas que el fitxer no existís, el crea."
+msgstr ""
+
+#: ../../special-chars.rst:316
+# 9a75ef2a6dfd4881a3347e1d0ee5457f
+msgid "Funciona només amb fitxers regulars, no amb *pipes*, enllaços simbòlics ni altres fitxers especials."
+msgstr ""
+
+#: ../../special-chars.rst:318
+# bd4ac123b4f94af6a5e609ec01e1a0e2
+msgid "De vegades trobarem ``:`` utilitzat per començar una línia de comentaris. No és una pràctica recomanada doncs, a diferència de ``#``, no queda desactivat el control d'errors."
+msgstr ""
+
+#: ../../special-chars.rst:325
+# 6c23c5e1590f410b9856c84650020e38
+msgid "Els dos punts també serveixen com a separador de camps al :doc:`fitxer<files>` ``/etc/passwd`` i en variables del sistema com ara :ref:`internalvariables_path`."
+msgstr ""
+
+#: ../../special-chars.rst:335
+# fd62fd403a8046d7915177f939196ea8
+msgid "Bash accepta anomenar una :doc:`funció<functions>` amb ``:``, com per exemple:"
+msgstr ""
+
+#: ../../special-chars.rst:350
+# cfa61ccdea8d4251a7e4a50f6654ff94
+msgid "Cal tenir present que és un comportament :doc:`portable <portabilityissues>` i, per tant, es desaconsella el seu ús."
+msgstr ""
+
+#: ../../special-chars.rst:354
+# f7532328809a4e458e05fe28ec2588ec
+msgid "Exclamació: \\!"
+msgstr ""
+
+#: ../../special-chars.rst:356
+# 90a109edd8c94b52a3db8a4cc14dcfa1
+msgid "L'exclamació és una :doc:`paraula reservada<internal>` de Bash."
+msgstr ""
+
+#: ../../special-chars.rst:358
+# 4fb67b5b13b542e5831ff4544315a31a
+msgid "En el seu ús més habitual, l'exclamació ``!`` (o *bang*) :ref:`nega o inverteix<exit-status_negatingconditionwithbang:` el resultat d'un test o un :doc:`estat de sortida<exit-status>`."
+msgstr ""
+
+#: ../../special-chars.rst:370
+# 1b8021a7b06a49f382cb3a192d240056
+msgid "També indica *desigualtat* quan es fa servir en conjunt amb l':ref:`operador de comparació <comparison-ops_notequalto>` ``=``."
+msgstr ""
+
+#: ../../special-chars.rst:373
+# 012cfbf4acd543b7af706e73ccd745b9
+msgid "Altres funcions de ``!`` són:"
+msgstr ""
+
+#: ../../special-chars.rst:375
+# f8d2b29a14b445a2908dcd431b791b51
+msgid "Com a referència indirecta a variable: mira :doc:`ivr`."
+msgstr ""
+
+#: ../../special-chars.rst:377
+# 17e5d7cbfc8c4bc0b46d2e31318ca6a9
+msgid "Des de la línia de comandes permet invocar el mecanisme :doc:`d'històric de comandes de Bash <histcommands>`."
+msgstr ""
+
+#: ../../special-chars.rst:382
+# 96ac4ba744794a0fb9aa4765eca9c6ae
+msgid "Dins d'un guió, el mecanisme d'històric de comandes està desabilitat."
+msgstr ""
+
+#: ../../special-chars.rst:385
+# 99344a21b08e48c9a6d73e13bc0feab3
+msgid "Asterisc: \\*"
+msgstr ""
+
+#: ../../special-chars.rst:387
+# b6bc17952a8341d0851f92b08e577d23
+msgid "Depenent del context, l'asterisc pot representar:"
+msgstr ""
+
+#: ../../special-chars.rst:389
+# 0af27aaa8770423b8ecfc55d664315e7
+msgid "Un mecanisme d'expansió de noms de fitxer"
+msgstr ""
+
+#: ../../special-chars.rst:391
+# 5661b6c0f7bf4edd94c32f0912c0c1f3
+msgid "El asterisc serveix de comodí per :doc:`l'expansió de noms de fitxer<globbingref>`."
+msgstr ""
+
+#: ../../special-chars.rst:393
+# 2f49a7a2b2a048df87e9c6c406d98041
+msgid "Quan apareix sol, implica **tots** els fitxers dins d'un directori. Per exemple:"
+msgstr ""
+
+#: ../../special-chars.rst:401
+# 00483d72bf1546f6956842ffaa932ee1
+msgid "En cas de ser doble asterisc, ``**``, funcionaria com un comodí estès (que accepta fitxers i directoris) incorporat en la :doc:`versió 4 de Bash<bashver4>."
+msgstr ""
+
+#: ../../special-chars.rst:405
+# 2ac1c30b4d844afca4b5469eeab73067
+msgid "*Qualsevol nombre de cops*: en :doc:`expressions regulars<regexp>`, l'asterisc especifica que l'element anterior pot aparèixer zero o més cops."
+msgstr ""
+
+#: ../../special-chars.rst:409
+# a7050e8343d44dc49015a5c2c891636d
+msgid "Un operador aritmètic"
+msgstr ""
+
+#: ../../special-chars.rst:411
+# c6e227408d6842b58660efe47f68cba5
+msgid "L'asterisc també és un :doc:`operador aritmètic<ops>`: quan apareix en una operació aritmètica ``\\*`` denota *multiplicació*."
+msgstr ""
+
+#: ../../special-chars.rst:414
+# 4c38b217c7cc4f16b73d6996cc553218
+msgid "En aquest mateix context, ``**`` (doble asterisc) representaria l'operador exponencial."
+msgstr ""
+
+#: ../../special-chars.rst:418
+# babcee959827463fa4567885c8cd7736
+msgid "Interrogant: ?"
+msgstr ""
+
+#: ../../special-chars.rst:420
+# 57a29499402e44b194480652adf6a800
+msgid "L'interrogant representa els següents papers, segons context:"
+msgstr ""
+
+#: ../../special-chars.rst:422
+# f7c0dea518554b08bf2418e32d075543
+msgid "En determinades expressions, ``?`` indica la comprovació d'una condició."
+msgstr ""
+
+#: ../../special-chars.rst:424
+# 6cbe49916f8c400f9c5f3bc4571e4510
+msgid "Per exemple, en una expressió de :doc:`doble parèntesis<dblparens>`, l'interrogant pot servir com l'operador ternari: `` (( condició ? resultat-si-cert : resultat-si-fals``. Per exemple:"
+msgstr ""
+
+#: ../../special-chars.rst:432
+# cc1176885aa04afca4fb18c870e741cb
+msgid "El codi anterior tindria el mateix efecte que el següent:"
+msgstr ""
+
+#: ../../special-chars.rst:443
+# 35ff9315a2a643449dee7f7e4cb7c5bc
+msgid "En una :doc:`substitució de paràmetre <parameter-substitution>`, comprova si la variable ha estat assignada."
+msgstr ""
+
+#: ../../special-chars.rst:446
+# 6cae9cbb62394b8eb3b18527ec87e755
+msgid "En un patró per :doc:`l'expansió de noms de fitxer<globbingref>`, ``?`` indica que s'admet un caràcter qualsevol."
+msgstr ""
+
+#: ../../special-chars.rst:448
+# b8fce2b4f2804e90abaadb66e645a397
+msgid "En una :doc:`expressió regular<x17129>` indica que l'element anterior és opcional. És a dir, que pot donar-se zero o un cop."
+msgstr ""
+
+#: ../../special-chars.rst:451
+# a5cf84058f644f33a48822aa2bbe5d33
+msgid "A continuació de ``$`` representa el valor de sortida de la comanda anterior:"
+msgstr ""
+
+#: ../../special-chars.rst:460
+# e76a4e730ada47e9b4880ca53ea12a85
+msgid "En aquest cas, la comanda 'rm' ha sortit amb un valor d'error ``1``."
+msgstr ""
+
+#: ../../special-chars.rst:464
+# 26e199b65f314e31b5e2d57518f84ac3
+msgid "Dollar: $"
+msgstr ""
+
+#: ../../special-chars.rst:466
+# 87e50f1f1b264d389b7a4c6eaf2e1066
+msgid "XXX TODO: per aquí"
+msgstr ""
+
+#: ../../special-chars.rst:468
+# 9e4d7eedddd145f280ccb4a4eab2da68
+msgid "**`Variable substitution <varsubn.html>`__ (contents of a variable).**"
+msgstr ""
+
+#: ../../special-chars.rst:483
+# ee088e7218a5451fa37c993a9f901a43
+msgid "A $ prefixing a variable name indicates the *value* the variable holds."
+msgstr ""
+
+#: ../../special-chars.rst:486
+# 7ab3dde83841483e8ced163e38335f11
+msgid "$"
+msgstr ""
+
+#: ../../special-chars.rst:488
+# f7efb2fb44084963b47a780fa2809075
+msgid "**end-of-line.** In a `regular expression <regexp.html#REGEXREF>`__ , a \"$\" addresses the `end of a line <x17129.html#DOLLARSIGNREF>`__ of text."
+msgstr ""
+
+#: ../../special-chars.rst:493
+# 3b6f7efc8975400283a7a6e4272c15b9
+msgid "${}"
+msgstr ""
+
+#: ../../special-chars.rst:495
+# f4d8ec974224478489ed082799a6dd74
+msgid "**`Parameter substitution <parameter-substitution.html#PARAMSUBREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:499
+# d13d8c6d6e82443586b4ff6df3c155f3
+msgid "$' ... '"
+msgstr ""
+
+#: ../../special-chars.rst:501
+# 5f55bd06bf66488ea77429cf5b0d0780
+msgid "**`Quoted string expansion <escapingsection.html#STRQ>`__ .** This construct expands single or multiple escaped octal or hex values into ASCII ` [3]  <special-chars.html#FTN.AEN1001>`__ or `Unicode <bashver4.html#UNICODEREF>`__ characters."
+msgstr ""
+
+#: ../../special-chars.rst:507
+# bd645f594ebd48b5a97088337b6ba9b4
+msgid "$\\* , $@"
+msgstr ""
+
+#: ../../special-chars.rst:509
+# 13323a148bec4e20b91c1746faabf648
+msgid "**`positional parameters <internalvariables.html#APPREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:512
+# aaae218f6ec0435f93098f2a1a62455d
+msgid "$?"
+msgstr ""
+
+#: ../../special-chars.rst:514
+# d3c79519482c4271a6322b64e842aa5e
+msgid "**exit status variable.** The `$? variable <exit-status.html#EXSREF>`__ holds the `exit status <exit-status.html#EXITSTATUSREF>`__ of a command, a `function <functions.html#FUNCTIONREF>`__ , or of the script itself."
+msgstr ""
+
+#: ../../special-chars.rst:520
+# d948d7978b7948f49257fe464f109e46
+msgid "$$"
+msgstr ""
+
+#: ../../special-chars.rst:522
+# aa3e0b2ea8f14c04ade6d767051289fc
+msgid "**process ID variable.** The `$$ variable <internalvariables.html#PROCCID>`__ holds the *process ID* ` [4]  <special-chars.html#FTN.AEN1071>`__ of the script in which it appears."
+msgstr ""
+
+#: ../../special-chars.rst:529
+# aeb2cd0e99ef49f2adf62b76fa10695a
+msgid "Parèntesis: ()"
+msgstr ""
+
+#: ../../special-chars.rst:531
+# 94f20218f2ea4f99a35705b3fc738894
+msgid "**command group.**"
+msgstr ""
+
+#: ../../special-chars.rst:543
+# fa6d2e5bddee4e5bbdc0859aa2f60fad
+msgid "Important"
+msgstr ""
+
+#: ../../special-chars.rst:545
+# 245740bbc0c645aa9c695c8547c13253
+msgid "A listing of commands within ``                         parentheses                       `` starts a `subshell <subshells.html#SUBSHELLSREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:549
+# f5e6e2d69fd142b38b0a73e1df3770bb
+msgid "Variables inside parentheses, within the subshell, are not visible to the rest of the script. The parent process, the script, `cannot read variables created in the child process <subshells.html#PARVIS>`__ , the subshell."
+msgstr ""
+
+#: ../../special-chars.rst:599
+# 3e1ebd09b69046168648d3efbfb74028
+msgid "Claus: {}"
+msgstr ""
+
+#: ../../special-chars.rst:601
+# c8e436c0d84f4ab695b6070ed62eba8f
+msgid "{xxx,yyy,zzz,...}"
+msgstr ""
+
+#: ../../special-chars.rst:603
+# 6fc3265ec36d461ca845d53bf78d1463
+msgid "**Brace expansion.**"
+msgstr ""
+
+#: ../../special-chars.rst:621
+# 28c67d1a83684413a4a0e059d6bbac94
+msgid "A command may act upon a comma-separated list of file specs within ``                   braces                 `` . ` [5]"
+msgstr ""
+
+#: ../../special-chars.rst:623
+# 3331e8f69fc04331b233e23fe1e68639
+msgid "<special-chars.html#FTN.AEN1124>`__ Filename expansion ("
+msgstr ""
+
+#: ../../special-chars.rst:624
+# df553c8b3598443ca4b575a63c33ca93
+msgid "`globbing <globbingref.html>`__ ) applies to the file specs between the braces."
+msgstr ""
+
+#: ../../special-chars.rst:629
+#: ../../special-chars.rst:1346
+#: ../../special-chars.rst:1662
+#: ../../special-chars.rst:1713
+# a77a2a47ac0647fb93f4f7224ecb952f
+# eeb10c7f014a4976b8e710dfb5f92989
+# 71877c3ba9bf4cfc988e7e34097e9d17
+# a3fb0e8976d54351835550b10dce0dd7
+msgid "Caution"
+msgstr ""
+
+#: ../../special-chars.rst:631
+# 4ea93ce706bb4ea39bd1907e2a0d4f52
+msgid "No spaces allowed within the braces *unless* the spaces are quoted or escaped."
+msgstr ""
+
+#: ../../special-chars.rst:634
+# 6d5ed461e480421b9777c059ed42f050
+msgid "``                         echo {file1,file2}\\ :{\\ A,\" B\",' C'}                       ``"
+msgstr ""
+
+#: ../../special-chars.rst:636
+# a77d834a3de242fcbe957f827bdb1088
+msgid "``            file1 : A file1 : B file1 : C file2 : A file2 : B file2 : C           ``"
+msgstr ""
+
+#: ../../special-chars.rst:641
+# 0a13591e415f4e57a569f2104dd72d93
+msgid "{a..z}"
+msgstr ""
+
+#: ../../special-chars.rst:643
+# 9e3a781d68d845bc8d6c61b46675e77a
+msgid "**Extended Brace expansion.**"
+msgstr ""
+
+#: ../../special-chars.rst:702
+# 98ada5b7e00542829afed66975bc387e
+msgid "Exemple 1. Code blocks and I/O redirection"
+msgstr ""
+
+#: ../../special-chars.rst:734
+# 6dcddcdf972e404f8d2f656e4a048c21
+msgid "Exemple 2. Saving the output of a code block to a file"
+msgstr ""
+
+#: ../../special-chars.rst:786
+#: ../../special-chars.rst:836
+#: ../../special-chars.rst:941
+#: ../../special-chars.rst:1187
+# bfec30a6b28c4757ae2eed92c0f6f869
+# 54b89aafc36e4df9aff904338125c584
+# 097fbb82bf784c94b7604f6e000cd6ae
+# 27b04ac7a1ca441a8147d7886d46e025
+msgid "Note"
+msgstr ""
+
+#: ../../special-chars.rst:788
+# 8bbbfe587a3d4143b44184314674b929
+msgid "Unlike a command group within (parentheses), as above, a code block enclosed by {braces} will *not* normally launch a `subshell <subshells.html#SUBSHELLSREF>`__ . ` [6]"
+msgstr ""
+
+#: ../../special-chars.rst:791
+# ad2c2dd3a5f94abf9f351dc2f6ab4183
+msgid "<special-chars.html#FTN.AEN1199>`__"
+msgstr ""
+
+#: ../../special-chars.rst:793
+# 5d249930e4484aec8702e870185ceb4f
+msgid "It is possible to `iterate <loops1.html#ITERATIONREF>`__ a code block using a `non-standard *for-loop* <loops1.html#NODODONE>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:799
+# 94d4ff2d2216448f8b40aaff04990144
+msgid "{}"
+msgstr ""
+
+#: ../../special-chars.rst:801
+# eb683ca73b504380925e73fc07b4f81c
+msgid "**placeholder for text.** Used after `xargs ``           -i          `` <moreadv.html#XARGSCURLYREF>`__ ( *replace strings* option). The {} double curly brackets are a placeholder for output text."
+msgstr ""
+
+#: ../../special-chars.rst:817
+# b933abe086934d81831a94287d14134d
+msgid "{} \\\\;"
+msgstr ""
+
+#: ../../special-chars.rst:819
+# e11cc85696db4123bd7760a5f916ef68
+msgid "**pathname.** Mostly used in `find <moreadv.html#FINDREF>`__ constructs. This is *not* a shell `builtin <internal.html#BUILTINREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:826
+# 1b5631be497d4e1baa43843e455d3db3
+msgid "Definition: A *pathname* is a *filename* that includes the complete `path <internalvariables.html#PATHREF>`__ . As an example, ``            /home/bozo/Notes/Thursday/schedule.txt           `` . This is sometimes referred to as the *absolute path* ."
+msgstr ""
+
+#: ../../special-chars.rst:838
+# ce33f84f038e4b0ebdb5ce8942056710
+msgid "The \" ; \" ends the ``            -exec           `` option of a **find** command sequence. It needs to be escaped to protect it from interpretation by the shell."
+msgstr ""
+
+#: ../../special-chars.rst:845
+# b103afc92b16475aa9178c9f7e627db9
+msgid "Claudàtors: [ ]"
+msgstr ""
+
+#: ../../special-chars.rst:847
+#: ../../special-chars.rst:858
+# 0d4719c0b1284858af496a07f728f53c
+# 470a90ee35e7487a873db9b578fdc36f
+msgid "**test.**"
+msgstr ""
+
+#: ../../special-chars.rst:850
+# 2ca26ec9be624ccc90785a1ab66dbc48
+msgid "`Test <tests.html#IFTHEN>`__ expression between **[ ]** . Note that **[** is part of the shell *builtin* `test <testconstructs.html#TTESTREF>`__ (and a synonym for it), *not* a link to the external command ``         /usr/bin/test        `` ."
+msgstr ""
+
+#: ../../special-chars.rst:856
+# 62d364f63ab34819b2c58751ed0c4a0f
+msgid "[[ ]]"
+msgstr ""
+
+#: ../../special-chars.rst:861
+# d5f66273b6eb4da0909ea9d89ac79dba
+msgid "Test expression between [[ ]] . More flexible than the single-bracket [ ] test, this is a shell `keyword <internal.html#KEYWORDREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:865
+# e5d9491911d54ed7a08363c86693105e
+msgid "See the discussion on the `[[ ... ]] construct <testconstructs.html#DBLBRACKETS>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:868
+#: ../../special-chars.rst:884
+# c7b28023ad7e4539bc8860f04a28afea
+# 2e0d51de89164ea4a371d1da7d8e5f81
+msgid "[ ]"
+msgstr ""
+
+#: ../../special-chars.rst:870
+# 047db0bc56dc459888cf4254a709cbf1
+msgid "**array element.**"
+msgstr ""
+
+#: ../../special-chars.rst:873
+# a15dce3a651f44cfb34526287a52d1f6
+msgid "In the context of an `array <arrays.html#ARRAYREF>`__ , brackets set off the numbering of each element of that array."
+msgstr ""
+
+#: ../../special-chars.rst:886
+# 32ecb4cd1ed54c86bb9494398cc115e4
+msgid "**range of characters.**"
+msgstr ""
+
+#: ../../special-chars.rst:889
+# 1dfdbfb3d2d1439ea6bb144b202e6292
+msgid "As part of a `regular expression <regexp.html#REGEXREF>`__ , brackets delineate a `range of characters <x17129.html#BRACKETSREF>`__ to match."
+msgstr ""
+
+#: ../../special-chars.rst:893
+# 49eb95242ad541e99be4e56a2e771864
+msgid "$[ ... ]"
+msgstr ""
+
+#: ../../special-chars.rst:895
+#: ../../special-chars.rst:916
+# 992d10a97e2744b3aec6424a6ac24265
+# 1565666db95e49019e44c40d13d73332
+msgid "**integer expansion.**"
+msgstr ""
+
+#: ../../special-chars.rst:898
+# f848a783db98443e8a56448ac9c85163
+msgid "Evaluate integer expression between $[ ] ."
+msgstr ""
+
+#: ../../special-chars.rst:911
+# c49e80387bf64c8780c6cd81aafe6f20
+msgid "Note that this usage is *deprecated* , and has been replaced by the `(( ... )) <dblparens.html>`__ construct."
+msgstr ""
+
+#: ../../special-chars.rst:914
+# 87bacffd46c14910ac1ffd4b45147b1e
+msgid "(( ))"
+msgstr ""
+
+#: ../../special-chars.rst:919
+# 1eb35f79c0264d6c895b9156889c190a
+msgid "Expand and evaluate integer expression between (( )) ."
+msgstr ""
+
+#: ../../special-chars.rst:921
+# d40e1bfd2b9f4eb9ae89cf5a00193861
+msgid "See the discussion on the `(( ... )) construct <dblparens.html>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:923
+# fb1ef4e7d14949f8b0a09bb6d747e87b
+msgid "> &> >& >> < <>"
+msgstr ""
+
+#: ../../special-chars.rst:925
+# 63d31b3ed57a4bc696b482b25ba31420
+msgid "**`redirection <io-redirection.html#IOREDIRREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:928
+# 242f466646a94fbe8191a5bd3b648da1
+msgid "``                   scriptname >filename                 `` redirects the output of ``         scriptname        `` to file ``         filename        `` . Overwrite ``         filename        `` if it already exists."
+msgstr ""
+
+#: ../../special-chars.rst:933
+# 09aa5f5569f34893bb5ef73d52e2c8c2
+msgid "``                   command &>filename                 `` redirects both the ``          stdout         `` <ioredirintro.html#STDINOUTDEF>`__ and the ``         stderr        `` of ``         command        `` to ``         filename        `` ."
+msgstr ""
+
+#: ../../special-chars.rst:943
+# cdd17eed49be41bca2d24bcb0fe696d8
+msgid "This is useful for suppressing output when testing for a condition."
+msgstr ""
+
+#: ../../special-chars.rst:944
+# e531746abc4549a28fe803b0dacb19f8
+msgid "For example, let us test whether a certain command exists."
+msgstr ""
+
+#: ../../special-chars.rst:950
+# ff52c99e6ef14a7593a841ef7ce1c7d2
+msgid "mand &>/dev/null"
+msgstr ""
+
+#: ../../special-chars.rst:954
+# 5c7b9065ce8d4137bb3560638b39da7f
+msgid "bash$ echo $? 1"
+msgstr ""
+
+#: ../../special-chars.rst:960
+# 7ae0ea17c63f430cae52f113f098f5b6
+msgid "Or in a script:"
+msgstr ""
+
+#: ../../special-chars.rst:968
+#: ../../special-chars.rst:1837
+# e8e73ed379f74779b076ee2dadc4f4b0
+# 4dffa51eeeec41eeb9cdbafc8d207429
+msgid "^"
+msgstr ""
+
+#: ../../special-chars.rst:970
+# 63a2aca2b4a84db980f23541d1fdc6fc
+msgid "cmd=rmdir"
+msgstr ""
+
+#: ../../special-chars.rst:972
+#: ../../special-chars.rst:978
+# 6b276f7c3bae47e8abaeaaf098d2d730
+# 8dabea8d21ad4efeb91c0113271c1b77
+msgid "command_test $cmd; e"
+msgstr ""
+
+#: ../../special-chars.rst:973
+# d204dd4abac7453da13aa9da9d4efe9c
+msgid "cho $?   # 0"
+msgstr ""
+
+#: ../../special-chars.rst:976
+# c966477c0fa54d1c9ec9d1c7bf6d1a81
+msgid "cmd=bogus_command"
+msgstr ""
+
+#: ../../special-chars.rst:979
+# 4c4bcd57eb1a4f65824838f0c73bfb91
+msgid "cho $?   # 1"
+msgstr ""
+
+#: ../../special-chars.rst:1034
+# f540c7b58e204f04abf042c95037dafe
+msgid "``                   command >&2                 `` redirects ``         stdout        `` of ``         command        `` to ``         stderr        `` ."
+msgstr ""
+
+#: ../../special-chars.rst:1038
+# 4bc6f5a46b944fb893a440bff421d0a6
+msgid "``                   scriptname >>filename                 `` appends the output of ``         scriptname        `` to file ``         filename        `` . If ``         filename        `` does not already exist, it is created."
+msgstr ""
+
+#: ../../special-chars.rst:1043
+# 82c17e5b6e294a6ca2f6f3fd0bc1dbc1
+msgid "``                   [i]<>filename                 `` opens file ``         filename        `` for reading and writing, and assigns `file descriptor <io-redirection.html#FDREF>`__ i to it. If ``         filename        `` does not exist, it is created."
+msgstr ""
+
+#: ../../special-chars.rst:1049
+# 0a7e31a3b1f0472881e10db55cd2d5dc
+msgid "**`process substitution <process-sub.html#PROCESSSUBREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:1052
+# fb0a11f9f4a041bf90d2bbd86da31035
+msgid "``                   (command)>                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1054
+# 98a536b9095447e98f0dc668288e7cf7
+msgid "``                   <(command)                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1056
+# b20f2eb1a9ae4d33ba84ae3ef8f5a41c
+msgid "`In a different context <comparison-ops.html#LTREF>`__ , the \" < \" and \" > \" characters act as `string comparison operators <comparison-ops.html#SCOMPARISON1>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1060
+# 9db82d56883b411d9cf7f42b427c2437
+msgid "`In yet another context <comparison-ops.html#INTLT>`__ , the \" < \" and \" > \" characters act as `integer comparison operators <comparison-ops.html#ICOMPARISON1>`__ . See also `Example 16-9 <moreadv.html#EX45>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1066
+# 74804d767cc748adbbfd4e2b2b1f74d8
+msgid "Signes de menor i major: < >"
+msgstr ""
+
+#: ../../special-chars.rst:1068
+# a2c32aeee4c54fe281e92c270e79e83e
+msgid "<<"
+msgstr ""
+
+#: ../../special-chars.rst:1070
+# 6f9364cada6f4de38efd807fbf8d8367
+msgid "**redirection used in a `here document <here-docs.html#HEREDOCREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:1074
+# 3423e69b7e0e48888bc353c145b376d3
+msgid "<<<"
+msgstr ""
+
+#: ../../special-chars.rst:1076
+# a37cb76ea79d44bb9f2503939a9a5ab1
+msgid "**redirection used in a `here string <x17837.html#HERESTRINGSREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:1080
+# 5f49907db5c141918292b539aac9a59e
+msgid "< , >"
+msgstr ""
+
+#: ../../special-chars.rst:1082
+# f90e772a35e04f87adabc1fa0a716c92
+msgid "**`ASCII comparison <comparison-ops.html#LTREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:1102
+# f4e89759c9cd4bdebf143492c00fc530
+msgid "\\\\< , \\\\>"
+msgstr ""
+
+#: ../../special-chars.rst:1104
+# 082e7fd2cf9d463fbeaa6595f1cc0ad7
+msgid "**`word boundary <x17129.html#ANGLEBRAC>`__ in a `regular expression <regexp.html#REGEXREF>`__ .**"
+msgstr ""
+
+#: ../../special-chars.rst:1108
+# de4308a7bf864453a0cdd0b69ac755aa
+msgid "``         bash$        `` ``                   grep '\\<the\\>' textfile                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1114
+# 60ed55dd60724b71b14a147fbfbb4447
+msgid "Barra vertical o *pipe*: \\"
+msgstr ""
+
+#: ../../special-chars.rst:1117
+# 5cbd7f531f75473199eb5d449747a155
+msgid "**pipe.** Passes the output ( ``          stdout         `` ) of a previous command to the input ( ``          stdin         `` ) of the next one, or to the shell. This is a method of chaining commands together."
+msgstr ""
+
+#: ../../special-chars.rst:1138
+# 0399eadf55104317923c919e8ed4b503
+msgid "A pipe, as a classic method of interprocess communication, sends the ``            stdout           `` of one `process <special-chars.html#PROCESSREF>`__ to the ``            stdin           `` of another. In a typical case, a command, such as `cat <basic.html#CATREF>`__ or `echo <internal.html#ECHOREF>`__ , pipes a stream of data to a *filter* , a command that transforms its input for processing. ` [7]"
+msgstr ""
+
+#: ../../special-chars.rst:1145
+# 847e3cec7c2b49b3b029faecb4ebd79d
+msgid "<special-chars.html#FTN.AEN1564>`__"
+msgstr ""
+
+#: ../../special-chars.rst:1147
+# 11901cf6a1d54424bf6288c3f9c26c06
+msgid "``                         cat $filename1 $filename2grep $search_word                       ``"
+msgstr ""
+
+#: ../../special-chars.rst:1149
+# 9c847987928f467eaa0104b8d3dedb22
+msgid "For an interesting note on the complexity of using UNIX pipes, see `the UNIX FAQ, Part 3 <http://www.faqs.org/faqs/unix-faq/faq>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1156
+# 56ebe157506545ee83c60f59bbb80732
+msgid "The output of a command or commands may be piped to a script."
+msgstr ""
+
+#: ../../special-chars.rst:1172
+# 1e0a924ac56b443db7047c1f3d579ad4
+msgid "Now, let us pipe the output of **ls -l** to this script."
+msgstr ""
+
+#: ../../special-chars.rst:1189
+# 7b66f3da6ed94d5d97bdba527a9e218e
+msgid "The ``            stdout           `` of each process in a pipe must be read as the ``            stdin           `` of the next. If this is not the case, the data stream will *block* , and the pipe will not behave as expected."
+msgstr ""
+
+#: ../../special-chars.rst:1200
+# 0a29b2f83ee14609aa84c2ef13775854
+msgid "at file1 file2\" disappea rs."
+msgstr ""
+
+#: ../../special-chars.rst:1205
+# 543751b1ed8442ca9f91f7aba5b6e021
+msgid "A pipe runs as a `child process <othertypesv.html#CHILDREF>`__ , and therefore cannot alter script variables."
+msgstr ""
+
+#: ../../special-chars.rst:1213
+# fc25557e2c4a4dfcabb5c46cbc584d71
+msgid "echo \"new_value\" | r"
+msgstr ""
+
+#: ../../special-chars.rst:1215
+# 1040e686056a4b589b3f36e06b9a4e60
+msgid "echo \"variable = $va"
+msgstr ""
+
+#: ../../special-chars.rst:1217
+# cea1505d24e3472d98282ec9a10d5369
+msgid "initial_value"
+msgstr ""
+
+#: ../../special-chars.rst:1221
+# a7edb0dac05542eca938688f0fed895f
+msgid "If one of the commands in the pipe aborts, this prematurely terminates execution of the pipe. Called a *broken pipe* , this condition sends a ``                         SIGPIPE                       `` `signal <debugging.html#SIGNALD>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1256
+# 0eb0cb604d1745368903efaea9706519
+msgid ">\\"
+msgstr ""
+
+#: ../../special-chars.rst:1258
+# 7aba124f109c46888beeb1f84ecbb95b
+msgid "**force redirection (even if the `noclobber option <options.html#NOCLOBBERREF>`__ is set).** This will forcibly overwrite an existing file."
+msgstr ""
+
+#: ../../special-chars.rst:1263
+# 46c03f08408641a89527c3760eb1f7c0
+msgid "\\|\\"
+msgstr ""
+
+#: ../../special-chars.rst:1265
+# 3f7cedcd76844e2fad5870b82c6e788f
+msgid "**`OR logical operator <ops.html#ORREF>`__ .** In a `test construct <testconstructs.html#TESTCONSTRUCTS1>`__ , the \\|\\ operator causes a return of 0 (success) if *either* of the linked test conditions is true."
+msgstr ""
+
+#: ../../special-chars.rst:1272
+# eb6311bbc77d48dbad0d2a3f6cf5a4f2
+msgid "Símbol d'unió o *ampersand*: &"
+msgstr ""
+
+#: ../../special-chars.rst:1274
+# ad3c7e0b02bf433a94c0acc155095992
+msgid "**Run job in background.** A command followed by an & will run in the background."
+msgstr ""
+
+#: ../../special-chars.rst:1288
+# 5d2f32646f05440e84fd3507bbdcbbca
+msgid "Within a script, commands and even `loops <loops1.html#FORLOOPREF1>`__ may run in the background."
+msgstr ""
+
+#: ../../special-chars.rst:1293
+# 12809c2717ef423ebb4d4735efe6d8dc
+msgid "Exemple 3. Running a loop in the background"
+msgstr ""
+
+#: ../../special-chars.rst:1348
+# f18ce691368b4797a63e77eeb6fdd8f5
+msgid "A command run in the background within a script may cause the script to hang, waiting for a keystroke. Fortunately, there is a `remedy <x9644.html#WAITHANG>`__ for this."
+msgstr ""
+
+#: ../../special-chars.rst:1355
+# 6da6c451ded4402c833b775a08c2dbe4
+msgid "&&"
+msgstr ""
+
+#: ../../special-chars.rst:1357
+# 3796d6a5a545413b96d281e66f29d828
+msgid "**`AND logical operator <ops.html#LOGOPS1>`__ .** In a `test construct <testconstructs.html#TESTCONSTRUCTS1>`__ , the && operator causes a return of 0 (success) only if *both* the linked test conditions are true."
+msgstr ""
+
+#: ../../special-chars.rst:1364
+# 6471754f54dc44b4b349299667d7fb3a
+msgid "Guió: -"
+msgstr ""
+
+#: ../../special-chars.rst:1366
+# a9318e1b403a44e3b6ee32ab66671447
+msgid "**option, prefix.** Option flag for a command or filter. Prefix for an operator. Prefix for a `default parameter <parameter-substitution.html#DEFPARAM1>`__ in `parameter substitution <parameter-substitution.html#PARAMSUBREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1372
+# 302498ccda9f42d6ad8618e08ad5ece9
+msgid "``                   COMMAND -[Option1][Option2][...]                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1374
+# 20f02954d6974dfc9c5ba2e5d73139f1
+msgid "``                   ls -al                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1376
+# 98a803ce579f412cb1a3ea6ff3e066fd
+msgid "``                   sort -dfu $filename                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1402
+# 3081cb6fb395440faddc7392f8a414e5
+msgid "**--**"
+msgstr ""
+
+#: ../../special-chars.rst:1404
+# 29db180592fb466a8a67c658ade881c0
+msgid "The *double-dash* ``         --        `` prefixes *long* (verbatim) options to commands."
+msgstr ""
+
+#: ../../special-chars.rst:1407
+# 7dc2187b1ab44c7d93904daa29bbbdab
+msgid "``                   sort --ignore-leading-blanks                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1409
+# 00593a8120784ce38deadffef4ed8a63
+msgid "Used with a `Bash builtin <internal.html#BUILTINREF>`__ , it means the *end of options* to that particular command."
+msgstr ""
+
+#: ../../special-chars.rst:1414
+# 4cd4e46ee1c54b6791b2275a730f9fb5
+msgid "Tip"
+msgstr ""
+
+#: ../../special-chars.rst:1416
+# ec571f88b4034e92ac2abbde728f1c8b
+msgid "This provides a handy means of removing files whose *names begin with a dash* ."
+msgstr ""
+
+#: ../../special-chars.rst:1424
+# b99a4d494a8643f6bc1609ed0749893c
+msgid "zo 0 Nov 25 12:29 -badna me"
+msgstr ""
+
+#: ../../special-chars.rst:1428
+# c8ba08785c194aa28beb2999770c7f82
+msgid "bash$ rm -- -badname"
+msgstr ""
+
+#: ../../special-chars.rst:1430
+# 08367d741959432ab7b6e268cf020f9d
+msgid "bash$ ls -l total 0"
+msgstr ""
+
+#: ../../special-chars.rst:1462
+# 4c905b53e9904204b7257c27592d18a2
+msgid "The *double-dash* is also used in conjunction with `set <internal.html#SETREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1465
+# 6556f5650d2c4adf943fb72368f2a29e
+msgid "``                   set -- $variable                 `` (as in `Example 15-18 <internal.html#SETPOS>`__ )"
+msgstr ""
+
+#: ../../special-chars.rst:1470
+# c09c64ab837d49a5a03c3c73584b9e15
+msgid "**redirection from/to ``           stdin          `` or ``           stdout          `` [dash].**"
+msgstr ""
+
+#: ../../special-chars.rst:1487
+# 8665d2e121ce46dd8803165d6fa1e4fb
+msgid "As expected, ``                   cat -                 `` echoes ``         stdin        `` , in this case keyboarded user input, to ``         stdout        `` . But, does I/O redirection using **-** have real-world applications?"
+msgstr ""
+
+#: ../../special-chars.rst:1550
+# 1f144b3e34144d66a8db4ecac0de1da4
+msgid "Note that in this context the \"-\" is not itself a Bash operator, but rather an option recognized by certain UNIX utilities that write to ``         stdout        `` , such as **tar** , **cat** , etc."
+msgstr ""
+
+#: ../../special-chars.rst:1562
+# 0e7914da76d04575b4968511f1297c91
+msgid "Where a filename is expected, ``                   -                 `` redirects output to ``         stdout        `` (sometimes seen with ``                   tar cf                 `` ), or accepts input from ``         stdin        `` , rather than from a file. This is a method of using a file-oriented utility as a filter in a pipe."
+msgstr ""
+
+#: ../../special-chars.rst:1578
+# 05841c2714604f60b2a5ed723c8c1652
+msgid "By itself on the command-line, `file <filearchiv.html#FILEREF>`__ fails with an error message."
+msgstr ""
+
+#: ../../special-chars.rst:1581
+# 545b56505f4d47c3b793d96213821983
+msgid "Add a \"-\" for a more useful result. This causes the shell to await user input."
+msgstr ""
+
+#: ../../special-chars.rst:1600
+# b2421a1517f84cb78eed2f1f2e4f2e9a
+msgid "Now the command accepts input from ``        stdin       `` and analyzes it."
+msgstr ""
+
+#: ../../special-chars.rst:1603
+# b34a1180a1d34732a0a3425351bba7fa
+msgid "The \"-\" can be used to pipe ``         stdout        `` to other commands. This permits such stunts as `prepending lines to a file <assortedtips.html#PREPENDREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1607
+# af1c645806b24b9e85092db65037e381
+msgid "Using `diff <filearchiv.html#DIFFREF>`__ to compare a file with a *section* of another:"
+msgstr ""
+
+#: ../../special-chars.rst:1610
+# 396606ce5f5b4f6d8cb55b6824ee8f8c
+msgid "``                   grep Linux file1diff file2 -                 ``"
+msgstr ""
+
+#: ../../special-chars.rst:1612
+# 81a7000b2f454f6394c9c15628d01b9a
+msgid "Finally, a real-world example using ``                   -                 `` with `tar <filearchiv.html#TARREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1618
+# f4e3137195644718a94d4badbe9f6843
+msgid "Exemple 4. Backup of all files changed in last day"
+msgstr ""
+
+#: ../../special-chars.rst:1664
+# 5248266deb024e26a171301c6e621184
+msgid "Filenames beginning with \"-\" may cause problems when coupled with the \"-\" redirection operator. A script should check for this and add an appropriate prefix to such filenames, for example ``            ./-FILENAME           `` , ``            $PWD/-FILENAME           `` , or ``            $PATHNAME/-FILENAME           `` ."
+msgstr ""
+
+#: ../../special-chars.rst:1671
+# 5ba7c385ad7c428a828f78f217b6b82d
+msgid "If the value of a variable begins with a ``                         -                       `` , this may likewise create problems."
+msgstr ""
+
+#: ../../special-chars.rst:1715
+# e51f34dcfb034fee91c4770d1e7e2e37
+msgid "Do not confuse the \"-\" used in this sense with the \"-\" redirection operator just discussed. The interpretation of the \"-\" depends on the context in which it appears."
+msgstr ""
+
+#: ../../special-chars.rst:1724
+# 737c8e3bbb664340b021b13c590f31a4
+msgid "**Minus.** Minus sign in an `arithmetic operation <ops.html#AROPS1>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1729
+# d0d776685b0c48aaa3193b1d978ee2c9
+msgid "Igual: ="
+msgstr ""
+
+#: ../../special-chars.rst:1731
+# e792e3cfce834a2fb2193dddcf2b0700
+msgid "**Equals.** `Assignment operator <varassignment.html#EQREF>`__"
+msgstr ""
+
+#: ../../special-chars.rst:1742
+# bdf2b8650544468fbba9aa572829dd38
+msgid "In a `different context <comparison-ops.html#EQUALSIGNREF>`__ , the \" = \" is a `string comparison <comparison-ops.html#SCOMPARISON1>`__ operator."
+msgstr ""
+
+#: ../../special-chars.rst:1747
+# c7fb53cf50d6496092676ddde983843b
+msgid "Suma: +"
+msgstr ""
+
+#: ../../special-chars.rst:1749
+# 5b37fef5aae145a4b3eed50e5079099d
+msgid "**Plus.** Addition `arithmetic operator <ops.html#AROPS1>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1752
+# 474fa703da1642b6848dc4e584b1088a
+msgid "In a `different context <x17129.html#PLUSREF>`__ , the + is a `Regular Expression <regexp.html>`__ operator."
+msgstr ""
+
+#: ../../special-chars.rst:1757
+# 786890a7869a4e2581b034bfdf01bdd9
+msgid "**Option.** Option flag for a command or filter."
+msgstr ""
+
+#: ../../special-chars.rst:1760
+# 0a5cf7f5dc644307b550b48fb0c77eb3
+msgid "Certain commands and `builtins <internal.html#BUILTINREF>`__ use the ``         +        `` to enable certain options and the ``         -        `` to disable them. In `parameter substitution <parameter-substitution.html#PARAMSUBREF>`__ , the ``         +        `` prefixes an `alternate value <parameter-substitution.html#PARAMALTV>`__ that a variable expands to."
+msgstr ""
+
+#: ../../special-chars.rst:1769
+# 8a8106d776324c4eac270303032e5325
+msgid "Percentatge: %"
+msgstr ""
+
+#: ../../special-chars.rst:1771
+# 3065a21137b446e8a005ec5249c6896d
+msgid "**`modulo <ops.html#MODULOREF>`__ .** Modulo (remainder of a division) `arithmetic operation <ops.html#AROPS1>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:1783
+# 7db33b0c1e664c8c8482826e42846c76
+msgid "In a `different context <parameter-substitution.html#PCTPATREF>`__ , the % is a `pattern matching <parameter-substitution.html#PSUB2>`__ operator."
+msgstr ""
+
+#: ../../special-chars.rst:1788
+# f7d1beb624e343299f61f4e5fd646dba
+msgid "Tilde: ~"
+msgstr ""
+
+#: ../../special-chars.rst:1790
+# 5f94873ed1df490e8ce1246f7d2c98c1
+msgid "**home directory [tilde].** This corresponds to the `$HOME <internalvariables.html#HOMEDIRREF>`__ internal variable. ``          ~bozo         `` is bozo's home directory, and **ls ~bozo** lists the contents of it. ~/ is the current user's home directory, and **ls ~/** lists the contents of it."
+msgstr ""
+
+#: ../../special-chars.rst:1818
+# 81a79e286a744b1b9bd6c016aa96c6ec
+msgid "~+"
+msgstr ""
+
+#: ../../special-chars.rst:1820
+# 8d90af509d6a46618b815ebe8a54b542
+msgid "**current working directory.** This corresponds to the `$PWD <internalvariables.html#PWDREF>`__ internal variable."
+msgstr ""
+
+#: ../../special-chars.rst:1824
+# d11aa2f0ad9248f38c7cf870f63c595e
+msgid "~-"
+msgstr ""
+
+#: ../../special-chars.rst:1826
+# 2f3217ad9e5c4a4fb65b3a79e385a4fb
+msgid "**previous working directory.** This corresponds to the `$OLDPWD <internalvariables.html#OLDPWD>`__ internal variable."
+msgstr ""
+
+#: ../../special-chars.rst:1830
+# 42b95178c7734ae9998fa72b68ef4cc5
+msgid "=~"
+msgstr ""
+
+#: ../../special-chars.rst:1832
+# 6c7eb83c056d410db9bcd599408fb1c6
+msgid "**`regular expression match <bashver3.html#REGEXMATCHREF>`__ .** This operator was introduced with `version 3 <bashver3.html#BASH3REF>`__ of Bash."
+msgstr ""
+
+#: ../../special-chars.rst:1839
+# 47d6021489c0463bab8fddababdbd7f1
+msgid "**beginning-of-line.** In a `regular expression <regexp.html#REGEXREF>`__ , a \"^\" addresses the `beginning of a line <x17129.html#CARETREF>`__ of text."
+msgstr ""
+
+#: ../../special-chars.rst:1844
+# 7d20d79057a1423faa312e4395a4ee38
+msgid "^ , ^^"
+msgstr ""
+
+#: ../../special-chars.rst:1846
+# d09cc92e68de4349bfed994c63683c94
+msgid "**`Uppercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in *parameter substitution* (added in `version 4 <bashver4.html#BASH4REF>`__ of Bash).**"
+msgstr ""
+
+#: ../../special-chars.rst:1852
+# 735f4a6fbfb94ca2a7d18f6235e8d5a7
+msgid "Caràcters de control"
+msgstr ""
+
+#: ../../special-chars.rst:1854
+# b43f31fb116d42fdbad417b567fc9f52
+msgid "**change the behavior of the terminal or text display.** A control character is a **CONTROL** + **key** combination (pressed simultaneously). A control character may also be written in *octal* or *hexadecimal* notation, following an *escape* ."
+msgstr ""
+
+#: ../../special-chars.rst:1860
+# 2853c6fc02af46f1bdb577ad161d8419
+msgid "Control characters are not normally useful inside a script."
+msgstr ""
+
+#: ../../special-chars.rst:1862
+# 10ac799e0be94e3fab2acbef2f236a03
+msgid "``                       Ctl-A                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1864
+# cfde0e0f991242f284f6b0c6b8ffd0de
+msgid "Moves cursor to beginning of line of text (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:1866
+# 06692200b0e84a53920b6db1f4b9c905
+msgid "``                       Ctl-B                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1868
+# fd8da478da5e4fae8c1e4f47f50dc4c8
+msgid "``                       Backspace                     `` (nondestructive)."
+msgstr ""
+
+#: ../../special-chars.rst:1873
+# 61c2291c3b0a42288da52490fcf7d4bc
+msgid "``                       Ctl-C                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1875
+# 3de003e8e6514913817bec5e5a5577cf
+msgid "``                       Break                     `` . Terminate a foreground job."
+msgstr ""
+
+#: ../../special-chars.rst:1880
+# 692dd9eb732b43bf9595f3a5bd98dbaf
+msgid "``                       Ctl-D                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1882
+# 57cc20b17c2642968ee46829f066fc66
+msgid "*Log out* from a shell (similar to `exit <exit-status.html#EXITCOMMANDREF>`__ )."
+msgstr ""
+
+#: ../../special-chars.rst:1885
+# 1520be3b7ace47bd94834eeea4a374a3
+msgid "``                       EOF                     `` (end-of-file). This also terminates input from ``           stdin          `` ."
+msgstr ""
+
+#: ../../special-chars.rst:1889
+# 49b98ead521d463b8a9597906215485e
+msgid "When typing text on the console or in an *xterm* window, ``                       Ctl-D                     `` erases the character under the cursor. When there are no characters present, ``                       Ctl-D                     `` logs out of the session, as expected. In an *xterm* window, this has the effect of closing the window."
+msgstr ""
+
+#: ../../special-chars.rst:1896
+# 50f254f128bf45e0baa1775d9cbfe806
+msgid "``                       Ctl-E                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1898
+# ab598684966a4f598d0376487f89c986
+msgid "Moves cursor to end of line of text (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:1900
+# c193a0be0c2a4476af949954a9e90826
+msgid "``                       Ctl-F                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1902
+# da4d76c6be684a7b8c185b24d435429d
+msgid "Moves cursor forward one character position (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:1907
+# c8bffe804a384886b4369b94288e7af2
+msgid "``                       Ctl-G                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1909
+# 78269ab8cfc24184b6f34d77fd8c315c
+msgid "``                       BEL                     `` . On some old-time teletype terminals, this would actually ring a bell. In an *xterm* it might beep."
+msgstr ""
+
+#: ../../special-chars.rst:1915
+# e1ca863e4b45415c843399e52afed2e1
+msgid "``                       Ctl-H                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1917
+# 1188e1054fa1408ebde8b6f0268fd9c8
+msgid "``                       Rubout                     `` (destructive backspace). Erases characters the cursor backs over while backspacing."
+msgstr ""
+
+#: ../../special-chars.rst:1958
+# f9468314769e4c6d93428da467620c67
+msgid "``                       Ctl-I                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1960
+# 48d132d0ac974ce28d22e983ed0f5557
+msgid "``                       Horizontal tab                     `` ."
+msgstr ""
+
+#: ../../special-chars.rst:1964
+# 965706f3df524a76b612cde4b2d8841a
+msgid "``                       Ctl-J                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1966
+# ef253564c62d4713b45c9c3a1d5da7ad
+msgid "``                       Newline                     `` (line feed). In a script, may also be expressed in octal notation -- '\\\\012' or in hexadecimal -- '\\\\x0a'."
+msgstr ""
+
+#: ../../special-chars.rst:1970
+# 538f01c979b74e88bf74eb9e74119f5a
+msgid "``                       Ctl-K                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1972
+# c26202bb83644473ba789eeb5d92b936
+msgid "``                       Vertical tab                     `` ."
+msgstr ""
+
+#: ../../special-chars.rst:1974
+# a332840beb944468b1fb34a74da367df
+msgid "When typing text on the console or in an *xterm* window, ``                       Ctl-K                     `` erases from the character under the cursor to end of line. Within a script, ``                       Ctl-K                     `` may behave differently, as in Lee Lee Maschmeyer's example, below."
+msgstr ""
+
+#: ../../special-chars.rst:1980
+# ee936e71bdba407ab56b6a8007030110
+msgid "``                       Ctl-L                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1982
+# c1f700d0bc094bfca67270962d4e356f
+msgid "``                       Formfeed                     `` (clear the terminal screen). In a terminal, this has the same effect as the `clear <terminalccmds.html#CLEARREF>`__ command. When sent to a printer, a ``                       Ctl-L                     `` causes an advance to end of the paper sheet."
+msgstr ""
+
+#: ../../special-chars.rst:1991
+# 7dbb538bd29147c2b3dcf60944e100e9
+msgid "``                       Ctl-M                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:1993
+# 17dd16c194414baa9b987c7ce6cccd97
+msgid "``                       Carriage return                     `` ."
+msgstr ""
+
+#: ../../special-chars.rst:2040
+# fb188c5d8e1b46659a966150919fe15f
+msgid "``                       Ctl-N                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2043
+# 2a526865480e4769bb96b52050e514e2
+msgid "<special-chars.html#FTN.AEN2107>`__ (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:2045
+# e7bd96c9a3004a3390e53e905f6fc14c
+msgid "``                       Ctl-O                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2047
+# 7718c8545745482ca8b1c2e028418eaa
+msgid "Issues a *newline* (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:2049
+# 8d38ba1b22f7416e8373af3f4ddf6602
+msgid "``                       Ctl-P                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2051
+# e8b89eee44934913bd4377928acd17fb
+msgid "Recalls last command from *history buffer* (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:2053
+# 69dd69baa7d84f1a901f90121eb1b8cc
+msgid "``                       Ctl-Q                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2055
+# 77dae7b69b524677be77d9d7c18fb028
+msgid "Resume ( ``                       XON                     `` )."
+msgstr ""
+
+#: ../../special-chars.rst:2057
+# efcc4200b9604571a41993ae600b0506
+msgid "This resumes ``           stdin          `` in a terminal."
+msgstr ""
+
+#: ../../special-chars.rst:2059
+# e6df456069544107ae4840e217759e8b
+msgid "``                       Ctl-R                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2061
+# a66e03d9819b4c40900534ee4071aa94
+msgid "Backwards search for text in *history buffer* (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:2064
+# 2c2e7d9be56f4faba0a7ee079683b356
+msgid "``                       Ctl-S                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2066
+# 25dc54bbf6de442b985d53ca066a3264
+msgid "Suspend ( ``                       XOFF                     `` )."
+msgstr ""
+
+#: ../../special-chars.rst:2068
+# 5d1ed52a194e46f69964c64d7a94cdf9
+msgid "This freezes ``           stdin          `` in a terminal. (Use Ctl-Q to restore input.)"
+msgstr ""
+
+#: ../../special-chars.rst:2071
+# 581bbe8d7cc7487fb2979305de990359
+msgid "``                       Ctl-T                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2073
+# 2330665ceb9a4ad0a2f3f7008ffb7619
+msgid "Reverses the position of the character the cursor is on with the previous character (on the command-line)."
+msgstr ""
+
+#: ../../special-chars.rst:2076
+# 60f367fba3454c32ba56d32a92145dee
+msgid "``                       Ctl-U                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2078
+# 5fca08dc501e433e924f8d9dc1921f15
+msgid "Erase a line of input, from the cursor backward to beginning of line. In some settings, ``                       Ctl-U                     `` erases the entire line of input, *regardless of cursor position* ."
+msgstr ""
+
+#: ../../special-chars.rst:2083
+# 0afd61dbe1cc4e038fb731761018bdc0
+msgid "``                       Ctl-V                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2085
+# a17f378a451f4ec5950144760f7f3861
+msgid "When inputting text, ``                       Ctl-V                     `` permits inserting control characters. For example, the following two are equivalent:"
+msgstr ""
+
+#: ../../special-chars.rst:2098
+# 87658db75a4c42958f3c54d736b3f23c
+msgid "``                       Ctl-V                     `` is primarily useful from within a text editor."
+msgstr ""
+
+#: ../../special-chars.rst:2101
+# 61caf6a4ae4941a38d8ba4fab44512b3
+msgid "``                       Ctl-W                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2103
+# 6cc6d3cebc7c47abaac28eb985c3a73c
+msgid "When typing text on the console or in an xterm window, ``                       Ctl-W                     `` erases from the character under the cursor backwards to the first instance of `whitespace <special-chars.html#WHITESPACEREF>`__ . In some settings, ``                       Ctl-W                     `` erases backwards to first non-alphanumeric character."
+msgstr ""
+
+#: ../../special-chars.rst:2110
+# 4345dca2810645c3ae397d199d0acec8
+msgid "``                       Ctl-X                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2112
+# e2b720b21e864d85ae6413839854e731
+msgid "In certain word processing programs, *Cuts* highlighted text and copies to *clipboard* ."
+msgstr ""
+
+#: ../../special-chars.rst:2115
+# 6a2ad2ac921d4d8db73673a12c0659c9
+msgid "``                       Ctl-Y                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2117
+# dd9aae67d52040f1b717df3e120459c2
+msgid "*Pastes* back text previously erased (with ``                       Ctl-U                     `` or ``                       Ctl-W                     `` )."
+msgstr ""
+
+#: ../../special-chars.rst:2121
+# 90ae2f60e46a4f589607b34aeb6b60bc
+msgid "``                       Ctl-Z                     ``"
+msgstr ""
+
+#: ../../special-chars.rst:2123
+# e9761eca05914b5685293e441bd3f4a6
+msgid "*Pauses* a foreground job."
+msgstr ""
+
+#: ../../special-chars.rst:2125
+# d916d628c24f42f0a16b271be0975e03
+msgid "*Substitute* operation in certain word processing applications."
+msgstr ""
+
+#: ../../special-chars.rst:2127
+# dffe22697dfe4b398fc7fd070cfc8854
+msgid "``                       EOF                     `` (end-of-file) character in the MSDOS filesystem."
+msgstr ""
+
+#: ../../special-chars.rst:2134
+# e79ed0dcaf2348f9b54ea1f1d2d8a21b
+msgid "Caràcters en blanc"
+msgstr ""
+
+#: ../../special-chars.rst:2136
+# 07a4536ba74442bbbbfea9f02030af22
+msgid "**functions as a separator between commands and/or variables.** Whitespace consists of either *spaces* , *tabs* , *blank lines* , or any combination thereof. ` [9]  <special-chars.html#FTN.AEN2198>`__ In some contexts, such as `variable assignment <gotchas.html#WSBAD>`__ , whitespace is not permitted, and results in a syntax error."
+msgstr ""
+
+#: ../../special-chars.rst:2144
+# 61de7bfe49c845d6895a901dfd960466
+msgid "Blank lines have no effect on the action of a script, and are therefore useful for visually separating functional sections."
+msgstr ""
+
+#: ../../special-chars.rst:2147
+# c843c79ba33a4dc38980674338127c06
+msgid "`$IFS <internalvariables.html#IFSREF>`__ , the special variable separating *fields* of input to certain commands. It defaults to whitespace."
+msgstr ""
+
+#: ../../special-chars.rst:2153
+# 39b6424c2be449de8dd4eebac8809f45
+msgid "``                         Definition:                       `` A"
+msgstr ""
+
+#: ../../special-chars.rst:2154
+# 4327657195684825adab3c9eecdf7e6a
+msgid "*field* is a discrete chunk of data expressed as a string of consecutive characters. Separating each field from adjacent fields is either *whitespace* or some other designated character (often determined by the $IFS ). In some contexts, a field may be called a *record* ."
+msgstr ""
+
+#: ../../special-chars.rst:2163
+# abaab240c5c142bf9e51c7c1a57faae5
+msgid "To preserve *whitespace* within a string or in a variable, use `quoting <quoting.html#QUOTINGREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:2166
+# 3fa29a4fab824de79ae3c246ebee0f58
+msgid "UNIX `filters <special-chars.html#FILTERDEF>`__ can target and operate on *whitespace* using the `POSIX <x17129.html#POSIXREF>`__ character class `[:space:] <x17129.html#WSPOSIX>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:2173
+# f41f7a6723174c42a12b55043bcc7801
+msgid "Anotacions"
+msgstr ""
+
+#: ../../special-chars.rst:2174
+# a44c6dde4cc94a15902e545ce6796627
+msgid "Consulta :doc:`x17129` per més informació sobre el concepte de *meta-significat*."
+msgstr ""
+
+#: ../../special-chars.rst:2177
+# c531f08bae034c55919717413678d03c
+msgid "Els *operadors* defineixen l'operació a realitzar en una expressió. Alguns exemples són els coneguts operadors aritmètics (+, -, \\* i \\/) (mira :doc:`ops`) per més detalls."
+msgstr ""
+
+#: ../../special-chars.rst:2180
+# db5ce1b9a9fd457d91d38790f7ff2379
+msgid "En Bash els conceptes d'*operador* i de *paraula clau* apareixen una mica superposats. Mira :ref:`internal_keyword`."
+msgstr ""
+
+#: ../../special-chars.rst:2184
+# fa91e1e344944f09b94532620f621ea8
+msgid "` [3]  <special-chars.html#AEN1001>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2186
+# cd62f239f6da4fe1966d4c09f0362783
+msgid "**A** merican **S** tandard **C** ode for **I** nformation **I** nterchange. This is a system for encoding text characters (alphabetic, numeric, and a limited set of symbols) as 7-bit numbers that can be stored and manipulated by computers. Many of the ASCII characters are represented on a standard keyboard."
+msgstr ""
+
+#: ../../special-chars.rst:2193
+# 7baac881f627438b84cb8671bbaf075d
+msgid "` [4]  <special-chars.html#AEN1071>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2195
+# 76253178d0ad40088f014713cc5d2ab7
+msgid "A *PID* , or *process ID* , is a number assigned to a running process. The *PID* s of running processes may be viewed with a `ps <system.html#PPSSREF>`__ command."
+msgstr ""
+
+#: ../../special-chars.rst:2199
+# fc15e88c6cd942a6b147b954e897c406
+msgid "``               Definition:             `` A *process* is a currently executing command (or program), sometimes referred to as a *job* ."
+msgstr ""
+
+#: ../../special-chars.rst:2203
+# 56b5ef027c73457183d04e2126a8a065
+msgid "` [5]  <special-chars.html#AEN1124>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2205
+# 4268574bac6e4647a8a33a2059b760e5
+msgid "The shell does the *brace expansion* . The command itself acts upon the *result* of the expansion."
+msgstr ""
+
+#: ../../special-chars.rst:2209
+# 9a0433c467a7496a82b1e2618a5b4af7
+msgid "` [6]  <special-chars.html#AEN1199>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2211
+# 67c6e8028e204dae8d22f88a3c3e5548
+msgid "Exception: a code block in braces as part of a pipe *may* run as a `subshell <subshells.html#SUBSHELLSREF>`__ ."
+msgstr ""
+
+#: ../../special-chars.rst:2218
+# ec730b5bd6b649f5b3eb624c582f3db7
+msgid "#  Error. The code b"
+msgstr ""
+
+#: ../../special-chars.rst:2221
+# f7d9c3d806f2408c92a769a6c6cd04cb
+msgid "#+ so the output of"
+msgstr ""
+
+#: ../../special-chars.rst:2223
+# ca704c3e4fcd447f939c04986e4052a5
+msgid "variables within the bl"
+msgstr ""
+
+#: ../../special-chars.rst:2225
+# 7a8d247913c64ea8b196d87a65492dbc
+msgid "echo \"First line is"
+msgstr ""
+
+#: ../../special-chars.rst:2226
+# c4b5339acbe94152a780a1176e4f052a
+msgid "$firstline; second line is $secondline\"  # Won't"
+msgstr ""
+
+#: ../../special-chars.rst:2228
+# 804efa451d514c9fa54a1c60d81be1f2
+msgid "work."
+msgstr ""
+
+#: ../../special-chars.rst:2230
+# c48585f20d7a48769fd7239a4ba61daf
+msgid "# Thanks, S.C."
+msgstr ""
+
+#: ../../special-chars.rst:2253
+# 5823013990e1403fb0675414178b4107
+msgid "` [7]  <special-chars.html#AEN1564>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2255
+# ebb636e5745246b8b005bc2cbfee9c28
+msgid "Even as in olden times a *philtre* denoted a potion alleged to have magical transformative powers, so does a UNIX *filter* transform its target in (roughly) analogous fashion. (The coder who comes up with a \"love philtre\" that runs on a Linux machine will likely win accolades and honors.)"
+msgstr ""
+
+#: ../../special-chars.rst:2262
+# f8bb7a36770e44e08a1bc26910b20e5b
+msgid "` [8]  <special-chars.html#AEN2107>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2264
+# 0f38e28bf5fc42bea869ce753d7a3aa4
+msgid "Bash stores a list of commands previously issued from the command-line in a *buffer* , or memory space, for recall with the `builtin <internal.html#BUILTINREF>`__ *history* commands."
+msgstr ""
+
+#: ../../special-chars.rst:2268
+# 4eb3c966e42646adb75a856cf20ce242
+msgid "` [9]  <special-chars.html#AEN2198>`__"
+msgstr ""
+
+#: ../../special-chars.rst:2270
+# 21e374024fe7422e9a4c2b8706d4fb9c
+msgid "A linefeed ( *newline* ) is also a whitespace character. This explains why a *blank line* , consisting only of a linefeed, is considered whitespace."
+msgstr ""
+

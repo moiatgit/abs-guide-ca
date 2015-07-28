@@ -1,0 +1,1047 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../dosbatch.rst:4
+# 7d55dbc43ac44118bc2f5c8e5c20fbbe
+msgid "XXX  Appendix N. Converting DOS Batch Files to Shell Scripts"
+msgstr ""
+
+#: ../../dosbatch.rst:6
+# 6cb86dbaa6ea44499e57fd2848a1f411
+msgid "Quite a number of programmers learned scripting on a PC running DOS. Even the crippled DOS batch file language allowed writing some fairly powerful scripts and applications, though they often required extensive kludges and workarounds. Occasionally, the need still arises to convert an old DOS batch file to a UNIX shell script. This is generally not difficult, as DOS batch file operators are only a limited subset of the equivalent shell scripting ones."
+msgstr ""
+
+#: ../../dosbatch.rst:15
+# 23494229bfc54f8eb4d574c8d898e873
+msgid "**Table N-1. Batch file keywords / variables / operators, and their shell equivalents**"
+msgstr ""
+
+#: ../../dosbatch.rst:19
+# eac7dac89c3c448d91ac100fd0b37a2e
+msgid "Batch File Operator"
+msgstr ""
+
+#: ../../dosbatch.rst:21
+# ee0f393c58e7474997acb03a814bf7f1
+msgid "Shell Script Equivalent"
+msgstr ""
+
+#: ../../dosbatch.rst:23
+# 4fe5babb48804436a33f92dbd31f54c6
+msgid "Meaning"
+msgstr ""
+
+#: ../../dosbatch.rst:25
+# 90b6e7ea8d254767bb5fb4b88ff5b50a
+msgid "``        %       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:27
+# 47c820f195ed4487bc17f529f4599831
+msgid "$"
+msgstr ""
+
+#: ../../dosbatch.rst:29
+# eb67a5e7fbb14d2faeabc53110fc1ce7
+msgid "command-line parameter prefix"
+msgstr ""
+
+#: ../../dosbatch.rst:31
+# 2be9163c83394cfb9e5e60fca4807f6e
+msgid "``        /       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:35
+# 529749b3914649ac86e8596adec11280
+msgid "command option flag"
+msgstr ""
+
+#: ../../dosbatch.rst:37
+# a58e03c61eeb4f58832ef86c7521f02d
+msgid "``        \\       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:39
+# e702db6d92e34119ba46990a0457d9ad
+msgid "/"
+msgstr ""
+
+#: ../../dosbatch.rst:41
+# e80a2bd622ee4d62be7186f7a65b5c52
+msgid "directory path separator"
+msgstr ""
+
+#: ../../dosbatch.rst:43
+# d2e7058b67ec4540947ada5701661dec
+msgid "``        ==       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:45
+# 8f8cb7de49f94aad97c8f1bc6948477e
+msgid "="
+msgstr ""
+
+#: ../../dosbatch.rst:47
+# cfa1920f7ce64fc0aba1760ab4b32112
+msgid "(equal-to) string comparison test"
+msgstr ""
+
+#: ../../dosbatch.rst:49
+# 7d68fbccf1df4fd6a63d1544aa748e9f
+msgid "``        !==!       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:51
+# f1e8c3473d69403ba46e3fdb5a3c6f91
+msgid "!="
+msgstr ""
+
+#: ../../dosbatch.rst:53
+# e535f1bb429f4341ad4e0ee7c9fd2abf
+msgid "(not equal-to) string comparison test"
+msgstr ""
+
+#: ../../dosbatch.rst:55
+# 17bf289476b34066bb1d5b6a9fe9d147
+msgid "``      ``"
+msgstr ""
+
+#: ../../dosbatch.rst:57
+# 488954d001d246ff98ebd69a95c4cee7
+msgid "\\"
+msgstr ""
+
+#: ../../dosbatch.rst:59
+# 8be6a257fd76458b9fd8d9be821544cf
+msgid "pipe"
+msgstr ""
+
+#: ../../dosbatch.rst:61
+# d06967c84e234b41ad611f84da53965e
+msgid "``        @       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:63
+#: ../../dosbatch.rst:129
+# 0577cfd7d7d74388a60bdc666da08b45
+# e3fa5c44c8124e27bab2915f826f8fb4
+msgid "set ``        +v       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:65
+# 1c68ad99b6ba4f4695957131a59220a0
+msgid "do not echo current command"
+msgstr ""
+
+#: ../../dosbatch.rst:67
+# 044cc1f3a40d4c938837e6f37733c528
+msgid "``        *       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:69
+# d619e90ce3804549854f8dbef2d77566
+msgid "\\*"
+msgstr ""
+
+#: ../../dosbatch.rst:71
+# 61903ef812664040bea5e0c9e7ad81a7
+msgid "filename \"wild card\""
+msgstr ""
+
+#: ../../dosbatch.rst:73
+# 654e30941b5740abb6d66b1dbae1d69e
+msgid "``        >       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:75
+# e25397094a374c94a5465ecb0029b38c
+msgid ">"
+msgstr ""
+
+#: ../../dosbatch.rst:77
+# 42ee9e6dfe4d4967a0f33606e95b3d90
+msgid "file redirection (overwrite)"
+msgstr ""
+
+#: ../../dosbatch.rst:79
+# 98526821ed4f47808747a21e2fca25a1
+msgid "``        >>       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:81
+# f3c0736ad32c4eceb72d823b59ea528b
+msgid ">>"
+msgstr ""
+
+#: ../../dosbatch.rst:83
+# 6d93e0a33d5c49b6b0ead1ec7ba5f187
+msgid "file redirection (append)"
+msgstr ""
+
+#: ../../dosbatch.rst:85
+# d25556b5da6f43abb3929d6c95a7f353
+msgid "``        <       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:87
+# 7cc18d4ff7684f50a238a8facc14e45a
+msgid "<"
+msgstr ""
+
+#: ../../dosbatch.rst:89
+# 41220eb984fd4d24b61c058e18ebcf88
+msgid "redirect ``        stdin       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:91
+# c041bcc744b04fc59cab5972c5855202
+msgid "``        %VAR%       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:93
+# 0804be12700c437c808032bc5302140e
+msgid "$VAR"
+msgstr ""
+
+#: ../../dosbatch.rst:95
+# 882fd71892424553a4f645385bbe603e
+msgid "environmental variable"
+msgstr ""
+
+#: ../../dosbatch.rst:97
+# 9c77a98f89d24d48ac7a2ad860058a7d
+msgid "``        REM       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:99
+# 9d34a378487641aa96e1faba1b1a22e4
+msgid "#"
+msgstr ""
+
+#: ../../dosbatch.rst:101
+# 446f0d1390814548b52c2da0f90cb749
+msgid "comment"
+msgstr ""
+
+#: ../../dosbatch.rst:103
+# 47a23f006bff47139924fb93ae3c9ce2
+msgid "``        NOT       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:105
+# 27ea72239da3418592032a33dcfe28be
+msgid "!"
+msgstr ""
+
+#: ../../dosbatch.rst:107
+# 6e577ecb5c0d4ae5a85b735ff245b598
+msgid "negate following test"
+msgstr ""
+
+#: ../../dosbatch.rst:109
+# 2a01b6d3b67b422eadda7ff951b5e321
+msgid "``        NUL       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:111
+# e7a4c8e9b5224556a2ab77da9cc3948a
+msgid "``        /dev/null       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:113
+# c04ef1d639bf47029f72cb131ffc2be3
+msgid "\"black hole\" for burying command output"
+msgstr ""
+
+#: ../../dosbatch.rst:115
+# e4edcc56ee0748a69ba90a37a1c59207
+msgid "``        ECHO       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:117
+#: ../../dosbatch.rst:123
+# fb520f6e218a4530abbade59450974f7
+# 4814d0053d624c77a0bd63fa005c7f2a
+msgid "echo"
+msgstr ""
+
+#: ../../dosbatch.rst:119
+# 1ffa5471448c4d19a78e7bb0c40c355b
+msgid "echo (many more option in Bash)"
+msgstr ""
+
+#: ../../dosbatch.rst:121
+# 3f4083b0e3974f06809cdf3c59ccf366
+msgid "``        ECHO.       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:125
+# de7d260287a24b439c26924619a86ca6
+msgid "echo blank line"
+msgstr ""
+
+#: ../../dosbatch.rst:127
+# 3fc33cc49fa74398bb50549568c865a2
+msgid "``        ECHO OFF       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:131
+# e35a870dd2e34130a54a6800109ee5c9
+msgid "do not echo command(s) following"
+msgstr ""
+
+#: ../../dosbatch.rst:133
+# b983f0e307b74321b133b135d2e609b3
+msgid "``        FOR %%VAR IN (LIST) DO       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:135
+# 9b1d96953bee4fe8aa1274e46140a730
+msgid "for var in [list]; do"
+msgstr ""
+
+#: ../../dosbatch.rst:137
+# 4c5020e9e3ea4bfa8c60f3efa7b72cb9
+msgid "\"for\" loop"
+msgstr ""
+
+#: ../../dosbatch.rst:139
+# d0f7cb2f48a342029314ac0905e6e92a
+msgid "``        :LABEL       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:141
+# 822b302561f94df3a6089516b4c325fa
+msgid "none (unnecessary)"
+msgstr ""
+
+#: ../../dosbatch.rst:143
+# 7f8260f2c4524e3c863f3a1f34327c27
+msgid "label"
+msgstr ""
+
+#: ../../dosbatch.rst:145
+# 41463aced1f348f3a8ff315f4fff7c00
+msgid "``        GOTO       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:147
+# 0f3068c4c1ef4321b5bc48acb9de98c5
+msgid "none (use a function)"
+msgstr ""
+
+#: ../../dosbatch.rst:149
+# 0b09fb1841ed4e6b9607dcf0a1ed063d
+msgid "jump to another location in the script"
+msgstr ""
+
+#: ../../dosbatch.rst:151
+# 7f3d0f5d27304a7795f350df7ea9cba7
+msgid "``        PAUSE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:153
+# 7bf52be9972a46ecbc65c45ccb97d9f3
+msgid "sleep"
+msgstr ""
+
+#: ../../dosbatch.rst:155
+# a3d302cecd354ae19e7eb89cea4f58c1
+msgid "pause or wait an interval"
+msgstr ""
+
+#: ../../dosbatch.rst:157
+# 75aaeff30ec342db885fd10d9c94dadc
+msgid "``        CHOICE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:159
+# 3380de2dcb1446529a62e0112e04c116
+msgid "case or select"
+msgstr ""
+
+#: ../../dosbatch.rst:161
+# 4ffa7eeb3ca748f29c5f17a20b457e7d
+msgid "menu choice"
+msgstr ""
+
+#: ../../dosbatch.rst:163
+# 85ed8e0f0663468d9bbe6a64c3fdbee4
+msgid "``        IF       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:165
+# 6a24400beddd422caafe56d7bd49ad3b
+msgid "if"
+msgstr ""
+
+#: ../../dosbatch.rst:167
+# 5d78dc19ebb84c55a79bdf35cdfa7499
+msgid "if-test"
+msgstr ""
+
+#: ../../dosbatch.rst:169
+# bff68e6db1264638a2d0fb328ccd85ad
+msgid "``        IF EXIST                           FILENAME                 ``"
+msgstr ""
+
+#: ../../dosbatch.rst:171
+# ae55b79831ac49daa31b411fdf255452
+msgid "if [ -e filename ]"
+msgstr ""
+
+#: ../../dosbatch.rst:173
+# a22bacf89933405cb719c6509933709e
+msgid "test if file exists"
+msgstr ""
+
+#: ../../dosbatch.rst:175
+# d064910987294f2c9fc408769797113f
+msgid "``        IF !%N==!       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:177
+# 19ac0d07c3f545848901cde8fead2b46
+msgid "if [ -z \"$N\" ]"
+msgstr ""
+
+#: ../../dosbatch.rst:179
+# ce3ac069b13e4543b75a56c819fa66f0
+msgid "if replaceable parameter \"N\" not present"
+msgstr ""
+
+#: ../../dosbatch.rst:181
+# 31545a0182164c1facbb233a3691551d
+msgid "``        CALL       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:183
+#: ../../dosbatch.rst:189
+# d1e47cf868c246f6aab4bf3ea8b0d9f4
+# 39a8dacbe92e4a1db502cab1eb75dd8c
+msgid "source or . (dot operator)"
+msgstr ""
+
+#: ../../dosbatch.rst:185
+# 73d8e9c97f10474cbea68db5717b1bd5
+msgid "\"include\" another script"
+msgstr ""
+
+#: ../../dosbatch.rst:187
+# 9bc67fdc59ec4c9295950b2e7e45e963
+msgid "``        COMMAND /C       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:191
+# e6ea01cf0d844473b55bcbdd6736bf16
+msgid "\"include\" another script (same as CALL)"
+msgstr ""
+
+#: ../../dosbatch.rst:193
+# a945b8f1780543f485eb2b16e6accdcf
+msgid "``        SET       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:195
+# d7cd8a82e3fe4ec28663319e5768e97d
+msgid "export"
+msgstr ""
+
+#: ../../dosbatch.rst:197
+# 21c10baf8dbc41f389843c5d4765540b
+msgid "set an environmental variable"
+msgstr ""
+
+#: ../../dosbatch.rst:199
+# a3119b70dcdb4584ba75b509f8ecb383
+msgid "``        SHIFT       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:201
+# 2a77984aed3b41988f0260d963b40ca0
+msgid "shift"
+msgstr ""
+
+#: ../../dosbatch.rst:203
+# c877f9569ebf473d966470a03837eaa2
+msgid "left shift command-line argument list"
+msgstr ""
+
+#: ../../dosbatch.rst:205
+# 81c86c19b30a4438a04af20db0e50d1b
+msgid "``        SGN       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:207
+# 270f5e73077241da80d2a9b308833ee1
+msgid "-lt or -gt"
+msgstr ""
+
+#: ../../dosbatch.rst:209
+# bf04e69e04934d9db3f748bd0a7999eb
+msgid "sign (of integer)"
+msgstr ""
+
+#: ../../dosbatch.rst:211
+# 0a7aeb4d5d5c48e691d9fc611b0a6deb
+msgid "``        ERRORLEVEL       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:213
+# 2128228e6b1b420fbfed7fa7052626db
+msgid "$?"
+msgstr ""
+
+#: ../../dosbatch.rst:215
+# a1ba377f41d146fe9a2ca1c08a28be50
+msgid "exit status"
+msgstr ""
+
+#: ../../dosbatch.rst:217
+# e6ce27f82daa47148a2fe29f378df04e
+msgid "``        CON       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:219
+# 060e08d106074362aeaad137b7156b1d
+msgid "``        stdin       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:221
+# 3a4716ef7f784e60a39b6be79022c7e2
+msgid "\"console\" ( ``        stdin       `` )"
+msgstr ""
+
+#: ../../dosbatch.rst:223
+# 22d3f9fbb79640d88c77913ac77b6f7f
+msgid "``        PRN       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:225
+#: ../../dosbatch.rst:231
+# f727d23d0ee94589b3447b1f547cb6f4
+# 2467b0ed7e8440638a539daaa5f9f855
+msgid "``        /dev/lp0       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:227
+# 7dca610e5e594864a9f81f380000fb1d
+msgid "(generic) printer device"
+msgstr ""
+
+#: ../../dosbatch.rst:229
+# 4711376f5aa848d3a10cade3f0ad994f
+msgid "``        LPT1       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:233
+# 1daf9dee555c4242935d1a0f721617fa
+msgid "first printer device"
+msgstr ""
+
+#: ../../dosbatch.rst:235
+# 047ef83cfcfa46f28b157038e7cf56b9
+msgid "``        COM1       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:237
+# 72357be5e076432c85d5c8d0ad68a8b1
+msgid "``        /dev/ttyS0       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:239
+# 445f4514c26a4b42b071f06157a8f1f9
+msgid "first serial port"
+msgstr ""
+
+#: ../../dosbatch.rst:243
+# de1adadd404843b5bdb6bb685cb24702
+msgid "Batch files usually contain DOS commands. These must be translated into their UNIX equivalents in order to convert a batch file into a shell script."
+msgstr ""
+
+#: ../../dosbatch.rst:248
+# abc767cb58054d3ebc229d077140b72d
+msgid "**Table N-2. DOS commands and their UNIX equivalents**"
+msgstr ""
+
+#: ../../dosbatch.rst:251
+# 27ca0ec7cb1d4b5499fc2fa1373fdd4f
+msgid "DOS Command"
+msgstr ""
+
+#: ../../dosbatch.rst:253
+# 8d4a4db5d7ba440984c04facd88af5d5
+msgid "UNIX Equivalent"
+msgstr ""
+
+#: ../../dosbatch.rst:255
+# 1d746edf79544c79ae6ce83602f3a92c
+msgid "Effect"
+msgstr ""
+
+#: ../../dosbatch.rst:257
+# f898ba30f28544a88f671b6ac4d3757a
+msgid "``        ASSIGN       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:259
+# dbdaf6ab6fd346b0b15dbeb50f7c74e2
+msgid "ln"
+msgstr ""
+
+#: ../../dosbatch.rst:261
+# a208374d63d24ddfa8fb507701734cc4
+msgid "link file or directory"
+msgstr ""
+
+#: ../../dosbatch.rst:263
+# c1bd92dc764d434e821e88e089d19500
+msgid "``        ATTRIB       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:265
+# f371008f019242a4a5edc5115b91dc52
+msgid "chmod"
+msgstr ""
+
+#: ../../dosbatch.rst:267
+# 5f728cec5f034c2491c3fb884d4cb396
+msgid "change file permissions"
+msgstr ""
+
+#: ../../dosbatch.rst:269
+# 18c39a1f5961435daa821becb7223ce3
+msgid "``        CD       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:271
+#: ../../dosbatch.rst:277
+# bd00d4f5bd99444aac40cc5c14de86e7
+# a04d2fbe97914960adbfda71fa829934
+msgid "cd"
+msgstr ""
+
+#: ../../dosbatch.rst:273
+#: ../../dosbatch.rst:279
+# abc6ddf13dff4e378905e3db29a19810
+# 7072e195e3484fbaac57be4c2068b353
+msgid "change directory"
+msgstr ""
+
+#: ../../dosbatch.rst:275
+# 7dd7967b58344f0c977801e21fc80126
+msgid "``        CHDIR       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:281
+# 99aa232743e04bf6821814eafe1bdc9c
+msgid "``        CLS       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:283
+# 05d3a10407ee4239a367f2b631e9c873
+msgid "clear"
+msgstr ""
+
+#: ../../dosbatch.rst:285
+# b77294a1d459464aa9bf7b53897a1204
+msgid "clear screen"
+msgstr ""
+
+#: ../../dosbatch.rst:287
+# ecc5ddbbae6d49b99f1716141e4ca25f
+msgid "``        COMP       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:289
+# ec056f18f3774feabd38094814d14479
+msgid "diff, comm, cmp"
+msgstr ""
+
+#: ../../dosbatch.rst:291
+#: ../../dosbatch.rst:345
+# b48fd4751f734040b8bfa9a850691dbd
+# f2a18d40a70649c99ed4c77d1e2ff48d
+msgid "file compare"
+msgstr ""
+
+#: ../../dosbatch.rst:293
+# 8a86335c9b424c9689bff9abd9ed4566
+msgid "``        COPY       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:295
+#: ../../dosbatch.rst:427
+# 5551762b5b264714849a0f4759fa0ab1
+# da6db44cd5da489083d3a8cf1df30602
+msgid "cp"
+msgstr ""
+
+#: ../../dosbatch.rst:297
+# cbbbcec9bbc54f239b257919cc301b92
+msgid "file copy"
+msgstr ""
+
+#: ../../dosbatch.rst:299
+# bebbd5aaa86f44c8b6659a73c30911aa
+msgid "``        Ctl-C       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:301
+# c7de022cb6ca46e1a07c5aec7489edb3
+msgid "Ctl-C"
+msgstr ""
+
+#: ../../dosbatch.rst:303
+# e40b1371a0944247be607f74bc815a7d
+msgid "break (signal)"
+msgstr ""
+
+#: ../../dosbatch.rst:305
+# 10eacc94d633425aa9bcd5a22624363d
+msgid "``        Ctl-Z       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:307
+# e349817eab5243519b6d683a91624fdd
+msgid "Ctl-D"
+msgstr ""
+
+#: ../../dosbatch.rst:309
+# df547cc597ee4e2f8bfa78aba85ea55d
+msgid "EOF (end-of-file)"
+msgstr ""
+
+#: ../../dosbatch.rst:311
+# 00086f573fa24a61aa04cc737dfdad03
+msgid "``        DEL       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:313
+#: ../../dosbatch.rst:331
+# 73f03ade69854e2381da94cec4e1408f
+# 2157c0ee949c432ea17cc24327a3acf6
+msgid "rm"
+msgstr ""
+
+#: ../../dosbatch.rst:315
+#: ../../dosbatch.rst:333
+# 9302bd18ad4942cd9aafe611907a2387
+# b7ab99ffaac440ebabfecbf9ef960f8b
+msgid "delete file(s)"
+msgstr ""
+
+#: ../../dosbatch.rst:317
+# d18b84500e0d4d5192ad344ca37d7baf
+msgid "``        DELTREE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:319
+# b39389189ab8416e82aaa3304325cb2e
+msgid "rm -rf"
+msgstr ""
+
+#: ../../dosbatch.rst:321
+# 42cd2428755a45bda18d6517edef4db0
+msgid "delete directory recursively"
+msgstr ""
+
+#: ../../dosbatch.rst:323
+# 1c851aa14d0748dcabf5d92bd1f69417
+msgid "``        DIR       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:325
+# d1efcef8e795456a99272a8c45766000
+msgid "ls -l"
+msgstr ""
+
+#: ../../dosbatch.rst:327
+# e2eb22c7381e47c6aca8705dd3d141f7
+msgid "directory listing"
+msgstr ""
+
+#: ../../dosbatch.rst:329
+# da0d0b6e40f847fcb0dd935b0fc69b56
+msgid "``        ERASE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:335
+# 3205d449a44c45e286afd5c7dc27f193
+msgid "``        EXIT       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:337
+# b9bf9b234f1e4e8a8bd9d7d723da002b
+msgid "exit"
+msgstr ""
+
+#: ../../dosbatch.rst:339
+# 52c120a701f84f7aaaf4822eb0cf94df
+msgid "exit current process"
+msgstr ""
+
+#: ../../dosbatch.rst:341
+# e42e9fd9d3654a3e8594763455ed5b40
+msgid "``        FC       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:343
+# 57665e5596bb4736826e88174cf44e4f
+msgid "comm, cmp"
+msgstr ""
+
+#: ../../dosbatch.rst:347
+# dca287139c21423393c9a06c8d05d703
+msgid "``        FIND       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:349
+# 9b094a27893d4378905d27851582d95c
+msgid "grep"
+msgstr ""
+
+#: ../../dosbatch.rst:351
+# fe28e63b188a469aa4015e544fad8a5a
+msgid "find strings in files"
+msgstr ""
+
+#: ../../dosbatch.rst:353
+# 408573803cec4dd497562d920f026657
+msgid "``        MD       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:355
+#: ../../dosbatch.rst:361
+# 46bc623ea5a74638bceed8b5fa650ad3
+# 0a121b0ec3f9415f9bda5b51a51f4700
+msgid "mkdir"
+msgstr ""
+
+#: ../../dosbatch.rst:357
+#: ../../dosbatch.rst:363
+# 1be96991b4d64cd6b272b8d6da0c4f1f
+# 79e552141cbe4388878310af0668c900
+msgid "make directory"
+msgstr ""
+
+#: ../../dosbatch.rst:359
+# c3ca3888d5d542f28839c85521256e87
+msgid "``        MKDIR       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:365
+# 4cad24a2ffb94376859b91c7e99ce083
+msgid "``        MORE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:367
+# 1cbc2a44beba45de9bda9cd42c540670
+msgid "more"
+msgstr ""
+
+#: ../../dosbatch.rst:369
+# 15d2dfe6fb84499584f7f397744e2b12
+msgid "text file paging filter"
+msgstr ""
+
+#: ../../dosbatch.rst:371
+# 20dbdfb55d7c474cb7227e325ef777ab
+msgid "``        MOVE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:373
+#: ../../dosbatch.rst:385
+#: ../../dosbatch.rst:391
+# f771759116b34178aa358f391739fe7b
+# 345fec35fc734702ac33017c1f8ffa1c
+# b469f97c1ed0416eb1c28d4b293a1a5f
+msgid "mv"
+msgstr ""
+
+#: ../../dosbatch.rst:375
+# 626cffe1d10f4193939b6506dc884d14
+msgid "move"
+msgstr ""
+
+#: ../../dosbatch.rst:377
+# b1604f4d2e5f4cf0aa00c6b5d031c657
+msgid "``        PATH       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:379
+# fca03d17483a4e52bce5206aba5c25b7
+msgid "$PATH"
+msgstr ""
+
+#: ../../dosbatch.rst:381
+# ef80d5fa60e343449aa93406aae99a0b
+msgid "path to executables"
+msgstr ""
+
+#: ../../dosbatch.rst:383
+# 1fe8733a9efd4cfe98aa5f9be19a0338
+msgid "``        REN       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:387
+#: ../../dosbatch.rst:393
+# fc34d4e137974109b399f3191ab072ea
+# eb46d7144b464cf5a9e1fb994ad642c1
+msgid "rename (move)"
+msgstr ""
+
+#: ../../dosbatch.rst:389
+# a875e9f37ace416e89499bb7c22202f0
+msgid "``        RENAME       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:395
+# 07c478ade44e41e5ab19aed085ffc7bc
+msgid "``        RD       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:397
+#: ../../dosbatch.rst:403
+# 4d2eed784c2244039ce2d222ca01b9b2
+# 828f7ca8361b494c86b1a1ac22cdfda9
+msgid "rmdir"
+msgstr ""
+
+#: ../../dosbatch.rst:399
+#: ../../dosbatch.rst:405
+# 5922e4b1ab764d2a8792cc5ec61bfa4d
+# f0477d18c9e24ad5ab41f52dd37f8aa3
+msgid "remove directory"
+msgstr ""
+
+#: ../../dosbatch.rst:401
+# a64d5d036dff4a3fb0febc273c22f991
+msgid "``        RMDIR       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:407
+# c3b46b0c2989458dafb24cb976ccd887
+msgid "``        SORT       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:409
+# e986031cc69b44b0a21e2cceb239f957
+msgid "sort"
+msgstr ""
+
+#: ../../dosbatch.rst:411
+# 34b9f4affd874eacb448d300ee48c32a
+msgid "sort file"
+msgstr ""
+
+#: ../../dosbatch.rst:413
+# 4ffa852f8cf54540a412ead65b2430bd
+msgid "``        TIME       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:415
+# 5fc995269a3b45a5ad23f05881ce0e5a
+msgid "date"
+msgstr ""
+
+#: ../../dosbatch.rst:417
+# 6a1c56f8f4b64b57b18ef51474011ef4
+msgid "display system time"
+msgstr ""
+
+#: ../../dosbatch.rst:419
+# e2ba1b64aed342ba88e38ff86051ae17
+msgid "``        TYPE       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:421
+# 044fd0ce7fef49628a602c577223c4f9
+msgid "cat"
+msgstr ""
+
+#: ../../dosbatch.rst:423
+# facb4c4ff6654ef9880f3dc98e5fe22a
+msgid "output file to ``        stdout       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:425
+# 8b4a7ed211d44aa7b797b258fda76834
+msgid "``        XCOPY       ``"
+msgstr ""
+
+#: ../../dosbatch.rst:429
+# f2e483c80b344745afbc82519206947e
+msgid "(extended) file copy"
+msgstr ""
+
+#: ../../dosbatch.rst:435
+# 800795f0eb674d83aeeaf75006862cfc
+msgid "|Note"
+msgstr ""
+
+#: ../../dosbatch.rst:437
+# 6811ceca3e53404a8456bc8b1c2c496f
+msgid "Virtually all UNIX and shell operators and commands have many more options and enhancements than their DOS and batch file counterparts. Many DOS batch files rely on auxiliary utilities, such as **ask.com** , a crippled counterpart to `read <internal.html#READREF>`__ ."
+msgstr ""
+
+#: ../../dosbatch.rst:442
+# ce68a24bffcb49a5858784414f2e23a0
+msgid "DOS supports only a very limited and incompatible subset of filename `wild-card expansion <globbingref.html>`__ , recognizing just the \\* and ? characters."
+msgstr ""
+
+#: ../../dosbatch.rst:449
+# ad97dc6298504cfe8a27131f64ca3c05
+msgid "Converting a DOS batch file into a shell script is generally straightforward, and the result ofttimes reads better than the original."
+msgstr ""
+
+#: ../../dosbatch.rst:454
+# 4fdd1233d55143dab85551a6e66b97db
+msgid "Exemple 1. VIEWDATA.BAT: DOS Batch File"
+msgstr ""
+
+#: ../../dosbatch.rst:483
+# df99ef1380b9464f971189b5bb34856f
+msgid "<dosbatch.html#FTN.AEN24713>`__"
+msgstr ""
+
+#: ../../dosbatch.rst:487
+# 62f727e9f61e4783a6c28bb5c1cd243d
+msgid "Exemple 2. *viewdata.sh* : Shell Script Conversion of VIEWDATA.BAT"
+msgstr ""
+
+#: ../../dosbatch.rst:517
+# e1a53fe220404020a9f12d85aba393d5
+msgid "Ted Davis' `Shell Scripts on the PC <http://www.maem.umr.edu/batch/>`__ site had a set of comprehensive tutorials on the old-fashioned art of batch file programming. Unfortunately the page has vanished without a trace."
+msgstr ""
+
+#: ../../dosbatch.rst:524
+# e321edc4b9f24d3eb9f101863a0c19a7
+msgid "Notes"
+msgstr ""
+
+#: ../../dosbatch.rst:527
+# 61e5a277002b4dcdb7626ceb994f9cb7
+msgid "` [1]  <dosbatch.html#AEN24713>`__"
+msgstr ""
+
+#: ../../dosbatch.rst:529
+# 1afd99b54cff4d1fb8318de667b336ca
+msgid "Various readers have suggested modifications of the above batch file to prettify it and make it more compact and efficient. In the opinion of the *ABS Guide* author, this is wasted effort. A Bash script can access a DOS filesystem, or even an NTFS partition (with the help of `ntfs-3g <http://www.ntfs-3g.org>`__ ) to do batch or scripted operations."
+msgstr ""
+

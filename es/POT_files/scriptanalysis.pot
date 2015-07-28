@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../scriptanalysis.rst:4
+# 40dbf23f4486447bb2d05c0b576f3d6c
+msgid "XXX  O.1. Analyzing Scripts"
+msgstr ""
+
+#: ../../scriptanalysis.rst:6
+# 14530e572fdc4a72977aa1cf9ed0ef95
+msgid "Examine the following script. Run it, then explain what it does. Annotate the script and rewrite it in a more compact and elegant manner."
+msgstr ""
+
+#: ../../scriptanalysis.rst:49
+#: ../../scriptanalysis.rst:69
+#: ../../scriptanalysis.rst:96
+#: ../../scriptanalysis.rst:117
+#: ../../scriptanalysis.rst:136
+# a0a3abba067f4811b810db6fba92106f
+# 1fcb19d0abbc45d09d672d2bdfebe3cd
+# f6b142474c5147c68f9a53a87509d30d
+# ea3c6d6930a349dd9f452e0be6914875
+# 6babf0bf58c84c59b47a4e90d0b0f702
+msgid "---"
+msgstr ""
+
+#: ../../scriptanalysis.rst:51
+# 1a6a08e9dead4893aff31ca3a845f8ea
+msgid "Explain what the following script does. It is really just a parameterized command-line pipe."
+msgstr ""
+
+#: ../../scriptanalysis.rst:71
+# 625dcaccdfad43979b545d34ff64d795
+msgid "Examine and explain the following script. For hints, you might refer to the listings for `find <moreadv.html#FINDREF>`__ and `stat <system.html#STATREF>`__ ."
+msgstr ""
+
+#: ../../scriptanalysis.rst:98
+# 52724b5671034f60adf5dc3f520281f7
+msgid "A reader sent in the following code snippet."
+msgstr ""
+
+#: ../../scriptanalysis.rst:110
+# daa5b5d36a94495da42b9ea3d2d00e62
+msgid "He wished to write a script tracking changes to the system log file, ``      /var/log/messages     `` . Unfortunately, the above code block hangs and does nothing useful. Why? Fix this so it does work. (Hint: rather than `redirecting the ``       stdin      `` of the loop <redircb.html#REDIRREF>`__ , try a `pipe <special-chars.html#PIPEREF>`__ .)"
+msgstr ""
+
+#: ../../scriptanalysis.rst:119
+# df3d1fbc8b174de084cb5171c6da7a05
+msgid "Analyze the following \"one-liner\" (here split into two lines for clarity) contributed by Rory Winston:"
+msgstr ""
+
+#: ../../scriptanalysis.rst:130
+# 8f8bfd801dc54756b9948c16aaf6e282
+msgid "Hint: First, break the script up into bite-sized sections. Then, carefully examine its use of `double-parentheses <dblparens.html>`__ arithmetic, the `export <internal.html#EXPORTREF>`__ command, the `find <moreadv.html#FINDREF>`__ command, the `wc <textproc.html#WCREF>`__ command, and `awk <awk.html#AWKREF>`__ ."
+msgstr ""
+
+#: ../../scriptanalysis.rst:138
+# 75119d036a1e47e48acce1499f5cf583
+msgid "Analyze `Example A-10 <contributed-scripts.html#LIFESLOW>`__ , and reorganize it in a simplified and more logical style. See how many of the variables can be eliminated, and try to optimize the script to speed up its execution time."
+msgstr ""
+
+#: ../../scriptanalysis.rst:143
+# 9e47c88a540b41859fe629e24849cb7b
+msgid "Alter the script so that it accepts any ordinary ASCII text file as input for its initial \"generation\" . The script will read the first ``             $ROW*$COL           `` characters, and set the occurrences of vowels as \"living\" cells. Hint: be sure to translate the spaces in the input file to underscore characters."
+msgstr ""
+

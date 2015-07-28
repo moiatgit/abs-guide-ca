@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../assortedtips.rst:4
+# 542cc1cecfbc4c87ba90713c012c63cb
+msgid "XXX  36.7. Assorted Tips"
+msgstr ""
+
+#: ../../assortedtips.rst:7
+# 1c357fe264884736b33e18af0ea6948b
+msgid "36.7.1. Ideas for more powerful scripts"
+msgstr ""
+
+#: ../../assortedtips.rst:12
+# 14481c7f4d7b40c7ac6010b54d343949
+msgid "You have a problem that you want to solve by writing a Bash script. Unfortunately, you don't know quite where to start. One method is to plunge right in and code those parts of the script that come easily, and write the hard parts as *pseudo-code* ."
+msgstr ""
+
+#: ../../assortedtips.rst:51
+# d7038082c52a451b8426434b0fba6e4c
+msgid "For an example of using pseudo-code, see the `Square Root <writingscripts.html#NEWTONSQRT>`__ exercise."
+msgstr ""
+
+#: ../../assortedtips.rst:56
+# 081a8c00965a4f6a9d498848fb7c0774
+msgid "To keep a record of which user scripts have run during a particular session or over a number of sessions, add the following lines to each script you want to keep track of. This will keep a continuing file record of the script names and invocation times."
+msgstr ""
+
+#: ../../assortedtips.rst:78
+# 81cc23bfd81a421386764a45e5c73ff4
+msgid "The >> operator *appends* lines to a file. What if you wish to *prepend* a line to an existing file, that is, to paste it in at the beginning?"
+msgstr ""
+
+#: ../../assortedtips.rst:95
+# 39c1b96865994941bf0a3246d539c0fb
+msgid "This is a simplified variant of the `Example 19-13 <x17837.html#PREPENDEX>`__ script given earlier. And, of course, `sed <sedawk.html#SEDREF>`__ can also do this."
+msgstr ""
+
+#: ../../assortedtips.rst:101
+# c26a41c4683745ea9b5451953a272d5f
+msgid "A shell script may act as an embedded command inside another shell script, a *Tcl* or *wish* script, or even a `Makefile <filearchiv.html#MAKEFILEREF>`__ . It can be invoked as an external shell command in a C program using the ``                   system()                 `` call, i.e., ``                   system(\"script_name\");                 `` ."
+msgstr ""
+
+#: ../../assortedtips.rst:110
+# 43ef7021a3054fedbc927cce6871509c
+msgid "Setting a variable to the contents of an embedded *sed* or *awk* script increases the readability of the surrounding `shell wrapper <wrapper.html#SHWRAPPER>`__ . See `Example A-1 <contributed-scripts.html#MAILFORMAT>`__ and `Example 15-20 <internal.html#COLTOTALER3>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:118
+# d39d33713f7045f889acedcc9fcf1459
+msgid "Put together files containing your favorite and most useful definitions and functions. As necessary, \"include\" one or more of these \"library files\" in scripts with either the `dot <special-chars.html#DOTREF>`__ ( **.** ) or `source <internal.html#SOURCEREF>`__ command."
+msgstr ""
+
+#: ../../assortedtips.rst:237
+# 2f58024fcf8f4bfaab96bc3875a1d28c
+msgid "Use special-purpose comment headers to increase clarity and legibility in scripts."
+msgstr ""
+
+#: ../../assortedtips.rst:263
+# 5a1e6fd7722e4b13aeb8ba49d92da88f
+msgid "Dotan Barak contributes template code for a *progress bar* in a script."
+msgstr ""
+
+#: ../../assortedtips.rst:268
+# aefd35cdab6e4116ba9b9c4aeeacc4bd
+msgid "Exemple 17. A Progress Bar"
+msgstr ""
+
+#: ../../assortedtips.rst:331
+# 29f8881cc56141d59038f650587101d3
+msgid "A particularly clever use of `if-test <testconstructs.html#TESTCONSTRUCTS1>`__ constructs is for comment blocks."
+msgstr ""
+
+#: ../../assortedtips.rst:365
+# 9e1434630fbb4667be898805a89e9f7f
+msgid "Compare this with `using here documents to comment out code blocks <here-docs.html#CBLOCK1>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:370
+# 656295f28aa34b8c9f9eb1dcbde29d84
+msgid "Using the `$? exit status variable <internalvariables.html#XSTATVARREF>`__ , a script may test if a parameter contains only digits, so it can be treated as an integer."
+msgstr ""
+
+#: ../../assortedtips.rst:402
+# 8a6ec631381b4741a45085abce352180
+msgid "The 0 - 255 range for function return values is a severe limitation."
+msgstr ""
+
+#: ../../assortedtips.rst:403
+# 83bd0d6f34cd4237a94739e8d6b31b9f
+msgid "Global variables and other workarounds are often problematic. An alternative method for a function to communicate a value back to the main body of the script is to have the function write to ``         stdout        `` (usually with `echo <internal.html#ECHOREF>`__ ) the \"return value,\" and assign this to a variable. This is actually a variant of `command substitution. <commandsub.html#COMMANDSUBREF>`__"
+msgstr ""
+
+#: ../../assortedtips.rst:413
+# cf54fab8d7184452b959087a62fa5de1
+msgid "Exemple 18. Return value trickery"
+msgstr ""
+
+#: ../../assortedtips.rst:453
+# 33c98f622d5b4cd3bed99734ed39737d
+msgid "The same technique also works for alphanumeric strings. This means that a function can \"return\" a non-numeric value."
+msgstr ""
+
+#: ../../assortedtips.rst:479
+# e23053081c34494e9bbf0817ba5da88c
+msgid "It is even possible for a function to \"return\" multiple values with this method."
+msgstr ""
+
+#: ../../assortedtips.rst:484
+# 2af10cc6c9c14aca8acd431b1e08981b
+msgid "Exemple 19. Even more return value trickery"
+msgstr ""
+
+#: ../../assortedtips.rst:523
+#: ../../assortedtips.rst:925
+# c480c2405a1c4875a7e3133af7fad371
+# 95217e09465a49af8812dc238b99b7e5
+msgid "|Caution"
+msgstr ""
+
+#: ../../assortedtips.rst:525
+# 382ea59eedc847af993a4e924a9ed95b
+msgid "There can be only **one** *echo* statement in the function for this"
+msgstr ""
+
+#: ../../assortedtips.rst:526
+# 519a867fef1944ab9f0049d512ddaee0
+msgid "to work. If you alter the previous example:"
+msgstr ""
+
+#: ../../assortedtips.rst:581
+# cb66f482252446da881ede9077e84247
+msgid "Next in our bag of tricks are techniques for passing an `array <arrays.html#ARRAYREF>`__ to a `function <functions.html#FUNCTIONREF>`__ , then \"returning\" an array back to the main body of the script."
+msgstr ""
+
+#: ../../assortedtips.rst:586
+# 54a86c27a16f4b6ca8296d25c688169c
+msgid "Passing an array involves loading the space-separated elements of the array into a variable with `command substitution <commandsub.html#COMMANDSUBREF>`__ . Getting an array back as the \"return value\" from a function uses the previously mentioned strategem of `echoing <internal.html#ECHOREF>`__ the array in the function, then invoking command substitution and the **( ... )** operator to assign it to an array."
+msgstr ""
+
+#: ../../assortedtips.rst:596
+# 5470ae15105c4680899a150c85814f50
+msgid "Exemple 20. Passing and returning arrays"
+msgstr ""
+
+#: ../../assortedtips.rst:683
+# f9fed6072c9846fa91d4cc9875ec0745
+msgid "For a more elaborate example of passing arrays to functions, see `Example A-10 <contributed-scripts.html#LIFESLOW>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:688
+# a425d4648adb44f1abd6129da7400d5b
+msgid "Using the `double-parentheses construct <dblparens.html>`__ , it is possible to use C-style syntax for setting and incrementing/decrementing variables and in `for <loops1.html#FORLOOPREF1>`__ and `while <loops1.html#WHILELOOPREF>`__ loops. See `Example 11-13 <loops1.html#FORLOOPC>`__ and `Example 11-18 <loops1.html#WHLOOPC>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:698
+# 08fc8101e6b144cc9887969ec57fddfe
+msgid "Setting the `path <internalvariables.html#PATHREF>`__ and `umask <system.html#UMASKREF>`__ at the beginning of a script makes it more `portable <portabilityissues.html>`__ -- more likely to run on a \"foreign\" machine whose user may have bollixed up the ``         $PATH        `` and **umask** ."
+msgstr ""
+
+#: ../../assortedtips.rst:717
+# 75c39e127798424294e3d8448de57a5c
+msgid "A useful scripting technique is to *repeatedly* feed the output of a filter (by piping) back to the *same filter* , but with a different set of arguments and/or options. Especially suitable for this are `tr <textproc.html#TRREF>`__ and `grep <textproc.html#GREPREF>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:734
+# 5f639a6990af48928d94f5366d477850
+msgid "Exemple 21. Fun with anagrams"
+msgstr ""
+
+#: ../../assortedtips.rst:782
+# c52326801c974fcfae53899ff881a306
+msgid "See also `Example 29-4 <procref1.html#CONSTAT>`__ , `Example 16-25 <textproc.html#CRYPTOQUOTE>`__ , and `Example A-9 <contributed-scripts.html#SOUNDEX>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:788
+# d86c22c24e7749b39576d435042f82e0
+msgid "Use \" `anonymous here documents <here-docs.html#ANONHEREDOC0>`__ \" to comment out blocks of code, to save having to individually comment out each line with a # . See `Example 19-11 <here-docs.html#COMMENTBLOCK>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:795
+# 32b52438f6f944639fb4948aa7193c17
+msgid "Running a script on a machine that relies on a command that might not be installed is dangerous. Use `whatis <filearchiv.html#WHATISREF>`__ to avoid potential problems with this."
+msgstr ""
+
+#: ../../assortedtips.rst:828
+# 87bbb0d448284ff3afde78cfca55b74e
+msgid "An `if-grep test <testconstructs.html#IFGREPREF>`__ may not return expected results in an error case, when text is output to ``         stderr        `` , rather that ``         stdout        `` ."
+msgstr ""
+
+#: ../../assortedtips.rst:842
+# ebfcacfc2c824422b39333425373184f
+msgid "`Redirecting <io-redirection.html#IOREDIRREF>`__ ``         stderr        `` to ``         stdout        `` fixes this."
+msgstr ""
+
+#: ../../assortedtips.rst:858
+# 9a608565c9494a9e8d00858393a7d21e
+msgid "If you absolutely must access a subshell variable outside the"
+msgstr ""
+
+#: ../../assortedtips.rst:859
+# b5b909d133d74c6ca059effa052e27a7
+msgid "subshell, here's a way to do it."
+msgstr ""
+
+#: ../../assortedtips.rst:887
+# fecf9e4cc0384a2597f9e5ef96181442
+msgid "The `run-parts <extmisc.html#RUNPARTSREF>`__ command is handy for running a set of command scripts in a particular sequence, especially in combination with `cron <system.html#CRONREF>`__ or `at <timedate.html#ATREF>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:894
+# 2d46fd849bdd4cb69a7b08f8da5eca15
+msgid "For doing multiple revisions on a complex script, use the *rcs* Revision Control System package."
+msgstr ""
+
+#: ../../assortedtips.rst:897
+# 45ca1e59690b472fb121d5f59e6c2503
+msgid "Among other benefits of this is automatically updated ID header tags. The **co** command in *rcs* does a parameter replacement of certain reserved key words, for example, replacing ``                   # $Id$                 `` in a script with something like:"
+msgstr ""
+
+#: ../../assortedtips.rst:912
+# e9017bbe33fe410fbf67e39215ffde34
+msgid "36.7.2. Widgets"
+msgstr ""
+
+#: ../../assortedtips.rst:915
+# 1d0cf5169bd64a3f8228a1a24a4718b5
+msgid "It would be nice to be able to invoke X-Windows widgets from a shell script. There happen to exist several packages that purport to do so, namely *Xscript* , *Xmenu* , and *widtools* . The first two of these no longer seem to be maintained. Fortunately, it is still possible to obtain *widtools* `here <http://www.batse.msfc.nasa.gov/~mallozzi/home/software/xforms/src/widtools-2.0.tgz>`__ ."
+msgstr ""
+
+#: ../../assortedtips.rst:927
+# 7abfda99991c46bdb6e8f8cf15b305e1
+msgid "The *widtools* (widget tools) package requires the *XForms* library to be installed. Additionally, the `Makefile <filearchiv.html#MAKEFILEREF>`__ needs some judicious editing before the package will build on a typical Linux system. Finally, three of the six widgets offered do not work (and, in fact, segfault)."
+msgstr ""
+
+#: ../../assortedtips.rst:936
+# 84f9ac19be0449d38d6df5c13f177bac
+msgid "The *dialog* family of tools offers a method of calling \"dialog\" widgets from a shell script. The original *dialog* utility works in a text console, but its successors, *gdialog* , *Xdialog* , and *kdialog* use X-Windows-based widget sets."
+msgstr ""
+
+#: ../../assortedtips.rst:943
+# adad511969f74ee995ee3908cea6bfae
+msgid "Exemple 22. Widgets invoked from a shell script"
+msgstr ""
+
+#: ../../assortedtips.rst:1010
+# 116e5855f61f4c178b560e05295782f1
+msgid "of popping up a message/query window. For example:"
+msgstr ""
+
+#: ../../assortedtips.rst:1020
+# f9cf725bb585482eb722608819266a1b
+msgid "`zenity <extmisc.html#ZENITYREF>`__ . This utility pops up *GTK+* dialog widgets-and-windows, and it works very nicely within a script."
+msgstr ""
+
+#: ../../assortedtips.rst:1040
+# 5d208e2a037849c28b586089a5ddaa0d
+msgid "For other methods of scripting with widgets, try *Tk* or *wish* ( *Tcl* derivatives), *PerlTk* ( *Perl* with *Tk* extensions), *tksh* ( *ksh* with *Tk* extensions), *XForms4Perl* ( *Perl* with *XForms* extensions), *Gtk-Perl* ( *Perl* with *Gtk* extensions), or *PyQt* ( *Python* with *Qt* extensions)."
+msgstr ""
+

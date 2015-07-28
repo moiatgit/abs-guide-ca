@@ -1,0 +1,511 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../x23170.rst:4
+# f93afd52efea415089faeb238aceb679
+msgid "XXX  C.1. Sed"
+msgstr ""
+
+#: ../../x23170.rst:6
+# a4daef83a64a4abbb8aedcb46951ba71
+msgid "*Sed* is a non-interactive ` [1]  <x23170.html#FTN.AEN23174>`__ **s** tream **ed** itor. It receives text input, whether from ``      stdin     `` or from a file, performs certain operations on specified lines of the input, one line at a time, then outputs the result to ``      stdout     `` or to a file. Within a shell script, *sed* is usually one of several tool components in a pipe."
+msgstr ""
+
+#: ../../x23170.rst:13
+# 8ebfc68677164a9da6e3411dc9f9b9af
+msgid "*Sed* determines which lines of its input that it will operate on from the *address range* passed to it. ` [2]  <x23170.html#FTN.AEN23185>`__ Specify this address range either by line number or by a pattern to match. For example, ``             3d           `` signals *sed* to delete line 3 of the input, and ``             /Windows/d           `` tells sed that you want every line of the input containing a match to \"Windows\" deleted."
+msgstr ""
+
+#: ../../x23170.rst:21
+# 65752d74991f417d8a5fa95f2c0c1cfd
+msgid "Of all the operations in the *sed* toolkit, we will focus primarily on the three most commonly used ones. These are **p** rinting (to ``      stdout     `` ), **d** eletion, and **s** ubstitution."
+msgstr ""
+
+#: ../../x23170.rst:26
+# 133d60df56b7429da3824ad56d80419d
+msgid "**Table C-1. Basic sed operators**"
+msgstr ""
+
+#: ../../x23170.rst:29
+# 7aefb4d21d3b455e928ae6e60d28c151
+msgid "Operator"
+msgstr ""
+
+#: ../../x23170.rst:31
+# efa53eb9e9bc4eb2ad65e459b5edbbd1
+msgid "Name"
+msgstr ""
+
+#: ../../x23170.rst:33
+#: ../../x23170.rst:156
+# 453da18553d646639a6cfeb2610f193e
+# 3ad64aac1a664560b8084746fd6098e8
+msgid "Effect"
+msgstr ""
+
+#: ../../x23170.rst:35
+# 2eb83d0f00e34bf09352ad477ca03a99
+msgid "``        [address-range]/p       ``"
+msgstr ""
+
+#: ../../x23170.rst:37
+# 97632d882dbb4080bba9a2451c096397
+msgid "print"
+msgstr ""
+
+#: ../../x23170.rst:39
+# cff11b7c011a44d5904e33deb12f585b
+msgid "Print [specified address range]"
+msgstr ""
+
+#: ../../x23170.rst:41
+# 6cdfc42ee443418ea1f24f3f112db27c
+msgid "``        [address-range]/d       ``"
+msgstr ""
+
+#: ../../x23170.rst:43
+# 31191ba5ff1f4c8e80d57e787690943c
+msgid "delete"
+msgstr ""
+
+#: ../../x23170.rst:45
+# 6165616fc84c40d1add679ed55e8903e
+msgid "Delete [specified address range]"
+msgstr ""
+
+#: ../../x23170.rst:47
+# 8a7b3c43572d4dca9ddbc5d362979a1e
+msgid "``        s/pattern1/pattern2/       ``"
+msgstr ""
+
+#: ../../x23170.rst:49
+#: ../../x23170.rst:55
+# 64e89faa33bc4bbea4e5e1f532affae4
+# 0d9285fdfe594e528f066120f8c85577
+msgid "substitute"
+msgstr ""
+
+#: ../../x23170.rst:51
+# 8aba3002c2e3479fafdce023c7750f1c
+msgid "Substitute pattern2 for first instance of pattern1 in a line"
+msgstr ""
+
+#: ../../x23170.rst:53
+# 34745cf9ed1d44f1903ebf84598a6817
+msgid "``        [address-range]/s/pattern1/pattern2/       ``"
+msgstr ""
+
+#: ../../x23170.rst:57
+# b9a502ab1f5c4f46a5903d91bfae308c
+msgid "Substitute pattern2 for first instance of pattern1 in a line, over ``                 address-range               ``"
+msgstr ""
+
+#: ../../x23170.rst:60
+# f93675c8f1d74c2db07b71bda5d58838
+msgid "``        [address-range]/y/pattern1/pattern2/       ``"
+msgstr ""
+
+#: ../../x23170.rst:62
+# 899efad24865438da4aa091ddc700f73
+msgid "transform"
+msgstr ""
+
+#: ../../x23170.rst:64
+# 823697c6040b484288672bb86302f970
+msgid "replace any character in pattern1 with the corresponding character in pattern2, over ``                 address-range               `` (equivalent of **tr** )"
+msgstr ""
+
+#: ../../x23170.rst:68
+# 5116ba32516e4ac2a81e67bdf1b937c6
+msgid "``        [address] i pattern Filename       ``"
+msgstr ""
+
+#: ../../x23170.rst:70
+# c39b2f66b0c14f3996bf2a58f3e3737a
+msgid "insert"
+msgstr ""
+
+#: ../../x23170.rst:72
+# d196f3a1c2e24014902f0ef1a687e4ad
+msgid "Insert pattern at address indicated in file Filename. Usually used with ``        -i       `` ``                 in-place               `` option."
+msgstr ""
+
+#: ../../x23170.rst:76
+# 02bb66b91c9e449cad181c8e78679ec9
+msgid "``        g       ``"
+msgstr ""
+
+#: ../../x23170.rst:78
+# babe8b7b4e3540cb97476b95bb474e79
+msgid "global"
+msgstr ""
+
+#: ../../x23170.rst:80
+# 2c9dc9ea96d0495a9215eaf09fbab082
+msgid "Operate on *every* pattern match within each matched line of input"
+msgstr ""
+
+#: ../../x23170.rst:86
+#: ../../x23170.rst:130
+#: ../../x23170.rst:265
+# 2cee9f84669d4388a6634558bb94c676
+# ee6497e161f547dda990020d51a46bcf
+# 125a2bece9b34f5ab88b6d8cc549c23d
+msgid "|Note"
+msgstr ""
+
+#: ../../x23170.rst:88
+# 0b70580b7095436cb7c829f19e286d9a
+msgid "Unless the ``         g        `` ( *global* ) operator is appended to a *substitute* command, the substitution operates only on the *first* instance of a pattern match within each line."
+msgstr ""
+
+#: ../../x23170.rst:95
+# 820f1f81a4c346129c573b09771dc9f8
+msgid "From the command-line and in a shell script, a sed operation may require quoting and certain options."
+msgstr ""
+
+#: ../../x23170.rst:112
+# 0c53c78090f1457181402639f37fc317
+msgid "In certain cases, a *sed* editing command will not work with single quotes."
+msgstr ""
+
+#: ../../x23170.rst:132
+# ef50296e159148a2b3563c3d25d6ae67
+msgid "*Sed* uses the ``         -e        `` option to specify that the following string is an instruction or set of instructions. If there is only a single instruction contained in the string, then this may be omitted."
+msgstr ""
+
+#: ../../x23170.rst:151
+# 0e0a4c2ccbac463ea111f6d80dd404e5
+msgid "**Table C-2. Examples of sed operators**"
+msgstr ""
+
+#: ../../x23170.rst:154
+# 6a6adc1b9c024881b80d939331c10154
+msgid "Notation"
+msgstr ""
+
+#: ../../x23170.rst:158
+# 24ce3ebfc78440d5b6c48547bccb82d9
+msgid "``        8d       ``"
+msgstr ""
+
+#: ../../x23170.rst:160
+# e264639d12934e52b7148188206023ae
+msgid "Delete 8th line of input."
+msgstr ""
+
+#: ../../x23170.rst:162
+# 72c39f6ee36e4e6e9bd52fc2a7c955f0
+msgid "``        /^$/d       ``"
+msgstr ""
+
+#: ../../x23170.rst:164
+# b0ab2847a5dc41d18249ea93dbed351f
+msgid "Delete all blank lines."
+msgstr ""
+
+#: ../../x23170.rst:166
+# 328f856d55dd4c55b17403014b71657a
+msgid "``        1,/^$/d       ``"
+msgstr ""
+
+#: ../../x23170.rst:168
+# adadadd1a4e44435b6b930ca749d4f95
+msgid "Delete from beginning of input up to, and including first blank line."
+msgstr ""
+
+#: ../../x23170.rst:170
+# 0ab032bece5944a180f2c89e8a85da98
+msgid "``        /Jones/p       ``"
+msgstr ""
+
+#: ../../x23170.rst:172
+# dff7340be78c4e938520e65d7f366106
+msgid "Print only lines containing \"Jones\" (with -n option)."
+msgstr ""
+
+#: ../../x23170.rst:174
+# ac7c8f8cd9da4588b82afc18e29d55f3
+msgid "``        s/Windows/Linux/       ``"
+msgstr ""
+
+#: ../../x23170.rst:176
+# 70c9331fe3d845e39451a2528af2542d
+msgid "Substitute \"Linux\" for first instance of \"Windows\" found in each input line."
+msgstr ""
+
+#: ../../x23170.rst:179
+# cd0ce93909f540408d27a34a6dff21fe
+msgid "``        s/BSOD/stability/g       ``"
+msgstr ""
+
+#: ../../x23170.rst:181
+# 5488a35f915c41aa880a1e46dfd00113
+msgid "Substitute \"stability\" for every instance of \"BSOD\" found in each input line."
+msgstr ""
+
+#: ../../x23170.rst:184
+# 68ecd001e75d4c57b324a37ef9dadb28
+msgid "``        s/ *$//       ``"
+msgstr ""
+
+#: ../../x23170.rst:186
+# c98f4c93dcb747e1ac920bc2faa62a4b
+msgid "Delete all spaces at the end of every line."
+msgstr ""
+
+#: ../../x23170.rst:188
+# 2ea1691a103a439c8cd2e67f54318773
+msgid "``        s/00*/0/g       ``"
+msgstr ""
+
+#: ../../x23170.rst:190
+# 10638839adae4e95b5bc614dac74e0dd
+msgid "Compress all consecutive sequences of zeroes into a single zero."
+msgstr ""
+
+#: ../../x23170.rst:192
+# 3b89f4c73732486e80c2a917845aa70c
+msgid "``        echo \"Working on it.\"sed -e '1i How far are you along?'       ``"
+msgstr ""
+
+#: ../../x23170.rst:194
+# c3845bc21ace4da2bb8af5ee00e980c6
+msgid "Prints \"How far are you along?\" as first line, \"Working on it\" as second."
+msgstr ""
+
+#: ../../x23170.rst:197
+# d3effa441ab54ae199a6aaf21d7e6e38
+msgid "``        5i 'Linux is great.' file.txt       ``"
+msgstr ""
+
+#: ../../x23170.rst:199
+# 51400455d0794795a75aaece6183310a
+msgid "Inserts 'Linux is great.' at line 5 of the file file.txt."
+msgstr ""
+
+#: ../../x23170.rst:201
+# a5cee8fa8e5b4c4183780bda73c0bffc
+msgid "``        /GUI/d       ``"
+msgstr ""
+
+#: ../../x23170.rst:203
+# 27525371e189403a927cc2eec9573158
+msgid "Delete all lines containing \"GUI\" ."
+msgstr ""
+
+#: ../../x23170.rst:205
+# e22af56c702c4bd58afd121ac472f2cc
+msgid "``        s/GUI//g       ``"
+msgstr ""
+
+#: ../../x23170.rst:207
+# 92c4616e8ef44d8fa7bcd5a3ca997dfe
+msgid "Delete all instances of \"GUI\" , leaving the remainder of each line intact."
+msgstr ""
+
+#: ../../x23170.rst:212
+# dd99b3157af944079cc0cebdea38662c
+msgid "Substituting a zero-length string for another is equivalent to deleting that string within a line of input. This leaves the remainder of the line intact. Applying ``             s/GUI//           `` to the line"
+msgstr ""
+
+#: ../../x23170.rst:223
+# 1000176c162242c9a783c6da29a6a47a
+msgid "results in"
+msgstr ""
+
+#: ../../x23170.rst:232
+# 1bd18afd456b40619a6ee4864fac9c7d
+msgid "A backslash forces the **sed** replacement command to continue on to the next line. This has the effect of using the *newline* at the end of the first line as the *replacement string* ."
+msgstr ""
+
+#: ../../x23170.rst:244
+# a43f8e5bc43b449fbac12a55c0bddf2c
+msgid "This substitution replaces line-beginning spaces with a newline. The net result is to replace paragraph indents with a blank line between paragraphs. An address range followed by one or more operations may require open and closed curly brackets, with appropriate newlines."
+msgstr ""
+
+#: ../../x23170.rst:259
+# 896e3aba98dc497d890352f9b05a2994
+msgid "This deletes only the first of each set of consecutive blank lines. That might be useful for single-spacing a text file, but retaining the blank line(s) between paragraphs."
+msgstr ""
+
+#: ../../x23170.rst:267
+# 6b936517076044eab58a8d75803af84d
+msgid "The usual delimiter that *sed* uses is / . However, *sed* allows other delimiters, such as % . This is useful when / is part of a replacement string, as in a file pathname. See `Example 11-10 <loops1.html#FINDSTRING>`__ and `Example 16-32 <filearchiv.html#STRIPC>`__ ."
+msgstr ""
+
+#: ../../x23170.rst:278
+# 9d2c5bda070f46f487f5f576c44275d5
+msgid "|Tip"
+msgstr ""
+
+#: ../../x23170.rst:280
+# c5238146655e4370bf32c694e7af3d44
+msgid "A quick way to double-space a text file is ``                   sed G        filename                 `` ."
+msgstr ""
+
+#: ../../x23170.rst:286
+# 3435afbef1f14400aa08e952ea0b86fb
+msgid "For illustrative examples of sed within shell scripts, see:"
+msgstr ""
+
+#: ../../x23170.rst:288
+# feb53e67da7d4aabb58f96f432e8a19a
+msgid "`Example 36-1 <wrapper.html#EX3>`__"
+msgstr ""
+
+#: ../../x23170.rst:290
+# 623d9f7d15d145cc91e65ef81044f0ef
+msgid "`Example 36-2 <wrapper.html#EX4>`__"
+msgstr ""
+
+#: ../../x23170.rst:292
+# 7cb88dbfa7ea49a9be903ee651ce2ce3
+msgid "`Example 16-3 <moreadv.html#EX57>`__"
+msgstr ""
+
+#: ../../x23170.rst:294
+# 438afff339ce49368977bebbf0fec13a
+msgid "`Example A-2 <contributed-scripts.html#RN>`__"
+msgstr ""
+
+#: ../../x23170.rst:296
+# 65acad1e50cf46d08661a70a4909b1a0
+msgid "`Example 16-17 <textproc.html#GRP>`__"
+msgstr ""
+
+#: ../../x23170.rst:298
+# 10c7b9dda1114d479f3b4e8fd2eaeeb2
+msgid "`Example 16-27 <textproc.html#COL>`__"
+msgstr ""
+
+#: ../../x23170.rst:300
+# b38b3907a5a24aaeb419e52070054203
+msgid "`Example A-12 <contributed-scripts.html#BEHEAD>`__"
+msgstr ""
+
+#: ../../x23170.rst:302
+# 6c4f4aeeea7042dfa8dba9e4aa21649f
+msgid "`Example A-16 <contributed-scripts.html#TREE>`__"
+msgstr ""
+
+#: ../../x23170.rst:304
+# a25105e9d9bd425fbab37e559ebb11eb
+msgid "`Example A-17 <contributed-scripts.html#TREE2>`__"
+msgstr ""
+
+#: ../../x23170.rst:306
+# c46d00c287db4cf39d1be1e09fbf0c4f
+msgid "`Example 16-32 <filearchiv.html#STRIPC>`__"
+msgstr ""
+
+#: ../../x23170.rst:308
+# 2ae93a56e2bd4d1b8cc3b55ca85e1dc5
+msgid "`Example 11-10 <loops1.html#FINDSTRING>`__"
+msgstr ""
+
+#: ../../x23170.rst:310
+# db2e6ca0d95d40f8b42c3c6591d211ae
+msgid "`Example 16-48 <mathc.html#BASE>`__"
+msgstr ""
+
+#: ../../x23170.rst:312
+# 776f82b4bfd1452b9188805259d97c77
+msgid "`Example A-1 <contributed-scripts.html#MAILFORMAT>`__"
+msgstr ""
+
+#: ../../x23170.rst:314
+# 22930a18a4ed41ae8a15d39275c20f64
+msgid "`Example 16-14 <textproc.html#RND>`__"
+msgstr ""
+
+#: ../../x23170.rst:316
+# b3715c70192f4167812576f952dc2fa9
+msgid "`Example 16-12 <textproc.html#WF>`__"
+msgstr ""
+
+#: ../../x23170.rst:318
+# 41c03abe983041e4b6a409a10d561f04
+msgid "`Example A-10 <contributed-scripts.html#LIFESLOW>`__"
+msgstr ""
+
+#: ../../x23170.rst:320
+# 53e5c61b535b434189836ec6c5a6d156
+msgid "`Example 19-12 <here-docs.html#SELFDOCUMENT>`__"
+msgstr ""
+
+#: ../../x23170.rst:322
+# cabe2a8a0e7940f39333bcf634f51824
+msgid "`Example 16-19 <textproc.html#DICTLOOKUP>`__"
+msgstr ""
+
+#: ../../x23170.rst:324
+# 99cab0c13c914e51a309a5c9abcf1da8
+msgid "`Example A-29 <contributed-scripts.html#WHX>`__"
+msgstr ""
+
+#: ../../x23170.rst:326
+# 629c5d057eff431fb7847fe22cddcfc2
+msgid "`Example A-31 <contributed-scripts.html#BASHPODDER>`__"
+msgstr ""
+
+#: ../../x23170.rst:328
+# 8ed014ff52dd4d3e915100b2e7e23801
+msgid "`Example A-24 <contributed-scripts.html#TOHTML>`__"
+msgstr ""
+
+#: ../../x23170.rst:330
+# 22661a0c2cde4204a82241eb8e1b87eb
+msgid "`Example A-43 <contributed-scripts.html#STOPWATCH>`__"
+msgstr ""
+
+#: ../../x23170.rst:332
+# 839c021dab7a4d43a435f7353b67a32b
+msgid "`Example A-55 <contributed-scripts.html#SEDAPPEND>`__"
+msgstr ""
+
+#: ../../x23170.rst:334
+# 9de67a9f4182499ba0a9112ee16d15ad
+msgid "For a more extensive treatment of *sed* , refer to the `pertinent references <biblio.html#DGSEDREF>`__ in the `*Bibliography* <biblio.html>`__ ."
+msgstr ""
+
+#: ../../x23170.rst:340
+# 49123778ee8a4d23839d8146774cf6f7
+msgid "Notes"
+msgstr ""
+
+#: ../../x23170.rst:343
+# 6871cd1e52e94be29bdf78e13c7866ca
+msgid "` [1]  <x23170.html#AEN23174>`__"
+msgstr ""
+
+#: ../../x23170.rst:345
+# 334c2509291944aa8ea5db8d1d14aef9
+msgid "*Sed* executes without user intervention."
+msgstr ""
+
+#: ../../x23170.rst:348
+# 29ceb6b4ac0a4108b33287a042d4557a
+msgid "` [2]  <x23170.html#AEN23185>`__"
+msgstr ""
+
+#: ../../x23170.rst:350
+# 4a47b760cf8b466990db30e8b24a7ad1
+msgid "If no address range is specified, the default is *all* lines."
+msgstr ""
+

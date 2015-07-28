@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../numerical-constants.rst:3
+# 5d07371dc2704d5eb6e060456f371a20
+msgid "XXX  8.2. Numerical Constants"
+msgstr ""
+
+#: ../../numerical-constants.rst:5
+# a7bf9069e2cf4635a4cd38a7a2fdedcd
+msgid "A shell script interprets a number as decimal (base 10), unless that"
+msgstr ""
+
+#: ../../numerical-constants.rst:6
+# e4e9c795bc0b46b5ac3fb098749bd63a
+msgid "number has a special prefix or notation. A number preceded by a ``             0           `` is ``             octal           `` (base 8). A number preceded by ``             0x           `` is ``             hexadecimal           `` (base 16). A number with an embedded ``             #           `` evaluates as ``             BASE#NUMBER           `` (with range and notational restrictions)."
+msgstr ""
+
+#: ../../numerical-constants.rst:16
+# 630ee0f0d8e1434b9319266860da20fc
+msgid "Exemple 4. Representation of numerical constants"
+msgstr ""
+

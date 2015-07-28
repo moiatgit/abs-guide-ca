@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:3
+# 075207685cec4cfda1dd17bf150a32ad
+msgid "Guia Avançada de Programació en Bash"
+msgstr ""
+
+#: ../../index.rst:7
+# 500d423eeffe4921b770beadecef2824
+msgid "Una exploració en profunditat de l'art de la programació Bash"
+msgstr ""
+
+#: ../../index.rst:9
+# fa9dd96d93b74b56ab09165af129e73e
+msgid "Per *Mendel Cooper*: ``<thegrendel.abs (at) gmail (dot) com>``"
+msgstr ""
+
+#: ../../index.rst:11
+# abd21ce304144ec2bb601e4f0f693e60
+msgid "Revisió 10 del 10 Març de 2014"
+msgstr ""
+
+#: ../../index.rst:13
+# ac7182f8ee4c4bbda24abcb0051beeab
+msgid "Traduït per *Moisès Gómez*: ``<moiatgit (a) gmail (punt) com>``"
+msgstr ""
+
+#: ../../index.rst:16
+# 97f29be4902c41b99ae07ed16048a5e7
+msgid "Introducció"
+msgstr ""
+
+#: ../../index.rst:18
+# 503c2b060a3b4d1aa6d485c6a42c6ce4
+msgid "Tens al davant un llibre de programació de guions en *Bash*. Està escrit en forma de tutorial i no pressuposa cap coneixement previ de programació. Això sí, avança molt ràpidament cap a un nivell intermedi/avançat, tot jugant amb les petites meravelles del GNU/Linux."
+msgstr ""
+
+#: ../../index.rst:24
+# da6780ac4cac48f9bd1c065760f2ab1d
+msgid "Ha estat ideat per poder ser usat de diferents maneres:"
+msgstr ""
+
+#: ../../index.rst:26
+# 47dd1269906f49649c75955ce7a04a56
+msgid "com a llibre de text"
+msgstr ""
+
+#: ../../index.rst:28
+# b9ab0e21a1b84599aa28b672a3456831
+msgid "com a manual d'autoaprenentatge"
+msgstr ""
+
+#: ../../index.rst:30
+# f42bb8f77fd0438a8019ad7bec8621b7
+msgid "com a referència i font de coneixement de les tècniques de programació de guions."
+msgstr ""
+
+#: ../../index.rst:33
+# bfef9714b32b4be08218473ae7b8a093
+msgid "Hi trobaràs exercicis i exemples comentats amb profusió, que et convidaran a fer proves pel teu compte, sota la premissa de que *l'única manera d'aprendre a programar guions és escrivint guions*."
+msgstr ""
+
+#: ../../index.rst:37
+# 478ee9aa9ce34d2e9973475fd0c359ef
+msgid "Aquest llibre és apte per l'ús dins de l'aula i com a introducció general als conceptes de programació."
+msgstr ""
+
+#: ../../index.rst:40
+# e1d26942dd9a46178638aa5743844f88
+msgid "Aquest document, a l'igual que l'original, està lliurat al *Domini Públic* i per tant, no hi ha cap *Copyright*."
+msgstr ""
+
+#: ../../index.rst:44
+# ba40a6db41fc4896b558e6327567fd5a
+msgid "Dedicatòria"
+msgstr ""
+
+#: ../../index.rst:46
+# 7acdac1d52974843a363540cf8fdfd05
+msgid "A Anita, la font de tota la màgia."
+msgstr ""
+
+#: ../../index.rst:49
+# 0650a3fa2d7e4db1bebfb0cf2cf4e4a1
+msgid "Taula de continguts"
+msgstr ""
+
+#: ../../index.rst:63
+# 5f2ee1bac0cc4b4a94af4746e83c95cb
+msgid "Índexs i taules"
+msgstr ""
+
+#: ../../index.rst:65
+# eccdb39097514a72b1bcc058ff4c70cc
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:66
+# 03a3e83746f54646833bb6078a1e4ea7
+msgid ":ref:`search`"
+msgstr ""
+

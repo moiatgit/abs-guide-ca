@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../parameter-substitution.rst:3
+# 646273b73a594b6fa3c9c22fd6c094ba
+msgid "XXX 10.2. Substitució de paràmetres"
+msgstr ""
+
+#: ../../parameter-substitution.rst:5
+# 006db6c70c8047c49b46d55b867dd01f
+msgid "**Manipulació i/o expansió de variables**"
+msgstr ""
+
+#: ../../parameter-substitution.rst:8
+# fd100c514d50442daa3bc498e20a15da
+msgid "El mateix que ``$parametre``, És a dir, el valor de la variable ``parametre``. En certs contextos, només funciona la forma menys ambigua de `` ${parametre} ``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:12
+# 3ea458c735c84603b2e26a18969d875e
+msgid "Es pot utilitzar per concatenar variables amb strings."
+msgstr ""
+
+#: ../../parameter-substitution.rst:24
+# 4d8ca3b8404948fb82f3c9fddb99f4ae
+msgid "En cas que el paràmetre no estigui assignat, es fa servir el valor per defecte."
+msgstr ""
+
+#: ../../parameter-substitution.rst:46
+# 08f5fb2cfffd4ac1b6064f98bf490bbf
+msgid "``${parametre-perdefecte}`` i ``${parametre:-perdefecte}`` són pràcticament equivalents. Els : extra només tenen sentit quan ``parametre`` està declarat però té assignat nul."
+msgstr ""
+
+#: ../../parameter-substitution.rst:96
+# 8a79d92ed093417d8432d0c5c092b9c3
+msgid "Aquesta funcionalitat de *paràmetre per defecte* és útil quan cal definir paràmetres \"no indicats\" a la línia de comandes de la crida al script."
+msgstr ""
+
+#: ../../parameter-substitution.rst:119
+# 33c0acefcc3c44ff8a6c907e7009c4fa
+msgid "Mira també `Exemple 3-4 <http://tldp.org/LDP/abs/html/special-chars.html#EX58>`_, `Exemple 30-2 <http://tldp.org/LDP/abs/html/zeros.html#EX73>`_, i `Exemple A-6 <http://tldp.org/LDP/abs/html/contributed-scripts.html#COLLATZ>`_."
+msgstr ""
+
+#: ../../parameter-substitution.rst:121
+# 116fc1eed43b4072a1dd1190f6a9a2d7
+msgid "Compara aquest mètode amb l'`ús d'una*llista \"and\"* per a suplir un argument de línia de comandes per defecte <http://tldp.org/LDP/abs/html/list-cons.html#ANDDEFAULT>`_."
+msgstr ""
+
+#: ../../parameter-substitution.rst:125
+# 139993bb55e54b208a149326169355e8
+msgid "``${parametre=perdefecte}``, ``${parametre:=perdefecte}``"
+msgstr ""
+
+#: ../../parameter-substitution.rst:127
+# 70ea57ae353a4c35a3523357dbebf569
+msgid "En cas que el paràmetre no estigui assignat, assigna'l a *perdefecte*."
+msgstr ""
+
+#: ../../parameter-substitution.rst:130
+# 3ab93b296aff4c02b5858deb2a3d2e02
+msgid "Les dues formes són pràcticament equivalents. El funcionament amb els : només es diferencia quan ``$parametre`` està declarat i assignat a nul `[1] <#FTN.AEN6179>`_ com passava més amunt."
+msgstr ""
+
+#: ../../parameter-substitution.rst:141
+# d4ba6df411e745d4b1a99dd31f6f9392
+msgid "Si el paràmetre està assignat, canvia el valor a ``altre_valor``, altrament fes servir el string nul."
+msgstr ""
+
+#: ../../parameter-substitution.rst:144
+# 963b5aee4e964fd68c3f17389578b805
+msgid "Les dues formes són pràcticament equivalents. El funcionament amb els : només es diferencia quan ``parametre`` està declarat i assignat a nul (mira més amunt)."
+msgstr ""
+
+#: ../../parameter-substitution.rst:185
+# eac7aa68c9244a639fb0058a3a293528
+msgid "Si el paràmetre està assignat fes servir el seu valor, altrament mostra el missatge msg\\_err."
+msgstr ""
+
+#: ../../parameter-substitution.rst:188
+# 5a92ed00b33b42d793498f44145cb360
+msgid "Les dues formes són pràcticament equivalents. El funcionament amb els : només es diferencia quan ``$parametre`` està declarat i assignat a nul com passava més amunt."
+msgstr ""
+
+#: ../../parameter-substitution.rst:195
+# 64db7c711ba94588b76815e5fe3d912d
+msgid "Exemple 1. Ús de la substitució de paràmetres i els missatges d'error"
+msgstr ""
+
+#: ../../parameter-substitution.rst:258
+# de7dd703ed6e49d68203470bf7f7371f
+msgid "Exemple 2. Ús de la substitució de paràmetres i els missatges d'\"informació\""
+msgstr ""
+
+#: ../../parameter-substitution.rst:279
+# 861ea1a585e74f1b95d8d1a2fc549ddd
+msgid "**Ús de la substitució de paràmetres i/o l'expansió.**Les expressions següents complementen les operacions de strings que consideren la **coincidència** ``amb`` **expressió** (mira l'`Exemple 16-9 <http://tldp.org/LDP/abs/html/moreadv.html#EX45>`_). Aquestes en concret es fan servir majoritàriament en l'anàlisi de camins (path) d'arxius."
+msgstr ""
+
+#: ../../parameter-substitution.rst:283
+# 2d21cc866be64b62a5ce97ecde16dbc5
+msgid "**Longitud de variables / Eliminació de substrings**"
+msgstr ""
+
+#: ../../parameter-substitution.rst:286
+# 40af443365584b1094a45c6381ee92a1
+msgid "``Longitud del string`` (nombre de caràcters a ``$var``). Per a un `array <http://tldp.org/LDP/abs/html/arrays.html#ARRAYREF>`_, **${#array}** correspon a la longitud del primer element de l'array."
+msgstr ""
+
+#: ../../parameter-substitution.rst:290
+# b8dfa75bf2f9478e82833f589135d79f
+msgid "center"
+msgstr ""
+
+#: ../../parameter-substitution.rst:291
+#: ../../parameter-substitution.rst:293
+# 823f89a0bdb444c5ad2fce138afb0d85
+# 0b9ff12e083d4f70b61b2e8c79a389ec
+msgid "Atenció"
+msgstr ""
+
+#: ../../parameter-substitution.rst:294
+# c644dd544950467381c04cb7122527ac
+msgid "Excepcions:"
+msgstr ""
+
+#: ../../parameter-substitution.rst:298
+# 3a28a43b921a4ffab9dce6ac6d9d2ee6
+msgid "**${#\\*}** i **${#@}** retornen el *nombre de paràmetres*."
+msgstr ""
+
+#: ../../parameter-substitution.rst:300
+# d06e8ea4705a4288b595ccbaa56254bd
+msgid "En cas d'array, **${#array[\\*]}** i **${#array[@]}** retornen el nombre d'elements que conté l'array."
+msgstr ""
+
+#: ../../parameter-substitution.rst:304
+# 96ca76d04e1c419c8ddd9423612fc6bc
+msgid "Exemple 3. Durada d'una variable"
+msgstr ""
+
+#: ../../parameter-substitution.rst:332
+# e17895051e164580a29393c6cc606467
+msgid "``${var#Patró}``, ``${var##Patró}``"
+msgstr ""
+
+#: ../../parameter-substitution.rst:334
+# 1e52d9c331ff42ba8d13fb971a015bea
+msgid "**${var#Patró}** Elimina de ``$var`` la part *més curta* del patró que coincideixi ``des de l'inici`` amb el contingut de ``$var``. NdT. No he pogut comprovar aquest funcionament. A les meves proves, ${var#patró} elimina la cadena \"Patró\" de l'inici de $var en cas que coincideixi perfectament."
+msgstr ""
+
+#: ../../parameter-substitution.rst:340
+# 01bf8a8ec1ea47b89ca5965f26582690
+msgid "**${var##Patríó}** Elimina de ``$var`` la part *més llarga* de ``$Patró`` que coincideixi ``des de l'inici`` amb el contingut de ``$var``. NdT. No he pogut comprovar aquest funcionament. A les meves proves, ${var##Patró} es comporta idènticament a ${var#Patró} excepte en el cas que s'afegeixi el caràcter \\*. Ex. ${var#\\*Patró} no sempre resulta igual a ${var##\\*Patró}."
+msgstr ""
+
+#: ../../parameter-substitution.rst:347
+# 05f08229773c4089ae408bc899a5edf9
+msgid "Veiem un exemple d'ús a l'`Exemple A-7 <http://tldp.org/LDP/abs/html/contributed-scripts.html#DAYSBETWEEN>`_:"
+msgstr ""
+
+#: ../../parameter-substitution.rst:360
+# eebc92fa610447a6967eb4f9c6ff7e6d
+msgid "Una versió de Manfred Schwarb amb una variació més elaborada de l'anterior:"
+msgstr ""
+
+#: ../../parameter-substitution.rst:374
+# 86302f7bf47a4106939392777283961b
+msgid "Un altre exemple d'ús:"
+msgstr ""
+
+#: ../../parameter-substitution.rst:389
+# e4350b129c1b49a7b5bbf06acba3e5f1
+msgid "``${var%Pattern}``, ``${var%%Pattern}``"
+msgstr ""
+
+#: ../../parameter-substitution.rst:391
+# 9ab699d89dcb4fe6a97a5ca6417f5ce5
+msgid "**${var%Pattern}** elimina de ``$var`` la part *més curta* del patró ``$Pattern`` que coincideixi amb la ``part final`` de ``$var``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:394
+# c0863b438cd941ecabc33b560d67753e
+msgid "**${var%%Pattern}** elimina de ``$var`` la part *més llarga* de ``$Pattern`` que coincideixi amb la ``part final`` de ``$var``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:397
+# b540af206daf4c83a47d6d8c2f863646
+msgid "La `versió 2 <http://tldp.org/LDP/abs/html/bashver2.html#BASH2REF>`_ de Bash va afegir noves opcions."
+msgstr ""
+
+#: ../../parameter-substitution.rst:403
+# c72da882812841639fb3f30edec69782
+msgid "Exemple 4. Patrons a la substitució de paràmetres"
+msgstr ""
+
+#: ../../parameter-substitution.rst:453
+# b4a3f433c0854a37b8bc3fd7f0496232
+msgid "Exemple 5. Canvi d'extensió d'un fitxer:"
+msgstr ""
+
+#: ../../parameter-substitution.rst:487
+# 16c35c23cd5d4c5b862e716a4ccbf3d1
+msgid "**Expansió de variables / substitució de substrings**"
+msgstr ""
+
+#: ../../parameter-substitution.rst:489
+# ce36ff33753441c6a7b32244501ff5d1
+msgid "Les següents funcions van ser adoptades del *ksh*."
+msgstr ""
+
+#: ../../parameter-substitution.rst:492
+# daa4dd82d3b04c12b361d54bbdc14f19
+msgid "Variable ``var`` expandida, començant des de la posició ``pos``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:495
+# 36a5869caf71449b8a775b7834d26b99
+msgid "Expansió de ``len`` caràcters de la variable ``var`` començant des de la posició ``pos``. A l'`Exemple A-13 <http://tldp.org/LDP/abs/html/contributed-scripts.html#PW>`_ es troba un exemple (creatiu) d'ús d'aquest operador."
+msgstr ""
+
+#: ../../parameter-substitution.rst:499
+# 9db6a0fc70ed4280bdbdd02e218ddb71
+msgid "Substitueix la primera aparició del ``Patró``, a la variable ``var`` per ``Substitució``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:502
+# 4b4cefab74424d6881096401e043b3a2
+msgid "En cas que no s'especifiqui ``Substitució``, la primera ocurrència de ``Patró`` es substitueix per *no res*. És a dir, elimina aquesta part de la variable."
+msgstr ""
+
+#: ../../parameter-substitution.rst:507
+# 9f0792a9b3ae4fccbe9e44ae63c7ea9b
+msgid "**Substitució global.** Substitueix totes les aparicions de ``Patró`` de la variable ``var`` per ``Substitució``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:510
+# a3914a01caae43b19eb3fedcf6382692
+msgid "Com abans, si no s'especifica ``Substitució`` es substitueixen totes les ocurrències de ``Patró`` per *no res*. És a dir, són eliminades."
+msgstr ""
+
+#: ../../parameter-substitution.rst:514
+# 5d592de40024413ea261fec57fd7d54d
+msgid "Exemple 6. Anàlisi de strings arbitraris"
+msgstr ""
+
+#: ../../parameter-substitution.rst:582
+# d93bb3a5f85842a79c3673c52097c5c2
+msgid "Quan l'*inici* de ``var`` coincideix amb ``Patró``, llavors ``Substitució`` apareix en comptes de ``Patró``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:586
+# dba10fd026fc4ab582fbb87cef9fa021
+msgid "Quan el *final* de ``var`` coincideix amb ``Patró``, llavors ``Substitució`` apareix en comptes de ``Patró``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:590
+# 2cdd8d33d3884955bfe7190804814038
+msgid "Exemple 7. Coincidència de patrons a l'inici o al final d'un string"
+msgstr ""
+
+#: ../../parameter-substitution.rst:630
+# f9d5f05ae81d4bc19200b83f3a05e1e7
+msgid "Coincideix amb els *noms* de totes les variables declarades que comencen per ``varprefix``."
+msgstr ""
+
+#: ../../parameter-substitution.rst:656
+# d68e217980444fd693ec3fb8b945aa5a
+msgid "Notes"
+msgstr ""
+
+#: ../../parameter-substitution.rst:658
+# 105c1aa4543e4be6866976eaff1e2eca
+msgid "`[1] <http://blamitec.wordpress.com/2011/04/13/abs-guide-10-2-substitucio-de-parametres>`_"
+msgstr ""
+
+#: ../../parameter-substitution.rst:660
+# 813630fe389e430283719be41823d1e5
+msgid "Quan a un script no interactiu $parametre és null, l'execució finalitza amb codi de sortida `127 <http://tldp.org/LDP/abs/html/exitcodes.html#EXITCODESREF>`_ (codi d'error de Bash que indica \"No es troba la comanda\")."
+msgstr ""
+

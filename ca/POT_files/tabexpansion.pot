@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tabexpansion.rst:4
+# 32492f693c034f15a801bd7972a0240f
+msgid "XXX  Appendix J. An Introduction to Programmable Completion"
+msgstr ""
+
+#: ../../tabexpansion.rst:6
+# a71d86e069ff4fe28756a3be1ae8af2a
+msgid "The *programmable completion* feature in Bash permits typing a partial command, then pressing the **[Tab]** key to auto-complete the command sequence. ` [1]  <tabexpansion.html#FTN.AEN24082>`__ If multiple completions are possible, then **[Tab]** lists them all. Let's see how it works."
+msgstr ""
+
+#: ../../tabexpansion.rst:31
+# e0ed86633f2e49a095ca5671f760130a
+msgid "Tab completion also works for variables and path names."
+msgstr ""
+
+#: ../../tabexpansion.rst:50
+# c6d0428f53db4fd5839256c1bf6e0c7a
+msgid "The Bash **complete** and **compgen** `builtins <internal.html#BUILTINREF>`__ make it possible for *tab completion* to recognize partial *parameters* and *options* to commands. In a very simple case, we can use **complete** from the command-line to specify a short list of acceptable parameters."
+msgstr ""
+
+#: ../../tabexpansion.rst:72
+# 80a20b12dc6a4d56a7bc14a6f7b39a06
+msgid "The ``      -f     `` option to *complete* specifies filenames, and ``      -X     `` the filter pattern."
+msgstr ""
+
+#: ../../tabexpansion.rst:75
+# 12b97c2b8e964f09af29b2d8c2a10d78
+msgid "For anything more complex, we could write a script that specifies a list of acceptable command-line parameters. The **compgen** builtin expands a list of *arguments* to *generate* completion matches."
+msgstr ""
+
+#: ../../tabexpansion.rst:79
+# 4cdbf793b3ac48fb868f6702f97807ea
+msgid "Let us take a `modified version <contributed-scripts.html#USEGETOPT2>`__ of the *UseGetOpt.sh* script as an example command. This script accepts a number of command-line parameters, preceded by either a single or double dash. And here is the corresponding *completion script* , by convention given a filename corresponding to its associated command."
+msgstr ""
+
+#: ../../tabexpansion.rst:87
+# 8eab23d765e34e989c2fd4f8fd32d004
+msgid "Exemple 1. Completion script for *UseGetOpt.sh*"
+msgstr ""
+
+#: ../../tabexpansion.rst:123
+# d0672a6008524e27ac138dc235fcaefa
+msgid "Now, let's try it."
+msgstr ""
+
+#: ../../tabexpansion.rst:141
+# fe16c4df3cd24991804f9c484a344d6d
+msgid "We begin by `sourcing <internal.html#SOURCEREF>`__ the \"completion script.\" This sets the command-line parameters. ` [2]"
+msgstr ""
+
+#: ../../tabexpansion.rst:143
+# 3db94c2dd7614fbb8e8737d60a4431ee
+msgid "<tabexpansion.html#FTN.AEN24160>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:145
+# ac2d5239560b4064b3962953632c43c7
+msgid "In the first instance, hitting **[Tab]** after a single dash, the output is all the possible parameters preceded by *one or more* dashes. Hitting **[Tab]** after *two* dashes gives the possible parameters preceded by *two or more* dashes."
+msgstr ""
+
+#: ../../tabexpansion.rst:150
+# 414dcac892744ff0b9ae96e9a0f85ba9
+msgid "Now, just what is the point of having to jump through flaming hoops to enable command-line tab completion? *It saves keystrokes.* ` [3]"
+msgstr ""
+
+#: ../../tabexpansion.rst:152
+# c5e403978405412da4c171b33dc585e5
+msgid "<tabexpansion.html#FTN.AEN24173>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:154
+# 2d5aa25cf60c40068dbfdf643cf35f18
+msgid "--"
+msgstr ""
+
+#: ../../tabexpansion.rst:156
+# d910ef409cc54e3eaae3ef036a2bd2c9
+msgid "*Resources:*"
+msgstr ""
+
+#: ../../tabexpansion.rst:158
+# f1ebf2e097ef416285a3c539959b9b91
+msgid "Bash `programmable completion <http://freshmeat.net/projects/bashcompletion>`__ project"
+msgstr ""
+
+#: ../../tabexpansion.rst:161
+# ffee31cb1264488fbddfe91bf8f45e2c
+msgid "Mitch Frazier's `*Linux Journal* <http://www.linuxjournal.com>`__ article, `*More on Using the Bash Complete Command* <http://www.linuxjournal.com/content/more-using-bash-complete-command>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:165
+# 0304ad2b3add40609f88f94a7071ddf9
+msgid "Steve's excellent two-part article, \"An Introduction to Bash Completion\" : `Part 1 <http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_1>`__ and `Part 2 <http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_2>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:173
+# b59362fd0cd845ce87c4ed4903913ac0
+msgid "Notes"
+msgstr ""
+
+#: ../../tabexpansion.rst:176
+# 14cee1cb4fba430e8d1bde0c7c67d52b
+msgid "` [1]  <tabexpansion.html#AEN24082>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:178
+# 83aff77f138140228f9eee44febaa669
+msgid "This works only from the *command line* , of course, and not within a script."
+msgstr ""
+
+#: ../../tabexpansion.rst:182
+# 72a135c8e90440d89eae43709599d1f2
+msgid "` [2]  <tabexpansion.html#AEN24160>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:184
+# 3347e3959a774caebf773a14b625851b
+msgid "Normally the default parameter completion files reside in either the ``       /etc/profile.d      `` directory or in ``       /etc/bash_completion      `` . These autoload on system startup. So, after writing a useful completion script, you might wish to move it (as *root* , of course) to one of these directories."
+msgstr ""
+
+#: ../../tabexpansion.rst:191
+# ec812ea576d44dea94d7256efd6cce17
+msgid "` [3]  <tabexpansion.html#AEN24173>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:193
+# 82e5bebbf18e443eb503cd8b80dcc3a5
+msgid "It has been extensively documented that programmers are willing to put in long hours of effort in order to save ten minutes of \"unnecessary\" labor. This is known as *optimization* ."
+msgstr ""
+

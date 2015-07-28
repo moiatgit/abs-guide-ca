@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../portabilityissues.rst:3
+# b35972d403ba407f9f9e883ed8d71dd9
+msgid "XXX 36.9. Portability Issues"
+msgstr ""
+
+#: ../../portabilityissues.rst:6
+# 4769deb5c37b4ef08eec607d654e8494
+msgid "**"
+msgstr ""
+
+#: ../../portabilityissues.rst:8
+# eff6ea149d1a45298abff23e72fd09f0
+msgid "*It is easier to port a shell than a shell script.*"
+msgstr ""
+
+#: ../../portabilityissues.rst:10
+# 0e43203256164ebb907a52e280e712cf
+msgid "*--Larry Wall*"
+msgstr ""
+
+#: ../../portabilityissues.rst:14
+# d9c7e0325336430cba36473e30756e05
+msgid "This book deals specifically with Bash scripting on a GNU/Linux system. All the same, users of **sh** and **ksh** will find much of value here."
+msgstr ""
+
+#: ../../portabilityissues.rst:17
+# b8a7abdde605450ab96ce74b9c681692
+msgid "As it happens, many of the various shells and scripting languages seem"
+msgstr ""
+
+#: ../../portabilityissues.rst:18
+# 15f946b8ed064bda8a78d4401fb1045f
+msgid "to be converging toward the `POSIX <sha-bang.html#POSIX2REF>`__ 1003.2 standard. Invoking Bash with the ``      --posix     `` option or inserting a **set -o posix** at the head of a script causes Bash to conform very closely to this standard. Another alternative is to use a *#!/bin/sh* `sha-bang header <sha-bang.html#SHABANGREF>`__ in the script, rather than *#!/bin/bash* . ` [1]"
+msgstr ""
+
+#: ../../portabilityissues.rst:24
+# 58a686fa2eba4a29909b50e4571ffd1e
+msgid "<portabilityissues.html#FTN.AEN20799>`__ Note that"
+msgstr ""
+
+#: ../../portabilityissues.rst:25
+# 3262e98720b447318d5084bfae1b7ed1
+msgid "``      /bin/sh     `` is a `link <basic.html#LINKREF>`__ to ``      /bin/bash     `` in Linux and certain other flavors of UNIX, and a script invoked this way disables extended Bash functionality."
+msgstr ""
+
+#: ../../portabilityissues.rst:29
+# 3e8a09b310a14339bbc7a10c666c8a46
+msgid "Most Bash scripts will run as-is under **ksh** , and vice-versa, since Chet Ramey has been busily porting **ksh** features to the latest versions of Bash."
+msgstr ""
+
+#: ../../portabilityissues.rst:33
+# e3b5056b47d44e64a2f0cf2dfd9c0079
+msgid "On a commercial UNIX machine, scripts using GNU-specific features of standard commands may not work. This has become less of a problem in the last few years, as the GNU utilities have pretty much displaced their proprietary counterparts even on \"big-iron\" UNIX. `Caldera's release of the source <http://linux.oreillynet.com/pub/a/linux/2002/02/28/caldera.html>`__ to many of the original UNIX utilities has accelerated the trend."
+msgstr ""
+
+#: ../../portabilityissues.rst:41
+# 93804454c5a8455cba83e1f7d362bddc
+msgid "Bash has certain features that the traditional `Bourne shell <why-shell.html#BASHDEF>`__ lacks. Among these are:"
+msgstr ""
+
+#: ../../portabilityissues.rst:44
+# fd2a4627c666441eba28fa805c8de6ad
+msgid "Certain extended `invocation options <options.html#INVOCATIONOPTIONSREF>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:47
+# eb85af1eef444897b86c5198be6a8e48
+msgid "`Command substitution <commandsub.html#COMMANDSUBREF>`__ using **$( )** notation"
+msgstr ""
+
+#: ../../portabilityissues.rst:50
+# fb6a63c7fd3245a38e58ac27ea968eae
+msgid "`Brace expansion <bashver3.html#BRACEEXPREF3>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:52
+# 3c4330f3e2d94985ba456df4c2b7479d
+msgid "Certain `array <arrays.html#ARRAYREF>`__ operations, and `associative arrays <bashver4.html#ASSOCARR>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:55
+# 1c45c8fd740c4671bdcb8ddfb2046d7d
+msgid "The `double brackets <testconstructs.html#DBLBRACKETS>`__ extended test construct"
+msgstr ""
+
+#: ../../portabilityissues.rst:58
+# 6cd15392a5a548e49eab5f115f730142
+msgid "The `double-parentheses <dblparens.html#DBLPARENSREF>`__ arithmetic-evaluation construct"
+msgstr ""
+
+#: ../../portabilityissues.rst:61
+# 2ac9fafc5dc848ba8e40d4cb222113fa
+msgid "Certain `string manipulation <string-manipulation.html#STRINGMANIP>`__ operations"
+msgstr ""
+
+#: ../../portabilityissues.rst:64
+# 9259498a67b74517aeca4cbecfba30d3
+msgid "`Process substitution <process-sub.html#PROCESSSUBREF>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:66
+# 55087f82e7804c7998f0faa1848de2cb
+msgid "A Regular Expression `matching operator <bashver3.html#REGEXMATCHREF>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:69
+# 9764efa485254b5f88eb6247fb68a96a
+msgid "Bash-specific `builtins <internal.html#BUILTINREF>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:71
+# 01551b5d88af47358fe12c8aca7518e3
+msgid "`Coprocesses <bashver4.html#COPROCREF>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:73
+# 0fadb0298a7e49418fd6554a8e97e04e
+msgid "See the `Bash F.A.Q. <ftp://ftp.cwru.edu/pub/bash/FAQ>`__ for a complete listing."
+msgstr ""
+
+#: ../../portabilityissues.rst:77
+# 294978029ed742eb947535c527407f23
+msgid "36.9.1. A Test Suite"
+msgstr ""
+
+#: ../../portabilityissues.rst:80
+# c8c74a04064b416795123daf9bcf2c56
+msgid "Let us illustrate some of the incompatibilities between Bash and the"
+msgstr ""
+
+#: ../../portabilityissues.rst:82
+# 0d8b33cc47a341b2bdb3367bc8551747
+msgid "<http://freshmeat.net/projects/bournesh>`__ and run the following"
+msgstr ""
+
+#: ../../portabilityissues.rst:83
+# 5323211046cf433f83001fb3ea52da04
+msgid "script, first using Bash, then the classic *sh* ."
+msgstr ""
+
+#: ../../portabilityissues.rst:87
+# cd08fec605bc4d999194a724d88a5c21
+msgid "Exemple 23. Test Suite"
+msgstr ""
+
+#: ../../portabilityissues.rst:159
+# 24713e80c2404bbc8dc208caabe69c09
+msgid "Notes"
+msgstr ""
+
+#: ../../portabilityissues.rst:162
+# e1e30ac980a8423595f474c4272e1e33
+msgid "` [1]  <portabilityissues.html#AEN20799>`__"
+msgstr ""
+
+#: ../../portabilityissues.rst:164
+# 5398cce1f1a64f0ba56a49c6aa7537d9
+msgid "Or, better yet, `#!/bin/env sh <system.html#ENVV2REF>`__ ."
+msgstr ""
+

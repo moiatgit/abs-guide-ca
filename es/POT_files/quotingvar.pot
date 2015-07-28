@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../quotingvar.rst:3
+# dbbcdfaa488f45ef91bf6e55ef8532bd
+msgid "XXX  5.1. Variables entre cometes"
+msgstr ""
+
+#: ../../quotingvar.rst:5
+# cca0ca63f5ba46d6833605a210660e23
+msgid "When referencing a variable, it is generally advisable to enclose its name in double quotes. This prevents reinterpretation of all special characters within the quoted string -- except $ , \\` (backquote), and \\\\ (escape). ` [1]  <quotingvar.html#FTN.AEN2630>`__ Keeping $ as a special character within double quotes permits referencing a quoted variable ( ``             \"$variable\"           `` ), that is, replacing the variable with its value (see `Example 4-1 <varsubn.html#EX9>`__ , above)."
+msgstr ""
+
+#: ../../quotingvar.rst:15
+# bb9393b5658446a09f65e80e43d1d181
+msgid "<quotingvar.html#FTN.AEN2688>`__ An argument enclosed in double quotes"
+msgstr ""
+
+#: ../../quotingvar.rst:16
+# 4b71826464c0419ba2edb0b4402419c3
+msgid "presents itself as a single word, even if it contains `whitespace <special-chars.html#WHITESPACEREF>`__ separators."
+msgstr ""
+
+#: ../../quotingvar.rst:42
+# 92d91c473c0b45e3b6a5f58497387abe
+msgid "A more elaborate example:"
+msgstr ""
+
+#: ../../quotingvar.rst:70
+# 24e124992888412f9daff0f5c3137ea7
+msgid "|Tip"
+msgstr ""
+
+#: ../../quotingvar.rst:72
+# 483849b05b434da38de7cd7c662565f3
+msgid "Enclosing the arguments to an **echo** statement in double quotes is necessary only when word splitting or preservation of `whitespace <special-chars.html#WHITESPACEREF>`__ is an issue."
+msgstr ""
+
+#: ../../quotingvar.rst:81
+# 1166faf624414aa29cb04dd924204413
+msgid "Exemple 1. Echoing Weird Variables"
+msgstr ""
+
+#: ../../quotingvar.rst:140
+# ffe36b3ba7734d89ac3be30e7b0302b6
+msgid "Single quotes ( ' ' ) operate similarly to double quotes, but do not permit referencing variables, since the special meaning of $ is turned off. Within single quotes, *every* special character except ' gets interpreted literally. Consider single quotes ( \"full quoting\" ) to be a stricter method of quoting than double quotes ( \"partial quoting\" )."
+msgstr ""
+
+#: ../../quotingvar.rst:148
+# 8561e3fd89bb4ccba93c965b91f15f37
+msgid "|Note"
+msgstr ""
+
+#: ../../quotingvar.rst:150
+# f52dc34e305b451ba18cb11ae86f5a12
+msgid "Since even the escape character ( \\\\ ) gets a literal interpretation within single quotes, trying to enclose a single quote within single quotes will not yield the expected result."
+msgstr ""
+
+#: ../../quotingvar.rst:159
+# 7397b5aaebf64cd59a4969ac8ca66580
+msgid "ite 's between single qu otes\""
+msgstr ""
+
+#: ../../quotingvar.rst:162
+# 7b5df67a1ca744f8a7d251643e846382
+msgid "echo"
+msgstr ""
+
+#: ../../quotingvar.rst:164
+# 6ef05a4f97a34ed9a0c80bb6048f0222
+msgid "# The roundabout met"
+msgstr ""
+
+#: ../../quotingvar.rst:166
+# 8a709e590ff245d78794c6e0a147c51c
+msgid "echo 'Why can'\\''t I"
+msgstr ""
+
+#: ../../quotingvar.rst:167
+# 08aeb7e04572431c8823edbf0e1b0726
+msgid "write '\"'\"'s between si"
+msgstr ""
+
+#: ../../quotingvar.rst:169
+# 0dc4baa57c5b488a8ad476c714d7fccb
+msgid "#    |-------|  |---"
+msgstr ""
+
+#: ../../quotingvar.rst:170
+# c3292bdb175f4d40bcbc61b9eb774209
+msgid "-------|   |------------ -----------|"
+msgstr ""
+
+#: ../../quotingvar.rst:172
+# 849898fe61654c3db40e6383d25ea381
+msgid "# Three single-quote"
+msgstr ""
+
+#: ../../quotingvar.rst:173
+# 7bdfc35615404904b95ccc116491f590
+msgid "d strings, with escaped and quoted single quotes"
+msgstr ""
+
+#: ../../quotingvar.rst:175
+# 6f01ac28ab17473ca3383d9d497cfda4
+msgid "between."
+msgstr ""
+
+#: ../../quotingvar.rst:177
+# 04db045bc7dc4de192780491f5c1694e
+msgid "# This example court"
+msgstr ""
+
+#: ../../quotingvar.rst:178
+# 5db726996af1400ea9d3ac25e40dc6a7
+msgid "esy of Stéphane Chazelas ."
+msgstr ""
+
+#: ../../quotingvar.rst:217
+# 55829e69e7dc4ac3903cd2a4fdea0390
+msgid "Notes"
+msgstr ""
+
+#: ../../quotingvar.rst:220
+# 33d0b598a178440d9180dee805619c86
+msgid "` [1]  <quotingvar.html#AEN2630>`__"
+msgstr ""
+
+#: ../../quotingvar.rst:222
+# e2afd55581a74957bf24ad2115e189d0
+msgid "Encapsulating \"!\" within double quotes gives an error when used *from the command line* . This is interpreted as a `history command <histcommands.html>`__ . Within a script, though, this problem does not occur, since the Bash history mechanism is disabled then."
+msgstr ""
+
+#: ../../quotingvar.rst:227
+# 7183647d994c46d3a6693cc74c903f96
+msgid "Of more concern is the *apparently* inconsistent behavior of ``               \\             `` within double quotes, and especially following an **echo -e** command."
+msgstr ""
+
+#: ../../quotingvar.rst:265
+# 41c371baf9ac46959614e9a5192bbf1d
+msgid "Double quotes following an *echo* *sometimes* escape ``               \\             `` . Moreover, the ``       -e      `` option to *echo* causes the \"\\\\t\" to be interpreted as a *tab* ."
+msgstr ""
+
+#: ../../quotingvar.rst:269
+# fd478ca0c01c46b8bfdd20d74b9136c5
+msgid "(Thank you, Wayne Pollock, for pointing this out, and Geoff Lee and Daniel Barclay for explaining it.)"
+msgstr ""
+
+#: ../../quotingvar.rst:333
+# 9dccd819ecc64e1598197e6e55aa5fb3
+msgid "` [2]  <quotingvar.html#AEN2688>`__"
+msgstr ""
+
+#: ../../quotingvar.rst:335
+# 11d0cd7650454352a13bfd83bc5b5976
+msgid "\"Word splitting,\" in this context, means dividing a character string"
+msgstr ""
+
+#: ../../quotingvar.rst:336
+# 217189f98362443ba592b5bd6ca63741
+msgid "into separate and discrete arguments."
+msgstr ""
+

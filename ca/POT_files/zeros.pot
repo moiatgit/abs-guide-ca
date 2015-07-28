@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../zeros.rst:4
+# e66abaf5b3254983bb0f32ca3940f150
+msgid "XXX  Chapter 31. Of Zeros and Nulls"
+msgstr ""
+
+#: ../../zeros.rst:7
+# 75a89567d7a844bb95eeeb2faa9a6653
+msgid "**"
+msgstr ""
+
+#: ../../zeros.rst:9
+# 06a803f0819c46ed886961ed78dd589e
+msgid "*Faultily faultless, icily regular, splendidly null*"
+msgstr ""
+
+#: ../../zeros.rst:11
+# 8d5f532d90db43ac89e074b1d1f0aa8e
+msgid "*Dead perfection; no more.*"
+msgstr ""
+
+#: ../../zeros.rst:13
+# 04949f93314a4f5ea6efb1e00c15e097
+msgid "*--Alfred Lord Tennyson*"
+msgstr ""
+
+#: ../../zeros.rst:18
+# 30692c5a14a84d0e83be18fbe2621ed6
+msgid "** ``        /dev/zero       `` ... ``        /dev/null       ``**"
+msgstr ""
+
+#: ../../zeros.rst:21
+# 30ffe4d48b4249b7b47a81035059ef34
+msgid "Think of ``         /dev/null        `` as a *black hole* . It is essentially the equivalent of a write-only file. Everything written to it disappears. Attempts to read or output from it result in nothing. All the same, ``         /dev/null        `` can be quite useful from both the command-line and in scripts."
+msgstr ""
+
+#: ../../zeros.rst:27
+# 779132669efb4c3f9d14c8ac1c98aebd
+msgid "Suppressing ``         stdout        `` ."
+msgstr ""
+
+#: ../../zeros.rst:37
+# 8f8a64428efe4001801afb03c1c304aa
+msgid "Suppressing ``         stderr        `` (from `Example 16-3 <moreadv.html#EX57>`__ )."
+msgstr ""
+
+#: ../../zeros.rst:48
+# 0e1602aedf3b4990a89f8b00f15eb1dc
+msgid "Suppressing output from *both* ``         stdout        `` and ``         stderr        `` ."
+msgstr ""
+
+#: ../../zeros.rst:67
+# 127aedeed07c4b35ab933f4040cb4e6b
+msgid "Deleting contents of a file, but preserving the file itself, with all attendant permissions (from `Example 2-1 <sha-bang.html#EX1>`__ and `Example 2-3 <sha-bang.html#EX2>`__ ):"
+msgstr ""
+
+#: ../../zeros.rst:81
+# 720be894b92c48e4900a4412c0eec81f
+msgid "Automatically emptying the contents of a logfile (especially good for dealing with those nasty \"cookies\" sent by commercial Web sites):"
+msgstr ""
+
+#: ../../zeros.rst:87
+# fec5822d4aa94678aef149dffa3801fa
+msgid "Exemple 1. Hiding the cookie jar"
+msgstr ""
+
+#: ../../zeros.rst:107
+# aa643961af714400aef33a79f164c6ee
+msgid "Like ``         /dev/null        `` , ``         /dev/zero        `` is a pseudo-device file, but it actually produces a stream of nulls ( *binary* zeros, not the `ASCII <special-chars.html#ASCIIDEF>`__ kind). Output written to ``         /dev/zero        `` disappears, and it is fairly difficult to actually read the nulls emitted there, though it can be done with `od <extmisc.html#ODREF>`__ or a hex editor. The chief use of ``         /dev/zero        `` is creating an initialized dummy file of predetermined length intended as a temporary swap file."
+msgstr ""
+
+#: ../../zeros.rst:119
+# c9d9a98db3fc49a3a511e691b5d9772b
+msgid "Exemple 2. Setting up a swapfile using ``           /dev/zero          ``"
+msgstr ""
+
+#: ../../zeros.rst:191
+# 737073e9f262487a92fa017b38cad3be
+msgid "Another application of ``         /dev/zero        `` is to \"zero out\" a file of a designated size for a special purpose, such as mounting a filesystem on a `loopback device <devref1.html#LOOPBACKREF>`__ (see `Example 17-8 <system.html#CREATEFS>`__ ) or \"securely\" deleting a file (see `Example 16-61 <extmisc.html#BLOTOUT>`__ )."
+msgstr ""
+
+#: ../../zeros.rst:200
+# 59014efa4c78497a96b6ba013805f7c8
+msgid "Exemple 3. Creating a ramdisk"
+msgstr ""
+
+#: ../../zeros.rst:269
+# 56c0feeb98c74dc6bd00fe2fd3000d29
+msgid "In addition to all the above, ``         /dev/zero        `` is needed by ELF ( *Executable and Linking Format* ) UNIX/Linux binaries."
+msgstr ""
+

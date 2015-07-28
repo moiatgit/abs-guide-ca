@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../varsubn.rst:3
+# e7e5f74307a749a2b87c297a6bca0b27
+msgid "4.1. Substitució de variables"
+msgstr ""
+
+#: ../../varsubn.rst:5
+# 0958eeaf9bd74eab9bd123f0263b8a6c
+msgid "El nom d'una variable és un marcador o referència al seu valor. El valor de la variable és la dada que conté la posició de memòria a què fa referència. En diem *substitució de variable* a l'obtenció del valor associat a la variable."
+msgstr ""
+
+#: ../../varsubn.rst:9
+# 52536e13f6ce4d7f93a843b538ab137a
+msgid "Comencem diferenciant cuidadosament entre el *nom* d'una variable i el seu *valor*."
+msgstr ""
+
+#: ../../varsubn.rst:11
+# d4f4f2261ff04abd897dae1078b17b08
+msgid "Si ``variable1`` és el nom d'una variable, llavors ``$variable1`` fa referència al seu valor, és a dir, la dada guardada en la posició de memòria a la que fa referència ``variable1`` [#mestecnicament]_."
+msgstr ""
+
+#: ../../varsubn.rst:14
+# fd6ccef93afd43d08e8c297f4959b8bb
+msgid "Per exemple, considera el següent codi:"
+msgstr ""
+
+#: ../../varsubn.rst:24
+# 6a19b277c5604489a1176b8af3f33bc5
+msgid "Trobarem el nom de les variables sense ``$``:"
+msgstr ""
+
+#: ../../varsubn.rst:26
+# b9691b8a9967407cbdf0763a7179e255
+msgid "quan és declada, assignada o desassignada (*unset*)"
+msgstr ""
+
+#: ../../varsubn.rst:28
+# b2ef3f4376c44b94baabf5a37bf818c5
+msgid "quan s'exporta"
+msgstr ""
+
+#: ../../varsubn.rst:30
+# 31f077c2fc784ff197f85cb91aeaf7f5
+msgid "en expressions aritmètiques amb :doc:`doble parèntesis <dblparens>'"
+msgstr ""
+
+#: ../../varsubn.rst:32
+# 0b28ce8f293149999d5bc38de517d0e8
+msgid "en variables que representen :ref:`senyals <debugging_example_trappingandexit>`."
+msgstr ""
+
+#: ../../varsubn.rst:34
+# 9646c306a8bb4d64a6d8669b62dd1732
+msgid "L'assignació pot realitzar-se:"
+msgstr ""
+
+#: ../../varsubn.rst:36
+# ea2eeb506502480a901da806531a47ec
+msgid "amb ``=`` com en ``var1=27``"
+msgstr ""
+
+#: ../../varsubn.rst:38
+# b21ca424361a4058b6c0a45650f60742
+msgid "amb una instrucció de lectura ``read`` com a :ref:`internal_variableassignwithread`."
+msgstr ""
+
+#: ../../varsubn.rst:40
+# 6dbdf25b7acc44909ce692bb3f78e5de
+msgid "a la capçalera d'un bucle:"
+msgstr ""
+
+#: ../../varsubn.rst:49
+# 8e91374ed8174e0b991282723ec3648f
+msgid "Encara que tanquem un valor entre cometes dobles, no s'evita la substitució. Per això se li diu *cometes parcials* o també *cometes febles*. Amb les cometes simples, en canvi, sí s'anul·la la substitució i el nom de la variable (juntament amb ``$``) s'interpreten literalment. És el que es coneix com a *cometes completes* o *cometes fortes*. Mira :doc:`quoting` per una discussió completa d'aquest tema."
+msgstr ""
+
+#: ../../varsubn.rst:55
+# de2b0a09d2ed41a4a733b182a0494755
+msgid "Cal tenir present què ``$variable`` és, en realitat, una forma simplificada de l'expressió ``${variable}``."
+msgstr ""
+
+#: ../../varsubn.rst:60
+# 13d3f1a088ab4fcab1cd3e38246d3a87
+msgid "En alguns contexts en que la forma simplificada ``$variable`` pot donar problemes, la forma completa ``${variable}`` podria funcionar. Mira :doc:`parameter-substitution` per més detalls."
+msgstr ""
+
+#: ../../varsubn.rst:63
+# cdb07b01db7245d2b969057d2646ab5a
+msgid "Veiem un exemple:"
+msgstr ""
+
+#: ../../varsubn.rst:68
+# b9f2238b14c345509c6e3b1a33ffc0ba
+msgid "A tenir present:"
+msgstr ""
+
+#: ../../varsubn.rst:70
+# 18ef03c63fea4193bbbf6c09b997752c
+msgid "En assignacions, ``=`` sense espais"
+msgstr ""
+
+#: ../../varsubn.rst:72
+# efab31b41f42417eaccd187eb6e6ab82
+msgid "A l'hora d'assignar un valor a una variable **no** es pot posar espais en blanc ni abans ni després del ``=``."
+msgstr ""
+
+#: ../../varsubn.rst:75
+# f7a28054c3bd4ff68b98bfade4605774
+msgid "Si el posem abans, s'intentaria executar la variable com si fos una comanda amb un argument:"
+msgstr ""
+
+#: ../../varsubn.rst:82
+# 4830a8413d04410a81ebd21d203f2847
+msgid "En el cas que l'espai estigui després, s'intentarà executar el valor com una comanda amb la variable assignada a \"\" com a variable d'entorn."
+msgstr ""
+
+#: ../../varsubn.rst:90
+# ff9be4214825466cb9fa4fb808a33af2
+msgid "Les cometes febles conserven blancs"
+msgstr ""
+
+#: ../../varsubn.rst:92
+# 67a648c791cc48f9b90afd84eb2b6360
+msgid "Quan posem una variable entre cometes, es preserven els espais en blanc del seu valor"
+msgstr ""
+
+#: ../../varsubn.rst:101
+# e9bfff1f3562430c8d29882ba8d86ce3
+msgid "Més d'una assignació per línia"
+msgstr ""
+
+#: ../../varsubn.rst:103
+# 92b92237934447f0a0220c9b775e0af7
+msgid "És possible assignar més d'una variable en una mateixa línia si les separem amb espais blancs."
+msgstr ""
+
+#: ../../varsubn.rst:111
+# 6989b803b4c8416b9dbae64730d45dbe
+msgid "Aquesta pràctica pot fer més difícil de llegir el nostre codi i podria no ser portable. Podria donar problemes amb versions antigues de ``sh``."
+msgstr ""
+
+#: ../../varsubn.rst:114
+# 4fe3c17503f84ac8b284449e9d1a3a3e
+msgid "Les variables sense inicialitzar tenen valor ``null``"
+msgstr ""
+
+#: ../../varsubn.rst:116
+# e195710a5564423e9358031f1a82cb65
+msgid "Una variable sense inicialitzar té el valor ``null`` que indica que no té cap valor assignat. Compte que ``null`` no és zero."
+msgstr ""
+
+#: ../../varsubn.rst:126
+# 41bef8f6dc18409880cdd589cba9121b
+msgid "Pot provocar problemes l'ús d'una variable abans de ser inicialitzada. Amb tot, és possible realitzar operacions aritmètiques amb variables no inicialitzades."
+msgstr ""
+
+#: ../../varsubn.rst:139
+# 4953b51ee4364607b6f07b4208b7311d
+msgid "Això implica que, malgrat una variable no inicialitzada val null, en cas de realitzar una operació aritmètica amb ella, es considera que té com a valor el 0."
+msgstr ""
+
+#: ../../varsubn.rst:142
+# c6565bc37d6c46d4927727aacd213ac6
+msgid "Considera també :ref:`internal_uselessthatsourcesitself`."
+msgstr ""
+
+#: ../../varsubn.rst:146
+# caca2bc530f44332b09ecfc33020c5e9
+msgid "Anotacions"
+msgstr ""
+
+#: ../../varsubn.rst:147
+# 0c81d5a77c82437c9c66bab295c39ec0
+msgid "Tècnicament, el *nom* d'una variable es coneix com a *lvalue* o valor esquerre, perquè apareix a la part esquerra d'una assignació. En canvi, el *valor* d'una variable és coneix com a *rvalue* doncs sol apareixer a la part dreta de l'assignació: ``variable2=$variable1``."
+msgstr ""
+

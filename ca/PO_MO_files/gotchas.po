@@ -1,0 +1,335 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../gotchas.rst:3
+msgid "XXX Chapter 34. Gotchas"
+msgstr ""
+
+#: ../../gotchas.rst:6 ../../gotchas.rst:704
+msgid "**"
+msgstr ""
+
+#: ../../gotchas.rst:8
+msgid "*Turandot: *Gli enigmi sono tre, la morte una!**"
+msgstr ""
+
+#: ../../gotchas.rst:10
+msgid "*Caleph: *No, no! Gli enigmi sono tre, una la vita!**"
+msgstr ""
+
+#: ../../gotchas.rst:12
+msgid "*--Puccini*"
+msgstr ""
+
+#: ../../gotchas.rst:16
+msgid ""
+"Here are some (non-recommended!) scripting practices that will bring "
+"excitement into an otherwise dull life."
+msgstr ""
+
+#: ../../gotchas.rst:21
+msgid "Assigning reserved words or characters to variable names."
+msgstr ""
+
+#: ../../gotchas.rst:41
+msgid ""
+"Using a hyphen or other reserved characters in a variable name (or function "
+"name)."
+msgstr ""
+
+#: ../../gotchas.rst:60
+msgid ""
+"Using the same name for a variable and a function. This can make a script "
+"difficult to understand."
+msgstr ""
+
+#: ../../gotchas.rst:79
+msgid "Using `whitespace <special-chars.html#WHITESPACEREF>`__"
+msgstr ""
+
+#: ../../gotchas.rst:80
+msgid ""
+"inappropriately. In contrast to other programming languages, Bash can be "
+"quite finicky about whitespace."
+msgstr ""
+
+#: ../../gotchas.rst:100
+msgid ""
+"Not terminating with a `semicolon <special-chars.html#SEMICOLONREF>`__ the "
+"final command in a `code block within curly brackets <special-"
+"chars.html#CODEBLOCKREF>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:118
+msgid ""
+"Assuming uninitialized variables (variables before a value is assigned to "
+"them) are \"zeroed out\" . An uninitialized variable has a value of *null* ,"
+" *not* zero."
+msgstr ""
+
+#: ../../gotchas.rst:142
+msgid ""
+"Mixing up *=* and *-eq* in a test. Remember, *=* is for comparing literal "
+"variables and *-eq* for integers."
+msgstr ""
+
+#: ../../gotchas.rst:179
+msgid ""
+"Misusing `string comparison <comparison-ops.html#SCOMPARISON1>`__ operators."
+msgstr ""
+
+#: ../../gotchas.rst:184
+msgid "Exemple 1. Numerical and string comparison are not equivalent"
+msgstr ""
+
+#: ../../gotchas.rst:239
+msgid ""
+"Attempting to use `let <internal.html#LETREF>`__ to set string variables."
+msgstr ""
+
+#: ../../gotchas.rst:252
+msgid ""
+"Sometimes variables within \"test\" brackets ([ ]) need to be quoted (double"
+" quotes). Failure to do so may cause unexpected behavior. See `Example 7-6 "
+"<comparison-ops.html#STRTEST>`__ , `Example 20-5 <redircb.html#REDIR2>`__ , "
+"and `Example 9-6 <internalvariables.html#ARGLIST>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:260
+msgid ""
+"Quoting a variable containing whitespace `prevents splitting "
+"<quotingvar.html#WSQUO>`__ . Sometimes this produces `unintended "
+"consequences <quotingvar.html#VARSPLITTING>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:266
+msgid ""
+"Commands issued from a script may fail to execute because the script owner "
+"lacks execute permission for them. If a user cannot invoke a command from "
+"the command-line, then putting it into a script will likewise fail. Try "
+"changing the attributes of the command in question, perhaps even setting the"
+" suid bit (as *root* , of course)."
+msgstr ""
+
+#: ../../gotchas.rst:274
+msgid ""
+"Attempting to use **-** as a redirection operator (which it is not) will "
+"usually result in an unpleasant surprise."
+msgstr ""
+
+#: ../../gotchas.rst:292
+msgid ""
+"Using Bash `version 2+ <bashver2.html#BASH2REF>`__ functionality may cause a"
+" bailout with error messages. Older Linux machines may have version 1.XX of "
+"Bash as the default installation."
+msgstr ""
+
+#: ../../gotchas.rst:317
+msgid ""
+"Using Bash-specific functionality in a `Bourne shell <why-"
+"shell.html#BASHDEF>`__ script ( ``                 #!/bin/sh               "
+"`` ) on a non-Linux machine `may cause unexpected behavior "
+"<gotchas.html#BINSH>`__ . A Linux system usually aliases **sh** to **bash** "
+", but this does not necessarily hold true for a generic UNIX machine."
+msgstr ""
+
+#: ../../gotchas.rst:326
+msgid ""
+"Using undocumented features in Bash turns out to be a dangerous practice. In"
+" previous releases of this book there were several scripts that depended on "
+"the \"feature\" that, although the maximum value of an `exit <exit-"
+"status.html#EXITSTATUSREF>`__ or `return <complexfunct.html#RETURNREF>`__ "
+"value was 255, that limit did not apply to *negative* integers. "
+"Unfortunately, in version 2.05b and later, that loophole disappeared. See "
+"`Example 24-9 <complexfunct.html#RETURNTEST>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:337
+msgid ""
+"In certain contexts, a misleading `exit status <exit-"
+"status.html#EXITSTATUSREF>`__ may be returned. This may occur when `setting "
+"a local variable within a function <localvar.html#EXITVALANOMALY01>`__ or "
+"when `assigning an arithmetic value to a variable "
+"<internal.html#EXITVALANOMALY02>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:343
+msgid "The `exit status of an arithmetic"
+msgstr ""
+
+#: ../../gotchas.rst:344
+msgid ""
+"expression <testconstructs.html#ARXS>`__ is *not* equivalent to an *error "
+"code* ."
+msgstr ""
+
+#: ../../gotchas.rst:359
+msgid ""
+"A script with DOS-type newlines ( ``                 \\r\\n               ``"
+" ) will fail to execute, since ``                 #!/bin/bash\\r\\n"
+"               `` is *not* recognized, *not* the same as the expected ``"
+"                 #!/bin/bash\\n               `` . The fix is to convert the"
+" script to UNIX-style newlines."
+msgstr ""
+
+#: ../../gotchas.rst:388
+msgid ""
+"A shell script headed by ``                 #!/bin/sh               `` will "
+"not run in full Bash-compatibility mode. Some Bash-specific functions might "
+"be disabled. Scripts that need complete access to all the Bash-specific "
+"extensions should start with ``                 #!/bin/bash               ``"
+" ."
+msgstr ""
+
+#: ../../gotchas.rst:395
+msgid ""
+"`Putting whitespace in front of the terminating limit string <here-"
+"docs.html#INDENTEDLS>`__ of a `here document <here-docs.html#HEREDOCREF>`__ "
+"will cause unexpected behavior in a script."
+msgstr ""
+
+#: ../../gotchas.rst:400
+msgid "Putting more than one *echo* statement in a function `whose output"
+msgstr ""
+
+#: ../../gotchas.rst:401
+msgid "is captured <assortedtips.html#RVT>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:424
+msgid "This `will not work <assortedtips.html#RVTCAUTION>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:428
+msgid ""
+"A script may not **export** variables back to its `parent process "
+"<internal.html#FORKREF>`__ , the shell, or to the environment. Just as we "
+"learned in biology, a child process can inherit from a parent, but not vice "
+"versa."
+msgstr ""
+
+#: ../../gotchas.rst:451
+msgid "Sure enough, back at the command prompt, $WHATEVER remains unset."
+msgstr ""
+
+#: ../../gotchas.rst:455
+msgid ""
+"Setting and manipulating variables in a `subshell "
+"<subshells.html#SUBSHELLSREF>`__ , then attempting to use those same "
+"variables outside the scope of the subshell will result an unpleasant "
+"surprise."
+msgstr ""
+
+#: ../../gotchas.rst:462
+msgid "Exemple 2. Subshell Pitfalls"
+msgstr ""
+
+#: ../../gotchas.rst:507
+msgid ""
+"`Piping <special-chars.html#PIPEREF>`__ **echo** output to a `read "
+"<internal.html#READREF>`__ may produce unexpected results. In this scenario,"
+" the **read** acts as if it were running in a subshell. Instead, use the "
+"`set <internal.html#SETREF>`__ command (as in `Example 15-18 "
+"<internal.html#SETPOS>`__ )."
+msgstr ""
+
+#: ../../gotchas.rst:515
+msgid "Exemple 3. Piping the output of *echo* to a *read*"
+msgstr ""
+
+#: ../../gotchas.rst:587
+msgid ""
+"In fact, as Anthony Richardson points out, piping to *any* loop can cause a "
+"similar problem."
+msgstr ""
+
+#: ../../gotchas.rst:658
+msgid ""
+"A lookalike problem occurs when trying to write the ``        stdout       "
+"`` of a **tail -f** piped to `grep <textproc.html#GREPREF>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:675
+msgid ""
+"Using \"suid\" commands within scripts is risky, as it may compromise system"
+" security. ` [1]  <gotchas.html#FTN.AEN19993>`__"
+msgstr ""
+
+#: ../../gotchas.rst:680
+msgid ""
+"Using shell scripts for CGI programming may be problematic. Shell script "
+"variables are not \"typesafe,\" and this can cause undesirable behavior as "
+"far as CGI is concerned. Moreover, it is difficult to \"cracker-proof\" "
+"shell scripts."
+msgstr ""
+
+#: ../../gotchas.rst:685
+msgid ""
+"Bash does not handle the `double slash ( // ) string "
+"<internal.html#DOUBLESLASHREF>`__ correctly."
+msgstr ""
+
+#: ../../gotchas.rst:690
+msgid ""
+"Bash scripts written for Linux or BSD systems may need fixups to run on a "
+"commercial UNIX machine. Such scripts often employ the GNU set of commands "
+"and filters, which have greater functionality than their generic UNIX "
+"counterparts. This is particularly true of such text processing utilites as "
+"`tr <textproc.html#TRREF>`__ ."
+msgstr ""
+
+#: ../../gotchas.rst:698
+msgid ""
+"Sadly, updates to Bash itself have broken older scripts that `used to work "
+"perfectly fine <string-manipulation.html#PARAGRAPHSPACE>`__ . Let us recall "
+"`how risky it is to use undocumented Bash features <gotchas.html#UNDOCF>`__ "
+"."
+msgstr ""
+
+#: ../../gotchas.rst:706
+msgid "*Danger is near thee --*"
+msgstr ""
+
+#: ../../gotchas.rst:708
+msgid "*Beware, beware, beware, beware.*"
+msgstr ""
+
+#: ../../gotchas.rst:710
+msgid "*Many brave hearts are asleep in the deep.*"
+msgstr ""
+
+#: ../../gotchas.rst:712
+msgid "*So beware --*"
+msgstr ""
+
+#: ../../gotchas.rst:714
+msgid "*Beware.*"
+msgstr ""
+
+#: ../../gotchas.rst:716
+msgid "*--A.J. Lamb and H.W. Petrie*"
+msgstr ""
+
+#: ../../gotchas.rst:722
+msgid "Notes"
+msgstr ""
+
+#: ../../gotchas.rst:725
+msgid "` [1]  <gotchas.html#AEN19993>`__"
+msgstr ""
+
+#: ../../gotchas.rst:727
+msgid ""
+"Setting the `suid <fto.html#SUIDREF>`__ permission on the script itself has "
+"no effect in Linux and most other UNIX flavors."
+msgstr ""

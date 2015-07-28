@@ -1,0 +1,840 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../revisionhistory.rst:4
+# 8a0273fc2f1a4924b566cd4bdff98162
+msgid "XXX  Appendix P. Revision History"
+msgstr ""
+
+#: ../../revisionhistory.rst:18
+# 79496dd6ac8d4653821fa2270d93acb3
+msgid "Here is the e-mail to the LDP requesting permission to submit version 0.1."
+msgstr ""
+
+#: ../../revisionhistory.rst:72
+# 6561b74d1af24faea7575c0c4f871408
+msgid "**Table P-1. Revision History**"
+msgstr ""
+
+#: ../../revisionhistory.rst:75
+# 3fe25372f4214d0eb366bb03c74f45bc
+msgid "Release"
+msgstr ""
+
+#: ../../revisionhistory.rst:77
+# 4e57fa0cc3964cdaa8784378650edf9e
+msgid "Date"
+msgstr ""
+
+#: ../../revisionhistory.rst:79
+# 90b142f905d047bc8ac5333c12c377df
+msgid "Comments"
+msgstr ""
+
+#: ../../revisionhistory.rst:81
+# b758cd9b00774491baf840e92113d995
+msgid "0.1"
+msgstr ""
+
+#: ../../revisionhistory.rst:83
+# 1b9ac2adf7b041d088784f660b3dc3f4
+msgid "14 Jun 2000"
+msgstr ""
+
+#: ../../revisionhistory.rst:85
+# 27f6b003c5e1496197f2879a1c0a5585
+msgid "Initial release."
+msgstr ""
+
+#: ../../revisionhistory.rst:87
+# 1c1c5ea5ed6149d88607387ff33c3dcd
+msgid "``        0.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:89
+# 7879ab2a178f408f8c8910fea449f4ab
+msgid "30 Oct 2000"
+msgstr ""
+
+#: ../../revisionhistory.rst:91
+# 9332b8774d074848a2dbaf8bcf1e29f6
+msgid "Bugs fixed, plus much additional material and more example scripts."
+msgstr ""
+
+#: ../../revisionhistory.rst:93
+# 3d88c505cf874d04a81181113c30de05
+msgid "``        0.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:95
+# ec35dbc23ba64836a04f8fb11dfb377f
+msgid "12 Feb 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:97
+# 53b4ac91b6f24877a42c8ef3c97f2478
+msgid "Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:99
+# f54c680b0f5446bcb9a2bed6e219698b
+msgid "``        0.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:101
+# 719bf97561254cf1964f044f384c481f
+msgid "08 Jul 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:103
+# 3a9af84112cb4dd9989a5250705a88e3
+msgid "Complete revision and expansion of the book."
+msgstr ""
+
+#: ../../revisionhistory.rst:105
+# 20bc85e87cae4e208586ee7ca67719cf
+msgid "``        0.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:107
+# 72e503750d034607967bb95c94f1faf3
+msgid "03 Sep 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:109
+# c6baf9c70292434a8653d33677204aa6
+msgid "Major update: Bugfixes, material added, sections reorganized."
+msgstr ""
+
+#: ../../revisionhistory.rst:111
+# 541cc576650948b1bc69d31f92104e96
+msgid "``        1.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:113
+# e55d85b0fad04e9f829d9b4b21012789
+msgid "14 Oct 2001"
+msgstr ""
+
+#: ../../revisionhistory.rst:115
+# 523eecf0a4904fd393c087968e309610
+msgid "Stable release: Bugfixes, reorganization, material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:117
+# 8a5aaa91241c4b77929eb0a2439d47a3
+msgid "``        1.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:119
+# aa3ffa8c710d4514b2d02d9ea9b8ffaf
+msgid "06 Jan 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:121
+#: ../../revisionhistory.rst:127
+# 6ba3b729f8b64940922374261336ebce
+# 9c848498df10417c96f5c992917e170f
+msgid "Bugfixes, material and scripts added."
+msgstr ""
+
+#: ../../revisionhistory.rst:123
+# 1f227f1f955741afb33e280d781ec6b0
+msgid "``        1.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:125
+# c12d092817c64421823e45087b3ebb4d
+msgid "31 Mar 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:129
+# 28ba883dd277430bbda84bd897b48965
+msgid "``        1.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:131
+# c706279edd364065a2f764f545f6dca6
+msgid "02 Jun 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:133
+# c3f46bf3ba6d4f2ea5697779ea62e110
+msgid "TANGERINE release: A few bugfixes, much more material and scripts added."
+msgstr ""
+
+#: ../../revisionhistory.rst:135
+# b0c61f6115194c6992a46b0bc7bf9da6
+msgid "``        1.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:137
+# f9e128e4d74e4cd2b2632c77b9c06058
+msgid "16 Jun 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:139
+# 7984875080284b8b87be6e1be2b04763
+msgid "MANGO release: A number of typos fixed, more material and scripts."
+msgstr ""
+
+#: ../../revisionhistory.rst:141
+# b5297db10fa74404bfb1e455e7f6a550
+msgid "``        1.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:143
+# 2aec94daa7f1476199fca1d307eaf48a
+msgid "13 Jul 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:145
+# 2eee314953814271b79e7103c1460efa
+msgid "PAPAYA release: A few bugfixes, much more material and scripts added."
+msgstr ""
+
+#: ../../revisionhistory.rst:147
+# 16621c9ad2084907a60450c31d45656f
+msgid "``        1.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:149
+# 03a39ecfa2154639ab11fa236500a477
+msgid "29 Sep 2002"
+msgstr ""
+
+#: ../../revisionhistory.rst:151
+# 0220a3173f5c4424b8d87dd6d9cc08e1
+msgid "POMEGRANATE release: Bugfixes, more material, one more script."
+msgstr ""
+
+#: ../../revisionhistory.rst:153
+# 0d40f4b236144b0a880b4b1328c2f5d2
+msgid "``        1.7       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:155
+# 7d7c5c7b7f0f4496b5ad055f24ab7576
+msgid "05 Jan 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:157
+# 422b5bed44da41bea282b3df557a768a
+msgid "COCONUT release: A couple of bugfixes, more material, one more script."
+msgstr ""
+
+#: ../../revisionhistory.rst:159
+# f2301c481d0f4750ba6789988d2ff67e
+msgid "``        1.8       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:161
+# b431ccfa97f84c6ba353a0faf41e71ea
+msgid "10 May 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:163
+# 945d8e08177e4ae6830e63f0e89ee603
+msgid "BREADFRUIT release: A number of bugfixes, more scripts and material."
+msgstr ""
+
+#: ../../revisionhistory.rst:165
+# 44d0f468e1b24359b948614b1327f821
+msgid "``        1.9       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:167
+# 6bc168945dc64c4bb1734489c5100e9f
+msgid "21 Jun 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:169
+# 92b5f8dd404e47719424412bbacfcf12
+msgid "PERSIMMON release: Bugfixes, and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:171
+# 4748b5a3faa5456ba64e43a6c5b18bc7
+msgid "``        2.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:173
+# e1a912dee42b4837a00497d07898241e
+msgid "24 Aug 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:175
+# 305c2d9a898943209ac5df0ee70eb364
+msgid "GOOSEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:177
+# 332914706b644c9c93e141ad45734463
+msgid "``        2.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:179
+# 0c5e4a1924e14f318b837ed73030c580
+msgid "14 Sep 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:181
+# 699c55158ef149808fab2b226d2a9d1e
+msgid "HUCKLEBERRY release: Bugfixes, and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:183
+# b83c1b4312da414c9eba060f3d1c84a5
+msgid "``        2.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:185
+# 03187fde515148358c2dadce88fab42a
+msgid "31 Oct 2003"
+msgstr ""
+
+#: ../../revisionhistory.rst:187
+# d4daa980350c4b89aa071494a4b8e0d8
+msgid "CRANBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:189
+# ef81e8f7368f4203b6020dd830f044be
+msgid "``        2.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:191
+# 5c720cd5acf7411a8e1928a894944de7
+msgid "03 Jan 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:193
+# 9e0f9a41354b42689af0136dd87ee243
+msgid "STRAWBERRY release: Bugfixes and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:195
+# 66bc8792a22040a88163364b1a5020d4
+msgid "``        2.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:197
+# 51283457449f49598a2dfd1e35ec64da
+msgid "25 Jan 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:199
+# ca86e01af69b458583611d2bd2e2dc9c
+msgid "MUSKMELON release: Bugfixes."
+msgstr ""
+
+#: ../../revisionhistory.rst:201
+# fadb9838005440cc8dcaae5f47147901
+msgid "``        2.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:203
+# f90ac2d50bf14763919c74e38d0201fc
+msgid "15 Feb 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:205
+# ac0d4f56bb654470a9ff350f5741f54d
+msgid "STARFRUIT release: Bugfixes and more material."
+msgstr ""
+
+#: ../../revisionhistory.rst:207
+# 40f0b21edd8c462da46d00839a0beb7b
+msgid "``        2.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:209
+# 440c18ccc95e4edebccdfb1301582d06
+msgid "15 Mar 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:211
+# 709f06b105464a7ebe9b7cbf29b542a3
+msgid "SALAL release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:213
+# e5aa478717ef497abbfd43617c38cd38
+msgid "``        2.7       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:215
+# 208f60aae64e4ad4a74be00168aac956
+msgid "18 Apr 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:217
+# 30309b52a4b246adb133831c8829bdb8
+msgid "MULBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:219
+# c9f0818535324574a9e1def69d33cdee
+msgid "``        2.8       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:221
+# 99fd34066e0547758e1bf7f4c143b413
+msgid "11 Jul 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:223
+# 2a478a81e4be4ca6bfbf823f778502d2
+msgid "ELDERBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:225
+# 28090bc850b045689a8a6519f6e1aa29
+msgid "``        3.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:227
+# 62924c6a9f164b079b8f18d22086a8e6
+msgid "03 Oct 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:229
+# 90fcd370ef8c4c369382f232048efd61
+msgid "LOGANBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:231
+# 46369f5ba8f4486c8ee19662b876422b
+msgid "``        3.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:233
+# 8d3887ebd4fa420088e6779c6be5d66d
+msgid "14 Nov 2004"
+msgstr ""
+
+#: ../../revisionhistory.rst:235
+# 24a58505881e49a78baa068ca7ee9d4c
+msgid "BAYBERRY release: Bugfix update."
+msgstr ""
+
+#: ../../revisionhistory.rst:237
+# 09ed2aa9f121431d81622acdc2ba5065
+msgid "``        3.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:239
+# da9604c8017e44b497a543bc1eb698bd
+msgid "06 Feb 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:241
+# d5710be050cf4f3ab44f5e76e4d75502
+msgid "BLUEBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:243
+# 987c6c06cfaf42098180ad74511d5718
+msgid "``        3.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:245
+# c580175833d449ed967c682380eeefd4
+msgid "20 Mar 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:247
+# 3705d730582044b28fbd96dea8bd34c5
+msgid "RASPBERRY release: Bugfixes, much material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:249
+# 5762b5c93e094e40a575dad7dc137e66
+msgid "``        3.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:251
+# 1587cf1c273d42418742d2506645971b
+msgid "08 May 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:253
+# 61b313184ae241ebb5d8d6bc079ffabf
+msgid "TEABERRY release: Bugfixes, stylistic revisions."
+msgstr ""
+
+#: ../../revisionhistory.rst:255
+# 68cc52d1b5ca40a2a7a6864312f8cd07
+msgid "``        3.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:257
+# 737839a1271b42f3acbd4d4235da8004
+msgid "05 Jun 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:259
+# 98fbffe2dc964e76a5801888b893491d
+msgid "BOXBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:261
+# fe7941581ee14062ba536af5633e599d
+msgid "``        3.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:263
+# 72b69e7cd0e84d269a7b9f976d7a4b5e
+msgid "28 Aug 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:265
+# ceae4d776ff84f85ab65225edd2a0f46
+msgid "POKEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:267
+# 9ca1581861704e93b9da90b3170040c1
+msgid "``        3.7       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:269
+# a28d010555704a479ab5f40802d96615
+msgid "23 Oct 2005"
+msgstr ""
+
+#: ../../revisionhistory.rst:271
+# 11b7c5113bfa4ed39709bc4314daf1b4
+msgid "WHORTLEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:273
+# 9c3114fff7184aeb9a40a5bb261d7031
+msgid "``        3.8       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:275
+# bb40da8d7e144169bf291582ffd92603
+msgid "26 Feb 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:277
+# 6b641689def342c48f4359a14cfeb779
+msgid "BLAEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:279
+# 60fb6076f3da40419573d4f1119a2e77
+msgid "``        3.9       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:281
+# 3c304b8ee4384f23ae97a1eb65e37608
+msgid "15 May 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:283
+# 3490e47960bf46b48f2d03e04b5f48e5
+msgid "SPICEBERRY release: Bugfixes, some material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:285
+# 94c54bc7b0004c5eabb6475aa64d5086
+msgid "``        4.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:287
+# 7c26c14dbc5c461dac5c719a21b52e32
+msgid "18 Jun 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:289
+# 118b9317c46945dba1a3b1b2bcd0613e
+msgid "WINTERBERRY release: Major reorganization."
+msgstr ""
+
+#: ../../revisionhistory.rst:291
+# 110efd29ce4840b3a24a7fef709d6fe0
+msgid "``        4.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:293
+# 14737a83ff3b4f50845beacd3f86cda4
+msgid "08 Oct 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:295
+# 9f626a2f70e34c45bec3801060d143ae
+msgid "WAXBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:297
+# 0aca8cdefb3d45a883bcb0a73f4a9713
+msgid "``        4.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:299
+# 97ee4fb2c29e46d1b4aad098c8437a51
+msgid "10 Dec 2006"
+msgstr ""
+
+#: ../../revisionhistory.rst:301
+# 18a47851afc8458fa6f2c0c17e2522d9
+msgid "SPARKLEBERRY release: Important update."
+msgstr ""
+
+#: ../../revisionhistory.rst:303
+# ffc73cc9238e408b912a51b9c8598ac4
+msgid "``        4.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:305
+# 2bc27ec39cf0458b8ca34e12b486b107
+msgid "29 Apr 2007"
+msgstr ""
+
+#: ../../revisionhistory.rst:307
+# 8157a194757244aeaa113d495420da2a
+msgid "INKBERRY release: Bugfixes, material added."
+msgstr ""
+
+#: ../../revisionhistory.rst:309
+# 9a41a9a007fb4fcf98421dfad6bc8838
+msgid "``        5.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:311
+# 79f5a71a41df4bd4afd000dd26a303a7
+msgid "24 Jun 2007"
+msgstr ""
+
+#: ../../revisionhistory.rst:313
+# 89838b71c00f4b38b65b8c62626e3989
+msgid "SERVICEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:315
+# 1a9eaa07a2724d3a91550625cfffc131
+msgid "``        5.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:317
+# 98ba7682588c47ffaeffe79a255e49be
+msgid "10 Nov 2007"
+msgstr ""
+
+#: ../../revisionhistory.rst:319
+# 37e10ca77438405a8b4ede5de0fe2487
+msgid "LINGONBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:321
+# a0179b2fd92642398ab83fae806735f8
+msgid "``        5.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:323
+# 324be51a06564c7ca2749392ad77ed1b
+msgid "16 Mar 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:325
+# f77f68b3721b4d9e8fe0d4d00be3c8c3
+msgid "SILVERBERRY release: Important update."
+msgstr ""
+
+#: ../../revisionhistory.rst:327
+# 10c5aa933fbd42a2aeddaa2660801a35
+msgid "``        5.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:329
+# e3596dbe8ac545b6890b240ad8c03aff
+msgid "11 May 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:331
+# 6ac7f6ee1f494c93b812f2d404a90845
+msgid "GOLDENBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:333
+# ccd37d78c15c465e82f08966b933ea57
+msgid "``        5.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:335
+# 46a415a2696a47b4af2b37122bb55bb2
+msgid "21 Jul 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:337
+# baaa1a0dcf9a431fb114ff2e1565c2af
+msgid "ANGLEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:339
+# c838683ebcce4abfa887c9367d3f8e59
+msgid "``        5.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:341
+# 35b71c79c1604b5487ef93a018f39a63
+msgid "23 Nov 2008"
+msgstr ""
+
+#: ../../revisionhistory.rst:343
+# 240aa240754643d0b142288a64f14a71
+msgid "FARKLEBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:345
+# 7ca0b523d7754ea58bf11392f04f2943
+msgid "``        5.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:347
+# dfa8c88dc6084a3aaf11e67b3d8f5b5e
+msgid "26 Jan 2009"
+msgstr ""
+
+#: ../../revisionhistory.rst:349
+# 486949c8292f457d89680beb31efded5
+msgid "WORCESTERBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:351
+# 8f588bf2daa84c4bb84cc71bfd925647
+msgid "``        6.0       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:353
+# b9af7e9d51ce4ef5a1c1fb1be0a55093
+msgid "23 Mar 2009"
+msgstr ""
+
+#: ../../revisionhistory.rst:355
+# 04078397494141779e4349066e58e683
+msgid "THIMBLEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:357
+# 453a901bc78a41b3817f1588f44cf41a
+msgid "``        6.1       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:359
+# b9b6e309354140b2af125dee1c127691
+msgid "30 Sep 2009"
+msgstr ""
+
+#: ../../revisionhistory.rst:361
+# 3224bc0bb8bf4f6aa34f82780f783eea
+msgid "BUFFALOBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:363
+# b256a1789da74e76b211fbde1c3444ab
+msgid "``        6.2       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:365
+# fa25981904774648914e39de4d6531de
+msgid "17 Mar 2010"
+msgstr ""
+
+#: ../../revisionhistory.rst:367
+# 846e940578d7424a9958f51e1f001091
+msgid "ROWANBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:369
+# 548dcc184b2547d68f66e3ca876ed898
+msgid "``        6.3       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:371
+# 81bf02ed26a24d6ea71271dca9285bc2
+msgid "30 Apr 2011"
+msgstr ""
+
+#: ../../revisionhistory.rst:373
+# e2fa3e3e6b2f4361be9432e4786cf545
+msgid "SWOZZLEBERRY release: Major update."
+msgstr ""
+
+#: ../../revisionhistory.rst:375
+# 8195e142bd214987b5046ae923f69c90
+msgid "``        6.4       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:377
+# a4a5b654105f4846a0b426b6e02cc901
+msgid "30 Aug 2011"
+msgstr ""
+
+#: ../../revisionhistory.rst:379
+# caf9de09130d4d00801518b6f94bf75d
+msgid "VORTEXBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:381
+# 15711750322e4f748198a164af7d465f
+msgid "``        6.5       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:383
+# dc02851c467c4f7190d0a12311ea3255
+msgid "05 Apr 2012"
+msgstr ""
+
+#: ../../revisionhistory.rst:385
+# 76a9adb1cbf74f6e976988d2b5cebb40
+msgid "TUNGSTENBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:387
+# a760c34acd9d4eabad9cef4888b6be5a
+msgid "``        6.6       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:389
+# 2c40050a5a3a4dbb96bf514f6cc35c46
+msgid "27 Nov 2012"
+msgstr ""
+
+#: ../../revisionhistory.rst:391
+# bbda450627344f9b88932ba8cfe4648e
+msgid "YTTERBIUMBERRY release: Minor update."
+msgstr ""
+
+#: ../../revisionhistory.rst:393
+# f734dcacedf9490ea42348c0d311430a
+msgid "``        10       ``"
+msgstr ""
+
+#: ../../revisionhistory.rst:395
+# 6367a3cea4e748a59ca1ff84df20aae2
+msgid "10 Mar 2014"
+msgstr ""
+
+#: ../../revisionhistory.rst:397
+# 7635b9c048bb45e2a73952b3dd3c5c09
+msgid "YTTERBIUMBERRY release: License change."
+msgstr ""
+

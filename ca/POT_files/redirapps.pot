@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../redirapps.rst:4
+# d5f25621426f4157966c0b6ac18d5cf0
+msgid "XXX  20.3. Applications"
+msgstr ""
+
+#: ../../redirapps.rst:6
+# b199a71406934dc4b5d0093b8694c9f5
+msgid "Clever use of I/O redirection permits parsing and stitching together snippets of command output (see `Example 15-7 <internal.html#READREDIR>`__ ). This permits generating report and log files."
+msgstr ""
+
+#: ../../redirapps.rst:13
+# b70044ed703549458e18f742aafd8ad2
+msgid "Exemple 12. Logging events"
+msgstr ""
+

@@ -1,0 +1,99 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../procref1.rst:4
+msgid "XXX  29.2. ``      /proc     ``"
+msgstr ""
+
+#: ../../procref1.rst:6
+msgid ""
+"The ``      /proc     `` directory is actually a pseudo-filesystem. The "
+"files in ``      /proc     `` mirror currently running system and kernel "
+"`processes <special-chars.html#PROCESSREF>`__ and contain information and "
+"statistics about them."
+msgstr ""
+
+#: ../../procref1.rst:97
+msgid ""
+"Shell scripts may extract data from certain of the files in ``      /proc"
+"     `` . ` [1]  <procref1.html#FTN.AEN19180>`__"
+msgstr ""
+
+#: ../../procref1.rst:191
+msgid "|Note"
+msgstr ""
+
+#: ../../procref1.rst:193
+msgid ""
+"It is even possible to control certain peripherals with commands sent to the"
+" ``         /proc        `` directory."
+msgstr ""
+
+#: ../../procref1.rst:201
+msgid "/proc/acpi/ibm/light"
+msgstr ""
+
+#: ../../procref1.rst:207
+msgid ""
+"This turns on the *Thinklight* in certain models of IBM/Lenovo Thinkpads. "
+"(May not work on all Linux distros.) Of course, caution is advised when "
+"writing to ``         /proc        `` ."
+msgstr ""
+
+#: ../../procref1.rst:227
+msgid ""
+"The ``      /proc     `` directory contains subdirectories with unusual "
+"numerical names. Every one of these names maps to the `process ID "
+"<internalvariables.html#PPIDREF>`__ of a currently running process. Within "
+"each of these subdirectories, there are a number of files that hold useful "
+"information about the corresponding process. The ``      stat     `` and ``"
+"      status     `` files keep running statistics on the process, the ``"
+"      cmdline     `` file holds the command-line arguments the process was "
+"invoked with, and the ``      exe     `` file is a symbolic link to the "
+"complete path name of the invoking process. There are a few more such files,"
+" but these seem to be the most interesting from a scripting standpoint."
+msgstr ""
+
+#: ../../procref1.rst:241
+msgid "Exemple 3. Finding the process associated with a PID"
+msgstr ""
+
+#: ../../procref1.rst:337
+msgid "Exemple 4. On-line connect status"
+msgstr ""
+
+#: ../../procref1.rst:408
+msgid "|Warning"
+msgstr ""
+
+#: ../../procref1.rst:410
+msgid ""
+"In general, it is dangerous to *write* to the files in ``         /proc"
+"        `` , as this can corrupt the filesystem or crash the machine."
+msgstr ""
+
+#: ../../procref1.rst:419
+msgid "Notes"
+msgstr ""
+
+#: ../../procref1.rst:422
+msgid "` [1]  <procref1.html#AEN19180>`__"
+msgstr ""
+
+#: ../../procref1.rst:424
+msgid ""
+"Certain system commands, such as `procinfo <system.html#PROCINFOREF>`__ , "
+"`free <system.html#FREEREF>`__ , `vmstat <system.html#VMSTATREF>`__ , `lsdev"
+" <system.html#LSDEVREF>`__ , and `uptime <system.html#UPTIMEREF>`__ do this "
+"as well."
+msgstr ""

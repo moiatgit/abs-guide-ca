@@ -1,0 +1,417 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../communications.rst:3
+# e562fccfc23649d488e5663dfe4985b2
+msgid "XXX  16.6. Communications Commands"
+msgstr ""
+
+#: ../../communications.rst:5
+# 02c563b342c2475bb9de44dd332cb91e
+msgid "Certain of the following commands find use in network data transfer and analysis, as well as in `chasing spammers <writingscripts.html#CSPAMMERS>`__ ."
+msgstr ""
+
+#: ../../communications.rst:10
+# ddf1eac32d98482092d5a1d95fab16a8
+msgid "** Information and Statistics**"
+msgstr ""
+
+#: ../../communications.rst:13
+# a866bdf1648946cf808105a5cd72a811
+msgid "Searches for information about an Internet host by name or IP address, using DNS."
+msgstr ""
+
+#: ../../communications.rst:26
+# 19a3d00a053b4224b7f0f76ebc962c70
+msgid "Displays IP information for a host. With the ``         -h        `` option, **ipcalc** does a reverse DNS lookup, finding the name of the host (server) from the IP address."
+msgstr ""
+
+#: ../../communications.rst:40
+# bc47f8a8ed064845a39610e5c0fb3717
+msgid "Do an Internet \"name server lookup\" on a host by IP address. This is essentially equivalent to **ipcalc -h** or **dig -x** . The command may be run either interactively or noninteractively, i.e., from within a script."
+msgstr ""
+
+#: ../../communications.rst:45
+# d93f37aec2f740128c123d82ea5be1c7
+msgid "The **nslookup** command has allegedly been \"deprecated,\" but it is still useful."
+msgstr ""
+
+#: ../../communications.rst:63
+# a166ff6f54a44dfca915516102315d51
+msgid "**D** omain **I** nformation **G** roper. Similar to **nslookup** , *dig* does an Internet *name server lookup* on a host. May be run from the command-line or from within a script."
+msgstr ""
+
+#: ../../communications.rst:67
+# 924bcc3e9e7445bfb37af293c851b991
+msgid "Some interesting options to *dig* are ``         +time=N        `` for setting a query timeout to ``                   N                 `` seconds, ``         +nofail        `` for continuing to query servers until a reply is received, and ``         -x        `` for doing a reverse address lookup."
+msgstr ""
+
+#: ../../communications.rst:74
+# 15ccdf608d27455cae7ce65da9894053
+msgid "Compare the output of **dig -x** with **ipcalc -h** and **nslookup** ."
+msgstr ""
+
+#: ../../communications.rst:102
+# c7b19ebeb3fc4a6a906f24204abd35b3
+msgid "Exemple 40. Finding out where to report a spammer"
+msgstr ""
+
+#: ../../communications.rst:158
+# 6d39796bf267447caadd0c8bf7cf43e1
+msgid "Exemple 41. Analyzing a spam domain"
+msgstr ""
+
+#: ../../communications.rst:313
+# 8e497b1819be4c048bb675afe4b9c68b
+msgid "For a much more elaborate version of the above script, see `Example A-28 <contributed-scripts.html#ISSPAMMER2>`__ ."
+msgstr ""
+
+#: ../../communications.rst:317
+# c4b8868882f64283ba6fe2c901049dc8
+msgid "Trace the route taken by packets sent to a remote host. This command works within a LAN, WAN, or over the Internet. The remote host may be specified by an IP address. The output of this command may be filtered by `grep <textproc.html#GREPREF>`__ or `sed <sedawk.html#SEDREF>`__ in a pipe."
+msgstr ""
+
+#: ../../communications.rst:337
+# 1cfab6f7564e490aba8aa25f1a8d3020
+msgid "Broadcast an ``                   ICMP           ECHO_REQUEST                 `` packet to another machine, either on a local or remote network. This is a diagnostic tool for testing network connections, and it should be used with caution."
+msgstr ""
+
+#: ../../communications.rst:358
+# dc54f1e7f68846e092399b2e698a7046
+msgid "A successful *ping* returns an `exit status <exit-status.html#EXITSTATUSREF>`__ of 0 . This can be tested for in a script."
+msgstr ""
+
+#: ../../communications.rst:379
+# 5166ecb38eb9481a83a5648913848aea
+msgid "Perform a DNS (Domain Name System) lookup. The ``         -h        `` option permits specifying which particular *whois* server to query. See `Example 4-6 <othertypesv.html#EX18>`__ and `Example 16-40 <communications.html#SPAMLOOKUP>`__ ."
+msgstr ""
+
+#: ../../communications.rst:385
+# c7b847fd39d54a72b3d31a2ef3a03a8e
+msgid "Retrieve information about users on a network. Optionally, this command can display a user's ``         ~/.plan        `` , ``         ~/.project        `` , and ``         ~/.forward        `` files, if present."
+msgstr ""
+
+#: ../../communications.rst:415
+# 22858a039393444a89b3143ae98bb604
+msgid "Out of security considerations, many networks disable **finger** and its associated daemon. ` [1]  <communications.html#FTN.AEN13320>`__"
+msgstr ""
+
+#: ../../communications.rst:419
+# c82696296fa74b5b900cfd5237035706
+msgid "Change information disclosed by the **finger** command."
+msgstr ""
+
+#: ../../communications.rst:422
+# 6dca86bb252a4d9aae37c49cb34910d0
+msgid "Verify an Internet e-mail address."
+msgstr ""
+
+#: ../../communications.rst:424
+# aa9a8f361f5d4d93a7d1d6c9b7dd58e4
+msgid "This command seems to be missing from newer Linux distros."
+msgstr ""
+
+#: ../../communications.rst:428
+# 4811787e8d964c7cad73ebc4a184c83f
+msgid "** Remote Host Access**"
+msgstr ""
+
+#: ../../communications.rst:431
+# 2d79bb89594945e28712a258d829896e
+msgid "The **sx** and **rx** command set serves to transfer files to and from a remote host using the *xmodem* protocol. These are generally part of a communications package, such as **minicom** ."
+msgstr ""
+
+#: ../../communications.rst:436
+# 4010791ed40e48e584add0101fda4c32
+msgid "The **sz** and **rz** command set serves to transfer files to and from a remote host using the *zmodem* protocol. *Zmodem* has certain advantages over *xmodem* , such as faster transmission rate and resumption of interrupted file transfers. Like **sx** and **rx** , these are generally part of a communications package."
+msgstr ""
+
+#: ../../communications.rst:443
+# 70c1725a2ffe4cf094180c3becfb4452
+msgid "Utility and protocol for uploading / downloading files to or from a remote host. An ftp session can be automated in a script (see `Example 19-6 <here-docs.html#EX72>`__ and `Example A-4 <contributed-scripts.html#ENCRYPTEDPW>`__ )."
+msgstr ""
+
+#: ../../communications.rst:449
+# 745d8d445fad40a0a6c6a87920aadb2f
+msgid "**uucp** : *UNIX to UNIX copy* . This is a communications package for transferring files between UNIX servers. A shell script is an effective way to handle a **uucp** command sequence."
+msgstr ""
+
+#: ../../communications.rst:453
+# f080ae770f104c7791ee48342ce345da
+msgid "Since the advent of the Internet and e-mail, **uucp** seems to have faded into obscurity, but it still exists and remains perfectly workable in situations where an Internet connection is not available or appropriate. The advantage of **uucp** is that it is fault-tolerant, so even if there is a service interruption the copy operation will resume where it left off when the connection is restored."
+msgstr ""
+
+#: ../../communications.rst:461
+#: ../../communications.rst:466
+# df4c51cd45a441ff8e746af072598c78
+# 4fa1e7ad181148f99921edad475ba530
+msgid "---"
+msgstr ""
+
+#: ../../communications.rst:463
+# cd9e2b0fc369459e9c5551f2bc2d89ac
+msgid "**uux** : *UNIX to UNIX execute* . Execute a command on a remote system. This command is part of the **uucp** package."
+msgstr ""
+
+#: ../../communications.rst:468
+# 5eb1cf65e57b4a7c91cf205854c400c4
+msgid "**cu** : **C** all **U** p a remote system and connect as a simple terminal. It is a sort of dumbed-down version of `telnet <communications.html#TELNETREF>`__ . This command is part of the **uucp** package."
+msgstr ""
+
+#: ../../communications.rst:474
+# d173bd23bdaf4532bfdea30345d47fc9
+msgid "Utility and protocol for connecting to a remote host."
+msgstr ""
+
+#: ../../communications.rst:478
+#: ../../communications.rst:937
+# a7b5453ca3174b8b8d747c9e8eae000c
+# 6a1d8f6c0f9a42d68ae7905de7f887fc
+msgid "|Caution"
+msgstr ""
+
+#: ../../communications.rst:480
+# 91a002b1da7c45d299ce1d14156927aa
+msgid "The *telnet* protocol contains security holes and should therefore probably be avoided. Its use within a shell script is *not* recommended."
+msgstr ""
+
+#: ../../communications.rst:488
+# 438165d7a5554a0c99820df595b3b2a3
+msgid "The **wget** utility *noninteractively* retrieves or downloads files from a Web or ftp site. It works well in a script."
+msgstr ""
+
+#: ../../communications.rst:510
+# 308d715acff04243968e19897ebad457
+msgid "Exemple 42. Getting a stock quote"
+msgstr ""
+
+#: ../../communications.rst:559
+# 4c03ce52a76548ef8d478f3df4282327
+msgid "See also `Example A-30 <contributed-scripts.html#WGETTER2>`__ and `Example A-31 <contributed-scripts.html#BASHPODDER>`__ ."
+msgstr ""
+
+#: ../../communications.rst:563
+# 15d1c464a5264d4d896ba87be1604062
+msgid "The **lynx** Web and file browser can be used inside a script (with the ``         -dump        `` option) to retrieve a file from a Web or ftp site noninteractively."
+msgstr ""
+
+#: ../../communications.rst:574
+# 49642f8239954cbb98b08f694ddd493f
+msgid "With the ``         -traversal        `` option, **lynx** starts at the HTTP URL specified as an argument, then \"crawls\" through all links located on that particular server. Used together with the ``         -crawl        `` option, outputs page text to a log file."
+msgstr ""
+
+#: ../../communications.rst:580
+# 5dce434df3cc4a17bde73e18aeb9485b
+msgid "``                   Remote login                 `` , initates a session on a remote host. This command has security issues, so use `ssh <communications.html#SSHREF>`__ instead."
+msgstr ""
+
+#: ../../communications.rst:585
+# 00910334bfcc424b95918e2bd96997a6
+msgid "``                   Remote shell                 `` , executes command(s) on a remote host. This has security issues, so use **ssh** instead."
+msgstr ""
+
+#: ../../communications.rst:590
+# bdb2f6d812a64c2692377167b3059afb
+msgid "``                   Remote copy                 `` , copies files between two different networked machines."
+msgstr ""
+
+#: ../../communications.rst:594
+# 4b7d8f63788447b1b740526aa580d524
+msgid "``                   Remote synchronize                 `` , updates (synchronizes) files between two different networked machines."
+msgstr ""
+
+#: ../../communications.rst:607
+# d0a53985db6549979457f9411e4e7fd8
+msgid "Exemple 43. Updating FC4"
+msgstr ""
+
+#: ../../communications.rst:795
+# 76371ef9610143b6807dd9de431108c8
+msgid "/usr/bin/tee $LOG"
+msgstr ""
+
+#: ../../communications.rst:797
+# d5de44c4ce4d422a8cee4b449d4cba15
+msgid "RET=$?"
+msgstr ""
+
+#: ../../communications.rst:799
+# abf22086be82403aa20877352a53273d
+msgid "#  --filter merge,+/ is crucial for the intention. #  + modifier means include and / means absolute path. #  Then sorted list in $TMP will contain ascending dir name and #+ prevent the following --exclude '*' from \"shortcutting the circuit.\""
+msgstr ""
+
+#: ../../communications.rst:804
+# 52169cfa196a4290ab5fa73d55bec6c8
+msgid "echo \"Done\""
+msgstr ""
+
+#: ../../communications.rst:806
+# 7adf2e0707e94a85830226954338e0cb
+msgid "rm -f $PID_FILE 2>/dev/null"
+msgstr ""
+
+#: ../../communications.rst:808
+# 76e58426b25c4a0b8a0d92dd31820f03
+msgid "return $RET"
+msgstr ""
+
+#: ../../communications.rst:809
+# 4d7e6718e033431583a37cb26f3206e7
+msgid "}"
+msgstr ""
+
+#: ../../communications.rst:811
+# 4ffe40339b5e482f816895af472965a5
+msgid "# ------- # Main init check_pid set_range get_list get_file RET=$? # -------"
+msgstr ""
+
+#: ../../communications.rst:822
+# a017731691e04886ab1d52fd3dbc3f02
+msgid "/usr/bin/logger -t ${0##*/} \"Fedora update mirrored successfully.\""
+msgstr ""
+
+#: ../../communications.rst:824
+# df41121b16704bea9755321e0436dfe3
+msgid "/usr/bin/logger -t ${0##*/} \\ \"Fedora update mirrored with failure code: $RET\""
+msgstr ""
+
+#: ../../communications.rst:826
+# a25a9900be864c6ab4ac8b564c1a49de
+msgid "fi"
+msgstr ""
+
+#: ../../communications.rst:828
+# cf0a44f993cf4defb36d5d1b022b0556
+msgid "exit $RET"
+msgstr ""
+
+#: ../../communications.rst:833
+# 8c11d6182d774432beb1777f7ca098ae
+msgid "See also `Example A-32 <contributed-scripts.html#NIGHTLYBACKUP>`__ ."
+msgstr ""
+
+#: ../../communications.rst:837
+# b66db293c366448b898d7bea9bb7f6df
+msgid "|Note"
+msgstr ""
+
+#: ../../communications.rst:839
+# dbaaabdce8424037ba0bb70a233d724b
+msgid "Using `rcp <communications.html#RCPREF>`__ , `rsync <communications.html#RSYNCREF>`__ , and similar utilities with security implications in a shell script may not be advisable. Consider, instead, using **ssh** , `scp <communications.html#SCPREF>`__ , or an **expect** script."
+msgstr ""
+
+#: ../../communications.rst:849
+# 8e8651075b234491833583db92ea0117
+msgid "``                   Secure shell                 `` , logs onto a remote host and executes commands there. This secure replacement for **telnet** , **rlogin** , **rcp** , and **rsh** uses identity authentication and encryption. See its `manpage <basic.html#MANREF>`__ for details."
+msgstr ""
+
+#: ../../communications.rst:857
+# d44b2dab69dc46eba832bd8dede3031b
+msgid "Exemple 44. Using *ssh*"
+msgstr ""
+
+#: ../../communications.rst:939
+# 7eafd99f17b14053a843dee3bef88675
+msgid "Within a loop, **ssh** may cause unexpected behavior. According to a `Usenet post <http://groups-beta.google.com/group/comp.unix.shell/msg/dcb446b5fff7d230>`__ in the comp.unix shell archives, **ssh** inherits the loop's ``            stdin           `` . To remedy this, pass **ssh** either the ``            -n           `` or ``            -f           `` option."
+msgstr ""
+
+#: ../../communications.rst:947
+# 5198b74a948f47ef8fc46785deab29a4
+msgid "Thanks, Jason Bechtel, for pointing this out."
+msgstr ""
+
+#: ../../communications.rst:953
+# 0063910d147f44948d59ae73eb7d9213
+msgid "``                   Secure copy                 `` , similar in function to **rcp** , copies files between two different networked machines, but does so using authentication, and with a security level similar to **ssh** ."
+msgstr ""
+
+#: ../../communications.rst:960
+# 8f2e4cc90d6f40d185ba03c50e8a17ae
+msgid "** Local Network**"
+msgstr ""
+
+#: ../../communications.rst:963
+# 2f0569ada7ac4414b768b6c11cb3a036
+msgid "This is a utility for terminal-to-terminal communication. It allows sending lines from your terminal (console or *xterm* ) to that of another user. The `mesg <system.html#MESGREF>`__ command may, of course, be used to disable write access to a terminal"
+msgstr ""
+
+#: ../../communications.rst:968
+# 4b38f8e2a9754e079d753010c4b14446
+msgid "Since **write** is interactive, it would not normally find use in a script."
+msgstr ""
+
+#: ../../communications.rst:972
+# 8c616d8a9e804af3bdac29418c8859c0
+msgid "A command-line utility for configuring a network adapter (using *DHCP* ). This command is native to Red Hat centric Linux distros."
+msgstr ""
+
+#: ../../communications.rst:977
+# 1dfc3041006d47a18c228eb452e0187d
+msgid "** Mail**"
+msgstr ""
+
+#: ../../communications.rst:980
+# 40e12c6c602344e19e07f5e6f86e74d3
+msgid "Send or read e-mail messages."
+msgstr ""
+
+#: ../../communications.rst:982
+# e796f9657914449c9ee577bff41292d9
+msgid "This stripped-down command-line mail client works fine as a command embedded in a script."
+msgstr ""
+
+#: ../../communications.rst:987
+# 1b713392354c40508cb7bf1aa787315a
+msgid "Exemple 45. A script that mails itself"
+msgstr ""
+
+#: ../../communications.rst:1028
+# 840a994cd4bc4a7088fc79d7613ce683
+msgid "Similar to the **mail** command, **mailto** sends e-mail messages from the command-line or in a script. However, **mailto** also permits sending MIME (multimedia) messages."
+msgstr ""
+
+#: ../../communications.rst:1033
+# 893c066b505548888d8de6d440b2b71b
+msgid "Show *mail statistics* . This command may be invoked only by *root* ."
+msgstr ""
+
+#: ../../communications.rst:1052
+# ba059a354c064790bcf4b9b6186a18f4
+msgid "This utility automatically replies to e-mails that the intended recipient is on vacation and temporarily unavailable. It runs on a network, in conjunction with **sendmail** , and is not applicable to a dial-up POPmail account."
+msgstr ""
+
+#: ../../communications.rst:1060
+# 972fd16b62344f4685c7220e61dbe9dd
+msgid "Notes"
+msgstr ""
+
+#: ../../communications.rst:1063
+# b279c65dfda440b48609b335e53d858c
+msgid "` [1]  <communications.html#AEN13320>`__"
+msgstr ""
+
+#: ../../communications.rst:1065
+# f56b6eb1b934479491ba83937a17f71c
+msgid "A *daemon* is a background process not attached to a terminal session. Daemons perform designated services either at specified times or explicitly triggered by certain events."
+msgstr ""
+
+#: ../../communications.rst:1069
+# bd467ce21c3d4dd387798ccb2fd84414
+msgid "The word \"daemon\" means ghost in Greek, and there is certainly something mysterious, almost supernatural, about the way UNIX daemons wander about behind the scenes, silently carrying out their appointed tasks."
+msgstr ""
+

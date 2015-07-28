@@ -1,0 +1,109 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../unofficialst.rst:4
+msgid "XXX  35.1. Unofficial Shell Scripting Stylesheet"
+msgstr ""
+
+#: ../../unofficialst.rst:6
+msgid ""
+"Comment your code. This makes it easier for others to understand (and "
+"appreciate), and easier for you to maintain."
+msgstr ""
+
+#: ../../unofficialst.rst:19
+msgid "Add descriptive headers to your scripts and functions."
+msgstr ""
+
+#: ../../unofficialst.rst:62
+msgid "<unofficialst.html#FTN.AEN20041>`__ that is, \"hard-wired\" literal"
+msgstr ""
+
+#: ../../unofficialst.rst:63
+msgid ""
+"constants. Use meaningful variable names instead. This makes the script "
+"easier to understand and permits making changes and updates without breaking"
+" the application."
+msgstr ""
+
+#: ../../unofficialst.rst:87
+msgid "Choose descriptive names for variables and functions."
+msgstr ""
+
+#: ../../unofficialst.rst:133
+msgid ""
+"Use `exit codes <exit-status.html#EXITCOMMANDREF>`__ in a systematic and "
+"meaningful way."
+msgstr ""
+
+#: ../../unofficialst.rst:146
+msgid "See also `Appendix E <exitcodes.html>`__ ."
+msgstr ""
+
+#: ../../unofficialst.rst:148
+msgid ""
+"*Ender* suggests using the `exit codes in ``         /usr/include/sysexits.h"
+"        `` <exitcodes.html#SYSEXITSREF>`__ in shell scripts, though these "
+"are primarily intended for C and C++ programming."
+msgstr ""
+
+#: ../../unofficialst.rst:153
+msgid ""
+"Use standardized parameter flags for script invocation. *Ender* proposes the"
+" following set of flags."
+msgstr ""
+
+#: ../../unofficialst.rst:178
+msgid "See also `Section G.1 <standard-options.html>`__ ."
+msgstr ""
+
+#: ../../unofficialst.rst:180
+msgid ""
+"Break complex scripts into simpler modules. Use functions where appropriate."
+" See `Example 37-4 <bashver2.html#CARDS>`__ ."
+msgstr ""
+
+#: ../../unofficialst.rst:183
+msgid "Don't use a complex construct where a simpler one will do."
+msgstr ""
+
+#: ../../unofficialst.rst:200
+msgid "**"
+msgstr ""
+
+#: ../../unofficialst.rst:202
+msgid ""
+"*... reading the UNIX source code to the Bourne shell (/bin/sh). I was "
+"shocked at how much simple algorithms could be made cryptic, and therefore "
+"useless, by a poor choice of code style. I asked myself, \"Could someone be "
+"proud of this code?\" *"
+msgstr ""
+
+#: ../../unofficialst.rst:207
+msgid "*--Landon Noll*"
+msgstr ""
+
+#: ../../unofficialst.rst:213
+msgid "Notes"
+msgstr ""
+
+#: ../../unofficialst.rst:216
+msgid "` [1]  <unofficialst.html#AEN20041>`__"
+msgstr ""
+
+#: ../../unofficialst.rst:218
+msgid ""
+"In this context, \"magic numbers\" have an entirely different meaning than "
+"the `magic numbers <sha-bang.html#MAGNUMREF>`__ used to designate file "
+"types."
+msgstr ""

@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../declareref.rst:3
+# 58aa89cddb974627b0fb7287f4547ead
+msgid "XXX  9.2. Typing variables: **declare** or **typeset**"
+msgstr ""
+
+#: ../../declareref.rst:5
+# 8d15786551cf442fa69b53c8b65cf37d
+msgid "The *declare* or *typeset* `builtins <internal.html#BUILTINREF>`__ , which are exact synonyms, permit modifying the properties of variables. This is a very weak form of the *typing* ` [1]"
+msgstr ""
+
+#: ../../declareref.rst:8
+# 5780737cdd254ddfaf1046ba6cb6d8d6
+msgid "<declareref.html#FTN.AEN5685>`__ available in certain programming"
+msgstr ""
+
+#: ../../declareref.rst:9
+# f7a901c9eb5a48dc80f974f6411a5af1
+msgid "languages. The *declare* command is specific to version 2 or later of Bash. The *typeset* command also works in ksh scripts."
+msgstr ""
+
+#: ../../declareref.rst:13
+# 9e7bb55f4fae43a29e67c2b16e29fb24
+msgid "** declare/typeset options**"
+msgstr ""
+
+#: ../../declareref.rst:16
+# 464385c8a07149c79bda7139bfe9ef3b
+msgid "( ``                   declare -r var1                 `` works the same as ``                   readonly var1                 `` )"
+msgstr ""
+
+#: ../../declareref.rst:19
+# 3918f659a3d44af0be5125e9dffc0ab5
+msgid "This is the rough equivalent of the **C** *const* type qualifier. An attempt to change the value of a *readonly* variable fails with an error message."
+msgstr ""
+
+#: ../../declareref.rst:33
+# 34400bd17fed49c1848c3bc3e6b15128
+msgid "-i ``                 integer               ``"
+msgstr ""
+
+#: ../../declareref.rst:50
+# 704d1f8829b04acfa91f05258ceafec2
+msgid "Certain arithmetic operations are permitted for declared integer variables without the need for `expr <moreadv.html#EXPRREF>`__ or `let <internal.html#LETREF>`__ ."
+msgstr ""
+
+#: ../../declareref.rst:66
+# 713b56a6a2614c8b94dc026980c5c38b
+msgid "-a ``                 array               ``"
+msgstr ""
+
+#: ../../declareref.rst:75
+# c7eb93cb4fe34d67a5dcad55351a71e1
+msgid "The variable ``                   indices                 `` will be treated as an `array <arrays.html#ARRAYREF>`__ ."
+msgstr ""
+
+#: ../../declareref.rst:78
+# 1fb5119a7871453d81a7bc0333bed40e
+msgid "-f ``                 function(s)               ``"
+msgstr ""
+
+#: ../../declareref.rst:87
+# e816bd7fc6544ff6906edd5e59f169e6
+msgid "A ``                   declare -f                 `` line with no arguments in a script causes a listing of all the `functions <functions.html#FUNCTIONREF>`__ previously defined in that script."
+msgstr ""
+
+#: ../../declareref.rst:99
+# 8ad2c98629144eb5bed5d164dfc4f5aa
+msgid "A ``                   declare -f function_name                 `` in a script lists just the function named."
+msgstr ""
+
+#: ../../declareref.rst:102
+# a1266a0022554de2888d05cf136f9816
+msgid "-x `export <internal.html#EXPORTREF>`__"
+msgstr ""
+
+#: ../../declareref.rst:111
+# 6d4cca3c915c4ac9a09db83f51fa7bd4
+msgid "This declares a variable as available for exporting outside the environment of the script itself."
+msgstr ""
+
+#: ../../declareref.rst:114
+# 790c63c96b2f46d9aa815de7a4b4f622
+msgid "-x var=$value"
+msgstr ""
+
+#: ../../declareref.rst:123
+# 32eb191963964f088ea3b99158e26214
+msgid "The **declare** command permits assigning a value to a variable in the same statement as setting its properties."
+msgstr ""
+
+#: ../../declareref.rst:129
+# 1ceba21ce35440b9a4addb7e9d641caf
+msgid "Exemple 10. Using *declare* to type variables"
+msgstr ""
+
+#: ../../declareref.rst:171
+# 5d4b81c84e2744d3b02d98006e0db11b
+msgid "|Caution"
+msgstr ""
+
+#: ../../declareref.rst:173
+# fe91d6c900e84842889aa7820a838b1f
+msgid "Using the *declare* builtin restricts the `scope <subshells.html#SCOPEREF>`__ of a variable."
+msgstr ""
+
+#: ../../declareref.rst:196
+# ab067ab2e1674f2181094119aa09dcee
+msgid "However . . ."
+msgstr ""
+
+#: ../../declareref.rst:216
+# ad7b788aade240fc8f1cdb940369de2a
+msgid "# Thank you, Michael"
+msgstr ""
+
+#: ../../declareref.rst:217
+# 023f8c10457940c291bc45313e7bae63
+msgid "Iatrou, for pointing th"
+msgstr ""
+
+#: ../../declareref.rst:218
+# e660b8303ada44f2be16e18f07e2a16d
+msgid "is out."
+msgstr ""
+
+#: ../../declareref.rst:298
+# 26d488214eaf4cb98cf9142fd396c44a
+msgid "The *declare* command can be helpful in identifying variables, `environmental <othertypesv.html#ENVREF>`__ or otherwise. This can be especially useful with `arrays <arrays.html#ARRAYREF>`__ ."
+msgstr ""
+
+#: ../../declareref.rst:326
+# 663cb378cbea4fa49b3a905b5deef6b2
+msgid "Notes"
+msgstr ""
+
+#: ../../declareref.rst:329
+# 11158ea9cd5c4e1da1ab86746e570a85
+msgid "` [1]  <declareref.html#AEN5685>`__"
+msgstr ""
+
+#: ../../declareref.rst:331
+# 10c70ac01b954145b83e6c70aad2296b
+msgid "In this context, *typing* a variable means to classify it and restrict"
+msgstr ""
+
+#: ../../declareref.rst:332
+# cda042ef9d5648fbb41965b4cd5af4e0
+msgid "its properties. For example, a variable *declared* or *typed* as an integer is no longer available for `string operations <refcards.html#STRINGOPSTAB>`__ ."
+msgstr ""
+
+#: ../../declareref.rst:345
+# f5697286d8fd409bb2c2800a71858019
+msgid "intvar=stringval echo \"$intvar\"   # 0"
+msgstr ""
+

@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../io-redirection.rst:4
+# 7ca199301b264556be69d2db9a42bba1
+msgid "XXX  Chapter 20. I/O Redirection"
+msgstr ""
+
+#: ../../io-redirection.rst:9
+# e24ae279b23342ceb1b69b521d0e4f35
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../io-redirection.rst:13
+# f36f2e4cb3c4436c9cc9e3e57b136f8c
+msgid "20.1. `Using *exec* <x17974.html>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:17
+# bf6dfff7412247cd8735e6278bff175a
+msgid "20.2. `Redirecting Code Blocks <redircb.html>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:21
+# 62c63c0510d2488ca64794dda01386f0
+msgid "20.3. `Applications <redirapps.html>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:27
+# 1bb46060bc5044268be3af3d49b70b55
+msgid "<io-redirection.html#FTN.AEN17884>`__ open, ``      stdin     `` (the"
+msgstr ""
+
+#: ../../io-redirection.rst:28
+# 96416bfbece84fcda353ac84ca596d32
+msgid "keyboard), ``      stdout     `` (the screen), and ``      stderr     `` (error messages output to the screen). These, and any other open files, can be redirected. Redirection simply means capturing output from a file, command, program, script, or even code block within a script (see `Example 3-1 <special-chars.html#EX8>`__ and `Example 3-2 <special-chars.html#RPMCHECK>`__ ) and sending it as input to another file, command, program, or script."
+msgstr ""
+
+#: ../../io-redirection.rst:36
+# 4dd5921f3ecc4252ba19e09e0f41476b
+msgid "Each open file gets assigned a file descriptor. ` [2] <io-redirection.html#FTN.AEN17894>`__ The file descriptors for"
+msgstr ""
+
+#: ../../io-redirection.rst:38
+# a3c2f2af10b043f7a7ad05212645d8e7
+msgid "``      stdin     `` , ``      stdout     `` , and ``      stderr     `` are 0, 1, and 2, respectively. For opening additional files, there remain descriptors 3 to 9. It is sometimes useful to assign one of these additional file descriptors to ``      stdin     `` , ``      stdout     `` , or ``      stderr     `` as a temporary duplicate link. ` [3]  <io-redirection.html#FTN.AEN17906>`__ This simplifies restoration to normal after complex redirection and reshuffling (see `Example 20-1 <x17974.html#REDIR1>`__ )."
+msgstr ""
+
+#: ../../io-redirection.rst:183
+# 7ea6c813e0f947e58ee7d325d267a3cb
+msgid "Multiple instances of input and output redirection and/or pipes can be combined in a single command line."
+msgstr ""
+
+#: ../../io-redirection.rst:197
+# 8feb5d573d554ede921058bf4c528779
+msgid "See `Example 16-31 <filearchiv.html#DERPM>`__ and `Example A-14 <contributed-scripts.html#FIFO>`__ . Multiple output streams may be redirected to one file."
+msgstr ""
+
+#: ../../io-redirection.rst:221
+# 8cab276a20614894811af90be4aeccf4
+msgid "** Closing File Descriptors**"
+msgstr ""
+
+#: ../../io-redirection.rst:224
+# 095311e0018a4948b7e0d19a41b23e98
+msgid "Close input file descriptor ``                   n                 `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:228
+# 010ed6589029437484e17ca9d5a44e94
+msgid "Close ``         stdin        `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:231
+# e42ebc370a38446196a7472cbb7e3457
+msgid "Close output file descriptor ``                   n                 `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:235
+# bd9e11c70fa54e50afb11505616e1d27
+msgid "Close ``         stdout        `` ."
+msgstr ""
+
+#: ../../io-redirection.rst:238
+# c1b6b8edaa194123a8924d6ade8f8054
+msgid "Child processes inherit open file descriptors. This is why pipes work. To prevent an fd from being inherited, close it."
+msgstr ""
+
+#: ../../io-redirection.rst:255
+# 306a8fb310994951903fccea78051b89
+msgid "For a more detailed introduction to I/O redirection see `Appendix F <ioredirintro.html>`__ ."
+msgstr ""
+
+#: ../../io-redirection.rst:260
+# 406b851da2a24d818460b44996a6de2c
+msgid "Notes"
+msgstr ""
+
+#: ../../io-redirection.rst:263
+# 5ed3900e95d54287a384c4028d7003b1
+msgid "` [1]  <io-redirection.html#AEN17884>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:265
+# d67176681c7340e79ac505664291c4fc
+msgid "By convention in UNIX and Linux, data streams and peripherals ( `device files <devref1.html#DEVFILEREF>`__ ) are treated as files, in a fashion analogous to ordinary files."
+msgstr ""
+
+#: ../../io-redirection.rst:270
+# f0af1c5fc3964933987f5b62ee5d6567
+msgid "` [2]  <io-redirection.html#AEN17894>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:272
+# 5f43b495f63c4b6eb16293562532934c
+msgid "A *file descriptor* is simply a number that the operating system"
+msgstr ""
+
+#: ../../io-redirection.rst:273
+# 63112b1126c74e73a2a5e2fb787c55f7
+msgid "assigns to an open file to keep track of it. Consider it a simplified type of file pointer. It is analogous to a *file handle* in **C** ."
+msgstr ""
+
+#: ../../io-redirection.rst:277
+# 7e936b82331a4b479f24b69b63e02ed6
+msgid "` [3]  <io-redirection.html#AEN17906>`__"
+msgstr ""
+
+#: ../../io-redirection.rst:279
+# 32004e9047ef412e854b36abac65b7c3
+msgid "Using ``               file            descriptor 5             `` might cause problems. When Bash creates a child process, as with `exec <internal.html#EXECREF>`__ , the child inherits fd 5 (see Chet Ramey's archived e-mail, `SUBJECT: RE: File descriptor 5 is held open <http://groups.google.com/group/gnu.bash.bug/browse_thread/thread/13955daafded3b5c/18c17050087f9f37>`__ ). Best leave this particular fd alone."
+msgstr ""
+

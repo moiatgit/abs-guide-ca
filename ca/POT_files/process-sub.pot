@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../process-sub.rst:4
+# 3bc5b0c3b91349f887b21edb3b72359d
+msgid "XXX  Chapter 23. Process Substitution"
+msgstr ""
+
+#: ../../process-sub.rst:6
+# 201ef8c81c5b4974be7a7671a12b88ab
+msgid "`Piping <special-chars.html#PIPEREF>`__ the ``      stdout     `` of a"
+msgstr ""
+
+#: ../../process-sub.rst:7
+# 2283a61357cc428c90b82f52657bc4f8
+msgid "command into the ``      stdin     `` of another is a powerful technique. But, what if you need to pipe the ``      stdout     `` of *multiple* commands? This is where ``             process     substitution           `` comes in."
+msgstr ""
+
+#: ../../process-sub.rst:12
+# 04932dc6e7114bfbb7d54cde41c5f6ee
+msgid "*Process substitution* feeds the output of a `process <special-chars.html#PROCESSREF>`__ (or processes) into the ``      stdin     `` of another process."
+msgstr ""
+
+#: ../../process-sub.rst:17
+# fa93ca25057a4286add439fe9f9f5990
+msgid "** Template**"
+msgstr ""
+
+#: ../../process-sub.rst:20
+# 96f043a5ee0c4583864d0c9a645b1063
+msgid "**>(command\\_list)**"
+msgstr ""
+
+#: ../../process-sub.rst:22
+# e2b878cd059e489f955acd54a31253c1
+msgid "**<(command\\_list)**"
+msgstr ""
+
+#: ../../process-sub.rst:24
+# b546b5410b1e48d4b00b5a70c90f38c2
+msgid "Process substitution uses ``         /dev/fd/<n>        `` files to send the results of the process(es) within parentheses to another process. ` [1]  <process-sub.html#FTN.AEN18244>`__"
+msgstr ""
+
+#: ../../process-sub.rst:30
+# e0513a301b97487f974404577a5bacb9
+msgid "|Caution"
+msgstr ""
+
+#: ../../process-sub.rst:32
+# effeb5be040541729376d874724683e8
+msgid "There is *no* space between the the \"<\" or \">\" and the parentheses. Space there would give an error message."
+msgstr ""
+
+#: ../../process-sub.rst:67
+# 8ece6cfba70347a8a7f959d5a658c1b5
+msgid "|Note"
+msgstr ""
+
+#: ../../process-sub.rst:69
+# 1cbacc87221148a3b75633a3001264eb
+msgid "Bash creates a pipe with two `file descriptors <io-redirection.html#FDREF>`__ , ``         --fIn        `` and ``         fOut--        `` . The ``         stdin        `` of `true <internal.html#TRUEREF>`__ connects to ``         fOut        `` (dup2(fOut, 0)), then Bash passes a ``         /dev/fd/fIn        `` argument to **echo** . On systems lacking ``         /dev/fd/<n>        `` files, Bash may use temporary files. (Thanks, S.C.)"
+msgstr ""
+
+#: ../../process-sub.rst:81
+# 0fcf39c7d3eb4e7cbb3c584ae0b48b74
+msgid "Process substitution can compare the output of two different commands, or even the output of different options to the same command."
+msgstr ""
+
+#: ../../process-sub.rst:101
+# 22bcc1e2ac5740cfabc645587fdd3367
+msgid "Process substitution can compare the contents of two directories -- to see which filenames are in one, but not the other."
+msgstr ""
+
+#: ../../process-sub.rst:111
+# 767589f146e547a6bcf17dc933d5ce7e
+msgid "Some other usages and uses of process substitution:"
+msgstr ""
+
+#: ../../process-sub.rst:179
+# 937f70681958417fb9ae2f1279658658
+msgid "*while-read loop* <gotchas.html#BADREAD0>`__ running in a subshell."
+msgstr ""
+
+#: ../../process-sub.rst:183
+# 90c0047196e447f8873a70bfb67b1fc6
+msgid "Exemple 1. Code block redirection without forking"
+msgstr ""
+
+#: ../../process-sub.rst:261
+# 5508b99567ea445d9374955ac6ac660a
+msgid "Exemple 2. Redirecting the output of *process substitution* into a loop."
+msgstr ""
+
+#: ../../process-sub.rst:292
+# 36c2df5368e24faaa3436b7efe69d840
+msgid "A reader sent in the following interesting example of process substitution."
+msgstr ""
+
+#: ../../process-sub.rst:357
+# 9193bbbe21b048aabe46648578d6e0d3
+msgid "Notes"
+msgstr ""
+
+#: ../../process-sub.rst:360
+# 69dbd6f6c77b419b9761a27b1b468706
+msgid "` [1]  <process-sub.html#AEN18244>`__"
+msgstr ""
+
+#: ../../process-sub.rst:362
+# 83d9e431803e4d4d8e1f359c03193e02
+msgid "This has the same effect as a `named pipe <extmisc.html#NAMEDPIPEREF>`__ (temp file), and, in fact, named pipes were at one time used in process substitution."
+msgstr ""
+

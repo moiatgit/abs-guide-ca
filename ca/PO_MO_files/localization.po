@@ -1,0 +1,160 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../localization.rst:4
+msgid "XXX  Appendix K. Localization"
+msgstr ""
+
+#: ../../localization.rst:6
+msgid "Localization is an undocumented Bash feature."
+msgstr ""
+
+#: ../../localization.rst:8
+msgid ""
+"A localized shell script echoes its text output in the language defined"
+msgstr ""
+
+#: ../../localization.rst:9
+msgid ""
+"as the system's locale. A Linux user in Berlin, Germany, would get script "
+"output in German, whereas his cousin in Berlin, Maryland, would get output "
+"from the same script in English."
+msgstr ""
+
+#: ../../localization.rst:13
+msgid ""
+"To create a localized script, use the following template to write all "
+"messages to the user (error messages, prompts, etc.)."
+msgstr ""
+
+#: ../../localization.rst:117
+msgid ""
+"This lists all the localized text. (The ``     -D    `` option lists double-"
+"quoted strings prefixed by a $ , without executing the script.)"
+msgstr ""
+
+#: ../../localization.rst:133
+msgid ""
+"The ``     --dump-po-strings    `` option to Bash resembles the ``     -D"
+"    `` option, but uses `gettext <textproc.html#GETTEXTREF>`__ \"po\" "
+"format."
+msgstr ""
+
+#: ../../localization.rst:139 ../../localization.rst:204
+msgid "|Note"
+msgstr ""
+
+#: ../../localization.rst:141
+msgid "Bruno Haible points out:"
+msgstr ""
+
+#: ../../localization.rst:143
+msgid ""
+"Starting with gettext-0.12.2, **xgettext -o - localized.sh** is recommended "
+"instead of **bash --dump-po-strings localized.sh** , because **xgettext** . "
+". ."
+msgstr ""
+
+#: ../../localization.rst:147
+msgid ""
+"1. understands the gettext and eval\\_gettext commands (whereas bash --dump-"
+"po-strings understands only its deprecated $\"...\" syntax)"
+msgstr ""
+
+#: ../../localization.rst:150
+msgid ""
+"2. can extract comments placed by the programmer, intended to be read by the"
+" translator."
+msgstr ""
+
+#: ../../localization.rst:153
+msgid ""
+"This shell code is then not specific to Bash any more; it works the same way"
+" with Bash 1.x and other /bin/sh implementations."
+msgstr ""
+
+#: ../../localization.rst:159
+msgid ""
+"Now, build a ``      language.po     `` file for each language that the "
+"script will be translated into, specifying the ``             msgstr"
+"           `` . Alfredo Pironti gives the following example:"
+msgstr ""
+
+#: ../../localization.rst:164
+msgid "fr.po:"
+msgstr ""
+
+#: ../../localization.rst:183
+msgid "Then, run `msgfmt <textproc.html#MSGFMTREF>`__ ."
+msgstr ""
+
+#: ../../localization.rst:185
+msgid "``             msgfmt -o localized.sh.mo fr.po           ``"
+msgstr ""
+
+#: ../../localization.rst:187
+msgid ""
+"Place the resulting ``      localized.sh.mo     `` file in the ``      "
+"/usr/local/share/locale/fr/LC_MESSAGES     `` directory, and at the "
+"beginning of the script, insert the lines:"
+msgstr ""
+
+#: ../../localization.rst:199
+msgid ""
+"If a user on a French system runs the script, she will get French messages."
+msgstr ""
+
+#: ../../localization.rst:206
+msgid ""
+"With older versions of Bash or other shells, localization requires `gettext "
+"<textproc.html#GETTEXTREF>`__ , using the ``         -s        `` option. In"
+" this case, the script becomes:"
+msgstr ""
+
+#: ../../localization.rst:224
+msgid "exit $E_CDERROR"
+msgstr ""
+
+#: ../../localization.rst:225
+msgid "} cd $var || error \"Ca"
+msgstr ""
+
+#: ../../localization.rst:228
+msgid "read -p \"$(gettext -"
+msgstr ""
+
+#: ../../localization.rst:229
+msgid "s \"Enter the value: \")\" var"
+msgstr ""
+
+#: ../../localization.rst:231
+msgid "# ..."
+msgstr ""
+
+#: ../../localization.rst:275
+msgid ""
+"The ``      TEXTDOMAIN     `` and ``      TEXTDOMAINDIR     `` variables "
+"need to be set and exported to the environment. This should be done within "
+"the script itself."
+msgstr ""
+
+#: ../../localization.rst:279
+msgid "---"
+msgstr ""
+
+#: ../../localization.rst:281
+msgid ""
+"This appendix written by Stéphane Chazelas, with modifications suggested by "
+"Alfredo Pironti, and by Bruno Haible, maintainer of GNU `gettext "
+"<textproc.html#GETTEXTREF>`__ ."
+msgstr ""

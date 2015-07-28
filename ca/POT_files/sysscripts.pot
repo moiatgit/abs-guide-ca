@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sysscripts.rst:4
+# 93591ab739aa486b90c46313de78b465
+msgid "XXX  17.1. Analyzing a System Script"
+msgstr ""
+
+#: ../../sysscripts.rst:6
+# f603acd06b6a43e7bac435303cedf798
+msgid "Using our knowledge of administrative commands, let us examine a system script. One of the shortest and simplest to understand scripts is \"killall,\" ` [1]  <sysscripts.html#FTN.AEN17079>`__ used to suspend running processes at system shutdown."
+msgstr ""
+
+#: ../../sysscripts.rst:13
+# 8560e0040fd547e8a7d600e34e1467fe
+msgid "Exemple 12. *killall* , from ``        /etc/rc.d/init.d       ``"
+msgstr ""
+
+#: ../../sysscripts.rst:64
+# 09daa457e4db4be896191af3065c384c
+msgid "That wasn't so bad. Aside from a little fancy footwork with variable matching, there is no new material there."
+msgstr ""
+
+#: ../../sysscripts.rst:68
+# aa1e0b76a61447eea79c4f270472debb
+msgid "**Exercise 1.** In ``       /etc/rc.d/init.d      `` , analyze the **halt** script. It is a bit longer than **killall** , but similar in concept. Make a copy of this script somewhere in your home directory and experiment with it (do *not* run it as *root* ). Do a simulated run with the ``       -vn      `` flags ( ``               sh       -vn scriptname             `` ). Add extensive comments. Change the commands to `echos <internal.html#ECHOREF>`__ ."
+msgstr ""
+
+#: ../../sysscripts.rst:78
+# 3ded31cea7774e1aba6b62991d233a15
+msgid "**Exercise 2.** Look at some of the more complex scripts in ``       /etc/rc.d/init.d      `` . Try to understand at least portions of them. Follow the above procedure to analyze them. For some additional insight, you might also examine the file ``       sysvinitfiles      `` in ``       /usr/share/doc/initscripts-?.??      `` , which is part of the \"initscripts\" documentation."
+msgstr ""
+
+#: ../../sysscripts.rst:88
+# c352f357446a47d0ab50fb8a0bea6a77
+msgid "Notes"
+msgstr ""
+
+#: ../../sysscripts.rst:91
+# 1c637bc8761a471eb9c267821cdc1c1a
+msgid "` [1]  <sysscripts.html#AEN17079>`__"
+msgstr ""
+
+#: ../../sysscripts.rst:93
+# 10351609e67d48369a37e8a8f3128396
+msgid "The *killall* system script should not be confused with the `killall <x9644.html#KILLALLREF>`__ command in ``       /usr/bin      `` ."
+msgstr ""
+

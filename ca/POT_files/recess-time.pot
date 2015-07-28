@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../recess-time.rst:4
+# 71449e0b549344a89071762ebb379559
+msgid "XXX  Chapter 14. Recess Time"
+msgstr ""
+
+#: ../../recess-time.rst:6
+# 5cacd5ab4aee405a8d49e884dde50b63
+msgid "*This bizarre little intermission gives the reader a chance to relax and maybe laugh a bit.*"
+msgstr ""
+
+#: ../../recess-time.rst:10
+# 02b6fb92557f4cb78228489271df14cb
+msgid "Fellow Linux user, greetings! You are reading something which will bring you luck and good fortune. Just e-mail a copy of this document to 10 of your friends. Before making the copies, send a 100-line Bash script to the first person on the list at the bottom of this letter. Then delete their name and add yours to the bottom of the list. Don't break the chain! Make the copies within 48 hours. Wilfred P. of Brooklyn failed to send out his ten copies and woke the next morning to find his job description changed to \"COBOL programmer.\" Howard L. of Newport News sent out his ten copies and within a month had enough hardware to build a 100-node Beowulf cluster dedicated to playing *Tuxracer* . Amelia V. of Chicago laughed at this letter and broke the chain. Shortly thereafter, a fire broke out in her terminal and she now spends her days writing documentation for MS Windows. Don't break the chain!  Send out your ten copies today!"
+msgstr ""
+
+#: ../../recess-time.rst:28
+# 03f262776a1d402994ca8085a3e0accb
+msgid "*Courtesy 'NIX \"fortune cookies\", with some alterations and many apologies*"
+msgstr ""
+

@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../miscellany.rst:4
+# bc52c5b768c348debe00ca020494ad49
+msgid "XXX  Chapter 36. Miscellany"
+msgstr ""
+
+#: ../../miscellany.rst:7
+# 9cbca2f6d7114b2eb16211c9a4d7f96c
+msgid "**"
+msgstr ""
+
+#: ../../miscellany.rst:9
+# fffb4c6c0ea34cc289041803a0ffac22
+msgid "*Nobody really knows what the Bourne shell's grammar is. Even examination of the source code is little help.*"
+msgstr ""
+
+#: ../../miscellany.rst:12
+# 6f28e172d4bb446aa576b6b33f41a11e
+msgid "*--Tom Duff*"
+msgstr ""
+
+#: ../../miscellany.rst:19
+# a1ffab4351aa4f62b10adea16142bb81
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../miscellany.rst:23
+# 29193cd341d7405e85a97b5db6c4891e
+msgid "36.1. `Interactive and non-interactive shells and scripts <intandnonint.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:28
+# 11217ed7442d4894ad37e6a37a499214
+msgid "36.2. `Shell Wrappers <wrapper.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:32
+# 5a53e9c967fa442eacfaeaf00fdfe628
+msgid "36.3. `Tests and Comparisons: Alternatives <testsandcomparisons.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:36
+# 8c07cae763e94ee2b5d440403ecceea1
+msgid "36.4. `Recursion: a script calling itself <recursionsct.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:40
+# 9f54d5bd8a204cdb8b1e4d4e334a0d2c
+msgid "36.5. ` \"Colorizing\" Scripts <colorizing.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:44
+# 3121c6aa8edc49618c58c5e69c1dc695
+msgid "36.6. `Optimizations <optimizations.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:48
+# fb94d12f8ee0428398cea2087e5203d7
+msgid "36.7. `Assorted Tips <assortedtips.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:54
+# 6ba9b19e131544a1b8dd41cb82c7b6f7
+msgid "36.7.1. `Ideas for more powerful scripts <assortedtips.html#AEN20460>`__"
+msgstr ""
+
+#: ../../miscellany.rst:58
+# c9bc8ab2a9624df9bf09a843adebe41b
+msgid "36.7.2. `Widgets <assortedtips.html#AEN20679>`__"
+msgstr ""
+
+#: ../../miscellany.rst:64
+# e307db7ef3924be69f91eaef1ac6bee2
+msgid "36.8. `Security Issues <securityissues.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:70
+# 380dd0c2f549404088aa3caf9aad2984
+msgid "36.8.1. `Infected Shell Scripts <securityissues.html#INFECTEDSCRIPTS>`__"
+msgstr ""
+
+#: ../../miscellany.rst:74
+# dad334941a3d4c389b12d3b56256afdd
+msgid "36.8.2. `Hiding Shell Script Source <securityissues.html#HIDINGSOURCE>`__"
+msgstr ""
+
+#: ../../miscellany.rst:79
+# d58f248953504bd7b394f701d077b458
+msgid "36.8.3. `Writing Secure Shell Scripts <securityissues.html#SECURITYTIPS>`__"
+msgstr ""
+
+#: ../../miscellany.rst:86
+# 7c0263a71a4f4c74b7e9a01ec3e92591
+msgid "36.9. `Portability Issues <portabilityissues.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:90
+# a6785629f67b4c68af412ba6cd4440fd
+msgid "36.10. `Shell Scripting Under Windows <winscript.html>`__"
+msgstr ""
+

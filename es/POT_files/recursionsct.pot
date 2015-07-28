@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../recursionsct.rst:4
+# 2f50d465bf0c491f896c2b5733fbd963
+msgid "XXX  36.4. Recursion: a script calling itself"
+msgstr ""
+
+#: ../../recursionsct.rst:6
+# 9bcc8116491f4684b606029224f1aad3
+msgid "Can a script `recursively <localvar.html#RECURSIONREF>`__ call itself? Indeed."
+msgstr ""
+
+#: ../../recursionsct.rst:11
+# 5c8d0c1e358d469f89336116608d9b54
+msgid "Exemple 10. A (useless) script that recursively calls itself"
+msgstr ""
+
+#: ../../recursionsct.rst:52
+# d075ac9328424d5c961ee63513c7a10f
+msgid "Exemple 11. A (useful) script that recursively calls itself"
+msgstr ""
+
+#: ../../recursionsct.rst:113
+# 51b88d036eb14021b5b5b1b7a49ae26a
+msgid "Exemple 12. Another (useful) script that recursively calls itself"
+msgstr ""
+
+#: ../../recursionsct.rst:178
+# 4b307400eba74198b6cde600a6928316
+msgid "|Caution"
+msgstr ""
+
+#: ../../recursionsct.rst:180
+# 2dcef56ee20144458dfb721053a20fca
+msgid "Too many levels of recursion can exhaust the script's stack space, causing a segfault."
+msgstr ""
+

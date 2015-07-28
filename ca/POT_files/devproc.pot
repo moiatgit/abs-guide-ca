@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../devproc.rst:4
+# 00cc37ba08c54c89a44133c848b84132
+msgid "XXX  Chapter 29. ``      /dev     `` and ``      /proc     ``"
+msgstr ""
+
+#: ../../devproc.rst:9
+# c18fcca93f0a463e924709b9032d51a5
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../devproc.rst:13
+# c4a518e5f0444b39ac730001e39b645e
+msgid "29.1. ``         /dev        `` <devref1.html>`__"
+msgstr ""
+
+#: ../../devproc.rst:17
+# 70ddd69101e14e1fbaf5f9932603bdb5
+msgid "29.2. ``         /proc        `` <procref1.html>`__"
+msgstr ""
+
+#: ../../devproc.rst:22
+# 34bbfbcf7d3b4366983d7aa890a39d11
+msgid "A Linux or UNIX filesystem typically has the ``      /dev     `` and ``      /proc     `` special-purpose directories."
+msgstr ""
+

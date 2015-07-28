@@ -1,0 +1,417 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../debugging.rst:4
+# 52b5167cf65846a49325cd1ccf4061ee
+msgid "XXX  Chapter 32. Debugging"
+msgstr ""
+
+#: ../../debugging.rst:7
+# c89e1d0d1cf6421d84b8aa3591b4559d
+msgid "**"
+msgstr ""
+
+#: ../../debugging.rst:9
+# 5acaf8782a584eae84ff42be12802849
+msgid "*Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.*"
+msgstr ""
+
+#: ../../debugging.rst:13
+# 664207ccd2554a9a92e9b55abc5bfab8
+msgid "*--Brian Kernighan*"
+msgstr ""
+
+#: ../../debugging.rst:17
+# fc2a4940dd804a7d9c2bfcd0c3e5284a
+msgid "The Bash shell contains no built-in debugger, and only bare-bones debugging-specific commands and constructs. Syntax errors or outright typos in the script generate cryptic error messages that are often of no help in debugging a non-functional script."
+msgstr ""
+
+#: ../../debugging.rst:24
+# 5876ba27df5345e4abfb78901b77fb09
+msgid "Exemple 1. A buggy script"
+msgstr ""
+
+#: ../../debugging.rst:47
+#: ../../debugging.rst:84
+# 0e23223e023f4af0976794841ec805bb
+# 9e7392d5516c4a8395a8693d5dfec6d4
+msgid "Output from script:"
+msgstr ""
+
+#: ../../debugging.rst:56
+# 9519a26034174247a1f69e6c76bb1d3b
+msgid "What's wrong with the above script? Hint: after the *if* ."
+msgstr ""
+
+#: ../../debugging.rst:60
+# e83777fccd1344a8a28f4e879baaf4a8
+msgid "Exemple 2. Missing `keyword <internal.html#KEYWORDREF>`__"
+msgstr ""
+
+#: ../../debugging.rst:94
+# 2a3551f29ce046869207ba856efcf522
+msgid "Note that the error message does *not* necessarily reference the line in which the error occurs, but the line where the Bash interpreter finally becomes aware of the error. Error messages may disregard comment lines in a script when reporting the line number of a syntax error."
+msgstr ""
+
+#: ../../debugging.rst:100
+# db0a1f77cb5d4191abae09ea1d4ef644
+msgid "What if the script executes, but does not work as expected? This is the all too familiar logic error."
+msgstr ""
+
+#: ../../debugging.rst:105
+# fd87a51d9c1a4193a471be1f2df3a1c8
+msgid "Exemple 3. *test24* : another buggy script"
+msgstr ""
+
+#: ../../debugging.rst:130
+# 534c3c81dd0f44d49cd76eb659c31e57
+msgid "Try to find out what's wrong with `Example 32-3 <debugging.html#EX75>`__ by uncommenting the ``             echo \"$badname\"           `` line. Echo statements are useful for seeing whether what you expect is actually what you get."
+msgstr ""
+
+#: ../../debugging.rst:135
+# 39b8218713234bc18671a9cd2da9c6eb
+msgid "In this particular case, ``             rm \"$badname\"           `` will not give the desired results because ``      $badname     `` should not be quoted. Placing it in quotes ensures that **rm** has only one argument (it will match only one filename). A partial fix is to remove to quotes from ``      $badname     `` and to reset ``      $IFS     `` to contain only a newline, ``             IFS=$'\\n'           `` . However, there are simpler ways of going about it."
+msgstr ""
+
+#: ../../debugging.rst:154
+# 1ec097d2efa6431daf9146e92f20f332
+msgid "Summarizing the symptoms of a buggy script,"
+msgstr ""
+
+#: ../../debugging.rst:156
+# 114a8aca7e1f447195fe3350450af679
+msgid "It bombs with a \" syntax error \" message, or"
+msgstr ""
+
+#: ../../debugging.rst:158
+# abc881cb2ea542d3af52f7cda3b23453
+msgid "It runs, but does not work as expected ( logic error )."
+msgstr ""
+
+#: ../../debugging.rst:160
+# 30f515e859284ed2875a0fa4c4ba785c
+msgid "It runs, works as expected, but has nasty side effects ( logic bomb )."
+msgstr ""
+
+#: ../../debugging.rst:163
+# 109e31535f4049e087806a8e54f51336
+msgid "Tools for debugging non-working scripts include"
+msgstr ""
+
+#: ../../debugging.rst:165
+# a8e8aebcac4448ef9dd060b65c840291
+msgid "Inserting `echo <internal.html#ECHOREF>`__ statements at critical points in the script to trace the variables, and otherwise give a snapshot of what is going on."
+msgstr ""
+
+#: ../../debugging.rst:171
+# 8b03e6e5ee824744b4cc0c20b51f43ab
+msgid "|Tip"
+msgstr ""
+
+#: ../../debugging.rst:173
+# 60aec849fefc4b57b7d58a526d0850ac
+msgid "Even better is an **echo** that echoes only when *debug* is on."
+msgstr ""
+
+#: ../../debugging.rst:180
+# 24a15def09354c24bfba7e2a8c9fe98d
+msgid "cho), by Stefano Falsett o ###"
+msgstr ""
+
+#: ../../debugging.rst:182
+# 3da0de44acf040569434dabfd5808185
+msgid "### Will echo passed"
+msgstr ""
+
+#: ../../debugging.rst:183
+# 535451bdb1404b8ea15bd233c83ea712
+msgid "parameters only if DEBU"
+msgstr ""
+
+#: ../../debugging.rst:186
+# 4836c8c1f1da436cb964993d2d8cd39e
+msgid "if [ ! -z \"$DEBUG\""
+msgstr ""
+
+#: ../../debugging.rst:188
+# ff0557c62c4842809a0030128604ba96
+msgid "echo \"$1\" >&2 #         ^^^ t"
+msgstr ""
+
+#: ../../debugging.rst:191
+# 2d91d82c0cad4e37b580f2f84583eaa7
+msgid "fi"
+msgstr ""
+
+#: ../../debugging.rst:192
+# f8cf96b994f348d7bafa461982f789c1
+msgid "}"
+msgstr ""
+
+#: ../../debugging.rst:194
+# 885b324e7bf54a52b48ea0bb0705574c
+msgid "DEBUG=on Whatever=whatnot debecho $Whatever"
+msgstr ""
+
+#: ../../debugging.rst:197
+# 69c942015fd0444fa12be6ab745172a6
+msgid "# whatnot"
+msgstr ""
+
+#: ../../debugging.rst:199
+# 77cf311fabfd4bd9ad50aad4b658431a
+msgid "DEBUG= Whatever=notwhat debecho $Whatever"
+msgstr ""
+
+#: ../../debugging.rst:202
+# ea4eabbecedb4366bafcd4bdae225d5a
+msgid "# (Will not echo.)"
+msgstr ""
+
+#: ../../debugging.rst:250
+# 932d2a09886b4c64908f4fbce7ce38c9
+msgid "Using the `tee <extmisc.html#TEEREF>`__ filter to check processes or data flows at critical points."
+msgstr ""
+
+#: ../../debugging.rst:253
+# 9236123631c843cb9a7f03b057276102
+msgid "Setting option flags ``        -n -v -x       ``"
+msgstr ""
+
+#: ../../debugging.rst:255
+# d2c23e855a8c47fc81e0fb9b2c99f9b4
+msgid "``                 sh -n scriptname               `` checks for syntax errors without actually running the script. This is the equivalent of inserting ``                 set -n               `` or ``                 set -o noexec               `` into the script. Note that certain types of syntax errors can slip past this check."
+msgstr ""
+
+#: ../../debugging.rst:261
+# bfda04398924447ca24e8bf7fe022189
+msgid "``                 sh -v scriptname               `` echoes each command before executing it. This is the equivalent of inserting ``                 set -v               `` or ``                 set           -o verbose               `` in the script."
+msgstr ""
+
+#: ../../debugging.rst:267
+# 313ef84e41eb42179e30ed187a3a0d1d
+msgid "The ``        -n       `` and ``        -v       `` flags work well together. ``                 sh -nv           scriptname               `` gives a verbose syntax check."
+msgstr ""
+
+#: ../../debugging.rst:272
+# 8c55fd3c01af4593a882d6dc7b66ac60
+msgid "``                 sh -x scriptname               `` echoes the result each command, but in an abbreviated manner. This is the equivalent of inserting ``                 set -x               `` or ``                 set -o xtrace               `` in the script."
+msgstr ""
+
+#: ../../debugging.rst:277
+# 8d7658f7fce943a7941adc22d8dcf6e3
+msgid "Inserting ``                 set -u               `` or ``                 set -o nounset               `` in the script runs it, but gives an unbound variable error message and aborts the script."
+msgstr ""
+
+#: ../../debugging.rst:299
+# 29bcae81f7644085b66ff9775834f632
+msgid "Using an \"assert\" function to test a variable or condition at critical points in a script. (This is an idea borrowed from C.)"
+msgstr ""
+
+#: ../../debugging.rst:304
+# cadca89b97484c1ca7dabc6d66eeae9d
+msgid "Exemple 4. Testing a condition with an *assert*"
+msgstr ""
+
+#: ../../debugging.rst:361
+# d969c8818ffb42bc86e211d23e9d2d6e
+msgid "Using the `$LINENO <internalvariables.html#LINENOREF>`__ variable and the `caller <internal.html#CALLERREF>`__ builtin."
+msgstr ""
+
+#: ../../debugging.rst:364
+# ee160b4225d148f5bc48297ae70d26f2
+msgid "Trapping at exit."
+msgstr ""
+
+#: ../../debugging.rst:366
+# 2bcaedd142fb43e79156e3c085d18c64
+msgid "The `exit <internal.html#EXITREF>`__ command in a script triggers a signal 0 , terminating the process, that is, the script itself. ` [1]"
+msgstr ""
+
+#: ../../debugging.rst:368
+# 70b54cb9bef9463388de05bd43cb79b4
+msgid "<debugging.html#FTN.AEN19460>`__ It is often useful to trap the"
+msgstr ""
+
+#: ../../debugging.rst:369
+# 829ade808fbd429593ff0779d89a9da1
+msgid "*exit* , forcing a \"printout\" of variables, for example. The *trap* must be the first command in the script."
+msgstr ""
+
+#: ../../debugging.rst:373
+# 62a8ef5793fc458f91e771d8bae7cc91
+msgid "** Trapping signals**"
+msgstr ""
+
+#: ../../debugging.rst:376
+# 2176b1b715894d5e84613310e3ae1c54
+msgid "Specifies an action on receipt of a signal; also useful for debugging."
+msgstr ""
+
+#: ../../debugging.rst:381
+# 100d4911594149c8ba67917d399eb1af
+msgid "A *signal* is a message sent to a process, either by the kernel or another process, telling it to take some specified action (usually to terminate). For example, hitting a `Control-C <special-chars.html#CTLCREF>`__ sends a user interrupt, an INT signal, to a running program."
+msgstr ""
+
+#: ../../debugging.rst:390
+# a91dc22b10894123a231f6bae3fcd98e
+msgid "*A simple instance:*"
+msgstr ""
+
+#: ../../debugging.rst:407
+# 65dca32ce29f471db6a6e87434e59510
+msgid "Exemple 5. Trapping at exit"
+msgstr ""
+
+#: ../../debugging.rst:438
+# 87b2e79f68b940b196dd1e6d85556733
+msgid "Exemple 6. Cleaning up after **Control-C**"
+msgstr ""
+
+#: ../../debugging.rst:536
+# 18eb06ee14284f20afe8b48f07611d74
+msgid "Exemple 7. A Simple Implementation of a Progress Bar"
+msgstr ""
+
+#: ../../debugging.rst:578
+#: ../../debugging.rst:876
+# 753ba3f3f3fe452ebd0b13089d439389
+# 0101aaaf75414666a788b130b817b2d3
+msgid "|Note"
+msgstr ""
+
+#: ../../debugging.rst:580
+# 5c08f96732224233b34b2b8a827b985c
+msgid "The ``         DEBUG        `` argument to **trap** causes a specified action to execute after every command in a script. This permits tracing variables, for example."
+msgstr ""
+
+#: ../../debugging.rst:586
+# 321536eafd524008bd969009d5b41af7
+msgid "Exemple 8. Tracing a variable"
+msgstr ""
+
+#: ../../debugging.rst:699
+# 4cf196688cce47ff8ed0ac84dcddff97
+msgid "Of course, the **trap** command has other uses aside from debugging, such as disabling certain keystrokes within a script (see `Example A-43 <contributed-scripts.html#STOPWATCH>`__ )."
+msgstr ""
+
+#: ../../debugging.rst:705
+# 2f64e7d7fef747528a073d12b2e73c15
+msgid "Exemple 9. Running multiple processes (on an SMP box)"
+msgstr ""
+
+#: ../../debugging.rst:878
+# c876f1a7683445f5a977186f2128d0d6
+msgid "``                   trap '' SIGNAL                 `` (two adjacent apostrophes) disables SIGNAL for the remainder of the script. ``                   trap SIGNAL                 `` restores the functioning of SIGNAL once more. This is useful to protect a critical portion of a script from an undesirable interrupt."
+msgstr ""
+
+#: ../../debugging.rst:901
+# ef27cc1a1eef459b818142717801da31
+msgid "`Version 3 <bashver3.html#BASH3REF>`__ of Bash adds the following `internal variables <internalvariables.html#INTERNALVARIABLES1>`__ for use by the debugger."
+msgstr ""
+
+#: ../../debugging.rst:905
+# ad65a359c0e148d9a5380fea7afa4ea0
+msgid "``           $BASH_ARGC          ``"
+msgstr ""
+
+#: ../../debugging.rst:907
+# f429440a1cb741f39b32a774145bea39
+msgid "Number of command-line arguments passed to script, similar to ``            $#           `` <internalvariables.html#CLACOUNTREF>`__ ."
+msgstr ""
+
+#: ../../debugging.rst:911
+# a37a3e538ec24eeaa42f4d3b1c1289e2
+msgid "``           $BASH_ARGV          ``"
+msgstr ""
+
+#: ../../debugging.rst:913
+# 24d771fa204e4f62a3507100d4e755f5
+msgid "Final command-line parameter passed to script, equivalent ``            ${!#}           `` <othertypesv.html#LASTARGREF>`__ ."
+msgstr ""
+
+#: ../../debugging.rst:916
+# 06b0276b188846609b5d17c482f2d207
+msgid "``           $BASH_COMMAND          ``"
+msgstr ""
+
+#: ../../debugging.rst:918
+# 04ab9667b4734d0c90147686a62c7e8d
+msgid "Command currently executing."
+msgstr ""
+
+#: ../../debugging.rst:920
+# bf6ac6a090d045e8b50bbbdeb59be35f
+msgid "``           $BASH_EXECUTION_STRING          ``"
+msgstr ""
+
+#: ../../debugging.rst:922
+# 73908ae5ec3e4d62a3e0ca2d6c5f48b2
+msgid "The *option string* following the ``           -c          `` `option <bash-options.html#CLOPTS>`__ to Bash."
+msgstr ""
+
+#: ../../debugging.rst:925
+# 873c814a27b343e9876b31c91a6dfc78
+msgid "``           $BASH_LINENO          ``"
+msgstr ""
+
+#: ../../debugging.rst:927
+# f06295a5fde24b0f83836e77a722c324
+msgid "In a `function <functions.html#FUNCTIONREF>`__ , indicates the line number of the function call."
+msgstr ""
+
+#: ../../debugging.rst:930
+# 4fe2c0748d5244f9a7c194642cac0061
+msgid "``           $BASH_REMATCH          ``"
+msgstr ""
+
+#: ../../debugging.rst:932
+# e2c69781e82443c69867114eaf42259c
+msgid "Array variable associated with **=~** `conditional regex matching <bashver3.html#REGEXMATCHREF>`__ ."
+msgstr ""
+
+#: ../../debugging.rst:937
+# fb7825cc9ead47ce80e14676034756d7
+msgid "``           $BASH_SOURCE          ``"
+msgstr ""
+
+#: ../../debugging.rst:939
+# 5d0f349704a7434896b2e1e8ce40de3e
+msgid "This is the name of the script, usually the same as `$0 <othertypesv.html#ARG0>`__ ."
+msgstr ""
+
+#: ../../debugging.rst:942
+# a0d3656633634b3b8dfa047c6b6800d9
+msgid "``            $BASH_SUBSHELL           `` <internalvariables.html#BASHSUBSHELLREF>`__"
+msgstr ""
+
+#: ../../debugging.rst:949
+# ee126afd44db44a892a97abff8ea2620
+msgid "Notes"
+msgstr ""
+
+#: ../../debugging.rst:952
+# 3638e28dda034e56a93e296cf2dac248
+msgid "` [1]  <debugging.html#AEN19460>`__"
+msgstr ""
+
+#: ../../debugging.rst:954
+# c2d391540d054899ac22010f255d2911
+msgid "By convention, ``               signal         0             `` is assigned to `exit <exit-status.html#EXITCOMMANDREF>`__ ."
+msgstr ""
+

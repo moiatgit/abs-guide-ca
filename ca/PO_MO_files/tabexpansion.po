@@ -1,0 +1,163 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tabexpansion.rst:4
+msgid "XXX  Appendix J. An Introduction to Programmable Completion"
+msgstr ""
+
+#: ../../tabexpansion.rst:6
+msgid ""
+"The *programmable completion* feature in Bash permits typing a partial "
+"command, then pressing the **[Tab]** key to auto-complete the command "
+"sequence. ` [1]  <tabexpansion.html#FTN.AEN24082>`__ If multiple completions"
+" are possible, then **[Tab]** lists them all. Let's see how it works."
+msgstr ""
+
+#: ../../tabexpansion.rst:31
+msgid "Tab completion also works for variables and path names."
+msgstr ""
+
+#: ../../tabexpansion.rst:50
+msgid ""
+"The Bash **complete** and **compgen** `builtins "
+"<internal.html#BUILTINREF>`__ make it possible for *tab completion* to "
+"recognize partial *parameters* and *options* to commands. In a very simple "
+"case, we can use **complete** from the command-line to specify a short list "
+"of acceptable parameters."
+msgstr ""
+
+#: ../../tabexpansion.rst:72
+msgid ""
+"The ``      -f     `` option to *complete* specifies filenames, and ``      "
+"-X     `` the filter pattern."
+msgstr ""
+
+#: ../../tabexpansion.rst:75
+msgid ""
+"For anything more complex, we could write a script that specifies a list of "
+"acceptable command-line parameters. The **compgen** builtin expands a list "
+"of *arguments* to *generate* completion matches."
+msgstr ""
+
+#: ../../tabexpansion.rst:79
+msgid ""
+"Let us take a `modified version <contributed-scripts.html#USEGETOPT2>`__ of "
+"the *UseGetOpt.sh* script as an example command. This script accepts a "
+"number of command-line parameters, preceded by either a single or double "
+"dash. And here is the corresponding *completion script* , by convention "
+"given a filename corresponding to its associated command."
+msgstr ""
+
+#: ../../tabexpansion.rst:87
+msgid "Exemple 1. Completion script for *UseGetOpt.sh*"
+msgstr ""
+
+#: ../../tabexpansion.rst:123
+msgid "Now, let's try it."
+msgstr ""
+
+#: ../../tabexpansion.rst:141
+msgid ""
+"We begin by `sourcing <internal.html#SOURCEREF>`__ the \"completion "
+"script.\" This sets the command-line parameters. ` [2]"
+msgstr ""
+
+#: ../../tabexpansion.rst:143
+msgid "<tabexpansion.html#FTN.AEN24160>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:145
+msgid ""
+"In the first instance, hitting **[Tab]** after a single dash, the output is "
+"all the possible parameters preceded by *one or more* dashes. Hitting "
+"**[Tab]** after *two* dashes gives the possible parameters preceded by *two "
+"or more* dashes."
+msgstr ""
+
+#: ../../tabexpansion.rst:150
+msgid ""
+"Now, just what is the point of having to jump through flaming hoops to "
+"enable command-line tab completion? *It saves keystrokes.* ` [3]"
+msgstr ""
+
+#: ../../tabexpansion.rst:152
+msgid "<tabexpansion.html#FTN.AEN24173>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:154
+msgid "--"
+msgstr ""
+
+#: ../../tabexpansion.rst:156
+msgid "*Resources:*"
+msgstr ""
+
+#: ../../tabexpansion.rst:158
+msgid ""
+"Bash `programmable completion "
+"<http://freshmeat.net/projects/bashcompletion>`__ project"
+msgstr ""
+
+#: ../../tabexpansion.rst:161
+msgid ""
+"Mitch Frazier's `*Linux Journal* <http://www.linuxjournal.com>`__ article, "
+"`*More on Using the Bash Complete Command* "
+"<http://www.linuxjournal.com/content/more-using-bash-complete-command>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:165
+msgid ""
+"Steve's excellent two-part article, \"An Introduction to Bash Completion\" :"
+" `Part 1 <http://www.debian-"
+"administration.org/article/An_introduction_to_bash_completion_part_1>`__ and"
+" `Part 2 <http://www.debian-"
+"administration.org/article/An_introduction_to_bash_completion_part_2>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:173
+msgid "Notes"
+msgstr ""
+
+#: ../../tabexpansion.rst:176
+msgid "` [1]  <tabexpansion.html#AEN24082>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:178
+msgid ""
+"This works only from the *command line* , of course, and not within a "
+"script."
+msgstr ""
+
+#: ../../tabexpansion.rst:182
+msgid "` [2]  <tabexpansion.html#AEN24160>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:184
+msgid ""
+"Normally the default parameter completion files reside in either the ``"
+"       /etc/profile.d      `` directory or in ``       /etc/bash_completion"
+"      `` . These autoload on system startup. So, after writing a useful "
+"completion script, you might wish to move it (as *root* , of course) to one "
+"of these directories."
+msgstr ""
+
+#: ../../tabexpansion.rst:191
+msgid "` [3]  <tabexpansion.html#AEN24173>`__"
+msgstr ""
+
+#: ../../tabexpansion.rst:193
+msgid ""
+"It has been extensively documented that programmers are willing to put in "
+"long hours of effort in order to save ten minutes of \"unnecessary\" labor. "
+"This is known as *optimization* ."
+msgstr ""

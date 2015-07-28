@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../bashver2.rst:4
+# 237ff41f1f0349338fd3e0911c208c4a
+msgid "XXX  37.1. Bash, version 2"
+msgstr ""
+
+#: ../../bashver2.rst:6
+# 3aaa8297323b4ee4b5753d12120ae03e
+msgid "The current version of *Bash* , the one you have running on your machine, is most likely version 2.xx.yy, 3.xx.yy, or 4.xx.yy."
+msgstr ""
+
+#: ../../bashver2.rst:18
+# dd3264f1a2944991a3e002786769358c
+msgid "The version 2 update of the classic Bash scripting language added array variables, string and parameter expansion, and a better method of indirect variable references, among other features."
+msgstr ""
+
+#: ../../bashver2.rst:24
+# ac925eda63e7450ab931b1ef64f1f80f
+msgid "Exemple 1. String expansion"
+msgstr ""
+
+#: ../../bashver2.rst:54
+# 23d66add22484f8fbbeaa7bb9986467e
+msgid "Exemple 2. Indirect variable references - the new way"
+msgstr ""
+
+#: ../../bashver2.rst:97
+# f982575df9ea4ee6b32efea18c07c1b8
+msgid "Exemple 3. Simple database application, using indirect variable referencing"
+msgstr ""
+
+#: ../../bashver2.rst:181
+# 23c57916ac1c40458a0ddd7eab1b69fb
+msgid "Exemple 4. Using arrays and other miscellaneous trickery to deal four random hands from a deck of cards"
+msgstr ""
+

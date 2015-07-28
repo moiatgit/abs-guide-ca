@@ -1,0 +1,165 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../exit-status.rst:3
+msgid "XXX Chapter 6. Exit and Exit Status"
+msgstr ""
+
+#: ../../exit-status.rst:6
+msgid "**"
+msgstr ""
+
+#: ../../exit-status.rst:8
+msgid ""
+"*... there are dark corners in the Bourne shell, and people use all of "
+"them.*"
+msgstr ""
+
+#: ../../exit-status.rst:11
+msgid "*--Chet Ramey*"
+msgstr ""
+
+#: ../../exit-status.rst:15
+msgid "The **exit** command terminates a script, just as in a **C** program."
+msgstr ""
+
+#: ../../exit-status.rst:16
+msgid ""
+"It can also return a value, which is available to the script's parent "
+"process."
+msgstr ""
+
+#: ../../exit-status.rst:19
+msgid "Every command returns an *exit status* (sometimes referred to as a"
+msgstr ""
+
+#: ../../exit-status.rst:20
+msgid ""
+"*return status* or *exit code* ). A successful command returns a 0 , while "
+"an unsuccessful one returns a non-zero value that usually can be interpreted"
+" as an *error code* . Well-behaved UNIX commands, programs, and utilities "
+"return a 0 exit code upon successful completion, though there are some "
+"exceptions."
+msgstr ""
+
+#: ../../exit-status.rst:26
+msgid ""
+"Likewise, `functions <functions.html#FUNCTIONREF>`__ within a script and the"
+" script itself return an exit status. The last command executed in the "
+"function or script determines the exit status. Within a script, an ``"
+"             exit                        nnn               `` command may be"
+" used to deliver an ``               nnn             `` exit status to the "
+"shell ( ``               nnn             `` must be an integer in the 0 - "
+"255 range)."
+msgstr ""
+
+#: ../../exit-status.rst:36 ../../exit-status.rst:227
+msgid "|Note"
+msgstr ""
+
+#: ../../exit-status.rst:38
+msgid ""
+"When a script ends with an **exit** that has no parameter, the exit status "
+"of the script is the exit status of the last command executed in the script "
+"(previous to the **exit** )."
+msgstr ""
+
+#: ../../exit-status.rst:54 ../../exit-status.rst:74 ../../exit-status.rst:89
+msgid "tus of last command."
+msgstr ""
+
+#: ../../exit-status.rst:56
+msgid "exit"
+msgstr ""
+
+#: ../../exit-status.rst:59
+msgid ""
+"The equivalent of a bare **exit** is **exit $?** or even just omitting the "
+"**exit** ."
+msgstr ""
+
+#: ../../exit-status.rst:76
+msgid "exit $?"
+msgstr ""
+
+#: ../../exit-status.rst:180
+msgid ""
+"``      $?     `` reads the exit status of the last command executed. After "
+"a function returns, ``      $?     `` gives the exit status of the last "
+"command executed in the function. This is Bash's way of giving functions a "
+"\"return value.\" ` [1]  <exit-status.html#FTN.AEN2981>`__"
+msgstr ""
+
+#: ../../exit-status.rst:185
+msgid "Following the execution of a `pipe <special-chars.html#PIPEREF>`__ , a"
+msgstr ""
+
+#: ../../exit-status.rst:186
+msgid "``      $?     `` gives the exit status of the last command executed."
+msgstr ""
+
+#: ../../exit-status.rst:188
+msgid ""
+"After a script terminates, a ``      $?     `` from the command-line gives "
+"the exit status of the script, that is, the last command executed in the "
+"script, which is, by convention, ``             0           `` on success or"
+" an integer in the range 1 - 255 on error."
+msgstr ""
+
+#: ../../exit-status.rst:195
+msgid "Exemple 1. exit / exit status"
+msgstr ""
+
+#: ../../exit-status.rst:220
+msgid ""
+"`$? <internalvariables.html#XSTATVARREF>`__ is especially useful for testing"
+" the result of a command in a script (see `Example 16-35 "
+"<filearchiv.html#FILECOMP>`__ and `Example 16-20 <textproc.html#LOOKUP>`__ "
+")."
+msgstr ""
+
+#: ../../exit-status.rst:229
+msgid ""
+"The `! <special-chars.html#NOTREF>`__ , the *logical not* qualifier, "
+"reverses the outcome of a test or command, and this affects its `exit status"
+" <exit-status.html#EXITSTATUSREF>`__ ."
+msgstr ""
+
+#: ../../exit-status.rst:237
+msgid "Exemple 2. Negating a condition using !"
+msgstr ""
+
+#: ../../exit-status.rst:313
+msgid "|Caution"
+msgstr ""
+
+#: ../../exit-status.rst:315
+msgid ""
+"Certain exit status codes have `reserved meanings "
+"<exitcodes.html#EXITCODESREF>`__ and should not be user-specified in a "
+"script."
+msgstr ""
+
+#: ../../exit-status.rst:324
+msgid "Notes"
+msgstr ""
+
+#: ../../exit-status.rst:327
+msgid "` [1]  <exit-status.html#AEN2981>`__"
+msgstr ""
+
+#: ../../exit-status.rst:329
+msgid ""
+"In those instances when there is no `return <complexfunct.html#RETURNREF>`__"
+" terminating the function."
+msgstr ""

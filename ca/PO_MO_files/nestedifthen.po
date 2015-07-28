@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../nestedifthen.rst:3
+msgid "XXX  7.4. Nested ``             if/then           `` Condition Tests"
+msgstr ""
+
+#: ../../nestedifthen.rst:5
+msgid ""
+"Condition tests using the ``             if/then           `` construct may "
+"be nested. The net result is equivalent to using the `*&&* "
+"<ops.html#LOGOPS1>`__ compound comparison operator."
+msgstr ""
+
+#: ../../nestedifthen.rst:31
+msgid ""
+"`Example 37-4 <bashver2.html#CARDS>`__ and `Example 17-11 "
+"<system.html#BACKLIGHT>`__ demonstrate nested ``             if/then"
+"           `` condition tests."
+msgstr ""

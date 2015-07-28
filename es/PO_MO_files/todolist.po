@@ -1,0 +1,33 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../todolist.rst:4
+msgid "XXX  Appendix R. To Do List"
+msgstr ""
+
+#: ../../todolist.rst:6
+msgid ""
+"A comprehensive survey of `incompatibilities "
+"<portabilityissues.html#BASHCOMPAT>`__ between Bash and the classic `Bourne "
+"shell <why-shell.html#BASHDEF>`__ ."
+msgstr ""
+
+#: ../../todolist.rst:10
+msgid "Same as above, but for the Korn shell ( *ksh* )."
+msgstr ""
+
+#: ../../todolist.rst:12
+msgid ""
+"Merge-like revision of official "
+"https://www.gnu.org/software/bash/manual/bash.html"
+msgstr ""

@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../testconstructs.rst:4
+# 7b2b532d4cbb4cc5903f341ca3e1f568
+msgid "XXX  7.1. Test Constructs"
+msgstr ""
+
+#: ../../testconstructs.rst:6
+# 9bd9cff648f449858fcd02e24b7d1ac7
+msgid "An **if/then** construct tests whether the `exit status <exit-status.html#EXITSTATUSREF>`__ of a list of commands is 0 (since 0 means \"success\" by UNIX convention), and if so, executes one or more commands."
+msgstr ""
+
+#: ../../testconstructs.rst:11
+# 1b477aa5066a4885becee1cd543fe25e
+msgid "There exists a dedicated command called **[** ( `left bracket <special-chars.html#LEFTBRACKET>`__ special character). It is a synonym for **test** , and a `builtin <internal.html#BUILTINREF>`__ for efficiency reasons. This command considers its arguments as comparison expressions or file tests and returns an exit status corresponding to the result of the comparison (0 for true, 1 for false)."
+msgstr ""
+
+#: ../../testconstructs.rst:19
+# 798671ff1b2c49d796dcf20da1e313f6
+msgid "With version 2.02, Bash introduced the `[[ ... ]] <testconstructs.html#DBLBRACKETS>`__ *extended test command* , which performs comparisons in a manner more familiar to programmers from other languages. Note that **[[** is a `keyword <internal.html#KEYWORDREF>`__ , not a command."
+msgstr ""
+
+#: ../../testconstructs.rst:25
+# 731f1ba62acd4f74ae611b981d0b3741
+msgid "Bash sees ``                 [[ $a -lt $b ]]               `` as a single element, which returns an exit status."
+msgstr ""
+
+#: ../../testconstructs.rst:30
+# 34356bf17d164e38967c3450b71f9f1f
+msgid "The `(( ... )) <dblparens.html>`__ and `let ... <internal.html#LETREF>`__ constructs return an `exit status <exit-status.html#EXITSTATUSREF>`__ , *according to whether the arithmetic expressions they evaluate expand to a non-zero value* . These `arithmetic-expansion <arithexp.html#ARITHEXPREF>`__ constructs may therefore be used to perform `arithmetic comparisons <comparison-ops.html#ICOMPARISON1>`__ ."
+msgstr ""
+
+#: ../../testconstructs.rst:75
+# 555435d79d04487b89a5fa72604567d5
+msgid "|Caution"
+msgstr ""
+
+#: ../../testconstructs.rst:77
+# 1f2048e9ff8d42ab8e8a1a462a32a1f1
+msgid "Again, note that the *exit status* of an arithmetic expression is"
+msgstr ""
+
+#: ../../testconstructs.rst:78
+# ac1013b44d514cc396fc635131727bda
+msgid "*not* an error value."
+msgstr ""
+
+#: ../../testconstructs.rst:87
+# ebd27f909b2541ed9c2172963107bbbd
+msgid "# 1"
+msgstr ""
+
+#: ../../testconstructs.rst:89
+# db0cc66b611e443ea4ebd9240790169c
+msgid "var=-2 && (( var+=2"
+msgstr ""
+
+#: ../../testconstructs.rst:90
+# 86144892ff1e4fe1a5873bd1aa16dff3
+msgid ")) && echo $var"
+msgstr ""
+
+#: ../../testconstructs.rst:92
+# 41ad9bfd10864c89a66f34c41c892d44
+msgid "# Will not echo $v"
+msgstr ""
+
+#: ../../testconstructs.rst:93
+# 0908d3f8206c4c48bf0bb4f5d2b5abb3
+msgid "ar!"
+msgstr ""
+
+#: ../../testconstructs.rst:121
+# bdb0cf5ba1b3480da15cb13677bb06a8
+msgid "An **if** can test any command, not just conditions enclosed within brackets."
+msgstr ""
+
+#: ../../testconstructs.rst:156
+# cc8536d7789b428e95906820a38656f0
+msgid "*These last two examples courtesy of StÃ©phane Chazelas.*"
+msgstr ""
+
+#: ../../testconstructs.rst:160
+# c26fbc8ddb8546058ecb915620d8060a
+msgid "Exemple 1. What is truth?"
+msgstr ""
+
+#: ../../testconstructs.rst:290
+# 4104ef043431441388c1fd39c9a3e3b2
+msgid "**Exercise.** Explain the behavior of `Example 7-1 <testconstructs.html#EX10>`__ , above."
+msgstr ""
+
+#: ../../testconstructs.rst:313
+#: ../../testconstructs.rst:382
+#: ../../testconstructs.rst:666
+# 908bc63b283a4da5913853a005281015
+# e77b9e9ca5324fd191e77b2b8f6e25c2
+# 7f02d6f815d74882bce9894e4e90f495
+msgid "|Note"
+msgstr ""
+
+#: ../../testconstructs.rst:315
+# f73c4d659e2247bc80febd48809a1162
+msgid "When *if* and *then* are on same line in a condition test, a semicolon must terminate the *if* statement. Both *if* and *then* are `keywords <internal.html#KEYWORDREF>`__ . Keywords (or commands) begin statements, and before a new statement on the same line begins, the old one must terminate."
+msgstr ""
+
+#: ../../testconstructs.rst:326
+# fa7a346f277e429485626eb8bb01bfab
+msgid "]; then"
+msgstr ""
+
+#: ../../testconstructs.rst:345
+# 9dad6faed3724ee589a989db764dfd03
+msgid "** Else if and elif**"
+msgstr ""
+
+#: ../../testconstructs.rst:348
+# 8837a71034b24083816ba3e8b232d931
+msgid "``                   elif                 `` is a contraction for *else if* . The effect is to nest an inner if/then construct within an outer one."
+msgstr ""
+
+#: ../../testconstructs.rst:372
+# 40ad971a59514078abec80d72d87e117
+msgid "The ``             if test condition-true           `` construct is the"
+msgstr ""
+
+#: ../../testconstructs.rst:373
+# 47338a53c5a74618ac25f73f9271564a
+msgid "exact equivalent of ``             if [ condition-true ]           `` . As it happens, the left bracket, **[** , is a *token* ` [1]"
+msgstr ""
+
+#: ../../testconstructs.rst:375
+# 598c7f629b704c6e998eab065edc2dda
+msgid "<testconstructs.html#FTN.AEN3140>`__ which invokes the **test**"
+msgstr ""
+
+#: ../../testconstructs.rst:376
+# d891848d594e48a69df22a6b4bb6aaf5
+msgid "command. The closing right bracket, **]** , in an if/test should not therefore be strictly necessary, however newer versions of Bash require it."
+msgstr ""
+
+#: ../../testconstructs.rst:384
+# 910e65639c7d49b8bbcb37d0be835f09
+msgid "The **test** command is a Bash `builtin <internal.html#BUILTINREF>`__ which tests file types and compares strings. Therefore, in a Bash script, **test** does *not* call the external ``         /usr/bin/test        `` binary, which is part of the *sh-utils* package. Likewise, **[** does not call ``         /usr/bin/[        `` , which is linked to ``         /usr/bin/test        `` ."
+msgstr ""
+
+#: ../../testconstructs.rst:399
+# ef22c78d730047a6939ddc3912cfcced
+msgid "bash$ type '[' [ is a shell builtin bash$ type '[[' [[ is a shell keywor"
+msgstr ""
+
+#: ../../testconstructs.rst:404
+# f8892f82741b4f2699cc6b40a95f5a63
+msgid "bash$ type ']]' ]] is a shell keywor"
+msgstr ""
+
+#: ../../testconstructs.rst:407
+# 13eff00bb8324dadadef60250176d315
+msgid "bash$ type ']' bash: type: ]: not f"
+msgstr ""
+
+#: ../../testconstructs.rst:409
+# 318db51328cc42278bb769df0776fff1
+msgid "ound"
+msgstr ""
+
+#: ../../testconstructs.rst:415
+# 328fd96563e748539a319029a6bbd387
+msgid "If, for some reason, you wish to use ``         /usr/bin/test        `` in a Bash script, then specify it by full pathname."
+msgstr ""
+
+#: ../../testconstructs.rst:453
+# 5e462ef30b4b46feaed0f15c8e467655
+msgid "Exemple 2. Equivalence of *test* , ``        /usr/bin/test       `` , [ ] , and ``        /usr/bin/[       ``"
+msgstr ""
+
+#: ../../testconstructs.rst:513
+# 589a8ec456824dfcbb946ff3daa07234
+msgid "the *extended test command* , adopted from *ksh88* ."
+msgstr ""
+
+#: ../../testconstructs.rst:515
+# db1ceed4dea24fbcbf7f2e81cc109e2b
+msgid "\\* \\* \\*"
+msgstr ""
+
+#: ../../testconstructs.rst:517
+# 3d9f205e87364e67a001a0246a8ea1ca
+msgid "No filename expansion or word splitting takes place between [[ and ]] , but there is parameter expansion and command substitution."
+msgstr ""
+
+#: ../../testconstructs.rst:532
+# 7648c82c23bd43429864f30d711f3e6a
+msgid "Using the **[[ ... ]]** test construct, rather than **[ ... ]** can prevent many logic errors in scripts. For example, the && , \\|\\, < , and > operators work within a [[ ]] test, despite giving an error within a [ ] construct."
+msgstr ""
+
+#: ../../testconstructs.rst:537
+# 3f1511ba2e02461a82dfad5c51725fb0
+msgid "*Arithmetic evaluation* of octal / hexadecimal constants takes place automatically within a [[ ... ]] construct."
+msgstr ""
+
+#: ../../testconstructs.rst:668
+# 4ae44aa4d8b04ed7b7c712ba068e8b7e
+msgid "Following an **if** , neither the **test** command nor the test brackets ( [ ] or [[ ]] ) are strictly necessary."
+msgstr ""
+
+#: ../../testconstructs.rst:678
+# 0c116a1fe2e548b5b6a422feab1f9c29
+msgid "null; then   # \"2>/dev/n ull\" hides error message ."
+msgstr ""
+
+#: ../../testconstructs.rst:681
+# 5368f7a08e3c441391cfb4a08325b7ef
+msgid "echo \"Now in $dir."
+msgstr ""
+
+#: ../../testconstructs.rst:684
+# eb599c337bc341868e8f850e47c202b6
+msgid "echo \"Can't change"
+msgstr ""
+
+#: ../../testconstructs.rst:686
+# 77f0edc1266142ab98f08fda55a3286b
+msgid "fi"
+msgstr ""
+
+#: ../../testconstructs.rst:691
+# d4b83d95bb13471e968f3c1102ffeb0b
+msgid "The \"if COMMAND\" construct returns the exit status of COMMAND. Similarly, a condition within test brackets may stand alone without an **if** , when used in combination with a `list construct <list-cons.html#LISTCONSREF>`__ ."
+msgstr ""
+
+#: ../../testconstructs.rst:703
+# 85af37e128d8448283d92f703f4aed50
+msgid "\" ] && echo \"$var1 is no t equal to $var2\""
+msgstr ""
+
+#: ../../testconstructs.rst:706
+# 670900b2adb44a639517ecb88e7c2309
+msgid "home=/home/bozo [ -d \"$home\" ] || ec"
+msgstr ""
+
+#: ../../testconstructs.rst:709
+# b8737310c8364aa8b03e1b3852d92e9d
+msgid "not exist.\""
+msgstr ""
+
+#: ../../testconstructs.rst:760
+# ed218279f1d54f66b1643086392177de
+msgid "arithmetic expression. If the expression evaluates as zero, it returns an `exit status <exit-status.html#EXITSTATUSREF>`__ of 1 , or \"false\" . A non-zero expression returns an exit status of 0 , or \"true\" . This is in marked contrast to using the **test** and [ ] constructs previously discussed."
+msgstr ""
+
+#: ../../testconstructs.rst:768
+# 1dd4758441be40319f6efead2ae515f6
+msgid "Exemple 3. Arithmetic Tests using (( ))"
+msgstr ""
+
+#: ../../testconstructs.rst:833
+# d05f02ec2d764b73957f17a331faf68d
+msgid "Notes"
+msgstr ""
+
+#: ../../testconstructs.rst:836
+# e55c9cdbaa374ce0a4a774ecbda11826
+msgid "` [1]  <testconstructs.html#AEN3140>`__"
+msgstr ""
+
+#: ../../testconstructs.rst:838
+# d8f3fe31d0fb4b018a0580ed370fec84
+msgid "A *token* is a symbol or short string with a special meaning attached"
+msgstr ""
+
+#: ../../testconstructs.rst:839
+# 366465fee3124b71b7140f1c0ca9190a
+msgid "to it (a `meta-meaning <x17129.html#METAMEANINGREF>`__ ). In Bash, certain tokens, such as **[** and `. (dot-command) <special-chars.html#DOTREF>`__ , may expand to *keywords* and commands."
+msgstr ""
+

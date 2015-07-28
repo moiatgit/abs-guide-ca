@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../othertypesv.rst:4
+# 04a7ef11d5b44c6797c32821c5a3fd8d
+msgid "XXX  4.4. Special Variable Types"
+msgstr ""
+
+#: ../../othertypesv.rst:8
+# 40c49749b2784bc2b7d25f905e954ea9
+msgid "Variables `visible <subshells.html#SCOPEREF>`__ only within a `code block <special-chars.html#CODEBLOCKREF>`__ or function (see also `local variables <localvar.html#LOCALREF>`__ in `functions <functions.html#FUNCTIONREF>`__ )"
+msgstr ""
+
+#: ../../othertypesv.rst:14
+# a2ec1080a6c744f9b54fc60aaf53f52f
+msgid "Variables that affect the behavior of the shell and user interface"
+msgstr ""
+
+#: ../../othertypesv.rst:18
+#: ../../othertypesv.rst:91
+#: ../../othertypesv.rst:399
+# 3b66582201b347bcbe9bfe03d0219449
+# 9796abbdeb954ab09db66a33bf28a141
+# 026182091ea844a4b4a1b3cb56d02d23
+msgid "|Note"
+msgstr ""
+
+#: ../../othertypesv.rst:20
+# bf90308b11c945759eba1dbf138875af
+msgid "In a more general context, each `process <special-chars.html#PROCESSREF>`__ has an \"environment\" , that is, a group of variables that the process may reference. In this sense, the shell behaves like any other process."
+msgstr ""
+
+#: ../../othertypesv.rst:25
+# cc80c08275b64759b941d0040b0fb886
+msgid "Every time a shell starts, it creates shell variables that correspond to its own environmental variables. Updating or adding new environmental variables causes the shell to update its environment, and all the shell's *child processes* (the commands it executes) inherit this environment."
+msgstr ""
+
+#: ../../othertypesv.rst:36
+# 915a832d25b34e3d92780182555c55d8
+msgid "|Caution"
+msgstr ""
+
+#: ../../othertypesv.rst:38
+# bb8934b8bf1b45b1ad4c0e5e9f8f77ef
+msgid "The space allotted to the environment is limited. Creating too many environmental variables or ones that use up excessive space may cause problems."
+msgstr ""
+
+#: ../../othertypesv.rst:48
+# 71252f13457a4113a83667a728fcf427
+msgid "var&=ZZZZZZZZZZZZZZ/'`\""
+msgstr ""
+
+#: ../../othertypesv.rst:50
+# b5a2682c80bd4d86aa12f5ace330374e
+msgid "bash$ du bash: /usr/bin/du: A"
+msgstr ""
+
+#: ../../othertypesv.rst:52
+# 1539e0de1451473c8e2a1ebffd097da1
+msgid "rgument list too long"
+msgstr ""
+
+#: ../../othertypesv.rst:58
+# 9eccb8e5cb6e414eb2ebe4ba2fbe3db5
+msgid "Note: this \"error\" has been fixed, as of kernel version 2.6.23."
+msgstr ""
+
+#: ../../othertypesv.rst:60
+# 2c42d730895a4257a6235acaef3882ff
+msgid "(Thank you, StÃ©phane Chazelas for the clarification, and for providing the above example.)"
+msgstr ""
+
+#: ../../othertypesv.rst:84
+# 522db829517f40fb9c6d49953a9b0f0d
+msgid "If a script sets environmental variables, they need to be \"exported,\" that is, reported to the *environment* local to the script. This is the function of the `export <internal.html#EXPORTREF>`__ command."
+msgstr ""
+
+#: ../../othertypesv.rst:93
+# 47ff2ba8fef84acd9c0effdd008e9b22
+msgid "A script can **export** variables only to child `processes <special-chars.html#PROCESSREF>`__ , that is, only to commands or processes which that particular script initiates. A script invoked from the command-line ``                         cannot                       `` export variables back to the command-line environment. *`Child processes <internal.html#FORKREF>`__ cannot export variables back to the parent processes that spawned them.*"
+msgstr ""
+
+#: ../../othertypesv.rst:102
+# 1e620797e21544a4830d1ce350d7811e
+msgid "``                         Definition:                       `` A"
+msgstr ""
+
+#: ../../othertypesv.rst:103
+# e1bbd4f4bc8249ed94108063c6f16292
+msgid "*child process* is a subprocess launched by another process, its `parent <internal.html#PARENTREF>`__ ."
+msgstr ""
+
+#: ../../othertypesv.rst:111
+# dd54712687c4455e9a65f0c929685b80
+msgid "<othertypesv.html#FTN.AEN2450>`__ : ``         $0        `` ,"
+msgstr ""
+
+#: ../../othertypesv.rst:112
+# 4e5556c5b8a84e9488aefa4f4e37dc73
+msgid "``         $1        `` , ``         $2        `` , ``         $3        `` . . ."
+msgstr ""
+
+#: ../../othertypesv.rst:115
+# 2c5bf74b066e499f916bdc8ae2a716fe
+msgid "``         $0        `` is the name of the script itself,"
+msgstr ""
+
+#: ../../othertypesv.rst:116
+# 1aa5b1187422412cb8f1a0da6ed40f33
+msgid "``         $1        `` is the first argument, ``         $2        `` the second, ``         $3        `` the third, and so forth. ` [2]  <othertypesv.html#FTN.AEN2464>`__ After ``         $9        `` , the arguments must be enclosed in brackets, for example, ``         ${10}        `` , ``         ${11}        `` , ``         ${12}        `` ."
+msgstr ""
+
+#: ../../othertypesv.rst:123
+# bf2fad0e84124b4fa4e2606696e3c1dc
+msgid "The special variables `$\\* and $@ <internalvariables.html#APPREF>`__ denote *all* the positional parameters."
+msgstr ""
+
+#: ../../othertypesv.rst:128
+# a465ccddc859470fb8dc71b7a8d73882
+msgid "Exemple 5. Positional Parameters"
+msgstr ""
+
+#: ../../othertypesv.rst:187
+# 6e41d73c28fc4575ac3edcb7aceaaa4d
+msgid "*Bracket notation* for positional parameters leads to a fairly simple way of referencing the *last* argument passed to a script on the command-line. This also requires `indirect referencing <bashver2.html#VARREFNEW>`__ ."
+msgstr ""
+
+#: ../../othertypesv.rst:206
+# 46d860a4819d4cf8b52708dd9e3853dd
+msgid "Some scripts can perform different operations, depending on which name they are invoked with. For this to work, the script needs to check ``         $0        `` , the name it was invoked by. ` [3]"
+msgstr ""
+
+#: ../../othertypesv.rst:209
+# 8a65fa1911314e2098d4e0e966533d10
+msgid "<othertypesv.html#FTN.AEN2501>`__ There must also exist symbolic"
+msgstr ""
+
+#: ../../othertypesv.rst:210
+# 8bfdcdf5fd3c41aea356af212648a07e
+msgid "links to all the alternate names of the script. See `Example 16-2 <basic.html#HELLOL>`__ ."
+msgstr ""
+
+#: ../../othertypesv.rst:215
+# 0fba119506bf41229e5ec2be8d226ed1
+msgid "|Tip"
+msgstr ""
+
+#: ../../othertypesv.rst:217
+# 138ddc7d342e42a8b5e44646c990a07a
+msgid "If a script expects a command-line parameter but is invoked without one, this may cause a *null variable assignment* , generally an undesirable result. One way to prevent this is to append an extra character to both sides of the assignment statement using the expected positional parameter."
+msgstr ""
+
+#: ../../othertypesv.rst:257
+#: ../../othertypesv.rst:302
+# fcb071b3ac1e42aa9ed5ddb31cbebe2b
+# cd45fe2c454445138bc0e65a2004e4f7
+msgid "---"
+msgstr ""
+
+#: ../../othertypesv.rst:261
+# aa08e550955e46f6a334ad76d78ddb11
+msgid "Exemple 6. *wh* , *whois* domain name lookup"
+msgstr ""
+
+#: ../../othertypesv.rst:304
+# b6739b75277f4ace98cdd58befb844b8
+msgid "The **shift** command reassigns the positional parameters, in effect shifting them to the left one notch."
+msgstr ""
+
+#: ../../othertypesv.rst:307
+# 51ca4c7893a0450c9463bc4671a151b4
+msgid "``         $1        `` <--- ``         $2        `` , ``         $2        `` <--- ``         $3        `` , ``         $3        `` <--- ``         $4        `` , etc."
+msgstr ""
+
+#: ../../othertypesv.rst:311
+# 167f24c447ae4229aaba54399c73d150
+msgid "The old ``         $1        `` disappears, but *``          $0         `` (the script name) does not change* . If you use a large number of positional parameters to a script, **shift** lets you access those past ``         10        `` , although `{bracket} notation <othertypesv.html#BRACKETNOTATION>`__ also permits this."
+msgstr ""
+
+#: ../../othertypesv.rst:320
+# e7b3981e260d4c4f9490b4791f936c5f
+msgid "Exemple 7. Using *shift*"
+msgstr ""
+
+#: ../../othertypesv.rst:356
+# 6a7e7fa47f6b4001ab59b6e5b40a3e1e
+msgid "The **shift** command can take a numerical parameter indicating how many positions to shift."
+msgstr ""
+
+#: ../../othertypesv.rst:401
+# 43693c0ab6994c6db1228dc9cd0fd0ec
+msgid "The **shift** command works in a similar fashion on parameters passed to a `function <functions.html#FUNCTIONREF>`__ . See `Example 36-18 <assortedtips.html#MULTIPLICATION>`__ ."
+msgstr ""
+
+#: ../../othertypesv.rst:411
+# 3718b81d08164c8f9d44bb068bab07ea
+msgid "Notes"
+msgstr ""
+
+#: ../../othertypesv.rst:414
+# 5cf3d921eaa34f22a6bdc660659fc066
+msgid "` [1]  <othertypesv.html#AEN2450>`__"
+msgstr ""
+
+#: ../../othertypesv.rst:416
+# 7714c120eaac49eb86fee9c0afdf779b
+msgid "Note that `*functions* also take positional parameters <complexfunct.html#PASSEDARGS>`__ ."
+msgstr ""
+
+#: ../../othertypesv.rst:420
+# 125f51077e6b4d6393d737697b85ec78
+msgid "` [2]  <othertypesv.html#AEN2464>`__"
+msgstr ""
+
+#: ../../othertypesv.rst:422
+# f7e581744ede462990bb85760900771a
+msgid "The process calling the script sets the ``       $0      `` parameter."
+msgstr ""
+
+#: ../../othertypesv.rst:423
+# c082902beefc4a3ab812d36913188239
+msgid "By convention, this parameter is the name of the script. See the `manpage <basic.html#MANREF>`__ (manual page) for **execv** ."
+msgstr ""
+
+#: ../../othertypesv.rst:426
+# 02f69d578e544eaeb84e5cc24b8402dd
+msgid "From the *command-line* , however, ``       $0      `` is the name of the shell."
+msgstr ""
+
+#: ../../othertypesv.rst:461
+# 216267dbcd1b45b9a9e7c0e90ca3cf39
+msgid "` [3]  <othertypesv.html#AEN2501>`__"
+msgstr ""
+
+#: ../../othertypesv.rst:463
+# 93d025d2d0ee4e9cb4782eefcacff59d
+msgid "If the the script is `sourced <internal.html#SOURCEREF>`__ or `symlinked <basic.html#SYMLINKREF>`__ , then this will not work. It is safer to check `$BASH\\_Source <debugging.html#BASHSOURCEREF>`__ ."
+msgstr ""
+

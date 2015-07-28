@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../operations.rst:3
+# 3e703e812c6e4428a8ace63896d6d023
+msgid "XXX Chapter 8. Operations and Related Topics"
+msgstr ""
+
+#: ../../operations.rst:8
+# 96e2f7c639b84b849503d2e0a8953354
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../operations.rst:12
+# 4f31ab6a9cbb4526ae475aa37162d1e2
+msgid "8.1. `Operators <ops.html>`__"
+msgstr ""
+
+#: ../../operations.rst:16
+# 05013e8f41b04da5833793cab7fd987d
+msgid "8.2. `Numerical Constants <numerical-constants.html>`__"
+msgstr ""
+
+#: ../../operations.rst:20
+# 6ebab090517b44dabdaebddfcb9c6ccd
+msgid "8.3. `The Double-Parentheses Construct <dblparens.html>`__"
+msgstr ""
+
+#: ../../operations.rst:24
+# 39306cae7bbe45918e56bee98f9c8a3a
+msgid "8.4. `Operator Precedence <opprecedence.html>`__"
+msgstr ""
+

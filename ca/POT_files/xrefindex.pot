@@ -1,0 +1,5792 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../xrefindex.rst:4
+# 72d96e3d88c545b48b07d774cfeeb22c
+msgid "XXX  Index"
+msgstr ""
+
+#: ../../xrefindex.rst:6
+# edc2cba80a8048c496b8bed11dac21f3
+msgid "This index / glossary / quick-reference lists many of the important topics covered in the text. Terms are arranged in *approximate* ASCII sorting order, *modified as necessary* for enhanced clarity."
+msgstr ""
+
+#: ../../xrefindex.rst:10
+# 40e361acb847489cbec79e5211dad20e
+msgid "Note that *commands* are indexed in `Part 4 <part4.html#PART4A>`__ ."
+msgstr ""
+
+#: ../../xrefindex.rst:12
+#: ../../xrefindex.rst:450
+#: ../../xrefindex.rst:621
+#: ../../xrefindex.rst:735
+#: ../../xrefindex.rst:864
+#: ../../xrefindex.rst:966
+#: ../../xrefindex.rst:1087
+#: ../../xrefindex.rst:1186
+#: ../../xrefindex.rst:1274
+#: ../../xrefindex.rst:1349
+#: ../../xrefindex.rst:1395
+#: ../../xrefindex.rst:1406
+#: ../../xrefindex.rst:1423
+#: ../../xrefindex.rst:1553
+#: ../../xrefindex.rst:1587
+#: ../../xrefindex.rst:1617
+#: ../../xrefindex.rst:1652
+#: ../../xrefindex.rst:1949
+#: ../../xrefindex.rst:1976
+#: ../../xrefindex.rst:2159
+#: ../../xrefindex.rst:2389
+#: ../../xrefindex.rst:2647
+#: ../../xrefindex.rst:2673
+#: ../../xrefindex.rst:2763
+#: ../../xrefindex.rst:2836
+#: ../../xrefindex.rst:2850
+#: ../../xrefindex.rst:2856
+# ee8f8dd5eba44dad9ae4b44d85b1563a
+# 11a4964c6dcb4ccbbd34b5b3c632cdee
+# 1f69af0d812d47b980967bd7927849d2
+# e3502cdd4a7b452c91edaa70f0b2a405
+# 87ae891066cf42fe99179b77d2926fbc
+# ef893191771e4f8391b60e7af15019e2
+# 3fde83d71aeb42ac83f98331c9146fe2
+# c66e45fe1ca24d5aa47c225c20dec025
+# 54002e3cec10448ba5b882971170171d
+# 042a76f04ac649be9bd4550b69f368d0
+# 97d21ace39dc41b28eb1aa8d525e2d0c
+# e6092359214e4d17bc176ef79a232dc1
+# f37144d58d344151a97cab9b9f271ce2
+# 4e9ccfe9c65c447da23dc72e20caaf32
+# 46930370a0a8479eaaf94399df778c13
+# d58ab6296b6a4fde980878aa0b0fccd4
+# 935d69f3b69846529397dc2058a20afe
+# 0dd8d038cd9c4b0f929a5aa988e08240
+# 02e865f71e9f4cfe97fedcdbc34e2954
+# c955e648e88f431395b0251dee399d27
+# 82369d6f4d4c464c8588aec7cdf45167
+# a0a0fb9c885d460bbf81c2956b39fafb
+# ffc372baaf544fb79bfd7183a826aac3
+# 8b90267997a44f1489bfadfa451d716b
+# 91a6c85e6d91435eb5ba015b5cecbca0
+# 98614da3d69b4adeaaf605cc8d3f7551
+# 68c981699b8145e1857f732e77077f0c
+msgid "\\* \\* \\*"
+msgstr ""
+
+#: ../../xrefindex.rst:14
+# b9dd00e4973d43ecaac29d43666de98f
+msgid "**^** (caret)"
+msgstr ""
+
+#: ../../xrefindex.rst:16
+# 6a976b01bb244dabbeba8210335d0a8a
+msgid "`Beginning-of-line <special-chars.html#BEGLINEREF>`__ , in a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:19
+# f483477874f246a9ba1ff4943575411b
+msgid "**^**"
+msgstr ""
+
+#: ../../xrefindex.rst:21
+# 16118243d20049faa51632819a90df69
+msgid "**^^**"
+msgstr ""
+
+#: ../../xrefindex.rst:23
+# ef2a7a271b4746cda742911c4023873a
+msgid "`Uppercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in *parameter substitution*"
+msgstr ""
+
+#: ../../xrefindex.rst:26
+# 1e32e7a58c6f48eaa803ab3037f2a612
+msgid "**~** *Tilde*"
+msgstr ""
+
+#: ../../xrefindex.rst:28
+# c0eb92cf87704c579af44c15c025cc0e
+msgid "**~** `home directory <special-chars.html#TILDEREF>`__ , corresponds to ``         $HOME        `` <internalvariables.html#HOMEDIRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:30
+# b834d4770cbc49a58bbc3949e06858ed
+msgid "**~/** `*Current user's* home directory <special-chars.html#TILDEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:33
+# 4cb64cb2cf3d4ed2aee8cb70425bf4d3
+msgid "**~+** `*Current* working directory <special-chars.html#WORKINGDIRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:36
+# f32ddfe0e52f4f4c998216667536dca7
+msgid "**~-** `*Previous* working directory <special-chars.html#PREVWORKINGDIR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:39
+# f805d8e3edec4798ac0f55e8ef18200a
+msgid "**=** *Equals* sign"
+msgstr ""
+
+#: ../../xrefindex.rst:41
+# 1065459efa714e23bcaf11802a6269ac
+msgid "**=** `Variable assignment <varassignment.html#EQREF>`__ operator"
+msgstr ""
+
+#: ../../xrefindex.rst:43
+# e1b83b11e4a044e6ba3e613078ca9d83
+msgid "**=** `String comparison <comparison-ops.html#SCOMPARISON1>`__ operator"
+msgstr ""
+
+#: ../../xrefindex.rst:46
+# a35bfff7b3034fa58b2dd177f28bfb5a
+msgid "**==** `String comparison <comparison-ops.html#SCOMPARISON2>`__ operator"
+msgstr ""
+
+#: ../../xrefindex.rst:49
+# 95c6fc0b855f4c929fec85209d4028db
+msgid "**=~** *Regular Expression* `match <bashver3.html#REGEXMATCHREF>`__ operator"
+msgstr ""
+
+#: ../../xrefindex.rst:52
+# 0c11e4d42daa47339c486b4f1b40f5f4
+msgid "`*Example script* <contributed-scripts.html#FINDSPLIT0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:54
+# 08ba1fcf06cc4223b33766026f133fa5
+msgid "**<** Left angle bracket"
+msgstr ""
+
+#: ../../xrefindex.rst:56
+# 19e6fbae6d9c410e95370af6932e070b
+msgid "Is-less-than"
+msgstr ""
+
+#: ../../xrefindex.rst:58
+# 4ddeb52a30404c86b36105144402f195
+msgid "`String comparison <comparison-ops.html#LTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:60
+# 1ad03865a02b4251bd0cae7c306a359c
+msgid "`Integer comparison <comparison-ops.html#INTLT>`__ within `double parentheses <dblparens.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:63
+#: ../../xrefindex.rst:84
+#: ../../xrefindex.rst:2041
+# 8c32a8c565cd46f08ff5590b5cb64fef
+# 3d8e552f25ab4a3d870fce9b1a070c26
+# e492116545bb45b7afe5c5807a4bdc5d
+msgid "Redirection"
+msgstr ""
+
+#: ../../xrefindex.rst:65
+# 2bf84eda175543408fbb7c3e5fa5ff39
+msgid "**<** ``         stdin        `` <io-redirection.html#IOREDIRECTIONREF2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:68
+# 6ae882137efc4300bed11835d75f9b76
+msgid "**<<** `*Here document* <special-chars.html#HEREDOCRRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:70
+# 80d6e096f2a148d6a70ec9e24aebb5b8
+msgid "**<<<** `*Here string* <special-chars.html#HERESTRINGREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:72
+# 10c997e38850411885681f04621e3ecd
+msgid "**<>** `Opening a file <special-chars.html#REDIRRW>`__ for *both* reading and writing"
+msgstr ""
+
+#: ../../xrefindex.rst:75
+# afa7b5b87f234592acda89671d8a88cf
+msgid "**>** Right angle bracket"
+msgstr ""
+
+#: ../../xrefindex.rst:77
+# 09f01c74f32d4444bf82aaa66307b48c
+msgid "Is-greater-than"
+msgstr ""
+
+#: ../../xrefindex.rst:79
+# 956fd6a6f4d84b9aaca5def8e9ba0219
+msgid "`String comparison <comparison-ops.html#GTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:81
+# b3c83a0b5db64835bde0b2e180a9540c
+msgid "`Integer comparison <comparison-ops.html#INTGT>`__ , within *double parentheses*"
+msgstr ""
+
+#: ../../xrefindex.rst:86
+# 4ea0b1810413433eb7aa3b8aa5465299
+msgid "**>** `Redirect ``         stdout        `` <io-redirection.html#IOREDIRECTIONREF>`__ to a file"
+msgstr ""
+
+#: ../../xrefindex.rst:90
+# b9b142d79a754f49928fc7528e57e5a9
+msgid "**>>** `Redirect ``         stdout        `` <io-redirection.html#IOREDIRECTIONREF>`__ to a file, but *append*"
+msgstr ""
+
+#: ../../xrefindex.rst:94
+# 9cdeb0d5858548af8aa2a76d84c4c630
+msgid "**i>&j** `Redirect *file descriptor* ``         i        `` <io-redirection.html#IOREDIRECTIONREF1>`__ to *file descriptor* ``        j       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:98
+# 929dc817a6c94221b8370f22e03b0d0b
+msgid "**>&j** `Redirect ``         stdout        `` <io-redirection.html#IOREDIRECTIONREF1>`__ to *file descriptor* ``        j       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:102
+#: ../../xrefindex.rst:384
+# 53d0e43bf54b4c73aec04d538c38dadd
+# 83ad840d95084007aca6ca16642052a8
+msgid "**>&2** `Redirect ``         stdout        `` <special-chars.html#REDIROUTERROR2>`__ of a command to ``        stderr       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:106
+#: ../../xrefindex.rst:392
+# 3f34bc52becd4d4e9c7ddd31ec48b487
+# 71ad2e089cfb48d9bdcc8f5dfc69a91d
+msgid "**2>&1** `Redirect ``         stderr        `` <io-redirection.html#IOREDIRECTIONREF1>`__ to ``        stdout       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:110
+#: ../../xrefindex.rst:376
+# 5d6b437c837d4e75a3485cdfd1c690b5
+# 4fc6ceda92b04d56b6a4ff25ac3a0704
+msgid "**&>** `Redirect *both* ``         stdout        `` and ``         stderr        `` <special-chars.html#REDIROUTERROR>`__ of a command to a file"
+msgstr ""
+
+#: ../../xrefindex.rst:114
+# f149726f476f4c1f8faf4290c4d127af
+msgid "**:> ``         file        ``** `Truncate file <io-redirection.html#IOREDIRECTIONREF>`__ to zero length"
+msgstr ""
+
+#: ../../xrefindex.rst:117
+# 87b22c6f58f540f0a5ee0d645d031f60
+msgid "**\\|** `Pipe <special-chars.html#PIPEREF>`__ , a device for passing the output of a command to another command or to the shell"
+msgstr ""
+
+#: ../../xrefindex.rst:120
+# a1f56d4fc45347699069a853f99ba132
+msgid "**\\|\\|** `Logical OR test operator <ops.html#ORREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:122
+# 3dbbc6a772234d1c9cbe236a12bee856
+msgid "**-** (dash)"
+msgstr ""
+
+#: ../../xrefindex.rst:124
+# 9767535e04ef470ba38f784149179e2b
+msgid "`Prefix to *default parameter* <parameter-substitution.html#DEFPARAM1>`__ , in *parameter substitution*"
+msgstr ""
+
+#: ../../xrefindex.rst:128
+# e9442eebee3545c392cf3fca9a3a5c11
+msgid "`Prefix to *option flag* <special-chars.html#DASHREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:130
+# 362abd1837fa4b508878d12b5f30246d
+msgid "`Indicating *redirection* <special-chars.html#DASHREF2>`__ from ``        stdin       `` or ``        stdout       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:133
+# f4ac644572454a4a9a3ca46733877abd
+msgid "**--** (double-dash)"
+msgstr ""
+
+#: ../../xrefindex.rst:135
+# ed7b983f431f48c9802a918548ee81f3
+msgid "`Prefix to *long* command options <special-chars.html#DOUBLEDASHREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:138
+# 8a237704ed484f8b87d90b147e8f1490
+msgid "`*C-style* variable decrement <dblparens.html#PLUSPLUSREF>`__ within `double parentheses <dblparens.html#DBLPARENSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:141
+# da97b287d94c488fa7f4afdd6e8f98ae
+msgid "**;** (semicolon)"
+msgstr ""
+
+#: ../../xrefindex.rst:143
+# 3c5e84bba0ae45aea17f6b27f2b3b17a
+msgid "`As command separator <special-chars.html#SEMICOLONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:145
+# 86041bc18b2b47dbbdfc6979fb2abb2a
+msgid "**\\\\;** `*Escaped* semicolon <moreadv.html#FINDREF0>`__ , terminates a `find <moreadv.html#FINDREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:148
+# 5099d1f8e1464e0faa1d8fd9590aab60
+msgid "**;;** `Double-semicolon <special-chars.html#DOUBLESEMICOLON>`__ , terminator in a `case <testbranch.html#CASEESAC1>`__ option"
+msgstr ""
+
+#: ../../xrefindex.rst:151
+# dad6a3f369fe47cebfdcf9f5082d411b
+msgid "Required when ..."
+msgstr ""
+
+#: ../../xrefindex.rst:153
+# 28ff9366a28546b7824ffc4020994886
+msgid "`*do* keyword is on the first line of *loop* <loops1.html#NEEDSEMICOLON>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:156
+# 201b014dd6804dbd9f68a511a869bcf4
+msgid "`terminating *curly-bracketed* code block <gotchas.html#OMITSEMICOLON>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:159
+# e105b729e7c34c1baf4cb3df8599812d
+msgid "**;;&** **;&** `Terminators <bashver4.html#NCTERM>`__ in a *case* option ( `version 4+ <bashver4.html#BASH4REF>`__ of Bash)."
+msgstr ""
+
+#: ../../xrefindex.rst:162
+# d63ed7ba7c404718bb157ec96a9f6963
+msgid "**:** Colon"
+msgstr ""
+
+#: ../../xrefindex.rst:164
+# 44827927f0e3461bb9caeb5f0695f822
+msgid "**:> ``         filename        ``** `Truncate file <io-redirection.html#IOREDIRECTIONREF>`__ to zero length"
+msgstr ""
+
+#: ../../xrefindex.rst:167
+# 172d89f0006b480cbe077a93ff05b22c
+msgid "`*null* command <special-chars.html#NULLREF>`__ , equivalent to the `true <internal.html#TRUEREF>`__ Bash builtin"
+msgstr ""
+
+#: ../../xrefindex.rst:170
+# 303dc9d50bff40ab935d3fff95667266
+msgid "Used in an `anonymous here document <here-docs.html#ANONHEREDOC0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:172
+# 76738b55057f4c7790cd34cd217ac3dd
+msgid "Used in an `otherwise empty function <special-chars.html#COLONINFUNCTION>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:175
+# 4a5c7a42f1254b3aabe74745ff22a0b3
+msgid "Used as a `function name <functions.html#FSTRANGEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:177
+# 7dc56f5468f64691adee33d8d6fff4c9
+msgid "**!** `Negation operator <special-chars.html#NOTREF>`__ , inverts `exit status <exit-status.html#NEGCOND>`__ of a test or command"
+msgstr ""
+
+#: ../../xrefindex.rst:180
+# 3eac3461dc964dbeba4a06c7ea50fe96
+msgid "**!=** `not-equal-to <comparison-ops.html#NOTEQUAL>`__ String comparison operator"
+msgstr ""
+
+#: ../../xrefindex.rst:183
+# 704ff581ab6e44a7b601ab9ba31f06ba
+msgid "**?** (question mark)"
+msgstr ""
+
+#: ../../xrefindex.rst:185
+# c99a00b656b44de995e88e835e780be1
+msgid "`Match zero or one characters <x17129.html#QUEXREGEX>`__ , in an `Extended Regular Expression <x17129.html#EXTREGEX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:188
+#: ../../xrefindex.rst:1959
+# 8340ef722c144056acfa12fb9d31d8d6
+# 1e4fca8ac48049d1851a0a016c235e1a
+msgid "`Single-character *wild card* <special-chars.html#QUEXWC>`__ , in `globbing <globbingref.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:191
+# 353bccd354eb4e70931bdc0900559127
+msgid "In a `*C* -style Trinary operator <special-chars.html#CSTRINARY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:193
+# 957c878cc37b415fb19930085d6c765f
+msgid "**//** `Double forward slash <internal.html#DOUBLESLASHREF>`__ , behavior of `cd <internal.html#CDREF>`__ command toward"
+msgstr ""
+
+#: ../../xrefindex.rst:196
+# 703510a569be4597b63a47d856592d8d
+msgid "**.** (dot / period)"
+msgstr ""
+
+#: ../../xrefindex.rst:198
+# 0b827fee9aea4ac9bac53dc161948dd4
+msgid "**.** `Load a file <special-chars.html#DOTREF>`__ (into a script), equivalent to `source <internal.html#SOURCEREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:201
+# f0f4b88ca02b47798e69f15b1b05adae
+msgid "**.** `Match single character <x17129.html#REGEXDOT>`__ , in a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:204
+# 383fb35b31e442818576093a6c28dc70
+msgid "**.** `Current working directory <special-chars.html#DOTDIRECTORY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:206
+# e63f0fa6f6994af1a6c82e1096b3336b
+msgid "**./** `Current working directory <internalvariables.html#CURRENTWDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:209
+# 78463416c06745e1aeb31ac240d66a11
+msgid "**..** `*Parent* directory <special-chars.html#DOTDIRECTORY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:211
+# e5ad30b1a6db48a28d8b3d2b245df858
+msgid "**' ... '** (single quotes) `*strong* quoting <varsubn.html#SNGLQUO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:213
+# 827f4e7e8ef04c64a5d9aba01c680554
+msgid "**\" ... \"** (double quotes) `*weak* quoting <varsubn.html#DBLQUO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:215
+#: ../../xrefindex.rst:960
+#: ../../xrefindex.rst:1778
+# 149adcad285344b8a341a34bdb5afdb1
+# 4c1d46f7aa6547e292242ac7fcd7819d
+# add7b91ef1654eec82b0a8d9661a42bd
+msgid "`*Double-quoting* the *backslash* ( **\\\\** ) character <quotingvar.html#QUOTINGBSL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:218
+#: ../../xrefindex.rst:222
+# cf65a606fa974031a29bedc4f776b318
+# 15f851db814f4af1b9327e57d8fc73a6
+msgid "**,**"
+msgstr ""
+
+#: ../../xrefindex.rst:220
+# 265c89d341ce4053a7d2ea4977cf1440
+msgid "`Comma operator <ops.html#COMMAOP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:224
+# e5461662b8264cb9ac4a5e1e70a581c1
+msgid "**,,**"
+msgstr ""
+
+#: ../../xrefindex.rst:226
+# 16d65480ff904bef952bc6b46cd85101
+msgid "`Lowercase conversion <bashver4.html#CASEMODPARAMSUB>`__ in *parameter substitution*"
+msgstr ""
+
+#: ../../xrefindex.rst:229
+# ad3dc002d8f34e89986c57f4a5bf0db4
+msgid "**()** Parentheses"
+msgstr ""
+
+#: ../../xrefindex.rst:231
+# 60b455743d9b40b39ce546c54e45312d
+msgid "**( ... )** `Command group <special-chars.html#PARENSREF>`__ ; starts a `subshell <subshells.html#SUBSHELLSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:234
+# bb565e46c4e14e04be12fe3c508bd51e
+msgid "**( ... )** `Enclose group <x17129.html#PARENGRPS>`__ of *Extended Regular Expressions*"
+msgstr ""
+
+#: ../../xrefindex.rst:237
+# 1190de9c1f0e4d579b456aedf1c9df1f
+msgid "**>( ... )**"
+msgstr ""
+
+#: ../../xrefindex.rst:239
+# ad39b2cbcae046f9939a5c52fd19858f
+msgid "**<( ... )** `Process substitution <process-sub.html#PROCESSSUBREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:242
+# dbfa7a18a2bf40fb95c3afd5e8118add
+msgid "**... )** `Terminates test-condition <testbranch.html#CASEPAREN>`__ in *case* construct"
+msgstr ""
+
+#: ../../xrefindex.rst:245
+# 6e6f5294136c4403bdfcc683bd90ac07
+msgid "**(( ... ))** `Double parentheses <dblparens.html#DBLPARENSREF>`__ , in arithmetic expansion"
+msgstr ""
+
+#: ../../xrefindex.rst:248
+# 7ae6607da04142a3ba351d503728150b
+msgid "**[** `Left bracket <special-chars.html#LEFTBRACKET>`__ , *test* construct"
+msgstr ""
+
+#: ../../xrefindex.rst:251
+# f4b84900114545058c4298a016fa34c0
+msgid "**[ ]** Brackets"
+msgstr ""
+
+#: ../../xrefindex.rst:253
+#: ../../xrefindex.rst:708
+# 6327bfe4793947ec8c05fb893f9dcbf3
+# e7bdd750c6bf419b8799450e42fe23dd
+msgid "`*Array* element <arrays.html#BRACKARRAY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:255
+#: ../../xrefindex.rst:710
+# dbec8dfe7d7d4f298c8fb5b22012898a
+# 28897ac5b3814aaba7224bc97e89a55a
+msgid "`Enclose character set to match <x17129.html#BRACKETSREF>`__ in a *Regular Expression*"
+msgstr ""
+
+#: ../../xrefindex.rst:258
+#: ../../xrefindex.rst:713
+# 0bd9f3d3a34a4f60a10be6ab90bc2b46
+# 56e6391c2cf945ccad1667ffee02d4e8
+msgid "`*Test* construct <special-chars.html#BRACKTEST>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:260
+# b99699a5b8d24bfd8f6c35f26836d2ba
+msgid "**[[ ... ]]** `Double brackets <testconstructs.html#DBLBRACKETS>`__ , extended *test* construct"
+msgstr ""
+
+#: ../../xrefindex.rst:263
+# 22dbfdfadd03422d86b33edae78d817f
+msgid "**$** `*Anchor* <x17129.html#DOLLARSIGNREF>`__ , in a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:266
+# 00d7e848299c4efd833fc187be1dc8f4
+msgid "**$** `Prefix to a variable name <varsubn.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:268
+# f9538a4c2f974437b2dc6875f7f1e7c9
+msgid "**$( ... )** `Command substitution <varassignment.html#COMMANDSUBREF0>`__ , setting a variable with output of a command, using parentheses notation"
+msgstr ""
+
+#: ../../xrefindex.rst:272
+# 21f966672fc34161bb1effc0d02512d7
+msgid "**\\` ... \\`** `Command substitution <commandsub.html#BACKQUOTESREF>`__ , using `backquotes <special-chars.html#BACKTICKSREF>`__ notation"
+msgstr ""
+
+#: ../../xrefindex.rst:275
+# ff595e274382427aa3aced63c2952392
+msgid "**$[ ... ]** `Integer expansion <special-chars.html#BRACKETARITH>`__ (deprecated)"
+msgstr ""
+
+#: ../../xrefindex.rst:278
+# 35e32c0342414e0780117d5d5ac60628
+msgid "**${ ... }** Variable manipulation / evaluation"
+msgstr ""
+
+#: ../../xrefindex.rst:280
+# 72c6e829adeb4f009730ae5c9ab22901
+msgid "**${var}** `Value of a variable <parameter-substitution.html#PSSUB1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:283
+# 8b435031447f41b9bbde670c2a3b750f
+msgid "**${#var}** `Length of a variable <parameter-substitution.html#PSOREX1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:286
+# 080bd4a8b12c48e7b0f8ddffc472d059
+msgid "**${#@}**"
+msgstr ""
+
+#: ../../xrefindex.rst:288
+# 93d6d1d56d444e73a89e1704ade3a0eb
+msgid "**${#\\*}** `Number of *positional parameters* <parameter-substitution.html#NUMPOSPARAM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:291
+# efdf27fa714f42ce893b84419360c072
+msgid "**${parameter?err\\_msg}** `Parameter-unset message <parameter-substitution.html#QERRMSG>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:294
+# c9ab1a6df6c847f4bc09658bed2a564b
+msgid "**${parameter-default}**"
+msgstr ""
+
+#: ../../xrefindex.rst:296
+# 34288d6ba2504340b1ea2eb2165f4430
+msgid "**${parameter:-default}**"
+msgstr ""
+
+#: ../../xrefindex.rst:298
+# 309cce18ef9e4490ba7de8dee2923142
+msgid "**${parameter=default}**"
+msgstr ""
+
+#: ../../xrefindex.rst:300
+# c7c746fd2a0e4989bd74eb61f75e243d
+msgid "**${parameter:=default}** `Set default parameter <parameter-substitution.html#DEFPARAM1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:303
+# 78af07d57054448ebd15db344181ed36
+msgid "**${parameter+alt\\_value}**"
+msgstr ""
+
+#: ../../xrefindex.rst:305
+# 442efc58ed3e4bd48fa6b2d8f4ebb5be
+msgid "**${parameter:+alt\\_value}**"
+msgstr ""
+
+#: ../../xrefindex.rst:307
+#: ../../xrefindex.rst:1660
+# 41ee93899cdf41cbafbc0cacba0359e7
+# 63b34d2907824e0bb4e1ed53fcf8d0b2
+msgid "`Alternate value <parameter-substitution.html#PARAMALTV>`__ of parameter, if set"
+msgstr ""
+
+#: ../../xrefindex.rst:310
+# 50b7fd52ba8f45d98e2bb085d202b38f
+msgid "**${!var}**"
+msgstr ""
+
+#: ../../xrefindex.rst:312
+# f66bbb1739d644aa951d7c999f89407a
+msgid "`Indirect referencing of a variable <ivr.html#IVR2>`__ , new notation"
+msgstr ""
+
+#: ../../xrefindex.rst:314
+# c8a4c12428b84c989e9051f3cb98dc81
+msgid "**${!#}**"
+msgstr ""
+
+#: ../../xrefindex.rst:316
+# 3963aa8e1b6343e59c637120f243f0a9
+msgid "`Final *positional parameter* <othertypesv.html#LASTARGREF>`__ . (This is an *indirect reference* to `$# <internalvariables.html#CLACOUNTREF>`__ .)"
+msgstr ""
+
+#: ../../xrefindex.rst:320
+# aa8d67b76fca45ec8e0bf99570bb3c8c
+msgid "**${!varprefix\\*}**"
+msgstr ""
+
+#: ../../xrefindex.rst:322
+# 8dd554f506354a73a0db3a79545919a5
+msgid "**${!varprefix@}**"
+msgstr ""
+
+#: ../../xrefindex.rst:324
+# a6def49e7612407783ef5a82c13103fd
+msgid "`Match *names* <parameter-substitution.html#VARPREFIXM>`__ of all previously declared variables beginning with ``        varprefix       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:328
+# 31fddc96f37e499782f61523cb202da4
+msgid "**${string:position}**"
+msgstr ""
+
+#: ../../xrefindex.rst:330
+# 7d12b278ed0441b884e32c5d2459cc10
+msgid "**${string:position:length}** `Substring extraction <string-manipulation.html#SUBSTREXTR01>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:333
+# 21bcff1c9d5c40de80ba22f26ea138cd
+msgid "**${var#Pattern}**"
+msgstr ""
+
+#: ../../xrefindex.rst:335
+# 78f6e1352aeb45ba9763735c05a7bf13
+msgid "**${var##Pattern}** `Substring removal <parameter-substitution.html#PSOREX2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:338
+# 7254400f07c9495b95057e4530a97c81
+msgid "**${var%Pattern}**"
+msgstr ""
+
+#: ../../xrefindex.rst:340
+# 6f3ac10efb244db2ae5932343a239101
+msgid "**${var%%Pattern}** `Substring removal <parameter-substitution.html#PCTPATREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:343
+# e6e93cde4e764ef0bd67d1d5f66f44a7
+msgid "**${string/substring/replacement}**"
+msgstr ""
+
+#: ../../xrefindex.rst:345
+# 0528f5f150b94ccdbd7ded062d47f7c7
+msgid "**${string//substring/replacement}**"
+msgstr ""
+
+#: ../../xrefindex.rst:347
+# 3c2e1c405a6f42ebb463d66785c4ee57
+msgid "**${string/#substring/replacement}**"
+msgstr ""
+
+#: ../../xrefindex.rst:349
+# 5d5991a3a36344a78861b5bdc8c906d0
+msgid "**${string/%substring/replacement}** `Substring replacement <string-manipulation.html#SUBSTRREPL00>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:352
+# 2e70bfdba043447fbf0e4b785fc540d3
+msgid "**$' ... '** `String expansion <escapingsection.html#STRQ>`__ , using *escaped* characters."
+msgstr ""
+
+#: ../../xrefindex.rst:355
+# 78fa5629a7ac4938a4886fd6f4efcac7
+msgid "**\\\\** `Escape <escapingsection.html#ESCP>`__ the character following"
+msgstr ""
+
+#: ../../xrefindex.rst:357
+# 9cf666b7200c455890228f9d9db0346e
+msgid "**\\\\< ... \\\\>** `Angle brackets <x17129.html#ANGLEBRAC>`__ , *escaped* , word boundary in a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:361
+# c36dfd3a981b48179766f950d69ea57b
+msgid "**\\\\{ N \\\\}** ` \"Curly\" brackets <x17129.html#ESCPCB>`__ , *escaped* , number of character sets to match in an `Extended RE <x17129.html#EXTREGEX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:365
+# 96db585b5eab4fcab94aeb2ef8ef95f6
+msgid "**\\\\;** `*Semicolon* <moreadv.html#FINDREF0>`__ , *escaped* , terminates a `find <moreadv.html#FINDREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:368
+# e651ca470cd24d59baa166e5b084f9d0
+msgid "**\\\\$$** `Indirect reverencing of a variable <ivr.html#IVRREF>`__ , old-style notation"
+msgstr ""
+
+#: ../../xrefindex.rst:371
+# 1f4ff2814fa14bc5b46af441ded2685c
+msgid "`Escaping a *newline* <escapingsection.html#ESCNEWLINE>`__ , to write a multi-line command"
+msgstr ""
+
+#: ../../xrefindex.rst:374
+# 361e21270816486690250a87b415b96f
+msgid "**&**"
+msgstr ""
+
+#: ../../xrefindex.rst:380
+# 93f809f404b345d3adbec5a9e980d023
+msgid "**>&j** `Redirect ``         stdout        `` <io-redirection.html#IOREDIRECTIONREF1>`__ to *file descriptor* *j*"
+msgstr ""
+
+#: ../../xrefindex.rst:388
+# 253f4bb19f3945be8bd241a8475e5fb2
+msgid "**i>&j** `Redirect *file descriptor* <io-redirection.html#IOREDIRECTIONREF1>`__ *i* to *file descriptor* *j*"
+msgstr ""
+
+#: ../../xrefindex.rst:396
+# ceea3641594a4392882cb3b052988980
+msgid "`Closing *file descriptors* <io-redirection.html#CFD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:398
+#: ../../xrefindex.rst:1106
+# 9f2334faa3d846ae807f0bf6cc915200
+# 03ce75a8c2f74c87a75ecd53a5fabe52
+msgid "**n<&-** Close input file descriptor *n*"
+msgstr ""
+
+#: ../../xrefindex.rst:400
+#: ../../xrefindex.rst:1108
+# ad6078a0826e4df4ac865f9fb6c20f46
+# 3381f231611443adbf2740e73234cbb0
+msgid "**0<&-** , **<&-** Close ``        stdin       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:402
+#: ../../xrefindex.rst:1110
+# f1835c44db8a48c399413eaab2266b19
+# ba6409fae7be4ffcadb70ef00bdb73d2
+msgid "**n>&-** Close output file descriptor *n*"
+msgstr ""
+
+#: ../../xrefindex.rst:404
+#: ../../xrefindex.rst:1112
+# 893f97560c0449a5a4ea72c8bb738944
+# ca6a53eaa30842b9b4aa1ff449c5b018
+msgid "**1>&-** , **>&-** Close ``        stdout       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:406
+# 30a7c7b47ff340a08a4f73339618f491
+msgid "**&&** `Logical AND test operator <special-chars.html#LOGICALAND>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:408
+# ab1b25a53cc141cc9a5d8bae2ecfc64f
+msgid "**Command &** `Run job in *background* <special-chars.html#BGJOB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:410
+# 042e86077bb7473e961e62e19a091e9f
+msgid "**#** `Hashmark <special-chars.html#HASHMARKREF>`__ , special symbol beginning a script *comment*"
+msgstr ""
+
+#: ../../xrefindex.rst:413
+# 82c42fce17944919a8cce06accd86967
+msgid "**#!** `Sha-bang <sha-bang.html#SHABANGREF>`__ , special string starting a `shell script <part1.html#WHATSASCRIPT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:416
+# ce7974a1c0b7414ea2b73f5a18069500
+msgid "**\\*** Asterisk"
+msgstr ""
+
+#: ../../xrefindex.rst:418
+# ceb310e553ac41a9876eeffd77bae766
+msgid "`*Wild card* <special-chars.html#ASTERISKREF>`__ , in `globbing <globbingref.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:421
+# 710fd2263737493d9c7ad15b0c2d222e
+msgid "`Any number of characters <special-chars.html#ASTERISKREF2>`__ in a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:424
+# ef786fabfef0495e8527df28addbb378
+msgid "**\\*\\*** `Exponentiation <ops.html#EXPONENTIATIONREF>`__ , arithmetic operator"
+msgstr ""
+
+#: ../../xrefindex.rst:427
+# bb7d7e4287804078a692b6981e34832f
+msgid "**\\*\\*** Extended *globbing* `file-match operator <bashver4.html#GLOBSTARREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:430
+# ae94fe70e5754b6eb261a8a1140430da
+msgid "**%** Percent sign"
+msgstr ""
+
+#: ../../xrefindex.rst:432
+# 1b742a7a8ac344139285b0db6efd8b3e
+msgid "`Modulo <ops.html#MODULOREF>`__ , division-remainder arithmetic operation"
+msgstr ""
+
+#: ../../xrefindex.rst:435
+# 7e47d58b12dc4db497934bdafa323c60
+msgid "`Substring removal <parameter-substitution.html#PCTPATREF>`__ (pattern matching) operator"
+msgstr ""
+
+#: ../../xrefindex.rst:438
+# 93112c74f4194c2d9d2344043cea3334
+msgid "**+** Plus sign"
+msgstr ""
+
+#: ../../xrefindex.rst:440
+# 26176847866b4a7f8e1ea452515b8539
+msgid "`*Character match* <x17129.html#PLUSREF>`__ , in an `extended Regular Expression <x17129.html#EXTREGEX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:443
+# a1475d3e8bc6443e932adcd12d93beff
+msgid "`Prefix to *alternate parameter* <parameter-substitution.html#PARAMALTV>`__ , in *parameter substitution*"
+msgstr ""
+
+#: ../../xrefindex.rst:447
+# 5d81ef4da0c045b3891378c4e1729042
+msgid "**++** `*C-style* variable increment <dblparens.html#PLUSPLUSREF>`__ , within `double parentheses <dblparens.html#DBLPARENSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:452
+# d7800877766c498e95f1c1c391be5fbb
+msgid "*Shell Variables*"
+msgstr ""
+
+#: ../../xrefindex.rst:454
+# 7f3b574f44b94e05955c4df5727b216a
+msgid "**$\\_** `Last argument to previous command <internalvariables.html#UNDERSCOREREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:457
+# 1c3d5aa7f04841289b046b8b90b43ac4
+msgid "**$-** `Flags passed to script <internalvariables.html#FLPREF>`__ , using `set <internal.html#SETREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:460
+# ccdae5c1706f4ef582f7d3bc8989a350
+msgid "**$!** `*Process ID* of last background job <internalvariables.html#PIDVARREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:463
+# 2febcfea2ac94c45ba903e56ed6403fc
+msgid "**$?** `*Exit status* of a command <exit-status.html#EXSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:465
+# 38c9c929ddfa43d793e2aaada4e3d04e
+msgid "**$@** All the *positional parameters* , `as *separate* words <internalvariables.html#APPREF2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:468
+# 1d67156cd8cc4babb5b8f1735c6e7ef6
+msgid "**$\\*** All the *positional parameters* , `as a *single* word <internalvariables.html#APPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:471
+# d32f24086fc64623896326c5c095da9b
+msgid "**$$** `Process ID <special-chars.html#PROCESSIDREF>`__ of the script"
+msgstr ""
+
+#: ../../xrefindex.rst:473
+# 957b6089f8ae4178a78515fcc693b082
+msgid "**$#** `Number of arguments passed <internalvariables.html#CLACOUNTREF>`__ to a `function <functions.html#FUNCTIONREF>`__ , or to the script itself"
+msgstr ""
+
+#: ../../xrefindex.rst:477
+# 89274aa858634254bf0fc8278ab0ef41
+msgid "**$0** `Filename of the script <othertypesv.html#SCRNAMEPARAM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:479
+# 5e6c1bfc828e4aafa6a41c1ffa3d59b1
+msgid "**$1** `First argument passed to script <othertypesv.html#POSPARAMREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:482
+# e54e5240db8f415798559d59270fab20
+msgid "**$9** `Ninth argument passed to script <othertypesv.html#POSPARAMREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:485
+# d045d96ce0464300828698a860d13eee
+msgid "`**Table** <refcards.html#SPECSHVARTAB>`__ of *shell variables*"
+msgstr ""
+
+#: ../../xrefindex.rst:487
+# ee0e46d7156e49fc81233f5e50f5dece
+msgid "\\* \\* \\* \\* \\* \\*"
+msgstr ""
+
+#: ../../xrefindex.rst:489
+# 1a47a7a2f8254d0b9e177d9671fbcd61
+msgid "**-a** `Logical AND <comparison-ops.html#COMPOUNDAND>`__ compound comparison test"
+msgstr ""
+
+#: ../../xrefindex.rst:492
+# a9ba7f5d992d4d5887b7341171f6c917
+msgid "Address database, `script example <testbranch.html#EX30>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:494
+# 78663ac9c68844fb83016021bd1e78d1
+msgid "*Advanced Bash Scripting Guide* , `where to download <mirrorsites.html#WHERE_TARBALL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:497
+# 324bcb32c5134d34a6619c5ffea7bbe4
+msgid "`Alias <aliases.html#ALIASREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:499
+# 2700aff4879040ef855fc93bdec18d8e
+msgid "`Removing an *alias* <aliases.html#UNALIASREF>`__ , using *unalias*"
+msgstr ""
+
+#: ../../xrefindex.rst:501
+# 0dab93ab98864bb78a7843eb9e0c6dc3
+msgid "`Anagramming <commandsub.html#AGRAM2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:503
+#: ../../xrefindex.rst:1450
+# b1a3da603d674667aea19c2a2ca2a299
+# d05e1f92d1ed40dfb1205d7ba2583e6f
+msgid "`*And* list <list-cons.html#LCONS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:505
+# 3a4b3b7b3f2b4773a7efde8f1a8328db
+msgid "`To supply default command-line argument <list-cons.html#ANDDEFAULT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:508
+# e64fe7717257462f9bd3f90940222e6f
+msgid "`*And* logical operator <ops.html#LOGOPS1>`__ **&&**"
+msgstr ""
+
+#: ../../xrefindex.rst:510
+# 26537ffa4a4a499384c420e5c7afe821
+msgid "`Angle brackets <x17129.html#ANGLEBRAC>`__ , *escaped* , **\\\\< . . . \\\\>** word boundary in a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:513
+# db1ebdeea51b4fd28b43631369e181df
+msgid "`Anonymous *here document* <here-docs.html#ANONHEREDOC0>`__ , using **:**"
+msgstr ""
+
+#: ../../xrefindex.rst:516
+# f72a0a91d9204915904ba6ed0a9ed9a4
+msgid "`Archiving <filearchiv.html#FAARCHIVING1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:518
+# 1edf8197564442eab09902de91cb2cd4
+msgid "`rpm <filearchiv.html#RPMREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:520
+# bac1f38df643436fb80652cf495efcd7
+msgid "`tar <filearchiv.html#TARREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:522
+# d9b866226bc440e2ab68d2672a8212ae
+msgid "`Arithmetic expansion <arithexp.html#ARITHEXPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:524
+# df11f2524a9b43e9a4cc4b87ad6cc81d
+msgid "`*exit status* of <testconstructs.html#ARXS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:526
+# 05e0946e807445e89e301ed070b018dd
+msgid "`variations of <arithexp.html#ARITHEXPVAR1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:528
+# 0068177a90a24e96af70e060aaa9b7da
+msgid "`Arithmetic operators <ops.html#AROPS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:530
+# 3d5c1a4a2abc44918fe8e4ff4833c6e2
+msgid "`combination operators <ops.html#ARITHOPSCOMB>`__ , *C* -style"
+msgstr ""
+
+#: ../../xrefindex.rst:532
+# 12dafb07a2424c5ba19958c14b3f3c46
+msgid "**+=** **-=** **\\*=** **/=** **%=**"
+msgstr ""
+
+#: ../../xrefindex.rst:536
+# a61e16f52f244a5eb320e7aa83ee76fe
+msgid "|Note"
+msgstr ""
+
+#: ../../xrefindex.rst:538
+# ce911eca3931416e933fbf8d739738a7
+msgid "`In certain contexts <bashver3.html#PLUSEQSTR>`__ , **+=** can also function as a *string concatenation* operator."
+msgstr ""
+
+#: ../../xrefindex.rst:544
+# 8c9d2e3933f44907ad7001e94c6f21cc
+msgid "`Arrays <arrays.html#ARRAYREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:546
+# 68b73afc3c3e4ec3b0d7ab244c42fb8d
+msgid "`Associative arrays <bashver4.html#ASSOCARR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:548
+# 3b26a062dc6f43938b8eec3a88fe836a
+msgid "`more efficient <optimizations.html#ASSOCARRTST>`__ than conventional arrays"
+msgstr ""
+
+#: ../../xrefindex.rst:551
+# 98bb3811724e4673a26b60734ff411b8
+msgid "`Bracket notation <arrays.html#ARRAYREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:553
+# c798de58586c443392cd85b557afae03
+msgid "`Concatenating <arrays.html#ARRAYAPPEND0>`__ , *example script*"
+msgstr ""
+
+#: ../../xrefindex.rst:555
+# 48cfc4240d334ea1be35fcab5fe61363
+msgid "`Copying <arrays.html#COPYARRAY0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:557
+# 10fff30f6d674fd598b3e4b71f515d81
+msgid "`Declaring <declareref.html#ARRAYDECLARE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:559
+# fd84ed8a4aaa48c5b635a71458c54433
+msgid "``        declare -a          array_name       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:561
+# 5bbc05632a7d46ff93838755e889de2c
+msgid "`Embedded arrays <arrays.html#ARRAYINDIR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:563
+# 24879b4ec6ff4b05ae7d1b98c63b035e
+msgid "`Empty arrays, empty elements <arrays.html#EMPTYARRAY0>`__ , *example script*"
+msgstr ""
+
+#: ../../xrefindex.rst:566
+# 467e6b329b9e448a98dc174fedd9503f
+msgid "`Indirect references <arrays.html#ARRAYINDIR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:568
+# cc9d64dc8fb64646ada263519e2ae686
+msgid "`Initialization <arrays.html#ARRAYINIT0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:570
+# c993ba592a8a4fa09c847b645f65884c
+msgid "``        array=( element1 element2 ... elementN)       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:572
+# f34e0b8c6b68438a98d19fed3f3fa9af
+msgid "`*Example script* <arrays.html#ARRAYASSIGN0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:574
+# b8e4cbdf80a449feb31d647a1a7db745
+msgid "Using `command substitution <arrays.html#ARRAYINITCS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:576
+# cd6ee3fed72a4aeea75e46d6a69a033c
+msgid "`Loading a file <arrays.html#ARRAYINITCS>`__ into an array"
+msgstr ""
+
+#: ../../xrefindex.rst:578
+# 3d188d33c7d74445a8c574d1769d24a5
+msgid "`Multidimensional <arrays.html#ARRAYMULTIDIM>`__ , simulating"
+msgstr ""
+
+#: ../../xrefindex.rst:580
+# 673bad416a554b98b3e088c599fbe3c0
+msgid "`Nesting and embedding <arrays.html#ARRAYNEST>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:582
+# 00a6ef4327554fffa3ca09c8429a89b8
+msgid "`Notation and usage <arrays.html#ARRAYNOTATION>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:584
+# b375f5f62b3541e4a526b2b349411742
+msgid "`Number of elements in <arrays.html#ARRAYNUMELEMENTS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:586
+# 2ee1bf03b127497c8a63acde4be20932
+msgid "``        ${#array_name[@]}       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:588
+# 476398195afc49818f3ac12c9f6def2b
+msgid "``        ${#array_name[*]}       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:590
+# e045c528952840c28273a6e2eb24fccd
+msgid "`Operations <arrays.html#ARRAYSYNTAX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:592
+#: ../../xrefindex.rst:1160
+#: ../../xrefindex.rst:2559
+# 75316cf4646d445e97ace414b7ad5d80
+# c22bc5b0ba1c4a969cd926d3628d32b6
+# b4353ed3cc4c484bb37f0ef900b81e23
+msgid "`Passing an *array* <assortedtips.html#PASSARRAY>`__ to a function"
+msgstr ""
+
+#: ../../xrefindex.rst:594
+# 26b69bd830d541b6925aba03a52948fb
+msgid "As `*return value* from a function <assortedtips.html#RETARRAY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:596
+# 769da1a3da114dd28f274c993ad772e0
+msgid "Special properties, `example script <arrays.html#ARRAYSPECIALPROPS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:599
+# 25c5aaf566f24efd83ef8a377453cf00
+msgid "String operations, `example script <arrays.html#ARRAYSTRINGOPS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:601
+# c40cb566a765480da1d21024eb5c71fc
+msgid "`*unset* deletes array elements <arrays.html#ARRAYUNSET>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:603
+# 72e3a4746e64430bb385630aac375fb4
+msgid "`Arrow keys <internal.html#READARROW>`__ , detecting"
+msgstr ""
+
+#: ../../xrefindex.rst:605
+# 1cdf42b835484827be1d0293866f6e1f
+msgid "ASCII"
+msgstr ""
+
+#: ../../xrefindex.rst:607
+# ef6cf68e8dac4db696c739be67e2a624
+msgid "`Definition <special-chars.html#ASCIIDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:609
+# 4b0882f54fb1413796601d0a68f40991
+msgid "`Scripts for generating ASCII table <asciitable.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:611
+# ec5d92ae3a20418db7ed302712f64a2c
+msgid "`awk <awk.html>`__ field-oriented text processing language"
+msgstr ""
+
+#: ../../xrefindex.rst:613
+# 4dade783fe544460858c4fb2b7f8a863
+msgid "``         rand()        `` <randomvar.html#AWKRANDOMREF>`__ , random function"
+msgstr ""
+
+#: ../../xrefindex.rst:616
+# 222a44548cf0472b94ec603a96fda376
+msgid "`String manipulation <string-manipulation.html#AWKSTRINGMANIP2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:618
+# 9b73447bf7c64065835d92967ef18bd7
+msgid "`Using *export* <internal.html#EXPORTAWK>`__ to pass a variable to an embedded *awk* script"
+msgstr ""
+
+#: ../../xrefindex.rst:623
+# eac2e373569f4593bcb2fe8c54da25a0
+msgid "Backlight, `setting the brightness <system.html#BACKLIGHT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:625
+# 93179ca097034c508e3cda7d4e603631
+msgid "`Backquotes <special-chars.html#BACKTICKSREF>`__ , used in `command substitution <commandsub.html#BACKQUOTESREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:628
+# a6656ccc136c40058bfd58383379ae76
+msgid "`Base conversion <mathc.html#BASE0>`__ , *example script*"
+msgstr ""
+
+#: ../../xrefindex.rst:630
+# 7f9b6f19de8b4addaa8d7e0d9a72b518
+msgid "`Bash <why-shell.html#BASHDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:632
+# 34a46b03b57c458eb37467d7cb805aa1
+msgid "`Bad scripting practices <gotchas.html#BASH3GOTCHA>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:634
+# b239992be474475eb2ff6d5f7a62d52c
+msgid "`Basics reviewed <contributed-scripts.html#BASICSREV0>`__ , *script example*"
+msgstr ""
+
+#: ../../xrefindex.rst:637
+# b57db71e541a4fd5abd35d0c4b21ac81
+msgid "`Command-line options <bash-options.html#CLOPTS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:639
+# 99592b4e589f4f80882dd9395995867f
+msgid "`**Table** <options.html#OPTIONSTABLE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:641
+# 2ce942edaed9492db59ccf519904a014
+msgid "`Features that classic *Bourne* shell lacks <portabilityissues.html#BASHCOMPAT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:644
+# 8cb9cd6277584c78bf36721fb302cde5
+msgid "`Internal variables <internalvariables.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:646
+# 5c7900e587514d7eb2d954a1492cc33c
+msgid "`Version 2 <bashver2.html#BASH2REF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:648
+# 9f474d467dea45669bf5adb9024b8b03
+msgid "`Version 3 <bashver3.html#BASH3REF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:650
+# f6cec29b08ff40d09b8c75a67c055904
+msgid "`Version 4 <bashver4.html#BASH4REF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:652
+# a5ead9fca6f84723914707d77b90b063
+msgid "`Version 4.1 <bashver4.html#BASH41>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:654
+# efdae13b2988478184dc812e3423dc38
+msgid "`Version 4.2 <bashver4.html#BASH42>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:656
+# b3d243703c44449183ff03d3a8ca3617
+msgid "`.bashrc <sample-bashrc.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:658
+# afe88c3c4ea1405e85c8a8703a709cb3
+msgid "``       $BASH_SUBSHELL      `` <internalvariables.html#BASHSUBSHELLREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:660
+# 15ef93e47c1b4e24a21015c546cc6931
+msgid "`Basic commands <basic.html#BASICCOMMANDS1>`__ , external"
+msgstr ""
+
+#: ../../xrefindex.rst:662
+# 1c682e5307c940c2a8ee83a525a0b50c
+msgid "`Batch files <dosbatch.html#DOSBATCH1>`__ , *DOS*"
+msgstr ""
+
+#: ../../xrefindex.rst:664
+# f1a3c092b4fc419387f0c1a029e2d742
+msgid "`Batch processing <timedate.html#BATCHPROCREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:666
+# e607978b2e904ef7af2c0c07e441fc17
+msgid "`bc <mathc.html#BCREF>`__ , calculator utility"
+msgstr ""
+
+#: ../../xrefindex.rst:668
+# 5ca0c429b8d444d280e40ef7475fd08f
+msgid "`In a *here document* <mathc.html#BCHEREDOC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:670
+# 6be1bf3dbad24b2092b581db083208ca
+msgid "`Template <mathc.html#BCTEMPLATE>`__ for calculating a script variable"
+msgstr ""
+
+#: ../../xrefindex.rst:673
+# a03c70a57ddb4ad3aaadceb09dfd3616
+msgid "`Bibliography <biblio.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:675
+# d4e60482139c4fc68be9921bd85463dc
+msgid "`Bison <textproc.html#BISONREF>`__ utility"
+msgstr ""
+
+#: ../../xrefindex.rst:677
+# 7e13cbcbb2e1446a8f72329c442f07fe
+msgid "`Bitwise operators <ops.html#BITWSOPS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:679
+# b06c375f6f4f4d8b9662c0425dad0451
+msgid "`Example script <contributed-scripts.html#BASE64>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:681
+# ac951cd6736c450fa462790bc23fe07f
+msgid "`Block devices <devref1.html#BLOCKDEVREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:683
+# f13a1f8bf75f4c85aa9740730c1033cc
+msgid "`testing for <fto.html#BLOCKDEVTEST>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:685
+# 3c896ffb345e493ba25c1003a1244be9
+msgid "`Blocks of code <special-chars.html#CODEBLOCKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:687
+# f6589a24d9a24feba3ca652a64148b8b
+msgid "`Iterating / looping <loops1.html#NODODONE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:689
+# 37702b5e54734285a15600290f1577de
+msgid "`Redirection <special-chars.html#BLOCKIO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:691
+# 143ced3a131f44c1b8b61a71c97529b9
+msgid "*Script example* : `Redirecting output of a a code block <special-chars.html#BLOCKIO2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:694
+# f9adce3d6ccd4bf987e8b0fc7ec16de7
+msgid "`Bootable flash drives <extmisc.html#BFS>`__ , creating"
+msgstr ""
+
+#: ../../xrefindex.rst:696
+# 57ac15e3d4f5414b936eb4d94239679d
+msgid "`Brace expansion <special-chars.html#BRACEEXPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:698
+# a9ea0e1dec6d4362a3296dce9401a2e2
+msgid "`Extended <special-chars.html#BRACEEXPREF33>`__ , ``                 {a..z}               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:701
+# 4f424c0bd6df4a99ad8ff75a8c863f6f
+msgid "`Parameterizing <bashver3.html#BRACEEXPREF3>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:703
+# 01ea2113700d4cf78ce57c709df8eda1
+msgid "With `increment and zero-padding <bashver4.html#BRACEEXPREF4>`__ (new feature in Bash, `version 4 <bashver4.html#BASH4REF>`__ )"
+msgstr ""
+
+#: ../../xrefindex.rst:706
+# 2eb3797183d247d4a6a886d7763197d9
+msgid "Brackets, **[ ]**"
+msgstr ""
+
+#: ../../xrefindex.rst:715
+# c5f4afe466e74c4d8450e8b854a0dc25
+msgid "Brackets, *curly* , **{}** , used in"
+msgstr ""
+
+#: ../../xrefindex.rst:717
+# 68ad1ba3eaed4cc292493cfbcea219c4
+msgid "`Code block <special-chars.html#CODEBLOCKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:719
+# 30068a2bc9b54959a2179654ba182365
+msgid "`*find* <moreadv.html#CURLYBRACKETSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:721
+# 06a025f4b82e444da40689e10d383aaf
+msgid "`*Extended Regular Expressions* <x17129.html#ESCPCB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:723
+# 5c3229191a7c4b1bae1a9715f529392b
+msgid "`*Positional parameters* <othertypesv.html#BRACKETNOTATION>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:725
+# b4b8608b59384afbbe0dfb9e697bf103
+msgid "`*xargs* <moreadv.html#XARGSCURLYREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:727
+# e645fe1c8b7040c38339df2763a3d728
+msgid "`break <loopcontrol.html#BRKCONT1>`__ *loop* control command"
+msgstr ""
+
+#: ../../xrefindex.rst:729
+# f126197ac65a4d20ae0f65675ea31892
+msgid "`Parameter <loopcontrol.html#BREAKPARAM>`__ (optional)"
+msgstr ""
+
+#: ../../xrefindex.rst:731
+# 6fe3f04622934451b2f7b6182076d16a
+msgid "`Builtins <internal.html#BUILTINREF>`__ in *Bash*"
+msgstr ""
+
+#: ../../xrefindex.rst:733
+# fe3f2f0637a244cb822c32ce9ea0d16f
+msgid "`Do not fork a subprocess <internal.html#BLTINFRK>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:737
+# 6364b58d443f4409805eeaca93e8acbe
+msgid "`*case* construct <testbranch.html#CASEESAC1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:739
+# 958a31c002e54b489d3ac31f6962bfad
+msgid "`Command-line parameters <testbranch.html#CASECL>`__ , handling"
+msgstr ""
+
+#: ../../xrefindex.rst:741
+# e7c9d6abac9841e597fcd2d20ad2262a
+msgid "`Globbing <testbranch.html#CSGLOB>`__ , filtering strings with"
+msgstr ""
+
+#: ../../xrefindex.rst:743
+# 896765b143854c16a72edbff4f95d995
+msgid "`cat <basic.html#CATREF>`__ , con *cat* entate file(s)"
+msgstr ""
+
+#: ../../xrefindex.rst:745
+# 284cf1ce4df0475c8740e6075ecdf103
+msgid "`Abuse of <optimizations.html#CATABUSE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:747
+#: ../../xrefindex.rst:1297
+# 562432279ff84f38992704f6362e9ee2
+# 9c1c79a270a247eeaf023b3c61bcef02
+msgid "`*cat* scripts <here-docs.html#CATSCRIPTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:749
+# ae1a7f78db4c40c9afb4af2d271a080d
+msgid "`Less efficient than redirecting ``         stdin        `` <basic.html#CATLESSEFF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:752
+# 330365831ef14cc0988210f6dcac7d95
+msgid "`Piping the output of <internal.html#READPIPEREF>`__ , to a `read <internal.html#READREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:755
+# 9f3d9088c1fd4014bc8748dcf1fab54d
+msgid "`Uses of <basic.html#CATUSES>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:757
+# bef784f6d45149198dae56c14fe4ec9b
+msgid "`Character devices <devref1.html#CHARDEVREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:759
+# 34f665cdbba34b529e1f8419e82c8eb6
+msgid "`testing for <fto.html#CHARDEVTEST>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:761
+# 0d2b287b260441029f4f995a046ddd45
+msgid "`Checksum <filearchiv.html#CHECKSUMREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:763
+# 6dca5816702e435ca67df9416c8a690c
+msgid "`Child processes <othertypesv.html#CHILDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:765
+# 3bb03a6d7e58431fa9d3237b3397146a
+msgid "`Colon <special-chars.html#NULLREF>`__ , **:** , equivalent to the `true <internal.html#TRUEREF>`__ Bash builtin"
+msgstr ""
+
+#: ../../xrefindex.rst:768
+# 53678d35c1d34d2ca50fc10ffab84058
+msgid "`Colorizing scripts <colorizing.html#COLORIZINGREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:770
+# 482c438b3298497688aff219424aa248
+msgid "Cycling through the background colors, `example script <contributed-scripts.html#SHOWALLC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:773
+# 4f37e72c7a9f42099cbbd35c097654f3
+msgid "`**Table** <colorizing.html#COLORIZTABLE>`__ of color escape sequences"
+msgstr ""
+
+#: ../../xrefindex.rst:776
+# ae9b75076aa34dacada17d1aed20c08d
+msgid "`Template <colorizing.html#COLORIZTEMPL>`__ , colored text on colored background"
+msgstr ""
+
+#: ../../xrefindex.rst:779
+# 3045a48a2e5648acb3ee5ce8ff8e7865
+msgid "`Comma operator <ops.html#COMMAOP>`__ , linking commands or operations"
+msgstr ""
+
+#: ../../xrefindex.rst:781
+# fd38521d80354c58aa13b9308e8772de
+msgid "`Command-line options <bash-options.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:783
+# ace4457a817447ebaa56312216109032
+msgid "`command\\_not\\_found\\_handle () <bashver4.html#CNFH>`__ *builtin* error-handling function ( `version 4+ <bashver4.html#BASH4REF>`__ of Bash)"
+msgstr ""
+
+#: ../../xrefindex.rst:787
+# a64007b4ecdc4445909d5595d1463602
+msgid "`Command substitution <commandsub.html#COMMANDSUBREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:789
+# 0bcc7ff58afa4370ba0664a220642d19
+msgid "`**$( ... )** <commandsub.html#CSPARENS>`__ , preferred notation"
+msgstr ""
+
+#: ../../xrefindex.rst:791
+# ca594da8011d4a07833384a45ed0055a
+msgid "`*Backquotes* <commandsub.html#BACKQUOTESREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:793
+# 696702930533468e9a1d974a56207eb5
+msgid "`Extending the *Bash* toolset <commandsub.html#CSTOOLSET>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:795
+# 13ace18c72c944628fc2c50d73176470
+msgid "`Invokes a *subshell* <commandsub.html#CSSUBSH>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:797
+# 6bc2e956906742b58a5fe3ae5fc5902f
+msgid "`Nesting <commandsub.html#CSNEST>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:799
+# c934a7d6150e419cb8d63ed2d369f084
+msgid "`Removes trailing newlines <commandsub.html#CSTRNL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:801
+# aaec42ee8d38494bb974fb6676019d29
+msgid "`Setting variable from loop output <commandsub.html#CSVL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:803
+# 7c8502e33ec24259a834fbcfed1ff9db
+msgid "`Word splitting <commandsub.html#CSWS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:805
+#: ../../xrefindex.rst:2538
+# fb591071df02418885edcdc62576a3dd
+# 2288f8762bf947c29325dd3b7e7af503
+msgid "`Comment headers <assortedtips.html#COMMENTH>`__ , special purpose"
+msgstr ""
+
+#: ../../xrefindex.rst:807
+# 49914f350f754460984674d3e50a4eed
+msgid "Commenting out blocks of code"
+msgstr ""
+
+#: ../../xrefindex.rst:809
+# f5bc452f31c348fb84fc72b2bb6e20b1
+msgid "Using an `*anonymous* here document <here-docs.html#CBLOCK1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:811
+# e4ff5af2022d44a7885e34c7245d2ae8
+msgid "Using an `*if-then* construct <assortedtips.html#COMOUTBL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:813
+# a27267fd80724232914c4f89615c2a0f
+msgid "`Communications and hosts <communications.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:815
+# 15ad7f9e7673411389cd05e2b258ade4
+msgid "`Compound comparison <comparison-ops.html#CCOMPARISON1>`__ operators"
+msgstr ""
+
+#: ../../xrefindex.rst:817
+# c0f2fd2b80804602adf15de6b3688c68
+msgid "`Compression utilities <filearchiv.html#FACOMPRESSION1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:819
+# 4f0c4fd955a7472b9455ee36e52433c3
+msgid "`bzip2 <filearchiv.html#BZIPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:821
+# 3638c96b8fb2493bb710811ff568b4b9
+msgid "`compress <filearchiv.html#COMPRESSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:823
+# 3e0ce7d28e09426e9c322a3464c6bfc9
+msgid "`gzip <filearchiv.html#GZIPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:825
+# 23d8b8f8586c4c2094a0e47e09b38390
+msgid "`zip <filearchiv.html#ZIPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:827
+#: ../../xrefindex.rst:1473
+# f61c79bc93bc493ab406d52128646c8e
+# 8d26d6143f0b46e9b31a501e472dc5de
+msgid "`continue <loopcontrol.html#BRKCONT1>`__ loop control command"
+msgstr ""
+
+#: ../../xrefindex.rst:829
+# 3a5cbe479678450e88d95a254c656f4b
+msgid "`Control characters <special-chars.html#CONTROLCHARREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:831
+# 200d148799b04c29b99480f2a24f21c1
+msgid "`Control-C <special-chars.html#CTLCREF>`__ , *break*"
+msgstr ""
+
+#: ../../xrefindex.rst:833
+# 16320fbbcb82453bb14c71e18563f720
+msgid "`Control-D <special-chars.html#CTLDREF>`__ , terminate / log out / erase"
+msgstr ""
+
+#: ../../xrefindex.rst:836
+# 1f6e9f9088f34a32bccd3a13306cfcd9
+msgid "`Control-G <special-chars.html#CTLGREF>`__ , ``                 BEL               `` ( *beep* )"
+msgstr ""
+
+#: ../../xrefindex.rst:839
+# af4f0ab3a1fe47c3be39cbd82409e914
+msgid "`Control-H <special-chars.html#CTLHREF>`__ , *rubout*"
+msgstr ""
+
+#: ../../xrefindex.rst:841
+# 9668f2b8fc0b4ee0bf997053fff6a478
+msgid "`Control-J <special-chars.html#CTLJREF>`__ , *newline*"
+msgstr ""
+
+#: ../../xrefindex.rst:843
+# 68f0620a55a54025bebbc262c6319f30
+msgid "`Control-M <special-chars.html#CTLMREF>`__ , carriage return"
+msgstr ""
+
+#: ../../xrefindex.rst:845
+# d1d11ac2958c4d60b71bf37db0e832db
+msgid "`Coprocesses <bashver4.html#COPROCREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:847
+# 0c49fc34bbe140cca733169d18f3d9b9
+msgid "`cron <system.html#CRONREF>`__ , scheduling *daemon*"
+msgstr ""
+
+#: ../../xrefindex.rst:849
+# 7d48c990769a403181da07c9006263f2
+msgid "`*C* -style syntax <assortedtips.html#CSTYLE>`__ , for handling variables"
+msgstr ""
+
+#: ../../xrefindex.rst:852
+#: ../../xrefindex.rst:1196
+# 2001b1c2a6174bd38874d60f0ab8fb4f
+# 5b957fcb5be142b4aa6556e5eb458c12
+msgid "`Crossword puzzle solver <textproc.html#CWSOLVER>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:854
+# 182247d2c0f34614809587f44d0d37ea
+msgid "`Cryptography <contributed-scripts.html#GRONSFELD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:856
+# 2d162037fa8149349397c0be1087d230
+msgid "Curly brackets {}"
+msgstr ""
+
+#: ../../xrefindex.rst:858
+# da57e330eda34fd6b1d79eeda30b166b
+msgid "`in *find* command <moreadv.html#CURLYBRACKETSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:860
+# 57437020b04c491687a1dc5b9dd0f71b
+msgid "`in an *Extended Regular Expression* <x17129.html#ESCPCB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:862
+# 1403332da5e74b9e8339f075aeb0d12d
+msgid "`in *xargs* <moreadv.html#XARGSCURLYREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:866
+# 8edda034449a4d39826092dc736f458c
+msgid "`Daemons <communications.html#DAEMONREF>`__ , in UNIX-type OS"
+msgstr ""
+
+#: ../../xrefindex.rst:868
+# ac2bf67e12a644a3aa804b0f120b6cff
+msgid "`date <timedate.html#DATEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:870
+# 5775e50adbd04d7ea134f5b7d2fbb85c
+msgid "`dc <mathc.html#DCREF>`__ , calculator utility"
+msgstr ""
+
+#: ../../xrefindex.rst:872
+# 3533849f1a8c4eae97280cb66d1a4fa5
+msgid "`dd <extmisc.html#DDREF>`__ , *data duplicator* command"
+msgstr ""
+
+#: ../../xrefindex.rst:874
+# a08531deec7a46699a07b94878386351
+msgid "`Conversions <extmisc.html#DDCONVERSIONS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:876
+# 1b544699060e45d58960d641c5d242c6
+msgid "`Copying raw data <extmisc.html#DDCOPY>`__ to/from devices"
+msgstr ""
+
+#: ../../xrefindex.rst:878
+# 131b1e697457464ca45cbf9d19b96ad0
+msgid "`File deletion <extmisc.html#DDFDEL>`__ , *secure*"
+msgstr ""
+
+#: ../../xrefindex.rst:880
+# 4d287fd3c702467598664b62bcbe98d4
+msgid "`Keystrokes <extmisc.html#DDKEYSTROKES>`__ , capturing"
+msgstr ""
+
+#: ../../xrefindex.rst:882
+# 1e47bcbe2b6943ef95e65c5d2d1c0832
+msgid "`Options <extmisc.html#DDOPTIONS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:884
+# c240fdddde8744c083bd19f33346dfea
+msgid "`Random access <extmisc.html#DDRANDOM>`__ on a data stream"
+msgstr ""
+
+#: ../../xrefindex.rst:886
+# 97b6956fd5764c558f7d4303a68af74e
+msgid "*Raspberry Pi* , `script for preparing a bootable SD card <extmisc.html#RPSDCARD01>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:889
+# ececfd71e0274f0886e94ffacea948a8
+msgid "`Swapfiles <extmisc.html#DDSWAP>`__ , initializing"
+msgstr ""
+
+#: ../../xrefindex.rst:891
+# 9f04bb29b5ff4a7d94af0529e51df201
+msgid "`Thread on *www.linuxquestions.org* <biblio.html#DDLINK>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:893
+# 0e07447a8ef14c2281ae53fb9f6d8a9d
+msgid "`Debugging scripts <debugging.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:895
+# cd33371bc9c641c3bce25bf03009726f
+msgid "`Tools <debugging.html#DEBUGTOOLS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:897
+# ba6f33346be2419e91e2ab60afeca6be
+msgid "`*Trapping* at exit <debugging.html#DEBUGTRAP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:899
+# ac7eab3ce02248dfb9e8b911cd0f2869
+msgid "`*Trapping* signals <debugging.html#TRAPREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:901
+# 2130ce19aab4404c9c5d7e163d5c9d6b
+msgid "`Decimal number <numerical-constants.html#NUMCONSTANTS>`__ , Bash interprets numbers as"
+msgstr ""
+
+#: ../../xrefindex.rst:904
+# 8c07f9022f4f408a8ebdacda252c740b
+msgid "`declare <declareref.html#DECLARE1REF>`__ builtin"
+msgstr ""
+
+#: ../../xrefindex.rst:906
+#: ../../xrefindex.rst:2645
+# 78fb355664ea4bb9b1798f516675e3e6
+# e2e30382200e47aa97ba072b812f1a8f
+msgid "`options <declareref.html#DECLAREOPSREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:908
+# 5a349d63bf384c31a4760103eb5578a6
+msgid "`case-modification <bashver4.html#DECLARECASEMOD>`__ options ( `version 4+ <bashver4.html#BASH4REF>`__ of Bash)"
+msgstr ""
+
+#: ../../xrefindex.rst:911
+# d011b38759764fdfb85433bd2187572c
+msgid "`Default parameters <parameter-substitution.html#DEFPARAM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:913
+# 6355193fca3641a2a087d2702c85ea85
+msgid "``       /dev      `` <devproc.html#DEVPROCREF>`__ directory"
+msgstr ""
+
+#: ../../xrefindex.rst:915
+# 19b60a4b33ad4c30b4b0e2dca01f996e
+msgid "``         /dev/null        `` <zeros.html#DEVNULLREF>`__ pseudo-device file"
+msgstr ""
+
+#: ../../xrefindex.rst:918
+# 81647072648c4806a4385791b0d93738
+msgid "``         /dev/urandom        `` <randomvar.html#URANDOMREF>`__ pseudo-device file, generating pseudorandom numbers with"
+msgstr ""
+
+#: ../../xrefindex.rst:921
+# 9b4eb837fb9742a8a90acae0eed02db1
+msgid "``         /dev/zero        `` <zeros.html#ZEROSREF1>`__ , pseudo-device file"
+msgstr ""
+
+#: ../../xrefindex.rst:924
+# e0b0aa4293b140ff95200c272fde1c67
+msgid "`Device file <devref1.html#DEVFILEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:926
+# 53e2ae39f8294bb48b95b0662d81ce89
+msgid "`*dialog* <assortedtips.html#DIALOGREF>`__ , utility for generating *dialog* boxes in a script"
+msgstr ""
+
+#: ../../xrefindex.rst:929
+# 18a8bcf721344f94be5ee14e2fcb16f8
+msgid "``       $DIRSTACK      `` <internalvariables.html#DIRSTACKREF>`__ *directory stack*"
+msgstr ""
+
+#: ../../xrefindex.rst:932
+# 5cabbc0ad70645d780fcd07801321f3b
+msgid "`Disabled commands <restricted-sh.html#DISABLEDCOMMREF>`__ , in *restricted shells*"
+msgstr ""
+
+#: ../../xrefindex.rst:935
+# 89e93b98f8e64c5f950b10ff0297ec73
+msgid "`do <loops1.html#DOINREF>`__ keyword, begins execution of commands within a `loop <loops.html#LOOPREF00>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:938
+# ad1a488cc01a41fb9bf2fcb41e3411fd
+msgid "`done <loops1.html#DOINREF>`__ keyword, terminates a loop"
+msgstr ""
+
+#: ../../xrefindex.rst:940
+# df4ec39cfba54ad897be2474be165e97
+msgid "`*DOS* batch files <dosbatch.html#DOSBATCH1>`__ , converting to shell scripts"
+msgstr ""
+
+#: ../../xrefindex.rst:943
+# ced607a0057e43b79846a94a376c17c2
+msgid "`*DOS* commands <dosbatch.html#DOSUNIXEQUIV>`__ , UNIX equivalents of ( **table** )"
+msgstr ""
+
+#: ../../xrefindex.rst:946
+# 130c69373d0d425b91434907ea36c9ba
+msgid "`*dot files* <basic.html#DOTFILESREF>`__ , \"hidden\" setup and configuration files"
+msgstr ""
+
+#: ../../xrefindex.rst:949
+# fae041cda86948e69e8a8fc665e5e7da
+msgid "`Double brackets <testconstructs.html#DBLBRACKETS>`__ **[[ ... ]]** `test <tests.html#IFTHEN>`__ construct"
+msgstr ""
+
+#: ../../xrefindex.rst:952
+# 2981a853c0214e56a731544cd9ce7ee9
+msgid "and `evaluation of *octal/hex* constants <testconstructs.html#DBLBRAEV>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:955
+# f0de1f297af1476ab64d6b21de7d46f7
+msgid "`Double parentheses <dblparens.html#DBLPARENSREF>`__ **(( ... ))** arithmetic expansion/evaluation construct"
+msgstr ""
+
+#: ../../xrefindex.rst:958
+# a87bb1e4b3c14842b138c277c1020b20
+msgid "`Double quotes <varsubn.html#DBLQUO>`__ **\" ... \"** *weak* quoting"
+msgstr ""
+
+#: ../../xrefindex.rst:963
+# 065440075fad49c3b862d00a601d7acd
+msgid "`Double-spacing a text file <x23170.html#DOUBLESPACE>`__ , using `sed <sedawk.html#SEDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:968
+# 6626d26c06e844e68589651e84d38b0d
+msgid "**-e** `File exists <fto.html#RTIF>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:970
+# ed4c917f86a84138945a1c21912d9301
+msgid "`echo <internal.html#ECHOREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:972
+# ecbacdf9b4c644bda203662869be1421
+msgid "`Feeding commands down a *pipe* <internal.html#ECHOGREPREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:974
+# 35b73fe875b64b8e872d049c06ee26e1
+msgid "`Setting a variable <internal.html#ECHOCS>`__ using `command substitution <commandsub.html#COMMANDSUBREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:977
+# dfa7b973d07342ff9a7ad319b9d78887
+msgid "``         /bin/echo        `` <internal.html#BINECHO>`__ , external *echo* command"
+msgstr ""
+
+#: ../../xrefindex.rst:980
+# 3e87351534884e4394787101f7e7e955
+msgid "`elif <testconstructs.html#ELIFREF1>`__ , Contraction of *else* and `if <tests.html#IFTHEN>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:983
+# 011590604f014b3e80383d44178f6de7
+msgid "`else <testconstructs.html#ELSEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:985
+# d18f1ef2521c4bc38e8587e143a75abd
+msgid "Encrypting files, using `openssl <filearchiv.html#OPENSSLREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:987
+# fbb79b0ced0544c4825efc6c0e4d2e61
+msgid "`esac <testbranch.html#CASEESAC1>`__ , keyword terminating *case* construct"
+msgstr ""
+
+#: ../../xrefindex.rst:990
+# e314ed8a0bb04c838cdd8b2601166e8e
+msgid "`*Environmental* variables <othertypesv.html#ENVREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:992
+# 7325d277e0ad4984bf45c27526edfabe
+msgid "`-eq <comparison-ops.html#EQUALREF>`__ , *is-equal-to* `integer comparison <comparison-ops.html#ICOMPARISON1>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:995
+# 616efc17919948d69f5cf116b725caf0
+msgid "`Eratosthenes, Sieve of <arrays.html#PRIMES0>`__ , algorithm for generating prime numbers"
+msgstr ""
+
+#: ../../xrefindex.rst:998
+# b73f8b6ff3384f3bba090f8d0ce8191e
+msgid "`Escaped characters <escapingsection.html#SPM>`__ , special meanings of"
+msgstr ""
+
+#: ../../xrefindex.rst:1000
+# e445951ef26d49b9a7a1e93dfeec77e5
+msgid "Within `$' ... ' <escapingsection.html#STRQ>`__ string expansion"
+msgstr ""
+
+#: ../../xrefindex.rst:1002
+# 19ca402420384727b5020570b87d9abc
+msgid "`Used with *Unicode* characters <bashver4.html#UNICODEREF2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1004
+# b0637b08d04643e9ac8a2beeb0522fcc
+msgid "``       /etc/fstab      `` <system.html#FSTABREF>`__ (filesystem mount) file"
+msgstr ""
+
+#: ../../xrefindex.rst:1007
+# f98e7f7268ed4f15a8a7443a8764d3dd
+msgid "``       /etc/passwd      `` <files.html#DATAFILESREF1>`__ (user account) file"
+msgstr ""
+
+#: ../../xrefindex.rst:1010
+# faee1b2361924abc82d33fc0700fb5e6
+msgid "``       $EUID      `` <internalvariables.html#EUIDREF>`__ , *Effective user ID*"
+msgstr ""
+
+#: ../../xrefindex.rst:1013
+# 387d57baaeb6430daebdd4e55a84d40a
+msgid "`eval <internal.html#EVALREF>`__ , Combine and *evaluate* expression(s), with variable expansion"
+msgstr ""
+
+#: ../../xrefindex.rst:1016
+# 3cc52e2a67c54847a0bd82fa569beb08
+msgid "`Effects of <internal.html#EVALEFF>`__ , *Example script*"
+msgstr ""
+
+#: ../../xrefindex.rst:1018
+# feb711c97ecf45868a929da04db6c4b3
+msgid "`Forces *reevaluation* <internal.html#EVALFORCED>`__ of arguments"
+msgstr ""
+
+#: ../../xrefindex.rst:1020
+# fcfb0f886731418a9d5a49b2d7897f22
+msgid "And `indirect references <ivr.html#EVALINDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1022
+# 2e07f6a9c04144ea910dc7fa4dc23b6b
+msgid "`Risk of using <internal.html#EVALRISK>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1024
+# 72a79b8dd51c4dc886356a7b5853aa9e
+msgid "`Using *eval* to convert *array* elements into a command list <contributed-scripts.html#SAMORSE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1027
+# 12b305de2bda454cb0fd26c0af157444
+msgid "`Using *eval* to select among variables <internal.html#ARRCHOICE0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1029
+# 936938ac70714cf1b7f6246b20d8a7d9
+msgid "`Evaluation of *octal/hex* constants within [[ ... ]] <testconstructs.html#DBLBRAEV>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1032
+# ac897b5396634d29b5bc0f8f6db7e8b9
+msgid "`exec <x17974.html#USINGEXECREF>`__ command, using in `redirection <io-redirection.html#IOREDIRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1035
+# c125214264c34ac591a4b804d6bbef94
+msgid "`Exercises <exercises.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1037
+# b776b7a5a2c9467da7768bdfacdb9a48
+msgid "Exit and Exit status"
+msgstr ""
+
+#: ../../xrefindex.rst:1039
+# 1e99a845076541e2b1ff3c22f77ec5a0
+msgid "`exit <exit-status.html#EXITCOMMANDREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:1041
+# 8d93ca48ff2d41ddb4dbbbc6d10f1050
+msgid "`Exit status <exit-status.html#EXITSTATUSREF>`__ ( *exit code* , *return* status of a command)"
+msgstr ""
+
+#: ../../xrefindex.rst:1044
+# 2efba4746dcc4290aa858c1414b9984a
+msgid "`**Table** <exitcodes.html#EXITCODESREF>`__ , *Exit codes* with special meanings"
+msgstr ""
+
+#: ../../xrefindex.rst:1047
+# 47e8e98aac404b8e8dd91072deae002e
+msgid "`Anomalous <gotchas.html#GOTCHAEXITVALANAMALIES>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1049
+# b4e0519830df474dbd2c27c749604e60
+msgid "`Out of range <exitcodes.html#EXCOOR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1051
+# c9e7c6e037304da5bb0e4b1565b34a4b
+msgid "`*Pipe* <exit-status.html#PIPEEX>`__ exit status"
+msgstr ""
+
+#: ../../xrefindex.rst:1053
+# 3115ff4e05ce43c7bd5b82d6f35ebcd5
+msgid "`Specified by a *function return* <complexfunct.html#EXITRETURN1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1055
+# 808eccd7be7348bb9a0dd0ca2344405f
+msgid "`*Successful* <exit-status.html#EXITSUCCESS>`__ , **0**"
+msgstr ""
+
+#: ../../xrefindex.rst:1057
+# 5cf0835905c142b08a87668d64db5a8c
+msgid "``         /usr/include/sysexits.h        `` <exitcodes.html#SYSEXITSREF>`__ , system file listing C/C++ standard exit codes"
+msgstr ""
+
+#: ../../xrefindex.rst:1060
+# 327a253717a646b0b7c6c9d0649bb43d
+msgid "`Export <internal.html#EXPORTREF2>`__ , to make available variables to `child processes <othertypesv.html#CHILDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1063
+# d562f6bbe76b4f7f8e2daac6fd2baad7
+msgid "`Passing a variable to an embedded *awk* script <internal.html#EXPORTAWK>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1066
+# 99e635a8997249c287f413ae26e1970b
+msgid "`expr <moreadv.html#EXPRREF>`__ , *Expression* evaluator"
+msgstr ""
+
+#: ../../xrefindex.rst:1068
+# fb786cbed92245ff820a6a3d918389f1
+msgid "`Substring extraction <moreadv.html#EXPEXTRSUB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1070
+# 2c58d48a805f4c2e9eac43ca1ae1b195
+msgid "`Substring *index* (numerical position in string) <string-manipulation.html#SUBSTRINGINDEX2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1073
+# 37e9a4b2b3bb45eb9160b348af3e5c97
+msgid "`Substring matching <string-manipulation.html#EXPRMATCH>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1075
+# 9a679c050bbf409d9198b2f5a5d2acc2
+msgid "`Extended *Regular Expressions* <x17129.html#EXTREGEX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1077
+# 4b6bbe69835241e781a54cfa6866eed8
+msgid "**?** (question mark) `Match zero / one characters <x17129.html#QUEXREGEX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1080
+# 4b6616923fac4a8b90d4f50b563bd3f2
+msgid "**( ... )** `Group of expressions <x17129.html#PARENGRPS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1082
+# fb47b4fc8c284b1eade69721bbdf2114
+msgid "**\\\\{ N \\\\}** ` \"Curly\" brackets <x17129.html#ESCPCB>`__ , *escaped* , number of character sets to match"
+msgstr ""
+
+#: ../../xrefindex.rst:1085
+#: ../../xrefindex.rst:2139
+# 2b17d48ee51b463b8104a2174309a125
+# c1e9b60b302e41c797c9e25ebc19a096
+msgid "**+** `*Character match* <x17129.html#PLUSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1089
+# 4d0da07eedf241b2a80b402abce10320
+msgid "`factor <mathc.html#FACTORREF>`__ , decomposes an integer into its prime factors"
+msgstr ""
+
+#: ../../xrefindex.rst:1092
+# 53dcbe22a0864d7eb75841bead6ce6ff
+msgid "Application: `Generating prime numbers <mathc.html#PRIMES2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1094
+# 394bcae5ac5046e294c0c6d4d353e39e
+msgid "`false <internal.html#FALSEREF>`__ , returns *unsuccessful* (1) `exit status <exit-status.html#EXITSTATUSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1097
+# 7f76cb5fa9da420389d682bd7ad834ee
+msgid "`Field <special-chars.html#FIELDREF>`__ , a group of characters that comprises an item of data"
+msgstr ""
+
+#: ../../xrefindex.rst:1100
+# 2e01797bf76b4e83a82ee186e987618a
+msgid "`Files / Archiving <filearchiv.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1102
+# e8937af6458d48439ff6dca6e40204a6
+msgid "`File descriptors <io-redirection.html#FDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1104
+# bcbd067096874e228cb669e95677fd2f
+msgid "`Closing <io-redirection.html#CFD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1114
+# ddb4e4e3fa284fedbad3e22fb6bc2666
+msgid "`File handles in *C* <io-redirection.html#FDREF1>`__ , similarity to"
+msgstr ""
+
+#: ../../xrefindex.rst:1116
+# 303246c1904e41a4a653444732680896
+msgid "`File encryption <filearchiv.html#OPENSSLREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1118
+# 97bd98df836d40a5b34948a9d7ccf090
+msgid "`find <moreadv.html#FINDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1120
+# 6fe6a329d60b4faca54a6b55ee0ebe59
+msgid "**{}** `Curly brackets <moreadv.html#CURLYBRACKETSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1122
+# a64e32b6c1ad43c2934f0d47dd83e9e1
+msgid "**\\\\;** `*Escaped* semicolon <moreadv.html#FINDREF0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1124
+# db3f7215004b41cf8bf6950f2bba52de
+msgid "`Filter <special-chars.html#FILTERDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1126
+# b1474f16a2344c1e9f2a162f1731bd8a
+msgid "`Using - with file-processing utility as a filter <special-chars.html#FILTERDASH>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1129
+# e2a5d0a5b7104871a52dbd7bf45f1641
+msgid "`Feeding output of a filter back to *same* filter <assortedtips.html#FILTEROUTP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1132
+# dbe04854b0784543b8e00493e07a2233
+msgid "`Floating point numbers <ops.html#NOFLOATINGPOINT>`__ , Bash does not recognize"
+msgstr ""
+
+#: ../../xrefindex.rst:1135
+# ba1701434a784f65a1fd852e267eb529
+msgid "`fold <textproc.html#FOLDREF>`__ , a filter to wrap lines of text"
+msgstr ""
+
+#: ../../xrefindex.rst:1137
+# b078ae3454044b7ca226be16c3b57721
+msgid "`Forking <internal.html#FORKREF>`__ a *child* process"
+msgstr ""
+
+#: ../../xrefindex.rst:1139
+#: ../../xrefindex.rst:1487
+# c9c6731422ba4c40bf579742de18271a
+# cac7fe2e29d041898bac8995cc36d9b3
+msgid "`*for* loops <loops1.html#FORLOOPREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1141
+# d07330f6c43442f7b811eb5a887e67d6
+msgid "`Functions <functions.html#FUNCTIONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1143
+# b046e1d94d0e479e9ea4cb2a93fbeac7
+msgid "`Arguments passed <complexfunct.html#PASSEDARGS>`__ referred to by position"
+msgstr ""
+
+#: ../../xrefindex.rst:1146
+# bbf213548dc741a8a6ac5b8a1f3c35ac
+msgid "`Capturing the return value <complexfunct.html#CAPTURERETVAL>`__ of a function using `echo <internal.html#ECHOREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1149
+#: ../../xrefindex.rst:1624
+# 746303484c324ca988896fa59e880d74
+# 46daa0bc12d444ebada5ea63bebff6db
+msgid "`*Colon* <special-chars.html#COLONFNAME>`__ as function name"
+msgstr ""
+
+#: ../../xrefindex.rst:1151
+# 13683b87e3e84e659151536121f26293
+msgid "`Definition must precede <functions.html#FUNCTDEFMUST>`__ first call to function"
+msgstr ""
+
+#: ../../xrefindex.rst:1154
+# 8072166142874943b8ca73446bc7d2c9
+msgid "`Exit status <complexfunct.html#EXITRETURN1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1156
+#: ../../xrefindex.rst:1454
+# d9e7257b7cbe45219404d7559bde4cc6
+# 2ee829a0a2f0444ea7986bce2dcf41ed
+msgid "`Local variables <localvar.html#LOCALREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1158
+#: ../../xrefindex.rst:1456
+# 3a5c833b49944f2b8daff9c7f7b654fa
+# c81cb68c84fa4cffbb4c64fc7acd85ef
+msgid "and `recursion <localvar.html#LOCVARRECUR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1162
+# 354e58d5b1d64033821557ffd380e553
+msgid "`Passing pointers <complexfunct.html#FUNCPOINTERS>`__ to a function"
+msgstr ""
+
+#: ../../xrefindex.rst:1164
+# f45b67c8f5e64356bd082d42b9b1a50e
+msgid "`Positional parameters <complexfunct.html#PASSEDARGS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1166
+# ae040bf74dc64ef8a1985bab777cecf9
+msgid "`Recursion <localvar.html#RECURSIONREF0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1168
+# 222572d9bd8d4d3da75ec03adff2485e
+msgid "`Redirecting ``         stdin        `` <complexfunct.html#REDSTDINFUNC1>`__ of a function"
+msgstr ""
+
+#: ../../xrefindex.rst:1172
+# f2fcd7fa8c8842e6b1b3096568691767
+msgid "`return <complexfunct.html#RETURNREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1174
+# e445b21d624b48d4a53141cdf6785580
+msgid "Multiple *return values* from a function, `example script <contributed-scripts.html#STDDEV>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1177
+# d48b3f7b3e11485da0662fb8976aaef7
+msgid "`Returning an *array* <assortedtips.html#RETARRAY>`__ from a function"
+msgstr ""
+
+#: ../../xrefindex.rst:1179
+# bb5704569d304a2fba336620d763ed71
+msgid "`*Return* range limits <assortedtips.html#RVT>`__ , workarounds"
+msgstr ""
+
+#: ../../xrefindex.rst:1181
+# 95c5cbe401ff47a88998dccdd81d0900
+msgid "`*Shift* arguments passed <complexfunct.html#FSHIFTREF>`__ to a function"
+msgstr ""
+
+#: ../../xrefindex.rst:1184
+# 02f6f5a8436f40a081f5db2358cb3ad3
+msgid "`Unusual function names <functions.html#FSTRANGEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1188
+# c5dc3fe7343942b9944888792da7ac37
+msgid "Games and amusements"
+msgstr ""
+
+#: ../../xrefindex.rst:1190
+# 808d028a99c84e0d849392c91bf093a0
+msgid "`Anagrams <assortedtips.html#AGRAM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1192
+# 7f063c2b95854703ad1cc69f9d3b0953
+msgid "`Anagrams <commandsub.html#AGRAM2>`__ , again"
+msgstr ""
+
+#: ../../xrefindex.rst:1194
+# deee1bedfec64c168b06ae6301230208
+msgid "`Bingo Number Generator <contributed-scripts.html#BINGO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1198
+# a22b515b9d054425b23b17c0c9bf0f08
+msgid "`Crypto-Quotes <textproc.html#CRYPTOQUOTE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1200
+# 9bab9b9330524ab39f538b1569e6571c
+msgid "`Dealing a deck of cards <bashver2.html#CARDS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1202
+# 127e6bea589245b4b87efd4734a2bbea
+msgid "`Fifteen Puzzle <contributed-scripts.html#FIFTEEN>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1204
+# af2f8da00f0343778522f6019037bfbe
+msgid "`Horse race <colorizing.html#HORSERACE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1206
+# 72ab23289a6b4b99b4233d085b48b082
+msgid "`Knight's Tour <contributed-scripts.html#KTOUR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1208
+# 8c1d7755f3f2412f94e7a2523fcfe5eb
+msgid "` \"Life\" game <contributed-scripts.html#LIFESLOW>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1210
+# 910d492400b2446bbe8471a2a5800258
+msgid "`Magic Squares <contributed-scripts.html#MSQUARE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1212
+# 2750517151904b40b98f9cb9a59edadf
+msgid "`Music-playing script <devref1.html#MUSICSCR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1214
+# 4618326ba6c34126857478113eb77451
+msgid "`Nim <contributed-scripts.html#NIM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1216
+# 08f9bba1acad494eb0b13dcce976808d
+msgid "`Pachinko <randomvar.html#BROWNIAN>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1218
+# 5f49bcd4978f4f2e9d55d0c4fcfec715
+msgid "`Perquackey <contributed-scripts.html#QKY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1220
+# 3462b8ce59334ed59d34c8ff17e622a2
+msgid "`Petals Around the Rose <contributed-scripts.html#PETALS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1222
+# aff5f488b3d4490cb5e1a257d74fc221
+msgid "`Podcasting <contributed-scripts.html#BASHPODDER>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1224
+# 31aa2f9a9dcd408e9b98a980a5910d79
+msgid "`Poem <arrays.html#POEM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1226
+# 0d756d4376f843f7b024b122afdf2501
+msgid "`Speech generation <wrapper.html#SPEECH00>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1228
+# 3b015d85dbd64a1d8ba12c927b5974cc
+msgid "`Towers of Hanoi <recurnolocvar.html#HANOI>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1230
+# 343630bbdbb94a1a9132af77b80b7dfa
+msgid "`Graphic version <contributed-scripts.html#HANOI2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1232
+# 5c340fe360b947b2b17b73865f046336
+msgid "`Alternate graphic version <contributed-scripts.html#HANOI2A>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1234
+# 288af272f63f4275ac6537fbc5035da0
+msgid "`getopt <extmisc.html#GETOPTY>`__ , *external* command for parsing script *command-line* arguments"
+msgstr ""
+
+#: ../../xrefindex.rst:1237
+# 7a47d712854d47ee8e9780cea2d6fd92
+msgid "`Emulated in a script <string-manipulation.html#GETOPTSIMPLE1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1239
+# 443342e8091f48478addb91fcf95cba1
+msgid "`getopts <internal.html#GETOPTSX>`__ , Bash *builtin* for parsing script *command-line* arguments"
+msgstr ""
+
+#: ../../xrefindex.rst:1242
+# 205fb6bdbc16498faa6df78c4be441cb
+msgid "``         $OPTIND        `` / ``         $OPTARG        `` <internal.html#GETOPTSOPT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1245
+# a6bb61fd03f04412aa9ae8e6f43417de
+msgid "`Global <subshells.html#SCOPEREF>`__ variable"
+msgstr ""
+
+#: ../../xrefindex.rst:1247
+# 652276daf9a74b2aa39cbadc1b633b00
+msgid "`Globbing <globbingref.html#GLOBBINGREF2>`__ , filename expansion"
+msgstr ""
+
+#: ../../xrefindex.rst:1249
+# 1f46e4ba7c8a43ca93ab47a7c3e8d89c
+msgid "`Handling filenames correctly <globbingref.html#HANDLINGFNAMES>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1251
+# 1465d8de58164031a1fee939a9778fa3
+msgid "`*Wild cards* <special-chars.html#ASTERISKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1253
+#: ../../xrefindex.rst:2825
+# e7c2fe126ce64e508c039761c05905cd
+# a7634675dfcc4295a237f88eafa066d2
+msgid "`Will not match ``         dot files        `` <globbingref.html#WDOTFILEWC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1256
+# e7e6a1fbf37e406e822e5cb4767d465b
+msgid "`Golden Ratio <mathc.html#GOLDENRATIO>`__ ( *Phi* )"
+msgstr ""
+
+#: ../../xrefindex.rst:1258
+# e83c8a6ae5034e419fbb5c096cf05c33
+msgid "`-ge <comparison-ops.html#GE0REF>`__ , *greater-than or equal* `integer comparison <comparison-ops.html#ICOMPARISON1>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:1261
+# 6cd4e9cadfd84b7ab126da19bfb1a3b9
+msgid "`-gt <comparison-ops.html#GT0REF>`__ , *greater-than* `integer comparison <comparison-ops.html#ICOMPARISON1>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:1264
+# 0689b07c4afa4c00a23a6e8f3d6d36b4
+msgid "`*groff* <textproc.html#GROFFREF>`__ , text markup and formatting language"
+msgstr ""
+
+#: ../../xrefindex.rst:1267
+# c579996bdfd4484ca94ae11900608df7
+msgid "`Gronsfeld cipher <contributed-scripts.html#GRONSFELD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1269
+# 93c879ee4337406d86eb572e926071d1
+msgid "``       $GROUPS      `` <internalvariables.html#GROUPSREF>`__ , *Groups* user belongs to"
+msgstr ""
+
+#: ../../xrefindex.rst:1272
+# ce5689e3edb34e748bb94e5487d99fa2
+msgid "`gzip <filearchiv.html#GZIPREF>`__ , compression utility"
+msgstr ""
+
+#: ../../xrefindex.rst:1276
+# 558b02d1f7534ba080428c36b3c62626
+msgid "`Hashing <internal.html#HASHREF>`__ , creating lookup keys in a table"
+msgstr ""
+
+#: ../../xrefindex.rst:1278
+# 935ffa72d84a43258af2462aba1ce571
+msgid "`*Example script* <contributed-scripts.html#HASHEX2_0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1280
+# 84e26c4d1e064cc0a14fd42e92601e87
+msgid "`head <textproc.html#HEADREF>`__ , *echo* to ``      stdout     `` lines at the beginning of a text file"
+msgstr ""
+
+#: ../../xrefindex.rst:1283
+# 2c18ffc10c2e4c6ca8ef2d8af4172afb
+msgid "`help <internal.html#HELPREF>`__ , gives usage summary of a Bash `builtin <internal.html#BUILTINREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1286
+# 37c4d73a92a74ff0a44fb5c073b28610
+msgid "`*Here* documents <here-docs.html#HEREDOCREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1288
+# 0ab705800bd14d66b8d246a5ae9cf8fc
+msgid "`*Anonymous* here documents <here-docs.html#ANONHEREDOC0>`__ , using **:**"
+msgstr ""
+
+#: ../../xrefindex.rst:1291
+# 1a5e38c078824cfd90c9c2acb82c1c50
+msgid "`Commenting out <here-docs.html#CBLOCK1>`__ blocks of code"
+msgstr ""
+
+#: ../../xrefindex.rst:1293
+# a3de3de91c2242afb35f45b4b3f23fae
+msgid "`Self-documenting <here-docs.html#HSELFDOC>`__ scripts"
+msgstr ""
+
+#: ../../xrefindex.rst:1295
+# 9f4c4e7aa153472e8be1ec659e4bceb8
+msgid "`*bc* in a *here document* <mathc.html#BCHEREDOC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1299
+# 95e81c407a2d4b039fcbf6c4f8f229e9
+msgid "`Command substitution <here-docs.html#HERECS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1301
+# 7f7c4f85c1d144fdb214c5c1998f1fa0
+msgid "`*ex* scripts <here-docs.html#EXSCRIPTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1303
+# c91ed4b2583b4c3c8dd49f57d54f6bde
+msgid "`*Function* <here-docs.html#HEREFUNC>`__ , supplying input to"
+msgstr ""
+
+#: ../../xrefindex.rst:1305
+# 737c5494982041c6b29428e7cba568ef
+msgid "`*Here* strings <x17837.html#HERESTRINGSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1307
+# 454e43e14dd6471cb317ee44242d37bd
+msgid "Calculating the `Golden Ratio <mathc.html#GOLDENRATIO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1309
+# 78b44cd90e884e9abcd34491a56b4b56
+msgid "`Prepending text <x17837.html#HSPRE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1311
+# 4c4f9ca764a244eca25f425d35bed301
+msgid "`As the ``         stdin        `` of a *loop* <x17837.html#HSLOOP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1314
+# c1e98175a0cc47258bf31fbd8b204abc
+msgid "`Using *read* <x17837.html#HSREAD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1316
+# 3196a42ca49445138bcc87073ad88df3
+msgid "`*Limit* string <here-docs.html#LIMITSTRINGREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1318
+# 4f3d98646dba49df838065ac40589d69
+msgid "` ! as a *limit string* <here-docs.html#EXCLLS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1320
+# 0bf9901264fd488a81176c3f77bc0412
+msgid "`Closing *limit string* <here-docs.html#INDENTEDLS>`__ may not be indented"
+msgstr ""
+
+#: ../../xrefindex.rst:1323
+# 3ca2b9920c2d42b395cb51312a461405
+msgid "`Dash option <here-docs.html#LIMITSTRDASH>`__ to limit string, ``        <<-LimitString       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:1326
+# dc753da3ac53488abf7d8ec555dc43f8
+msgid "`Literal text output <here-docs.html#HERELIT>`__ , for generating program code"
+msgstr ""
+
+#: ../../xrefindex.rst:1329
+# bdf58ba8977242e196c5cf32a31b2100
+msgid "`Parameter substitution <here-docs.html#HEREPARAMSUB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1331
+# 7e391130a63847efa95697a93353217c
+msgid "`Disabling <here-docs.html#HEREESC>`__ *parameter substitution*"
+msgstr ""
+
+#: ../../xrefindex.rst:1333
+# 7fa340a3aad34248a4f24c7b08d503d9
+msgid "`Passing parameters <here-docs.html#HEREPASSP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1335
+# 0dba3dbed9fc4e44b48806b2c6932bac
+msgid "`Temporary files <here-docs.html#HERETEMP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1337
+# 7fc33ba5aa3f46b7a7f6b0e08d882e53
+msgid "`Using *vi* non-interactively <here-docs.html#VIHERE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1339
+# e263ae19f5d04226b5df8d7a795377cc
+msgid "`History commands <histcommands.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1341
+# 0e59f002eab945d38c5f1947e0220255
+msgid "``       $HOME      `` <internalvariables.html#HOMEDIRREF>`__ , *user's home directory*"
+msgstr ""
+
+#: ../../xrefindex.rst:1344
+# dacd7bb46ecd427ebb15a48bc5a37ed3
+msgid "`Homework assignment solver <contributed-scripts.html#HOMEWORK>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1346
+# 0784b895fd39461cbf7ffa842baa8422
+msgid "``       $HOSTNAME      `` <internalvariables.html#HOSTNAMEREF>`__ , system *host name*"
+msgstr ""
+
+#: ../../xrefindex.rst:1351
+# 31c77fad9c68434c8ff7deecc69a7b71
+msgid "``       $Id      `` parameter <assortedtips.html#RCSREF>`__ , in *rcs* (Revision Control System)"
+msgstr ""
+
+#: ../../xrefindex.rst:1354
+# 79aca2bd43b6428db2145c7ea57c21ac
+msgid "`if [ condition ]; then ... <tests.html#IFTHEN>`__ *test* construct"
+msgstr ""
+
+#: ../../xrefindex.rst:1356
+# b8c9febdcf1b4e5780010ce77a146918
+msgid "`if-grep <testconstructs.html#IFGREPREF>`__ , *if* and `grep <textproc.html#GREPREF>`__ in combination"
+msgstr ""
+
+#: ../../xrefindex.rst:1359
+# edfe622764484a1f9cad09fbed006a27
+msgid "`Fixup <assortedtips.html#IFGREPFIX>`__ for *if-grep* test"
+msgstr ""
+
+#: ../../xrefindex.rst:1361
+# bce35b4c87614e7d879eed47b9e131f1
+msgid "``       $IFS      `` <internalvariables.html#IFSREF>`__ , *Internal field separator* variable"
+msgstr ""
+
+#: ../../xrefindex.rst:1364
+# 59df277ddbbb4be5860e314d15450b2e
+msgid "`Defaults to *whitespace* <internalvariables.html#IFSWS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1366
+# acda13504f054480bd538fac678b8fe5
+msgid "`Integer comparison operators <comparison-ops.html#ICOMPARISON1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1368
+# 1d7e438a138c4ffb8c39771d0e54ff6d
+msgid "`in <loops1.html#DOINREF>`__ , *keyword* preceding ``      [list]     `` in a *for* loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1371
+# 3dfd1f1669374330a7d81a33afc32232
+msgid "`Initialization table <system.html#INITTABREF>`__ , ``      /etc/inittab     ``"
+msgstr ""
+
+#: ../../xrefindex.rst:1374
+# 05ec97764eee4ee3bf41ecc79e5ddff5
+msgid "`Inline group <special-chars.html#CODEBLOCKREF>`__ , i.e., code block"
+msgstr ""
+
+#: ../../xrefindex.rst:1376
+# 2323e1da192547e392607f11bbb78404
+msgid "`Interactive script <intandnonint.html#IITEST>`__ , test for"
+msgstr ""
+
+#: ../../xrefindex.rst:1378
+# 6339aec051514554b38064d3a0648b94
+msgid "`I/O redirection <io-redirection.html#IOREDIRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1380
+# f39ab323b1e945708c096a36e74cf33d
+msgid "`Indirect referencing of variables <ivr.html#IVRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1382
+# 7f758710a4ab4d3081a5da3f00933535
+msgid "`New notation <ivr.html#IVR2>`__ , introduced in `version 2 <bashver2.html#BASH2REF>`__ of Bash ( `example script <bashver2.html#VARREFNEW>`__ )"
+msgstr ""
+
+#: ../../xrefindex.rst:1386
+# ccb56a9dcc3f4619b7d8df33fff8f956
+msgid "`iptables <system.html#IPTABLESREF>`__ , packet filtering and firewall utility"
+msgstr ""
+
+#: ../../xrefindex.rst:1389
+# b0c013ef7dc542be8f4f3ad61406b212
+msgid "`Usage example <system.html#IPTABLES01>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1391
+# 7ceedce2f6c647979a3ece441c0ca92d
+msgid "`Example script <networkprogramming.html#IPTABLES02>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1393
+# b4fc0447abb6408dba73bef047c37e52
+msgid "`Iteration <loops1.html#ITERATIONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1397
+# 4a5524f0eaa14bfeab2dbcc00e078305
+msgid "`Job IDs <x9644.html#JOBIDTABLE0>`__ , table"
+msgstr ""
+
+#: ../../xrefindex.rst:1399
+# c1286dcb3a624e9abfabf4be2235ade2
+msgid "`jot <extmisc.html#JOTREF>`__ , Emit a sequence of integers. Equivalent to `seq <extmisc.html#SEQREF>`__ ."
+msgstr ""
+
+#: ../../xrefindex.rst:1402
+# 86b5075c0f804e17addf1552aa1185e4
+msgid "`Random sequence generation <extmisc.html#JOTRANDOM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1404
+#: ../../xrefindex.rst:1628
+# 02e772256d8847a2b7142d56d2e7d4e7
+# 7e8b51b2d05f4b72a6cd4b45c0abf804
+msgid "`Just another Bash hacker! <textproc.html#JABH>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1408
+# 1eb5bcff7b2d47d081bf1b2017992b94
+msgid "`Keywords <internal.html#KEYWORDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1410
+# a91412d7280d4df789d63689fa5feb24
+msgid "`error <debugging.html#MISSINGKEYWORD>`__ , if missing"
+msgstr ""
+
+#: ../../xrefindex.rst:1412
+# be987019ab4d451b945a1b0b950718a4
+msgid "`kill <x9644.html#KILLREF>`__ , terminate a process by `process ID <special-chars.html#PROCESSIDDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1415
+# e0bedac7aaf748ca8a8a24de9f91b776
+msgid "`Options <x9644.html#ZOMBIEREF>`__ ( ``        -l       `` , ``        -9       `` )"
+msgstr ""
+
+#: ../../xrefindex.rst:1418
+# 2db70ff605f94675a6d4095466a8e14f
+msgid "`killall <x9644.html#KILLALLREF>`__ , terminate a process *by name*"
+msgstr ""
+
+#: ../../xrefindex.rst:1420
+# 368ee51b644c47e1a8337886ad0a47a2
+msgid "`*killall script* <sysscripts.html#KILLALL2REF>`__ in ``      /etc/rc.d/init.d     ``"
+msgstr ""
+
+#: ../../xrefindex.rst:1425
+# 312506e7e5d1489abe36be591f71cebb
+msgid "`lastpipe <bashver4.html#LASTPIPEREF>`__ shell option"
+msgstr ""
+
+#: ../../xrefindex.rst:1427
+# c516de3669924677841a880f49f0abdb
+msgid "`-le <comparison-ops.html#LE0REF>`__ , *less-than or equal* `integer comparison <comparison-ops.html#ICOMPARISON1>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:1430
+# a41c11bb2c6d47b89739a9cc9b6c6aab
+msgid "`let <internal.html#LETREF>`__ , setting and carrying out arithmetic operations on variables"
+msgstr ""
+
+#: ../../xrefindex.rst:1433
+# a1a2f1a1b6184b8eb4a4df29420d1cff
+msgid "*C-style* `increment and decrement operators <internal.html#EX46>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1435
+# 6f11a9785c7d4397a85a0044bd8f8969
+msgid "`Limit string <here-docs.html#LIMITSTRINGREF>`__ , in a `here document <here-docs.html#HEREDOCREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1438
+# ef21c908b92b4bb0a1be404303dc8cc5
+msgid "``       $LINENO      `` <internalvariables.html#LINENOREF>`__ , variable indicating the *line number* where it appears in a script"
+msgstr ""
+
+#: ../../xrefindex.rst:1441
+# 3f6caf94eda64b848a6d39dd567fa4cd
+msgid "`Link <basic.html#LINKREF>`__ , file (using *ln* command)"
+msgstr ""
+
+#: ../../xrefindex.rst:1443
+# ffabb98143ca4aadb480a53964381237
+msgid "`Invoking script with multiple names <basic.html#LINKMINVOK>`__ , using *ln*"
+msgstr ""
+
+#: ../../xrefindex.rst:1446
+# fa7ae52d209645bc851920fe59a94274
+msgid "`*symbolic* links <basic.html#SYMLINKREF>`__ , *ln -s*"
+msgstr ""
+
+#: ../../xrefindex.rst:1448
+# a010cdc01f504c2cb2dcc3f566ac825b
+msgid "`List constructs <list-cons.html#LISTCONSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1452
+#: ../../xrefindex.rst:1648
+# cde276ebcfe24e12acd11836a5a48411
+# 67920a47c50c4a388ca6b9e0c7be7e2d
+msgid "`*Or* list <list-cons.html#ORLISTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1458
+# 7fda601522134472b2d85a58663d7196
+msgid "`Localization <localization.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1460
+# 68b0073cd7fa4ec395cb182926b73c24
+msgid "`Logical operators <ops.html#LOGOPS1>`__ ( ``      &&     `` , ``      |    `` , etc.)"
+msgstr ""
+
+#: ../../xrefindex.rst:1463
+# 5c30644686f540828b669616d44a5d44
+msgid "`Logout file <files.html#LOGOUTFILEREF1>`__ , the ``      ~/.bash_logout     `` file"
+msgstr ""
+
+#: ../../xrefindex.rst:1466
+# c19591110af541ea961229ac771ded97
+msgid "`Loopback device <system.html#ISOMOUNTREF0>`__ , mounting a file on a `block device <devref1.html#BLOCKDEVREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1469
+# 1620a875abc049b4930de45d2f529503
+msgid "`Loops <loops1.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1471
+# d72c1b37a766473c8e013ca7ef7e288e
+msgid "`break <loopcontrol.html#BRKCONT1>`__ loop control command"
+msgstr ""
+
+#: ../../xrefindex.rst:1475
+# db6ded8c16ae4fe3bdeb83c382cb8112
+msgid "*C* -style loop within `double parentheses <dblparens.html#DBLPARENSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1478
+# 21b81467120c41dab7b723210804d3ed
+msgid "`*for* loop <loops1.html#LOOPCSTYLE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1480
+# 8ff070ad25914d9ba8cdce5d94537e3a
+msgid "`*while* loop <loops1.html#WLOOPCSTYLE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1482
+# 591524dccaef47ec9edf814dbf0dfc2c
+msgid "`do <loops1.html#DOINREF>`__ (keyword), begins execution of commands within a loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1485
+# 6df54f7b9b5d4ab389daf26556c142e0
+msgid "`done <loops1.html#DOINREF>`__ (keyword), terminates a loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1489
+# d1e64d5fafe94890a3f10abc42574e75
+msgid "``                 for               `` ``        arg       `` ``                 in               `` ``        [list]       `` ; ``                 do               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:1493
+# cf74a0e4c7f244f88be086dd44851ef2
+msgid "`*Command substitution* to generate ``         [list]        `` <loops1.html#LOOPCS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1496
+# c7968647889847f6a99f95597ee893b3
+msgid "`Filename expansion in ``         [list]        `` <loops1.html#LIGLOB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1499
+# 2ceab7bc25bd490d8f99722a9a77db79
+msgid "`Multiple parameters in each ``         [list]        `` element <loops1.html#MULTPARAML>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1502
+# 1ef274bfa7a3475483eadf1ba2c0330a
+msgid "`Omitting ``         [list]        `` <loops1.html#OMITLIST>`__ , defaults to `positional parameters <internalvariables.html#POSPARAMREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1506
+# 787f6d56c82048c09cf51b17992a6dcb
+msgid "`Parameterizing ``         [list]        `` <loops1.html#PARAMLI>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1508
+# 41e9b345baef437a9094c8adbd2d0653
+msgid "`Redirection <loops1.html#LOOPREDIR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1510
+# de19e6e4f1f24b9a9c0a081d695ad1c3
+msgid "`in <loops1.html#DOINREF>`__ , (keyword) preceding [list] in a *for* loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1513
+# 029baf501f854766ac93d63559439ea7
+msgid "`Nested loops <nestedloops.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1515
+# 38af58334af041d8b16a47b5f1d4397c
+msgid "`Running a loop *in the background* <special-chars.html#BGLOOP0>`__ , *script example*"
+msgstr ""
+
+#: ../../xrefindex.rst:1518
+# 58de125266c54e659f6fbd66b0acc5fb
+msgid "Semicolon required, when *do* is on first line of loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1520
+# 9df9f5f9a2fd4d0199a7ceeb30c1df58
+msgid "`*for* loop <loops1.html#NEEDSEMICOLON>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1522
+# 49e48b40ff02468f889d587325f48fcf
+msgid "`*while* loop <loops1.html#WHILENEEDSEMI>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1524
+#: ../../xrefindex.rst:2669
+# e679a742236e4e2abcd27eafde053db5
+# 9817b5adb0fd4988a016614da6c538b6
+msgid "`until <loops1.html#UNTILLOOPREF>`__ loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1526
+# 885c6a4372004c869a3f41840494665e
+msgid "``                 until [ condition-is-true ]; do               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:1528
+#: ../../xrefindex.rst:2771
+# d48808b13a624b67bbaad176dfc78db5
+# 14932cb2cd3d45e884e95e27f64498b9
+msgid "`while <loops1.html#WHILELOOPREF>`__ loop"
+msgstr ""
+
+#: ../../xrefindex.rst:1530
+# 76b6351948fd479bb14fe74ede27d2ae
+msgid "``                 while [ condition ]; do               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:1532
+# 8aa3b878613b4b3b9468d1be4be9c2eb
+msgid "`Function call <loops1.html#WHILEFUNC>`__ inside test brackets"
+msgstr ""
+
+#: ../../xrefindex.rst:1534
+#: ../../xrefindex.rst:2780
+# 6d5d5345d821403ba626d89a2f6b183e
+# b9aa27a6dd0949adab29d34d17c6f14d
+msgid "`Multiple conditions <loops1.html#WHMULTCOND>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1536
+# 8c735ae5110f444c86ff32a0a4aa0da5
+msgid "`Omitting *test brackets* <loops1.html#WHILENOBRACKETS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1538
+# 62474854ff134fdfa472b8506972e161
+msgid "`Redirection <loops1.html#WHREDIR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1540
+#: ../../xrefindex.rst:2022
+#: ../../xrefindex.rst:2784
+# 2f27fa6951cd4f10bf7091182770d8a3
+# 054094636bed467e8022551220fbd5f0
+# dcfc48a0967d41deb1b4fe50fd1a0342
+msgid "`*while read* <loops1.html#WHILEREADREF2>`__ construct"
+msgstr ""
+
+#: ../../xrefindex.rst:1542
+# 90a37d9449804413a934ea3956a24d9c
+msgid "`Which type of loop to use <loops1.html#CHOOSELOOP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1544
+# 9256c38bfc344cb3831546782b7fefe0
+msgid "Loopback devices"
+msgstr ""
+
+#: ../../xrefindex.rst:1546
+# f727b8ace91c4a86b74ec52755795122
+msgid "`In ``         /dev        `` directory <devref1.html#LOOPBACKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1548
+# 974ae2b9c5ba429aa1ade313c372d3a8
+msgid "`Mounting an ISO image <system.html#ISOMOUNTREF0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1550
+# 98d82a5672b44ef884e3b3896c9c99d1
+msgid "`-lt <comparison-ops.html#LT0REF>`__ , *less-than* `integer comparison <comparison-ops.html#ICOMPARISON1>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:1555
+# 972040cde250414684c04fd6ed66b39c
+msgid "`m4 <extmisc.html#M4REF>`__ , macro processing language"
+msgstr ""
+
+#: ../../xrefindex.rst:1557
+# bbdbc72168734e28bfe8e4bf9133dd8c
+msgid "``       $MACHTYPE      `` <internalvariables.html#MACHTYPEREF>`__ , *Machine type*"
+msgstr ""
+
+#: ../../xrefindex.rst:1560
+# 8b50e53eeba5463294c1be5bd6aabe7e
+msgid "`Magic number <sha-bang.html#MAGNUMREF>`__ , marker at the head of a file indicating the file type"
+msgstr ""
+
+#: ../../xrefindex.rst:1563
+# 541730a4bea24d869d861edfda05424c
+msgid "``       Makefile      `` <filearchiv.html#MAKEFILEREF>`__ , file containing the list of dependencies used by `make <filearchiv.html#MAKEREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:1567
+# 705e3c05f36740f6ae2a75b939ac91e0
+msgid "`man <basic.html#MANREF>`__ , *manual page* (lookup)"
+msgstr ""
+
+#: ../../xrefindex.rst:1569
+# 8c56a140532d4654a0f6a064fbdc3e79
+msgid "`*Man page* editor <contributed-scripts.html#MANED>`__ (script)"
+msgstr ""
+
+#: ../../xrefindex.rst:1571
+# 45d79cb5d78744dfb76f928e2053c5d1
+msgid "`mapfile <bashver4.html#MAPFILEREF>`__ builtin, loads an array with a text file"
+msgstr ""
+
+#: ../../xrefindex.rst:1574
+# 23e2f1b2c0084071a720f12e66d5d501
+msgid "`Math commands <mathc.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1576
+# 98680a97b1d14e7fb56828b223cd6eb8
+msgid "`Meta-meaning <x17129.html#METAMEANINGREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1578
+# 0567538affbc4737845fb18ae3742cf0
+msgid "`Morse code training <contributed-scripts.html#SAMORSE>`__ script"
+msgstr ""
+
+#: ../../xrefindex.rst:1580
+# 70cd903715db4041ade9adff61907f87
+msgid "`Modulo <ops.html#MODULOREF>`__ , arithmetic *remainder* operator"
+msgstr ""
+
+#: ../../xrefindex.rst:1582
+# 32fd3b008d0744c3aefc1c6132032cf4
+msgid "Application: `Generating prime numbers <contributed-scripts.html#PRIMES1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1585
+# bbdd57007270479f85af2acb34db05d4
+msgid "`Mortgage calculations <mathc.html#MONTHLYPMT0>`__ , *example script*"
+msgstr ""
+
+#: ../../xrefindex.rst:1589
+# 29106335d4a24c7987c5ca912858fcfd
+msgid "**-n** `String not *null* <comparison-ops.html#STRINGNOTNULL>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:1591
+# d9cefa370e0e4ee7a69b68fafd296307
+msgid "`Named pipe <extmisc.html#NAMEDPIPEREF>`__ , a temporary FIFO buffer"
+msgstr ""
+
+#: ../../xrefindex.rst:1593
+# 18ce6dad6d8a4edbaeec85ed194ca83c
+msgid "`*Example script* <contributed-scripts.html#ZFIFO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1595
+# 0ea0b64e7f364aa2ad5bf6d8726030df
+msgid "`nc <system.html#NCREF>`__ , *netcat* , a network toolkit for TCP and UDP ports"
+msgstr ""
+
+#: ../../xrefindex.rst:1598
+# e4d3426bba0f4a5398ef33db338b15f0
+msgid "`-ne <comparison-ops.html#NEQUALREF>`__ , *not-equal-to* `integer comparison <comparison-ops.html#ICOMPARISON1>`__ test"
+msgstr ""
+
+#: ../../xrefindex.rst:1601
+# f16e27e3775f452e9825febae2f19624
+msgid "`Negation operator <special-chars.html#NOTREF>`__ , **!** , reverses the sense of a `test <tests.html#IFTHEN>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1604
+# bbde279ca7bc47d79ee18b52e5fcf451
+msgid "`netstat <system.html#NETSTATREF>`__ , Network statistics"
+msgstr ""
+
+#: ../../xrefindex.rst:1606
+# 46aacb48159b48a1abcf5e1293f07ae5
+msgid "`Network programming <networkprogramming.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1608
+# 4a91f69711be48339b656d97aae430de
+msgid "`nl <textproc.html#NLREF>`__ , a filter to number lines of text"
+msgstr ""
+
+#: ../../xrefindex.rst:1610
+# d19150232b7b4216aa1336525a0583c4
+msgid "`*Noclobber* <options.html#NOCLOBBERREF>`__ , ``      -C     `` option to Bash to prevent overwriting of files"
+msgstr ""
+
+#: ../../xrefindex.rst:1613
+# b15b8755c41b42b891088e1233bea3c9
+msgid "`*NOT* logical operator <ops.html#LOGOPS1>`__ , **!**"
+msgstr ""
+
+#: ../../xrefindex.rst:1615
+#: ../../xrefindex.rst:2557
+# 8f89580abb874b14a67e1fb1110b60e2
+# ad99cee8e2d1428bb22d60d882d6def6
+msgid "`*null* variable assignment <othertypesv.html#NULLVAR>`__ , avoiding"
+msgstr ""
+
+#: ../../xrefindex.rst:1619
+# 297d1fb65e4d4656aa64f5f574582017
+msgid "**-o** `Logical OR <comparison-ops.html#COMPOUNDOR>`__ compound comparison test"
+msgstr ""
+
+#: ../../xrefindex.rst:1622
+# e91d543051754aaa93d6905d428f9944
+msgid "Obfuscation"
+msgstr ""
+
+#: ../../xrefindex.rst:1626
+# 5adefb7e723144b2b41a9ddc8235cbdd
+msgid "`Homework assignment <contributed-scripts.html#HOMEWORK>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1630
+# 236de0d4e98c4a94a9149003578aa4f1
+msgid "`octal <escapingsection.html#OCTALREF>`__ , base-8 numbers"
+msgstr ""
+
+#: ../../xrefindex.rst:1632
+# 6213965d1799422daf871a0ec2d9c455
+msgid "`od <extmisc.html#ODREF>`__ , *octal dump*"
+msgstr ""
+
+#: ../../xrefindex.rst:1634
+# 584bfd0115554a99ac47927a592a6b15
+msgid "``       $OLDPWD      `` <internalvariables.html#OLDPWD>`__ Previous working directory"
+msgstr ""
+
+#: ../../xrefindex.rst:1637
+# 5acd4a5d1b6e43808ad069a34095c30a
+msgid "`openssl <filearchiv.html#OPENSSLREF>`__ encryption utility"
+msgstr ""
+
+#: ../../xrefindex.rst:1639
+# 54a865b6349c4671b68d2fbdd6e668b3
+msgid "Operator"
+msgstr ""
+
+#: ../../xrefindex.rst:1641
+# d01346067dce43ffa95d022907a2d110
+msgid "`Definition of <special-chars.html#OPERATORDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1643
+# 28058d6cdca34574ab8c54f28a2436fe
+msgid "`Precedence <opprecedence.html#OPPRECEDENCE1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1645
+# 15ae06207bfc4e669a7ee5fc1bb1f9db
+msgid "`Options <options.html#OPTIONSREF>`__ , passed to shell or script on command line or by `set <internal.html#SETREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:1650
+# e1d6800f1cf64c59bddc7c537053fed5
+msgid "`*Or* logical operator <ops.html#ORREF>`__ , **\\|\\|**"
+msgstr ""
+
+#: ../../xrefindex.rst:1654
+# 810e2b880fa14ebf89f7f4bf9408dc2d
+msgid "`Parameter substitution <parameter-substitution.html#PARAMSUBREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1656
+# 86b2ae46be6141aca32963393b2848f9
+msgid "*${parameter+alt\\_value}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1658
+# 328f486cda3a416d8fac23b3d7dd772b
+msgid "*${parameter:+alt\\_value}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1663
+# 5285c93a425e41e6924071906badadf3
+msgid "*${parameter-default}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1665
+# b064b0d7a47a44d2b9cddc9efba75f42
+msgid "*${parameter:-default}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1667
+# 64a41633d86e4d4cb7b148e7965fd406
+msgid "*${parameter=default}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1669
+# c6ebe62113a14f6d89e7e3f8361eb2e1
+msgid "*${parameter:=default}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1671
+# 8262273ab2c74958b3838fa4a16677ba
+msgid "`Default parameters <parameter-substitution.html#DEFPARAM1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1673
+# 58027b8dcc544a6c9a26fe573f649e6d
+msgid "*${!varprefix\\*}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1675
+# 75da256dac31494f947b1f6d824c8ae3
+msgid "*${!varprefix@}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1677
+# d3caa8f7962d4d54ba58112c4785b045
+msgid "`Parameter *name* match <parameter-substitution.html#VARPREFIXM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1679
+# 5a29610acfe74d3cb2e1f9a1d11c220b
+msgid "*${parameter?err\\_msg}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1681
+# 1b8f47def67e4b148bdaadc3620c0c00
+msgid "`Parameter-unset message <parameter-substitution.html#QERRMSG>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1683
+# e1ff4a9ce9a34beb8946c6290cddc210
+msgid "*${parameter}*"
+msgstr ""
+
+#: ../../xrefindex.rst:1685
+# 7a2ca592838541f78263cb5b2f0883f4
+msgid "`Value of *parameter* <parameter-substitution.html#PSSUB1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1687
+# 9b0901ad8c0347339f32f22470bb7bb4
+msgid "`*Case modification* <bashver4.html#CASEMODPARAMSUB>`__ ( `version 4+ <bashver4.html#BASH4REF>`__ of Bash)."
+msgstr ""
+
+#: ../../xrefindex.rst:1690
+# 36e129c6d04b4447975dacae50baf176
+msgid "`*Script example* <contributed-scripts.html#PW0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1692
+# 8ad37428f13e41d6b2cb3b06e4c2ccb6
+msgid "`**Table** <refcards.html#PARSUBTAB>`__ of *parameter substitution*"
+msgstr ""
+
+#: ../../xrefindex.rst:1694
+# 4e3bfdb17edd4f5593f7516df71cf6c3
+msgid "`Parent / child process problem <gotchas.html#PARCHILDPROBREF>`__ , a *child* process cannot `export <internal.html#EXPORTREF>`__ variables to a `parent process <internal.html#FORKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1698
+# f54b67dd089a4fc39aaffcc15bbe7135
+msgid "Parentheses"
+msgstr ""
+
+#: ../../xrefindex.rst:1700
+# 523cc3a5668d4534befc549740de20ff
+msgid "`Command group <special-chars.html#PARENSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1702
+# 9095e6bdb7134a2aa1fc52eb6f4ed0e2
+msgid "`Enclose group <x17129.html#PARENGRPS>`__ of *Extended Regular Expressions*"
+msgstr ""
+
+#: ../../xrefindex.rst:1705
+# 7ef7abdbaf504059b0e3facaf9d9de81
+msgid "`Double parentheses <dblparens.html#DBLPARENSREF>`__ , in arithmetic expansion"
+msgstr ""
+
+#: ../../xrefindex.rst:1708
+# aca0f9aee09f4730a46c323090e08c29
+msgid "``       $PATH      `` <internalvariables.html#PATHREF>`__ , the *path* (location of system binaries)"
+msgstr ""
+
+#: ../../xrefindex.rst:1711
+# 190162827f0b4b14b1b305bcf749c19e
+msgid "Appending directories to ``        $PATH       `` `using the ``         +=        `` operator <bashver3.html#PATHAPPEND>`__ ."
+msgstr ""
+
+#: ../../xrefindex.rst:1714
+# ce91f494c20d41ccb87c30f0ca385aef
+msgid "`Pathname <special-chars.html#PATHNAMEREF>`__ , a ``      filename     `` that incorporates the complete *path* of a given file."
+msgstr ""
+
+#: ../../xrefindex.rst:1718
+# d1e465dba57049c882d69a462adf3162
+msgid "`Parsing *pathnames* <pathmanagement.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1720
+# a312052c326d47179977bba6039f092e
+msgid "`Perl <wrapper.html#PERLREF>`__ , programming language"
+msgstr ""
+
+#: ../../xrefindex.rst:1722
+# 666dc7f01faa4c1e93b65daedb5c3c9b
+msgid "`Combined <wrapper.html#BASHANDPERL0>`__ in the same file with a *Bash* script"
+msgstr ""
+
+#: ../../xrefindex.rst:1725
+# 4bb88f75281040a3ba01b931d5444b90
+msgid "`Embedded <wrapper.html#PERLEMB>`__ in a *Bash* script"
+msgstr ""
+
+#: ../../xrefindex.rst:1727
+# 5dab3fd68dc64f07add4a45c466d70fd
+msgid "`*Perquackey* -type anagramming game <contributed-scripts.html#QKY>`__ ( *Quackey* script)"
+msgstr ""
+
+#: ../../xrefindex.rst:1730
+# b67bd12f7e474d7a978b1ea594b59a67
+msgid "`*Petals Around the Rose* <contributed-scripts.html#PETALS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1732
+# 2f681e49ea0a4d83a95f479a009884fc
+msgid "`PID <special-chars.html#PROCESSIDDEF>`__ , *Process ID* , an identification number assigned to a running process."
+msgstr ""
+
+#: ../../xrefindex.rst:1735
+# 5627ffaa10444a11962fe3aca5b7eca2
+msgid "`Pipe <special-chars.html#PIPEREF>`__ , **\\|** , a device for passing the output of a command to another command or to the shell"
+msgstr ""
+
+#: ../../xrefindex.rst:1738
+# a3c491d9e8054089b1ab8273f5bc7d3a
+msgid "`Avoiding unnecessary commands <optimizations.html#CATABUSE>`__ in a *pipe*"
+msgstr ""
+
+#: ../../xrefindex.rst:1741
+# 4a7ad082b758499884e3447b941951f2
+msgid "`*Comments* embedded within <special-chars.html#COMMINPIPE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1743
+# a67330332d084b71a8fac59a075a090e
+msgid "`Exit status <exit-status.html#PIPEEX>`__ of a pipe"
+msgstr ""
+
+#: ../../xrefindex.rst:1745
+# 99b8bc02c4934ab39d413e48207be242
+msgid "`Pipefail <bashver3.html#PIPEFAILREF>`__ , *set -o pipefail* option to indicate `exit status <exit-status.html#EXITSTATUSREF>`__ within a *pipe*"
+msgstr ""
+
+#: ../../xrefindex.rst:1749
+# ea942860cc9f4815ab26a8551313b6de
+msgid "``         $PIPESTATUS        `` <internalvariables.html#PIPESTATUSREF>`__ , *exit status* of last executed pipe"
+msgstr ""
+
+#: ../../xrefindex.rst:1752
+# e9c8632251454f48a82607bfa9f0c8ee
+msgid "`Piping output of a command <special-chars.html#UCREF>`__ to a script"
+msgstr ""
+
+#: ../../xrefindex.rst:1754
+# 38e39fcb46a7415b80e749e6cd7c686d
+msgid "`Redirecting ``         stdin        `` <basic.html#CATLESSEFF>`__ , rather than using `cat <basic.html#CATREF>`__ in a *pipe*"
+msgstr ""
+
+#: ../../xrefindex.rst:1757
+# ab33526d2c9d4bd5840c8c4e08d4a8c4
+msgid "`Pitfalls <gotchas.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1759
+# ee27e624202e443db7d479cbf06d1029
+msgid "`**-** (dash) is *not* redirection operator <gotchas.html#DASHNREDR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1762
+# 9388700f5a9d47bcaca69f1f9062172a
+msgid "`**//** (double forward slash) <internal.html#DOUBLESLASHREF>`__ , behavior of `cd <internal.html#CDREF>`__ command toward"
+msgstr ""
+
+#: ../../xrefindex.rst:1765
+# ddeba2119f4b40598f97c7495a71e0f6
+msgid "` #!/bin/sh  <gotchas.html#BINSH>`__ script header disables `extended *Bash* features <portabilityissues.html#BASHCOMPAT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1768
+# e3c670bd6a1f4f869ba95d5a5f2a2143
+msgid "`Abuse of *cat* <optimizations.html#CATABUSE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1770
+# abc4f5cfb0244c43b309126932056806
+msgid "`*CGI* programming <gotchas.html#CGIREF>`__ , using scripts for"
+msgstr ""
+
+#: ../../xrefindex.rst:1772
+# 62e1087b5eec4cf8b2e55bd5232f672e
+msgid "Closing *limit string* in a *here document* , `indenting <here-docs.html#INDENTEDLS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1775
+# b4735a50659c42e1b2fb9fb8ef8280e5
+msgid "`DOS-type newlines ( \\\\r\\\\n ) <gotchas.html#DOSNEWLINES>`__ crash a script"
+msgstr ""
+
+#: ../../xrefindex.rst:1781
+# 237771b4961b4366ab5faf689fb1c67d
+msgid "`eval <internal.html#EVALRISK>`__ , risk of using"
+msgstr ""
+
+#: ../../xrefindex.rst:1783
+# dbb1a06215204c99a2a993efc151add7
+msgid "`Execute permission lacking <gotchas.html#EXECPERM>`__ for commands within a script"
+msgstr ""
+
+#: ../../xrefindex.rst:1786
+# e559932e19fb4ded8bc688d325e1aed0
+msgid "*Exit status* , `anomalous <gotchas.html#GOTCHAEXITVALANAMALIES>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1788
+# e4879832e42d41a698d8b93e602cf1a9
+msgid "*Exit status* `of arithmetic expression *not* equivalent to an *error code* <gotchas.html#ARXS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1791
+# 650786f8b697423e8518be02541c15d1
+msgid "`*Export* problem <gotchas.html#PARCHILDPROBREF>`__ , *child* process to *parent* process"
+msgstr ""
+
+#: ../../xrefindex.rst:1794
+# 7b60f1dcc4f24680b41ed974a6c876f3
+msgid "`Extended *Bash* features <gotchas.html#LATEVERF>`__ not available"
+msgstr ""
+
+#: ../../xrefindex.rst:1796
+# 9e0b74282d664f2d971de80eef6fcdad
+msgid "`Failing to *quote* variables <gotchas.html#FAILQUOTE>`__ within *test* brackets"
+msgstr ""
+
+#: ../../xrefindex.rst:1799
+# 2498459235364737b2c00684c59f296f
+msgid "`*GNU* command set <gotchas.html#GNUREF>`__ , in cross-platform scripts"
+msgstr ""
+
+#: ../../xrefindex.rst:1802
+# 071e34cca37a43c78354761aba85d09c
+msgid "*let* misuse: `attempting to set string variables <gotchas.html#LETBAD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1805
+# 21d29f4126e841f0b764826db5610e64
+msgid "`Multiple echo statements <gotchas.html#RVTCAUTION2>`__ in a `function whose output is captured <assortedtips.html#RVT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1808
+# db26632aa8f14b5083219890a4ad76ac
+msgid "`*null* variable assignment <othertypesv.html#NULLVAR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1810
+# 98b4dd65029f406490604ab882dc8537
+msgid "`Numerical and string comparison operators <gotchas.html#NUMSTRCOMPNE>`__ *not* equivalent"
+msgstr ""
+
+#: ../../xrefindex.rst:1813
+# d12df7d81f7c4e3ba10e425514790f63
+msgid "`**=** and **-eq** <gotchas.html#EQDIF>`__ *not* interchangeable"
+msgstr ""
+
+#: ../../xrefindex.rst:1815
+# 72dd7b7f44684c82a574a14802a0510a
+msgid "`Omitting terminal *semicolon* <gotchas.html#OMITSEMICOLON>`__ , in a *curly-bracketed* `code block <special-chars.html#CODEBLOCKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1818
+# f94729709acb4e4a9b5c6115204fdb58
+msgid "Piping"
+msgstr ""
+
+#: ../../xrefindex.rst:1820
+# 1db2ea9cadbb4bff8968ae2ca8530b5a
+msgid "`*echo* to a loop <gotchas.html#PIPELOOP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1822
+# b6c8878b25f44aafbc296af74a422990
+msgid "`*echo* to *read* <gotchas.html#BADREAD0>`__ (however, this problem `can be circumvented <process-sub.html#GOODREAD0>`__ )"
+msgstr ""
+
+#: ../../xrefindex.rst:1825
+# 56ea650607804987818076b58b81046e
+msgid "`*tail* ``         -f        `` to *grep* <gotchas.html#PTAILGREP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1827
+# 3d09d85937f24181a20b0a924a695413
+msgid "Preserving *whitespace* within a variable, `unintended consequences <quotingvar.html#VARSPLITTING>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1830
+#: ../../xrefindex.rst:2178
+# faa25ad7dc294fdba86acfa9c5cea2f1
+# 2431779ac0434ae0b1e176984d6c38f8
+msgid "`*suid* commands inside a script <gotchas.html#SUIDSCR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1832
+# 3ae6f20c8ef643778efdc50d15102b0d
+msgid "`Undocumented *Bash* features <gotchas.html#UNDOCF>`__ , danger of"
+msgstr ""
+
+#: ../../xrefindex.rst:1834
+# 1ddc917a616149fb9798cd83dcbb4c33
+msgid "Updates to *Bash* `breaking older scripts <gotchas.html#UPDATEBREAKS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1837
+#: ../../xrefindex.rst:2662
+# 33481ab5809d4811b825491a324ce914
+# d5641e5af3734d41ab4ddfbecc75b76c
+msgid "`Uninitialized variables <gotchas.html#UNINITVAR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1839
+# 84a9d79195554e4b8ce61f45c65c2ae5
+msgid "`Variable names <gotchas.html#INAPPVN>`__ , inappropriate"
+msgstr ""
+
+#: ../../xrefindex.rst:1841
+# 2d3340e574fa4e4ba9c86ef3651b2250
+msgid "`Variables in a *subshell* <gotchas.html#VARSUBSH>`__ , *scope* limited"
+msgstr ""
+
+#: ../../xrefindex.rst:1844
+# 3655f2770d194772850a24bfca7900e5
+msgid "`Subshell in *while-read* loop <gotchas.html#BADREAD0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1846
+# 88f4f3f18b654a9b9157e531602c159e
+msgid "`Whitespace <gotchas.html#WSBAD>`__ , misuse of"
+msgstr ""
+
+#: ../../xrefindex.rst:1848
+# 418182c5f8df4607979bc786a04c1a78
+msgid "Pointers"
+msgstr ""
+
+#: ../../xrefindex.rst:1850
+# 6f92ee6f6baf4b8eb5a536e940efdf39
+msgid "`and file descriptors <io-redirection.html#FDREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1852
+# adae24d2a1204f5e9bbd8f947b6d0c98
+msgid "`and functions <complexfunct.html#FUNCPOINTERS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1854
+# f63cd65a982a42fab87728a95970939e
+msgid "`and *indirect references* <ivr.html#IRRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1856
+# 09e94e96eb614152b8b02222a1202da2
+msgid "`and *variables* <varsubn.html#POINTERREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1858
+# 0cbfe588c0dc47c6915d80041987e942
+msgid "`Portability issues <portabilityissues.html>`__ in shell scripting"
+msgstr ""
+
+#: ../../xrefindex.rst:1860
+#: ../../xrefindex.rst:2585
+# db883259643946c5aa6a75ddf56b5ff1
+# 5b8a6829430d4e27be0f32de396a9059
+msgid "`Setting *path* and *umask* <assortedtips.html#SETPUM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1862
+# db3c2cdef85b4e938d31a7e67b27d9ba
+msgid "`A *test suite* script <portabilityissues.html#TESTSUITE0>`__ (Bash versus classic Bourne shell)"
+msgstr ""
+
+#: ../../xrefindex.rst:1865
+#: ../../xrefindex.rst:2587
+# 8fb7d0dd17cb4311a6d3ad6412157f3e
+# e41569cd61e9483f89c2424c0e844003
+msgid "`Using *whatis* <assortedtips.html#WHATISREF3>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1867
+# f4f7d75a195f4eefa01a0741c9013ef8
+msgid "`Positional parameters <othertypesv.html#POSPARAMREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1869
+# de2c895e3d0a4e8d9a349b4661fcc34c
+msgid "``         $@        `` <internalvariables.html#APPREF2>`__ , as *separate* words"
+msgstr ""
+
+#: ../../xrefindex.rst:1872
+# 464086f972424142a748d01ee002e33e
+msgid "``         $*        `` <internalvariables.html#APPREF>`__ , as a *single* word"
+msgstr ""
+
+#: ../../xrefindex.rst:1875
+# 06876011f1e34ea6b64456f328c008c7
+msgid "`in functions <complexfunct.html#PASSEDARGS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1877
+# e491bce82f7b4d83918510d4774bc4ef
+msgid "` POSIX  <sha-bang.html#POSIX2REF>`__ , *Portable Operating System Interface / UNIX*"
+msgstr ""
+
+#: ../../xrefindex.rst:1880
+# 1059bb8c43f443dba8013870f911c61f
+msgid "``         --posix        `` option <portabilityissues.html#POSIX3REF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1883
+# f21cf9e6fd2c4dceb0e4071b3c729ff5
+msgid "`1003.2 standard <portabilityissues.html#POSIX3REF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1885
+# 6f42c7d6ac4c4bb2a8ab53072b7995f8
+msgid "`Character classes <x17129.html#POSIXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1887
+# 66d4f5c1596f4be9bdea104410ab94ab
+msgid "``       $PPID      `` <internalvariables.html#PPIDREF>`__ , *process ID* of parent process"
+msgstr ""
+
+#: ../../xrefindex.rst:1890
+# b390201119f946a5ad8e1c59d3ad73f8
+msgid "`Precedence <opprecedence.html#OPPRECEDENCE1>`__ , operator"
+msgstr ""
+
+#: ../../xrefindex.rst:1892
+# 56156b058f59437986f3876a872421d1
+msgid "`*Prepending* <assortedtips.html#PREPENDREF>`__ lines at head of a file, *script example*"
+msgstr ""
+
+#: ../../xrefindex.rst:1895
+# 58e55617ea68431487dc56136b8a86bf
+msgid "Prime numbers"
+msgstr ""
+
+#: ../../xrefindex.rst:1897
+# 192b61dc8401497a862577c8dceb0046
+msgid "Generating primes `using the *factor* command <mathc.html#PRIMES2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1899
+# 0a0ec4a51eae44e3b1dd4cb361495872
+msgid "Generating primes `using the *modulo* operator <contributed-scripts.html#PRIMES1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1902
+# 3e7e0874d837401ab45daba3586c8d6c
+msgid "Sieve of Eratosthenes, `example script <arrays.html#PRIMES0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1904
+# f449a72c9d86449f987c92f204766100
+msgid "`printf <internal.html#PRINTFREF>`__ , *formatted print* command"
+msgstr ""
+
+#: ../../xrefindex.rst:1906
+# 0b3a2f5f48a5428db21fd18c4dbd0830
+msgid "``       /proc      `` <procref1.html#PROCREF2>`__ directory"
+msgstr ""
+
+#: ../../xrefindex.rst:1908
+# fcf37ef6b30049f6a4c2e30cea6ddae0
+msgid "`Running processes <procref1.html#PROCRUNNING>`__ , files describing"
+msgstr ""
+
+#: ../../xrefindex.rst:1910
+# 2cf47c965a0443779541db5e5b48a38b
+msgid "`Writing to files in ``         /proc        `` <procref1.html#PROCWARNING>`__ , *warning*"
+msgstr ""
+
+#: ../../xrefindex.rst:1913
+# 55b47944e1bf4188b69c6dcfd7e006e1
+msgid "`Process <special-chars.html#PROCESSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1915
+# 6675f39f5aa74556b19255b6b2169b09
+msgid "`Child process <othertypesv.html#CHILDREF2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1917
+# 9a385b5c802b4047ad713aa374071a5c
+msgid "`Parent process <internal.html#PARENTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1919
+# f65b1e3c40fc45afa8bc3975fa4f5b88
+msgid "`Process ID <special-chars.html#PROCESSIDDEF>`__ (PID)"
+msgstr ""
+
+#: ../../xrefindex.rst:1921
+# 87515e914b6944d1bb400eb30f2a78db
+msgid "`Process substitution <process-sub.html#PROCESSSUBREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1923
+# cbf0d837cd92487b94ddcfdc82e3be2b
+msgid "`To compare contents of directories <process-sub.html#PCC2DIR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1925
+# 5ec4e171ec0f49bcb22554096dab43d0
+msgid "`To supply ``         stdin        `` of a command <process-sub.html#PSFDSTDIN>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1928
+# fda2d9a64b2a4b1eb04bf0245fec6597
+msgid "`Template <process-sub.html#COMMANDSPARENS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1930
+#: ../../xrefindex.rst:2607
+# 93071b9e69c74193bdc4c707462de485
+# 9e9aa52ab3dc4cfc889d8b4f1fa63953
+msgid "`*while-read* loop without a *subshell* <process-sub.html#GOODREAD0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1933
+# 601cc2b50a744bf387fe1f428234b165
+msgid "`Programmable completion <tabexpansion.html>`__ (tab expansion)"
+msgstr ""
+
+#: ../../xrefindex.rst:1935
+# 16d54011538e4bc3a5f3e05b995c1f98
+msgid "Prompt"
+msgstr ""
+
+#: ../../xrefindex.rst:1937
+# dea9723d844548279dc35df5828204fb
+msgid "``         $PS1        `` <internalvariables.html#PS1REF>`__ , *Main prompt* , seen at command line"
+msgstr ""
+
+#: ../../xrefindex.rst:1940
+# 5fe5378fdd504bd8a3a1728431304af2
+msgid "``         $PS2        `` <internalvariables.html#SECPROMPTREF>`__ , Secondary prompt"
+msgstr ""
+
+#: ../../xrefindex.rst:1943
+# dcafc193c597440da577ee56ba7369e8
+msgid "`Pseudo-code <assortedtips.html#PSEUDOCODEREF>`__ , as problem-solving method"
+msgstr ""
+
+#: ../../xrefindex.rst:1946
+# c86ece60a2324df4b67146ebcff0b81d
+msgid "``       $PWD      `` <internalvariables.html#PWDREF>`__ , Current working directory"
+msgstr ""
+
+#: ../../xrefindex.rst:1951
+# 353b32e7afb94691b20b15eded16c2ea
+msgid "`Quackey <contributed-scripts.html#QKY>`__ , a *Perquackey* -type anagramming game (script)"
+msgstr ""
+
+#: ../../xrefindex.rst:1954
+# 3608f2befb3d48838cd802e7f563c772
+msgid "Question mark, **?**"
+msgstr ""
+
+#: ../../xrefindex.rst:1956
+# 0b1457b4b2a8453a80fa9b8f2ad7423e
+msgid "`Character match <x17129.html#QUEXREGEX>`__ in an Extended *Regular Expression*"
+msgstr ""
+
+#: ../../xrefindex.rst:1962
+# 0f83a7ba83c443e8b91caad86c799c12
+msgid "In a `*C* -style Trinary (ternary) operator <special-chars.html#CSTRINARY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1965
+# 856e2424793442e6b812f395341a0f54
+msgid "`Quoting <quoting.html#QUOTINGDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1967
+# 1092400e2c35457ab6267fe409a69399
+msgid "`Character string <quoting.html#QUOTINGREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1969
+# b8494db261484a38bdd68dca504a73dd
+msgid "`Variables <quotingvar.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1971
+#: ../../xrefindex.rst:2737
+# 383e18eb07244539ae02b0f85a406a80
+# 430b432abb7f459fa50c28e7200336bd
+msgid "`within *test* brackets <gotchas.html#FAILQUOTE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1973
+# f5b5e4c152d54fd58413f51b1f0ca908
+msgid "`*Whitespace* <quotingvar.html#WSQUO>`__ , using *quoting* to preserve"
+msgstr ""
+
+#: ../../xrefindex.rst:1978
+# 99b2b64032934af0a13e5457f88ca49c
+msgid "Random numbers"
+msgstr ""
+
+#: ../../xrefindex.rst:1980
+# 2a125db724f3444fa603c812012108da
+msgid "``         /dev/urandom        `` <randomvar.html#URANDOMREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1982
+# 462fd395ca88412d9d7afffe1233e973
+msgid "``         rand()        `` <randomvar.html#AWKRANDOMREF>`__ , random function in `awk <awk.html#AWKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1985
+# 1e76a7f4c9a5412d8dea7a72b19f4e52
+msgid "``         $RANDOM        `` <randomvar.html#RANDOMVAR01>`__ , Bash function that returns a pseudorandom integer"
+msgstr ""
+
+#: ../../xrefindex.rst:1988
+# b98ddc5cd3ef4f3b95ac6968d3be76ce
+msgid "`Random sequence generation <timedate.html#DATERANDREF>`__ , using `date <timedate.html#DATEREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:1991
+# 43e365e2c4494372af83c6143a2fb689
+msgid "`Random sequence generation <extmisc.html#JOTRANDOM>`__ , using `jot <extmisc.html#JOTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:1994
+# 0216b37d70634de0b51e15b77ba90f16
+msgid "`Random string <string-manipulation.html#RANDSTRING0>`__ , generating"
+msgstr ""
+
+#: ../../xrefindex.rst:1996
+# c5f8f45cddc54486a3548bf48b9510f2
+msgid "Raspberry Pi (single-board computer)"
+msgstr ""
+
+#: ../../xrefindex.rst:1998
+# ba138604f54f47e192d0c4e536a1e91f
+msgid "`Script for preparing a bootable SD card <extmisc.html#RPSDCARD01>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2000
+#: ../../xrefindex.rst:2571
+# 47b44640c8d84dfaa199b959ee4eb42c
+# 78cf4820cd074c3495612f76d40dbae1
+msgid "`rcs <assortedtips.html#RCSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2002
+# 9351c72fce2148bdb607f7d560c24f79
+msgid "`read <internal.html#READREF>`__ , set value of a variable from ``       stdin      `` <ioredirintro.html#STDINOUTDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2005
+# 247597db30904817b21669ef982af98e
+msgid "`Detecting *arrow* keys <internal.html#READARROW>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2007
+# b9e259e2479a4acda3b910ca383bdfce
+msgid "`Options <internal.html#READOPTIONS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2009
+# 5b1ed9040c80451f9c56aa580437379b
+msgid "`Piping output of *cat* <internal.html#READPIPEREF>`__ to *read*"
+msgstr ""
+
+#: ../../xrefindex.rst:2011
+# 7b636c4b1c064d809939b1dd3a9e2c6f
+msgid "` \"Prepending\" text <x17837.html#HSREAD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2013
+# 44ae01fc79184e03a7995ccd6f76b330
+msgid "`Problems piping *echo* <gotchas.html#BADREAD0>`__ to *read*"
+msgstr ""
+
+#: ../../xrefindex.rst:2015
+# 0242a29e789648f5bfc262be8eda7bcb
+msgid "`Redirection from a file <internal.html#READREDIR0>`__ to *read*"
+msgstr ""
+
+#: ../../xrefindex.rst:2017
+# 5441b9d12fc5469aa0fb6829d3387144
+msgid "``         $REPLY        `` <internalvariables.html#REPLYREF>`__ , default *read* variable"
+msgstr ""
+
+#: ../../xrefindex.rst:2020
+# da6b394a097f4bca8d95d41976145924
+msgid "`Timed input <internal.html#READTIMED>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2024
+# 0832cd95f75545148a212059f52a758c
+msgid "`readline <internal.html#READLINEREF>`__ library"
+msgstr ""
+
+#: ../../xrefindex.rst:2026
+# b25982f4882d4eb9865dca8497b2d595
+msgid "`Recursion <localvar.html#RECURSIONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2028
+# 7833d76eeb2448c49c011d0e36d6a2a2
+msgid "`Demonstration of <localvar.html#RECURSIONDEMO0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2030
+# e320bc342e864b47bd102d32837729fc
+msgid "`Factorial <localvar.html#FACTORIALREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2032
+# 3f8ac73f4f3541759d23352cf172deb3
+msgid "`Fibonacci sequence <recurnolocvar.html#FIBOREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2034
+# a29708f004f64c639b36870ea4ad2943
+msgid "`Local variables <localvar.html#LOCVARRECUR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2036
+# cf72b906aa58409589a520a286d547aa
+msgid "`Script calling itself recursively <recursionsct.html#SCRIPTRECURSION>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2039
+# 95becd6d2b264622864d0b37db5b7645
+msgid "`Towers of Hanoi <recurnolocvar.html#HANOIREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2043
+# ad3b00b7345c46c9bc996c05e9e429f5
+msgid "`Code blocks <redircb.html#REDIRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2045
+# 1d7eccca6ee74648ac57f2759868d92e
+msgid "`exec < ``         filename        `` <x17974.html#USINGEXECREF>`__ ,"
+msgstr ""
+
+#: ../../xrefindex.rst:2047
+# 9b810dd1c9ce47ffabb91656b472c946
+msgid "to reassign `file descriptors <io-redirection.html#FDREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2049
+# 06599450c0f0413c8c1a001d44d63566
+msgid "`Introductory-level explanation <ioredirintro.html>`__ of *I/O redirection*"
+msgstr ""
+
+#: ../../xrefindex.rst:2052
+# b1cafddedd9d42dfa942be53a39c71b8
+msgid "`Open a file <io-redirection.html#IOREDIRECTIONREF2>`__ for *both* reading and writing"
+msgstr ""
+
+#: ../../xrefindex.rst:2055
+# 2fe47bfd8db64ea5bf5332a04402dc5f
+msgid "``        <>filename       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2057
+# a7c43bf0d47c4de9ac0e2e9743a64167
+msgid "`*read* input redirected <internal.html#READREDIR0>`__ from a file"
+msgstr ""
+
+#: ../../xrefindex.rst:2059
+# fb517cdd4cdc44d7bda1c5ac8c79c90c
+msgid "``         stderr        `` to ``         stdout        `` <io-redirection.html#IOREDIRECTIONREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2062
+# 63f9fe61477d4d7eba3d9207a387edb9
+msgid "``        2>&1       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2064
+# e63df633aa2c4fec9a18accca7f17e83
+msgid "``         stdin        `` / ``         stdout        `` <special-chars.html#COXEX>`__ , using **-**"
+msgstr ""
+
+#: ../../xrefindex.rst:2068
+# 19f318e138dd4d6996a30a86d9d06ea6
+msgid "``         stdin        `` of a *function* <complexfunct.html#REDSTDINFUNC1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2071
+# 7d119f1456844b30bff3fb14393087f2
+msgid "``         stdout        `` to a file <io-redirection.html#IOREDIRECTIONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2074
+# 6d4de4cbdb86453a8c6dc987de955990
+msgid "``                 >               `` ... ``                 >>               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2077
+# 4f88f1a4554a423cad4cd5c48f3bad03
+msgid "``         stdout        `` to *file descriptor* <io-redirection.html#IOREDIRECTIONREF1>`__ *j*"
+msgstr ""
+
+#: ../../xrefindex.rst:2080
+# 85efcb6584e846e89b899c410e5f8c58
+msgid "``        >&j       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2082
+# f2399f64d4344a9aa6185754e71592b4
+msgid "`file descriptor ``         i        `` to *file descriptor* <io-redirection.html#IOREDIRECTIONREF1>`__ *j*"
+msgstr ""
+
+#: ../../xrefindex.rst:2085
+# b4323833b3ea400da6b28332163aab32
+msgid "``        i>&j       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2087
+# 094dea6326274862bcbf4e0002d228c0
+msgid "``         stdout        `` of a command <special-chars.html#REDIROUTERROR2>`__ to ``        stderr       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2091
+# a843d9affa9345ba9d1953676e2fc5ff
+msgid "``        >&2       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2093
+# 32576b87d1454266badd417e310d6ffd
+msgid "``         stdout        `` *and* ``         stderr        `` of a command <special-chars.html#REDIROUTERROR>`__ to a file"
+msgstr ""
+
+#: ../../xrefindex.rst:2096
+# 95103f7e971f4851950fa4f92113f8e3
+msgid "``        &>       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2098
+#: ../../xrefindex.rst:2400
+# 9154c71a2dbc479786d14dbf822807ce
+# b3a2cd5856a447078d1216feacaed3df
+msgid "`tee <extmisc.html#TEEREF>`__ , redirect to a file output of command(s) partway through a `pipe <special-chars.html#PIPEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2101
+# f18f3fa61e254fc59e310df197fc1915
+msgid "`Reference Cards <refcards.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2103
+# fad41eaec1114f9e869780e9b4ca6e01
+msgid "`Miscellaneous constructs <refcards.html#MISCTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2105
+# 1f091a70c6f14a6b8a72a5e2609e19fd
+msgid "`Parameter substitution/expansion <refcards.html#PARSUBTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2107
+# b5cbf96ed9514bdbba71a112e9df9423
+msgid "`Special shell variables <refcards.html#SPECSHVARTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2109
+# a34b480ad2074a71864056dad2e8569a
+msgid "`String operations <refcards.html#STRINGOPSTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2111
+#: ../../xrefindex.rst:2425
+# e80614b8924044f383da3c60962af532
+# bc8996a13e0a46e485cc201f0748ab6e
+msgid "Test operators"
+msgstr ""
+
+#: ../../xrefindex.rst:2113
+#: ../../xrefindex.rst:2498
+# bdc39df175d04b36b06d59b865a7294c
+# 30475c473d3c4088864ac4ddb8c920d7
+msgid "`Binary comparison <refcards.html#BINCOMPTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2115
+# c8a7dd60466d400a902e7d2faf47e43c
+msgid "`Files <refcards.html#FILESTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2117
+# f410f0d074a746b7822571eeedefc6a9
+msgid "`*Regular Expressions* <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2119
+# 0ec6aab3abe94e80a16b6ae65ff06209
+msgid "**^** (caret) `Beginning-of-line <special-chars.html#BEGLINEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2121
+# 7440b362b8e34e2ca8180ab309dbd6d6
+msgid "**$** (dollar sign) `*Anchor* <x17129.html#DOLLARSIGNREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2123
+# 0b13199b63bc44f28289f19355f1ea54
+msgid "**.** (dot) `Match single character <x17129.html#REGEXDOT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2125
+# 43576aaf549944feb80921d9573eaa88
+msgid "**\\*** (asterisk) `Any number of characters <special-chars.html#ASTERISKREF2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2128
+# 24938376494d400eb05db7eecce45bf0
+msgid "**[ ]** (brackets) `Enclose character set to match <x17129.html#BRACKETSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2131
+# c5a656981014447fa4c93391c7bbd633
+msgid "**\\\\** (backslash) `Escape <x17129.html#REGEXBS>`__ , interpret following character literally"
+msgstr ""
+
+#: ../../xrefindex.rst:2134
+# ab8ea2e5d5c04e689840eece8fd6b279
+msgid "**\\\\< ... \\\\>** (angle brackets, *escaped* ) `Word boundary <x17129.html#ANGLEBRAC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2137
+# 640d17f7543b4382989fe7b273c3bd74
+msgid "`Extended <x17129.html#EXTREGEX>`__ REs"
+msgstr ""
+
+#: ../../xrefindex.rst:2141
+# e9debfb7277f49f4ab395c73cd8f479d
+msgid "**\\\\{ \\\\}** `Escaped \"curly\" brackets <x17129.html#ESCPCB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2143
+# 3d138767f39348b1bf66ec06591ae839
+msgid "**[: :]** `POSIX character classes <x17129.html#POSIXREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2145
+# 1fc3d111de4a4e058062e86046ef0abb
+msgid "``       $REPLY      `` <internalvariables.html#REPLYREF>`__ , Default value associated with `read <internal.html#READREF>`__ command"
+msgstr ""
+
+#: ../../xrefindex.rst:2148
+# b04269101514455caa27e1dce92be717
+msgid "`Restricted shell <restricted-sh.html#RESTRICTEDSHREF>`__ , shell (or script) with certain commands disabled"
+msgstr ""
+
+#: ../../xrefindex.rst:2151
+# 7f95353b69b94faa99bb859ea0841f0c
+msgid "`return <complexfunct.html#RETURNREF>`__ , command that terminates a `function <functions.html#FUNCTIONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2154
+# 3da106660a7b4be5bc3fd228052255d5
+msgid "`run-parts <extmisc.html#RUNPARTSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2156
+# f3b4606a06d449318760b215294671a6
+msgid "`Running scripts in sequence <assortedtips.html#RUNPARTSREF2>`__ , without user intervention"
+msgstr ""
+
+#: ../../xrefindex.rst:2161
+# eba1aabad93a4d4a9c62ac7891af45fc
+msgid "`Scope <subshells.html#SCOPEREF>`__ of a variable, definition"
+msgstr ""
+
+#: ../../xrefindex.rst:2163
+# 0965a4648cdc4a28b3bc50b914dc9056
+msgid "`Script options <options.html#INVOCATIONOPTIONSREF>`__ , set at command line"
+msgstr ""
+
+#: ../../xrefindex.rst:2166
+# f196c93c0d674d94bd1a118f7c64ead5
+msgid "`Scripting routines <assortedtips.html#LIBROUTINES>`__ , library of useful definitions and `functions <functions.html#FUNCTIONREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2169
+# c96288b000fc47b081668864f965a9fb
+msgid "`Secondary prompt <internalvariables.html#SECPROMPTREF>`__ , **``       $PS2      ``**"
+msgstr ""
+
+#: ../../xrefindex.rst:2172
+# 34a19695f9ce4ceb8f13cbd139a88d82
+msgid "`Security issues <securityissues.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2174
+# b6602bcba0f94c258089d73b71628035
+msgid "`nmap <system.html#NMAPREF>`__ , *network mapper* / port scanner"
+msgstr ""
+
+#: ../../xrefindex.rst:2176
+# ab165b62d67844ad938ff83c50ddc5ea
+msgid "`sudo <system.html#SUDOREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2180
+# 154c0a71b4d942978a1832b9bbbc527e
+msgid "`Viruses, trojans, and worms <securityissues.html#INFECTEDSCRIPTS1>`__ in scripts"
+msgstr ""
+
+#: ../../xrefindex.rst:2183
+# 8e3ce33fe49e4544b6bac287b5781602
+msgid "`Writing secure scripts <securityissues.html#SECURITYTIPS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2185
+# eb295adc58dc460087c33a6356d5d2c0
+msgid "`sed <sedawk.html#SEDREF>`__ , pattern-based programming language"
+msgstr ""
+
+#: ../../xrefindex.rst:2187
+# 5373a032afe24ee3bc9bde13191eba86
+msgid "`**Table** <x23170.html#SEDBASICTABLE>`__ , basic operators"
+msgstr ""
+
+#: ../../xrefindex.rst:2189
+# c6bc5a4aabba498b9a69d4606998f299
+msgid "`**Table** <x23170.html#SEDOPTABLE>`__ , examples of operators"
+msgstr ""
+
+#: ../../xrefindex.rst:2191
+# e3a3a73481a24cf4aee72553cc611e37
+msgid "`select <testbranch.html#SELECTREF>`__ , construct for menu building"
+msgstr ""
+
+#: ../../xrefindex.rst:2193
+# 416e3a53a07b4fdabbff159537032134
+msgid "``                   in                                 list                     `` omitted <testbranch.html#INLISTOMIT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2196
+# 4d89c4176cdc4e90b86b18c360ce0cbe
+msgid "`Semaphore <system.html#SEMAPHOREREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2198
+# 87423173b56c4dc6a6e21ca3b66ff8c6
+msgid "`Semicolon required <loops1.html#NEEDSEMICOLON>`__ , when `do <loops1.html#DOINREF>`__ *keyword* is on first line of `loop <loops1.html#FORLOOPREF1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2202
+# 28a482473a0746b3a4cab77a7d7f5a72
+msgid "`When terminating *curly-bracketed* code block <gotchas.html#OMITSEMICOLON>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2205
+# ae662a01d3dd4a37b381a30fe5a1f022
+msgid "`seq <extmisc.html#SEQREF>`__ , Emit a sequence of integers. Equivalent to `jot <extmisc.html#JOTREF>`__ ."
+msgstr ""
+
+#: ../../xrefindex.rst:2208
+# e45ec88680a7490986d9138c230ed528
+msgid "`set <internal.html#SETREF>`__ , Change value of internal script variables"
+msgstr ""
+
+#: ../../xrefindex.rst:2211
+# b1b520a2e37343dd8c835a00a3cfd0c7
+msgid "`set -u <debugging.html#UNDVARERR>`__ , Abort script with error message if attempting to use an *undeclared* variable."
+msgstr ""
+
+#: ../../xrefindex.rst:2214
+# c19740cc7b0d4c49a57d612118114e66
+msgid "`Shell script <part1.html#WHATSASCRIPT>`__ , definition of"
+msgstr ""
+
+#: ../../xrefindex.rst:2216
+# e747f914acc543cda41e77e1b36e3267
+msgid "`Shell wrapper <wrapper.html#SHWRAPPER>`__ , script embedding a command or utility"
+msgstr ""
+
+#: ../../xrefindex.rst:2219
+# e94704c9a7ab4f68bc84da6b8d051fe3
+msgid "`shift <othertypesv.html#SHIFTREF>`__ , reassigning *positional parameters*"
+msgstr ""
+
+#: ../../xrefindex.rst:2222
+# 9ea77303968640128162d08682fa887c
+msgid "``       $SHLVL      `` <internalvariables.html#SHLVLREF>`__ , *shell level* , depth to which the shell (or script) is nested"
+msgstr ""
+
+#: ../../xrefindex.rst:2225
+# 74074a00d87e4abfb8a0466594157dc2
+msgid "`shopt <internal.html#SHOPTREF>`__ , change *shell options*"
+msgstr ""
+
+#: ../../xrefindex.rst:2227
+# 61b453b962994e27a2cd96fc217b2800
+msgid "`Signal <debugging.html#SIGNALD>`__ , a message sent to a process"
+msgstr ""
+
+#: ../../xrefindex.rst:2229
+# 03a051bf56b942e68422b64a9cbcc040
+msgid "Simulations"
+msgstr ""
+
+#: ../../xrefindex.rst:2231
+# c8bf87557b15439ca8fc86748c7ac544
+msgid "`Brownian motion <randomvar.html#BROWNIANREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2233
+# 6b342418f00c4a029bcc86f68845ff66
+msgid "`Galton board <randomvar.html#BROWNIANREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2235
+# 5493b096f1844b52b453330a4e3f4c6f
+msgid "`Horserace <colorizing.html#HORSERACEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2237
+# 3ef0e07b430243be84dfd170a9eba1e4
+msgid "`*Life* <contributed-scripts.html#LIFEREF>`__ , game of"
+msgstr ""
+
+#: ../../xrefindex.rst:2239
+# af10b5e1ad4e4c55bcf6d319eabe3cf0
+msgid "`PI <mathc.html#CANNONREF>`__ , approximating by firing cannonballs"
+msgstr ""
+
+#: ../../xrefindex.rst:2241
+# 24551bade1674bc584dcaac9ddad299e
+msgid "`Pushdown *stack* <arrays.html#STACKEX0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2243
+# 28374836c8814260b3566829624b5d64
+msgid "`Single quotes <varsubn.html#SNGLQUO>`__ ( **' ... '** ) *strong* `quoting <quoting.html#QUOTINGREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2246
+# 4295fef2f0474f8b83929d77d96eac1e
+msgid "`Socket <devref1.html#SOCKETREF>`__ , a communication node associated with an I/O port"
+msgstr ""
+
+#: ../../xrefindex.rst:2249
+# d9e450b91bcd48d991824c10d7d7be21
+msgid "Sorting"
+msgstr ""
+
+#: ../../xrefindex.rst:2251
+# c4d93736fcca49a2849a08446043d754
+msgid "`Bubble sort <arrays.html#BUBBLESORT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2253
+# 22217670453d4573b1c238519770c849
+msgid "`Insertion sort <contributed-scripts.html#INSERTIONSORT0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2255
+# 82092605b27c498fb2f111cd5e1b97c7
+msgid "`source <internal.html#SOURCEREF>`__ , execute a script or, within a script, import a file"
+msgstr ""
+
+#: ../../xrefindex.rst:2258
+# 339876d8f8d74ff6bce26f4da6b9a443
+msgid "`Passing positional parameters <internal.html#SOURCEPARAMS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2260
+# f3232e06c8854e4db1937c52a06759d1
+msgid "*Spam* , dealing with"
+msgstr ""
+
+#: ../../xrefindex.rst:2262
+# db05a213dd014a189fc40d898537e3ce
+msgid "`*Example script* <communications.html#SPAMLOOKUP_0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2264
+# a6438eace1a949f88868772c1ce6d3b9
+msgid "`*Example script* <communications.html#ISSPAMMER_0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2266
+# 195dffa013434540b1d3e5bf65a3e71b
+msgid "`*Example script* <contributed-scripts.html#ISSPAMMER2_0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2268
+# d135d615210a431c9b3b87a42e068a2f
+msgid "`*Example script* <contributed-scripts.html#WHX0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2270
+# ce9a3e80a50349e29291bae7be3b6514
+msgid "`Special characters <special-chars.html#SCHARLIST1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2272
+# 9922e830ddf0432582f3f729e8f544b0
+msgid "Stack"
+msgstr ""
+
+#: ../../xrefindex.rst:2274
+# 4c5e3ba5f0964dacbcfc5c3cb6f57b9d
+msgid "`Definition <internalvariables.html#STACKDEFREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2276
+# c152853b3fc349e58bc61eb5023f1639
+msgid "Emulating a *push-down stack* , `example script <arrays.html#STACKEX0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2279
+# 40a7984c14454e5abc26ca3b93c4cf56
+msgid "Standard Deviation, `example script <contributed-scripts.html#STDDEV>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2281
+# 6d8ab3dd94ba400f99805e40ab6a6153
+msgid "`Startup files <files.html#FILESREF1>`__ , Bash"
+msgstr ""
+
+#: ../../xrefindex.rst:2283
+# 4e68c5ffc9e5443fac1f3e03ea644e9b
+msgid "``       stdin      `` and ``       stdout      `` <ioredirintro.html#STDINOUTDEF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2286
+# 45824fa5d15945ef8cc5d682d53775be
+msgid "`Stopwatch <contributed-scripts.html#STOPWATCH>`__ , example script"
+msgstr ""
+
+#: ../../xrefindex.rst:2288
+# 141f703a7da54cd697c411d62f06f9bf
+msgid "Strings"
+msgstr ""
+
+#: ../../xrefindex.rst:2290
+# 969ae19fc70c4542897def97f74b23e0
+msgid "**=~** `String match operator <bashver3.html#REGEXMATCHREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2292
+# a91e496bbd124baca549525b7394d59f
+msgid "`Comparison <comparison-ops.html#SCOMPARISON1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2294
+#: ../../xrefindex.rst:2720
+# b110f9afc8d148f18186996078421756
+# 65735073d7554867920516ec900c6a07
+msgid "`Length <parameter-substitution.html#PSOREX1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2296
+# b6e9c11d7e7e4ff3bdae778745b3aa52
+msgid "``                 ${#string}               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2298
+# 7362ad77789a452a977a073e7283762a
+msgid "`Manipulation <string-manipulation.html#STRINGMANIP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2300
+# 5d50aab7c2c5435c9067e4503590b272
+msgid "`Manipulation <string-manipulation.html#AWKSTRINGMANIP2>`__ , using `awk <awk.html#AWKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2303
+#: ../../xrefindex.rst:2731
+# 18f5cd9a23854ccc9bc188097487ad93
+# 1b5231380d2142b385f35cf6b3266043
+msgid "`*Null* string <comparison-ops.html#STRINGNOTNULL>`__ , testing for"
+msgstr ""
+
+#: ../../xrefindex.rst:2305
+# cbaf8761ba8246b6a52ae924be06a242
+msgid "`Protecting strings <contributed-scripts.html#PROTECTLITERAL0>`__ from expansion and/or reinterpretation, *script example*"
+msgstr ""
+
+#: ../../xrefindex.rst:2308
+# 3fba99f4ddfc49daa867438f2ddc7d48
+msgid "`*Unprotecting* strings <contributed-scripts.html#UNPROTECTLITERAL0>`__ , *script example*"
+msgstr ""
+
+#: ../../xrefindex.rst:2312
+# 1f6ae77a4b0b4d4fb4f38cee186a0571
+msgid "*strchr()* , `equivalent of <string-manipulation.html#SUBSTRINGINDEX2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2315
+# 676318995ce64c0c8e34c5b733946a4a
+msgid "*strlen()* , `equivalent of <string-manipulation.html#STRLEN>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2317
+# e3b81f50972c452093b15221d6150290
+msgid "`strings <filearchiv.html#STRINGSREF>`__ command, find printable strings in a binary or data file"
+msgstr ""
+
+#: ../../xrefindex.rst:2320
+# 8850a7061c9c4fa98c9150c11ce6596f
+msgid "Substring extraction"
+msgstr ""
+
+#: ../../xrefindex.rst:2322
+# e01ee5de5ce34ee08f1d33eccda4a829
+msgid "`${string:position} <string-manipulation.html#SUBSTREXTR01>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2324
+# 6a92771157364b8da650bbf5ad2871f6
+msgid "`${string:position:length} <string-manipulation.html#SUBSTREXTR02>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2326
+# 69d613ec510f466385028a50b204612f
+msgid "`Using *expr* <moreadv.html#EXPEXTRSUB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2328
+# ad31735cc303452f8114778ae4a07e19
+msgid "`Substring *index* <string-manipulation.html#SUBSTRINGINDEX2>`__ (numerical position in string)"
+msgstr ""
+
+#: ../../xrefindex.rst:2331
+# b8995462a3504003a50695f81d62444b
+msgid "`Substring *matching* <string-manipulation.html#EXPRPAREN>`__ , using `expr <moreadv.html#EXPRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2334
+# 819e7aa4991e4cd2a28adc662d6c6db4
+msgid "`Substring *removal* <parameter-substitution.html#PSOREX1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2336
+# 17affe55fd274f1b8f76431e5ba3a23b
+msgid "`${var#Pattern} <parameter-substitution.html#PSOREXSH>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2338
+# daf3c57abf78452cbfb29e1f12a77787
+msgid "`${var##Pattern} <parameter-substitution.html#PSOREXLO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2340
+# 314ba7f953ab4b1c904e5fec3e6d7e8a
+msgid "`${var%Pattern} <parameter-substitution.html#PCTREP1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2342
+# 39475759473642fcbb890d44464d0ea1
+msgid "`${var%%Pattern} <parameter-substitution.html#PCTREP2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2344
+# 9b75f747ca2647f1a63d4dc38f93472c
+msgid "Substring replacement"
+msgstr ""
+
+#: ../../xrefindex.rst:2346
+# 38a659a7790c41e998b074aae884e382
+msgid "`${string/substring/replacement} <string-manipulation.html#SUBSTRREPL00>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2348
+# 9c8a3094c8db4576b1a067e1b963e51e
+msgid "`${string//substring/replacement} <string-manipulation.html#SUBSTRREPL01>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2350
+# 8db164e63427423f80865701628c836f
+msgid "`${string/#substring/replacement} <string-manipulation.html#SUBSTRREPL02>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2352
+# 1e5457cf9a924f3db6fc783d248471f6
+msgid "`${string/%substring/replacement} <string-manipulation.html#SUBSTRREPL03>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2354
+# 8c2cae00f4f8458e9171ca6d8643d6ba
+msgid "`*Script example* <contributed-scripts.html#DAYSBETWEEN0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2356
+# dd9071da9e7044f2a56f012e4df6b5fb
+msgid "`**Table** <refcards.html#STRINGOPSTAB>`__ of *string/substring* manipulation and extraction operators"
+msgstr ""
+
+#: ../../xrefindex.rst:2359
+# 45bbba7b010f49ca99ff26483f03b304
+msgid "`*Strong* quoting <varsubn.html#SNGLQUO>`__ **' ... '**"
+msgstr ""
+
+#: ../../xrefindex.rst:2361
+# f2c3bea51c3240f3abc563daef15edad
+msgid "`Stylesheet <scrstyle.html>`__ for writing scripts"
+msgstr ""
+
+#: ../../xrefindex.rst:2363
+# 961c04c1b03f4d449a447c0757ec3719
+msgid "`Subshell <subshells.html#SUBSHELLSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2365
+# eb1491fe0f3f4e7fb428777503f7aee8
+msgid "`Command list within parentheses <subshells.html#SUBSHELLPARENS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2367
+# dbea1c2bf5914753beeb9d478037df7b
+msgid "`Variables <subshells.html#SUBSHNLEVREF>`__ , ``        $BASH_SUBSHELL       `` and ``        $SHLVL       ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2370
+# f1a33404bb5f4ab6af9f03e3b439347f
+msgid "Variables in a *subshell*"
+msgstr ""
+
+#: ../../xrefindex.rst:2372
+# ca02b7f0a5504578b6959dea809ed620
+msgid "`*scope* limited <gotchas.html#VARSUBSH>`__ , but ..."
+msgstr ""
+
+#: ../../xrefindex.rst:2374
+# ce4d017077344e0ea85abe426ac6921c
+msgid "... `can be accessed outside the subshell? <assortedtips.html#SUBSHTMP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2377
+# 5e833bde3ec444bd8bd4afef9ffb6471
+msgid "`su <system.html#SUREF>`__ *Substitute user* , log on as a different user or as *root*"
+msgstr ""
+
+#: ../../xrefindex.rst:2380
+# 19303199ac234e4f9eec64148bb556b4
+msgid "`suid <fto.html#SUIDREF>`__ ( *set user id* ) file flag"
+msgstr ""
+
+#: ../../xrefindex.rst:2382
+# 41d1466b19b74e358d2966d3b9f23f0c
+msgid "`*suid* commands inside a script <gotchas.html#SUIDSCR>`__ , not advisable"
+msgstr ""
+
+#: ../../xrefindex.rst:2385
+# ce43b695d88a4e878881760ab58c92af
+msgid "`Symbolic links <basic.html#SYMLINKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2387
+# 2a27d187e34b4a53a7cd3c6f20e9ef38
+msgid "`Swapfiles <zeros.html#SWAPFILEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2391
+# b241f0d42b284e58a8775cec516c1046
+msgid "`Tab completion <tabexpansion.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2393
+# eca5ed3caed5431ea7cbebf0d06db4bb
+msgid "Table lookup, `script example <bashver2.html#RESISTOR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2395
+# 38737fec9edf469fa3f7fbf675b25445
+msgid "`tail <textproc.html#TAILREF>`__ , *echo* to ``      stdout     `` lines at the (tail) end of a text file"
+msgstr ""
+
+#: ../../xrefindex.rst:2398
+# fbed874c5e8c423495d64d69c2b87ba5
+msgid "`tar <filearchiv.html#TARREF>`__ , archiving utility"
+msgstr ""
+
+#: ../../xrefindex.rst:2403
+# 73661ba2917e452cbd9333a2d8903613
+msgid "`Terminals <system.html#TERMINALSSYS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2405
+# 6535d60833324a7383eb89e39d689421
+msgid "`setserial <system.html#SETSERIALREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2407
+# 3a8bf5e9e5d04288be261a8d97c801a9
+msgid "`setterm <system.html#SETTERMREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2409
+# 1c244f803cf64f5fab4cec4d5d2b62ac
+msgid "`stty <system.html#STTYREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2411
+# 24a13a61580c469087c20daddd5beb2c
+msgid "`tput <terminalccmds.html#TPUTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2413
+# 817f32fef4a54c05aa367a4e0a4e66d6
+msgid "`wall <system.html#WALLREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2415
+# aa3d647c872a4759bfda936a0f3dc710
+msgid "*test* command"
+msgstr ""
+
+#: ../../xrefindex.rst:2417
+# 45423f60785b48ef97d43db32105d94c
+msgid "`Bash *builtin* <testconstructs.html#TTESTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2419
+# aba173d6b15e4b4cba68fae67f84b1a6
+msgid "`external command <testconstructs.html#USRBINTEST>`__ , ``        /usr/bin/test       `` (equivalent to ``        /usr/bin/[       `` )"
+msgstr ""
+
+#: ../../xrefindex.rst:2423
+# 6266e483d2cd492a893e5bf749626fc9
+msgid "`Test constructs <testconstructs.html#TESTCONSTRUCTS1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2427
+# 21102ee077fa4a569b3d11ac8315c292
+msgid "**-a** `Logical AND <comparison-ops.html#COMPOUNDAND>`__ compound comparison"
+msgstr ""
+
+#: ../../xrefindex.rst:2430
+# c3dcfd3c60354a0c9e8fce5f012bf925
+msgid "**-e** `File exists <fto.html#RTIF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2432
+# bd9722fd52c64b9d89ef9a55c1ab781d
+msgid "**-eq** `is-equal-to <comparison-ops.html#EQUALREF>`__ (integer comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2435
+# 896843107fca49fcb759f5f4dbaf9ce3
+msgid "**-f** `File is a *regular* file <fto.html#REGULARFILE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2437
+# a30565b236ac4adfb497e3d1fdfcbbc9
+msgid "**-ge** `greater-than or equal <comparison-ops.html#GE0REF>`__ (integer comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2440
+# acf29c0a9f36499c9e365e6e04463036
+msgid "**-gt** `greater-than <comparison-ops.html#GT0REF>`__ (integer comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2443
+# 340325744921476089124e167a016529
+msgid "**-le** `less-than or equal <comparison-ops.html#LE0REF>`__ (integer comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2446
+# ecced0af58b249698b5c9bdf2e585d4e
+msgid "**-lt** `less-than <comparison-ops.html#LT0REF>`__ (integer comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2449
+# 607462771cd24e36a6994b3249de6991
+msgid "**-n** `not-zero-length <comparison-ops.html#STRINGNOTNULL>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2452
+# d09a24d6868344bba5816fba236acdf8
+msgid "**-ne** `not-equal-to <comparison-ops.html#NEQUALREF>`__ (integer comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2455
+# 6b61f3179cd646eca7cd38f3fe0ff2ec
+msgid "**-o** `Logical OR <comparison-ops.html#COMPOUNDOR>`__ compound comparison"
+msgstr ""
+
+#: ../../xrefindex.rst:2458
+# 68810eb56168407c8bcc556cf8dea1eb
+msgid "**-u** `*suid* flag set <fto.html#SUIDREF>`__ , file test"
+msgstr ""
+
+#: ../../xrefindex.rst:2460
+# 7df3082d56214eb88f732946bcba6a9d
+msgid "**-z** `is-zero-length <comparison-ops.html#STRINGNULL>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2463
+# c9283c2d64104409b0fab94b6b159e89
+msgid "**=** `is-equal-to <comparison-ops.html#SCOMPARISON1>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2466
+# a4aa56c64e2643cabdfe8ad602d74849
+msgid "**==** `is-equal-to <comparison-ops.html#SCOMPARISON2>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2469
+# 6e7bb7613ca94c19b1492119775d3d5e
+msgid "**<** `less-than <comparison-ops.html#LTREF>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2471
+# 7e4a4e57e21541a798d14fe8ff9c4afc
+msgid "**<** `less-than <comparison-ops.html#INTLT>`__ , (integer comparison, within `double parentheses <dblparens.html>`__ )"
+msgstr ""
+
+#: ../../xrefindex.rst:2474
+# 7608752e65474ed3b71cdc3f22ba4bf6
+msgid "**<=** `less-than-or-equal <comparison-ops.html#LTEQ>`__ , (integer comparison, within *double parentheses* )"
+msgstr ""
+
+#: ../../xrefindex.rst:2477
+# fe8f0b149af3494396bc9e569af1ad46
+msgid "**>** `greater-than <comparison-ops.html#GTREF>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2480
+# e34fbc88f3c44eeba24ebf460ac46539
+msgid "**>** `greater-than <comparison-ops.html#INTGT>`__ , (integer comparison, within *double parentheses* )"
+msgstr ""
+
+#: ../../xrefindex.rst:2483
+# dd923c0c22774875a891800b356cfb52
+msgid "**>=** `greater-than-or-equal <comparison-ops.html#GTEQ>`__ , (integer comparison, within *double parentheses* )"
+msgstr ""
+
+#: ../../xrefindex.rst:2486
+# 45c685b08ad04938956ebd5fe1d03ae4
+msgid "**\\|\\|** `Logical OR <ops.html#ORREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2488
+# 75b44751e5b54a898bf501ebfdad2f1a
+msgid "**&&** `Logical AND <special-chars.html#LOGICALAND>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2490
+# cefee4fbf4194364a509732f753dd1f6
+msgid "**!** `Negation operator <special-chars.html#NOTREF>`__ , inverts `exit status <exit-status.html#EXITSTATUSREF>`__ of a test"
+msgstr ""
+
+#: ../../xrefindex.rst:2493
+# e765c2c7633546b984bf80b87565b7a9
+msgid "**!=** `not-equal-to <comparison-ops.html#NOTEQUAL>`__ (string comparison)"
+msgstr ""
+
+#: ../../xrefindex.rst:2496
+# 7f78036bf0eb44b9bbcbcbaaf6660f06
+msgid "**Tables** of *test* operators"
+msgstr ""
+
+#: ../../xrefindex.rst:2500
+# 5a491c5c5cf34f08bf1e9e36f123b902
+msgid "`File <refcards.html#FILESTAB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2502
+# 61995903f2a447688ca62d2167ab3479
+msgid "`Text and text file processing <textproc.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2504
+# 30396fe8b506430697d8ac2f6c095dcf
+msgid "`Time / Date <timedate.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2506
+# 77fbc5a333e0438889b8fefab5a5ad58
+msgid "Timed input"
+msgstr ""
+
+#: ../../xrefindex.rst:2508
+# 2f14be3200954b3b9ed580d4acd47a7d
+msgid "`Using *read -t* <internal.html#READTIMED>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2510
+# 42c11901a4eb4e1c86bb852a77b4eb3e
+msgid "`Using *stty* <internalvariables.html#STTYTO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2512
+# 3d29ad52d9604734a50305734917606f
+msgid "`Using timing loop <internalvariables.html#TIMINGLOOP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2514
+# da905354ed014f8b96360e5e60b7f432
+msgid "`Using ``         $TMOUT        `` <internalvariables.html#TMOUTREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2517
+# b812bb32f6b9453eaf4c2a099fd0a692
+msgid "`Tips and hints <assortedtips.html>`__ for Bash scripts"
+msgstr ""
+
+#: ../../xrefindex.rst:2519
+# 0c1632af381f4ba28ab49a37cc3400f4
+msgid "Array, `as *return value* from a function <assortedtips.html#RETARRAY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2522
+# b95d2117c6684e4eb7df79dcb669b466
+msgid "*Associative* array `more efficient <optimizations.html#ASSOCARRTST>`__ than a numerically-indexed array"
+msgstr ""
+
+#: ../../xrefindex.rst:2526
+# 4e5fa455e3294db9bc25ee9c88e02b94
+msgid "`Capturing the return value <complexfunct.html#CAPTURERETVAL>`__ of a function, using *echo*"
+msgstr ""
+
+#: ../../xrefindex.rst:2529
+# 08dd0d9320c7493b9e2464a6ba70698f
+msgid "`*CGI* programming <networkprogramming.html#CGISCRIPT>`__ , using scripts for"
+msgstr ""
+
+#: ../../xrefindex.rst:2532
+# 42a047c1b02248488cd1dc5e1eee33ab
+msgid "Comment blocks"
+msgstr ""
+
+#: ../../xrefindex.rst:2534
+# d79dfffaf59642708ced180cc52a0b8b
+msgid "Using `*anonymous here documents* <here-docs.html#CBLOCK1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2536
+# 26de8c6bd7e441f29ba12d0a34e3fff1
+msgid "Using `*if-then* constructs <assortedtips.html#COMOUTBL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2540
+# 5fe17eddba1546008c36ab0f8a673552
+msgid "`*C* -style syntax <assortedtips.html#CSTYLE>`__ , for manipulating variables"
+msgstr ""
+
+#: ../../xrefindex.rst:2543
+# 205616d10f434b30a8339d122168a5e0
+msgid "`Double-spacing a text file <x23170.html#DOUBLESPACE>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2545
+# e7232022a7404c56b2b3f516272d78b6
+msgid "Filenames prefixed with a dash, `removing <basic.html#DASHREM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2547
+# 2534995e0cdf49188a9fbb1e95bfecfc
+msgid "`Filter <assortedtips.html#FILTEROUTP>`__ , feeding output back to *same* filter"
+msgstr ""
+
+#: ../../xrefindex.rst:2550
+# f45eff88244b45e791245cb7d0841f80
+msgid "Function `*return* value workarounds <assortedtips.html#RVT>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2552
+# baf8c1c23bf2466c80b525edd809d593
+msgid "`*if-grep* test fixup <assortedtips.html#IFGREPFIX>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2554
+# eeb0ac32cffc4e2db4bba399555416a8
+msgid "`Library <assortedtips.html#LIBROUTINES>`__ of useful definitions and *functions*"
+msgstr ""
+
+#: ../../xrefindex.rst:2561
+# 3b663bcc4bc544e79a07417f881e8a97
+msgid "``        $PATH       `` , appending to, `using the ``         +=        `` operator <bashver3.html#PATHAPPEND>`__ ."
+msgstr ""
+
+#: ../../xrefindex.rst:2564
+# 54f27b31733e4540a2ecb3cb7e0af1d9
+msgid "`*Prepending* <assortedtips.html#PREPENDREF>`__ lines at head of a file"
+msgstr ""
+
+#: ../../xrefindex.rst:2567
+# cf0d083006f54ca4992e82bed0c4c9de
+msgid "`Progress bar <assortedtips.html#PROGRESSBAR>`__ template"
+msgstr ""
+
+#: ../../xrefindex.rst:2569
+# 7c9b60f266a341eba74dfcc90d58e395
+msgid "`Pseudo-code <assortedtips.html#PSEUDOCODEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2573
+# 8aa326b47a9e4df8a782f680d185f461
+msgid "`Redirecting a *test* to ``         /dev/null        `` <special-chars.html#DEVNULLREDIRECT>`__ to suppress output"
+msgstr ""
+
+#: ../../xrefindex.rst:2577
+# d16f991cf1c94d2180ac254e52dd62c9
+msgid "`Running scripts in sequence <assortedtips.html#RUNPARTSREF2>`__ without user intervention, using `run-parts <extmisc.html#RUNPARTSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2581
+# cd60724d75204aaf9472d7db97f3bddb
+msgid "Script `as embedded command <assortedtips.html#SCRIPTASEMB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2583
+# 2f460acedacf4bc5a7639018be6f1cc0
+msgid "Script *portability*"
+msgstr ""
+
+#: ../../xrefindex.rst:2589
+# d7417c66991640c1b3e185b38eeee79f
+msgid "`Setting script variable <assortedtips.html#SETVAREMB>`__ to a block of embedded *sed* or *awk* code"
+msgstr ""
+
+#: ../../xrefindex.rst:2592
+# ef01e509e21f46b095afcbe223f529e5
+msgid "Speeding up script execution by `disabling *unicode* <optimizations.html#LCALL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2595
+# 395e4ca54a1a406ab2ac24b2f87c42d0
+msgid "Subshell variable, `accessing outside the subshell <assortedtips.html#SUBSHTMP>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2598
+# c65a276c44e0421f90638491e4973e69
+msgid "`Testing a variable <assortedtips.html#INTPARAM>`__ to see if it contains only digits"
+msgstr ""
+
+#: ../../xrefindex.rst:2601
+# 7c658269ab8f41e2ba9b9cbee379d16a
+msgid "`Testing whether a command exists <special-chars.html#DEVNULLREDIRECT>`__ , using `type <internal.html#TYPEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2605
+# e3db03f2f82f4a878746583b53392901
+msgid "`Tracking script usage <assortedtips.html#TRACKINGSCR>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2610
+# 7723b864d28b4623a987eeb307b5580f
+msgid "`Widgets <assortedtips.html#WIDGETREF>`__ , invoking from a script"
+msgstr ""
+
+#: ../../xrefindex.rst:2612
+# b5e9df5561be41ca91ab710706592e6b
+msgid "``       $TMOUT      `` <internalvariables.html#TMOUTREF>`__ , Timeout interval"
+msgstr ""
+
+#: ../../xrefindex.rst:2615
+# 3f165b4a3e22462fa92a2af375149093
+msgid "`Token <testconstructs.html#TOKENREF>`__ , a symbol that may expand to a `keyword <internal.html#KEYWORDREF>`__ or command"
+msgstr ""
+
+#: ../../xrefindex.rst:2618
+# 631557b2110d4037a11c0cf883bf3e91
+msgid "`tput <terminalccmds.html#TPUTREF>`__ , terminal-control command"
+msgstr ""
+
+#: ../../xrefindex.rst:2620
+# 129fe02dd2484588a8854f652812307a
+msgid "`tr <textproc.html#TRREF>`__ , character translation filter"
+msgstr ""
+
+#: ../../xrefindex.rst:2622
+# 120212db41a4424fb3e6d89b507312fe
+msgid "`DOS to Unix text file conversion <textproc.html#TRD2U>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2624
+# a46c9a547fd3413fbcaee0786603fe11
+msgid "`Options <textproc.html#TROPTIONS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2626
+# 006feff776294c589b58936cc35cfae5
+msgid "`Soundex <contributed-scripts.html#SOUNDEX0>`__ , *example script*"
+msgstr ""
+
+#: ../../xrefindex.rst:2628
+# aaffd4bf44be4532a8263e9f6c93b7c5
+msgid "`Variants <textproc.html#TRVARIANTS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2630
+# b26ee156bc5c4ddcbe5e5d0e72be74d1
+msgid "`*Trap* <debugging.html#TRAPREF1>`__ , specifying an action upon receipt of a `signal <debugging.html#SIGNALD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2633
+# 739bfa3432594e8a97a00b9ab4132a4b
+msgid "*Trinary (ternary)* operator, *C* -style, ``             var>10?88:99           ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2636
+# c05299af48414bfa833b57aa660bbbd8
+msgid "`in *double-parentheses* construct <special-chars.html#CSTRINARY>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2638
+# be87e3b87cd14797b3c2dce892a7ac47
+msgid "`in *let* construct <internal.html#EX46>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2640
+# 566af5169d5841cfaecacfc5523e32b3
+msgid "`true <internal.html#TRUEREF>`__ , returns *successful* (0) `exit status <exit-status.html#EXITSTATUSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2643
+# 3969706a57ea4085804ccf0c20f0469c
+msgid "`typeset <declareref.html#DECLARE1REF>`__ builtin"
+msgstr ""
+
+#: ../../xrefindex.rst:2649
+# d9fb6e41db314ef9a67a24e999a6814b
+msgid "``       $UID      `` <internalvariables.html#UIDREF>`__ , User ID number"
+msgstr ""
+
+#: ../../xrefindex.rst:2652
+# 273671c32e064cad8e0a834f7d368cd7
+msgid "`unalias <aliases.html#UNALIASREF>`__ , to remove an `alias <aliases.html#ALIASREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2655
+# 0bdaccb8240e42c283a4371e53d0e477
+msgid "`uname <system.html#UNAMEREF>`__ , output system information"
+msgstr ""
+
+#: ../../xrefindex.rst:2657
+# 709dca5be50f4b4a80f4b5eff1a9149b
+msgid "`Unicode <bashver4.html#UNICODEREF>`__ , encoding standard for representing letters and symbols"
+msgstr ""
+
+#: ../../xrefindex.rst:2660
+# 9c5c7a45f9af4f358c486b48b7078912
+msgid "`Disabling *unicode* <optimizations.html#LCALL>`__ to optimize script"
+msgstr ""
+
+#: ../../xrefindex.rst:2664
+# 1a8851150af64dda821f9873eeaa969d
+msgid "`uniq <textproc.html#UNIQREF>`__ , filter to remove duplicate lines from a sorted file"
+msgstr ""
+
+#: ../../xrefindex.rst:2667
+# bbb765572d9d4bcbafb00fa75b71ff6b
+msgid "`unset <internal.html#UNSETREF>`__ , delete a shell variable"
+msgstr ""
+
+#: ../../xrefindex.rst:2671
+# 28a3ee65541b48a78655746c026ccf56
+msgid "*until [ condition-is-true ]; do*"
+msgstr ""
+
+#: ../../xrefindex.rst:2675
+# 84ce9bd34f7046589eacfdd87907e819
+msgid "*Variables*"
+msgstr ""
+
+#: ../../xrefindex.rst:2677
+# ef9a3f24f77246ce8ee040f909197346
+msgid "`Array operations on <arrays.html#ARRAYOPSVARS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2679
+# 06ea49dd4e3148b78a41f3eabe7eaa86
+msgid "`Assignment <ops.html#ASNOP1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2681
+# 5bd65c1b10654a23b71f90e61f57a251
+msgid "`*Script example* <varassignment.html#EX15_0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2683
+# 8f61a816abd1490c8e4e5366798e8ec0
+msgid "`*Script example* <varassignment.html#EX16_0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2685
+# d82f1f155ef74a4ea3253afd3f1d6130
+msgid "`*Script example* <varsubn.html#VARUNSETTING>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2687
+# 3532aaee7ce04bbca6c3533d846e0bb3
+msgid "`*Bash* internal variables <internalvariables.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2689
+# c36963a02f384a6e85c385dd41b9747a
+msgid "`Block of *sed* or *awk* code <assortedtips.html#SETVAREMB>`__ , setting a variable to"
+msgstr ""
+
+#: ../../xrefindex.rst:2692
+# 767b99ab55174aada280705cdba89e23
+msgid "*C-style* `increment/decrement/trinary operations <dblparens.html#PLUSPLUSREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2695
+# b4737635b59241109553acf8873c065a
+msgid "`Change value of internal script variables <internal.html#SETREF>`__ using *set*"
+msgstr ""
+
+#: ../../xrefindex.rst:2698
+# 4cbccf93d0644aaf9407c0e72493650b
+msgid "`declare <declareref.html#DECLARE1REF>`__ , to modify the properties of variables"
+msgstr ""
+
+#: ../../xrefindex.rst:2701
+# 3205d655db074fbe8f8fe74c823b7732
+msgid "`Deleting a shell variable <internal.html#UNSETREF>`__ using *unset*"
+msgstr ""
+
+#: ../../xrefindex.rst:2703
+# e190dfa8e85843308ce5554ffaa151a9
+msgid "`Environmental <othertypesv.html#ENVREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2705
+# 422bfd3b8e1946a5b6be518149963c25
+msgid "`Expansion / Substring replacement <parameter-substitution.html#EXPREPL1>`__ operators"
+msgstr ""
+
+#: ../../xrefindex.rst:2708
+# f99ff65392704b08a95df7a2276acaac
+msgid "`Indirect referencing <ivr.html#IVRREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2710
+# c92f13720e8c4b9db30a4af8840ddc22
+msgid "``                 eval variable1=\\$$variable2               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2712
+# 510b7b60e24e4739bd0e8028b6162d17
+msgid "`Newer notation <ivr.html#IVR2>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2714
+# 6aabfa81e3ba4964a7a5a0641c2baff7
+msgid "``                 ${!variable}               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2716
+# c8615950891d42dd8bfa14919cac9331
+msgid "`Integer <ops.html#INTVARREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2718
+# abe3785f63c14511bff1ae4c3bc1c687
+msgid "`Integer / string <untyped.html#BVUNTYPED>`__ (variables are untyped)"
+msgstr ""
+
+#: ../../xrefindex.rst:2722
+# 1ba4c110828941fd8e6eb105ef49c61f
+msgid "``                 ${#var}               ``"
+msgstr ""
+
+#: ../../xrefindex.rst:2724
+# bab829e4025646b09bb0f3bc5b15709a
+msgid "`Lvalue <varsubn.html#LVALUEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2726
+# 0f2061a708234211b468e56e89fbe4f3
+msgid "`Manipulating and expanding <parameter-substitution.html#PSSUB1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2728
+# ce22e201cf80472a9f9fdaa237d6f924
+msgid "`*Name* and *value* of a variable <varsubn.html#VARNAMEVAL>`__ , distinguishing between"
+msgstr ""
+
+#: ../../xrefindex.rst:2733
+# 09114ab5cbb547e28d8e8838fa94bbe8
+msgid "`*Null* variable assignment <othertypesv.html#NULLVAR>`__ , avoiding"
+msgstr ""
+
+#: ../../xrefindex.rst:2735
+# 312069a6ae6f4f6e92c3aa69c6ef3381
+msgid "`Quoting <quotingvar.html>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2739
+# a2a8cac282e84dbca6c0698721d585ba
+msgid "`to preserve *whitespace* <quotingvar.html#WSQUO>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2741
+# ffb26ba7ee6c4de7b84fc4c016787da7
+msgid "`rvalue <varsubn.html#LVALUEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2743
+# edb448f9bc87415bad4ee1e294d279f2
+msgid "`Setting to *null* value <varsubn.html#VARUNSETTING>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2745
+# 5b8e9a845f854891a4180f96212b37ac
+msgid "`In *subshell* <subshells.html#PARVIS>`__ not visible to parent shell"
+msgstr ""
+
+#: ../../xrefindex.rst:2747
+# d5ef7bb3f814428795855289fd658738
+msgid "Testing a variable `if it contains only digits <assortedtips.html#INTPARAM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2750
+# f4469f822c9a4d70b0f9aa6eac4f6bf8
+msgid "`Typing <declareref.html#TYPINGREF>`__ , restricting the properties of a variable"
+msgstr ""
+
+#: ../../xrefindex.rst:2753
+# 40045b70016d4595b5260beee692e3fd
+msgid "`Undeclared <debugging.html#UNDVARERR>`__ , error message"
+msgstr ""
+
+#: ../../xrefindex.rst:2755
+# 57834e01ad55474aa09176b4bfc4e8fa
+msgid "`Uninitialized <varsubn.html#UNINITVAR1>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2757
+# 55ec0c066f764fef91a29b706ff85d40
+msgid "`Unquoted variable <quotingvar.html#VARSPLITTING>`__ , *splitting*"
+msgstr ""
+
+#: ../../xrefindex.rst:2759
+# c385683921894a4fb453581460e7926e
+msgid "`Unsetting <internal.html#UNSETREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2761
+# c0c99efbd6bc4d19bdf2ba8586b3deaf
+msgid "`Untyped <untyped.html#BVUNTYPED>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2765
+# 39c48cf31c5143a2a5e2fad40436f628
+msgid "`wait <x9644.html#WAITREF>`__ , suspend script execution"
+msgstr ""
+
+#: ../../xrefindex.rst:2767
+# c72907a175944ac6a415ea038a58dd77
+msgid "`To remedy script hang <x9644.html#WAITHANG>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2769
+# 3064f444418b491fb6a42444d3947698
+msgid "`*Weak* quoting <varsubn.html#DBLQUO>`__ **\" ... \"**"
+msgstr ""
+
+#: ../../xrefindex.rst:2773
+# 741c652193e44547824838cb0e6e2f35
+msgid "*while [ condition ]; do*"
+msgstr ""
+
+#: ../../xrefindex.rst:2775
+# c84c505ad8e1448e981763e2284db152
+msgid "`C-style syntax <loops1.html#WHLOOPC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2777
+# 331bd56188104eb4912177db6c7ea1fd
+msgid "`Calling a *function* within *test* brackets <loops1.html#WHILEFUNC>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2782
+# f7ddb3eb8da64e7c8833b410f9f4d45c
+msgid "`Omitting *test* brackets <loops1.html#WHILENOBRACKETS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2786
+# 221140dc18f640588126496c666bc2d8
+msgid "`Avoiding a *subshell* <process-sub.html#GOODREAD0>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2788
+# a1532be6f6214f1a90cf7c847cb01338
+msgid "`Whitespace <special-chars.html#WHITESPACEREF>`__ , spaces, tabs, and newline characters"
+msgstr ""
+
+#: ../../xrefindex.rst:2791
+# 04596f3f0ddc4d09b4b0d737b68f3e8b
+msgid "``         $IFS        `` defaults to <internalvariables.html#IFSWS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2794
+# ad2cf598256b46c59eccf6fbe31d0f0c
+msgid "`Inappropriate use of <gotchas.html#WSBAD>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2796
+# e357bcd73dce4f49905728091447ad7d
+msgid "`Preceding closing *limit string* <here-docs.html#INDENTEDLS>`__ in a *here document* , error"
+msgstr ""
+
+#: ../../xrefindex.rst:2799
+# 0daeaf31af4b4b5b8ddf1b07cb21b2cc
+msgid "`Preceding script comments <special-chars.html#WSBCOMM>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2801
+# 57b5c052a9c9482e92a6abca14dcfc06
+msgid "`*Quoting* <quotingvar.html#WSQUO>`__ , to preserve *whitespace* within strings or variables"
+msgstr ""
+
+#: ../../xrefindex.rst:2804
+# 77850a7fe8674d5f85586078c06f36c2
+msgid "`[:space:] <x17129.html#WSPOSIX>`__ , *POSIX* character class"
+msgstr ""
+
+#: ../../xrefindex.rst:2806
+# 4c66b08f8b14423bb35ba239ad3e5340
+msgid "`who <system.html#WHOREF>`__ , information about logged on users"
+msgstr ""
+
+#: ../../xrefindex.rst:2808
+# 1dd0a8c5541d4f699a205651b2817c8f
+msgid "`w <system.html#WREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2810
+# 9bb3f716a09c4b37a088b3f661d04ed6
+msgid "`whoami <system.html#WHOAMIREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2812
+# bdb95a3d521d4e56aee05c9028e7cc5a
+msgid "`logname <system.html#LOGNAMEREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2814
+# 6ccb5a98f0cd4564a93c4cf21f1af863
+msgid "`Widgets <assortedtips.html#WIDGETREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2816
+# f5c3548288a54a12839c66392a02a1eb
+msgid "`Wild card <globbingref.html#WILDCARDDEF>`__ characters"
+msgstr ""
+
+#: ../../xrefindex.rst:2818
+# 53fabea1a0a9429aa12823842695b01a
+msgid "`Asterisk \\* <special-chars.html#ASTERISKREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2820
+# dcc8a1993ac3456ba53e10c06d150d60
+msgid "In ``                   [list]                 `` constructs <loops1.html#LIGLOB>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2823
+# e2909da24aa34078b9e06c870aa54e47
+msgid "`Question mark ? <special-chars.html#WILDCARDQU>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2828
+# 04d5a1f6631e4bbc83c6f5e24b3787f7
+msgid "Word splitting"
+msgstr ""
+
+#: ../../xrefindex.rst:2830
+# 54d3ed5e9ecf425caeb2db45a604340f
+msgid "`Definition <quotingvar.html#WSPLITREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2832
+# 9ef6004f1e8c469999d60ae28bab6776
+msgid "`Resulting from *command substitution* <commandsub.html#CSWS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2834
+# 83ca4484c82541789c731773f774fc95
+msgid "`Wrapper <wrapper.html#SHWRAPPER>`__ , shell"
+msgstr ""
+
+#: ../../xrefindex.rst:2838
+# 5ed01d5046ce41fcb6108132ef5af86f
+msgid "`xargs <moreadv.html#XARGSREF>`__ , Filter for grouping arguments"
+msgstr ""
+
+#: ../../xrefindex.rst:2840
+# 17713c635fc8442ab251e55cb2ebc2b9
+msgid "`Curly brackets <moreadv.html#XARGSCURLYREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2842
+# ed2ff1cd8e8449e385c667762fcb1d38
+msgid "`Limiting arguments passed <moreadv.html#XARGSLIMARGS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2844
+# 92c393dc6e064e22a05918cc7eaae9f0
+msgid "`Options <moreadv.html#XARGSLIMARGS>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2846
+# d7e8e611bafa485886296f2e8f6d3abe
+msgid "Processes arguments `one at a time <moreadv.html#XARGSONEATATIME>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2848
+# a5680a75df0141e89fc83c2a71e191c2
+msgid "`Whitespace <moreadv.html#XARGSWS>`__ , handling"
+msgstr ""
+
+#: ../../xrefindex.rst:2852
+# 67e6c15c58d24dbfab00741996f24608
+msgid "`yes <extmisc.html#YESREF>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2854
+# 52ca965fadc74a7686a476312de9b8b8
+msgid "`Emulation <extmisc.html#YESEMU>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2858
+# 42eafa0256334680a5b88fd302be423b
+msgid "**-z** `String is *null* <comparison-ops.html#STRINGNULL>`__"
+msgstr ""
+
+#: ../../xrefindex.rst:2860
+# 5e5daad4290c423784f3110564b9940e
+msgid "`*Zombie* <x9644.html#ZOMBIEREF>`__ , a process that has terminated, but not yet been `killed <x9644.html#KILLREF>`__ by its `parent <internal.html#PARENTREF>`__"
+msgstr ""
+

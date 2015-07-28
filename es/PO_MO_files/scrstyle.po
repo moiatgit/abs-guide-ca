@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../scrstyle.rst:4
+msgid "XXX  Chapter 35. Scripting With Style"
+msgstr ""
+
+#: ../../scrstyle.rst:6
+msgid ""
+"Get into the habit of writing shell scripts in a structured and systematic "
+"manner. Even on-the-fly and \"written on the back of an envelope\" scripts "
+"will benefit if you take a few minutes to plan and organize your thoughts "
+"before sitting down and coding."
+msgstr ""
+
+#: ../../scrstyle.rst:11
+msgid ""
+"Herewith are a few stylistic guidelines. This is not (necessarily) intended "
+"as an *Official Shell Scripting Stylesheet* ."
+msgstr ""

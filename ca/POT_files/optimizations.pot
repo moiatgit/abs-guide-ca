@@ -1,0 +1,481 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../optimizations.rst:4
+# 4bf45f1fc4ef437b82ef1464cafa2fd6
+msgid "XXX  36.6. Optimizations"
+msgstr ""
+
+#: ../../optimizations.rst:6
+# fd7e0149714045e5b7983b9bb1d7f0a8
+msgid "Most shell scripts are quick 'n dirty solutions to non-complex problems. As such, optimizing them for speed is not much of an issue. Consider the case, though, where a script carries out an important task, does it well, but runs too slowly. Rewriting it in a compiled language may not be a palatable option. The simplest fix would be to rewrite the parts of the script that slow it down. Is it possible to apply principles of code optimization even to a lowly shell script?"
+msgstr ""
+
+#: ../../optimizations.rst:14
+# dc048e90d4174a31a3b539ca853b2e3c
+msgid "Check the loops in the script. Time consumed by repetitive operations adds up quickly. If at all possible, remove time-consuming operations from within loops."
+msgstr ""
+
+#: ../../optimizations.rst:18
+# e44d6d0005b14572846cad67e2ac4000
+msgid "Use `builtin <internal.html#BUILTINREF>`__ commands in preference to system commands. Builtins execute faster and usually do not launch a subshell when invoked."
+msgstr ""
+
+#: ../../optimizations.rst:22
+# 7bf6d8118a5f4b4fb381359a0cb117aa
+msgid "Avoid unnecessary commands, particularly in a `pipe <special-chars.html#PIPEREF>`__ ."
+msgstr ""
+
+#: ../../optimizations.rst:37
+# 935678d8d48b4246bdb163c3aad3ba45
+msgid "The `cat <basic.html#CATREF>`__ command seems especially prone to overuse in scripts."
+msgstr ""
+
+#: ../../optimizations.rst:42
+# f9ebd51b11644d93a8a7eb70c89be21d
+msgid "Disabling certain Bash options can speed up scripts."
+msgstr ""
+
+#: ../../optimizations.rst:44
+# f81dac73997d4c288c94d36525214dfc
+msgid "As Erik Brandsberg points out:"
+msgstr ""
+
+#: ../../optimizations.rst:46
+# bb7a622fc69f4f7cbf10556a8d7f417c
+msgid "If you don't need `Unicode <bashver4.html#UNICODEREF>`__ support, you can get potentially a 2x or more improvement in speed by simply setting the ``                   LC_ALL                 `` variable."
+msgstr ""
+
+#: ../../optimizations.rst:156
+#: ../../optimizations.rst:345
+# e28c20e92fed49379f7cfdce6b6b3a7f
+# c2b4a3e268ed406ba91848b12f25884e
+msgid "|Note"
+msgstr ""
+
+#: ../../optimizations.rst:158
+# 141825872b924f36818abde79e49e572
+msgid "Certain operators, notably `expr <moreadv.html#EXPRREF>`__ , are very inefficient and might be replaced by `double parentheses <dblparens.html>`__ arithmetic expansion. See `Example A-59 <contributed-scripts.html#TESTEXECTIME>`__ ."
+msgstr ""
+
+#: ../../optimizations.rst:172
+# 7baa131692c54eccb345e39cb0e22770
+msgid "user          0m0.28"
+msgstr ""
+
+#: ../../optimizations.rst:174
+#: ../../optimizations.rst:190
+#: ../../optimizations.rst:212
+#: ../../optimizations.rst:222
+#: ../../optimizations.rst:242
+#: ../../optimizations.rst:366
+#: ../../optimizations.rst:393
+#: ../../optimizations.rst:402
+#: ../../optimizations.rst:420
+#: ../../optimizations.rst:449
+#: ../../optimizations.rst:459
+#: ../../optimizations.rst:468
+# de77417f2f734625be2146ca986cccc9
+# 3b8b4f2b42c842a9ad897819c271852d
+# eda00104d580441aaf3b166b6a939db8
+# 1629fd56e74b4868b6b7d550844deb55
+# 421f82263a8b49aab193e8b2d964451e
+# 85c862d125c24be2a1ae7f2590035910
+# fc3db2fb59424d4b986dbdc84fb8cef7
+# 38eaed2680eb4dea9d37ed3622794052
+# f80691ee065f4f47949f9667e4dfbd18
+# 75ca2e9a783a4e3aaf53fba198ec99fe
+# b30db2ee9e9c489d8449d19ea9861932
+# a731cec970e34617a5f2add71cf1e9bf
+msgid "sys           0m0.00"
+msgstr ""
+
+#: ../../optimizations.rst:175
+#: ../../optimizations.rst:223
+#: ../../optimizations.rst:441
+# caaa684e09c24a8e8b1a0870ec446d60
+# bec87a1d0c2f4b37a3235a5ebdc398ea
+# c0bed81debf74868989ab700438cfed5
+msgid "8s"
+msgstr ""
+
+#: ../../optimizations.rst:177
+# a2869d8b77fe483ab7f5584cbfe062ca
+msgid "math via expr: real          1m17.8"
+msgstr ""
+
+#: ../../optimizations.rst:180
+# ad6f88a77f2c4367ad8a1f3a658661ec
+msgid "user          0m3.60"
+msgstr ""
+
+#: ../../optimizations.rst:182
+# dbbc02e28df045ecbdb08238961a4c84
+msgid "sys           0m8.76"
+msgstr ""
+
+#: ../../optimizations.rst:183
+# d7d0886a8b1d407498abc0cefd6cdf18
+msgid "5s"
+msgstr ""
+
+#: ../../optimizations.rst:185
+# be22bedd9631420fbbf11d695247b16a
+msgid "math via let: real          0m0.36"
+msgstr ""
+
+#: ../../optimizations.rst:188
+# 845684638fab488ba9100d4c81e9a6c9
+msgid "user          0m0.37"
+msgstr ""
+
+#: ../../optimizations.rst:191
+#: ../../optimizations.rst:213
+#: ../../optimizations.rst:243
+#: ../../optimizations.rst:421
+#: ../../optimizations.rst:450
+#: ../../optimizations.rst:469
+# 5c97c3f73f26400d9ca6f1843977c96e
+# e49427c0ec1844ccba023a8376e051de
+# 53fa173ecc934375ab077e711709a5d1
+# 29e7aa17a92b41d994150f73c7cadf43
+# 7621e3ef570f47afb854b202320cde5e
+# 3043e3b63738474f9cb5acae4157ff56
+msgid "0s"
+msgstr ""
+
+#: ../../optimizations.rst:196
+# a157eb6d619045a1808f6dc84a24323a
+msgid "`Condition testing <tests.html#IFTHEN>`__ constructs in scripts deserve close scrutiny. Substitute `case <testbranch.html#CASEESAC1>`__ for `if-then <tests.html#IFTHEN>`__ constructs and combine tests when possible, to minimize script execution time. Again, refer to `Example A-59 <contributed-scripts.html#TESTEXECTIME>`__ ."
+msgstr ""
+
+#: ../../optimizations.rst:208
+# f2c5365ee00a422394a53268aee5292d
+msgid "real          0m0.32"
+msgstr ""
+
+#: ../../optimizations.rst:210
+# d2fe48c7423a420fb7cd5aa1e33880a7
+msgid "user          0m0.32"
+msgstr ""
+
+#: ../../optimizations.rst:216
+# 29ea99d9f7f84bf98e27b55d6215f64c
+msgid "Test with if [], no"
+msgstr ""
+
+#: ../../optimizations.rst:218
+# d406d7fa87f348608599573be772d97c
+msgid "real          0m0.43"
+msgstr ""
+
+#: ../../optimizations.rst:220
+# 26606041985d4fbf8d82a93dae95b572
+msgid "user          0m0.43"
+msgstr ""
+
+#: ../../optimizations.rst:226
+# 54ec8360cacd4a5fa8c1fd3c3ab52a19
+msgid "Test with if [], quo"
+msgstr ""
+
+#: ../../optimizations.rst:228
+# 6753aa0833504a488dee426ffb06e5af
+msgid "real          0m0.47"
+msgstr ""
+
+#: ../../optimizations.rst:230
+#: ../../optimizations.rst:240
+# b579b9590ab740d98b26f23823aba5b1
+# 43154d8b256d4a009c44d26d7056a19f
+msgid "user          0m0.45"
+msgstr ""
+
+#: ../../optimizations.rst:232
+#: ../../optimizations.rst:440
+# 96e6c6d358a9474392bdd5e4aa076410
+# e7b58c095daf45839a61eb6223c492a8
+msgid "sys           0m0.02"
+msgstr ""
+
+#: ../../optimizations.rst:233
+#: ../../optimizations.rst:367
+#: ../../optimizations.rst:394
+#: ../../optimizations.rst:403
+#: ../../optimizations.rst:460
+# 180ef38b9203484db1e4495935562104
+# 339cf678f5bc4d05b9a04fe060befe82
+# ba24b23e7aef4c829907e7d7ce72100b
+# b2ad24e65864419185b49f3390e152bb
+# 9477717a3b97498db66deb41bf37559b
+msgid "4s"
+msgstr ""
+
+#: ../../optimizations.rst:236
+# 710624baa0ce4049a7e1cc86b6e7b451
+msgid "Test with if [], usi"
+msgstr ""
+
+#: ../../optimizations.rst:238
+# 48879ffe15c74499a99077aa072bdbbd
+msgid "real          0m0.45"
+msgstr ""
+
+#: ../../optimizations.rst:347
+# 957a63d9f7ff496baca05c2167c2c805
+msgid "Erik Brandsberg recommends using `associative arrays <bashver4.html#ASSOCARR>`__ in preference to conventional numeric-indexed arrays in most cases. When overwriting values in a numeric array, there is a significant performance penalty vs. associative arrays. Running a test script confirms this. See `Example A-60 <contributed-scripts.html#ASSOCARRTEST>`__ ."
+msgstr ""
+
+#: ../../optimizations.rst:362
+# 655bc35d2060432892494d2edb070d6f
+msgid "real          0m0.41"
+msgstr ""
+
+#: ../../optimizations.rst:364
+#: ../../optimizations.rst:391
+# ea3363997c26406d826fd8997cc99d6c
+# af1fec6debbb4d28b1d5ea8f76e9677f
+msgid "user          0m0.41"
+msgstr ""
+
+#: ../../optimizations.rst:369
+# 4de3af00a95f4f6785c25fb761d3f665
+msgid "Assigning a numeric"
+msgstr ""
+
+#: ../../optimizations.rst:371
+# 1867e8934f1f4368878c39c4ba6d32fc
+msgid "real          0m0.58"
+msgstr ""
+
+#: ../../optimizations.rst:373
+# 7e2f0944a3254b748df5aa51ec01baee
+msgid "user          0m0.56"
+msgstr ""
+
+#: ../../optimizations.rst:375
+#: ../../optimizations.rst:384
+#: ../../optimizations.rst:411
+#: ../../optimizations.rst:430
+# 4439364ffb0842aa9ad8c96805e2f1c6
+# 87f97856267f465c8036f5a6b3f63381
+# 4cb18195ffaf4b93a7dc71b333b45526
+# 95d7a65e609f4cfebb1aef6ec4e9e60e
+msgid "sys           0m0.01"
+msgstr ""
+
+#: ../../optimizations.rst:376
+#: ../../optimizations.rst:385
+#: ../../optimizations.rst:431
+# ccd85cb238364f498f047447100afa8e
+# 817ee2e5acfa4e0a99a41fcf2f722b89
+# ac46c8004a564eb2bc57ab4e180d7fbe
+msgid "6s"
+msgstr ""
+
+#: ../../optimizations.rst:378
+# ff6ae30b1ec34b43aa7cd8c7dadbc8ce
+msgid "Overwriting a numeri"
+msgstr ""
+
+#: ../../optimizations.rst:380
+# 0b8e2bcd7d8e4c0db29c55e3d94a773d
+msgid "real          0m21.9"
+msgstr ""
+
+#: ../../optimizations.rst:382
+# f70128688f6248b797d050824766ad3f
+msgid "user          0m21.9"
+msgstr ""
+
+#: ../../optimizations.rst:387
+# a6fb18c2dd6c4090abda80d90a7e07e0
+msgid "Linear reading of nu"
+msgstr ""
+
+#: ../../optimizations.rst:389
+#: ../../optimizations.rst:416
+# 296dd06a22664c70b1d1671b62fb784a
+# f5ffc01d0ffe45ac85f5ffabbb8ba88d
+msgid "real          0m0.42"
+msgstr ""
+
+#: ../../optimizations.rst:396
+# d0b2d6c4bdc3446cbcfb3cb0b783eb54
+msgid "Assigning an associa"
+msgstr ""
+
+#: ../../optimizations.rst:398
+# 9343c574daa6422e8291d04831087ad8
+msgid "real          0m1.80"
+msgstr ""
+
+#: ../../optimizations.rst:400
+# 896f3de1ac944d379d59e2c16ad470fb
+msgid "user          0m1.79"
+msgstr ""
+
+#: ../../optimizations.rst:405
+# 30f07185d17f41668168d7be9b7e731a
+msgid "Overwriting an assoc"
+msgstr ""
+
+#: ../../optimizations.rst:407
+# fe28323ba07c4f2fbf22b5daba2927e3
+msgid "real          0m1.79"
+msgstr ""
+
+#: ../../optimizations.rst:409
+# c66d7e19dbbd4c33998fb0e6a47db2cc
+msgid "user          0m1.78"
+msgstr ""
+
+#: ../../optimizations.rst:412
+# 7bb7269cc80b4319849266d48eea2d94
+msgid "2s"
+msgstr ""
+
+#: ../../optimizations.rst:414
+# 51db9100f69d47eba2ebe0a1e05ca231
+msgid "Linear reading an as"
+msgstr ""
+
+#: ../../optimizations.rst:418
+# 9d119ad60c6c4439b483e01cba387969
+msgid "user          0m0.42"
+msgstr ""
+
+#: ../../optimizations.rst:423
+# cd625072e833420d91a0b87bbffcb0f6
+msgid "Assigning a random n"
+msgstr ""
+
+#: ../../optimizations.rst:424
+# 31ef5b14caf94906bfd9700110609c20
+msgid "umber to a simple variab le"
+msgstr ""
+
+#: ../../optimizations.rst:426
+# 0edc5a2733174930b6bafade5e7f0434
+msgid "real          0m0.40"
+msgstr ""
+
+#: ../../optimizations.rst:428
+# a93b944130434236a5d709583bffea88
+msgid "user          0m0.38"
+msgstr ""
+
+#: ../../optimizations.rst:433
+# 94bb62a70ef544f2b6688b3db340eb14
+msgid "Assigning a sparse n"
+msgstr ""
+
+#: ../../optimizations.rst:436
+# 597afb8b0d5e47cdbea55e6cd964cc11
+msgid "real          0m12.6"
+msgstr ""
+
+#: ../../optimizations.rst:438
+# 720cd28fe70641afa2caa45a76059be6
+msgid "user          0m12.6"
+msgstr ""
+
+#: ../../optimizations.rst:443
+# 6df0c353d52c4a05879da3223a059a99
+msgid "Reading sparse numer"
+msgstr ""
+
+#: ../../optimizations.rst:445
+#: ../../optimizations.rst:464
+# 0a30d986c6cb48c797042416f4de1be2
+# 69383a628fb04193b4ec492da2794345
+msgid "real          0m0.08"
+msgstr ""
+
+#: ../../optimizations.rst:447
+#: ../../optimizations.rst:466
+# 010c518852904d70abfbccc8040e6f4b
+# da33b1a5ba914fd58584e61c065ac5fa
+msgid "user          0m0.08"
+msgstr ""
+
+#: ../../optimizations.rst:452
+# d751d4c87ecc46ed9ac00df2ae662ad3
+msgid "Assigning a sparse a"
+msgstr ""
+
+#: ../../optimizations.rst:453
+# fb1e7e745e8146fe851304d7d9203651
+msgid "ssociative array entry r andomly into 64k cells"
+msgstr ""
+
+#: ../../optimizations.rst:455
+# ac1570fe7d924305aa3a68b94d0545c5
+msgid "real          0m0.69"
+msgstr ""
+
+#: ../../optimizations.rst:457
+# 40f0d16b60f3458e8a7b0c84dbb84021
+msgid "user          0m0.69"
+msgstr ""
+
+#: ../../optimizations.rst:462
+# 4f1088c12a584b70a19c5b78aba112c6
+msgid "Reading sparse assoc"
+msgstr ""
+
+#: ../../optimizations.rst:607
+# e9e34bdababe40f58b4a444ad72d7c7d
+msgid "Use the `time <timedate.html#TIMREF>`__ and `times <x9644.html#TIMESREF>`__ tools to profile computation-intensive commands. Consider rewriting time-critical code sections in C, or even in assembler."
+msgstr ""
+
+#: ../../optimizations.rst:612
+# d8cb5f016da141d395abbb7931a0b8eb
+msgid "Try to minimize file I/O. Bash is not particularly efficient at handling files, so consider using more appropriate tools for this within the script, such as `awk <awk.html#AWKREF>`__ or `Perl <wrapper.html#PERLREF>`__ ."
+msgstr ""
+
+#: ../../optimizations.rst:618
+# 74d46f63c5d041e1ac8a4559fb73d93c
+msgid "<optimizations.html#FTN.AEN20452>`__ so they can be reorganized and"
+msgstr ""
+
+#: ../../optimizations.rst:619
+# 3f5323bbc4314c9188dfd36279a1b6ce
+msgid "tightened up as necessary. Some of the optimization techniques applicable to high-level languages may work for scripts, but others, such as *loop unrolling* , are mostly irrelevant. Above all, use common sense."
+msgstr ""
+
+#: ../../optimizations.rst:624
+# 8becc771bfdf4e30971dce579f5a3cc0
+msgid "For an excellent demonstration of how optimization can dramatically reduce the execution time of a script, see `Example 16-47 <mathc.html#MONTHLYPMT>`__ ."
+msgstr ""
+
+#: ../../optimizations.rst:630
+# 8b66afbfc0b14059bed335067e66beb0
+msgid "Notes"
+msgstr ""
+
+#: ../../optimizations.rst:633
+# 94a0f77b28b043b1be10933c31dd7d87
+msgid "` [1]  <optimizations.html#AEN20452>`__"
+msgstr ""
+
+#: ../../optimizations.rst:635
+# a8df93234a8f41ad99bd18993a9abfce
+msgid "This usually means liberal use of `functions <functions.html#FUNCTIONREF>`__ ."
+msgstr ""
+

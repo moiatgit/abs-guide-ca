@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../unofficialst.rst:4
+# a2fde896214f47d4acb2281796ababd7
+msgid "XXX  35.1. Unofficial Shell Scripting Stylesheet"
+msgstr ""
+
+#: ../../unofficialst.rst:6
+# 31b93cab2fbb4978a35a21d2a4c518ef
+msgid "Comment your code. This makes it easier for others to understand (and appreciate), and easier for you to maintain."
+msgstr ""
+
+#: ../../unofficialst.rst:19
+# 9e99edc55f3f4a1bb197484316fe21ea
+msgid "Add descriptive headers to your scripts and functions."
+msgstr ""
+
+#: ../../unofficialst.rst:62
+# dae925fcafca4473b171b05b9697c3f1
+msgid "<unofficialst.html#FTN.AEN20041>`__ that is, \"hard-wired\" literal"
+msgstr ""
+
+#: ../../unofficialst.rst:63
+# 4ad2a5af0b6d460ea340974f41f20b0b
+msgid "constants. Use meaningful variable names instead. This makes the script easier to understand and permits making changes and updates without breaking the application."
+msgstr ""
+
+#: ../../unofficialst.rst:87
+# 56d026e9b90a4f178f68e811f2a48efa
+msgid "Choose descriptive names for variables and functions."
+msgstr ""
+
+#: ../../unofficialst.rst:133
+# c41df66a26e64834aafd75c71cb704e3
+msgid "Use `exit codes <exit-status.html#EXITCOMMANDREF>`__ in a systematic and meaningful way."
+msgstr ""
+
+#: ../../unofficialst.rst:146
+# 39161e0366fa45d68a9659cc53b50afe
+msgid "See also `Appendix E <exitcodes.html>`__ ."
+msgstr ""
+
+#: ../../unofficialst.rst:148
+# a1d3578884a1404d856b24a98421bafe
+msgid "*Ender* suggests using the `exit codes in ``         /usr/include/sysexits.h        `` <exitcodes.html#SYSEXITSREF>`__ in shell scripts, though these are primarily intended for C and C++ programming."
+msgstr ""
+
+#: ../../unofficialst.rst:153
+# 10cc4e9322764392b4b82726c8736300
+msgid "Use standardized parameter flags for script invocation. *Ender* proposes the following set of flags."
+msgstr ""
+
+#: ../../unofficialst.rst:178
+# f8608753f37e42508f83ff6575917d3b
+msgid "See also `Section G.1 <standard-options.html>`__ ."
+msgstr ""
+
+#: ../../unofficialst.rst:180
+# 1e88b0e7b52e475a9490347580b20469
+msgid "Break complex scripts into simpler modules. Use functions where appropriate. See `Example 37-4 <bashver2.html#CARDS>`__ ."
+msgstr ""
+
+#: ../../unofficialst.rst:183
+# e4fe73a8574e41e39ffb21ce8a673c2d
+msgid "Don't use a complex construct where a simpler one will do."
+msgstr ""
+
+#: ../../unofficialst.rst:200
+# 56cdf026438643348758b884f213319c
+msgid "**"
+msgstr ""
+
+#: ../../unofficialst.rst:202
+# 4858e50c36444a49bb664d240afa910b
+msgid "*... reading the UNIX source code to the Bourne shell (/bin/sh). I was shocked at how much simple algorithms could be made cryptic, and therefore useless, by a poor choice of code style. I asked myself, \"Could someone be proud of this code?\" *"
+msgstr ""
+
+#: ../../unofficialst.rst:207
+# 7a7c48442d8a44dabe80c277291affd7
+msgid "*--Landon Noll*"
+msgstr ""
+
+#: ../../unofficialst.rst:213
+# f0890d2a9a6f427bb6f86888c71bc8f8
+msgid "Notes"
+msgstr ""
+
+#: ../../unofficialst.rst:216
+# 3fd7568dab0a4b479bc0cd0dae4cf203
+msgid "` [1]  <unofficialst.html#AEN20041>`__"
+msgstr ""
+
+#: ../../unofficialst.rst:218
+# f87a6f4502d247d8a8c2702ffe648ce3
+msgid "In this context, \"magic numbers\" have an entirely different meaning than the `magic numbers <sha-bang.html#MAGNUMREF>`__ used to designate file types."
+msgstr ""
+

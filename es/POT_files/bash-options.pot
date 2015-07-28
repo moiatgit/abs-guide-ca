@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../bash-options.rst:3
+# eeee64a3929d4ed0a4af6af1acb9eadb
+msgid "XXX  G.2. Bash Command-Line Options"
+msgstr ""
+
+#: ../../bash-options.rst:5
+# 364d5774d64f43bbab0d723e307cc8e8
+msgid "*Bash* itself has a number of command-line options. Here are some of the more useful ones."
+msgstr ""
+
+#: ../../bash-options.rst:8
+# 71a3ac2bb12e4fa5be768500b4c573d3
+msgid "``        -c       ``"
+msgstr ""
+
+#: ../../bash-options.rst:10
+# 361e54f455b04cd9bbe83d4d46785dee
+msgid "*Read commands from the following string and assign any arguments to the `positional parameters <internalvariables.html#POSPARAMREF>`__ .*"
+msgstr ""
+
+#: ../../bash-options.rst:22
+# 49922e65a6304a5c84484072a28af6c5
+msgid "``        -r       ``"
+msgstr ""
+
+#: ../../bash-options.rst:24
+# 01d735544981483a94174d2b2483ba19
+msgid "``        --restricted       ``"
+msgstr ""
+
+#: ../../bash-options.rst:26
+# ef2ac7323b4a42fca7cafddc7d355ba5
+msgid "*Runs the shell, or a script, in `restricted mode <restricted-sh.html#RESTRICTEDSHREF>`__ .*"
+msgstr ""
+
+#: ../../bash-options.rst:29
+# b2a7e2df3b50473dac293021f65faed9
+msgid "``        --posix       ``"
+msgstr ""
+
+#: ../../bash-options.rst:31
+# 1c6708977bab468e99900affcee5f3cd
+msgid "*Forces Bash to conform to `POSIX <sha-bang.html#POSIX2REF>`__ mode.*"
+msgstr ""
+
+#: ../../bash-options.rst:33
+# 84ccc17f70c547c2aa5b0dc6322aec75
+msgid "``        --version       ``"
+msgstr ""
+
+#: ../../bash-options.rst:35
+# 2b22a208a89143e78daf107c7c00cbd4
+msgid "*Display Bash version information and exit.*"
+msgstr ""
+
+#: ../../bash-options.rst:37
+# 67aa85bf2199462e970df835ffc3d1b7
+msgid "``        --       ``"
+msgstr ""
+
+#: ../../bash-options.rst:39
+# 8d3528903e104fd1b8ead9cb4a3f4ea1
+msgid "*End of options. Anything further on the command line is an argument, not an option.*"
+msgstr ""
+

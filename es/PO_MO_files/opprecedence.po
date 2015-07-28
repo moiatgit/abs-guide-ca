@@ -1,0 +1,359 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../opprecedence.rst:4
+msgid "XXX  8.4. Operator Precedence"
+msgstr ""
+
+#: ../../opprecedence.rst:6
+msgid ""
+"In a script, operations execute in order of *precedence* : the higher "
+"precedence operations execute *before* the lower precedence ones. ` [1]"
+msgstr ""
+
+#: ../../opprecedence.rst:8
+msgid "<opprecedence.html#FTN.AEN4290>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:11
+msgid "**Table 8-1. Operator Precedence**"
+msgstr ""
+
+#: ../../opprecedence.rst:14
+msgid "Operator"
+msgstr ""
+
+#: ../../opprecedence.rst:16
+msgid "Meaning"
+msgstr ""
+
+#: ../../opprecedence.rst:18
+msgid "Comments"
+msgstr ""
+
+#: ../../opprecedence.rst:20 ../../opprecedence.rst:148
+msgid "``       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:22
+msgid "**HIGHEST PRECEDENCE**"
+msgstr ""
+
+#: ../../opprecedence.rst:24
+msgid "``        var++ var--       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:26
+msgid "post-increment, post-decrement"
+msgstr ""
+
+#: ../../opprecedence.rst:28
+msgid "`C-style <assortedtips.html#CSTYLE>`__ operators"
+msgstr ""
+
+#: ../../opprecedence.rst:30
+msgid "``        ++var --var       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:32
+msgid "pre-increment, pre-decrement"
+msgstr ""
+
+#: ../../opprecedence.rst:34
+msgid "``        ! ~       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:36
+msgid "`negation <special-chars.html#NOTREF>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:38
+msgid "logical / bitwise, inverts sense of following operator"
+msgstr ""
+
+#: ../../opprecedence.rst:40
+msgid "``        **       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:42
+msgid "`exponentiation <ops.html#EXPONENTIATIONREF>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:44
+msgid "`arithmetic operation <ops.html#AROPS1>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:46
+msgid "``        * / %       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:48
+msgid "multiplication, division, modulo"
+msgstr ""
+
+#: ../../opprecedence.rst:50 ../../opprecedence.rst:56
+msgid "arithmetic operation"
+msgstr ""
+
+#: ../../opprecedence.rst:52
+msgid "``        + -       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:54
+msgid "addition, subtraction"
+msgstr ""
+
+#: ../../opprecedence.rst:58
+msgid "``        << >>       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:60
+msgid "left, right shift"
+msgstr ""
+
+#: ../../opprecedence.rst:62
+msgid "`bitwise <ops.html#BITWSOPS1>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:64
+msgid "``        -z -n       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:66 ../../opprecedence.rst:72
+msgid "*unary* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:68
+msgid "string is/is-not `null <comparison-ops.html#STRINGNULL>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:70
+msgid "``        -e -f -t -x, etc.       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:74
+msgid "`file-test <fto.html>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:76
+msgid "``        < -lt > -gt <= -le >= -ge       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:78 ../../opprecedence.rst:84
+msgid "*compound* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:80
+msgid "string and integer"
+msgstr ""
+
+#: ../../opprecedence.rst:82
+msgid "``        -nt -ot -ef       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:86
+msgid "file-test"
+msgstr ""
+
+#: ../../opprecedence.rst:88
+msgid "``        == -eq                 !=                -ne       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:90
+msgid "equality / inequality"
+msgstr ""
+
+#: ../../opprecedence.rst:92
+msgid "test operators, string and integer"
+msgstr ""
+
+#: ../../opprecedence.rst:94
+msgid "``        &       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:96 ../../opprecedence.rst:114
+msgid "AND"
+msgstr ""
+
+#: ../../opprecedence.rst:98 ../../opprecedence.rst:110
+msgid "bitwise"
+msgstr ""
+
+#: ../../opprecedence.rst:100
+msgid "``        ^       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:102
+msgid "XOR"
+msgstr ""
+
+#: ../../opprecedence.rst:104
+msgid "*exclusive* OR, bitwise"
+msgstr ""
+
+#: ../../opprecedence.rst:106
+msgid "``      ``"
+msgstr ""
+
+#: ../../opprecedence.rst:108 ../../opprecedence.rst:120
+msgid "OR"
+msgstr ""
+
+#: ../../opprecedence.rst:112
+msgid "``        && -a       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:116
+msgid "`logical <ops.html#LOGOPS1>`__ , *compound* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:118
+msgid "``        |-o       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:122
+msgid "logical, *compound* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:124
+msgid "``        ?:       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:126
+msgid "`trinary operator <special-chars.html#CSTRINARY>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:128
+msgid "C-style"
+msgstr ""
+
+#: ../../opprecedence.rst:130
+msgid "``        =       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:132
+msgid "`assignment <varassignment.html#EQREF>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:134
+msgid "(do not confuse with equality *test* )"
+msgstr ""
+
+#: ../../opprecedence.rst:136
+msgid "``        *= /= %= += -= <<= >>= &=       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:138
+msgid "`combination assignment <ops.html#ARITHOPSCOMB>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:140
+msgid "times-equal, divide-equal, mod-equal, etc."
+msgstr ""
+
+#: ../../opprecedence.rst:142
+msgid "``        ,       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:144
+msgid "`comma <ops.html#COMMAOP>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:146
+msgid "links a sequence of operations"
+msgstr ""
+
+#: ../../opprecedence.rst:150
+msgid "**LOWEST PRECEDENCE**"
+msgstr ""
+
+#: ../../opprecedence.rst:154
+msgid "In practice, all you really need to remember is the following:"
+msgstr ""
+
+#: ../../opprecedence.rst:156
+msgid ""
+"The \"My Dear Aunt Sally\" mantra ( *multiply, divide, add, subtract* ) for "
+"the familiar `arithmetic operations <ops.html#AROPS1>`__ ."
+msgstr ""
+
+#: ../../opprecedence.rst:159
+msgid ""
+"The *compound* logical operators, **&&** , **\\|\\|** , **-a** , and **-o** "
+"have low precedence."
+msgstr ""
+
+#: ../../opprecedence.rst:162
+msgid ""
+"The order of evaluation of equal-precedence operators is usually *left-to-"
+"right* ."
+msgstr ""
+
+#: ../../opprecedence.rst:165
+msgid ""
+"Now, let's utilize our knowledge of operator precedence to analyze a couple "
+"of lines from the ``      /etc/init.d/functions file     `` , as found in "
+"the *Fedora Core* Linux distro."
+msgstr ""
+
+#: ../../opprecedence.rst:223
+msgid "|Tip"
+msgstr ""
+
+#: ../../opprecedence.rst:225
+msgid ""
+"To avoid confusion or error in a complex sequence of test operators, break "
+"up the sequence into bracketed sections."
+msgstr ""
+
+#: ../../opprecedence.rst:235
+msgid "# Unclear what's goi"
+msgstr ""
+
+#: ../../opprecedence.rst:236
+msgid "ng on here..."
+msgstr ""
+
+#: ../../opprecedence.rst:238
+msgid "if [[ \"$v1\" -gt \"$v2"
+msgstr ""
+
+#: ../../opprecedence.rst:239
+msgid "\" ]] || [[ \"$v1\" -lt \"$v 2\" ]] && [[ -e \"$filenam e\" ]]"
+msgstr ""
+
+#: ../../opprecedence.rst:242
+msgid "# Much better -- the"
+msgstr ""
+
+#: ../../opprecedence.rst:243
+msgid "condition tests are gro"
+msgstr ""
+
+#: ../../opprecedence.rst:244
+msgid "uped in logical sections ."
+msgstr ""
+
+#: ../../opprecedence.rst:273
+msgid "Notes"
+msgstr ""
+
+#: ../../opprecedence.rst:276
+msgid "` [1]  <opprecedence.html#AEN4290>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:278
+msgid ""
+"*Precedence* , in this context, has approximately the same meaning as "
+"*priority*"
+msgstr ""

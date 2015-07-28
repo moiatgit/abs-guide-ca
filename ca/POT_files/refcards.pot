@@ -1,0 +1,1226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../refcards.rst:4
+# a8495285e89a455a9715d8904b6e38c5
+msgid "XXX  Appendix B. Reference Cards"
+msgstr ""
+
+#: ../../refcards.rst:6
+# 1e09abff81ac4bc4862f1612dc5f8a6c
+msgid "The following reference cards provide a useful *summary* of certain scripting concepts. The foregoing text treats these matters in more depth, as well as giving usage examples."
+msgstr ""
+
+#: ../../refcards.rst:11
+# 0f5e6cdf1a8e4fab9f8fae93acf1bb7b
+msgid "**Table B-1. Special Shell Variables**"
+msgstr ""
+
+#: ../../refcards.rst:14
+# 130cec615c86479aaf2f3aad70a1671c
+msgid "Variable"
+msgstr ""
+
+#: ../../refcards.rst:16
+#: ../../refcards.rst:84
+#: ../../refcards.rst:90
+#: ../../refcards.rst:293
+#: ../../refcards.rst:367
+# b6a3209d6ff1424e93c37f18aaabc5de
+# 2606e08371da4130ae794ecc8f330813
+# 685e2dcc12f040e4a0c6b6b537c81db8
+# 094f2fc66c1745e691c495b89a2f5916
+# 6c5998fc94a142a9b84a9ad234b340a4
+msgid "Meaning"
+msgstr ""
+
+#: ../../refcards.rst:18
+# 6c63d7dd04b442a699659768b3872d28
+msgid "``        $0       ``"
+msgstr ""
+
+#: ../../refcards.rst:20
+# a9fc6f450f6c449b89c485c9713bb9ac
+msgid "Filename of script"
+msgstr ""
+
+#: ../../refcards.rst:22
+# 9bd17c059ea64d10bb6d25283b85ac88
+msgid "``        $1       ``"
+msgstr ""
+
+#: ../../refcards.rst:24
+# 72d43a06646245cd8d75165643c4585d
+msgid "Positional parameter #1"
+msgstr ""
+
+#: ../../refcards.rst:26
+# 34d882fec8814e938893092c3766a06b
+msgid "``        $2 - $9       ``"
+msgstr ""
+
+#: ../../refcards.rst:28
+# 6d4315d83f7e40009d28ba53234f27ba
+msgid "Positional parameters #2 - #9"
+msgstr ""
+
+#: ../../refcards.rst:30
+# 3075c76c8d6b4ff0917a1b8a675dd055
+msgid "``        ${10}       ``"
+msgstr ""
+
+#: ../../refcards.rst:32
+# 54a133a40e314678b6f25c0c9e062440
+msgid "Positional parameter #10"
+msgstr ""
+
+#: ../../refcards.rst:34
+# 31d00fd8dda3405c903c160e004277c6
+msgid "``        $#       ``"
+msgstr ""
+
+#: ../../refcards.rst:36
+#: ../../refcards.rst:48
+#: ../../refcards.rst:52
+# a1142cfa47944f018c9c2743993c484f
+# bc7c1457516547779c4aaf5c7d8bb414
+# 62836ae76afb459f8529fda8ab9c6acd
+msgid "Number of positional parameters"
+msgstr ""
+
+#: ../../refcards.rst:38
+# 0bd1f8e11dd6425eb53a82c0bc596343
+msgid "``        \"$*\"       ``"
+msgstr ""
+
+#: ../../refcards.rst:40
+# 013ea1474126454487677d7c9cecbf8c
+msgid "All the positional parameters (as a single word) \\*"
+msgstr ""
+
+#: ../../refcards.rst:42
+# 4cd92435897140cbbe358ed7b355e884
+msgid "``        \"$@\"       ``"
+msgstr ""
+
+#: ../../refcards.rst:44
+# 4911ea2801984fa1a709a77f78c3209c
+msgid "All the positional parameters (as separate strings)"
+msgstr ""
+
+#: ../../refcards.rst:46
+# 4382c9b0a0034042bd7a52894aa12ac3
+msgid "``        ${#*}       ``"
+msgstr ""
+
+#: ../../refcards.rst:50
+# 754470fa0a8345329345c2995390b96e
+msgid "``        ${#@}       ``"
+msgstr ""
+
+#: ../../refcards.rst:54
+# 9f52cf854dc34818aca7be642113da58
+msgid "``        $?       ``"
+msgstr ""
+
+#: ../../refcards.rst:56
+# 03e5fa984e8040e88c6f7a72c66cc4b8
+msgid "Return value"
+msgstr ""
+
+#: ../../refcards.rst:58
+# 3afe14a799d7483985b06971c149b6fd
+msgid "``        $$       ``"
+msgstr ""
+
+#: ../../refcards.rst:60
+# 8a05b33a77de462b8bd4ca3fb92523ec
+msgid "Process ID (PID) of script"
+msgstr ""
+
+#: ../../refcards.rst:62
+# d7e93e1d0c1f4e3ab1ffd10a76f4f611
+msgid "``        $-       ``"
+msgstr ""
+
+#: ../../refcards.rst:64
+# 4a060421bb9d4db6a8796f3c4d050565
+msgid "Flags passed to script (using *set* )"
+msgstr ""
+
+#: ../../refcards.rst:66
+# 5df597a3bf3f4bb6b55aed7dc0aa0316
+msgid "``        $_       ``"
+msgstr ""
+
+#: ../../refcards.rst:68
+# dda16e45a0d245f7b425874924308874
+msgid "Last argument of previous command"
+msgstr ""
+
+#: ../../refcards.rst:70
+# 6ebe15ac95114c6c845c9907d8dfa983
+msgid "``        $!       ``"
+msgstr ""
+
+#: ../../refcards.rst:72
+# 3a96ad42eb3a481abf4668a868f6beac
+msgid "Process ID (PID) of last job run in background"
+msgstr ""
+
+#: ../../refcards.rst:76
+# b63cbf60aa84478783af7bc3861a8fff
+msgid "**\\*** *Must be quoted* , otherwise it defaults to ``      $@     `` ."
+msgstr ""
+
+#: ../../refcards.rst:79
+# 3e465fa9a4e54a0099a0dc20ea1eb5fb
+msgid "**Table B-2. TEST Operators: Binary Comparison**"
+msgstr ""
+
+#: ../../refcards.rst:82
+#: ../../refcards.rst:88
+#: ../../refcards.rst:177
+#: ../../refcards.rst:183
+# 69d602803c1c4f35b14ee0fdbf13c55a
+# 2eebbbb84f50446c973af9f38efdbff2
+# fbb614107f324ddeb6e4e9251d9bb137
+# 5cc239657df047179e6d83f6a1857ac5
+msgid "Operator"
+msgstr ""
+
+#: ../../refcards.rst:92
+# 5c22656506534fb3b8d9f18c98a89b70
+msgid "`Arithmetic Comparison <comparison-ops.html#ICOMPARISON1>`__"
+msgstr ""
+
+#: ../../refcards.rst:94
+# 9ddf46d1836741ecbf0082bad635cf30
+msgid "`String Comparison <comparison-ops.html#SCOMPARISON1>`__"
+msgstr ""
+
+#: ../../refcards.rst:96
+# 67b064cbe1ac48748e6293cefead5dc9
+msgid "``        -eq       ``"
+msgstr ""
+
+#: ../../refcards.rst:98
+#: ../../refcards.rst:102
+#: ../../refcards.rst:106
+# 43df2c3a74694f8aa20d9d11d2b2e8b8
+# 7fcdec54ea4f46c295de25ab0bdd2572
+# 26e7ec2f143046d8a9248f71f5e1f316
+msgid "Equal to"
+msgstr ""
+
+#: ../../refcards.rst:100
+# 94ecbef7fdd34b0f9f40865fd44dedbc
+msgid "``        =       ``"
+msgstr ""
+
+#: ../../refcards.rst:104
+# 85b28a8b3a0d484396dd14ea026e7d7b
+msgid "``        ==       ``"
+msgstr ""
+
+#: ../../refcards.rst:108
+# a540e3c254804e20946721c272031f96
+msgid "``        -ne       ``"
+msgstr ""
+
+#: ../../refcards.rst:110
+#: ../../refcards.rst:114
+# 4e70bec9e5c4435bb26ba5602aa35f5e
+# 690dd61697ac40f0a70a197776e41417
+msgid "Not equal to"
+msgstr ""
+
+#: ../../refcards.rst:112
+# def01931853c4b6f8ad62b86c7a8a375
+msgid "``        !=       ``"
+msgstr ""
+
+#: ../../refcards.rst:116
+# c951993cd4b643f6896076cb10498dbd
+msgid "``        -lt       ``"
+msgstr ""
+
+#: ../../refcards.rst:118
+#: ../../refcards.rst:162
+# 576ce816c2af4eaa86f4886fdebd2c31
+# a41dba12f0894ac785794acb1e4ecddf
+msgid "Less than"
+msgstr ""
+
+#: ../../refcards.rst:120
+# 99f74fc15d944219ae3a15fd5be78cc8
+msgid "``        \\<       ``"
+msgstr ""
+
+#: ../../refcards.rst:122
+# 8b8015d6dff542449e8edbfde8e5e595
+msgid "Less than ( `ASCII <special-chars.html#ASCIIDEF>`__ ) \\*"
+msgstr ""
+
+#: ../../refcards.rst:124
+# 9518300eda3644f1b84fa5f7d229203e
+msgid "``        -le       ``"
+msgstr ""
+
+#: ../../refcards.rst:126
+#: ../../refcards.rst:166
+# cd252e9a871b4230ac6d0820b4e591bc
+# d5d75b00dea64ed2a80034376a325b9a
+msgid "Less than or equal to"
+msgstr ""
+
+#: ../../refcards.rst:128
+# de28847836084a56b8b4fd3fa547fbcb
+msgid "``        -gt       ``"
+msgstr ""
+
+#: ../../refcards.rst:130
+#: ../../refcards.rst:154
+# e8d6aca7a17b41fe963e0105b7d88c1d
+# 21f81fa8c1d247be8807ad3365546bbf
+msgid "Greater than"
+msgstr ""
+
+#: ../../refcards.rst:132
+# 829983c7e5d54ff199c72113e2cec9e1
+msgid "``        \\>       ``"
+msgstr ""
+
+#: ../../refcards.rst:134
+# a4d79ed9b18747a2bdc3675f03ab6444
+msgid "Greater than (ASCII) \\*"
+msgstr ""
+
+#: ../../refcards.rst:136
+# 12ed8bc0e0504bbbb87af6a2ac19eece
+msgid "``        -ge       ``"
+msgstr ""
+
+#: ../../refcards.rst:138
+#: ../../refcards.rst:158
+# 201c54f620f0455abd350f92b6522fb0
+# a4ba77a3151e4603b93c0055b9c6adca
+msgid "Greater than or equal to"
+msgstr ""
+
+#: ../../refcards.rst:140
+# 680e3272726d40a0854d45a97d26a78d
+msgid "``        -z       ``"
+msgstr ""
+
+#: ../../refcards.rst:142
+# 2a95b7bcea55457f971a21ad629723a4
+msgid "String is empty"
+msgstr ""
+
+#: ../../refcards.rst:144
+# cd11f57df6ca45d79c3a691c1bedcb63
+msgid "``        -n       ``"
+msgstr ""
+
+#: ../../refcards.rst:146
+# 364c0b5cddab497f9079000629b00f4f
+msgid "String is not empty"
+msgstr ""
+
+#: ../../refcards.rst:148
+# 07a53d4ad3e747f1a449e5f71280039a
+msgid "Arithmetic Comparison"
+msgstr ""
+
+#: ../../refcards.rst:150
+# 9f50ab62fc9b41a3b61fef6a57b6ddda
+msgid "`within double parentheses <testconstructs.html#DBLPRX>`__ (( ... ))"
+msgstr ""
+
+#: ../../refcards.rst:152
+# 8c258b108e9f46ef8699182f1b56b4f4
+msgid "``        >       ``"
+msgstr ""
+
+#: ../../refcards.rst:156
+# 3439118d8dab493eb96bad1965241404
+msgid "``        >=       ``"
+msgstr ""
+
+#: ../../refcards.rst:160
+# 9c0e88d3db8c4d98b8012e05fd89ed0a
+msgid "``        <       ``"
+msgstr ""
+
+#: ../../refcards.rst:164
+# 43dc4f4dd5d74e66a4c2592232c6da84
+msgid "``        <=       ``"
+msgstr ""
+
+#: ../../refcards.rst:170
+# 9bdd9041e961410ea56438afa2e9f528
+msgid "**\\*** *If within a double-bracket* [[ ... ]] *test construct, then no escape* \\\\ *is needed.*"
+msgstr ""
+
+#: ../../refcards.rst:174
+# 4c664b4158174598b3bd5d1a27b0c695
+msgid "**Table B-3. TEST Operators: Files**"
+msgstr ""
+
+#: ../../refcards.rst:179
+#: ../../refcards.rst:185
+# 33a958f8d3394c4b84819fe780c5a78b
+# a4041e4c82ec40bc8976949ef330a448
+msgid "Tests Whether"
+msgstr ""
+
+#: ../../refcards.rst:187
+# 671e3b9d0862426eb63816f15a10b857
+msgid "``        -e       ``"
+msgstr ""
+
+#: ../../refcards.rst:189
+# 6c20bece59684c38b48279b8d23398a5
+msgid "File exists"
+msgstr ""
+
+#: ../../refcards.rst:191
+# 374cf773ec1f434cacdb06fd3bfc1d29
+msgid "``        -s       ``"
+msgstr ""
+
+#: ../../refcards.rst:193
+# aa25ccf232294cf5be1b6ca3effb0d45
+msgid "File is not zero size"
+msgstr ""
+
+#: ../../refcards.rst:195
+# 06fc4e6aa1b0455b81829795d4152c91
+msgid "``        -f       ``"
+msgstr ""
+
+#: ../../refcards.rst:197
+# fa5c48ede04346b2b8d442bb5dc8e28b
+msgid "File is a *regular* file"
+msgstr ""
+
+#: ../../refcards.rst:199
+# 6538cdc66cb94e70af299cc70d966a8e
+msgid "``        -d       ``"
+msgstr ""
+
+#: ../../refcards.rst:201
+# 393d5f2cc6174747bc4bc94ec07518fc
+msgid "File is a *directory*"
+msgstr ""
+
+#: ../../refcards.rst:203
+# c715dec3aaf14917ae5a9b3be49fd216
+msgid "``        -r       ``"
+msgstr ""
+
+#: ../../refcards.rst:205
+# 574ec2a838e8467b8c718b9fb3dd1902
+msgid "File has *read* permission"
+msgstr ""
+
+#: ../../refcards.rst:207
+# d0ad75799dd04a1f801e46c1bfdd53ea
+msgid "``        -h       ``"
+msgstr ""
+
+#: ../../refcards.rst:209
+# 32759ba6f3434f0d89fd8dc6f7dbcaa8
+msgid "File is a `symbolic link <basic.html#SYMLINKREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:211
+# 6e5b28ca7dd64adba65600ae7cb3f59c
+msgid "``        -w       ``"
+msgstr ""
+
+#: ../../refcards.rst:213
+# 2760c820eb1744258921333edb581304
+msgid "File has *write* permission"
+msgstr ""
+
+#: ../../refcards.rst:215
+# d605b18728b146bfb96e5637c6f1cb53
+msgid "``        -L       ``"
+msgstr ""
+
+#: ../../refcards.rst:217
+# 0f1614302c1f4038bf05365db4b7b867
+msgid "File is a *symbolic link*"
+msgstr ""
+
+#: ../../refcards.rst:219
+# 3b959e0cb4724cabb30644f65251f164
+msgid "``        -x       ``"
+msgstr ""
+
+#: ../../refcards.rst:221
+# f7f65fe5c0d843d699e536de2fead140
+msgid "File has *execute* permission"
+msgstr ""
+
+#: ../../refcards.rst:223
+# 3d7bacd946734240b4b3c87849870456
+msgid "``        -b       ``"
+msgstr ""
+
+#: ../../refcards.rst:225
+# 112dcc74a8e946bdb8f53ba54811fd67
+msgid "File is a `block device <devref1.html#BLOCKDEVREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:227
+# e6e36be7350445679f3185059a9d16b8
+msgid "``        -c       ``"
+msgstr ""
+
+#: ../../refcards.rst:229
+# cba9b09e0bea427bb274a4e1f392553f
+msgid "File is a `character device <devref1.html#CHARDEVREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:231
+# 51dbe1feb6134e7c80e879ad1a876d56
+msgid "``        -g       ``"
+msgstr ""
+
+#: ../../refcards.rst:233
+# 7a1e26dc572b495eb427b39c7fbc5de4
+msgid "*sgid* flag set"
+msgstr ""
+
+#: ../../refcards.rst:235
+# 07046816432347dab86c56be1c210b37
+msgid "``        -p       ``"
+msgstr ""
+
+#: ../../refcards.rst:237
+# 5995526783a34d3da65751e344026f59
+msgid "File is a `pipe <special-chars.html#PIPEREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:239
+# d42e57ca9d104d36b370f4395441d8c2
+msgid "``        -u       ``"
+msgstr ""
+
+#: ../../refcards.rst:241
+# 7f8a6b0b98d44422a945d351a7b9e1c2
+msgid "*suid* flag set"
+msgstr ""
+
+#: ../../refcards.rst:243
+# 5561707082df41e295a55dec13b3b1e9
+msgid "``        -S       ``"
+msgstr ""
+
+#: ../../refcards.rst:245
+# e109bb8a100443668f49e040806abbcb
+msgid "File is a `socket <devref1.html#SOCKETREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:247
+# af324a5cfd404daea2568644ff05f585
+msgid "``        -k       ``"
+msgstr ""
+
+#: ../../refcards.rst:249
+# a89ca2f095c7456b8a39c097e1b5035e
+msgid "\"sticky bit\" set"
+msgstr ""
+
+#: ../../refcards.rst:251
+# b5ce1400a08b4a21b1c1a174d4749dbe
+msgid "``        -t       ``"
+msgstr ""
+
+#: ../../refcards.rst:253
+# 681d602d4feb48d899099a1153bd0b23
+msgid "File is associated with a *terminal*"
+msgstr ""
+
+#: ../../refcards.rst:255
+# 1404e777e7404bffaeab29d9f231541e
+msgid "``        -N       ``"
+msgstr ""
+
+#: ../../refcards.rst:257
+# b8f2bd06e5724a96a96924a165e488b4
+msgid "File modified since it was last read"
+msgstr ""
+
+#: ../../refcards.rst:259
+# 3e3a056edc834caeb2a77971ffdadf10
+msgid "``        F1 -nt F2       ``"
+msgstr ""
+
+#: ../../refcards.rst:261
+# 1d79f5e33f9b446ab1a78785ed31cb61
+msgid "File F1 is *newer* than F2 \\*"
+msgstr ""
+
+#: ../../refcards.rst:263
+# b07d029e1ca8427da2639df7050f5c26
+msgid "``        -O       ``"
+msgstr ""
+
+#: ../../refcards.rst:265
+# a8887bcc72d54ad5b3825590a7f06faf
+msgid "You own the file"
+msgstr ""
+
+#: ../../refcards.rst:267
+# bf03eddcba6a4c1597486127006e21b3
+msgid "``        F1 -ot F2       ``"
+msgstr ""
+
+#: ../../refcards.rst:269
+# 29fce4715ad34a0d9561e6f1f669f10e
+msgid "File F1 is *older* than F2 \\*"
+msgstr ""
+
+#: ../../refcards.rst:271
+# 1f21f62313f2499dbf4af91e98b1d8ca
+msgid "``        -G       ``"
+msgstr ""
+
+#: ../../refcards.rst:273
+# 1e2ad874ef0e4e3e943ca25117acf3dd
+msgid "*Group id* of file same as yours"
+msgstr ""
+
+#: ../../refcards.rst:275
+# a915779d8d564962ac921523ce3d5eae
+msgid "``        F1 -ef F2       ``"
+msgstr ""
+
+#: ../../refcards.rst:277
+# 8df92f1dd4d04232b24162a5be64c012
+msgid "Files F1 and F2 are *hard links* to the same file \\*"
+msgstr ""
+
+#: ../../refcards.rst:279
+# 09bed9e7476c44fd81c559092700c35f
+msgid "``        !       ``"
+msgstr ""
+
+#: ../../refcards.rst:281
+# 55abcfaf86f94be3b5afdec9635ca006
+msgid "NOT (inverts sense of above tests)"
+msgstr ""
+
+#: ../../refcards.rst:285
+# 969181e541134202971ff1747da8e4df
+msgid "**\\*** *Binary* operator (requires two operands)."
+msgstr ""
+
+#: ../../refcards.rst:288
+# 6065cb298e4442c78d9086d2402ec209
+msgid "**Table B-4. Parameter Substitution and Expansion**"
+msgstr ""
+
+#: ../../refcards.rst:291
+#: ../../refcards.rst:365
+#: ../../refcards.rst:481
+# 9dc065ccfb154c0fb1952777a4e9029e
+# 9861c798517846c09a0d17356c7cdae5
+# 9adde33530f844eda0b3d89cbf324c95
+msgid "Expression"
+msgstr ""
+
+#: ../../refcards.rst:295
+# a73bfbd2f41846aa85ced85b58e2a846
+msgid "``        ${var}       ``"
+msgstr ""
+
+#: ../../refcards.rst:297
+# e644ce21529c451d997b2520a670fa8d
+msgid "Value of ``                 var               `` (same as ``                 $var               `` )"
+msgstr ""
+
+#: ../../refcards.rst:300
+# 3c44de58269d4100b88254b9ef3b63c4
+msgid "``        ${var-$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:302
+# 3e24371eb4a34128be16aacaeb85343d
+msgid "If ``                 var               `` not set, `evaluate <internal.html#EVALREF>`__ expression as ``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:306
+# 8f5469ddf7854c67a941440ab8dde0fc
+msgid "``        ${var:-$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:308
+# cb8151c930ba42dd94b54b4ef495848b
+msgid "If ``                 var               `` not set or is empty, *evaluate* expression as ``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:311
+# 9c95bcdf9899463ebcc9bca6930666b8
+msgid "``        ${var=$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:313
+# cae2d124dcf44b62b9208eda18d6d8cf
+msgid "If ``                 var               `` not set, evaluate expression as ``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:316
+# c9ccd19d0e3b4f8885ec12f6fc496a74
+msgid "``        ${var:=$DEFAULT}       ``"
+msgstr ""
+
+#: ../../refcards.rst:318
+# f31d3e467fa94ef890a1b42367133df8
+msgid "If ``                 var               `` not set or is empty, evaluate expression as ``                 $DEFAULT               `` \\*"
+msgstr ""
+
+#: ../../refcards.rst:321
+# d638e984973542a781578c7269e2f252
+msgid "``        ${var+$OTHER}       ``"
+msgstr ""
+
+#: ../../refcards.rst:323
+#: ../../refcards.rst:328
+# 989bdc6b434b4ca18f77c8ca50a42238
+# e8cf2dc8e1964d7396e00162a1608b11
+msgid "If ``                 var               `` set, evaluate expression as ``                 $OTHER               `` , otherwise as null string"
+msgstr ""
+
+#: ../../refcards.rst:326
+# 104112778817450f963df885a30a6d80
+msgid "``        ${var:+$OTHER}       ``"
+msgstr ""
+
+#: ../../refcards.rst:331
+# 16df7ef33ce14efa9e7aa85692d79e72
+msgid "``        ${var?$ERR_MSG}       ``"
+msgstr ""
+
+#: ../../refcards.rst:333
+#: ../../refcards.rst:339
+# 011d178f65dd40ccb6f3757dac38dac5
+# ca93027de878416ca47277bdefe84650
+msgid "If ``                 var               `` not set, print ``                 $ERR_MSG               `` and abort script with an exit status of 1 .\\*"
+msgstr ""
+
+#: ../../refcards.rst:337
+# 19966a418393475eab5478c57653d0fe
+msgid "``        ${var:?$ERR_MSG}       ``"
+msgstr ""
+
+#: ../../refcards.rst:343
+# 6417d36a567e461190c043489e73620b
+msgid "``        ${!varprefix*}       ``"
+msgstr ""
+
+#: ../../refcards.rst:345
+#: ../../refcards.rst:350
+# a83a55c99c0b4f6da9ff2e16c738a5da
+# d4cd440763874134bb8270fd08d57989
+msgid "Matches all previously declared variables beginning with ``                 varprefix               ``"
+msgstr ""
+
+#: ../../refcards.rst:348
+# 51c8d8b42b094870bbd25065e679b578
+msgid "``        ${!varprefix@}       ``"
+msgstr ""
+
+#: ../../refcards.rst:355
+# d22d378d9031491b845e8b98622060ef
+msgid "**\\*** If ``             var           `` *is* set, evaluate the expression as ``             $var           `` with no side-effects."
+msgstr ""
+
+#: ../../refcards.rst:358
+# 3c078b641b8e4c61861210538c06a7d5
+msgid "**# Note** that some of the above behavior of operators has changed from earlier versions of Bash."
+msgstr ""
+
+#: ../../refcards.rst:362
+# 64d21a6c3f854deb988377225046e8e4
+msgid "**Table B-5. String Operations**"
+msgstr ""
+
+#: ../../refcards.rst:369
+# 3b375a38bcad49d49a1f0fc494dee379
+msgid "``        ${#string}       ``"
+msgstr ""
+
+#: ../../refcards.rst:371
+# 281b3a9775944050806654aa998940ec
+msgid "Length of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:373
+# 4fabfa39263e4c40913f7b7553202a9d
+msgid "``        ${string:position}       ``"
+msgstr ""
+
+#: ../../refcards.rst:375
+# 3ddc9509b4d54abbaa14b86966d67d5f
+msgid "Extract substring from ``                 $string               `` at ``                 $position               ``"
+msgstr ""
+
+#: ../../refcards.rst:378
+# 9c5df602dbca49bead40ba52a9c1d270
+msgid "``        ${string:position:length}       ``"
+msgstr ""
+
+#: ../../refcards.rst:380
+# f171b4362c484f799687724f6c56abf9
+msgid "Extract ``                 $length               `` characters substring from ``                 $string               `` at ``                 $position               `` [zero-indexed, first character is at position 0]"
+msgstr ""
+
+#: ../../refcards.rst:385
+# 966eb27b327340ee83faafb424660875
+msgid "``        ${string#substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:387
+# 7f4d908066e2477f8edabfde450f1e30
+msgid "Strip shortest match of ``                 $substring               `` from front of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:390
+# 617f659815ca4641b482a3f4005bf29b
+msgid "``        ${string##substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:392
+# 3bb5e77a4ec44e27859205d2530ad671
+msgid "Strip longest match of ``                 $substring               `` from front of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:395
+# 2d9fc1f9316f4c1098bec76114ad801c
+msgid "``        ${string%substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:397
+# 3cfce01b0c4c48b5b8c04cfe7ed10f52
+msgid "Strip shortest match of ``                 $substring               `` from back of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:400
+# e8d695c796d54642b8c175bd72ee1b16
+msgid "``        ${string%%substring}       ``"
+msgstr ""
+
+#: ../../refcards.rst:402
+# 22dfabbff71b4a3298fcbc51e06b2f80
+msgid "Strip longest match of ``                 $substring               `` from back of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:405
+# f1d79e3a55d245e391c50fdff8d83fe2
+msgid "``        ${string/substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:407
+# 470d9bdbb85d4fd793acc26bfdc3514f
+msgid "Replace first match of ``                 $substring               `` with ``                 $replacement               ``"
+msgstr ""
+
+#: ../../refcards.rst:410
+# d3d9a235393045ac82c275de66827c2c
+msgid "``        ${string//substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:412
+# cad6be85fa4647bb935a393ba2237f2e
+msgid "Replace *all* matches of ``                 $substring               `` with ``                 $replacement               ``"
+msgstr ""
+
+#: ../../refcards.rst:415
+# 4784343db5b04a198588afaffa5145d9
+msgid "``        ${string/#substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:417
+# 5192b1ed69e149e8ad1375f9f21d37c0
+msgid "If ``                 $substring               `` matches *front* end of ``                 $string               `` , substitute ``                 $replacement               `` for ``                 $substring               ``"
+msgstr ""
+
+#: ../../refcards.rst:422
+# 23540ebf53c2480fb5773d7d2aff05e9
+msgid "``        ${string/%substring/replacement}       ``"
+msgstr ""
+
+#: ../../refcards.rst:424
+# 745701bc9b4d4cbaa4deb7c88841a70c
+msgid "If ``                 $substring               `` matches *back* end of ``                 $string               `` , substitute ``                 $replacement               `` for ``                 $substring               ``"
+msgstr ""
+
+#: ../../refcards.rst:429
+# 0168b27a8158444daec0912e77c257e7
+msgid "``        expr match \"$string\" '$substring'       ``"
+msgstr ""
+
+#: ../../refcards.rst:431
+#: ../../refcards.rst:436
+# 4de90482986a404b87aaf89a0bd41401
+# 53ed90fd57a04b1fb732ea63d1460856
+msgid "Length of matching ``                 $substring               `` \\* at beginning of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:434
+# f72448b673744f24a74eba6fa63baf61
+msgid "``        expr \"$string\" : '$substring'       ``"
+msgstr ""
+
+#: ../../refcards.rst:439
+# 4eb226e9899946e7a082eb96352850fb
+msgid "``        expr index \"$string\" $substring       ``"
+msgstr ""
+
+#: ../../refcards.rst:441
+# 5d3bb56c44e745cd9dff11b9efd7425e
+msgid "Numerical position in ``                 $string               `` of first character in ``                 $substring               `` \\* that matches [0 if no match, first character counts as position 1]"
+msgstr ""
+
+#: ../../refcards.rst:445
+# 422170dcbdf44b2fad1574f783f2b269
+msgid "``        expr substr $string $position             $length       ``"
+msgstr ""
+
+#: ../../refcards.rst:447
+# 26086d72f8074cc29979e05f64262a31
+msgid "Extract ``                 $length               `` characters from ``                 $string               `` starting at ``                 $position               `` [0 if no match, first character counts as position 1]"
+msgstr ""
+
+#: ../../refcards.rst:452
+# a45def2a98274b9e9fcc7ed12ae9650c
+msgid "``        expr match \"$string\"             '\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:454
+# 89fb351a8eee4c30a2eaea57c008750a
+msgid "Extract ``                 $substring               `` \\*, searching from beginning of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:457
+# fc889b0b3c4b405b9b935d8fe7a1ec8a
+msgid "``        expr \"$string\" :             '\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:459
+# e6a33462cc9748808eaed98f3098e17c
+msgid "Extract ``                 $substring               `` \\* , searching from beginning of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:462
+# 53e3326f64204e9091152320105d653c
+msgid "``        expr match \"$string\"             '.*\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:464
+#: ../../refcards.rst:469
+# 654dd386a230489da3f9ea6ff74d0317
+# ed52e711a2f94b938ede50d691d441fb
+msgid "Extract ``                 $substring               `` \\*, searching from end of ``                 $string               ``"
+msgstr ""
+
+#: ../../refcards.rst:467
+# f49770d4684e425d8efef4f88d9b17c1
+msgid "``        expr \"$string\" :             '.*\\($substring\\)'       ``"
+msgstr ""
+
+#: ../../refcards.rst:474
+# 4d5e0236ba254a2ea567e8301ee89bba
+msgid "**\\*** Where ``             $substring           `` is a `Regular Expression <regexp.html#REGEXREF>`__ ."
+msgstr ""
+
+#: ../../refcards.rst:478
+# cb977c39acb4412daec63dbddcb0ccf3
+msgid "**Table B-6. Miscellaneous Constructs**"
+msgstr ""
+
+#: ../../refcards.rst:483
+# 12c76acc159c4f5488fc9905f384b58c
+msgid "Interpretation"
+msgstr ""
+
+#: ../../refcards.rst:485
+# b454dd3ef4a940b3b1eb2b1640f15059
+msgid "`Brackets <x17129.html#BRACKETSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:487
+# f2d1cb8bbd0a45e88ece3d0a3afd45d8
+msgid "``        if [ CONDITION ]       ``"
+msgstr ""
+
+#: ../../refcards.rst:489
+# 3f43f56f5c094a118734cd0cb6396a30
+msgid "`Test construct <special-chars.html#LEFTBRACKET>`__"
+msgstr ""
+
+#: ../../refcards.rst:491
+# 9044c0e9ad794f9cb9cbb0bd95aeaf37
+msgid "``        if [[ CONDITION ]]       ``"
+msgstr ""
+
+#: ../../refcards.rst:493
+# e2ed07b37164496ba94eeb76ad2ee91c
+msgid "`Extended test construct <testconstructs.html#DBLBRACKETS>`__"
+msgstr ""
+
+#: ../../refcards.rst:495
+# 2d8b48a48e9d4bfb985c7086af895ecb
+msgid "``        Array[1]=element1       ``"
+msgstr ""
+
+#: ../../refcards.rst:497
+# c3612528bdcd46a09dfbfd473388cdd5
+msgid "`Array initialization <arrays.html#ARRAYREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:499
+# 3aac3b35af174149830b53c82e63633c
+msgid "``        [a-z]       ``"
+msgstr ""
+
+#: ../../refcards.rst:501
+# 9676d18b7ba141efbec4b7866996ebb2
+msgid "`Range of characters <x17129.html#BRACKETSREF>`__ within a `Regular Expression <regexp.html#REGEXREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:504
+# ccef404e69054fb4ae2cbe46c6db2b20
+msgid "Curly Brackets"
+msgstr ""
+
+#: ../../refcards.rst:506
+# 881adcb5c4f940579238670f5bb09651
+msgid "``        ${variable}       ``"
+msgstr ""
+
+#: ../../refcards.rst:508
+# 7db18dbee99544988e8a7d2323cf48a5
+msgid "`Parameter substitution <parameter-substitution.html#PARAMSUBREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:510
+# 552229ec7c084edb82820ae54a2b6f2e
+msgid "``        ${!variable}       ``"
+msgstr ""
+
+#: ../../refcards.rst:512
+# ed49141c7463460a85fec9932db66dd9
+msgid "`Indirect variable reference <ivr.html#IVRREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:514
+# ddb447db4f5f42aab4787131b24fb305
+msgid "``        { command1; command2; . . . commandN; }       ``"
+msgstr ""
+
+#: ../../refcards.rst:516
+# 2d6daa8fcb074ff889db3068375d9aca
+msgid "`Block of code <special-chars.html#CODEBLOCKREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:518
+# 69c424640735420ab969bf0e3f254b1f
+msgid "``        {string1,string2,string3,...}       ``"
+msgstr ""
+
+#: ../../refcards.rst:520
+# ec450d82ca6a49b3a884755adb76c6db
+msgid "`Brace expansion <special-chars.html#BRACEEXPREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:522
+# 2fb7bf258895466a9a57f25109d8b4c1
+msgid "``        {a..z}       ``"
+msgstr ""
+
+#: ../../refcards.rst:524
+# 629f67f414974a57ab0056f03b1ccde9
+msgid "`Extended brace expansion <bashver3.html#BRACEEXPREF3>`__"
+msgstr ""
+
+#: ../../refcards.rst:526
+# d2aefb89677747bf893718cf99609ba4
+msgid "``        {}       ``"
+msgstr ""
+
+#: ../../refcards.rst:528
+# d32002ccc26641b8858556cb4b997e91
+msgid "Text replacement, after `find <moreadv.html#CURLYBRACKETSREF>`__ and `xargs <moreadv.html#XARGSCURLYREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:531
+# e61d2f4da9574abfbc88f90c00f96de0
+msgid "`Parentheses <special-chars.html#PARENSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:533
+# b1471d990ebc4eaab352b867591de34a
+msgid "``        ( command1; command2 )       ``"
+msgstr ""
+
+#: ../../refcards.rst:535
+# 04ba3ce9101a4bb597f01fd52a235039
+msgid "Command group executed within a `subshell <subshells.html#SUBSHELLSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:538
+# 6f765f07d627428b92df0c743b71d2d3
+msgid "``        Array=(element1 element2 element3)       ``"
+msgstr ""
+
+#: ../../refcards.rst:540
+# b343e706a253416a98a6955031cd9d06
+msgid "`Array initialization <arrays.html#ARRAYINIT0>`__"
+msgstr ""
+
+#: ../../refcards.rst:542
+# 0f37776b6da54d2ebbc6ff08dfda4f62
+msgid "``        result=$(COMMAND)       ``"
+msgstr ""
+
+#: ../../refcards.rst:544
+# aec02ffba4194c5cb03770c17bf1fbde
+msgid "`Command substitution <commandsub.html#CSPARENS>`__ , new style"
+msgstr ""
+
+#: ../../refcards.rst:546
+# c07e9db409634fe7842873e8b809316b
+msgid "``        >(COMMAND)       ``"
+msgstr ""
+
+#: ../../refcards.rst:548
+# 96489257989d497abc82f49b0dcb3c3f
+msgid "`Process substitution <process-sub.html#PROCESSSUBREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:550
+# 3ccbdcc80daa4f049622c24af520735a
+msgid "``        <(COMMAND)       ``"
+msgstr ""
+
+#: ../../refcards.rst:552
+# fa80f651f8cb44c1b8422590e33897a5
+msgid "Process substitution"
+msgstr ""
+
+#: ../../refcards.rst:554
+# 0c762e4f42a244218cb555a52f711f80
+msgid "`Double Parentheses <dblparens.html>`__"
+msgstr ""
+
+#: ../../refcards.rst:556
+# 345440d3f0444adb95a761016ba688f5
+msgid "``        (( var = 78 ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:558
+# ee2a518c946849c2ada4e0846b9c3b56
+msgid "`Integer arithmetic <dblparens.html#DBLPARENSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:560
+# 9a7ece8643fc4b159277a06e4be1e52b
+msgid "``        var=$(( 20 + 5 ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:562
+# 84184bef89b941b0ac74b95cb0919b9c
+msgid "Integer arithmetic, with variable assignment"
+msgstr ""
+
+#: ../../refcards.rst:564
+# ef12b32ac23e47ed935acfc1d82d4428
+msgid "``        (( var++ ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:566
+# 0861bf31eb2b4217921d42345ea9b127
+msgid "*C-style* `variable increment <dblparens.html#PLUSPLUSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:568
+# ce89590b54aa4017853ccc73fa05f9cd
+msgid "``        (( var-- ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:570
+# 91a634cba1db40a497efbe3b0855006b
+msgid "*C-style* `variable decrement <dblparens.html#PLUSPLUSREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:572
+# b21a218b8699483cb7311b8cbe85ad27
+msgid "``        (( var0 = var1<98?9:21 ))       ``"
+msgstr ""
+
+#: ../../refcards.rst:574
+# f8319bdc384e44a5a59d85af8de7cebe
+msgid "*C-style* `ternary <special-chars.html#CSTRINARY>`__ operation"
+msgstr ""
+
+#: ../../refcards.rst:576
+# 70f54f4e40e34426b84decbaf4d9a888
+msgid "`Quoting <quoting.html#QUOTINGREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:578
+# ef0a151eb47f41d082f68ee96a24b522
+msgid "``        \"$variable\"       ``"
+msgstr ""
+
+#: ../../refcards.rst:580
+# 6667c17674ac46d4ac4f2d1a80d9e881
+msgid "`\"Weak\" quoting <varsubn.html#DBLQUO>`__"
+msgstr ""
+
+#: ../../refcards.rst:582
+# 2c4150479ac747bead9205e125ce2774
+msgid "``        'string'       ``"
+msgstr ""
+
+#: ../../refcards.rst:584
+# 7bf5a64ab9524e389ee47198b1ac5b9d
+msgid "`'Strong' quoting <varsubn.html#SNGLQUO>`__"
+msgstr ""
+
+#: ../../refcards.rst:586
+# c2bc8c54f9694182b9c517163808f5cf
+msgid "`Back Quotes <commandsub.html#BACKQUOTESREF>`__"
+msgstr ""
+
+#: ../../refcards.rst:588
+# a5b6e95fa6bc4e6e81abbd6f557b813e
+msgid "``        result=`COMMAND`       ``"
+msgstr ""
+
+#: ../../refcards.rst:590
+# 950e3dfb42c848d0af805ebec5deee6b
+msgid "`Command substitution <commandsub.html#COMMANDSUBREF>`__ , classic style"
+msgstr ""
+

@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../asciitable.rst:4
+# ec5730d0ce37405fa98bcdf5f0944552
+msgid "XXX  Appendix T. ASCII Table"
+msgstr ""
+
+#: ../../asciitable.rst:6
+# d3363bdcbcf84dbd89c86e438500851b
+msgid "Traditionally, a book of this sort has an `ASCII <special-chars.html#ASCIIDEF>`__ Table appendix. This book does not. Instead, here are several short scripts, each of which generates a complete ASCII table."
+msgstr ""
+
+#: ../../asciitable.rst:13
+# d9488033d6414b2495873144de704182
+msgid "Exemple 1. A script that generates an ASCII table"
+msgstr ""
+
+#: ../../asciitable.rst:70
+# 53d67cd35aa141b9b835038efda38a34
+msgid "Exemple 2. Another ASCII table script"
+msgstr ""
+
+#: ../../asciitable.rst:123
+# d1f0076730074925a4c1231fb9839cd4
+msgid "Exemple 3. A third ASCII table script, using *awk*"
+msgstr ""
+

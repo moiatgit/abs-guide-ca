@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../prelimexer.rst:3
+# a61053944312445b846a9413cc68bb06
+msgid "2.1. Uns primers exercicis"
+msgstr ""
+
+#: ../../prelimexer.rst:5
+# 366859554d904c709bc5836a53081ed2
+msgid "Troba aquí uns primers exercicis:"
+msgstr ""
+
+#: ../../prelimexer.rst:7
+# c8b41315983a4342b2f06bf102a8b1e5
+msgid "Els administradors de sistemes sovint escriuen guions per a automatitzar tarees habituals."
+msgstr ""
+
+#: ../../prelimexer.rst:10
+# 4d3c2305e7c24fd396fcef5bfb69940b
+msgid "Pensa diferents exemples pels que els guions poden ser útils."
+msgstr ""
+
+#: ../../prelimexer.rst:12
+# 4ffc214d1ea94835bce3d5090e16dbd9
+msgid "Escriu un guió que, en ser invocat, mostri:"
+msgstr ""
+
+#: ../../prelimexer.rst:14
+# 45e9b8e837534de8aa26de4903a619c1
+msgid "l'hora i la data"
+msgstr ""
+
+#: ../../prelimexer.rst:16
+# 024e8ae179634bcea5323058e174ff96
+msgid "la llista de tots els usuaris logats"
+msgstr ""
+
+#: ../../prelimexer.rst:18
+# 7ee413f2d3d94135b6e77627a9a23f10
+msgid "el temps durant el qual el sistema és operatiu (*uptime*)"
+msgstr ""
+
+#: ../../prelimexer.rst:20
+# 2666ef918b504565b81e92f9f801b3a8
+msgid "Finalment, el guió guardarà tota aquesta informació en un fitxer de log."
+msgstr ""
+
+#: ../../prelimexer.rst:25
+# 05c1044d63ff4fd7b6d6a821f1f1af91
+msgid "Trobaràs ajuda per a resoldre aquest exercici als següents documents:"
+msgstr ""
+
+#: ../../prelimexer.rst:28
+# 2f5b3be984e743c888dec42cef6b8aaa
+msgid ":doc:`timedate`"
+msgstr ""
+
+#: ../../prelimexer.rst:30
+# 99891e97bc8945d1a7dd84e6a743691c
+msgid ":doc:`system`"
+msgstr ""
+
+#: ../../prelimexer.rst:32
+# 52c9e97356dc418486d605fde91e0f9f
+msgid ":doc:`io-redirection`"
+msgstr ""
+

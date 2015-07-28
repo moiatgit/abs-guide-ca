@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../histcommands.rst:3
+# ba34dc85bc9640a2bf87bf3bd467fa0c
+msgid "XXX  Appendix L. History Commands"
+msgstr ""
+
+#: ../../histcommands.rst:5
+# 534ea26f06f447c0bc4e1991614e53fb
+msgid "The Bash shell provides command-line tools for editing and manipulating a user's *command history* . This is primarily a convenience, a means of saving keystrokes."
+msgstr ""
+
+#: ../../histcommands.rst:9
+# 2ffb69954e5b43cbadba03218e183a69
+msgid "Bash history commands:"
+msgstr ""
+
+#: ../../histcommands.rst:11
+# cc7874c03a104ed389e741f4390214b5
+msgid "**history**"
+msgstr ""
+
+#: ../../histcommands.rst:13
+# 47f6cabc123d42f9afbf9172733d191c
+msgid "**fc**"
+msgstr ""
+
+#: ../../histcommands.rst:27
+# dc88dc149dbe48a092bff00814293641
+msgid "Internal variables associated with Bash history commands:"
+msgstr ""
+
+#: ../../histcommands.rst:29
+# fcb34025072f4c98978bfd6c014a4bc2
+msgid "$HISTCMD"
+msgstr ""
+
+#: ../../histcommands.rst:31
+# bbdd71bf804748a8b50080940789c3fe
+msgid "$HISTCONTROL"
+msgstr ""
+
+#: ../../histcommands.rst:33
+# f68aca6947f248f9bc603144728aab6d
+msgid "$HISTIGNORE"
+msgstr ""
+
+#: ../../histcommands.rst:35
+# 3c2eb6ab04574bcd80283bd2c1f750b7
+msgid "$HISTFILE"
+msgstr ""
+
+#: ../../histcommands.rst:37
+# 79cacf680357449396a86aa8e116bf28
+msgid "$HISTFILESIZE"
+msgstr ""
+
+#: ../../histcommands.rst:39
+# 41f193ed16584fbb92fa8a932e3d27d8
+msgid "$HISTSIZE"
+msgstr ""
+
+#: ../../histcommands.rst:41
+# 57cd4a4823184006ac5545bac98463f1
+msgid "$HISTTIMEFORMAT (Bash, ver. 3.0 or later)"
+msgstr ""
+
+#: ../../histcommands.rst:43
+# 799263193d46484bb7d178d05e1c3612
+msgid "!!"
+msgstr ""
+
+#: ../../histcommands.rst:45
+# 9bac34485fd743808bbbb969a46e36c9
+msgid "!$"
+msgstr ""
+
+#: ../../histcommands.rst:47
+# d815f2bc6042440a9efef4d483346c2e
+msgid "!#"
+msgstr ""
+
+#: ../../histcommands.rst:49
+# f15d5453263947e2b7fcebc94de7cde9
+msgid "!N"
+msgstr ""
+
+#: ../../histcommands.rst:51
+# ae2d798036d845a08acbbbc13b3e07c7
+msgid "!-N"
+msgstr ""
+
+#: ../../histcommands.rst:53
+# 9e24dd8ab7fb498db25c93e76dde3779
+msgid "!STRING"
+msgstr ""
+
+#: ../../histcommands.rst:55
+# 4b8df0e4e3474bb9bd42fd2c79f059a1
+msgid "!?STRING?"
+msgstr ""
+
+#: ../../histcommands.rst:57
+# f89bd88a3ea44a0b8272d603afe3b56e
+msgid "^STRING^string^"
+msgstr ""
+
+#: ../../histcommands.rst:59
+# bddd406a4c5f41d288a121529da90ec6
+msgid "Unfortunately, the Bash history tools find no use in scripting."
+msgstr ""
+
+#: ../../histcommands.rst:91
+# 56c9ce7130694941a973877a90d4b640
+msgid "The `Advancing in the Bash Shell <http://samrowe.com/wordpress/advancing-in-the-bash-shell/>`__ site gives a good introduction to the use of history commands in Bash."
+msgstr ""
+

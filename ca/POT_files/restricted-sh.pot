@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../restricted-sh.rst:4
+# fbb8beee66b541b5bc0be2bead5a14c9
+msgid "XXX  Chapter 22. Restricted Shells"
+msgstr ""
+
+#: ../../restricted-sh.rst:7
+# b7288559e8ac40e3a7170685e8cd839b
+msgid "** Disabled commands in restricted shells**"
+msgstr ""
+
+#: ../../restricted-sh.rst:10
+# dbbe4fcb1f9e4b078bc5224d684924f9
+msgid "**.** Running a script or portion of a script in *restricted mode* disables certain commands that would otherwise be available. This is a security measure intended to limit the privileges of the script user and to minimize possible damage from running the script."
+msgstr ""
+
+#: ../../restricted-sh.rst:17
+# 92e15eb2651743e8a39ffc279e46a01e
+msgid "The following commands and actions are disabled:"
+msgstr ""
+
+#: ../../restricted-sh.rst:19
+# c36e1045312e422c8580578a27e7bfc6
+msgid "Using ``                 cd               `` to change the working directory."
+msgstr ""
+
+#: ../../restricted-sh.rst:22
+# d31b9c163dc54a919898f497effc93f0
+msgid "Changing the values of the ``                 $PATH               `` , ``                 $SHELL               `` , ``                 $BASH_ENV               `` , or ``                 $ENV               `` `environmental variables <othertypesv.html#ENVREF>`__ ."
+msgstr ""
+
+#: ../../restricted-sh.rst:28
+# 184b64d3516b4d849226cb6cff554be4
+msgid "Reading or changing the ``                 $SHELLOPTS               `` , shell environmental options."
+msgstr ""
+
+#: ../../restricted-sh.rst:32
+# fcbbc48cb1404bdc9f1d3e8894e8f145
+msgid "Output redirection."
+msgstr ""
+
+#: ../../restricted-sh.rst:34
+# dabef7f24ec7460282aeebf8069c7b2b
+msgid "Invoking commands containing one or more / 's."
+msgstr ""
+
+#: ../../restricted-sh.rst:36
+# 2972872680ac4adc87dd3f47540ae666
+msgid "Invoking `exec <internal.html#EXECREF>`__ to substitute a different process for the shell."
+msgstr ""
+
+#: ../../restricted-sh.rst:39
+# eab7d0674faf497d9fc7844e598c501e
+msgid "Various other commands that would enable monkeying with or attempting to subvert the script for an unintended purpose."
+msgstr ""
+
+#: ../../restricted-sh.rst:42
+# 48efc10f22b841958441c8722e376ca9
+msgid "Getting out of restricted mode within the script."
+msgstr ""
+
+#: ../../restricted-sh.rst:46
+# 85ec39066a3a459f87026d17de2185fb
+msgid "Exemple 1. Running a script in restricted mode"
+msgstr ""
+

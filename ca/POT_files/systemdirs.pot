@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../systemdirs.rst:4
+# 3059d13236924083bd1a9a3a4c2f8937
+msgid "XXX  Appendix I. Important System Directories"
+msgstr ""
+
+#: ../../systemdirs.rst:6
+# 08f6bd423b5741eab057ffcbf7a41e3b
+msgid "Sysadmins and anyone else writing administrative scripts should be intimately familiar with the following system directories."
+msgstr ""
+
+#: ../../systemdirs.rst:9
+# 3ec0a08dc6c744a3b29e30fbe4ccab2c
+msgid "``        /bin       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:11
+# 42a17f2f4d364333a40648eea93781f1
+msgid "Binaries (executables). Basic system programs and utilities (such as **bash** )."
+msgstr ""
+
+#: ../../systemdirs.rst:14
+# 848113babf964f9181fa3493e704f6d3
+msgid "``        /usr/bin       `` ` [1]  <systemdirs.html#FTN.AEN23969>`__"
+msgstr ""
+
+#: ../../systemdirs.rst:16
+# edabfdebe34440e198122ae103c2f938
+msgid "More system binaries."
+msgstr ""
+
+#: ../../systemdirs.rst:18
+# 61d336cbfa0b4051ba828132ae18caeb
+msgid "``        /usr/local/bin       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:20
+# d549c28153ae40fe81474ec9e50087d7
+msgid "Miscellaneous binaries local to the particular machine."
+msgstr ""
+
+#: ../../systemdirs.rst:22
+# 67001d91026c494d998356f1e6472fff
+msgid "``        /sbin       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:24
+# 24b927c0c2b642849e3b91d23c06b1cb
+msgid "System binaries. Basic system administrative programs and utilities (such as **fsck** )."
+msgstr ""
+
+#: ../../systemdirs.rst:27
+# e6b55687006b4a8482f1bd29262418c5
+msgid "``        /usr/sbin       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:29
+# d1c30a10e6d7483c808ecaae8564f558
+msgid "More system administrative programs and utilities."
+msgstr ""
+
+#: ../../systemdirs.rst:31
+# 0711b79d4de042d38fb7b73f689b0874
+msgid "``        /etc       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:33
+# c64dac0e5d4b4544b8b2e9a27ef01494
+msgid "*Et cetera* . Systemwide configuration scripts."
+msgstr ""
+
+#: ../../systemdirs.rst:35
+# 63160551b9e14744932705fc6137e550
+msgid "Of particular interest are the ``         /etc/fstab        `` <system.html#FSTABREF>`__ (filesystem table), ``        /etc/mtab       `` (mounted filesystem table), and the ``         /etc/inittab        `` <system.html#INITTABREF>`__ files."
+msgstr ""
+
+#: ../../systemdirs.rst:41
+# b1bb0e330e6a498ca4ff7a6dfc386a35
+msgid "``        /etc/rc.d       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:43
+# 3e7a37013a5043fc98d987cb58ca6dee
+msgid "Boot scripts, on Red Hat and derivative distributions of Linux."
+msgstr ""
+
+#: ../../systemdirs.rst:45
+# 3a86fc73c8f14a3cbecad052b8385838
+msgid "``        /usr/share/doc       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:47
+# e4eafaa4d5ae4c4f96a41bdccd22ea05
+msgid "Documentation for installed packages."
+msgstr ""
+
+#: ../../systemdirs.rst:49
+# 984fc1e9aa0a4eefae594c6f499445b1
+msgid "``        /usr/man       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:51
+# ddb9600a16a64275805eecc5f8cd3dc0
+msgid "The systemwide `manpages <basic.html#MANREF>`__ ."
+msgstr ""
+
+#: ../../systemdirs.rst:53
+# f3d5fa996ab4449d84c3f6943b98a5c4
+msgid "``        /dev       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:55
+# db67ef1ed57a45b0a852ec9cd2cf0b6f
+msgid "Device directory. Entries (but *not* mount points) for physical and virtual devices. See `Chapter 29 <devproc.html>`__ ."
+msgstr ""
+
+#: ../../systemdirs.rst:58
+# 3fb8ba41dedd49c19b0ad4dfd73a2bb1
+msgid "``        /proc       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:60
+# f7fd84859e28464896e7df70314129f7
+msgid "Process directory. Contains information and statistics about running processes and kernel parameters. See `Chapter 29 <devproc.html>`__ ."
+msgstr ""
+
+#: ../../systemdirs.rst:63
+# 152b958c0fe5426ea4a08d5e77b8b4e2
+msgid "``        /sys       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:65
+# 3e6d4229a8d246539afc489fc3f477f2
+msgid "Systemwide device directory. Contains information and statistics about device and device names. This is newly added to Linux with the 2.6.X kernels."
+msgstr ""
+
+#: ../../systemdirs.rst:69
+# 07bff1e28cc44bed8819c7622a37b322
+msgid "``        /mnt       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:71
+# cc2cc661fd0549b2a5497e4301b7e34f
+msgid "*Mount* . Directory for mounting hard drive partitions, such as ``        /mnt/dos       `` , and physical devices. In newer Linux distros, the ``        /media       `` directory has taken over as the preferred mount point for I/O devices."
+msgstr ""
+
+#: ../../systemdirs.rst:76
+# c672bb1a8d52467aa3fbe61767509b71
+msgid "``        /media       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:78
+# e50da676878b47729b1545dbc62fa1af
+msgid "In newer Linux distros, the preferred mount point for I/O devices, such as CD/DVD drives or USB flash drives."
+msgstr ""
+
+#: ../../systemdirs.rst:81
+# 025af8b0d4f741beacf042b24b723e32
+msgid "``        /var       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:83
+# 7887bcbad99f4d8a89ad589ae922705c
+msgid "*Variable* (changeable) system files. This is a catchall \"scratchpad\" directory for data generated while a Linux/UNIX machine is running."
+msgstr ""
+
+#: ../../systemdirs.rst:86
+# 1d4acf242434429f85c486be53303056
+msgid "``        /var/log       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:88
+# 05de8c2306514e9baaa9d9852fbf82d2
+msgid "Systemwide log files."
+msgstr ""
+
+#: ../../systemdirs.rst:90
+# 3638ffb2ebdb4ea5b0fdbf8cafb9d948
+msgid "``        /var/spool/mail       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:92
+# 5fa10d3c24bb4b37afb6e0087db224ee
+msgid "User mail spool."
+msgstr ""
+
+#: ../../systemdirs.rst:94
+# 708a81013aa8433598e4348253eb909e
+msgid "``        /lib       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:96
+# d9cc4b5fd8d74b20b84cfffe164452a1
+msgid "Systemwide library files."
+msgstr ""
+
+#: ../../systemdirs.rst:98
+# 34dbde560a794d1e8841888d23816e26
+msgid "``        /usr/lib       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:100
+# c55bf136c08047199c7a53569b190f9a
+msgid "More systemwide library files."
+msgstr ""
+
+#: ../../systemdirs.rst:102
+# b3c3c1ef36ba4e07a85cf49de8c240c1
+msgid "``        /tmp       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:104
+# 248af6832fe248f6ab8536494c5763cc
+msgid "System temporary files."
+msgstr ""
+
+#: ../../systemdirs.rst:106
+# 2241dd4d7d5541ee9273f2c3e085eafc
+msgid "``        /boot       ``"
+msgstr ""
+
+#: ../../systemdirs.rst:108
+# 8fa85488c02b430aa4fe5f6290c90714
+msgid "System *boot* directory. The kernel, module links, system map, and boot manager reside here."
+msgstr ""
+
+#: ../../systemdirs.rst:113
+# 3404bd40abf4486bbe0a34d9c469475d
+msgid "|Warning"
+msgstr ""
+
+#: ../../systemdirs.rst:115
+# 2770fd961b534ce28ad2158102b5de2f
+msgid "Altering files in this directory may result in an unbootable system."
+msgstr ""
+
+#: ../../systemdirs.rst:122
+# 3cb400b21d9346ab973eefbc7e23955f
+msgid "Notes"
+msgstr ""
+
+#: ../../systemdirs.rst:125
+# 02957a6bbbc04db788d10a8ac4c591c6
+msgid "` [1]  <systemdirs.html#AEN23969>`__"
+msgstr ""
+
+#: ../../systemdirs.rst:127
+# fc1a114e80df49ccbd155109cd319aef
+msgid "Some early UNIX systems had a fast, small-capacity fixed disk (containing ``       /      `` , the root partition), and a second drive which was larger, but slower (containing ``       /usr      `` and other partitions). The most frequently used programs and utilities therefore resided on the small-but-fast drive, in ``       /bin      `` , and the others on the slower drive, in ``       /usr/bin      `` ."
+msgstr ""
+
+#: ../../systemdirs.rst:134
+# ad929c09cd684092a6c9dbba0f755f76
+msgid "This likewise accounts for the split between ``       /sbin      `` and ``       /usr/sbin      `` , ``       /lib      `` and ``       /usr/lib      `` , etc."
+msgstr ""
+

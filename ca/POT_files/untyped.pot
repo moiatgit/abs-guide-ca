@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../untyped.rst:3
+# f3844347ee7644f49aa2eb74b5af4be2
+msgid "4.3. Variables i Tipus"
+msgstr ""
+
+#: ../../untyped.rst:5
+# b6a62f36d0a0447e8b66f52c9f60179d
+msgid "A diferència d'altres llenguatges de programació, Bash no classifica les seves variables per tipus. En general, les variables en Bash són cadenes de caràcters què, depenent del context en que apareixen, són interpretades com nombres a l'hora de realitzar operacions o comparacions aritmètiques. El punt determinant és que el valor només contingui dígits."
+msgstr ""
+
+#: ../../untyped.rst:11
+# 3b524f23fd014442bd31cc5493a5c88c
+msgid "Considera el següent exemple:"
+msgstr ""
+
+#: ../../untyped.rst:15
+# a3f89943c0a04e22b6a02ba0f061d267
+msgid "Que les variables no tinguin tipus és a l'hora una benedicció i una maledicció. Permeten més flexibilitat durant la programació i fan més fàcil generar línies de codi (donant-te prou corda per penjar-te a tu mateix!). No obstant, també permeten incorporar errors subtils que fomenten hàbits de programació descuidats."
+msgstr ""
+
+#: ../../untyped.rst:21
+# f4e2a4e7916349e2b6d64969799a1aae
+msgid "Per alleugerir la càrrega de fer el seguiment del tipus de les variables en un guió, Bash permet :doc:`declarar variables <declareref>`."
+msgstr ""
+

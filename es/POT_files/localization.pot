@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../localization.rst:4
+# 6a693f215f694394abc8b11d587cd132
+msgid "XXX  Appendix K. Localization"
+msgstr ""
+
+#: ../../localization.rst:6
+# de4ff44c926f4915aeb0bfca0c8b3c34
+msgid "Localization is an undocumented Bash feature."
+msgstr ""
+
+#: ../../localization.rst:8
+# 0247da695ee74a09bcc6838769016b98
+msgid "A localized shell script echoes its text output in the language defined"
+msgstr ""
+
+#: ../../localization.rst:9
+# d02af5ae68e04cf5a4c1ff1859219ce2
+msgid "as the system's locale. A Linux user in Berlin, Germany, would get script output in German, whereas his cousin in Berlin, Maryland, would get output from the same script in English."
+msgstr ""
+
+#: ../../localization.rst:13
+# 6e57a793bd0f4ff79d531232200a38db
+msgid "To create a localized script, use the following template to write all messages to the user (error messages, prompts, etc.)."
+msgstr ""
+
+#: ../../localization.rst:117
+# 64beb1a6689748ce88b1c0edd6b34515
+msgid "This lists all the localized text. (The ``     -D    `` option lists double-quoted strings prefixed by a $ , without executing the script.)"
+msgstr ""
+
+#: ../../localization.rst:133
+# 287b8332be4b43d0910dd2d178dcdf3b
+msgid "The ``     --dump-po-strings    `` option to Bash resembles the ``     -D    `` option, but uses `gettext <textproc.html#GETTEXTREF>`__ \"po\" format."
+msgstr ""
+
+#: ../../localization.rst:139
+#: ../../localization.rst:204
+# 6c6be84aa17b46c790815d53fe354436
+# 0f9f489863d84808b09b9c3b17bba1b9
+msgid "|Note"
+msgstr ""
+
+#: ../../localization.rst:141
+# 46ddd0e3f9e04abf9573e058f590f7c5
+msgid "Bruno Haible points out:"
+msgstr ""
+
+#: ../../localization.rst:143
+# f6bd8b1c2f9e426fbb100ff7d392a0f3
+msgid "Starting with gettext-0.12.2, **xgettext -o - localized.sh** is recommended instead of **bash --dump-po-strings localized.sh** , because **xgettext** . . ."
+msgstr ""
+
+#: ../../localization.rst:147
+# e64564fb70dc49fb9be4d504b209df4e
+msgid "1. understands the gettext and eval\\_gettext commands (whereas bash --dump-po-strings understands only its deprecated $\"...\" syntax)"
+msgstr ""
+
+#: ../../localization.rst:150
+# 9cc9352ae5f443d1b24fe4206bf10515
+msgid "2. can extract comments placed by the programmer, intended to be read by the translator."
+msgstr ""
+
+#: ../../localization.rst:153
+# 00b4f38bdba6497b9edf1cdfcb67d357
+msgid "This shell code is then not specific to Bash any more; it works the same way with Bash 1.x and other /bin/sh implementations."
+msgstr ""
+
+#: ../../localization.rst:159
+# 982bdaa4e6ae48a6b959bb7f29dddb97
+msgid "Now, build a ``      language.po     `` file for each language that the script will be translated into, specifying the ``             msgstr           `` . Alfredo Pironti gives the following example:"
+msgstr ""
+
+#: ../../localization.rst:164
+# 1a59e54c428a4c10a921bbb2ad8cd09c
+msgid "fr.po:"
+msgstr ""
+
+#: ../../localization.rst:183
+# 1aac049b8d5f47488656b05cc7a1bb04
+msgid "Then, run `msgfmt <textproc.html#MSGFMTREF>`__ ."
+msgstr ""
+
+#: ../../localization.rst:185
+# c66ff42274d54f0c8a5187b03db5398f
+msgid "``             msgfmt -o localized.sh.mo fr.po           ``"
+msgstr ""
+
+#: ../../localization.rst:187
+# 6fee56bc2f574569bcc09ace17d70d18
+msgid "Place the resulting ``      localized.sh.mo     `` file in the ``      /usr/local/share/locale/fr/LC_MESSAGES     `` directory, and at the beginning of the script, insert the lines:"
+msgstr ""
+
+#: ../../localization.rst:199
+# 304c3055a2994f68ab8646e9da001570
+msgid "If a user on a French system runs the script, she will get French messages."
+msgstr ""
+
+#: ../../localization.rst:206
+# 97195896251449508c7cc634970fb5c7
+msgid "With older versions of Bash or other shells, localization requires `gettext <textproc.html#GETTEXTREF>`__ , using the ``         -s        `` option. In this case, the script becomes:"
+msgstr ""
+
+#: ../../localization.rst:224
+# dce855e7219648c8a4144d1192cea639
+msgid "exit $E_CDERROR"
+msgstr ""
+
+#: ../../localization.rst:225
+# 7b789de4ac58462890dfc3449ac9e04c
+msgid "} cd $var || error \"Ca"
+msgstr ""
+
+#: ../../localization.rst:228
+# 50b0f6441f5f4051a16fe624f03fb9af
+msgid "read -p \"$(gettext -"
+msgstr ""
+
+#: ../../localization.rst:229
+# 4a9ec223493d460b8729eb4eb719fa69
+msgid "s \"Enter the value: \")\" var"
+msgstr ""
+
+#: ../../localization.rst:231
+# b9e7eb22568e4b3784a759a218512803
+msgid "# ..."
+msgstr ""
+
+#: ../../localization.rst:275
+# 206734c10c5740cdb904d7fb2203e8c8
+msgid "The ``      TEXTDOMAIN     `` and ``      TEXTDOMAINDIR     `` variables need to be set and exported to the environment. This should be done within the script itself."
+msgstr ""
+
+#: ../../localization.rst:279
+# 1d7b031538454dab9d7b9b9d9c752cef
+msgid "---"
+msgstr ""
+
+#: ../../localization.rst:281
+# cb877d09ddb44a209aa363f704134815
+msgid "This appendix written by Stéphane Chazelas, with modifications suggested by Alfredo Pironti, and by Bruno Haible, maintainer of GNU `gettext <textproc.html#GETTEXTREF>`__ ."
+msgstr ""
+

@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../globbingref.rst:3
+# abd6484dcb9e4da19c8ca37ea7026f46
+msgid "XXX 18.2. Globbing: expansió de noms de fitxer"
+msgstr ""
+
+#: ../../globbingref.rst:5
+# 77e4ad3016d3449397363994aaeb88dc
+msgid "Bash itself cannot recognize Regular Expressions. Inside scripts, it is commands and utilities -- such as `sed <sedawk.html#SEDREF>`__ and `awk <awk.html#AWKREF>`__ -- that interpret RE's."
+msgstr ""
+
+#: ../../globbingref.rst:10
+# 8ffd965868ae4e5eabceb40dde2566e4
+msgid "<globbingref.html#FTN.AEN17572>`__ -- a process known as *globbing* --"
+msgstr ""
+
+#: ../../globbingref.rst:11
+# 63d11ee07b434fdaa5c303ed3eeaa394
+msgid "but this does *not* use the standard RE set. Instead, globbing recognizes and expands *wild cards* . Globbing interprets the standard wild card characters ` [2]  <globbingref.html#FTN.AEN17581>`__ -- `\\* <special-chars.html#ASTERISKREF>`__ and `? <special-chars.html#WILDCARDQU>`__ , character lists in square brackets, and certain other special characters (such as ^ for negating the sense of a match). There are important limitations on wild card characters in globbing, however. Strings containing ``             *           `` will not match filenames that start with a dot, as, for example, ``       .bashrc      `` <sample-bashrc.html>`__ . ` [3]  <globbingref.html#FTN.AEN17592>`__ Likewise, the ``             ?           `` has a different meaning in globbing than as part of an RE."
+msgstr ""
+
+#: ../../globbingref.rst:61
+# 861c580450d64cab93c71ba9636919c4
+msgid "Bash performs filename expansion on unquoted command-line arguments. The `echo <internal.html#ECHOREF>`__ command demonstrates this."
+msgstr ""
+
+#: ../../globbingref.rst:81
+# bad3075250394a7990541e1362fa62cb
+msgid "Note"
+msgstr ""
+
+#: ../../globbingref.rst:83
+# 9662bd560e6f4d969dbbe206f834f5c2
+msgid "It is possible to modify the way Bash interprets special characters in globbing. A **set -f** command disables globbing, and the ``         nocaseglob        `` and ``         nullglob        `` options to `shopt <internal.html#SHOPTREF>`__ change globbing behavior."
+msgstr ""
+
+#: ../../globbingref.rst:91
+# a97d234a8ff24e13ad50bd5a04efeb6d
+msgid "See also `Example 11-5 <loops1.html#LISTGLOB>`__ ."
+msgstr ""
+
+#: ../../globbingref.rst:95
+# 12b62cf51b614f7c9668ae28427c5e4f
+msgid "Caution"
+msgstr ""
+
+#: ../../globbingref.rst:97
+# e9e6ad2e85ea476e910686f30fb707ba
+msgid "Filenames with embedded"
+msgstr ""
+
+#: ../../globbingref.rst:98
+# be795687e910433e85338a5ab21d2d04
+msgid "`whitespace <special-chars.html#WHITESPACEREF>`__ can cause *globbing* to choke. `David Wheeler <http://www.dwheeler.com/essays/filenames-in-shell.html>`__ shows how to avoid many such pitfalls."
+msgstr ""
+
+#: ../../globbingref.rst:108
+# 7c48f18e4c1546329847eeb6d04351c2
+msgid ")\"   # Remove space."
+msgstr ""
+
+#: ../../globbingref.rst:110
+# 2531685eca8f4e4bbb946102ea47d94b
+msgid "#  Correct glob use: #  Always use for-lo"
+msgstr ""
+
+#: ../../globbingref.rst:112
+# 885d7566b4294bf4b148978be5990cfa
+msgid "op, prefix glob, check i f exists file."
+msgstr ""
+
+#: ../../globbingref.rst:115
+# 9537534d0fa84faeabae09096e112a6d
+msgid "# Use ./* ... N"
+msgstr ""
+
+#: ../../globbingref.rst:117
+# 8319156a24644ce0907642a25d06969d
+msgid "if [ -e \"$file\" ]"
+msgstr ""
+
+#: ../../globbingref.rst:120
+# 9daf9ef48730443ea8a2f4c94397af2e
+msgid "COMMAND ... \"$f"
+msgstr ""
+
+#: ../../globbingref.rst:122
+# 4a70361732e64bad90b457e35f77da3c
+msgid "fi"
+msgstr ""
+
+#: ../../globbingref.rst:123
+# 7ed1703b452847b09cd65d8768601b06
+msgid "done"
+msgstr ""
+
+#: ../../globbingref.rst:125
+# 2a4d1e2182a64953b8a00bf533039cb0
+msgid "# This example taken"
+msgstr ""
+
+#: ../../globbingref.rst:126
+# d38fd6132f134615b6bfdc661cde6ae4
+msgid "from David Wheeler's si"
+msgstr ""
+
+#: ../../globbingref.rst:127
+# b9357e8ccce1414f92c11289afe1851b
+msgid "te, with permission."
+msgstr ""
+
+#: ../../globbingref.rst:167
+# 87f5920bc9674276b05a78dd79ab7445
+msgid "Notes"
+msgstr ""
+
+#: ../../globbingref.rst:170
+# 1f656c0afd2240c3ae3de2433da26747
+msgid "` [1]  <globbingref.html#AEN17572>`__"
+msgstr ""
+
+#: ../../globbingref.rst:172
+# ebde5f2977f14e97b92956f4c13b455c
+msgid "*Filename expansion* means expanding filename patterns or templates containing special characters. For example, ``       example.???      `` might expand to ``       example.001      `` and/or ``       example.txt      `` ."
+msgstr ""
+
+#: ../../globbingref.rst:178
+# 8d0fc479f6b84d2bb8093d64aca5b1f7
+msgid "` [2]  <globbingref.html#AEN17581>`__"
+msgstr ""
+
+#: ../../globbingref.rst:180
+# 167a0a09477f436fbd855541606e89b8
+msgid "A *wild card* character, analogous to a wild card in poker, can"
+msgstr ""
+
+#: ../../globbingref.rst:181
+# 250c7c999b7f43dc98dd20f829f1befe
+msgid "represent (almost) any other character."
+msgstr ""
+
+#: ../../globbingref.rst:184
+# bae815d2618a46a3ae69b6f9d9d3696f
+msgid "` [3]  <globbingref.html#AEN17592>`__"
+msgstr ""
+
+#: ../../globbingref.rst:186
+# 2c23acab13ba4e628267255c138d20f6
+msgid "Filename expansion *can* match dotfiles, but only if the pattern explicitly includes the dot as a literal character."
+msgstr ""
+

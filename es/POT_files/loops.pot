@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../loops.rst:4
+# f5dac86b3f4144c498023bd77d25430d
+msgid "XXX  Chapter 11. Loops and Branches"
+msgstr ""
+
+#: ../../loops.rst:7
+# 8f908ef676e841d18488d74f403be571
+msgid "**"
+msgstr ""
+
+#: ../../loops.rst:9
+# 4e07e8fdf6e94612ac11322f73eb8e09
+msgid "*What needs this iteration, woman?*"
+msgstr ""
+
+#: ../../loops.rst:11
+# 318e40abb6db43db9afccb9237998f05
+msgid "*--Shakespeare, ``                   Othello                 ``*"
+msgstr ""
+
+#: ../../loops.rst:18
+# 9951b2c103074c6d8f640ccb850c466b
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../loops.rst:22
+# c630770cac7743f0874c36254cdbd9b3
+msgid "11.1. `Loops <loops1.html>`__"
+msgstr ""
+
+#: ../../loops.rst:26
+# 15664db5cf8d429dbfd1bb7bcaf61378
+msgid "11.2. `Nested Loops <nestedloops.html>`__"
+msgstr ""
+
+#: ../../loops.rst:30
+# 87fe1f88a0444e5c9d235ea8745df640
+msgid "11.3. `Loop Control <loopcontrol.html>`__"
+msgstr ""
+
+#: ../../loops.rst:34
+# f9fbafcdbb10471b9ac6ac3126cf7f17
+msgid "11.4. `Testing and Branching <testbranch.html>`__"
+msgstr ""
+
+#: ../../loops.rst:39
+# 2de47a40b76143d0ada246286da34e6e
+msgid "Operations on code blocks are the key to structured and organized shell scripts. Looping and branching constructs provide the tools for accomplishing this."
+msgstr ""
+

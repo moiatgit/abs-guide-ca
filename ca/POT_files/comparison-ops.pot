@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../comparison-ops.rst:3
+# e682fc2ea5774023967b9edc1490b666
+msgid "XXX  7.3. Other Comparison Operators"
+msgstr ""
+
+#: ../../comparison-ops.rst:5
+# d7266225828441c6a01b4e5adff291c8
+msgid "Un operador de comparació binari, permet comparar dos valors."
+msgstr ""
+
+#: ../../comparison-ops.rst:7
+# c4d33b52ab5147fdafb9b5300a317966
+msgid "Hi ha operadors de comparació diferents pels dos tipus de valors: strings i enters."
+msgstr ""
+
+#: ../../comparison-ops.rst:11
+# bd2da04322004b15a15d93653131ed7f
+msgid "Comparació d'enters"
+msgstr ""
+
+#: ../../comparison-ops.rst:14
+#: ../../comparison-ops.rst:69
+#: ../../comparison-ops.rst:87
+# 4c2b7d9de4634d1b9802cd3992163120
+# d030dbf0d5dc4679848c4ae7531f848d
+# 7e540825cfd74b3293090a90d16a4824
+msgid "is equal to"
+msgstr ""
+
+#: ../../comparison-ops.rst:16
+# b347939d6df14701a2eed692df95967e
+msgid "``                   if [ \"$a\" -eq \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:19
+#: ../../comparison-ops.rst:148
+# 39e9c2c681fa4ea28303d592b954c629
+# 822c9ab28e0d4bd999515807264db5d9
+msgid "is not equal to"
+msgstr ""
+
+#: ../../comparison-ops.rst:21
+# 32ba9212f8964aa68432374c34250213
+msgid "``                   if [ \"$a\" -ne \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:24
+# 7c2e3bf58d3f4cf5a28d3c6d8c622b0c
+msgid "is greater than"
+msgstr ""
+
+#: ../../comparison-ops.rst:26
+# 4ea432be36534d6898c3edb14d29dea2
+msgid "``                   if [ \"$a\" -gt \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:29
+# 8a0f36af8c8e408aa9277deefdeb3ec0
+msgid "is greater than or equal to"
+msgstr ""
+
+#: ../../comparison-ops.rst:31
+# e0eda840b4ac497881ccd052e929feab
+msgid "``                   if [ \"$a\" -ge \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:34
+# b5f5b77f53a94838aab8977148459074
+msgid "is less than"
+msgstr ""
+
+#: ../../comparison-ops.rst:36
+# 3d8482cde3d14bb498ffdccfca91b13d
+msgid "``                   if [ \"$a\" -lt \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:39
+# 81a113b4c3994e2f9b4f48e586616464
+msgid "is less than or equal to"
+msgstr ""
+
+#: ../../comparison-ops.rst:41
+# 4dc6c7909f6a4b5296de58991c2caa8f
+msgid "``                   if [ \"$a\" -le \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:44
+# 7c87f8a9ada84881aa19b0674f80fc3e
+msgid "is less than (within `double parentheses <dblparens.html>`__ )"
+msgstr ""
+
+#: ../../comparison-ops.rst:46
+# 964395c9601745ed850fd0967b591f0c
+msgid "``                   ((\"$a\" < \"$b\"))                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:49
+# 281f36b00e564db9b12b312d7548e7e6
+msgid "is less than or equal to (within double parentheses)"
+msgstr ""
+
+#: ../../comparison-ops.rst:51
+# f0866a5ca6634d7ba1e99d58c394555d
+msgid "``                   ((\"$a\" <= \"$b\"))                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:54
+# 99b80c6f71d44400835e0242f1784bd4
+msgid "is greater than (within double parentheses)"
+msgstr ""
+
+#: ../../comparison-ops.rst:56
+# d1c426a114de4964bce78078bafdef26
+msgid "``                   ((\"$a\" > \"$b\"))                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:59
+# f77d1c4e0018435caba31eace7bde9a6
+msgid "is greater than or equal to (within double parentheses)"
+msgstr ""
+
+#: ../../comparison-ops.rst:61
+# 990c1ccfa8ce4d418646d3cbafd8c1ef
+msgid "``                   ((\"$a\" >= \"$b\"))                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:65
+# b52da0eff7fd4ab69576d4a2d4bb8dca
+msgid "Comparació de strings"
+msgstr ""
+
+#: ../../comparison-ops.rst:67
+# c323e09aa90749b48b1d4ad97100d769
+msgid "="
+msgstr ""
+
+#: ../../comparison-ops.rst:71
+# 01c12d79208640008cc9a2952f458cb1
+msgid "``                   if [ \"$a\" = \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:75
+#: ../../comparison-ops.rst:202
+#: ../../comparison-ops.rst:438
+# dcaed65e2d5043a1bd7b9b21ba750cea
+# a6df86114ea84f349dd66f3266d4d3f5
+# 14d8befa039d4c8a914615a0fb237959
+msgid "|Caution"
+msgstr ""
+
+#: ../../comparison-ops.rst:77
+# fd44a7d252c849d9ba3015fb76c70aa9
+msgid "Note the `whitespace <special-chars.html#WHITESPACEREF>`__ framing the **=** ."
+msgstr ""
+
+#: ../../comparison-ops.rst:80
+# b3b9deeb477640a5adade78cf6a1e138
+msgid "``                         if [ \"$a\"=\"$b\" ]                       `` is *not* equivalent to the above."
+msgstr ""
+
+#: ../../comparison-ops.rst:89
+# 3014b9194fa04a549061965ee640f9f4
+msgid "``                   if [ \"$a\" == \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:91
+# 7b66c20f10e54d88abdb3b1c8772bc9b
+msgid "This is a synonym for = ."
+msgstr ""
+
+#: ../../comparison-ops.rst:95
+# 9597df807b58427f8d1a70bacbf3f554
+msgid "|Note"
+msgstr ""
+
+#: ../../comparison-ops.rst:97
+# 784d5ee7bdb94916968fe3b1393b9af1
+msgid "The == comparison operator behaves differently within a `double-brackets <testconstructs.html#DBLBRACKETS>`__ test than within single brackets."
+msgstr ""
+
+#: ../../comparison-ops.rst:107
+# fcc111197fdb470a913b9aed6908ce56
+msgid "[[ $a == \"z*\" ]] # T"
+msgstr ""
+
+#: ../../comparison-ops.rst:109
+#: ../../comparison-ops.rst:116
+# 09f06daeb9544276b6636a187bdd33f1
+# d61412f2d1f54dafa4c10ac7c5974af7
+msgid "(literal matching)."
+msgstr ""
+
+#: ../../comparison-ops.rst:111
+# f8891af596c84badbffde7626866b447
+msgid "[ $a == z* ]     # F"
+msgstr ""
+
+#: ../../comparison-ops.rst:112
+# f0094ae6943c4c44b9bc8371489fe3f1
+msgid "ile globbing and word sp litting take place."
+msgstr ""
+
+#: ../../comparison-ops.rst:114
+# a0495e21bbc743d19dc3ea70a4f526bf
+msgid "[ \"$a\" == \"z*\" ] # T"
+msgstr ""
+
+#: ../../comparison-ops.rst:118
+# b60dfe17c5e741fcbddb266c96e609d6
+msgid "# Thanks, StÃ©phane"
+msgstr ""
+
+#: ../../comparison-ops.rst:119
+# 46afa62214be49b7b824a834f859f102
+msgid "Chazelas"
+msgstr ""
+
+#: ../../comparison-ops.rst:150
+# dc44ea949093492ea9ad17f7e36ae72d
+msgid "``                   if [ \"$a\" != \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:152
+# b72eeed900594e18a67a8a657df259bb
+msgid "This operator uses pattern matching within a `[[ ... ]] <testconstructs.html#DBLBRACKETS>`__ construct."
+msgstr ""
+
+#: ../../comparison-ops.rst:156
+# 5e048e3f723746a5a9215d49d364b127
+msgid "is less than, in `ASCII <special-chars.html#ASCIIDEF>`__ alphabetical order"
+msgstr ""
+
+#: ../../comparison-ops.rst:159
+# b09808d29d804769992a21286a707888
+msgid "``                   if [[ \"$a\" < \"$b\" ]]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:161
+# 1d8c2366df57405f824fe5f1fc984e56
+msgid "``                   if [ \"$a\" \\< \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:163
+# b885dbeb1cce4902b0dc76029764b63d
+msgid "Note that the \"<\" needs to be `escaped <escapingsection.html#ESCP>`__ within a ``                   [  ]                 `` construct."
+msgstr ""
+
+#: ../../comparison-ops.rst:168
+# cd58a4c0e06d4572807d902d6015856e
+msgid "is greater than, in ASCII alphabetical order"
+msgstr ""
+
+#: ../../comparison-ops.rst:170
+# 9103e9ac7ae941d9bb7627a95348143d
+msgid "``                   if [[ \"$a\" > \"$b\" ]]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:172
+# d501ca65475b4959bee392b48c145fa7
+msgid "``                   if [ \"$a\" \\> \"$b\" ]                 ``"
+msgstr ""
+
+#: ../../comparison-ops.rst:174
+# cd8df5587c5047a9a067058f2ef203fd
+msgid "Note that the \">\" needs to be escaped within a ``                   [  ]                 `` construct."
+msgstr ""
+
+#: ../../comparison-ops.rst:177
+# c7268a595ed04404bdbd387ea5820693
+msgid "See `Example 27-11 <arrays.html#BUBBLE>`__ for an application of this comparison operator."
+msgstr ""
+
+#: ../../comparison-ops.rst:181
+# dcebdaa4746e4456b04be9b2d34c89c8
+msgid "string is *null* , that is, has zero length"
+msgstr ""
+
+#: ../../comparison-ops.rst:198
+# 1b1e2fdb430340049cafa1044fb068f2
+msgid "string is not *null.*"
+msgstr ""
+
+#: ../../comparison-ops.rst:204
+# b308e3feb6bc43e3aec32050aea8f1a2
+msgid "The ``                         -n                       `` test requires that the string be quoted within the test brackets. Using an unquoted string with *! -z* , or even just the unquoted string alone within test brackets (see `Example 7-6 <comparison-ops.html#STRTEST>`__ ) normally works, however, this is an unsafe practice. *Always* quote a tested string. ` [1]"
+msgstr ""
+
+#: ../../comparison-ops.rst:210
+# 43dedfe6cb3544e1b5fabb530a23f783
+msgid "<comparison-ops.html#FTN.AEN3669>`__"
+msgstr ""
+
+#: ../../comparison-ops.rst:218
+# 3b26bb0884a2451d972a2009b6a0befd
+msgid "Exemple 5. Arithmetic and string comparisons"
+msgstr ""
+
+#: ../../comparison-ops.rst:265
+# 1904671b65a54009bc8955219e913c1e
+msgid "Exemple 6. Testing whether a string is *null*"
+msgstr ""
+
+#: ../../comparison-ops.rst:344
+# d32f15170e5849fcb9bad7d4afc98127
+msgid "Exemple 7. *zmore*"
+msgstr ""
+
+#: ../../comparison-ops.rst:395
+# f601dd9e39104eebaeaa38f11979e0f1
+msgid "** compound comparison**"
+msgstr ""
+
+#: ../../comparison-ops.rst:398
+# baae6507001843d08f6112f66913d2b9
+msgid "logical and"
+msgstr ""
+
+#: ../../comparison-ops.rst:400
+# 5da2a511179449f4a40b861dc914aeed
+msgid "``                   exp1 -a exp2                 `` returns true if *both* exp1 and exp2 are true."
+msgstr ""
+
+#: ../../comparison-ops.rst:404
+# 4bd9b618df9b4fdbabea6cce9524d177
+msgid "logical or"
+msgstr ""
+
+#: ../../comparison-ops.rst:406
+# 18565cb4f4b34a218161558661000140
+msgid "``                   exp1 -o exp2                 `` returns true if either exp1 *or* exp2 is true."
+msgstr ""
+
+#: ../../comparison-ops.rst:410
+# eb39e849bf6f4dde9237a87043a8e7fc
+msgid "These are similar to the Bash comparison operators **&&** and **\\|\\|** , used within `double brackets <testconstructs.html#DBLBRACKETS>`__ ."
+msgstr ""
+
+#: ../../comparison-ops.rst:420
+# f33d025e788a4de6aae16679ccf61999
+msgid "The **-o** and **-a** operators work with the `test <testconstructs.html#TTESTREF>`__ command or occur within single test brackets."
+msgstr ""
+
+#: ../../comparison-ops.rst:440
+# 085324e3254c4b7e93d0c9bc97a85724
+msgid "But, as *rihad* points out:"
+msgstr ""
+
+#: ../../comparison-ops.rst:449
+# 338708a77490459ba1fd8c783075e6ad
+msgid "[ 1 -eq 2 ] && [ -n"
+msgstr ""
+
+#: ../../comparison-ops.rst:452
+#: ../../comparison-ops.rst:460
+# 2a76724b45f541488ee4bfa40171ca16
+# 3823cbca13e5428984cd835a4b228f12
+msgid "# ^^^^^^^ False cond"
+msgstr ""
+
+#: ../../comparison-ops.rst:453
+# c869a2bf66044539885c36f07d29ceba
+msgid "ition. So far, everythin g as expected."
+msgstr ""
+
+#: ../../comparison-ops.rst:456
+# 28178d049d1f4fc4b8cbd4ae3868a887
+msgid "# However ... [ 1 -eq 2 -a -n \"`ec"
+msgstr ""
+
+#: ../../comparison-ops.rst:461
+# 3c029b135959465289b0d818ce3acbe9
+msgid "ition. So, why \"true\" ou tput?"
+msgstr ""
+
+#: ../../comparison-ops.rst:464
+# 456f4c7e40344834b8b9d5cec45921ce
+msgid "# Is it because both"
+msgstr ""
+
+#: ../../comparison-ops.rst:465
+# 8f5e40f751854626b158b886cb55f644
+msgid "condition clauses withi"
+msgstr ""
+
+#: ../../comparison-ops.rst:467
+# c5ebf174ed0e4f628bf7eb34da151511
+msgid "[[ 1 -eq 2 && -n \"`e"
+msgstr ""
+
+#: ../../comparison-ops.rst:470
+# 90c82f2b0f8d4b75ade2de92fe028a03
+msgid "# No, that's not it."
+msgstr ""
+
+#: ../../comparison-ops.rst:472
+# a9e249298e694532a7f82b025cce98db
+msgid "# Apparently && and"
+msgstr ""
+
+#: ../../comparison-ops.rst:474
+# 585706030cd64d61a425ecca947662b1
+msgid "-a and -o do not."
+msgstr ""
+
+#: ../../comparison-ops.rst:516
+# 46f8e4adac3145508051e3c0af0c5550
+msgid "Refer to `Example 8-3 <ops.html#ANDOR>`__ , `Example 27-17 <arrays.html#TWODIM>`__ , and `Example A-29 <contributed-scripts.html#WHX>`__ to see compound comparison operators in action."
+msgstr ""
+
+#: ../../comparison-ops.rst:523
+# 10d2e7c3754044df98d51caafa851f2b
+msgid "Notes"
+msgstr ""
+
+#: ../../comparison-ops.rst:526
+# 7f3410b4dfb94c2280dafd6301293e55
+msgid "` [1]  <comparison-ops.html#AEN3669>`__"
+msgstr ""
+
+#: ../../comparison-ops.rst:528
+# 309c8fdec7ee4cd6aa560d3e7d331cd9
+msgid "As S.C. points out, in a compound test, even quoting the string variable might not suffice. ``               [ -n \"$string\" -o \"$a\" = \"$b\" ]             `` may cause an error with some versions of Bash if ``       $string      `` is empty. The safe way is to append an extra character to possibly empty variables, ``               [ \"x$string\" != x -o \"x$a\" = \"x$b\" ]             `` (the \"x's\" cancel out)."
+msgstr ""
+

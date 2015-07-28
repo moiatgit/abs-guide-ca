@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../recurnolocvar.rst:3
+# 94a6c3a5ebab44c3a4644fdd246ec7c2
+msgid "XXX Recursion Without Local Variables"
+msgstr ""
+
+#: ../../recurnolocvar.rst:5
+# 23d08d64df594db4afc676733dd472e7
+msgid "A function may recursively call itself even without use of local variables."
+msgstr ""
+
+#: ../../recurnolocvar.rst:9
+# 9407a82e4b504b65adf144c96fbcd45c
+msgid "Exemple 16. *The Fibonacci Sequence*"
+msgstr ""
+
+#: ../../recurnolocvar.rst:47
+# 259295e5184f4d77b742cdf416dcb6e9
+msgid "}"
+msgstr ""
+
+#: ../../recurnolocvar.rst:49
+# d0a7f03a1e71412988c02297b239785e
+msgid "for i in $(seq 0 $MAXTERM) do  # Calculate $MAXTERM+1 terms."
+msgstr ""
+
+#: ../../recurnolocvar.rst:51
+# 243247bed1f642e4a4ad052bb1a5db2f
+msgid "FIBO=$(Fibonacci $i) echo -n \"$FIBO \""
+msgstr ""
+
+#: ../../recurnolocvar.rst:53
+# 1feee8c24d2f45e1a89ee5772b7bb025
+msgid "done # 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 # Takes a while, doesn't it? Recursion in a script is slow."
+msgstr ""
+
+#: ../../recurnolocvar.rst:57
+# ac9e530974d547dc95073db50d7f377f
+msgid "echo"
+msgstr ""
+
+#: ../../recurnolocvar.rst:59
+# aec7c0205dcf45e49e987ed1fe025bd9
+msgid "exit 0"
+msgstr ""
+
+#: ../../recurnolocvar.rst:63
+# 9637da6e0e7548b88ea3b897e8690c01
+msgid "Exemple 17. *The Towers of Hanoi*"
+msgstr ""
+
+#: ../../recurnolocvar.rst:149
+# 0b35de8128344f5ea7b5759179573e41
+msgid "exit 0; ;;"
+msgstr ""
+
+#: ../../recurnolocvar.rst:152
+# 4d346c8168b7430f90e653842b153053
+msgid "echo \"$0: illegal value for number of disks\"; exit $E_BADPARAM; ;;"
+msgstr ""
+
+#: ../../recurnolocvar.rst:155
+#: ../../recurnolocvar.rst:162
+# f7e99fbe682b44bab59da83c64f3333a
+# 1dc8b94e8e7c41d3a985d8d37c0a16bc
+msgid "esac"
+msgstr ""
+
+#: ../../recurnolocvar.rst:156
+# 4b38183486c440b5ac021348769f56dc
+msgid ";; *)"
+msgstr ""
+
+#: ../../recurnolocvar.rst:158
+# 61b404eff1f94fc891c23f699b870fff
+msgid "echo \"usage: $0 N\" echo \"       Where \\\"N\\\" is the number of disks.\" exit $E_NOPARAM; ;;"
+msgstr ""
+
+#: ../../recurnolocvar.rst:164
+# 0630e999946d49f19269c29b2192c1ca
+msgid "# Exercises: # --------- # 1) Would commands beyond this point ever be executed? #    Why not? (Easy) # 2) Explain the workings of the workings of the \"dohanoi\" function. #    (Difficult -- see the Dewdney reference, above.)"
+msgstr ""
+

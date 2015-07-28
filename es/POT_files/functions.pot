@@ -1,0 +1,384 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../functions.rst:4
+# d67320db86df4a78afe4b5c9e3623d26
+msgid "XXX  Chapter 24. Functions"
+msgstr ""
+
+#: ../../functions.rst:9
+# 4de9256e32764e17b6c03909cdb00968
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../functions.rst:13
+# ccaf9e19ab60454c9e3a85e2db461fc9
+msgid "24.1. `Complex Functions and Function Complexities <complexfunct.html>`__"
+msgstr ""
+
+#: ../../functions.rst:18
+# 691f69fbdc574795877256784e1773de
+msgid "24.2. `Local Variables <localvar.html>`__"
+msgstr ""
+
+#: ../../functions.rst:22
+# e396487971d3441c8e56238b85b5535c
+msgid "24.3. `Recursion Without Local Variables <recurnolocvar.html>`__"
+msgstr ""
+
+#: ../../functions.rst:27
+# e19a849498c64cc59b10e8dad30503b5
+msgid "Like \"real\" programming languages, Bash has functions, though in a somewhat limited implementation. A function is a subroutine, a `code block <special-chars.html#CODEBLOCKREF>`__ that implements a set of operations, a \"black box\" that performs a specified task. Wherever there is repetitive code, when a task repeats with only slight variations in procedure, then consider using a function."
+msgstr ""
+
+#: ../../functions.rst:35
+#: ../../functions.rst:40
+# 5f5d119be8964022b7ea11dda123c3f2
+# 29d3f8444bb94da7969bb373ad4104e8
+msgid "``             command           `` ... }"
+msgstr ""
+
+#: ../../functions.rst:38
+# 6cbecea654fb483fadaebed9391fa35b
+msgid "or ``             function_name           `` () {"
+msgstr ""
+
+#: ../../functions.rst:43
+# 84c595b0c9d845afb81c9862de4749d4
+msgid "This second form will cheer the hearts of C programmers (and is more `portable <portabilityissues.html>`__ )."
+msgstr ""
+
+#: ../../functions.rst:46
+# c915293123dd49c29fdc5d6eeb5e115b
+msgid "As in C, the function's opening bracket may optionally appear on the second line."
+msgstr ""
+
+#: ../../functions.rst:50
+# bcf2d623bfc747ddb64b1391c3b5c860
+msgid "{ ``             command           `` ... }"
+msgstr ""
+
+#: ../../functions.rst:56
+#: ../../functions.rst:216
+#: ../../functions.rst:492
+# 864f9bfef6204ab8afc9ef6206154702
+# 62f43adea0a64536b0c5148de73df42c
+# 822ed1052df04bf784ac741a80e2cdc0
+msgid "|Note"
+msgstr ""
+
+#: ../../functions.rst:58
+# 37ac8153ab944b8dbf5b12bfca04e478
+msgid "A function may be \"compacted\" into a single line."
+msgstr ""
+
+#: ../../functions.rst:67
+# 64ab51dd87744446a53444364432cfdb
+msgid "^     ^"
+msgstr ""
+
+#: ../../functions.rst:72
+# 7199a22ac72e4c01aec24266ecceeb4e
+msgid "In this case, however, a *semicolon* must follow the final command in the function."
+msgstr ""
+
+#: ../../functions.rst:83
+#: ../../functions.rst:90
+# 22883af5761a423d8101eaab414f7ebf
+# d15d29c3e75e49abbf0feab1031d2642
+msgid "^"
+msgstr ""
+
+#: ../../functions.rst:85
+# d5bf7f5ab19646f6b917f5860687f13a
+msgid "fun2 () { echo \"Even"
+msgstr ""
+
+#: ../../functions.rst:86
+# eb4b9141a7f74fc2be05b235e44c6d21
+msgid "a single-command functi"
+msgstr ""
+
+#: ../../functions.rst:88
+# 22f305785a9746f792ac89063c2f56af
+msgid "#"
+msgstr ""
+
+#: ../../functions.rst:128
+# ecf6b512c33c4657a5120da457134caf
+msgid "Functions are called, *triggered* , simply by invoking their names. *A function call is equivalent to a command.*"
+msgstr ""
+
+#: ../../functions.rst:133
+# 7a67f30551fd46a1b8ddc7de53e44f7f
+msgid "Exemple 1. Simple functions"
+msgstr ""
+
+#: ../../functions.rst:180
+# 4e0de861fac743babc8a758767fc4f06
+msgid "The function definition must precede the first call to it. There is no method of \"declaring\" the function, as, for example, in C."
+msgstr ""
+
+#: ../../functions.rst:218
+# 36f567ba15a645009a024d0854ecb5d7
+msgid "Functions may not be empty!"
+msgstr ""
+
+#: ../../functions.rst:232
+# 7e02bedff88746b2884ff681cbfa8624
+msgid "xit here!"
+msgstr ""
+
+#: ../../functions.rst:234
+# 4406323b969c4d7bba5dc37b1350c6f8
+msgid "# $ sh empty-functio"
+msgstr ""
+
+#: ../../functions.rst:236
+#: ../../functions.rst:239
+# 391128c74b6243d390a14de4ecd142f9
+# 07ca24d09b46466fb81608df03adda33
+msgid "# empty-function.sh:"
+msgstr ""
+
+#: ../../functions.rst:237
+# ecbfb1f8c3c74e2cb7050935b7ccccb9
+msgid "line 6: syntax error ne"
+msgstr ""
+
+#: ../../functions.rst:240
+# 8e5a1bae3c974d4d916e1ab95f7d3636
+msgid "line 6: `}'"
+msgstr ""
+
+#: ../../functions.rst:242
+# 45456b8fd7074e739668426973c6ea61
+msgid "# $ echo $? # 2"
+msgstr ""
+
+#: ../../functions.rst:246
+# fad372df02b24eb19c99ca90f3d005b3
+msgid "# Note that a functi"
+msgstr ""
+
+#: ../../functions.rst:247
+# 2ebdfe65e3864d2bb032a0f2459d2aec
+msgid "on containing only comme nts is empty."
+msgstr ""
+
+#: ../../functions.rst:250
+#: ../../functions.rst:512
+#: ../../functions.rst:518
+# d50cd07edcc44c26b053b68ee3a8eb0e
+# 776d618f12564929886c22c2041f14ac
+# a096de1ab7294180bebcfd56a23b1d09
+msgid "func () {"
+msgstr ""
+
+#: ../../functions.rst:252
+# 8ed76d8b94b04639b44f98f8ae6e626f
+msgid "# Comment 1. # Comment 2. # This is still an"
+msgstr ""
+
+#: ../../functions.rst:256
+# cbee4183a0d14b69b49db67b57d1360b
+msgid "# Thank you, Mark"
+msgstr ""
+
+#: ../../functions.rst:257
+# 9387ec3744884a7385dd7d8514b131b8
+msgid "Bova, for pointing this out."
+msgstr ""
+
+#: ../../functions.rst:259
+# 1d8026e9489b4cef967eea1426bca1d2
+msgid "} # Results in same er"
+msgstr ""
+
+#: ../../functions.rst:261
+# c291b2896ef5404d8ee1dc0aba69d210
+msgid "ror message as above."
+msgstr ""
+
+#: ../../functions.rst:264
+# 2d581ddcd806456ea59dfe8327a5a146
+msgid "# However ..."
+msgstr ""
+
+#: ../../functions.rst:266
+# 2bd39b7efd8e47ddb7d62b0318f6154c
+msgid "not_quite_empty () {"
+msgstr ""
+
+#: ../../functions.rst:268
+# dc82232fd58c4bdeab1f359936618f15
+msgid "illegal_command"
+msgstr ""
+
+#: ../../functions.rst:269
+# 46f66d193f1a40338082a43864797202
+msgid "} #  A script contai"
+msgstr ""
+
+#: ../../functions.rst:270
+# e5d4b2e289884604b8344fb29da57e76
+msgid "ning this function will *not* bomb"
+msgstr ""
+
+#: ../../functions.rst:272
+# 28eff4591097422dbd73ba01125beb0a
+msgid "#+ as long as the"
+msgstr ""
+
+#: ../../functions.rst:273
+# e4d2f6ba24cf4709ba41b12f24c75546
+msgid "function is not called."
+msgstr ""
+
+#: ../../functions.rst:275
+# f24b33bef1e84c93ab705cf2b370ee92
+msgid "not_empty () {"
+msgstr ""
+
+#: ../../functions.rst:277
+# fee92cbe692c47458c5b6895ac12231a
+msgid ":"
+msgstr ""
+
+#: ../../functions.rst:278
+# b86faab4966649b9bdb42be05efbd32d
+msgid "} # Contains a : (nu"
+msgstr ""
+
+#: ../../functions.rst:280
+# 9c93c95d2f724ef98272482128d5d15e
+msgid "okay."
+msgstr ""
+
+#: ../../functions.rst:283
+# 93c1b08435e546bc952ef38aeb17b780
+msgid "# Thank you, Dominic"
+msgstr ""
+
+#: ../../functions.rst:284
+# 9ff0f97e980a42b98dd587f9ec99f326
+msgid "k Geyer and Thiemo Kelln er."
+msgstr ""
+
+#: ../../functions.rst:389
+# 4b1d858c81274a6eb1ed701ce5e3ac5f
+msgid "It is even possible to nest a function within another function, although this is not very useful."
+msgstr ""
+
+#: ../../functions.rst:418
+# ea8e1bb17a63451ead8dad1d113fdb5e
+msgid "Function declarations can appear in unlikely places, even where a command would otherwise go."
+msgstr ""
+
+#: ../../functions.rst:488
+# c874a9a9561c4a7a83d757b8b03c734f
+msgid "See also `Example A-56 <contributed-scripts.html#GRONSFELD>`__"
+msgstr ""
+
+#: ../../functions.rst:494
+# 61cd12218b5141bcba8c8c842e2c837b
+msgid "What happens when different versions of the same function appear in a script?"
+msgstr ""
+
+#: ../../functions.rst:503
+# b146b046e16c4628967f4fc1ddfaba0e
+msgid "#  when a function i"
+msgstr ""
+
+#: ../../functions.rst:504
+# f098e42793114d56a8a6ef8c6d7cc891
+msgid "s defined multiple times ,"
+msgstr ""
+
+#: ../../functions.rst:506
+# f7dfb345b896449b9ac6fd884e7fdc08
+msgid "#  the final version"
+msgstr ""
+
+#: ../../functions.rst:508
+# f941e245b02b4cde91ca57dda1e835a8
+msgid "#  This is not, howe"
+msgstr ""
+
+#: ../../functions.rst:509
+# 6e4f8fdfff33415d9030f37a6344b8a8
+msgid "ver, particularly useful ."
+msgstr ""
+
+#: ../../functions.rst:514
+# 72884ef92aa541459deb4d6aabb2ac7a
+msgid "echo \"First versio"
+msgstr ""
+
+#: ../../functions.rst:516
+#: ../../functions.rst:522
+# c0e3b383d053418180408bc4eea224af
+# f1534ee88d3d426fa41f1310bb49e136
+msgid "}"
+msgstr ""
+
+#: ../../functions.rst:520
+# 3496734c4b5b40a29d86f4f98c84c5cb
+msgid "echo \"Second versi"
+msgstr ""
+
+#: ../../functions.rst:524
+# 6b4fd33f047640459851365745472706
+msgid "func   # Second vers"
+msgstr ""
+
+#: ../../functions.rst:525
+# d76c1d262d8b4df1bb78dfaee45acdd5
+msgid "ion of func ()."
+msgstr ""
+
+#: ../../functions.rst:527
+# ef3095682da040b993bab24897da01b5
+msgid "exit $?"
+msgstr ""
+
+#: ../../functions.rst:529
+# ce0ce92904b74de889d83bdd12bd8136
+msgid "#  It is even possib"
+msgstr ""
+
+#: ../../functions.rst:530
+# 90f1ee9bb2f643f79462d94a5937e8f6
+msgid "le to use functions to o verride"
+msgstr ""
+
+#: ../../functions.rst:532
+# 6ca053e127fa430296c9e871b92d6f63
+msgid "#+ or preempt system"
+msgstr ""
+
+#: ../../functions.rst:534
+# 8c19cb58ced941349d83257668e66e1a
+msgid "#  Of course, this i"
+msgstr ""
+
+#: ../../functions.rst:535
+# a36caba14b78499399d0eb688d59353d
+msgid "s *not* advisable."
+msgstr ""
+

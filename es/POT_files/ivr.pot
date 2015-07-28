@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../ivr.rst:3
+# e0c8532bb8cc4913b298ff4c3ef716c8
+msgid "XXX  Chapter 28. Indirect References"
+msgstr ""
+
+#: ../../ivr.rst:5
+# be48d0ed85e54e3b8f25bb3c65fb5ee6
+msgid "We have seen that `referencing a variable <varsubn.html>`__ , ``      $var     `` , fetches its *value* . But, what about the *value of a value* ? What about ``      $$var     `` ?"
+msgstr ""
+
+#: ../../ivr.rst:9
+# 9af35880bb8e401a85c315a1f3a0ee3f
+msgid "The actual notation is ``             \\$$var           `` , usually preceded by an `eval <internal.html#EVALREF>`__ (and sometimes an `echo <internal.html#ECHOREF>`__ ). This is called an *indirect reference* ."
+msgstr ""
+
+#: ../../ivr.rst:16
+# e622bd955cab4bd596b116e879d846ce
+msgid "Exemple 1. Indirect Variable References"
+msgstr ""
+
+#: ../../ivr.rst:106
+# 18a33e3a36934692b8dd7219c2834d72
+msgid "Indirect referencing in Bash is a multi-step process. First, take the name of a variable: ``         varname        `` . Then, reference it: ``         $varname        `` . Then, reference the reference: ``         $$varname        `` . Then, *escape* the first $ : ``         \\$$varname        `` . Finally, force a reevaluation of the expression and assign it: **eval newvar=\\\\$$varname** ."
+msgstr ""
+
+#: ../../ivr.rst:116
+# 47ae26e23f0047cea2c9e82531d0e1ef
+msgid "Of what practical use is indirect referencing of variables? It gives Bash a little of the functionality of `pointers <varsubn.html#POINTERREF>`__ in *C* , for instance, in `table lookup <bashver2.html#RESISTOR>`__ . And, it also has some other very interesting applications. . . ."
+msgstr ""
+
+#: ../../ivr.rst:122
+# d001bd169049455c92c5ae05a006fd0a
+msgid "Nils Radtke shows how to build \"dynamic\" variable names and evaluate their contents. This can be useful when `sourcing <internal.html#SOURCEREF>`__ configuration files."
+msgstr ""
+
+#: ../../ivr.rst:186
+# 5e484a75bb794067b1a9ce421fb57108
+msgid "Exemple 2. Passing an indirect reference to *awk*"
+msgstr ""
+
+#: ../../ivr.rst:247
+# f713bf731ead4f08848194925eb48776
+msgid "|Caution"
+msgstr ""
+
+#: ../../ivr.rst:249
+# 493121b9bfe1426f9d6b95d00010e091
+msgid "This method of indirect referencing is a bit tricky. If the second order variable changes its value, then the first order variable must be properly dereferenced (as in the above example). Fortunately, the ``                   ${!variable}                 `` notation introduced with `version 2 <bashver2.html#BASH2REF>`__ of Bash (see `Example 37-2 <bashver2.html#EX78>`__ and `Example A-22 <contributed-scripts.html#HASHEX2>`__ ) makes indirect referencing more intuitive."
+msgstr ""
+
+#: ../../ivr.rst:263
+# 1d06d4ee47a04a5d8dec293af8ff98f5
+msgid "Bash does not support pointer arithmetic, and this severely limits the usefulness of indirect referencing. In fact, indirect referencing in a scripting language is, at best, something of an afterthought."
+msgstr ""
+

@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../standard-options.rst:4
+# 15d49247ac0c4add881fb4772fbfd59e
+msgid "XXX  G.1. Standard Command-Line Options"
+msgstr ""
+
+#: ../../standard-options.rst:6
+# cd9ca0fe162843fa9674606312016375
+msgid "Over time, there has evolved a loose standard for the meanings of command-line option flags. The GNU utilities conform more closely to this \"standard\" than older UNIX utilities."
+msgstr ""
+
+#: ../../standard-options.rst:10
+# c6c70ee7a4014b768a9891fe28ba894f
+msgid "Traditionally, UNIX command-line options consist of a dash, followed by one or more lowercase letters. The GNU utilities added a double-dash, followed by a complete word or compound word."
+msgstr ""
+
+#: ../../standard-options.rst:14
+# 24c43a123dcb4d07a683d034015e7a09
+msgid "The two most widely-accepted options are:"
+msgstr ""
+
+#: ../../standard-options.rst:16
+# 829fa72bacbe40768558f3579cac106f
+msgid "``        -h       ``"
+msgstr ""
+
+#: ../../standard-options.rst:18
+# 5cb2d866286046ec9f59f2f0c521b667
+msgid "``        --help       ``"
+msgstr ""
+
+#: ../../standard-options.rst:20
+# 9efbc1e236a64ecc8c3f82eecc309c28
+msgid "*Help* : Give usage message and exit."
+msgstr ""
+
+#: ../../standard-options.rst:22
+#: ../../standard-options.rst:60
+# 075703b3a408439bae0e4836331e3e9b
+# db97a4affc7b4828ba3f1947323c62fa
+msgid "``        -v       ``"
+msgstr ""
+
+#: ../../standard-options.rst:24
+# 147f9b8fca204bcca1e3e3d7173f6f18
+msgid "``        --version       ``"
+msgstr ""
+
+#: ../../standard-options.rst:26
+# f911ede6bafc4bd48a40ac07286031bc
+msgid "*Version* : Show program version and exit."
+msgstr ""
+
+#: ../../standard-options.rst:28
+# 89a9141b9d054f8cbae79408c569dd20
+msgid "Other common options are:"
+msgstr ""
+
+#: ../../standard-options.rst:30
+# b4e91c14cd2b43cc8e10bee613e083b5
+msgid "``        -a       ``"
+msgstr ""
+
+#: ../../standard-options.rst:32
+# 5dcc8bc8f4d44fc8b21b3baa0ad51459
+msgid "``        --all       ``"
+msgstr ""
+
+#: ../../standard-options.rst:34
+# aaf583007cdd4fcfb0de17c5deed6d27
+msgid "*All* : show *all* information or operate on *all* arguments."
+msgstr ""
+
+#: ../../standard-options.rst:36
+# 785ca852af7747609a51bd9da1da8c87
+msgid "``        -l       ``"
+msgstr ""
+
+#: ../../standard-options.rst:38
+# ac3de1e07f8e4d55a78997700a66d7d9
+msgid "``        --list       ``"
+msgstr ""
+
+#: ../../standard-options.rst:40
+# 42d8c1788320482898bafc3ffaf957d7
+msgid "*List* : list files or arguments without taking other action."
+msgstr ""
+
+#: ../../standard-options.rst:42
+# 1ce9b2352fe64f45b15d766b8d409b68
+msgid "``        -o       ``"
+msgstr ""
+
+#: ../../standard-options.rst:44
+# 2a2e34c97d0e41a2b6aae8cd9a45b153
+msgid "*Output* filename"
+msgstr ""
+
+#: ../../standard-options.rst:46
+# 023a0274ec2e4392b9b8ca26f671fcdb
+msgid "``        -q       ``"
+msgstr ""
+
+#: ../../standard-options.rst:48
+# 7350ea340c10425295b99e1180a53194
+msgid "``        --quiet       ``"
+msgstr ""
+
+#: ../../standard-options.rst:50
+# 6c52c26cd016484fb6b03aacf277581b
+msgid "*Quiet* : suppress ``        stdout       `` ."
+msgstr ""
+
+#: ../../standard-options.rst:52
+# a276781f941a4bed902a011831336cc4
+msgid "``        -r       ``"
+msgstr ""
+
+#: ../../standard-options.rst:54
+# 1c9156afd0564373aaeac47f04f277d8
+msgid "``        -R       ``"
+msgstr ""
+
+#: ../../standard-options.rst:56
+# 2d7c372ccf3f448c93cf9257087fdbef
+msgid "``        --recursive       ``"
+msgstr ""
+
+#: ../../standard-options.rst:58
+# ccf4e5201786416a825bba33adec4c7e
+msgid "*Recursive* : Operate recursively (down directory tree)."
+msgstr ""
+
+#: ../../standard-options.rst:62
+# ba2d46e4f2bc44458ea8e756d0d9bae9
+msgid "``        --verbose       ``"
+msgstr ""
+
+#: ../../standard-options.rst:64
+# 64796d843649479485b8e63b2f9ac1ef
+msgid "*Verbose* : output additional information to ``        stdout       `` or ``        stderr       `` ."
+msgstr ""
+
+#: ../../standard-options.rst:67
+# 4340e646f2f14540841b2fc435ae4f41
+msgid "``        -z       ``"
+msgstr ""
+
+#: ../../standard-options.rst:69
+# 65e0854c7a0548e0a65b5fc937faaeb7
+msgid "``        --compress       ``"
+msgstr ""
+
+#: ../../standard-options.rst:71
+# 72432a3a3eee431fb81230f490a14eba
+msgid "*Compress* : apply compression (usually `gzip <filearchiv.html#GZIPREF>`__ )."
+msgstr ""
+
+#: ../../standard-options.rst:74
+# 0cb5bf6016d64e4086e461909ab64122
+msgid "However:"
+msgstr ""
+
+#: ../../standard-options.rst:76
+# 9fde92b5330046cda787c872c72356a5
+msgid "In **tar** and **gawk** :"
+msgstr ""
+
+#: ../../standard-options.rst:78
+#: ../../standard-options.rst:86
+# 0d636676aa5940f5a3700cb0d437e9ba
+# 04545200bf68443cb9f1184855231ecd
+msgid "``        -f       ``"
+msgstr ""
+
+#: ../../standard-options.rst:80
+# 82754e3733e94df1a8688f58206d1c3c
+msgid "``        --file       ``"
+msgstr ""
+
+#: ../../standard-options.rst:82
+# 806491b7e91c443dbf4eb091cc4eca19
+msgid "*File* : filename follows."
+msgstr ""
+
+#: ../../standard-options.rst:84
+# 63909faf2a1d4132aed278d3d3690651
+msgid "In **cp** , **mv** , **rm** :"
+msgstr ""
+
+#: ../../standard-options.rst:88
+# 28885e4ed97f4babbb559d60e11d4210
+msgid "``        --force       ``"
+msgstr ""
+
+#: ../../standard-options.rst:90
+# aebb4279f34f4ee6a5b5be3bdd6160a5
+msgid "*Force* : force overwrite of target file(s)."
+msgstr ""
+
+#: ../../standard-options.rst:94
+# 0069d80f348e4b27aadba843fe38678e
+msgid "|Caution"
+msgstr ""
+
+#: ../../standard-options.rst:96
+# fbdec8dca6ef47f7bec8691c72de962c
+msgid "Many UNIX and Linux utilities deviate from this \"standard,\" so it is dangerous to *assume* that a given option will behave in a standard way. Always check the man page for the command in question when in doubt."
+msgstr ""
+
+#: ../../standard-options.rst:103
+# 36d6705bac754476944bfb709508de7e
+msgid "A complete table of recommended options for the GNU utilities is available at `the GNU standards page <http://www.gnu.org/prep/standards/>`__ ."
+msgstr ""
+

@@ -1,0 +1,461 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../loops1.rst:4
+# 2dd913e118c14806ba4fb4f15f584619
+msgid "XXX  11.1. Loops"
+msgstr ""
+
+#: ../../loops1.rst:7
+# 937483aab34d4de59c6b652f2a280959
+msgid "<loops1.html#FTN.AEN6560>`__ a list of commands as long as the *loop"
+msgstr ""
+
+#: ../../loops1.rst:8
+# af041f84deb342a2a6b3115a82acdd95
+msgid "control condition* is true."
+msgstr ""
+
+#: ../../loops1.rst:11
+# 021e871a5dd34221a560be60d02eef99
+msgid "** for loops**"
+msgstr ""
+
+#: ../../loops1.rst:13
+# 601ee640436a41b0a1246013d99bd163
+msgid "**for ``                   arg                 `` in"
+msgstr ""
+
+#: ../../loops1.rst:15
+# 7e84f39f61094d11a11fbcaa1cf0f3ac
+msgid "This is the basic looping construct. It differs significantly from its *C* counterpart."
+msgstr ""
+
+#: ../../loops1.rst:19
+# e5bd8813aa1c42d2b8dfd8d0d3f64487
+msgid "``                   list                 `` ]"
+msgstr ""
+
+#: ../../loops1.rst:20
+#: ../../loops1.rst:838
+#: ../../loops1.rst:1121
+# eb6b13a4f51b40c2b8ec54c93e793826
+# c2eb8fcb04cd4603b67bb43d1d943f1c
+# 54d60a4f2eb444c685c0d34d6d55d404
+msgid "do ``                   command(s)                 `` ... done"
+msgstr ""
+
+#: ../../loops1.rst:26
+#: ../../loops1.rst:719
+#: ../../loops1.rst:1103
+# 87a6493b4bca448f9f20a7d7c475a3b0
+# 33dc872d1d86421db79a678605ca88ef
+# cca1efc3974b44cc8c684f22d0f09c6f
+msgid "|Note"
+msgstr ""
+
+#: ../../loops1.rst:28
+# 4d73894d078949a2ad059100f800cc70
+msgid "During each pass through the loop, ``                         arg                       `` takes on the value of each successive variable in the ``                         list                       `` ."
+msgstr ""
+
+#: ../../loops1.rst:50
+# 35213b347da44e608d81db1266a5d461
+msgid "The argument ``                   list                 `` may contain `wild cards <special-chars.html#ASTERISKREF>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:53
+# a1733823738d4bbcb205051ab27d0a99
+msgid "If *do* is on same line as *for* , there needs to be a semicolon after list."
+msgstr ""
+
+#: ../../loops1.rst:57
+# 2b699eea66c146acac0c6df893f9f863
+msgid "``                   list                 `` ] ; do"
+msgstr ""
+
+#: ../../loops1.rst:61
+# 4940fa66925347bc8eb254d9ee9b02ff
+msgid "Exemple 1. Simple *for* loops"
+msgstr ""
+
+#: ../../loops1.rst:91
+# 1e6deba5b7e74c40b8fd11db0bc61a32
+msgid "Each ``                   [list]                 `` element may contain multiple parameters. This is useful when processing parameters in groups. In such cases, use the `set <internal.html#SETREF>`__ command (see `Example 15-16 <internal.html#EX34>`__ ) to force parsing of each ``                   [list]                 `` element and assignment of each component to the positional parameters."
+msgstr ""
+
+#: ../../loops1.rst:101
+# 9b91fa9cda294630b58a18cec22a7196
+msgid "Exemple 2. *for* loop with two parameters in each [list] element"
+msgstr ""
+
+#: ../../loops1.rst:134
+# 116cc2db277e4d2d8dfb77f4b590d9d7
+msgid "A variable may supply the ``                   [list]                 `` in a *for loop* ."
+msgstr ""
+
+#: ../../loops1.rst:139
+# f2ae2702cb574cce9e327602094787f3
+msgid "Exemple 3. *Fileinfo:* operating on a file list contained in a variable"
+msgstr ""
+
+#: ../../loops1.rst:178
+# 66f3c2e8935f4af7bae09dec43b01b51
+msgid "The ``                   [list]                 `` in a *for loop* may be parameterized."
+msgstr ""
+
+#: ../../loops1.rst:183
+# 55768d606f5247ef86bb8c416ae581bd
+msgid "Exemple 4. Operating on a parameterized file list"
+msgstr ""
+
+#: ../../loops1.rst:203
+# e0c8df95b0a647d59049d3596d05ab10
+msgid "If the ``                   [list]                 `` in a *for loop* contains wild cards ( \\* and ? ) used in filename expansion, then `globbing <globbingref.html>`__ takes place."
+msgstr ""
+
+#: ../../loops1.rst:209
+# ca5e1ae169ed4c49b8ce57229b914b76
+msgid "Exemple 5. Operating on files with a *for* loop"
+msgstr ""
+
+#: ../../loops1.rst:249
+# 7d6139b405af482688f86f1f2bda3390
+msgid "Omitting the ``                   in [list]                 `` part of a *for loop* causes the loop to operate on $@ -- the `positional parameters <internalvariables.html#POSPARAMREF>`__ . A particularly clever illustration of this is `Example A-15 <contributed-scripts.html#PRIMES>`__ . See also `Example 15-17 <internal.html#REVPOSPARAMS>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:258
+# a590f241ed4a48d8a676e7a15cc081c3
+msgid "Exemple 6. Missing ``                       in [list]                     `` in a *for* loop"
+msgstr ""
+
+#: ../../loops1.rst:283
+# a1ba1fc267df4edfad9a16b9319350d4
+msgid "It is possible to use `command substitution <commandsub.html#COMMANDSUBREF>`__ to generate the ``                   [list]                 `` in a *for loop* . See also `Example 16-54 <extmisc.html#EX53>`__ , `Example 11-11 <loops1.html#SYMLINKS>`__ and `Example 16-48 <mathc.html#BASE>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:292
+# f725a137eaf5440f9a19bc61443d0570
+msgid "Exemple 7. Generating the ``[list]`` in a *for* loop with command substitution"
+msgstr ""
+
+#: ../../loops1.rst:313
+# 4cf106641e74451e9d0d16038650f4e2
+msgid "Here is a somewhat more complex example of using command substitution to create the ``                   [list]                 `` ."
+msgstr ""
+
+#: ../../loops1.rst:319
+# 7f700ed70f49423a8e791cdaafd297d6
+msgid "Exemple 8. A *grep* replacement for binary files"
+msgstr ""
+
+#: ../../loops1.rst:367
+# a51b2903bc424b2890aff13e9fd0e6db
+msgid "More of the same."
+msgstr ""
+
+#: ../../loops1.rst:371
+# 03a9e325a22a4eea93b5e6accdc88a90
+msgid "Exemple 9. Listing all users on the system"
+msgstr ""
+
+#: ../../loops1.rst:409
+# ee1bf6a778f34449b50d93afb3f2c791
+msgid "Yet another example of the ``                   [list]                 `` resulting from command substitution."
+msgstr ""
+
+#: ../../loops1.rst:415
+# d226d60729d74c938f58c2354f7261ac
+msgid "Exemple 10. Checking all the binaries in a directory for authorship"
+msgstr ""
+
+#: ../../loops1.rst:446
+# 87a19040592d4247a4b0ade270538458
+msgid "A final example of ``                   [list]                 `` / command substitution, but this time the \"command\" is a `function <functions.html#FUNCTIONREF>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:469
+# f6a57fb07cf14056a471a325ccbb619a
+msgid "The output of a *for loop* may be piped to a command or commands."
+msgstr ""
+
+#: ../../loops1.rst:473
+# ab9249ebde5f47b9a739ca4c866520b8
+msgid "Exemple 11. Listing the *symbolic links* in a directory"
+msgstr ""
+
+#: ../../loops1.rst:545
+# 9fc5c4584f51423e851a260a0d819a77
+msgid "The ``         stdout        `` of a loop may be `redirected <io-redirection.html#IOREDIRREF>`__ to a file, as this slight modification to the previous example shows."
+msgstr ""
+
+#: ../../loops1.rst:551
+# 254c77e80dde4b43bf35d3db923cf38e
+msgid "Exemple 12. Symbolic links in a directory, saved to a file"
+msgstr ""
+
+#: ../../loops1.rst:582
+# 2202095990174390a61c85644298ffd9
+msgid "There is an alternative syntax to a *for loop* that will look very familiar to C programmers. This requires `double parentheses <dblparens.html#DBLPARENSREF>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:588
+# 9cff8a8af66d48c0841c40850bbdeaa8
+msgid "Exemple 13. A C-style *for* loop"
+msgstr ""
+
+#: ../../loops1.rst:656
+# f8b2cb705841405c9fb690b2e861646b
+msgid "See also `Example 27-16 <arrays.html#QFUNCTION>`__ , `Example 27-17 <arrays.html#TWODIM>`__ , and `Example A-6 <contributed-scripts.html#COLLATZ>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:660
+# bae3b3010ba3417c8e99d68a9905d2ba
+msgid "---"
+msgstr ""
+
+#: ../../loops1.rst:662
+# 3dda3f85e5744c5f98a51d53430ce80e
+msgid "Now, a *for loop* used in a \"real-life\" context."
+msgstr ""
+
+#: ../../loops1.rst:666
+# d0b7b874e1b447f6a6b490c4df951140
+msgid "Exemple 14. Using *efax* in batch mode"
+msgstr ""
+
+#: ../../loops1.rst:721
+# d80cc16b5a02445294f9a97e7f6e60c8
+msgid "The `keywords <internal.html#KEYWORDREF>`__ **do** and **done**"
+msgstr ""
+
+#: ../../loops1.rst:722
+# 243a1c54d3074faba4b8f9ea20f1e55e
+msgid "delineate the *for-loop* command block. However, these may, in certain contexts, be omitted by framing the command block within `curly brackets <special-chars.html#CODEBLOCKREF>`__"
+msgstr ""
+
+#: ../../loops1.rst:732
+# de2d7f96a9354cdd8d3344908ad9c09e
+msgid "# No do! {"
+msgstr ""
+
+#: ../../loops1.rst:734
+# c7352da7562e475a95d120a879684302
+msgid "echo -n \"* $n *\""
+msgstr ""
+
+#: ../../loops1.rst:735
+# fdb532e9eaba464ea3123c8ecd2c4c01
+msgid "} # No done!"
+msgstr ""
+
+#: ../../loops1.rst:739
+# 4a68ec2bdb1d46369f5caa052e67de5a
+msgid "# Outputs: # * 1 ** 2 ** 3 ** 4"
+msgstr ""
+
+#: ../../loops1.rst:741
+# b2c409a1462c49efb8e80c2400368278
+msgid "** 5 ** 6 ** 7 ** 8 **"
+msgstr ""
+
+#: ../../loops1.rst:743
+# 87711e05064f46dda5b987f9231d92cb
+msgid "# And, echo $? retur"
+msgstr ""
+
+#: ../../loops1.rst:744
+# 07bd955c16194a36bd6ab5431b5b88ad
+msgid "ns 0, so Bash does not r egister an error."
+msgstr ""
+
+#: ../../loops1.rst:748
+# b26ca933930f4901be78ed839aecf20b
+msgid "echo"
+msgstr ""
+
+#: ../../loops1.rst:751
+# aed54c75cb11486cb9078f3cd031fe4a
+msgid "#  But, note that in"
+msgstr ""
+
+#: ../../loops1.rst:752
+# 73f3f4202ee0454297fcb0ce523c4661
+msgid "a classic for-loop:"
+msgstr ""
+
+#: ../../loops1.rst:754
+# 7d44c57abeb04850b0f93b76b48c6b7d
+msgid "#+ a terminal semico"
+msgstr ""
+
+#: ../../loops1.rst:755
+# 2b3b60782a4d45008d604901d0641f57
+msgid "lon is required."
+msgstr ""
+
+#: ../../loops1.rst:757
+# 51f124b704c746dcb9019a1c176ab076
+msgid "for n in 1 2 3 {  echo -n \"$n \"; } #               ^"
+msgstr ""
+
+#: ../../loops1.rst:762
+# 38b02bf1d10d48469c75bd33d97af4ce
+msgid "# Thank you, YongYe,"
+msgstr ""
+
+#: ../../loops1.rst:763
+# fc09feb314dd44a789d203954ce12ee8
+msgid "for pointing this out."
+msgstr ""
+
+#: ../../loops1.rst:830
+# 9f1120ad72994cb2a5f345d23ebbc235
+msgid "This construct tests for a condition at the top of a loop, and keeps looping as long as that condition is true (returns a 0 `exit status <exit-status.html#EXITSTATUSREF>`__ ). In contrast to a `for loop <loops1.html#FORLOOPREF1>`__ , a *while loop* finds use in situations where the number of loop repetitions is not known beforehand."
+msgstr ""
+
+#: ../../loops1.rst:842
+# bc9d7041d5ba4f76be97b5fb230d154f
+msgid "The bracket construct in a *while loop* is nothing more than our old friend, the `test brackets <testconstructs.html#TESTCONSTRUCTS1>`__ used in an *if/then* test. In fact, a *while loop* can legally use the more versatile `double-brackets construct <testconstructs.html#DBLBRACKETS>`__ (while [[ condition ]])."
+msgstr ""
+
+#: ../../loops1.rst:849
+# 0b970543f2b746929254ef48bfa7bd42
+msgid "`As is the case with *for loops* <loops1.html#NEEDSEMICOLON>`__ , placing the *do* on the same line as the condition test requires a semicolon."
+msgstr ""
+
+#: ../../loops1.rst:853
+# 4e588a16a32148c09877ea78833d965d
+msgid "**while** [ ``                   condition                 `` ] ; do"
+msgstr ""
+
+#: ../../loops1.rst:855
+# 97849f9361a44bc2be72768916fb9f98
+msgid "Note that the *test brackets* `are *not* mandatory <loops1.html#WHILENOBRACKETS>`__ in a *while* loop. See, for example, the `getopts construct <internal.html#GETOPTSX>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:861
+# d6af0a5bc1354f858918d7ed36519188
+msgid "Exemple 15. Simple *while* loop"
+msgstr ""
+
+#: ../../loops1.rst:892
+# 5bd8b65e3c37406db848907a2c1f5c9f
+msgid "Exemple 16. Another *while* loop"
+msgstr ""
+
+#: ../../loops1.rst:916
+# 439623d14fc342f88326b1447844926b
+msgid "A *while loop* may have multiple conditions. Only the final condition determines when the loop terminates. This necessitates a slightly different loop syntax, however."
+msgstr ""
+
+#: ../../loops1.rst:922
+# e4cf4689f3ef4e078723bd6cb00d6abd
+msgid "Exemple 17. *while* loop with multiple conditions"
+msgstr ""
+
+#: ../../loops1.rst:952
+# bffbeb3887c8466d8e739902560b3cd5
+msgid "As with a *for loop* , a *while loop* may employ C-style syntax by using the double-parentheses construct (see also `Example 8-5 <dblparens.html#CVARS>`__ )."
+msgstr ""
+
+#: ../../loops1.rst:958
+# 42f79e916908426a99c528b7d89ebe5d
+msgid "Exemple 18. C-style syntax in a *while* loop"
+msgstr ""
+
+#: ../../loops1.rst:1001
+# c34ec54b07d74b05b455d160d4b2f008
+msgid "Inside its test brackets, a *while loop* can call a `function <functions.html#FUNCTIONREF>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:1037
+# 9d75b96f8b824db8bb639d4a00c93feb
+msgid "Similar to the `if-test <testconstructs.html#IFGREPREF>`__ construct, a *while* loop can omit the test brackets."
+msgstr ""
+
+#: ../../loops1.rst:1069
+# 9e235351735a42089f852430d7e8201a
+msgid "By coupling the power of the `read <internal.html#READREF>`__ command with a *while loop* , we get the handy `while read <internal.html#WHILEREADREF>`__ construct, useful for reading and parsing files."
+msgstr ""
+
+#: ../../loops1.rst:1105
+# fcc19acf64b34201b2f64409687fcc06
+msgid "A *while loop* may have its ``            stdin           `` `redirected to a file <redircb.html#REDIRREF>`__ by a < at its end."
+msgstr ""
+
+#: ../../loops1.rst:1108
+# 8b9e22c6e36647499f60afbd117fc855
+msgid "A *while loop* may have its ``            stdin           `` `supplied by a pipe <internal.html#READPIPEREF>`__ ."
+msgstr ""
+
+#: ../../loops1.rst:1115
+# c436411d66434d62b003ac307501f3b5
+msgid "This construct tests for a condition at the top of a loop, and keeps looping as long as that condition is *false* (opposite of *while loop* )."
+msgstr ""
+
+#: ../../loops1.rst:1120
+# 909e3fbc3dd546ceb847a45e5f81f87d
+msgid "``                   condition-is-true                 `` ]"
+msgstr ""
+
+#: ../../loops1.rst:1125
+# 2fdd466640a9443ba526ac8b53e8890d
+msgid "Note that an *until loop* tests for the terminating condition at the *top* of the loop, differing from a similar construct in some programming languages."
+msgstr ""
+
+#: ../../loops1.rst:1129
+# 67a5b48c29494a619d43547f234e4aab
+msgid "As is the case with *for loops* , placing the *do* on the same line as the condition test requires a semicolon."
+msgstr ""
+
+#: ../../loops1.rst:1132
+# be79db2b68ae4ce6abc7977615a54a9d
+msgid "**until** [ ``                   condition-is-true                 `` ] ; do"
+msgstr ""
+
+#: ../../loops1.rst:1137
+# 1c19e5900208424b8a78ca30246e7145
+msgid "Exemple 19. *until* loop"
+msgstr ""
+
+#: ../../loops1.rst:1177
+# 7524255cc3b147a9b65ebd02e8093938
+msgid "How to choose between a *for* loop or a *while* loop or *until* loop? In **C** , you would typically use a *for* loop when the number of loop iterations is known beforehand. With *Bash* , however, the situation is fuzzier. The Bash *for* loop is more loosely structured and more flexible than its equivalent in other languages. Therefore, feel free to use whatever type of loop gets the job done in the simplest way."
+msgstr ""
+
+#: ../../loops1.rst:1186
+# 325e2075fd1149b2a079bf829bc93f9c
+msgid "Notes"
+msgstr ""
+
+#: ../../loops1.rst:1189
+# 4c1fd4e138b346d3ad1dcb9bb9269823
+msgid "` [1]  <loops1.html#AEN6560>`__"
+msgstr ""
+
+#: ../../loops1.rst:1191
+# b90a38df19f64305b874a8de50b6cd87
+msgid "*Iteration* : Repeated execution of a command or group of commands,"
+msgstr ""
+
+#: ../../loops1.rst:1192
+# 599dca169f054a12b62e1f5996c18db1
+msgid "usually -- but not always, *while* a given condition holds, or *until* a given condition is met."
+msgstr ""
+

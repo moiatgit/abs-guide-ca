@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../timedate.rst:3
+# fd82dc95a8b54c1ab6e3dcd773e05a9e
+msgid "XXX Comandes de data i hora"
+msgstr ""
+
+#: ../../timedate.rst:5
+# 2c307e1c48e845eab5476866e17de43b
+msgid "En aquesta secció estudiarem les comandes time, date i el càlcul de temps."
+msgstr ""
+
+#: ../../timedate.rst:9
+# 6f74ff0c4e62455d8e0a728253a97866
+msgid "Invocant-la directament, **date** escriu la data i l'hora a la sortida estàndard (``stdout``). Aquesta comanda es torna més interessant quan es fan servir les opcions de formatat i anàlisi."
+msgstr ""
+
+#: ../../timedate.rst:14
+# 59eeb009cb08408f86baa30e98d5cdd5
+msgid "Exemple 10. Ús de *date*"
+msgstr ""
+
+#: ../../timedate.rst:40
+# 87d279df3cb84c018fea132b384d619d
+msgid "L'opció ``-u`` retorna l' UTC o Temps Universal Coordinat (Universal Coordinated Time)."
+msgstr ""
+
+#: ../../timedate.rst:54
+# ab47bbdd0bda4e1ca9d014a5431e14f8
+msgid "Aquesta opció facilita el càlcul del temps entre diferents dates."
+msgstr ""
+
+#: ../../timedate.rst:57
+# e25ccd5a7d79444a8898755c99afa444
+msgid "Exemple 11. Càlculs amb *Date*"
+msgstr ""
+
+#: ../../timedate.rst:103
+# e2402e01aa1144628813e2ca3a90a8ae
+msgid "La comanda *date* disposa d'un bon nombre d'opcions de sortida (*output*). Per exemple ``%N`` retorna la part dels nanosegons del temps actual. Això pot ser útil, per exemple, per generar d'enters aleatoris."
+msgstr ""
+
+#: ../../timedate.rst:120
+# ae2d62636b584194a2bd7022b5e61ae6
+msgid "Hi ha moltes altres opcions (mira **man date**)."
+msgstr ""
+
+#: ../../timedate.rst:142
+# 0f0134e126574a498c29f8c6bdf67eb8
+msgid "Mira també l' `Exemple 3-4 <special-chars.ca.html#EX58>`_ i `Exemple A-43 <contributed-scripts.ca.html#STOPWATCH>`_."
+msgstr ""
+
+#: ../../timedate.rst:146
+# 1f7dacf3265a454283cadc5467cc3159
+msgid "Mostra el temps en la zona horària que se li especifiqui."
+msgstr ""
+
+#: ../../timedate.rst:154
+# 8f8cd32e29b842f394f3024fd6f3babf
+msgid "Mostra estadístiques detallades de temps de l'execució d'una comanda."
+msgstr ""
+
+#: ../../timedate.rst:157
+# f986647bb15f40949f39860aa7203f6a
+msgid "``time ls -l /`` retorna quelcom similar a:"
+msgstr ""
+
+#: ../../timedate.rst:165
+# bd53cf406ab64c1b98caaf91db3a6a62
+msgid "Mira també a la secció anterior la comanda (molt semblant) `times <x9445.ca.html#TIMESREF>`_."
+msgstr ""
+
+#: ../../timedate.rst:168
+# d0e87f2e1f604b4a8cd084944d7ce93a
+msgid "*Atenció*: Des de la `versió 2.0 <bashver2.ca.html#BASH2REF>`_ de Bash, **time** és una paraula reservada. Presenta un comportament lleugerament diferent amb pipelines."
+msgstr ""
+
+#: ../../timedate.rst:173
+# e832e2cc12c348ad95da29d77f6c7e3b
+msgid "Utilitat que modifica els temps de darrera modificació i accés d'un fitxer al temps del sistema o bé a un d'especificat. També és útil per a crear un nou fitxer. La comanda ``touch zzz`` crea un nou fitxer de longitud zero, amb el nom ``zzz`` sempre, és clar, que no existeixi ja ``zzz``. És útil deixar marques de temps d'aquesta manera en fitxers buits de manera que es pugui fer seguiment dels moments de modificació d'un projecte."
+msgstr ""
+
+#: ../../timedate.rst:181
+# 2620e084b5b0459a90f3aaea3834eb13
+msgid "*Atenció*: La comanda **touch** equival a ``: >> newfile`` o ``>> newfile`` (en el cas de fitxers ordinaris)."
+msgstr ""
+
+#: ../../timedate.rst:184
+# 51ea1bf9133b4ee8a7dc5afa0af2756e
+msgid "*Truc*: Abans de fer `cp -u <basic.ca.html#CPREF>`_ (*copia / actualitza*), fes servir **touch** per a actualitzar la marca de temps d'aquells fitxers que no vulguis sobreescriure."
+msgstr ""
+
+#: ../../timedate.rst:188
+# d9ed8bb5a7db444b95cbfb30907dfead
+msgid "Per exemple, si el directori ``/home/bozo/tax_audit`` conté els fitxers ``calculs-051606.data``, ``calculs-051706.data``, i ``calculs-051806.data``, llavors fent un **touch calculs\\*.data** protegirà aquests fitxers de ser sobreescrits per fitxers amb el mateix nom durant l'execució de **cp -u /home/bozo/financial\\_info/calculs\\*data /home/bozo/tax\\_audit**."
+msgstr ""
+
+#: ../../timedate.rst:196
+# 9004bd51b07641d9b24e83df96557114
+msgid "La comanda de control de treballs **at** executa un conjunt de comandes donat en el moment especificat. Recorda al `cron <system.ca.html#CRONREF>`_ però **at** és realment útil quan volem executar un únic cop un conjunt de comandes."
+msgstr ""
+
+#: ../../timedate.rst:201
+# 89377109409b4f83af54d1bc9be06c3c
+msgid "``at 2pm January 15`` demana per un conjunt de comandes a ser executades en el moment indicat. Aquestes comandes han de ser compatibles amb shell-script donat que, a efectes pràctics, l'usuari està escrivint un script de shell línia a línia. L'entrada finalitza amb `Ctl-D <special-chars.ca.html#CTLDREF>`_."
+msgstr ""
+
+#: ../../timedate.rst:207
+# b2e8e3e9d4fa40889953f0ac2f4faf53
+msgid "**at** llegeix la llista de comandes des d'un fitxer tant indicant l'opció ``-f`` com redireccionant l'entrada (<), El fitxer contindrà un shell script tot qualsevol, per suposat sempre i quant no sigui interactiu. Resulta particularment adequat incloure la comanda `run-parts <extmisc.ca.html#RUNPARTSREF>`_ al fitxer per a executar un conjunt diferent de scripts."
+msgstr ""
+
+#: ../../timedate.rst:221
+# 5a4c54c72e1e42898bae7960fb6ac33d
+msgid "La comanda de control de treballs **batch** és similar a **at**, Es diferencia del segon en que executa la llista de comandes quan la càrrega del sistema cau per sota de ``.8``. Al igual que **at**, pot llegir comandes d'un fitxer amb l'opció ``-f``."
+msgstr ""
+
+#: ../../timedate.rst:226
+# 3703288926ec4516be90f13764556805
+msgid "El concepte de processament en segon pla o *batch processing* data de l'era de les computadores mainframe. Vol dir, executar un conjunt de comandes sense intervenció de l'usuari."
+msgstr ""
+
+#: ../../timedate.rst:231
+# 785263d8aedc40cc9a8dc1566541c756
+msgid "Mostra un calendari ben formatat per sortida estàndard ( ``stdout``). Funciona tant per l'any actual com per un ampli rang d'anys al passat i al futur,"
+msgstr ""
+
+#: ../../timedate.rst:236
+# c9cce9a2ed24470c8623309fb72d4823
+msgid "És l'equivalent per la shell d'un *bucle d'espera*. Es queda en pausa durant el nombre especificat de segons sense fer res. Pot ser útil per calcular temps i també en processos que s'executen en segon pla comprovant un esdeveniment amb certa freqüència (polling), com ara a l'`Exemple 31-6 <debugging.ca.html#ONLINE>`_."
+msgstr ""
+
+#: ../../timedate.rst:246
+# 2d76cfea03204b2d9921d79de3b13d29
+msgid "*Atenció*: Per defecte la comanda **sleep** funciona amb segons, però es pot especificar també minuts, hores o dies."
+msgstr ""
+
+#: ../../timedate.rst:254
+# 796b86bd12954571b2a7db0b7930a898
+msgid "*Atenció*: La comanda `watch <system.ca.html#WATCHREF>`_ pot ser una millor elecció que **sleep** quan el que volem és executar comandes cada cert interval de temps."
+msgstr ""
+
+#: ../../timedate.rst:259
+# 976d4a8a5b0c4067877cc74540dc3fe9
+msgid "*Microsleep* (la *u* es llegeix com la lletra grega *mu*, o el prefix *micro-*). És el mateix que **sleep**, però amb intervals de microsegons. Pot ser usada per càlcul de temps amb precisió, o bé per controlar un procés amb un interval molt freqüent."
+msgstr ""
+
+#: ../../timedate.rst:268
+# 5146c8c2048b4c8994ff506fdfb9faa5
+msgid "Aquesta comanda és part dels paquet de Red Hat *initscripts / rc-scripts*."
+msgstr ""
+
+#: ../../timedate.rst:271
+# 1ed61bc0c66c4eebb5e2bdb6f2fbce69
+msgid "*Compte!*: La comanda **usleep** no ofereix un càlcul de temps particularment precís i , per tant, no és adequada per a bucles on el temps sigui crític."
+msgstr ""
+
+#: ../../timedate.rst:276
+# 12abff3baeaa4e03bffb239bdbe32217
+msgid "La comanda **hwclock** accedeix o ajusta el rellotge físic de la màquina. Algunes opcions requereixen privilegis de *root*. El fitxer d'inici ``/etc/rc.d/rc.sysinit`` fa servir **hwclock** per a assignar durant l'arrancada l'hora del sistema a partir del rellotge de la màquina."
+msgstr ""
+
+#: ../../timedate.rst:282
+# 8f74c66a11304cd7b1e2f0fed2c9dc27
+msgid "La comanda **clock** s'anomena també **hwclock**."
+msgstr ""
+
+#: ../../timedate.rst:287
+# be5d573add504eddb2ac334bc490a67b
+msgid "`Inici <index.ca.html>`_ :  Guia avançada de Bash-Scripting"
+msgstr ""
+
+#: ../../timedate.rst:289
+# f3b2e657d4f44f3193fc8317dbe1eeb4
+msgid "`Amunt <external.ca.html>`_ : Capítol 16. Filtres externs, programes i comandes"
+msgstr ""
+
+#: ../../timedate.rst:292
+# 30c26960c7a74d1a9d91e2bc14df7c5b
+msgid "`Anterior <moreadv.ca.html>`_ : Comandes complexes"
+msgstr ""
+
+#: ../../timedate.rst:294
+# 4720c2dde5c943d98175e2be5149ff50
+msgid "`Següent <textproc.ca.html>`_ : Comandes de processament de text"
+msgstr ""
+

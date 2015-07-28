@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../traductorcat.rst:3
+# dc7b601b85b6456489214745a241b8f6
+msgid "Notes sobre la traducció"
+msgstr ""
+
+#: ../../traductorcat.rst:5
+# bfa75bd06cb24f42b530a333c9a363c9
+msgid "El responsable de la traducció que estàs llegint és Moisès Gómez."
+msgstr ""
+
+#: ../../traductorcat.rst:7
+# e822d71c9e5943c19af2ec0cd2b35b60
+msgid "No sóc un traductor professional, tot i que no és la primera vegada que tradueixo un llibre."
+msgstr ""
+
+#: ../../traductorcat.rst:9
+# 7c54a705bc3f4b2d9197cb206e976e4a
+msgid "La meva motivació principal a l'hora de realitzar aquesta traducció ha estat la d'aprofundir en els continguts del llibre. En el meu cas, la manera que he trobat més efectiva d'aprendre quelcom és havent d'expressar-ho amb les meves paraules."
+msgstr ""
+
+#: ../../traductorcat.rst:13
+# c318927c55c7412fa855723b703a8ccf
+msgid "He dedicat, però, molt d'esforç de manera que el resultat pugui arribar a ser d'utilitat a altres persones. Espero que sigui el teu cas."
+msgstr ""
+
+#: ../../traductorcat.rst:16
+# 2de027c7df114d8dbbbcf40b02231866
+msgid "El llibre original, en la seva darrera versió/revisió, el podeu trobar a la `pàgina de l'autor <http://www.tldp.org/LDP/abs/html/>`."
+msgstr ""
+
+#: ../../traductorcat.rst:19
+# 85f77298e3914581ba6edb991542a84c
+msgid "Voldria indicar algunes decisions que he pres respecte a aquesta traducció:"
+msgstr ""
+
+#: ../../traductorcat.rst:21
+# 2c20f4728f944dba9eed9a8db9e5eb81
+msgid "Elaborant la traducció, he realitzat proves de tot el codi que hi apareix. A menys que s'indiqui el contrari, el codi ha funcionat fent servir *GNU bash, version 4.3.30(1)-release (x86_64-pc-linux-gnu)*."
+msgstr ""
+
+#: ../../traductorcat.rst:25
+# 6c9686ba6a254164bbcbcf1db8324cb4
+msgid "Allà on ho he considerat oportú, he afegit algun exemple o aclariment que no apareix en el llibre original. Donat que es tracta d'afegits petits, he preferit no signar aquestes aportacions per evitar fer la lectura més pesada."
+msgstr ""
+
+#: ../../traductorcat.rst:29
+# 89ff5e3425b04f2dbf6f9c43d5082d34
+msgid "He deixat sense traduir algunes de les nombroses i generalment interessants cites amb que l'autor ha enriquit el seu text original."
+msgstr ""
+
+#: ../../traductorcat.rst:32
+# 64b2062ec149401a8f3c1dac6fc0b049
+msgid "El format del llibre resultant és diferent. He optat per fer servir *ReStructuredText* i amb aquest, *Sphinx*. Tot plegat fa que el format final tingui una aparença significativament diferent de l'original."
+msgstr ""
+
+#: ../../traductorcat.rst:36
+# a6e1a31b63064194bbcd88ce8ae29911
+msgid "Malgrat no sempre he estat d'acord amb les decisions d'estructura, exemples i comentaris de l'autor, m'he forçat a mantenir-les allà on no em suposava un cost addicional de traducció. Una notable diferència és la inclusió dels *crèdits* i *agraïments* que l'autor inclou per tot arreu per reconèixer aportacions que li han fet tercer. He optat per no incloure-les, a excepció de la pàgina que les recopila totes :doc:`credits`, doncs considero que fan més nosa que servei pel que (imagino) deu ser un lector estàndard d'un llibre de programació en Bash en català (una població probablement no massa nombrosa, en tot cas)."
+msgstr ""
+
+#: ../../traductorcat.rst:44
+# 49bda7ce62cf4ce9b64ca2a0bc858d1f
+msgid "A l'hora de realitzar una traducció, la revisió del text original és molt profunda. Això permet adonar-se de duplicacions de temes i de *petits* detalls que falten. Per exemple, en :doc:`special-chars` he considerat que es podria afegir a ``?`` l'accepció de variable quan apareix amb ``$?``."
+msgstr ""
+
+#: ../../traductorcat.rst:49
+# 0f2b79534d5f461790206e53c94b74f6
+msgid "Tant de bo aquesta traducció et sigui profitosa! Estaré encantat de saber les teves impressions."
+msgstr ""
+
+#: ../../traductorcat.rst:51
+# 494754ef2bd1464d95d8c7b7749e6a0e
+msgid "Moisès : moiatgit (a) gmail (.) com"
+msgstr ""
+

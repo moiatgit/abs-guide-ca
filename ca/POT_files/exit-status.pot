@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../exit-status.rst:3
+# d870ceb0f57b45719e95840d7d511527
+msgid "XXX Chapter 6. Exit and Exit Status"
+msgstr ""
+
+#: ../../exit-status.rst:6
+# 6771f73576474afdbee68e1426099a0a
+msgid "**"
+msgstr ""
+
+#: ../../exit-status.rst:8
+# 27757ddf42ac44a0a3ee20888147a953
+msgid "*... there are dark corners in the Bourne shell, and people use all of them.*"
+msgstr ""
+
+#: ../../exit-status.rst:11
+# 398d205623354ebe8e8aa21ba2d8a16c
+msgid "*--Chet Ramey*"
+msgstr ""
+
+#: ../../exit-status.rst:15
+# cede3971b5fc497190b1967516f33a64
+msgid "The **exit** command terminates a script, just as in a **C** program."
+msgstr ""
+
+#: ../../exit-status.rst:16
+# d098c6a06ae54b87935d4fed89a6e125
+msgid "It can also return a value, which is available to the script's parent process."
+msgstr ""
+
+#: ../../exit-status.rst:19
+# cfbafed735bd457393a6b47c3d274051
+msgid "Every command returns an *exit status* (sometimes referred to as a"
+msgstr ""
+
+#: ../../exit-status.rst:20
+# b50fc2c7e07649d48e91a83e9313ad95
+msgid "*return status* or *exit code* ). A successful command returns a 0 , while an unsuccessful one returns a non-zero value that usually can be interpreted as an *error code* . Well-behaved UNIX commands, programs, and utilities return a 0 exit code upon successful completion, though there are some exceptions."
+msgstr ""
+
+#: ../../exit-status.rst:26
+# 8c58e0bcd9504afd880f220a8a8ec749
+msgid "Likewise, `functions <functions.html#FUNCTIONREF>`__ within a script and the script itself return an exit status. The last command executed in the function or script determines the exit status. Within a script, an ``             exit                        nnn               `` command may be used to deliver an ``               nnn             `` exit status to the shell ( ``               nnn             `` must be an integer in the 0 - 255 range)."
+msgstr ""
+
+#: ../../exit-status.rst:36
+#: ../../exit-status.rst:227
+# b0d59d832cb54a7f9eceea4e416072eb
+# 12c0b60b56bb44fcbb654f984278de1a
+msgid "|Note"
+msgstr ""
+
+#: ../../exit-status.rst:38
+# 9c0d6e03793e4f3488c7d9e4bb953eb2
+msgid "When a script ends with an **exit** that has no parameter, the exit status of the script is the exit status of the last command executed in the script (previous to the **exit** )."
+msgstr ""
+
+#: ../../exit-status.rst:54
+#: ../../exit-status.rst:74
+#: ../../exit-status.rst:89
+# 77daca4334e24182af150215d916f6a5
+# 8d44dc04c9d6416dbe4394aec1a3b377
+# d471e79924df412aa906ab55f6a98d28
+msgid "tus of last command."
+msgstr ""
+
+#: ../../exit-status.rst:56
+# e2755471f74240859470e3d745fc3682
+msgid "exit"
+msgstr ""
+
+#: ../../exit-status.rst:59
+# cc3da28411394ce182de85271995b41b
+msgid "The equivalent of a bare **exit** is **exit $?** or even just omitting the **exit** ."
+msgstr ""
+
+#: ../../exit-status.rst:76
+# 149761f0973f482db9e6d945e745f099
+msgid "exit $?"
+msgstr ""
+
+#: ../../exit-status.rst:180
+# 10605ae0b171433ea4b3c5409036d8b4
+msgid "``      $?     `` reads the exit status of the last command executed. After a function returns, ``      $?     `` gives the exit status of the last command executed in the function. This is Bash's way of giving functions a \"return value.\" ` [1]  <exit-status.html#FTN.AEN2981>`__"
+msgstr ""
+
+#: ../../exit-status.rst:185
+# 7f874af9510e46d1a45bcaddecb0e105
+msgid "Following the execution of a `pipe <special-chars.html#PIPEREF>`__ , a"
+msgstr ""
+
+#: ../../exit-status.rst:186
+# c80d51c11de2439990152bac3a3abc4f
+msgid "``      $?     `` gives the exit status of the last command executed."
+msgstr ""
+
+#: ../../exit-status.rst:188
+# be6a9e8cc52745499919fbb5bf2f31a3
+msgid "After a script terminates, a ``      $?     `` from the command-line gives the exit status of the script, that is, the last command executed in the script, which is, by convention, ``             0           `` on success or an integer in the range 1 - 255 on error."
+msgstr ""
+
+#: ../../exit-status.rst:195
+# 906d15ff409b4e12b209c0f22323ad3f
+msgid "Exemple 1. exit / exit status"
+msgstr ""
+
+#: ../../exit-status.rst:220
+# 48d6c20ce3e140ee913ad1ec49d723a5
+msgid "`$? <internalvariables.html#XSTATVARREF>`__ is especially useful for testing the result of a command in a script (see `Example 16-35 <filearchiv.html#FILECOMP>`__ and `Example 16-20 <textproc.html#LOOKUP>`__ )."
+msgstr ""
+
+#: ../../exit-status.rst:229
+# b4d2f49475494fc19e73e194d5bf942e
+msgid "The `! <special-chars.html#NOTREF>`__ , the *logical not* qualifier, reverses the outcome of a test or command, and this affects its `exit status <exit-status.html#EXITSTATUSREF>`__ ."
+msgstr ""
+
+#: ../../exit-status.rst:237
+# ee7a1a2e481141348a769a67b4b5f469
+msgid "Exemple 2. Negating a condition using !"
+msgstr ""
+
+#: ../../exit-status.rst:313
+# b177998578ee42cf8589417f394613e9
+msgid "|Caution"
+msgstr ""
+
+#: ../../exit-status.rst:315
+# fdee574eb7d14c1dbff1f8978be34d15
+msgid "Certain exit status codes have `reserved meanings <exitcodes.html#EXITCODESREF>`__ and should not be user-specified in a script."
+msgstr ""
+
+#: ../../exit-status.rst:324
+# 5601e1c2d1d146f58311207b5bb049cc
+msgid "Notes"
+msgstr ""
+
+#: ../../exit-status.rst:327
+# 281db422264b4c479f10d6d8b107e1b2
+msgid "` [1]  <exit-status.html#AEN2981>`__"
+msgstr ""
+
+#: ../../exit-status.rst:329
+# daac7ad0a0b144268d2f99ca93109a35
+msgid "In those instances when there is no `return <complexfunct.html#RETURNREF>`__ terminating the function."
+msgstr ""
+

@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../networkprogramming.rst:4
+# 3fb8e823bee04124a6556b43d81595ae
+msgid "XXX  Chapter 30. Network Programming"
+msgstr ""
+
+#: ../../networkprogramming.rst:7
+# 4e26842a9e324e94a1be6a36c54a66a7
+msgid "**"
+msgstr ""
+
+#: ../../networkprogramming.rst:9
+# 899a2b383b3e4c6b923d78511f4e1354
+msgid "*The Net's a cross between an elephant and a white elephant sale: it never forgets, and it's always crap.*"
+msgstr ""
+
+#: ../../networkprogramming.rst:12
+# fddaa13dc47e470685ae109cedc33ee2
+msgid "*--Nemo*"
+msgstr ""
+
+#: ../../networkprogramming.rst:16
+# d8971de15e0b43c49dc25f720c11b423
+msgid "A Linux system has quite a number of tools for accessing, manipulating, and troubleshooting network connections. We can incorporate some of these tools into scripts -- scripts that expand our knowledge of networking, useful scripts that can facilitate the administration of a network."
+msgstr ""
+
+#: ../../networkprogramming.rst:22
+# 4045f40433704339a597145004c87651
+msgid "Here is a simple CGI script that demonstrates connecting to a remote"
+msgstr ""
+
+#: ../../networkprogramming.rst:23
+# 2edc4832e52f4d0fb85b7e3546c9be40
+msgid "server."
+msgstr ""
+
+#: ../../networkprogramming.rst:27
+# c507ac38fa0243829ba12f13a7a155ab
+msgid "Exemple 1. Print the server environment"
+msgstr ""
+
+#: ../../networkprogramming.rst:101
+# a7446e7d888343258545f995e60b8500
+msgid "For security purposes, it may be helpful to identify the IP addresses a computer is accessing."
+msgstr ""
+
+#: ../../networkprogramming.rst:106
+# cd5008cf4a7e43cfa156fefa18e85ce5
+msgid "Exemple 2. IP addresses"
+msgstr ""
+
+#: ../../networkprogramming.rst:153
+# dcdbfee7753042c68ae488e26075d6d2
+msgid "More examples of network programming:"
+msgstr ""
+
+#: ../../networkprogramming.rst:155
+# 42ddee5c98fc4244b1146f3511b77e1a
+msgid "`Getting the time from *nist.gov* <devref1.html#NPREF>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:157
+# d28869f2d5b5484e8839e441f8dddf83
+msgid "`Downloading a URL <devref1.html#NW001>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:159
+# e51bf04e7f8d4434ac7f0c6062c9d1cd
+msgid "`A GRE tunnel <system.html#IPSCRIPT0>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:161
+# 6631ad131f24431d8282cbe7a763ead4
+msgid "`Checking if an Internet server is up <communications.html#PING0>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:163
+# 555b128a834a4c039e9e537fbe107819
+msgid "`Example 16-41 <communications.html#ISSPAMMER>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:165
+# c50e94e2ecff492d9074949673eada3e
+msgid "`Example A-28 <contributed-scripts.html#ISSPAMMER2>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:167
+# ce78559243a644639b39971176da3aeb
+msgid "`Example A-29 <contributed-scripts.html#WHX>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:169
+# 8940517938ee4c5191f2165f21f707fe
+msgid "`Example 29-1 <devref1.html#DEVTCP>`__"
+msgstr ""
+
+#: ../../networkprogramming.rst:171
+# 9eab280f78a4463592fcb3f15ded2e35
+msgid "See also the `networking commands <system.html#NETWORKSYS1>`__ in the `System and Administrative Commands <system.html>`__ chapter and the `communications commands <communications.html>`__ in the `External Filters, Programs and Commands <external.html>`__ chapter."
+msgstr ""
+

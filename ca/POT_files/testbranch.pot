@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../testbranch.rst:3
+# 3e7b3b762b574ff7a4c5f5c6d431c7fc
+msgid "XXX  11.4. Testing and Branching"
+msgstr ""
+
+#: ../../testbranch.rst:5
+# 04e4b5d43bbc4f8ba485c45533b5b162
+msgid "The **case** and **select** constructs are technically not loops, since they do not iterate the execution of a code block. Like loops, however, they direct program flow according to conditions at the top or bottom of the block."
+msgstr ""
+
+#: ../../testbranch.rst:11
+# fd055a08b80148a4914b12add75cd54b
+msgid "** Controlling program flow in a code block**"
+msgstr ""
+
+#: ../../testbranch.rst:14
+# ed7b5cb90556471593e53add07109637
+msgid "The **case** construct is the shell scripting analog to ``                   switch                 `` in **C/C++** . It permits branching to one of a number of code blocks, depending on condition tests. It serves as a kind of shorthand for multiple if/then/else statements and is an appropriate tool for creating menus."
+msgstr ""
+
+#: ../../testbranch.rst:22
+# 220bc72c1cd649228547fa87ab552044
+msgid "\"$ ``                   condition1                 `` \" ) ``                   command                 `` ... ;; \"$ ``                   condition2                 `` \" ) ``                   command                 `` ... ;; **esac**"
+msgstr ""
+
+#: ../../testbranch.rst:32
+# 7826bbe9e2744021a2d205dd1f582b7d
+msgid "|Note"
+msgstr ""
+
+#: ../../testbranch.rst:34
+# c3e33622131b47818949dd58cfac96dd
+msgid "Quoting the variables is not mandatory, since word splitting does not take place."
+msgstr ""
+
+#: ../../testbranch.rst:37
+# 8e807682501247649b40fe77f669ba88
+msgid "Each test line ends with a right paren **)** . ` [1] <testbranch.html#FTN.AEN7087>`__"
+msgstr ""
+
+#: ../../testbranch.rst:40
+# 27e2bebd97b04a97835ef4f2ec0ffee5
+msgid "Each condition block ends with a *double* semicolon ;; ."
+msgstr ""
+
+#: ../../testbranch.rst:42
+# 580b52a3d197409a9ef0833b6abc9b7b
+msgid "If a condition tests *true* , then the associated commands execute and the **case** block terminates."
+msgstr ""
+
+#: ../../testbranch.rst:45
+# f36b2305d0704d23a87f9a83f7dd0d71
+msgid "The entire **case** block ends with an **esac** ( *case* spelled backwards)."
+msgstr ""
+
+#: ../../testbranch.rst:53
+# 06bcd87ebd0540eeaa453ba09307bbd7
+msgid "Exemple 25. Using *case*"
+msgstr ""
+
+#: ../../testbranch.rst:93
+# ce5c7d1cb3444d95b9131a26e7ad352e
+msgid "Exemple 26. Creating menus using *case*"
+msgstr ""
+
+#: ../../testbranch.rst:167
+# 5f666921ebcd4d849cb0ed9a5179afe2
+msgid "An exceptionally clever use of **case** involves testing for command-line parameters."
+msgstr ""
+
+#: ../../testbranch.rst:193
+# bf89428aedd741bebc4291f516a37d47
+msgid "Here is a more straightforward example of command-line parameter handling:"
+msgstr ""
+
+#: ../../testbranch.rst:228
+# 8a1bbc89bc5042bebf0852dbef199961
+msgid "Exemple 27. Using *command substitution* to generate the *case* variable"
+msgstr ""
+
+#: ../../testbranch.rst:250
+# 25fe6403184c402fabd88126bfed5318
+msgid "A **case** construct can filter strings for `globbing <globbingref.html>`__ patterns."
+msgstr ""
+
+#: ../../testbranch.rst:255
+# 18a4631960a843db8d946be0033f2741
+msgid "Exemple 28. Simple string matching"
+msgstr ""
+
+#: ../../testbranch.rst:304
+# 1f5f1849f4154e0493c0e77bfbc648f7
+msgid "Exemple 29. Checking for alphabetic input"
+msgstr ""
+
+#: ../../testbranch.rst:420
+# 640d17e281b74e4681bdb447b880af5d
+msgid "The **select** construct, adopted from the Korn Shell, is yet another tool for building menus."
+msgstr ""
+
+#: ../../testbranch.rst:424
+# b1d6e6ccdbc04f58a15e293e1809b9ae
+msgid "``                   list                 `` ]"
+msgstr ""
+
+#: ../../testbranch.rst:425
+# b48d71ea5e434b4dad6d4eb7da5ab4be
+msgid "do ``                   command                 `` ... break done"
+msgstr ""
+
+#: ../../testbranch.rst:430
+# 06e85c9ed4474fc7b4df3ed03078ae0a
+msgid "This prompts the user to enter one of the choices presented in the variable list. Note that **select** uses the ``         $PS3        `` prompt ( ``         #?        `` ) by default, but this may be changed."
+msgstr ""
+
+#: ../../testbranch.rst:437
+# 00053a4435664c7397c24d6168f38be9
+msgid "Exemple 30. Creating menus using *select*"
+msgstr ""
+
+#: ../../testbranch.rst:470
+# 9048b63783004d7d87eff59d0339f328
+msgid "If ``                   in                                 list                     `` is omitted, then **select** uses the list of command line arguments ( ``         $@        `` ) passed to the script or the function containing the **select** construct."
+msgstr ""
+
+#: ../../testbranch.rst:476
+# 80edb44aab5b4e4c9b8781a62a8cb530
+msgid "Compare this to the behavior of a"
+msgstr ""
+
+#: ../../testbranch.rst:478
+# 70cccc6ac0394a6a96eca4f2445c7364
+msgid "**for** ``                   variable                 `` [in ``                   list                 `` ]"
+msgstr ""
+
+#: ../../testbranch.rst:481
+# 73b12f5333534617814f6f3255f192e6
+msgid "construct with the ``                 in                              list                   `` omitted."
+msgstr ""
+
+#: ../../testbranch.rst:487
+# 3ec8d0a8699c4dd3929feb5421d8a75a
+msgid "Exemple 31. Creating menus using *select* in a function"
+msgstr ""
+
+#: ../../testbranch.rst:520
+# a3286ba267184e6894974782a278d0d4
+msgid "See also `Example 37-3 <bashver2.html#RESISTOR>`__ ."
+msgstr ""
+
+#: ../../testbranch.rst:525
+# 0f778a0762894083bc039adba350b3ce
+msgid "Notes"
+msgstr ""
+
+#: ../../testbranch.rst:528
+# fbcf08c123624898a51faaff1135f2a3
+msgid "` [1]  <testbranch.html#AEN7087>`__"
+msgstr ""
+
+#: ../../testbranch.rst:530
+# 52d0db643199483fb3bdb23ef9bf1403
+msgid "Pattern-match lines may also *start* with a **(** left paren to give the layout a more structured appearance."
+msgstr ""
+
+#: ../../testbranch.rst:538
+# 6a36541dad5f49a596369a0c953470bb
+msgid "# $( arch ) returns mach ine architecture."
+msgstr ""
+
+#: ../../testbranch.rst:540
+# d0ad449049764f49bfbf7230e2156bd2
+msgid "( i386 ) echo \"803"
+msgstr ""
+
+#: ../../testbranch.rst:543
+# 4082af108f43420483f81408b3e53b51
+msgid "( i486 ) echo \"804"
+msgstr ""
+
+#: ../../testbranch.rst:545
+# adae0f4c11d1447da4b6c799e4c9e3b2
+msgid "( i586 ) echo \"Pen"
+msgstr ""
+
+#: ../../testbranch.rst:547
+# 9a3d23f681294472be119aec41211ca0
+msgid "( i686 ) echo \"Pen"
+msgstr ""
+
+#: ../../testbranch.rst:549
+# 0ff8387cf8514648ada7fcf360c5f83f
+msgid "(    * ) echo \"Oth"
+msgstr ""
+
+#: ../../testbranch.rst:551
+# 21fb1cf70204446c8497932415b88fb9
+msgid "esac"
+msgstr ""
+

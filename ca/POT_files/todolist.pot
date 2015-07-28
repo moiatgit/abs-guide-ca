@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../todolist.rst:4
+# 58ba05f2d27448e2ac7bdd87350e32b2
+msgid "XXX  Appendix R. To Do List"
+msgstr ""
+
+#: ../../todolist.rst:6
+# 2d514b0d1344413fb884e8002e7ace3e
+msgid "A comprehensive survey of `incompatibilities <portabilityissues.html#BASHCOMPAT>`__ between Bash and the classic `Bourne shell <why-shell.html#BASHDEF>`__ ."
+msgstr ""
+
+#: ../../todolist.rst:10
+# 0cac8adb90264ed0b3e0ce3f74724a19
+msgid "Same as above, but for the Korn shell ( *ksh* )."
+msgstr ""
+
+#: ../../todolist.rst:12
+# 55a71c3b6fd64bbdbb74916ecd5f5167
+msgid "Merge-like revision of official https://www.gnu.org/software/bash/manual/bash.html"
+msgstr ""
+

@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../loopcontrol.rst:4
+# 5cec24a4fac34f47976e32d2ad2d4370
+msgid "XXX  11.3. Loop Control"
+msgstr ""
+
+#: ../../loopcontrol.rst:7
+# 57b66ef7089440cb8b51ed0204e0e019
+msgid "**"
+msgstr ""
+
+#: ../../loopcontrol.rst:9
+# a4f11a1647bd44b581ff8178ff8fa591
+msgid "*Tournez cent tours, tournez mille tours,*"
+msgstr ""
+
+#: ../../loopcontrol.rst:11
+# cd1bcff00b6b4e58a25dd0ac0149a942
+msgid "*Tournez souvent et tournez toujours . . .*"
+msgstr ""
+
+#: ../../loopcontrol.rst:13
+# f4334640f4774e9a97753e4ac7b153f0
+msgid "*--Verlaine, \"Chevaux de bois\" *"
+msgstr ""
+
+#: ../../loopcontrol.rst:18
+# 1e7b41ebc0aa4e598403d3caad6bd43a
+msgid "** Commands affecting loop behavior**"
+msgstr ""
+
+#: ../../loopcontrol.rst:22
+# 2b113b1e3c3f422581fce8e3b2eed8ac
+msgid "<loopcontrol.html#FTN.AEN6981>`__ correspond exactly to their"
+msgstr ""
+
+#: ../../loopcontrol.rst:23
+# 1c272f44b3794b2d986683c10b5f9b33
+msgid "counterparts in other programming languages. The **break** command terminates the loop ( *breaks* out of it), while **continue** causes a jump to the next `iteration <loops1.html#ITERATIONREF>`__ of the loop, skipping all the remaining commands in that particular loop cycle."
+msgstr ""
+
+#: ../../loopcontrol.rst:31
+# 102cbd4c742047fda2edc489d6411088
+msgid "Exemple 21. Effects of *break* and **continue** in a loop"
+msgstr ""
+
+#: ../../loopcontrol.rst:89
+# edc15fb96b5d425496e6fafd1a42e2be
+msgid "The **break** command may optionally take a parameter. A plain **break** terminates only the innermost loop in which it is embedded, but a **break N** breaks out of ``                   N                 `` levels of loop."
+msgstr ""
+
+#: ../../loopcontrol.rst:96
+# f296e2ceed6b415cb411823a53c6f156
+msgid "Exemple 22. Breaking out of multiple loop levels"
+msgstr ""
+
+#: ../../loopcontrol.rst:133
+# dd99c8ac23d84b52a05843c77aceecfb
+msgid "The **continue** command, similar to **break** , optionally takes a parameter. A plain **continue** cuts short the current iteration within its loop and begins the next. A **continue N** terminates all remaining iterations at its loop level and continues with the next iteration at the loop, ``         N        `` levels above."
+msgstr ""
+
+#: ../../loopcontrol.rst:141
+# 1369ee780e554235af79fdbc7e877d5a
+msgid "Exemple 23. Continuing at a higher loop level"
+msgstr ""
+
+#: ../../loopcontrol.rst:182
+# cf796012b1cd4c49b17767cb16c86e03
+msgid "Exemple 24. Using *continue N* in an actual task"
+msgstr ""
+
+#: ../../loopcontrol.rst:249
+# 38dc74cd94384c0fbae5b6d13f35e2e6
+msgid "|Caution"
+msgstr ""
+
+#: ../../loopcontrol.rst:251
+# bba22e8ef34a48dfb065398214478be1
+msgid "The **continue N** construct is difficult to understand and tricky to use in any meaningful context. It is probably best avoided."
+msgstr ""
+
+#: ../../loopcontrol.rst:260
+# 35bc5cc32ddd4252a8f00decdba78c7d
+msgid "Notes"
+msgstr ""
+
+#: ../../loopcontrol.rst:263
+# ddd3bb9ed0574731914de4f1971142ed
+msgid "` [1]  <loopcontrol.html#AEN6981>`__"
+msgstr ""
+
+#: ../../loopcontrol.rst:265
+# 3505bcb00bbc4426973a8b924d6e6795
+msgid "These are shell `builtins <internal.html#BUILTINREF>`__ , whereas other loop commands, such as `while <loops1.html#WHILELOOPREF>`__ and `case <testbranch.html#CASEESAC1>`__ , are `keywords <internal.html#KEYWORDREF>`__ ."
+msgstr ""
+

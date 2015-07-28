@@ -1,0 +1,447 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../opprecedence.rst:4
+# 62df401d290d441083b3360d6b2812b7
+msgid "XXX  8.4. Operator Precedence"
+msgstr ""
+
+#: ../../opprecedence.rst:6
+# 1f3374f474d7438e99716f9422e3a92f
+msgid "In a script, operations execute in order of *precedence* : the higher precedence operations execute *before* the lower precedence ones. ` [1]"
+msgstr ""
+
+#: ../../opprecedence.rst:8
+# b6f0a3db38434afb9ffbf23852529aa6
+msgid "<opprecedence.html#FTN.AEN4290>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:11
+# 998726cdb6a54ea78508afdf5910e659
+msgid "**Table 8-1. Operator Precedence**"
+msgstr ""
+
+#: ../../opprecedence.rst:14
+# 8b39826fe5464f73b4427356f03e151e
+msgid "Operator"
+msgstr ""
+
+#: ../../opprecedence.rst:16
+# 7793aa06e23244beb2199b00bdc4775c
+msgid "Meaning"
+msgstr ""
+
+#: ../../opprecedence.rst:18
+# 343b90aa8aba401c8b74022369ee92c9
+msgid "Comments"
+msgstr ""
+
+#: ../../opprecedence.rst:20
+#: ../../opprecedence.rst:148
+# 13e408c17bdd45f3a9904c24f09f3c59
+# 14fd01392f03410d8e9a1641b3654cef
+msgid "``       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:22
+# bef93364f96c45e7828e9db61d0097cd
+msgid "**HIGHEST PRECEDENCE**"
+msgstr ""
+
+#: ../../opprecedence.rst:24
+# be69d123f89f4df8b9ec5a2e87a6df28
+msgid "``        var++ var--       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:26
+# aab755034b14454cb0ec57f9baff6743
+msgid "post-increment, post-decrement"
+msgstr ""
+
+#: ../../opprecedence.rst:28
+# 1ce3255097e6489f8ba95329e08a45b8
+msgid "`C-style <assortedtips.html#CSTYLE>`__ operators"
+msgstr ""
+
+#: ../../opprecedence.rst:30
+# 9354aecd1b7a44e7848428653ab32e04
+msgid "``        ++var --var       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:32
+# c0a9847e147e4b928c8689a0c9c96ad1
+msgid "pre-increment, pre-decrement"
+msgstr ""
+
+#: ../../opprecedence.rst:34
+# b2f1dfe2b4a54181a367d48c9d8295d0
+msgid "``        ! ~       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:36
+# b8a7dbf038e14fe9bc02bba99dcad09b
+msgid "`negation <special-chars.html#NOTREF>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:38
+# bc8104b80f044801ab2c00a0d4c03e94
+msgid "logical / bitwise, inverts sense of following operator"
+msgstr ""
+
+#: ../../opprecedence.rst:40
+# 1431ce98c81d445197f85a0a625cab89
+msgid "``        **       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:42
+# 660f5520c61c4aa5a22b3e331a670d44
+msgid "`exponentiation <ops.html#EXPONENTIATIONREF>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:44
+# f1b936dc43f94bcdb9fc2a1a21892f4e
+msgid "`arithmetic operation <ops.html#AROPS1>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:46
+# 5ea4b6e0c77d459d90733a7f1f7e0ff7
+msgid "``        * / %       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:48
+# 41e79b8ea8d34e3884115ef0f9f08587
+msgid "multiplication, division, modulo"
+msgstr ""
+
+#: ../../opprecedence.rst:50
+#: ../../opprecedence.rst:56
+# 92d151fd50804baa89613b8d213a9f21
+# 37ac311432b549ab8fe7e924c1675841
+msgid "arithmetic operation"
+msgstr ""
+
+#: ../../opprecedence.rst:52
+# a1ecf6fb9eff47338a1ce7927cdf419f
+msgid "``        + -       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:54
+# 1b5b6614d8dd4d809d4842f756e6345f
+msgid "addition, subtraction"
+msgstr ""
+
+#: ../../opprecedence.rst:58
+# cc035d24ab4f4aeb8915fc858474bbe6
+msgid "``        << >>       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:60
+# d48da6419aa84a82a598016b1a5482f2
+msgid "left, right shift"
+msgstr ""
+
+#: ../../opprecedence.rst:62
+# bd6adbbad48d4efcaa0289d1a098649f
+msgid "`bitwise <ops.html#BITWSOPS1>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:64
+# c52d048854e3407184afd989c6ea07d3
+msgid "``        -z -n       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:66
+#: ../../opprecedence.rst:72
+# 426ea19f6c574c6894f16fa33198a099
+# 64557083ffa14295960317eb4fcb5b08
+msgid "*unary* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:68
+# 8da4087b1761489f88a4b6715863c24b
+msgid "string is/is-not `null <comparison-ops.html#STRINGNULL>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:70
+# 866807c0c6e24e828637d3c519f59813
+msgid "``        -e -f -t -x, etc.       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:74
+# 8491bc6944dc48ab8e48c3f10b896302
+msgid "`file-test <fto.html>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:76
+# 9ee62c8667194f76a189a9aca89be44b
+msgid "``        < -lt > -gt <= -le >= -ge       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:78
+#: ../../opprecedence.rst:84
+# 6afafd5c90a14699a65a4b2c36faf4ab
+# 470ed77c7cb449049a48f5201faa6cce
+msgid "*compound* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:80
+# 5df41dde8a8241a9b032bb4b3d6b971c
+msgid "string and integer"
+msgstr ""
+
+#: ../../opprecedence.rst:82
+# f57584c526224ad9aae080170e2c5d5b
+msgid "``        -nt -ot -ef       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:86
+# d7738804d42f4c38825185e1072b7e07
+msgid "file-test"
+msgstr ""
+
+#: ../../opprecedence.rst:88
+# 069315e25ae64dc8914b90112627f0b2
+msgid "``        == -eq                 !=                -ne       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:90
+# da3fb14f331942ffb4a92d426c9072cc
+msgid "equality / inequality"
+msgstr ""
+
+#: ../../opprecedence.rst:92
+# 6ed417230dca4c678fb6fdf50eeafdfa
+msgid "test operators, string and integer"
+msgstr ""
+
+#: ../../opprecedence.rst:94
+# 4b37d4ee99fe45a0be27d18927c2320f
+msgid "``        &       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:96
+#: ../../opprecedence.rst:114
+# 8da312169838419bb62be18ff8dfcbba
+# 7ea06aa2843544b286cc5dcae2b02c67
+msgid "AND"
+msgstr ""
+
+#: ../../opprecedence.rst:98
+#: ../../opprecedence.rst:110
+# de542e91169745b8bb7d15ad30965b4c
+# 4008e97353654342ae09119ada400374
+msgid "bitwise"
+msgstr ""
+
+#: ../../opprecedence.rst:100
+# 9a7d269760404e9d8770fd78c5528dbd
+msgid "``        ^       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:102
+# cc92e21b313443899434c17c887c87a6
+msgid "XOR"
+msgstr ""
+
+#: ../../opprecedence.rst:104
+# 9b844acf3def4526b664d9ef3fd7b417
+msgid "*exclusive* OR, bitwise"
+msgstr ""
+
+#: ../../opprecedence.rst:106
+# 67a47afc179b4769ae5b59ea60c39838
+msgid "``      ``"
+msgstr ""
+
+#: ../../opprecedence.rst:108
+#: ../../opprecedence.rst:120
+# b3e3aa9497794cf2bd7f80e82f0917ab
+# dcaeecdac03545aa9bc3d026593f01b0
+msgid "OR"
+msgstr ""
+
+#: ../../opprecedence.rst:112
+# 1c383e3363bd4c0fbb9ba9b719f159f7
+msgid "``        && -a       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:116
+# 04add5d182434be69d753296c95115e8
+msgid "`logical <ops.html#LOGOPS1>`__ , *compound* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:118
+# 96b0f0cdc2084660a41deec4adc96ea7
+msgid "``        |-o       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:122
+# b3bce9ecc3654c15aa55bb1b055e485d
+msgid "logical, *compound* comparison"
+msgstr ""
+
+#: ../../opprecedence.rst:124
+# 4943dd4d45424f18ac83bb58b43d6f01
+msgid "``        ?:       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:126
+# 69af07fc288c4d73af9e2f74d3631a2f
+msgid "`trinary operator <special-chars.html#CSTRINARY>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:128
+# 53e1d6d332af4b01ae0037248400cca2
+msgid "C-style"
+msgstr ""
+
+#: ../../opprecedence.rst:130
+# 4c6130354c4f419faaa15f6c0de90981
+msgid "``        =       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:132
+# a591cdc920e34a40bc423bee501a5674
+msgid "`assignment <varassignment.html#EQREF>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:134
+# f1dc5a5786de44bfb02257c348bb5222
+msgid "(do not confuse with equality *test* )"
+msgstr ""
+
+#: ../../opprecedence.rst:136
+# 689bc76371594318b090df5b5ea9ef92
+msgid "``        *= /= %= += -= <<= >>= &=       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:138
+# 3ebb0e0c4cde4af1902295122f02ca3b
+msgid "`combination assignment <ops.html#ARITHOPSCOMB>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:140
+# 0358d6bcf520450e89c5582fceb82004
+msgid "times-equal, divide-equal, mod-equal, etc."
+msgstr ""
+
+#: ../../opprecedence.rst:142
+# a053bf8665af4d2bb68c9bc5cd5815d1
+msgid "``        ,       ``"
+msgstr ""
+
+#: ../../opprecedence.rst:144
+# 41c9ebfdd94a4c6a9247c29b7bfae18e
+msgid "`comma <ops.html#COMMAOP>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:146
+# 588a564533e64bdf9fcd044ebab1a93b
+msgid "links a sequence of operations"
+msgstr ""
+
+#: ../../opprecedence.rst:150
+# 60c32ad9249741debdd7bbb05194b0fd
+msgid "**LOWEST PRECEDENCE**"
+msgstr ""
+
+#: ../../opprecedence.rst:154
+# d381afa0ef784dabb4273b53d3f26c3c
+msgid "In practice, all you really need to remember is the following:"
+msgstr ""
+
+#: ../../opprecedence.rst:156
+# 956cfe3748b747f69f254a955e7fa5e6
+msgid "The \"My Dear Aunt Sally\" mantra ( *multiply, divide, add, subtract* ) for the familiar `arithmetic operations <ops.html#AROPS1>`__ ."
+msgstr ""
+
+#: ../../opprecedence.rst:159
+# 8ca2f37f9c1b4c76a47a98410534e7e9
+msgid "The *compound* logical operators, **&&** , **\\|\\|** , **-a** , and **-o** have low precedence."
+msgstr ""
+
+#: ../../opprecedence.rst:162
+# ca3914bf2efc4f668fac381547234a5d
+msgid "The order of evaluation of equal-precedence operators is usually *left-to-right* ."
+msgstr ""
+
+#: ../../opprecedence.rst:165
+# 50ab28986d4c418f91daeb477c796bab
+msgid "Now, let's utilize our knowledge of operator precedence to analyze a couple of lines from the ``      /etc/init.d/functions file     `` , as found in the *Fedora Core* Linux distro."
+msgstr ""
+
+#: ../../opprecedence.rst:223
+# 2c96d50b892a46b993ff5ce4468c6deb
+msgid "|Tip"
+msgstr ""
+
+#: ../../opprecedence.rst:225
+# 09e9fbe0028e42ffacfdaabed9977b3b
+msgid "To avoid confusion or error in a complex sequence of test operators, break up the sequence into bracketed sections."
+msgstr ""
+
+#: ../../opprecedence.rst:235
+# 7dded3b5893c4c5e95f7838f7d806bd9
+msgid "# Unclear what's goi"
+msgstr ""
+
+#: ../../opprecedence.rst:236
+# b1f7d3fcb98444fe85cf4f16d5a1c881
+msgid "ng on here..."
+msgstr ""
+
+#: ../../opprecedence.rst:238
+# cc84ffc46d7342bc971da95071923aac
+msgid "if [[ \"$v1\" -gt \"$v2"
+msgstr ""
+
+#: ../../opprecedence.rst:239
+# ebc711467a704c00b336b4a54b12bf11
+msgid "\" ]] || [[ \"$v1\" -lt \"$v 2\" ]] && [[ -e \"$filenam e\" ]]"
+msgstr ""
+
+#: ../../opprecedence.rst:242
+# a2b9d53cc8c441e3a3ba489469ca12f7
+msgid "# Much better -- the"
+msgstr ""
+
+#: ../../opprecedence.rst:243
+# 99b21399994042f4a9bda9192125092b
+msgid "condition tests are gro"
+msgstr ""
+
+#: ../../opprecedence.rst:244
+# 602daad461aa4eba882709bcf47a0472
+msgid "uped in logical sections ."
+msgstr ""
+
+#: ../../opprecedence.rst:273
+# c90866ead8c54a1d9791b728ad2b9e10
+msgid "Notes"
+msgstr ""
+
+#: ../../opprecedence.rst:276
+# fb5706a8711646b3940a9eb89e5dd69c
+msgid "` [1]  <opprecedence.html#AEN4290>`__"
+msgstr ""
+
+#: ../../opprecedence.rst:278
+# 0c729be0cecf43378ff26a6a12e7e54e
+msgid "*Precedence* , in this context, has approximately the same meaning as *priority*"
+msgstr ""
+

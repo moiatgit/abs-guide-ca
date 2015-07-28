@@ -1,0 +1,66 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../wherehelp.rst:3
+msgid "On (no) aconseguir ajuda"
+msgstr ""
+
+#: ../../wherehelp.rst:5
+msgid ""
+"`L'autor <mailto:thegrendel.abs@gmail.com>`_ ha deixat de mantenir a aquest "
+"document. Tampoc no respondrà cap pregunta sobre aquest llibre ni sobre "
+"temes generals de programació de guions."
+msgstr ""
+
+#: ../../wherehelp.rst:9
+msgid ""
+"Si et cal ajut amb algun dels exercicis, et recomano que llegeixis les "
+"seccions corresponents d'aquest i altres referències. Fes el millor que "
+"puguis per resoldre el problema fent servir la teva intuïció i recursos. "
+"*Per favor, no facis perdre el temps de l'autor.* Fet-t'ho, no aconseguiràs "
+"ni ajuda ni comprensió [#insiste]_."
+msgstr ""
+
+#: ../../wherehelp.rst:15
+msgid ""
+"De la mateixa manera, et demano que t'abstinguis de molestar a l'autor amb "
+"sol·licituds, ofertes de feina o \"oportunitats de negoci\". A ell ja li va "
+"prou bé i no li fa falta ni ajuda ni consideracions. Gràcies."
+msgstr ""
+
+#: ../../wherehelp.rst:19
+msgid ""
+"Per favor, tingués present que l'autor *no* contestarà preguntes sobre "
+"programació de guions per sistemes Sun/Solaris/Oracle o Apple. Els executius"
+" foscos i els advocats anacrònics d'aquestes empreses en particular han fet "
+"servir els litigis d'una manera predatòria i/o com a arma contra la "
+"Comunitat de Codi Obert. Tot usuari d'Apple o Solaris que li calgui ajut amb"
+" els seus guions pot dirigir amablement les seves preocupacions al servei al"
+" client de la seva companyia."
+msgstr ""
+
+#: ../../wherehelp.rst:29
+msgid ""
+"... sophisticated in mechanism but possibly agile operating under noises "
+"being extremely suppressed ...*"
+msgstr ""
+
+#: ../../wherehelp.rst:35
+msgid "Anotacions"
+msgstr ""
+
+#: ../../wherehelp.rst:36
+msgid ""
+"Be, si insisteixes de debó, pots intentar modificar l'exemple A-44 de :doc"
+":`contributed-scripts` per adaptar-ho a les teves necessitats."
+msgstr ""

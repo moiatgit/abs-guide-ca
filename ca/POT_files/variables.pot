@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../variables.rst:3
+# 81ceb419d496463f83f6eae86458573d
+msgid "4. Variables"
+msgstr ""
+
+#: ../../variables.rst:5
+# 10882ef5225c4c43a43d767e67093f5e
+msgid "Les *variables* són la manera en que els llenguatges de programació representen les dades. Una variable és simplement una *etiqueta*, un nom assignat a una posició de memòria de l'ordinador on es guarda una dada."
+msgstr ""
+
+#: ../../variables.rst:9
+# 0fbbc2116e31482995e9a0590f2af5ab
+msgid "Les variables apareixen en operacions aritmètiques, manipulació de quantitats i en processament de Strings (cadenes de text)."
+msgstr ""
+

@@ -1,0 +1,106 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../loopcontrol.rst:4
+msgid "XXX  11.3. Loop Control"
+msgstr ""
+
+#: ../../loopcontrol.rst:7
+msgid "**"
+msgstr ""
+
+#: ../../loopcontrol.rst:9
+msgid "*Tournez cent tours, tournez mille tours,*"
+msgstr ""
+
+#: ../../loopcontrol.rst:11
+msgid "*Tournez souvent et tournez toujours . . .*"
+msgstr ""
+
+#: ../../loopcontrol.rst:13
+msgid "*--Verlaine, \"Chevaux de bois\" *"
+msgstr ""
+
+#: ../../loopcontrol.rst:18
+msgid "** Commands affecting loop behavior**"
+msgstr ""
+
+#: ../../loopcontrol.rst:22
+msgid "<loopcontrol.html#FTN.AEN6981>`__ correspond exactly to their"
+msgstr ""
+
+#: ../../loopcontrol.rst:23
+msgid ""
+"counterparts in other programming languages. The **break** command "
+"terminates the loop ( *breaks* out of it), while **continue** causes a jump "
+"to the next `iteration <loops1.html#ITERATIONREF>`__ of the loop, skipping "
+"all the remaining commands in that particular loop cycle."
+msgstr ""
+
+#: ../../loopcontrol.rst:31
+msgid "Exemple 21. Effects of *break* and **continue** in a loop"
+msgstr ""
+
+#: ../../loopcontrol.rst:89
+msgid ""
+"The **break** command may optionally take a parameter. A plain **break** "
+"terminates only the innermost loop in which it is embedded, but a **break "
+"N** breaks out of ``                   N                 `` levels of loop."
+msgstr ""
+
+#: ../../loopcontrol.rst:96
+msgid "Exemple 22. Breaking out of multiple loop levels"
+msgstr ""
+
+#: ../../loopcontrol.rst:133
+msgid ""
+"The **continue** command, similar to **break** , optionally takes a "
+"parameter. A plain **continue** cuts short the current iteration within its "
+"loop and begins the next. A **continue N** terminates all remaining "
+"iterations at its loop level and continues with the next iteration at the "
+"loop, ``         N        `` levels above."
+msgstr ""
+
+#: ../../loopcontrol.rst:141
+msgid "Exemple 23. Continuing at a higher loop level"
+msgstr ""
+
+#: ../../loopcontrol.rst:182
+msgid "Exemple 24. Using *continue N* in an actual task"
+msgstr ""
+
+#: ../../loopcontrol.rst:249
+msgid "|Caution"
+msgstr ""
+
+#: ../../loopcontrol.rst:251
+msgid ""
+"The **continue N** construct is difficult to understand and tricky to use in"
+" any meaningful context. It is probably best avoided."
+msgstr ""
+
+#: ../../loopcontrol.rst:260
+msgid "Notes"
+msgstr ""
+
+#: ../../loopcontrol.rst:263
+msgid "` [1]  <loopcontrol.html#AEN6981>`__"
+msgstr ""
+
+#: ../../loopcontrol.rst:265
+msgid ""
+"These are shell `builtins <internal.html#BUILTINREF>`__ , whereas other loop"
+" commands, such as `while <loops1.html#WHILELOOPREF>`__ and `case "
+"<testbranch.html#CASEESAC1>`__ , are `keywords <internal.html#KEYWORDREF>`__"
+" ."
+msgstr ""

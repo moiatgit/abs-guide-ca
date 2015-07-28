@@ -1,0 +1,543 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../moreadv.rst:3
+# ae9870ff585b443e930bac17393b36f8
+msgid "XXX  16.2. Complex Commands"
+msgstr ""
+
+#: ../../moreadv.rst:6
+# bb55efe9cca84b7d83484147f993c2d8
+msgid "** Commands for more advanced users**"
+msgstr ""
+
+#: ../../moreadv.rst:10
+# cf0cd961272945d1a1348f18bc6f19d8
+msgid "**find**"
+msgstr ""
+
+#: ../../moreadv.rst:12
+# 9cea7ced5f2341dbbdb997fe29d8e26c
+msgid "-exec ``                   COMMAND                 `` \\\\;"
+msgstr ""
+
+#: ../../moreadv.rst:14
+# 75a6f82365424f969f88af4ec021ab16
+msgid "Carries out ``                   COMMAND                 `` on each file that **find** matches. The command sequence terminates with ; (the \";\" is `escaped <escapingsection.html#ESCP>`__ to make certain the shell passes it to **find** literally, without interpreting it as a special character)."
+msgstr ""
+
+#: ../../moreadv.rst:31
+# e9675863b4c844bb83d76b1438f6c6b2
+msgid "If ``                   COMMAND                 `` contains {} , then **find** substitutes the full path name of the selected file for \"{}\" ."
+msgstr ""
+
+#: ../../moreadv.rst:87
+# 72a03c1a9bee45d8b55e53d2e4cdd165
+msgid "# #  [:digit:] is one of the character classes #+ introduced with the POSIX 1003.2 standard."
+msgstr ""
+
+#: ../../moreadv.rst:91
+# a110202e06a84e2180bde76f9afe485a
+msgid "# Thanks, StÃ©phane Chazelas."
+msgstr ""
+
+#: ../../moreadv.rst:97
+#: ../../moreadv.rst:282
+# eacdffb6292447a990656c9c19f4cc6b
+# a16fac23b3b640d7bf0aa375c52c4b33
+msgid "|Note"
+msgstr ""
+
+#: ../../moreadv.rst:99
+# b3980a84c8894a148d0d7be5ff378879
+msgid "The ``            -exec           `` option to **find** should not be confused with the `exec <internal.html#EXECREF>`__ shell builtin."
+msgstr ""
+
+#: ../../moreadv.rst:107
+# 94a39c1d3de04fb19451bb810e6b14b0
+msgid "Exemple 3. *Badname* , eliminate file names in current directory containing bad characters and `whitespace <special-chars.html#WHITESPACEREF>`__ ."
+msgstr ""
+
+#: ../../moreadv.rst:149
+# cb6882b6df254803a763cd7dbd0e3050
+msgid "Exemple 4. Deleting a file by its *inode* number"
+msgstr ""
+
+#: ../../moreadv.rst:204
+# 7318aec2037245719fc08c1beb6f6fda
+msgid "The **find** command also works without the ``         -exec        `` option."
+msgstr ""
+
+#: ../../moreadv.rst:227
+# a0c199bb0cdb4e04826d1ebbe274cf96
+msgid "See `Example 16-30 <filearchiv.html#EX48>`__ , `Example 3-4 <special-chars.html#EX58>`__ , and `Example 11-10 <loops1.html#FINDSTRING>`__ for scripts using **find** . Its `manpage <basic.html#MANREF>`__ provides more detail on this complex and powerful command."
+msgstr ""
+
+#: ../../moreadv.rst:234
+# 1aa21b97ac45426d99fadaaf440a0de2
+msgid "A filter for feeding arguments to a command, and also a tool for assembling the commands themselves. It breaks a data stream into small enough chunks for filters and commands to process. Consider it as a powerful replacement for `backquotes <commandsub.html#BACKQUOTESREF>`__ . In situations where `command substitution <commandsub.html#COMMANDSUBREF>`__ fails with a too many arguments error, substituting **xargs** often works. ` [1]  <moreadv.html#FTN.AEN10465>`__ Normally, **xargs** reads from ``         stdin        `` or from a pipe, but it can also be given the output of a file."
+msgstr ""
+
+#: ../../moreadv.rst:245
+# 03d8057e96514d259cd24b76df2f2d9c
+msgid "The default command for **xargs** is `echo <internal.html#ECHOREF>`__ . This means that input piped to **xargs** may have linefeeds and other whitespace characters stripped out."
+msgstr ""
+
+#: ../../moreadv.rst:276
+# b55505186d4448a080a085aeb902351a
+msgid "``                   lsxargs -p -l gzip                 `` `gzips <filearchiv.html#GZIPREF>`__ every file in current directory, one at a time, prompting before each operation."
+msgstr ""
+
+#: ../../moreadv.rst:284
+# 3b609f034425486881a208b9c7ecbb8f
+msgid "Note that *xargs* processes the arguments passed to it sequentially, *one at a time* ."
+msgstr ""
+
+#: ../../moreadv.rst:291
+# 12c8dfc5c49b4bfe822cadd01844814b
+msgid "xargs file /usr/bin:          d"
+msgstr ""
+
+#: ../../moreadv.rst:293
+# d79b0a12b44d404d9ea7d7accb847dc3
+msgid "/usr/bin/foomatic-p"
+msgstr ""
+
+#: ../../moreadv.rst:294
+# 42f4d0acb92f444fb3c713731d232a13
+msgid "pd-options:          per l script text executable"
+msgstr ""
+
+#: ../../moreadv.rst:296
+# 7606e914c5084bef9814b6c3ae15180d
+msgid ". . ."
+msgstr ""
+
+#: ../../moreadv.rst:323
+#: ../../moreadv.rst:340
+#: ../../moreadv.rst:391
+# aeae24de7425437bbec2bb2f2845f243
+# 2a048fb737fe41bdb594aaa9e483c2ea
+# a07034f1c0524dd7867950a222e12ad4
+msgid "|Tip"
+msgstr ""
+
+#: ../../moreadv.rst:325
+# 096835f4bb8f48b89ba1a578c45f4067
+msgid "An interesting *xargs* option is ``            -n                                       NN                         `` , which limits to ``                         NN                       `` the number of arguments passed."
+msgstr ""
+
+#: ../../moreadv.rst:331
+# c0783383a68342dfbb4a6ce6fd065434
+msgid "``                         lsxargs -n 8 echo                       `` lists the files in the current directory in ``            8           `` columns."
+msgstr ""
+
+#: ../../moreadv.rst:342
+# 38644359f8344235b1a0e0b322e4f3b1
+msgid "Another useful option is ``            -0           `` , in combination with ``                         find           -print0                       `` or ``                         grep -lZ                       `` . This allows handling arguments containing whitespace or quotes."
+msgstr ""
+
+#: ../../moreadv.rst:348
+# 418af387e8624246b1b7e65f8171a2eb
+msgid "``                         find / -type f -print0xargs -0 grep -liwZ GUI | xargs -0 rm -f                       ``"
+msgstr ""
+
+#: ../../moreadv.rst:350
+# d128e9022ced4249aa48445884a3bb37
+msgid "``                         grep -rliwZ GUI /xargs -0 rm -f                       ``"
+msgstr ""
+
+#: ../../moreadv.rst:352
+# 1323bc4c4a634995afb51f354a248990
+msgid "Either of the above will remove any file containing \"GUI\" . *(Thanks, S.C.)*"
+msgstr ""
+
+#: ../../moreadv.rst:355
+# 2dfce7b10b75475b919d943a9ed7ba1b
+msgid "Or:"
+msgstr ""
+
+#: ../../moreadv.rst:363
+# 504a8c1d0a1d45ef84813c1bb5046821
+msgid "#  From Han Holl's f"
+msgstr ""
+
+#: ../../moreadv.rst:364
+# a19f4e816a3844709f94cb964bee695c
+msgid "ixup of \"get-commandline .sh\""
+msgstr ""
+
+#: ../../moreadv.rst:366
+# 87c2f23dcbe74cb8bc66c4f697e408e6
+msgid "#+ script in \"/dev a"
+msgstr ""
+
+#: ../../moreadv.rst:367
+# 4486dc735a2245059d6fb4b4c9f296d2
+msgid "nd /proc\" chapter."
+msgstr ""
+
+#: ../../moreadv.rst:393
+# 60d8529c69774f3aa88dd19578925c52
+msgid "The ``            -P           `` option to *xargs* permits running processes in parallel. This speeds up execution in a machine with a multicore CPU."
+msgstr ""
+
+#: ../../moreadv.rst:403
+# 507fed754f5e4a12b5bbf66d97c758c6
+msgid "# Converts all the g"
+msgstr ""
+
+#: ../../moreadv.rst:404
+# 3621b6356bc447f39690023bd5a61878
+msgid "if images in current dir ectory to png."
+msgstr ""
+
+#: ../../moreadv.rst:407
+# b6ac6a5f993d4812897791cf3213b4e8
+msgid "# Options: # ======= # -t    Print comman"
+msgstr ""
+
+#: ../../moreadv.rst:411
+# de24d6bfc19342c090fbec00c641ec92
+msgid "# -n1   At most 1 ar"
+msgstr ""
+
+#: ../../moreadv.rst:413
+# 52e8db31a7094776847cc4e96f0438af
+msgid "# -P2   Run up to 2"
+msgstr ""
+
+#: ../../moreadv.rst:414
+# 2b9bb8ae9f9c4060a9bf9d732438e5a0
+msgid "processes simultaneously ."
+msgstr ""
+
+#: ../../moreadv.rst:417
+# 4130fa301b764c0cb0ef78b7e4531169
+msgid "# Thank you, Roberto"
+msgstr ""
+
+#: ../../moreadv.rst:418
+# 912e80150f5f479a9e30c49a7d8e05f3
+msgid "Polli, for the inspirat"
+msgstr ""
+
+#: ../../moreadv.rst:419
+# e35ed51dd01045d08e5ad80f33a2a67b
+msgid "ion."
+msgstr ""
+
+#: ../../moreadv.rst:459
+# 967ff5348a69424190b40eff1784cd12
+msgid "Exemple 5. Logfile: Using *xargs* to monitor system log"
+msgstr ""
+
+#: ../../moreadv.rst:504
+# 4b03b2393048475f8ae3e13f4e42b89f
+msgid "`As in **find** <moreadv.html#CURLYBRACKETSREF>`__ , a curly bracket pair serves as a placeholder for replacement text."
+msgstr ""
+
+#: ../../moreadv.rst:509
+# 9b6901eb44074d6284d1dffca85907dc
+msgid "Exemple 6. Copying files in current directory to another"
+msgstr ""
+
+#: ../../moreadv.rst:550
+# c6013cf9ddf64b65b34054cecfc49c35
+msgid "Exemple 7. Killing processes by name"
+msgstr ""
+
+#: ../../moreadv.rst:601
+# 8ce41d835b9d4600aa23efeee07b8cfe
+msgid "Exemple 8. Word frequency analysis using *xargs*"
+msgstr ""
+
+#: ../../moreadv.rst:656
+# d1ff7abdebbd46bc96602e72515bc241
+msgid "All-purpose expression evaluator: Concatenates and evaluates the arguments according to the operation given (arguments must be separated by spaces). Operations may be arithmetic, comparison, string, or logical."
+msgstr ""
+
+#: ../../moreadv.rst:663
+# a9596b4a8ca74760ae791024a76f4f9d
+msgid "returns ``            8           ``"
+msgstr ""
+
+#: ../../moreadv.rst:666
+# 239c3613c82342d39f6b3c58b0980089
+msgid "returns 2"
+msgstr ""
+
+#: ../../moreadv.rst:669
+# 629ef4f20a10497191d02a4a18fed621
+msgid "returns the error message, expr: division by zero"
+msgstr ""
+
+#: ../../moreadv.rst:671
+# 02df336f60624eae9caa770580a7bea7
+msgid "Illegal arithmetic operations not allowed."
+msgstr ""
+
+#: ../../moreadv.rst:674
+# f1ce9e355c4f4a1c9ce8f9aa1162497f
+msgid "returns 15"
+msgstr ""
+
+#: ../../moreadv.rst:676
+# 28b1f230a62e4f36b2669b975e48641c
+msgid "The multiplication operator must be escaped when used in an arithmetic expression with **expr** ."
+msgstr ""
+
+#: ../../moreadv.rst:680
+# 5b5934a21d284bfabecb191c4ce56ad1
+msgid "Increment a variable, with the same effect as ``                         let y=y+1                       `` and ``                         y=$(($y+1))                       `` . This is an example of `arithmetic expansion <arithexp.html#ARITHEXPREF>`__ ."
+msgstr ""
+
+#: ../../moreadv.rst:689
+# f561b4d506fc467eb8dee7f9ef4e6785
+msgid "Extract substring of $length characters, starting at $position."
+msgstr ""
+
+#: ../../moreadv.rst:694
+# 9e11ea3cef50468e9155ecf4280ff860
+msgid "Exemple 9. Using *expr*"
+msgstr ""
+
+#: ../../moreadv.rst:809
+# 4afd901b009a4a2fb712436fe7e2a7df
+msgid "|Important"
+msgstr ""
+
+#: ../../moreadv.rst:811
+# 7892b9a6be174ef899bcab5c04a0be17
+msgid "The `: ( *null* ) <special-chars.html#NULLREF>`__ operator can substitute for **match** . For example, ``                         b=`expr $a : [0-9]*`                       `` is the exact equivalent of ``                         b=`expr match $a           [0-9]*`                       `` in the above listing."
+msgstr ""
+
+#: ../../moreadv.rst:824
+# 76b4e594e2c3490db2255d4d8cde8740
+msgid "ons using \\\"expr \\$strin g : \\\" construct\""
+msgstr ""
+
+#: ../../moreadv.rst:826
+# 46a3f2c7987d4a82a1c23f43698bdc26
+msgid "echo \"=============="
+msgstr ""
+
+#: ../../moreadv.rst:831
+# 3f121607201a40229edd9234671aaf6d
+msgid "a=1234zipper5FLIPPER"
+msgstr ""
+
+#: ../../moreadv.rst:832
+# 1f1f4bbb0bc84cc49f0e1c6b450cf765
+msgid "43231"
+msgstr ""
+
+#: ../../moreadv.rst:834
+# 088e748330c54cffa96278f4dc6a1577
+msgid "echo \"The string bei"
+msgstr ""
+
+#: ../../moreadv.rst:835
+# 360a5b468edd4652b128cb2a8487d7c4
+msgid "ng operated upon is \\\"`e xpr \"$a\" : '\\(.*\\)'`\\\".\""
+msgstr ""
+
+#: ../../moreadv.rst:837
+# 133a82a015ef4a1d856670ae81736e91
+msgid "#     Escaped parent"
+msgstr ""
+
+#: ../../moreadv.rst:841
+#: ../../moreadv.rst:847
+# a4abbee76541402c8030e08eb1419bcd
+# 67a66e12421d4b28947b400e6d466de0
+msgid "#       ************"
+msgstr ""
+
+#: ../../moreadv.rst:845
+# 72615f90ed71451e8a994516813d9080
+msgid "#+           match a"
+msgstr ""
+
+#: ../../moreadv.rst:851
+# 173da2eb4129465fb515079d87cbb415
+msgid "#  If no escaped par"
+msgstr ""
+
+#: ../../moreadv.rst:853
+# b039bcb48ecf42a499029f91c3e0c214
+msgid "#+ then 'expr' conve"
+msgstr ""
+
+#: ../../moreadv.rst:854
+# 30bd95b3175646c3baedb1975879bd85
+msgid "rts the string operand t o an integer."
+msgstr ""
+
+#: ../../moreadv.rst:857
+# 8c199e9536834666839b93c07b095f97
+msgid "echo \"Length of \\\"$a"
+msgstr ""
+
+#: ../../moreadv.rst:858
+# 7997db16503440668f9193a4b363328a
+msgid "\\\" is `expr \"$a\" : '.*'` .\"   # Length of string"
+msgstr ""
+
+#: ../../moreadv.rst:861
+# 7742666552ac4077bd3b693857312068
+msgid "echo \"Number of digi"
+msgstr ""
+
+#: ../../moreadv.rst:862
+# 38d1538696954a34bc00ab088196c012
+msgid "ts at the beginning of \\ \"$a\\\" is `expr \"$a\" : '[ 0-9]*'`.\""
+msgstr ""
+
+#: ../../moreadv.rst:866
+# e0b3c7fced754693abcaa29008f0e484
+msgid "# ------------------"
+msgstr ""
+
+#: ../../moreadv.rst:869
+# 8c1eca198eda40628beb24c436a34830
+msgid "------- #"
+msgstr ""
+
+#: ../../moreadv.rst:871
+#: ../../moreadv.rst:906
+# 90298e38620a46cdb13c613da91c1504
+# 5426450a5a874edd8ca96127522c1e22
+msgid "echo"
+msgstr ""
+
+#: ../../moreadv.rst:873
+# 7949ea4f25d54bd7b10d89992aa173f8
+msgid "echo \"The digits at"
+msgstr ""
+
+#: ../../moreadv.rst:874
+# 14237a6cab8d44aebfecdbe089e3617c
+msgid "the beginning of \\\"$a\\\" are `expr \"$a\" : '\\([0-9 ]*\\)'`.\""
+msgstr ""
+
+#: ../../moreadv.rst:877
+# 1edd85d997274d6584676b9e405e1f5d
+msgid "#"
+msgstr ""
+
+#: ../../moreadv.rst:879
+# ba08e2fd88f24213934c659cde25d720
+msgid "=="
+msgstr ""
+
+#: ../../moreadv.rst:881
+# 8051d56652d14a62af4698821912ba11
+msgid "echo \"The first 7 ch"
+msgstr ""
+
+#: ../../moreadv.rst:882
+# 5eca87d6e99d43acab2239cc34f91662
+msgid "aracters of \\\"$a\\\" are ` expr \"$a\" : '\\(.......\\) '`.\""
+msgstr ""
+
+#: ../../moreadv.rst:885
+# e89dd84250d84190a6cbadeb40a74a01
+msgid "#         ====="
+msgstr ""
+
+#: ../../moreadv.rst:888
+# 5b26520031234c5bb9488d629d1c339a
+msgid "# Again, escaped par"
+msgstr ""
+
+#: ../../moreadv.rst:889
+# eaa9dc8106014ed2af8ecdf6a7cf9173
+msgid "entheses force a substri ng match."
+msgstr ""
+
+#: ../../moreadv.rst:891
+# 1c3d194e98ac44879de0e7e69162defe
+msgid "# echo \"The last 7 cha"
+msgstr ""
+
+#: ../../moreadv.rst:893
+# d8a760882fa847e68e68e565407b193b
+msgid "racters of \\\"$a\\\" are `e xpr \"$a\" : '.*\\(.......\\ )'`.\""
+msgstr ""
+
+#: ../../moreadv.rst:897
+# 3b4e818cacc745a3874fb68994171cc3
+msgid "end of strin"
+msgstr ""
+
+#: ../../moreadv.rst:899
+# 82573a622b3940e4b988d6305358374a
+msgid "#  (In fact, means s"
+msgstr ""
+
+#: ../../moreadv.rst:900
+# b94589dd87c94e83bccf4abd31dc6b89
+msgid "kip over one or more of any characters until spe cified"
+msgstr ""
+
+#: ../../moreadv.rst:903
+# 869a33d6307d46a4a9b2808b029d2506
+msgid "#+  substring found."
+msgstr ""
+
+#: ../../moreadv.rst:904
+# 9628e63bf6ae4d9d98379166e0ea824c
+msgid ")"
+msgstr ""
+
+#: ../../moreadv.rst:908
+# de5f46492f344886a69ce091ebd1db32
+msgid "exit 0"
+msgstr ""
+
+#: ../../moreadv.rst:1009
+# e8ea967df09d472ab194665bd33804c6
+msgid "The above script illustrates how **expr** uses the *escaped parentheses -- \\\\( ... \\\\) --* grouping operator in tandem with `regular expression <regexp.html#REGEXREF>`__ parsing to match a substring. Here is a another example, this time from \"real life.\""
+msgstr ""
+
+#: ../../moreadv.rst:1026
+# 1fd9cfd0ff3440e292cf450d94937285
+msgid "`Perl <wrapper.html#PERLREF>`__ , `sed <sedawk.html#SEDREF>`__ , and `awk <awk.html#AWKREF>`__ have far superior string parsing facilities. A short **sed** or **awk** \"subroutine\" within a script (see `Section 36.2 <wrapper.html>`__ ) is an attractive alternative to **expr** ."
+msgstr ""
+
+#: ../../moreadv.rst:1031
+# cfb855637e8e4863b7a90082ce222802
+msgid "See `Section 10.1 <string-manipulation.html>`__ for more on using **expr** in string operations."
+msgstr ""
+
+#: ../../moreadv.rst:1036
+# a910dcebe56e441a8b36e2143d351a47
+msgid "Notes"
+msgstr ""
+
+#: ../../moreadv.rst:1039
+# 6aaaded299c14eaab0ac4839a69f40e5
+msgid "` [1]  <moreadv.html#AEN10465>`__"
+msgstr ""
+
+#: ../../moreadv.rst:1041
+# 475bd77ca0214a8c9eafa5103fc47ba1
+msgid "And even when *xargs* is not strictly necessary, it can speed up execution of a command involving `batch-processing <timedate.html#BATCHPROCREF>`__ of multiple files."
+msgstr ""
+

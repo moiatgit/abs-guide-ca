@@ -1,0 +1,101 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../miscellany.rst:4
+msgid "XXX  Chapter 36. Miscellany"
+msgstr ""
+
+#: ../../miscellany.rst:7
+msgid "**"
+msgstr ""
+
+#: ../../miscellany.rst:9
+msgid ""
+"*Nobody really knows what the Bourne shell's grammar is. Even examination of"
+" the source code is little help.*"
+msgstr ""
+
+#: ../../miscellany.rst:12
+msgid "*--Tom Duff*"
+msgstr ""
+
+#: ../../miscellany.rst:19
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../miscellany.rst:23
+msgid ""
+"36.1. `Interactive and non-interactive shells and scripts "
+"<intandnonint.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:28
+msgid "36.2. `Shell Wrappers <wrapper.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:32
+msgid ""
+"36.3. `Tests and Comparisons: Alternatives <testsandcomparisons.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:36
+msgid "36.4. `Recursion: a script calling itself <recursionsct.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:40
+msgid "36.5. ` \"Colorizing\" Scripts <colorizing.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:44
+msgid "36.6. `Optimizations <optimizations.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:48
+msgid "36.7. `Assorted Tips <assortedtips.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:54
+msgid ""
+"36.7.1. `Ideas for more powerful scripts <assortedtips.html#AEN20460>`__"
+msgstr ""
+
+#: ../../miscellany.rst:58
+msgid "36.7.2. `Widgets <assortedtips.html#AEN20679>`__"
+msgstr ""
+
+#: ../../miscellany.rst:64
+msgid "36.8. `Security Issues <securityissues.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:70
+msgid ""
+"36.8.1. `Infected Shell Scripts <securityissues.html#INFECTEDSCRIPTS>`__"
+msgstr ""
+
+#: ../../miscellany.rst:74
+msgid ""
+"36.8.2. `Hiding Shell Script Source <securityissues.html#HIDINGSOURCE>`__"
+msgstr ""
+
+#: ../../miscellany.rst:79
+msgid ""
+"36.8.3. `Writing Secure Shell Scripts <securityissues.html#SECURITYTIPS>`__"
+msgstr ""
+
+#: ../../miscellany.rst:86
+msgid "36.9. `Portability Issues <portabilityissues.html>`__"
+msgstr ""
+
+#: ../../miscellany.rst:90
+msgid "36.10. `Shell Scripting Under Windows <winscript.html>`__"
+msgstr ""

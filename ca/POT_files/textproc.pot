@@ -1,0 +1,794 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../textproc.rst:3
+# 31931124235e4f428e7f11edc1ea8e81
+msgid "XXX  16.4. Text Processing Commands"
+msgstr ""
+
+#: ../../textproc.rst:6
+# 78a95ef3749a44698a2340fb306645a1
+msgid "** Commands affecting text and text files**"
+msgstr ""
+
+#: ../../textproc.rst:9
+# 6911a2c8c1b24e548aaff36b3bcc43c5
+msgid "File sort utility, often used as a filter in a pipe. This command sorts a *text stream* or file forwards or backwards, or according to various keys or character positions. Using the ``         -m        `` option, it merges presorted input files. The *info page* lists its many capabilities and options. See `Example 11-10 <loops1.html#FINDSTRING>`__ , `Example 11-11 <loops1.html#SYMLINKS>`__ , and `Example A-8 <contributed-scripts.html#MAKEDICT>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:19
+# 8ed6bc61029f4934b18a7ad1ec77e5c2
+msgid "*Topological sort* , reading in pairs of whitespace-separated strings and sorting according to input patterns. The original purpose of **tsort** was to sort a list of dependencies for an obsolete version of the *ld* linker in an \"ancient\" version of UNIX."
+msgstr ""
+
+#: ../../textproc.rst:24
+# c995e992ab69427eab5a34133cfe89e9
+msgid "The results of a *tsort* will usually differ markedly from those of the standard **sort** command, above."
+msgstr ""
+
+#: ../../textproc.rst:28
+# da60fda999e040338fcebe4c094b1476
+msgid "This filter removes duplicate lines from a sorted file. It is often seen in a pipe coupled with `sort <textproc.html#SORTREF>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:42
+# da07189a2d0c4608a920ff225f82260d
+msgid "The useful ``         -c        `` option prefixes each line of the input file with its number of occurrences."
+msgstr ""
+
+#: ../../textproc.rst:71
+# eb93e9c553a44c0bae8f0af279a5fadc
+msgid "The ``                   sort INPUTFILEuniq -c | sort -nr                 `` command string produces a *frequency of occurrence* listing on the ``         INPUTFILE        `` file (the ``         -nr        `` options to **sort** cause a reverse numerical sort). This template finds use in analysis of log files and dictionary lists, and wherever the lexical structure of a document needs to be examined."
+msgstr ""
+
+#: ../../textproc.rst:81
+# f8d8203a3ed54b5ebb853c3bfe07eee8
+msgid "Exemple 12. Word Frequency Analysis"
+msgstr ""
+
+#: ../../textproc.rst:176
+# 1d214c031e644a0e84b4a270a50347d8
+msgid "The **expand** filter converts tabs to spaces. It is often used in a `pipe <special-chars.html#PIPEREF>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:179
+# 5e2a61b5c2664bf091197055613b2421
+msgid "The **unexpand** filter converts spaces to tabs. This reverses the effect of **expand** ."
+msgstr ""
+
+#: ../../textproc.rst:183
+# 923cafcfd72942b68d5e6577ded76fb7
+msgid "A tool for extracting `fields <special-chars.html#FIELDREF>`__ from files. It is similar to the ``                   print $N                 `` command set in `awk <awk.html#AWKREF>`__ , but more limited. It may be simpler to use *cut* in a script than *awk* . Particularly important are the ``         -d        `` (delimiter) and ``         -f        `` (field specifier) options."
+msgstr ""
+
+#: ../../textproc.rst:191
+# 1582c0dcff114e39ae4d70a266e4cc5a
+msgid "Using **cut** to obtain a listing of the mounted filesystems:"
+msgstr ""
+
+#: ../../textproc.rst:200
+# 0a5767814be74653bfcc299533d53eed
+msgid "Using **cut** to list the OS and kernel version:"
+msgstr ""
+
+#: ../../textproc.rst:209
+# 976ffab6b91e496ba6f1efd4d01763cd
+msgid "Using **cut** to extract message headers from an e-mail folder:"
+msgstr ""
+
+#: ../../textproc.rst:222
+# ed58c8874200498cab25b44be7ffad1b
+msgid "Using **cut** to parse a file:"
+msgstr ""
+
+#: ../../textproc.rst:240
+# f301c144206545ea84913081ad48b1c4
+msgid "``                   cut -d ' ' -f2,3 filename                 `` is equivalent to ``                   awk -F'[ ]' '{ print $2, $3 }' filename                 ``"
+msgstr ""
+
+#: ../../textproc.rst:246
+#: ../../textproc.rst:367
+#: ../../textproc.rst:601
+#: ../../textproc.rst:1030
+#: ../../textproc.rst:1138
+# 35b799411ded458394d3ac1b7ba40040
+# d73f5ca3c2f649c9b329cb2b56d39dae
+# 3f16bec887cf432d8b4bdde7ecc85ec0
+# 5df3ac9d3fa34ae78708b03fa46c7815
+# e5453d98beae4141850a77bbf0386365
+msgid "|Note"
+msgstr ""
+
+#: ../../textproc.rst:248
+# 2c0fe6622f354de9928c3aa4121a7566
+msgid "It is even possible to specify a linefeed as a delimiter. The trick is to actually embed a linefeed ( **RETURN** ) in the command sequence."
+msgstr ""
+
+#: ../../textproc.rst:258
+# 476928046bd842a496a95bf4b9d37fd1
+msgid "This is line 7 of t"
+msgstr ""
+
+#: ../../textproc.rst:260
+# fd47cb78f23b4fccba7e854cd13233c8
+msgid "This is line 19 of"
+msgstr ""
+
+#: ../../textproc.rst:261
+# 11beb669bb1f417cb8c423767fa707d2
+msgid "testfile."
+msgstr ""
+
+#: ../../textproc.rst:265
+# 202e14fc7c044185b34164263b5b472f
+msgid "Thank you, Jaka Kranjc, for pointing this out."
+msgstr ""
+
+#: ../../textproc.rst:290
+# 44ba4bcf80914f488edf353c05e72c99
+msgid "See also `Example 16-48 <mathc.html#BASE>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:293
+# 98bc93fbb7dd4a3d979a9378e6381f4c
+msgid "Tool for merging together different files into a single, multi-column file. In combination with `cut <textproc.html#CUTREF>`__ , useful for creating system log files."
+msgstr ""
+
+#: ../../textproc.rst:319
+# ca1369bb8bd94902968b586f3f5b2124
+msgid "Consider this a special-purpose cousin of **paste** . This powerful utility allows merging two files in a meaningful fashion, which essentially creates a simple version of a relational database."
+msgstr ""
+
+#: ../../textproc.rst:323
+# 68d444132114472d94dd1deca1f522ed
+msgid "The **join** command operates on exactly two files, but pastes together only those lines with a common tagged `field <special-chars.html#FIELDREF>`__ (usually a numerical label), and writes the result to ``         stdout        `` . The files to be joined should be sorted according to the tagged field for the matchups to work properly."
+msgstr ""
+
+#: ../../textproc.rst:369
+# 57f9bace13704802ae3e57b7f0b1a41f
+msgid "The tagged field appears only once in the output."
+msgstr ""
+
+#: ../../textproc.rst:375
+# 6e576b3f4e8f4f9faa587a56751d940c
+msgid "lists the beginning of a file to ``         stdout        `` . The default is ``         10        `` lines, but a different number can be specified. The command has a number of interesting options."
+msgstr ""
+
+#: ../../textproc.rst:381
+# 2a76578c18a64f409a41e59abd893fde
+msgid "Exemple 13. Which files are scripts?"
+msgstr ""
+
+#: ../../textproc.rst:422
+# e434f53ae488402c9643205be6b8e524
+msgid "Exemple 14. Generating 10-digit random numbers"
+msgstr ""
+
+#: ../../textproc.rst:513
+# 4e7a070dd1ba41dbab66ecf0dc2cb966
+msgid "See also `Example 16-39 <filearchiv.html#EX52>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:516
+# 563f817dcef24fd19d046bd726f158ae
+msgid "lists the (tail) end of a file to ``         stdout        `` . The default is ``         10        `` lines, but this can be changed with the ``         -n        `` option. Commonly used to keep track of changes to a system logfile, using the ``         -f        `` option, which outputs lines appended to the file."
+msgstr ""
+
+#: ../../textproc.rst:526
+# eab132c2eecf42b08400714f9a12b65e
+msgid "Exemple 15. Using *tail* to monitor the system log"
+msgstr ""
+
+#: ../../textproc.rst:552
+#: ../../textproc.rst:776
+#: ../../textproc.rst:1153
+#: ../../textproc.rst:1684
+# 7e0178cdffce44548edeb5b46014f473
+# 67063ebc81524339832b77d995ea3527
+# 6b78cfff7ac0443fb7e5c5adb71c5beb
+# f3f74fc7e3ba47b78c78dddf594a202b
+msgid "|Tip"
+msgstr ""
+
+#: ../../textproc.rst:554
+# 27a13c2152be49da9f5162767a83ef2f
+msgid "To list a specific line of a text file, `pipe <special-chars.html#PIPEREF>`__ the output of **head** to **tail -n 1** . For example ``                         head -n 8 database.txttail         -n 1                       `` lists the 8th line of the file ``            database.txt           `` ."
+msgstr ""
+
+#: ../../textproc.rst:561
+# 0e65a14868b84857aaf5bf23b099568f
+msgid "To set a variable to a given block of a text file:"
+msgstr ""
+
+#: ../../textproc.rst:566
+# b3a7758d2bf74c2a999668496e5e59d2
+msgid "lename | tail -n $n)"
+msgstr ""
+
+#: ../../textproc.rst:568
+# 91fd571dacff497d91d63dfb1881402c
+msgid "# filename = name of"
+msgstr ""
+
+#: ../../textproc.rst:570
+# f8797495524b4c89a200897f9b2f05fc
+msgid "# m = from beginning"
+msgstr ""
+
+#: ../../textproc.rst:571
+# 5bd6726eb5724cd38973c46c85844be0
+msgid "of file, number of line"
+msgstr ""
+
+#: ../../textproc.rst:573
+# cc807373b1a44ecbb374a1b85c4041c7
+msgid "# n = number of line"
+msgstr ""
+
+#: ../../textproc.rst:574
+# 1fee50e36867466890048189acf777ff
+msgid "s to set variable to (tr im from end of block)"
+msgstr ""
+
+#: ../../textproc.rst:603
+# fbd47731ae2c49a2b6162fc5057a03fa
+msgid "Newer implementations of **tail** deprecate the older **tail -$LINES filename** usage. The standard **tail -n $LINES filename** is correct."
+msgstr ""
+
+#: ../../textproc.rst:610
+# d80e414aae37432280c628e35ec51282
+msgid "See also `Example 16-5 <moreadv.html#EX41>`__ , `Example 16-39 <filearchiv.html#EX52>`__ and `Example 32-6 <debugging.html#ONLINE>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:615
+# 66a1d313f9854786820e954dbeaaf3be
+msgid "A multi-purpose file search tool that uses `Regular Expressions <regexp.html#REGEXREF>`__ . It was originally a command/filter in the venerable **ed** line editor: ``                   g/re/p                 `` -- *global - regular expression - print* ."
+msgstr ""
+
+#: ../../textproc.rst:621
+# 03d24c9e7b9f47679ad0a35d9a95dfc1
+msgid "**grep** ``                   pattern                 `` [ ``                   file                 `` ...]"
+msgstr ""
+
+#: ../../textproc.rst:624
+# 0ad12da4657441b3abbf56de3169d91d
+msgid "Search the target file(s) for occurrences of ``                 pattern               `` , where ``                 pattern               `` may be literal text or a Regular Expression."
+msgstr ""
+
+#: ../../textproc.rst:638
+# 929dcaae5efc43efab9fce7e1920c894
+msgid "If no target file(s) specified, **grep** works as a filter on ``         stdout        `` , as in a `pipe <special-chars.html#PIPEREF>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:652
+# d7eef5764fde40ee95066a0a4328b3b4
+msgid "The ``         -i        `` option causes a case-insensitive search."
+msgstr ""
+
+#: ../../textproc.rst:654
+# 1b3f1ee3cff342b5bbd91463b2701b0b
+msgid "The ``         -w        `` option matches only whole words."
+msgstr ""
+
+#: ../../textproc.rst:656
+# aa0df12bfac347a0b0645aa15e599b5c
+msgid "The ``         -l        `` option lists only the files in which matches were found, but not the matching lines."
+msgstr ""
+
+#: ../../textproc.rst:659
+# e6b6b868569e470b9b7ff72dfae6a095
+msgid "The ``         -r        `` (recursive) option searches files in the current working directory and all subdirectories below it."
+msgstr ""
+
+#: ../../textproc.rst:662
+# a5a71d2913954798a55e91349d478ebb
+msgid "The ``         -n        `` option lists the matching lines, together with line numbers."
+msgstr ""
+
+#: ../../textproc.rst:675
+# 55f253fca3ec436aae0d274458554f3d
+msgid "The ``         -v        `` (or ``         --invert-match        `` ) option *filters out* matches."
+msgstr ""
+
+#: ../../textproc.rst:688
+# 33383c8bbc2144a5afd8e8d5e9eca21d
+msgid "The ``         -c        `` ( ``         --count        `` ) option gives a numerical count of matches, rather than actually listing the matches."
+msgstr ""
+
+#: ../../textproc.rst:717
+# 483382bd71df4aeca3ab0f0908cc84d7
+msgid "The ``         --color        `` (or ``         --colour        `` ) option marks the matching string in color (on the console or in an *xterm* window). Since *grep* prints out each entire line containing the matching pattern, this lets you see exactly *what* is being matched. See also the ``         -o        `` option, which shows only the matching portion of the line(s)."
+msgstr ""
+
+#: ../../textproc.rst:726
+# 2aede31f8760412ebbadde6013d47165
+msgid "Exemple 16. Printing out the *From* lines in stored e-mail messages"
+msgstr ""
+
+#: ../../textproc.rst:760
+# 91bd24ae279b4b5181ffb5b7df652d36
+msgid "When invoked with more than one target file given, **grep** specifies which file contains matches."
+msgstr ""
+
+#: ../../textproc.rst:778
+# 26ab4100e9484441addcfced5c9d576d
+msgid "To force **grep** to show the filename when searching only one target file, simply give ``            /dev/null           `` as the second file."
+msgstr ""
+
+#: ../../textproc.rst:786
+# b69ea0ccb4df4fb09a84d1f2a446e0de
+msgid "osinfo.txt:This is a"
+msgstr ""
+
+#: ../../textproc.rst:787
+# 6965f3ebc35c437fb33b92bd12cdba7b
+msgid "file containing informa"
+msgstr ""
+
+#: ../../textproc.rst:789
+# a80f4ffdaba740a59be907666701c810
+msgid "osinfo.txt:The GPL"
+msgstr ""
+
+#: ../../textproc.rst:791
+# db3d0aa53a69449e9206330438dca8ab
+msgid "of the Linux operating"
+msgstr ""
+
+#: ../../textproc.rst:792
+# 87b9bbc4c5334bcdb6377964bc0113cf
+msgid "system."
+msgstr ""
+
+#: ../../textproc.rst:815
+# 57e57fea216a4d50adfd3b355bec72fe
+msgid "If there is a successful match, **grep** returns an `exit status <exit-status.html#EXITSTATUSREF>`__ of 0, which makes it useful in a condition test in a script, especially in combination with the ``         -q        `` option to suppress output."
+msgstr ""
+
+#: ../../textproc.rst:839
+# 93bc4404ac3a440eb99542bfc2c5a60d
+msgid "`Example 32-6 <debugging.html#ONLINE>`__ demonstrates how to use **grep** to search for a word pattern in a system logfile."
+msgstr ""
+
+#: ../../textproc.rst:844
+# d526dbe099974c4ba078d173a29fcbce
+msgid "Exemple 16. Emulating *grep* in a script"
+msgstr ""
+
+#: ../../textproc.rst:887
+# 6a8394da4e134def94425cc06ec45ba8
+msgid "How can **grep** search for two (or more) separate patterns? What if you want **grep** to display all lines in a file or files that contain both \"pattern1\" *and* \"pattern2\" ?"
+msgstr ""
+
+#: ../../textproc.rst:891
+# ae23bd9d1e0d49f1b28696c32d1675a7
+msgid "One method is to `pipe <special-chars.html#PIPEREF>`__ the result of **grep pattern1** to **grep pattern2** ."
+msgstr ""
+
+#: ../../textproc.rst:894
+# df500fd4d94848b8a6a09ca3adb37c88
+msgid "For example, given the following file:"
+msgstr ""
+
+#: ../../textproc.rst:909
+# cb973c72e6e1438aa47d16fe7bb79693
+msgid "Now, let's search this file for lines containing *both* \"file\" and \"text\" . . ."
+msgstr ""
+
+#: ../../textproc.rst:928
+# f23266eb8c5140b9a6775f73aeda138c
+msgid "Now, for an interesting recreational use of *grep* . . ."
+msgstr ""
+
+#: ../../textproc.rst:932
+# 9085028eaa0543b9914463a8227a0ceb
+msgid "Exemple 17. Crossword puzzle solver"
+msgstr ""
+
+#: ../../textproc.rst:1008
+# 5edc62be19d9443891b50c39ba7c3c12
+msgid "uses a somewhat different, extended set of `Regular Expressions <regexp.html#REGEXREF>`__ , which can make the search a bit more flexible. It also allows the boolean \\( *or* ) operator."
+msgstr ""
+
+#: ../../textproc.rst:1024
+# 1ba6e597887b4e4a8ca02b7323a4c78f
+msgid "literal string search (no `Regular Expressions <regexp.html#REGEXREF>`__ ), which generally speeds things up a bit."
+msgstr ""
+
+#: ../../textproc.rst:1032
+# c3d5246fe5634d5c8c0e988f61f938cb
+msgid "On some Linux distros, **egrep** and **fgrep** are symbolic links to, or aliases for **grep** , but invoked with the ``            -E           `` and ``            -F           `` options, respectively."
+msgstr ""
+
+#: ../../textproc.rst:1042
+# 016f5849adca4f98bcd68345e08d005d
+msgid "Exemple 19. Looking up definitions in *Webster's 1913 Dictionary*"
+msgstr ""
+
+#: ../../textproc.rst:1140
+# dfb7daccd2e84cef9d997c8d29b3cf8b
+msgid "See also `Example A-41 <contributed-scripts.html#QKY>`__ for an example of speedy *fgrep* lookup on a large text file."
+msgstr ""
+
+#: ../../textproc.rst:1146
+# 37df2d12a9114b0186f7afa9df0f863e
+msgid "**agrep** ( *approximate grep* ) extends the capabilities of **grep** to approximate matching. The search string may differ by a specified number of characters from the resulting matches. This utility is not part of the core Linux distribution."
+msgstr ""
+
+#: ../../textproc.rst:1155
+# 855441c6a34e4b2c94e3ab7e41708d10
+msgid "To search compressed files, use **zgrep** , **zegrep** , or **zfgrep** . These also work on non-compressed files, though slower than plain **grep** , **egrep** , **fgrep** . They are handy for searching through a mixed set of files, some compressed, some not."
+msgstr ""
+
+#: ../../textproc.rst:1160
+# 6286bd6f89cc4ac8b129da27ec53c23e
+msgid "To search `bzipped <filearchiv.html#BZIPREF>`__ files, use **bzgrep** ."
+msgstr ""
+
+#: ../../textproc.rst:1167
+# fcd044b0173f4f63a1f9f7d4e2a857a7
+msgid "The command **look** works like **grep** , but does a lookup on a \"dictionary,\" a sorted word list. By default, **look** searches for a match in ``         /usr/dict/words        `` , but a different dictionary file may be specified."
+msgstr ""
+
+#: ../../textproc.rst:1174
+# 5f8c08c2934c492fa791905314c99236
+msgid "Exemple 18. Checking words in a list for validity"
+msgstr ""
+
+#: ../../textproc.rst:1228
+# b288afafd5c74957babe2a6d8b284739
+msgid "Scripting languages especially suited for parsing text files and command output. May be embedded singly or in combination in pipes and shell scripts."
+msgstr ""
+
+#: ../../textproc.rst:1233
+# 419c1fce8a8644239192e2c5d2745e9e
+msgid "Non-interactive \"stream editor\" , permits using many **ex** commands in `batch <timedate.html#BATCHPROCREF>`__ mode. It finds many uses in shell scripts."
+msgstr ""
+
+#: ../../textproc.rst:1238
+# c93105b7b7e346ab93387d61dad2ca1a
+msgid "Programmable file extractor and formatter, good for manipulating and/or extracting `fields <special-chars.html#FIELDREF>`__ (columns) in structured text files. Its syntax is similar to C."
+msgstr ""
+
+#: ../../textproc.rst:1243
+# 07ff0ab148ed4dfd9dd14dc17b508ede
+msgid "*wc* gives a \"word count\" on a file or I/O stream:"
+msgstr ""
+
+#: ../../textproc.rst:1254
+# a1e3f8b4c2174b76b5b5c6cc61f33b14
+msgid "``                   wc -w                 `` gives only the word count."
+msgstr ""
+
+#: ../../textproc.rst:1257
+# 90e633a1ac9c4307bfe0ea9e9406a8df
+msgid "``                   wc -l                 `` gives only the line count."
+msgstr ""
+
+#: ../../textproc.rst:1260
+# d1487c56a7624acfb3d7765a82a1271d
+msgid "``                   wc -c                 `` gives only the byte count."
+msgstr ""
+
+#: ../../textproc.rst:1263
+# bbeeeac8e0b04b50876d4a7633cb419f
+msgid "``                   wc -m                 `` gives only the character count."
+msgstr ""
+
+#: ../../textproc.rst:1266
+# 1a7e00da7fec4a1090e3c64892c78971
+msgid "``                   wc -L                 `` gives only the length of the longest line."
+msgstr ""
+
+#: ../../textproc.rst:1269
+# 6f535d619bf64dd98ad02d3a45002915
+msgid "Using **wc** to count how many ``         .txt        `` files are in current working directory:"
+msgstr ""
+
+#: ../../textproc.rst:1287
+# bc2304950b2c4969a1dd650f0dc7881a
+msgid "Using **wc** to total up the size of all the files whose names begin with letters in the range d - h"
+msgstr ""
+
+#: ../../textproc.rst:1299
+# 728f48bd8fbc46b8a6da11e561e31240
+msgid "Using **wc** to count the instances of the word \"Linux\" in the main source file for this book."
+msgstr ""
+
+#: ../../textproc.rst:1311
+# 00d45327e31f4e199c63f39ed675781c
+msgid "See also `Example 16-39 <filearchiv.html#EX52>`__ and `Example 20-8 <redircb.html#REDIR4>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:1314
+# 1f8ce2bb29e74039bb48eca635d632cb
+msgid "Certain commands include some of the functionality of **wc** as options."
+msgstr ""
+
+#: ../../textproc.rst:1331
+# 93c6ad3d48c246d7a1c8fc6ca5e335cf
+msgid "character translation filter."
+msgstr ""
+
+#: ../../textproc.rst:1335
+#: ../../textproc.rst:1739
+# 3425bdb1fead40a09c8015904e8e4ccc
+# d1ea8bbeacf5471da28eb0f76e70f080
+msgid "|Caution"
+msgstr ""
+
+#: ../../textproc.rst:1337
+# 0aae0e5c71514551a9e2fbb93127eb10
+msgid "`Must use quoting and/or brackets <special-chars.html#UCREF>`__ , as appropriate. Quotes prevent the shell from reinterpreting the special characters in **tr** command sequences. Brackets should be quoted to prevent expansion by the shell."
+msgstr ""
+
+#: ../../textproc.rst:1345
+# caf0352a012945f9b88ecdb2dd41d62c
+msgid "Either ``                   tr \"A-Z\" \"*\" <filename                 `` or ``                   tr A-Z \\* <filename                 `` changes all the uppercase letters in ``         filename        `` to asterisks (writes to ``         stdout        `` ). On some systems this may not work, but ``                   tr A-Z           '[**]'                 `` will."
+msgstr ""
+
+#: ../../textproc.rst:1354
+# d583e18494fe47ceaefa22490fae762f
+msgid "The ``         -d        `` option deletes a range of characters."
+msgstr ""
+
+#: ../../textproc.rst:1368
+# 12d8324582ff4257b8c23713130862da
+msgid "The ``         --squeeze-repeats        `` (or ``         -s        `` ) option deletes all but the first instance of a string of consecutive characters. This option is useful for removing excess `whitespace <special-chars.html#WHITESPACEREF>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:1381
+# b86bf0e3144a45f895fb9c69c787e212
+msgid "The ``         -c        `` \"complement\" option *inverts* the character set to match. With this option, **tr** acts only upon those characters *not* matching the specified set."
+msgstr ""
+
+#: ../../textproc.rst:1393
+# 2f1084b12a8347d19e0d501e68d8f6f5
+msgid "Note that **tr** recognizes `POSIX character classes <x17129.html#POSIXREF>`__ . ` [1]"
+msgstr ""
+
+#: ../../textproc.rst:1395
+# 2c834a6778bc45d9ad78670d66426d4e
+msgid "<textproc.html#FTN.AEN11502>`__"
+msgstr ""
+
+#: ../../textproc.rst:1408
+# 135fd473bc1f4c808c721ef911e5854d
+msgid "Exemple 19. *toupper* : Transforms a file to all uppercase."
+msgstr ""
+
+#: ../../textproc.rst:1446
+# 2f54ad96efe34ba7bed6206373db06ea
+msgid "Exemple 22. *lowercase* : Changes all filenames in working directory to lowercase."
+msgstr ""
+
+#: ../../textproc.rst:1500
+# 94cba2a44acf4c2389277c194a150ab5
+msgid "Exemple 20. *du* : DOS to UNIX text file conversion."
+msgstr ""
+
+#: ../../textproc.rst:1540
+# 7a7aedf4c1ba4c3f9208af22236ae020
+msgid "Exemple 21. *rot13* : ultra-weak encryption."
+msgstr ""
+
+#: ../../textproc.rst:1565
+# a6d58c4bc3284dd5aca8b2a8dcb47256
+msgid "Exemple 22. Generating \"Crypto-Quote\" Puzzles"
+msgstr ""
+
+#: ../../textproc.rst:1634
+# 94b09cda7fd84231bddf77908a55a918
+msgid "***tr* variants**"
+msgstr ""
+
+#: ../../textproc.rst:1636
+# 152f897c627f43dfb528beb56e3725eb
+msgid "The **tr** utility has two historic variants. The BSD version does not use brackets ( ``                         tr a-z A-Z                       `` ), but the SysV one does ( ``                         tr '[a-z]' '[A-Z]'                       `` ). The GNU version of **tr** resembles the BSD one."
+msgstr ""
+
+#: ../../textproc.rst:1647
+# e91768a0a42f49bab1bc541fb2165362
+msgid "A filter that wraps lines of input to a specified width. This is especially useful with the ``         -s        `` option, which breaks lines at word spaces (see `Example 16-26 <textproc.html#EX50>`__ and `Example A-1 <contributed-scripts.html#MAILFORMAT>`__ )."
+msgstr ""
+
+#: ../../textproc.rst:1654
+# c81c66128ba24d19baf6422b1012b3dc
+msgid "Simple-minded file formatter, used as a filter in a pipe to \"wrap\" long lines of text output."
+msgstr ""
+
+#: ../../textproc.rst:1659
+# 0f83969bc9484af8a0cb20f220e4d17d
+msgid "Exemple 23. Formatted file listing."
+msgstr ""
+
+#: ../../textproc.rst:1680
+# 479cb9d505374a1d885ddcf03ac91c24
+msgid "See also `Example 16-5 <moreadv.html#EX41>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:1686
+# a66ad000122e4f8c8aa0e61f54f05a53
+msgid "A powerful alternative to **fmt** is Kamil Toman's **par** utility, available from http://www.cs.berkeley.edu/~amc/Par/ ."
+msgstr ""
+
+#: ../../textproc.rst:1693
+# 0931715487a04ba9ad1220c28c4a7208
+msgid "This deceptively named filter removes reverse line feeds from an input stream. It also attempts to replace whitespace with equivalent tabs. The chief use of **col** is in filtering the output from certain text processing utilities, such as **groff** and **tbl** ."
+msgstr ""
+
+#: ../../textproc.rst:1699
+# 8b8ed828e5b84812b226d233f2ac8f99
+msgid "Column formatter. This filter transforms list-type text output into a \"pretty-printed\" table by inserting tabs at appropriate places."
+msgstr ""
+
+#: ../../textproc.rst:1704
+# 35a3dedbc9b64d29986b5a1df7feb4d0
+msgid "Exemple 24. Using *column* to format a directory listing"
+msgstr ""
+
+#: ../../textproc.rst:1730
+# f03aecbec00244fcae92369899667326
+msgid "Column removal filter. This removes columns (characters) from a file and writes the file, lacking the range of specified columns, back to ``         stdout        `` . ``                   colrm 2 4 <filename                 `` removes the second through fourth characters from each line of the text file ``         filename        `` ."
+msgstr ""
+
+#: ../../textproc.rst:1741
+# e94cc95dcd4043a686bf8858f8724e8d
+msgid "If the file contains tabs or nonprintable characters, this may cause unpredictable behavior. In such cases, consider using `expand <textproc.html#EXPANDREF>`__ and **unexpand** in a pipe preceding **colrm** ."
+msgstr ""
+
+#: ../../textproc.rst:1750
+# 1917727e970a42c5ae3bdf1038134dca
+msgid "Line numbering filter: ``                   nl filename                 `` lists ``         filename        `` to ``         stdout        `` , but inserts consecutive numbers at the beginning of each non-blank line. If ``         filename        `` omitted, operates on ``         stdin.        ``"
+msgstr ""
+
+#: ../../textproc.rst:1757
+# e4effb068a4140f89183e036602d595e
+msgid "The output of **nl** is very similar to ``                   cat -b                 `` , since, by default **nl** does not list blank lines."
+msgstr ""
+
+#: ../../textproc.rst:1763
+# 37d33aa87d7f435ba1c6b672019691cd
+msgid "Exemple 25. *nl* : A self-numbering script."
+msgstr ""
+
+#: ../../textproc.rst:1792
+# 98ac1ef7c5124650a32c11efdc65d45c
+msgid "Print formatting filter. This will paginate files (or ``         stdout        `` ) into sections suitable for hard copy printing or viewing on screen. Various options permit row and column manipulation, joining lines, setting margins, numbering lines, adding page headers, and merging files, among other things. The **pr** command combines much of the functionality of **nl** , **paste** , **fold** , **column** , and **expand** ."
+msgstr ""
+
+#: ../../textproc.rst:1800
+# 2887ff2a4a7b42718c6dbb152988f759
+msgid "``                   pr -o 5 --width=65 fileZZZmore                 `` gives a nice paginated listing to screen of ``         fileZZZ        `` with margins set at 5 and 65."
+msgstr ""
+
+#: ../../textproc.rst:1804
+# c7d7523b537e49b3bd16db86730351a1
+msgid "A particularly useful option is ``         -d        `` , forcing double-spacing (same effect as **sed -G** )."
+msgstr ""
+
+#: ../../textproc.rst:1808
+# 65157149a50d4e299ae8ea8e27268f37
+msgid "The GNU **gettext** package is a set of utilities for `localizing <localization.html>`__ and translating the text output of programs into foreign languages. While originally intended for C programs, it now supports quite a number of programming and scripting languages."
+msgstr ""
+
+#: ../../textproc.rst:1814
+# 3860ea5d7ac04618a45b43bbd6ba2550
+msgid "The **gettext** *program* works on shell scripts. See the ``                   info page                 `` ."
+msgstr ""
+
+#: ../../textproc.rst:1818
+# 9b4b935dbbdc4a01874892d043afac0d
+msgid "A program for generating binary message catalogs. It is used for `localization <localization.html>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:1822
+# eed6394cb8c24236b99af1bd4a8ce106
+msgid "A utility for converting file(s) to a different encoding (character set). Its chief use is for `localization <localization.html>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:1843
+# 0a6ca277998e48278a3ff840007c080d
+msgid "Consider this a fancier version of **iconv** , above. This very versatile utility for converting a file to a different encoding scheme. Note that *recode* is not part of the standard Linux installation."
+msgstr ""
+
+#: ../../textproc.rst:1849
+# 303155ddc5bd41579cd7522a8decb149
+msgid "**TeX** and **Postscript** are text markup languages used for preparing copy for printing or formatted video display."
+msgstr ""
+
+#: ../../textproc.rst:1852
+# 3611b1b7490e40fd883c597aa570ee71
+msgid "**TeX** is Donald Knuth's elaborate typsetting system. It is often convenient to write a shell script encapsulating all the options and arguments passed to one of these markup languages."
+msgstr ""
+
+#: ../../textproc.rst:1856
+# 66958d48972048dc9aee7ac65017b7fa
+msgid "*Ghostscript* ( **gs** ) is a GPL-ed Postscript interpreter."
+msgstr ""
+
+#: ../../textproc.rst:1859
+# ad21b1cbbfe84f1ba75d5e3f4f74fe2a
+msgid "Utility for processing *TeX* and *pdf* files. Found in ``         /usr/bin        `` on many Linux distros, it is actually a `shell wrapper <wrapper.html#SHWRAPPER>`__ that calls `Perl <wrapper.html#PERLREF>`__ to invoke *Tex* ."
+msgstr ""
+
+#: ../../textproc.rst:1877
+# ed32b61f837247709409e26fe7a9fa56
+msgid "Utility for converting plain text file to PostScript"
+msgstr ""
+
+#: ../../textproc.rst:1879
+# fea8ba73b40e405d9529b5b38f3dcb0b
+msgid "For example, **enscript filename.txt -p filename.ps** produces the PostScript output file ``         filename.ps        `` ."
+msgstr ""
+
+#: ../../textproc.rst:1883
+# be9edad85fb64df0852f41aa4055942e
+msgid "Yet another text markup and display formatting language is **groff** . This is the enhanced GNU version of the venerable UNIX **roff/troff** display and typesetting package. `Manpages <basic.html#MANREF>`__ use **groff** ."
+msgstr ""
+
+#: ../../textproc.rst:1888
+# 9b3fb05d3b074b5599fa85a1563d751e
+msgid "The **tbl** table processing utility is considered part of **groff** , as its function is to convert table markup into **groff** commands."
+msgstr ""
+
+#: ../../textproc.rst:1892
+# bbded0acb9bf4d6fad64fb9c945cdd09
+msgid "The **eqn** equation processing utility is likewise part of **groff** , and its function is to convert equation markup into **groff** commands."
+msgstr ""
+
+#: ../../textproc.rst:1898
+# 7cbf7baea2fe4292b0caac3a00f9f110
+msgid "Exemple 26. *manview* : Viewing formatted manpages"
+msgstr ""
+
+#: ../../textproc.rst:1936
+# 4fa4a63400ab4423b28e794bc8f1e3b4
+msgid "See also `Example A-39 <contributed-scripts.html#MANED>`__ ."
+msgstr ""
+
+#: ../../textproc.rst:1938
+# efae2ae5fee44db0a66cfaf99c658ef1
+msgid "**lex** , **yacc**"
+msgstr ""
+
+#: ../../textproc.rst:1940
+# b11b8b8826f04a448802dc0a59b74a7c
+msgid "The **lex** lexical analyzer produces programs for pattern matching. This has been replaced by the nonproprietary **flex** on Linux systems."
+msgstr ""
+
+#: ../../textproc.rst:1944
+# 98554a7138684bc4b41d523d595a1f0e
+msgid "The **yacc** utility creates a parser based on a set of specifications. This has been replaced by the nonproprietary **bison** on Linux systems."
+msgstr ""
+
+#: ../../textproc.rst:1951
+# f29ed43305554ec48fe194f371534a0a
+msgid "Notes"
+msgstr ""
+
+#: ../../textproc.rst:1954
+# c7d2e0d00b194ea794fedd70ff8dda00
+msgid "` [1]  <textproc.html#AEN11502>`__"
+msgstr ""
+
+#: ../../textproc.rst:1956
+# 1dec5d74972945e8a91bbfa1bb99c1ac
+msgid "This is only true of the GNU version of **tr** , not the generic version often found on commercial UNIX systems."
+msgstr ""
+

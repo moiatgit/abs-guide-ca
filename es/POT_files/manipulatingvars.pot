@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manipulatingvars.rst:4
+# 8d232b7941fc4cf98861a400f5eba55d
+msgid "XXX  Chapter 10. Manipulating Variables"
+msgstr ""
+
+#: ../../manipulatingvars.rst:9
+# e7d660e376df43af943c1518bfd8fd78
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../manipulatingvars.rst:13
+# 106f9f71c7a04cd481a5b71976d0bead
+msgid "10.1. `Manipulating Strings <string-manipulation.html>`__"
+msgstr ""
+
+#: ../../manipulatingvars.rst:19
+# b81d0b28b2d641a8a2e8f75e8b3f8659
+msgid "10.1.1. `Manipulating strings using awk <string-manipulation.html#AWKSTRINGMANIP>`__"
+msgstr ""
+
+#: ../../manipulatingvars.rst:24
+# 3084ffef791d48658c03d496fe2f6dce
+msgid "10.1.2. `Further Reference <string-manipulation.html#STRFDISC>`__"
+msgstr ""
+
+#: ../../manipulatingvars.rst:30
+# afaf1d107295426f977f29b30f36c59c
+msgid "10.2. `Parameter Substitution <parameter-substitution.html>`__"
+msgstr ""
+

@@ -1,0 +1,52 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tests.rst:3
+msgid "XXX Chapter 7. Tests"
+msgstr ""
+
+#: ../../tests.rst:8
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../tests.rst:12
+msgid "7.1. `Test Constructs <testconstructs.html>`__"
+msgstr ""
+
+#: ../../tests.rst:16
+msgid "7.2. `File test operators <fto.html>`__"
+msgstr ""
+
+#: ../../tests.rst:20
+msgid "7.3. `Other Comparison Operators <comparison-ops.html>`__"
+msgstr ""
+
+#: ../../tests.rst:24
+msgid ""
+"7.4. `Nested ``                   if/then                 `` Condition Tests"
+" <nestedifthen.html>`__"
+msgstr ""
+
+#: ../../tests.rst:29
+msgid "7.5. `Testing Your Knowledge of Tests <testtest.html>`__"
+msgstr ""
+
+#: ../../tests.rst:34
+msgid ""
+"Every reasonably complete programming language can test for a condition, "
+"then act according to the result of the test. Bash has the `test "
+"<testconstructs.html#TTESTREF>`__ command, various `bracket "
+"<testconstructs.html#DBLBRACKETS>`__ and `parenthesis "
+"<testconstructs.html#DBLPARENSTST>`__ operators, and the **if/then** "
+"construct."
+msgstr ""

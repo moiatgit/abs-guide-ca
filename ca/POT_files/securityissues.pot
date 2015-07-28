@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../securityissues.rst:4
+# 96a8f79ad2574026a6cb975fd65f4b77
+msgid "XXX  36.8. Security Issues"
+msgstr ""
+
+#: ../../securityissues.rst:7
+# 76726a8dbb7d43448c10f061c6d82f6c
+msgid "36.8.1. Infected Shell Scripts"
+msgstr ""
+
+#: ../../securityissues.rst:10
+# 2bbc905c6ab2482e8db411db4d1d6090
+msgid "A brief warning about script security is indicated. A shell script may contain a *worm* , *trojan* , or even a *virus* . For that reason, never run as *root* a script (or permit it to be inserted into the system startup scripts in ``       /etc/rc.d      `` ) unless you have obtained said script from a trusted source or you have carefully analyzed it to make certain it does nothing harmful."
+msgstr ""
+
+#: ../../securityissues.rst:17
+# 9a5ccbe1f91b4befa9da3867a484fec5
+msgid "Various researchers at Bell Labs and other sites, including M. Douglas McIlroy, Tom Duff, and Fred Cohen have investigated the implications of shell script viruses. They conclude that it is all too easy for even a novice, a \"script kiddie,\" to write one. ` [1]"
+msgstr ""
+
+#: ../../securityissues.rst:21
+# ce8d34decfc44f9ea0851089064cf365
+msgid "<securityissues.html#FTN.AEN20748>`__"
+msgstr ""
+
+#: ../../securityissues.rst:23
+# 15695ad6319447918457760682d82542
+msgid "Here is yet another reason to learn scripting. Being able to look at and understand scripts may protect your system from being compromised by a rogue script."
+msgstr ""
+
+#: ../../securityissues.rst:29
+# 73aa1a3abfdd4011b120774774e9282c
+msgid "36.8.2. Hiding Shell Script Source"
+msgstr ""
+
+#: ../../securityissues.rst:32
+# 4892aaf1a9214cd6a3f81ab061fe67f3
+msgid "For security purposes, it may be necessary to render a script unreadable. If only there were a utility to create a stripped binary executable from a script. Francisco Rosales' `shc -- generic shell script compiler <http://www.datsi.fi.upm.es/~frosal/sources/>`__ does exactly that."
+msgstr ""
+
+#: ../../securityissues.rst:38
+# 9978f92547e54bb1a2f9df556267dc5c
+msgid "Unfortunately, according to `an article <http://www.linuxjournal.com/article/8256>`__ in the October, 2005 *Linux Journal* , the binary can, in at least some cases, be decrypted to recover the original script source. Still, this could be a useful method of keeping scripts secure from all but the most skilled hackers."
+msgstr ""
+
+#: ../../securityissues.rst:47
+# 81fcfdfb3d014b1688b155644e0ce61c
+msgid "36.8.3. Writing Secure Shell Scripts"
+msgstr ""
+
+#: ../../securityissues.rst:50
+# 989f48e7c0b94e4da2ed38b374f4d8b9
+msgid "*Dan Stromberg* suggests the following guidelines for writing (relatively) secure shell scripts."
+msgstr ""
+
+#: ../../securityissues.rst:53
+# b7bf61fce640458d8d9f6b38f4d9bd67
+msgid "Don't put secret data in `environment variables <othertypesv.html#ENVREF>`__ ."
+msgstr ""
+
+#: ../../securityissues.rst:56
+# abe18f97a23b4f278bb7a407c0d5d01e
+msgid "Don't pass secret data in an external command's arguments (pass them in via a `pipe <special-chars.html#PIPEREF>`__ or `redirection <io-redirection.html#IOREDIRREF>`__ instead)."
+msgstr ""
+
+#: ../../securityissues.rst:60
+# 02b62530aa6f40228bd451264c21bc1c
+msgid "Set your `$PATH <internalvariables.html#PATHREF>`__ carefully. Don't just trust whatever path you inherit from the caller if your script is running as *root* . In fact, whenever you use an environment variable inherited from the caller, think about what could happen if the caller put something misleading in the variable, e.g., if the caller set `$HOME <internalvariables.html#HOMEDIRREF>`__ to ``         /etc        `` ."
+msgstr ""
+
+#: ../../securityissues.rst:71
+# ceac81aba3554db693779f4df3a7f0bf
+msgid "Notes"
+msgstr ""
+
+#: ../../securityissues.rst:74
+# b97a42de6612415d86c4dfcc93e4035f
+msgid "` [1]  <securityissues.html#AEN20748>`__"
+msgstr ""
+
+#: ../../securityissues.rst:76
+# 9d03f3fbd4dc451899b6e42ab0888bbb
+msgid "See Marius van Oers' article, `Unix Shell Scripting Malware <http://www.virusbtn.com/magazine/archives/200204/malshell.xml>`__ , and also the `*Denning* reference <biblio.html#DENNINGREF>`__ in the *bibliography* ."
+msgstr ""
+

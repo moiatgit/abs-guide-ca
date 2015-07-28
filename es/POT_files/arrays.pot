@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../arrays.rst:4
+# 088a7d4091014820bcf9ed2c6f80aa5a
+msgid "XXX  Chapter 27. Arrays"
+msgstr ""
+
+#: ../../arrays.rst:6
+# 439c860c6b4f42b0aad94e4a7147c7b2
+msgid "Newer versions of Bash support one-dimensional arrays. Array elements may be initialized with the ``             variable[xx]           `` notation. Alternatively, a script may introduce the entire array by an explicit ``             declare -a variable           `` statement. To dereference (retrieve the contents of) an array element, use *curly bracket* notation, that is, ``             ${element[xx]}           `` ."
+msgstr ""
+
+#: ../../arrays.rst:15
+# 2391209a57224e2da9bc9486b974e55b
+msgid "Exemple 1. Simple array usage"
+msgstr ""
+
+#: ../../arrays.rst:100
+# 4c6af11422a24cd3ac1c5df0f2b9ed4a
+msgid "As we have seen, a convenient way of initializing an entire array is the ``      array=( element1 element2 ... elementN )     `` notation."
+msgstr ""
+
+#: ../../arrays.rst:116
+# c4445c0ec073427f9aa0227103950888
+msgid "Bash permits array operations on variables, even if the variables are not explicitly declared as arrays."
+msgstr ""
+
+#: ../../arrays.rst:136
+# 12fa3d51e1264d1eb1bec76a13aa2167
+msgid "Once again this demonstrates that `Bash variables are untyped <untyped.html#BVUNTYPED>`__ ."
+msgstr ""
+
+#: ../../arrays.rst:174
+# 9566081a529f46beaf188ab4e75c63c4
+msgid "Exemple 2. Formatting a poem"
+msgstr ""
+
+#: ../../arrays.rst:223
+# e75c99cd0d88461eb169f6f5724632ef
+msgid "Array variables have a syntax all their own, and even standard Bash commands and operators have special options adapted for array use."
+msgstr ""
+
+#: ../../arrays.rst:228
+# ec930cce68084e30bc041793fc0a9baf
+msgid "Exemple 3. Various array operations"
+msgstr ""
+
+#: ../../arrays.rst:284
+# 2197b8676c6b4636ab0e26264b052156
+msgid "Many of the standard `string operations <string-manipulation.html#STRINGMANIP>`__ work on arrays."
+msgstr ""
+
+#: ../../arrays.rst:289
+# 746b96bcca074d839a42cf0b80766158
+msgid "Exemple 4. String operations on arrays"
+msgstr ""
+
+#: ../../arrays.rst:416
+# 260446736b2f49bca903e8216abb92b8
+msgid "`Command substitution <commandsub.html#COMMANDSUBREF>`__ can construct the individual elements of an array."
+msgstr ""
+
+#: ../../arrays.rst:421
+# 6e57248a6f9c46d1aa3c469dfec13f21
+msgid "Exemple 5. Loading the contents of a script into an array"
+msgstr ""
+
+#: ../../arrays.rst:459
+# 600902abe0834a64841132538bf68857
+msgid "In an array context, some Bash `builtins <internal.html#BUILTINREF>`__ have a slightly altered meaning. For example, `unset <internal.html#UNSETREF>`__ deletes array elements, or even an entire array."
+msgstr ""
+
+#: ../../arrays.rst:466
+# 006660d519fb4d5d98ef1cc08adde8df
+msgid "Exemple 6. Some special properties of arrays"
+msgstr ""
+
+#: ../../arrays.rst:538
+# a6f07f76652343918d68e5553a73083e
+msgid "As seen in the previous example, either **${array\\_name[@]}** or **${array\\_name[\\*]}** refers to *all* the elements of the array. Similarly, to get a count of the number of elements in an array, use either **${#array\\_name[@]}** or **${#array\\_name[\\*]}** . **${#array\\_name}** is the length (number of characters) of **${array\\_name[0]}** , the first element of the array."
+msgstr ""
+
+#: ../../arrays.rst:547
+# 7e2d31b4c7534f91b13d55f9f854c82a
+msgid "Exemple 7. Of empty arrays and empty elements"
+msgstr ""
+
+#: ../../arrays.rst:713
+# e25f4df761ff441999d24bf3317d1d56
+msgid "The relationship of **${array\\_name[@]}** and **${array\\_name[\\*]}** is analogous to that between `$@ and $\\* <internalvariables.html#APPREF>`__ . This powerful array notation has a number of uses."
+msgstr ""
+
+#: ../../arrays.rst:751
+# a38e3141b41342a6aa43742636c78eea
+msgid "Tip"
+msgstr ""
+
+#: ../../arrays.rst:753
+# b9f8d01a7151480b8b8c71bbf7366590
+msgid "The **array=( element1 element2 ... elementN )** initialization operation, with the help of `command substitution <commandsub.html#COMMANDSUBREF>`__ , makes it possible to load the contents of a text file into an array."
+msgstr ""
+
+#: ../../arrays.rst:768
+# 4ec5c97348fd4d61a05200d6597a12f6
+msgid "# #            1 a b c #            2 d e f"
+msgstr ""
+
+#: ../../arrays.rst:771
+# 65758c23c89d42b8b111c23ca480b52e
+msgid "g"
+msgstr ""
+
+#: ../../arrays.rst:774
+# eb5c66fed7774d7184bd98786e6d88cf
+msgid "declare -a array1"
+msgstr ""
+
+#: ../../arrays.rst:776
+# 72178f22aab344bb8b43520fabe3f849
+msgid "array1=( `cat \"$file"
+msgstr ""
+
+#: ../../arrays.rst:779
+# a5347f29ec9243e9b7cd2bd0d510b9b6
+msgid "#         List file"
+msgstr ""
+
+#: ../../arrays.rst:780
+# a67b583824f9492bb16af9055a9df8d5
+msgid "to stdout              # + of $filename into arra y1."
+msgstr ""
+
+#: ../../arrays.rst:783
+# fb707cd725644c04a15290bf89c87eec
+msgid "# #  array1=( `cat \"$f"
+msgstr ""
+
+#: ../../arrays.rst:787
+# e3a7261312e1464d86e2588d9223b4f8
+msgid "change linefeed"
+msgstr ""
+
+#: ../../arrays.rst:789
+# a18debe5264949fab7aa3e2ca69c81b6
+msgid "#  Not necessary bec"
+msgstr ""
+
+#: ../../arrays.rst:790
+# 91a2961b4f5148ae8de12910131898fd
+msgid "ause Bash does word spli tting,"
+msgstr ""
+
+#: ../../arrays.rst:792
+# 660c90dc63794903acf083778bc779f4
+msgid "#+ changing linefeed"
+msgstr ""
+
+#: ../../arrays.rst:793
+# db5dcc15ece8430bbe674215a27b7edf
+msgid "s to spaces."
+msgstr ""
+
+#: ../../arrays.rst:796
+# a124dc8d3c9a46f49b5faa745f3e3a0e
+msgid "# List the arra"
+msgstr ""
+
+#: ../../arrays.rst:799
+# 49c0be1c11b846978eff7df4e1f032bf
+msgid "1 a b c 2 d e"
+msgstr ""
+
+#: ../../arrays.rst:801
+# 33f78c4610c944358ca473aab588c2e1
+msgid "# #  Each whitespace-s"
+msgstr ""
+
+#: ../../arrays.rst:803
+# b0c87fa8e2384909acf8251c15b1e645
+msgid "eparated \"word\" in the f ile"
+msgstr ""
+
+#: ../../arrays.rst:805
+# 43a6515d6bea43d28ea1541a886a5008
+msgid "#+ has been assigned"
+msgstr ""
+
+#: ../../arrays.rst:806
+# 4b49fc0c4f194d9d9daf2107f2987879
+msgid "to an element of the ar"
+msgstr ""
+
+#: ../../arrays.rst:807
+# aa709fc2f80f4e3ca9e404b0b05d6020
+msgid "ray."
+msgstr ""
+
+#: ../../arrays.rst:809
+# 3fd1da24b4a54431b607335531f4fca3
+msgid "element_count=${#arr"
+msgstr ""
+
+#: ../../arrays.rst:812
+# e357e87539d04ea4997069687fe82750
+msgid "# 8"
+msgstr ""
+
+#: ../../arrays.rst:884
+# cfac563eb9e645dd84e5034f56dda52b
+msgid "Clever scripting makes it possible to add array operations."
+msgstr ""
+
+#: ../../arrays.rst:888
+# b16cb4f03f134aefac7bf50ff663eebc
+msgid "Exemple 8. Initializing arrays"
+msgstr ""
+
+#: ../../arrays.rst:987
+# e33f979f37fd4df693332a21707b8bc4
+msgid "|Note"
+msgstr ""
+
+#: ../../arrays.rst:989
+# 84c0c68fc88b446892d4f6a95c218597
+msgid "Adding a superfluous **declare -a** statement to an array declaration may speed up execution of subsequent operations on the array."
+msgstr ""
+
+#: ../../arrays.rst:997
+# 2170136efd914a3db4dda6a14894e961
+msgid "Exemple 9. Copying and concatenating arrays"
+msgstr ""
+
+#: ../../arrays.rst:1073
+# b5eac09cdc224a0e9db2698b43d5b09a
+msgid "Exemple 10. More on concatenating arrays"
+msgstr ""
+
+#: ../../arrays.rst:1194
+#: ../../arrays.rst:1308
+#: ../../arrays.rst:1344
+#: ../../arrays.rst:1428
+#: ../../arrays.rst:1631
+#: ../../arrays.rst:1766
+#: ../../arrays.rst:1842
+#: ../../arrays.rst:2007
+# b070f3ca989f4e68859fbf7fb2caaae2
+# 781b077069ad4826b8c79365001823f6
+# ae026f6ee1a6489ea768f1300976560f
+# ab53c85bd6a243ee83d864187bbe6b5a
+# 343dea0086a44a589411452334127d73
+# 9d771670aef745c68fe4fab6ac83030c
+# 88366f9cbbf34574b726c238ab7a9c92
+# 71f83cd81ffc4e48beb69f3ad55832d6
+msgid "--"
+msgstr ""
+
+#: ../../arrays.rst:1196
+# c73123164db8403d86aa1f328435cacb
+msgid "Arrays permit deploying old familiar algorithms as shell scripts. Whether this is necessarily a good idea is left for the reader to decide."
+msgstr ""
+
+#: ../../arrays.rst:1202
+# 81d9aa86a4fe4c59ae47573b31e2ba9b
+msgid "Exemple 11. The Bubble Sort"
+msgstr ""
+
+#: ../../arrays.rst:1310
+# cf7869cba90041d4a4d421468bb374ac
+msgid "Is it possible to nest arrays within arrays?"
+msgstr ""
+
+#: ../../arrays.rst:1346
+# e638320fed9c464bb0b8d7d750cd2f2f
+msgid "Embedded arrays in combination with `indirect references <bashver2.html#VARREFNEW>`__ create some fascinating possibilities"
+msgstr ""
+
+#: ../../arrays.rst:1352
+# 4c2b7bd1513849ff9feb50ff0d77e12b
+msgid "Exemple 12. Embedded arrays and indirect references"
+msgstr ""
+
+#: ../../arrays.rst:1430
+# a34217a0c58546c0b7cc38010e066c72
+msgid "Arrays enable implementing a shell script version of the *Sieve of Eratosthenes* . Of course, a resource-intensive application of this nature should really be written in a compiled language, such as C. It runs excruciatingly slowly as a script."
+msgstr ""
+
+#: ../../arrays.rst:1437
+# de6780388b7d4e9dbcb7b8b55949af6c
+msgid "Exemple 13. The Sieve of Eratosthenes"
+msgstr ""
+
+#: ../../arrays.rst:1582
+# 80af9419ec254fdd94ac8c8a4fdbd98a
+msgid "Exemple 14. The Sieve of Eratosthenes, Optimized"
+msgstr ""
+
+#: ../../arrays.rst:1627
+# 32e6da0817ff44378f56be04178056e0
+msgid "Compare these array-based prime number generators with alternatives that do not use arrays, `Example A-15 <contributed-scripts.html#PRIMES>`__ , and `Example 16-46 <mathc.html#PRIMES2>`__ ."
+msgstr ""
+
+#: ../../arrays.rst:1633
+# 1588f86ddd7a487a8e18926f57494286
+msgid "Arrays lend themselves, to some extent, to emulating data structures for which Bash has no native support."
+msgstr ""
+
+#: ../../arrays.rst:1638
+# 4e9fb8632ad74eba83c72a719db53d85
+msgid "Exemple 15. Emulating a push-down stack"
+msgstr ""
+
+#: ../../arrays.rst:1768
+# 1a3a2f011b9f4db199ea3b30f8a404cd
+msgid "Fancy manipulation of array \"subscripts\" may require intermediate variables. For projects involving this, again consider using a more powerful programming language, such as Perl or C."
+msgstr ""
+
+#: ../../arrays.rst:1774
+# 54e69746b3944ac89759468189cd61af
+msgid "Exemple 16. Complex array application: *Exploring a weird mathematical series*"
+msgstr ""
+
+#: ../../arrays.rst:1844
+# 977b4a8b43404996b6e05d7e92e44634
+msgid "Bash supports only one-dimensional arrays, though a little trickery permits simulating multi-dimensional ones."
+msgstr ""
+
+#: ../../arrays.rst:1849
+# 3c9076c827e64ef494778a6088a8db95
+msgid "Exemple 17. Simulating a two-dimensional array, then tilting it"
+msgstr ""
+
+#: ../../arrays.rst:2000
+# 7c70c4d2266b47febdf91e3811954e1d
+msgid "A two-dimensional array is essentially equivalent to a one-dimensional one, but with additional addressing modes for referencing and manipulating the individual elements by *row* and *column* position."
+msgstr ""
+
+#: ../../arrays.rst:2004
+# 61ccf8f5436d4b84aa51b42d9eae307f
+msgid "For an even more elaborate example of simulating a two-dimensional array, see `Example A-10 <contributed-scripts.html#LIFESLOW>`__ ."
+msgstr ""
+
+#: ../../arrays.rst:2009
+# d7fc1aa11bd04d09aa4153b0c883ec63
+msgid "For more interesting scripts using arrays, see:"
+msgstr ""
+
+#: ../../arrays.rst:2011
+# a10bbf2c18d842c582813990901c9d70
+msgid "`Example 12-3 <commandsub.html#AGRAM2>`__"
+msgstr ""
+
+#: ../../arrays.rst:2013
+# ee941d9e61b64fee842525b3abd58f1f
+msgid "`Example 16-46 <mathc.html#PRIMES2>`__"
+msgstr ""
+
+#: ../../arrays.rst:2015
+# 4da7aab703f4472eaa2f7c878c467bc9
+msgid "`Example A-22 <contributed-scripts.html#HASHEX2>`__"
+msgstr ""
+
+#: ../../arrays.rst:2017
+# 9afe40d5728e41b781852d3a4db3bd38
+msgid "`Example A-44 <contributed-scripts.html#HOMEWORK>`__"
+msgstr ""
+
+#: ../../arrays.rst:2019
+# f8a4bbb94e9a4a2994dd23503e2f00df
+msgid "`Example A-41 <contributed-scripts.html#QKY>`__"
+msgstr ""
+
+#: ../../arrays.rst:2021
+# 3c7ca42df4d646daa774ca79eaacb695
+msgid "`Example A-42 <contributed-scripts.html#NIM>`__"
+msgstr ""
+

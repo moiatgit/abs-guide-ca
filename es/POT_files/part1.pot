@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../part1.rst:3
+# 3a547ae7f13e46a49a5856f3e9d8c0a0
+msgid "Part 1. Introducció"
+msgstr ""
+
+#: ../../part1.rst:6
+# 442b264f6a2b4d1fabcdab9bce2337ce
+msgid "2. Argument d'un film, d'un programa televisiu, etc., en el qual hom fa totes les indicacions tècniques pertinents per a la seva realització."
+msgstr ""
+
+#: ../../part1.rst:12
+# 209273b989e1469b95dc76894b82a6e6
+msgid "L'intèrpret de comandes (*shell*) és més que una capa entre el sistema operatiu i l'usuari. És tot un llenguatge de programació força potent."
+msgstr ""
+
+#: ../../part1.rst:15
+# 5158d229ced4412b8f2d048b0630f457
+msgid "Als programes de la *shell* en diem *guions* o *scripts*. Els guions inclouen crides al sistema, eines, utilitats, i executables en general. Virtualment podem invocar des d'un guió el repertori sencer de comandes utilitats i eines del sistema operatiu. A més a més, ens ofereix altres comandes internes de la *shell* com ara comparació de valors, i bucles."
+msgstr ""
+
+#: ../../part1.rst:22
+# e82dadf8f7b640ca89f502e6976f6ca3
+msgid "Els guions es fan servir sovint per resoldre tasques d'administració de sistemes, però també d'altres tasques repetitives que no requereixen els *ornaments* i *virgueries* de llenguatges de programació tipus C."
+msgstr ""
+
+#: ../../part1.rst:27
+# ca523eaa2e5c4d9aabef0ec5cfb7b4c7
+msgid "En aquesta part veurem:"
+msgstr ""
+

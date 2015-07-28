@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Moisès Gómez, Germán Alonso
+# This file is distributed under the same license as the Traducció abs-guide branca git gettext-way package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Traducció abs-guide branca git gettext-way 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 12:11\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../exitcodes.rst:4
+# fc0e6e5114d843328d1758b768fa275c
+msgid "XXX  Appendix E. Exit Codes With Special Meanings"
+msgstr ""
+
+#: ../../exitcodes.rst:7
+# 763da492203842bbaa98bfb8371bed8b
+msgid "**Table E-1. *Reserved* Exit Codes**"
+msgstr ""
+
+#: ../../exitcodes.rst:10
+# 6d309037c7eb42ca9a92f62102b75beb
+msgid "Exit Code Number"
+msgstr ""
+
+#: ../../exitcodes.rst:12
+# 24421b5b806c443faf426d188a2aa8a2
+msgid "Meaning"
+msgstr ""
+
+#: ../../exitcodes.rst:14
+# 24cc878e199043b0bdfa00a176424bae
+msgid "Example"
+msgstr ""
+
+#: ../../exitcodes.rst:16
+# 490179e6263242a69f9b3ea98fd13557
+msgid "Comments"
+msgstr ""
+
+#: ../../exitcodes.rst:18
+# 407648987ade4f99b3b13df9ed957fdc
+msgid "``        1       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:20
+# 19cc25c462c240b9abeff7e2fbab24a5
+msgid "Catchall for general errors"
+msgstr ""
+
+#: ../../exitcodes.rst:22
+# 622eb45fc3f04e68865d79ad7418e7b0
+msgid "let \"var1 = 1/0\""
+msgstr ""
+
+#: ../../exitcodes.rst:24
+# 72dc56136b5e4393bfc96596dc2d381b
+msgid "Miscellaneous errors, such as \"divide by zero\" and other impermissible operations"
+msgstr ""
+
+#: ../../exitcodes.rst:27
+# 043c0749d356437890f28020f614193b
+msgid "``        2       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:29
+# e183944b2ebe4eaaba3df866bad273af
+msgid "Misuse of shell builtins (according to Bash documentation)"
+msgstr ""
+
+#: ../../exitcodes.rst:31
+# f8dbdc7f75ac421884fc2c3686b76e02
+msgid "empty\\_function() {}"
+msgstr ""
+
+#: ../../exitcodes.rst:33
+# 90973215d0804b89a8751badb0a1551e
+msgid "`Missing keyword <debugging.html#MISSINGKEYWORD>`__ or command, or permission problem (and `*diff* return code on a failed binary file comparison <filearchiv.html#DIFFERR2>`__ )."
+msgstr ""
+
+#: ../../exitcodes.rst:37
+# eb8635e900324ccaab6f67d7380430e7
+msgid "``        126       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:39
+# 06f5e3f6dfe7425fa7b525073aae6049
+msgid "Command invoked cannot execute"
+msgstr ""
+
+#: ../../exitcodes.rst:41
+# 47f5b11a07b249ddaf097fcc9185698b
+msgid "/dev/null"
+msgstr ""
+
+#: ../../exitcodes.rst:43
+# df3bb6fd5cf147bba7b35cb03868c0f4
+msgid "Permission problem or command is not an executable"
+msgstr ""
+
+#: ../../exitcodes.rst:45
+# 077b3a753b02428bb48a87b01ccce4e9
+msgid "``        127       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:47
+# 5401d414128045c8ab98ba0522fead08
+msgid "\"command not found\""
+msgstr ""
+
+#: ../../exitcodes.rst:49
+# 9ad6a3a08c3444b1861ba8d4cf37abf4
+msgid "illegal\\_command"
+msgstr ""
+
+#: ../../exitcodes.rst:51
+# bdeb4c100d8a4c5dbec12b889c576dec
+msgid "Possible problem with ``        $PATH       `` or a typo"
+msgstr ""
+
+#: ../../exitcodes.rst:53
+# ea551a6ab6634f3ab3076c871c21b895
+msgid "``        128       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:55
+# 211e9fe90af643dca6617cc8b8c2f535
+msgid "Invalid argument to `exit <exit-status.html#EXITCOMMANDREF>`__"
+msgstr ""
+
+#: ../../exitcodes.rst:57
+# cdf633e2fbdf4af8ac1167e41a0cdba4
+msgid "exit 3.14159"
+msgstr ""
+
+#: ../../exitcodes.rst:59
+# 52d8f4e273eb40c6ba631e194c37c9ea
+msgid "**exit** takes only integer args in the range 0 - 255 (see first footnote)"
+msgstr ""
+
+#: ../../exitcodes.rst:62
+# 0ac9a825729a4d2db1b302652f140273
+msgid "``        128+n       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:64
+# fe0afd26bf294b109aef3ee8d7d20a70
+msgid "Fatal error signal \"n\""
+msgstr ""
+
+#: ../../exitcodes.rst:66
+# 1ff9786e2c34408a9c3f255136ecd51d
+msgid "*kill -9* ``        $PPID       `` of script"
+msgstr ""
+
+#: ../../exitcodes.rst:68
+# f9b4825288104ef7a1cc7cb9f0676dab
+msgid "``                 $?               `` returns 137 (128 + 9)"
+msgstr ""
+
+#: ../../exitcodes.rst:70
+# eb4e26beb93141edab5fda1c7940b510
+msgid "``        130       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:72
+# 624761a0a5a34c90bf659beae2aa8b2a
+msgid "Script terminated by Control-C"
+msgstr ""
+
+#: ../../exitcodes.rst:74
+# 6735f2860411466080adb1f627fa273f
+msgid "*Ctl-C*"
+msgstr ""
+
+#: ../../exitcodes.rst:76
+# 2bdde246c1664e9fa25bb003246a74e2
+msgid "Control-C is fatal error signal 2 , (130 = 128 + 2, see above)"
+msgstr ""
+
+#: ../../exitcodes.rst:78
+# 51f3ed8f8b8f4e719d9346b7677c2933
+msgid "``        255*       ``"
+msgstr ""
+
+#: ../../exitcodes.rst:80
+# 533f5e64376349809bd8877b717579c0
+msgid "Exit status out of range"
+msgstr ""
+
+#: ../../exitcodes.rst:82
+# 79f2cb5a7c8e4cae9ccbadcbf339d3b2
+msgid "exit -1"
+msgstr ""
+
+#: ../../exitcodes.rst:84
+# 07b0abeb62834153b74ce332d460927d
+msgid "**exit** takes only integer args in the range 0 - 255"
+msgstr ""
+
+#: ../../exitcodes.rst:89
+# 182555ab322141f0814d1eac846ba91b
+msgid "<exitcodes.html#FTN.AEN23629>`__ have special meanings, and should"
+msgstr ""
+
+#: ../../exitcodes.rst:90
+# f20b40b9ff8941ef9a6d3619ae2a85b2
+msgid "therefore be avoided for user-specified exit parameters. Ending a script with *exit 127* would certainly cause confusion when troubleshooting (is the error code a \"command not found\" or a user-defined one?). However, many scripts use an *exit 1* as a general bailout-upon-error. Since exit code 1 signifies so many possible errors, it is not particularly useful in debugging."
+msgstr ""
+
+#: ../../exitcodes.rst:97
+# d485c01069874b7da6302195644f1d64
+msgid "There has been an attempt to systematize exit status numbers (see ``      /usr/include/sysexits.h     `` ), but this is intended for C and C++ programmers. A similar standard for scripting might be appropriate. The author of this document proposes restricting user-defined exit codes to the range 64 - 113 (in addition to 0 , for success), to conform with the C/C++ standard. This would allot 50 valid codes, and make troubleshooting scripts more straightforward. ` [2]"
+msgstr ""
+
+#: ../../exitcodes.rst:104
+# cf65a72520044e638d86d6de4036da4d
+msgid "<exitcodes.html#FTN.AEN23647>`__ All user-defined exit codes in the"
+msgstr ""
+
+#: ../../exitcodes.rst:105
+# 09c9c8150dcb4902a3a7815f4ff96526
+msgid "accompanying examples to this document conform to this standard, except where overriding circumstances exist, as in `Example 9-2 <internalvariables.html#TMDIN>`__ ."
+msgstr ""
+
+#: ../../exitcodes.rst:111
+# 46a5dbc89ba746cc83dc9dce02ba2a62
+msgid "|Note"
+msgstr ""
+
+#: ../../exitcodes.rst:113
+# 6c70f2b5364a4451a144300e3ef824a5
+msgid "Issuing a `$? <internalvariables.html#XSTATVARREF>`__ from the command-line after a shell script exits gives results consistent with the table above only from the Bash or *sh* prompt. Running the *C-shell* or *tcsh* may give different values in some cases."
+msgstr ""
+
+#: ../../exitcodes.rst:123
+# bc9d1e58c0db485bbfe4dab68f2ba5d4
+msgid "Notes"
+msgstr ""
+
+#: ../../exitcodes.rst:126
+# 99c2388903ba4fffa4aac7647505f415
+msgid "` [1]  <exitcodes.html#AEN23629>`__"
+msgstr ""
+
+#: ../../exitcodes.rst:128
+# 0cafe9f7d0404be38f3fda51e6d3b8cc
+msgid "Out of range exit values can result in unexpected exit codes. An exit"
+msgstr ""
+
+#: ../../exitcodes.rst:129
+# d393e2b38fd14ab5ae0895615cd8600d
+msgid "value greater than 255 returns an exit code `modulo <ops.html#MODULOREF>`__ 256 . For example, *exit 3809* gives an exit code of 225 (3809 % 256 = 225)."
+msgstr ""
+
+#: ../../exitcodes.rst:134
+# 6cc58fac030f4914864043d45f26a298
+msgid "` [2]  <exitcodes.html#AEN23647>`__"
+msgstr ""
+
+#: ../../exitcodes.rst:136
+# 288aeb5a3b5e4860960568e0caca1e27
+msgid "An update of ``       /usr/include/sysexits.h      `` allocates previously unused exit codes from 64 - 78 . It may be anticipated that the range of unallotted exit codes will be further restricted in the future. The author of this document will *not* do fixups on the scripting examples to conform to the changing standard. This should not cause any problems, since there is no overlap or conflict in usage of exit codes between compiled C/C++ binaries and shell scripts."
+msgstr ""
+
