@@ -13,19 +13,22 @@ msgstr ""
 
 #: ../../part1.rst:3
 msgid "Part 1. Introducció"
-msgstr ""
+msgstr "Parte 1. Introducción"
 
 #: ../../part1.rst:6
 msgid ""
 "2. Argument d'un film, d'un programa televisiu, etc., en el qual hom fa "
 "totes les indicacions tècniques pertinents per a la seva realització."
 msgstr ""
+"1. m. Escrito en que breve y ordenadamente se han apuntado algunas ideas o cosas con objeto de que sirva de guía para determinado fin. `http://lema.rae.es/drae/?val=gui%C3%B3n`_"
 
 #: ../../part1.rst:12
 msgid ""
 "L'intèrpret de comandes (*shell*) és més que una capa entre el sistema "
 "operatiu i l'usuari. És tot un llenguatge de programació força potent."
 msgstr ""
+"El interprete de comandos (*shell*) es más que una capa entre el sistema "
+"operativo y el usuario. Es un lenguaje de programación completo bastante potente."
 
 #: ../../part1.rst:15
 msgid ""
@@ -35,6 +38,11 @@ msgid ""
 "utilitats i eines del sistema operatiu. A més a més, ens ofereix altres "
 "comandes internes de la *shell* com ara comparació de valors, i bucles."
 msgstr ""
+"A los programas de la *shell* los llamamos *guiones* o *scripts*. Los scripts "
+"incluyen llamadas al sistema, herramientas, utilidades, y ejecutables en general. "
+"Virtualmente podemos invocar desde un script el repertorio completo de comandos "
+"utilidades y herramientas del sistema operativo. Además, nos ofrece otros "
+"comandos internos de la *shell* como la comparación de valores, y bucles. "
 
 #: ../../part1.rst:22
 msgid ""
@@ -42,7 +50,10 @@ msgid ""
 "sistemes, però també d'altres tasques repetitives que no requereixen els "
 "*ornaments* i *virgueries* de llenguatges de programació tipus C."
 msgstr ""
+"Los scripts se suelen utilizar normalmente para resolver tareas de administración de "
+"sistemas, así como para otras tareas repetitivas que no requieren de los "
+"*ornamentos* y *virguerías* de lenguajes de programación tipo C."
 
 #: ../../part1.rst:27
 msgid "En aquesta part veurem:"
-msgstr ""
+msgstr "En esta parte veremos:"
