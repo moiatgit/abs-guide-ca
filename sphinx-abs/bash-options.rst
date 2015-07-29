@@ -2,7 +2,7 @@
 G.2. Opcions de la línia de comandes Bash
 #########################################
 
-*Bash* per si mateix te una sèrie d'opcions a la línia de ordres. Aquestes són algunes de les més útils.
+*Bash* per si mateix te una sèrie d'opcions a la línia de comandes. Aquestes són algunes de les més útils.
 
 
 -  ``        -c       ``
