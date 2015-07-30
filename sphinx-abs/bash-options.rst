@@ -28,7 +28,7 @@ G.2. Opcions de la línia de comandes Bash
 
 -  ``        --posix       ``
 
-   Obliga a Bash a ajustar-se al estàndard `POSIX <sha-bang.html#POSIX2REF>`__ .
+   Obliga a Bash a ajustar-se a l'estàndard `POSIX <sha-bang.html#POSIX2REF>`__ .
 
 -  ``        --version       ``
 
