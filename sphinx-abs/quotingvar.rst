@@ -2,338 +2,95 @@
 XXX  5.1. Variables entre cometes
 #################################
 
-When referencing a variable, it is generally advisable to enclose its
-name in double quotes. This prevents reinterpretation of all special
-characters within the quoted string -- except $ , \` (backquote), and \\
-(escape). ` [1]  <quotingvar.html#FTN.AEN2630>`__ Keeping $ as a special
-character within double quotes permits referencing a quoted variable (
-``             "$variable"           `` ), that is, replacing the
-variable with its value (see `Example 4-1 <varsubn.html#EX9>`__ ,
-above).
+En referenciar una variable, en general es recomanable posar-la entre cometes
+dobles per evitar que es reinterpretin tots els caràcters especials que hi pugui
+contenir (a excepció de ``$``, la cometa invertida ````` i la contrabarra ``\``
+[#quotingbang]_.
 
-Use double quotes to prevent word splitting. ` [2]
- <quotingvar.html#FTN.AEN2688>`__ An argument enclosed in double quotes
-presents itself as a single word, even if it contains
-`whitespace <special-chars.html#WHITESPACEREF>`__ separators.
+El caràcter ``$`` es manté amb el seu significat especial per permetre
+referenciar el contingut de les variables. Mira :doc:`varsubn` per més detall.
 
+Farem servir les cometes dobles per evitar que es separin les paraules que
+apareixen en el text separades per blancs.  Un valor entre cometes dobles es
+presenta com una única paraula, fins i tot si conté espais en blanc.
 
-.. code-block:: sh
+Posarem els arguments d'una crida a ``echo`` entre cometes dobles només quan
+ens sigui important separar per paraules o preservar els espais.
 
-    List="one two three"
+Exemple 1. Preservació d'espais en blanc
+========================================
 
-    for a in $List     # Splits the variable in parts at whitespace.
-    do
-      echo "$a"
-    done
-    # one
-    # two
-    # three
+.. literalinclude:: _scripts/quotinglists.sh
+   :language: bash
 
-    echo "---"
+Exemple 2. Espais en blanc i variables buides
+=============================================
 
-    for a in "$List"   # Preserves whitespace in a single variable.
-    do #     ^     ^
-      echo "$a"
-    done
-    # one two three
+.. literalinclude:: _scripts/quotingwords.sh
+   :language: bash
 
+.. note:: Aquest exemple mostra la definició d'una funció. Pots trobar més
+   detalls sobre funcions a :doc:`functions`.
 
+Exemple 3. Com mostrar variables *rares*
+========================================
 
-A more elaborate example:
+.. literalinclude:: _scripts/weirdvars.sh
+   :language: bash
 
+Les cometes simples funcionen de manera semblant a les dobles. Entre
+d'altres coses, però, no permeten referenciar variables donat que el significat
+especial de ``$`` es perd. Dins de cometes simples, **cada** caràcter especial
+és interpretat literalment. Les cometes simples es consideren com a *completes*
+o *fortes*, mentre que les dobles es consideren com *parcials* o *febles*.
 
-.. code-block:: sh
+Com que fins i tot el ``\`` és interpretat literalment dins de cometes simples,
+ens trobarem que intentar posar cometes simples dins de cometes simples no ens
+donarà el resultat esperat.
 
-    variable1="a variable containing five words"
-    COMMAND This is $variable1    # Executes COMMAND with 7 arguments:
-    # "This" "is" "a" "variable" "containing" "five" "words"
+.. literalinclude:: _scripts/nestedsinglequotes.sh
+   :language: bash
 
-    COMMAND "This is $variable1"  # Executes COMMAND with 1 argument:
-    # "This is a variable containing five words"
+.. rubric:: Anotacions
 
+.. [#quotingbang] Posar entre cometes ``!`` en la línia de comandes, ens
+   generarà un error donat que arrenca el :doc:`mecanisme d'històric
+   <histcommands>`. Això no passa dins d'un guió on l'històric queda
+   deshabilitat.
 
-    variable2=""    # Empty.
+   Més preocupant pot resultar el comportament aparentment inconsistent de ``\``
+   entre cometes dobles, especialment seguint ``echo -e``.
 
-    COMMAND $variable2 $variable2 $variable2
-                    # Executes COMMAND with no arguments.
-    COMMAND "$variable2" "$variable2" "$variable2"
-                    # Executes COMMAND with 3 empty arguments.
-    COMMAND "$variable2 $variable2 $variable2"
-                    # Executes COMMAND with 1 argument (2 spaces).
+   .. code-block:: sh
 
-    # Thanks, Stéphane Chazelas.
+        $ echo hola\!
+        hola!
+        $ echo "hola\!"
+        hola\!
 
 
+        $ echo \
+        >
+        # surt amb control-c
+        $ echo "\"
+        >
+        # surt amb control-c
+        $ echo \a
+        a
+        $ echo "\a"
+        \a
 
 
+        $ echo x\ty
+        xty
+        $ echo "x\ty"
+        x\ty
 
-|Tip
+        $ echo -e x\ty
+        xty
+        $ echo -e "x\ty"
+        x       y
 
-Enclosing the arguments to an **echo** statement in double quotes is
-necessary only when word splitting or preservation of
-`whitespace <special-chars.html#WHITESPACEREF>`__ is an issue.
-
-
-
-
-
-Exemple 1. Echoing Weird Variables
-==================================
-
-
-.. code-block:: sh
-
-    #!/bin/bash
-    # weirdvars.sh: Echoing weird variables.
-
-    echo
-
-    var="'(]\\{}\$\""
-    echo $var        # '(]\{}$"
-    echo "$var"      # '(]\{}$"     Doesn't make a difference.
-
-    echo
-
-    IFS='\'
-    echo $var        # '(] {}$"     \ converted to space. Why?
-    echo "$var"      # '(]\{}$"
-
-    # Examples above supplied by Stephane Chazelas.
-
-    echo
-
-    var2="\\\\\""
-    echo $var2       #   "
-    echo "$var2"     # \\"
-    echo
-    # But ... var2="\\\\"" is illegal. Why?
-    var3='\\\\'
-    echo "$var3"     # \\\\
-    # Strong quoting works, though.
-
-
-    # ************************************************************ #
-    # As the first example above shows, nesting quotes is permitted.
-
-    echo "$(echo '"')"           # "
-    #    ^           ^
-
-
-    # At times this comes in useful.
-
-    var1="Two bits"
-    echo "\$var1 = "$var1""      # $var1 = Two bits
-    #    ^                ^
-
-    # Or, as Chris Hiestand points out ...
-
-    if [[ "$(du "$My_File1")" -gt "$(du "$My_File2")" ]]
-    #     ^     ^         ^ ^     ^     ^         ^ ^
-    then
-      ...
-    fi
-    # ************************************************************ #
-
-
-
-
-Single quotes ( ' ' ) operate similarly to double quotes, but do not
-permit referencing variables, since the special meaning of $ is turned
-off. Within single quotes, *every* special character except ' gets
-interpreted literally. Consider single quotes ( "full quoting" ) to be a
-stricter method of quoting than double quotes ( "partial quoting" ).
-
-
-
-|Note
-
-Since even the escape character ( \\ ) gets a literal interpretation
-within single quotes, trying to enclose a single quote within single
-quotes will not yield the expected result.
-
-----------------------------------------------------------------------------------
-
-.. code-block:: sh
-
-    echo "Why can't I wr
-ite 's between single qu
-otes"
-
-    echo
-
-    # The roundabout met
-hod.
-    echo 'Why can'\''t I
- write '"'"'s between si
-ngle quotes'
-    #    |-------|  |---
--------|   |------------
------------|
-    # Three single-quote
-d strings, with escaped
-and quoted single quotes
- between.
-
-    # This example court
-esy of Stéphane Chazelas
-.
-
-----------------------------------------------------------------------------------
-
-
-
-.. code-block:: sh
-
-    echo "Why can't I write 's between single quotes"
-
-    echo
-
-    # The roundabout method.
-    echo 'Why can'\''t I write '"'"'s between single quotes'
-    #    |------- |----------|   |-----------------------
-    # Three single-quoted strings, with escaped and quoted single quotes between.
-
-    # This example courtesy of Stéphane Chazelas.
-
-
-.. code-block:: sh
-
-    echo "Why can't I write 's between single quotes"
-
-    echo
-
-    # The roundabout method.
-    echo 'Why can'\''t I write '"'"'s between single quotes'
-    #    |------- |----------|   |-----------------------
-    # Three single-quoted strings, with escaped and quoted single quotes between.
-
-    # This example courtesy of Stéphane Chazelas.
-
-
-
-
-
-Notes
-~~~~~
-
-
-` [1]  <quotingvar.html#AEN2630>`__
-
-Encapsulating "!" within double quotes gives an error when used *from
-the command line* . This is interpreted as a `history
-command <histcommands.html>`__ . Within a script, though, this problem
-does not occur, since the Bash history mechanism is disabled then.
-
-Of more concern is the *apparently* inconsistent behavior of
-``               \             `` within double quotes, and especially
-following an **echo -e** command.
-
-----------------------------------------------------------------------------------
-
-.. code-block:: sh
-
-    bash$ echo hello\!
-    hello!
-    bash$ echo "hello\!"
-    hello\!
-
-
-    bash$ echo \
-    >
-    bash$ echo "\"
-    >
-    bash$ echo \a
-    a
-    bash$ echo "\a"
-    \a
-
-
-    bash$ echo x\ty
-    xty
-    bash$ echo "x\ty"
-    x\ty
-
-    bash$ echo -e x\ty
-    xty
-    bash$ echo -e "x\ty"
-    x       y
-
-
-----------------------------------------------------------------------------------
-
-
-Double quotes following an *echo* *sometimes* escape
-``               \             `` . Moreover, the ``       -e      ``
-option to *echo* causes the "\\t" to be interpreted as a *tab* .
-
-(Thank you, Wayne Pollock, for pointing this out, and Geoff Lee and
-Daniel Barclay for explaining it.)
-
-
-.. code-block:: sh
-
-    bash$ echo hello\!
-    hello!
-    bash$ echo "hello\!"
-    hello\!
-
-
-    bash$ echo \
-    >
-    bash$ echo "\"
-    >
-    bash$ echo \a
-    a
-    bash$ echo "\a"
-    \a
-
-
-    bash$ echo x\ty
-    xty
-    bash$ echo "x\ty"
-    x\ty
-
-    bash$ echo -e x\ty
-    xty
-    bash$ echo -e "x\ty"
-    x       y
-
-
-
-.. code-block:: sh
-
-    bash$ echo hello\!
-    hello!
-    bash$ echo "hello\!"
-    hello\!
-
-
-    bash$ echo \
-    >
-    bash$ echo "\"
-    >
-    bash$ echo \a
-    a
-    bash$ echo "\a"
-    \a
-
-
-    bash$ echo x\ty
-    xty
-    bash$ echo "x\ty"
-    x\ty
-
-    bash$ echo -e x\ty
-    xty
-    bash$ echo -e "x\ty"
-    x       y
-
-
-
-` [2]  <quotingvar.html#AEN2688>`__
-
- "Word splitting," in this context, means dividing a character string
-into separate and discrete arguments.
-
-
+   Les cometes dobles a continuació de ``echo`` de vegades escapen ``\``. És
+   més, l'opció ``-e`` fa que ``\t`` sigui interpretat com un tabulador.
 
