@@ -47,7 +47,7 @@ XXX  16.1. Basic Commands
 
 
 
-    |Tip
+.. tip::
 
     The *ls* command returns a non-zero `exit
     status <exit-status.html#EXITSTATUSREF>`__ when attempting to list a
@@ -177,7 +177,7 @@ Exemple 1. Using *ls* to create a table of contents for burning a CDR disk
 
 
 
-    |Note
+.. note::
 
      In a `pipe <special-chars.html#PIPEREF>`__ , it may be more
     efficient to `redirect <io-redirection.html#IOREDIRREF>`__ the
@@ -256,7 +256,7 @@ s with the pipe.
 
 
 
-    |Tip
+.. tip::
 
     Particularly useful are the ``            -a           `` archive
     flag (for copying an entire directory tree), the
@@ -305,7 +305,7 @@ usly existing files.
 
 
 
-    |Note
+.. note::
 
     When used in a non-interactive script, **mv** takes the
     ``            -f           `` ( *force* ) option to bypass user
@@ -360,7 +360,7 @@ o  bozo      1024 May 28
 
 
 
-    |Note
+.. note::
 
     The *rm* command will, by itself, fail to remove filenames beginning
     with a dash. Why? Because *rm* sees a dash-prefixed filename as an
@@ -436,7 +436,7 @@ o  bozo      1024 May 28
 
 
 
-    |Warning
+.. warning::
 
      When used with the recursive flag ``            -r           `` ,
     this command removes files all the way down the directory tree from
@@ -563,7 +563,7 @@ o  bozo      1024 May 28
 
 
 
-    |Note
+.. note::
 
     The file attributes set with **chattr** do not show in a file
     listing ( **ls -l** ).
@@ -593,7 +593,7 @@ o  bozo      1024 May 28
 
 
 
-    |Caution
+.. caution::
 
     If a file named ``            newfile           `` has previously
     existed, an error message will result.

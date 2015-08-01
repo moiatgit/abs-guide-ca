@@ -184,7 +184,7 @@ Exemple 55. Letter Count"
 
 
 
-    |Note
+.. note::
 
     Somewhat more capable than *seq* , **jot** is a classic UNIX utility
     that is not normally included in a standard Linux distro. However,
@@ -288,7 +288,7 @@ Exemple 56. Using *getopt* to parse command-line options
 
 
 
-    |Note
+.. note::
 
     As *Peggy Russell* points out:
 
@@ -356,7 +356,7 @@ c:d -- "$@")
 
 
 
-    |Warning
+.. warning::
 
     Caution advised when piping *yes* to a potentially dangerous system
     command, such as `fsck <system.html#FSCKREF>`__ or
@@ -368,7 +368,7 @@ c:d -- "$@")
 
 
 
-    |Note
+.. note::
 
     The *yes* command parses variables, or more accurately, it echoes
     parsed variables. For example:
@@ -1206,7 +1206,7 @@ Exemple 64. Using *m4*
 
 
 
-    |Note
+.. note::
 
     The various behaviors of the executable must be defined within the
     code of the executable itself, analogous to something like the

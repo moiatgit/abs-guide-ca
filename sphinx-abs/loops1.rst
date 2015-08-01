@@ -23,7 +23,7 @@ control condition* is true.
 
 
 
-    |Note
+.. note::
 
     During each pass through the loop,
     ``                         arg                       `` takes on the
@@ -716,7 +716,7 @@ Exemple 14. Using *efax* in batch mode
 
 
 
-    |Note
+.. note::
 
      The `keywords <internal.html#KEYWORDREF>`__ **do** and **done**
     delineate the *for-loop* command block. However, these may, in
@@ -1100,7 +1100,7 @@ Exemple 18. C-style syntax in a *while* loop
 
 
 
-    |Note
+.. note::
 
     A *while loop* may have its ``            stdin           ``
     `redirected to a file <redircb.html#REDIRREF>`__ by a < at its end.

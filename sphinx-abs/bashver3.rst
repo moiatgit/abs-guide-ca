@@ -273,7 +273,7 @@ This is pretty much a bugfix update.
 
 
 
-   |Caution
+.. caution::
 
    In fact, quoting in this context is *not* advisable as it may cause
    *regex* evaluation to fail. Chet Ramey states in the `Bash

@@ -202,7 +202,7 @@ Exemple 24. Using *continue N* in an actual task
             beta=${n#.iso.}
             [ -r .Iso.$beta ] && continue
             [ -r .lock.$beta ] && sleep 10 && continue
-            lockfile -r0 .lock.$beta |continue
+            lockfile -r0 .lock.$beta.. continue::
             echo -n "$beta: " `date`
             run-isotherm $beta
             date
@@ -246,7 +246,7 @@ Exemple 24. Using *continue N* in an actual task
 
 
 
-    |Caution
+.. caution::
 
     The **continue N** construct is difficult to understand and tricky
     to use in any meaningful context. It is probably best avoided.

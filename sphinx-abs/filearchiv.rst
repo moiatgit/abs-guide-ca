@@ -31,7 +31,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-       |Caution
+.. caution::
 
        This option will not work on magnetic tape devices.
 
@@ -65,7 +65,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Caution
+.. caution::
 
     It may be difficult to recover data from a corrupted *gzipped* tar
     archive. When archiving important files, make multiple backups.
@@ -104,7 +104,7 @@ XXX  16.5. File and Archiving Commands
 
 
 
-    |Tip
+.. tip::
 
     ``                         rpm -qf                       ``
     identifies which package a file originates from.
@@ -136,7 +136,7 @@ s
 
 
 
-    |Tip
+.. tip::
 
     ``                         rpm -qa                       `` gives a
     complete list of all installed *rpm* packages on a given system. An
@@ -377,7 +377,7 @@ Exemple 31. Unpacking an *rpm* archive
 
 
 
-    |Note
+.. note::
 
     The ``            -c           `` option sends the output of
     **gzip** to ``            stdout           `` . This is useful when
@@ -395,7 +395,7 @@ Exemple 31. Unpacking an *rpm* archive
 
 
 
-    |Caution
+.. caution::
 
     On some commercial UNIX systems, **zcat** is a synonym for
     **uncompress -c** , and will not work on *gzipped* files.
@@ -415,7 +415,7 @@ Exemple 31. Unpacking an *rpm* archive
 
 
 
-    |Note
+.. note::
 
     Newer versions of `tar <filearchiv.html#TARREF>`__ have been patched
     with **bzip2** support.
@@ -432,7 +432,7 @@ Exemple 31. Unpacking an *rpm* archive
 
 
 
-    |Tip
+.. tip::
 
     The **znew** command transforms *compressed* files into *gzipped*
     ones.
@@ -450,7 +450,7 @@ Exemple 31. Unpacking an *rpm* archive
 
 
 
-    |Tip
+.. tip::
 
     The output of **sq** may be piped to **gzip** for further
     compression.
@@ -601,7 +601,7 @@ Exemple 32. Stripping comments from C program files
         }
 
         WEIRD=`echo -n -e '\377'`   # or WEIRD=$'\377'
-        [[ $# -eq 1 ]] |usage
+        [[ $# -eq 1 ]].. usage::
         case `file "$1"` in
           *"C program text"*) sed -e "s%/\*%${WEIRD}%g;s%\*/%${WEIRD}%g" "$1" \
 tr '\377\n' '\n\377' \
@@ -915,7 +915,7 @@ Exemple 34. An "improved" *strings* command
 
 
 
-    |Tip
+.. tip::
 
      The **diff** command returns an exit status of 0 if the compared
     files are identical, and 1 if they differ (or 2 when *binary* files
@@ -961,7 +961,7 @@ Exemple 34. An "improved" *strings* command
 
 
 
-    |Note
+.. note::
 
     The **diff** command can also recursively compare directories (for
     the filenames present).
@@ -1002,7 +1002,7 @@ notes2: file04
 
 
 
-    |Tip
+.. tip::
 
     Use **zdiff** to compare *gzipped* files.
 
@@ -1011,7 +1011,7 @@ notes2: file04
 
 
 
-    |Tip
+.. tip::
 
     Use **diffstat** to create a histogram (point-distribution graph) of
     output from **diff** .
@@ -1060,7 +1060,7 @@ notes2: file04
 
 
 
-    |Note
+.. note::
 
     Like **diff** , **cmp** returns an exit status of 0 if the compared
     files are identical, and 1 if they differ. This permits use in a
@@ -1117,7 +1117,7 @@ Exemple 35. Using *cmp* to compare two files within a script.
 
 
 
-    |Tip
+.. tip::
 
     Use **zcmp** on *gzipped* files.
 
@@ -1183,7 +1183,7 @@ Exemple 35. Using *cmp* to compare two files within a script.
 
 
 
-    |Note
+.. note::
 
     **basename** and **dirname** can operate on any arbitrary string.
     The argument does not need to refer to an existing file, or even be
@@ -1296,7 +1296,7 @@ Exemple 37. A script that copies itself in sections
 
 
 
-    |Note
+.. note::
 
     The **cksum** command shows the size, in bytes, of its target,
     whether file or ``            stdout           `` .
@@ -1441,7 +1441,7 @@ Exemple 38. Checking file integrity
 
 
 
-    |Note
+.. note::
 
     There have been reports that the 128-bit **md5sum** can be cracked,
     so the more secure 160-bit **sha1sum** is a welcome new addition to
@@ -1548,7 +1548,7 @@ Exemple 39. Uudecoding encoded files
 
 
 
-    |Tip
+.. tip::
 
     The `fold -s <textproc.html#FOLDREF>`__ command may be useful
     (possibly in a pipe) to process long uudecoded text messages
@@ -1635,7 +1635,7 @@ Exemple 39. Uudecoding encoded files
 
 
 
-    |Caution
+.. caution::
 
     Advanced forensic technology may still be able to recover the
     contents of a file, even after application of **shred** .

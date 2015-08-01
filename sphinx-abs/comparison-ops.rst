@@ -72,7 +72,7 @@ Comparació de strings
 
 
 
-    |Caution
+.. caution::
 
     Note the `whitespace <special-chars.html#WHITESPACEREF>`__ framing
     the **=** .
@@ -92,7 +92,7 @@ Comparació de strings
 
 
 
-    |Note
+.. note::
 
     The == comparison operator behaves differently within a
     `double-brackets <testconstructs.html#DBLBRACKETS>`__ test than
@@ -199,7 +199,7 @@ Chazelas
 
 
 
-    |Caution
+.. caution::
 
     The ``                         -n                       `` test
     requires that the string be quoted within the test brackets. Using

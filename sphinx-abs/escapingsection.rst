@@ -47,7 +47,7 @@ special meaning for that character.
 
 
 
-    |Important
+.. important::
 
     The ``                         $' ... '                       ``
     `quoted <quoting.html#QUOTINGREF>`__ string-expansion construct is a

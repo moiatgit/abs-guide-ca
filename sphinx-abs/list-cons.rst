@@ -188,7 +188,7 @@ Exemple 3. Using *or lists* in combination with an *and list*
 
 
 
-    |Caution
+.. caution::
 
     If the first command in an *or list* returns true , it
     ``                         will                       `` execute.
@@ -215,7 +215,7 @@ Exemple 3. Using *or lists* in combination with an *and list*
     # If they want to run something in single user mode, might as well run it...
     for i in /etc/rc1.d/S[0-9][0-9]* ; do
             # Check if the script is there.
-            [ -x "$i" ] |continue
+            [ -x "$i" ].. continue::
       # ==> If corresponding file in $PWD *not* found,
       #+==> then "continue" by jumping to the top of the loop.
 

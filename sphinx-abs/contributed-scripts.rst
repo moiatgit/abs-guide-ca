@@ -10842,7 +10842,7 @@ Exemple 48. *The Towers of Hanoi, graphic version*
 
       while true; do
         rod=$1
-        test ${rod/[^123]/} |continue
+        test ${rod/[^123]/}.. continue::
 
         sequence=$(echo $(seq 0 $disks1tac))
         for summit in $sequence; do
@@ -10859,7 +10859,7 @@ Exemple 48. *The Towers of Hanoi, graphic version*
 
       while true; do
         rod=$2
-        test ${rod/[^123]} |continue
+        test ${rod/[^123]}.. continue::
 
         sequence=$(echo $(seq 0 $disks1tac))
         for firstfree in $sequence; do
@@ -11059,7 +11059,7 @@ Exemple 49. *The Towers of Hanoi, alternate graphic version*
 
       while true; do
         rod=$1
-        test ${rod/[^123]/} |continue
+        test ${rod/[^123]/}.. continue::
 
         sequence=$(echo $(seq 0 $disks1tac))
         for summit in $sequence; do
@@ -11076,7 +11076,7 @@ Exemple 49. *The Towers of Hanoi, alternate graphic version*
 
       while true; do
         rod=$2
-        test ${rod/[^123]} |continue
+        test ${rod/[^123]}.. continue::
 
         sequence=$(echo $(seq 0 $disks1tac))
         for firstfree in $sequence; do

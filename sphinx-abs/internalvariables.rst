@@ -187,7 +187,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
 
 
 
-    |Caution
+.. caution::
 
     The ``            $EUID           `` is not necessarily the same as
     the `$UID <internalvariables.html#UIDREF>`__ .
@@ -334,7 +334,7 @@ Les *variables internes* són variables que afecten el comportament dels guions 
 
 
 
-    |Caution
+.. caution::
 
     ``            $IFS           `` does not handle whitespace the same
     as it does other characters.
@@ -651,7 +651,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note
+.. note::
 
     As of version 2.05 of Bash, filename globbing no longer
     distinguishes between lowercase and uppercase letters in a character
@@ -762,7 +762,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Note
+.. note::
 
     The current "working directory" , ``            ./           `` , is
     usually omitted from the ``            $PATH           `` as a
@@ -805,7 +805,7 @@ Exemple 1. $IFS and whitespace
 
 
 
-    |Caution
+.. caution::
 
     The ``            $PIPESTATUS           `` variable may contain an
     erroneous 0 value in a login shell (in releases prior to 3.0 of
@@ -858,7 +858,7 @@ TUS[*]}
 
 
 
-    |Note
+.. note::
 
     The ``            $PIPESTATUS           `` variable gives unexpected
     results in some contexts.
@@ -926,7 +926,7 @@ TUS[@]}
 
 
 
-    |Note
+.. note::
 
     ``            $PIPESTATUS           `` is a "volatile" variable. It
     needs to be captured immediately after the pipe in question, before
@@ -987,7 +987,7 @@ TUS[@]}
 
 
 
-    |Note
+.. note::
 
     The `pipefail option <bashver3.html#PIPEFAILREF>`__ may be useful in
     cases where ``            $PIPESTATUS           `` does not give the
@@ -1207,7 +1207,7 @@ TUS[@]}
 
 
 
-    |Note
+.. note::
 
     This variable is `*not* affected by
     subshells <subshells.html#SUBSHNLEVREF>`__ . Use
@@ -1473,7 +1473,7 @@ Exemple 5. Am I root?
 
 
 
-    |Note
+.. note::
 
     The variables ``            $ENV           `` ,
     ``            $LOGNAME           `` ,
@@ -1565,7 +1565,7 @@ etc.
 
 
 
-    |Note
+.. note::
 
      " ``             $*            `` " must be quoted.
 
@@ -1580,7 +1580,7 @@ etc.
 
 
 
-    |Note
+.. note::
 
     Of course, " ``             $@            `` " should be quoted.
 
@@ -1678,7 +1678,7 @@ Exemple 6. *arglist* : Listing arguments with $\* and $@
 
 
 
-    |Caution
+.. caution::
 
     The ``            $*           `` and ``            $@           ``
     parameters sometimes display inconsistent and puzzling behavior,
@@ -1838,7 +1838,7 @@ Exemple 7. Inconsistent ``$*`` and ``$@`` behavior
 
 
 
-    |Note
+.. note::
 
     The **$@** and **$\*** parameters differ only when between double
     quotes.
@@ -1898,7 +1898,7 @@ Exemple 8. ``$*`` and ``$@`` when ``$IFS`` is empty
 
 
 
-    |Caution
+.. caution::
 
     This was originally a *ksh* construct adopted into Bash, and
     unfortunately it does not seem to work reliably in Bash scripts. One

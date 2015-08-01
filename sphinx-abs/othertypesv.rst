@@ -15,7 +15,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    |Note
+.. note::
 
     In a more general context, each
     `process <special-chars.html#PROCESSREF>`__ has an "environment" ,
@@ -33,7 +33,7 @@ XXX  4.4. Special Variable Types
 
 
 
-    |Caution
+.. caution::
 
     The space allotted to the environment is limited. Creating too many
     environmental variables or ones that use up excessive space may
@@ -88,7 +88,7 @@ rgument list too long
 
 
 
-    |Note
+.. note::
 
     A script can **export** variables only to child
     `processes <special-chars.html#PROCESSREF>`__ , that is, only to
@@ -212,7 +212,7 @@ Exemple 5. Positional Parameters
 
 
 
-    |Tip
+.. tip::
 
     If a script expects a command-line parameter but is invoked without
     one, this may cause a *null variable assignment* , generally an
@@ -389,14 +389,14 @@ Exemple 7. Using *shift*
         #      done           #+ then loop never ends!
         #
         # When in doubt, add a sanity check. . . .
-        #           shift 20 |break
+        #           shift 20.. break::
         #                    ^^^^^^^^
 
 
 
 
 
-    |Note
+.. note::
 
     The **shift** command works in a similar fashion on parameters
     passed to a `function <functions.html#FUNCTIONREF>`__ . See `Example

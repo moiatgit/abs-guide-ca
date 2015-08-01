@@ -346,7 +346,7 @@ Exemple 7. Maximum of two numbers
 
 
 
-    |Tip
+.. tip::
 
     For a function to return a string or array, use a dedicated
     variable.
@@ -523,7 +523,7 @@ Exemple 8. Converting numbers to Roman numerals
 
 
 
-    |Important
+.. important::
 
     The largest positive integer a function can return is 255. The
     **return** command is closely tied to the concept of `exit
@@ -1205,7 +1205,7 @@ Exemple 11. Real name from username
 
 
 
-    |Note
+.. note::
 
     Emmanuel Rouat's `sample ``             bashrc            ``
     file <sample-bashrc.html>`__ contains some instructive examples of

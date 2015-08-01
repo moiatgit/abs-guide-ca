@@ -27,7 +27,7 @@ technique. But, what if you need to pipe the ``      stdout     `` of
 
 
 
-    |Caution
+.. caution::
 
     There is *no* space between the the "<" or ">" and the parentheses.
     Space there would give an error message.

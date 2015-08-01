@@ -475,7 +475,7 @@ Exemple 41. Analyzing a spam domain
 
 
 
-    |Caution
+.. caution::
 
     The *telnet* protocol contains security holes and should therefore
     probably be avoided. Its use within a shell script is *not*
@@ -834,7 +834,7 @@ Exemple 43. Updating FC4
 
 
 
-    |Note
+.. note::
 
     Using `rcp <communications.html#RCPREF>`__ ,
     `rsync <communications.html#RSYNCREF>`__ , and similar utilities
@@ -934,7 +934,7 @@ Exemple 44. Using *ssh*
 
 
 
-    |Caution
+.. caution::
 
     Within a loop, **ssh** may cause unexpected behavior. According to a
     `Usenet

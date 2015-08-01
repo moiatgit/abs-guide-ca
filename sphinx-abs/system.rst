@@ -71,7 +71,7 @@ damage your system if misused.
 
 
 
-    |Note
+.. note::
 
     The **adduser** command is a synonym for **useradd** and is usually
     a symbolic link to it.
@@ -110,7 +110,7 @@ damage your system if misused.
 
 
 
-    |Note
+.. note::
 
     The **id** command shows the *effective* IDs only when they differ
     from the *real* ones.
@@ -227,7 +227,7 @@ damage your system if misused.
 
 
 
-    |Note
+.. note::
 
     While **logname** prints the name of the logged in user, **whoami**
     gives the name of the user attached to the current process. As we
@@ -367,7 +367,7 @@ Exemple 1. Setting a new password
 
 
 
-    |Note
+.. note::
 
     Kurt Glaesemann points out that the *newgrp* command could prove
     helpful in setting the default group permissions for files a user
@@ -680,7 +680,7 @@ Exemple 4. Keypress detection
 
 
 
-    |Tip
+.. tip::
 
     It can be quite annoying to have a message about ordering pizza
     suddenly appear in the middle of the text file you are editing. On a
@@ -711,7 +711,7 @@ Exemple 4. Keypress detection
 
 
 
-    |Note
+.. note::
 
     If write access to a particular terminal has been disabled with
     **mesg** , then **wall** cannot send a message to that terminal.
@@ -791,7 +791,7 @@ Exemple 4. Keypress detection
 
 
 
-    |Caution
+.. caution::
 
     This command will fail if the user invoking it does not have read
     permission for the ``            /var/log/lastlog           `` file.
@@ -1201,7 +1201,7 @@ Exemple 5. Checking a remote server for *identd*
 
 
 
-    |Note
+.. note::
 
     A *load average* of 1 or less indicates that the system handles
     processes immediately. A load average greater than 1 means that
@@ -1250,7 +1250,7 @@ Exemple 5. Checking a remote server for *identd*
 
 
 
-    |Note
+.. note::
 
     This command allegedly fetches a "unique" serial number for a
     particular system. Certain product registration procedures use this
@@ -1408,7 +1408,7 @@ n localhost
 
 
 
-    |Note
+.. note::
 
     Stefano Falsetto has created
     `rottlog <http://www.gnu.org/software/rottlog/>`__ , which he
@@ -1660,7 +1660,7 @@ Exemple 6. *pidof* helps kill a process
 
 
 
-    |Note
+.. note::
 
     Some flavors of Linux run **crond** , Matthew Dillon's version of
     **cron** .
@@ -1700,7 +1700,7 @@ Exemple 6. *pidof* helps kill a process
 
 
 
-    |Warning
+.. warning::
 
     On some Linux distros, the **halt** command has 755 permissions, so
     it can be invoked by a non-root user. A careless *halt* in a
@@ -1835,7 +1835,7 @@ Exemple 6. *pidof* helps kill a process
 
 
 
-    |Note
+.. note::
 
     A **netstat -lptu** shows `sockets <devref1.html#SOCKETREF>`__ that
     are listening to ports, and the associated processes. This can be
@@ -2046,7 +2046,7 @@ Exemple 7. Checking a CD image
 
 
 
-    |Note
+.. note::
 
     The **automount** utility, if properly installed, can mount and
     unmount floppies or CDROM disks as they are accessed or removed. On
@@ -2193,7 +2193,7 @@ Exemple 9. Adding a new hard drive
 
 
 
-    |Warning
+.. warning::
 
     This is an extremely dangerous command. Use it at your own risk, as
     you may inadvertently destroy your filesystem.
@@ -2225,7 +2225,7 @@ Exemple 9. Adding a new hard drive
 
 
 
-    |Warning
+.. warning::
 
     Use this command with extreme caution. If something goes wrong, you
     may destroy an existing filesystem.
@@ -2248,7 +2248,7 @@ Exemple 9. Adding a new hard drive
 
 
 
-    |Caution
+.. caution::
 
     All of these should be invoked as *root* , and they can damage or
     destroy a filesystem if misused.
@@ -2365,7 +2365,7 @@ Exemple 9. Adding a new hard drive
 
 
 
-    |Caution
+.. caution::
 
     It might be necessary to copy certain system files to a *chrooted*
     directory, since the normal ``            $PATH           `` can no
@@ -2452,7 +2452,7 @@ Exemple 9. Adding a new hard drive
 
 
 
-    |Note
+.. note::
 
     Unlike **lockfile** , **flock** does *not* automatically create a
     lock file.
@@ -2510,7 +2510,7 @@ Exemple 9. Adding a new hard drive
 
 
 
-    |Important
+.. important::
 
     Judicious use of **ulimit** can protect a system against the dreaded
     *fork bomb* .
@@ -2672,7 +2672,7 @@ Exemple 10. Using *umask* to hide an output file from prying eyes
 
 
 
-    |Note
+.. note::
 
     Doing a **cat /proc/modules** gives the same information.
 
@@ -2725,7 +2725,7 @@ Exemple 10. Using *umask* to hide an output file from prying eyes
 
 
 
-    |Note
+.. note::
 
      The first line of a script (the "sha-bang" line) may use **env**
     when the path to the shell or interpreter is unknown.
@@ -2837,7 +2837,7 @@ its usual place, in /bin
 
 
 
-    |Note
+.. note::
 
     Unfortunately, `piping <special-chars.html#PIPEREF>`__ the output of
     **watch command** to `grep <textproc.html#GREPREF>`__ does not work.

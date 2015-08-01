@@ -520,7 +520,7 @@ Exemple 19. Even more return value trickery
 
 
 
-   |Caution
+.. caution::
 
     There can be only **one** *echo* statement in the function for this
    to work. If you alter the previous example:

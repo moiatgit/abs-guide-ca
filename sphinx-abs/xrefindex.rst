@@ -533,7 +533,7 @@ download <mirrorsites.html#WHERE_TARBALL>`__
 
 
 
-   |Note
+.. note::
 
    `In certain contexts <bashver3.html#PLUSEQSTR>`__ , **+=** can also
    function as a *string concatenation* operator.
