@@ -1,6 +1,6 @@
-#################################
-XXX  5.1. Variables entre cometes
-#################################
+############################
+5.1. Variables entre cometes
+############################
 
 En referenciar una variable, en general es recomanable posar-la entre cometes
 dobles per evitar que es reinterpretin tots els caràcters especials que hi pugui

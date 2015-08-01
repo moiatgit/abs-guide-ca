@@ -67,7 +67,7 @@ com pot ser *Perl*, que intenten servir per a tot i per a tothom, amb
 el cost de forçar a tothom a canviar la manera de pensar per a
 adaptar-te a l'eina.
 
-Segons :ref:`Herbert Mayer <HERB89>`, *per què un llenguatge sigui
+Segons :ref:`Herbert Mayer <biblio_herb89>`, *per què un llenguatge sigui
 útil, cal que disposi de cadenes (arrays), punters i algun mecanisme
 genèric per crear estructures de dades*. Amb aquests criteris, la
 programació en *shell* quedaria una mica per sota de ser "útil". O,
