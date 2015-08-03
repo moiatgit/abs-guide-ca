@@ -1,8 +1,7 @@
 #!/bin/bash
 # XXX Demostració de captura de tecles
-
-# Used in ABS Guide with permission.
-# Requires version 4.2+ of Bash.
+# Autor original: Sigurd Solaas, 20 abril 2011
+# Per versió de Bash 4.2+.
 
 key="no value yet"
 while true; do
