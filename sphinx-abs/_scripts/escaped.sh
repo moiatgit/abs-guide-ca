@@ -1,41 +1,40 @@
 #!/bin/bash
 # XXX Demostració de caràcters escapats
 
-#############################################################
-### First, let's show some basic escaped-character usage. ###
-#############################################################
+### Comencem veient uns exemples bàsics d'escapament de caràcters
 
-# Escaping a newline.
-# ------------------
+# Escapem un salt de línia
 
 echo ""
 
-echo "This will print
-as two lines."
-# This will print
-# as two lines.
+echo "Aquest text es mostrarà
+en dues línies."
+# Sortida: Aquest text es mostrarà
+#          en dues línies.
 
-echo "This will print \
-    as one line."
-# This will print as one line.
+echo "Aquest text es mostrarà \
+en una única línia."
+# Sortida: Aquest text es mostrarà en una única línia.
 
 echo; echo
 
 echo "============="
 
 
-echo "\v\v\v\v"      # Prints \v\v\v\v literally.
-# Use the -e option with 'echo' to print escaped characters.
-echo "============="
-echo "VERTICAL TABS"
-echo -e "\v\v\v\v"   # Prints 4 vertical tabs.
-echo "=============="
-
-echo "QUOTATION MARK"
-echo -e "\042"       # Prints " (quote, octal ASCII character 42).
-echo "=============="
+echo "a\ve\vi\vo\vu"     # Sortida: a\ve\vi\vo\vu
+# Amb l'opció -e, la comanda echo mostrarà els caràcters escapats.
+echo "Tabulació vertical"
+echo -e "a\ve\vi\vo\vu"   # Sortida:    a
+                          #                 e
+                          #                     i
+                          #                         o
+                          #                             u
 
 
+echo "Cometes dobles
+echo -e "\042aeiou\042"       # Sortida: "aeiou"
+
+XXX vas per aquí
 
 # The $'\X' construct makes the -e option unnecessary.
 
