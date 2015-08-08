@@ -1,87 +1,86 @@
 #!/bin/bash
-# XXX Demostració de captura de tecles
+# Demostració de captura de tecles
 # Autor original: Sigurd Solaas, 20 abril 2011
 # Per versió de Bash 4.2+.
 
-key="no value yet"
+key="De moment no has pres cap tecla"
 while true; do
     clear
-    echo "Bash Extra Keys Demo. Keys to try:"
+    echo "Demostració de tecles extra. Prova amb les tecles:"
     echo
-    echo "* Insert, Delete, Home, End, Page_Up and Page_Down"
-    echo "* The four arrow keys"
-    echo "* Tab, enter, escape, and space key"
-    echo "* The letter and number keys, etc."
+    echo "* Insert, Delete, Home, End, Page_Up i Page_Down"
+    echo "* Les quatre tecles del cursor"
+    echo "* Tab, enter, esc i barra d'espai"
+    echo "* Les tecles de lletres, nombres, etc."
     echo
-    echo "    d = show date/time"
-    echo "    q = quit"
+    echo "    d = mostra la data i hora"
+    echo "    q = surt"
     echo "================================"
     echo
 
-    # Convert the separate home-key to home-key_num_7:
+    # Converteix la tecla separada home-key a home-key_num_7:
     if [ "$key" = $'\x1b\x4f\x48' ]; then
-        key=$'\x1b\x5b\x31\x7e'
-        #   Quoted string-expansion construct.
+        key=$'\x1b\x5b\x31\x7e' #   expansió de text entre cometes
     fi
 
-    # Convert the separate end-key to end-key_num_1.
+    # Converteix la tecla separada end-key a end-key_num_1.
     if [ "$key" = $'\x1b\x4f\x46' ]; then
         key=$'\x1b\x5b\x34\x7e'
     fi
 
     case "$key" in
         $'\x1b\x5b\x32\x7e')  # Insert
-            echo Insert Key
+            echo Insert
             ;;
         $'\x1b\x5b\x33\x7e')  # Delete
-            echo Delete Key
+            echo Delete
             ;;
         $'\x1b\x5b\x31\x7e')  # Home_key_num_7
-            echo Home Key
+            echo Inici
             ;;
         $'\x1b\x5b\x34\x7e')  # End_key_num_1
-            echo End Key
+            echo Fi
             ;;
         $'\x1b\x5b\x35\x7e')  # Page_Up
-            echo Page_Up
+            echo Pàgina amunt
             ;;
         $'\x1b\x5b\x36\x7e')  # Page_Down
-            echo Page_Down
+            echo Pàgina abaix
             ;;
         $'\x1b\x5b\x41')  # Up_arrow
-            echo Up arrow
+            echo Cursor amunt
             ;;
         $'\x1b\x5b\x42')  # Down_arrow
-            echo Down arrow
+            echo Cursor abaix
             ;;
         $'\x1b\x5b\x43')  # Right_arrow
-            echo Right arrow
+            echo Cursor dreta
             ;;
         $'\x1b\x5b\x44')  # Left_arrow
-            echo Left arrow
+            echo Cursor esquerra
             ;;
         $'\x09')  # Tab
-            echo Tab Key
+            echo Tab
             ;;
         $'\x0a')  # Enter
-            echo Enter Key
+            echo Enter
             ;;
         $'\x1b')  # Escape
-            echo Escape Key
+            echo Escape
             ;;
         $'\x20')  # Space
-            echo Space Key
+            echo Space
             ;;
         d)
             date
             ;;
         q)
-            echo Time to quit...
+            echo "Això s'acaba..."
             echo
             exit 0
             ;;
         *)
-            echo You pressed: \'"$key"\'
+            echo Has pres: \'"$key"\'
             ;;
     esac
 
@@ -89,7 +88,7 @@ while true; do
     echo "================================"
 
     unset K1 K2 K3
-    read -s -N1 -p "Press a key: "
+    read -s -N1 -p "Prem una tecla: "
     K1="$REPLY"
     read -s -N2 -t 0.001
     K2="$REPLY"

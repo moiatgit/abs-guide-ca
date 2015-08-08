@@ -1,5 +1,5 @@
 #!/bin/bash
-# XXX Demostració de caràcters escapats
+# Demostració de caràcters escapats
 
 ### Comencem veient uns exemples bàsics d'escapament de caràcters
 
@@ -31,59 +31,53 @@ echo -e "a\ve\vi\vo\vu"   # Sortida:    a
                           #                             u
 
 
-echo "Cometes dobles
+echo "Cometes dobles"
 echo -e "\042aeiou\042"       # Sortida: "aeiou"
 
-XXX vas per aquí
+# Amb $'\X' no cal l'opció -e
 
-# The $'\X' construct makes the -e option unnecessary.
+echo; echo "Salt de línia i (potser) PIIIP"
+echo $'\n'           # Nova línia
+echo $'\a'           # Alerta (PIIP).
+# Depenent del terminal, pot no fer soroll sinó un parpadeig.
 
-echo; echo "NEWLINE and (maybe) BEEP"
-echo $'\n'           # Newline.
-echo $'\a'           # Alert (beep).
-# May only flash, not beep, depending on terminal.
+# Hem vist l'expansió $'\xxx'. Ara...
 
-# We have seen $'\nnn" string expansion, and now . . .
+# La versió 2 de Bash va introduir l'expansió de cadenes de text $'\nnn'.
+echo "Introducció de l'expansió de cadenes amb \$\' ... \' ..."
+echo "... que inclou més marques de cometes."
 
-# =================================================================== #
-# Version 2 of Bash introduced the $'\nnn' string expansion construct.
-# =================================================================== #
+echo $'a\t \042 \tz'   # Sortida: a    "   z
+# Atenció: '\xxx' és un valor octal
 
-echo "Introducing the \$\' ... \' string-expansion construct . . . "
-echo ". . . featuring more quotation marks."
-
-echo $'\t \042 \t'   # Quote (") framed by tabs.
-# Note that  '\nnn' is an octal value.
-
-# It also works with hexadecimal values, in an $'\xhhh' construct.
-echo $'\t \x22 \t'  # Quote (") framed by tabs.
-# Thank you, Greg Keraunen, for pointing this out.
-# Earlier Bash versions allowed '\x022'.
+# També funciona amb valors hexadecimals amb $'\xhhh'.
+echo $'a\t \x22 \tz'  # Sortida: a    "   z
 
 echo
 
 
-# Assigning ASCII characters to a variable.
-# ----------------------------------------
-quote=$'\042'        # " assigned to a variable.
-echo "$quote Quoted string $quote and this lies outside the quotes."
+# Assignació d'un caràcter ASCII a una variable.
+cometes=$'\042'        # " ara $cometes val "
+echo $cometes text entre cometes $cometes i fora de les cometes.
 
 echo
 
-# Concatenating ASCII chars in a variable.
-triple_underline=$'\137\137\137'  # 137 is octal ASCII code for '_'.
-echo "$triple_underline UNDERLINE $triple_underline"
+# Concatenació de caràcters ASCII en una variable.
+triple_subratllat=$'\137\137\137'  # 137 és el valor octal del caràcter ASCII _
+echo "$triple_subratllat SUBRATLLAT $triple_subratllat"
 
 echo
 
-ABC=$'\101\102\103\010'           # 101, 102, 103 are octal A, B, C.
+ABC=$'\101\102\103\010'      # 101, 102, 103 són els valors en octal dels caràcters A, B i C.
 echo $ABC
 
 echo
 
-escape=$'\033'                    # 033 is octal for escape.
-echo "\"escape\" echoes as $escape"
-#                                   no visible output.
+escape=$'\033'               # 033 és el valor octal pel caràcter d'escape (tecla ESC)
+echo "\"escape\" mostrat com $escape"
+# Sortida: "escape" mostrat com 
+#                               ^ en el teu terminal segurament es mostra amb un
+#                               símbol "raro"
 
 echo
 
