@@ -1,65 +1,26 @@
-
 ################################
 XXX  4.4. Special Variable Types
 ################################
 
 
- ``                 Local variables               ``
-    Variables `visible <subshells.html#SCOPEREF>`__ only within a `code
-    block <special-chars.html#CODEBLOCKREF>`__ or function (see also
-    `local variables <localvar.html#LOCALREF>`__ in
-    `functions <functions.html#FUNCTIONREF>`__ )
+Variable local
+    Les variables locals són variables :doc:`visibles <subshells>` només dins d'un bloc de codi o
+    funció.
 
- ``                 Environmental variables               ``
-    Variables that affect the behavior of the shell and user interface
+    Considera :doc:`localvar` i :doc:`functions`.
 
-
-
-    |Note
-
-    In a more general context, each
-    `process <special-chars.html#PROCESSREF>`__ has an "environment" ,
-    that is, a group of variables that the process may reference. In
-    this sense, the shell behaves like any other process.
-
-    Every time a shell starts, it creates shell variables that
-    correspond to its own environmental variables. Updating or adding
-    new environmental variables causes the shell to update its
-    environment, and all the shell's *child processes* (the commands it
-    executes) inherit this environment.
+Variable d'entorn
+    Les variables d'entorn afecten el comportament del sistema.
 
 
+En un context més general, cada procés disposa d'un *entorn* o grup de variables que el procés pot
+fer referència. En aquest sentit, la shell es comporta com qualsevol altre procés. Cada cop que
+s'inicia una shell, es creen les variables que corresponen al seu entorn. Afegir noves variables
+d'entorn, o modificar el valor d'alguna existent, modifica l'entorn de la shell i el dels seus
+processos fill (comandes que executi la shell), doncs aquests hereten l'entorn de la shell.
 
 
-
-
-    |Caution
-
-    The space allotted to the environment is limited. Creating too many
-    environmental variables or ones that use up excessive space may
-    cause problems.
-
---------------------------------------------------------------------------------------
-
-.. code-block:: sh
-
-    bash$ eval "`seq 100
-00 | sed -e 's/.*/export
- var&=ZZZZZZZZZZZZZZ/'`"
-
-    bash$ du
-    bash: /usr/bin/du: A
-rgument list too long
-
-
---------------------------------------------------------------------------------------
-
-
-    Note: this "error" has been fixed, as of kernel version 2.6.23.
-
-    (Thank you, StÃ©phane Chazelas for the clarification, and for
-    providing the above example.)
-
+XXX TODO per aquí
 
     .. code-block:: sh
 
