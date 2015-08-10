@@ -1,15 +1,14 @@
+#########################################
+G.2. Opcions de la línia de comandes Bash
+#########################################
 
-###################################
-XXX  G.2. Bash Command-Line Options
-###################################
+*Bash* per si mateix te una sèrie d'opcions a la línia de comandes. Aquestes són algunes de les més útils.
 
-*Bash* itself has a number of command-line options. Here are some of the
-more useful ones.
 
 -  ``        -c       ``
 
-   *Read commands from the following string and assign any arguments to
-   the `positional parameters <internalvariables.html#POSPARAMREF>`__ .*
+   *Llegir comandes de la següent cadena i assignar qualsevol argument als
+   `paràmetres posicionals <internalvariables.html#POSPARAMREF>`__ .*
 
 
    .. code-block:: sh
@@ -24,20 +23,19 @@ more useful ones.
 
    ``        --restricted       ``
 
-   *Runs the shell, or a script, in `restricted
-   mode <restricted-sh.html#RESTRICTEDSHREF>`__ .*
+   Executar la shell, o un guió en `mode restringit <restricted-sh.html#RESTRICTEDSHREF>`__ .
+
 
 -  ``        --posix       ``
 
-   *Forces Bash to conform to `POSIX <sha-bang.html#POSIX2REF>`__ mode.*
+   Obliga a Bash per ajustar-se a l'estàndard `POSIX <sha-bang.html#POSIX2REF>`__ .
 
 -  ``        --version       ``
 
-   *Display Bash version information and exit.*
+   *Mostrar per pantalla informació de la versió i sortirda.*
 
 -  ``        --       ``
 
-   *End of options. Anything further on the command line is an argument,
-   not an option.*
+   *Fi d'opcions. Qualsevol cosa més enllá en la línia de comandes és un argument, no una opció.*
 
 
