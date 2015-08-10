@@ -168,7 +168,7 @@ Tools for debugging non-working scripts include
 
 
 
-   |Tip
+.. tip::
 
    Even better is an **echo** that echoes only when *debug* is on.
 

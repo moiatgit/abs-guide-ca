@@ -243,7 +243,7 @@ Exemple 12. Word Frequency Analysis
 
 
 
-    |Note
+.. note::
 
     It is even possible to specify a linefeed as a delimiter. The trick
     is to actually embed a linefeed ( **RETURN** ) in the command
@@ -364,7 +364,7 @@ testfile.
 
 
 
-    |Note
+.. note::
 
     The tagged field appears only once in the output.
 
@@ -549,7 +549,7 @@ Exemple 15. Using *tail* to monitor the system log
 
 
 
-    |Tip
+.. tip::
 
     To list a specific line of a text file,
     `pipe <special-chars.html#PIPEREF>`__ the output of **head** to
@@ -598,7 +598,7 @@ im from end of block)
 
 
 
-    |Note
+.. note::
 
     Newer implementations of **tail** deprecate the older **tail -$LINES
     filename** usage. The standard **tail -n $LINES filename** is
@@ -773,7 +773,7 @@ Exemple 16. Printing out the *From* lines in stored e-mail messages
 
 
 
-    |Tip
+.. tip::
 
     To force **grep** to show the filename when searching only one
     target file, simply give ``            /dev/null           `` as the
@@ -1027,7 +1027,7 @@ Exemple 17. Crossword puzzle solver
 
 
 
-    |Note
+.. note::
 
     On some Linux distros, **egrep** and **fgrep** are symbolic links
     to, or aliases for **grep** , but invoked with the
@@ -1135,7 +1135,7 @@ Exemple 19. Looking up definitions in *Webster's 1913 Dictionary*
 
 
 
-    |Note
+.. note::
 
     See also `Example A-41 <contributed-scripts.html#QKY>`__ for an
     example of speedy *fgrep* lookup on a large text file.
@@ -1150,7 +1150,7 @@ Exemple 19. Looking up definitions in *Webster's 1913 Dictionary*
 
 
 
-    |Tip
+.. tip::
 
     To search compressed files, use **zgrep** , **zegrep** , or
     **zfgrep** . These also work on non-compressed files, though slower
@@ -1332,7 +1332,7 @@ Exemple 18. Checking words in a list for validity
 
 
 
-    |Caution
+.. caution::
 
     `Must use quoting and/or brackets <special-chars.html#UCREF>`__ , as
     appropriate. Quotes prevent the shell from reinterpreting the
@@ -1681,7 +1681,7 @@ Exemple 23. Formatted file listing.
 
 
 
-    |Tip
+.. tip::
 
     A powerful alternative to **fmt** is Kamil Toman's **par** utility,
     available from http://www.cs.berkeley.edu/~amc/Par/ .
@@ -1736,7 +1736,7 @@ Exemple 24. Using *column* to format a directory listing
 
 
 
-    |Caution
+.. caution::
 
     If the file contains tabs or nonprintable characters, this may cause
     unpredictable behavior. In such cases, consider using

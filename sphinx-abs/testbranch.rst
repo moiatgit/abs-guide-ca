@@ -29,7 +29,7 @@ the block.
 
 
 
-    |Note
+.. note::
 
     -  Quoting the variables is not mandatory, since word splitting does
        not take place.

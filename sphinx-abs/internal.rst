@@ -759,9 +759,9 @@ Exemple 6. Detecting the arrow keys
         while true
         do
           read -sn1 a
-          test "$a" == `echo -en "\e"` |continue
+          test "$a" == `echo -en "\e"`.. continue::
           read -sn1 a
-          test "$a" == "[" |continue
+          test "$a" == "[".. continue::
           read -sn1 a
           case "$a" in
             A)  echo "up";;

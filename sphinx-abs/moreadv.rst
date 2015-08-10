@@ -94,7 +94,7 @@ grep '^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'
 
 
 
-    |Note
+.. note::
 
     The ``            -exec           `` option to **find** should not
     be confused with the `exec <internal.html#EXECREF>`__ shell builtin.
@@ -279,7 +279,7 @@ Exemple 4. Deleting a file by its *inode* number
 
 
 
-    |Note
+.. note::
 
     Note that *xargs* processes the arguments passed to it sequentially,
     *one at a time* .
@@ -320,7 +320,7 @@ l script text executable
 
 
 
-    |Tip
+.. tip::
 
     An interesting *xargs* option is
     ``            -n                                       NN                         ``
@@ -337,7 +337,7 @@ l script text executable
 
 
 
-    |Tip
+.. tip::
 
     Another useful option is ``            -0           `` , in
     combination with
@@ -388,7 +388,7 @@ nd /proc" chapter.
 
 
 
-    |Tip
+.. tip::
 
     The ``            -P           `` option to *xargs* permits running
     processes in parallel. This speeds up execution in a machine with a
@@ -806,7 +806,7 @@ Exemple 9. Using *expr*
 
 
 
-    |Important
+.. important::
 
     The `: ( *null* ) <special-chars.html#NULLREF>`__ operator can
     substitute for **match** . For example,

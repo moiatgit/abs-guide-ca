@@ -22,6 +22,29 @@ processos fill (comandes que executi la shell), doncs aquests hereten l'entorn d
 
 XXX TODO per aquí
 
+
+
+
+
+
+
+.. caution::
+
+    The space allotted to the environment is limited. Creating too many
+    environmental variables or ones that use up excessive space may
+    cause problems.
+
+
+.. code-block:: sh
+
+    bash$ eval "`seq 100
+00 | sed -e 's/.*/export
+ var&=ZZZZZZZZZZZZZZ/'`"
+
+    bash$ du
+    bash: /usr/bin/du: A
+rgument list too long
+
     .. code-block:: sh
 
         bash$ eval "`seq 10000sed -e 's/.*/export var&=ZZZZZZZZZZZZZZ/'`"
@@ -49,7 +72,7 @@ XXX TODO per aquí
 
 
 
-    |Note
+.. note::
 
     A script can **export** variables only to child
     `processes <special-chars.html#PROCESSREF>`__ , that is, only to
@@ -173,7 +196,7 @@ Exemple 5. Positional Parameters
 
 
 
-    |Tip
+.. tip::
 
     If a script expects a command-line parameter but is invoked without
     one, this may cause a *null variable assignment* , generally an
@@ -350,14 +373,14 @@ Exemple 7. Using *shift*
         #      done           #+ then loop never ends!
         #
         # When in doubt, add a sanity check. . . .
-        #           shift 20 |break
+        #           shift 20.. break::
         #                    ^^^^^^^^
 
 
 
 
 
-    |Note
+.. note::
 
     The **shift** command works in a similar fashion on parameters
     passed to a `function <functions.html#FUNCTIONREF>`__ . See `Example

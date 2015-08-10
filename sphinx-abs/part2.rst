@@ -8,8 +8,6 @@ Part 2. Conceptes bàsics
    special-chars
    variables
    quoting
-   quotingvar
-   escapingsection
    exit-status
    tests
    testconstructs

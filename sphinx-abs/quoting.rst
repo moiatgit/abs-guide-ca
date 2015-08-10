@@ -1,98 +1,68 @@
-######################
-XXX Chapter 5. Cometes
-######################
+##################
+Chapter 5. Cometes
+##################
 
+.. toctree::
+   :titlesonly:
 
+   quotingvar
+   escapingsection
 
+Quan posem un text entre cometes, permet que es *protegeixin* part o tots els :doc:`caràcters
+especials <special-chars>` que contingui aquest, de manera que l'interpret de comandes no els
+interpreti de manera especial sinó com el seu significat literal. 
 
-**Table of Contents**
-
-
-
-5.1. `Quoting Variables <quotingvar.html>`__
-
-
-
-5.2. `Escaping <escapingsection.html>`__
-
-
-
-
-Quoting means just that, bracketing a string in quotes. This has the
-effect of protecting `special
-characters <special-chars.html#SCHARLIST1>`__ in the string from
-reinterpretation or expansion by the shell or shell script. (A character
-is "special" if it has an interpretation other than its literal meaning.
-For example, the `asterisk \* <special-chars.html#ASTERISKREF>`__
-represents a *wild card* character in `globbing <globbingref.html>`__
-and `Regular Expressions <regexp.html#REGEXREF>`__ ).
-
+Per exemple, l'asterisc \* representa qualsevol caràcter tan en :doc:`globbingref` com en
+:doc:`regexp`. 
 
 .. code-block:: sh
 
-    bash$ ls -l [Vv]*
+    $ ls -l [Vv]*
     -rw-rw-r--    1 bozo  bozo       324 Apr  2 15:05 VIEWDATA.BAT
-     -rw-rw-r--    1 bozo  bozo       507 May  4 14:25 vartrace.sh
-     -rw-rw-r--    1 bozo  bozo       539 Apr 14 17:11 viewdata.sh
+    -rw-rw-r--    1 bozo  bozo       507 May  4 14:25 vartrace.sh
+    -rw-rw-r--    1 bozo  bozo       539 Apr 14 17:11 viewdata.sh
 
-    bash$ ls -l '[Vv]*'
-    ls: [Vv]*: No such file or directory
+    $ ls -l '[Vv]*'
+    ls: no s’ha pogut accedir a [Vv]*: El fitxer o directori no existeix
 
+En l'exemple anterior veiem com per la primera crida a ``ls``, s'interpreta que es vol tots els
+fitxers amb nom iniciat per ``V`` o ``v``. En canvi, a la segona crida de ``ls``, s'interpreta que
+el que s'ha de llistar és l'entrada amb el nom literal ``[Vv]*`` que, al menys en aquest cas, no es
+troba.
 
+Quan escrivim un document en el nostre dia a dia, i posem una frase entre cometes, indiquem que
+aquest contingut és especial. En Bash, quan podem entre cometes un text, també l'estem marcant com a
+especial i *protegim* el seu significat literal.
 
-
-
-In everyday speech or writing, when we "quote" a phrase, we set it apart
-and give it special meaning. In a Bash script, when we *quote* a string,
-we set it apart and protect its *literal* meaning.
-
-
-
-
-Certain programs and utilities reinterpret or expand special characters
-in a quoted string. An important use of quoting is protecting a
-command-line parameter from the shell, but still letting the calling
-program expand it.
-
+Hi ha alguns programes i utilitats que requereixen determinats caràcters especials
+dins del text que reben com a entrada i, per tant, ens cal evitar que la Shell els interpreti abans
+que arribin al programa objectiu:
 
 .. code-block:: sh
 
-    bash$ grep '[Ff]irst' *.txt
-    file1.txt:This is the first line of file1.txt.
-     file2.txt:This is the First line of file2.txt.
+    $ grep -H '[Pp]rimer' *.txt
+    fitxer1.txt:Primer la obligació i després la devoció.
+    fitxer2.txt:La obligació primer. Després la devoció.
 
+En l'exemple anterior, la utilitat ``grep`` rep literalment el text ``[Pp]primer`` com a primer
+argument de la crida, que interpretarà com a expressió regular per trobar tots els fitxers que
+continguin les paraules ``primer`` o ``Primer``. L'asterisc, en canvi, arribarà a ``grep`` en forma
+de llista de fitxers amb extensió .txt que es trobin al directori actual.
 
+.. note::
 
-Note that the unquoted ``             grep [Ff]irst *.txt           ``
-works under the Bash shell. ` [1]  <quoting.html#FTN.AEN2609>`__
+   De fet, Bash acceptaria correctament ``grep -H [Pp]rimer *.txt`` a menys que existeixi un fitxer
+   anomenat ``primer`` o ``Primer`` en el directori actual.
 
-Quoting can also suppress `echo's <internal.html#ECHOREF>`__ "appetite"
-for newlines.
-
+Les cometes també poden fer que ``echo`` respecti els salts de línia. Mira :doc:`internal`.
 
 .. code-block:: sh
 
-    bash$ echo $(ls -l)
-    total 8 -rw-rw-r-- 1 bo bo 13 Aug 21 12:57 t.sh -rw-rw-r-- 1 bo bo 78 Aug 21 12:57 u.sh
-
-
-    bash$ echo "$(ls -l)"
-    total 8
-     -rw-rw-r--  1 bo bo  13 Aug 21 12:57 t.sh
-     -rw-rw-r--  1 bo bo  78 Aug 21 12:57 u.sh
-
-
-
-
-Notes
-~~~~~
-
-
-` [1]  <quoting.html#AEN2609>`__
-
-Unless there is a file named ``       first      `` in the current
-working directory. Yet another reason to *quote* . (Thank you, Harald
-Koenig, for pointing this out.
-
-
+    $ echo $(ls /etc/mail*)
+    /etc/mailcap /etc/mailcap.order /etc/mailname /etc/mail.rc
+    $ echo "$(ls /etc/mail*)"
+    /etc/mailcap
+    /etc/mailcap.order
+    /etc/mailname
+    /etc/mail.rc
 

@@ -522,7 +522,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 
-    |Note
+.. note::
 
      && may also be used, depending on context, in an `and
     list <list-cons.html#LISTCONSREF>`__ to concatenate commands.
@@ -548,7 +548,7 @@ A-54 <contributed-scripts.html#BASE64>`__ ) script.
 
 
 
-    |Note
+.. note::
 
     Bash tests the `exit status <exit-status.html#EXITSTATUSREF>`__ of
     each statement linked with a logical operator.

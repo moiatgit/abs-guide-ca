@@ -118,7 +118,7 @@ Exemple 6. A somewhat more elaborate address database
 
 
 
-   |Caution
+.. caution::
 
    Elements of the *index* array may include embedded `space
    characters <special-chars.html#WHITESPACEREF>`__ , or even leading
@@ -291,7 +291,7 @@ There is a new 'coproc' reserved word that specifies a coprocess:
 
 
 
-   |Caution
+.. caution::
 
    The coprocess is *asynchronous* , and this might cause a problem. It
    may terminate before another process has finished communicating with
@@ -838,7 +838,7 @@ new features and enhancements, in addition to bugfixes.
 
 
 
-   |Note
+.. note::
 
    The above example uses the `**$' ...
    '** <escapingsection.html#STRQ>`__ *string-expansion* construct.

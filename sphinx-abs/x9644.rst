@@ -14,7 +14,7 @@ chapter.
 
 
 
-    |Note
+.. note::
 
     It is all too easy to confuse *jobs* and *processes* . Certain
     `builtins <internal.html#BUILTINREF>`__ , such as **kill** ,
@@ -138,7 +138,7 @@ Exemple 26. Waiting for a process to finish before proceeding
 
 
 
-    |Tip
+.. tip::
 
     Within a script, running a command in the background with an
     ampersand (&) may cause the script to hang until **ENTER** is hit.
@@ -362,7 +362,7 @@ Exemple 27. A script that kills itself
 
 
 
-    |Note
+.. note::
 
     ``                         kill -l                       `` lists
     all the `signals <debugging.html#SIGNALD>`__ (as does the file
@@ -388,7 +388,7 @@ Exemple 27. A script that kills itself
 
 
 
-    |Note
+.. note::
 
     This refers to the **killall** command in
     ``            /usr/bin           `` , *not* the `killall
@@ -412,7 +412,7 @@ Exemple 27. A script that kills itself
 
 
 
-    |Note
+.. note::
 
     This is one of three shell directives that effect script command
     processing. The others are `builtin <x9644.html#BLTREF>`__ and

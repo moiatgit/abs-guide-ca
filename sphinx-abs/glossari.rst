@@ -59,3 +59,8 @@ llibre, amb la versió en anglès entre parèntesis.
 
         Mecanisme mitjançant el qual es reemplaça el nom d'una variable pel valor que conté la
         posició de memòria a la que la variable fa referència.
+
+   Espai en rere (*backspace*)
+
+        Tecla (o caràcter) que elimina el caracter anterior al cursor i deixa el
+        cursor en el seu lloc.

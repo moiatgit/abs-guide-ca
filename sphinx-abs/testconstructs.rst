@@ -72,7 +72,7 @@ XXX  7.1. Test Constructs
 
 
 
-   |Caution
+.. caution::
 
     Again, note that the *exit status* of an arithmetic expression is
    *not* an error value.
