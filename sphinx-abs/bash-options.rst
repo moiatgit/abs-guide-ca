@@ -1,43 +1,42 @@
+##############################
+G.2. Bash Command-Line Options
+##############################
 
-###################################
-XXX  G.2. Bash Command-Line Options
-###################################
+Com a programa, ``bash`` ofereix algunes opcions. Entre les més útils, trobem:
 
-*Bash* itself has a number of command-line options. Here are some of the
-more useful ones.
+- ``-c``
 
--  ``        -c       ``
-
-   *Read commands from the following string and assign any arguments to
-   the `positional parameters <internalvariables.html#POSPARAMREF>`__ .*
-
-
-   .. code-block:: sh
-
-       bash$ bash -c 'set a b c d; IFS="+-;"; echo "$*"'
-       a+b+c+d
+Llegeix les comandes del text que segueix a l'opció i assigna qualsevol argument als
+:ref:`paràmetres <internalvariables_parametresposicionals>`.
 
 
 
+.. code-block:: sh
 
--  ``        -r       ``
+       $ bash -c 'set a b c d; IFS="@"; echo "$*"'
+       a@b@c@d
 
-   ``        --restricted       ``
 
-   *Runs the shell, or a script, in `restricted
-   mode <restricted-sh.html#RESTRICTEDSHREF>`__ .*
 
--  ``        --posix       ``
 
-   *Forces Bash to conform to `POSIX <sha-bang.html#POSIX2REF>`__ mode.*
+- ``-r``
 
--  ``        --version       ``
+  ``--restricted``
 
-   *Display Bash version information and exit.*
+  Executa la shell, o un guió, en :doc:`mode restringit <restricted-sh>`.
 
--  ``        --       ``
 
-   *End of options. Anything further on the command line is an argument,
-   not an option.*
+- ``--posix``
 
+  Obliga a *bash* a respectar el mode *POSIX* (mira :doc:`sha-bang`).
+
+- ``--version``
+
+  Mostra la versió de *Bash* i finalitza.
+
+
+- ``--``
+
+  Marca el final de les opcions. Tot el que aparegui a continuació a la línia de comandes, es
+  considerarà un argument en comptes d'una opció.
 

@@ -1545,8 +1545,10 @@ Exemple 5. Am I root?
 
 
 
+.. _internalvariables_parametresposicionals:
 
-**Positional Parameters**
+Paràmetres posicionals
+======================
 
  ``        $0       `` , ``        $1       `` , ``        $2       `` ,
 etc.
