@@ -1,43 +1,21 @@
-
-###################################
-XXX  Chapter 11. Loops and Branches
-###################################
-
-
-**
-
-*What needs this iteration, woman?*
-
-*--Shakespeare, ``                   Othello                 ``*
+##############################
+Chapter 11. Loops and Branches
+##############################
 
 
+    *What needs this iteration, woman?*
+
+    --Shakespeare, Othello
+
+Les operacions en blocs de codi són la clau per fer guions de shell ben organitzats i estructurats.
+Ho aconseguirem amb les estructures de bucle i condicional.
 
 
+.. toctree::
+    :titlesonly:
 
-
-**Table of Contents**
-
-
-
-11.1. `Loops <loops1.html>`__
-
-
-
-11.2. `Nested Loops <nestedloops.html>`__
-
-
-
-11.3. `Loop Control <loopcontrol.html>`__
-
-
-
-11.4. `Testing and Branching <testbranch.html>`__
-
-
-
-
-Operations on code blocks are the key to structured and organized shell
-scripts. Looping and branching constructs provide the tools for
-accomplishing this.
-
+    loops1.html
+    nestedloops.html
+    loopcontrol.html
+    testbranch.html
 

@@ -2860,6 +2860,8 @@ its usual place, in /bin
     Command-line tool for manipulating the root window of the screen.
 
 
+.. _system_example_backlight:
+
 Exemple 11. *Backlight* : changes the brightness of the (laptop) screen backlight
 =================================================================================
 
