@@ -40,6 +40,15 @@ general als conceptes de programació.
 Aquest document, a l'igual que l'original, està lliurat al *Domini
 Públic* i per tant, no hi ha cap *Copyright*.
 
+.. note:: 
+
+    Nota del traductor: aquesta traducció s'està completant. He pensat, però, que podria ser
+    d'interès d'algú poder consultar ja aquelles parts que estiguin disponibles. Per convenció, les
+    seccions amb el títol precedit de **XXX** no estan completament traduïdes.
+
+    Si tens interès en participar d'alguna manera en la traducció, per favor, revisa el `projecte al
+    github <https://github.com/moiatgit/abs-guide-ca>`_.
+
 Dedicatòria
 ===========
 
