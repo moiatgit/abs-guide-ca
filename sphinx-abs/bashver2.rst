@@ -147,7 +147,7 @@ Exemple 3. Simple database application, using indirect variable referencing
 
 
 
-.. _basver2_exemple_cads:
+.. _bashver2_exemple_cards:
 
 Exemple 4. Using arrays and other miscellaneous trickery to deal four random hands from a deck of cards
 =======================================================================================================
