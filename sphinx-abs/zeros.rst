@@ -1,55 +1,50 @@
-
 ###################################
 XXX  Chapter 31. Of Zeros and Nulls
 ###################################
 
+    Faultily faultless, icily regular, splendidly null
 
-**
+    Dead perfection; no more.
 
-*Faultily faultless, icily regular, splendidly null*
-
-*Dead perfection; no more.*
-
-*--Alfred Lord Tennyson*
+    --Alfred Lord Tennyson
 
 
 
 
-** ``        /dev/zero       `` ... ``        /dev/null       ``**
+``/dev/zero`` ... ``/dev/null``
+===============================
 
- Uses of ``        /dev/null       ``
-    Think of ``         /dev/null        `` as a *black hole* . It is
-    essentially the equivalent of a write-only file. Everything written
-    to it disappears. Attempts to read or output from it result in
-    nothing. All the same, ``         /dev/null        `` can be quite
-    useful from both the command-line and in scripts.
+Uses of ``        /dev/null       ``
 
-    Suppressing ``         stdout        `` .
+* Think of ``         /dev/null        `` as a *black hole* . It is essentially the equivalent of a
+  write-only file. Everything written to it disappears. Attempts to read or output from it result in
+  nothing. All the same, ``         /dev/null        `` can be quite useful from both the
+  command-line and in scripts.
+
+* Suppressing ``         stdout        `` .
 
 
-    .. code-block:: sh
+  .. code-block:: sh
 
         cat $filename >/dev/null
         # Contents of the file will not list to stdout.
 
 
 
-    Suppressing ``         stderr        `` (from `Example
-    16-3 <moreadv.html#EX57>`__ ).
+* Suppressing ``         stderr        `` (from `Example 16-3 <moreadv.html#EX57>`__ ).
 
 
-    .. code-block:: sh
+  .. code-block:: sh
 
         rm $badname 2>/dev/null
         #           So error messages [stderr] deep-sixed.
 
 
 
-    Suppressing output from *both* ``         stdout        `` and
-    ``         stderr        `` .
+* Suppressing output from *both* ``         stdout        `` and ``         stderr        `` .
 
 
-    .. code-block:: sh
+  .. code-block:: sh
 
         cat $filename 2>/dev/null >/dev/null
         # If "$filename" does not exist, there will be no error message output.
@@ -64,12 +59,11 @@ XXX  Chapter 31. Of Zeros and Nulls
 
 
 
-    Deleting contents of a file, but preserving the file itself, with
-    all attendant permissions (from `Example 2-1 <sha-bang.html#EX1>`__
-    and `Example 2-3 <sha-bang.html#EX2>`__ ):
+* Deleting contents of a file, but preserving the file itself, with all attendant permissions (from
+  `Example 2-1 <sha-bang.html#EX1>`__ and `Example 2-3 <sha-bang.html#EX2>`__ ):
 
 
-    .. code-block:: sh
+  .. code-block:: sh
 
         cat /dev/null > /var/log/messages
         #  : > /var/log/messages   has same effect, but does not spawn a new process.
@@ -78,48 +72,46 @@ XXX  Chapter 31. Of Zeros and Nulls
 
 
 
-    Automatically emptying the contents of a logfile (especially good
-    for dealing with those nasty "cookies" sent by commercial Web
-    sites):
+* Automatically emptying the contents of a logfile (especially good for dealing with those nasty
+  "cookies" sent by commercial Web sites):
 
 
 Exemple 1. Hiding the cookie jar
 ================================
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
-        # Obsolete Netscape browser.
-        # Same principle applies to newer browsers.
+    # Obsolete Netscape browser.
+    # Same principle applies to newer browsers.
 
-        if [ -f ~/.netscape/cookies ]  # Remove, if exists.
-        then
-          rm -f ~/.netscape/cookies
-        fi
+    if [ -f ~/.netscape/cookies ]  # Remove, if exists.
+    then
+      rm -f ~/.netscape/cookies
+    fi
 
-        ln -s /dev/null ~/.netscape/cookies
-        # All cookies now get sent to a black hole, rather than saved to disk.
-
-
+    ln -s /dev/null ~/.netscape/cookies
+    # All cookies now get sent to a black hole, rather than saved to disk.
 
 
- Uses of ``        /dev/zero       ``
-    Like ``         /dev/null        `` , ``         /dev/zero        ``
-    is a pseudo-device file, but it actually produces a stream of nulls
-    ( *binary* zeros, not the `ASCII <special-chars.html#ASCIIDEF>`__
-    kind). Output written to ``         /dev/zero        `` disappears,
-    and it is fairly difficult to actually read the nulls emitted there,
-    though it can be done with `od <extmisc.html#ODREF>`__ or a hex
-    editor. The chief use of ``         /dev/zero        `` is creating
-    an initialized dummy file of predetermined length intended as a
-    temporary swap file.
+
+
+Uses of ``/dev/zero``
+=====================
+
+Like ``         /dev/null        `` , ``         /dev/zero        `` is a pseudo-device file, but it
+actually produces a stream of nulls ( *binary* zeros, not the `ASCII
+<special-chars.html#ASCIIDEF>`__ kind). Output written to ``         /dev/zero        `` disappears,
+and it is fairly difficult to actually read the nulls emitted there, though it can be done with `od
+<extmisc.html#ODREF>`__ or a hex editor. The chief use of ``         /dev/zero        `` is creating
+an initialized dummy file of predetermined length intended as a temporary swap file.
 
 
 Exemple 2. Setting up a swapfile using ``           /dev/zero          ``
 =========================================================================
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         #!/bin/bash
         # Creating a swap file.
@@ -188,19 +180,17 @@ Exemple 2. Setting up a swapfile using ``           /dev/zero          ``
 
 
 
-    Another application of ``         /dev/zero        `` is to "zero
-    out" a file of a designated size for a special purpose, such as
-    mounting a filesystem on a `loopback
-    device <devref1.html#LOOPBACKREF>`__ (see `Example
-    17-8 <system.html#CREATEFS>`__ ) or "securely" deleting a file (see
-    `Example 16-61 <extmisc.html#BLOTOUT>`__ ).
+Another application of ``         /dev/zero        `` is to "zero out" a file of a designated size
+for a special purpose, such as mounting a filesystem on a `loopback device
+<devref1.html#LOOPBACKREF>`__ (see `Example 17-8 <system.html#CREATEFS>`__ ) or "securely" deleting
+a file (see `Example 16-61 <extmisc.html#BLOTOUT>`__ ).
 
 
 Exemple 3. Creating a ramdisk
 =============================
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
         #!/bin/bash
         # ramdisk.sh
@@ -266,9 +256,8 @@ Exemple 3. Creating a ramdisk
 
 
 
-    In addition to all the above, ``         /dev/zero        `` is
-    needed by ELF ( *Executable and Linking Format* ) UNIX/Linux
-    binaries.
+In addition to all the above, ``         /dev/zero        `` is needed by ELF ( *Executable and
+Linking Format* ) UNIX/Linux binaries.
 
 
 
