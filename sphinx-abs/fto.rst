@@ -1,76 +1,38 @@
+################################################
+XXX  7.2. Operadors de comprovació sobre fitxers
+################################################
 
-#############################
-XXX  7.2. File test operators
-#############################
-
-
-** Returns true if...**
+Els següents operadors retornen cert si:
 
  -e
-    file exists
+    existeix el fitxer
 
  -a
-    file exists
+    existeix el fitxer
 
-    This is identical in effect to -e . It has been "deprecated," ` [1]
-     <fto.html#FTN.AEN3289>`__ and its use is discouraged.
+    Presenta el mateix resultat que ``-e`` però es considera desfasat i es desaconsella el seu ús.
 
  -f
-    file is a ``                   regular                 `` file (not
-    a directory or `device file <devref1.html#DEVFILEREF>`__ )
+    és un fitxer regular (ni un directori, ni un :doc:`fitxer de dispositiu <devref1>` )
 
  -s
-    file is not zero size
+    la mida del fitxer no és zero (fitxer no buit)
 
  -d
-    file is a directory
+    és un directori
 
  -b
-    file is a `block device <devref1.html#BLOCKDEVREF>`__
+    és un :ref:`dispositiu de bloc <fto_exemple_condicionsfitxersespecials>`
 
  -c
-     file is a `character device <devref1.html#CHARDEVREF>`__
-
-
-    .. code-block:: sh
-
-        device0="/dev/sda2"    # /   (root directory)
-        if [ -b "$device0" ]
-        then
-          echo "$device0 is a block device."
-        fi
-
-        # /dev/sda2 is a block device.
-
-
-
-        device1="/dev/ttyS1"   # PCMCIA modem card.
-        if [ -c "$device1" ]
-        then
-          echo "$device1 is a character device."
-        fi
-
-        # /dev/ttyS1 is a character device.
-
-
+    és un :ref:`dispositiu de caràcter <fto_exemple_condicionsfitxersespecials>`
 
  -p
-    file is a `pipe <special-chars.html#PIPEREF>`__
+    el fitxer és un :ref:`conducte <specialchars-pipe>` o *pipe*.
 
+    Considera l'exemple :ref:`fto_exemple_pipe`.
 
-    .. code-block:: sh
-
-        function show_input_type()
-        {
-           [ -p /dev/fd/0 ] && echo PIPE |echo STDIN
-        }
-
-        show_input_type "Input"                           # STDIN
-        echo "Input"show_input_type                    # PIPE
-
-        # This example courtesy of Carl Anderson.
-
-
+.. XXX per aquí
 
  -h
     file is a `symbolic link <basic.html#SYMLINKREF>`__
@@ -82,7 +44,7 @@ XXX  7.2. File test operators
     file is a `socket <devref1.html#SOCKETREF>`__
 
  -t
-     file ( `descriptor <io-redirection.html#FDREF>`__ ) is associated
+    file ( `descriptor <io-redirection.html#FDREF>`__ ) is associated
     with a terminal device
 
     This test option `may be used to
@@ -118,7 +80,7 @@ XXX  7.2. File test operators
     A binary owned by *root* with
     ``                   set-user-id                 `` flag set runs
     with *root* privileges, even when an ordinary user invokes it. ` [2]
-     <fto.html#FTN.AEN3400>`__ This is useful for executables (such as
+    <fto.html#FTN.AEN3400>`__ This is useful for executables (such as
     **pppd** and **cdrecord** ) that need to access system hardware.
     Lacking the *suid* flag, these binaries could not be invoked by a
     *non-root* user.
@@ -140,7 +102,7 @@ XXX  7.2. File test operators
     Commonly known as the *sticky bit,* the *save-text-mode* flag is a
     special type of file permission. If a file has this flag set, that
     file will be kept in cache memory, for quicker access. ` [3]
-     <fto.html#FTN.AEN3423>`__ If set on a directory, it restricts write
+    <fto.html#FTN.AEN3423>`__ If set on a directory, it restricts write
     permission. Setting the sticky bit adds a *t* to the permissions on
     the file or directory listing. This restricts altering or deleting
     specific files in that directory to the owner of those files.
@@ -183,9 +145,24 @@ XXX  7.2. File test operators
     same file
 
  !
-     "not" -- reverses the sense of the tests above (returns true if
+    "not" -- reverses the sense of the tests above (returns true if
     condition absent).
 
+.. _fto_exemple_condicionsfitxersespecials:
+
+Exemple 1. Condicions amb fitxers especials
+===========================================
+
+.. literalinclude:: _scripts/fitxersespecials.sh
+    :language: sh
+
+.. _fto_exemple_pipe:
+
+Exemple 2. Comprovacions amb conductes
+======================================
+
+.. literalinclude:: _scripts/exemplepipe.sh
+    :language: sh
 
 
 Exemple 4. Testing for broken links
@@ -265,59 +242,6 @@ file test operators.
 Notes
 ~~~~~
 
-
-` [1]  <fto.html#AEN3289>`__
-
-Per the 1913 edition of *Webster's Dictionary* :
-
-----------------------------------------------------------------------------------
-
-.. code-block:: sh
-
-    Deprecate
-    ...
-
-    To pray against, as
-an evil;
-    to seek to avert by
-prayer;
-    to desire the remova
-l of;
-    to seek deliverance
-from;
-    to express deep regr
-et for;
-    to disapprove of str
-ongly.
-
-----------------------------------------------------------------------------------
-
-
-
-.. code-block:: sh
-
-    Deprecate
-    ...
-
-    To pray against, as an evil;
-    to seek to avert by prayer;
-    to desire the removal of;
-    to seek deliverance from;
-    to express deep regret for;
-    to disapprove of strongly.
-
-
-.. code-block:: sh
-
-    Deprecate
-    ...
-
-    To pray against, as an evil;
-    to seek to avert by prayer;
-    to desire the removal of;
-    to seek deliverance from;
-    to express deep regret for;
-    to disapprove of strongly.
 
 
 ` [2]  <fto.html#AEN3400>`__

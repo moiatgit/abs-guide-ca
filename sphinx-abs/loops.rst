@@ -14,8 +14,8 @@ Ho aconseguirem amb les estructures de bucle i condicional.
 .. toctree::
     :titlesonly:
 
-    loops1.html
-    nestedloops.html
-    loopcontrol.html
-    testbranch.html
+    loops1
+    nestedloops
+    loopcontrol
+    testbranch
 

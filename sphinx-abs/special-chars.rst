@@ -1110,11 +1110,11 @@ Signes de menor i major: < >
 
 .. _specialchars-pipe:
 
-Barra vertical o *pipe*: \
-===========================
+Barra vertical o *conducte*: |
+==============================
 
 
-    **pipe.** Passes the output ( ``          stdout         `` ) of a
+    **conducte** o (**pipe.**)  Passes the output ( ``          stdout         `` ) of a
     previous command to the input ( ``          stdin         `` ) of
     the next one, or to the shell. This is a method of chaining commands
     together.

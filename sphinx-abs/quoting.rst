@@ -1,5 +1,5 @@
 ##################
-Chapter 5. Cometes
+Capítol 5. Cometes
 ##################
 
 .. toctree::
