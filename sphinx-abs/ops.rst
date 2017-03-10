@@ -3,6 +3,9 @@ XXX  8.1. Operators
 ###################
 
 
+Assignació
+==========
+
 ** assignment**
 
  ``                 variable assignment               ``

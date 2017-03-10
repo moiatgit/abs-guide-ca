@@ -4,6 +4,8 @@ abs-guide-ca
 
 This is a translation into Catalan of the *ABS-Guide* by Mendel Cooper.
 
+You can find the original document at http://tldp.org/LDP/abs/html/.
+
 Structure of the project
 ========================
 
