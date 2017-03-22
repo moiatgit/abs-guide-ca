@@ -1,123 +1,45 @@
-####################################
-XXX  Chapter 28. Indirect References
-####################################
+######################################
+XXX Capítol 28. Referències indirectes
+######################################
 
-We have seen that `referencing a variable <varsubn.html>`__ ,
-``      $var     `` , fetches its *value* . But, what about the *value
-of a value* ? What about ``      $$var     `` ?
+Hem vist que en :doc:`referenciar una variable <varsubn>` fent
+``$var``. bash retorna el seu *valor*. Què passa, però, si aquest valor és a la seva
+vegada una variable? Com obtenim el valor d'un valor?
+Potser amb ``$$var`` ?
 
-The actual notation is ``             \$$var           `` , usually
-preceded by an `eval <internal.html#EVALREF>`__ (and sometimes an
-`echo <internal.html#ECHOREF>`__ ). This is called an *indirect
-reference* .
+Encara que l'intent amb dos ``$`` s'acosta, la manera de fer-ho és amb
+``\$$var``.
+Normalment el precedirem per un `eval`, però també amb `echo`. Mira :doc:`internal``.
+Anomenarem aquest tipus de referències *referència indirecta*.
 
+Exemple 1
+=========
 
-Exemple 1. Indirect Variable References
-=======================================
+.. literalinclude:: _scripts/ind-ref.sh
+   :language: bash
 
+Les referències indirectes en Bash es realitzen amb més d'una passada:
 
-.. code-block:: sh
+#. Primer, s'obté el nom de la variable ``varname``.
 
-    #!/bin/bash
-    # ind-ref.sh: Indirect variable referencing.
-    # Accessing the contents of the contents of a variable.
+#. A continuació es referencia: ``$varname``.
 
-    # First, let's fool around a little.
+#. Tot seguit, s'indica la referència de la referència: ``$$varname``.
 
-    var=23
+#. Ara escapem el primer ``$``: ``\$$varname``
 
-    echo "\$var   = $var"           # $var   = 23
-    # So far, everything as expected. But ...
+#. Finalment demanem la seva reevaluació: ``eval newvar=\\$$varname``.
 
-    echo "\$\$var  = $$var"         # $$var  = 4570var
-    #  Not useful ...
-    #  \$\$ expanded to PID of the script
-    #  -- refer to the entry on the $$ variable --
-    #+ and "var" is echoed as plain text.
-    #  (Thank you, Jakob Bohm, for pointing this out.)
+Quina utilitat pot tenir l'ús de referenciació indirecta? Proporciona a
+Bash una aproximació a la funcionalitat dels punters de *C*. Per exemple, 
+considera l'exemple:
 
-    echo "\\\$\$var = \$$var"       # \$$var = $23
-    #  As expected. The first $ is escaped and pasted on to
-    #+ the value of var ($var = 23 ).
-    #  Meaningful, but still not useful.
-
-    # Now, let's start over and do it the right way.
-
-    # ============================================== #
+.. literalinclude:: _scripts/resistor-inventory.sh
 
 
-    a=letter_of_alphabet   # Variable "a" holds the name of another variable.
-    letter_of_alphabet=z
+Una altra aplicació interessant...
 
-    echo
-
-    # Direct reference.
-    echo "a = $a"          # a = letter_of_alphabet
-
-    # Indirect reference.
-      eval a=\$$a
-    # ^^^        Forcing an eval(uation), and ...
-    #        ^   Escaping the first $ ...
-    # ------------------------------------------------------------------------
-    # The 'eval' forces an update of $a, sets it to the updated value of \$$a.
-    # So, we see why 'eval' so often shows up in indirect reference notation.
-    # ------------------------------------------------------------------------
-      echo "Now a = $a"    # Now a = z
-
-    echo
-
-
-    # Now, let's try changing the second-order reference.
-
-    t=table_cell_3
-    table_cell_3=24
-    echo "\"table_cell_3\" = $table_cell_3"            # "table_cell_3" = 24
-    echo -n "dereferenced \"t\" = "; eval echo \$$t    # dereferenced "t" = 24
-    # In this simple case, the following also works (why?).
-    #         eval t=\$$t; echo "\"t\" = $t"
-
-    echo
-
-    t=table_cell_3
-    NEW_VAL=387
-    table_cell_3=$NEW_VAL
-    echo "Changing value of \"table_cell_3\" to $NEW_VAL."
-    echo "\"table_cell_3\" now $table_cell_3"
-    echo -n "dereferenced \"t\" now "; eval echo \$$t
-    # "eval" takes the two arguments "echo" and "\$$t" (set equal to $table_cell_3)
-
-
-    echo
-
-    # (Thanks, Stephane Chazelas, for clearing up the above behavior.)
-
-
-    #   A more straightforward method is the ${!t} notation, discussed in the
-    #+ "Bash, version 2" section.
-    #   See also ex78.sh.
-
-    exit 0
-
-
-
-
-
-
-Indirect referencing in Bash is a multi-step process. First, take the
-name of a variable: ``         varname        `` . Then, reference it:
-``         $varname        `` . Then, reference the reference:
-``         $$varname        `` . Then, *escape* the first $ :
-``         \$$varname        `` . Finally, force a reevaluation of the
-expression and assign it: **eval newvar=\\$$varname** .
-
-
-
-
-Of what practical use is indirect referencing of variables? It gives
-Bash a little of the functionality of
-`pointers <varsubn.html#POINTERREF>`__ in *C* , for instance, in `table
-lookup <bashver2.html#RESISTOR>`__ . And, it also has some other very
-interesting applications. . . .
+.. XXX TODO: vas per aquí
 
 Nils Radtke shows how to build "dynamic" variable names and evaluate
 their contents. This can be useful when
