@@ -3,193 +3,86 @@ XXX Chapter 6. Exit and Exit Status
 ###################################
 
 
-**
+    Hi ha cantonades fosques a la *Bourne shell* i la gent les fa servir totes.
 
-*... there are dark corners in the Bourne shell, and people use all of
-them.*
-
-*--Chet Ramey*
+    --Chet Ramey
 
 
 
- The **exit** command terminates a script, just as in a **C** program.
-It can also return a value, which is available to the script's parent
-process.
+La comanda ``exit`` finalitza un guió tal i com ho fa en un programa en
+*C*. A banda, pot retornar un valor que quedarà disponible pel procés pare
+del guió.
 
- Every command returns an *exit status* (sometimes referred to as a
-*return status* or *exit code* ). A successful command returns a 0 ,
-while an unsuccessful one returns a non-zero value that usually can be
-interpreted as an *error code* . Well-behaved UNIX commands, programs,
-and utilities return a 0 exit code upon successful completion, though
-there are some exceptions.
+Cada comanda retorna un *estat de sortida* o *codi de sortida*. Quan la
+comanda té èxit, el resultat a retornar és 0. En canvi, una comanda amb
+problemes retornarà un valor diferent de cero que normalment pot ser
+interpretat com a *codi d'error*.
+Les comandes UNIX, els programes i les utilitats retornen en general un 0
+quan tot ha anat correctament. Amb tot, hi ha algunes excepcions.
 
-Likewise, `functions <functions.html#FUNCTIONREF>`__ within a script and
-the script itself return an exit status. The last command executed in
-the function or script determines the exit status. Within a script, an
-``             exit                        nnn               `` command
-may be used to deliver an ``               nnn             `` exit
-status to the shell ( ``               nnn             `` must be an
-integer in the 0 - 255 range).
+De la mateixa manera les :doc:`funcions <functions.rst>` dins d'un guió
+poden també retornar un estat de sortida.
+La darrera comanda executada a la funció (o al guió) determina el resultat
+de sortida.
+La comanda ``exit nnn`` permet especificar ``nnn`` com a estat de sortida
+a la línia de comandes. ``nnn`` ha de ser un enter de 0 a 255.
 
+Quan un guió finalitza amb ``exit`` sense paràmetre, l'estat de
+sortida que retorna correspon al de la darrera comanda executada tot
+just abans del ``exit``.
 
+És equivalent a fer ``exit $?`` o, fins i tot, a simplement no
+posar-hi cap ``exit``.
 
-|Note
-
-When a script ends with an **exit** that has no parameter, the exit
-status of the script is the exit status of the last command executed in
-the script (previous to the **exit** ).
-
+Els següents codis d'exemple són equivalents:
 
 .. code-block:: sh
 
     #!/bin/bash
-
-    COMMAND_1
-
+    PRIMERA_COMANDA
     . . .
-
-    COMMAND_LAST
-
-    # Will exit with sta
-tus of last command.
-
-    exit
-
-
-The equivalent of a bare **exit** is **exit $?** or even just omitting
-the **exit** .
-
-
-.. code-block:: sh
-
-    #!/bin/bash
-
-    COMMAND_1
-
-    . . .
-
-    COMMAND_LAST
-
-    # Will exit with sta
-tus of last command.
-
-    exit $?
-
-.. code-block:: sh
-
-    #!/bin/bash
-
-    COMMAND1
-
-    . . .
-
-    COMMAND_LAST
-
-    # Will exit with sta
-tus of last command.
-
-
-.. code-block:: sh
-
-    #!/bin/bash
-
-    COMMAND_1
-
-    . . .
-
-    COMMAND_LAST
-
-    # Will exit with status of last command.
-
+    DARRERA_COMANDA
+    # Surt amb l'estat de sortida de la darrera comanda
     exit
 
 
 .. code-block:: sh
 
     #!/bin/bash
-
-    COMMAND_1
-
+    PRIMERA_COMANDA
     . . .
-
-    COMMAND_LAST
-
-    # Will exit with status of last command.
-
+    DARRERA_COMANDA
+    # Surt amb l'estat de sortida de la darrera comanda
     exit $?
 
-
 .. code-block:: sh
 
     #!/bin/bash
-
-    COMMAND1
-
+    PRIMERA_COMANDA
     . . .
-
-    COMMAND_LAST
-
-    # Will exit with status of last command.
-
-
-.. code-block:: sh
-
-    #!/bin/bash
-
-    COMMAND_1
-
-    . . .
-
-    COMMAND_LAST
-
-    # Will exit with status of last command.
-
-    exit
-
-
-.. code-block:: sh
-
-    #!/bin/bash
-
-    COMMAND_1
-
-    . . .
-
-    COMMAND_LAST
-
-    # Will exit with status of last command.
-
-    exit $?
-
-
-.. code-block:: sh
-
-    #!/bin/bash
-
-    COMMAND1
-
-    . . .
-
-    COMMAND_LAST
-
-    # Will exit with status of last command.
+    DARRERA_COMANDA
+    # Surt amb l'estat de sortida de la darrera comanda
+    # Fixa't que aquí ja no hi ha cap exit
 
 
 
+``$?`` equival a l'estat de sortida de la darrera comanda executada.
+Un cop la funció retorna, ``$?`` correspon a l'estat de la darrera comanda
+executada a la funció. Aquesta és la *manera* en que les funcions Bash
+retornen un valor en aquells casos que la funció no finalitza amb un
+``return`` (considera :doc:`funcions complexes <complexfunct.rst>` per més
+detalls)
 
-``      $?     `` reads the exit status of the last command executed.
-After a function returns, ``      $?     `` gives the exit status of the
-last command executed in the function. This is Bash's way of giving
-functions a "return value." ` [1]  <exit-status.html#FTN.AEN2981>`__
+En cas de seguir l'execució d'una :doc:`canonada 
+<special-chars.rst>` o *pipe*, ``$?`` també correspon al valor de la darrera
+comanda executada.
 
- Following the execution of a `pipe <special-chars.html#PIPEREF>`__ , a
-``      $?     `` gives the exit status of the last command executed.
+En finalitzar un guió, ``$?`` des de la línia de comandes mostra l'estat
+de sortida del guió. És a dir, l'estat de sortida de la darrera comanda
+executada pel guió. Per convenció, el valor serà 0 si tot ha anat bé i un
+valor enter del 1 al 255 per indicar que hi ha hagut error.
 
-After a script terminates, a ``      $?     `` from the command-line
-gives the exit status of the script, that is, the last command executed
-in the script, which is, by convention, ``             0           `` on
-success or an integer in the range 1 - 255 on error.
-
+XXX per aquí
 
 Exemple 1. exit / exit status
 =============================
@@ -224,11 +117,10 @@ testing the result of a command in a script (see `Example
 
 
 
-|Note
-
-The `! <special-chars.html#NOTREF>`__ , the *logical not* qualifier,
-reverses the outcome of a test or command, and this affects its `exit
-status <exit-status.html#EXITSTATUSREF>`__ .
+.. note:: 
+    The `! <special-chars.html#NOTREF>`__ , the *logical not* qualifier,
+    reverses the outcome of a test or command, and this affects its `exit
+    status <exit-status.html#EXITSTATUSREF>`__ .
 
 
 .. _exit-status_negatingconditionwithbang:
@@ -310,24 +202,11 @@ Exemple 2. Negating a condition using !
 
 
 
-|Caution
+.. caution::
+    Certain exit status codes have `reserved
+    meanings <exitcodes.html#EXITCODESREF>`__ and should not be
+    user-specified in a script.
 
-Certain exit status codes have `reserved
-meanings <exitcodes.html#EXITCODESREF>`__ and should not be
-user-specified in a script.
-
-
-
-
-
-Notes
-~~~~~
-
-
-` [1]  <exit-status.html#AEN2981>`__
-
-In those instances when there is no
-`return <complexfunct.html#RETURNREF>`__ terminating the function.
 
 
 
